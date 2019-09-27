@@ -109,6 +109,7 @@ public class AdGroupServiceClientTest {
   private static MockGroupPlacementViewService mockGroupPlacementViewService;
   private static MockHotelGroupViewService mockHotelGroupViewService;
   private static MockHotelPerformanceViewService mockHotelPerformanceViewService;
+  private static MockInvoiceService mockInvoiceService;
   private static MockKeywordPlanAdGroupService mockKeywordPlanAdGroupService;
   private static MockKeywordPlanCampaignService mockKeywordPlanCampaignService;
   private static MockKeywordPlanIdeaService mockKeywordPlanIdeaService;
@@ -222,6 +223,7 @@ public class AdGroupServiceClientTest {
     mockGroupPlacementViewService = new MockGroupPlacementViewService();
     mockHotelGroupViewService = new MockHotelGroupViewService();
     mockHotelPerformanceViewService = new MockHotelPerformanceViewService();
+    mockInvoiceService = new MockInvoiceService();
     mockKeywordPlanAdGroupService = new MockKeywordPlanAdGroupService();
     mockKeywordPlanCampaignService = new MockKeywordPlanCampaignService();
     mockKeywordPlanIdeaService = new MockKeywordPlanIdeaService();
@@ -331,6 +333,7 @@ public class AdGroupServiceClientTest {
                 mockGroupPlacementViewService,
                 mockHotelGroupViewService,
                 mockHotelPerformanceViewService,
+                mockInvoiceService,
                 mockKeywordPlanAdGroupService,
                 mockKeywordPlanCampaignService,
                 mockKeywordPlanIdeaService,

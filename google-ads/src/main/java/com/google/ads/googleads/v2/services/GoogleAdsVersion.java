@@ -228,6 +228,9 @@ public interface GoogleAdsVersion {
   @ServiceClientDescriptor(settingsClass = HotelPerformanceViewServiceSettings.class)
   HotelPerformanceViewServiceClient createHotelPerformanceViewServiceClient();
 
+  @ServiceClientDescriptor(settingsClass = InvoiceServiceSettings.class)
+  InvoiceServiceClient createInvoiceServiceClient();
+
   @ServiceClientDescriptor(settingsClass = KeywordPlanAdGroupServiceSettings.class)
   KeywordPlanAdGroupServiceClient createKeywordPlanAdGroupServiceClient();
 

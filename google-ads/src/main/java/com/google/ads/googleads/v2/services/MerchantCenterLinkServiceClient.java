@@ -196,7 +196,7 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns Merchant Center links available tor this customer.
+   * Returns Merchant Center links available for this customer.
    *
    * <p>Sample code:
    *
@@ -220,7 +220,7 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns Merchant Center links available tor this customer.
+   * Returns Merchant Center links available for this customer.
    *
    * <p>Sample code:
    *
@@ -244,7 +244,7 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns Merchant Center links available tor this customer.
+   * Returns Merchant Center links available for this customer.
    *
    * <p>Sample code:
    *

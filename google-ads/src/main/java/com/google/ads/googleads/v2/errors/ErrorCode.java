@@ -679,6 +679,12 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 1008: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 126;
+            errorCode_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -820,6 +826,7 @@ private static final long serialVersionUID = 0L;
     CURRENCY_CODE_ERROR(122),
     ACCESS_INVITATION_ERROR(124),
     REACH_PLAN_ERROR(125),
+    INVOICE_ERROR(126),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -940,6 +947,7 @@ private static final long serialVersionUID = 0L;
         case 122: return CURRENCY_CODE_ERROR;
         case 124: return ACCESS_INVITATION_ERROR;
         case 125: return REACH_PLAN_ERROR;
+        case 126: return INVOICE_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -4210,6 +4218,37 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v2.errors.ReachPlanErrorEnum.ReachPlanError.UNSPECIFIED;
   }
 
+  public static final int INVOICE_ERROR_FIELD_NUMBER = 126;
+  /**
+   * <pre>
+   * The reasons for the invoice error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+   */
+  public int getInvoiceErrorValue() {
+    if (errorCodeCase_ == 126) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the invoice error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+   */
+  public com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError getInvoiceError() {
+    if (errorCodeCase_ == 126) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError result = com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4538,6 +4577,9 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 125) {
       output.writeEnum(125, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 126) {
+      output.writeEnum(126, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -4967,6 +5009,10 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 125) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(125, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 126) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(126, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -5405,6 +5451,10 @@ private static final long serialVersionUID = 0L;
         if (getReachPlanErrorValue()
             != other.getReachPlanErrorValue()) return false;
         break;
+      case 126:
+        if (getInvoiceErrorValue()
+            != other.getInvoiceErrorValue()) return false;
+        break;
       case 0:
       default:
     }
@@ -5839,6 +5889,10 @@ private static final long serialVersionUID = 0L;
       case 125:
         hash = (37 * hash) + REACH_PLAN_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getReachPlanErrorValue();
+        break;
+      case 126:
+        hash = (37 * hash) + INVOICE_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getInvoiceErrorValue();
         break;
       case 0:
       default:
@@ -6323,6 +6377,9 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 125) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 126) {
+        result.errorCode_ = errorCode_;
+      }
       result.errorCodeCase_ = errorCodeCase_;
       onBuilt();
       return result;
@@ -6791,6 +6848,10 @@ private static final long serialVersionUID = 0L;
         }
         case REACH_PLAN_ERROR: {
           setReachPlanErrorValue(other.getReachPlanErrorValue());
+          break;
+        }
+        case INVOICE_ERROR: {
+          setInvoiceErrorValue(other.getInvoiceErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -14604,6 +14665,80 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearReachPlanError() {
       if (errorCodeCase_ == 125) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the invoice error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+     */
+    public int getInvoiceErrorValue() {
+      if (errorCodeCase_ == 126) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the invoice error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+     */
+    public Builder setInvoiceErrorValue(int value) {
+      errorCodeCase_ = 126;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the invoice error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+     */
+    public com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError getInvoiceError() {
+      if (errorCodeCase_ == 126) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError result = com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the invoice error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+     */
+    public Builder setInvoiceError(com.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 126;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the invoice error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.errors.InvoiceErrorEnum.InvoiceError invoice_error = 126;</code>
+     */
+    public Builder clearInvoiceError() {
+      if (errorCodeCase_ == 126) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

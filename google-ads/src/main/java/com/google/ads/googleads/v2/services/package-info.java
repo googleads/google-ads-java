@@ -1110,6 +1110,25 @@
  * </code>
  * </pre>
  *
+ * ==================== InvoiceServiceClient ====================
+ *
+ * <p>Service Description: A service to fetch invoices issued for a billing setup during a given
+ * month.
+ *
+ * <p>Sample for InvoiceServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create()) {
+ *   String customerId = "";
+ *   String billingSetup = "";
+ *   String issueYear = "";
+ *   MonthOfYearEnum.MonthOfYear issueMonth = MonthOfYearEnum.MonthOfYear.UNSPECIFIED;
+ *   ListInvoicesResponse response = invoiceServiceClient.listInvoices(customerId, billingSetup, issueYear, issueMonth);
+ * }
+ * </code>
+ * </pre>
+ *
  * =============================== KeywordPlanAdGroupServiceClient ===============================
  *
  * <p>Service Description: Service to manage Keyword Plan ad groups.

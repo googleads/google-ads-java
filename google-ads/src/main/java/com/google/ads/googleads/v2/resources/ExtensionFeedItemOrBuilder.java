@@ -31,6 +31,31 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
+   * The ID of this feed item. Read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value id = 24;</code>
+   */
+  boolean hasId();
+  /**
+   * <pre>
+   * The ID of this feed item. Read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value id = 24;</code>
+   */
+  com.google.protobuf.Int64Value getId();
+  /**
+   * <pre>
+   * The ID of this feed item. Read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value id = 24;</code>
+   */
+  com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
+
+  /**
+   * <pre>
    * The extension type of the extension feed item.
    * This field is read-only.
    * </pre>
@@ -514,6 +539,31 @@ public interface ExtensionFeedItemOrBuilder extends
    * <code>.google.ads.googleads.v2.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
    */
   com.google.ads.googleads.v2.common.AffiliateLocationFeedItemOrBuilder getAffiliateLocationFeedItemOrBuilder();
+
+  /**
+   * <pre>
+   * Hotel Callout extension.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+   */
+  boolean hasHotelCalloutFeedItem();
+  /**
+   * <pre>
+   * Hotel Callout extension.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+   */
+  com.google.ads.googleads.v2.common.HotelCalloutFeedItem getHotelCalloutFeedItem();
+  /**
+   * <pre>
+   * Hotel Callout extension.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+   */
+  com.google.ads.googleads.v2.common.HotelCalloutFeedItemOrBuilder getHotelCalloutFeedItemOrBuilder();
 
   /**
    * <pre>

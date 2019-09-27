@@ -236,9 +236,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 130: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
               adSchedules_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdScheduleInfo>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000020;
             }
             adSchedules_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.AdScheduleInfo.parser(), extensionRegistry));
@@ -304,6 +304,33 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 186: {
+            com.google.ads.googleads.v2.common.HotelCalloutFeedItem.Builder subBuilder = null;
+            if (extensionCase_ == 23) {
+              subBuilder = ((com.google.ads.googleads.v2.common.HotelCalloutFeedItem) extension_).toBuilder();
+            }
+            extension_ =
+                input.readMessage(com.google.ads.googleads.v2.common.HotelCalloutFeedItem.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v2.common.HotelCalloutFeedItem) extension_);
+              extension_ = subBuilder.buildPartial();
+            }
+            extensionCase_ = 23;
+            break;
+          }
+          case 194: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (id_ != null) {
+              subBuilder = id_.toBuilder();
+            }
+            id_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(id_);
+              id_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -319,7 +346,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+      if (((mutable_bitField0_ & 0x00000020) != 0)) {
         adSchedules_ = java.util.Collections.unmodifiableList(adSchedules_);
       }
       this.unknownFields = unknownFields.build();
@@ -354,6 +381,7 @@ private static final long serialVersionUID = 0L;
     PROMOTION_FEED_ITEM(12),
     LOCATION_FEED_ITEM(14),
     AFFILIATE_LOCATION_FEED_ITEM(15),
+    HOTEL_CALLOUT_FEED_ITEM(23),
     EXTENSION_NOT_SET(0);
     private final int value;
     private ExtensionCase(int value) {
@@ -379,6 +407,7 @@ private static final long serialVersionUID = 0L;
         case 12: return PROMOTION_FEED_ITEM;
         case 14: return LOCATION_FEED_ITEM;
         case 15: return AFFILIATE_LOCATION_FEED_ITEM;
+        case 23: return HOTEL_CALLOUT_FEED_ITEM;
         case 0: return EXTENSION_NOT_SET;
         default: return null;
       }
@@ -476,6 +505,39 @@ private static final long serialVersionUID = 0L;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int ID_FIELD_NUMBER = 24;
+  private com.google.protobuf.Int64Value id_;
+  /**
+   * <pre>
+   * The ID of this feed item. Read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value id = 24;</code>
+   */
+  public boolean hasId() {
+    return id_ != null;
+  }
+  /**
+   * <pre>
+   * The ID of this feed item. Read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value id = 24;</code>
+   */
+  public com.google.protobuf.Int64Value getId() {
+    return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
+  }
+  /**
+   * <pre>
+   * The ID of this feed item. Read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.Int64Value id = 24;</code>
+   */
+  public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
+    return getId();
   }
 
   public static final int EXTENSION_TYPE_FIELD_NUMBER = 13;
@@ -1161,6 +1223,44 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v2.common.AffiliateLocationFeedItem.getDefaultInstance();
   }
 
+  public static final int HOTEL_CALLOUT_FEED_ITEM_FIELD_NUMBER = 23;
+  /**
+   * <pre>
+   * Hotel Callout extension.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+   */
+  public boolean hasHotelCalloutFeedItem() {
+    return extensionCase_ == 23;
+  }
+  /**
+   * <pre>
+   * Hotel Callout extension.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+   */
+  public com.google.ads.googleads.v2.common.HotelCalloutFeedItem getHotelCalloutFeedItem() {
+    if (extensionCase_ == 23) {
+       return (com.google.ads.googleads.v2.common.HotelCalloutFeedItem) extension_;
+    }
+    return com.google.ads.googleads.v2.common.HotelCalloutFeedItem.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Hotel Callout extension.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+   */
+  public com.google.ads.googleads.v2.common.HotelCalloutFeedItemOrBuilder getHotelCalloutFeedItemOrBuilder() {
+    if (extensionCase_ == 23) {
+       return (com.google.ads.googleads.v2.common.HotelCalloutFeedItem) extension_;
+    }
+    return com.google.ads.googleads.v2.common.HotelCalloutFeedItem.getDefaultInstance();
+  }
+
   public static final int TARGETED_CAMPAIGN_FIELD_NUMBER = 18;
   /**
    * <pre>
@@ -1314,6 +1414,12 @@ private static final long serialVersionUID = 0L;
     if (targetedKeyword_ != null) {
       output.writeMessage(22, getTargetedKeyword());
     }
+    if (extensionCase_ == 23) {
+      output.writeMessage(23, (com.google.ads.googleads.v2.common.HotelCalloutFeedItem) extension_);
+    }
+    if (id_ != null) {
+      output.writeMessage(24, getId());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -1406,6 +1512,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, getTargetedKeyword());
     }
+    if (extensionCase_ == 23) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, (com.google.ads.googleads.v2.common.HotelCalloutFeedItem) extension_);
+    }
+    if (id_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(24, getId());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1423,6 +1537,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
+    if (hasId() != other.hasId()) return false;
+    if (hasId()) {
+      if (!getId()
+          .equals(other.getId())) return false;
+    }
     if (extensionType_ != other.extensionType_) return false;
     if (hasStartDateTime() != other.hasStartDateTime()) return false;
     if (hasStartDateTime()) {
@@ -1490,6 +1609,10 @@ private static final long serialVersionUID = 0L;
         if (!getAffiliateLocationFeedItem()
             .equals(other.getAffiliateLocationFeedItem())) return false;
         break;
+      case 23:
+        if (!getHotelCalloutFeedItem()
+            .equals(other.getHotelCalloutFeedItem())) return false;
+        break;
       case 0:
       default:
     }
@@ -1519,6 +1642,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
+    if (hasId()) {
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+    }
     hash = (37 * hash) + EXTENSION_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + extensionType_;
     if (hasStartDateTime()) {
@@ -1585,6 +1712,10 @@ private static final long serialVersionUID = 0L;
       case 15:
         hash = (37 * hash) + AFFILIATE_LOCATION_FEED_ITEM_FIELD_NUMBER;
         hash = (53 * hash) + getAffiliateLocationFeedItem().hashCode();
+        break;
+      case 23:
+        hash = (37 * hash) + HOTEL_CALLOUT_FEED_ITEM_FIELD_NUMBER;
+        hash = (53 * hash) + getHotelCalloutFeedItem().hashCode();
         break;
       case 0:
       default:
@@ -1741,6 +1872,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       resourceName_ = "";
 
+      if (idBuilder_ == null) {
+        id_ = null;
+      } else {
+        id_ = null;
+        idBuilder_ = null;
+      }
       extensionType_ = 0;
 
       if (startDateTimeBuilder_ == null) {
@@ -1757,7 +1894,7 @@ private static final long serialVersionUID = 0L;
       }
       if (adSchedulesBuilder_ == null) {
         adSchedules_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
       } else {
         adSchedulesBuilder_.clear();
       }
@@ -1810,6 +1947,11 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
+      if (idBuilder_ == null) {
+        result.id_ = id_;
+      } else {
+        result.id_ = idBuilder_.build();
+      }
       result.extensionType_ = extensionType_;
       if (startDateTimeBuilder_ == null) {
         result.startDateTime_ = startDateTime_;
@@ -1822,9 +1964,9 @@ private static final long serialVersionUID = 0L;
         result.endDateTime_ = endDateTimeBuilder_.build();
       }
       if (adSchedulesBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           adSchedules_ = java.util.Collections.unmodifiableList(adSchedules_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.adSchedules_ = adSchedules_;
       } else {
@@ -1912,6 +2054,13 @@ private static final long serialVersionUID = 0L;
           result.extension_ = affiliateLocationFeedItemBuilder_.build();
         }
       }
+      if (extensionCase_ == 23) {
+        if (hotelCalloutFeedItemBuilder_ == null) {
+          result.extension_ = extension_;
+        } else {
+          result.extension_ = hotelCalloutFeedItemBuilder_.build();
+        }
+      }
       if (servingResourceTargetingCase_ == 18) {
         if (targetedCampaignBuilder_ == null) {
           result.servingResourceTargeting_ = servingResourceTargeting_;
@@ -1981,6 +2130,9 @@ private static final long serialVersionUID = 0L;
         resourceName_ = other.resourceName_;
         onChanged();
       }
+      if (other.hasId()) {
+        mergeId(other.getId());
+      }
       if (other.extensionType_ != 0) {
         setExtensionTypeValue(other.getExtensionTypeValue());
       }
@@ -1994,7 +2146,7 @@ private static final long serialVersionUID = 0L;
         if (!other.adSchedules_.isEmpty()) {
           if (adSchedules_.isEmpty()) {
             adSchedules_ = other.adSchedules_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureAdSchedulesIsMutable();
             adSchedules_.addAll(other.adSchedules_);
@@ -2007,7 +2159,7 @@ private static final long serialVersionUID = 0L;
             adSchedulesBuilder_.dispose();
             adSchedulesBuilder_ = null;
             adSchedules_ = other.adSchedules_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
             adSchedulesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAdSchedulesFieldBuilder() : null;
@@ -2067,6 +2219,10 @@ private static final long serialVersionUID = 0L;
         }
         case AFFILIATE_LOCATION_FEED_ITEM: {
           mergeAffiliateLocationFeedItem(other.getAffiliateLocationFeedItem());
+          break;
+        }
+        case HOTEL_CALLOUT_FEED_ITEM: {
+          mergeHotelCalloutFeedItem(other.getHotelCalloutFeedItem());
           break;
         }
         case EXTENSION_NOT_SET: {
@@ -2243,6 +2399,159 @@ private static final long serialVersionUID = 0L;
       resourceName_ = value;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Int64Value id_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
+    /**
+     * <pre>
+     * The ID of this feed item. Read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 24;</code>
+     */
+    public boolean hasId() {
+      return idBuilder_ != null || id_ != null;
+    }
+    /**
+     * <pre>
+     * The ID of this feed item. Read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 24;</code>
+     */
+    public com.google.protobuf.Int64Value getId() {
+      if (idBuilder_ == null) {
+        return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
+      } else {
+        return idBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The ID of this feed item. Read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 24;</code>
+     */
+    public Builder setId(com.google.protobuf.Int64Value value) {
+      if (idBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        id_ = value;
+        onChanged();
+      } else {
+        idBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of this feed item. Read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 24;</code>
+     */
+    public Builder setId(
+        com.google.protobuf.Int64Value.Builder builderForValue) {
+      if (idBuilder_ == null) {
+        id_ = builderForValue.build();
+        onChanged();
+      } else {
+        idBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of this feed item. Read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 24;</code>
+     */
+    public Builder mergeId(com.google.protobuf.Int64Value value) {
+      if (idBuilder_ == null) {
+        if (id_ != null) {
+          id_ =
+            com.google.protobuf.Int64Value.newBuilder(id_).mergeFrom(value).buildPartial();
+        } else {
+          id_ = value;
+        }
+        onChanged();
+      } else {
+        idBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of this feed item. Read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 24;</code>
+     */
+    public Builder clearId() {
+      if (idBuilder_ == null) {
+        id_ = null;
+        onChanged();
+      } else {
+        id_ = null;
+        idBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The ID of this feed item. Read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 24;</code>
+     */
+    public com.google.protobuf.Int64Value.Builder getIdBuilder() {
+      
+      onChanged();
+      return getIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The ID of this feed item. Read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 24;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
+      if (idBuilder_ != null) {
+        return idBuilder_.getMessageOrBuilder();
+      } else {
+        return id_ == null ?
+            com.google.protobuf.Int64Value.getDefaultInstance() : id_;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of this feed item. Read-only.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value id = 24;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+        getIdFieldBuilder() {
+      if (idBuilder_ == null) {
+        idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                getId(),
+                getParentForChildren(),
+                isClean());
+        id_ = null;
+      }
+      return idBuilder_;
     }
 
     private int extensionType_ = 0;
@@ -2678,9 +2987,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.AdScheduleInfo> adSchedules_ =
       java.util.Collections.emptyList();
     private void ensureAdSchedulesIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         adSchedules_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdScheduleInfo>(adSchedules_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -2896,7 +3205,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAdSchedules() {
       if (adSchedulesBuilder_ == null) {
         adSchedules_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         adSchedulesBuilder_.clear();
@@ -3015,7 +3324,7 @@ private static final long serialVersionUID = 0L;
         adSchedulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.AdScheduleInfo, com.google.ads.googleads.v2.common.AdScheduleInfo.Builder, com.google.ads.googleads.v2.common.AdScheduleInfoOrBuilder>(
                 adSchedules_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         adSchedules_ = null;
@@ -5209,6 +5518,178 @@ private static final long serialVersionUID = 0L;
       extensionCase_ = 15;
       onChanged();;
       return affiliateLocationFeedItemBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v2.common.HotelCalloutFeedItem, com.google.ads.googleads.v2.common.HotelCalloutFeedItem.Builder, com.google.ads.googleads.v2.common.HotelCalloutFeedItemOrBuilder> hotelCalloutFeedItemBuilder_;
+    /**
+     * <pre>
+     * Hotel Callout extension.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+     */
+    public boolean hasHotelCalloutFeedItem() {
+      return extensionCase_ == 23;
+    }
+    /**
+     * <pre>
+     * Hotel Callout extension.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+     */
+    public com.google.ads.googleads.v2.common.HotelCalloutFeedItem getHotelCalloutFeedItem() {
+      if (hotelCalloutFeedItemBuilder_ == null) {
+        if (extensionCase_ == 23) {
+          return (com.google.ads.googleads.v2.common.HotelCalloutFeedItem) extension_;
+        }
+        return com.google.ads.googleads.v2.common.HotelCalloutFeedItem.getDefaultInstance();
+      } else {
+        if (extensionCase_ == 23) {
+          return hotelCalloutFeedItemBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v2.common.HotelCalloutFeedItem.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel Callout extension.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+     */
+    public Builder setHotelCalloutFeedItem(com.google.ads.googleads.v2.common.HotelCalloutFeedItem value) {
+      if (hotelCalloutFeedItemBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        extension_ = value;
+        onChanged();
+      } else {
+        hotelCalloutFeedItemBuilder_.setMessage(value);
+      }
+      extensionCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel Callout extension.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+     */
+    public Builder setHotelCalloutFeedItem(
+        com.google.ads.googleads.v2.common.HotelCalloutFeedItem.Builder builderForValue) {
+      if (hotelCalloutFeedItemBuilder_ == null) {
+        extension_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelCalloutFeedItemBuilder_.setMessage(builderForValue.build());
+      }
+      extensionCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel Callout extension.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+     */
+    public Builder mergeHotelCalloutFeedItem(com.google.ads.googleads.v2.common.HotelCalloutFeedItem value) {
+      if (hotelCalloutFeedItemBuilder_ == null) {
+        if (extensionCase_ == 23 &&
+            extension_ != com.google.ads.googleads.v2.common.HotelCalloutFeedItem.getDefaultInstance()) {
+          extension_ = com.google.ads.googleads.v2.common.HotelCalloutFeedItem.newBuilder((com.google.ads.googleads.v2.common.HotelCalloutFeedItem) extension_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          extension_ = value;
+        }
+        onChanged();
+      } else {
+        if (extensionCase_ == 23) {
+          hotelCalloutFeedItemBuilder_.mergeFrom(value);
+        }
+        hotelCalloutFeedItemBuilder_.setMessage(value);
+      }
+      extensionCase_ = 23;
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel Callout extension.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+     */
+    public Builder clearHotelCalloutFeedItem() {
+      if (hotelCalloutFeedItemBuilder_ == null) {
+        if (extensionCase_ == 23) {
+          extensionCase_ = 0;
+          extension_ = null;
+          onChanged();
+        }
+      } else {
+        if (extensionCase_ == 23) {
+          extensionCase_ = 0;
+          extension_ = null;
+        }
+        hotelCalloutFeedItemBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Hotel Callout extension.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+     */
+    public com.google.ads.googleads.v2.common.HotelCalloutFeedItem.Builder getHotelCalloutFeedItemBuilder() {
+      return getHotelCalloutFeedItemFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Hotel Callout extension.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+     */
+    public com.google.ads.googleads.v2.common.HotelCalloutFeedItemOrBuilder getHotelCalloutFeedItemOrBuilder() {
+      if ((extensionCase_ == 23) && (hotelCalloutFeedItemBuilder_ != null)) {
+        return hotelCalloutFeedItemBuilder_.getMessageOrBuilder();
+      } else {
+        if (extensionCase_ == 23) {
+          return (com.google.ads.googleads.v2.common.HotelCalloutFeedItem) extension_;
+        }
+        return com.google.ads.googleads.v2.common.HotelCalloutFeedItem.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Hotel Callout extension.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v2.common.HotelCalloutFeedItem, com.google.ads.googleads.v2.common.HotelCalloutFeedItem.Builder, com.google.ads.googleads.v2.common.HotelCalloutFeedItemOrBuilder> 
+        getHotelCalloutFeedItemFieldBuilder() {
+      if (hotelCalloutFeedItemBuilder_ == null) {
+        if (!(extensionCase_ == 23)) {
+          extension_ = com.google.ads.googleads.v2.common.HotelCalloutFeedItem.getDefaultInstance();
+        }
+        hotelCalloutFeedItemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v2.common.HotelCalloutFeedItem, com.google.ads.googleads.v2.common.HotelCalloutFeedItem.Builder, com.google.ads.googleads.v2.common.HotelCalloutFeedItemOrBuilder>(
+                (com.google.ads.googleads.v2.common.HotelCalloutFeedItem) extension_,
+                getParentForChildren(),
+                isClean());
+        extension_ = null;
+      }
+      extensionCase_ = 23;
+      onChanged();;
+      return hotelCalloutFeedItemBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

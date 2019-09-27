@@ -835,6 +835,23 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Hotel price bucket.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+   */
+  int getHotelPriceBucketValue();
+  /**
+   * <pre>
+   * Hotel price bucket.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+   */
+  com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket getHotelPriceBucket();
+
+  /**
+   * <pre>
    * Hotel state.
    * </pre>
    *

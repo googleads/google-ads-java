@@ -69,6 +69,11 @@ public final class ExtensionsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v2_common_SitelinkFeedItem_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v2_common_HotelCalloutFeedItem_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v2_common_HotelCalloutFeedItem_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -214,13 +219,16 @@ public final class ExtensionsProto {
       "om_parameters\030\007 \003(\0132/.google.ads.googlea" +
       "ds.v2.common.CustomParameter\0226\n\020final_ur" +
       "l_suffix\030\010 \001(\0132\034.google.protobuf.StringV" +
-      "alueB\352\001\n\"com.google.ads.googleads.v2.com" +
-      "monB\017ExtensionsProtoP\001ZDgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v2/c" +
-      "ommon;common\242\002\003GAA\252\002\036Google.Ads.GoogleAd" +
-      "s.V2.Common\312\002\036Google\\Ads\\GoogleAds\\V2\\Co" +
-      "mmon\352\002\"Google::Ads::GoogleAds::V2::Commo" +
-      "nb\006proto3"
+      "alue\"w\n\024HotelCalloutFeedItem\022*\n\004text\030\001 \001" +
+      "(\0132\034.google.protobuf.StringValue\0223\n\rlang" +
+      "uage_code\030\002 \001(\0132\034.google.protobuf.String" +
+      "ValueB\352\001\n\"com.google.ads.googleads.v2.co" +
+      "mmonB\017ExtensionsProtoP\001ZDgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v2/" +
+      "common;common\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
+      "ds.V2.Common\312\002\036Google\\Ads\\GoogleAds\\V2\\C" +
+      "ommon\352\002\"Google::Ads::GoogleAds::V2::Comm" +
+      "onb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -311,6 +319,12 @@ public final class ExtensionsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_common_SitelinkFeedItem_descriptor,
         new java.lang.String[] { "LinkText", "Line1", "Line2", "FinalUrls", "FinalMobileUrls", "TrackingUrlTemplate", "UrlCustomParameters", "FinalUrlSuffix", });
+    internal_static_google_ads_googleads_v2_common_HotelCalloutFeedItem_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_google_ads_googleads_v2_common_HotelCalloutFeedItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v2_common_HotelCalloutFeedItem_descriptor,
+        new java.lang.String[] { "Text", "LanguageCode", });
     com.google.ads.googleads.v2.common.CustomParameterProto.getDescriptor();
     com.google.ads.googleads.v2.common.FeedCommonProto.getDescriptor();
     com.google.ads.googleads.v2.enums.AppStoreProto.getDescriptor();

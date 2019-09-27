@@ -151,7 +151,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns the list of plannable locations (e.g. countries, DMAs).
+   * Returns the list of plannable locations (for example, countries &amp; DMAs).
    *
    * <p>Sample code:
    *
@@ -172,7 +172,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns the list of plannable locations (e.g. countries, DMAs).
+   * Returns the list of plannable locations (for example, countries &amp; DMAs).
    *
    * <p>Sample code:
    *

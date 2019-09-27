@@ -191,6 +191,14 @@ private static final long serialVersionUID = 0L;
      * <code>AFFILIATE_LOCATION = 13;</code>
      */
     AFFILIATE_LOCATION(13),
+    /**
+     * <pre>
+     * Hotel callout
+     * </pre>
+     *
+     * <code>HOTEL_CALLOUT = 15;</code>
+     */
+    HOTEL_CALLOUT(15),
     UNRECOGNIZED(-1),
     ;
 
@@ -298,6 +306,14 @@ private static final long serialVersionUID = 0L;
      * <code>AFFILIATE_LOCATION = 13;</code>
      */
     public static final int AFFILIATE_LOCATION_VALUE = 13;
+    /**
+     * <pre>
+     * Hotel callout
+     * </pre>
+     *
+     * <code>HOTEL_CALLOUT = 15;</code>
+     */
+    public static final int HOTEL_CALLOUT_VALUE = 15;
 
 
     public final int getNumber() {
@@ -331,6 +347,7 @@ private static final long serialVersionUID = 0L;
         case 11: return STRUCTURED_SNIPPET;
         case 12: return LOCATION;
         case 13: return AFFILIATE_LOCATION;
+        case 15: return HOTEL_CALLOUT;
         default: return null;
       }
     }

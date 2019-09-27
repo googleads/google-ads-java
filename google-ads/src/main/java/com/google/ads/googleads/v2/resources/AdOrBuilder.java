@@ -228,6 +228,31 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
+   * The suffix to use when constructing a final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  boolean hasFinalUrlSuffix();
+  /**
+   * <pre>
+   * The suffix to use when constructing a final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  com.google.protobuf.StringValue getFinalUrlSuffix();
+  /**
+   * <pre>
+   * The suffix to use when constructing a final URL.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder();
+
+  /**
+   * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
    * </pre>
