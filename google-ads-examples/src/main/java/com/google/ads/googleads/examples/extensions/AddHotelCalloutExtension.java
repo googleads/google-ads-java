@@ -165,7 +165,7 @@ public class AddHotelCalloutExtension {
               Long.toString(customerId), ImmutableList.of(feedItemOperation));
       String extensionFeedItemResourceName = response.getResults(0).getResourceName();
       System.out.printf(
-          "Added an extension feed item with resource name: '%s'%n", extensionFeedItemResourceName);
+          "Added a extension feed item with resource name: '%s'.%n", extensionFeedItemResourceName);
       return extensionFeedItemResourceName;
     }
   }
@@ -199,7 +199,7 @@ public class AddHotelCalloutExtension {
 
       String campaignExtensionResourceName = response.getResults(0).getResourceName();
       System.out.printf(
-          "Added an campaign extension with resource name: '%s'%n", campaignExtensionResourceName);
+          "Added a campaign extension with resource name: '%s'.%n", campaignExtensionResourceName);
       return campaignExtensionResourceName;
     }
   }
@@ -233,7 +233,7 @@ public class AddHotelCalloutExtension {
 
       String adGroupExtensionResourceName = response.getResults(0).getResourceName();
       System.out.printf(
-          "Added an adgroup extension with resource name: '%s'%n", adGroupExtensionResourceName);
+          "Added a adgroup extension with resource name: '%s'.%n", adGroupExtensionResourceName);
       return adGroupExtensionResourceName;
     }
   }
@@ -261,7 +261,7 @@ public class AddHotelCalloutExtension {
 
       String customerExtensionResourceName = response.getResults(0).getResourceName();
       System.out.printf(
-          "Added an account extension with resource name: '%s'%n", customerExtensionResourceName);
+          "Added a account extension with resource name: '%s'.%n", customerExtensionResourceName);
       return customerExtensionResourceName;
     }
   }
