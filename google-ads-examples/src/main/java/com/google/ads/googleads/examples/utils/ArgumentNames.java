@@ -48,4 +48,6 @@ public final class ArgumentNames {
   public static final String GMB_ACCESS_TOKEN = "--gmbAccessToken";
   public static final String USER_LIST_ID = "--userListId";
   public static final String MANAGER_ID = "--managerId";
+  public static final String CALLOUT_TEXT = "--calloutText";
+  public static final String LANGUAGE_CODE = "--languageCode";
 }
