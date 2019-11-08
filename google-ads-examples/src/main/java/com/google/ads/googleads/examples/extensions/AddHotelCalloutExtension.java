@@ -45,8 +45,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Adds a hotel callout to a specific account, campaign within the account, and adgroup within the
- * campaign.
+ * Adds a hotel callout extension to a specific account, campaign within the account, and adgroup
+ * within the campaign.
  */
 public class AddHotelCalloutExtension {
 
@@ -63,7 +63,8 @@ public class AddHotelCalloutExtension {
     @Parameter(names = ArgumentNames.CALLOUT_TEXT, required = true)
     private String calloutText;
 
-    // IETF BCP 47 compliant language code
+    // To see supported languages visit
+    // https://developers.google.com/hotels/hotel-ads/api-reference/language-codes.
     @Parameter(names = ArgumentNames.LANGUAGE_CODE, required = true)
     private String languageCode;
   }
@@ -136,7 +137,7 @@ public class AddHotelCalloutExtension {
     addExtensionToAdGroup(googleAdsClient, customerId, adGroupId, extensionFeedItemResourceName);
 
     // Adds the extension feed item to the account.
-    addExtensionAccount(googleAdsClient, customerId, extensionFeedItemResourceName);
+    addExtensionToAccount(googleAdsClient, customerId, extensionFeedItemResourceName);
   }
 
   /** Creates a new extension feed item for the callout. */
@@ -239,7 +240,7 @@ public class AddHotelCalloutExtension {
   }
 
   /** Adds extension feed item to the account. */
-  private String addExtensionAccount(
+  private String addExtensionToAccount(
       GoogleAdsClient googleAdsClient, long customerId, String extensionFeedItemResourceName) {
     // Creates the customer extension setting, sets it to HOTEL_CALLOUT, and attaches the feed item.
     CustomerExtensionSetting customerExtensionSetting =
