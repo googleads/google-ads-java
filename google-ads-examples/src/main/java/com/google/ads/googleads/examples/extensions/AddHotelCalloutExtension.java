@@ -63,7 +63,7 @@ public class AddHotelCalloutExtension {
     @Parameter(names = ArgumentNames.CALLOUT_TEXT, required = true)
     private String calloutText;
 
-    // To see supported languages visit
+    // See supported languages at:
     // https://developers.google.com/hotels/hotel-ads/api-reference/language-codes.
     @Parameter(names = ArgumentNames.LANGUAGE_CODE, required = true)
     private String languageCode;
