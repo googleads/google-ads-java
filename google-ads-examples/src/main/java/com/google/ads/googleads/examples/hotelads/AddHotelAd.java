@@ -18,7 +18,6 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v2.errors.GoogleAdsException;
 import com.google.ads.googleads.v2.common.HotelAdInfo;
 import com.google.ads.googleads.v2.common.PercentCpc;
 import com.google.ads.googleads.v2.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
@@ -28,6 +27,7 @@ import com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingC
 import com.google.ads.googleads.v2.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v2.errors.GoogleAdsError;
+import com.google.ads.googleads.v2.errors.GoogleAdsException;
 import com.google.ads.googleads.v2.resources.Ad;
 import com.google.ads.googleads.v2.resources.AdGroup;
 import com.google.ads.googleads.v2.resources.AdGroupAd;
@@ -242,7 +242,8 @@ public class AddHotelAd {
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
 
     // Issues a mutate request to add the campaign.
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+    try (CampaignServiceClient campaignServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       MutateCampaignsResponse response =
           campaignServiceClient.mutateCampaigns(
               Long.toString(customerId), Collections.singletonList(operation));
@@ -280,7 +281,8 @@ public class AddHotelAd {
     AdGroupOperation operation = AdGroupOperation.newBuilder().setCreate(adGroup).build();
 
     // Issues a mutate request to add an ad group.
-    try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+    try (AdGroupServiceClient adGroupServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       MutateAdGroupResult mutateAdGroupResult =
           adGroupServiceClient
               .mutateAdGroups(Long.toString(customerId), Collections.singletonList(operation))
@@ -311,7 +313,7 @@ public class AddHotelAd {
         AdGroupAd.newBuilder()
             // Sets the ad to the ad created above.
             .setAd(ad)
-            .setStatus(AdGroupAdStatus.PAUSED)
+            .setStatus(AdGroupAdStatus.ENABLED)
             // Sets the ad group.
             .setAdGroup(StringValue.of(adGroupResourceName))
             .build();
