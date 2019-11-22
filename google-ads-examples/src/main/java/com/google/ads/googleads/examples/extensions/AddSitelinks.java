@@ -1,3 +1,17 @@
+// Copyright 2019 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 package com.google.ads.googleads.examples.extensions;
 
 import com.beust.jcommander.Parameter;
@@ -9,6 +23,7 @@ import com.google.ads.googleads.v2.common.KeywordInfo;
 import com.google.ads.googleads.v2.common.SitelinkFeedItem;
 import com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek;
 import com.google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType;
+import com.google.ads.googleads.v2.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice;
 import com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType;
 import com.google.ads.googleads.v2.enums.MinuteOfHourEnum.MinuteOfHour;
 import com.google.ads.googleads.v2.errors.GoogleAdsError;
@@ -33,10 +48,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Adds sitelinks to a campaign. To create a campaign, run AddCampaigns.java. */
-public class AddSiteLinks {
+/** Adds Sitelinks to a campaign. To create a campaign, run AddCampaigns.java. */
+public class AddSitelinks {
 
-  private static class AddSiteLinksParams extends CodeSampleParams {
+  private static class AddSitelinksParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -46,7 +61,7 @@ public class AddSiteLinks {
   }
 
   public static void main(String[] args) throws IOException {
-    AddSiteLinksParams params = new AddSiteLinksParams();
+    AddSitelinksParams params = new AddSitelinksParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -68,7 +83,7 @@ public class AddSiteLinks {
     }
 
     try {
-      new AddSiteLinks().runExample(googleAdsClient, params.customerId, params.campaignId);
+      new AddSitelinks().runExample(googleAdsClient, params.customerId, params.campaignId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -135,7 +150,7 @@ public class AddSiteLinks {
       GoogleAdsClient googleAdsClient,
       long customerId,
       String campaignResourceName) {
-    SitelinkFeedItem sitelinkFeedItem1 = createSiteLinkFeedItem(
+    SitelinkFeedItem sitelinkFeedItem1 = createSitelinkFeedItem(
         "Store Hours", "http://www.example.com/storehours");
 
     // Creates an ExtensionFeedItem from the SitelinkFeedItem.
@@ -149,7 +164,7 @@ public class AddSiteLinks {
     // Creates an ExtensionFeedItemOperation and adds it to the operations List.
     operations.add(ExtensionFeedItemOperation.newBuilder().setCreate(extensionFeedItem1).build());
 
-    SitelinkFeedItem sitelinkFeedItem2 = createSiteLinkFeedItem(
+    SitelinkFeedItem sitelinkFeedItem2 = createSitelinkFeedItem(
         "Thanksgiving Specials", "http://www.example.com/thanksgiving");
 
     DateTime startTime = new DateTime(DateTime.now().getYear(), 11, 20, 0, 0, 0);
@@ -180,13 +195,14 @@ public class AddSiteLinks {
 
     operations.add(ExtensionFeedItemOperation.newBuilder().setCreate(extensionFeedItem2).build());
 
-    SitelinkFeedItem sitelinkFeedItem3 = createSiteLinkFeedItem(
+    SitelinkFeedItem sitelinkFeedItem3 = createSitelinkFeedItem(
         "Wifi available", "http://www.example.com/mobile/wifi");
 
     ExtensionFeedItem extensionFeedItem3 = ExtensionFeedItem.newBuilder()
         .setExtensionType(ExtensionType.SITELINK)
         .setSitelinkFeedItem(sitelinkFeedItem3)
         .setTargetedCampaign(StringValue.of(campaignResourceName))
+        .setDevice(FeedItemTargetDevice.MOBILE)
         .setTargetedKeyword(KeywordInfo.newBuilder()
             .setText(StringValue.of("free wifi"))
             .setMatchType(KeywordMatchType.BROAD).build())
@@ -194,7 +210,7 @@ public class AddSiteLinks {
 
     operations.add(ExtensionFeedItemOperation.newBuilder().setCreate(extensionFeedItem3).build());
 
-    SitelinkFeedItem sitelinkFeedItem4 = createSiteLinkFeedItem(
+    SitelinkFeedItem sitelinkFeedItem4 = createSitelinkFeedItem(
         "Happy hours", "http://www.example.com/happyhours");
 
     ExtensionFeedItem extensionFeedItem4 =  ExtensionFeedItem.newBuilder()
@@ -202,15 +218,15 @@ public class AddSiteLinks {
         .setSitelinkFeedItem(sitelinkFeedItem4)
         .setTargetedCampaign(StringValue.of(campaignResourceName))
         .addAdSchedules(
-            createAdSchedule(DayOfWeek.MONDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
+            createAdScheduleInfo(DayOfWeek.MONDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
         .addAdSchedules(
-            createAdSchedule(DayOfWeek.TUESDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
+            createAdScheduleInfo(DayOfWeek.TUESDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
         .addAdSchedules(
-            createAdSchedule(DayOfWeek.WEDNESDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
+            createAdScheduleInfo(DayOfWeek.WEDNESDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
         .addAdSchedules(
-            createAdSchedule(DayOfWeek.THURSDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
+            createAdScheduleInfo(DayOfWeek.THURSDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
         .addAdSchedules(
-            createAdSchedule(DayOfWeek.FRIDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
+            createAdScheduleInfo(DayOfWeek.FRIDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
         .build();
 
     operations.add(ExtensionFeedItemOperation.newBuilder().setCreate(extensionFeedItem4).build());
@@ -237,12 +253,12 @@ public class AddSiteLinks {
    * Creates a new SitelinkFeedItem with the specified attributes.
    *
    * @param sitelinkText the text of the sitelink feed item.
-   * @param siteLinkUrl the URL of the sitelink  feed item.
+   * @param sitelinkUrl the URL of the sitelink  feed item.
    */
-  private static SitelinkFeedItem createSiteLinkFeedItem(String sitelinkText, String siteLinkUrl) {
+  private static SitelinkFeedItem createSitelinkFeedItem(String sitelinkText, String sitelinkUrl) {
     return SitelinkFeedItem.newBuilder()
         .setLinkText(StringValue.of(sitelinkText))
-        .addFinalUrls(StringValue.of(siteLinkUrl))
+        .addFinalUrls(StringValue.of(sitelinkUrl))
         .build();
   }
 
@@ -255,7 +271,7 @@ public class AddSiteLinks {
    * @param endHour the ending hour of the AdScheduleInfo.
    * @param endMinute ending minute of the AdScheduleInfo.
    */
-  private static AdScheduleInfo createAdSchedule(
+  private static AdScheduleInfo createAdScheduleInfo(
       DayOfWeek day, int startHour, MinuteOfHour startMinute, int endHour, MinuteOfHour endMinute) {
     return AdScheduleInfo.newBuilder()
         .setDayOfWeek(day)
