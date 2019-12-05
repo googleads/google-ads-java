@@ -48,7 +48,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Adds Sitelinks to a campaign. To create a campaign, run AddCampaigns.java. */
+/** Adds sitelinks to a campaign. To create a campaign, run AddCampaigns.java. */
 public class AddSitelinks {
 
   private static class AddSitelinksParams extends CodeSampleParams {
@@ -253,7 +253,7 @@ public class AddSitelinks {
    * Creates a new SitelinkFeedItem with the specified attributes.
    *
    * @param sitelinkText the text of the sitelink feed item.
-   * @param sitelinkUrl the URL of the sitelink  feed item.
+   * @param sitelinkUrl the URL of the sitelink feed item.
    */
   private static SitelinkFeedItem createSitelinkFeedItem(String sitelinkText, String sitelinkUrl) {
     return SitelinkFeedItem.newBuilder()
