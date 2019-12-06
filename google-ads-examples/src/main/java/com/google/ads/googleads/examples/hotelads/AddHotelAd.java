@@ -313,6 +313,9 @@ public class AddHotelAd {
         AdGroupAd.newBuilder()
             // Sets the ad to the ad created above.
             .setAd(ad)
+            // Set the ad group ad to enabled.  Setting this to paused will cause an error
+            // for hotel campaigns.  For hotels pausing should happen at either the ad group or
+            // campaign level.
             .setStatus(AdGroupAdStatus.ENABLED)
             // Sets the ad group.
             .setAdGroup(StringValue.of(adGroupResourceName))
