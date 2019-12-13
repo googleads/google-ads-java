@@ -155,15 +155,16 @@ public class ApiCatalogTest {
 
   /** Ensure that all services and all service clients can be instantiated. */
   @Test
-  public void createServices_createsAllServiceClients()
-      throws InvocationTargetException, IllegalAccessException {
-    GoogleAdsAllVersions versions = catalog.createAllVersionsClient(transportProvider, new FakeCredential());
+  public void createServices_createsAllServiceClients() throws Exception {
+    GoogleAdsAllVersions versions =
+        catalog.createAllVersionsClient(transportProvider, new FakeCredential());
     for (Method serviceFactoryMethod : GoogleAdsAllVersions.class.getMethods()) {
       Object factory = serviceFactoryMethod.invoke(versions);
       for (Method serviceMethod : serviceFactoryMethod.getReturnType().getMethods()) {
-        assertNotNull(
-            "Expected a valid service client for " + serviceFactoryMethod,
-            serviceMethod.invoke(factory));
+        try (AutoCloseable serviceClient = (AutoCloseable) serviceMethod.invoke(factory)) {
+          assertNotNull(
+              "Expected a valid service client for " + serviceFactoryMethod, serviceClient);
+        }
       }
     }
   }

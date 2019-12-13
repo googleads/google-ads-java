@@ -292,7 +292,10 @@ public class GoogleAdsClientTest {
             .setEndpoint("fake-address")
             .build();
     mockService.addResponse(SearchGoogleAdsResponse.newBuilder().build());
-    client.getLatestVersion().createGoogleAdsServiceClient().search("123", "select blah");
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+        client.getLatestVersion().createGoogleAdsServiceClient()) {
+      googleAdsServiceClient.search("123", "select blah");
+    }
     assertTrue(
         "login customer ID not found",
         localChannelProvider.isHeaderSent(
@@ -309,7 +312,10 @@ public class GoogleAdsClientTest {
             .setTransportChannelProvider(localChannelProvider)
             .build();
     mockService.addResponse(SearchGoogleAdsResponse.newBuilder().build());
-    client.getLatestVersion().createGoogleAdsServiceClient().search("123", "select blah");
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+        client.getLatestVersion().createGoogleAdsServiceClient()) {
+      googleAdsServiceClient.search("123", "select blah");
+    }
     assertFalse(
         "login customer ID header should be excluded if not configured",
         localChannelProvider.isHeaderSent("login-customer-id", Pattern.compile(".*")));
@@ -332,8 +338,9 @@ public class GoogleAdsClientTest {
     trailers.put(trailerKey, failure.build().toByteArray());
     StatusException rootCause = new StatusException(Status.UNKNOWN, trailers);
     mockService.addException(new ApiException(rootCause, GrpcStatusCode.of(Code.UNKNOWN), false));
-    try {
-      client.getLatestVersion().createGoogleAdsServiceClient().search("123", "select blah");
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+        client.getLatestVersion().createGoogleAdsServiceClient()) {
+      googleAdsServiceClient.search("123", "select blah");
     } catch (GoogleAdsException ex) {
       // Expected
     }
