@@ -1,3 +1,11 @@
+4.3.0 - 2019-12-16
+------------------
+- Added option to use generated API Catalog.
+- Added example for AddSiteLinks.
+- Changed default status of AdGroupAd to ENABLED in AddHotelAd example.
+- Added example for AddHotelCalloutExtension.
+- Added example for HandleRateExceededError.
+
 4.2.0 - 2019-09-27
 ------------------
 - Added support for Google Ads API v2_2.

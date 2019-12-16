@@ -18,7 +18,7 @@ This project hosts the Java client library for the Google Ads API.
     <dependency>
       <groupId>com.google.api-ads</groupId>
       <artifactId>google-ads</artifactId>
-      <version>4.2.0</version>
+      <version>4.3.0</version>
     </dependency>
 
 ## Getting started
@@ -193,7 +193,7 @@ the following format:
     # uses multiple manager account + OAuth pairs.
     #
     # api.googleads.loginCustomerId=INSERT_LOGIN_CUSTOEMR_ID_HERE
-    
+
     # By default, this library uses reflection to build the ApiCatalog. 
     # In order to reduce latency when creating service clients, users can set 
     # api.googleads.enableGeneratedCatalog=true, which will use a pre-generated 
