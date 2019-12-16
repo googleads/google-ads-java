@@ -193,6 +193,15 @@ the following format:
     # uses multiple manager account + OAuth pairs.
     #
     # api.googleads.loginCustomerId=INSERT_LOGIN_CUSTOEMR_ID_HERE
+    
+    # By default, this library uses reflection to build the ApiCatalog. 
+    # In order to reduce latency when creating service clients, users can set 
+    # api.googleads.enableGeneratedCatalog=true, which will use a pre-generated 
+    # ApiCatalog that does not use reflection. Excluding this property from the 
+    # ads.properties file or using any value other than true will result in the 
+    # default behavior. This feature is still experimental.
+    #
+    # api.googleads.enableGeneratedCatalog=true
 
 This configuration file format is similar to the format used in the AdWords
 API's
