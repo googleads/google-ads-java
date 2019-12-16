@@ -22,6 +22,7 @@ import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
 import com.google.auth.oauth2.UserCredentials;
 import com.google.auto.value.AutoValue;
+import com.google.common.annotations.Beta;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
@@ -60,7 +61,6 @@ import javax.annotation.concurrent.ThreadSafe;
 @ThreadSafe
 public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
 
-  private static final ApiCatalog catalog = ApiCatalog.getDefault();
   /** The default endpoint for Google Ads API services. */
   private static final String DEFAULT_ENDPOINT = "googleads.googleapis.com:443";
 
@@ -101,6 +101,10 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
   /** Returns the login customer ID for this client. */
   @Nullable
   public abstract Long getLoginCustomerId();
+
+  /** Returns whether this client will enable the generated catalog. */
+  @Beta
+  abstract boolean getEnableGeneratedCatalog();
 
   /** Returns a new {@link GoogleAdsClient.Builder} with the properties as this instance. */
   public abstract Builder toBuilder();
@@ -192,6 +196,25 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       }
     }
 
+    /** Returns whether this client will enable the generated catalog. */
+    @Beta
+    public abstract boolean getEnableGeneratedCatalog();
+
+    /**
+     * By default, this library uses reflection to build the ApiCatalog. In order to reduce latency,
+     * users may use a pre-generated ApiCatalog that does not use of reflection.
+     * This feature is still experimental.
+     */
+    @Beta
+    public abstract Builder setEnableGeneratedCatalog(boolean enableGeneratedCatalog);
+
+    @Beta
+    private void setEnableGeneratedCatalog(Properties properties) {
+      String configuredEnableGeneratedCatalog =
+          properties.getProperty(ConfigPropertyKey.ENABLE_GENERATED_CATALOG.getPropertyKey());
+      setEnableGeneratedCatalog(Boolean.parseBoolean(configuredEnableGeneratedCatalog));
+    }
+
     /** Returns the endpoint currently configured. */
     public abstract String getEndpoint();
 
@@ -262,6 +285,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       setDeveloperToken(properties);
       setEndpoint(properties);
       setLoginCustomerId(properties);
+      setEnableGeneratedCatalog(properties);
       return this;
     }
 
@@ -281,6 +305,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
      * Returns a new instance of {@link GoogleAdsClient} based on the attributes of this builder.
      */
     public GoogleAdsClient build() {
+      ApiCatalog catalog = ApiCatalog.getDefault(getEnableGeneratedCatalog());
       TransportChannelProvider transportChannelProvider = getTransportChannelProvider();
       if (transportChannelProvider.needsHeaders()) {
         transportChannelProvider = transportChannelProvider.withHeaders(getHeaders());
@@ -314,7 +339,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       DEVELOPER_TOKEN("api.googleads.developerToken"),
       REFRESH_TOKEN("api.googleads.refreshToken"),
       ENDPOINT("api.googleads.endpoint"),
-      LOGIN_CUSTOMER_ID("api.googleads.loginCustomerId");
+      LOGIN_CUSTOMER_ID("api.googleads.loginCustomerId"),
+      ENABLE_GENERATED_CATALOG("api.googleads.enableGeneratedCatalog");
 
       private final String key;
 

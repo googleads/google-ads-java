@@ -32,6 +32,19 @@ public interface ApiCatalog {
     return ApiCatalogImpl.getDefault();
   }
 
+  /**
+   * By default, this library uses reflection to build the ApiCatalog. In order to reduce latency,
+   * users can set api.googleads.enableGeneratedCatalog=true in the ads.properties file, which
+   * will set the enableGeneratedCatalog parameter equal to true and generate an ApiCatalog without
+   * the use of reflection. This feature is still experimental.
+   */
+  static ApiCatalog getDefault(boolean enableGeneratedCatalog) {
+    if (enableGeneratedCatalog) {
+      return GeneratedCatalog.getDefault();
+    }
+    return ApiCatalog.getDefault();
+  }
+
   /** Returns all API versions available in the current catalog. */
   SortedSet<Version> getSupportedVersions();
 
