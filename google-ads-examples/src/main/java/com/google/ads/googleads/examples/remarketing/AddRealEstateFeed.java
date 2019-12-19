@@ -398,7 +398,7 @@ public class AddRealEstateFeed {
                 StringValue.of("http://www.example.com/listings/images?listing_id=ABC123DEF"))
             .build();
     // Creates the contextual keywords feed attribute value.
-    FeedItemAttributeValue finalUrl =
+    FeedItemAttributeValue contextualKeywords =
         FeedItemAttributeValue.newBuilder()
             .setFeedAttributeId(
                 Int64Value.of(
@@ -420,7 +420,7 @@ public class AddRealEstateFeed {
             .addAttributeValues(finalUrls)
             // Optionally include additional attributes.
             .addAttributeValues(imageUrl)
-            .addAttributeValues(finalUrl)
+            .addAttributeValues(contextualKeywords)
             .build();
 
     // Creates an operation to add the FeedItem. You can include multiple feed items in a single
