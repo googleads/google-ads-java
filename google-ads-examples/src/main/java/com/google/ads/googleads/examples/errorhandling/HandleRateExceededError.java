@@ -207,7 +207,9 @@ public class HandleRateExceededError {
               MutateAdGroupCriteriaResponse response =
                   adGroupCriterionServiceClient.mutateAdGroupCriteria(
                       Long.toString(customerId), operations, false, true);
-
+              // The result set will be empty while validateOnly is set to true in the
+              // mutateAdGroupCriteria request. Remove the validateOnly parameter or set to false
+              // to complete the request and return a result set.
               System.out.printf("Added %d ad group criteria:%n", response.getResultsCount());
               for (MutateAdGroupCriterionResult result : response.getResultsList()) {
                 System.out.println(result.getResourceName());
