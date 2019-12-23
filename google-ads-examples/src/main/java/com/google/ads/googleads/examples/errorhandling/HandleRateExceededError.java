@@ -209,12 +209,13 @@ public class HandleRateExceededError {
                       Long.toString(customerId), operations, false, true);
               System.out.printf("%d operations validated.%n", operations.size());
               // The result set will be empty while validateOnly is set to true in the
-              // mutateAdGroupCriteria request. Remove the validateOnly parameter or set to false
-              // to complete the request and return a result set.
-              System.out.printf("Added %d ad group criteria:%n", response.getResultsCount());
-              for (MutateAdGroupCriterionResult result : response.getResultsList()) {
-                System.out.println(result.getResourceName());
-              }
+              // mutateAdGroupCriteria request. Remove the validateOnly parameter (or set to false)
+              // and uncomment the code below to complete the request and return a result set.
+
+              //System.out.printf("Added %d ad group criteria:%n", response.getResultsCount());
+              //for (MutateAdGroupCriterionResult result : response.getResultsList()) {
+              //  System.out.println(result.getResourceName());
+              //}
               break;
             } catch (GoogleAdsException gae) {
               for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
