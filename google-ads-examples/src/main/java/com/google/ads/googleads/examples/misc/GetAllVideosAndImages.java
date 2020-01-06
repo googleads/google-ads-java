@@ -92,7 +92,7 @@ public class GetAllVideosAndImages {
           .setCustomerId(Long.toString(customerId))
           .setPageSize(PAGE_SIZE)
           .setQuery("SELECT media_file.id, media_file.name, media_file.type " +
-            "FROM media_file ORDER BY media_file.id")
+            "FROM media_file WHERE media_file.type in ('IMAGE', 'VIDEO') ORDER BY media_file.id")
           .build();
       // Issues the search request.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
