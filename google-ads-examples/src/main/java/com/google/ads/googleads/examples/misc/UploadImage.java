@@ -39,14 +39,14 @@ import java.util.Arrays;
 /** Uploads an image. */
 public class UploadImage {
 
-  private static class AddAdGroupParams extends CodeSampleParams {
+  private static class UploadImageParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
   }
 
   public static void main(String[] args) throws IOException {
-    AddAdGroupParams params = new AddAdGroupParams();
+    UploadImageParams params = new UploadImageParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
