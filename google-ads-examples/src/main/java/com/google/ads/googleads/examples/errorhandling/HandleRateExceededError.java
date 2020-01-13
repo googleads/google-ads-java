@@ -27,6 +27,7 @@ import com.google.ads.googleads.v2.errors.QuotaErrorEnum.QuotaError;
 import com.google.ads.googleads.v2.resources.AdGroupCriterion;
 import com.google.ads.googleads.v2.services.AdGroupCriterionOperation;
 import com.google.ads.googleads.v2.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v2.services.MutateAdGroupCriteriaRequest;
 import com.google.ads.googleads.v2.services.MutateAdGroupCriteriaResponse;
 import com.google.ads.googleads.v2.services.MutateAdGroupCriterionResult;
 import com.google.ads.googleads.v2.utils.ResourceNames;
@@ -203,15 +204,19 @@ public class HandleRateExceededError {
         try {
           while (retryCount < NUM_RETRIES) {
             try {
-              // Makes the validateOnly mutate request.
-              MutateAdGroupCriteriaResponse response =
-                  adGroupCriterionServiceClient.mutateAdGroupCriteria(
-                      Long.toString(customerId), operations, false, true);
+              // Creates the validateOnly request.
+              MutateAdGroupCriteriaRequest mutateAdGroupCriteriaRequest =
+                  MutateAdGroupCriteriaRequest.newBuilder()
+                  .setCustomerId(Long.toString(customerId))
+                  .addAllOperations(operations)
+                  .setValidateOnly(true)
+                  .build();
 
-              System.out.printf("Added %d ad group criteria:%n", response.getResultsCount());
-              for (MutateAdGroupCriterionResult result : response.getResultsList()) {
-                System.out.println(result.getResourceName());
-              }
+              // Makes the mutate request. The result set will be empty because validateOnly is set
+              // to true in the MutateAdGroupCriteriaRequest.
+              MutateAdGroupCriteriaResponse response =
+                  adGroupCriterionServiceClient.mutateAdGroupCriteria(mutateAdGroupCriteriaRequest);
+              System.out.printf("%d operations validated.%n", operations.size());
               break;
             } catch (GoogleAdsException gae) {
               for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
