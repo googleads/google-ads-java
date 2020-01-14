@@ -1,4 +1,4 @@
-4.4.0 - 2020-01-10
+4.4.0 - 2020-01-14
 ------------------
 - Switch to Gax 1.50.1 and gRPC 1.25.0.
 - Various updates to code examples.
