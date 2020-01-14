@@ -2,6 +2,7 @@
 ------------------
 - Switch to Gax 1.50.1 and gRPC 1.25.0.
 - Various updates to code examples.
+- Fix resource names utility for payment accounts.
 
 4.3.0 - 2019-12-16
 ------------------
