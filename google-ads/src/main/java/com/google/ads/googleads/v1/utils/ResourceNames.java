@@ -632,7 +632,7 @@ public class ResourceNames {
 
   /** Returns the payments account resource name for the specified components. */
   public static String paymentsAccount(
-      long customerId, long paymentsAccountId) {
+      long customerId, String paymentsAccountId) {
     return String.format(
         "customers/%s/paymentsAccounts/%s",
         String.valueOf(customerId), paymentsAccountId);
