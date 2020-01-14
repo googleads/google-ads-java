@@ -1,3 +1,8 @@
+4.4.0 - 2020-01-10
+------------------
+- Switch to Gax 1.50.1 and gRPC 1.25.0.
+- Various updates to code examples.
+
 4.3.0 - 2019-12-16
 ------------------
 - Added option to use generated API Catalog.
