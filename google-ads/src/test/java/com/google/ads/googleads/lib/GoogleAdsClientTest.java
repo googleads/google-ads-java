@@ -268,6 +268,24 @@ public class GoogleAdsClientTest {
     assertNull("invalid login-customer-id", client.getLoginCustomerId());
   }
 
+  /** Verifies that builder does not require enableGeneratedCatalog to be set explicitly. */
+  @Test
+  public void build_enableGeneratedCatalog_not_required() throws IOException {
+    Credentials credentials =
+        UserCredentials.newBuilder()
+            .setClientId(CLIENT_ID)
+            .setClientSecret(CLIENT_SECRET)
+            .setRefreshToken(REFRESH_TOKEN)
+            .build();
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .setCredentials(credentials)
+            .setDeveloperToken(DEVELOPER_TOKEN)
+            .setLoginCustomerId(LOGIN_CUSTOMER_ID)
+            .build();
+    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID, false);
+  }
+
   /** Verifies that loginCustomerId is not required. */
   @Test
   public void buildFromProperties_loginCustomerId_isOptional() {

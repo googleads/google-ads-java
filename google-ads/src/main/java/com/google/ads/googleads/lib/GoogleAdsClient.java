@@ -67,6 +67,9 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
   /** Returns a new builder for {@link GoogleAdsClient} with only default values set. */
   public static Builder newBuilder() {
     AutoValue_GoogleAdsClient.Builder clientBuilder = new AutoValue_GoogleAdsClient.Builder();
+    // Sets the default value for enableGeneratedCatalog.
+    clientBuilder.setEnableGeneratedCatalog(false);
+    // Constructs the channel provider.
     InstantiatingGrpcChannelProvider transportChannelProvider =
         InstantiatingGrpcChannelProvider.newBuilder()
             .setInterceptorProvider(
