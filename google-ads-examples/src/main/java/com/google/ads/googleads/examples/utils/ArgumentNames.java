@@ -25,6 +25,9 @@ public final class ArgumentNames {
   public static final String BID_MODIFIER = "--bidModifier";
   public static final String CRITERION_ID = "--criterionId";
   public static final String CAMPAIGN_BUDGET_ID = "--campaignBudgetId";
+  public static final String CONVERSION_ACTION_ID = "--conversionActionId";
+  public static final String CONVERSION_TIME = "--conversionTime";
+  public static final String CONVERSION_VALUE = "--conversionValue";
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
   public static final String CPC_BID_CEILING_MICRO_AMOUNT = "--cpcBidCeilingMicroAmount";
   public static final String ARTIFACT_NAME = "--artifactName";
@@ -32,6 +35,7 @@ public final class ArgumentNames {
   public static final String FEED_ITEM_ID = "--feedItemId";
   public static final String FLIGHT_PLACEHOLDER_FIELD = "--flightPlaceholderField";
   public static final String FEED_ITEM_IDS = "--feedItemIds";
+  public static final String GCL_ID = "--gclid";
   public static final String KEYWORD_PLAN_ID = "--keywordPlanId";
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String LANGUAGE_ID = "--languageId";
