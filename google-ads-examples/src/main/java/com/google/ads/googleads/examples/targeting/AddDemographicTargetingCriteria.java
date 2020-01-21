@@ -31,6 +31,7 @@ import com.google.ads.googleads.v2.services.MutateAdGroupCriteriaResponse;
 import com.google.ads.googleads.v2.services.MutateAdGroupCriterionResult;
 import com.google.ads.googleads.v2.utils.ResourceNames;
 import com.google.protobuf.BoolValue;
+import com.google.protobuf.DoubleValue;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -46,6 +47,9 @@ public class AddDemographicTargetingCriteria {
 
     @Parameter(names = ArgumentNames.AD_GROUP_ID, required = true)
     private Long adGroupId;
+
+    @Parameter(names = ArgumentNames.BID_MODIFIER, required = true)
+    private Double bidModifier;
   }
 
   public static void main(String[] args) {
@@ -56,6 +60,7 @@ public class AddDemographicTargetingCriteria {
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
+      params.bidModifier = Double.parseDouble("INSERT_BID_MODIFIER_HERE");
     }
 
     GoogleAdsClient googleAdsClient;
@@ -75,7 +80,8 @@ public class AddDemographicTargetingCriteria {
           .runExample(
               googleAdsClient,
               params.customerId,
-              params.adGroupId);
+              params.adGroupId,
+              params.bidModifier);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -97,23 +103,29 @@ public class AddDemographicTargetingCriteria {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID in which to create criterion.
    * @param adGroupId the ad group ID in which to create criterion.
+   * @param bidModifier the value of the bid modifier to add.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
+  private void runExample(
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long adGroupId,
+      double bidModifier) {
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
     List<AdGroupCriterionOperation> operations = new ArrayList<>();
 
-    // Creates a gender demographic criteria.
+    // Creates a gender demographic criterion.
     AdGroupCriterion genderAdGroupCriterionOperation = AdGroupCriterion.newBuilder()
         .setAdGroup(StringValue.of(adGroupResourceName))
         .setGender(GenderInfo.newBuilder().setType(GenderType.MALE).build())
+        .setBidModifier(DoubleValue.of(bidModifier))
         .build();
 
-    // Creates a age range negative demographic criteria.
+    // Creates an age range negative demographic criterion.
     AdGroupCriterion ageRangeNegativeAdGroupCriterionOperation = AdGroupCriterion.newBuilder()
         .setAdGroup(StringValue.of(adGroupResourceName))
         .setNegative(BoolValue.of(true))
-        .setAgeRange(AgeRangeInfo.newBuilder().setType(AgeRangeType.AGE_RANGE_UNDETERMINED).build())
+        .setAgeRange(AgeRangeInfo.newBuilder().setType(AgeRangeType.AGE_RANGE_18_24).build())
         .build();
 
     // Creates and adds the operations.
