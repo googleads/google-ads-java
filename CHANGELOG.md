@@ -1,3 +1,8 @@
+4.4.1 - 2020-01-22
+------------------
+- Set a default value for `enableGeneratedCatalog` property,
+  see #224.
+
 4.4.0 - 2020-01-14
 ------------------
 - Switch to Gax 1.50.1 and gRPC 1.25.0.
