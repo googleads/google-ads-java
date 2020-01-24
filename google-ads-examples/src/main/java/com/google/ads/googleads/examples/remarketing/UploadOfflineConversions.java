@@ -45,6 +45,9 @@ public class UploadOfflineConversions {
     @Parameter(names = ArgumentNames.GCL_ID, required = true)
     private String gclid;
 
+    // The date time at which the conversion occurred. Must be after the click time.
+    // The timezone must be specified.
+    // The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
     @Parameter(names = ArgumentNames.CONVERSION_TIME, required = true)
     private String conversionTime;
 
@@ -138,7 +141,9 @@ public class UploadOfflineConversions {
           .uploadClickConversions(
               Long.toString(customerId),
               ImmutableList.of(clickConversion),
+              // Enables partial failure (must be true).
               true,
+              // Disables validate only.
               false);
 
       // Prints any partial errors returned.
