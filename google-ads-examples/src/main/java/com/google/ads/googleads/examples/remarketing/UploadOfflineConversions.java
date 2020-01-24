@@ -45,10 +45,10 @@ public class UploadOfflineConversions {
     @Parameter(names = ArgumentNames.GCL_ID, required = true)
     private String gclid;
 
-    // The date time at which the conversion occurred. Must be after the click time.
-    // The timezone must be specified.
-    // The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
-    @Parameter(names = ArgumentNames.CONVERSION_TIME, required = true)
+    @Parameter(names = ArgumentNames.CONVERSION_TIME, required = true,
+        description = "The date time at which the conversion occurred. "
+            + "Must be after the click time. "
+            + "The format is  \"yyyy-mm-dd hh:mm:ss+|-hh:mm\", e.g. “2019-01-01 12:32:45-08:00”.")
     private String conversionTime;
 
     @Parameter(names = ArgumentNames.CONVERSION_VALUE, required = true)
