@@ -91,7 +91,6 @@ public class UploadImageAsset {
    * @throws IOException if there are errors related to image processing.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) throws IOException {
-
     byte[] imageData = ByteStreams.toByteArray(new URL(IMAGE_URL).openStream());
 
     // Create the image asset.
@@ -119,12 +118,9 @@ public class UploadImageAsset {
       // Issues a mutate request to add the asset.
       MutateAssetsResponse response =
           assetServiceClient.mutateAssets(Long.toString(customerId), ImmutableList.of(operation));
-      if (!response.getResultsList().isEmpty()) {
-        System.out.printf("The image asset with resource name '%s' was created.%n",
-            response.getResults(0).getResourceName());
-      } else {
-        System.out.print("No image asset was created.%n");
-      }
+      // Prints the result.
+      System.out.printf("The image asset with resource name '%s' was created.%n",
+          response.getResults(0).getResourceName());
     }
   }
 }
