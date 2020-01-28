@@ -47,8 +47,8 @@ public class UploadOfflineConversions {
 
     @Parameter(names = ArgumentNames.CONVERSION_TIME, required = true,
         description = "The date time at which the conversion occurred. "
-            + "Must be after the click time. "
-            + "The format is  \"yyyy-mm-dd hh:mm:ss+|-hh:mm\", e.g. “2019-01-01 12:32:45-08:00”.")
+            + "Must be after the click time, and must include the time zone offset. "
+            + "The format is  'yyyy-mm-dd hh:mm:ss+|-hh:mm', e.g. '2019-01-01 12:32:45-08:00'.")
     private String conversionTime;
 
     @Parameter(names = ArgumentNames.CONVERSION_VALUE, required = true)
