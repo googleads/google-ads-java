@@ -42,7 +42,7 @@ public class UploadOfflineConversions {
     @Parameter(names = ArgumentNames.CONVERSION_ACTION_ID, required = true)
     private long conversionActionId;
 
-    @Parameter(names = ArgumentNames.GCL_ID, required = true)
+    @Parameter(names = ArgumentNames.GCLID, required = true)
     private String gclid;
 
     @Parameter(names = ArgumentNames.CONVERSION_TIME, required = true,
