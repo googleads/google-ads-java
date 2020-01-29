@@ -39,6 +39,7 @@ import com.google.ads.googleads.v2.services.ExtensionFeedItemServiceClient;
 import com.google.ads.googleads.v2.services.MutateCustomerExtensionSettingsResponse;
 import com.google.ads.googleads.v2.services.MutateExtensionFeedItemsResponse;
 import com.google.ads.googleads.v2.utils.ResourceNames;
+import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Int32Value;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
@@ -47,17 +48,17 @@ import java.io.IOException;
 import java.util.Arrays;
 
 /**
- * This example adds a price extension and associates it with an account. Campaign targeting is also
- * set using the specified campaign ID. To get campaigns, run GetCampaigns.
+ * Adds a price extension and associates it with an account. Campaign targeting is also set using
+ * the specified campaign ID. To get campaigns, run GetCampaigns.
  */
 public class AddPrices {
 
   public static class AddPricesParams extends CodeSampleParams {
     @Parameter(names = ArgumentNames.CUSTOMER_ID)
-    public long customerId;
+    private long customerId;
 
     @Parameter(names = ArgumentNames.CAMPAIGN_ID)
-    public long campaignId;
+    private long campaignId;
   }
 
   public static void main(String[] args) {
@@ -99,7 +100,12 @@ public class AddPrices {
     }
   }
 
-  /** Runs the example. */
+  /**
+   * Runs the example.
+   *
+   * @param googleAdsClient the client to use for API calls.
+   * @param customerId the customer ID for which to add extensions.
+   */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Creates an extension feed item as price.
     String extensionFeedItemResource =
@@ -113,27 +119,36 @@ public class AddPrices {
             .addExtensionFeedItems(StringValue.of(extensionFeedItemResource))
             .build();
 
-    // Issues a mutate request to add the customer extension setting and print its information.
+    // Creates an operation to add the extension setting.
     CustomerExtensionSettingOperation operation =
         CustomerExtensionSettingOperation.newBuilder().setCreate(setting).build();
+
+    // Issues a mutate request to add the customer extension setting and prints its information.
     try (CustomerExtensionSettingServiceClient client =
         googleAdsClient.getLatestVersion().createCustomerExtensionSettingServiceClient()) {
       MutateCustomerExtensionSettingsResponse response =
           client.mutateCustomerExtensionSettings(
-              String.valueOf(customerId), Arrays.asList(operation));
-      System.out.println(
-          "Created customer extension setting with resource name: "
-              + response.getResults(0).getResourceName());
+              String.valueOf(customerId), ImmutableList.of(operation));
+      System.out.printf(
+          "Created customer extension setting with resource name: %s",
+          response.getResults(0).getResourceName());
     }
   }
 
-  /** Creates an extension feed item for price extension. */
+  /**
+   * Creates an extension feed item for price extension.
+   *
+   * @param googleAdsClient the client to use for API calls.
+   * @param customerId the customer ID for which to add extensions.
+   * @return the resource name of the newly created extension feed item.
+   */
   private String createExtensionFeedItem(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Creates the price extension feed item.
     PriceFeedItem priceFeedItem =
         PriceFeedItem.newBuilder()
             .setType(PriceExtensionType.SERVICES)
+            // Optional: set a qualifier text to show with the price extension.
             .setPriceQualifier(PriceExtensionPriceQualifier.FROM)
             .setTrackingUrlTemplate(StringValue.of("http://tracker.example.com/?u={lpurl}"))
             .setLanguageCode(StringValue.of("en"))
@@ -179,20 +194,31 @@ public class AddPrices {
                 createAdSchedule(DayOfWeek.SATURDAY, 10, MinuteOfHour.ZERO, 22, MinuteOfHour.ZERO))
             .build();
 
-    // Issues a mutate request to add the extension feed item and print its information.
+    // Creates an operation to add the feed item.
     ExtensionFeedItemOperation operation =
         ExtensionFeedItemOperation.newBuilder().setCreate(extensionFeedItem).build();
+
+    // Issues a mutate request to add the extension feed item and prints its information.
     try (ExtensionFeedItemServiceClient client =
         googleAdsClient.getLatestVersion().createExtensionFeedItemServiceClient()) {
       MutateExtensionFeedItemsResponse response =
-          client.mutateExtensionFeedItems(String.valueOf(customerId), Arrays.asList(operation));
+          client.mutateExtensionFeedItems(String.valueOf(customerId), ImmutableList.of(operation));
       String resourceName = response.getResultsList().get(0).getResourceName();
-      System.out.println("Created extension feed item with resource name: " + resourceName);
+      System.out.printf("Created extension feed item with resource name: %s", resourceName);
       return resourceName;
     }
   }
 
-  /** Creates a new ad schedule info with the specified parameters. */
+  /**
+   * Creates a new ad schedule info with the specified parameters.
+   *
+   * @param dayOfWeek the day of week for which the schedule is enabled.
+   * @param startHour the hour at which the schedule takes effect.
+   * @param startMinute the minute past the hour at which the schedule takes effect.
+   * @param endHour the hour at which the schedule stops running.
+   * @param endMinute the minute past the hour at which the schedule stops running.
+   * @return a newly created ad schedule object.
+   */
   private AdScheduleInfo createAdSchedule(
       DayOfWeek dayOfWeek,
       int startHour,
@@ -208,7 +234,19 @@ public class AddPrices {
         .build();
   }
 
-  /** Creates a new price offer with the specified parameters. */
+  /**
+   * Creates a new price offer with the specified parameters.
+   *
+   * @param header the headline for the price extension.
+   * @param description a detailed description line that may show on the price extension.
+   * @param priceInMicros the price to display, measured in micros (e.g. 1_000_000 micros = 1 USD).
+   * @param currencyCode the currency code representing the unit of currency.
+   * @param unit optionally set a unit describing the quantity obtained for the price.
+   * @param finalUrl the final URL to which a click on the price extension drives traffic.
+   * @param finalMobileUrl the final URL to which mobile clicks on the price extension drives
+   *     traffic.
+   * @return a newly created price offer object.
+   */
   private PriceOffer createPriceOffer(
       String header,
       String description,
