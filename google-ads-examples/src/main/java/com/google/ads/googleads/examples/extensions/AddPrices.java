@@ -45,7 +45,6 @@ import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Arrays;
 
 /**
  * Adds a price extension and associates it with an account. Campaign targeting is also set using
@@ -108,20 +107,20 @@ public class AddPrices {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     // Creates an extension feed item as price.
-    String extensionFeedItemResource =
+    String extensionFeedItemResourceName =
         createExtensionFeedItem(googleAdsClient, customerId, campaignId);
 
     // Creates a customer extension setting using the previously created extension
     // feed item. This associates the price extension to your account.
-    CustomerExtensionSetting setting =
+    CustomerExtensionSetting customerExtensionSetting =
         CustomerExtensionSetting.newBuilder()
             .setExtensionType(ExtensionType.PRICE)
-            .addExtensionFeedItems(StringValue.of(extensionFeedItemResource))
+            .addExtensionFeedItems(StringValue.of(extensionFeedItemResourceName))
             .build();
 
     // Creates an operation to add the extension setting.
     CustomerExtensionSettingOperation operation =
-        CustomerExtensionSettingOperation.newBuilder().setCreate(setting).build();
+        CustomerExtensionSettingOperation.newBuilder().setCreate(customerExtensionSetting).build();
 
     // Issues a mutate request to add the customer extension setting and prints its information.
     try (CustomerExtensionSettingServiceClient client =
@@ -148,7 +147,7 @@ public class AddPrices {
     PriceFeedItem priceFeedItem =
         PriceFeedItem.newBuilder()
             .setType(PriceExtensionType.SERVICES)
-            // Optional: set a qualifier text to show with the price extension.
+            // Optional: sets a qualifier text to show with the price extension.
             .setPriceQualifier(PriceExtensionPriceQualifier.FROM)
             .setTrackingUrlTemplate(StringValue.of("http://tracker.example.com/?u={lpurl}"))
             .setLanguageCode(StringValue.of("en"))
