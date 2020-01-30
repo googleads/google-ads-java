@@ -34,10 +34,8 @@ import com.google.protobuf.FloatValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** Sets a bid modifier for the mobile platform on given campaign. */
+/** Updates a campaign criterion with a new bid modifier. */
 public class UpdateCampaignCriterionBidModifier {
-
-  private static final float BID_MODIFIER = 1.5f;
 
   private static class UpdateCampaignCriterionBidModifierParams extends CodeSampleParams {
 
@@ -49,6 +47,10 @@ public class UpdateCampaignCriterionBidModifier {
 
     @Parameter(names = ArgumentNames.CRITERION_ID, required = true)
     private Long criterionId;
+
+    /** Specify the bid modifier value here or the default specified below will be used. */
+    @Parameter(names = ArgumentNames.BID_MODIFIER)
+    private Float bidModifier = 1.5f;
   }
 
   public static void main(String[] args) throws IOException {
@@ -61,6 +63,9 @@ public class UpdateCampaignCriterionBidModifier {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.campaignId = Long.parseLong("INSERT_CAMPAIGN_ID_HERE");
       params.criterionId = Long.parseLong("INSERT_CRITERION_ID_HERE");
+      // Optional: To use a different bid modifier value from the default (1.5f), uncomment
+      // the line below and insert the desired bid modifier value.
+      // params.bidModifier = Float.parseFloat("INSERT_BID_MODIFIER_VALUE_HERE");
     }
 
     GoogleAdsClient googleAdsClient;
@@ -80,7 +85,8 @@ public class UpdateCampaignCriterionBidModifier {
           googleAdsClient,
           params.customerId,
           params.campaignId,
-          params.criterionId);
+          params.criterionId,
+          params.bidModifier);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -103,13 +109,15 @@ public class UpdateCampaignCriterionBidModifier {
    * @param customerId the client customer ID.
    * @param campaignId the campaign ID.
    * @param criterionId the ID of the criterion to be updated.
+   * @param bidModifier the bid modifier for the campaign criterion.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
       long campaignId,
-      long criterionId) {
+      long criterionId,
+      float bidModifier) {
     // Creates the criterion resource name.
     String criterionResourceName =
         ResourceNames.campaignCriterion(customerId, campaignId, criterionId);
@@ -117,7 +125,7 @@ public class UpdateCampaignCriterionBidModifier {
     // Creates the CampaignCriterion.
     CampaignCriterion campaignCriterion = CampaignCriterion.newBuilder()
         .setResourceName(criterionResourceName)
-        .setBidModifier(FloatValue.of(BID_MODIFIER))
+        .setBidModifier(FloatValue.of(bidModifier))
         .setDevice(DeviceInfo.newBuilder().setType(Device.MOBILE).build())
         .build();
 
