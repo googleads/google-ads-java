@@ -34,7 +34,7 @@ import java.io.IOException;
 
 /** Imports offline conversion values for specific clicks to an account. */
 public class UploadOfflineConversion {
-  private static class UploadOfflineConversionsParams extends CodeSampleParams {
+  private static class UploadOfflineConversionParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private long customerId;
@@ -56,7 +56,7 @@ public class UploadOfflineConversion {
   }
 
   public static void main(String[] args) {
-    UploadOfflineConversionsParams params = new UploadOfflineConversionsParams();
+    UploadOfflineConversionParams params = new UploadOfflineConversionParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
