@@ -33,8 +33,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /** Imports offline conversion values for specific clicks to an account. */
-public class UploadOfflineConversions {
-  private static class UploadOfflineConversionsParams extends CodeSampleParams {
+public class UploadOfflineConversion {
+  private static class UploadOfflineConversionParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private long customerId;
@@ -56,7 +56,7 @@ public class UploadOfflineConversions {
   }
 
   public static void main(String[] args) {
-    UploadOfflineConversionsParams params = new UploadOfflineConversionsParams();
+    UploadOfflineConversionParams params = new UploadOfflineConversionParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -81,7 +81,7 @@ public class UploadOfflineConversions {
     }
 
     try {
-      new UploadOfflineConversions().runExample(
+      new UploadOfflineConversion().runExample(
           googleAdsClient,
           params.customerId,
           params.conversionActionId,
