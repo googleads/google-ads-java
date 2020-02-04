@@ -1,4 +1,4 @@
-// Copyright 2018 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,28 +19,15 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v2.common.TagSnippet;
-import com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory;
-import com.google.ads.googleads.v2.enums.ConversionActionStatusEnum.ConversionActionStatus;
-import com.google.ads.googleads.v2.enums.ConversionActionTypeEnum.ConversionActionType;
 import com.google.ads.googleads.v2.errors.GoogleAdsError;
 import com.google.ads.googleads.v2.errors.GoogleAdsException;
-import com.google.ads.googleads.v2.resources.ConversionAction;
-import com.google.ads.googleads.v2.resources.ConversionAction.ValueSettings;
 import com.google.ads.googleads.v2.resources.RemarketingAction;
-import com.google.ads.googleads.v2.services.ConversionActionOperation;
-import com.google.ads.googleads.v2.services.ConversionActionServiceClient;
 import com.google.ads.googleads.v2.services.GoogleAdsRow;
 import com.google.ads.googleads.v2.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v2.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v2.services.MutateConversionActionResult;
-import com.google.ads.googleads.v2.services.MutateConversionActionsResponse;
-import com.google.ads.googleads.v2.services.MutateRemarketingActionResult;
 import com.google.ads.googleads.v2.services.MutateRemarketingActionsResponse;
 import com.google.ads.googleads.v2.services.RemarketingActionOperation;
 import com.google.ads.googleads.v2.services.RemarketingActionServiceClient;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.DoubleValue;
-import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
