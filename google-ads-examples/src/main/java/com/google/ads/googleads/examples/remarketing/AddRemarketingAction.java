@@ -146,7 +146,7 @@ public class AddRemarketingAction {
             tagSnippet.getPageFormat(),
             tagSnippet.getGlobalSiteTag().getValue());
         System.out.printf(
-            "and the following event snippet:%n%s%n", tagSnippet.getEventSnippet().getValue());
+            "and the following event snippet:%n%s%n%n", tagSnippet.getEventSnippet().getValue());
       }
     }
   }
