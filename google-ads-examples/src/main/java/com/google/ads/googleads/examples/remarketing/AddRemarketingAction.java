@@ -115,7 +115,8 @@ public class AddRemarketingAction {
     // tag snippets.
     String query =
         String.format(
-            "SELECT remarketing_action.id, remarketing_action.name,"
+            "SELECT remarketing_action.id,"
+                + " remarketing_action.name,"
                 + " remarketing_action.tag_snippets "
                 + "FROM remarketing_action "
                 + "WHERE remarketing_action.resource_name = '%s'",
