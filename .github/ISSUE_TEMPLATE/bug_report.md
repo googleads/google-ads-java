@@ -9,14 +9,14 @@ assignees: ''
 
 <!--
 This form is for bug reports for this library only.
-For general, language-agnostic questions and troubleshooting, please ask/look for answers [here](INSERT LINK TO FORUM).
+For general, language-agnostic questions and troubleshooting, please ask/look for answers [here](https://groups.google.com/g/adwords-api).
 
 Please check existing issues to see if your bug has already been reported before creating a new issue. We encourage you to add any relevant information to the existing issue if one already exists.
 -->
 
 **Which version of the client library are you using?**
 
-**Which version of [LANGUAGE] are you using?**
+**Which version of Java are you using?**
 
 **Which operating system (Linux, Windows, ...) and version?**
 
