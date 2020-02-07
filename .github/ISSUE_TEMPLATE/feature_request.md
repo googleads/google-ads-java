@@ -9,7 +9,7 @@ assignees: ''
 
 <!--
 This form is for feature requests for this library only.
-For general, language-agnostic questions and troubleshooting, please ask/look for answers [here](INSERT LINK TO FORUM).
+For general, language-agnostic questions and troubleshooting, please ask/look for answers [here](https://groups.google.com/g/adwords-api).
 
 Please check existing issues to see if your feature request has already been identified before creating a new issue. We encourage you to add any relevant information to the existing issue if one already exists.
 -->
