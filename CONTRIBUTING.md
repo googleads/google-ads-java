@@ -8,7 +8,6 @@ us provide a world-class developer experience. We value your contributions, no m
 Even small documentation fixes can go a long way in helping other developers use our API. Before
 contributing, please review the guidelines and best practices below.
 
-* [Core API vs. Language Library](#core-api-vs-language-library)
 *  [Providing Feedback](#providing-feedback)
     *  [Feature Requests](#feature-requests)
     *  [Bug Reports](#bug-reports)
@@ -21,13 +20,11 @@ contributing, please review the guidelines and best practices below.
     *  [Testing](#testing)
  * [Community Guidelines](#community-guidelines)
 
-## Core API vs. Language Library
+## Providing Feedback
 
 This repository is specifically for the Google Ads API Client Library for Java. If you have feedback
-related to the core API, please submit it
-[here](https://developers.google.com/google-ads/api/support).
-
-## Providing Feedback
+related to the Google Ads API, please submit it by clicking the "Send feedback" button in the top right
+corner of [this page](https://developers.google.com/google-ads/api/support).
 
 ### Feature Requests
 
