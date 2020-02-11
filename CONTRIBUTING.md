@@ -23,10 +23,13 @@ contributing, please review the guidelines and best practices below.
 ## Providing Feedback
 
 This repository is specifically for the Google Ads API Client Library for Java. If you have feedback
-related to the Google Ads API, please submit it by clicking the "Send feedback" button in the top right
+related to the Google Ads API, please submit it by clicking the **Send feedback** button in the top right
 corner of [this page](https://developers.google.com/google-ads/api/support).
 
 ### Feature Requests
+
+We appreciate your feedback and encourage you to submit feature requests that
+will help improve this library.
 
 If you see that someone has already created an issue that describes your proposed feature request,
 please upvote their idea to avoid duplicates and help our team prioritize feature requests.
@@ -39,6 +42,9 @@ the [Feature Request](https://github.com/googleads/google-ads-java/issues/new?as
 template.
 
 ### Bug Reports
+
+We appreciate your feedback and encourage you to report bugs that will help
+improve this library.
 
 If you see that someone has already created a bug that describes your bug, please upvote their
 issue to avoid duplicates and help our team prioritize feature requests. In addition, if you
