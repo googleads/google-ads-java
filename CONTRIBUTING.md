@@ -30,7 +30,7 @@ corner of [this page](https://developers.google.com/google-ads/api/support).
 
 If you see that someone has already created an issue that describes your proposed feature request,
 please upvote their idea to avoid duplicates and help our team prioritize feature requests.
-Github even provides a similar issues search as you create new issues, which can help in this
+Github provides a similar issues search as you create new issues, which can help in this
 effort. In addition, if you have commentary or can build upon someone else’s idea, feel free to
 do so by adding a comment.
 
@@ -118,4 +118,4 @@ your new feature or bug fix.
 ## Community Guidelines
 
 This project follows
-[Google's Open Source Community Guidelines](https://opensource.google/conduct/). 
+[Google's Open Source Community Guidelines](https://opensource.google/conduct/).
