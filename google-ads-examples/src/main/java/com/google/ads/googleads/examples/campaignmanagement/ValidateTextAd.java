@@ -107,6 +107,7 @@ public class ValidateTextAd {
         ExpandedTextAdInfo.newBuilder()
             .setDescription(StringValue.of("Luxury Cruise to Mars"))
             .setHeadlinePart1(StringValue.of("Visit the Red Planet in style"))
+            // Adds a headline that will trigger a policy violation to demonstrate error handling.
             .setHeadlinePart2(StringValue.of("Low-gravity fun for everyone!!"))
             .build();
 
