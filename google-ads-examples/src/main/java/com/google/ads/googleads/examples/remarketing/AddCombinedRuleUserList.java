@@ -40,7 +40,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Creates a rule-based user list for people that have visited two different sections of a website.
+ * Creates a rule-based user list for users who have visited two different sections of a website.
  */
 public class AddCombinedRuleUserList {
 
@@ -98,7 +98,8 @@ public class AddCombinedRuleUserList {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     String urlString = "url__";
 
-    // Creates a rule targeting any user that visited a url that equals 'example.com/example1'.
+    // Creates a rule targeting any user that visited a url that equals
+    // 'http://example.com/example1'.
     UserListRuleItemInfo rule1 =
         UserListRuleItemInfo.newBuilder()
             // Uses a built-in parameter to create a domain URL rule.
@@ -106,11 +107,12 @@ public class AddCombinedRuleUserList {
             .setStringRuleItem(
                 UserListStringRuleItemInfo.newBuilder()
                     .setOperator(UserListStringRuleItemOperator.EQUALS)
-                    .setValue(StringValue.of("example.com/example1"))
+                    .setValue(StringValue.of("http://example.com/example1"))
                     .build())
             .build();
 
-    // Creates a rule targeting any user that visited a url that equals 'example.com/example2'.
+    // Creates a rule targeting any user that visited a url that equals
+    // 'http://example.com/example2'.
     UserListRuleItemInfo rule2 =
         UserListRuleItemInfo.newBuilder()
             // Uses a built-in parameter to create a domain URL rule.
@@ -118,7 +120,7 @@ public class AddCombinedRuleUserList {
             .setStringRuleItem(
                 UserListStringRuleItemInfo.newBuilder()
                     .setOperator(UserListStringRuleItemOperator.EQUALS)
-                    .setValue(StringValue.of("example.com/example2"))
+                    .setValue(StringValue.of("http://example.com/example2"))
                     .build())
             .build();
 
@@ -147,11 +149,15 @@ public class AddCombinedRuleUserList {
             .setExpressionRuleUserList(expressionRuleUserListInfo)
             .build();
 
-    // Creates the user list.
+    // Creates a user list.
     UserList userList =
         UserList.newBuilder()
-            .setName(StringValue.of("All visitors to example.com" + System.currentTimeMillis()))
-            .setDescription(StringValue.of("Any visitor to any page of example.com"))
+            .setName(
+                StringValue.of(
+                    "All visitors to example.com/example1 AND example.com/example2 #"
+                        + System.currentTimeMillis()))
+            .setDescription(
+                StringValue.of("Visitors of both example.com/example1 AND example.com/example2"))
             .setMembershipStatus(UserListMembershipStatus.OPEN)
             .setMembershipLifeSpan(Int64Value.of(365))
             .setRuleBasedUserList(ruleBasedUserListInfo)
