@@ -342,7 +342,7 @@ public class AddAppCampaign {
     AdGroup adGroup =
         AdGroup.newBuilder()
             .setName(StringValue.of("Earth to Mars cruises #" + System.currentTimeMillis()))
-            .setStatus(AdGroupStatus.PAUSED)
+            .setStatus(AdGroupStatus.ENABLED)
             .setCampaign(StringValue.of(campaignResourceName))
             .build();
 
