@@ -20,6 +20,7 @@ import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v2.common.LanguageInfo;
 import com.google.ads.googleads.v2.common.LocationInfo;
+import com.google.ads.googleads.v2.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
 import com.google.ads.googleads.v2.enums.AdGroupStatusEnum.AdGroupStatus;
 import com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType;
 import com.google.ads.googleads.v2.enums.CriterionTypeEnum.CriterionType;
@@ -205,6 +206,7 @@ public class AddAppCampaign {
                 AppCampaignSetting.newBuilder()
                     .setAppId(StringValue.of("com.google.android.apps.adwords"))
                     .setAppStore(AppCampaignAppStore.GOOGLE_APP_STORE)
+                    // Optional: Optimize this campaign for getting new users for your app.
                     .setBiddingStrategyGoalType(
                         AppCampaignBiddingStrategyGoalType.OPTIMIZE_INSTALLS_TARGET_INSTALL_COST)
                     .build())
@@ -240,6 +242,8 @@ public class AddAppCampaign {
 
   /**
    * Sets campaign targeting criteria for a given campaign.
+   *
+   * Both location and language targeting are illustrated.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the customer ID.
@@ -375,6 +379,7 @@ public class AddAppCampaign {
     // Creates an ad group ad.
     AdGroupAd adGroupAd =
         AdGroupAd.newBuilder()
+            .setStatus(AdGroupAdStatus.ENABLED)
             .setAdGroup(StringValue.of(adGroupResourceName))
             .setAd(
                 // ad_data is a 'oneof' message so setting app_ad
@@ -420,7 +425,7 @@ public class AddAppCampaign {
           adGroupAdServiceClient.mutateAdGroupAds(
               Long.toString(customerId), ImmutableList.of(operation));
       System.out.printf(
-          "Create an ad group with ad with resource name '%s'%n",
+          "Created an ad group ad with ad with resource name '%s'%n",
           response.getResults(0).getResourceName());
     }
   }
