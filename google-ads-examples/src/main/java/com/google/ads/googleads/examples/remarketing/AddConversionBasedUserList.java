@@ -95,15 +95,16 @@ public class AddConversionBasedUserList {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the client customer Id.
-   * @param conversionActionIds the Ids of the conversion actions for the basic user list.
+   * @param customerId the client customer ID.
+   * @param conversionActionIds the IDs of the conversion actions for the basic user list.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, List<Long> conversionActionIds) {
     List<UserListActionInfo> userListActionInfoList = new ArrayList<>();
     for (long conversionActionId : conversionActionIds) {
-      // Creates the UserListActionInfo object for a given conversion action.
+      // Creates the UserListActionInfo object for a given conversion action. This specifies the
+      // conversion action that, when triggered, will cause a user to be added to a UserList.
       UserListActionInfo userListActionInfo =
           UserListActionInfo.newBuilder()
               .setConversionAction(
