@@ -69,7 +69,7 @@ import java.util.Arrays;
 import java.util.List;
 import org.joda.time.DateTime;
 
-/** Adds a new App Campaign */
+/** Adds a new App Campaign. */
 public class AddAppCampaign {
   private static class AddAppCampaignParams extends CodeSampleParams {
 
@@ -144,7 +144,7 @@ public class AddAppCampaign {
     CampaignBudget campaignBudget =
         CampaignBudget.newBuilder()
             .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
-            .setAmountMicros(Int64Value.of(50000000))
+            .setAmountMicros(Int64Value.of(50_000_000))
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             // An App campaign cannot use a shared campaign budget.
             // explicitly_shared must be set to false.
@@ -162,7 +162,7 @@ public class AddAppCampaign {
       MutateCampaignBudgetsResponse response =
           campaignBudgetServiceClient.mutateCampaignBudgets(
               Long.toString(customerId), ImmutableList.of(operation));
-      // Prints and returns the response.
+      // Prints and returns the resource name.
       String budgetResourceName = response.getResults(0).getResourceName();
       System.out.printf("Created campaign budget with resource name '%s'.%n", budgetResourceName);
       return budgetResourceName;
@@ -243,7 +243,7 @@ public class AddAppCampaign {
   /**
    * Sets campaign targeting criteria for a given campaign.
    *
-   * Both location and language targeting are illustrated.
+   * <p>Both location and language targeting are illustrated.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the customer ID.
@@ -258,12 +258,11 @@ public class AddAppCampaign {
     // GeoTargetConstantService.suggestGeoTargetConstants() and directly
     // apply GeoTargetConstant.resource_name here. An example can be found
     // in GetGeoTargetConstantByNames.java.
-    ArrayList<Integer> locationIds =
-        new ArrayList<>(
-            Arrays.asList(
-                21137, // California
-                2484 // Mexico
-                ));
+    List<Integer> locationIds =
+        Arrays.asList(
+            21137, // California
+            2484 // Mexico
+            );
 
     for (int locationId : locationIds) {
       // Creates a campaign criterion.
@@ -286,12 +285,11 @@ public class AddAppCampaign {
     }
 
     // Creates the language campaign criteria.
-    ArrayList<Integer> languageIds =
-        new ArrayList<>(
-            Arrays.asList(
-                1000, // English
-                1003 // Spanish
-                ));
+    List<Integer> languageIds =
+        Arrays.asList(
+            1000, // English
+            1003 // Spanish
+            );
 
     for (int languageId : languageIds) {
       // Creates a campaign criterion.
