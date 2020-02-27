@@ -106,6 +106,10 @@ public class SetupAdvancedRemarketing {
     UserListRuleItemInfo checkoutRule =
         UserListRuleItemInfo.newBuilder()
             // The rule variable name must match a corresponding key name fired from a pixel.
+            // To learn more about setting up remarketing tags, visit
+            // https://support.google.com/google-ads/answer/2476688?hl=en.
+            // To learn more about remarketing events and parameters, visit
+            // https://support.google.com/google-ads/answer/7305793?hl=en.
             .setName(StringValue.of("ecomm_pagetype"))
             .setStringRuleItem(
                 UserListStringRuleItemInfo.newBuilder()
@@ -135,6 +139,8 @@ public class SetupAdvancedRemarketing {
             .build();
 
     // Creates the RuleItem for checkout start date.
+    // The tags and keys used below must have been in place in the past for the date range specified
+    // in the rules.
     UserListRuleItemInfo startDateRule =
         UserListRuleItemInfo.newBuilder()
             // The rule variable name must match a corresponding key name fired from a pixel.
