@@ -99,7 +99,7 @@ public class AddExpressionRuleUserList {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     String urlString = "url__";
 
-    // Creates a rule targeting any user that visited a url that contains example.com/section1'.
+    // Creates a rule targeting any user that visited a url that contains 'example.com/section1'.
     UserListRuleItemInfo rule1 =
         UserListRuleItemInfo.newBuilder()
             // Uses a built-in parameter to create a domain URL rule.
@@ -111,7 +111,7 @@ public class AddExpressionRuleUserList {
                     .build())
             .build();
 
-    // Creates a rule targeting any user that visited a url that contains example.com/section2'.
+    // Creates a rule targeting any user that visited a url that contains 'example.com/section2'.
     UserListRuleItemInfo rule2 =
         UserListRuleItemInfo.newBuilder()
             // Uses a built-in parameter to create a domain URL rule.
