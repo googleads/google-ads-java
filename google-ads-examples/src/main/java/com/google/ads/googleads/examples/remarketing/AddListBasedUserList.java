@@ -127,7 +127,7 @@ public class AddListBasedUserList {
         UserList.newBuilder()
             .setName(
                 StringValue.of(
-                    "My combination list of Mars or Venus customers #"
+                    "My combination list of other user lists #"
                         + System.currentTimeMillis()))
             .setLogicalUserList(
                 LogicalUserListInfo.newBuilder().addRules(userListLogicalRuleInfo).build())
