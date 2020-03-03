@@ -41,9 +41,9 @@ import java.util.List;
  * Creates a combination user list containing users that are present on any one of the provided user
  * lists.
  */
-public class AddListBasedUserList {
+public class AddUnionUserList {
 
-  private static class AddListBasedUserListParams extends CodeSampleParams {
+  private static class AddUnionUserListParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -53,7 +53,7 @@ public class AddListBasedUserList {
   }
 
   public static void main(String[] args) {
-    AddListBasedUserListParams params = new AddListBasedUserListParams();
+    AddUnionUserListParams params = new AddUnionUserListParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -78,7 +78,7 @@ public class AddListBasedUserList {
     }
 
     try {
-      new AddListBasedUserList().runExample(googleAdsClient, params.customerId, params.userListIds);
+      new AddUnionUserList().runExample(googleAdsClient, params.customerId, params.userListIds);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -104,7 +104,8 @@ public class AddListBasedUserList {
    */
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, List<Long> userListIds) {
-    // Creates the rule operand info targeting the provided list IDs.
+    // Adds each of the provided list IDs to a list of rule operands specifying which lists the
+    // operator should target.
     List<LogicalUserListOperandInfo> logicalUserListOperandInfoList = new ArrayList<>();
     for (long userListId : userListIds) {
       String userListResourceName = ResourceNames.userList(customerId, userListId);
@@ -118,6 +119,10 @@ public class AddListBasedUserList {
     // they are present in any of the provided lists.
     UserListLogicalRuleInfo userListLogicalRuleInfo =
         UserListLogicalRuleInfo.newBuilder()
+            // Using ANY means that a user should be added to the combined list if they are present
+            // on any of the lists targeted in the LogicalUserListOperandInfo. Use ALL to add users
+            // present on all of the provided lists or NONE to add users that aren't present on any
+            // of the targeted lists.
             .setOperator(UserListLogicalRuleOperator.ANY)
             .addAllRuleOperands(logicalUserListOperandInfoList)
             .build();
@@ -127,8 +132,7 @@ public class AddListBasedUserList {
         UserList.newBuilder()
             .setName(
                 StringValue.of(
-                    "My combination list of other user lists #"
-                        + System.currentTimeMillis()))
+                    "My combination list of other user lists #" + System.currentTimeMillis()))
             .setLogicalUserList(
                 LogicalUserListInfo.newBuilder().addRules(userListLogicalRuleInfo).build())
             .build();
