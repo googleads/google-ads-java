@@ -14,12 +14,14 @@
 
 package com.google.ads.googleads.lib;
 
-import com.google.ads.googleads.v2.services.GoogleAdsVersion;
+import com.google.ads.googleads.v3.services.GoogleAdsVersion;
 
 // This class can be replaced with codegen, for now it is generated manually.
 public abstract class AbstractGoogleAdsClient implements GoogleAdsAllVersions {
 
-  /** Returns the accessor for service client factories, using configuration from this class. */
+  /**
+   * Returns the accessor for service client factories, using configuration from this class.
+   */
   protected abstract GoogleAdsAllVersions getGoogleAdsAllVersions();
 
   @Override
@@ -28,12 +30,17 @@ public abstract class AbstractGoogleAdsClient implements GoogleAdsAllVersions {
   }
 
   @Override
-  public GoogleAdsVersion getVersion2() {
+  public com.google.ads.googleads.v2.services.GoogleAdsVersion getVersion2() {
     return getGoogleAdsAllVersions().getVersion2();
   }
 
   @Override
-  public com.google.ads.googleads.v2.services.GoogleAdsVersion getLatestVersion() {
+  public GoogleAdsVersion getVersion3() {
+    return getGoogleAdsAllVersions().getVersion3();
+  }
+
+  @Override
+  public GoogleAdsVersion getLatestVersion() {
     return getGoogleAdsAllVersions().getLatestVersion();
   }
 }

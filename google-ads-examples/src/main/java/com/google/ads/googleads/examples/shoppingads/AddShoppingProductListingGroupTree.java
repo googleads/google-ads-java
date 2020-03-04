@@ -18,25 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v2.errors.GoogleAdsException;
-import com.google.ads.googleads.v2.utils.ResourceNames;
-import com.google.ads.googleads.v2.common.ListingBrandInfo;
-import com.google.ads.googleads.v2.common.ListingDimensionInfo;
-import com.google.ads.googleads.v2.common.ListingGroupInfo;
-import com.google.ads.googleads.v2.common.ProductConditionInfo;
-import com.google.ads.googleads.v2.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v2.enums.ListingGroupTypeEnum.ListingGroupType;
-import com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition;
-import com.google.ads.googleads.v2.errors.GoogleAdsError;
-import com.google.ads.googleads.v2.resources.AdGroupCriterion;
-import com.google.ads.googleads.v2.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v2.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v2.services.GoogleAdsRow;
-import com.google.ads.googleads.v2.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v2.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v2.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v2.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v2.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v3.common.ProductBrandInfo;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
+import com.google.ads.googleads.v3.utils.ResourceNames;
+import com.google.ads.googleads.v3.common.ListingDimensionInfo;
+import com.google.ads.googleads.v3.common.ListingGroupInfo;
+import com.google.ads.googleads.v3.common.ProductConditionInfo;
+import com.google.ads.googleads.v3.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v3.enums.ListingGroupTypeEnum.ListingGroupType;
+import com.google.ads.googleads.v3.enums.ProductConditionEnum.ProductCondition;
+import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.resources.AdGroupCriterion;
+import com.google.ads.googleads.v3.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v3.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v3.services.GoogleAdsRow;
+import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v3.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v3.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -219,8 +219,8 @@ public class AddShoppingProductListingGroupTree {
             adGroupId,
             adGroupCriterionResourceNameConditionOther,
             ListingDimensionInfo.newBuilder()
-                .setListingBrand(
-                    ListingBrandInfo.newBuilder().setValue(StringValue.of("CoolBrand")).build())
+                .setProductBrand(
+                    ProductBrandInfo.newBuilder().setValue(StringValue.of("CoolBrand")).build())
                 .build(),
             900_000L);
     operations.add(
@@ -235,8 +235,8 @@ public class AddShoppingProductListingGroupTree {
             adGroupId,
             adGroupCriterionResourceNameConditionOther,
             ListingDimensionInfo.newBuilder()
-                .setListingBrand(
-                    ListingBrandInfo.newBuilder().setValue(StringValue.of("CheapBrand")).build())
+                .setProductBrand(
+                    ProductBrandInfo.newBuilder().setValue(StringValue.of("CheapBrand")).build())
                 .build(),
             10_000L);
     operations.add(
@@ -251,7 +251,7 @@ public class AddShoppingProductListingGroupTree {
             adGroupId,
             adGroupCriterionResourceNameConditionOther,
             ListingDimensionInfo.newBuilder()
-                .setListingBrand(ListingBrandInfo.newBuilder().build())
+                .setProductBrand(ProductBrandInfo.newBuilder().build())
                 .build(),
             50_000L);
     operations.add(

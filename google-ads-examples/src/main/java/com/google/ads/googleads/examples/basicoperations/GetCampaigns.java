@@ -18,19 +18,20 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v2.errors.GoogleAdsException;
-import com.google.ads.googleads.v2.errors.GoogleAdsError;
-import com.google.ads.googleads.v2.services.GoogleAdsRow;
-import com.google.ads.googleads.v2.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v2.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v2.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
+import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.services.GoogleAdsRow;
+import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v3.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse;
+import com.google.api.gax.rpc.ServerStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** Gets all campaigns. To add campaigns, run AddCampaigns.java. */
+/**
+ * Gets all campaigns. To add campaigns, run AddCampaigns.java.
+ */
 public class GetCampaigns {
-
-  private static final int PAGE_SIZE = 1_000;
 
   private static class GetCampaignsWithStatsParams extends CodeSampleParams {
 
@@ -86,22 +87,25 @@ public class GetCampaigns {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-      // Creates a request that will retrieve all campaigns using pages of the specified page size.
-      SearchGoogleAdsRequest request =
-          SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
-              .setQuery("SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id")
-              .build();
-      // Issues the search request.
-      SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
-      // Iterates over all rows in all pages and prints the requested field values for the campaign
-      // in each row.
-      for (GoogleAdsRow googleAdsRow : searchPagedResponse.iterateAll()) {
-        System.out.printf(
-            "Campaign with ID %d and name '%s' was found.%n",
-            googleAdsRow.getCampaign().getId().getValue(),
-            googleAdsRow.getCampaign().getName().getValue());
+      String query = "SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id";
+      // Constructs the SearchGoogleAdsStreamRequest.
+      SearchGoogleAdsStreamRequest request = SearchGoogleAdsStreamRequest.newBuilder()
+          .setCustomerId(Long.toString(customerId))
+          .setQuery(query)
+          .build();
+
+      // Creates and issues a search Google Ads stream request that will retrieve all campaigns.
+      ServerStream<SearchGoogleAdsStreamResponse> stream = googleAdsServiceClient
+          .searchStreamCallable().call(request);
+
+      // Iterates through and prints all of the results in the stream response.
+      for (SearchGoogleAdsStreamResponse response : stream) {
+        for (GoogleAdsRow googleAdsRow : response.getResultsList()) {
+          System.out.printf(
+              "Campaign with ID %d and name '%s' was found.%n",
+              googleAdsRow.getCampaign().getId().getValue(),
+              googleAdsRow.getCampaign().getName().getValue());
+        }
       }
     }
   }
