@@ -1,3 +1,13 @@
+5.0.0 - 2020-03-04
+------------------
+- Added support for Google Ads API v3_0.
+- Added example demonstrating how to add demographic targeting criteria.
+- Added example demonstrating how to upload an image asset.
+- Added example demonstrating how to add a price extension.
+- Added several examples demontrating remarketing funcionality.
+- Updated issues templates.
+- Updated CONTRIBUTING.MD.
+
 4.4.1 - 2020-01-22
 ------------------
 - Set a default value for `enableGeneratedCatalog` property,
