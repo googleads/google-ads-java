@@ -163,7 +163,11 @@ public class GetResponsiveSearchAds {
    */
   private String adTextAssetsToStrings(List<AdTextAsset> adTextAssets) {
     return adTextAssets.stream()
-        .map(adTextAsset -> adTextAsset.getText().getValue())
+        .map(
+            adTextAsset ->
+                adTextAsset.getText().getValue()
+                    + " pinned to "
+                    + adTextAsset.getPinnedField().getValueDescriptor().getName())
         .collect(Collectors.joining(", "));
   }
 }
