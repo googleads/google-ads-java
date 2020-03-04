@@ -18,42 +18,42 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v2.common.ExpandedTextAdInfo;
-import com.google.ads.googleads.v2.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField;
-import com.google.ads.googleads.v2.enums.FeedAttributeTypeEnum.FeedAttributeType;
-import com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v2.errors.GoogleAdsError;
-import com.google.ads.googleads.v2.errors.GoogleAdsException;
-import com.google.ads.googleads.v2.resources.Ad;
-import com.google.ads.googleads.v2.resources.AdGroupAd;
-import com.google.ads.googleads.v2.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v2.resources.Feed;
-import com.google.ads.googleads.v2.resources.FeedAttribute;
-import com.google.ads.googleads.v2.resources.FeedItem;
-import com.google.ads.googleads.v2.resources.FeedItemAttributeValue;
-import com.google.ads.googleads.v2.resources.FeedItemTarget;
-import com.google.ads.googleads.v2.resources.FeedMapping;
-import com.google.ads.googleads.v2.services.AdGroupAdOperation;
-import com.google.ads.googleads.v2.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v2.services.FeedItemOperation;
-import com.google.ads.googleads.v2.services.FeedItemServiceClient;
-import com.google.ads.googleads.v2.services.FeedItemTargetOperation;
-import com.google.ads.googleads.v2.services.FeedItemTargetServiceClient;
-import com.google.ads.googleads.v2.services.FeedMappingOperation;
-import com.google.ads.googleads.v2.services.FeedMappingServiceClient;
-import com.google.ads.googleads.v2.services.FeedOperation;
-import com.google.ads.googleads.v2.services.FeedServiceClient;
-import com.google.ads.googleads.v2.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v2.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v2.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v2.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v2.services.MutateFeedItemResult;
-import com.google.ads.googleads.v2.services.MutateFeedItemTargetsResponse;
-import com.google.ads.googleads.v2.services.MutateFeedItemsResponse;
-import com.google.ads.googleads.v2.services.MutateFeedMappingsResponse;
-import com.google.ads.googleads.v2.services.MutateFeedsResponse;
-import com.google.ads.googleads.v2.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v2.utils.ResourceNames;
+import com.google.ads.googleads.v3.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField;
+import com.google.ads.googleads.v3.enums.FeedAttributeTypeEnum.FeedAttributeType;
+import com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
+import com.google.ads.googleads.v3.resources.Ad;
+import com.google.ads.googleads.v3.resources.AdGroupAd;
+import com.google.ads.googleads.v3.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v3.resources.Feed;
+import com.google.ads.googleads.v3.resources.FeedAttribute;
+import com.google.ads.googleads.v3.resources.FeedItem;
+import com.google.ads.googleads.v3.resources.FeedItemAttributeValue;
+import com.google.ads.googleads.v3.resources.FeedItemTarget;
+import com.google.ads.googleads.v3.resources.FeedMapping;
+import com.google.ads.googleads.v3.services.AdGroupAdOperation;
+import com.google.ads.googleads.v3.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v3.services.FeedItemOperation;
+import com.google.ads.googleads.v3.services.FeedItemServiceClient;
+import com.google.ads.googleads.v3.services.FeedItemTargetOperation;
+import com.google.ads.googleads.v3.services.FeedItemTargetServiceClient;
+import com.google.ads.googleads.v3.services.FeedMappingOperation;
+import com.google.ads.googleads.v3.services.FeedMappingServiceClient;
+import com.google.ads.googleads.v3.services.FeedOperation;
+import com.google.ads.googleads.v3.services.FeedServiceClient;
+import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v3.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v3.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v3.services.MutateFeedItemResult;
+import com.google.ads.googleads.v3.services.MutateFeedItemTargetsResponse;
+import com.google.ads.googleads.v3.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v3.services.MutateFeedMappingsResponse;
+import com.google.ads.googleads.v3.services.MutateFeedsResponse;
+import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -288,7 +288,7 @@ public class AddAdCustomizer {
 
     // Map the feed attributes to ad customizer placeholder fields.
     // For a full list of ad customizer placeholder fields, see
-    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v2.enums#google.ads.googleads.v2.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
+    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v3.enums#google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField
     AttributeFieldMapping nameFieldMapping =
         AttributeFieldMapping.newBuilder()
             .setFeedAttributeId(feedAttributes.get("Name").getId())

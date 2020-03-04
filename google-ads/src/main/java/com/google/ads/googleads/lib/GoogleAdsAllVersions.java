@@ -15,9 +15,12 @@
 package com.google.ads.googleads.lib;
 
 public interface GoogleAdsAllVersions {
+
   com.google.ads.googleads.v1.services.GoogleAdsVersion getVersion1();
 
   com.google.ads.googleads.v2.services.GoogleAdsVersion getVersion2();
 
-  com.google.ads.googleads.v2.services.GoogleAdsVersion getLatestVersion();
+  com.google.ads.googleads.v3.services.GoogleAdsVersion getVersion3();
+
+  com.google.ads.googleads.v3.services.GoogleAdsVersion getLatestVersion();
 }

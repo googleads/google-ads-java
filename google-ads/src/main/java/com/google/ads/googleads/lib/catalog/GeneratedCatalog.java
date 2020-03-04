@@ -11,7 +11,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
 package com.google.ads.googleads.lib.catalog;
 
 import com.google.ads.googleads.lib.GoogleAdsAllVersions;
@@ -228,6 +227,8 @@ import com.google.ads.googleads.v2.services.UserLocationViewServiceClient;
 import com.google.ads.googleads.v2.services.UserLocationViewServiceSettings;
 import com.google.ads.googleads.v2.services.VideoServiceClient;
 import com.google.ads.googleads.v2.services.VideoServiceSettings;
+import com.google.ads.googleads.v3.services.CurrencyConstantServiceClient;
+import com.google.ads.googleads.v3.services.CurrencyConstantServiceSettings;
 import com.google.api.gax.core.FixedCredentialsProvider;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
@@ -241,12 +242,16 @@ import javax.annotation.Generated;
 
 @Generated("by a class not included in this version of the library")
 class GeneratedCatalog implements ApiCatalog {
+
   private static final ApiCatalog INSTANCE =
       new GeneratedCatalog(VersionDescriptorLoader
           .forVersionList(GoogleAdsAllVersions.class).getVersions());
+
   private final ImmutableSortedSet<Version> supportedVersions;
+
   /**
-   * Creates a new constant catalog from a known collection of versions */
+   * Creates a new constant catalog from a known collection of versions
+   */
   private GeneratedCatalog(Collection<Version> versions) {
     supportedVersions = ImmutableSortedSet.copyOf(new TreeSet<>(versions));
   }
@@ -280,13 +285,19 @@ class GeneratedCatalog implements ApiCatalog {
       }
 
       @Override
-      public GoogleAdsVersion getLatestVersion() {
-        return getVersion2();
+      public com.google.ads.googleads.v3.services.GoogleAdsVersion getVersion3() {
+        return new V3Client(provider, credentials);
+      }
+
+      @Override
+      public com.google.ads.googleads.v3.services.GoogleAdsVersion getLatestVersion() {
+        return getVersion3();
       }
     };
   }
 
   private static class V2Client implements GoogleAdsVersion {
+
     private final TransportChannelProvider provider;
 
     private final Credentials credentials;
@@ -294,6 +305,146 @@ class GeneratedCatalog implements ApiCatalog {
     public V2Client(TransportChannelProvider provider, Credentials credentials) {
       this.provider = provider;
       this.credentials = credentials;
+    }
+
+    @Override
+    public AdGroupAdServiceClient createAdGroupAdServiceClient() {
+      try {
+        AdGroupAdServiceSettings settings =
+            AdGroupAdServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return AdGroupAdServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public AccountBudgetServiceClient createAccountBudgetServiceClient() {
+      try {
+        AccountBudgetServiceSettings settings =
+            AccountBudgetServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return AccountBudgetServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public AccountBudgetProposalServiceClient createAccountBudgetProposalServiceClient() {
+      try {
+        AccountBudgetProposalServiceSettings settings =
+            AccountBudgetProposalServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return AccountBudgetProposalServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public AdGroupAdAssetViewServiceClient createAdGroupAdAssetViewServiceClient() {
+      try {
+        AdGroupAdAssetViewServiceSettings settings =
+            AdGroupAdAssetViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return AdGroupAdAssetViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public AdGroupAdLabelServiceClient createAdGroupAdLabelServiceClient() {
+      try {
+        AdGroupAdLabelServiceSettings settings =
+            AdGroupAdLabelServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return AdGroupAdLabelServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public AdGroupAudienceViewServiceClient createAdGroupAudienceViewServiceClient() {
+      try {
+        AdGroupAudienceViewServiceSettings settings =
+            AdGroupAudienceViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return AdGroupAudienceViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public AdGroupBidModifierServiceClient createAdGroupBidModifierServiceClient() {
+      try {
+        AdGroupBidModifierServiceSettings settings =
+            AdGroupBidModifierServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return AdGroupBidModifierServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public AdGroupCriterionLabelServiceClient createAdGroupCriterionLabelServiceClient() {
+      try {
+        AdGroupCriterionLabelServiceSettings settings =
+            AdGroupCriterionLabelServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return AdGroupCriterionLabelServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public AdGroupCriterionServiceClient createAdGroupCriterionServiceClient() {
+      try {
+        AdGroupCriterionServiceSettings settings =
+            AdGroupCriterionServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return AdGroupCriterionServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public AdGroupCriterionSimulationServiceClient createAdGroupCriterionSimulationServiceClient() {
+      try {
+        AdGroupCriterionSimulationServiceSettings settings =
+            AdGroupCriterionSimulationServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return AdGroupCriterionSimulationServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
     }
 
     @Override
@@ -985,146 +1136,6 @@ class GeneratedCatalog implements ApiCatalog {
     }
 
     @Override
-    public AccountBudgetProposalServiceClient createAccountBudgetProposalServiceClient() {
-      try {
-        AccountBudgetProposalServiceSettings settings =
-            AccountBudgetProposalServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return AccountBudgetProposalServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public AccountBudgetServiceClient createAccountBudgetServiceClient() {
-      try {
-        AccountBudgetServiceSettings settings =
-            AccountBudgetServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return AccountBudgetServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public AdGroupAdAssetViewServiceClient createAdGroupAdAssetViewServiceClient() {
-      try {
-        AdGroupAdAssetViewServiceSettings settings =
-            AdGroupAdAssetViewServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return AdGroupAdAssetViewServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public AdGroupAdLabelServiceClient createAdGroupAdLabelServiceClient() {
-      try {
-        AdGroupAdLabelServiceSettings settings =
-            AdGroupAdLabelServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return AdGroupAdLabelServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public AdGroupAdServiceClient createAdGroupAdServiceClient() {
-      try {
-        AdGroupAdServiceSettings settings =
-            AdGroupAdServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return AdGroupAdServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public AdGroupAudienceViewServiceClient createAdGroupAudienceViewServiceClient() {
-      try {
-        AdGroupAudienceViewServiceSettings settings =
-            AdGroupAudienceViewServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return AdGroupAudienceViewServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public AdGroupBidModifierServiceClient createAdGroupBidModifierServiceClient() {
-      try {
-        AdGroupBidModifierServiceSettings settings =
-            AdGroupBidModifierServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return AdGroupBidModifierServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public AdGroupCriterionLabelServiceClient createAdGroupCriterionLabelServiceClient() {
-      try {
-        AdGroupCriterionLabelServiceSettings settings =
-            AdGroupCriterionLabelServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return AdGroupCriterionLabelServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public AdGroupCriterionServiceClient createAdGroupCriterionServiceClient() {
-      try {
-        AdGroupCriterionServiceSettings settings =
-            AdGroupCriterionServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return AdGroupCriterionServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public AdGroupCriterionSimulationServiceClient createAdGroupCriterionSimulationServiceClient() {
-      try {
-        AdGroupCriterionSimulationServiceSettings settings =
-            AdGroupCriterionSimulationServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return AdGroupCriterionSimulationServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
     public FeedPlaceholderViewServiceClient createFeedPlaceholderViewServiceClient() {
       try {
         FeedPlaceholderViewServiceSettings settings =
@@ -1786,6 +1797,7 @@ class GeneratedCatalog implements ApiCatalog {
   }
 
   private static class V1Client implements com.google.ads.googleads.v1.services.GoogleAdsVersion {
+
     private final TransportChannelProvider provider;
 
     private final Credentials credentials;
@@ -1793,6 +1805,147 @@ class GeneratedCatalog implements ApiCatalog {
     public V1Client(TransportChannelProvider provider, Credentials credentials) {
       this.provider = provider;
       this.credentials = credentials;
+    }
+
+    @Override
+    public com.google.ads.googleads.v1.services.AdGroupAdServiceClient createAdGroupAdServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v1.services.AdGroupAdServiceSettings settings =
+            com.google.ads.googleads.v1.services.AdGroupAdServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v1.services.AdGroupAdServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v1.services.AccountBudgetServiceClient createAccountBudgetServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v1.services.AccountBudgetServiceSettings settings =
+            com.google.ads.googleads.v1.services.AccountBudgetServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v1.services.AccountBudgetServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v1.services.AccountBudgetProposalServiceClient createAccountBudgetProposalServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v1.services.AccountBudgetProposalServiceSettings settings =
+            com.google.ads.googleads.v1.services.AccountBudgetProposalServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v1.services.AccountBudgetProposalServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v1.services.AdGroupAdLabelServiceClient createAdGroupAdLabelServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v1.services.AdGroupAdLabelServiceSettings settings =
+            com.google.ads.googleads.v1.services.AdGroupAdLabelServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v1.services.AdGroupAdLabelServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v1.services.AdGroupAudienceViewServiceClient createAdGroupAudienceViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v1.services.AdGroupAudienceViewServiceSettings settings =
+            com.google.ads.googleads.v1.services.AdGroupAudienceViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v1.services.AdGroupAudienceViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v1.services.AdGroupBidModifierServiceClient createAdGroupBidModifierServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v1.services.AdGroupBidModifierServiceSettings settings =
+            com.google.ads.googleads.v1.services.AdGroupBidModifierServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v1.services.AdGroupBidModifierServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v1.services.AdGroupCriterionLabelServiceClient createAdGroupCriterionLabelServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v1.services.AdGroupCriterionLabelServiceSettings settings =
+            com.google.ads.googleads.v1.services.AdGroupCriterionLabelServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v1.services.AdGroupCriterionLabelServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v1.services.AdGroupCriterionServiceClient createAdGroupCriterionServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v1.services.AdGroupCriterionServiceSettings settings =
+            com.google.ads.googleads.v1.services.AdGroupCriterionServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v1.services.AdGroupCriterionServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v1.services.AdGroupCriterionSimulationServiceClient createAdGroupCriterionSimulationServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v1.services.AdGroupCriterionSimulationServiceSettings settings =
+            com.google.ads.googleads.v1.services.AdGroupCriterionSimulationServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v1.services.AdGroupCriterionSimulationServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
     }
 
     @Override
@@ -1804,7 +1957,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.AdGroupExtensionSettingServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.AdGroupExtensionSettingServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -1967,7 +2121,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.CampaignAudienceViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.CampaignAudienceViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -1982,7 +2137,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.CampaignBidModifierServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.CampaignBidModifierServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2023,11 +2179,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.CampaignCriterionSimulationServiceSettings settings =
-            com.google.ads.googleads.v1.services.CampaignCriterionSimulationServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.CampaignCriterionSimulationServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.CampaignCriterionSimulationServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.CampaignCriterionSimulationServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2057,7 +2215,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.CampaignExperimentServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.CampaignExperimentServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2068,11 +2227,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.CampaignExtensionSettingServiceSettings settings =
-            com.google.ads.googleads.v1.services.CampaignExtensionSettingServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.CampaignExtensionSettingServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.CampaignExtensionSettingServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.CampaignExtensionSettingServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2203,11 +2364,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.ConversionAdjustmentUploadServiceSettings settings =
-            com.google.ads.googleads.v1.services.ConversionAdjustmentUploadServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.ConversionAdjustmentUploadServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.ConversionAdjustmentUploadServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.ConversionAdjustmentUploadServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2237,7 +2400,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.CustomerClientLinkServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.CustomerClientLinkServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2263,11 +2427,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.CustomerExtensionSettingServiceSettings settings =
-            com.google.ads.googleads.v1.services.CustomerExtensionSettingServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.CustomerExtensionSettingServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.CustomerExtensionSettingServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.CustomerExtensionSettingServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2312,7 +2478,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.CustomerManagerLinkServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.CustomerManagerLinkServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2323,11 +2490,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.CustomerNegativeCriterionServiceSettings settings =
-            com.google.ads.googleads.v1.services.CustomerNegativeCriterionServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.CustomerNegativeCriterionServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.CustomerNegativeCriterionServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.CustomerNegativeCriterionServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2372,7 +2541,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.DetailPlacementViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.DetailPlacementViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2387,7 +2557,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.DisplayKeywordViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.DisplayKeywordViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2413,11 +2584,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.DynamicSearchAdsSearchTermViewServiceSettings settings =
-            com.google.ads.googleads.v1.services.DynamicSearchAdsSearchTermViewServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.DynamicSearchAdsSearchTermViewServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.DynamicSearchAdsSearchTermViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.DynamicSearchAdsSearchTermViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2432,7 +2605,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.ExpandedLandingPageViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.ExpandedLandingPageViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2499,141 +2673,6 @@ class GeneratedCatalog implements ApiCatalog {
     }
 
     @Override
-    public com.google.ads.googleads.v1.services.AccountBudgetProposalServiceClient createAccountBudgetProposalServiceClient(
-    ) {
-      try {
-        com.google.ads.googleads.v1.services.AccountBudgetProposalServiceSettings settings =
-            com.google.ads.googleads.v1.services.AccountBudgetProposalServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return com.google.ads.googleads.v1.services.AccountBudgetProposalServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public com.google.ads.googleads.v1.services.AccountBudgetServiceClient createAccountBudgetServiceClient(
-    ) {
-      try {
-        com.google.ads.googleads.v1.services.AccountBudgetServiceSettings settings =
-            com.google.ads.googleads.v1.services.AccountBudgetServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return com.google.ads.googleads.v1.services.AccountBudgetServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public com.google.ads.googleads.v1.services.AdGroupAdLabelServiceClient createAdGroupAdLabelServiceClient(
-    ) {
-      try {
-        com.google.ads.googleads.v1.services.AdGroupAdLabelServiceSettings settings =
-            com.google.ads.googleads.v1.services.AdGroupAdLabelServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return com.google.ads.googleads.v1.services.AdGroupAdLabelServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public com.google.ads.googleads.v1.services.AdGroupAdServiceClient createAdGroupAdServiceClient(
-    ) {
-      try {
-        com.google.ads.googleads.v1.services.AdGroupAdServiceSettings settings =
-            com.google.ads.googleads.v1.services.AdGroupAdServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return com.google.ads.googleads.v1.services.AdGroupAdServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public com.google.ads.googleads.v1.services.AdGroupAudienceViewServiceClient createAdGroupAudienceViewServiceClient(
-    ) {
-      try {
-        com.google.ads.googleads.v1.services.AdGroupAudienceViewServiceSettings settings =
-            com.google.ads.googleads.v1.services.AdGroupAudienceViewServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return com.google.ads.googleads.v1.services.AdGroupAudienceViewServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public com.google.ads.googleads.v1.services.AdGroupBidModifierServiceClient createAdGroupBidModifierServiceClient(
-    ) {
-      try {
-        com.google.ads.googleads.v1.services.AdGroupBidModifierServiceSettings settings =
-            com.google.ads.googleads.v1.services.AdGroupBidModifierServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return com.google.ads.googleads.v1.services.AdGroupBidModifierServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public com.google.ads.googleads.v1.services.AdGroupCriterionLabelServiceClient createAdGroupCriterionLabelServiceClient(
-    ) {
-      try {
-        com.google.ads.googleads.v1.services.AdGroupCriterionLabelServiceSettings settings =
-            com.google.ads.googleads.v1.services.AdGroupCriterionLabelServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return com.google.ads.googleads.v1.services.AdGroupCriterionLabelServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public com.google.ads.googleads.v1.services.AdGroupCriterionServiceClient createAdGroupCriterionServiceClient(
-    ) {
-      try {
-        com.google.ads.googleads.v1.services.AdGroupCriterionServiceSettings settings =
-            com.google.ads.googleads.v1.services.AdGroupCriterionServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return com.google.ads.googleads.v1.services.AdGroupCriterionServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
-    public com.google.ads.googleads.v1.services.AdGroupCriterionSimulationServiceClient createAdGroupCriterionSimulationServiceClient(
-    ) {
-      try {
-        com.google.ads.googleads.v1.services.AdGroupCriterionSimulationServiceSettings settings =
-            com.google.ads.googleads.v1.services.AdGroupCriterionSimulationServiceSettings.newBuilder()
-                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
-                .setTransportChannelProvider(provider)
-                .build();
-        return com.google.ads.googleads.v1.services.AdGroupCriterionSimulationServiceClient.create(settings);
-      } catch (IOException e) {
-        throw new RuntimeException(e);
-      }
-    }
-
-    @Override
     public com.google.ads.googleads.v1.services.FeedPlaceholderViewServiceClient createFeedPlaceholderViewServiceClient(
     ) {
       try {
@@ -2642,7 +2681,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.FeedPlaceholderViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.FeedPlaceholderViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2746,7 +2786,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.GroupPlacementViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.GroupPlacementViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2776,7 +2817,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.HotelPerformanceViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.HotelPerformanceViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2791,7 +2833,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.KeywordPlanAdGroupServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.KeywordPlanAdGroupServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2806,7 +2849,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.KeywordPlanCampaignServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.KeywordPlanCampaignServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2836,7 +2880,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.KeywordPlanKeywordServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.KeywordPlanKeywordServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2847,11 +2892,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.KeywordPlanNegativeKeywordServiceSettings settings =
-            com.google.ads.googleads.v1.services.KeywordPlanNegativeKeywordServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.KeywordPlanNegativeKeywordServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.KeywordPlanNegativeKeywordServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.KeywordPlanNegativeKeywordServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2955,7 +3002,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.ManagedPlacementViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.ManagedPlacementViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2985,7 +3033,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.MerchantCenterLinkServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.MerchantCenterLinkServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -2996,11 +3045,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.MobileAppCategoryConstantServiceSettings settings =
-            com.google.ads.googleads.v1.services.MobileAppCategoryConstantServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.MobileAppCategoryConstantServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.MobileAppCategoryConstantServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.MobileAppCategoryConstantServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -3015,7 +3066,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.MobileDeviceConstantServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.MobileDeviceConstantServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -3041,11 +3093,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.OperatingSystemVersionConstantServiceSettings settings =
-            com.google.ads.googleads.v1.services.OperatingSystemVersionConstantServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.OperatingSystemVersionConstantServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.OperatingSystemVersionConstantServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.OperatingSystemVersionConstantServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -3056,11 +3110,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.PaidOrganicSearchTermViewServiceSettings settings =
-            com.google.ads.googleads.v1.services.PaidOrganicSearchTermViewServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.PaidOrganicSearchTermViewServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.PaidOrganicSearchTermViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.PaidOrganicSearchTermViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -3075,7 +3131,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.ParentalStatusViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.ParentalStatusViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -3101,11 +3158,13 @@ class GeneratedCatalog implements ApiCatalog {
     ) {
       try {
         com.google.ads.googleads.v1.services.ProductBiddingCategoryConstantServiceSettings settings =
-            com.google.ads.googleads.v1.services.ProductBiddingCategoryConstantServiceSettings.newBuilder()
+            com.google.ads.googleads.v1.services.ProductBiddingCategoryConstantServiceSettings
+                .newBuilder()
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.ProductBiddingCategoryConstantServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.ProductBiddingCategoryConstantServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -3210,7 +3269,8 @@ class GeneratedCatalog implements ApiCatalog {
                 .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
                 .setTransportChannelProvider(provider)
                 .build();
-        return com.google.ads.googleads.v1.services.ShoppingPerformanceViewServiceClient.create(settings);
+        return com.google.ads.googleads.v1.services.ShoppingPerformanceViewServiceClient
+            .create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
@@ -3285,6 +3345,1664 @@ class GeneratedCatalog implements ApiCatalog {
                 .setTransportChannelProvider(provider)
                 .build();
         return com.google.ads.googleads.v1.services.VideoServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+  }
+
+  private static class V3Client implements com.google.ads.googleads.v3.services.GoogleAdsVersion {
+
+    private final TransportChannelProvider provider;
+
+    private final Credentials credentials;
+
+    public V3Client(TransportChannelProvider provider, Credentials credentials) {
+      this.provider = provider;
+      this.credentials = credentials;
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupAdServiceClient createAdGroupAdServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupAdServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupAdServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupAdServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AccountBudgetServiceClient createAccountBudgetServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AccountBudgetServiceSettings settings =
+            com.google.ads.googleads.v3.services.AccountBudgetServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AccountBudgetServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AccountBudgetProposalServiceClient createAccountBudgetProposalServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AccountBudgetProposalServiceSettings settings =
+            com.google.ads.googleads.v3.services.AccountBudgetProposalServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AccountBudgetProposalServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupAdAssetViewServiceClient createAdGroupAdAssetViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupAdAssetViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupAdAssetViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupAdAssetViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupAdLabelServiceClient createAdGroupAdLabelServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupAdLabelServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupAdLabelServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupAdLabelServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupAudienceViewServiceClient createAdGroupAudienceViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupAudienceViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupAudienceViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupAudienceViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupBidModifierServiceClient createAdGroupBidModifierServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupBidModifierServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupBidModifierServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupBidModifierServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupCriterionLabelServiceClient createAdGroupCriterionLabelServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupCriterionLabelServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupCriterionLabelServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupCriterionLabelServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupCriterionServiceClient createAdGroupCriterionServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupCriterionServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupCriterionServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupCriterionServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupCriterionSimulationServiceClient createAdGroupCriterionSimulationServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupCriterionSimulationServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupCriterionSimulationServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupCriterionSimulationServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupExtensionSettingServiceClient createAdGroupExtensionSettingServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupExtensionSettingServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupExtensionSettingServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupExtensionSettingServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupFeedServiceClient createAdGroupFeedServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupFeedServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupFeedServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupFeedServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupLabelServiceClient createAdGroupLabelServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupLabelServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupLabelServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupLabelServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupServiceClient createAdGroupServiceClient() {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdGroupSimulationServiceClient createAdGroupSimulationServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdGroupSimulationServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdGroupSimulationServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdGroupSimulationServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdParameterServiceClient createAdParameterServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdParameterServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdParameterServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdParameterServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdScheduleViewServiceClient createAdScheduleViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AdScheduleViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdScheduleViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdScheduleViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AdServiceClient createAdServiceClient() {
+      try {
+        com.google.ads.googleads.v3.services.AdServiceSettings settings =
+            com.google.ads.googleads.v3.services.AdServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AdServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AgeRangeViewServiceClient createAgeRangeViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.AgeRangeViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.AgeRangeViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AgeRangeViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.AssetServiceClient createAssetServiceClient() {
+      try {
+        com.google.ads.googleads.v3.services.AssetServiceSettings settings =
+            com.google.ads.googleads.v3.services.AssetServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.AssetServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.BiddingStrategyServiceClient createBiddingStrategyServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.BiddingStrategyServiceSettings settings =
+            com.google.ads.googleads.v3.services.BiddingStrategyServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.BiddingStrategyServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.BillingSetupServiceClient createBillingSetupServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.BillingSetupServiceSettings settings =
+            com.google.ads.googleads.v3.services.BillingSetupServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.BillingSetupServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignAudienceViewServiceClient createCampaignAudienceViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignAudienceViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignAudienceViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignAudienceViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignBidModifierServiceClient createCampaignBidModifierServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignBidModifierServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignBidModifierServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignBidModifierServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignBudgetServiceClient createCampaignBudgetServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignBudgetServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignBudgetServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignBudgetServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignCriterionServiceClient createCampaignCriterionServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignCriterionServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignCriterionServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignCriterionServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignCriterionSimulationServiceClient createCampaignCriterionSimulationServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignCriterionSimulationServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignCriterionSimulationServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignCriterionSimulationServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignDraftServiceClient createCampaignDraftServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignDraftServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignDraftServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignDraftServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignExperimentServiceClient createCampaignExperimentServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignExperimentServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignExperimentServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignExperimentServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignExtensionSettingServiceClient createCampaignExtensionSettingServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignExtensionSettingServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignExtensionSettingServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignExtensionSettingServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignFeedServiceClient createCampaignFeedServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignFeedServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignFeedServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignFeedServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignLabelServiceClient createCampaignLabelServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignLabelServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignLabelServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignLabelServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignServiceClient createCampaignServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CampaignSharedSetServiceClient createCampaignSharedSetServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CampaignSharedSetServiceSettings settings =
+            com.google.ads.googleads.v3.services.CampaignSharedSetServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CampaignSharedSetServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CarrierConstantServiceClient createCarrierConstantServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CarrierConstantServiceSettings settings =
+            com.google.ads.googleads.v3.services.CarrierConstantServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CarrierConstantServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ChangeStatusServiceClient createChangeStatusServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ChangeStatusServiceSettings settings =
+            com.google.ads.googleads.v3.services.ChangeStatusServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ChangeStatusServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ClickViewServiceClient createClickViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ClickViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.ClickViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ClickViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ConversionActionServiceClient createConversionActionServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ConversionActionServiceSettings settings =
+            com.google.ads.googleads.v3.services.ConversionActionServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ConversionActionServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ConversionAdjustmentUploadServiceClient createConversionAdjustmentUploadServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ConversionAdjustmentUploadServiceSettings settings =
+            com.google.ads.googleads.v3.services.ConversionAdjustmentUploadServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ConversionAdjustmentUploadServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ConversionUploadServiceClient createConversionUploadServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ConversionUploadServiceSettings settings =
+            com.google.ads.googleads.v3.services.ConversionUploadServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ConversionUploadServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CustomerClientLinkServiceClient createCustomerClientLinkServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CustomerClientLinkServiceSettings settings =
+            com.google.ads.googleads.v3.services.CustomerClientLinkServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CustomerClientLinkServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CustomerClientServiceClient createCustomerClientServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CustomerClientServiceSettings settings =
+            com.google.ads.googleads.v3.services.CustomerClientServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CustomerClientServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CustomerExtensionSettingServiceClient createCustomerExtensionSettingServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CustomerExtensionSettingServiceSettings settings =
+            com.google.ads.googleads.v3.services.CustomerExtensionSettingServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CustomerExtensionSettingServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CustomerFeedServiceClient createCustomerFeedServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CustomerFeedServiceSettings settings =
+            com.google.ads.googleads.v3.services.CustomerFeedServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CustomerFeedServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CustomerLabelServiceClient createCustomerLabelServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CustomerLabelServiceSettings settings =
+            com.google.ads.googleads.v3.services.CustomerLabelServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CustomerLabelServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CustomerManagerLinkServiceClient createCustomerManagerLinkServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CustomerManagerLinkServiceSettings settings =
+            com.google.ads.googleads.v3.services.CustomerManagerLinkServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CustomerManagerLinkServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CustomerNegativeCriterionServiceClient createCustomerNegativeCriterionServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CustomerNegativeCriterionServiceSettings settings =
+            com.google.ads.googleads.v3.services.CustomerNegativeCriterionServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CustomerNegativeCriterionServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CustomerServiceClient createCustomerServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CustomerServiceSettings settings =
+            com.google.ads.googleads.v3.services.CustomerServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CustomerServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.CustomInterestServiceClient createCustomInterestServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.CustomInterestServiceSettings settings =
+            com.google.ads.googleads.v3.services.CustomInterestServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.CustomInterestServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.DetailPlacementViewServiceClient createDetailPlacementViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.DetailPlacementViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.DetailPlacementViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.DetailPlacementViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.DisplayKeywordViewServiceClient createDisplayKeywordViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.DisplayKeywordViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.DisplayKeywordViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.DisplayKeywordViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.DistanceViewServiceClient createDistanceViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.DistanceViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.DistanceViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.DistanceViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.DomainCategoryServiceClient createDomainCategoryServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.DomainCategoryServiceSettings settings =
+            com.google.ads.googleads.v3.services.DomainCategoryServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.DomainCategoryServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.DynamicSearchAdsSearchTermViewServiceClient createDynamicSearchAdsSearchTermViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.DynamicSearchAdsSearchTermViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.DynamicSearchAdsSearchTermViewServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.DynamicSearchAdsSearchTermViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ExpandedLandingPageViewServiceClient createExpandedLandingPageViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ExpandedLandingPageViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.ExpandedLandingPageViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ExpandedLandingPageViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ExtensionFeedItemServiceClient createExtensionFeedItemServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ExtensionFeedItemServiceSettings settings =
+            com.google.ads.googleads.v3.services.ExtensionFeedItemServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ExtensionFeedItemServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.FeedItemServiceClient createFeedItemServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.FeedItemServiceSettings settings =
+            com.google.ads.googleads.v3.services.FeedItemServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.FeedItemServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.FeedItemTargetServiceClient createFeedItemTargetServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.FeedItemTargetServiceSettings settings =
+            com.google.ads.googleads.v3.services.FeedItemTargetServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.FeedItemTargetServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.FeedMappingServiceClient createFeedMappingServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.FeedMappingServiceSettings settings =
+            com.google.ads.googleads.v3.services.FeedMappingServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.FeedMappingServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.FeedPlaceholderViewServiceClient createFeedPlaceholderViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.FeedPlaceholderViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.FeedPlaceholderViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.FeedPlaceholderViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.FeedServiceClient createFeedServiceClient() {
+      try {
+        com.google.ads.googleads.v3.services.FeedServiceSettings settings =
+            com.google.ads.googleads.v3.services.FeedServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.FeedServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.GenderViewServiceClient createGenderViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.GenderViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.GenderViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.GenderViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.GeographicViewServiceClient createGeographicViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.GeographicViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.GeographicViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.GeographicViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.GeoTargetConstantServiceClient createGeoTargetConstantServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.GeoTargetConstantServiceSettings settings =
+            com.google.ads.googleads.v3.services.GeoTargetConstantServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.GeoTargetConstantServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.GoogleAdsFieldServiceClient createGoogleAdsFieldServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.GoogleAdsFieldServiceSettings settings =
+            com.google.ads.googleads.v3.services.GoogleAdsFieldServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.GoogleAdsFieldServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.GoogleAdsServiceClient createGoogleAdsServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.GoogleAdsServiceSettings settings =
+            com.google.ads.googleads.v3.services.GoogleAdsServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.GoogleAdsServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.GroupPlacementViewServiceClient createGroupPlacementViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.GroupPlacementViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.GroupPlacementViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.GroupPlacementViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.HotelGroupViewServiceClient createHotelGroupViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.HotelGroupViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.HotelGroupViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.HotelGroupViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.HotelPerformanceViewServiceClient createHotelPerformanceViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.HotelPerformanceViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.HotelPerformanceViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.HotelPerformanceViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.InvoiceServiceClient createInvoiceServiceClient() {
+      try {
+        com.google.ads.googleads.v3.services.InvoiceServiceSettings settings =
+            com.google.ads.googleads.v3.services.InvoiceServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.InvoiceServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.KeywordPlanAdGroupServiceClient createKeywordPlanAdGroupServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.KeywordPlanAdGroupServiceSettings settings =
+            com.google.ads.googleads.v3.services.KeywordPlanAdGroupServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.KeywordPlanAdGroupServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public CurrencyConstantServiceClient createCurrencyConstantServiceClient() {
+      try {
+        CurrencyConstantServiceSettings settings =
+            CurrencyConstantServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return CurrencyConstantServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.KeywordPlanCampaignServiceClient createKeywordPlanCampaignServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.KeywordPlanCampaignServiceSettings settings =
+            com.google.ads.googleads.v3.services.KeywordPlanCampaignServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.KeywordPlanCampaignServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.KeywordPlanIdeaServiceClient createKeywordPlanIdeaServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.KeywordPlanIdeaServiceSettings settings =
+            com.google.ads.googleads.v3.services.KeywordPlanIdeaServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.KeywordPlanIdeaServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.KeywordPlanKeywordServiceClient createKeywordPlanKeywordServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.KeywordPlanKeywordServiceSettings settings =
+            com.google.ads.googleads.v3.services.KeywordPlanKeywordServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.KeywordPlanKeywordServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.KeywordPlanNegativeKeywordServiceClient createKeywordPlanNegativeKeywordServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.KeywordPlanNegativeKeywordServiceSettings settings =
+            com.google.ads.googleads.v3.services.KeywordPlanNegativeKeywordServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.KeywordPlanNegativeKeywordServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.KeywordPlanServiceClient createKeywordPlanServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.KeywordPlanServiceSettings settings =
+            com.google.ads.googleads.v3.services.KeywordPlanServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.KeywordPlanServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.KeywordViewServiceClient createKeywordViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.KeywordViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.KeywordViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.KeywordViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.LabelServiceClient createLabelServiceClient() {
+      try {
+        com.google.ads.googleads.v3.services.LabelServiceSettings settings =
+            com.google.ads.googleads.v3.services.LabelServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.LabelServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.LandingPageViewServiceClient createLandingPageViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.LandingPageViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.LandingPageViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.LandingPageViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.LanguageConstantServiceClient createLanguageConstantServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.LanguageConstantServiceSettings settings =
+            com.google.ads.googleads.v3.services.LanguageConstantServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.LanguageConstantServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.LocationViewServiceClient createLocationViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.LocationViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.LocationViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.LocationViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ManagedPlacementViewServiceClient createManagedPlacementViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ManagedPlacementViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.ManagedPlacementViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ManagedPlacementViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.MediaFileServiceClient createMediaFileServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.MediaFileServiceSettings settings =
+            com.google.ads.googleads.v3.services.MediaFileServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.MediaFileServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.MerchantCenterLinkServiceClient createMerchantCenterLinkServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.MerchantCenterLinkServiceSettings settings =
+            com.google.ads.googleads.v3.services.MerchantCenterLinkServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.MerchantCenterLinkServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.MobileAppCategoryConstantServiceClient createMobileAppCategoryConstantServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.MobileAppCategoryConstantServiceSettings settings =
+            com.google.ads.googleads.v3.services.MobileAppCategoryConstantServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.MobileAppCategoryConstantServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.MobileDeviceConstantServiceClient createMobileDeviceConstantServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.MobileDeviceConstantServiceSettings settings =
+            com.google.ads.googleads.v3.services.MobileDeviceConstantServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.MobileDeviceConstantServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.MutateJobServiceClient createMutateJobServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.MutateJobServiceSettings settings =
+            com.google.ads.googleads.v3.services.MutateJobServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.MutateJobServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.OperatingSystemVersionConstantServiceClient createOperatingSystemVersionConstantServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.OperatingSystemVersionConstantServiceSettings settings =
+            com.google.ads.googleads.v3.services.OperatingSystemVersionConstantServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.OperatingSystemVersionConstantServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.PaidOrganicSearchTermViewServiceClient createPaidOrganicSearchTermViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.PaidOrganicSearchTermViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.PaidOrganicSearchTermViewServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.PaidOrganicSearchTermViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ParentalStatusViewServiceClient createParentalStatusViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ParentalStatusViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.ParentalStatusViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ParentalStatusViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.PaymentsAccountServiceClient createPaymentsAccountServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.PaymentsAccountServiceSettings settings =
+            com.google.ads.googleads.v3.services.PaymentsAccountServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.PaymentsAccountServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ProductBiddingCategoryConstantServiceClient createProductBiddingCategoryConstantServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ProductBiddingCategoryConstantServiceSettings settings =
+            com.google.ads.googleads.v3.services.ProductBiddingCategoryConstantServiceSettings
+                .newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ProductBiddingCategoryConstantServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ProductGroupViewServiceClient createProductGroupViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ProductGroupViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.ProductGroupViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ProductGroupViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ReachPlanServiceClient createReachPlanServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ReachPlanServiceSettings settings =
+            com.google.ads.googleads.v3.services.ReachPlanServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ReachPlanServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.RecommendationServiceClient createRecommendationServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.RecommendationServiceSettings settings =
+            com.google.ads.googleads.v3.services.RecommendationServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.RecommendationServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.RemarketingActionServiceClient createRemarketingActionServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.RemarketingActionServiceSettings settings =
+            com.google.ads.googleads.v3.services.RemarketingActionServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.RemarketingActionServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.SearchTermViewServiceClient createSearchTermViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.SearchTermViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.SearchTermViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.SearchTermViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.SharedCriterionServiceClient createSharedCriterionServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.SharedCriterionServiceSettings settings =
+            com.google.ads.googleads.v3.services.SharedCriterionServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.SharedCriterionServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.SharedSetServiceClient createSharedSetServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.SharedSetServiceSettings settings =
+            com.google.ads.googleads.v3.services.SharedSetServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.SharedSetServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.ShoppingPerformanceViewServiceClient createShoppingPerformanceViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.ShoppingPerformanceViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.ShoppingPerformanceViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.ShoppingPerformanceViewServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.TopicConstantServiceClient createTopicConstantServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.TopicConstantServiceSettings settings =
+            com.google.ads.googleads.v3.services.TopicConstantServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.TopicConstantServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.TopicViewServiceClient createTopicViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.TopicViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.TopicViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.TopicViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.UserInterestServiceClient createUserInterestServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.UserInterestServiceSettings settings =
+            com.google.ads.googleads.v3.services.UserInterestServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.UserInterestServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.UserListServiceClient createUserListServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.UserListServiceSettings settings =
+            com.google.ads.googleads.v3.services.UserListServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.UserListServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.UserLocationViewServiceClient createUserLocationViewServiceClient(
+    ) {
+      try {
+        com.google.ads.googleads.v3.services.UserLocationViewServiceSettings settings =
+            com.google.ads.googleads.v3.services.UserLocationViewServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.UserLocationViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public com.google.ads.googleads.v3.services.VideoServiceClient createVideoServiceClient() {
+      try {
+        com.google.ads.googleads.v3.services.VideoServiceSettings settings =
+            com.google.ads.googleads.v3.services.VideoServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.VideoServiceClient.create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }

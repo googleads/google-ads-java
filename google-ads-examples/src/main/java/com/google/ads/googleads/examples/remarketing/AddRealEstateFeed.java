@@ -18,32 +18,32 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v2.enums.FeedAttributeTypeEnum.FeedAttributeType;
-import com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType;
-import com.google.ads.googleads.v2.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField;
-import com.google.ads.googleads.v2.errors.GoogleAdsError;
-import com.google.ads.googleads.v2.errors.GoogleAdsException;
-import com.google.ads.googleads.v2.resources.AttributeFieldMapping;
-import com.google.ads.googleads.v2.resources.Feed;
-import com.google.ads.googleads.v2.resources.FeedAttribute;
-import com.google.ads.googleads.v2.resources.FeedItem;
-import com.google.ads.googleads.v2.resources.FeedItemAttributeValue;
-import com.google.ads.googleads.v2.resources.FeedMapping;
-import com.google.ads.googleads.v2.services.FeedItemOperation;
-import com.google.ads.googleads.v2.services.FeedItemServiceClient;
-import com.google.ads.googleads.v2.services.FeedMappingOperation;
-import com.google.ads.googleads.v2.services.FeedMappingServiceClient;
-import com.google.ads.googleads.v2.services.FeedOperation;
-import com.google.ads.googleads.v2.services.FeedServiceClient;
-import com.google.ads.googleads.v2.services.GoogleAdsRow;
-import com.google.ads.googleads.v2.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v2.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v2.services.MutateFeedItemResult;
-import com.google.ads.googleads.v2.services.MutateFeedItemsResponse;
-import com.google.ads.googleads.v2.services.MutateFeedMappingResult;
-import com.google.ads.googleads.v2.services.MutateFeedMappingsResponse;
-import com.google.ads.googleads.v2.services.MutateFeedsResponse;
-import com.google.ads.googleads.v2.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v3.enums.FeedAttributeTypeEnum.FeedAttributeType;
+import com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType;
+import com.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField;
+import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
+import com.google.ads.googleads.v3.resources.AttributeFieldMapping;
+import com.google.ads.googleads.v3.resources.Feed;
+import com.google.ads.googleads.v3.resources.FeedAttribute;
+import com.google.ads.googleads.v3.resources.FeedItem;
+import com.google.ads.googleads.v3.resources.FeedItemAttributeValue;
+import com.google.ads.googleads.v3.resources.FeedMapping;
+import com.google.ads.googleads.v3.services.FeedItemOperation;
+import com.google.ads.googleads.v3.services.FeedItemServiceClient;
+import com.google.ads.googleads.v3.services.FeedMappingOperation;
+import com.google.ads.googleads.v3.services.FeedMappingServiceClient;
+import com.google.ads.googleads.v3.services.FeedOperation;
+import com.google.ads.googleads.v3.services.FeedServiceClient;
+import com.google.ads.googleads.v3.services.GoogleAdsRow;
+import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v3.services.MutateFeedItemResult;
+import com.google.ads.googleads.v3.services.MutateFeedItemsResponse;
+import com.google.ads.googleads.v3.services.MutateFeedMappingResult;
+import com.google.ads.googleads.v3.services.MutateFeedMappingsResponse;
+import com.google.ads.googleads.v3.services.MutateFeedsResponse;
+import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
@@ -275,7 +275,7 @@ public class AddRealEstateFeed {
     // the context of a real estate feed (e.g. a LISTING_ID or LISTING_NAME). The FeedMapping
     // associates the feed column by ID to this type and controls how the feed attributes are
     // presented in dynamic content.
-    // See https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v2.enums#google.ads.googleads.v2.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
+    // See https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v3.enums#google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
     // for the full list of placeholder values.
     AttributeFieldMapping listingIdMapping =
         AttributeFieldMapping.newBuilder()

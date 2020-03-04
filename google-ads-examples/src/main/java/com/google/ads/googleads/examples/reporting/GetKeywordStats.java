@@ -18,26 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v2.errors.GoogleAdsException;
-import com.google.ads.googleads.v2.common.Metrics;
-import com.google.ads.googleads.v2.errors.GoogleAdsError;
-import com.google.ads.googleads.v2.resources.AdGroup;
-import com.google.ads.googleads.v2.resources.AdGroupCriterion;
-import com.google.ads.googleads.v2.resources.Campaign;
-import com.google.ads.googleads.v2.services.GoogleAdsRow;
-import com.google.ads.googleads.v2.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v2.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v2.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
+import com.google.ads.googleads.v3.common.Metrics;
+import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.resources.AdGroup;
+import com.google.ads.googleads.v3.resources.AdGroupCriterion;
+import com.google.ads.googleads.v3.resources.Campaign;
+import com.google.ads.googleads.v3.services.GoogleAdsRow;
+import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v3.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v3.services.SearchGoogleAdsStreamResponse;
+import com.google.api.gax.rpc.ServerStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Gets keyword performance statistics for the 50 keywords with the most impressions
- * over the last 7 days.
+ * Gets keyword performance statistics for the 50 keywords with the most impressions over the last 7
+ * days.
  */
 public class GetKeywordStats {
-
-  private static final int PAGE_SIZE = 1_000;
 
   private static class GetKeywordStatsParams extends CodeSampleParams {
 
@@ -112,47 +111,49 @@ public class GetKeywordStats {
               // Limits to the 50 keywords with the most impressions in the date range.
               + "ORDER BY metrics.impressions DESC "
               + "LIMIT 50";
+      // Constructs the SearchGoogleAdsStreamRequest.
+      SearchGoogleAdsStreamRequest request = SearchGoogleAdsStreamRequest.newBuilder()
+          .setCustomerId(Long.toString(customerId))
+          .setQuery(searchQuery)
+          .build();
 
-      // Creates a request that will retrieve all keyword statistics using pages of the specified
-      // page size.
-      SearchGoogleAdsRequest request =
-          SearchGoogleAdsRequest.newBuilder()
-              .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
-              .setQuery(searchQuery)
-              .build();
-      // Issues the search request.
-      SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
-      // Iterates over all rows in all pages and prints the requested field values for the keyword
-      // in each row.
-      for (GoogleAdsRow googleAdsRow : searchPagedResponse.iterateAll()) {
-        Campaign campaign = googleAdsRow.getCampaign();
-        AdGroup adGroup = googleAdsRow.getAdGroup();
-        AdGroupCriterion adGroupCriterion = googleAdsRow.getAdGroupCriterion();
-        Metrics metrics = googleAdsRow.getMetrics();
+      // Creates and issues a search Google Ads stream request that will retrieve all of the
+      // requested field values for the keyword.
+      ServerStream<SearchGoogleAdsStreamResponse> stream = googleAdsServiceClient
+          .searchStreamCallable().call(request);
 
-        System.out.printf(
-            "Keyword text '%s' with "
-                + "match type '%s' "
-                + "and ID %d "
-                + "in ad group '%s' "
-                + "with ID %d "
-                + "in campaign '%s' "
-                + "with ID %d "
-                + "had %d impression(s), "
-                + "%d click(s), "
-                + "and %d cost (in micros) "
-                + "during the last 7 days.%n",
-            adGroupCriterion.getKeyword().getText().getValue(),
-            adGroupCriterion.getKeyword().getMatchType(),
-            adGroupCriterion.getCriterionId().getValue(),
-            adGroup.getName().getValue(),
-            adGroup.getId().getValue(),
-            campaign.getName().getValue(),
-            campaign.getId().getValue(),
-            metrics.getImpressions().getValue(),
-            metrics.getClicks().getValue(),
-            metrics.getCostMicros().getValue());
+      // Iterates through the results in the stream response and prints all of the requested
+      // field values for the keyword in each row.
+      for (SearchGoogleAdsStreamResponse response : stream) {
+        for (GoogleAdsRow googleAdsRow : response.getResultsList()) {
+          Campaign campaign = googleAdsRow.getCampaign();
+          AdGroup adGroup = googleAdsRow.getAdGroup();
+          AdGroupCriterion adGroupCriterion = googleAdsRow.getAdGroupCriterion();
+          Metrics metrics = googleAdsRow.getMetrics();
+
+          System.out.printf(
+              "Keyword text '%s' with "
+                  + "match type '%s' "
+                  + "and ID %d "
+                  + "in ad group '%s' "
+                  + "with ID %d "
+                  + "in campaign '%s' "
+                  + "with ID %d "
+                  + "had %d impression(s), "
+                  + "%d click(s), "
+                  + "and %d cost (in micros) "
+                  + "during the last 7 days.%n",
+              adGroupCriterion.getKeyword().getText().getValue(),
+              adGroupCriterion.getKeyword().getMatchType(),
+              adGroupCriterion.getCriterionId().getValue(),
+              adGroup.getName().getValue(),
+              adGroup.getId().getValue(),
+              campaign.getName().getValue(),
+              campaign.getId().getValue(),
+              metrics.getImpressions().getValue(),
+              metrics.getClicks().getValue(),
+              metrics.getCostMicros().getValue());
+        }
       }
     }
   }
