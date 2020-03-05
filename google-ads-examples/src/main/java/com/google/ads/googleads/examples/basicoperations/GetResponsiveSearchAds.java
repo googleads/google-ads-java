@@ -141,16 +141,12 @@ public class GetResponsiveSearchAds {
         System.out.printf(
             "Responsive search ad with resource name '%s', status '%s' was found.%n",
             ad.getResourceName(), adGroupAd.getStatus().getDescriptorForType().getName());
-        // Prints the ad text asset detail if responsive search ad info is present.
-        if (ad.hasResponsiveSearchAd()) {
-          ResponsiveSearchAdInfo responsiveSearchAdInfo = ad.getResponsiveSearchAd();
-          System.out.printf(
-              "Headlines:%n'%s'%n" + "Descriptions:%n'%s'%n",
-              adTextAssetsToStrings(responsiveSearchAdInfo.getHeadlinesList()),
-              adTextAssetsToStrings(responsiveSearchAdInfo.getDescriptionsList()));
-        } else {
-          System.out.println("Responsive search ad info was not found.");
-        }
+        // Prints the ad text asset detail.
+        ResponsiveSearchAdInfo responsiveSearchAdInfo = ad.getResponsiveSearchAd();
+        System.out.printf(
+            "Headlines:%n'%s'%n" + "Descriptions:%n'%s'%n",
+            adTextAssetsToStrings(responsiveSearchAdInfo.getHeadlinesList()),
+            adTextAssetsToStrings(responsiveSearchAdInfo.getDescriptionsList()));
       }
     }
   }
