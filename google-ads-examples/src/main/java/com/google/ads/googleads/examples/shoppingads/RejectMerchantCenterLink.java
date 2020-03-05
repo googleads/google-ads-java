@@ -101,7 +101,7 @@ public class RejectMerchantCenterLink {
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long merchantCenterAccountId) {
 
-    // Reject a pending link request or unlink an enabled link for a Google Ads account with
+    // Rejects a pending link request or unlinks an enabled link for a Google Ads account with
     // customerId from a Merchant Center account with merchantCenterAccountId.
     try (MerchantCenterLinkServiceClient merchantCenterLinkService =
         googleAdsClient.getLatestVersion().createMerchantCenterLinkServiceClient()) {
@@ -112,19 +112,23 @@ public class RejectMerchantCenterLink {
                   .build());
 
       System.out.printf(
-          "%d Merchant Center link(s) found with the following resource name(s):%n",
+          "%d Merchant Center link(s) found with the following details:%n",
           response.getMerchantCenterLinksCount());
 
       for (MerchantCenterLink merchantCenterLink : response.getMerchantCenterLinksList()) {
-        System.out.printf("'%s'%n", merchantCenterLink.getResourceName());
+        System.out.printf(
+            "Link '%s' is in status '%s'.%n",
+            merchantCenterLink.getResourceName(), merchantCenterLink.getStatus());
 
-        // Check if there is a link for the Merchant Center account we are looking for.
+        // Checks if there is a link for the Merchant Center account we are looking for.
         if (merchantCenterAccountId == merchantCenterLink.getId().getValue()) {
           // If the Merchant Center link is pending, reject it by removing the link.
           // If the Merchant Center link is enabled, unlink Merchant Center from Google Ads by
           // removing the link.
           // In both cases, the remove action is the same.
           removeMerchantCenterLink(merchantCenterLinkService, customerId, merchantCenterLink);
+          // There is only one MerchantCenterLink object for a given Google Ads account and Merchant
+          // Center account, so we can break early.
           break;
         }
       }
@@ -132,7 +136,7 @@ public class RejectMerchantCenterLink {
   }
 
   /**
-   * Remove a Merchant Center link from a Google Ads client customer account.
+   * Removes a Merchant Center link from a Google Ads client customer account.
    *
    * @param merchantCenterLinkServiceClient the MerchantCenterLinkService client.
    * @param customerId the client customer ID of the Google Ads account that has the link request.

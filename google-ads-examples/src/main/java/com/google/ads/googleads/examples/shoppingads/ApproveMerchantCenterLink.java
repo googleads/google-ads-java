@@ -103,7 +103,7 @@ public class ApproveMerchantCenterLink {
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long merchantCenterAccountId) {
 
-    // Approve a pending link request for a Google Ads account with customerId from a Merchant
+    // Approves a pending link request for a Google Ads account with customerId from a Merchant
     // Center account with merchantCenterAccountId.
     try (MerchantCenterLinkServiceClient merchantCenterLinkService =
         googleAdsClient.getLatestVersion().createMerchantCenterLinkServiceClient()) {
@@ -114,22 +114,26 @@ public class ApproveMerchantCenterLink {
                   .build());
 
       System.out.printf(
-          "%d Merchant Center link(s) found with the following resource name(s):%n",
+          "%d Merchant Center link(s) found with the following details:%n",
           response.getMerchantCenterLinksCount());
 
       for (MerchantCenterLink merchantCenterLink : response.getMerchantCenterLinksList()) {
-        System.out.printf("'%s'%n", merchantCenterLink.getResourceName());
+        System.out.printf(
+            "Found link '%s' in status '%s'.%n",
+            merchantCenterLink.getResourceName(), merchantCenterLink.getStatus());
 
-        // Check if there is a link for the Merchant Center account we are looking for, then only
-        // approve the link if it is in a 'PENDING' state.
+        // Checks if there is a link for the Merchant Center account we are looking for, then only
+        // approves the link if it is in a 'PENDING' state.
         if (merchantCenterAccountId == merchantCenterLink.getId().getValue()
             && merchantCenterLink.getStatus() == MerchantCenterLinkStatus.PENDING) {
-          // Update the status of Merchant Center link to 'ENABLED' to approve the link.
+          // Updates the status of Merchant Center link to 'ENABLED' to approve the link.
           updateMerchantCenterLinkStatus(
               merchantCenterLinkService,
               customerId,
               merchantCenterLink,
               MerchantCenterLinkStatus.ENABLED);
+          // There is only one MerchantCenterLink object for a given Google Ads account and Merchant
+          // Center account, so we can break early.
           break;
         }
       }
@@ -142,6 +146,7 @@ public class ApproveMerchantCenterLink {
    * @param merchantCenterLinkServiceClient the MerchantCenterLinkService client.
    * @param customerId the client customer ID of the Google Ads account to approve the link request.
    * @param merchantCenterLink the MerchantCenterLink object to update.
+   * @param status the new status to set on the link.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void updateMerchantCenterLinkStatus(
