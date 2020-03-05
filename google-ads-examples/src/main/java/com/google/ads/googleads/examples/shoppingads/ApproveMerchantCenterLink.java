@@ -119,7 +119,7 @@ public class ApproveMerchantCenterLink {
 
       for (MerchantCenterLink merchantCenterLink : response.getMerchantCenterLinksList()) {
         System.out.printf(
-            "Found link '%s' in status '%s'.%n",
+            "Link '%s' has status '%s'.%n",
             merchantCenterLink.getResourceName(), merchantCenterLink.getStatus());
 
         // Checks if there is a link for the Merchant Center account we are looking for, then only
