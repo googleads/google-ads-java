@@ -16,6 +16,8 @@ package com.google.ads.googleads.examples.utils;
 
 /** Contains command line argument formats for example code. */
 public final class ArgumentNames {
+  public static final String ADJUSTMENT_TIME = "--adjustmentTime";
+  public static final String ADJUSTMENT_TYPE = "--adjustmentType";
   public static final String ATTRIBUTE_VALUE = "--attributeValue";
   public static final String BILLING_SETUP_ID = "--billingSetupId";
   public static final String CUSTOMER_ID = "--customerId";
@@ -41,6 +43,7 @@ public final class ArgumentNames {
   public static final String LANGUAGE_ID = "--languageId";
   public static final String LOCATION_ID = "--locationId";
   public static final String RECOMMENDATION_ID = "--recommendationId";
+  public static final String RESTATEMENT_VALUE = "--restatementValue";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
   public static final String MERCHANT_CENTER_ACCOUNT_ID = "--merchantCenterAccountId";
   public static final String CREATE_DEFAULT_LISTING_GROUP = "--createDefaultListingGroup";
