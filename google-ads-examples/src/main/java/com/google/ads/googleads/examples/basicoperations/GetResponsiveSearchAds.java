@@ -144,7 +144,7 @@ public class GetResponsiveSearchAds {
         // Prints the ad text asset detail.
         ResponsiveSearchAdInfo responsiveSearchAdInfo = ad.getResponsiveSearchAd();
         System.out.printf(
-            "Headlines:%n'%s'%n" + "Descriptions:%n'%s'%n",
+            "Headlines:%n'%s'%nDescriptions:%n'%s'%n",
             adTextAssetsToStrings(responsiveSearchAdInfo.getHeadlinesList()),
             adTextAssetsToStrings(responsiveSearchAdInfo.getDescriptionsList()));
       }
