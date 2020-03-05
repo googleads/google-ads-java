@@ -117,7 +117,7 @@ public class RejectMerchantCenterLink {
 
       for (MerchantCenterLink merchantCenterLink : response.getMerchantCenterLinksList()) {
         System.out.printf(
-            "Link '%s' is in status '%s'.%n",
+            "Link '%s' has status '%s'.%n",
             merchantCenterLink.getResourceName(), merchantCenterLink.getStatus());
 
         // Checks if there is a link for the Merchant Center account we are looking for.
