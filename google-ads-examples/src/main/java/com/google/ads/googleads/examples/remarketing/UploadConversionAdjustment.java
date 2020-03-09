@@ -51,26 +51,27 @@ public class UploadConversionAdjustment {
     @Parameter(names = ArgumentNames.GCLID, required = true)
     private String gclid;
 
+    // RETRACTION negates a conversion, and RESTATEMENT changes the value of a conversion.
     @Parameter(names = ArgumentNames.ADJUSTMENT_TYPE, required = true)
     private String adjustmentType;
 
     @Parameter(
-        names = ArgumentNames.CONVERSION_TIME,
+        names = ArgumentNames.CONVERSION_DATE_TIME,
         required = true,
         description =
             "The date time at which the conversion occurred. "
                 + "Must be after the click time, and must include the time zone offset. "
                 + "The format is  'yyyy-mm-dd hh:mm:ss+|-hh:mm', e.g. '2019-01-01 12:32:45-08:00'.")
-    private String conversionTime;
+    private String conversionDateTime;
 
     @Parameter(
-        names = ArgumentNames.ADJUSTMENT_TIME,
+        names = ArgumentNames.ADJUSTMENT_DATE_TIME,
         required = true,
         description =
             "The date time at which the adjustment occurred. "
                 + "Must be after the click time, and must include the time zone offset. "
                 + "The format is  'yyyy-mm-dd hh:mm:ss+|-hh:mm', e.g. '2019-01-01 12:32:45-08:00'.")
-    private String adjustmentTime;
+    private String adjustmentDateTime;
 
     @Parameter(names = ArgumentNames.RESTATEMENT_VALUE)
     private Float restatementValue;
@@ -86,10 +87,10 @@ public class UploadConversionAdjustment {
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       params.gclid = "INSERT_GCL_ID_HERE";
       params.adjustmentType = "INSERT_ADJUSTMENT_TYPE_HERE";
-      params.conversionTime = "INSERT_CONVERSION_TIME_HERE";
-      params.adjustmentTime = "INSERT_ADJUSTMENT_TIME_HERE";
+      params.conversionDateTime = "INSERT_CONVERSION_DATE_TIME_HERE";
+      params.adjustmentDateTime = "INSERT_ADJUSTMENT_DATE_TIME_HERE";
 
-      // Optional: Specify a restatement value for adjustments of type type RESTATEMENT.
+      // Optional: Specify a restatement value for adjustments of type RESTATEMENT.
       params.restatementValue = null;
     }
 
@@ -113,8 +114,8 @@ public class UploadConversionAdjustment {
               params.conversionActionId,
               params.gclid,
               params.adjustmentType,
-              params.conversionTime,
-              params.adjustmentTime,
+              params.conversionDateTime,
+              params.adjustmentDateTime,
               params.restatementValue);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
@@ -139,8 +140,8 @@ public class UploadConversionAdjustment {
    * @param conversionActionId conversion action ID associated with this conversion.
    * @param gclid the GCLID for the conversion.
    * @param adjustmentType the type of adjustment, e.g. RETRACTION, RESTATEMENT.
-   * @param conversionTime date and time of the conversion.
-   * @param adjustmentTime date and time of the adjustment.
+   * @param conversionDateTime date and time of the conversion.
+   * @param adjustmentDateTime date and time of the adjustment.
    * @param restatementValue the adjusted value for adjustment type RESTATEMENT.
    */
   private void runExample(
@@ -149,8 +150,8 @@ public class UploadConversionAdjustment {
       long conversionActionId,
       String gclid,
       String adjustmentType,
-      String conversionTime,
-      String adjustmentTime,
+      String conversionDateTime,
+      String adjustmentDateTime,
       @Nullable Float restatementValue) {
     // Gets the conversion adjustment enum value from the adjustmentType String.
     ConversionAdjustmentType conversionAdjustmentType =
@@ -166,9 +167,9 @@ public class UploadConversionAdjustment {
             .setGclidDateTimePair(
                 GclidDateTimePair.newBuilder()
                     .setGclid(StringValue.of(gclid))
-                    .setConversionDateTime(StringValue.of(conversionTime))
+                    .setConversionDateTime(StringValue.of(conversionDateTime))
                     .build())
-            .setAdjustmentDateTime(StringValue.of(adjustmentTime))
+            .setAdjustmentDateTime(StringValue.of(adjustmentDateTime))
             .build();
 
     // Sets adjusted value for adjustment type RESTATEMENT.

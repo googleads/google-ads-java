@@ -16,7 +16,7 @@ package com.google.ads.googleads.examples.utils;
 
 /** Contains command line argument formats for example code. */
 public final class ArgumentNames {
-  public static final String ADJUSTMENT_TIME = "--adjustmentTime";
+  public static final String ADJUSTMENT_DATE_TIME = "--adjustmentDateTime";
   public static final String ADJUSTMENT_TYPE = "--adjustmentType";
   public static final String ATTRIBUTE_VALUE = "--attributeValue";
   public static final String BILLING_SETUP_ID = "--billingSetupId";
@@ -28,7 +28,7 @@ public final class ArgumentNames {
   public static final String CRITERION_ID = "--criterionId";
   public static final String CAMPAIGN_BUDGET_ID = "--campaignBudgetId";
   public static final String CONVERSION_ACTION_ID = "--conversionActionId";
-  public static final String CONVERSION_TIME = "--conversionTime";
+  public static final String CONVERSION_DATE_TIME = "--conversionDateTime";
   public static final String CONVERSION_VALUE = "--conversionValue";
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
   public static final String CPC_BID_CEILING_MICRO_AMOUNT = "--cpcBidCeilingMicroAmount";

@@ -45,11 +45,11 @@ public class UploadOfflineConversion {
     @Parameter(names = ArgumentNames.GCLID, required = true)
     private String gclid;
 
-    @Parameter(names = ArgumentNames.CONVERSION_TIME, required = true,
+    @Parameter(names = ArgumentNames.CONVERSION_DATE_TIME, required = true,
         description = "The date time at which the conversion occurred. "
             + "Must be after the click time, and must include the time zone offset. "
             + "The format is  'yyyy-mm-dd hh:mm:ss+|-hh:mm', e.g. '2019-01-01 12:32:45-08:00'.")
-    private String conversionTime;
+    private String conversionDateTime;
 
     @Parameter(names = ArgumentNames.CONVERSION_VALUE, required = true)
     private Double conversionValue;
@@ -64,7 +64,7 @@ public class UploadOfflineConversion {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       params.gclid = "INSERT_GCL_ID_HERE";
-      params.conversionTime = "INSERT_CONVERSION_TIME_HERE";
+      params.conversionDateTime = "INSERT_CONVERSION_DATE_TIME_HERE";
       params.conversionValue = Double.parseDouble("INSERT_CONVERSION_VALUE_HERE");
     }
 
@@ -86,7 +86,7 @@ public class UploadOfflineConversion {
           params.customerId,
           params.conversionActionId,
           params.gclid,
-          params.conversionTime,
+          params.conversionDateTime,
           params.conversionValue);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
@@ -110,7 +110,7 @@ public class UploadOfflineConversion {
    * @param customerId the client customer ID.
    * @param conversionActionId conversion action ID associated with this conversion.
    * @param gclid the GCLID for the conversion.
-   * @param conversionTime  date and time of the conversion.
+   * @param conversionDateTime  date and time of the conversion.
    * @param conversionValue the value of the conversion.
    */
   private void runExample(
@@ -118,7 +118,7 @@ public class UploadOfflineConversion {
       long customerId,
       long conversionActionId,
       String gclid,
-      String conversionTime,
+      String conversionDateTime,
       Double conversionValue) {
     // Gets the conversion action resource name.
     String conversionActionResourceName =
@@ -127,7 +127,7 @@ public class UploadOfflineConversion {
     // Creates the click conversion.
     ClickConversion clickConversion = ClickConversion.newBuilder()
         .setConversionAction(StringValue.of(conversionActionResourceName))
-        .setConversionDateTime(StringValue.of(conversionTime))
+        .setConversionDateTime(StringValue.of(conversionDateTime))
         .setConversionValue(DoubleValue.of(conversionValue))
         .setCurrencyCode(StringValue.of("USD"))
         .setGclid(StringValue.of(gclid))
