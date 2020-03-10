@@ -126,6 +126,9 @@ public class UpdateAudienceTargetRestriction {
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
       // Iterates over all rows in all pages and prints the requested field values for the ad group
       // in each row.
+      // Creates a flag that specifies whether or not we should update the targeting setting. We
+      // should only do this if we find an AUDIENCE target restriction with bid_only set to false.
+      boolean shouldUpdateTargetingSetting = false;
       for (GoogleAdsRow googleAdsRow : searchPagedResponse.iterateAll()) {
         AdGroup adGroup = googleAdsRow.getAdGroup();
         // Prints the results.
@@ -135,9 +138,6 @@ public class UpdateAudienceTargetRestriction {
             adGroup.getId().getValue(), adGroup.getName().getValue());
         List<TargetRestriction> targetRestrictions =
             adGroup.getTargetingSetting().getTargetRestrictionsList();
-        // Creates a flag that specifies whether or not we should update the targeting setting. We
-        // should only do this if we find an AUDIENCE target restriction with bid_only set to false.
-        boolean shouldUpdateTargetingSetting = false;
         // Loops through and prints each of the target restrictions.
         // Reconstructs the TargetingSetting object with the updated audience target restriction
         // because Google will overwrite the entire targeting_setting field of the ad group when
@@ -165,15 +165,14 @@ public class UpdateAudienceTargetRestriction {
           }
         }
       }
-    }
-
-    // Only updates the TargetingSetting on the ad group if there is an AUDIENCE TargetRestriction
-    // with bid_only set to false.
-    if (shouldUpdateTargetingSetting) {
-      updateTargetingSetting(
+      // Only updates the TargetingSetting on the ad group if there is an AUDIENCE TargetRestriction
+      // with bid_only set to false.
+      if (shouldUpdateTargetingSetting) {
+        updateTargetingSetting(
           googleAdsClient, customerId, adGroupId, targetingSettingBuilder.build());
-    } else {
-      System.out.println("No target restrictions to update.");
+      } else {
+        System.out.println("No target restrictions to update.");
+      }
     }
   }
 
