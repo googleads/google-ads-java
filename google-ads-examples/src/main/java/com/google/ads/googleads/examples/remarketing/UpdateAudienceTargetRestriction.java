@@ -104,9 +104,6 @@ public class UpdateAudienceTargetRestriction {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
     // Creates an empty TargetingSetting object.
     TargetingSetting.Builder targetingSettingBuilder = TargetingSetting.newBuilder();
-    // Creates a flag that specifies whether or not we should update the targeting setting. We
-    // should only do this if we find an AUDIENCE target restriction with bid_only set to false.
-    boolean shouldUpdateTargetingSetting = false;
 
     // Creates the Google Ads service client.
     try (GoogleAdsServiceClient googleAdsServiceClient =
@@ -138,6 +135,9 @@ public class UpdateAudienceTargetRestriction {
             adGroup.getId().getValue(), adGroup.getName().getValue());
         List<TargetRestriction> targetRestrictions =
             adGroup.getTargetingSetting().getTargetRestrictionsList();
+        // Creates a flag that specifies whether or not we should update the targeting setting. We
+        // should only do this if we find an AUDIENCE target restriction with bid_only set to false.
+        boolean shouldUpdateTargetingSetting = false;
         // Loops through and prints each of the target restrictions.
         // Reconstructs the TargetingSetting object with the updated audience target restriction
         // because Google will overwrite the entire targeting_setting field of the ad group when
@@ -168,7 +168,7 @@ public class UpdateAudienceTargetRestriction {
     }
 
     // Only updates the TargetingSetting on the ad group if there is an AUDIENCE TargetRestriction
-    // with  bid_only set to false.
+    // with bid_only set to false.
     if (shouldUpdateTargetingSetting) {
       updateTargetingSetting(
           googleAdsClient, customerId, adGroupId, targetingSettingBuilder.build());
