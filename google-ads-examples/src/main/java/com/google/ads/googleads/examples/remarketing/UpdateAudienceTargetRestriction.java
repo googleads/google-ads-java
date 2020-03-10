@@ -169,7 +169,7 @@ public class UpdateAudienceTargetRestriction {
       // with bid_only set to false.
       if (shouldUpdateTargetingSetting) {
         updateTargetingSetting(
-          googleAdsClient, customerId, adGroupId, targetingSettingBuilder.build());
+            googleAdsClient, customerId, adGroupId, targetingSettingBuilder.build());
       } else {
         System.out.println("No target restrictions to update.");
       }
@@ -213,7 +213,7 @@ public class UpdateAudienceTargetRestriction {
       // Prints the resource name of the updated object.
       System.out.printf(
           "Updated targeting setting of ad group with resourceName '%s'; set the AUDIENCE "
-              + "target restriction to bid_only.%n",
+              + "target restriction to 'Observation'.%n",
           response.getResults(0).getResourceName());
     }
   }
