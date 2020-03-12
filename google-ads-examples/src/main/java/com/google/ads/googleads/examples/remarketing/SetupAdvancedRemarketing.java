@@ -147,6 +147,8 @@ public class SetupAdvancedRemarketing {
             .setName(StringValue.of("checkoutdate"))
             .setDateRuleItem(
                 UserListDateRuleItemInfo.newBuilder()
+                    // Available UserListDateRuleItemOperators can be found at
+                    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v3.enums#google.ads.googleads.v3.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator
                     .setOperator(UserListDateRuleItemOperator.AFTER)
                     .setValue(StringValue.of("20191031"))
                     .build())
