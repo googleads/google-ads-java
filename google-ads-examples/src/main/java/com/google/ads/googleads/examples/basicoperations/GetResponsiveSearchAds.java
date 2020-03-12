@@ -109,7 +109,8 @@ public class GetResponsiveSearchAds {
           "SELECT ad_group.id, ad_group_ad.ad.id, "
               + "ad_group_ad.ad.responsive_search_ad.headlines, "
               + "ad_group_ad.ad.responsive_search_ad.descriptions, "
-              + "ad_group_ad.status FROM ad_group_ad "
+              + "ad_group_ad.status "
+              + "FROM ad_group_ad "
               + "WHERE ad_group_ad.ad.type = RESPONSIVE_SEARCH_AD "
               + "AND ad_group_ad.status != 'REMOVED'";
       if (adGroupId != null) {
