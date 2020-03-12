@@ -51,8 +51,11 @@ public class UploadConversionAdjustment {
     @Parameter(names = ArgumentNames.GCLID, required = true)
     private String gclid;
 
-    // RETRACTION negates a conversion, and RESTATEMENT changes the value of a conversion.
-    @Parameter(names = ArgumentNames.ADJUSTMENT_TYPE, required = true)
+    @Parameter(
+        names = ArgumentNames.ADJUSTMENT_TYPE,
+        required = true,
+        description =
+            "RETRACTION negates a conversion, and RESTATEMENT changes the value of a conversion.")
     private String adjustmentType;
 
     @Parameter(
@@ -73,7 +76,11 @@ public class UploadConversionAdjustment {
                 + "The format is  'yyyy-mm-dd hh:mm:ss+|-hh:mm', e.g. '2019-01-01 12:32:45-08:00'.")
     private String adjustmentDateTime;
 
-    @Parameter(names = ArgumentNames.RESTATEMENT_VALUE)
+    @Parameter(
+        names = ArgumentNames.RESTATEMENT_VALUE,
+        description =
+            "The updated value of the conversion. Only applicable for ADJUSTMENT_TYPE of"
+                + " RESTATEMENT.")
     private Float restatementValue;
   }
 
