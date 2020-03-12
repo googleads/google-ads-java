@@ -18,25 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v2.common.ExpressionRuleUserListInfo;
-import com.google.ads.googleads.v2.common.RuleBasedUserListInfo;
-import com.google.ads.googleads.v2.common.UserListDateRuleItemInfo;
-import com.google.ads.googleads.v2.common.UserListNumberRuleItemInfo;
-import com.google.ads.googleads.v2.common.UserListRuleInfo;
-import com.google.ads.googleads.v2.common.UserListRuleItemGroupInfo;
-import com.google.ads.googleads.v2.common.UserListRuleItemInfo;
-import com.google.ads.googleads.v2.common.UserListStringRuleItemInfo;
-import com.google.ads.googleads.v2.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator;
-import com.google.ads.googleads.v2.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
-import com.google.ads.googleads.v2.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator;
-import com.google.ads.googleads.v2.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
-import com.google.ads.googleads.v2.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
-import com.google.ads.googleads.v2.errors.GoogleAdsError;
-import com.google.ads.googleads.v2.errors.GoogleAdsException;
-import com.google.ads.googleads.v2.resources.UserList;
-import com.google.ads.googleads.v2.services.MutateUserListsResponse;
-import com.google.ads.googleads.v2.services.UserListOperation;
-import com.google.ads.googleads.v2.services.UserListServiceClient;
+import com.google.ads.googleads.v3.common.ExpressionRuleUserListInfo;
+import com.google.ads.googleads.v3.common.RuleBasedUserListInfo;
+import com.google.ads.googleads.v3.common.UserListDateRuleItemInfo;
+import com.google.ads.googleads.v3.common.UserListNumberRuleItemInfo;
+import com.google.ads.googleads.v3.common.UserListRuleInfo;
+import com.google.ads.googleads.v3.common.UserListRuleItemGroupInfo;
+import com.google.ads.googleads.v3.common.UserListRuleItemInfo;
+import com.google.ads.googleads.v3.common.UserListStringRuleItemInfo;
+import com.google.ads.googleads.v3.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator;
+import com.google.ads.googleads.v3.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
+import com.google.ads.googleads.v3.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator;
+import com.google.ads.googleads.v3.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
+import com.google.ads.googleads.v3.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
+import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
+import com.google.ads.googleads.v3.resources.UserList;
+import com.google.ads.googleads.v3.services.MutateUserListsResponse;
+import com.google.ads.googleads.v3.services.UserListOperation;
+import com.google.ads.googleads.v3.services.UserListServiceClient;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.DoubleValue;
 import com.google.protobuf.Int64Value;
@@ -107,9 +107,9 @@ public class SetupAdvancedRemarketing {
         UserListRuleItemInfo.newBuilder()
             // The rule variable name must match a corresponding key name fired from a pixel.
             // To learn more about setting up remarketing tags, visit
-            // https://support.google.com/google-ads/answer/2476688?hl=en.
+            // https://support.google.com/google-ads/answer/2476688.
             // To learn more about remarketing events and parameters, visit
-            // https://support.google.com/google-ads/answer/7305793?hl=en.
+            // https://support.google.com/google-ads/answer/7305793.
             .setName(StringValue.of("ecomm_pagetype"))
             .setStringRuleItem(
                 UserListStringRuleItemInfo.newBuilder()
@@ -160,7 +160,7 @@ public class SetupAdvancedRemarketing {
             .setDateRuleItem(
                 UserListDateRuleItemInfo.newBuilder()
                     .setOperator(UserListDateRuleItemOperator.BEFORE)
-                    .setValue(StringValue.of("20190101"))
+                    .setValue(StringValue.of("20200101"))
                     .build())
             .build();
 
@@ -203,7 +203,7 @@ public class SetupAdvancedRemarketing {
                     "Users who checked out in November or December OR visited the checkout page"
                         + " with more than one item in their cart"))
             .setMembershipStatus(UserListMembershipStatus.OPEN)
-            .setMembershipLifeSpan(Int64Value.of(365))
+            .setMembershipLifeSpan(Int64Value.of(90))
             .setRuleBasedUserList(ruleBasedUserListInfo)
             .build();
 
