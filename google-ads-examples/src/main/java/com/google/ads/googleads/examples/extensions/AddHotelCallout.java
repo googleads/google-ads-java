@@ -45,10 +45,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Adds a hotel callout extension to a specific account, campaign within the account, and adgroup
+ * Adds a hotel callout extension to a specific account, campaign within the account, and ad group
  * within the campaign.
  */
-public class AddHotelCalloutExtension {
+public class AddHotelCallout {
 
   private static class AddHotelCalloutParams extends CodeSampleParams {
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
@@ -95,7 +95,7 @@ public class AddHotelCalloutExtension {
     }
 
     try {
-      new AddHotelCalloutExtension()
+      new AddHotelCallout()
           .runExample(
               googleAdsClient,
               params.customerId,
@@ -130,14 +130,14 @@ public class AddHotelCalloutExtension {
     String extensionFeedItemResourceName =
         addExtensionFeedItem(googleAdsClient, customerId, calloutText, languageCode);
 
+    // Adds the extension feed item to the account.
+    addExtensionToAccount(googleAdsClient, customerId, extensionFeedItemResourceName);
+
     // Adds the extension feed item to the campaign.
     addExtensionToCampaign(googleAdsClient, customerId, campaignId, extensionFeedItemResourceName);
 
-    // Adds the extension feed item to the adgroup.
+    // Adds the extension feed item to the ad group.
     addExtensionToAdGroup(googleAdsClient, customerId, adGroupId, extensionFeedItemResourceName);
-
-    // Adds the extension feed item to the account.
-    addExtensionToAccount(googleAdsClient, customerId, extensionFeedItemResourceName);
   }
 
   /** Creates a new extension feed item for the callout. */
@@ -171,8 +171,35 @@ public class AddHotelCalloutExtension {
     }
   }
 
+  /** Adds extension feed item to the account. */
+  private void addExtensionToAccount(
+      GoogleAdsClient googleAdsClient, long customerId, String extensionFeedItemResourceName) {
+    // Creates the customer extension setting, sets it to HOTEL_CALLOUT, and attaches the feed item.
+    CustomerExtensionSetting customerExtensionSetting =
+        CustomerExtensionSetting.newBuilder()
+            .setExtensionType(ExtensionType.HOTEL_CALLOUT)
+            .addExtensionFeedItems(StringValue.of(extensionFeedItemResourceName))
+            .build();
+
+    // Creates the customer extension setting operation.
+    CustomerExtensionSettingOperation op =
+        CustomerExtensionSettingOperation.newBuilder().setCreate(customerExtensionSetting).build();
+
+    // Issues the create request to add the callout.
+    try (CustomerExtensionSettingServiceClient customerExtensionServiceClient =
+        googleAdsClient.getLatestVersion().createCustomerExtensionSettingServiceClient()) {
+      MutateCustomerExtensionSettingsResponse response =
+          customerExtensionServiceClient.mutateCustomerExtensionSettings(
+              Long.toString(customerId), ImmutableList.of(op));
+
+      String customerExtensionResourceName = response.getResults(0).getResourceName();
+      System.out.printf(
+          "Added a account extension with resource name: '%s'.%n", customerExtensionResourceName);
+    }
+  }
+
   /** Adds the extension feed item to the Campaign. */
-  private String addExtensionToCampaign(
+  private void addExtensionToCampaign(
       GoogleAdsClient googleAdsClient,
       long customerId,
       long campaignId,
@@ -201,19 +228,18 @@ public class AddHotelCalloutExtension {
       String campaignExtensionResourceName = response.getResults(0).getResourceName();
       System.out.printf(
           "Added a campaign extension with resource name: '%s'.%n", campaignExtensionResourceName);
-      return campaignExtensionResourceName;
     }
   }
 
-  /** Adds the extension feed item to the adgroup. */
-  private String addExtensionToAdGroup(
+  /** Adds the extension feed item to the ad group. */
+  private void addExtensionToAdGroup(
       GoogleAdsClient googleAdsClient,
       long customerId,
       long adGroupId,
       String extensionFeedItemResourceName) {
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
-    // Creates the adgroup extension setting, sets it to HOTEL_CALLOUT, and attaches the feed item.
+    // Creates the ad group extension setting, sets it to HOTEL_CALLOUT, and attaches the feed item.
     AdGroupExtensionSetting adGroupExtensionSetting =
         AdGroupExtensionSetting.newBuilder()
             .setExtensionType(ExtensionType.HOTEL_CALLOUT)
@@ -221,7 +247,7 @@ public class AddHotelCalloutExtension {
             .addExtensionFeedItems(StringValue.of(extensionFeedItemResourceName))
             .build();
 
-    // Creates the adgroup extension setting operation.
+    // Creates the ad group extension setting operation.
     AdGroupExtensionSettingOperation op =
         AdGroupExtensionSettingOperation.newBuilder().setCreate(adGroupExtensionSetting).build();
 
@@ -234,36 +260,7 @@ public class AddHotelCalloutExtension {
 
       String adGroupExtensionResourceName = response.getResults(0).getResourceName();
       System.out.printf(
-          "Added a adgroup extension with resource name: '%s'.%n", adGroupExtensionResourceName);
-      return adGroupExtensionResourceName;
-    }
-  }
-
-  /** Adds extension feed item to the account. */
-  private String addExtensionToAccount(
-      GoogleAdsClient googleAdsClient, long customerId, String extensionFeedItemResourceName) {
-    // Creates the customer extension setting, sets it to HOTEL_CALLOUT, and attaches the feed item.
-    CustomerExtensionSetting customerExtensionSetting =
-        CustomerExtensionSetting.newBuilder()
-            .setExtensionType(ExtensionType.HOTEL_CALLOUT)
-            .addExtensionFeedItems(StringValue.of(extensionFeedItemResourceName))
-            .build();
-
-    // Creates the customer extension setting operation.
-    CustomerExtensionSettingOperation op =
-        CustomerExtensionSettingOperation.newBuilder().setCreate(customerExtensionSetting).build();
-
-    // Issues the create request to add the callout.
-    try (CustomerExtensionSettingServiceClient customerExtensionServiceClient =
-        googleAdsClient.getLatestVersion().createCustomerExtensionSettingServiceClient()) {
-      MutateCustomerExtensionSettingsResponse response =
-          customerExtensionServiceClient.mutateCustomerExtensionSettings(
-              Long.toString(customerId), ImmutableList.of(op));
-
-      String customerExtensionResourceName = response.getResults(0).getResourceName();
-      System.out.printf(
-          "Added a account extension with resource name: '%s'.%n", customerExtensionResourceName);
-      return customerExtensionResourceName;
+          "Added an ad group extension with resource name: '%s'.%n", adGroupExtensionResourceName);
     }
   }
 }
