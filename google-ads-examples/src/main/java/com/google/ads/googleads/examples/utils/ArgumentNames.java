@@ -57,4 +57,5 @@ public final class ArgumentNames {
   public static final String MANAGER_ID = "--managerId";
   public static final String CALLOUT_TEXT = "--calloutText";
   public static final String LANGUAGE_CODE = "--languageCode";
+  public static final String SITELINK_TEXT = "--sitelinkText";
 }
