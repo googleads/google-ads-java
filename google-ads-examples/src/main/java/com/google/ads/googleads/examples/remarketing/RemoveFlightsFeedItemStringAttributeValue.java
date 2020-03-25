@@ -40,14 +40,14 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * Removes a FeedItemAttributeValue of a FeedItem in a flights Feed. To create a flights
- * feed, run the AddFlightsFeed example. This example is specific to feeds of type
- * DYNAMIC_FLIGHT. The attribute you are removing must be present on the feed.
+ * Removes a FeedItemAttributeValue of a FeedItem in a flights Feed. To create a flights feed, run
+ * the AddFlightsFeed example. This example is specific to feeds of type DYNAMIC_FLIGHT. The
+ * attribute you are removing must be present on the feed.
  */
-public class RemoveFeedItemAttributeValue {
+public class RemoveFlightsFeedItemStringAttributeValue {
   private static final int PAGE_SIZE = 1_000;
 
-  private static class RemoveFeedItemAttributeValueParams extends CodeSampleParams {
+  private static class RemoveFlightsFeedItemStringAttributeValueParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private long customerId;
@@ -63,7 +63,8 @@ public class RemoveFeedItemAttributeValue {
   }
 
   public static void main(String[] args) {
-    RemoveFeedItemAttributeValueParams params = new RemoveFeedItemAttributeValueParams();
+    RemoveFlightsFeedItemStringAttributeValueParams params =
+        new RemoveFlightsFeedItemStringAttributeValueParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -87,13 +88,13 @@ public class RemoveFeedItemAttributeValue {
     }
 
     try {
-      new RemoveFeedItemAttributeValue()
+      new RemoveFlightsFeedItemStringAttributeValue()
           .runExample(
-            googleAdsClient,
-            params.customerId,
-            params.feedId,
-            params.feedItemId,
-            params.flightPlaceholderField);
+              googleAdsClient,
+              params.customerId,
+              params.feedId,
+              params.feedItemId,
+              params.flightPlaceholderField);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -126,7 +127,7 @@ public class RemoveFeedItemAttributeValue {
       long feedItemId,
       String flightPlaceholderField) {
     removeAttributeFromFeedItem(
-      googleAdsClient, customerId, feedId, feedItemId, flightPlaceholderField);
+        googleAdsClient, customerId, feedId, feedItemId, flightPlaceholderField);
   }
 
   /**
@@ -153,8 +154,7 @@ public class RemoveFeedItemAttributeValue {
         AddFlightsFeed.getFeed(googleAdsClient, customerId, feedResourceName);
 
     // Gets the feed item resource name.
-    String feedItemResourceName = ResourceNames.feedItem(customerId, feedId,
-      feedItemId);
+    String feedItemResourceName = ResourceNames.feedItem(customerId, feedId, feedItemId);
     // Removes the attribute from the feed item.
     FeedItem feedItem =
         removeAttributeValueFromFeedItem(
@@ -252,8 +252,8 @@ public class RemoveFeedItemAttributeValue {
   }
 
   /**
-   * Gets the ID of the attribute. This is needed to specify which
-   * FeedItemAttributeValue will be removed in the given FeedItem.
+   * Gets the ID of the attribute. This is needed to specify which FeedItemAttributeValue will be
+   * removed in the given FeedItem.
    *
    * @param feedItem the FeedItem that will be updated.
    * @param removedFeedItemAttributeValue the new FeedItemAttributeValue that will be removed.
@@ -275,8 +275,9 @@ public class RemoveFeedItemAttributeValue {
 
     // Throws an exception if the attribute value is not found.
     if (attributeIndex == null) {
-      new IllegalArgumentException("No matching feed attribute for feed item attribute value: "
-          + removedFeedItemAttributeValue);
+      new IllegalArgumentException(
+          "No matching feed attribute for feed item attribute value: "
+              + removedFeedItemAttributeValue);
     }
 
     return attributeIndex;

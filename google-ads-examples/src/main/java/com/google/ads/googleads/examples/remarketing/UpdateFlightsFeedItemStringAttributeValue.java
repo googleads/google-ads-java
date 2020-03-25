@@ -41,15 +41,15 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * Updates a FeedItemAttributeValue in a flights feed. To create a flights feed,
- * run the AddFlightsFeed example. This example is specific to feeds of type DYNAMIC_FLIGHT.
- * The attribute you are updating must be present on the feed. This example is
- * specifically for updating the StringValue of an attribute.
+ * Updates a FeedItemAttributeValue in a flights feed. To create a flights feed, run the
+ * AddFlightsFeed example. This example is specific to feeds of type DYNAMIC_FLIGHT. The attribute
+ * you are updating must be present on the feed. This example is specifically for updating the
+ * StringValue of an attribute.
  */
-public class UpdateFeedItemAttributeValue {
+public class UpdateFlightsFeedItemStringAttributeValue {
   private static final int PAGE_SIZE = 1_000;
 
-  private static class UpdateFeedItemAttributeValueParams extends CodeSampleParams {
+  private static class UpdateFlightsFeedItemStringAttributeValueParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private long customerId;
@@ -68,7 +68,8 @@ public class UpdateFeedItemAttributeValue {
   }
 
   public static void main(String[] args) {
-    UpdateFeedItemAttributeValueParams params = new UpdateFeedItemAttributeValueParams();
+    UpdateFlightsFeedItemStringAttributeValueParams params =
+        new UpdateFlightsFeedItemStringAttributeValueParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -93,13 +94,14 @@ public class UpdateFeedItemAttributeValue {
     }
 
     try {
-      new UpdateFeedItemAttributeValue().runExample(
-        googleAdsClient,
-        params.customerId,
-        params.feedId,
-        params.feedItemId,
-        params.flightPlaceholderField,
-        params.attributeValue);
+      new UpdateFlightsFeedItemStringAttributeValue()
+          .runExample(
+              googleAdsClient,
+              params.customerId,
+              params.feedId,
+              params.feedItemId,
+              params.flightPlaceholderField,
+              params.attributeValue);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -134,7 +136,7 @@ public class UpdateFeedItemAttributeValue {
       String flightPlaceholderField,
       String attributeValue) {
     updateFeedItem(
-      googleAdsClient, customerId, feedId, feedItemId, flightPlaceholderField, attributeValue);
+        googleAdsClient, customerId, feedId, feedItemId, flightPlaceholderField, attributeValue);
   }
 
   /**
@@ -164,13 +166,13 @@ public class UpdateFeedItemAttributeValue {
 
     // Gets the ID of the attribute to update. This is needed to specify which
     // FeedItemAttributeValue will be updated in the given FeedItem.
-    long attributeId = feedAttributes
-      .get(FlightPlaceholderField.valueOf(flightPlaceholderField.toUpperCase()))
-      .getId()
-      .getValue();
+    long attributeId =
+        feedAttributes
+            .get(FlightPlaceholderField.valueOf(flightPlaceholderField.toUpperCase()))
+            .getId()
+            .getValue();
     // Gets the feed item resource name.
-    String feedItemResourceName =
-      ResourceNames.feedItem(customerId, feedId, feedItemId);
+    String feedItemResourceName = ResourceNames.feedItem(customerId, feedId, feedItemId);
     // Retrieves the feed item and its associated attributes based on its resource name.
     FeedItem feedItem = getFeedItem(googleAdsClient, customerId, feedItemResourceName);
     // Creates the updated FeedItemAttributeValue.
@@ -247,15 +249,15 @@ public class UpdateFeedItemAttributeValue {
   }
 
   /**
-   * Gets the ID of the attribute. This is needed to specify which
-   * FeedItemAttributeValue will be updated in the given FeedItem.
+   * Gets the ID of the attribute. This is needed to specify which FeedItemAttributeValue will be
+   * updated in the given FeedItem.
    *
    * @param feedItem the FeedItem that will be updated.
    * @param newFeedItemAttributeValue the new FeedItemAttributeValue that will be updated.
    * @return int the index of the attribute.
    */
   private int getAttributeIndex(
-    FeedItem feedItem, FeedItemAttributeValue newFeedItemAttributeValue) {
+      FeedItem feedItem, FeedItemAttributeValue newFeedItemAttributeValue) {
     Integer attributeIndex = null;
 
     // Loops through attribute values to find the index of the FeedItemAttributeValue to update
@@ -263,7 +265,7 @@ public class UpdateFeedItemAttributeValue {
       attributeIndex = (attributeIndex != null) ? attributeIndex + 1 : 0;
       // Checks if the current feedItemAttributeValue is the one we are updating
       if (feedItemAttributeValue.getFeedAttributeId().getValue()
-        == newFeedItemAttributeValue.getFeedAttributeId().getValue()) {
+          == newFeedItemAttributeValue.getFeedAttributeId().getValue()) {
         break;
       }
     }
@@ -271,7 +273,7 @@ public class UpdateFeedItemAttributeValue {
     // Throws an exception if the attribute value is not found.
     if (attributeIndex == null) {
       new IllegalArgumentException(
-        "No matching feed attribute for feed item attribute value: " + newFeedItemAttributeValue);
+          "No matching feed attribute for feed item attribute value: " + newFeedItemAttributeValue);
     }
 
     return attributeIndex;
