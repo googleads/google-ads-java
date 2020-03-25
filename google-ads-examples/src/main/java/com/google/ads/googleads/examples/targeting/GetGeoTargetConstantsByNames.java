@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /** Gets GeoTargetConstants by given location names. */
-public class GetGeoTargetConstantByName {
+public class GetGeoTargetConstantsByNames {
 
   public static void main(String[] args) {
     GoogleAdsClient googleAdsClient;
@@ -44,7 +44,7 @@ public class GetGeoTargetConstantByName {
     }
 
     try {
-      new GetGeoTargetConstantByName().runExample(googleAdsClient);
+      new GetGeoTargetConstantsByNames().runExample(googleAdsClient);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
