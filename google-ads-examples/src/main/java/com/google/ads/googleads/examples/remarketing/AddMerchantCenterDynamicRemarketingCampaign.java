@@ -259,7 +259,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     String marketingImageName = "Marketing Image";
     String marketingImageResourceName =
         uploadAsset(googleAdsClient, customerId, marketingImageUrl, marketingImageName);
-    String squareMarketingImageName = "Logo Image";
+    String squareMarketingImageName = "Square Marketing Image";
     String squareMarketingImageUrl = "https://goo.gl/mtt54n";
     String squareMarketingImageResourceName =
         uploadAsset(googleAdsClient, customerId, squareMarketingImageUrl, squareMarketingImageName);
