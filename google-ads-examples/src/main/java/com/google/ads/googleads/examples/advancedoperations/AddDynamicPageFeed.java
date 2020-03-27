@@ -68,6 +68,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/** Adds a page feed with URLs for a Dynamic Search Ads Campaign. */
 public class AddDynamicPageFeed {
 
   private static final int PAGE_SIZE = 1_000;
@@ -136,6 +137,7 @@ public class AddDynamicPageFeed {
    */
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId, long adGroupId) {
+    // The label for the DSA page URLs.
     String dsaPageUrlLabel = "discounts";
 
     // Creates the page feed details. This code example creates a new feed, but you can
@@ -205,7 +207,7 @@ public class AddDynamicPageFeed {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the customer ID.
    * @param feedResourceName the resource name of the feed.
-   * @return a MAP of the names and IDs of feed attributes.
+   * @return a map of the names and IDs of feed attributes.
    */
   private static Map<String, Long> getFeed(
       GoogleAdsClient googleAdsClient, long customerId, String feedResourceName) {
@@ -247,7 +249,7 @@ public class AddDynamicPageFeed {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the customer ID.
-   * @param feedDetails a MAP of the names and IDs of feed attributes.
+   * @param feedDetails a map of the names and IDs of feed attributes.
    * @param feedResourceName the resource name of the feed.
    */
   private static void createFeedMapping(
@@ -299,7 +301,7 @@ public class AddDynamicPageFeed {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the customer ID.
-   * @param feedDetails a MAP of the names and IDs of feed attributes.
+   * @param feedDetails a map of the names and IDs of feed attributes.
    * @param feedResourceName the resource name of the feed.
    * @param dsaPageUrlLabel the label for the DSA page URLs.
    */
@@ -315,7 +317,7 @@ public class AddDynamicPageFeed {
             "http://www.example.com/discounts/hotel-deals",
             "http://www.example.com/discounts/flight-deals");
 
-    // Creates a label attribute.
+    // Creates a value for the label attribute.
     FeedItemAttributeValue labelAttributeValue =
         FeedItemAttributeValue.newBuilder()
             .setFeedAttributeId(Int64Value.of(feedDetails.get("Label")))
@@ -439,7 +441,8 @@ public class AddDynamicPageFeed {
       SearchPagedResponse response = googleAdsServiceClient.search(request);
 
       // Throws an exception if the campaign is not a DSA campaign.
-      // The server will return an error if the campaign is not a DSA campaign, but this
+      // The server will return an error when trying to update the campaign with the DSA feed in
+      // the following step if the campaign is not a DSA campaign. However, this
       // exception is easier to interpret.
       if (!response
           .getPage()
@@ -473,14 +476,15 @@ public class AddDynamicPageFeed {
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, String dsaPageUrlLabel) {
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
-    // Creates the webpage condition info.
+    // Creates the webpage condition info that targets an advertiser's webpages based on the
+    // custom label specified by the dsaPageUrlLabel (e.g. "discounts").
     WebpageConditionInfo webpageConditionInfo =
         WebpageConditionInfo.newBuilder()
             .setOperand(WebpageConditionOperand.CUSTOM_LABEL)
             .setArgument(StringValue.of(dsaPageUrlLabel))
             .build();
 
-    // Creates the webpage info.
+    // Creates the webpage info, or criterion for targeting webpages of an advertiser's website.
     WebpageInfo webpageInfo =
         WebpageInfo.newBuilder()
             .setCriterionName(StringValue.of("Test Criterion"))
