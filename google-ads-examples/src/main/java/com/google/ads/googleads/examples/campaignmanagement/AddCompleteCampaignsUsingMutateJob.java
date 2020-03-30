@@ -73,7 +73,7 @@ public class AddCompleteCampaignsUsingMutateJob {
 
   private static final int NUMBER_OF_AD_GROUPS_TO_ADD = 2;
 
-  private static final int NUMBER_OF_KEYWORDS_TO_ADD = 5;
+  private static final int NUMBER_OF_KEYWORDS_TO_ADD = 4;
 
   private static final int MAX_TOTAL_POLL_INTERVAL_SECONDS = 60;
 
