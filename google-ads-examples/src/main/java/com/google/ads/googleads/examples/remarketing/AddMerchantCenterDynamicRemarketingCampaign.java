@@ -28,6 +28,7 @@ import com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus;
 import com.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
 import com.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType;
 import com.google.ads.googleads.v3.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v3.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
 import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.Ad;
@@ -66,8 +67,8 @@ import java.io.IOException;
 import java.net.URL;
 
 /**
- *  Creates a shopping campaign associated with an existing merchant center account, along with a
- *  related ad group and dynamic display ad, and targets a user list for remarketing purposes.
+ * Creates a shopping campaign associated with an existing merchant center account, along with a
+ * related ad group and dynamic display ad, and targets a user list for remarketing purposes.
  */
 public class AddMerchantCenterDynamicRemarketingCampaign {
   private static class AddMerchantCenterDynamicRemarketingCampaignParams extends CodeSampleParams {
@@ -87,7 +88,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
 
   public static void main(String[] args) throws IOException {
     AddMerchantCenterDynamicRemarketingCampaignParams params =
-      new AddMerchantCenterDynamicRemarketingCampaignParams();
+        new AddMerchantCenterDynamicRemarketingCampaignParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -135,18 +136,18 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
-      GoogleAdsClient googleAdsClient,
-      AddMerchantCenterDynamicRemarketingCampaignParams params)
+      GoogleAdsClient googleAdsClient, AddMerchantCenterDynamicRemarketingCampaignParams params)
       throws IOException {
     // Creates a shopping campaign associated with a given merchant center account.
-    String campaignResourceName = createCampaign(
-        googleAdsClient,
-        params.customerId,
-        params.merchantCenterAccountId,
-        params.campaignBudgetId);
+    String campaignResourceName =
+        createCampaign(
+            googleAdsClient,
+            params.customerId,
+            params.merchantCenterAccountId,
+            params.campaignBudgetId);
     // Creates an ad group for the campaign.
-    String adGroupResourceName = createAdGroup(googleAdsClient, params.customerId,
-      campaignResourceName);
+    String adGroupResourceName =
+        createAdGroup(googleAdsClient, params.customerId, campaignResourceName);
     // Creates a dynamic display ad in the ad group.
     createAd(googleAdsClient, params.customerId, adGroupResourceName);
     // Targets a specific user list for remarketing.
@@ -258,10 +259,10 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
     String marketingImageName = "Marketing Image";
     String marketingImageResourceName =
         uploadAsset(googleAdsClient, customerId, marketingImageUrl, marketingImageName);
-    String logoImageName = "Logo Image";
-    String logoImageUrl = "https://goo.gl/mtt54n";
-    String logoImageResourceName =
-        uploadAsset(googleAdsClient, customerId, logoImageUrl, logoImageName);
+    String squareMarketingImageName = "Square Marketing Image";
+    String squareMarketingImageUrl = "https://goo.gl/mtt54n";
+    String squareMarketingImageResourceName =
+        uploadAsset(googleAdsClient, customerId, squareMarketingImageUrl, squareMarketingImageName);
 
     // Creates the responsive display ad info object.
     ResponsiveDisplayAdInfo responsiveDisplayAdInfo =
@@ -271,7 +272,9 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
                     .setAsset(StringValue.of(marketingImageResourceName))
                     .build())
             .addSquareMarketingImages(
-                AdImageAsset.newBuilder().setAsset(StringValue.of(logoImageResourceName)).build())
+                AdImageAsset.newBuilder()
+                    .setAsset(StringValue.of(squareMarketingImageResourceName))
+                    .build())
             .addHeadlines(AdTextAsset.newBuilder().setText(StringValue.of("Travel")).build())
             .setLongHeadline(
                 AdTextAsset.newBuilder().setText(StringValue.of("Travel the World")).build())
@@ -281,24 +284,26 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
             // Optional: Call to action text.
             // Valid texts: https://support.google.com/adwords/answer/7005917
             .setCallToActionText(StringValue.of("Apply Now"))
-            // Optional: Creates a logo image and set it to the ad.
-            .addLogoImages(
-                AdImageAsset.newBuilder().setAsset(StringValue.of(logoImageResourceName)).build())
-            // Optional: Creates a logo image and set it to the ad.
-            .addSquareLogoImages(
-                AdImageAsset.newBuilder().setAsset(StringValue.of(logoImageResourceName)).build())
-            // Whitelisted accounts only: Sets color settings using hexadecimal values.
-            // Sets allowFlexibleColor to false if you want your ads to render by always
-            // using your colors strictly.
-            /*
+            // Optional: Sets the ad colors.
             .setMainColor(StringValue.of("#0000ff"))
             .setAccentColor(StringValue.of("#ffff00"))
+            // Optional: Sets to false to strictly render the ad using the colors.
             .setAllowFlexibleColor(BoolValue.of(false))
-            */
-            // Whitelisted accounts only: Sets the format setting that the ad will be
-            // served in.
-            /*
+            // Optional: Sets the format setting that the ad will be served in.
             .setFormatSetting(DisplayAdFormatSetting.NON_NATIVE)
+            // Optional: Creates a logo image and sets it to the ad.
+            /*
+            .addLogoImages(
+                AdImageAsset.newBuilder()
+                    .setAsset(StringValue.of("INSERT_LOGO_IMAGE_RESOURCE_NAME_HERE"))
+                    .build())
+            */
+            // Optional: Creates a square logo image and sets it to the ad.
+            /*
+            .addSquareLogoImages(
+                AdImageAsset.newBuilder()
+                    .setAsset(StringValue.of("INSERT_SQUARE_LOGO_IMAGE_RESOURCE_NAME_HERE"))
+                    .build())
             */
             .build();
 
