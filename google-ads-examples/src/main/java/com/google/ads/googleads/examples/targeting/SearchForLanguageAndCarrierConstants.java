@@ -31,8 +31,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Illustrates how to search for language constants where the name includes a given string and
- * search for all the available mobile carrier constants with a given country code.
+ * Illustrates how to:
+ *
+ * <ul>
+ *   <li>Search for language constants where the name includes a given string.
+ *   <li>Search for all the available mobile carrier constants with a given country code.
+ * </ul>
  */
 public class SearchForLanguageAndCarrierConstants {
 
