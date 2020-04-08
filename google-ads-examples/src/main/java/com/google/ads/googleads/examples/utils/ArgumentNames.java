@@ -58,4 +58,8 @@ public final class ArgumentNames {
   public static final String CALLOUT_TEXT = "--calloutText";
   public static final String LANGUAGE_CODE = "--languageCode";
   public static final String SITELINK_TEXT = "--sitelinkText";
+  public static final String MARKETING_IMAGE_ASSET_RESOURCE_NAME =
+      "--marketingImageAssetResourceName";
+  public static final String SQUARE_MARKETING_IMAGE_ASSET_RESOURCE_NAME =
+      "--squareMarketingImageAssetResourceName";
 }
