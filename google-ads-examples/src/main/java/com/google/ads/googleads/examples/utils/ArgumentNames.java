@@ -58,4 +58,6 @@ public final class ArgumentNames {
   public static final String CALLOUT_TEXT = "--calloutText";
   public static final String LANGUAGE_CODE = "--languageCode";
   public static final String SITELINK_TEXT = "--sitelinkText";
+  public static final String LANGUAGE_NAME = "--languageName";
+  public static final String COUNTRY_CODE = "--countryCode";
 }
