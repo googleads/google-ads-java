@@ -21,16 +21,22 @@ import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
 import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.CustomerClient;
+import com.google.ads.googleads.v3.resources.CustomerName;
+import com.google.ads.googleads.v3.services.CustomerServiceClient;
 import com.google.ads.googleads.v3.services.GoogleAdsRow;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v3.services.ListAccessibleCustomersRequest;
+import com.google.ads.googleads.v3.services.ListAccessibleCustomersResponse;
 import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
 import com.google.common.base.Strings;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /** Gets the account hierarchy of the specified manager account. */
@@ -38,17 +44,35 @@ public class GetAccountHierarchy {
 
   private static class GetAccountHierarchyParams extends CodeSampleParams {
 
-    @Parameter(names = ArgumentNames.MANAGER_ID, required = true)
+    @Parameter(names = ArgumentNames.MANAGER_ID)
     private Long managerId;
+
+    @Parameter(names = ArgumentNames.LOGIN_CUSTOMER_ID)
+    private Long loginCustomerId;
   }
 
   public static void main(String[] args) {
     GetAccountHierarchyParams params = new GetAccountHierarchyParams();
     if (!params.parseArguments(args)) {
 
-      // Either pass the required parameters for this example on the command line, or insert them
-      // into the code here. See the parameter class definition above for descriptions.
-      params.managerId = Long.parseLong("INSERT_MANAGER_ID_HERE");
+      // Optional: You may pass the managerId on the command line or specify a managerId here. If
+      // neither are set, a null value will be passed to the run example method, and the example
+      // will print the hierarchies of all accessible customer IDs.
+      // params.managerId = Long.parseLong("INSERT_MANAGER_ID_HERE");
+
+      // Optional: You may pass the loginCustomerId on the command line or specify a loginCustomerId
+      // here if and only if the managerId is set. If the loginCustomerId is set neither on the
+      // command line nor below, a null value will be passed to the run example method, and the
+      // example will use each respective accessible customer ID as the loginCustomerId.
+      // params.managerId = Long.parseLong("INSERT_MANAGER_ID_HERE");
+    }
+
+    if (params.managerId != null && params.loginCustomerId == null) {
+      System.err.println("loginCustomerId must be provided if managerId is provided.");
+      return;
+    } else if (params.managerId == null && params.loginCustomerId != null) {
+      System.err.println("loginCustomerId may not be provided if managerId is not provided.");
+      return;
     }
 
     GoogleAdsClient googleAdsClient;
@@ -64,7 +88,8 @@ public class GetAccountHierarchy {
     }
 
     try {
-      new GetAccountHierarchy().runExample(googleAdsClient, params.managerId);
+      new GetAccountHierarchy()
+          .runExample(googleAdsClient, params.managerId, params.loginCustomerId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -81,89 +106,153 @@ public class GetAccountHierarchy {
   }
 
   /**
+   * Creates a new GoogleAdsClient instance with the specified loginCustomerId.
+   *
+   * @param loginCustomerId the loginCustomerId used to create the GoogleAdsClient.
+   * @return GoogleAdsClient.
+   */
+  private GoogleAdsClient createGoogleAdsClient(long loginCustomerId) {
+    GoogleAdsClient googleAdsClient = null;
+    try {
+      googleAdsClient =
+          GoogleAdsClient.newBuilder()
+              .fromPropertiesFile()
+              .setLoginCustomerId(loginCustomerId)
+              .build();
+    } catch (FileNotFoundException fnfe) {
+      System.err.printf(
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+      return null;
+    } catch (IOException ioe) {
+      System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
+      return null;
+    }
+    return googleAdsClient;
+  }
+
+  /**
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param managerId the root customer ID from which to begin the search.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long managerId) {
-    Set<Long> managerAccountsToSearch = new HashSet<>();
-    CustomerClient rootCustomerClient = null;
-    int depth = 0;
+  private void runExample(GoogleAdsClient googleAdsClient, Long managerId, Long loginCustomerId) {
+    List<Long> seedCustomerIds = new ArrayList<>();
+    if (managerId != null) {
+      seedCustomerIds.add(managerId);
+    } else {
+      // Issues a request for listing all accessible customers by this authenticated Google account.
+      try (CustomerServiceClient customerServiceClient =
+          googleAdsClient.getLatestVersion().createCustomerServiceClient()) {
+        ListAccessibleCustomersResponse accessibleCustomers =
+            customerServiceClient.listAccessibleCustomers(
+                ListAccessibleCustomersRequest.newBuilder().build());
+        System.out.println(
+            "No manager customer ID is specified. The example will print the "
+                + "hierarchies of all accessible customer IDs:");
 
-    // Creates the Google Ads Service client.
-    try (GoogleAdsServiceClient googleAdsServiceClient =
-        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-      // Creates a query that retrieves all child accounts of the manager specified in search
-      // calls below.
-      String query =
-          "SELECT customer_client.client_customer, customer_client.level, "
-              + "customer_client.manager, customer_client.descriptive_name, "
-              + "customer_client.currency_code, customer_client.time_zone, "
-              + "customer_client.id "
-              + "FROM customer_client "
-              + "WHERE customer_client.level <= 1";
-
-      // Adds the seed customer ID to the list of IDs to be processed.
-      managerAccountsToSearch.add(managerId);
-      // Performs a breadth-first search algorithm to build a mapping of managers to their
-      // child accounts.
-      Multimap<Long, CustomerClient> customerIdsToChildAccounts = ArrayListMultimap.create();
-      while (!managerAccountsToSearch.isEmpty()) {
-        long customerId = managerAccountsToSearch.iterator().next();
-        managerAccountsToSearch.remove(customerId);
-        // Issues a search request by specifying page size.
-        SearchPagedResponse response =
-            googleAdsServiceClient.search(
-                SearchGoogleAdsRequest.newBuilder()
-                    .setQuery(query)
-                    .setCustomerId(Long.toString(customerId))
-                    .build());
-
-        // Iterates over all rows in all pages to get all customer clients under the specified
-        // customer's hierarchy.
-        for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
-          CustomerClient customerClient = googleAdsRow.getCustomerClient();
-          // The customer client making the request will be returned in the
-          // search result with a level of 0.
-          if (customerClient.getLevel().getValue() == 0) {
-            // Store the root customer client, which is the first encountered customer client
-            // that has level of 0.
-            if (rootCustomerClient == null) {
-              rootCustomerClient = customerClient;
-            }
-            // The steps below map parent and children accounts. Continue here so that managers
-            // accounts exclude themselves from the list of their children accounts.
-            continue;
-          }
-
-          // For all level-1 (direct child) accounts that are manager accounts, the above
-          // query will be run against them to create a map of managers to their
-          // child accounts for printing the hierarchy afterwards.
-          customerIdsToChildAccounts.put(customerId, customerClient);
-          // Checks is the child account is a manager itself so that it can later be processed
-          // and added to the map if it hasn't been already.
-          if (customerClient.getManager().getValue()) {
-            // A customer can be managed by multiple managers, so to prevent visiting the same
-            // customer multiple times, we need to check if it's already in the map.
-            boolean alreadyVisited =
-                customerIdsToChildAccounts.containsKey(customerClient.getId().getValue());
-            if (!alreadyVisited && customerClient.getLevel().getValue() == 1) {
-              managerAccountsToSearch.add(customerClient.getId().getValue());
-            }
-          }
+        for (String customerResourceName : accessibleCustomers.getResourceNamesList()) {
+          long customer = Long.parseLong(CustomerName.parse(customerResourceName).getCustomer());
+          System.out.println(customer);
+          seedCustomerIds.add(customer);
         }
       }
+    }
 
-      if (!(rootCustomerClient == null)) {
-        System.out.printf(
-            "The hierarchy of customer ID %d is printed below.%n",
-            rootCustomerClient.getId().getValue());
-        printAccountHierarchy(rootCustomerClient, customerIdsToChildAccounts, depth);
+    for (long seedCustomerId : seedCustomerIds) {
+      Set<Long> managerAccountsToSearch = new HashSet<>();
+      CustomerClient rootCustomerClient = null;
+      int depth = 0;
+
+      if (loginCustomerId != null) {
+        googleAdsClient = createGoogleAdsClient(loginCustomerId);
       } else {
-        System.out.println(
-            "Customer ID is likely a test account, so its customer client "
-                + "information cannot be retrieved");
+        googleAdsClient = createGoogleAdsClient(seedCustomerId);
+      }
+
+      if (googleAdsClient == null) {
+        return;
+      }
+
+      // Creates the Google Ads Service client.
+      try (GoogleAdsServiceClient googleAdsServiceClient =
+          googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+        // Creates a query that retrieves all child accounts of the manager specified in search
+        // calls below.
+        String query =
+            "SELECT customer_client.client_customer, customer_client.level, "
+                + "customer_client.manager, customer_client.descriptive_name, "
+                + "customer_client.currency_code, customer_client.time_zone, "
+                + "customer_client.id "
+                + "FROM customer_client "
+                + "WHERE customer_client.level <= 1";
+
+        // Adds the seed customer ID to the list of IDs to be processed.
+        managerAccountsToSearch.add(seedCustomerId);
+        // Performs a breadth-first search algorithm to build a mapping of managers to their
+        // child accounts.
+        Multimap<Long, CustomerClient> customerIdsToChildAccounts = ArrayListMultimap.create();
+        while (!managerAccountsToSearch.isEmpty()) {
+          long customerId = managerAccountsToSearch.iterator().next();
+          managerAccountsToSearch.remove(customerId);
+          SearchPagedResponse response = null;
+          try {
+            // Issues a search request.
+            response =
+                googleAdsServiceClient.search(
+                    SearchGoogleAdsRequest.newBuilder()
+                        .setQuery(query)
+                        .setCustomerId(Long.toString(customerId))
+                        .build());
+
+            // Iterates over all rows in all pages to get all customer clients under the specified
+            // customer's hierarchy.
+            for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
+              CustomerClient customerClient = googleAdsRow.getCustomerClient();
+              // The customer client making the request will be returned in the
+              // search result with a level of 0.
+              if (customerClient.getLevel().getValue() == 0) {
+                // Store the root customer client, which is the first encountered customer client
+                // that has level of 0.
+                if (rootCustomerClient == null) {
+                  rootCustomerClient = customerClient;
+                }
+                // The steps below map parent and children accounts. Continue here so that managers
+                // accounts exclude themselves from the list of their children accounts.
+                continue;
+              }
+
+              // For all level-1 (direct child) accounts that are manager accounts, the above
+              // query will be run against them to create a map of managers to their
+              // child accounts for printing the hierarchy afterwards.
+              customerIdsToChildAccounts.put(customerId, customerClient);
+              // Checks is the child account is a manager itself so that it can later be processed
+              // and added to the map if it hasn't been already.
+              if (customerClient.getManager().getValue()) {
+                // A customer can be managed by multiple managers, so to prevent visiting the same
+                // customer multiple times, we need to check if it's already in the map.
+                boolean alreadyVisited =
+                    customerIdsToChildAccounts.containsKey(customerClient.getId().getValue());
+                if (!alreadyVisited && customerClient.getLevel().getValue() == 1) {
+                  managerAccountsToSearch.add(customerClient.getId().getValue());
+                }
+              }
+            }
+          } catch (GoogleAdsException gae) {
+            System.out.printf("Unable to retrieve hierarchy: %s%n", gae);
+          }
+        }
+
+        if (!(rootCustomerClient == null)) {
+          System.out.printf(
+              "The hierarchy of customer ID %d is printed below.%n",
+              rootCustomerClient.getId().getValue());
+          printAccountHierarchy(rootCustomerClient, customerIdsToChildAccounts, depth);
+        } else {
+          System.out.println(
+              "Customer ID is likely a test account, so its customer client "
+                  + "information cannot be retrieved.");
+        }
       }
     }
   }
