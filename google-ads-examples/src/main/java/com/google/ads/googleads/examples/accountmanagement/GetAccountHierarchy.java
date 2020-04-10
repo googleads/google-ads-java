@@ -66,7 +66,7 @@ public class GetAccountHierarchy {
       // here if and only if the managerId is set. If the loginCustomerId is set neither on the
       // command line nor below, a null value will be passed to the run example method, and the
       // example will use each respective accessible customer ID as the loginCustomerId.
-      // params.managerId = Long.parseLong("INSERT_MANAGER_ID_HERE");
+      // params.managerId = Long.parseLong("INSERT_LOGIN_CUSTOMER_ID_HERE");
     }
 
     if (params.managerId != null && params.loginCustomerId == null) {
@@ -108,31 +108,6 @@ public class GetAccountHierarchy {
   }
 
   /**
-   * Creates a new GoogleAdsClient instance with the specified loginCustomerId.
-   *
-   * @param loginCustomerId the loginCustomerId used to create the GoogleAdsClient.
-   * @return a GoogleAdsClient instance.
-   */
-  private GoogleAdsClient createGoogleAdsClient(long loginCustomerId) {
-    GoogleAdsClient googleAdsClient;
-    try {
-      googleAdsClient =
-          GoogleAdsClient.newBuilder()
-              .fromPropertiesFile()
-              .setLoginCustomerId(loginCustomerId)
-              .build();
-    } catch (FileNotFoundException fnfe) {
-      System.err.printf(
-          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return null;
-    } catch (IOException ioe) {
-      System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return null;
-    }
-    return googleAdsClient;
-  }
-
-  /**
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
@@ -147,8 +122,7 @@ public class GetAccountHierarchy {
       seedCustomerIds = getAccessibleCustomers(googleAdsClient);
     }
 
-    Map<CustomerClient, Multimap<Long, CustomerClient>> customerClientsToHierarchies =
-        new HashMap<>();
+    Map<CustomerClient, Multimap<Long, CustomerClient>> allHierarchies = new HashMap<>();
     List<Long> accountsWithNoInfo = new ArrayList<>();
     // Constructs a map of account hierarchies.
     for (long seedCustomerId : seedCustomerIds) {
@@ -156,7 +130,7 @@ public class GetAccountHierarchy {
           createCustomerClientToHierarchy(loginCustomerId, seedCustomerId);
 
       if (customerClientToHierarchy != null) {
-        customerClientsToHierarchies.putAll(customerClientToHierarchy);
+        allHierarchies.putAll(customerClientToHierarchy);
       } else {
         accountsWithNoInfo.add(seedCustomerId);
       }
@@ -176,14 +150,40 @@ public class GetAccountHierarchy {
     int depth = 0;
     // Prints the hierarchy information for all accounts for which there is hierarchy information
     // available.
-    for (CustomerClient rootCustomerClient : customerClientsToHierarchies.keySet()) {
+    for (CustomerClient rootCustomerClient : allHierarchies.keySet()) {
       System.out.printf(
           "The hierarchy of customer ID %d is printed below.%n",
           rootCustomerClient.getId().getValue());
-      printAccountHierarchy(
-          rootCustomerClient, customerClientsToHierarchies.get(rootCustomerClient), depth);
+      printAccountHierarchy(rootCustomerClient, allHierarchies.get(rootCustomerClient), depth);
       System.out.println();
     }
+  }
+
+  /**
+   * Creates a new GoogleAdsClient instance with the specified loginCustomerId.
+   *
+   * @param loginCustomerId the loginCustomerId used to create the GoogleAdsClient.
+   * @return a GoogleAdsClient instance. Returns null if the GoogleAdsClient cannot be created.
+   */
+  private GoogleAdsClient createGoogleAdsClient(long loginCustomerId) {
+    GoogleAdsClient googleAdsClient;
+    try {
+      googleAdsClient =
+          GoogleAdsClient.newBuilder()
+              .fromPropertiesFile()
+              .setLoginCustomerId(loginCustomerId)
+              .build();
+    } catch (FileNotFoundException fnfe) {
+      System.err.printf(
+          "Failed to load GoogleAdsClient configuration from file with loginCustomerId %d. " +
+            "Exception: %s%n", loginCustomerId, fnfe);
+      return null;
+    } catch (IOException ioe) {
+      System.err.printf("Failed to create GoogleAdsClient with loginCustomerId %d. Exception: %s%n",
+        loginCustomerId, ioe);
+      return null;
+    }
+    return googleAdsClient;
   }
 
   /**
@@ -191,7 +191,8 @@ public class GetAccountHierarchy {
    *
    * @param loginCustomerId the loginCustomerId used to create the GoogleAdsClient.
    * @param seedCustomerId the ID of the customer at the root of the tree.
-   * @return a map between a CustomerClient and each of its managers' mappings.
+   * @return a map between a CustomerClient and each of its managers' mappings if the account
+   *     hierarchy can be retrieved. If the account hierarchy cannot be retrieved, returns null.
    */
   private Map<CustomerClient, Multimap<Long, CustomerClient>> createCustomerClientToHierarchy(
       Long loginCustomerId, long seedCustomerId) {
@@ -208,6 +209,10 @@ public class GetAccountHierarchy {
       googleAdsClient = createGoogleAdsClient(seedCustomerId);
     }
 
+    // The createGoogleAdsClient method returns null if a GoogleAdsClient cannot be created. In
+    // that case, the account hierarchy for the given seedCustomerId will be able to be
+    // retrieved. This method returns null in that case to add the seedCustomerId to the list of
+    // customer IDs for which the account hierarchy could not be retrieved.
     if (googleAdsClient == null) {
       return null;
     }
@@ -262,7 +267,7 @@ public class GetAccountHierarchy {
             // query will be run against them to create a map of managers to their
             // child accounts for printing the hierarchy afterwards.
             customerIdsToChildAccounts.put(customerId, customerClient);
-            // Checks is the child account is a manager itself so that it can later be processed
+            // Checks if the child account is a manager itself so that it can later be processed
             // and added to the map if it hasn't been already.
             if (customerClient.getManager().getValue()) {
               // A customer can be managed by multiple managers, so to prevent visiting the same
@@ -281,16 +286,18 @@ public class GetAccountHierarchy {
         }
       }
 
+      // The rootCustomerClient will be null if the account hierarchy was unable to be retrieved
+      // (e.g. the account is a test account or a client account with an incomplete billing setup.
+      // This method returns null in these cases to add the seedCustomerId to the list of
+      // customer IDs for which the account hierarchy could not be retrieved.
       if (rootCustomerClient == null) {
         return null;
       }
 
-      CustomerClient finalRootCustomerClient = rootCustomerClient;
-      return new HashMap<CustomerClient, Multimap<Long, CustomerClient>>() {
-        {
-          put(finalRootCustomerClient, customerIdsToChildAccounts);
-        }
-      };
+      Map<CustomerClient, Multimap<Long, CustomerClient>> CustomerClientToHierarchy =
+          new HashMap<>();
+      CustomerClientToHierarchy.put(rootCustomerClient, customerIdsToChildAccounts);
+      return CustomerClientToHierarchy;
     }
   }
 
