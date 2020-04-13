@@ -41,7 +41,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/** Gets the account hierarchy of the specified manager account. */
+/**
+ * Gets the account hierarchy of the specified manager account. If you don't specify manager ID,
+ * the example will instead print the hierarchies of all accessible customer accounts
+ * for your authenticated Google account. Note that if the list of accessible customers for your
+ * authenticated Google account includes accounts within the same hierarchy, this example will
+ * retrieve and print the overlapping portions of the hierarchy for each accessible customer.
+ */
 public class GetAccountHierarchy {
 
   private static class GetAccountHierarchyParams extends CodeSampleParams {
@@ -114,11 +120,13 @@ public class GetAccountHierarchy {
    * @param managerId the root customer ID from which to begin the search.
    * @param loginCustomerId the loginCustomerId used to create the GoogleAdsClient.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, Long managerId, Long loginCustomerId) {
+  private void runExample(GoogleAdsClient googleAdsClient, Long managerId, long loginCustomerId) {
     List<Long> seedCustomerIds = new ArrayList<>();
     if (managerId != null) {
+      // Only gets the hierarchy for the provided manager ID if provided.
       seedCustomerIds.add(managerId);
     } else {
+      // Otherwise gets the account hierarchies for all accessible customers.
       seedCustomerIds = getAccessibleCustomers(googleAdsClient);
     }
 
@@ -140,7 +148,7 @@ public class GetAccountHierarchy {
     if (!accountsWithNoInfo.isEmpty()) {
       System.out.println(
           "Unable to retrieve information for the following accounts which are likely either test "
-              + "accounts with setup issues. Please check the logs for additional details.");
+              + "accounts or accounts with setup issues. Please check the logs for details.");
       for (long accountId : accountsWithNoInfo) {
         System.out.println(accountId);
       }
@@ -152,7 +160,7 @@ public class GetAccountHierarchy {
     // available.
     for (CustomerClient rootCustomerClient : allHierarchies.keySet()) {
       System.out.printf(
-          "The hierarchy of customer ID %d is printed below.%n",
+          "Hierarchy of customer ID %d:%n",
           rootCustomerClient.getId().getValue());
       printAccountHierarchy(rootCustomerClient, allHierarchies.get(rootCustomerClient), depth);
       System.out.println();
@@ -162,28 +170,14 @@ public class GetAccountHierarchy {
   /**
    * Creates a new GoogleAdsClient instance with the specified loginCustomerId.
    *
-   * @param loginCustomerId the loginCustomerId used to create the GoogleAdsClient.
+   * @param customerId the customerId used as the loginCustomerId to create the GoogleAdsClient.
    * @return a GoogleAdsClient instance. Returns null if the GoogleAdsClient cannot be created.
    */
-  private GoogleAdsClient createGoogleAdsClient(long loginCustomerId) {
+  private GoogleAdsClient createGoogleAdsClient(long customerId) throws IOException {
     GoogleAdsClient googleAdsClient;
-    try {
       googleAdsClient =
-          GoogleAdsClient.newBuilder()
-              .fromPropertiesFile()
-              .setLoginCustomerId(loginCustomerId)
-              .build();
-    } catch (FileNotFoundException fnfe) {
-      System.err.printf(
-          "Failed to load GoogleAdsClient configuration from file with loginCustomerId %d. " +
-            "Exception: %s%n", loginCustomerId, fnfe);
-      return null;
-    } catch (IOException ioe) {
-      System.err.printf("Failed to create GoogleAdsClient with loginCustomerId %d. Exception: %s%n",
-        loginCustomerId, ioe);
-      return null;
-    }
-    return googleAdsClient;
+          GoogleAdsClient.newBuilder().fromPropertiesFile().setLoginCustomerId(customerId).build();
+      return googleAdsClient;
   }
 
   /**
@@ -195,7 +189,7 @@ public class GetAccountHierarchy {
    *     hierarchy can be retrieved. If the account hierarchy cannot be retrieved, returns null.
    */
   private Map<CustomerClient, Multimap<Long, CustomerClient>> createCustomerClientToHierarchy(
-      Long loginCustomerId, long seedCustomerId) {
+      Long loginCustomerId, long seedCustomerId) throws IOException {
     Set<Long> managerAccountsToSearch = new HashSet<>();
     CustomerClient rootCustomerClient = null;
 
@@ -207,14 +201,6 @@ public class GetAccountHierarchy {
       googleAdsClient = createGoogleAdsClient(loginCustomerId);
     } else {
       googleAdsClient = createGoogleAdsClient(seedCustomerId);
-    }
-
-    // The createGoogleAdsClient method returns null if a GoogleAdsClient cannot be created. In
-    // that case, the account hierarchy for the given seedCustomerId will be able to be
-    // retrieved. This method returns null in that case to add the seedCustomerId to the list of
-    // customer IDs for which the account hierarchy could not be retrieved.
-    if (googleAdsClient == null) {
-      return null;
     }
 
     // Creates the Google Ads Service client.
@@ -294,10 +280,10 @@ public class GetAccountHierarchy {
         return null;
       }
 
-      Map<CustomerClient, Multimap<Long, CustomerClient>> CustomerClientToHierarchy =
+      Map<CustomerClient, Multimap<Long, CustomerClient>> customerClientToHierarchy =
           new HashMap<>();
-      CustomerClientToHierarchy.put(rootCustomerClient, customerIdsToChildAccounts);
-      return CustomerClientToHierarchy;
+      customerClientToHierarchy.put(rootCustomerClient, customerIdsToChildAccounts);
+      return customerClientToHierarchy;
     }
   }
 
@@ -358,10 +344,8 @@ public class GetAccountHierarchy {
 
     // Recursively calls this function for all child accounts of customerClient if the current
     // customer is a manager account.
-    if (customerIdsToChildAccounts.containsKey(customerId)) {
-      for (CustomerClient childCustomer : customerIdsToChildAccounts.get(customerId)) {
-        printAccountHierarchy(childCustomer, customerIdsToChildAccounts, depth + 1);
-      }
+    for (CustomerClient childCustomer : customerIdsToChildAccounts.get(customerId)) {
+      printAccountHierarchy(childCustomer, customerIdsToChildAccounts, depth + 1);
     }
   }
 }
