@@ -169,19 +169,6 @@ public class GetAccountHierarchy {
   }
 
   /**
-   * Creates a new GoogleAdsClient instance with the specified loginCustomerId.
-   *
-   * @param customerId the customerId used as the loginCustomerId to create the GoogleAdsClient.
-   * @return a GoogleAdsClient instance. Returns null if the GoogleAdsClient cannot be created.
-   */
-  private GoogleAdsClient createGoogleAdsClient(long customerId) throws IOException {
-    GoogleAdsClient googleAdsClient;
-    googleAdsClient =
-        GoogleAdsClient.newBuilder().fromPropertiesFile().setLoginCustomerId(customerId).build();
-    return googleAdsClient;
-  }
-
-  /**
    * Creates a map between a CustomerClient and each of its managers' mappings.
    *
    * @param loginCustomerId the loginCustomerId used to create the GoogleAdsClient.
@@ -194,15 +181,14 @@ public class GetAccountHierarchy {
     Set<Long> managerAccountsToSearch = new HashSet<>();
     CustomerClient rootCustomerClient = null;
 
-    GoogleAdsClient googleAdsClient;
     // Creates a GoogleAdsClient with the specified loginCustomerId. See
     // https://developers.google.com/google-ads/api/docs/concepts/call-structure#cid for more
     // information.
-    if (loginCustomerId != null) {
-      googleAdsClient = createGoogleAdsClient(loginCustomerId);
-    } else {
-      googleAdsClient = createGoogleAdsClient(seedCustomerId);
-    }
+    GoogleAdsClient googleAdsClient = GoogleAdsClient.newBuilder()
+      .fromPropertiesFile()
+      .setLoginCustomerId(
+        loginCustomerId != null ? loginCustomerId : seedCustomerId)
+      .build();
 
     // Creates the Google Ads Service client.
     try (GoogleAdsServiceClient googleAdsServiceClient =
@@ -225,7 +211,7 @@ public class GetAccountHierarchy {
       while (!managerAccountsToSearch.isEmpty()) {
         long customerId = managerAccountsToSearch.iterator().next();
         managerAccountsToSearch.remove(customerId);
-        SearchPagedResponse response = null;
+        SearchPagedResponse response;
         try {
           // Issues a search request.
           response =
