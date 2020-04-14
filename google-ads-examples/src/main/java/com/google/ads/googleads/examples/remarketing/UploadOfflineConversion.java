@@ -148,19 +148,19 @@ public class UploadOfflineConversion {
 
       // Prints any partial errors returned.
       if (response.hasPartialFailureError()) {
-        System.out.printf("Partial error encountered: '%s'.%n",
-            response.getPartialFailureError().getMessage());
-      }
-
-      // Prints the result.
-      ClickConversionResult result = response.getResults(0);
-      // Only prints valid results.
-      if (result.hasGclid()) {
         System.out.printf(
-            "Uploaded conversion that occurred at '%s' from Google Click ID '%s' to '%s'.%n",
-            result.getConversionDateTime().getValue(),
-            result.getGclid().getValue(),
-            result.getConversionAction().getValue());
+            "Partial error encountered: '%s'.%n", response.getPartialFailureError().getMessage());
+      } else {
+        // Prints the result.
+        ClickConversionResult result = response.getResults(0);
+        // Only prints valid results.
+        if (result.hasGclid()) {
+          System.out.printf(
+              "Uploaded conversion that occurred at '%s' from Google Click ID '%s' to '%s'.%n",
+              result.getConversionDateTime().getValue(),
+              result.getGclid().getValue(),
+              result.getConversionAction().getValue());
+        }
       }
     }
   }
