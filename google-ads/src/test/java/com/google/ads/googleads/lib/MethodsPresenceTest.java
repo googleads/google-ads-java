@@ -30,14 +30,14 @@ import static org.junit.Assert.assertEquals;
 @RunWith(JUnit4.class)
 public class MethodsPresenceTest {
   /**
-   * Verifies that the list of all service client methods in a given GoogleAdsVersion class
-   * matches that provided in the testdata/avail_service_clients.txt file.
+   * Verifies that the list of all service client methods in a given GoogleAdsVersion class matches
+   * that provided in the testdata/avail_service_clients.txt file.
    *
-   * The avail_service_clients.txt file should be the standard against which all releases are
+   * <p>The avail_service_clients.txt file should be the standard against which all releases are
    * compared. In the event the list of services changes in the API, this test will fail. Then,
    * avail_service_clients.txt should be updated so that this test passes.
    *
-   * The version variable should be updated for each major release of the Google Ads API.
+   * <p>The version variable should be updated for each major release of the Google Ads API.
    */
   @Test
   public void methodsListMatches() throws ClassNotFoundException {
