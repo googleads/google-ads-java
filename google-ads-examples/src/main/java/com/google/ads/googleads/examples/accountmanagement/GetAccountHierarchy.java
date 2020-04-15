@@ -37,6 +37,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -181,7 +182,7 @@ public class GetAccountHierarchy {
    */
   private Map<CustomerClient, Multimap<Long, CustomerClient>> createCustomerClientToHierarchy(
       Long loginCustomerId, long seedCustomerId) throws IOException {
-    Set<Long> managerAccountsToSearch = new HashSet<>();
+    LinkedList<Long> managerAccountsToSearch = new LinkedList<>();
     CustomerClient rootCustomerClient = null;
 
     // Creates a GoogleAdsClient with the specified loginCustomerId. See
@@ -212,8 +213,7 @@ public class GetAccountHierarchy {
       // child accounts.
       Multimap<Long, CustomerClient> customerIdsToChildAccounts = ArrayListMultimap.create();
       while (!managerAccountsToSearch.isEmpty()) {
-        long customerIdToSearchFrom = managerAccountsToSearch.iterator().next();
-        managerAccountsToSearch.remove(customerIdToSearchFrom);
+        long customerIdToSearchFrom = managerAccountsToSearch.pop();
         SearchPagedResponse response;
         try {
           // Issues a search request.
