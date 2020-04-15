@@ -21,11 +21,12 @@ import org.junit.runners.JUnit4;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.Arrays;
-import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
-import static org.junit.Assert.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 @RunWith(JUnit4.class)
 public class MethodsPresenceTest {
@@ -36,34 +37,34 @@ public class MethodsPresenceTest {
    * <p>The avail_service_clients.txt file should be the standard against which all releases are
    * compared. In the event the list of services changes in the API, this test will fail. Then,
    * avail_service_clients.txt should be updated so that this test passes.
-   *
-   * <p>The version variable should be updated for each major release of the Google Ads API.
    */
   @Test
-  public void methodsListMatches() throws ClassNotFoundException {
-    String version = "v3";
-    Class cls = Class.forName("com.google.ads.googleads." + version + ".services.GoogleAdsVersion");
+  public void methodsListMatches() throws ClassNotFoundException, NoSuchMethodException {
+    // Gets the fully qualified return type of the GoogleAdsAllVersions getLatestVersion method,
+    // which is the class from which the methods will be retrieved.
+    Method latestVersionMethod = GoogleAdsAllVersions.class.getMethod("getLatestVersion");
+    Class cls = Class.forName(latestVersionMethod.getReturnType().getName());
 
-    // Retrieves a list of the methods (and return types) in the GoogleAdsVersion class using
-    // reflection, alphabetizes the list by method name, and concatenates the alphabetized list
-    // into a string.
+    // Retrieves a list of the methods in the GoogleAdsVersion class using reflection and adds
+    // each to a set.
     List<Method> methods = Arrays.asList(cls.getDeclaredMethods());
-    methods.sort(Comparator.comparing((Method method) -> method.getName().toLowerCase()));
-    String serviceListReflection = "";
+    Set<String> serviceListReflection = new HashSet<>();
     for (Method method : methods) {
-      serviceListReflection += method.getName() + ": " + method.getReturnType().getSimpleName();
+      serviceListReflection.add(method.toString());
     }
 
-    // Retrieves the list of service client methods (and return types) in the
-    // provided avail_service_clients.txt file.
-    ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-    InputStream inputStream = classLoader.getResourceAsStream("testdata/avail_service_clients.txt");
+    // Retrieves the list of service client methods in the provided avail_service_clients.txt file.
+    InputStream inputStream =
+        MethodsPresenceTest.class.getResourceAsStream("/testdata/avail_service_clients.txt");
     Scanner scanner = new Scanner(inputStream);
-    StringBuffer serviceListResource = new StringBuffer();
+    Set<String> serviceListResource = new HashSet<>();
     while (scanner.hasNext()) {
-      serviceListResource.append(scanner.nextLine());
+      serviceListResource.add(scanner.nextLine());
     }
+    serviceListResource.remove("");
 
-    assertEquals(serviceListReflection, serviceListResource.toString());
+    assertTrue(
+        serviceListReflection.size() == serviceListResource.size()
+            && serviceListReflection.containsAll(serviceListResource));
   }
 }
