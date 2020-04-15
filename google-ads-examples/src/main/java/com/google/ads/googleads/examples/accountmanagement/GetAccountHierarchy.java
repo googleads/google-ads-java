@@ -127,12 +127,12 @@ public class GetAccountHierarchy {
   private void runExample(GoogleAdsClient googleAdsClient, Long managerId, long loginCustomerId)
       throws IOException {
     List<Long> seedCustomerIds = new ArrayList<>();
-    if (managerId != null) {
+    if (managerId == null) {
+      // Gets the account hierarchies for all accessible customers.
+      seedCustomerIds = getAccessibleCustomers(googleAdsClient);
+    } else {
       // Only gets the hierarchy for the provided manager ID if provided.
       seedCustomerIds.add(managerId);
-    } else {
-      // Otherwise gets the account hierarchies for all accessible customers.
-      seedCustomerIds = getAccessibleCustomers(googleAdsClient);
     }
 
     Map<CustomerClient, Multimap<Long, CustomerClient>> allHierarchies = new HashMap<>();
