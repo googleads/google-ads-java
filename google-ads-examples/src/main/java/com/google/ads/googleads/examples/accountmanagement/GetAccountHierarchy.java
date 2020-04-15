@@ -124,7 +124,7 @@ public class GetAccountHierarchy {
    * @param loginCustomerId the loginCustomerId used to create the GoogleAdsClient.
    * @throws IOException if a Google Ads Client is not successfully created.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, Long managerId, long loginCustomerId)
+  private void runExample(GoogleAdsClient googleAdsClient, Long managerId, Long loginCustomerId)
       throws IOException {
     List<Long> seedCustomerIds = new ArrayList<>();
     if (managerId == null) {
@@ -142,10 +142,10 @@ public class GetAccountHierarchy {
       Map<CustomerClient, Multimap<Long, CustomerClient>> customerClientToHierarchy =
           createCustomerClientToHierarchy(loginCustomerId, seedCustomerId);
 
-      if (customerClientToHierarchy != null) {
-        allHierarchies.putAll(customerClientToHierarchy);
-      } else {
+      if (customerClientToHierarchy == null) {
         accountsWithNoInfo.add(seedCustomerId);
+      } else {
+        allHierarchies.putAll(customerClientToHierarchy);
       }
     }
 
@@ -190,7 +190,7 @@ public class GetAccountHierarchy {
     GoogleAdsClient googleAdsClient =
         GoogleAdsClient.newBuilder()
             .fromPropertiesFile()
-            .setLoginCustomerId(loginCustomerId != null ? loginCustomerId : seedCustomerId)
+            .setLoginCustomerId(loginCustomerId == null ? seedCustomerId : loginCustomerId)
             .build();
 
     // Creates the Google Ads Service client.
@@ -212,8 +212,8 @@ public class GetAccountHierarchy {
       // child accounts.
       Multimap<Long, CustomerClient> customerIdsToChildAccounts = ArrayListMultimap.create();
       while (!managerAccountsToSearch.isEmpty()) {
-        long customerId = managerAccountsToSearch.iterator().next();
-        managerAccountsToSearch.remove(customerId);
+        long customerIdToSearchFrom = managerAccountsToSearch.iterator().next();
+        managerAccountsToSearch.remove(customerIdToSearchFrom);
         SearchPagedResponse response;
         try {
           // Issues a search request.
@@ -221,7 +221,7 @@ public class GetAccountHierarchy {
               googleAdsServiceClient.search(
                   SearchGoogleAdsRequest.newBuilder()
                       .setQuery(query)
-                      .setCustomerId(Long.toString(customerId))
+                      .setCustomerId(Long.toString(customerIdToSearchFrom))
                       .build());
 
           // Iterates over all rows in all pages to get all customer clients under the specified
@@ -229,20 +229,21 @@ public class GetAccountHierarchy {
           for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
             CustomerClient customerClient = googleAdsRow.getCustomerClient();
 
+            // Gets the CustomerClient object for the root customer in the tree.
             if (customerClient.getId().getValue() == seedCustomerId) {
               rootCustomerClient = customerClient;
             }
 
             // The steps below map parent and children accounts. Continue here so that managers
             // accounts exclude themselves from the list of their children accounts.
-            if (customerClient.getId().getValue() == customerId) {
+            if (customerClient.getId().getValue() == customerIdToSearchFrom) {
               continue;
             }
 
             // For all level-1 (direct child) accounts that are manager accounts, the above
             // query will be run against them to create a map of managers to their
             // child accounts for printing the hierarchy afterwards.
-            customerIdsToChildAccounts.put(customerId, customerClient);
+            customerIdsToChildAccounts.put(customerIdToSearchFrom, customerClient);
             // Checks if the child account is a manager itself so that it can later be processed
             // and added to the map if it hasn't been already.
             if (customerClient.getManager().getValue()) {
@@ -258,7 +259,7 @@ public class GetAccountHierarchy {
         } catch (GoogleAdsException gae) {
           System.out.printf(
               "Unable to retrieve hierarchy for customer ID %d: %s%n",
-              customerId, gae.getGoogleAdsFailure().getErrors(0).getMessage());
+              customerIdToSearchFrom, gae.getGoogleAdsFailure().getErrors(0).getMessage());
         }
       }
 
