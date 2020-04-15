@@ -42,11 +42,12 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Gets the account hierarchy of the specified manager account. If you don't specify manager ID, the
- * example will instead print the hierarchies of all accessible customer accounts for your
- * authenticated Google account. Note that if the list of accessible customers for your
- * authenticated Google account includes accounts within the same hierarchy, this example will
- * retrieve and print the overlapping portions of the hierarchy for each accessible customer.
+ * Gets the account hierarchy of the specified manager account and login customer ID. If you don't
+ * specify manager ID or login customer ID, the example will instead print the hierarchies of all
+ * accessible customer accounts for your authenticated Google account. Note that if the list of
+ * accessible customers for your authenticated Google account includes accounts within the same
+ * hierarchy, this example will retrieve and print the overlapping portions of the hierarchy for
+ * each accessible customer.
  */
 public class GetAccountHierarchy {
 
@@ -121,6 +122,7 @@ public class GetAccountHierarchy {
    * @param googleAdsClient the Google Ads API client.
    * @param managerId the root customer ID from which to begin the search.
    * @param loginCustomerId the loginCustomerId used to create the GoogleAdsClient.
+   * @throws IOException if a Google Ads Client is not successfully created.
    */
   private void runExample(GoogleAdsClient googleAdsClient, Long managerId, long loginCustomerId)
       throws IOException {
@@ -136,7 +138,7 @@ public class GetAccountHierarchy {
     Map<CustomerClient, Multimap<Long, CustomerClient>> allHierarchies = new HashMap<>();
     List<Long> accountsWithNoInfo = new ArrayList<>();
     // Constructs a map of account hierarchies.
-    for (long seedCustomerId : seedCustomerIds) {
+    for (Long seedCustomerId : seedCustomerIds) {
       Map<CustomerClient, Multimap<Long, CustomerClient>> customerClientToHierarchy =
           createCustomerClientToHierarchy(loginCustomerId, seedCustomerId);
 
@@ -175,6 +177,7 @@ public class GetAccountHierarchy {
    * @param seedCustomerId the ID of the customer at the root of the tree.
    * @return a map between a CustomerClient and each of its managers' mappings if the account
    *     hierarchy can be retrieved. If the account hierarchy cannot be retrieved, returns null.
+   * @throws IOException if a Google Ads Client is not successfully created.
    */
   private Map<CustomerClient, Multimap<Long, CustomerClient>> createCustomerClientToHierarchy(
       Long loginCustomerId, long seedCustomerId) throws IOException {
@@ -184,11 +187,11 @@ public class GetAccountHierarchy {
     // Creates a GoogleAdsClient with the specified loginCustomerId. See
     // https://developers.google.com/google-ads/api/docs/concepts/call-structure#cid for more
     // information.
-    GoogleAdsClient googleAdsClient = GoogleAdsClient.newBuilder()
-      .fromPropertiesFile()
-      .setLoginCustomerId(
-        loginCustomerId != null ? loginCustomerId : seedCustomerId)
-      .build();
+    GoogleAdsClient googleAdsClient =
+        GoogleAdsClient.newBuilder()
+            .fromPropertiesFile()
+            .setLoginCustomerId(loginCustomerId != null ? loginCustomerId : seedCustomerId)
+            .build();
 
     // Creates the Google Ads Service client.
     try (GoogleAdsServiceClient googleAdsServiceClient =
@@ -293,7 +296,7 @@ public class GetAccountHierarchy {
               + "hierarchies of all accessible customer IDs:");
 
       for (String customerResourceName : accessibleCustomers.getResourceNamesList()) {
-        long customer = Long.parseLong(CustomerName.parse(customerResourceName).getCustomer());
+        Long customer = Long.parseLong(CustomerName.parse(customerResourceName).getCustomer());
         System.out.println(customer);
         seedCustomerIds.add(customer);
       }
