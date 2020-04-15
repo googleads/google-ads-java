@@ -43,7 +43,7 @@ import java.util.Set;
 
 /**
  * Gets the account hierarchy of the specified manager account and login customer ID. If you don't
- * specify manager ID or login customer ID, the example will instead print the hierarchies of all
+ * specify manager ID and login customer ID, the example will instead print the hierarchies of all
  * accessible customer accounts for your authenticated Google account. Note that if the list of
  * accessible customers for your authenticated Google account includes accounts within the same
  * hierarchy, this example will retrieve and print the overlapping portions of the hierarchy for
