@@ -36,11 +36,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
+import java.util.Queue;
 
 /**
  * Gets the account hierarchy of the specified manager account and login customer ID. If you don't
@@ -182,7 +181,7 @@ public class GetAccountHierarchy {
    */
   private Map<CustomerClient, Multimap<Long, CustomerClient>> createCustomerClientToHierarchy(
       Long loginCustomerId, long seedCustomerId) throws IOException {
-    LinkedList<Long> managerAccountsToSearch = new LinkedList<>();
+    Queue<Long> managerAccountsToSearch = new LinkedList<>();
     CustomerClient rootCustomerClient = null;
 
     // Creates a GoogleAdsClient with the specified loginCustomerId. See
@@ -213,7 +212,7 @@ public class GetAccountHierarchy {
       // child accounts.
       Multimap<Long, CustomerClient> customerIdsToChildAccounts = ArrayListMultimap.create();
       while (!managerAccountsToSearch.isEmpty()) {
-        long customerIdToSearchFrom = managerAccountsToSearch.pop();
+        long customerIdToSearchFrom = managerAccountsToSearch.poll();
         SearchPagedResponse response;
         try {
           // Issues a search request.
