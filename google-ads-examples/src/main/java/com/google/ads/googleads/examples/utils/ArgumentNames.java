@@ -63,4 +63,6 @@ public final class ArgumentNames {
       "--marketingImageAssetResourceName";
   public static final String SQUARE_MARKETING_IMAGE_ASSET_RESOURCE_NAME =
       "--squareMarketingImageAssetResourceName";
+  public static final String LANGUAGE_NAME = "--languageName";
+  public static final String COUNTRY_CODE = "--countryCode";
 }
