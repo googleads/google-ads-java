@@ -131,14 +131,14 @@ public class SearchForLanguageAndCarrierConstants {
       // Creates a query that retrieves each language constant with the language name parameter in
       // the name.
       String searchQuery =
-          String.format(
-              "SELECT language_constant.id, "
-                  + "language_constant.code, "
-                  + "language_constant.name, "
-                  + "language_constant.targetable "
-                  + "FROM language_constant "
-                  + "WHERE language_constant.name LIKE '%s%%'",
-              languageName);
+          "SELECT language_constant.id, "
+              + "language_constant.code, "
+              + "language_constant.name, "
+              + "language_constant.targetable "
+              + "FROM language_constant "
+              + "WHERE language_constant.name LIKE '%"
+              + languageName
+              + "%'";
 
       // Constructs the SearchGoogleAdsStreamRequest.
       SearchGoogleAdsStreamRequest request =
