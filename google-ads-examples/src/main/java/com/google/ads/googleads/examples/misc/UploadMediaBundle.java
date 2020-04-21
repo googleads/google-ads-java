@@ -1,5 +1,5 @@
 //
-// Copyright 2019 Google LLC
+// Copyright 2020 Google LLC
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -37,7 +37,7 @@ import java.util.Arrays;
 
 /**
  * This example uploads an HTML5 zip file as a Media Bundle. More information about Media Bundle can
- * be found at https://developers.google.com/google-ads/api/docs/assets/overview
+ * be found at https://developers.google.com/google-ads/api/docs/assets/overview.
  */
 public class UploadMediaBundle {
 
@@ -92,7 +92,7 @@ public class UploadMediaBundle {
 
     byte[] bundleData = ByteStreams.toByteArray(new URL(BUNDLE_URL).openStream());
 
-    // Creates a media bundle file
+    // Creates a media bundle file.
     MediaBundle bundle =
         MediaBundle.newBuilder().setData(BytesValue.of(ByteString.copyFrom(bundleData))).build();
 
@@ -104,10 +104,10 @@ public class UploadMediaBundle {
             .setMediaBundle(bundle)
             .build();
 
-    // Creates a MediaFile operation
+    // Creates a MediaFile operation.
     MediaFileOperation op = MediaFileOperation.newBuilder().setCreate(file).build();
 
-    // Creates the MediaFile service client
+    // Creates the MediaFile service client.
     try (MediaFileServiceClient mediaFileServiceClient =
         googleAdsClient.getLatestVersion().createMediaFileServiceClient()) {
       MutateMediaFilesResponse response =
