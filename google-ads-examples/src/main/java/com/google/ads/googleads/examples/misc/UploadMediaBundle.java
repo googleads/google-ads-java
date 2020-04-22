@@ -43,6 +43,12 @@ public class UploadMediaBundle {
 
   private static final String BUNDLE_URL = "https://goo.gl/9Y7qI2";
 
+  private static class UploadMediaBundleParams extends CodeSampleParams {
+
+    @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
+    private Long customerId;
+  }
+
   public static void main(String[] args) throws IOException {
     UploadMediaBundleParams params = new UploadMediaBundleParams();
     if (!params.parseArguments(args)) {
@@ -116,11 +122,5 @@ public class UploadMediaBundle {
           "The media bundle with resource name '%s' was added.%n",
           response.getResults(0).getResourceName());
     }
-  }
-
-  private static class UploadMediaBundleParams extends CodeSampleParams {
-
-    @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
-    private Long customerId;
   }
 }
