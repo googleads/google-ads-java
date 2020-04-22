@@ -36,8 +36,8 @@ import java.net.URL;
 import java.util.Arrays;
 
 /**
- * This example uploads an HTML5 zip file as a Media Bundle. More information about Media Bundle can
- * be found at https://developers.google.com/google-ads/api/docs/assets/overview.
+ * Uploads an HTML5 zip file as a Media Bundle. More information about Media Bundle can be found at
+ * https://developers.google.com/google-ads/api/docs/assets/overview.
  */
 public class UploadMediaBundle {
 
