@@ -13,8 +13,10 @@
 // limitations under the License.
 
 package com.google.ads.googleads.lib;
-
-import java.io.FileOutputStream;
+import com.google.common.base.Charsets;
+import com.google.common.io.CharSink;
+import com.google.common.io.Files;
+import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -31,15 +33,16 @@ public class MethodsListGenerator {
     Class cls = Class.forName(latestVersionMethod.getReturnType().getName());
     List<Method> methods = Arrays.asList(cls.getDeclaredMethods());
 
-    String output = "";
+    StringBuilder output = new StringBuilder();
     for (Method method : methods) {
-      output += method.toString() + "\n";
+      output.append(method + "\n");
     }
-    System.out.printf(output);
 
-    String resourcesDir = "./google-ads/src/test/resources/testdata/avail_service_clients.txt";
-    FileOutputStream classesFile = new FileOutputStream(resourcesDir);
-    classesFile.write(output.getBytes());
-    classesFile.close();
+    System.out.println("Writing the following methods to file:");
+    System.out.printf(output.toString());
+
+    File file = new File("./google-ads/src/test/resources/testdata/avail_service_clients.txt");
+    CharSink sink = Files.asCharSink(file, Charsets.UTF_8);
+    sink.write(output);
   }
 }

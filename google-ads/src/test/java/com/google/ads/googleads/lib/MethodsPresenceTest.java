@@ -14,19 +14,20 @@
 
 package com.google.ads.googleads.lib;
 
+import com.google.common.base.Charsets;
+import com.google.common.io.Resources;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-
-import java.io.InputStream;
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Scanner;
 import java.util.Set;
 
-import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnit4.class)
 public class MethodsPresenceTest {
@@ -39,7 +40,8 @@ public class MethodsPresenceTest {
    * avail_service_clients.txt should be updated so that this test passes.
    */
   @Test
-  public void methodsListMatches() throws ClassNotFoundException, NoSuchMethodException {
+  public void methodsListMatches()
+      throws ClassNotFoundException, NoSuchMethodException, IOException {
     // Gets the fully qualified return type of the GoogleAdsAllVersions getLatestVersion method,
     // which is the class from which the methods will be retrieved.
     Method latestVersionMethod = GoogleAdsAllVersions.class.getMethod("getLatestVersion");
@@ -54,17 +56,11 @@ public class MethodsPresenceTest {
     }
 
     // Retrieves the list of service client methods in the provided avail_service_clients.txt file.
-    InputStream inputStream =
-        MethodsPresenceTest.class.getResourceAsStream("/testdata/avail_service_clients.txt");
-    Scanner scanner = new Scanner(inputStream);
-    Set<String> serviceListResource = new HashSet<>();
-    while (scanner.hasNext()) {
-      serviceListResource.add(scanner.nextLine());
-    }
+    URL resource = Resources.getResource("testdata/avail_service_clients.txt");
+    Set<String> serviceListResource =
+        new HashSet<>(Resources.asCharSource(resource, Charsets.UTF_8).readLines());
     serviceListResource.remove("");
 
-    assertTrue(
-        serviceListReflection.size() == serviceListResource.size()
-            && serviceListReflection.containsAll(serviceListResource));
+    assertEquals(serviceListResource, serviceListReflection);
   }
 }
