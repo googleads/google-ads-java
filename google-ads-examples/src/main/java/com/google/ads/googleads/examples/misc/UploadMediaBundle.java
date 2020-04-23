@@ -36,7 +36,7 @@ import java.net.URL;
 import java.util.Arrays;
 
 /**
- * Uploads an HTML5 zip file as a Media Bundle. More information about Media Bundle can be found at
+ * Uploads an HTML5 zip file as a media bundle. More information about media bundles can be found at
  * https://developers.google.com/google-ads/api/docs/assets/overview.
  */
 public class UploadMediaBundle {
@@ -96,12 +96,14 @@ public class UploadMediaBundle {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) throws IOException {
 
+    // Reads the sample media bundle from the URL into a byte array.
     byte[] bundleData = ByteStreams.toByteArray(new URL(BUNDLE_URL).openStream());
 
     // Creates a media bundle file.
     MediaBundle bundle =
         MediaBundle.newBuilder().setData(BytesValue.of(ByteString.copyFrom(bundleData))).build();
 
+    // Creates a media file.
     MediaFile file =
         MediaFile.newBuilder()
             .setName(StringValue.of("Ad Media Bundle"))
@@ -110,10 +112,10 @@ public class UploadMediaBundle {
             .setMediaBundle(bundle)
             .build();
 
-    // Creates a MediaFile operation.
+    // Creates a media file operation.
     MediaFileOperation op = MediaFileOperation.newBuilder().setCreate(file).build();
 
-    // Creates the MediaFile service client.
+    // Issues a mutate request to add the media file.
     try (MediaFileServiceClient mediaFileServiceClient =
         googleAdsClient.getLatestVersion().createMediaFileServiceClient()) {
       MutateMediaFilesResponse response =
