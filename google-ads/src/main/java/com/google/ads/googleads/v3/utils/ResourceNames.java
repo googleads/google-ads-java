@@ -37,6 +37,7 @@ import com.google.ads.googleads.v3.resources.AdGroupFeedName;
 import com.google.ads.googleads.v3.resources.AdGroupLabelName;
 import com.google.ads.googleads.v3.resources.AdGroupName;
 import com.google.ads.googleads.v3.resources.AdGroupSimulationName;
+import com.google.ads.googleads.v3.resources.AdName;
 import com.google.ads.googleads.v3.resources.AdParameterName;
 import com.google.ads.googleads.v3.resources.AdScheduleViewName;
 import com.google.ads.googleads.v3.resources.AgeRangeViewName;
@@ -154,6 +155,13 @@ public class ResourceNames {
   public static String accountBudgetProposal(long customerId, long accountBudgetProposalId) {
     return AccountBudgetProposalName.format(
         String.valueOf(customerId), String.valueOf(accountBudgetProposalId));
+  }
+
+  /**
+   * Returns the ad resource name for the specified components.
+   */
+  public static String ad(long customerId, long adId) {
+    return AdName.format(String.valueOf(customerId), String.valueOf(adId));
   }
 
   /**
