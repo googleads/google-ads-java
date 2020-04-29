@@ -74,7 +74,7 @@ public class AddUnionUserList {
       System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
