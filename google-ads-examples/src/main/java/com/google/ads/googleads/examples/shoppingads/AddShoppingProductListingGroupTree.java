@@ -18,16 +18,15 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.ProductBrandInfo;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.ads.googleads.v3.common.ListingDimensionInfo;
 import com.google.ads.googleads.v3.common.ListingGroupInfo;
+import com.google.ads.googleads.v3.common.ProductBrandInfo;
 import com.google.ads.googleads.v3.common.ProductConditionInfo;
 import com.google.ads.googleads.v3.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
 import com.google.ads.googleads.v3.enums.ListingGroupTypeEnum.ListingGroupType;
 import com.google.ads.googleads.v3.enums.ProductConditionEnum.ProductCondition;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.AdGroupCriterion;
 import com.google.ads.googleads.v3.services.AdGroupCriterionOperation;
 import com.google.ads.googleads.v3.services.AdGroupCriterionServiceClient;
@@ -37,6 +36,7 @@ import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedRe
 import com.google.ads.googleads.v3.services.MutateAdGroupCriteriaResponse;
 import com.google.ads.googleads.v3.services.MutateAdGroupCriterionResult;
 import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -46,8 +46,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Adds a shopping listing group tree to a shopping ad group. The example
- * will clear an existing listing group tree and rebuild it include the following tree structure:
+ * Adds a shopping listing group tree to a shopping ad group. The example will clear an existing
+ * listing group tree and rebuild it include the following tree structure:
  *
  * <pre>
  * ProductCanonicalCondition NEW $0.20

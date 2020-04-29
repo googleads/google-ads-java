@@ -18,17 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.ads.googleads.v3.common.HotelCheckInDayInfo;
 import com.google.ads.googleads.v3.common.HotelLengthOfStayInfo;
 import com.google.ads.googleads.v3.enums.DayOfWeekEnum.DayOfWeek;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.AdGroupBidModifier;
 import com.google.ads.googleads.v3.services.AdGroupBidModifierOperation;
 import com.google.ads.googleads.v3.services.AdGroupBidModifierServiceClient;
 import com.google.ads.googleads.v3.services.MutateAdGroupBidModifierResult;
 import com.google.ads.googleads.v3.services.MutateAdGroupBidModifiersResponse;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.protobuf.DoubleValue;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
@@ -38,8 +38,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Adds ad group bid modifiers to a hotel ad group based on hotel check-in
- * day and hotel length of stay.
+ * Adds ad group bid modifiers to a hotel ad group based on hotel check-in day and hotel length of
+ * stay.
  */
 public class AddHotelAdGroupBidModifiers {
 

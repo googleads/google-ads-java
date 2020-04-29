@@ -18,9 +18,9 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.common.Metrics;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.AdGroup;
 import com.google.ads.googleads.v3.resources.AdGroupCriterion;
 import com.google.ads.googleads.v3.resources.Campaign;
@@ -112,15 +112,16 @@ public class GetKeywordStats {
               + "ORDER BY metrics.impressions DESC "
               + "LIMIT 50";
       // Constructs the SearchGoogleAdsStreamRequest.
-      SearchGoogleAdsStreamRequest request = SearchGoogleAdsStreamRequest.newBuilder()
-          .setCustomerId(Long.toString(customerId))
-          .setQuery(searchQuery)
-          .build();
+      SearchGoogleAdsStreamRequest request =
+          SearchGoogleAdsStreamRequest.newBuilder()
+              .setCustomerId(Long.toString(customerId))
+              .setQuery(searchQuery)
+              .build();
 
       // Creates and issues a search Google Ads stream request that will retrieve all of the
       // requested field values for the keyword.
-      ServerStream<SearchGoogleAdsStreamResponse> stream = googleAdsServiceClient
-          .searchStreamCallable().call(request);
+      ServerStream<SearchGoogleAdsStreamResponse> stream =
+          googleAdsServiceClient.searchStreamCallable().call(request);
 
       // Iterates through the results in the stream response and prints all of the requested
       // field values for the keyword in each row.

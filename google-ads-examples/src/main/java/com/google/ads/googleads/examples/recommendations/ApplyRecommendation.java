@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.services.ApplyRecommendationOperation;
 import com.google.ads.googleads.v3.services.ApplyRecommendationResponse;
 import com.google.ads.googleads.v3.services.ApplyRecommendationResult;
 import com.google.ads.googleads.v3.services.RecommendationServiceClient;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -122,8 +122,7 @@ public class ApplyRecommendation {
     try (RecommendationServiceClient recommendationServiceClient =
         googleAdsClient.getLatestVersion().createRecommendationServiceClient()) {
       ApplyRecommendationResponse response =
-          recommendationServiceClient.applyRecommendation(
-              Long.toString(customerId), operations);
+          recommendationServiceClient.applyRecommendation(Long.toString(customerId), operations);
       System.out.printf("Applied %d recommendation:%n", response.getResultsCount());
       for (ApplyRecommendationResult result : response.getResultsList()) {
         System.out.println(result.getResourceName());

@@ -18,13 +18,13 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.common.AddressInfo;
 import com.google.ads.googleads.v3.common.KeywordInfo;
 import com.google.ads.googleads.v3.common.ProximityInfo;
 import com.google.ads.googleads.v3.enums.KeywordMatchTypeEnum.KeywordMatchType;
 import com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.CampaignCriterion;
 import com.google.ads.googleads.v3.resources.CampaignCriterion.Builder;
 import com.google.ads.googleads.v3.resources.CampaignName;
@@ -143,7 +143,8 @@ public class AddCampaignTargetingCriteria {
                 .setCreate(buildLocationIdCriterion(locationId, campaignResourceName))
                 .build(),
             CampaignCriterionOperation.newBuilder()
-                .setCreate(buildProximityLocation(campaignResourceName)).build());
+                .setCreate(buildProximityLocation(campaignResourceName))
+                .build());
 
     try (CampaignCriterionServiceClient campaignCriterionServiceClient =
         googleAdsClient.getLatestVersion().createCampaignCriterionServiceClient()) {

@@ -43,8 +43,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Adds a feed that syncs feed items from a Google
- * My Business (GMB) account and associates the feed with a customer.
+ * Adds a feed that syncs feed items from a Google My Business (GMB) account and associates the feed
+ * with a customer.
  */
 public class AddGoogleMyBusinessLocationExtensions {
   // The required scope for setting the OAuth info.

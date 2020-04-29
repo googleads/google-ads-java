@@ -18,12 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.common.ManualCpc;
 import com.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
 import com.google.ads.googleads.v3.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v3.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.Campaign;
 import com.google.ads.googleads.v3.resources.Campaign.NetworkSettings;
 import com.google.ads.googleads.v3.resources.CampaignBudget;
@@ -170,7 +170,8 @@ public class AddCampaigns {
       operations.add(op);
     }
 
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+    try (CampaignServiceClient campaignServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       MutateCampaignsResponse response =
           campaignServiceClient.mutateCampaigns(Long.toString(customerId), operations);
       System.out.printf("Added %d campaigns:%n", response.getResultsCount());

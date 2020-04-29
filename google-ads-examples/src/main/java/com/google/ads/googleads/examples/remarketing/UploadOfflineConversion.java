@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 package com.google.ads.googleads.examples.remarketing;
 
 import com.beust.jcommander.Parameter;
@@ -45,10 +44,13 @@ public class UploadOfflineConversion {
     @Parameter(names = ArgumentNames.GCLID, required = true)
     private String gclid;
 
-    @Parameter(names = ArgumentNames.CONVERSION_DATE_TIME, required = true,
-        description = "The date time at which the conversion occurred. "
-            + "Must be after the click time, and must include the time zone offset. "
-            + "The format is  'yyyy-mm-dd hh:mm:ss+|-hh:mm', e.g. '2019-01-01 12:32:45-08:00'.")
+    @Parameter(
+        names = ArgumentNames.CONVERSION_DATE_TIME,
+        required = true,
+        description =
+            "The date time at which the conversion occurred. "
+                + "Must be after the click time, and must include the time zone offset. "
+                + "The format is  'yyyy-mm-dd hh:mm:ss+|-hh:mm', e.g. '2019-01-01 12:32:45-08:00'.")
     private String conversionDateTime;
 
     @Parameter(names = ArgumentNames.CONVERSION_VALUE, required = true)
@@ -81,13 +83,14 @@ public class UploadOfflineConversion {
     }
 
     try {
-      new UploadOfflineConversion().runExample(
-          googleAdsClient,
-          params.customerId,
-          params.conversionActionId,
-          params.gclid,
-          params.conversionDateTime,
-          params.conversionValue);
+      new UploadOfflineConversion()
+          .runExample(
+              googleAdsClient,
+              params.customerId,
+              params.conversionActionId,
+              params.gclid,
+              params.conversionDateTime,
+              params.conversionValue);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -110,7 +113,7 @@ public class UploadOfflineConversion {
    * @param customerId the client customer ID.
    * @param conversionActionId conversion action ID associated with this conversion.
    * @param gclid the GCLID for the conversion.
-   * @param conversionDateTime  date and time of the conversion.
+   * @param conversionDateTime date and time of the conversion.
    * @param conversionValue the value of the conversion.
    */
   private void runExample(
@@ -125,20 +128,21 @@ public class UploadOfflineConversion {
         ResourceNames.conversionAction(customerId, conversionActionId);
 
     // Creates the click conversion.
-    ClickConversion clickConversion = ClickConversion.newBuilder()
-        .setConversionAction(StringValue.of(conversionActionResourceName))
-        .setConversionDateTime(StringValue.of(conversionDateTime))
-        .setConversionValue(DoubleValue.of(conversionValue))
-        .setCurrencyCode(StringValue.of("USD"))
-        .setGclid(StringValue.of(gclid))
-        .build();
+    ClickConversion clickConversion =
+        ClickConversion.newBuilder()
+            .setConversionAction(StringValue.of(conversionActionResourceName))
+            .setConversionDateTime(StringValue.of(conversionDateTime))
+            .setConversionValue(DoubleValue.of(conversionValue))
+            .setCurrencyCode(StringValue.of("USD"))
+            .setGclid(StringValue.of(gclid))
+            .build();
 
     // Creates the conversion upload service client.
     try (ConversionUploadServiceClient conversionUploadServiceClient =
         googleAdsClient.getLatestVersion().createConversionUploadServiceClient()) {
       // Uploads the click conversion. Partial failure should always be set to true.
-      UploadClickConversionsResponse response = conversionUploadServiceClient
-          .uploadClickConversions(
+      UploadClickConversionsResponse response =
+          conversionUploadServiceClient.uploadClickConversions(
               Long.toString(customerId),
               ImmutableList.of(clickConversion),
               // Enables partial failure (must be true).
@@ -148,8 +152,8 @@ public class UploadOfflineConversion {
 
       // Prints any partial errors returned.
       if (response.hasPartialFailureError()) {
-        System.out.printf("Partial error encountered: '%s'.%n",
-            response.getPartialFailureError().getMessage());
+        System.out.printf(
+            "Partial error encountered: '%s'.%n", response.getPartialFailureError().getMessage());
       }
 
       // Prints the result.
