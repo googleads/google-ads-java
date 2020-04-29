@@ -19,18 +19,18 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType;
-import com.google.ads.googleads.v3.resources.MediaFile;
-import com.google.ads.googleads.v3.resources.MediaImage;
-import com.google.ads.googleads.v3.services.MediaFileServiceClient;
-import com.google.ads.googleads.v3.services.MediaFileOperation;
-import com.google.ads.googleads.v3.services.MutateMediaFilesResponse;
-import com.google.ads.googleads.v3.services.MutateMediaFileResult;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
 import com.google.ads.googleads.v3.errors.GoogleAdsException;
+import com.google.ads.googleads.v3.resources.MediaFile;
+import com.google.ads.googleads.v3.resources.MediaImage;
+import com.google.ads.googleads.v3.services.MediaFileOperation;
+import com.google.ads.googleads.v3.services.MediaFileServiceClient;
+import com.google.ads.googleads.v3.services.MutateMediaFileResult;
+import com.google.ads.googleads.v3.services.MutateMediaFilesResponse;
 import com.google.common.io.ByteStreams;
-import com.google.protobuf.StringValue;
-import com.google.protobuf.BytesValue;
 import com.google.protobuf.ByteString;
+import com.google.protobuf.BytesValue;
+import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -59,7 +59,7 @@ public class UploadImage {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -74,8 +74,8 @@ public class UploadImage {
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -95,24 +95,22 @@ public class UploadImage {
     byte[] imageData = ByteStreams.toByteArray(new URL("https://goo.gl/3b9Wfh").openStream());
 
     MediaImage image =
-      MediaImage.newBuilder()
-        .setData(BytesValue.of(ByteString.copyFrom(imageData)))
-        .build();
+        MediaImage.newBuilder().setData(BytesValue.of(ByteString.copyFrom(imageData))).build();
 
     MediaFile file =
-      MediaFile.newBuilder()
-        .setName(StringValue.of("Ad Image"))
-        .setType(MediaType.IMAGE)
-        .setSourceUrl(StringValue.of("https://goo.gl/3b9Wfh"))
-        .setImage(image)
-        .build();
+        MediaFile.newBuilder()
+            .setName(StringValue.of("Ad Image"))
+            .setType(MediaType.IMAGE)
+            .setSourceUrl(StringValue.of("https://goo.gl/3b9Wfh"))
+            .setImage(image)
+            .build();
 
     MediaFileOperation op = MediaFileOperation.newBuilder().setCreate(file).build();
 
     try (MediaFileServiceClient mediaFileServiceClient =
         googleAdsClient.getLatestVersion().createMediaFileServiceClient()) {
       MutateMediaFilesResponse response =
-        mediaFileServiceClient.mutateMediaFiles(Long.toString(customerId), Arrays.asList(op));
+          mediaFileServiceClient.mutateMediaFiles(Long.toString(customerId), Arrays.asList(op));
       System.out.printf("Added %d images:%n", response.getResultsCount());
       for (MutateMediaFileResult result : response.getResultsList()) {
         System.out.println(result.getResourceName());

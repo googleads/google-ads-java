@@ -18,11 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.common.KeywordInfo;
 import com.google.ads.googleads.v3.enums.KeywordMatchTypeEnum.KeywordMatchType;
 import com.google.ads.googleads.v3.enums.SharedSetTypeEnum.SharedSetType;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.CampaignName;
 import com.google.ads.googleads.v3.resources.CampaignSharedSet;
 import com.google.ads.googleads.v3.resources.SharedCriterion;
@@ -45,10 +45,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Creates a shared list of negative broad match keywords. It then attaches them to a
- * campaign.
- */
+/** Creates a shared list of negative broad match keywords. It then attaches them to a campaign. */
 public class CreateAndAttachSharedKeywordSet {
 
   private static class CreateAndAttachSharedKeywordSetParams extends CodeSampleParams {

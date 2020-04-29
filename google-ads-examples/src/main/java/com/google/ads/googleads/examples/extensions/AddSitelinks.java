@@ -40,13 +40,13 @@ import com.google.ads.googleads.v3.services.MutateExtensionFeedItemResult;
 import com.google.ads.googleads.v3.services.MutateExtensionFeedItemsResponse;
 import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import org.joda.time.DateTime;
 import com.google.protobuf.Int32Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.joda.time.DateTime;
 
 /** Adds sitelinks to a campaign. To create a campaign, run AddCampaigns.java. */
 public class AddSitelinks {
@@ -114,15 +114,16 @@ public class AddSitelinks {
         createExtensionFeedItems(googleAdsClient, customerId, campaignResourceName);
 
     // Creates a CampaignExtensionSetting.
-    CampaignExtensionSetting campaignExtensionSetting = CampaignExtensionSetting.newBuilder()
-        .setCampaign(StringValue.of(campaignResourceName))
-        .setExtensionType(ExtensionType.SITELINK)
-        .addAllExtensionFeedItems(extensionFeedItems)
-        .build();
+    CampaignExtensionSetting campaignExtensionSetting =
+        CampaignExtensionSetting.newBuilder()
+            .setCampaign(StringValue.of(campaignResourceName))
+            .setExtensionType(ExtensionType.SITELINK)
+            .addAllExtensionFeedItems(extensionFeedItems)
+            .build();
 
     // Creates the operation.
-    CampaignExtensionSettingOperation operation = CampaignExtensionSettingOperation.newBuilder()
-        .setCreate(campaignExtensionSetting).build();
+    CampaignExtensionSettingOperation operation =
+        CampaignExtensionSettingOperation.newBuilder().setCreate(campaignExtensionSetting).build();
 
     // Creates the CampaignExtensionSettingServiceClient.
     try (CampaignExtensionSettingServiceClient campaignExtensionSettingServiceClient =
@@ -147,25 +148,24 @@ public class AddSitelinks {
    * @param campaignResourceName the resource name of the campaign to target.
    */
   private static List<StringValue> createExtensionFeedItems(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      String campaignResourceName) {
-    SitelinkFeedItem sitelinkFeedItem1 = createSitelinkFeedItem(
-        "Store Hours", "http://www.example.com/storehours");
+      GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
+    SitelinkFeedItem sitelinkFeedItem1 =
+        createSitelinkFeedItem("Store Hours", "http://www.example.com/storehours");
 
     // Creates an ExtensionFeedItem from the SitelinkFeedItem.
-    ExtensionFeedItem extensionFeedItem1 = ExtensionFeedItem.newBuilder()
-        .setExtensionType(ExtensionType.SITELINK)
-        .setSitelinkFeedItem(sitelinkFeedItem1)
-        .setTargetedCampaign(StringValue.of(campaignResourceName))
-        .build();
+    ExtensionFeedItem extensionFeedItem1 =
+        ExtensionFeedItem.newBuilder()
+            .setExtensionType(ExtensionType.SITELINK)
+            .setSitelinkFeedItem(sitelinkFeedItem1)
+            .setTargetedCampaign(StringValue.of(campaignResourceName))
+            .build();
 
     List<ExtensionFeedItemOperation> operations = new ArrayList<>();
     // Creates an ExtensionFeedItemOperation and adds it to the operations List.
     operations.add(ExtensionFeedItemOperation.newBuilder().setCreate(extensionFeedItem1).build());
 
-    SitelinkFeedItem sitelinkFeedItem2 = createSitelinkFeedItem(
-        "Thanksgiving Specials", "http://www.example.com/thanksgiving");
+    SitelinkFeedItem sitelinkFeedItem2 =
+        createSitelinkFeedItem("Thanksgiving Specials", "http://www.example.com/thanksgiving");
 
     DateTime startTime = new DateTime(DateTime.now().getYear(), 11, 20, 0, 0, 0);
     if (startTime.isBeforeNow()) {
@@ -184,50 +184,60 @@ public class AddSitelinks {
     // https://developers.google.com/adwords/api/docs/appendix/geotargeting
     String unitedStates = ResourceNames.geoTargetConstant(2840);
 
-    ExtensionFeedItem extensionFeedItem2 = ExtensionFeedItem.newBuilder()
-        .setExtensionType(ExtensionType.SITELINK)
-        .setSitelinkFeedItem(sitelinkFeedItem2)
-        .setTargetedCampaign(StringValue.of(campaignResourceName))
-        .setStartDateTime(StringValue.of(startTimeString))
-        .setEndDateTime(StringValue.of(endTimeString))
-        .setTargetedGeoTargetConstant(StringValue.of(unitedStates))
-        .build();
+    ExtensionFeedItem extensionFeedItem2 =
+        ExtensionFeedItem.newBuilder()
+            .setExtensionType(ExtensionType.SITELINK)
+            .setSitelinkFeedItem(sitelinkFeedItem2)
+            .setTargetedCampaign(StringValue.of(campaignResourceName))
+            .setStartDateTime(StringValue.of(startTimeString))
+            .setEndDateTime(StringValue.of(endTimeString))
+            .setTargetedGeoTargetConstant(StringValue.of(unitedStates))
+            .build();
 
     operations.add(ExtensionFeedItemOperation.newBuilder().setCreate(extensionFeedItem2).build());
 
-    SitelinkFeedItem sitelinkFeedItem3 = createSitelinkFeedItem(
-        "Wifi available", "http://www.example.com/mobile/wifi");
+    SitelinkFeedItem sitelinkFeedItem3 =
+        createSitelinkFeedItem("Wifi available", "http://www.example.com/mobile/wifi");
 
-    ExtensionFeedItem extensionFeedItem3 = ExtensionFeedItem.newBuilder()
-        .setExtensionType(ExtensionType.SITELINK)
-        .setSitelinkFeedItem(sitelinkFeedItem3)
-        .setTargetedCampaign(StringValue.of(campaignResourceName))
-        .setDevice(FeedItemTargetDevice.MOBILE)
-        .setTargetedKeyword(KeywordInfo.newBuilder()
-            .setText(StringValue.of("free wifi"))
-            .setMatchType(KeywordMatchType.BROAD).build())
-        .build();
+    ExtensionFeedItem extensionFeedItem3 =
+        ExtensionFeedItem.newBuilder()
+            .setExtensionType(ExtensionType.SITELINK)
+            .setSitelinkFeedItem(sitelinkFeedItem3)
+            .setTargetedCampaign(StringValue.of(campaignResourceName))
+            .setDevice(FeedItemTargetDevice.MOBILE)
+            .setTargetedKeyword(
+                KeywordInfo.newBuilder()
+                    .setText(StringValue.of("free wifi"))
+                    .setMatchType(KeywordMatchType.BROAD)
+                    .build())
+            .build();
 
     operations.add(ExtensionFeedItemOperation.newBuilder().setCreate(extensionFeedItem3).build());
 
-    SitelinkFeedItem sitelinkFeedItem4 = createSitelinkFeedItem(
-        "Happy hours", "http://www.example.com/happyhours");
+    SitelinkFeedItem sitelinkFeedItem4 =
+        createSitelinkFeedItem("Happy hours", "http://www.example.com/happyhours");
 
-    ExtensionFeedItem extensionFeedItem4 =  ExtensionFeedItem.newBuilder()
-        .setExtensionType(ExtensionType.SITELINK)
-        .setSitelinkFeedItem(sitelinkFeedItem4)
-        .setTargetedCampaign(StringValue.of(campaignResourceName))
-        .addAdSchedules(
-            createAdScheduleInfo(DayOfWeek.MONDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
-        .addAdSchedules(
-            createAdScheduleInfo(DayOfWeek.TUESDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
-        .addAdSchedules(
-            createAdScheduleInfo(DayOfWeek.WEDNESDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
-        .addAdSchedules(
-            createAdScheduleInfo(DayOfWeek.THURSDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
-        .addAdSchedules(
-            createAdScheduleInfo(DayOfWeek.FRIDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
-        .build();
+    ExtensionFeedItem extensionFeedItem4 =
+        ExtensionFeedItem.newBuilder()
+            .setExtensionType(ExtensionType.SITELINK)
+            .setSitelinkFeedItem(sitelinkFeedItem4)
+            .setTargetedCampaign(StringValue.of(campaignResourceName))
+            .addAdSchedules(
+                createAdScheduleInfo(
+                    DayOfWeek.MONDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
+            .addAdSchedules(
+                createAdScheduleInfo(
+                    DayOfWeek.TUESDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
+            .addAdSchedules(
+                createAdScheduleInfo(
+                    DayOfWeek.WEDNESDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
+            .addAdSchedules(
+                createAdScheduleInfo(
+                    DayOfWeek.THURSDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
+            .addAdSchedules(
+                createAdScheduleInfo(
+                    DayOfWeek.FRIDAY, 18, MinuteOfHour.ZERO, 21, MinuteOfHour.ZERO))
+            .build();
 
     operations.add(ExtensionFeedItemOperation.newBuilder().setCreate(extensionFeedItem4).build());
 

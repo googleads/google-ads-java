@@ -21,10 +21,10 @@ import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
 import com.google.ads.googleads.v3.common.DeviceInfo;
 import com.google.ads.googleads.v3.enums.DeviceEnum.Device;
-import com.google.ads.googleads.v3.services.CampaignCriterionOperation;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
 import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.CampaignCriterion;
+import com.google.ads.googleads.v3.services.CampaignCriterionOperation;
 import com.google.ads.googleads.v3.services.CampaignCriterionServiceClient;
 import com.google.ads.googleads.v3.services.MutateCampaignCriteriaResponse;
 import com.google.ads.googleads.v3.services.MutateCampaignCriterionResult;
@@ -81,12 +81,13 @@ public class UpdateCampaignCriterionBidModifier {
     }
 
     try {
-      new UpdateCampaignCriterionBidModifier().runExample(
-          googleAdsClient,
-          params.customerId,
-          params.campaignId,
-          params.criterionId,
-          params.bidModifier);
+      new UpdateCampaignCriterionBidModifier()
+          .runExample(
+              googleAdsClient,
+              params.customerId,
+              params.campaignId,
+              params.criterionId,
+              params.bidModifier);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -123,18 +124,19 @@ public class UpdateCampaignCriterionBidModifier {
         ResourceNames.campaignCriterion(customerId, campaignId, criterionId);
 
     // Creates the CampaignCriterion.
-    CampaignCriterion campaignCriterion = CampaignCriterion.newBuilder()
-        .setResourceName(criterionResourceName)
-        .setBidModifier(FloatValue.of(bidModifier))
-        .setDevice(DeviceInfo.newBuilder().setType(Device.MOBILE).build())
-        .build();
+    CampaignCriterion campaignCriterion =
+        CampaignCriterion.newBuilder()
+            .setResourceName(criterionResourceName)
+            .setBidModifier(FloatValue.of(bidModifier))
+            .setDevice(DeviceInfo.newBuilder().setType(Device.MOBILE).build())
+            .build();
 
     // Creates the operation.
     CampaignCriterionOperation operation =
-      CampaignCriterionOperation.newBuilder()
-          .setUpdate(campaignCriterion)
-          .setUpdateMask(FieldMasks.allSetFieldsOf(campaignCriterion))
-          .build();
+        CampaignCriterionOperation.newBuilder()
+            .setUpdate(campaignCriterion)
+            .setUpdateMask(FieldMasks.allSetFieldsOf(campaignCriterion))
+            .build();
 
     // Creates the CampaignCriterionServiceClient.
     try (CampaignCriterionServiceClient campaignCriterionServiceClient =
@@ -144,8 +146,8 @@ public class UpdateCampaignCriterionBidModifier {
           campaignCriterionServiceClient.mutateCampaignCriteria(
               Long.toString(customerId), ImmutableList.of(operation));
       for (MutateCampaignCriterionResult result : response.getResultsList()) {
-        System.out.printf("Campaign criterion with resource name '%s' was modified.%n",
-            result.getResourceName());
+        System.out.printf(
+            "Campaign criterion with resource name '%s' was modified.%n", result.getResourceName());
       }
     }
   }

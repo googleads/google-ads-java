@@ -163,8 +163,7 @@ public class GetProductBiddingCategoryConstant {
     for (CategoryNode category : categories) {
       System.out.printf("%s%s [%s]%n", prefix, category.localizedName, category.resourceName);
       displayCategories(
-        category.children,
-        String.format("%s%s > ", prefix, category.localizedName));
+          category.children, String.format("%s%s > ", prefix, category.localizedName));
     }
   }
 

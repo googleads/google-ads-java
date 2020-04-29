@@ -196,8 +196,8 @@ public class AddRealEstateFeed {
    * Retrieves details about a feed. The initial query retrieves the FeedAttributes, or columns, of
    * the feed. Each FeedAttribute will also include the FeedAttributeId, which will be used in a
    * subsequent step. The example then inserts a new key, value pair into a map for each
-   * FeedAttribute, which is the return value of the method. The keys are the placeholder types
-   * that the columns will be. The values are the FeedAttributes.
+   * FeedAttribute, which is the return value of the method. The keys are the placeholder types that
+   * the columns will be. The values are the FeedAttributes.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
@@ -231,23 +231,23 @@ public class AddRealEstateFeed {
       Map<RealEstatePlaceholderField, FeedAttribute> feedAttributes = new HashMap<>();
       // Loops through each of the feed attributes and populates the map.
       for (FeedAttribute feedAttribute : feedAttributeList) {
-        switch(feedAttribute.getName().getValue()) {
+        switch (feedAttribute.getName().getValue()) {
           case "Listing ID":
             feedAttributes.put(RealEstatePlaceholderField.LISTING_ID, feedAttribute);
             break;
           case "Listing Name":
-          feedAttributes.put(RealEstatePlaceholderField.LISTING_NAME, feedAttribute);
+            feedAttributes.put(RealEstatePlaceholderField.LISTING_NAME, feedAttribute);
             break;
           case "Final URLs":
-          feedAttributes.put(RealEstatePlaceholderField.FINAL_URLS, feedAttribute);
+            feedAttributes.put(RealEstatePlaceholderField.FINAL_URLS, feedAttribute);
             break;
           case "Image URL":
-          feedAttributes.put(RealEstatePlaceholderField.IMAGE_URL, feedAttribute);
+            feedAttributes.put(RealEstatePlaceholderField.IMAGE_URL, feedAttribute);
             break;
           case "Contextual Keywords":
-          feedAttributes.put(RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS, feedAttribute);
+            feedAttributes.put(RealEstatePlaceholderField.CONTEXTUAL_KEYWORDS, feedAttribute);
             break;
-          // Optionally add other RealEstatePlaceholderFields.
+            // Optionally add other RealEstatePlaceholderFields.
           default:
             throw new Error("Invalid attribute name.");
         }
@@ -275,7 +275,8 @@ public class AddRealEstateFeed {
     // the context of a real estate feed (e.g. a LISTING_ID or LISTING_NAME). The FeedMapping
     // associates the feed column by ID to this type and controls how the feed attributes are
     // presented in dynamic content.
-    // See https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v3.enums#google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
+    // See
+    // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.v3.enums#google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField
     // for the full list of placeholder values.
     AttributeFieldMapping listingIdMapping =
         AttributeFieldMapping.newBuilder()

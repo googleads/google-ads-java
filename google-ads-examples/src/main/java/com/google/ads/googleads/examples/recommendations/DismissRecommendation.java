@@ -18,20 +18,20 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
 import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.services.DismissRecommendationRequest.DismissRecommendationOperation;
 import com.google.ads.googleads.v3.services.DismissRecommendationResponse;
 import com.google.ads.googleads.v3.services.DismissRecommendationResponse.DismissRecommendationResult;
 import com.google.ads.googleads.v3.services.RecommendationServiceClient;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
 
 /**
- * Dismisses a given recommendation. To retrieve recommendations for text ads,
- * run GetTextAdRecommendations.java.
+ * Dismisses a given recommendation. To retrieve recommendations for text ads, run
+ * GetTextAdRecommendations.java.
  */
 public class DismissRecommendation {
 
@@ -89,28 +89,26 @@ public class DismissRecommendation {
     }
   }
 
-  /**
-   * Runs the example.
-   */
-  private void runExample(GoogleAdsClient googleAdsClient, Long customerId,
-      String recommendationId) {
+  /** Runs the example. */
+  private void runExample(
+      GoogleAdsClient googleAdsClient, Long customerId, String recommendationId) {
     // Converts the customer and recommendation ID to a resource name.
     String resourceName = ResourceNames.recommendation(customerId, recommendationId);
 
     // Constructs a dismiss operation for the recommendation.
-    DismissRecommendationOperation operation = DismissRecommendationOperation.newBuilder()
-        .setResourceName(resourceName)
-        .build();
+    DismissRecommendationOperation operation =
+        DismissRecommendationOperation.newBuilder().setResourceName(resourceName).build();
 
     // Issues a mutate request to dismiss the recommendation.
-    try (RecommendationServiceClient client = googleAdsClient.getLatestVersion().createRecommendationServiceClient()) {
-      DismissRecommendationResponse response = client
-          .dismissRecommendation(customerId.toString(), Arrays.asList(operation));
+    try (RecommendationServiceClient client =
+        googleAdsClient.getLatestVersion().createRecommendationServiceClient()) {
+      DismissRecommendationResponse response =
+          client.dismissRecommendation(customerId.toString(), Arrays.asList(operation));
 
       DismissRecommendationResult result = response.getResultsList().get(0);
 
-      System.out
-          .printf("Dismissed recommendation with resource name: '%s'%n", result.getResourceName());
+      System.out.printf(
+          "Dismissed recommendation with resource name: '%s'%n", result.getResourceName());
     }
   }
 }

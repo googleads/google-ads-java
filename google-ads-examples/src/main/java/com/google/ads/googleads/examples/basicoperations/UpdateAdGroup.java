@@ -18,25 +18,22 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.AdGroup;
 import com.google.ads.googleads.v3.services.AdGroupOperation;
 import com.google.ads.googleads.v3.services.AdGroupServiceClient;
 import com.google.ads.googleads.v3.services.MutateAdGroupResult;
 import com.google.ads.googleads.v3.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Int64Value;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Updates the CPC bid and status for a given ad group. To get ad groups, run
- * GetAdGroups.java.
- */
+/** Updates the CPC bid and status for a given ad group. To get ad groups, run GetAdGroups.java. */
 public class UpdateAdGroup {
 
   private static class UpdateAdGroupParams extends CodeSampleParams {
@@ -104,7 +101,8 @@ public class UpdateAdGroup {
    */
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long bidMicroAmount) {
-    try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+    try (AdGroupServiceClient adGroupServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       // Creates an ad group object with the proper resource name and any other changes.
       AdGroup adGroup =
           AdGroup.newBuilder()

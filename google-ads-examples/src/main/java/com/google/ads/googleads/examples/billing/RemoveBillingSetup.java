@@ -17,12 +17,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.services.BillingSetupOperation;
 import com.google.ads.googleads.v3.services.BillingSetupServiceClient;
 import com.google.ads.googleads.v3.services.MutateBillingSetupResponse;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -94,17 +94,17 @@ public class RemoveBillingSetup {
     String billingSetupResourceName = ResourceNames.billingSetup(customerId, billingSetupId);
 
     // Constructs an operation that will remove the billing setup.
-    BillingSetupOperation operation = BillingSetupOperation.newBuilder()
-        .setRemove(billingSetupResourceName)
-        .build();
+    BillingSetupOperation operation =
+        BillingSetupOperation.newBuilder().setRemove(billingSetupResourceName).build();
 
-    try (BillingSetupServiceClient billingSetupServiceClient = googleAdsClient.getLatestVersion()
-        .createBillingSetupServiceClient()) {
+    try (BillingSetupServiceClient billingSetupServiceClient =
+        googleAdsClient.getLatestVersion().createBillingSetupServiceClient()) {
       // Sends the operation in a mutate request.
-      MutateBillingSetupResponse response = billingSetupServiceClient
-          .mutateBillingSetup(String.valueOf(customerId), operation);
+      MutateBillingSetupResponse response =
+          billingSetupServiceClient.mutateBillingSetup(String.valueOf(customerId), operation);
 
-      System.out.printf("Removed billing setup with resource name '%s'.%n",
+      System.out.printf(
+          "Removed billing setup with resource name '%s'.%n",
           response.getResult().getResourceName());
     }
   }

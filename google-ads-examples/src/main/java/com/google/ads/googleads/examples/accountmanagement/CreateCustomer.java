@@ -33,8 +33,8 @@ import java.time.format.DateTimeFormatter;
 /**
  * Creates a new customer under a given manager account.
  *
- * Note: this example must be run using the credentials of a Google Ads manager account. By default,
- * the new account will only be accessible via the manager account.
+ * <p>Note: this example must be run using the credentials of a Google Ads manager account. By
+ * default, the new account will only be accessible via the manager account.
  */
 public class CreateCustomer {
 
@@ -88,17 +88,18 @@ public class CreateCustomer {
     String dateTime = ZonedDateTime.now().format(DateTimeFormatter.RFC_1123_DATE_TIME);
 
     // Initializes a Customer object to be created.
-    Customer customer = Customer.newBuilder()
-        .setDescriptiveName(
-            StringValue.of("Account created with CustomerService on '" + dateTime + "'"))
-        .setCurrencyCode(StringValue.of("USD"))
-        .setTimeZone(StringValue.of("America/New_York"))
-        // Optional: Sets additional attributes of the customer.
-        .setTrackingUrlTemplate(StringValue.of("{lpurl}?device={device}"))
-        .setFinalUrlSuffix(
-            StringValue.of("keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}"))
-        .setHasPartnersBadge(BoolValue.of(false))
-        .build();
+    Customer customer =
+        Customer.newBuilder()
+            .setDescriptiveName(
+                StringValue.of("Account created with CustomerService on '" + dateTime + "'"))
+            .setCurrencyCode(StringValue.of("USD"))
+            .setTimeZone(StringValue.of("America/New_York"))
+            // Optional: Sets additional attributes of the customer.
+            .setTrackingUrlTemplate(StringValue.of("{lpurl}?device={device}"))
+            .setFinalUrlSuffix(
+                StringValue.of("keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}"))
+            .setHasPartnersBadge(BoolValue.of(false))
+            .build();
 
     // Sends the request to create the customer.
     try (CustomerServiceClient client =

@@ -18,8 +18,8 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.ChangeStatus;
 import com.google.ads.googleads.v3.services.GoogleAdsRow;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
@@ -96,7 +96,8 @@ public class GetAccountChanges {
             + "WHERE change_status.last_change_date_time DURING LAST_7_DAYS "
             + "ORDER BY change_status.last_change_date_time";
 
-    try (GoogleAdsServiceClient client = googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+    try (GoogleAdsServiceClient client =
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       SearchPagedResponse response = client.search(String.valueOf(customerId), query);
 
       for (GoogleAdsRow row : response.iterateAll()) {

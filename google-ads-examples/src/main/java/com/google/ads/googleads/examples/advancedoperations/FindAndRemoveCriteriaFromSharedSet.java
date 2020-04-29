@@ -18,9 +18,9 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.SharedCriterion;
 import com.google.ads.googleads.v3.resources.SharedSet;
 import com.google.ads.googleads.v3.services.GoogleAdsRow;
@@ -38,8 +38,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Demonstrates how to find shared sets, how to find shared set criteria, and how to
- * remove shared set criteria.
+ * Demonstrates how to find shared sets, how to find shared set criteria, and how to remove shared
+ * set criteria.
  */
 public class FindAndRemoveCriteriaFromSharedSet {
 

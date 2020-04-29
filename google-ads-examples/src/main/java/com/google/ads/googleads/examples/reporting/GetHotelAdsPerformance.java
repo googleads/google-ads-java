@@ -18,8 +18,8 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.services.GoogleAdsRow;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
@@ -28,8 +28,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Gets Hotel-ads performance statistics for the 50 Hotel ad groups with the most
- * impressions over the last 7 days.
+ * Gets Hotel-ads performance statistics for the 50 Hotel ad groups with the most impressions over
+ * the last 7 days.
  */
 public class GetHotelAdsPerformance {
 
@@ -82,35 +82,39 @@ public class GetHotelAdsPerformance {
   private void runExample(GoogleAdsClient googleAdsClient, Long customerId) {
     // Creates a query that retrieves hotel-ads statistics for each campaign and ad group.
     // Returned statistics will be segmented by the check-in day of week and length of stay.
-    String query = "SELECT "
-        + "  campaign.id, "
-        + "  campaign.advertising_channel_type, "
-        + "  ad_group.id, "
-        + "  ad_group.status, "
-        + "  metrics.impressions, "
-        + "  metrics.hotel_average_lead_value_micros, "
-        + "  segments.hotel_check_in_day_of_week, "
-        + "  segments.hotel_length_of_stay "
-        + "FROM hotel_performance_view "
-        + "WHERE segments.date DURING LAST_7_DAYS "
-        + "  AND campaign.advertising_channel_type = 'HOTEL' "
-        + "  AND ad_group.status = 'ENABLED' "
-        + "ORDER BY metrics.impressions DESC "
-        + "LIMIT 50";
+    String query =
+        "SELECT "
+            + "  campaign.id, "
+            + "  campaign.advertising_channel_type, "
+            + "  ad_group.id, "
+            + "  ad_group.status, "
+            + "  metrics.impressions, "
+            + "  metrics.hotel_average_lead_value_micros, "
+            + "  segments.hotel_check_in_day_of_week, "
+            + "  segments.hotel_length_of_stay "
+            + "FROM hotel_performance_view "
+            + "WHERE segments.date DURING LAST_7_DAYS "
+            + "  AND campaign.advertising_channel_type = 'HOTEL' "
+            + "  AND ad_group.status = 'ENABLED' "
+            + "ORDER BY metrics.impressions DESC "
+            + "LIMIT 50";
 
     // Constructs and issues a search request by specifying page size.
-    SearchGoogleAdsRequest request = SearchGoogleAdsRequest.newBuilder()
-        .setCustomerId(String.valueOf(customerId))
-        .setPageSize(PAGE_SIZE)
-        .setQuery(query)
-        .build();
+    SearchGoogleAdsRequest request =
+        SearchGoogleAdsRequest.newBuilder()
+            .setCustomerId(String.valueOf(customerId))
+            .setPageSize(PAGE_SIZE)
+            .setQuery(query)
+            .build();
 
     // Iterates over all rows in all pages and prints the requested field values for each row.
-    try (GoogleAdsServiceClient googleAdsService = googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+    try (GoogleAdsServiceClient googleAdsService =
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       SearchPagedResponse response = googleAdsService.search(request);
 
       for (GoogleAdsRow row : response.iterateAll()) {
-        System.out.printf("Ad group ID %d in campaign ID %d "
+        System.out.printf(
+            "Ad group ID %d in campaign ID %d "
                 + "with hotel check-in on %s and %d day(s) of stay "
                 + "had %d impression(s) and %.2f average lead value (in micros) "
                 + "during the last 7 days.%n",

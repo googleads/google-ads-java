@@ -72,10 +72,7 @@ public class AddDemographicTargetingCriteria {
 
     try {
       new AddDemographicTargetingCriteria()
-          .runExample(
-              googleAdsClient,
-              params.customerId,
-              params.adGroupId);
+          .runExample(googleAdsClient, params.customerId, params.adGroupId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -98,39 +95,41 @@ public class AddDemographicTargetingCriteria {
    * @param customerId the client customer ID in which to create criterion.
    * @param adGroupId the ad group ID in which to create criterion.
    */
-  private void runExample(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      long adGroupId) {
+  private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
     List<AdGroupCriterionOperation> operations = new ArrayList<>();
 
     // Creates a gender demographic criterion.
-    AdGroupCriterion genderAdGroupCriterionOperation = AdGroupCriterion.newBuilder()
-        .setAdGroup(StringValue.of(adGroupResourceName))
-        .setGender(GenderInfo.newBuilder().setType(GenderType.MALE).build())
-        .build();
+    AdGroupCriterion genderAdGroupCriterionOperation =
+        AdGroupCriterion.newBuilder()
+            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setGender(GenderInfo.newBuilder().setType(GenderType.MALE).build())
+            .build();
 
     // Creates an age range negative demographic criterion.
-    AdGroupCriterion ageRangeNegativeAdGroupCriterionOperation = AdGroupCriterion.newBuilder()
-        .setAdGroup(StringValue.of(adGroupResourceName))
-        .setNegative(BoolValue.of(true))
-        .setAgeRange(AgeRangeInfo.newBuilder().setType(AgeRangeType.AGE_RANGE_18_24).build())
-        .build();
+    AdGroupCriterion ageRangeNegativeAdGroupCriterionOperation =
+        AdGroupCriterion.newBuilder()
+            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setNegative(BoolValue.of(true))
+            .setAgeRange(AgeRangeInfo.newBuilder().setType(AgeRangeType.AGE_RANGE_18_24).build())
+            .build();
 
     // Creates and adds the operations.
-    operations.add(AdGroupCriterionOperation.newBuilder()
-        .setCreate(genderAdGroupCriterionOperation).build());
-    operations.add(AdGroupCriterionOperation.newBuilder()
-        .setCreate(ageRangeNegativeAdGroupCriterionOperation).build());
+    operations.add(
+        AdGroupCriterionOperation.newBuilder().setCreate(genderAdGroupCriterionOperation).build());
+    operations.add(
+        AdGroupCriterionOperation.newBuilder()
+            .setCreate(ageRangeNegativeAdGroupCriterionOperation)
+            .build());
 
     // Creates the service client.
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
         googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
       // Issues the mutate request.
-      MutateAdGroupCriteriaResponse response = adGroupCriterionServiceClient
-          .mutateAdGroupCriteria(Long.toString(customerId), operations);
+      MutateAdGroupCriteriaResponse response =
+          adGroupCriterionServiceClient.mutateAdGroupCriteria(
+              Long.toString(customerId), operations);
       // Prints the results.
       System.out.printf("Added %d ad group criteria:%n", response.getResultsCount());
       for (MutateAdGroupCriterionResult result : response.getResultsList()) {
