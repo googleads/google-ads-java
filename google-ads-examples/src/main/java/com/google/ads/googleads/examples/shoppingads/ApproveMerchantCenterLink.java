@@ -132,9 +132,6 @@ public class ApproveMerchantCenterLink {
               customerId,
               merchantCenterLink,
               MerchantCenterLinkStatus.ENABLED);
-          // There is only one MerchantCenterLink object for a given Google Ads account and Merchant
-          // Center account, so we can break early.
-          break;
         }
       }
     }
@@ -177,7 +174,7 @@ public class ApproveMerchantCenterLink {
     // Prints the resource name of the updated object.
     MutateMerchantCenterLinkResult merchantCenterLinkResult = response.getResult();
     System.out.printf(
-        "Approved Merchant Center link with resource name: '%s'.%n",
+        "Updated Merchant Center link with resource name: '%s'.%n",
         merchantCenterLinkResult.getResourceName());
   }
 }
