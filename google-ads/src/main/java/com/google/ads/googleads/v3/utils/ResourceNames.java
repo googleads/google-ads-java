@@ -529,8 +529,17 @@ public class ResourceNames {
 
   /**
    * Returns the customer negative criterion for the specified components.
+   *
+   * @deprecated use {@link #customerNegativeCriterion(long, long)} instead.
    */
+  @Deprecated
   public static String customerNegativeCriteria(long customerId, long criterionId) {
+    return CustomerNegativeCriteriaName.format(
+        String.valueOf(customerId), String.valueOf(criterionId));
+  }
+
+  /** Returns the customer negative criterion for the specified components. */
+  public static String customerNegativeCriterion(long customerId, long criterionId) {
     return CustomerNegativeCriteriaName.format(
         String.valueOf(customerId), String.valueOf(criterionId));
   }
