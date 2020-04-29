@@ -242,8 +242,8 @@ public class AddFlightsFeed {
           case "Final URLs":
             feedAttributes.put(FlightPlaceholderField.FINAL_URLS, feedAttribute);
             break;
-          // The full list of FlightPlaceholderFields can be found here
-          // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.[INSERT_VERSION].enums#flightplaceholderfieldenum.
+            // The full list of FlightPlaceholderFields can be found here
+            // https://developers.google.com/google-ads/api/reference/rpc/google.ads.googleads.[INSERT_VERSION].enums#flightplaceholderfieldenum.
           default:
             throw new Error("Invalid attribute name.");
         }

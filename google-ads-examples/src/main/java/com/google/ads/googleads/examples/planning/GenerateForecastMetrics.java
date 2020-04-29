@@ -29,8 +29,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Creates a keyword plan, which can be reused for retrieving forecast metrics and
- * historic metrics.
+ * Creates a keyword plan, which can be reused for retrieving forecast metrics and historic metrics.
  */
 public class GenerateForecastMetrics {
 

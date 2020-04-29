@@ -18,8 +18,8 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.services.GoogleAdsRow;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
@@ -51,7 +51,7 @@ public class GetAllVideosAndImages {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -66,8 +66,8 @@ public class GetAllVideosAndImages {
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -84,26 +84,28 @@ public class GetAllVideosAndImages {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
-           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Creates a request that will retrieve all video and image files using pages of the
       // specified page size.
       SearchGoogleAdsRequest request =
-        SearchGoogleAdsRequest.newBuilder()
-          .setCustomerId(Long.toString(customerId))
-          .setPageSize(PAGE_SIZE)
-          .setQuery("SELECT media_file.id, media_file.name, media_file.type " +
-            "FROM media_file WHERE media_file.type in ('IMAGE', 'VIDEO') ORDER BY media_file.id")
-          .build();
+          SearchGoogleAdsRequest.newBuilder()
+              .setCustomerId(Long.toString(customerId))
+              .setPageSize(PAGE_SIZE)
+              .setQuery(
+                  "SELECT media_file.id, media_file.name, media_file.type FROM media_file WHERE"
+                      + " media_file.type in ('IMAGE', 'VIDEO') ORDER BY media_file.id")
+              .build();
       // Issues the search request.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
-      // Iterates over all rows in all pages and prints the requested field values for the media file
+      // Iterates over all rows in all pages and prints the requested field values for the media
+      // file
       // in each row.
       for (GoogleAdsRow googleAdsRow : searchPagedResponse.iterateAll()) {
         System.out.printf(
-          "Media file with ID %d, name '%s', and type '%s' was found.%n",
-          googleAdsRow.getMediaFile().getId().getValue(),
-          googleAdsRow.getMediaFile().getName().getValue(),
-          googleAdsRow.getMediaFile().getType());
+            "Media file with ID %d, name '%s', and type '%s' was found.%n",
+            googleAdsRow.getMediaFile().getId().getValue(),
+            googleAdsRow.getMediaFile().getName().getValue(),
+            googleAdsRow.getMediaFile().getType());
       }
     }
   }

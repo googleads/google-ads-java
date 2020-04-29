@@ -30,8 +30,8 @@ import java.net.URL;
 import java.util.Properties;
 
 /**
- * Creates an OAuth2 refresh token for the Google Ads API using the
- * Native/Installed application flow.
+ * Creates an OAuth2 refresh token for the Google Ads API using the Native/Installed application
+ * flow.
  *
  * <p>This example is meant to be run from the command line and requires user input.
  */

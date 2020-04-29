@@ -18,21 +18,18 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.services.CampaignOperation;
 import com.google.ads.googleads.v3.services.CampaignServiceClient;
 import com.google.ads.googleads.v3.services.MutateCampaignResult;
 import com.google.ads.googleads.v3.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.common.collect.Lists;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Deletes a campaign using the 'REMOVE' operation. To get campaigns, run
- * GetCampaigns.java.
- */
+/** Deletes a campaign using the 'REMOVE' operation. To get campaigns, run GetCampaigns.java. */
 public class RemoveCampaign {
 
   private static class RemoveCampaignParams extends CodeSampleParams {
@@ -92,7 +89,8 @@ public class RemoveCampaign {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+    try (CampaignServiceClient campaignServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
       // Constructs an operation that will remove the campaign with the specified resource name.
       CampaignOperation operation =

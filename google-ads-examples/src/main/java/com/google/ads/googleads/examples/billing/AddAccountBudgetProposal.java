@@ -17,7 +17,6 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType;
 import com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
@@ -26,14 +25,15 @@ import com.google.ads.googleads.v3.resources.AccountBudgetProposal;
 import com.google.ads.googleads.v3.services.AccountBudgetProposalOperation;
 import com.google.ads.googleads.v3.services.AccountBudgetProposalServiceClient;
 import com.google.ads.googleads.v3.services.MutateAccountBudgetProposalResponse;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Creates an account budget proposal using the 'CREATE' operation. To get account
- * budget proposals, run GetAccountBudgetProposals.java.
+ * Creates an account budget proposal using the 'CREATE' operation. To get account budget proposals,
+ * run GetAccountBudgetProposals.java.
  */
 public class AddAccountBudgetProposal {
 
@@ -121,8 +121,8 @@ public class AddAccountBudgetProposal {
             .build();
 
     // Creates an operation which will add the new AccountBudgetProposal.
-    AccountBudgetProposalOperation operation = AccountBudgetProposalOperation.newBuilder()
-        .setCreate(proposal).build();
+    AccountBudgetProposalOperation operation =
+        AccountBudgetProposalOperation.newBuilder().setCreate(proposal).build();
 
     try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient =
         googleAdsClient.getLatestVersion().createAccountBudgetProposalServiceClient()) {

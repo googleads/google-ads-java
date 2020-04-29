@@ -18,7 +18,6 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.common.ListingGroupInfo;
 import com.google.ads.googleads.v3.common.ManualCpc;
 import com.google.ads.googleads.v3.common.ShoppingProductAdInfo;
@@ -31,6 +30,7 @@ import com.google.ads.googleads.v3.enums.BudgetDeliveryMethodEnum.BudgetDelivery
 import com.google.ads.googleads.v3.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v3.enums.ListingGroupTypeEnum.ListingGroupType;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.Ad;
 import com.google.ads.googleads.v3.resources.AdGroup;
 import com.google.ads.googleads.v3.resources.AdGroupAd;
@@ -64,8 +64,7 @@ import java.io.IOException;
 import java.util.Collections;
 
 /**
- * Creates a standard shopping campaign, a shopping product ad group and a shopping
- * product ad.
+ * Creates a standard shopping campaign, a shopping product ad group and a shopping product ad.
  *
  * <p>Prerequisite: You need to have access to a Merchant Center account. You can find instructions
  * to create a Merchant Center account here: https://support.google.com/merchants/answer/188924.
@@ -253,7 +252,8 @@ public class AddShoppingProductAd {
     CampaignOperation operation = CampaignOperation.newBuilder().setCreate(campaign).build();
 
     // Issues a mutate request to add the campaign.
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+    try (CampaignServiceClient campaignServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       MutateCampaignsResponse response =
           campaignServiceClient.mutateCampaigns(
               Long.toString(customerId), Collections.singletonList(operation));
@@ -293,7 +293,8 @@ public class AddShoppingProductAd {
     AdGroupOperation operation = AdGroupOperation.newBuilder().setCreate(adGroup).build();
 
     // Issues a mutate request to add an ad group.
-    try (AdGroupServiceClient adGroupServiceClient = googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
+    try (AdGroupServiceClient adGroupServiceClient =
+        googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       MutateAdGroupResult mutateAdGroupResult =
           adGroupServiceClient
               .mutateAdGroups(Long.toString(customerId), Collections.singletonList(operation))

@@ -38,8 +38,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Shows how to use the validateOnly header to validate an expanded text ad. No ads will be
- * created, but exceptions will still be thrown.
+ * Shows how to use the validateOnly header to validate an expanded text ad. No ads will be created,
+ * but exceptions will still be thrown.
  */
 public class ValidateTextAd {
 

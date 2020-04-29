@@ -18,24 +18,21 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.ads.googleads.v3.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.Campaign;
 import com.google.ads.googleads.v3.services.CampaignOperation;
 import com.google.ads.googleads.v3.services.CampaignServiceClient;
 import com.google.ads.googleads.v3.services.MutateCampaignResult;
 import com.google.ads.googleads.v3.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collections;
 
-/**
- * Updates a campaign by setting the status to PAUSED. To get campaigns, run
- * GetCampaigns.java.
- */
+/** Updates a campaign by setting the status to PAUSED. To get campaigns, run GetCampaigns.java. */
 public class UpdateCampaign {
 
   private static class UpdateCampaignParams extends CodeSampleParams {
@@ -95,7 +92,8 @@ public class UpdateCampaign {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, Long customerId, Long campaignId) {
-    try (CampaignServiceClient campaignServiceClient = googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
+    try (CampaignServiceClient campaignServiceClient =
+        googleAdsClient.getLatestVersion().createCampaignServiceClient()) {
       // Creates a Campaign object with the proper resource name and any other changes.
       Campaign campaign =
           Campaign.newBuilder()

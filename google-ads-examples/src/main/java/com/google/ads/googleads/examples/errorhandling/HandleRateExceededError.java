@@ -29,7 +29,6 @@ import com.google.ads.googleads.v3.services.AdGroupCriterionOperation;
 import com.google.ads.googleads.v3.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v3.services.MutateAdGroupCriteriaRequest;
 import com.google.ads.googleads.v3.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v3.services.MutateAdGroupCriterionResult;
 import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -38,11 +37,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Handles RateExceededError in an application. This code example runs 5 threads in parallel,
- * each thread attempting to validate 100 keywords in a single request. While spanning 5
- * parallel threads is unlikely to trigger a rate exceeded error, substantially increasing the
- * number of threads may have that effect. Note that this example is for illustrative purposes
- * only, and you shouldn't intentionally try to trigger a rate exceed error in your application.
+ * Handles RateExceededError in an application. This code example runs 5 threads in parallel, each
+ * thread attempting to validate 100 keywords in a single request. While spanning 5 parallel threads
+ * is unlikely to trigger a rate exceeded error, substantially increasing the number of threads may
+ * have that effect. Note that this example is for illustrative purposes only, and you shouldn't
+ * intentionally try to trigger a rate exceed error in your application.
  */
 public class HandleRateExceededError {
   private static class HandleRateExceededErrorParams extends CodeSampleParams {
@@ -207,10 +206,10 @@ public class HandleRateExceededError {
               // Creates the validateOnly request.
               MutateAdGroupCriteriaRequest mutateAdGroupCriteriaRequest =
                   MutateAdGroupCriteriaRequest.newBuilder()
-                  .setCustomerId(Long.toString(customerId))
-                  .addAllOperations(operations)
-                  .setValidateOnly(true)
-                  .build();
+                      .setCustomerId(Long.toString(customerId))
+                      .addAllOperations(operations)
+                      .setValidateOnly(true)
+                      .build();
 
               // Makes the mutate request. The result set will be empty because validateOnly is set
               // to true in the MutateAdGroupCriteriaRequest.
