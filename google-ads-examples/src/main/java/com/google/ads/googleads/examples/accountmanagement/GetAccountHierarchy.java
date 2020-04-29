@@ -111,6 +111,7 @@ public class GetAccountHierarchy {
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
       }
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Request failed. Exception: %s%n", ioe);
     }
