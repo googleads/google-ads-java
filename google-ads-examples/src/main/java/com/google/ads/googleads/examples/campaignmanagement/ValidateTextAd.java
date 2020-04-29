@@ -68,10 +68,10 @@ public class ValidateTextAd {
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
-      return;
+      System.exit(1);
     }
 
     try {
@@ -172,8 +172,10 @@ public class ValidateTextAd {
           }
         }
       }
+      System.exit(1);
     } catch (Exception e) {
       System.out.printf("Failure: Message '%s'.%n", e.getMessage());
+      System.exit(1);
     }
   }
 }
