@@ -50,7 +50,7 @@ public class GetAccountBudgets {
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
           "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
-      return;
+      System.exit(1);
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
       return;
