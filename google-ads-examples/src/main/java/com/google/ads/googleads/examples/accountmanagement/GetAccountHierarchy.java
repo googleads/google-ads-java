@@ -223,8 +223,8 @@ public class GetAccountHierarchy {
                       .setCustomerId(Long.toString(customerIdToSearchFrom))
                       .build());
 
-          // Iterates over all rows to get all customer clients under the specified customer's
-          // hierarchy.
+          // Iterates over all rows in all pages to get all customer clients under the specified
+          // customer's hierarchy.
           for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
             CustomerClient customerClient = googleAdsRow.getCustomerClient();
 
