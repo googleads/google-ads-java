@@ -9,126 +9,126 @@ public interface LanguageConstantOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the language constant.
+   * Output only. The resource name of the language constant.
    * Language constant resource names have the form:
    * `languageConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the language constant.
+   * Output only. The resource name of the language constant.
    * Language constant resource names have the form:
    * `languageConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the language constant.
+   * Output only. The ID of the language constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the language constant.
+   * Output only. The ID of the language constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the language constant.
+   * Output only. The ID of the language constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue code = 3;</code>
+   * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCode();
   /**
    * <pre>
-   * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue code = 3;</code>
+   * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getCode();
   /**
    * <pre>
-   * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue code = 3;</code>
+   * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCodeOrBuilder();
 
   /**
    * <pre>
-   * The full name of the language in English, e.g., "English (US)", "Spanish",
+   * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
    * etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 4;</code>
+   * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasName();
   /**
    * <pre>
-   * The full name of the language in English, e.g., "English (US)", "Spanish",
+   * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
    * etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 4;</code>
+   * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * The full name of the language in English, e.g., "English (US)", "Spanish",
+   * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
    * etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 4;</code>
+   * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 
   /**
    * <pre>
-   * Whether the language is targetable.
+   * Output only. Whether the language is targetable.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue targetable = 5;</code>
+   * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasTargetable();
   /**
    * <pre>
-   * Whether the language is targetable.
+   * Output only. Whether the language is targetable.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue targetable = 5;</code>
+   * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValue getTargetable();
   /**
    * <pre>
-   * Whether the language is targetable.
+   * Output only. Whether the language is targetable.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue targetable = 5;</code>
+   * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getTargetableOrBuilder();
 }

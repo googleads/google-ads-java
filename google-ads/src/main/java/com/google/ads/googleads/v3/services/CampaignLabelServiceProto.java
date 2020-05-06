@@ -54,41 +54,43 @@ public final class CampaignLabelServiceProto {
       "v3/resources/campaign_label.proto\032\034googl" +
       "e/api/annotations.proto\032\027google/api/clie" +
       "nt.proto\032\037google/api/field_behavior.prot" +
-      "o\032\027google/rpc/status.proto\"5\n\027GetCampaig" +
-      "nLabelRequest\022\032\n\rresource_name\030\001 \001(\tB\003\340A" +
-      "\002\"\272\001\n\033MutateCampaignLabelsRequest\022\030\n\013cus" +
-      "tomer_id\030\001 \001(\tB\003\340A\002\022Q\n\noperations\030\002 \003(\0132" +
-      "8.google.ads.googleads.v3.services.Campa" +
-      "ignLabelOperationB\003\340A\002\022\027\n\017partial_failur" +
-      "e\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"{\n\026Campai" +
-      "gnLabelOperation\022B\n\006create\030\001 \001(\01320.googl" +
-      "e.ads.googleads.v3.resources.CampaignLab" +
-      "elH\000\022\020\n\006remove\030\002 \001(\tH\000B\013\n\toperation\"\237\001\n\034" +
-      "MutateCampaignLabelsResponse\0221\n\025partial_" +
-      "failure_error\030\003 \001(\0132\022.google.rpc.Status\022" +
-      "L\n\007results\030\002 \003(\0132;.google.ads.googleads." +
-      "v3.services.MutateCampaignLabelResult\"2\n" +
-      "\031MutateCampaignLabelResult\022\025\n\rresource_n" +
-      "ame\030\001 \001(\t2\360\003\n\024CampaignLabelService\022\311\001\n\020G" +
-      "etCampaignLabel\0229.google.ads.googleads.v" +
-      "3.services.GetCampaignLabelRequest\0320.goo" +
-      "gle.ads.googleads.v3.resources.CampaignL" +
-      "abel\"H\202\323\344\223\0022\0220/v3/{resource_name=custome" +
-      "rs/*/campaignLabels/*}\332A\rresource_name\022\356" +
-      "\001\n\024MutateCampaignLabels\022=.google.ads.goo" +
-      "gleads.v3.services.MutateCampaignLabelsR" +
-      "equest\032>.google.ads.googleads.v3.service" +
-      "s.MutateCampaignLabelsResponse\"W\202\323\344\223\0028\"3" +
-      "/v3/customers/{customer_id=*}/campaignLa" +
-      "bels:mutate:\001*\332A\026customer_id,operations\032" +
-      "\033\312A\030googleads.googleapis.comB\200\002\n$com.goo" +
-      "gle.ads.googleads.v3.servicesB\031CampaignL" +
-      "abelServiceProtoP\001ZHgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v3/servi" +
-      "ces;services\242\002\003GAA\252\002 Google.Ads.GoogleAd" +
-      "s.V3.Services\312\002 Google\\Ads\\GoogleAds\\V3\\" +
-      "Services\352\002$Google::Ads::GoogleAds::V3::S" +
-      "ervicesb\006proto3"
+      "o\032\031google/api/resource.proto\032\027google/rpc" +
+      "/status.proto\"`\n\027GetCampaignLabelRequest" +
+      "\022E\n\rresource_name\030\001 \001(\tB.\340A\002\372A(\n&googlea" +
+      "ds.googleapis.com/CampaignLabel\"\272\001\n\033Muta" +
+      "teCampaignLabelsRequest\022\030\n\013customer_id\030\001" +
+      " \001(\tB\003\340A\002\022Q\n\noperations\030\002 \003(\01328.google.a" +
+      "ds.googleads.v3.services.CampaignLabelOp" +
+      "erationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n" +
+      "\rvalidate_only\030\004 \001(\010\"{\n\026CampaignLabelOpe" +
+      "ration\022B\n\006create\030\001 \001(\01320.google.ads.goog" +
+      "leads.v3.resources.CampaignLabelH\000\022\020\n\006re" +
+      "move\030\002 \001(\tH\000B\013\n\toperation\"\237\001\n\034MutateCamp" +
+      "aignLabelsResponse\0221\n\025partial_failure_er" +
+      "ror\030\003 \001(\0132\022.google.rpc.Status\022L\n\007results" +
+      "\030\002 \003(\0132;.google.ads.googleads.v3.service" +
+      "s.MutateCampaignLabelResult\"2\n\031MutateCam" +
+      "paignLabelResult\022\025\n\rresource_name\030\001 \001(\t2" +
+      "\360\003\n\024CampaignLabelService\022\311\001\n\020GetCampaign" +
+      "Label\0229.google.ads.googleads.v3.services" +
+      ".GetCampaignLabelRequest\0320.google.ads.go" +
+      "ogleads.v3.resources.CampaignLabel\"H\202\323\344\223" +
+      "\0022\0220/v3/{resource_name=customers/*/campa" +
+      "ignLabels/*}\332A\rresource_name\022\356\001\n\024MutateC" +
+      "ampaignLabels\022=.google.ads.googleads.v3." +
+      "services.MutateCampaignLabelsRequest\032>.g" +
+      "oogle.ads.googleads.v3.services.MutateCa" +
+      "mpaignLabelsResponse\"W\202\323\344\223\0028\"3/v3/custom" +
+      "ers/{customer_id=*}/campaignLabels:mutat" +
+      "e:\001*\332A\026customer_id,operations\032\033\312A\030google" +
+      "ads.googleapis.comB\200\002\n$com.google.ads.go" +
+      "ogleads.v3.servicesB\031CampaignLabelServic" +
+      "eProtoP\001ZHgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v3/services;servic" +
+      "es\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.Servi" +
+      "ces\312\002 Google\\Ads\\GoogleAds\\V3\\Services\352\002" +
+      "$Google::Ads::GoogleAds::V3::Servicesb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -105,6 +107,7 @@ public final class CampaignLabelServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetCampaignLabelRequest_descriptor =
@@ -143,12 +146,14 @@ public final class CampaignLabelServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.CampaignLabelProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }
 

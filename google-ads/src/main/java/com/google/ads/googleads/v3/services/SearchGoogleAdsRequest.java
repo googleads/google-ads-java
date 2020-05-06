@@ -10,18 +10,15 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.SearchGoogleAdsRequest}
  */
-public final class SearchGoogleAdsRequest extends
+public  final class SearchGoogleAdsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.SearchGoogleAdsRequest)
     SearchGoogleAdsRequestOrBuilder {
-
-  private static final long serialVersionUID = 0L;
-
+private static final long serialVersionUID = 0L;
   // Use SearchGoogleAdsRequest.newBuilder() to construct.
   private SearchGoogleAdsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-
   private SearchGoogleAdsRequest() {
     customerId_ = "";
     query_ = "";
@@ -34,7 +31,6 @@ public final class SearchGoogleAdsRequest extends
   getUnknownFields() {
     return this.unknownFields;
   }
-
   private SearchGoogleAdsRequest(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -82,11 +78,6 @@ public final class SearchGoogleAdsRequest extends
             validateOnly_ = input.readBool();
             break;
           }
-          case 48: {
-
-            returnSummaryRow_ = input.readBool();
-            break;
-          }
           case 56: {
 
             returnTotalResultsCount_ = input.readBool();
@@ -117,24 +108,21 @@ public final class SearchGoogleAdsRequest extends
       makeExtensionsImmutable();
     }
   }
-
   public static final com.google.protobuf.Descriptors.Descriptor
-  getDescriptor() {
+      getDescriptor() {
     return com.google.ads.googleads.v3.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v3_services_SearchGoogleAdsRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-  internalGetFieldAccessorTable() {
+      internalGetFieldAccessorTable() {
     return com.google.ads.googleads.v3.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v3_services_SearchGoogleAdsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.google.ads.googleads.v3.services.SearchGoogleAdsRequest.class,
-            com.google.ads.googleads.v3.services.SearchGoogleAdsRequest.Builder.class);
+            com.google.ads.googleads.v3.services.SearchGoogleAdsRequest.class, com.google.ads.googleads.v3.services.SearchGoogleAdsRequest.Builder.class);
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object customerId_;
-
   /**
    * <pre>
    * Required. The ID of the customer being queried.
@@ -147,14 +135,13 @@ public final class SearchGoogleAdsRequest extends
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs =
+      com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       customerId_ = s;
       return s;
     }
   }
-
   /**
    * <pre>
    * Required. The ID of the customer being queried.
@@ -163,10 +150,10 @@ public final class SearchGoogleAdsRequest extends
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public com.google.protobuf.ByteString
-  getCustomerIdBytes() {
+      getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
+      com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       customerId_ = b;
@@ -178,7 +165,6 @@ public final class SearchGoogleAdsRequest extends
 
   public static final int QUERY_FIELD_NUMBER = 2;
   private volatile java.lang.Object query_;
-
   /**
    * <pre>
    * Required. The query string.
@@ -191,14 +177,13 @@ public final class SearchGoogleAdsRequest extends
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs =
+      com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       query_ = s;
       return s;
     }
   }
-
   /**
    * <pre>
    * Required. The query string.
@@ -207,10 +192,10 @@ public final class SearchGoogleAdsRequest extends
    * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public com.google.protobuf.ByteString
-  getQueryBytes() {
+      getQueryBytes() {
     java.lang.Object ref = query_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
+      com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       query_ = b;
@@ -222,7 +207,6 @@ public final class SearchGoogleAdsRequest extends
 
   public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
   private volatile java.lang.Object pageToken_;
-
   /**
    * <pre>
    * Token of the page to retrieve. If not specified, the first
@@ -238,14 +222,13 @@ public final class SearchGoogleAdsRequest extends
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
-      com.google.protobuf.ByteString bs =
+      com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
       pageToken_ = s;
       return s;
     }
   }
-
   /**
    * <pre>
    * Token of the page to retrieve. If not specified, the first
@@ -257,10 +240,10 @@ public final class SearchGoogleAdsRequest extends
    * <code>string page_token = 3;</code>
    */
   public com.google.protobuf.ByteString
-  getPageTokenBytes() {
+      getPageTokenBytes() {
     java.lang.Object ref = pageToken_;
     if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b =
+      com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       pageToken_ = b;
@@ -272,7 +255,6 @@ public final class SearchGoogleAdsRequest extends
 
   public static final int PAGE_SIZE_FIELD_NUMBER = 4;
   private int pageSize_;
-
   /**
    * <pre>
    * Number of elements to retrieve in a single page.
@@ -288,7 +270,6 @@ public final class SearchGoogleAdsRequest extends
 
   public static final int VALIDATE_ONLY_FIELD_NUMBER = 5;
   private boolean validateOnly_;
-
   /**
    * <pre>
    * If true, the request is validated but not executed.
@@ -300,24 +281,8 @@ public final class SearchGoogleAdsRequest extends
     return validateOnly_;
   }
 
-  public static final int RETURN_SUMMARY_ROW_FIELD_NUMBER = 6;
-  private boolean returnSummaryRow_;
-
-  /**
-   * <pre>
-   * If true, summary row will be included in the response.
-   * Otherwise(false or not specified) summary row will not be returned.
-   * </pre>
-   *
-   * <code>bool return_summary_row = 6;</code>
-   */
-  public boolean getReturnSummaryRow() {
-    return returnSummaryRow_;
-  }
-
   public static final int RETURN_TOTAL_RESULTS_COUNT_FIELD_NUMBER = 7;
   private boolean returnTotalResultsCount_;
-
   /**
    * <pre>
    * If true, the total number of results that match the query ignoring the
@@ -333,7 +298,6 @@ public final class SearchGoogleAdsRequest extends
 
   public static final int SUMMARY_ROW_SETTING_FIELD_NUMBER = 8;
   private int summaryRowSetting_;
-
   /**
    * <pre>
    * Determines whether a summary row will be returned. By default, summary row
@@ -341,13 +305,11 @@ public final class SearchGoogleAdsRequest extends
    * by itself after all other query results are returned.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting
-   * summary_row_setting = 8;</code>
+   * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
    */
   public int getSummaryRowSettingValue() {
     return summaryRowSetting_;
   }
-
   /**
    * <pre>
    * Determines whether a summary row will be returned. By default, summary row
@@ -355,29 +317,20 @@ public final class SearchGoogleAdsRequest extends
    * by itself after all other query results are returned.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting
-   * summary_row_setting = 8;</code>
+   * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
    */
   public com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting() {
     @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting
-        .valueOf(summaryRowSetting_);
-    return result == null
-        ? com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.UNRECOGNIZED
-        : result;
+    com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.valueOf(summaryRowSetting_);
+    return result == null ? com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
-
   @java.lang.Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
-    if (isInitialized == 1) {
-      return true;
-    }
-    if (isInitialized == 0) {
-      return false;
-    }
+    if (isInitialized == 1) return true;
+    if (isInitialized == 0) return false;
 
     memoizedIsInitialized = 1;
     return true;
@@ -385,7 +338,7 @@ public final class SearchGoogleAdsRequest extends
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
-      throws java.io.IOException {
+                      throws java.io.IOException {
     if (!getCustomerIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, customerId_);
     }
@@ -401,15 +354,10 @@ public final class SearchGoogleAdsRequest extends
     if (validateOnly_ != false) {
       output.writeBool(5, validateOnly_);
     }
-    if (returnSummaryRow_ != false) {
-      output.writeBool(6, returnSummaryRow_);
-    }
     if (returnTotalResultsCount_ != false) {
       output.writeBool(7, returnTotalResultsCount_);
     }
-    if (summaryRowSetting_
-        != com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.UNSPECIFIED
-        .getNumber()) {
+    if (summaryRowSetting_ != com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.UNSPECIFIED.getNumber()) {
       output.writeEnum(8, summaryRowSetting_);
     }
     unknownFields.writeTo(output);
@@ -418,9 +366,7 @@ public final class SearchGoogleAdsRequest extends
   @java.lang.Override
   public int getSerializedSize() {
     int size = memoizedSize;
-    if (size != -1) {
-      return size;
-    }
+    if (size != -1) return size;
 
     size = 0;
     if (!getCustomerIdBytes().isEmpty()) {
@@ -434,25 +380,19 @@ public final class SearchGoogleAdsRequest extends
     }
     if (pageSize_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, pageSize_);
+        .computeInt32Size(4, pageSize_);
     }
     if (validateOnly_ != false) {
       size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, validateOnly_);
-    }
-    if (returnSummaryRow_ != false) {
-      size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, returnSummaryRow_);
+        .computeBoolSize(5, validateOnly_);
     }
     if (returnTotalResultsCount_ != false) {
       size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, returnTotalResultsCount_);
+        .computeBoolSize(7, returnTotalResultsCount_);
     }
-    if (summaryRowSetting_
-        != com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.UNSPECIFIED
-        .getNumber()) {
+    if (summaryRowSetting_ != com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(8, summaryRowSetting_);
+        .computeEnumSize(8, summaryRowSetting_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -462,7 +402,7 @@ public final class SearchGoogleAdsRequest extends
   @java.lang.Override
   public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
-      return true;
+     return true;
     }
     if (!(obj instanceof com.google.ads.googleads.v3.services.SearchGoogleAdsRequest)) {
       return super.equals(obj);
@@ -470,39 +410,19 @@ public final class SearchGoogleAdsRequest extends
     com.google.ads.googleads.v3.services.SearchGoogleAdsRequest other = (com.google.ads.googleads.v3.services.SearchGoogleAdsRequest) obj;
 
     if (!getCustomerId()
-        .equals(other.getCustomerId())) {
-      return false;
-    }
+        .equals(other.getCustomerId())) return false;
     if (!getQuery()
-        .equals(other.getQuery())) {
-      return false;
-    }
+        .equals(other.getQuery())) return false;
     if (!getPageToken()
-        .equals(other.getPageToken())) {
-      return false;
-    }
+        .equals(other.getPageToken())) return false;
     if (getPageSize()
-        != other.getPageSize()) {
-      return false;
-    }
+        != other.getPageSize()) return false;
     if (getValidateOnly()
-        != other.getValidateOnly()) {
-      return false;
-    }
-    if (getReturnSummaryRow()
-        != other.getReturnSummaryRow()) {
-      return false;
-    }
+        != other.getValidateOnly()) return false;
     if (getReturnTotalResultsCount()
-        != other.getReturnTotalResultsCount()) {
-      return false;
-    }
-    if (summaryRowSetting_ != other.summaryRowSetting_) {
-      return false;
-    }
-    if (!unknownFields.equals(other.unknownFields)) {
-      return false;
-    }
+        != other.getReturnTotalResultsCount()) return false;
+    if (summaryRowSetting_ != other.summaryRowSetting_) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -524,9 +444,6 @@ public final class SearchGoogleAdsRequest extends
     hash = (37 * hash) + VALIDATE_ONLY_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getValidateOnly());
-    hash = (37 * hash) + RETURN_SUMMARY_ROW_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getReturnSummaryRow());
     hash = (37 * hash) + RETURN_TOTAL_RESULTS_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getReturnTotalResultsCount());
@@ -542,46 +459,38 @@ public final class SearchGoogleAdsRequest extends
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
   public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-
   public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-
-  public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseFrom(
-      java.io.InputStream input)
+  public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-
   public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -589,14 +498,11 @@ public final class SearchGoogleAdsRequest extends
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
-  public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseDelimitedFrom(
-      java.io.InputStream input)
+  public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -604,14 +510,12 @@ public final class SearchGoogleAdsRequest extends
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-
   public static com.google.ads.googleads.v3.services.SearchGoogleAdsRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -621,19 +525,13 @@ public final class SearchGoogleAdsRequest extends
   }
 
   @java.lang.Override
-  public Builder newBuilderForType() {
-    return newBuilder();
-  }
-
+  public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-
-  public static Builder newBuilder(
-      com.google.ads.googleads.v3.services.SearchGoogleAdsRequest prototype) {
+  public static Builder newBuilder(com.google.ads.googleads.v3.services.SearchGoogleAdsRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-
   @java.lang.Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
@@ -646,7 +544,6 @@ public final class SearchGoogleAdsRequest extends
     Builder builder = new Builder(parent);
     return builder;
   }
-
   /**
    * <pre>
    * Request message for [GoogleAdsService.Search][google.ads.googleads.v3.services.GoogleAdsService.Search].
@@ -658,19 +555,17 @@ public final class SearchGoogleAdsRequest extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:google.ads.googleads.v3.services.SearchGoogleAdsRequest)
       com.google.ads.googleads.v3.services.SearchGoogleAdsRequestOrBuilder {
-
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return com.google.ads.googleads.v3.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v3_services_SearchGoogleAdsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return com.google.ads.googleads.v3.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v3_services_SearchGoogleAdsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v3.services.SearchGoogleAdsRequest.class,
-              com.google.ads.googleads.v3.services.SearchGoogleAdsRequest.Builder.class);
+              com.google.ads.googleads.v3.services.SearchGoogleAdsRequest.class, com.google.ads.googleads.v3.services.SearchGoogleAdsRequest.Builder.class);
     }
 
     // Construct using com.google.ads.googleads.v3.services.SearchGoogleAdsRequest.newBuilder()
@@ -683,13 +578,11 @@ public final class SearchGoogleAdsRequest extends
       super(parent);
       maybeForceBuilderInitialization();
     }
-
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
-          .alwaysUseFieldBuilders) {
+              .alwaysUseFieldBuilders) {
       }
     }
-
     @java.lang.Override
     public Builder clear() {
       super.clear();
@@ -703,8 +596,6 @@ public final class SearchGoogleAdsRequest extends
 
       validateOnly_ = false;
 
-      returnSummaryRow_ = false;
-
       returnTotalResultsCount_ = false;
 
       summaryRowSetting_ = 0;
@@ -714,7 +605,7 @@ public final class SearchGoogleAdsRequest extends
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
-    getDescriptorForType() {
+        getDescriptorForType() {
       return com.google.ads.googleads.v3.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v3_services_SearchGoogleAdsRequest_descriptor;
     }
 
@@ -734,14 +625,12 @@ public final class SearchGoogleAdsRequest extends
 
     @java.lang.Override
     public com.google.ads.googleads.v3.services.SearchGoogleAdsRequest buildPartial() {
-      com.google.ads.googleads.v3.services.SearchGoogleAdsRequest result = new com.google.ads.googleads.v3.services.SearchGoogleAdsRequest(
-          this);
+      com.google.ads.googleads.v3.services.SearchGoogleAdsRequest result = new com.google.ads.googleads.v3.services.SearchGoogleAdsRequest(this);
       result.customerId_ = customerId_;
       result.query_ = query_;
       result.pageToken_ = pageToken_;
       result.pageSize_ = pageSize_;
       result.validateOnly_ = validateOnly_;
-      result.returnSummaryRow_ = returnSummaryRow_;
       result.returnTotalResultsCount_ = returnTotalResultsCount_;
       result.summaryRowSetting_ = summaryRowSetting_;
       onBuilt();
@@ -752,44 +641,38 @@ public final class SearchGoogleAdsRequest extends
     public Builder clone() {
       return super.clone();
     }
-
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.setField(field, value);
     }
-
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
       return super.setRepeatedField(field, index, value);
     }
-
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
       return super.addRepeatedField(field, value);
     }
-
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.google.ads.googleads.v3.services.SearchGoogleAdsRequest) {
-        return mergeFrom((com.google.ads.googleads.v3.services.SearchGoogleAdsRequest) other);
+        return mergeFrom((com.google.ads.googleads.v3.services.SearchGoogleAdsRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
@@ -797,10 +680,7 @@ public final class SearchGoogleAdsRequest extends
     }
 
     public Builder mergeFrom(com.google.ads.googleads.v3.services.SearchGoogleAdsRequest other) {
-      if (other == com.google.ads.googleads.v3.services.SearchGoogleAdsRequest
-          .getDefaultInstance()) {
-        return this;
-      }
+      if (other == com.google.ads.googleads.v3.services.SearchGoogleAdsRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
         onChanged();
@@ -818,9 +698,6 @@ public final class SearchGoogleAdsRequest extends
       }
       if (other.getValidateOnly() != false) {
         setValidateOnly(other.getValidateOnly());
-      }
-      if (other.getReturnSummaryRow() != false) {
-        setReturnSummaryRow(other.getReturnSummaryRow());
       }
       if (other.getReturnTotalResultsCount() != false) {
         setReturnTotalResultsCount(other.getReturnTotalResultsCount());
@@ -847,8 +724,7 @@ public final class SearchGoogleAdsRequest extends
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v3.services.SearchGoogleAdsRequest) e
-            .getUnfinishedMessage();
+        parsedMessage = (com.google.ads.googleads.v3.services.SearchGoogleAdsRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -859,7 +735,6 @@ public final class SearchGoogleAdsRequest extends
     }
 
     private java.lang.Object customerId_ = "";
-
     /**
      * <pre>
      * Required. The ID of the customer being queried.
@@ -879,7 +754,6 @@ public final class SearchGoogleAdsRequest extends
         return (java.lang.String) ref;
       }
     }
-
     /**
      * <pre>
      * Required. The ID of the customer being queried.
@@ -888,10 +762,10 @@ public final class SearchGoogleAdsRequest extends
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.ByteString
-    getCustomerIdBytes() {
+        getCustomerIdBytes() {
       java.lang.Object ref = customerId_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         customerId_ = b;
@@ -900,7 +774,6 @@ public final class SearchGoogleAdsRequest extends
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
      * <pre>
      * Required. The ID of the customer being queried.
@@ -911,14 +784,13 @@ public final class SearchGoogleAdsRequest extends
     public Builder setCustomerId(
         java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       customerId_ = value;
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * Required. The ID of the customer being queried.
@@ -927,12 +799,11 @@ public final class SearchGoogleAdsRequest extends
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearCustomerId() {
-
+      
       customerId_ = getDefaultInstance().getCustomerId();
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * Required. The ID of the customer being queried.
@@ -943,17 +814,16 @@ public final class SearchGoogleAdsRequest extends
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       customerId_ = value;
       onChanged();
       return this;
     }
 
     private java.lang.Object query_ = "";
-
     /**
      * <pre>
      * Required. The query string.
@@ -973,7 +843,6 @@ public final class SearchGoogleAdsRequest extends
         return (java.lang.String) ref;
       }
     }
-
     /**
      * <pre>
      * Required. The query string.
@@ -982,10 +851,10 @@ public final class SearchGoogleAdsRequest extends
      * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.ByteString
-    getQueryBytes() {
+        getQueryBytes() {
       java.lang.Object ref = query_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         query_ = b;
@@ -994,7 +863,6 @@ public final class SearchGoogleAdsRequest extends
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
      * <pre>
      * Required. The query string.
@@ -1005,14 +873,13 @@ public final class SearchGoogleAdsRequest extends
     public Builder setQuery(
         java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       query_ = value;
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * Required. The query string.
@@ -1021,12 +888,11 @@ public final class SearchGoogleAdsRequest extends
      * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearQuery() {
-
+      
       query_ = getDefaultInstance().getQuery();
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * Required. The query string.
@@ -1037,17 +903,16 @@ public final class SearchGoogleAdsRequest extends
     public Builder setQueryBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       query_ = value;
       onChanged();
       return this;
     }
 
     private java.lang.Object pageToken_ = "";
-
     /**
      * <pre>
      * Token of the page to retrieve. If not specified, the first
@@ -1070,7 +935,6 @@ public final class SearchGoogleAdsRequest extends
         return (java.lang.String) ref;
       }
     }
-
     /**
      * <pre>
      * Token of the page to retrieve. If not specified, the first
@@ -1082,10 +946,10 @@ public final class SearchGoogleAdsRequest extends
      * <code>string page_token = 3;</code>
      */
     public com.google.protobuf.ByteString
-    getPageTokenBytes() {
+        getPageTokenBytes() {
       java.lang.Object ref = pageToken_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
@@ -1094,7 +958,6 @@ public final class SearchGoogleAdsRequest extends
         return (com.google.protobuf.ByteString) ref;
       }
     }
-
     /**
      * <pre>
      * Token of the page to retrieve. If not specified, the first
@@ -1108,14 +971,13 @@ public final class SearchGoogleAdsRequest extends
     public Builder setPageToken(
         java.lang.String value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-
+    throw new NullPointerException();
+  }
+  
       pageToken_ = value;
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * Token of the page to retrieve. If not specified, the first
@@ -1127,12 +989,11 @@ public final class SearchGoogleAdsRequest extends
      * <code>string page_token = 3;</code>
      */
     public Builder clearPageToken() {
-
+      
       pageToken_ = getDefaultInstance().getPageToken();
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * Token of the page to retrieve. If not specified, the first
@@ -1146,17 +1007,16 @@ public final class SearchGoogleAdsRequest extends
     public Builder setPageTokenBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
-        throw new NullPointerException();
-      }
-      checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       pageToken_ = value;
       onChanged();
       return this;
     }
 
-    private int pageSize_;
-
+    private int pageSize_ ;
     /**
      * <pre>
      * Number of elements to retrieve in a single page.
@@ -1169,7 +1029,6 @@ public final class SearchGoogleAdsRequest extends
     public int getPageSize() {
       return pageSize_;
     }
-
     /**
      * <pre>
      * Number of elements to retrieve in a single page.
@@ -1180,12 +1039,11 @@ public final class SearchGoogleAdsRequest extends
      * <code>int32 page_size = 4;</code>
      */
     public Builder setPageSize(int value) {
-
+      
       pageSize_ = value;
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * Number of elements to retrieve in a single page.
@@ -1196,14 +1054,13 @@ public final class SearchGoogleAdsRequest extends
      * <code>int32 page_size = 4;</code>
      */
     public Builder clearPageSize() {
-
+      
       pageSize_ = 0;
       onChanged();
       return this;
     }
 
-    private boolean validateOnly_;
-
+    private boolean validateOnly_ ;
     /**
      * <pre>
      * If true, the request is validated but not executed.
@@ -1214,7 +1071,6 @@ public final class SearchGoogleAdsRequest extends
     public boolean getValidateOnly() {
       return validateOnly_;
     }
-
     /**
      * <pre>
      * If true, the request is validated but not executed.
@@ -1223,12 +1079,11 @@ public final class SearchGoogleAdsRequest extends
      * <code>bool validate_only = 5;</code>
      */
     public Builder setValidateOnly(boolean value) {
-
+      
       validateOnly_ = value;
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * If true, the request is validated but not executed.
@@ -1237,58 +1092,13 @@ public final class SearchGoogleAdsRequest extends
      * <code>bool validate_only = 5;</code>
      */
     public Builder clearValidateOnly() {
-
+      
       validateOnly_ = false;
       onChanged();
       return this;
     }
 
-    private boolean returnSummaryRow_;
-
-    /**
-     * <pre>
-     * If true, summary row will be included in the response.
-     * Otherwise(false or not specified) summary row will not be returned.
-     * </pre>
-     *
-     * <code>bool return_summary_row = 6;</code>
-     */
-    public boolean getReturnSummaryRow() {
-      return returnSummaryRow_;
-    }
-
-    /**
-     * <pre>
-     * If true, summary row will be included in the response.
-     * Otherwise(false or not specified) summary row will not be returned.
-     * </pre>
-     *
-     * <code>bool return_summary_row = 6;</code>
-     */
-    public Builder setReturnSummaryRow(boolean value) {
-
-      returnSummaryRow_ = value;
-      onChanged();
-      return this;
-    }
-
-    /**
-     * <pre>
-     * If true, summary row will be included in the response.
-     * Otherwise(false or not specified) summary row will not be returned.
-     * </pre>
-     *
-     * <code>bool return_summary_row = 6;</code>
-     */
-    public Builder clearReturnSummaryRow() {
-
-      returnSummaryRow_ = false;
-      onChanged();
-      return this;
-    }
-
-    private boolean returnTotalResultsCount_;
-
+    private boolean returnTotalResultsCount_ ;
     /**
      * <pre>
      * If true, the total number of results that match the query ignoring the
@@ -1301,7 +1111,6 @@ public final class SearchGoogleAdsRequest extends
     public boolean getReturnTotalResultsCount() {
       return returnTotalResultsCount_;
     }
-
     /**
      * <pre>
      * If true, the total number of results that match the query ignoring the
@@ -1312,12 +1121,11 @@ public final class SearchGoogleAdsRequest extends
      * <code>bool return_total_results_count = 7;</code>
      */
     public Builder setReturnTotalResultsCount(boolean value) {
-
+      
       returnTotalResultsCount_ = value;
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * If true, the total number of results that match the query ignoring the
@@ -1328,14 +1136,13 @@ public final class SearchGoogleAdsRequest extends
      * <code>bool return_total_results_count = 7;</code>
      */
     public Builder clearReturnTotalResultsCount() {
-
+      
       returnTotalResultsCount_ = false;
       onChanged();
       return this;
     }
 
     private int summaryRowSetting_ = 0;
-
     /**
      * <pre>
      * Determines whether a summary row will be returned. By default, summary row
@@ -1343,13 +1150,11 @@ public final class SearchGoogleAdsRequest extends
      * by itself after all other query results are returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting
-     * summary_row_setting = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
      */
     public int getSummaryRowSettingValue() {
       return summaryRowSetting_;
     }
-
     /**
      * <pre>
      * Determines whether a summary row will be returned. By default, summary row
@@ -1357,15 +1162,13 @@ public final class SearchGoogleAdsRequest extends
      * by itself after all other query results are returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting
-     * summary_row_setting = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
      */
     public Builder setSummaryRowSettingValue(int value) {
       summaryRowSetting_ = value;
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * Determines whether a summary row will be returned. By default, summary row
@@ -1373,18 +1176,13 @@ public final class SearchGoogleAdsRequest extends
      * by itself after all other query results are returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting
-     * summary_row_setting = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
      */
     public com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting() {
       @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting
-          .valueOf(summaryRowSetting_);
-      return result == null
-          ? com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.UNRECOGNIZED
-          : result;
+      com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.valueOf(summaryRowSetting_);
+      return result == null ? com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.UNRECOGNIZED : result;
     }
-
     /**
      * <pre>
      * Determines whether a summary row will be returned. By default, summary row
@@ -1392,20 +1190,17 @@ public final class SearchGoogleAdsRequest extends
      * by itself after all other query results are returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting
-     * summary_row_setting = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
      */
-    public Builder setSummaryRowSetting(
-        com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting value) {
+    public Builder setSummaryRowSetting(com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting value) {
       if (value == null) {
         throw new NullPointerException();
       }
-
+      
       summaryRowSetting_ = value.getNumber();
       onChanged();
       return this;
     }
-
     /**
      * <pre>
      * Determines whether a summary row will be returned. By default, summary row
@@ -1413,16 +1208,14 @@ public final class SearchGoogleAdsRequest extends
      * by itself after all other query results are returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting
-     * summary_row_setting = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 8;</code>
      */
     public Builder clearSummaryRowSetting() {
-
+      
       summaryRowSetting_ = 0;
       onChanged();
       return this;
     }
-
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1435,12 +1228,12 @@ public final class SearchGoogleAdsRequest extends
       return super.mergeUnknownFields(unknownFields);
     }
 
+
     // @@protoc_insertion_point(builder_scope:google.ads.googleads.v3.services.SearchGoogleAdsRequest)
   }
 
   // @@protoc_insertion_point(class_scope:google.ads.googleads.v3.services.SearchGoogleAdsRequest)
   private static final com.google.ads.googleads.v3.services.SearchGoogleAdsRequest DEFAULT_INSTANCE;
-
   static {
     DEFAULT_INSTANCE = new com.google.ads.googleads.v3.services.SearchGoogleAdsRequest();
   }

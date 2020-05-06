@@ -32,24 +32,26 @@ public final class LabelProto {
       "l.proto\022!google.ads.googleads.v3.resourc" +
       "es\032/google/ads/googleads/v3/common/text_" +
       "label.proto\0320google/ads/googleads/v3/enu" +
-      "ms/label_status.proto\032\031google/api/resour" +
-      "ce.proto\032\036google/protobuf/wrappers.proto" +
-      "\032\034google/api/annotations.proto\"\310\002\n\005Label" +
-      "\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022*\n\004name\030\003 \001(\0132\034" +
-      ".google.protobuf.StringValue\022J\n\006status\030\004" +
-      " \001(\0162:.google.ads.googleads.v3.enums.Lab" +
-      "elStatusEnum.LabelStatus\022=\n\ntext_label\030\005" +
-      " \001(\0132).google.ads.googleads.v3.common.Te" +
-      "xtLabel:H\352AE\n\036googleads.googleapis.com/L" +
-      "abel\022#customers/{customer}/labels/{label" +
-      "}B\367\001\n%com.google.ads.googleads.v3.resour" +
-      "cesB\nLabelProtoP\001ZJgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v3/resour" +
-      "ces;resources\242\002\003GAA\252\002!Google.Ads.GoogleA" +
-      "ds.V3.Resources\312\002!Google\\Ads\\GoogleAds\\V" +
-      "3\\Resources\352\002%Google::Ads::GoogleAds::V3" +
-      "::Resourcesb\006proto3"
+      "ms/label_status.proto\032\037google/api/field_" +
+      "behavior.proto\032\031google/api/resource.prot" +
+      "o\032\036google/protobuf/wrappers.proto\032\034googl" +
+      "e/api/annotations.proto\"\372\002\n\005Label\022=\n\rres" +
+      "ource_name\030\001 \001(\tB&\340A\005\372A \n\036googleads.goog" +
+      "leapis.com/Label\022,\n\002id\030\002 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\003\340A\003\022*\n\004name\030\003 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\022O\n\006status\030\004 \001" +
+      "(\0162:.google.ads.googleads.v3.enums.Label" +
+      "StatusEnum.LabelStatusB\003\340A\003\022=\n\ntext_labe" +
+      "l\030\005 \001(\0132).google.ads.googleads.v3.common" +
+      ".TextLabel:H\352AE\n\036googleads.googleapis.co" +
+      "m/Label\022#customers/{customer}/labels/{la" +
+      "bel}B\367\001\n%com.google.ads.googleads.v3.res" +
+      "ourcesB\nLabelProtoP\001ZJgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v3/res" +
+      "ources;resources\242\002\003GAA\252\002!Google.Ads.Goog" +
+      "leAds.V3.Resources\312\002!Google\\Ads\\GoogleAd" +
+      "s\\V3\\Resources\352\002%Google::Ads::GoogleAds:" +
+      ":V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -64,6 +66,7 @@ public final class LabelProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.common.TextLabelProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.LabelStatusProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -76,11 +79,14 @@ public final class LabelProto {
         new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "TextLabel", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.common.TextLabelProto.getDescriptor();
     com.google.ads.googleads.v3.enums.LabelStatusProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

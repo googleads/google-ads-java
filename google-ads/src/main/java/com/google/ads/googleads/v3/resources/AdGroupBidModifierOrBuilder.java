@@ -9,76 +9,76 @@ public interface AdGroupBidModifierOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the ad group bid modifier.
+   * Immutable. The resource name of the ad group bid modifier.
    * Ad group bid modifier resource names have the form:
    * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the ad group bid modifier.
+   * Immutable. The resource name of the ad group bid modifier.
    * Ad group bid modifier resource names have the form:
    * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ad group to which this criterion belongs.
+   * Immutable. The ad group to which this criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasAdGroup();
   /**
    * <pre>
-   * The ad group to which this criterion belongs.
+   * Immutable. The ad group to which this criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
    * <pre>
-   * The ad group to which this criterion belongs.
+   * Immutable. The ad group to which this criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder();
 
   /**
    * <pre>
-   * The ID of the criterion to bid modify.
+   * Output only. The ID of the criterion to bid modify.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCriterionId();
   /**
    * <pre>
-   * The ID of the criterion to bid modify.
+   * Output only. The ID of the criterion to bid modify.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getCriterionId();
   /**
    * <pre>
-   * The ID of the criterion to bid modify.
+   * Output only. The ID of the criterion to bid modify.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder();
 
@@ -115,205 +115,205 @@ public interface AdGroupBidModifierOrBuilder extends
 
   /**
    * <pre>
-   * The base ad group from which this draft/trial adgroup bid modifier was
+   * Output only. The base ad group from which this draft/trial adgroup bid modifier was
    * created. If ad_group is a base ad group then this field will be equal to
    * ad_group. If the ad group was created in the draft or trial and has no
    * corresponding base ad group, then this field will be null.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasBaseAdGroup();
   /**
    * <pre>
-   * The base ad group from which this draft/trial adgroup bid modifier was
+   * Output only. The base ad group from which this draft/trial adgroup bid modifier was
    * created. If ad_group is a base ad group then this field will be equal to
    * ad_group. If the ad group was created in the draft or trial and has no
    * corresponding base ad group, then this field will be null.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getBaseAdGroup();
   /**
    * <pre>
-   * The base ad group from which this draft/trial adgroup bid modifier was
+   * Output only. The base ad group from which this draft/trial adgroup bid modifier was
    * created. If ad_group is a base ad group then this field will be equal to
    * ad_group. If the ad group was created in the draft or trial and has no
    * corresponding base ad group, then this field will be null.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder();
 
   /**
    * <pre>
-   * Bid modifier source.
+   * Output only. Bid modifier source.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getBidModifierSourceValue();
   /**
    * <pre>
-   * Bid modifier source.
+   * Output only. Bid modifier source.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.BidModifierSourceEnum.BidModifierSource getBidModifierSource();
 
   /**
    * <pre>
-   * Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+   * <code>.google.ads.googleads.v3.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasHotelDateSelectionType();
   /**
    * <pre>
-   * Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+   * <code>.google.ads.googleads.v3.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.HotelDateSelectionTypeInfo getHotelDateSelectionType();
   /**
    * <pre>
-   * Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+   * <code>.google.ads.googleads.v3.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.HotelDateSelectionTypeInfoOrBuilder getHotelDateSelectionTypeOrBuilder();
 
   /**
    * <pre>
-   * Criterion for number of days prior to the stay the booking is being made.
+   * Immutable. Criterion for number of days prior to the stay the booking is being made.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+   * <code>.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasHotelAdvanceBookingWindow();
   /**
    * <pre>
-   * Criterion for number of days prior to the stay the booking is being made.
+   * Immutable. Criterion for number of days prior to the stay the booking is being made.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+   * <code>.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo getHotelAdvanceBookingWindow();
   /**
    * <pre>
-   * Criterion for number of days prior to the stay the booking is being made.
+   * Immutable. Criterion for number of days prior to the stay the booking is being made.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+   * <code>.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfoOrBuilder getHotelAdvanceBookingWindowOrBuilder();
 
   /**
    * <pre>
-   * Criterion for length of hotel stay in nights.
+   * Immutable. Criterion for length of hotel stay in nights.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+   * <code>.google.ads.googleads.v3.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasHotelLengthOfStay();
   /**
    * <pre>
-   * Criterion for length of hotel stay in nights.
+   * Immutable. Criterion for length of hotel stay in nights.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+   * <code>.google.ads.googleads.v3.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.HotelLengthOfStayInfo getHotelLengthOfStay();
   /**
    * <pre>
-   * Criterion for length of hotel stay in nights.
+   * Immutable. Criterion for length of hotel stay in nights.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+   * <code>.google.ads.googleads.v3.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.HotelLengthOfStayInfoOrBuilder getHotelLengthOfStayOrBuilder();
 
   /**
    * <pre>
-   * Criterion for day of the week the booking is for.
+   * Immutable. Criterion for day of the week the booking is for.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+   * <code>.google.ads.googleads.v3.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasHotelCheckInDay();
   /**
    * <pre>
-   * Criterion for day of the week the booking is for.
+   * Immutable. Criterion for day of the week the booking is for.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+   * <code>.google.ads.googleads.v3.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.HotelCheckInDayInfo getHotelCheckInDay();
   /**
    * <pre>
-   * Criterion for day of the week the booking is for.
+   * Immutable. Criterion for day of the week the booking is for.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+   * <code>.google.ads.googleads.v3.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.HotelCheckInDayInfoOrBuilder getHotelCheckInDayOrBuilder();
 
   /**
    * <pre>
-   * A device criterion.
+   * Immutable. A device criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.DeviceInfo device = 11;</code>
+   * <code>.google.ads.googleads.v3.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasDevice();
   /**
    * <pre>
-   * A device criterion.
+   * Immutable. A device criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.DeviceInfo device = 11;</code>
+   * <code>.google.ads.googleads.v3.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.DeviceInfo getDevice();
   /**
    * <pre>
-   * A device criterion.
+   * Immutable. A device criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.DeviceInfo device = 11;</code>
+   * <code>.google.ads.googleads.v3.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.DeviceInfoOrBuilder getDeviceOrBuilder();
 
   /**
    * <pre>
-   * A preferred content criterion.
+   * Immutable. A preferred content criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.PreferredContentInfo preferred_content = 12;</code>
+   * <code>.google.ads.googleads.v3.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasPreferredContent();
   /**
    * <pre>
-   * A preferred content criterion.
+   * Immutable. A preferred content criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.PreferredContentInfo preferred_content = 12;</code>
+   * <code>.google.ads.googleads.v3.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.PreferredContentInfo getPreferredContent();
   /**
    * <pre>
-   * A preferred content criterion.
+   * Immutable. A preferred content criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.PreferredContentInfo preferred_content = 12;</code>
+   * <code>.google.ads.googleads.v3.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.PreferredContentInfoOrBuilder getPreferredContentOrBuilder();
 

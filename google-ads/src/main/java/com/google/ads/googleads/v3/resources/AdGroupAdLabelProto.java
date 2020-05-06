@@ -30,22 +30,26 @@ public final class AdGroupAdLabelProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v3/resources/ad_g" +
       "roup_ad_label.proto\022!google.ads.googlead" +
-      "s.v3.resources\032\031google/api/resource.prot" +
-      "o\032\036google/protobuf/wrappers.proto\032\034googl" +
-      "e/api/annotations.proto\"\357\001\n\016AdGroupAdLab" +
-      "el\022\025\n\rresource_name\030\001 \001(\t\0221\n\013ad_group_ad" +
-      "\030\002 \001(\0132\034.google.protobuf.StringValue\022+\n\005" +
-      "label\030\003 \001(\0132\034.google.protobuf.StringValu" +
-      "e:f\352Ac\n\'googleads.googleapis.com/AdGroup" +
-      "AdLabel\0228customers/{customer}/adGroupAdL" +
-      "abels/{ad_group_ad_label}B\200\002\n%com.google" +
-      ".ads.googleads.v3.resourcesB\023AdGroupAdLa" +
-      "belProtoP\001ZJgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v3/resources;res" +
-      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V3.R" +
-      "esources\312\002!Google\\Ads\\GoogleAds\\V3\\Resou" +
-      "rces\352\002%Google::Ads::GoogleAds::V3::Resou" +
-      "rcesb\006proto3"
+      "s.v3.resources\032\037google/api/field_behavio" +
+      "r.proto\032\031google/api/resource.proto\032\036goog" +
+      "le/protobuf/wrappers.proto\032\034google/api/a" +
+      "nnotations.proto\"\364\002\n\016AdGroupAdLabel\022F\n\rr" +
+      "esource_name\030\001 \001(\tB/\340A\005\372A)\n\'googleads.go" +
+      "ogleapis.com/AdGroupAdLabel\022]\n\013ad_group_" +
+      "ad\030\002 \001(\0132\034.google.protobuf.StringValueB*" +
+      "\340A\005\372A$\n\"googleads.googleapis.com/AdGroup" +
+      "Ad\022S\n\005label\030\003 \001(\0132\034.google.protobuf.Stri" +
+      "ngValueB&\340A\005\372A \n\036googleads.googleapis.co" +
+      "m/Label:f\352Ac\n\'googleads.googleapis.com/A" +
+      "dGroupAdLabel\0228customers/{customer}/adGr" +
+      "oupAdLabels/{ad_group_ad_label}B\200\002\n%com." +
+      "google.ads.googleads.v3.resourcesB\023AdGro" +
+      "upAdLabelProtoP\001ZJgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v3/resourc" +
+      "es;resources\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
+      "s.V3.Resources\312\002!Google\\Ads\\GoogleAds\\V3" +
+      "\\Resources\352\002%Google::Ads::GoogleAds::V3:" +
+      ":Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -58,6 +62,7 @@ public final class AdGroupAdLabelProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -70,9 +75,12 @@ public final class AdGroupAdLabelProto {
         new java.lang.String[] { "ResourceName", "AdGroupAd", "Label", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

@@ -9,263 +9,263 @@ public interface MediaFileOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the media file.
+   * Immutable. The resource name of the media file.
    * Media file resource names have the form:
    * `customers/{customer_id}/mediaFiles/{media_file_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the media file.
+   * Immutable. The resource name of the media file.
    * Media file resource names have the form:
    * `customers/{customer_id}/mediaFiles/{media_file_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the media file.
+   * Output only. The ID of the media file.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the media file.
+   * Output only. The ID of the media file.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the media file.
+   * Output only. The ID of the media file.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * Type of the media file.
+   * Immutable. Type of the media file.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getTypeValue();
   /**
    * <pre>
-   * Type of the media file.
+   * Immutable. Type of the media file.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.MediaTypeEnum.MediaType getType();
 
   /**
    * <pre>
-   * The mime type of the media file.
+   * Output only. The mime type of the media file.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getMimeTypeValue();
   /**
    * <pre>
-   * The mime type of the media file.
+   * Output only. The mime type of the media file.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType getMimeType();
 
   /**
    * <pre>
-   * The URL of where the original media file was downloaded from (or a file
+   * Immutable. The URL of where the original media file was downloaded from (or a file
    * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue source_url = 7;</code>
+   * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasSourceUrl();
   /**
    * <pre>
-   * The URL of where the original media file was downloaded from (or a file
+   * Immutable. The URL of where the original media file was downloaded from (or a file
    * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue source_url = 7;</code>
+   * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValue getSourceUrl();
   /**
    * <pre>
-   * The URL of where the original media file was downloaded from (or a file
+   * Immutable. The URL of where the original media file was downloaded from (or a file
    * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue source_url = 7;</code>
+   * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSourceUrlOrBuilder();
 
   /**
    * <pre>
-   * The name of the media file. The name can be used by clients to help
+   * Immutable. The name of the media file. The name can be used by clients to help
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 8;</code>
+   * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasName();
   /**
    * <pre>
-   * The name of the media file. The name can be used by clients to help
+   * Immutable. The name of the media file. The name can be used by clients to help
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 8;</code>
+   * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * The name of the media file. The name can be used by clients to help
+   * Immutable. The name of the media file. The name can be used by clients to help
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 8;</code>
+   * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 
   /**
    * <pre>
-   * The size of the media file in bytes.
+   * Output only. The size of the media file in bytes.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value file_size = 9;</code>
+   * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasFileSize();
   /**
    * <pre>
-   * The size of the media file in bytes.
+   * Output only. The size of the media file in bytes.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value file_size = 9;</code>
+   * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getFileSize();
   /**
    * <pre>
-   * The size of the media file in bytes.
+   * Output only. The size of the media file in bytes.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value file_size = 9;</code>
+   * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getFileSizeOrBuilder();
 
   /**
    * <pre>
-   * Encapsulates an Image.
+   * Immutable. Encapsulates an Image.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaImage image = 3;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasImage();
   /**
    * <pre>
-   * Encapsulates an Image.
+   * Immutable. Encapsulates an Image.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaImage image = 3;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.MediaImage getImage();
   /**
    * <pre>
-   * Encapsulates an Image.
+   * Immutable. Encapsulates an Image.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaImage image = 3;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.MediaImageOrBuilder getImageOrBuilder();
 
   /**
    * <pre>
-   * A ZIP archive media the content of which contains HTML5 assets.
+   * Immutable. A ZIP archive media the content of which contains HTML5 assets.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasMediaBundle();
   /**
    * <pre>
-   * A ZIP archive media the content of which contains HTML5 assets.
+   * Immutable. A ZIP archive media the content of which contains HTML5 assets.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.MediaBundle getMediaBundle();
   /**
    * <pre>
-   * A ZIP archive media the content of which contains HTML5 assets.
+   * Immutable. A ZIP archive media the content of which contains HTML5 assets.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.MediaBundleOrBuilder getMediaBundleOrBuilder();
 
   /**
    * <pre>
-   * Encapsulates an Audio.
+   * Output only. Encapsulates an Audio.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasAudio();
   /**
    * <pre>
-   * Encapsulates an Audio.
+   * Output only. Encapsulates an Audio.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.resources.MediaAudio getAudio();
   /**
    * <pre>
-   * Encapsulates an Audio.
+   * Output only. Encapsulates an Audio.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.resources.MediaAudioOrBuilder getAudioOrBuilder();
 
   /**
    * <pre>
-   * Encapsulates a Video.
+   * Immutable. Encapsulates a Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasVideo();
   /**
    * <pre>
-   * Encapsulates a Video.
+   * Immutable. Encapsulates a Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.MediaVideo getVideo();
   /**
    * <pre>
-   * Encapsulates a Video.
+   * Immutable. Encapsulates a Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11;</code>
+   * <code>.google.ads.googleads.v3.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.MediaVideoOrBuilder getVideoOrBuilder();
 

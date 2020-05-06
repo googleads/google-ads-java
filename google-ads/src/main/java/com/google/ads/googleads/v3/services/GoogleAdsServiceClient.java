@@ -15,6 +15,7 @@
  */
 package com.google.ads.googleads.v3.services;
 
+import com.google.ads.googleads.v2.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v3.services.stub.GoogleAdsServiceStub;
 import com.google.ads.googleads.v3.services.stub.GoogleAdsServiceStubSettings;
 import com.google.api.core.ApiFunction;
@@ -35,7 +36,6 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
 // AUTO-GENERATED DOCUMENTATION AND SERVICE
-
 /**
  * Service Description: Service to fetch data and metrics across resources.
  *
@@ -108,13 +108,10 @@ import javax.annotation.Generated;
 @Generated("by gapic-generator")
 @BetaApi
 public class GoogleAdsServiceClient implements BackgroundResource {
-
   private final GoogleAdsServiceSettings settings;
   private final GoogleAdsServiceStub stub;
 
-  /**
-   * Constructs an instance of GoogleAdsServiceClient with default settings.
-   */
+  /** Constructs an instance of GoogleAdsServiceClient with default settings. */
   public static final GoogleAdsServiceClient create() throws IOException {
     return create(GoogleAdsServiceSettings.newBuilder().build());
   }
@@ -163,70 +160,6 @@ public class GoogleAdsServiceClient implements BackgroundResource {
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
-
-  /**
-   * Returns all rows that match the search query.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
-   *   String customerId = "";
-   *   String query = "";
-   *   boolean validateOnly = false;
-   *   boolean returnSummaryRow = false;
-   *   for (GoogleAdsRow element : googleAdsServiceClient.search(customerId, query, validateOnly, returnSummaryRow).iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer being queried.
-   * @param query The query string.
-   * @param validateOnly If true, the request is validated but not executed.
-   * @param returnSummaryRow If true, summary row will be included in the response. Otherwise(false
-   * or not specified) summary row will not be returned.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final SearchPagedResponse search(
-      String customerId, String query, boolean validateOnly, boolean returnSummaryRow) {
-    SearchGoogleAdsRequest request =
-        SearchGoogleAdsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .setQuery(query)
-            .setValidateOnly(validateOnly)
-            .setReturnSummaryRow(returnSummaryRow)
-            .build();
-    return search(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-
-  /**
-   * Returns all rows that match the search query.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
-   *   String customerId = "";
-   *   String query = "";
-   *   for (GoogleAdsRow element : googleAdsServiceClient.search(customerId, query).iterateAll()) {
-   *     // doThingsWith(element);
-   *   }
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer being queried.
-   * @param query The query string.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final SearchPagedResponse search(String customerId, String query) {
-    SearchGoogleAdsRequest request =
-        SearchGoogleAdsRequest.newBuilder().setCustomerId(customerId).setQuery(query).build();
-    return search(request);
-  }
-
   /**
    * Returns all rows that match the search query.
    *
@@ -254,7 +187,32 @@ public class GoogleAdsServiceClient implements BackgroundResource {
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns all rows that match the search query.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
+   *   String customerId = "";
+   *   String query = "";
+   *   for (GoogleAdsRow element : googleAdsServiceClient.search(customerId, query).iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * </code></pre>
+   *
+   * @param customerId The ID of the customer being queried.
+   * @param query The query string.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final SearchPagedResponse search(String customerId, String query) {
+    SearchGoogleAdsRequest request =
+        SearchGoogleAdsRequest.newBuilder().setCustomerId(customerId).setQuery(query).build();
+    return search(request);
+  }
 
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
    * Returns all rows that match the search query.
    *
@@ -281,7 +239,6 @@ public class GoogleAdsServiceClient implements BackgroundResource {
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
-
   /**
    * Returns all rows that match the search query.
    *
@@ -315,7 +272,6 @@ public class GoogleAdsServiceClient implements BackgroundResource {
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
-
   /**
    * Returns all rows that match the search stream query.
    *
@@ -338,19 +294,18 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    * </code></pre>
    */
   public final ServerStreamingCallable<SearchGoogleAdsStreamRequest, SearchGoogleAdsStreamResponse>
-  searchStreamCallable() {
+      searchStreamCallable() {
     return stub.searchStreamCallable();
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
-
   /**
    * Creates, updates, or removes resources. This method supports atomic transactions with multiple
    * types of resources. For example, you can atomically create a campaign and a campaign budget, or
    * perform up to thousands of mutates atomically.
    *
-   * <p>This method is essentially a wrapper around a series of mutate methods. The only features
-   * it offers over calling those methods directly are:
+   * <p>This method is essentially a wrapper around a series of mutate methods. The only features it
+   * offers over calling those methods directly are:
    *
    * <p>- Atomic transactions - Temp resource names (described below) - Somewhat reduced latency
    * over making a series of mutate calls
@@ -377,11 +332,10 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    *
    * <p>Note:
    *
-   * <p>- Resources must be created with a temp name before the name can be reused. For example,
-   * the previous CampaignBudget+Campaign example would fail if the mutate order was reversed. -
-   * Temp names are not remembered across requests. - There's no limit to the number of temp names
-   * in a request. - Each temp name must use a unique negative number, even if the resource types
-   * differ.
+   * <p>- Resources must be created with a temp name before the name can be reused. For example, the
+   * previous CampaignBudget+Campaign example would fail if the mutate order was reversed. - Temp
+   * names are not remembered across requests. - There's no limit to the number of temp names in a
+   * request. - Each temp name must use a unique negative number, even if the resource types differ.
    *
    * <p>## Latency
    *
@@ -405,10 +359,10 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    * @param customerId Required. The ID of the customer whose resources are being modified.
    * @param mutateOperations Required. The list of operations to perform on individual resources.
    * @param partialFailure If true, successful operations will be carried out and invalid operations
-   * will return errors. If false, all operations will be carried out in one transaction if and only
-   * if they are all valid. Default is false.
+   *     will return errors. If false, all operations will be carried out in one transaction if and
+   *     only if they are all valid. Default is false.
    * @param validateOnly If true, the request is validated but not executed. Only errors are
-   * returned, not results.
+   *     returned, not results.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateGoogleAdsResponse mutate(
@@ -428,14 +382,13 @@ public class GoogleAdsServiceClient implements BackgroundResource {
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
-
   /**
    * Creates, updates, or removes resources. This method supports atomic transactions with multiple
    * types of resources. For example, you can atomically create a campaign and a campaign budget, or
    * perform up to thousands of mutates atomically.
    *
-   * <p>This method is essentially a wrapper around a series of mutate methods. The only features
-   * it offers over calling those methods directly are:
+   * <p>This method is essentially a wrapper around a series of mutate methods. The only features it
+   * offers over calling those methods directly are:
    *
    * <p>- Atomic transactions - Temp resource names (described below) - Somewhat reduced latency
    * over making a series of mutate calls
@@ -462,11 +415,10 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    *
    * <p>Note:
    *
-   * <p>- Resources must be created with a temp name before the name can be reused. For example,
-   * the previous CampaignBudget+Campaign example would fail if the mutate order was reversed. -
-   * Temp names are not remembered across requests. - There's no limit to the number of temp names
-   * in a request. - Each temp name must use a unique negative number, even if the resource types
-   * differ.
+   * <p>- Resources must be created with a temp name before the name can be reused. For example, the
+   * previous CampaignBudget+Campaign example would fail if the mutate order was reversed. - Temp
+   * names are not remembered across requests. - There's no limit to the number of temp names in a
+   * request. - Each temp name must use a unique negative number, even if the resource types differ.
    *
    * <p>## Latency
    *
@@ -501,14 +453,13 @@ public class GoogleAdsServiceClient implements BackgroundResource {
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
-
   /**
    * Creates, updates, or removes resources. This method supports atomic transactions with multiple
    * types of resources. For example, you can atomically create a campaign and a campaign budget, or
    * perform up to thousands of mutates atomically.
    *
-   * <p>This method is essentially a wrapper around a series of mutate methods. The only features
-   * it offers over calling those methods directly are:
+   * <p>This method is essentially a wrapper around a series of mutate methods. The only features it
+   * offers over calling those methods directly are:
    *
    * <p>- Atomic transactions - Temp resource names (described below) - Somewhat reduced latency
    * over making a series of mutate calls
@@ -535,11 +486,10 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    *
    * <p>Note:
    *
-   * <p>- Resources must be created with a temp name before the name can be reused. For example,
-   * the previous CampaignBudget+Campaign example would fail if the mutate order was reversed. -
-   * Temp names are not remembered across requests. - There's no limit to the number of temp names
-   * in a request. - Each temp name must use a unique negative number, even if the resource types
-   * differ.
+   * <p>- Resources must be created with a temp name before the name can be reused. For example, the
+   * previous CampaignBudget+Campaign example would fail if the mutate order was reversed. - Temp
+   * names are not remembered across requests. - There's no limit to the number of temp names in a
+   * request. - Each temp name must use a unique negative number, even if the resource types differ.
    *
    * <p>## Latency
    *
@@ -570,14 +520,13 @@ public class GoogleAdsServiceClient implements BackgroundResource {
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
-
   /**
    * Creates, updates, or removes resources. This method supports atomic transactions with multiple
    * types of resources. For example, you can atomically create a campaign and a campaign budget, or
    * perform up to thousands of mutates atomically.
    *
-   * <p>This method is essentially a wrapper around a series of mutate methods. The only features
-   * it offers over calling those methods directly are:
+   * <p>This method is essentially a wrapper around a series of mutate methods. The only features it
+   * offers over calling those methods directly are:
    *
    * <p>- Atomic transactions - Temp resource names (described below) - Somewhat reduced latency
    * over making a series of mutate calls
@@ -604,11 +553,10 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    *
    * <p>Note:
    *
-   * <p>- Resources must be created with a temp name before the name can be reused. For example,
-   * the previous CampaignBudget+Campaign example would fail if the mutate order was reversed. -
-   * Temp names are not remembered across requests. - There's no limit to the number of temp names
-   * in a request. - Each temp name must use a unique negative number, even if the resource types
-   * differ.
+   * <p>- Resources must be created with a temp name before the name can be reused. For example, the
+   * previous CampaignBudget+Campaign example would fail if the mutate order was reversed. - Temp
+   * names are not remembered across requests. - There's no limit to the number of temp names in a
+   * request. - Each temp name must use a unique negative number, even if the resource types differ.
    *
    * <p>## Latency
    *
@@ -669,8 +617,8 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   public static class SearchPagedResponse
       extends AbstractPagedListResponse<
-      SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow, SearchPage,
-      SearchFixedSizeCollection> {
+          SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow, SearchPage,
+          SearchFixedSizeCollection> {
 
     public static ApiFuture<SearchPagedResponse> createAsync(
         PageContext<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow> context,
@@ -695,7 +643,7 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   public static class SearchPage
       extends AbstractPage<
-      SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow, SearchPage> {
+          SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow, SearchPage> {
 
     private SearchPage(
         PageContext<SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow> context,
@@ -724,8 +672,8 @@ public class GoogleAdsServiceClient implements BackgroundResource {
 
   public static class SearchFixedSizeCollection
       extends AbstractFixedSizeCollection<
-      SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow, SearchPage,
-      SearchFixedSizeCollection> {
+          SearchGoogleAdsRequest, SearchGoogleAdsResponse, GoogleAdsRow, SearchPage,
+          SearchFixedSizeCollection> {
 
     private SearchFixedSizeCollection(List<SearchPage> pages, int collectionSize) {
       super(pages, collectionSize);

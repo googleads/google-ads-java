@@ -136,12 +136,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the Keyword Plan negative keyword.
+   * Immutable. The resource name of the Keyword Plan negative keyword.
    * KeywordPlanNegativeKeyword resource names have the form:
    * `customers/{customer_id}/keywordPlanNegativeKeywords/{kp_negative_keyword_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -157,12 +157,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the Keyword Plan negative keyword.
+   * Immutable. The resource name of the Keyword Plan negative keyword.
    * KeywordPlanNegativeKeyword resource names have the form:
    * `customers/{customer_id}/keywordPlanNegativeKeywords/{kp_negative_keyword_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
    * The Keyword Plan campaign to which this negative keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasKeywordPlanCampaign() {
     return keywordPlanCampaign_ != null;
@@ -195,7 +195,7 @@ private static final long serialVersionUID = 0L;
    * The Keyword Plan campaign to which this negative keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getKeywordPlanCampaign() {
     return keywordPlanCampaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlanCampaign_;
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
    * The Keyword Plan campaign to which this negative keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanCampaignOrBuilder() {
     return getKeywordPlanCampaign();
@@ -215,30 +215,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the Keyword Plan negative keyword.
+   * Output only. The ID of the Keyword Plan negative keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the Keyword Plan negative keyword.
+   * Output only. The ID of the Keyword Plan negative keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the Keyword Plan negative keyword.
+   * Output only. The ID of the Keyword Plan negative keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -718,12 +718,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the Keyword Plan negative keyword.
+     * Immutable. The resource name of the Keyword Plan negative keyword.
      * KeywordPlanNegativeKeyword resource names have the form:
      * `customers/{customer_id}/keywordPlanNegativeKeywords/{kp_negative_keyword_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -739,12 +739,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan negative keyword.
+     * Immutable. The resource name of the Keyword Plan negative keyword.
      * KeywordPlanNegativeKeyword resource names have the form:
      * `customers/{customer_id}/keywordPlanNegativeKeywords/{kp_negative_keyword_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -761,12 +761,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan negative keyword.
+     * Immutable. The resource name of the Keyword Plan negative keyword.
      * KeywordPlanNegativeKeyword resource names have the form:
      * `customers/{customer_id}/keywordPlanNegativeKeywords/{kp_negative_keyword_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -780,12 +780,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan negative keyword.
+     * Immutable. The resource name of the Keyword Plan negative keyword.
      * KeywordPlanNegativeKeyword resource names have the form:
      * `customers/{customer_id}/keywordPlanNegativeKeywords/{kp_negative_keyword_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -795,12 +795,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan negative keyword.
+     * Immutable. The resource name of the Keyword Plan negative keyword.
      * KeywordPlanNegativeKeyword resource names have the form:
      * `customers/{customer_id}/keywordPlanNegativeKeywords/{kp_negative_keyword_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -822,7 +822,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan campaign to which this negative keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasKeywordPlanCampaign() {
       return keywordPlanCampaignBuilder_ != null || keywordPlanCampaign_ != null;
@@ -832,7 +832,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan campaign to which this negative keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getKeywordPlanCampaign() {
       if (keywordPlanCampaignBuilder_ == null) {
@@ -846,7 +846,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan campaign to which this negative keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setKeywordPlanCampaign(com.google.protobuf.StringValue value) {
       if (keywordPlanCampaignBuilder_ == null) {
@@ -866,7 +866,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan campaign to which this negative keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setKeywordPlanCampaign(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -884,7 +884,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan campaign to which this negative keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeKeywordPlanCampaign(com.google.protobuf.StringValue value) {
       if (keywordPlanCampaignBuilder_ == null) {
@@ -906,7 +906,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan campaign to which this negative keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearKeywordPlanCampaign() {
       if (keywordPlanCampaignBuilder_ == null) {
@@ -924,7 +924,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan campaign to which this negative keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getKeywordPlanCampaignBuilder() {
       
@@ -936,7 +936,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan campaign to which this negative keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getKeywordPlanCampaignOrBuilder() {
       if (keywordPlanCampaignBuilder_ != null) {
@@ -951,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan campaign to which this negative keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -972,20 +972,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the Keyword Plan negative keyword.
+     * Output only. The ID of the Keyword Plan negative keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan negative keyword.
+     * Output only. The ID of the Keyword Plan negative keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -996,10 +996,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan negative keyword.
+     * Output only. The ID of the Keyword Plan negative keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1016,10 +1016,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan negative keyword.
+     * Output only. The ID of the Keyword Plan negative keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1034,10 +1034,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan negative keyword.
+     * Output only. The ID of the Keyword Plan negative keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1056,10 +1056,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan negative keyword.
+     * Output only. The ID of the Keyword Plan negative keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1074,10 +1074,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan negative keyword.
+     * Output only. The ID of the Keyword Plan negative keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1086,10 +1086,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan negative keyword.
+     * Output only. The ID of the Keyword Plan negative keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1101,10 +1101,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan negative keyword.
+     * Output only. The ID of the Keyword Plan negative keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

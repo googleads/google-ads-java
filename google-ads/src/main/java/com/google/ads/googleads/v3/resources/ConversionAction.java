@@ -279,20 +279,20 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The status of the data-driven attribution model for the conversion
+     * Output only. The status of the data-driven attribution model for the conversion
      * action.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     int getDataDrivenModelStatusValue();
     /**
      * <pre>
-     * The status of the data-driven attribution model for the conversion
+     * Output only. The status of the data-driven attribution model for the conversion
      * action.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus getDataDrivenModelStatus();
   }
@@ -414,22 +414,22 @@ private static final long serialVersionUID = 0L;
     private int dataDrivenModelStatus_;
     /**
      * <pre>
-     * The status of the data-driven attribution model for the conversion
+     * Output only. The status of the data-driven attribution model for the conversion
      * action.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getDataDrivenModelStatusValue() {
       return dataDrivenModelStatus_;
     }
     /**
      * <pre>
-     * The status of the data-driven attribution model for the conversion
+     * Output only. The status of the data-driven attribution model for the conversion
      * action.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus getDataDrivenModelStatus() {
       @SuppressWarnings("deprecation")
@@ -826,22 +826,22 @@ private static final long serialVersionUID = 0L;
       private int dataDrivenModelStatus_ = 0;
       /**
        * <pre>
-       * The status of the data-driven attribution model for the conversion
+       * Output only. The status of the data-driven attribution model for the conversion
        * action.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2;</code>
+       * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public int getDataDrivenModelStatusValue() {
         return dataDrivenModelStatus_;
       }
       /**
        * <pre>
-       * The status of the data-driven attribution model for the conversion
+       * Output only. The status of the data-driven attribution model for the conversion
        * action.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2;</code>
+       * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setDataDrivenModelStatusValue(int value) {
         dataDrivenModelStatus_ = value;
@@ -850,11 +850,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The status of the data-driven attribution model for the conversion
+       * Output only. The status of the data-driven attribution model for the conversion
        * action.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2;</code>
+       * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus getDataDrivenModelStatus() {
         @SuppressWarnings("deprecation")
@@ -863,11 +863,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The status of the data-driven attribution model for the conversion
+       * Output only. The status of the data-driven attribution model for the conversion
        * action.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2;</code>
+       * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setDataDrivenModelStatus(com.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus value) {
         if (value == null) {
@@ -880,11 +880,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The status of the data-driven attribution model for the conversion
+       * Output only. The status of the data-driven attribution model for the conversion
        * action.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2;</code>
+       * <code>.google.ads.googleads.v3.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearDataDrivenModelStatus() {
         
@@ -2224,12 +2224,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the conversion action.
+   * Immutable. The resource name of the conversion action.
    * Conversion action resource names have the form:
    * `customers/{customer_id}/conversionActions/{conversion_action_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -2245,12 +2245,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the conversion action.
+   * Immutable. The resource name of the conversion action.
    * Conversion action resource names have the form:
    * `customers/{customer_id}/conversionActions/{conversion_action_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -2270,30 +2270,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the conversion action.
+   * Output only. The ID of the conversion action.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the conversion action.
+   * Output only. The ID of the conversion action.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the conversion action.
+   * Output only. The ID of the conversion action.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -2367,20 +2367,20 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * The type of this conversion action.
+   * Immutable. The type of this conversion action.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * The type of this conversion action.
+   * Immutable. The type of this conversion action.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType getType() {
     @SuppressWarnings("deprecation")
@@ -2417,33 +2417,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue ownerCustomer_;
   /**
    * <pre>
-   * The resource name of the conversion action owner customer, or null if this
+   * Output only. The resource name of the conversion action owner customer, or null if this
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+   * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasOwnerCustomer() {
     return ownerCustomer_ != null;
   }
   /**
    * <pre>
-   * The resource name of the conversion action owner customer, or null if this
+   * Output only. The resource name of the conversion action owner customer, or null if this
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+   * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getOwnerCustomer() {
     return ownerCustomer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ownerCustomer_;
   }
   /**
    * <pre>
-   * The resource name of the conversion action owner customer, or null if this
+   * Output only. The resource name of the conversion action owner customer, or null if this
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+   * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getOwnerCustomerOrBuilder() {
     return getOwnerCustomer();
@@ -2655,20 +2655,20 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v3.common.TagSnippet> tagSnippets_;
   /**
    * <pre>
-   * The snippets used for tracking conversions.
+   * Output only. The snippets used for tracking conversions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.ads.googleads.v3.common.TagSnippet> getTagSnippetsList() {
     return tagSnippets_;
   }
   /**
    * <pre>
-   * The snippets used for tracking conversions.
+   * Output only. The snippets used for tracking conversions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.ads.googleads.v3.common.TagSnippetOrBuilder> 
       getTagSnippetsOrBuilderList() {
@@ -2676,30 +2676,30 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The snippets used for tracking conversions.
+   * Output only. The snippets used for tracking conversions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getTagSnippetsCount() {
     return tagSnippets_.size();
   }
   /**
    * <pre>
-   * The snippets used for tracking conversions.
+   * Output only. The snippets used for tracking conversions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.TagSnippet getTagSnippets(int index) {
     return tagSnippets_.get(index);
   }
   /**
    * <pre>
-   * The snippets used for tracking conversions.
+   * Output only. The snippets used for tracking conversions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.TagSnippetOrBuilder getTagSnippetsOrBuilder(
       int index) {
@@ -3510,12 +3510,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the conversion action.
+     * Immutable. The resource name of the conversion action.
      * Conversion action resource names have the form:
      * `customers/{customer_id}/conversionActions/{conversion_action_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -3531,12 +3531,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action.
+     * Immutable. The resource name of the conversion action.
      * Conversion action resource names have the form:
      * `customers/{customer_id}/conversionActions/{conversion_action_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -3553,12 +3553,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action.
+     * Immutable. The resource name of the conversion action.
      * Conversion action resource names have the form:
      * `customers/{customer_id}/conversionActions/{conversion_action_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -3572,12 +3572,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action.
+     * Immutable. The resource name of the conversion action.
      * Conversion action resource names have the form:
      * `customers/{customer_id}/conversionActions/{conversion_action_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -3587,12 +3587,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action.
+     * Immutable. The resource name of the conversion action.
      * Conversion action resource names have the form:
      * `customers/{customer_id}/conversionActions/{conversion_action_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -3611,20 +3611,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the conversion action.
+     * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the conversion action.
+     * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -3635,10 +3635,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the conversion action.
+     * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -3655,10 +3655,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the conversion action.
+     * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3673,10 +3673,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the conversion action.
+     * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -3695,10 +3695,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the conversion action.
+     * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -3713,10 +3713,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the conversion action.
+     * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -3725,10 +3725,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the conversion action.
+     * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -3740,10 +3740,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the conversion action.
+     * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3998,20 +3998,20 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The type of this conversion action.
+     * Immutable. The type of this conversion action.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * The type of this conversion action.
+     * Immutable. The type of this conversion action.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -4020,10 +4020,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of this conversion action.
+     * Immutable. The type of this conversion action.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType getType() {
       @SuppressWarnings("deprecation")
@@ -4032,10 +4032,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of this conversion action.
+     * Immutable. The type of this conversion action.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setType(com.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType value) {
       if (value == null) {
@@ -4048,10 +4048,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of this conversion action.
+     * Immutable. The type of this conversion action.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearType() {
       
@@ -4130,22 +4130,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ownerCustomerBuilder_;
     /**
      * <pre>
-     * The resource name of the conversion action owner customer, or null if this
+     * Output only. The resource name of the conversion action owner customer, or null if this
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+     * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasOwnerCustomer() {
       return ownerCustomerBuilder_ != null || ownerCustomer_ != null;
     }
     /**
      * <pre>
-     * The resource name of the conversion action owner customer, or null if this
+     * Output only. The resource name of the conversion action owner customer, or null if this
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+     * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getOwnerCustomer() {
       if (ownerCustomerBuilder_ == null) {
@@ -4156,11 +4156,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action owner customer, or null if this
+     * Output only. The resource name of the conversion action owner customer, or null if this
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+     * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setOwnerCustomer(com.google.protobuf.StringValue value) {
       if (ownerCustomerBuilder_ == null) {
@@ -4177,11 +4177,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action owner customer, or null if this
+     * Output only. The resource name of the conversion action owner customer, or null if this
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+     * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setOwnerCustomer(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -4196,11 +4196,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action owner customer, or null if this
+     * Output only. The resource name of the conversion action owner customer, or null if this
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+     * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeOwnerCustomer(com.google.protobuf.StringValue value) {
       if (ownerCustomerBuilder_ == null) {
@@ -4219,11 +4219,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action owner customer, or null if this
+     * Output only. The resource name of the conversion action owner customer, or null if this
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+     * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearOwnerCustomer() {
       if (ownerCustomerBuilder_ == null) {
@@ -4238,11 +4238,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action owner customer, or null if this
+     * Output only. The resource name of the conversion action owner customer, or null if this
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+     * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getOwnerCustomerBuilder() {
       
@@ -4251,11 +4251,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action owner customer, or null if this
+     * Output only. The resource name of the conversion action owner customer, or null if this
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+     * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getOwnerCustomerOrBuilder() {
       if (ownerCustomerBuilder_ != null) {
@@ -4267,11 +4267,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the conversion action owner customer, or null if this
+     * Output only. The resource name of the conversion action owner customer, or null if this
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue owner_customer = 7;</code>
+     * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -5167,10 +5167,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.common.TagSnippet> getTagSnippetsList() {
       if (tagSnippetsBuilder_ == null) {
@@ -5181,10 +5181,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getTagSnippetsCount() {
       if (tagSnippetsBuilder_ == null) {
@@ -5195,10 +5195,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TagSnippet getTagSnippets(int index) {
       if (tagSnippetsBuilder_ == null) {
@@ -5209,10 +5209,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTagSnippets(
         int index, com.google.ads.googleads.v3.common.TagSnippet value) {
@@ -5230,10 +5230,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTagSnippets(
         int index, com.google.ads.googleads.v3.common.TagSnippet.Builder builderForValue) {
@@ -5248,10 +5248,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addTagSnippets(com.google.ads.googleads.v3.common.TagSnippet value) {
       if (tagSnippetsBuilder_ == null) {
@@ -5268,10 +5268,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addTagSnippets(
         int index, com.google.ads.googleads.v3.common.TagSnippet value) {
@@ -5289,10 +5289,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addTagSnippets(
         com.google.ads.googleads.v3.common.TagSnippet.Builder builderForValue) {
@@ -5307,10 +5307,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addTagSnippets(
         int index, com.google.ads.googleads.v3.common.TagSnippet.Builder builderForValue) {
@@ -5325,10 +5325,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllTagSnippets(
         java.lang.Iterable<? extends com.google.ads.googleads.v3.common.TagSnippet> values) {
@@ -5344,10 +5344,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTagSnippets() {
       if (tagSnippetsBuilder_ == null) {
@@ -5361,10 +5361,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removeTagSnippets(int index) {
       if (tagSnippetsBuilder_ == null) {
@@ -5378,10 +5378,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TagSnippet.Builder getTagSnippetsBuilder(
         int index) {
@@ -5389,10 +5389,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TagSnippetOrBuilder getTagSnippetsOrBuilder(
         int index) {
@@ -5403,10 +5403,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.ads.googleads.v3.common.TagSnippetOrBuilder> 
          getTagSnippetsOrBuilderList() {
@@ -5418,10 +5418,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TagSnippet.Builder addTagSnippetsBuilder() {
       return getTagSnippetsFieldBuilder().addBuilder(
@@ -5429,10 +5429,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TagSnippet.Builder addTagSnippetsBuilder(
         int index) {
@@ -5441,10 +5441,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking conversions.
+     * Output only. The snippets used for tracking conversions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.common.TagSnippet.Builder> 
          getTagSnippetsBuilderList() {

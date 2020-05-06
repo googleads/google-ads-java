@@ -9,48 +9,48 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the ad group.
+   * Immutable. The resource name of the ad group.
    * Ad group resource names have the form:
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the ad group.
+   * Immutable. The resource name of the ad group.
    * Ad group resource names have the form:
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the ad group.
+   * Output only. The ID of the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the ad group.
+   * Output only. The ID of the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the ad group.
+   * Output only. The ID of the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
@@ -113,18 +113,18 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * The type of the ad group.
+   * Immutable. The type of the ad group.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getTypeValue();
   /**
    * <pre>
-   * The type of the ad group.
+   * Immutable. The type of the ad group.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType getType();
 
@@ -147,38 +147,38 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * For draft or experiment ad groups, this field is the resource name of the
+   * Output only. For draft or experiment ad groups, this field is the resource name of the
    * base ad group from which this ad group was created. If a draft or
    * experiment ad group does not have a base ad group, then this field is null.
    * For base ad groups, this field equals the ad group resource name.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasBaseAdGroup();
   /**
    * <pre>
-   * For draft or experiment ad groups, this field is the resource name of the
+   * Output only. For draft or experiment ad groups, this field is the resource name of the
    * base ad group from which this ad group was created. If a draft or
    * experiment ad group does not have a base ad group, then this field is null.
    * For base ad groups, this field equals the ad group resource name.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getBaseAdGroup();
   /**
    * <pre>
-   * For draft or experiment ad groups, this field is the resource name of the
+   * Output only. For draft or experiment ad groups, this field is the resource name of the
    * base ad group from which this ad group was created. If a draft or
    * experiment ad group does not have a base ad group, then this field is null.
    * For base ad groups, this field equals the ad group resource name.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder();
 
@@ -258,26 +258,26 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * The campaign to which the ad group belongs.
+   * Immutable. The campaign to which the ad group belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 10;</code>
+   * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasCampaign();
   /**
    * <pre>
-   * The campaign to which the ad group belongs.
+   * Immutable. The campaign to which the ad group belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 10;</code>
+   * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getCampaign();
   /**
    * <pre>
-   * The campaign to which the ad group belongs.
+   * Immutable. The campaign to which the ad group belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 10;</code>
+   * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder();
 
@@ -358,26 +358,26 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * The CPV (cost-per-view) bid.
+   * Output only. The CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCpvBidMicros();
   /**
    * <pre>
-   * The CPV (cost-per-view) bid.
+   * Output only. The CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getCpvBidMicros();
   /**
    * <pre>
-   * The CPV (cost-per-view) bid.
+   * Output only. The CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getCpvBidMicrosOrBuilder();
 
@@ -572,138 +572,138 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * The effective target CPA (cost-per-acquisition).
+   * Output only. The effective target CPA (cost-per-acquisition).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasEffectiveTargetCpaMicros();
   /**
    * <pre>
-   * The effective target CPA (cost-per-acquisition).
+   * Output only. The effective target CPA (cost-per-acquisition).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getEffectiveTargetCpaMicros();
   /**
    * <pre>
-   * The effective target CPA (cost-per-acquisition).
+   * Output only. The effective target CPA (cost-per-acquisition).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getEffectiveTargetCpaMicrosOrBuilder();
 
   /**
    * <pre>
-   * Source of the effective target CPA.
+   * Output only. Source of the effective target CPA.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getEffectiveTargetCpaSourceValue();
   /**
    * <pre>
-   * Source of the effective target CPA.
+   * Output only. Source of the effective target CPA.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetCpaSource();
 
   /**
    * <pre>
-   * The effective target ROAS (return-on-ad-spend).
+   * Output only. The effective target ROAS (return-on-ad-spend).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasEffectiveTargetRoas();
   /**
    * <pre>
-   * The effective target ROAS (return-on-ad-spend).
+   * Output only. The effective target ROAS (return-on-ad-spend).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.DoubleValue getEffectiveTargetRoas();
   /**
    * <pre>
-   * The effective target ROAS (return-on-ad-spend).
+   * Output only. The effective target ROAS (return-on-ad-spend).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.DoubleValueOrBuilder getEffectiveTargetRoasOrBuilder();
 
   /**
    * <pre>
-   * Source of the effective target ROAS.
+   * Output only. Source of the effective target ROAS.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getEffectiveTargetRoasSourceValue();
   /**
    * <pre>
-   * Source of the effective target ROAS.
+   * Output only. Source of the effective target ROAS.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetRoasSource();
 
   /**
    * <pre>
-   * The resource names of labels attached to this ad group.
+   * Output only. The resource names of labels attached to this ad group.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.util.List<com.google.protobuf.StringValue> 
       getLabelsList();
   /**
    * <pre>
-   * The resource names of labels attached to this ad group.
+   * Output only. The resource names of labels attached to this ad group.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getLabels(int index);
   /**
    * <pre>
-   * The resource names of labels attached to this ad group.
+   * Output only. The resource names of labels attached to this ad group.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   int getLabelsCount();
   /**
    * <pre>
-   * The resource names of labels attached to this ad group.
+   * Output only. The resource names of labels attached to this ad group.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getLabelsOrBuilderList();
   /**
    * <pre>
-   * The resource names of labels attached to this ad group.
+   * Output only. The resource names of labels attached to this ad group.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getLabelsOrBuilder(
       int index);

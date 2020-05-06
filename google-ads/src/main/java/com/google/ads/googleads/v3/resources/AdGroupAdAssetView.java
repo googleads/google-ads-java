@@ -142,12 +142,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the ad group ad asset view.
+   * Output only. The resource name of the ad group ad asset view.
    * Ad group ad asset view resource names have the form:
    * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.asset_field_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -163,12 +163,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the ad group ad asset view.
+   * Output only. The resource name of the ad group ad asset view.
    * Ad group ad asset view resource names have the form:
    * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.asset_field_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -188,30 +188,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroupAd_;
   /**
    * <pre>
-   * The ad group ad to which the asset is linked.
+   * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasAdGroupAd() {
     return adGroupAd_ != null;
   }
   /**
    * <pre>
-   * The ad group ad to which the asset is linked.
+   * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getAdGroupAd() {
     return adGroupAd_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupAd_;
   }
   /**
    * <pre>
-   * The ad group ad to which the asset is linked.
+   * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+   * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder() {
     return getAdGroupAd();
@@ -221,30 +221,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue asset_;
   /**
    * <pre>
-   * The asset which is linked to the ad group ad.
+   * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue asset = 6;</code>
+   * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasAsset() {
     return asset_ != null;
   }
   /**
    * <pre>
-   * The asset which is linked to the ad group ad.
+   * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue asset = 6;</code>
+   * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getAsset() {
     return asset_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : asset_;
   }
   /**
    * <pre>
-   * The asset which is linked to the ad group ad.
+   * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue asset = 6;</code>
+   * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getAssetOrBuilder() {
     return getAsset();
@@ -254,20 +254,20 @@ private static final long serialVersionUID = 0L;
   private int fieldType_;
   /**
    * <pre>
-   * Role that the asset takes in the ad.
+   * Output only. Role that the asset takes in the ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getFieldTypeValue() {
     return fieldType_;
   }
   /**
    * <pre>
-   * Role that the asset takes in the ad.
+   * Output only. Role that the asset takes in the ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType getFieldType() {
     @SuppressWarnings("deprecation")
@@ -279,30 +279,30 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policySummary_;
   /**
    * <pre>
-   * Policy information for the ad group ad asset.
+   * Output only. Policy information for the ad group ad asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+   * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasPolicySummary() {
     return policySummary_ != null;
   }
   /**
    * <pre>
-   * Policy information for the ad group ad asset.
+   * Output only. Policy information for the ad group ad asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+   * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary getPolicySummary() {
     return policySummary_ == null ? com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary.getDefaultInstance() : policySummary_;
   }
   /**
    * <pre>
-   * Policy information for the ad group ad asset.
+   * Output only. Policy information for the ad group ad asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+   * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummaryOrBuilder getPolicySummaryOrBuilder() {
     return getPolicySummary();
@@ -312,20 +312,20 @@ private static final long serialVersionUID = 0L;
   private int performanceLabel_;
   /**
    * <pre>
-   * Performance of an asset linkage.
+   * Output only. Performance of an asset linkage.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getPerformanceLabelValue() {
     return performanceLabel_;
   }
   /**
    * <pre>
-   * Performance of an asset linkage.
+   * Output only. Performance of an asset linkage.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel getPerformanceLabel() {
     @SuppressWarnings("deprecation")
@@ -764,12 +764,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the ad group ad asset view.
+     * Output only. The resource name of the ad group ad asset view.
      * Ad group ad asset view resource names have the form:
      * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.asset_field_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -785,12 +785,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group ad asset view.
+     * Output only. The resource name of the ad group ad asset view.
      * Ad group ad asset view resource names have the form:
      * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.asset_field_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -807,12 +807,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group ad asset view.
+     * Output only. The resource name of the ad group ad asset view.
      * Ad group ad asset view resource names have the form:
      * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.asset_field_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -826,12 +826,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group ad asset view.
+     * Output only. The resource name of the ad group ad asset view.
      * Ad group ad asset view resource names have the form:
      * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.asset_field_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -841,12 +841,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group ad asset view.
+     * Output only. The resource name of the ad group ad asset view.
      * Ad group ad asset view resource names have the form:
      * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.asset_field_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -865,20 +865,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupAdBuilder_;
     /**
      * <pre>
-     * The ad group ad to which the asset is linked.
+     * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasAdGroupAd() {
       return adGroupAdBuilder_ != null || adGroupAd_ != null;
     }
     /**
      * <pre>
-     * The ad group ad to which the asset is linked.
+     * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getAdGroupAd() {
       if (adGroupAdBuilder_ == null) {
@@ -889,10 +889,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group ad to which the asset is linked.
+     * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupAd(com.google.protobuf.StringValue value) {
       if (adGroupAdBuilder_ == null) {
@@ -909,10 +909,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group ad to which the asset is linked.
+     * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupAd(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -927,10 +927,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group ad to which the asset is linked.
+     * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroupAd(com.google.protobuf.StringValue value) {
       if (adGroupAdBuilder_ == null) {
@@ -949,10 +949,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group ad to which the asset is linked.
+     * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroupAd() {
       if (adGroupAdBuilder_ == null) {
@@ -967,10 +967,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group ad to which the asset is linked.
+     * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupAdBuilder() {
       
@@ -979,10 +979,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group ad to which the asset is linked.
+     * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupAdOrBuilder() {
       if (adGroupAdBuilder_ != null) {
@@ -994,10 +994,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group ad to which the asset is linked.
+     * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_ad = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group_ad = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1018,20 +1018,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> assetBuilder_;
     /**
      * <pre>
-     * The asset which is linked to the ad group ad.
+     * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue asset = 6;</code>
+     * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasAsset() {
       return assetBuilder_ != null || asset_ != null;
     }
     /**
      * <pre>
-     * The asset which is linked to the ad group ad.
+     * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue asset = 6;</code>
+     * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getAsset() {
       if (assetBuilder_ == null) {
@@ -1042,10 +1042,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The asset which is linked to the ad group ad.
+     * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue asset = 6;</code>
+     * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAsset(com.google.protobuf.StringValue value) {
       if (assetBuilder_ == null) {
@@ -1062,10 +1062,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The asset which is linked to the ad group ad.
+     * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue asset = 6;</code>
+     * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAsset(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1080,10 +1080,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The asset which is linked to the ad group ad.
+     * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue asset = 6;</code>
+     * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAsset(com.google.protobuf.StringValue value) {
       if (assetBuilder_ == null) {
@@ -1102,10 +1102,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The asset which is linked to the ad group ad.
+     * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue asset = 6;</code>
+     * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAsset() {
       if (assetBuilder_ == null) {
@@ -1120,10 +1120,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The asset which is linked to the ad group ad.
+     * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue asset = 6;</code>
+     * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAssetBuilder() {
       
@@ -1132,10 +1132,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The asset which is linked to the ad group ad.
+     * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue asset = 6;</code>
+     * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAssetOrBuilder() {
       if (assetBuilder_ != null) {
@@ -1147,10 +1147,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The asset which is linked to the ad group ad.
+     * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue asset = 6;</code>
+     * <code>.google.protobuf.StringValue asset = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1169,20 +1169,20 @@ private static final long serialVersionUID = 0L;
     private int fieldType_ = 0;
     /**
      * <pre>
-     * Role that the asset takes in the ad.
+     * Output only. Role that the asset takes in the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getFieldTypeValue() {
       return fieldType_;
     }
     /**
      * <pre>
-     * Role that the asset takes in the ad.
+     * Output only. Role that the asset takes in the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFieldTypeValue(int value) {
       fieldType_ = value;
@@ -1191,10 +1191,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Role that the asset takes in the ad.
+     * Output only. Role that the asset takes in the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType getFieldType() {
       @SuppressWarnings("deprecation")
@@ -1203,10 +1203,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Role that the asset takes in the ad.
+     * Output only. Role that the asset takes in the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFieldType(com.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType value) {
       if (value == null) {
@@ -1219,10 +1219,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Role that the asset takes in the ad.
+     * Output only. Role that the asset takes in the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetFieldTypeEnum.AssetFieldType field_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearFieldType() {
       
@@ -1236,20 +1236,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary, com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary.Builder, com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummaryOrBuilder> policySummaryBuilder_;
     /**
      * <pre>
-     * Policy information for the ad group ad asset.
+     * Output only. Policy information for the ad group ad asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPolicySummary() {
       return policySummaryBuilder_ != null || policySummary_ != null;
     }
     /**
      * <pre>
-     * Policy information for the ad group ad asset.
+     * Output only. Policy information for the ad group ad asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary getPolicySummary() {
       if (policySummaryBuilder_ == null) {
@@ -1260,10 +1260,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad group ad asset.
+     * Output only. Policy information for the ad group ad asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPolicySummary(com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary value) {
       if (policySummaryBuilder_ == null) {
@@ -1280,10 +1280,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad group ad asset.
+     * Output only. Policy information for the ad group ad asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPolicySummary(
         com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary.Builder builderForValue) {
@@ -1298,10 +1298,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad group ad asset.
+     * Output only. Policy information for the ad group ad asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePolicySummary(com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary value) {
       if (policySummaryBuilder_ == null) {
@@ -1320,10 +1320,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad group ad asset.
+     * Output only. Policy information for the ad group ad asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPolicySummary() {
       if (policySummaryBuilder_ == null) {
@@ -1338,10 +1338,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad group ad asset.
+     * Output only. Policy information for the ad group ad asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary.Builder getPolicySummaryBuilder() {
       
@@ -1350,10 +1350,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad group ad asset.
+     * Output only. Policy information for the ad group ad asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummaryOrBuilder getPolicySummaryOrBuilder() {
       if (policySummaryBuilder_ != null) {
@@ -1365,10 +1365,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad group ad asset.
+     * Output only. Policy information for the ad group ad asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary policy_summary = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary, com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummary.Builder, com.google.ads.googleads.v3.resources.AdGroupAdAssetPolicySummaryOrBuilder> 
@@ -1387,20 +1387,20 @@ private static final long serialVersionUID = 0L;
     private int performanceLabel_ = 0;
     /**
      * <pre>
-     * Performance of an asset linkage.
+     * Output only. Performance of an asset linkage.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getPerformanceLabelValue() {
       return performanceLabel_;
     }
     /**
      * <pre>
-     * Performance of an asset linkage.
+     * Output only. Performance of an asset linkage.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPerformanceLabelValue(int value) {
       performanceLabel_ = value;
@@ -1409,10 +1409,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance of an asset linkage.
+     * Output only. Performance of an asset linkage.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel getPerformanceLabel() {
       @SuppressWarnings("deprecation")
@@ -1421,10 +1421,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance of an asset linkage.
+     * Output only. Performance of an asset linkage.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPerformanceLabel(com.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel value) {
       if (value == null) {
@@ -1437,10 +1437,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Performance of an asset linkage.
+     * Output only. Performance of an asset linkage.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel performance_label = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPerformanceLabel() {
       

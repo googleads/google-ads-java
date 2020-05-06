@@ -9,243 +9,243 @@ public interface SharedCriterionOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the shared criterion.
+   * Immutable. The resource name of the shared criterion.
    * Shared set resource names have the form:
    * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the shared criterion.
+   * Immutable. The resource name of the shared criterion.
    * Shared set resource names have the form:
    * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The shared set to which the shared criterion belongs.
+   * Immutable. The shared set to which the shared criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue shared_set = 2;</code>
+   * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasSharedSet();
   /**
    * <pre>
-   * The shared set to which the shared criterion belongs.
+   * Immutable. The shared set to which the shared criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue shared_set = 2;</code>
+   * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getSharedSet();
   /**
    * <pre>
-   * The shared set to which the shared criterion belongs.
+   * Immutable. The shared set to which the shared criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue shared_set = 2;</code>
+   * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getSharedSetOrBuilder();
 
   /**
    * <pre>
-   * The ID of the criterion.
+   * Output only. The ID of the criterion.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCriterionId();
   /**
    * <pre>
-   * The ID of the criterion.
+   * Output only. The ID of the criterion.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getCriterionId();
   /**
    * <pre>
-   * The ID of the criterion.
+   * Output only. The ID of the criterion.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder();
 
   /**
    * <pre>
-   * The type of the criterion.
+   * Output only. The type of the criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getTypeValue();
   /**
    * <pre>
-   * The type of the criterion.
+   * Output only. The type of the criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType getType();
 
   /**
    * <pre>
-   * Keyword.
+   * Immutable. Keyword.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasKeyword();
   /**
    * <pre>
-   * Keyword.
+   * Immutable. Keyword.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.KeywordInfo getKeyword();
   /**
    * <pre>
-   * Keyword.
+   * Immutable. Keyword.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.KeywordInfoOrBuilder getKeywordOrBuilder();
 
   /**
    * <pre>
-   * YouTube Video.
+   * Immutable. YouTube Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasYoutubeVideo();
   /**
    * <pre>
-   * YouTube Video.
+   * Immutable. YouTube Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.YouTubeVideoInfo getYoutubeVideo();
   /**
    * <pre>
-   * YouTube Video.
+   * Immutable. YouTube Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder();
 
   /**
    * <pre>
-   * YouTube Channel.
+   * Immutable. YouTube Channel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasYoutubeChannel();
   /**
    * <pre>
-   * YouTube Channel.
+   * Immutable. YouTube Channel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.YouTubeChannelInfo getYoutubeChannel();
   /**
    * <pre>
-   * YouTube Channel.
+   * Immutable. YouTube Channel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder();
 
   /**
    * <pre>
-   * Placement.
+   * Immutable. Placement.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasPlacement();
   /**
    * <pre>
-   * Placement.
+   * Immutable. Placement.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.PlacementInfo getPlacement();
   /**
    * <pre>
-   * Placement.
+   * Immutable. Placement.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.PlacementInfoOrBuilder getPlacementOrBuilder();
 
   /**
    * <pre>
-   * Mobile App Category.
+   * Immutable. Mobile App Category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasMobileAppCategory();
   /**
    * <pre>
-   * Mobile App Category.
+   * Immutable. Mobile App Category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.MobileAppCategoryInfo getMobileAppCategory();
   /**
    * <pre>
-   * Mobile App Category.
+   * Immutable. Mobile App Category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder();
 
   /**
    * <pre>
-   * Mobile application.
+   * Immutable. Mobile application.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasMobileApplication();
   /**
    * <pre>
-   * Mobile application.
+   * Immutable. Mobile application.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.MobileApplicationInfo getMobileApplication();
   /**
    * <pre>
-   * Mobile application.
+   * Immutable. Mobile application.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder();
 

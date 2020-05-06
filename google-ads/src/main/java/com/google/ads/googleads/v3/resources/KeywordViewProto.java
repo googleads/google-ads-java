@@ -30,18 +30,20 @@ public final class KeywordViewProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v3/resources/keyw" +
       "ord_view.proto\022!google.ads.googleads.v3." +
-      "resources\032\031google/api/resource.proto\032\034go" +
-      "ogle/api/annotations.proto\"\201\001\n\013KeywordVi" +
-      "ew\022\025\n\rresource_name\030\001 \001(\t:[\352AX\n$googlead" +
-      "s.googleapis.com/KeywordView\0220customers/" +
-      "{customer}/keywordViews/{keyword_view}B\375" +
-      "\001\n%com.google.ads.googleads.v3.resources" +
-      "B\020KeywordViewProtoP\001ZJgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v3/res" +
-      "ources;resources\242\002\003GAA\252\002!Google.Ads.Goog" +
-      "leAds.V3.Resources\312\002!Google\\Ads\\GoogleAd" +
-      "s\\V3\\Resources\352\002%Google::Ads::GoogleAds:" +
-      ":V3::Resourcesb\006proto3"
+      "resources\032\037google/api/field_behavior.pro" +
+      "to\032\031google/api/resource.proto\032\034google/ap" +
+      "i/annotations.proto\"\257\001\n\013KeywordView\022C\n\rr" +
+      "esource_name\030\001 \001(\tB,\340A\003\372A&\n$googleads.go" +
+      "ogleapis.com/KeywordView:[\352AX\n$googleads" +
+      ".googleapis.com/KeywordView\0220customers/{" +
+      "customer}/keywordViews/{keyword_view}B\375\001" +
+      "\n%com.google.ads.googleads.v3.resourcesB" +
+      "\020KeywordViewProtoP\001ZJgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v3/reso" +
+      "urces;resources\242\002\003GAA\252\002!Google.Ads.Googl" +
+      "eAds.V3.Resources\312\002!Google\\Ads\\GoogleAds" +
+      "\\V3\\Resources\352\002%Google::Ads::GoogleAds::" +
+      "V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -54,6 +56,7 @@ public final class KeywordViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
@@ -65,9 +68,12 @@ public final class KeywordViewProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

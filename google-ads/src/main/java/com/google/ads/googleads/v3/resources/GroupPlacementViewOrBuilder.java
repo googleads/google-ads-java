@@ -9,121 +9,121 @@ public interface GroupPlacementViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the group placement view.
+   * Output only. The resource name of the group placement view.
    * Group placement view resource names have the form:
    * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the group placement view.
+   * Output only. The resource name of the group placement view.
    * Group placement view resource names have the form:
    * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The automatic placement string at group level, e. g. web domain, mobile
+   * Output only. The automatic placement string at group level, e. g. web domain, mobile
    * app ID, or a YouTube channel ID.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue placement = 2;</code>
+   * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasPlacement();
   /**
    * <pre>
-   * The automatic placement string at group level, e. g. web domain, mobile
+   * Output only. The automatic placement string at group level, e. g. web domain, mobile
    * app ID, or a YouTube channel ID.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue placement = 2;</code>
+   * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getPlacement();
   /**
    * <pre>
-   * The automatic placement string at group level, e. g. web domain, mobile
+   * Output only. The automatic placement string at group level, e. g. web domain, mobile
    * app ID, or a YouTube channel ID.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue placement = 2;</code>
+   * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getPlacementOrBuilder();
 
   /**
    * <pre>
-   * Domain name for websites and YouTube channel name for YouTube channels.
+   * Output only. Domain name for websites and YouTube channel name for YouTube channels.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue display_name = 3;</code>
+   * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasDisplayName();
   /**
    * <pre>
-   * Domain name for websites and YouTube channel name for YouTube channels.
+   * Output only. Domain name for websites and YouTube channel name for YouTube channels.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue display_name = 3;</code>
+   * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getDisplayName();
   /**
    * <pre>
-   * Domain name for websites and YouTube channel name for YouTube channels.
+   * Output only. Domain name for websites and YouTube channel name for YouTube channels.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue display_name = 3;</code>
+   * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getDisplayNameOrBuilder();
 
   /**
    * <pre>
-   * URL of the group placement, e.g. domain, link to the mobile application in
+   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue target_url = 4;</code>
+   * <code>.google.protobuf.StringValue target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasTargetUrl();
   /**
    * <pre>
-   * URL of the group placement, e.g. domain, link to the mobile application in
+   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue target_url = 4;</code>
+   * <code>.google.protobuf.StringValue target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getTargetUrl();
   /**
    * <pre>
-   * URL of the group placement, e.g. domain, link to the mobile application in
+   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue target_url = 4;</code>
+   * <code>.google.protobuf.StringValue target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getTargetUrlOrBuilder();
 
   /**
    * <pre>
-   * Type of the placement, e.g. Website, YouTube Channel, Mobile Application.
+   * Output only. Type of the placement, e.g. Website, YouTube Channel, Mobile Application.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getPlacementTypeValue();
   /**
    * <pre>
-   * Type of the placement, e.g. Website, YouTube Channel, Mobile Application.
+   * Output only. Type of the placement, e.g. Website, YouTube Channel, Mobile Application.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType getPlacementType();
 }

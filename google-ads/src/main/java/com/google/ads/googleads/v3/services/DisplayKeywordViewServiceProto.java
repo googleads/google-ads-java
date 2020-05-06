@@ -34,22 +34,24 @@ public final class DisplayKeywordViewServiceProto {
       "leads/v3/resources/display_keyword_view." +
       "proto\032\034google/api/annotations.proto\032\027goo" +
       "gle/api/client.proto\032\037google/api/field_b" +
-      "ehavior.proto\":\n\034GetDisplayKeywordViewRe" +
-      "quest\022\032\n\rresource_name\030\001 \001(\tB\003\340A\0022\230\002\n\031Di" +
-      "splayKeywordViewService\022\335\001\n\025GetDisplayKe" +
-      "ywordView\022>.google.ads.googleads.v3.serv" +
-      "ices.GetDisplayKeywordViewRequest\0325.goog" +
-      "le.ads.googleads.v3.resources.DisplayKey" +
-      "wordView\"M\202\323\344\223\0027\0225/v3/{resource_name=cus" +
-      "tomers/*/displayKeywordViews/*}\332A\rresour" +
-      "ce_name\032\033\312A\030googleads.googleapis.comB\205\002\n" +
-      "$com.google.ads.googleads.v3.servicesB\036D" +
-      "isplayKeywordViewServiceProtoP\001ZHgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v3/services;services\242\002\003GAA\252\002 Google" +
-      ".Ads.GoogleAds.V3.Services\312\002 Google\\Ads\\" +
-      "GoogleAds\\V3\\Services\352\002$Google::Ads::Goo" +
-      "gleAds::V3::Servicesb\006proto3"
+      "ehavior.proto\032\031google/api/resource.proto" +
+      "\"j\n\034GetDisplayKeywordViewRequest\022J\n\rreso" +
+      "urce_name\030\001 \001(\tB3\340A\002\372A-\n+googleads.googl" +
+      "eapis.com/DisplayKeywordView2\230\002\n\031Display" +
+      "KeywordViewService\022\335\001\n\025GetDisplayKeyword" +
+      "View\022>.google.ads.googleads.v3.services." +
+      "GetDisplayKeywordViewRequest\0325.google.ad" +
+      "s.googleads.v3.resources.DisplayKeywordV" +
+      "iew\"M\202\323\344\223\0027\0225/v3/{resource_name=customer" +
+      "s/*/displayKeywordViews/*}\332A\rresource_na" +
+      "me\032\033\312A\030googleads.googleapis.comB\205\002\n$com." +
+      "google.ads.googleads.v3.servicesB\036Displa" +
+      "yKeywordViewServiceProtoP\001ZHgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v3/services;services\242\002\003GAA\252\002 Google.Ads." +
+      "GoogleAds.V3.Services\312\002 Google\\Ads\\Googl" +
+      "eAds\\V3\\Services\352\002$Google::Ads::GoogleAd" +
+      "s::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,6 +68,7 @@ public final class DisplayKeywordViewServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetDisplayKeywordViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -79,12 +82,14 @@ public final class DisplayKeywordViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.DisplayKeywordViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

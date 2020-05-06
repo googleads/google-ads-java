@@ -33,20 +33,22 @@ public final class VideoServiceProto {
       "services\032-google/ads/googleads/v3/resour" +
       "ces/video.proto\032\034google/api/annotations." +
       "proto\032\027google/api/client.proto\032\037google/a" +
-      "pi/field_behavior.proto\"-\n\017GetVideoReque" +
-      "st\022\032\n\rresource_name\030\001 \001(\tB\003\340A\0022\327\001\n\014Video" +
-      "Service\022\251\001\n\010GetVideo\0221.google.ads.google" +
-      "ads.v3.services.GetVideoRequest\032(.google" +
-      ".ads.googleads.v3.resources.Video\"@\202\323\344\223\002" +
-      "*\022(/v3/{resource_name=customers/*/videos" +
-      "/*}\332A\rresource_name\032\033\312A\030googleads.google" +
-      "apis.comB\370\001\n$com.google.ads.googleads.v3" +
-      ".servicesB\021VideoServiceProtoP\001ZHgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v3/services;services\242\002\003GAA\252\002 Google." +
-      "Ads.GoogleAds.V3.Services\312\002 Google\\Ads\\G" +
-      "oogleAds\\V3\\Services\352\002$Google::Ads::Goog" +
-      "leAds::V3::Servicesb\006proto3"
+      "pi/field_behavior.proto\032\031google/api/reso" +
+      "urce.proto\"P\n\017GetVideoRequest\022=\n\rresourc" +
+      "e_name\030\001 \001(\tB&\340A\002\372A \n\036googleads.googleap" +
+      "is.com/Video2\327\001\n\014VideoService\022\251\001\n\010GetVid" +
+      "eo\0221.google.ads.googleads.v3.services.Ge" +
+      "tVideoRequest\032(.google.ads.googleads.v3." +
+      "resources.Video\"@\202\323\344\223\002*\022(/v3/{resource_n" +
+      "ame=customers/*/videos/*}\332A\rresource_nam" +
+      "e\032\033\312A\030googleads.googleapis.comB\370\001\n$com.g" +
+      "oogle.ads.googleads.v3.servicesB\021VideoSe" +
+      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v3/services;se" +
+      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.S" +
+      "ervices\312\002 Google\\Ads\\GoogleAds\\V3\\Servic" +
+      "es\352\002$Google::Ads::GoogleAds::V3::Service" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -63,6 +65,7 @@ public final class VideoServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetVideoRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -76,12 +79,14 @@ public final class VideoServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.VideoProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

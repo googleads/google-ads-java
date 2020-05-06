@@ -123,12 +123,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the merchant center link.
+   * Immutable. The resource name of the merchant center link.
    * Merchant center link resource names have the form:
    * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -144,12 +144,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the merchant center link.
+   * Immutable. The resource name of the merchant center link.
    * Merchant center link resource names have the form:
    * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -169,33 +169,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the Merchant Center account.
+   * Output only. The ID of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the Merchant Center account.
+   * Output only. The ID of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the Merchant Center account.
+   * Output only. The ID of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -205,33 +205,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue merchantCenterAccountName_;
   /**
    * <pre>
-   * The name of the Merchant Center account.
+   * Output only. The name of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+   * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasMerchantCenterAccountName() {
     return merchantCenterAccountName_ != null;
   }
   /**
    * <pre>
-   * The name of the Merchant Center account.
+   * Output only. The name of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+   * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getMerchantCenterAccountName() {
     return merchantCenterAccountName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : merchantCenterAccountName_;
   }
   /**
    * <pre>
-   * The name of the Merchant Center account.
+   * Output only. The name of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+   * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getMerchantCenterAccountNameOrBuilder() {
     return getMerchantCenterAccountName();
@@ -648,12 +648,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the merchant center link.
+     * Immutable. The resource name of the merchant center link.
      * Merchant center link resource names have the form:
      * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -669,12 +669,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the merchant center link.
+     * Immutable. The resource name of the merchant center link.
      * Merchant center link resource names have the form:
      * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -691,12 +691,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the merchant center link.
+     * Immutable. The resource name of the merchant center link.
      * Merchant center link resource names have the form:
      * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -710,12 +710,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the merchant center link.
+     * Immutable. The resource name of the merchant center link.
      * Merchant center link resource names have the form:
      * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -725,12 +725,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the merchant center link.
+     * Immutable. The resource name of the merchant center link.
      * Merchant center link resource names have the form:
      * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -749,22 +749,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the Merchant Center account.
+     * Output only. The ID of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the Merchant Center account.
+     * Output only. The ID of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -775,11 +775,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Merchant Center account.
+     * Output only. The ID of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -796,11 +796,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Merchant Center account.
+     * Output only. The ID of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -815,11 +815,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Merchant Center account.
+     * Output only. The ID of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -838,11 +838,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Merchant Center account.
+     * Output only. The ID of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -857,11 +857,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Merchant Center account.
+     * Output only. The ID of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -870,11 +870,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Merchant Center account.
+     * Output only. The ID of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -886,11 +886,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Merchant Center account.
+     * Output only. The ID of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -911,22 +911,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> merchantCenterAccountNameBuilder_;
     /**
      * <pre>
-     * The name of the Merchant Center account.
+     * Output only. The name of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+     * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasMerchantCenterAccountName() {
       return merchantCenterAccountNameBuilder_ != null || merchantCenterAccountName_ != null;
     }
     /**
      * <pre>
-     * The name of the Merchant Center account.
+     * Output only. The name of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+     * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getMerchantCenterAccountName() {
       if (merchantCenterAccountNameBuilder_ == null) {
@@ -937,11 +937,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Merchant Center account.
+     * Output only. The name of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+     * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setMerchantCenterAccountName(com.google.protobuf.StringValue value) {
       if (merchantCenterAccountNameBuilder_ == null) {
@@ -958,11 +958,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Merchant Center account.
+     * Output only. The name of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+     * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setMerchantCenterAccountName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -977,11 +977,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Merchant Center account.
+     * Output only. The name of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+     * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeMerchantCenterAccountName(com.google.protobuf.StringValue value) {
       if (merchantCenterAccountNameBuilder_ == null) {
@@ -1000,11 +1000,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Merchant Center account.
+     * Output only. The name of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+     * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearMerchantCenterAccountName() {
       if (merchantCenterAccountNameBuilder_ == null) {
@@ -1019,11 +1019,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Merchant Center account.
+     * Output only. The name of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+     * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getMerchantCenterAccountNameBuilder() {
       
@@ -1032,11 +1032,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Merchant Center account.
+     * Output only. The name of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+     * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getMerchantCenterAccountNameOrBuilder() {
       if (merchantCenterAccountNameBuilder_ != null) {
@@ -1048,11 +1048,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the Merchant Center account.
+     * Output only. The name of the Merchant Center account.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+     * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

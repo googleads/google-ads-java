@@ -32,24 +32,29 @@ public final class CampaignSharedSetProto {
       "aign_shared_set.proto\022!google.ads.google" +
       "ads.v3.resources\032>google/ads/googleads/v" +
       "3/enums/campaign_shared_set_status.proto" +
-      "\032\031google/api/resource.proto\032\036google/prot" +
-      "obuf/wrappers.proto\032\034google/api/annotati" +
-      "ons.proto\"\340\002\n\021CampaignSharedSet\022\025\n\rresou" +
-      "rce_name\030\001 \001(\t\022.\n\010campaign\030\003 \001(\0132\034.googl" +
-      "e.protobuf.StringValue\0220\n\nshared_set\030\004 \001" +
-      "(\0132\034.google.protobuf.StringValue\022b\n\006stat" +
-      "us\030\002 \001(\0162R.google.ads.googleads.v3.enums" +
-      ".CampaignSharedSetStatusEnum.CampaignSha" +
-      "redSetStatus:n\352Ak\n*googleads.googleapis." +
-      "com/CampaignSharedSet\022=customers/{custom" +
-      "er}/campaignSharedSets/{campaign_shared_" +
-      "set}B\203\002\n%com.google.ads.googleads.v3.res" +
-      "ourcesB\026CampaignSharedSetProtoP\001ZJgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v3/resources;resources\242\002\003GAA\252\002!Goo" +
-      "gle.Ads.GoogleAds.V3.Resources\312\002!Google\\" +
-      "Ads\\GoogleAds\\V3\\Resources\352\002%Google::Ads" +
-      "::GoogleAds::V3::Resourcesb\006proto3"
+      "\032\037google/api/field_behavior.proto\032\031googl" +
+      "e/api/resource.proto\032\036google/protobuf/wr" +
+      "appers.proto\032\034google/api/annotations.pro" +
+      "to\"\360\003\n\021CampaignSharedSet\022I\n\rresource_nam" +
+      "e\030\001 \001(\tB2\340A\005\372A,\n*googleads.googleapis.co" +
+      "m/CampaignSharedSet\022Y\n\010campaign\030\003 \001(\0132\034." +
+      "google.protobuf.StringValueB)\340A\005\372A#\n!goo" +
+      "gleads.googleapis.com/Campaign\022\\\n\nshared" +
+      "_set\030\004 \001(\0132\034.google.protobuf.StringValue" +
+      "B*\340A\005\372A$\n\"googleads.googleapis.com/Share" +
+      "dSet\022g\n\006status\030\002 \001(\0162R.google.ads.google" +
+      "ads.v3.enums.CampaignSharedSetStatusEnum" +
+      ".CampaignSharedSetStatusB\003\340A\003:n\352Ak\n*goog" +
+      "leads.googleapis.com/CampaignSharedSet\022=" +
+      "customers/{customer}/campaignSharedSets/" +
+      "{campaign_shared_set}B\203\002\n%com.google.ads" +
+      ".googleads.v3.resourcesB\026CampaignSharedS" +
+      "etProtoP\001ZJgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v3/resources;reso" +
+      "urces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V3.Re" +
+      "sources\312\002!Google\\Ads\\GoogleAds\\V3\\Resour" +
+      "ces\352\002%Google::Ads::GoogleAds::V3::Resour" +
+      "cesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -63,6 +68,7 @@ public final class CampaignSharedSetProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.CampaignSharedSetStatusProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -75,10 +81,13 @@ public final class CampaignSharedSetProto {
         new java.lang.String[] { "ResourceName", "Campaign", "SharedSet", "Status", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.CampaignSharedSetStatusProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

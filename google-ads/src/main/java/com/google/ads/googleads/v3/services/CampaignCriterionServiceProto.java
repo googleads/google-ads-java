@@ -54,46 +54,48 @@ public final class CampaignCriterionServiceProto {
       "ads/v3/resources/campaign_criterion.prot" +
       "o\032\034google/api/annotations.proto\032\027google/" +
       "api/client.proto\032\037google/api/field_behav" +
-      "ior.proto\032 google/protobuf/field_mask.pr" +
-      "oto\032\027google/rpc/status.proto\"9\n\033GetCampa" +
-      "ignCriterionRequest\022\032\n\rresource_name\030\001 \001" +
-      "(\tB\003\340A\002\"\300\001\n\035MutateCampaignCriteriaReques" +
-      "t\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022U\n\noperation" +
-      "s\030\002 \003(\0132<.google.ads.googleads.v3.servic" +
-      "es.CampaignCriterionOperationB\003\340A\002\022\027\n\017pa" +
-      "rtial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001" +
-      "(\010\"\374\001\n\032CampaignCriterionOperation\022/\n\013upd" +
-      "ate_mask\030\004 \001(\0132\032.google.protobuf.FieldMa" +
-      "sk\022F\n\006create\030\001 \001(\01324.google.ads.googlead" +
-      "s.v3.resources.CampaignCriterionH\000\022F\n\006up" +
-      "date\030\002 \001(\01324.google.ads.googleads.v3.res" +
-      "ources.CampaignCriterionH\000\022\020\n\006remove\030\003 \001" +
-      "(\tH\000B\013\n\toperation\"\245\001\n\036MutateCampaignCrit" +
-      "eriaResponse\0221\n\025partial_failure_error\030\003 " +
-      "\001(\0132\022.google.rpc.Status\022P\n\007results\030\002 \003(\013" +
-      "2?.google.ads.googleads.v3.services.Muta" +
-      "teCampaignCriterionResult\"6\n\035MutateCampa" +
-      "ignCriterionResult\022\025\n\rresource_name\030\001 \001(" +
-      "\t2\212\004\n\030CampaignCriterionService\022\327\001\n\024GetCa" +
-      "mpaignCriterion\022=.google.ads.googleads.v" +
-      "3.services.GetCampaignCriterionRequest\0324" +
-      ".google.ads.googleads.v3.resources.Campa" +
-      "ignCriterion\"J\202\323\344\223\0024\0222/v3/{resource_name" +
-      "=customers/*/campaignCriteria/*}\332A\rresou" +
-      "rce_name\022\366\001\n\026MutateCampaignCriteria\022?.go" +
-      "ogle.ads.googleads.v3.services.MutateCam" +
-      "paignCriteriaRequest\032@.google.ads.google" +
-      "ads.v3.services.MutateCampaignCriteriaRe" +
-      "sponse\"Y\202\323\344\223\002:\"5/v3/customers/{customer_" +
-      "id=*}/campaignCriteria:mutate:\001*\332A\026custo" +
-      "mer_id,operations\032\033\312A\030googleads.googleap" +
-      "is.comB\204\002\n$com.google.ads.googleads.v3.s" +
-      "ervicesB\035CampaignCriterionServiceProtoP\001" +
-      "ZHgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v3/services;services\242\002\003GAA" +
-      "\252\002 Google.Ads.GoogleAds.V3.Services\312\002 Go" +
-      "ogle\\Ads\\GoogleAds\\V3\\Services\352\002$Google:" +
-      ":Ads::GoogleAds::V3::Servicesb\006proto3"
+      "ior.proto\032\031google/api/resource.proto\032 go" +
+      "ogle/protobuf/field_mask.proto\032\027google/r" +
+      "pc/status.proto\"h\n\033GetCampaignCriterionR" +
+      "equest\022I\n\rresource_name\030\001 \001(\tB2\340A\002\372A,\n*g" +
+      "oogleads.googleapis.com/CampaignCriterio" +
+      "n\"\300\001\n\035MutateCampaignCriteriaRequest\022\030\n\013c" +
+      "ustomer_id\030\001 \001(\tB\003\340A\002\022U\n\noperations\030\002 \003(" +
+      "\0132<.google.ads.googleads.v3.services.Cam" +
+      "paignCriterionOperationB\003\340A\002\022\027\n\017partial_" +
+      "failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\374\001\n" +
+      "\032CampaignCriterionOperation\022/\n\013update_ma" +
+      "sk\030\004 \001(\0132\032.google.protobuf.FieldMask\022F\n\006" +
+      "create\030\001 \001(\01324.google.ads.googleads.v3.r" +
+      "esources.CampaignCriterionH\000\022F\n\006update\030\002" +
+      " \001(\01324.google.ads.googleads.v3.resources" +
+      ".CampaignCriterionH\000\022\020\n\006remove\030\003 \001(\tH\000B\013" +
+      "\n\toperation\"\245\001\n\036MutateCampaignCriteriaRe" +
+      "sponse\0221\n\025partial_failure_error\030\003 \001(\0132\022." +
+      "google.rpc.Status\022P\n\007results\030\002 \003(\0132?.goo" +
+      "gle.ads.googleads.v3.services.MutateCamp" +
+      "aignCriterionResult\"6\n\035MutateCampaignCri" +
+      "terionResult\022\025\n\rresource_name\030\001 \001(\t2\212\004\n\030" +
+      "CampaignCriterionService\022\327\001\n\024GetCampaign" +
+      "Criterion\022=.google.ads.googleads.v3.serv" +
+      "ices.GetCampaignCriterionRequest\0324.googl" +
+      "e.ads.googleads.v3.resources.CampaignCri" +
+      "terion\"J\202\323\344\223\0024\0222/v3/{resource_name=custo" +
+      "mers/*/campaignCriteria/*}\332A\rresource_na" +
+      "me\022\366\001\n\026MutateCampaignCriteria\022?.google.a" +
+      "ds.googleads.v3.services.MutateCampaignC" +
+      "riteriaRequest\032@.google.ads.googleads.v3" +
+      ".services.MutateCampaignCriteriaResponse" +
+      "\"Y\202\323\344\223\002:\"5/v3/customers/{customer_id=*}/" +
+      "campaignCriteria:mutate:\001*\332A\026customer_id" +
+      ",operations\032\033\312A\030googleads.googleapis.com" +
+      "B\204\002\n$com.google.ads.googleads.v3.service" +
+      "sB\035CampaignCriterionServiceProtoP\001ZHgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v3/services;services\242\002\003GAA\252\002 Goo" +
+      "gle.Ads.GoogleAds.V3.Services\312\002 Google\\A" +
+      "ds\\GoogleAds\\V3\\Services\352\002$Google::Ads::" +
+      "GoogleAds::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -110,6 +112,7 @@ public final class CampaignCriterionServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
@@ -149,12 +152,14 @@ public final class CampaignCriterionServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.CampaignCriterionProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }

@@ -97,7 +97,7 @@ public interface ForecastOrBuilder extends
   /**
    * <pre>
    * Total number of ad impressions. This includes impressions that may fall
-   * outside the specified Targeting, due to insufficent information on
+   * outside the specified Targeting, due to insufficient information on
    * signed-in users.
    * </pre>
    *
@@ -107,7 +107,7 @@ public interface ForecastOrBuilder extends
   /**
    * <pre>
    * Total number of ad impressions. This includes impressions that may fall
-   * outside the specified Targeting, due to insufficent information on
+   * outside the specified Targeting, due to insufficient information on
    * signed-in users.
    * </pre>
    *
@@ -117,7 +117,7 @@ public interface ForecastOrBuilder extends
   /**
    * <pre>
    * Total number of ad impressions. This includes impressions that may fall
-   * outside the specified Targeting, due to insufficent information on
+   * outside the specified Targeting, due to insufficient information on
    * signed-in users.
    * </pre>
    *

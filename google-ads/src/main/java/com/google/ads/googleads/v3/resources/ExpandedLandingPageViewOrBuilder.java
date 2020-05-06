@@ -9,48 +9,48 @@ public interface ExpandedLandingPageViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the expanded landing page view.
+   * Output only. The resource name of the expanded landing page view.
    * Expanded landing page view resource names have the form:
    * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the expanded landing page view.
+   * Output only. The resource name of the expanded landing page view.
    * Expanded landing page view resource names have the form:
    * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The final URL that clicks are directed to.
+   * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+   * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasExpandedFinalUrl();
   /**
    * <pre>
-   * The final URL that clicks are directed to.
+   * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+   * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getExpandedFinalUrl();
   /**
    * <pre>
-   * The final URL that clicks are directed to.
+   * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+   * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getExpandedFinalUrlOrBuilder();
 }

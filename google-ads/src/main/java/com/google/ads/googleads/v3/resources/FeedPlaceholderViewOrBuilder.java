@@ -9,40 +9,40 @@ public interface FeedPlaceholderViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the feed placeholder view.
+   * Output only. The resource name of the feed placeholder view.
    * Feed placeholder view resource names have the form:
    * `customers/{customer_id}/feedPlaceholderViews/{placeholder_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the feed placeholder view.
+   * Output only. The resource name of the feed placeholder view.
    * Feed placeholder view resource names have the form:
    * `customers/{customer_id}/feedPlaceholderViews/{placeholder_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The placeholder type of the feed placeholder view.
+   * Output only. The placeholder type of the feed placeholder view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getPlaceholderTypeValue();
   /**
    * <pre>
-   * The placeholder type of the feed placeholder view.
+   * Output only. The placeholder type of the feed placeholder view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType();
 }

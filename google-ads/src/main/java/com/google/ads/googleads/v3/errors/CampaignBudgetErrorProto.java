@@ -31,7 +31,7 @@ public final class CampaignBudgetErrorProto {
       "\n:google/ads/googleads/v3/errors/campaig" +
       "n_budget_error.proto\022\036google.ads.googlea" +
       "ds.v3.errors\032\034google/api/annotations.pro" +
-      "to\"\340\005\n\027CampaignBudgetErrorEnum\"\304\005\n\023Campa" +
+      "to\"\237\006\n\027CampaignBudgetErrorEnum\"\203\006\n\023Campa" +
       "ignBudgetError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
       "WN\020\001\022$\n CAMPAIGN_BUDGET_CANNOT_BE_SHARED" +
       "\020\021\022\033\n\027CAMPAIGN_BUDGET_REMOVED\020\002\022\032\n\026CAMPA" +
@@ -49,13 +49,15 @@ public final class CampaignBudgetErrorProto {
       "NEY_AMOUNT_LESS_THAN_CURRENCY_MINIMUM_CP" +
       "C\020\r\022\032\n\026MONEY_AMOUNT_TOO_LARGE\020\016\022\031\n\025NEGAT" +
       "IVE_MONEY_AMOUNT\020\017\022)\n%NON_MULTIPLE_OF_MI" +
-      "NIMUM_CURRENCY_UNIT\020\020B\363\001\n\"com.google.ads" +
-      ".googleads.v3.errorsB\030CampaignBudgetErro" +
-      "rProtoP\001ZDgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v3/errors;errors\242\002" +
-      "\003GAA\252\002\036Google.Ads.GoogleAds.V3.Errors\312\002\036" +
-      "Google\\Ads\\GoogleAds\\V3\\Errors\352\002\"Google:" +
-      ":Ads::GoogleAds::V3::Errorsb\006proto3"
+      "NIMUM_CURRENCY_UNIT\020\020\022=\n9TOTAL_BUDGET_AM" +
+      "OUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_DAI" +
+      "LY\020\022B\363\001\n\"com.google.ads.googleads.v3.err" +
+      "orsB\030CampaignBudgetErrorProtoP\001ZDgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v3/errors;errors\242\002\003GAA\252\002\036Google.Ads" +
+      ".GoogleAds.V3.Errors\312\002\036Google\\Ads\\Google" +
+      "Ads\\V3\\Errors\352\002\"Google::Ads::GoogleAds::" +
+      "V3::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

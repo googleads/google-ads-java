@@ -33,21 +33,23 @@ public final class GenderViewServiceProto {
       "ds.v3.services\0323google/ads/googleads/v3/" +
       "resources/gender_view.proto\032\034google/api/" +
       "annotations.proto\032\027google/api/client.pro" +
-      "to\032\037google/api/field_behavior.proto\"2\n\024G" +
-      "etGenderViewRequest\022\032\n\rresource_name\030\001 \001" +
-      "(\tB\003\340A\0022\360\001\n\021GenderViewService\022\275\001\n\rGetGen" +
-      "derView\0226.google.ads.googleads.v3.servic" +
-      "es.GetGenderViewRequest\032-.google.ads.goo" +
-      "gleads.v3.resources.GenderView\"E\202\323\344\223\002/\022-" +
-      "/v3/{resource_name=customers/*/genderVie" +
-      "ws/*}\332A\rresource_name\032\033\312A\030googleads.goog" +
-      "leapis.comB\375\001\n$com.google.ads.googleads." +
-      "v3.servicesB\026GenderViewServiceProtoP\001ZHg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v3/services;services\242\002\003GAA\252\002 " +
-      "Google.Ads.GoogleAds.V3.Services\312\002 Googl" +
-      "e\\Ads\\GoogleAds\\V3\\Services\352\002$Google::Ad" +
-      "s::GoogleAds::V3::Servicesb\006proto3"
+      "to\032\037google/api/field_behavior.proto\032\031goo" +
+      "gle/api/resource.proto\"Z\n\024GetGenderViewR" +
+      "equest\022B\n\rresource_name\030\001 \001(\tB+\340A\002\372A%\n#g" +
+      "oogleads.googleapis.com/GenderView2\360\001\n\021G" +
+      "enderViewService\022\275\001\n\rGetGenderView\0226.goo" +
+      "gle.ads.googleads.v3.services.GetGenderV" +
+      "iewRequest\032-.google.ads.googleads.v3.res" +
+      "ources.GenderView\"E\202\323\344\223\002/\022-/v3/{resource" +
+      "_name=customers/*/genderViews/*}\332A\rresou" +
+      "rce_name\032\033\312A\030googleads.googleapis.comB\375\001" +
+      "\n$com.google.ads.googleads.v3.servicesB\026" +
+      "GenderViewServiceProtoP\001ZHgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v3" +
+      "/services;services\242\002\003GAA\252\002 Google.Ads.Go" +
+      "ogleAds.V3.Services\312\002 Google\\Ads\\GoogleA" +
+      "ds\\V3\\Services\352\002$Google::Ads::GoogleAds:" +
+      ":V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -64,6 +66,7 @@ public final class GenderViewServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetGenderViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -77,12 +80,14 @@ public final class GenderViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.GenderViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

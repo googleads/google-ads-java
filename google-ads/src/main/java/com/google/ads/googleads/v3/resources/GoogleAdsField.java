@@ -247,12 +247,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the artifact.
+   * Output only. The resource name of the artifact.
    * Artifact resource names have the form:
    * `googleAdsFields/{name}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -268,12 +268,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the artifact.
+   * Output only. The resource name of the artifact.
    * Artifact resource names have the form:
    * `googleAdsFields/{name}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -293,30 +293,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * The name of the artifact.
+   * Output only. The name of the artifact.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 2;</code>
+   * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * The name of the artifact.
+   * Output only. The name of the artifact.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 2;</code>
+   * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * The name of the artifact.
+   * Output only. The name of the artifact.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 2;</code>
+   * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
@@ -326,20 +326,20 @@ private static final long serialVersionUID = 0L;
   private int category_;
   /**
    * <pre>
-   * The category of the artifact.
+   * Output only. The category of the artifact.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getCategoryValue() {
     return category_;
   }
   /**
    * <pre>
-   * The category of the artifact.
+   * Output only. The category of the artifact.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory getCategory() {
     @SuppressWarnings("deprecation")
@@ -351,33 +351,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue selectable_;
   /**
    * <pre>
-   * Whether the artifact can be used in a SELECT clause in search
+   * Output only. Whether the artifact can be used in a SELECT clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue selectable = 4;</code>
+   * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasSelectable() {
     return selectable_ != null;
   }
   /**
    * <pre>
-   * Whether the artifact can be used in a SELECT clause in search
+   * Output only. Whether the artifact can be used in a SELECT clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue selectable = 4;</code>
+   * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getSelectable() {
     return selectable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : selectable_;
   }
   /**
    * <pre>
-   * Whether the artifact can be used in a SELECT clause in search
+   * Output only. Whether the artifact can be used in a SELECT clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue selectable = 4;</code>
+   * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getSelectableOrBuilder() {
     return getSelectable();
@@ -387,33 +387,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue filterable_;
   /**
    * <pre>
-   * Whether the artifact can be used in a WHERE clause in search
+   * Output only. Whether the artifact can be used in a WHERE clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue filterable = 5;</code>
+   * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasFilterable() {
     return filterable_ != null;
   }
   /**
    * <pre>
-   * Whether the artifact can be used in a WHERE clause in search
+   * Output only. Whether the artifact can be used in a WHERE clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue filterable = 5;</code>
+   * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getFilterable() {
     return filterable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : filterable_;
   }
   /**
    * <pre>
-   * Whether the artifact can be used in a WHERE clause in search
+   * Output only. Whether the artifact can be used in a WHERE clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue filterable = 5;</code>
+   * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getFilterableOrBuilder() {
     return getFilterable();
@@ -423,33 +423,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue sortable_;
   /**
    * <pre>
-   * Whether the artifact can be used in a ORDER BY clause in search
+   * Output only. Whether the artifact can be used in a ORDER BY clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue sortable = 6;</code>
+   * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasSortable() {
     return sortable_ != null;
   }
   /**
    * <pre>
-   * Whether the artifact can be used in a ORDER BY clause in search
+   * Output only. Whether the artifact can be used in a ORDER BY clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue sortable = 6;</code>
+   * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getSortable() {
     return sortable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sortable_;
   }
   /**
    * <pre>
-   * Whether the artifact can be used in a ORDER BY clause in search
+   * Output only. Whether the artifact can be used in a ORDER BY clause in search
    * queries.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue sortable = 6;</code>
+   * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getSortableOrBuilder() {
     return getSortable();
@@ -459,22 +459,22 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.protobuf.StringValue> selectableWith_;
   /**
    * <pre>
-   * The names of all resources, segments, and metrics that are selectable with
+   * Output only. The names of all resources, segments, and metrics that are selectable with
    * the described artifact.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+   * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.protobuf.StringValue> getSelectableWithList() {
     return selectableWith_;
   }
   /**
    * <pre>
-   * The names of all resources, segments, and metrics that are selectable with
+   * Output only. The names of all resources, segments, and metrics that are selectable with
    * the described artifact.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+   * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getSelectableWithOrBuilderList() {
@@ -482,33 +482,33 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The names of all resources, segments, and metrics that are selectable with
+   * Output only. The names of all resources, segments, and metrics that are selectable with
    * the described artifact.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+   * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getSelectableWithCount() {
     return selectableWith_.size();
   }
   /**
    * <pre>
-   * The names of all resources, segments, and metrics that are selectable with
+   * Output only. The names of all resources, segments, and metrics that are selectable with
    * the described artifact.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+   * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getSelectableWith(int index) {
     return selectableWith_.get(index);
   }
   /**
    * <pre>
-   * The names of all resources, segments, and metrics that are selectable with
+   * Output only. The names of all resources, segments, and metrics that are selectable with
    * the described artifact.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+   * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getSelectableWithOrBuilder(
       int index) {
@@ -519,26 +519,26 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.protobuf.StringValue> attributeResources_;
   /**
    * <pre>
-   * The names of all resources that are selectable with the described
+   * Output only. The names of all resources that are selectable with the described
    * artifact. Fields from these resources do not segment metrics when included
    * in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+   * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.protobuf.StringValue> getAttributeResourcesList() {
     return attributeResources_;
   }
   /**
    * <pre>
-   * The names of all resources that are selectable with the described
+   * Output only. The names of all resources that are selectable with the described
    * artifact. Fields from these resources do not segment metrics when included
    * in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+   * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getAttributeResourcesOrBuilderList() {
@@ -546,39 +546,39 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The names of all resources that are selectable with the described
+   * Output only. The names of all resources that are selectable with the described
    * artifact. Fields from these resources do not segment metrics when included
    * in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+   * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getAttributeResourcesCount() {
     return attributeResources_.size();
   }
   /**
    * <pre>
-   * The names of all resources that are selectable with the described
+   * Output only. The names of all resources that are selectable with the described
    * artifact. Fields from these resources do not segment metrics when included
    * in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+   * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getAttributeResources(int index) {
     return attributeResources_.get(index);
   }
   /**
    * <pre>
-   * The names of all resources that are selectable with the described
+   * Output only. The names of all resources that are selectable with the described
    * artifact. Fields from these resources do not segment metrics when included
    * in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+   * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getAttributeResourcesOrBuilder(
       int index) {
@@ -589,7 +589,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.protobuf.StringValue> metrics_;
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all metrics that are
+   * Output only. At and beyond version V1 this field lists the names of all metrics that are
    * selectable with the described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
    * Before version V1 this field lists the names of all metrics that are
@@ -597,14 +597,14 @@ private static final long serialVersionUID = 0L;
    * category is either RESOURCE or SEGMENT
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+   * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.protobuf.StringValue> getMetricsList() {
     return metrics_;
   }
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all metrics that are
+   * Output only. At and beyond version V1 this field lists the names of all metrics that are
    * selectable with the described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
    * Before version V1 this field lists the names of all metrics that are
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
    * category is either RESOURCE or SEGMENT
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+   * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getMetricsOrBuilderList() {
@@ -620,7 +620,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all metrics that are
+   * Output only. At and beyond version V1 this field lists the names of all metrics that are
    * selectable with the described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
    * Before version V1 this field lists the names of all metrics that are
@@ -628,14 +628,14 @@ private static final long serialVersionUID = 0L;
    * category is either RESOURCE or SEGMENT
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+   * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getMetricsCount() {
     return metrics_.size();
   }
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all metrics that are
+   * Output only. At and beyond version V1 this field lists the names of all metrics that are
    * selectable with the described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
    * Before version V1 this field lists the names of all metrics that are
@@ -643,14 +643,14 @@ private static final long serialVersionUID = 0L;
    * category is either RESOURCE or SEGMENT
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+   * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getMetrics(int index) {
     return metrics_.get(index);
   }
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all metrics that are
+   * Output only. At and beyond version V1 this field lists the names of all metrics that are
    * selectable with the described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
    * Before version V1 this field lists the names of all metrics that are
@@ -658,7 +658,7 @@ private static final long serialVersionUID = 0L;
    * category is either RESOURCE or SEGMENT
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+   * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getMetricsOrBuilder(
       int index) {
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.protobuf.StringValue> segments_;
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all artifacts,
+   * Output only. At and beyond version V1 this field lists the names of all artifacts,
    * whether a segment or another resource, that segment metrics when included
    * in search queries and when the described artifact is used in the FROM
    * clause. It is only set for artifacts whose category is RESOURCE.
@@ -679,14 +679,14 @@ private static final long serialVersionUID = 0L;
    * METRIC.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+   * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.protobuf.StringValue> getSegmentsList() {
     return segments_;
   }
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all artifacts,
+   * Output only. At and beyond version V1 this field lists the names of all artifacts,
    * whether a segment or another resource, that segment metrics when included
    * in search queries and when the described artifact is used in the FROM
    * clause. It is only set for artifacts whose category is RESOURCE.
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
    * METRIC.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+   * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getSegmentsOrBuilderList() {
@@ -704,7 +704,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all artifacts,
+   * Output only. At and beyond version V1 this field lists the names of all artifacts,
    * whether a segment or another resource, that segment metrics when included
    * in search queries and when the described artifact is used in the FROM
    * clause. It is only set for artifacts whose category is RESOURCE.
@@ -714,14 +714,14 @@ private static final long serialVersionUID = 0L;
    * METRIC.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+   * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getSegmentsCount() {
     return segments_.size();
   }
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all artifacts,
+   * Output only. At and beyond version V1 this field lists the names of all artifacts,
    * whether a segment or another resource, that segment metrics when included
    * in search queries and when the described artifact is used in the FROM
    * clause. It is only set for artifacts whose category is RESOURCE.
@@ -731,14 +731,14 @@ private static final long serialVersionUID = 0L;
    * METRIC.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+   * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getSegments(int index) {
     return segments_.get(index);
   }
   /**
    * <pre>
-   * At and beyond version V1 this field lists the names of all artifacts,
+   * Output only. At and beyond version V1 this field lists the names of all artifacts,
    * whether a segment or another resource, that segment metrics when included
    * in search queries and when the described artifact is used in the FROM
    * clause. It is only set for artifacts whose category is RESOURCE.
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
    * METRIC.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+   * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getSegmentsOrBuilder(
       int index) {
@@ -759,22 +759,22 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.protobuf.StringValue> enumValues_;
   /**
    * <pre>
-   * Values the artifact can assume if it is a field of type ENUM.
+   * Output only. Values the artifact can assume if it is a field of type ENUM.
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+   * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.protobuf.StringValue> getEnumValuesList() {
     return enumValues_;
   }
   /**
    * <pre>
-   * Values the artifact can assume if it is a field of type ENUM.
+   * Output only. Values the artifact can assume if it is a field of type ENUM.
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+   * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getEnumValuesOrBuilderList() {
@@ -782,33 +782,33 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Values the artifact can assume if it is a field of type ENUM.
+   * Output only. Values the artifact can assume if it is a field of type ENUM.
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+   * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getEnumValuesCount() {
     return enumValues_.size();
   }
   /**
    * <pre>
-   * Values the artifact can assume if it is a field of type ENUM.
+   * Output only. Values the artifact can assume if it is a field of type ENUM.
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+   * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getEnumValues(int index) {
     return enumValues_.get(index);
   }
   /**
    * <pre>
-   * Values the artifact can assume if it is a field of type ENUM.
+   * Output only. Values the artifact can assume if it is a field of type ENUM.
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+   * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getEnumValuesOrBuilder(
       int index) {
@@ -819,22 +819,22 @@ private static final long serialVersionUID = 0L;
   private int dataType_;
   /**
    * <pre>
-   * This field determines the operators that can be used with the artifact
+   * Output only. This field determines the operators that can be used with the artifact
    * in WHERE clauses.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getDataTypeValue() {
     return dataType_;
   }
   /**
    * <pre>
-   * This field determines the operators that can be used with the artifact
+   * Output only. This field determines the operators that can be used with the artifact
    * in WHERE clauses.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType getDataType() {
     @SuppressWarnings("deprecation")
@@ -846,30 +846,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue typeUrl_;
   /**
    * <pre>
-   * The URL of proto describing the artifact's data type.
+   * Output only. The URL of proto describing the artifact's data type.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue type_url = 13;</code>
+   * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasTypeUrl() {
     return typeUrl_ != null;
   }
   /**
    * <pre>
-   * The URL of proto describing the artifact's data type.
+   * Output only. The URL of proto describing the artifact's data type.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue type_url = 13;</code>
+   * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getTypeUrl() {
     return typeUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : typeUrl_;
   }
   /**
    * <pre>
-   * The URL of proto describing the artifact's data type.
+   * Output only. The URL of proto describing the artifact's data type.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue type_url = 13;</code>
+   * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getTypeUrlOrBuilder() {
     return getTypeUrl();
@@ -879,30 +879,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue isRepeated_;
   /**
    * <pre>
-   * Whether the field artifact is repeated.
+   * Output only. Whether the field artifact is repeated.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+   * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasIsRepeated() {
     return isRepeated_ != null;
   }
   /**
    * <pre>
-   * Whether the field artifact is repeated.
+   * Output only. Whether the field artifact is repeated.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+   * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getIsRepeated() {
     return isRepeated_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : isRepeated_;
   }
   /**
    * <pre>
-   * Whether the field artifact is repeated.
+   * Output only. Whether the field artifact is repeated.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+   * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getIsRepeatedOrBuilder() {
     return getIsRepeated();
@@ -1708,12 +1708,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the artifact.
+     * Output only. The resource name of the artifact.
      * Artifact resource names have the form:
      * `googleAdsFields/{name}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1729,12 +1729,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the artifact.
+     * Output only. The resource name of the artifact.
      * Artifact resource names have the form:
      * `googleAdsFields/{name}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1751,12 +1751,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the artifact.
+     * Output only. The resource name of the artifact.
      * Artifact resource names have the form:
      * `googleAdsFields/{name}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1770,12 +1770,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the artifact.
+     * Output only. The resource name of the artifact.
      * Artifact resource names have the form:
      * `googleAdsFields/{name}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1785,12 +1785,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the artifact.
+     * Output only. The resource name of the artifact.
      * Artifact resource names have the form:
      * `googleAdsFields/{name}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1809,20 +1809,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * The name of the artifact.
+     * Output only. The name of the artifact.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 2;</code>
+     * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * The name of the artifact.
+     * Output only. The name of the artifact.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 2;</code>
+     * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1833,10 +1833,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the artifact.
+     * Output only. The name of the artifact.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 2;</code>
+     * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1853,10 +1853,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the artifact.
+     * Output only. The name of the artifact.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 2;</code>
+     * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1871,10 +1871,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the artifact.
+     * Output only. The name of the artifact.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 2;</code>
+     * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1893,10 +1893,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the artifact.
+     * Output only. The name of the artifact.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 2;</code>
+     * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -1911,10 +1911,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the artifact.
+     * Output only. The name of the artifact.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 2;</code>
+     * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -1923,10 +1923,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the artifact.
+     * Output only. The name of the artifact.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 2;</code>
+     * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -1938,10 +1938,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the artifact.
+     * Output only. The name of the artifact.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 2;</code>
+     * <code>.google.protobuf.StringValue name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1960,20 +1960,20 @@ private static final long serialVersionUID = 0L;
     private int category_ = 0;
     /**
      * <pre>
-     * The category of the artifact.
+     * Output only. The category of the artifact.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getCategoryValue() {
       return category_;
     }
     /**
      * <pre>
-     * The category of the artifact.
+     * Output only. The category of the artifact.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCategoryValue(int value) {
       category_ = value;
@@ -1982,10 +1982,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category of the artifact.
+     * Output only. The category of the artifact.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory getCategory() {
       @SuppressWarnings("deprecation")
@@ -1994,10 +1994,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category of the artifact.
+     * Output only. The category of the artifact.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCategory(com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory value) {
       if (value == null) {
@@ -2010,10 +2010,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category of the artifact.
+     * Output only. The category of the artifact.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCategory() {
       
@@ -2027,22 +2027,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> selectableBuilder_;
     /**
      * <pre>
-     * Whether the artifact can be used in a SELECT clause in search
+     * Output only. Whether the artifact can be used in a SELECT clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue selectable = 4;</code>
+     * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSelectable() {
       return selectableBuilder_ != null || selectable_ != null;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a SELECT clause in search
+     * Output only. Whether the artifact can be used in a SELECT clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue selectable = 4;</code>
+     * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getSelectable() {
       if (selectableBuilder_ == null) {
@@ -2053,11 +2053,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a SELECT clause in search
+     * Output only. Whether the artifact can be used in a SELECT clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue selectable = 4;</code>
+     * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSelectable(com.google.protobuf.BoolValue value) {
       if (selectableBuilder_ == null) {
@@ -2074,11 +2074,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a SELECT clause in search
+     * Output only. Whether the artifact can be used in a SELECT clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue selectable = 4;</code>
+     * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSelectable(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -2093,11 +2093,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a SELECT clause in search
+     * Output only. Whether the artifact can be used in a SELECT clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue selectable = 4;</code>
+     * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeSelectable(com.google.protobuf.BoolValue value) {
       if (selectableBuilder_ == null) {
@@ -2116,11 +2116,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a SELECT clause in search
+     * Output only. Whether the artifact can be used in a SELECT clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue selectable = 4;</code>
+     * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSelectable() {
       if (selectableBuilder_ == null) {
@@ -2135,11 +2135,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a SELECT clause in search
+     * Output only. Whether the artifact can be used in a SELECT clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue selectable = 4;</code>
+     * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getSelectableBuilder() {
       
@@ -2148,11 +2148,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a SELECT clause in search
+     * Output only. Whether the artifact can be used in a SELECT clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue selectable = 4;</code>
+     * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getSelectableOrBuilder() {
       if (selectableBuilder_ != null) {
@@ -2164,11 +2164,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a SELECT clause in search
+     * Output only. Whether the artifact can be used in a SELECT clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue selectable = 4;</code>
+     * <code>.google.protobuf.BoolValue selectable = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -2189,22 +2189,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> filterableBuilder_;
     /**
      * <pre>
-     * Whether the artifact can be used in a WHERE clause in search
+     * Output only. Whether the artifact can be used in a WHERE clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue filterable = 5;</code>
+     * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasFilterable() {
       return filterableBuilder_ != null || filterable_ != null;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a WHERE clause in search
+     * Output only. Whether the artifact can be used in a WHERE clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue filterable = 5;</code>
+     * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getFilterable() {
       if (filterableBuilder_ == null) {
@@ -2215,11 +2215,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a WHERE clause in search
+     * Output only. Whether the artifact can be used in a WHERE clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue filterable = 5;</code>
+     * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFilterable(com.google.protobuf.BoolValue value) {
       if (filterableBuilder_ == null) {
@@ -2236,11 +2236,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a WHERE clause in search
+     * Output only. Whether the artifact can be used in a WHERE clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue filterable = 5;</code>
+     * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFilterable(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -2255,11 +2255,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a WHERE clause in search
+     * Output only. Whether the artifact can be used in a WHERE clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue filterable = 5;</code>
+     * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeFilterable(com.google.protobuf.BoolValue value) {
       if (filterableBuilder_ == null) {
@@ -2278,11 +2278,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a WHERE clause in search
+     * Output only. Whether the artifact can be used in a WHERE clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue filterable = 5;</code>
+     * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearFilterable() {
       if (filterableBuilder_ == null) {
@@ -2297,11 +2297,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a WHERE clause in search
+     * Output only. Whether the artifact can be used in a WHERE clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue filterable = 5;</code>
+     * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getFilterableBuilder() {
       
@@ -2310,11 +2310,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a WHERE clause in search
+     * Output only. Whether the artifact can be used in a WHERE clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue filterable = 5;</code>
+     * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getFilterableOrBuilder() {
       if (filterableBuilder_ != null) {
@@ -2326,11 +2326,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a WHERE clause in search
+     * Output only. Whether the artifact can be used in a WHERE clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue filterable = 5;</code>
+     * <code>.google.protobuf.BoolValue filterable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -2351,22 +2351,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> sortableBuilder_;
     /**
      * <pre>
-     * Whether the artifact can be used in a ORDER BY clause in search
+     * Output only. Whether the artifact can be used in a ORDER BY clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue sortable = 6;</code>
+     * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSortable() {
       return sortableBuilder_ != null || sortable_ != null;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a ORDER BY clause in search
+     * Output only. Whether the artifact can be used in a ORDER BY clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue sortable = 6;</code>
+     * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getSortable() {
       if (sortableBuilder_ == null) {
@@ -2377,11 +2377,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a ORDER BY clause in search
+     * Output only. Whether the artifact can be used in a ORDER BY clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue sortable = 6;</code>
+     * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSortable(com.google.protobuf.BoolValue value) {
       if (sortableBuilder_ == null) {
@@ -2398,11 +2398,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a ORDER BY clause in search
+     * Output only. Whether the artifact can be used in a ORDER BY clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue sortable = 6;</code>
+     * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSortable(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -2417,11 +2417,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a ORDER BY clause in search
+     * Output only. Whether the artifact can be used in a ORDER BY clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue sortable = 6;</code>
+     * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeSortable(com.google.protobuf.BoolValue value) {
       if (sortableBuilder_ == null) {
@@ -2440,11 +2440,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a ORDER BY clause in search
+     * Output only. Whether the artifact can be used in a ORDER BY clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue sortable = 6;</code>
+     * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSortable() {
       if (sortableBuilder_ == null) {
@@ -2459,11 +2459,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a ORDER BY clause in search
+     * Output only. Whether the artifact can be used in a ORDER BY clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue sortable = 6;</code>
+     * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getSortableBuilder() {
       
@@ -2472,11 +2472,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a ORDER BY clause in search
+     * Output only. Whether the artifact can be used in a ORDER BY clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue sortable = 6;</code>
+     * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getSortableOrBuilder() {
       if (sortableBuilder_ != null) {
@@ -2488,11 +2488,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the artifact can be used in a ORDER BY clause in search
+     * Output only. Whether the artifact can be used in a ORDER BY clause in search
      * queries.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue sortable = 6;</code>
+     * <code>.google.protobuf.BoolValue sortable = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -2522,11 +2522,11 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getSelectableWithList() {
       if (selectableWithBuilder_ == null) {
@@ -2537,11 +2537,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getSelectableWithCount() {
       if (selectableWithBuilder_ == null) {
@@ -2552,11 +2552,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getSelectableWith(int index) {
       if (selectableWithBuilder_ == null) {
@@ -2567,11 +2567,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSelectableWith(
         int index, com.google.protobuf.StringValue value) {
@@ -2589,11 +2589,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSelectableWith(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2608,11 +2608,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addSelectableWith(com.google.protobuf.StringValue value) {
       if (selectableWithBuilder_ == null) {
@@ -2629,11 +2629,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addSelectableWith(
         int index, com.google.protobuf.StringValue value) {
@@ -2651,11 +2651,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addSelectableWith(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2670,11 +2670,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addSelectableWith(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2689,11 +2689,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllSelectableWith(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -2709,11 +2709,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSelectableWith() {
       if (selectableWithBuilder_ == null) {
@@ -2727,11 +2727,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removeSelectableWith(int index) {
       if (selectableWithBuilder_ == null) {
@@ -2745,11 +2745,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getSelectableWithBuilder(
         int index) {
@@ -2757,11 +2757,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSelectableWithOrBuilder(
         int index) {
@@ -2772,11 +2772,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getSelectableWithOrBuilderList() {
@@ -2788,11 +2788,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addSelectableWithBuilder() {
       return getSelectableWithFieldBuilder().addBuilder(
@@ -2800,11 +2800,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addSelectableWithBuilder(
         int index) {
@@ -2813,11 +2813,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources, segments, and metrics that are selectable with
+     * Output only. The names of all resources, segments, and metrics that are selectable with
      * the described artifact.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue selectable_with = 7;</code>
+     * <code>repeated .google.protobuf.StringValue selectable_with = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getSelectableWithBuilderList() {
@@ -2852,13 +2852,13 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getAttributeResourcesList() {
       if (attributeResourcesBuilder_ == null) {
@@ -2869,13 +2869,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getAttributeResourcesCount() {
       if (attributeResourcesBuilder_ == null) {
@@ -2886,13 +2886,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getAttributeResources(int index) {
       if (attributeResourcesBuilder_ == null) {
@@ -2903,13 +2903,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAttributeResources(
         int index, com.google.protobuf.StringValue value) {
@@ -2927,13 +2927,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAttributeResources(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2948,13 +2948,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAttributeResources(com.google.protobuf.StringValue value) {
       if (attributeResourcesBuilder_ == null) {
@@ -2971,13 +2971,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAttributeResources(
         int index, com.google.protobuf.StringValue value) {
@@ -2995,13 +2995,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAttributeResources(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3016,13 +3016,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAttributeResources(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3037,13 +3037,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllAttributeResources(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -3059,13 +3059,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAttributeResources() {
       if (attributeResourcesBuilder_ == null) {
@@ -3079,13 +3079,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removeAttributeResources(int index) {
       if (attributeResourcesBuilder_ == null) {
@@ -3099,13 +3099,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getAttributeResourcesBuilder(
         int index) {
@@ -3113,13 +3113,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAttributeResourcesOrBuilder(
         int index) {
@@ -3130,13 +3130,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getAttributeResourcesOrBuilderList() {
@@ -3148,13 +3148,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addAttributeResourcesBuilder() {
       return getAttributeResourcesFieldBuilder().addBuilder(
@@ -3162,13 +3162,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addAttributeResourcesBuilder(
         int index) {
@@ -3177,13 +3177,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The names of all resources that are selectable with the described
+     * Output only. The names of all resources that are selectable with the described
      * artifact. Fields from these resources do not segment metrics when included
      * in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue attribute_resources = 8;</code>
+     * <code>repeated .google.protobuf.StringValue attribute_resources = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getAttributeResourcesBuilderList() {
@@ -3218,7 +3218,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3226,7 +3226,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getMetricsList() {
       if (metricsBuilder_ == null) {
@@ -3237,7 +3237,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3245,7 +3245,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getMetricsCount() {
       if (metricsBuilder_ == null) {
@@ -3256,7 +3256,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3264,7 +3264,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getMetrics(int index) {
       if (metricsBuilder_ == null) {
@@ -3275,7 +3275,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3283,7 +3283,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setMetrics(
         int index, com.google.protobuf.StringValue value) {
@@ -3301,7 +3301,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3309,7 +3309,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setMetrics(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3324,7 +3324,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3332,7 +3332,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addMetrics(com.google.protobuf.StringValue value) {
       if (metricsBuilder_ == null) {
@@ -3349,7 +3349,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3357,7 +3357,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addMetrics(
         int index, com.google.protobuf.StringValue value) {
@@ -3375,7 +3375,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3383,7 +3383,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addMetrics(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3398,7 +3398,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3406,7 +3406,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addMetrics(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3421,7 +3421,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3429,7 +3429,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllMetrics(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -3445,7 +3445,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3453,7 +3453,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearMetrics() {
       if (metricsBuilder_ == null) {
@@ -3467,7 +3467,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3475,7 +3475,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removeMetrics(int index) {
       if (metricsBuilder_ == null) {
@@ -3489,7 +3489,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3497,7 +3497,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getMetricsBuilder(
         int index) {
@@ -3505,7 +3505,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3513,7 +3513,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getMetricsOrBuilder(
         int index) {
@@ -3524,7 +3524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3532,7 +3532,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getMetricsOrBuilderList() {
@@ -3544,7 +3544,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3552,7 +3552,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addMetricsBuilder() {
       return getMetricsFieldBuilder().addBuilder(
@@ -3560,7 +3560,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3568,7 +3568,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addMetricsBuilder(
         int index) {
@@ -3577,7 +3577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all metrics that are
+     * Output only. At and beyond version V1 this field lists the names of all metrics that are
      * selectable with the described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
      * Before version V1 this field lists the names of all metrics that are
@@ -3585,7 +3585,7 @@ private static final long serialVersionUID = 0L;
      * category is either RESOURCE or SEGMENT
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue metrics = 9;</code>
+     * <code>repeated .google.protobuf.StringValue metrics = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getMetricsBuilderList() {
@@ -3620,7 +3620,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3630,7 +3630,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getSegmentsList() {
       if (segmentsBuilder_ == null) {
@@ -3641,7 +3641,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3651,7 +3651,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getSegmentsCount() {
       if (segmentsBuilder_ == null) {
@@ -3662,7 +3662,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3672,7 +3672,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getSegments(int index) {
       if (segmentsBuilder_ == null) {
@@ -3683,7 +3683,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3693,7 +3693,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSegments(
         int index, com.google.protobuf.StringValue value) {
@@ -3711,7 +3711,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3721,7 +3721,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSegments(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3736,7 +3736,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3746,7 +3746,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addSegments(com.google.protobuf.StringValue value) {
       if (segmentsBuilder_ == null) {
@@ -3763,7 +3763,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3773,7 +3773,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addSegments(
         int index, com.google.protobuf.StringValue value) {
@@ -3791,7 +3791,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3801,7 +3801,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addSegments(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3816,7 +3816,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3826,7 +3826,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addSegments(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3841,7 +3841,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3851,7 +3851,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllSegments(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -3867,7 +3867,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3877,7 +3877,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSegments() {
       if (segmentsBuilder_ == null) {
@@ -3891,7 +3891,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3901,7 +3901,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removeSegments(int index) {
       if (segmentsBuilder_ == null) {
@@ -3915,7 +3915,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3925,7 +3925,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getSegmentsBuilder(
         int index) {
@@ -3933,7 +3933,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3943,7 +3943,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSegmentsOrBuilder(
         int index) {
@@ -3954,7 +3954,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3964,7 +3964,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getSegmentsOrBuilderList() {
@@ -3976,7 +3976,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -3986,7 +3986,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addSegmentsBuilder() {
       return getSegmentsFieldBuilder().addBuilder(
@@ -3994,7 +3994,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -4004,7 +4004,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addSegmentsBuilder(
         int index) {
@@ -4013,7 +4013,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * At and beyond version V1 this field lists the names of all artifacts,
+     * Output only. At and beyond version V1 this field lists the names of all artifacts,
      * whether a segment or another resource, that segment metrics when included
      * in search queries and when the described artifact is used in the FROM
      * clause. It is only set for artifacts whose category is RESOURCE.
@@ -4023,7 +4023,7 @@ private static final long serialVersionUID = 0L;
      * METRIC.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue segments = 10;</code>
+     * <code>repeated .google.protobuf.StringValue segments = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getSegmentsBuilderList() {
@@ -4058,11 +4058,11 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getEnumValuesList() {
       if (enumValuesBuilder_ == null) {
@@ -4073,11 +4073,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getEnumValuesCount() {
       if (enumValuesBuilder_ == null) {
@@ -4088,11 +4088,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getEnumValues(int index) {
       if (enumValuesBuilder_ == null) {
@@ -4103,11 +4103,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEnumValues(
         int index, com.google.protobuf.StringValue value) {
@@ -4125,11 +4125,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEnumValues(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -4144,11 +4144,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addEnumValues(com.google.protobuf.StringValue value) {
       if (enumValuesBuilder_ == null) {
@@ -4165,11 +4165,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addEnumValues(
         int index, com.google.protobuf.StringValue value) {
@@ -4187,11 +4187,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addEnumValues(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -4206,11 +4206,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addEnumValues(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -4225,11 +4225,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllEnumValues(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -4245,11 +4245,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearEnumValues() {
       if (enumValuesBuilder_ == null) {
@@ -4263,11 +4263,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removeEnumValues(int index) {
       if (enumValuesBuilder_ == null) {
@@ -4281,11 +4281,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getEnumValuesBuilder(
         int index) {
@@ -4293,11 +4293,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getEnumValuesOrBuilder(
         int index) {
@@ -4308,11 +4308,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getEnumValuesOrBuilderList() {
@@ -4324,11 +4324,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addEnumValuesBuilder() {
       return getEnumValuesFieldBuilder().addBuilder(
@@ -4336,11 +4336,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addEnumValuesBuilder(
         int index) {
@@ -4349,11 +4349,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Values the artifact can assume if it is a field of type ENUM.
+     * Output only. Values the artifact can assume if it is a field of type ENUM.
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue enum_values = 11;</code>
+     * <code>repeated .google.protobuf.StringValue enum_values = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getEnumValuesBuilderList() {
@@ -4377,22 +4377,22 @@ private static final long serialVersionUID = 0L;
     private int dataType_ = 0;
     /**
      * <pre>
-     * This field determines the operators that can be used with the artifact
+     * Output only. This field determines the operators that can be used with the artifact
      * in WHERE clauses.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getDataTypeValue() {
       return dataType_;
     }
     /**
      * <pre>
-     * This field determines the operators that can be used with the artifact
+     * Output only. This field determines the operators that can be used with the artifact
      * in WHERE clauses.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setDataTypeValue(int value) {
       dataType_ = value;
@@ -4401,11 +4401,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This field determines the operators that can be used with the artifact
+     * Output only. This field determines the operators that can be used with the artifact
      * in WHERE clauses.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType getDataType() {
       @SuppressWarnings("deprecation")
@@ -4414,11 +4414,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This field determines the operators that can be used with the artifact
+     * Output only. This field determines the operators that can be used with the artifact
      * in WHERE clauses.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setDataType(com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType value) {
       if (value == null) {
@@ -4431,11 +4431,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This field determines the operators that can be used with the artifact
+     * Output only. This field determines the operators that can be used with the artifact
      * in WHERE clauses.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearDataType() {
       
@@ -4449,20 +4449,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> typeUrlBuilder_;
     /**
      * <pre>
-     * The URL of proto describing the artifact's data type.
+     * Output only. The URL of proto describing the artifact's data type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue type_url = 13;</code>
+     * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTypeUrl() {
       return typeUrlBuilder_ != null || typeUrl_ != null;
     }
     /**
      * <pre>
-     * The URL of proto describing the artifact's data type.
+     * Output only. The URL of proto describing the artifact's data type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue type_url = 13;</code>
+     * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getTypeUrl() {
       if (typeUrlBuilder_ == null) {
@@ -4473,10 +4473,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of proto describing the artifact's data type.
+     * Output only. The URL of proto describing the artifact's data type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue type_url = 13;</code>
+     * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTypeUrl(com.google.protobuf.StringValue value) {
       if (typeUrlBuilder_ == null) {
@@ -4493,10 +4493,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of proto describing the artifact's data type.
+     * Output only. The URL of proto describing the artifact's data type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue type_url = 13;</code>
+     * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTypeUrl(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -4511,10 +4511,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of proto describing the artifact's data type.
+     * Output only. The URL of proto describing the artifact's data type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue type_url = 13;</code>
+     * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTypeUrl(com.google.protobuf.StringValue value) {
       if (typeUrlBuilder_ == null) {
@@ -4533,10 +4533,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of proto describing the artifact's data type.
+     * Output only. The URL of proto describing the artifact's data type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue type_url = 13;</code>
+     * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTypeUrl() {
       if (typeUrlBuilder_ == null) {
@@ -4551,10 +4551,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of proto describing the artifact's data type.
+     * Output only. The URL of proto describing the artifact's data type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue type_url = 13;</code>
+     * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getTypeUrlBuilder() {
       
@@ -4563,10 +4563,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of proto describing the artifact's data type.
+     * Output only. The URL of proto describing the artifact's data type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue type_url = 13;</code>
+     * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getTypeUrlOrBuilder() {
       if (typeUrlBuilder_ != null) {
@@ -4578,10 +4578,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of proto describing the artifact's data type.
+     * Output only. The URL of proto describing the artifact's data type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue type_url = 13;</code>
+     * <code>.google.protobuf.StringValue type_url = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -4602,20 +4602,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> isRepeatedBuilder_;
     /**
      * <pre>
-     * Whether the field artifact is repeated.
+     * Output only. Whether the field artifact is repeated.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+     * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasIsRepeated() {
       return isRepeatedBuilder_ != null || isRepeated_ != null;
     }
     /**
      * <pre>
-     * Whether the field artifact is repeated.
+     * Output only. Whether the field artifact is repeated.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+     * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getIsRepeated() {
       if (isRepeatedBuilder_ == null) {
@@ -4626,10 +4626,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the field artifact is repeated.
+     * Output only. Whether the field artifact is repeated.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+     * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setIsRepeated(com.google.protobuf.BoolValue value) {
       if (isRepeatedBuilder_ == null) {
@@ -4646,10 +4646,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the field artifact is repeated.
+     * Output only. Whether the field artifact is repeated.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+     * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setIsRepeated(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -4664,10 +4664,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the field artifact is repeated.
+     * Output only. Whether the field artifact is repeated.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+     * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeIsRepeated(com.google.protobuf.BoolValue value) {
       if (isRepeatedBuilder_ == null) {
@@ -4686,10 +4686,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the field artifact is repeated.
+     * Output only. Whether the field artifact is repeated.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+     * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearIsRepeated() {
       if (isRepeatedBuilder_ == null) {
@@ -4704,10 +4704,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the field artifact is repeated.
+     * Output only. Whether the field artifact is repeated.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+     * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getIsRepeatedBuilder() {
       
@@ -4716,10 +4716,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the field artifact is repeated.
+     * Output only. Whether the field artifact is repeated.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+     * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getIsRepeatedOrBuilder() {
       if (isRepeatedBuilder_ != null) {
@@ -4731,10 +4731,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the field artifact is repeated.
+     * Output only. Whether the field artifact is repeated.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue is_repeated = 14;</code>
+     * <code>.google.protobuf.BoolValue is_repeated = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 

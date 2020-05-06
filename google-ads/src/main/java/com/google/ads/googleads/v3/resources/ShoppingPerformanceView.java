@@ -94,12 +94,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the Shopping performance view.
+   * Output only. The resource name of the Shopping performance view.
    * Shopping performance view resource names have the form:
    * `customers/{customer_id}/shoppingPerformanceView`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -115,12 +115,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the Shopping performance view.
+   * Output only. The resource name of the Shopping performance view.
    * Shopping performance view resource names have the form:
    * `customers/{customer_id}/shoppingPerformanceView`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -450,12 +450,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the Shopping performance view.
+     * Output only. The resource name of the Shopping performance view.
      * Shopping performance view resource names have the form:
      * `customers/{customer_id}/shoppingPerformanceView`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -471,12 +471,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Shopping performance view.
+     * Output only. The resource name of the Shopping performance view.
      * Shopping performance view resource names have the form:
      * `customers/{customer_id}/shoppingPerformanceView`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -493,12 +493,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Shopping performance view.
+     * Output only. The resource name of the Shopping performance view.
      * Shopping performance view resource names have the form:
      * `customers/{customer_id}/shoppingPerformanceView`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -512,12 +512,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Shopping performance view.
+     * Output only. The resource name of the Shopping performance view.
      * Shopping performance view resource names have the form:
      * `customers/{customer_id}/shoppingPerformanceView`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -527,12 +527,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Shopping performance view.
+     * Output only. The resource name of the Shopping performance view.
      * Shopping performance view resource names have the form:
      * `customers/{customer_id}/shoppingPerformanceView`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {

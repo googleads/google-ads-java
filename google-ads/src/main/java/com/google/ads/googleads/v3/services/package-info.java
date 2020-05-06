@@ -1408,6 +1408,22 @@
  * </code>
  * </pre>
  *
+ * =============================== OfflineUserDataJobServiceClient ===============================
+ *
+ * <p>Service Description: Service to manage offline user data jobs.
+ *
+ * <p>Sample for OfflineUserDataJobServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient = OfflineUserDataJobServiceClient.create()) {
+ *   String customerId = "";
+ *   OfflineUserDataJob job = OfflineUserDataJob.newBuilder().build();
+ *   CreateOfflineUserDataJobResponse response = offlineUserDataJobServiceClient.createOfflineUserDataJob(customerId, job);
+ * }
+ * </code>
+ * </pre>
+ *
  * =========================================== OperatingSystemVersionConstantServiceClient
  * ===========================================
  *
@@ -1637,6 +1653,23 @@
  * try (TopicViewServiceClient topicViewServiceClient = TopicViewServiceClient.create()) {
  *   String formattedResourceName = TopicViewServiceClient.formatTopicViewName("[CUSTOMER]", "[TOPIC_VIEW]");
  *   TopicView response = topicViewServiceClient.getTopicView(formattedResourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ===================== UserDataServiceClient =====================
+ *
+ * <p>Service Description: Service to manage user data uploads. Accessible to whitelisted customers
+ * only.
+ *
+ * <p>Sample for UserDataServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (UserDataServiceClient userDataServiceClient = UserDataServiceClient.create()) {
+ *   String customerId = "";
+ *   List&lt;UserDataOperation&gt; operations = new ArrayList&lt;&gt;();
+ *   UploadUserDataResponse response = userDataServiceClient.uploadUserData(customerId, operations);
  * }
  * </code>
  * </pre>

@@ -141,12 +141,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the language constant.
+   * Output only. The resource name of the language constant.
    * Language constant resource names have the form:
    * `languageConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -162,12 +162,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the language constant.
+   * Output only. The resource name of the language constant.
    * Language constant resource names have the form:
    * `languageConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -187,30 +187,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the language constant.
+   * Output only. The ID of the language constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the language constant.
+   * Output only. The ID of the language constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the language constant.
+   * Output only. The ID of the language constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -220,30 +220,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue code_;
   /**
    * <pre>
-   * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue code = 3;</code>
+   * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCode() {
     return code_ != null;
   }
   /**
    * <pre>
-   * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue code = 3;</code>
+   * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getCode() {
     return code_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : code_;
   }
   /**
    * <pre>
-   * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue code = 3;</code>
+   * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCodeOrBuilder() {
     return getCode();
@@ -253,33 +253,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * The full name of the language in English, e.g., "English (US)", "Spanish",
+   * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
    * etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 4;</code>
+   * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * The full name of the language in English, e.g., "English (US)", "Spanish",
+   * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
    * etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 4;</code>
+   * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * The full name of the language in English, e.g., "English (US)", "Spanish",
+   * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
    * etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 4;</code>
+   * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
@@ -289,30 +289,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue targetable_;
   /**
    * <pre>
-   * Whether the language is targetable.
+   * Output only. Whether the language is targetable.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue targetable = 5;</code>
+   * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasTargetable() {
     return targetable_ != null;
   }
   /**
    * <pre>
-   * Whether the language is targetable.
+   * Output only. Whether the language is targetable.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue targetable = 5;</code>
+   * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getTargetable() {
     return targetable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : targetable_;
   }
   /**
    * <pre>
-   * Whether the language is targetable.
+   * Output only. Whether the language is targetable.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue targetable = 5;</code>
+   * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getTargetableOrBuilder() {
     return getTargetable();
@@ -747,12 +747,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the language constant.
+     * Output only. The resource name of the language constant.
      * Language constant resource names have the form:
      * `languageConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -768,12 +768,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language constant.
+     * Output only. The resource name of the language constant.
      * Language constant resource names have the form:
      * `languageConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -790,12 +790,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language constant.
+     * Output only. The resource name of the language constant.
      * Language constant resource names have the form:
      * `languageConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -809,12 +809,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language constant.
+     * Output only. The resource name of the language constant.
      * Language constant resource names have the form:
      * `languageConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -824,12 +824,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language constant.
+     * Output only. The resource name of the language constant.
      * Language constant resource names have the form:
      * `languageConstants/{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -848,20 +848,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the language constant.
+     * Output only. The ID of the language constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the language constant.
+     * Output only. The ID of the language constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -872,10 +872,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the language constant.
+     * Output only. The ID of the language constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -892,10 +892,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the language constant.
+     * Output only. The ID of the language constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -910,10 +910,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the language constant.
+     * Output only. The ID of the language constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -932,10 +932,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the language constant.
+     * Output only. The ID of the language constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -950,10 +950,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the language constant.
+     * Output only. The ID of the language constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -962,10 +962,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the language constant.
+     * Output only. The ID of the language constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -977,10 +977,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the language constant.
+     * Output only. The ID of the language constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1001,20 +1001,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> codeBuilder_;
     /**
      * <pre>
-     * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue code = 3;</code>
+     * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCode() {
       return codeBuilder_ != null || code_ != null;
     }
     /**
      * <pre>
-     * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue code = 3;</code>
+     * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCode() {
       if (codeBuilder_ == null) {
@@ -1025,10 +1025,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue code = 3;</code>
+     * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCode(com.google.protobuf.StringValue value) {
       if (codeBuilder_ == null) {
@@ -1045,10 +1045,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue code = 3;</code>
+     * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1063,10 +1063,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue code = 3;</code>
+     * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCode(com.google.protobuf.StringValue value) {
       if (codeBuilder_ == null) {
@@ -1085,10 +1085,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue code = 3;</code>
+     * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCode() {
       if (codeBuilder_ == null) {
@@ -1103,10 +1103,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue code = 3;</code>
+     * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getCodeBuilder() {
       
@@ -1115,10 +1115,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue code = 3;</code>
+     * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCodeOrBuilder() {
       if (codeBuilder_ != null) {
@@ -1130,10 +1130,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue code = 3;</code>
+     * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1154,22 +1154,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * The full name of the language in English, e.g., "English (US)", "Spanish",
+     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
      * etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * The full name of the language in English, e.g., "English (US)", "Spanish",
+     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
      * etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1180,11 +1180,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The full name of the language in English, e.g., "English (US)", "Spanish",
+     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
      * etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1201,11 +1201,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The full name of the language in English, e.g., "English (US)", "Spanish",
+     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
      * etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1220,11 +1220,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The full name of the language in English, e.g., "English (US)", "Spanish",
+     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
      * etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1243,11 +1243,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The full name of the language in English, e.g., "English (US)", "Spanish",
+     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
      * etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -1262,11 +1262,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The full name of the language in English, e.g., "English (US)", "Spanish",
+     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
      * etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -1275,11 +1275,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The full name of the language in English, e.g., "English (US)", "Spanish",
+     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
      * etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -1291,11 +1291,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The full name of the language in English, e.g., "English (US)", "Spanish",
+     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
      * etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1316,20 +1316,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> targetableBuilder_;
     /**
      * <pre>
-     * Whether the language is targetable.
+     * Output only. Whether the language is targetable.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue targetable = 5;</code>
+     * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTargetable() {
       return targetableBuilder_ != null || targetable_ != null;
     }
     /**
      * <pre>
-     * Whether the language is targetable.
+     * Output only. Whether the language is targetable.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue targetable = 5;</code>
+     * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getTargetable() {
       if (targetableBuilder_ == null) {
@@ -1340,10 +1340,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the language is targetable.
+     * Output only. Whether the language is targetable.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue targetable = 5;</code>
+     * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTargetable(com.google.protobuf.BoolValue value) {
       if (targetableBuilder_ == null) {
@@ -1360,10 +1360,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the language is targetable.
+     * Output only. Whether the language is targetable.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue targetable = 5;</code>
+     * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTargetable(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -1378,10 +1378,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the language is targetable.
+     * Output only. Whether the language is targetable.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue targetable = 5;</code>
+     * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTargetable(com.google.protobuf.BoolValue value) {
       if (targetableBuilder_ == null) {
@@ -1400,10 +1400,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the language is targetable.
+     * Output only. Whether the language is targetable.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue targetable = 5;</code>
+     * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTargetable() {
       if (targetableBuilder_ == null) {
@@ -1418,10 +1418,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the language is targetable.
+     * Output only. Whether the language is targetable.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue targetable = 5;</code>
+     * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getTargetableBuilder() {
       
@@ -1430,10 +1430,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the language is targetable.
+     * Output only. Whether the language is targetable.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue targetable = 5;</code>
+     * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getTargetableOrBuilder() {
       if (targetableBuilder_ != null) {
@@ -1445,10 +1445,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the language is targetable.
+     * Output only. Whether the language is targetable.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue targetable = 5;</code>
+     * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 

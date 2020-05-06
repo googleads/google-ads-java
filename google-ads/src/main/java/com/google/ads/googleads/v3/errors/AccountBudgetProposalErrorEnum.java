@@ -282,6 +282,15 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_BILLING_SETUP = 23;</code>
      */
     INVALID_BILLING_SETUP(23),
+    /**
+     * <pre>
+     * Budget creation failed as it overlaps with an pending budget proposal
+     * or an approved budget.
+     * </pre>
+     *
+     * <code>OVERLAPS_EXISTING_BUDGET = 24;</code>
+     */
+    OVERLAPS_EXISTING_BUDGET(24),
     UNRECOGNIZED(-1),
     ;
 
@@ -481,6 +490,15 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_BILLING_SETUP = 23;</code>
      */
     public static final int INVALID_BILLING_SETUP_VALUE = 23;
+    /**
+     * <pre>
+     * Budget creation failed as it overlaps with an pending budget proposal
+     * or an approved budget.
+     * </pre>
+     *
+     * <code>OVERLAPS_EXISTING_BUDGET = 24;</code>
+     */
+    public static final int OVERLAPS_EXISTING_BUDGET_VALUE = 24;
 
 
     public final int getNumber() {
@@ -525,6 +543,7 @@ private static final long serialVersionUID = 0L;
         case 21: return BUDGET_DATE_RANGE_INCOMPATIBLE_WITH_BILLING_SETUP;
         case 22: return NOT_AUTHORIZED;
         case 23: return INVALID_BILLING_SETUP;
+        case 24: return OVERLAPS_EXISTING_BUDGET;
         default: return null;
       }
     }

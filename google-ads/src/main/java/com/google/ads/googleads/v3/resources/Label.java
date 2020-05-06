@@ -135,12 +135,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * Label resource names have the form:
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -156,12 +156,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * Label resource names have the form:
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -181,30 +181,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * Id of the label. Read only.
+   * Output only. Id of the label. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * Id of the label. Read only.
+   * Output only. Id of the label. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * Id of the label. Read only.
+   * Output only. Id of the label. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -253,20 +253,20 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Status of the label. Read only.
+   * Output only. Status of the label. Read only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Status of the label. Read only.
+   * Output only. Status of the label. Read only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -722,12 +722,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * Label resource names have the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -743,12 +743,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * Label resource names have the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -765,12 +765,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * Label resource names have the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -784,12 +784,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * Label resource names have the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -799,12 +799,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * Label resource names have the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -823,20 +823,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * Id of the label. Read only.
+     * Output only. Id of the label. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * Id of the label. Read only.
+     * Output only. Id of the label. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -847,10 +847,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the label. Read only.
+     * Output only. Id of the label. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -867,10 +867,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the label. Read only.
+     * Output only. Id of the label. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -885,10 +885,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the label. Read only.
+     * Output only. Id of the label. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -907,10 +907,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the label. Read only.
+     * Output only. Id of the label. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -925,10 +925,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the label. Read only.
+     * Output only. Id of the label. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -937,10 +937,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the label. Read only.
+     * Output only. Id of the label. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -952,10 +952,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the label. Read only.
+     * Output only. Id of the label. Read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1145,20 +1145,20 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Status of the label. Read only.
+     * Output only. Status of the label. Read only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Status of the label. Read only.
+     * Output only. Status of the label. Read only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -1167,10 +1167,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the label. Read only.
+     * Output only. Status of the label. Read only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -1179,10 +1179,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the label. Read only.
+     * Output only. Status of the label. Read only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus value) {
       if (value == null) {
@@ -1195,10 +1195,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the label. Read only.
+     * Output only. Status of the label. Read only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.LabelStatusEnum.LabelStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       

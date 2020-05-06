@@ -34,21 +34,23 @@ public final class CarrierConstantServiceProto {
       "s/v3/resources/carrier_constant.proto\032\034g" +
       "oogle/api/annotations.proto\032\027google/api/" +
       "client.proto\032\037google/api/field_behavior." +
-      "proto\"7\n\031GetCarrierConstantRequest\022\032\n\rre" +
-      "source_name\030\001 \001(\tB\003\340A\0022\375\001\n\026CarrierConsta" +
-      "ntService\022\305\001\n\022GetCarrierConstant\022;.googl" +
-      "e.ads.googleads.v3.services.GetCarrierCo" +
-      "nstantRequest\0322.google.ads.googleads.v3." +
-      "resources.CarrierConstant\">\202\323\344\223\002(\022&/v3/{" +
-      "resource_name=carrierConstants/*}\332A\rreso" +
-      "urce_name\032\033\312A\030googleads.googleapis.comB\202" +
-      "\002\n$com.google.ads.googleads.v3.servicesB" +
-      "\033CarrierConstantServiceProtoP\001ZHgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v3/services;services\242\002\003GAA\252\002 Google." +
-      "Ads.GoogleAds.V3.Services\312\002 Google\\Ads\\G" +
-      "oogleAds\\V3\\Services\352\002$Google::Ads::Goog" +
-      "leAds::V3::Servicesb\006proto3"
+      "proto\032\031google/api/resource.proto\"d\n\031GetC" +
+      "arrierConstantRequest\022G\n\rresource_name\030\001" +
+      " \001(\tB0\340A\002\372A*\n(googleads.googleapis.com/C" +
+      "arrierConstant2\375\001\n\026CarrierConstantServic" +
+      "e\022\305\001\n\022GetCarrierConstant\022;.google.ads.go" +
+      "ogleads.v3.services.GetCarrierConstantRe" +
+      "quest\0322.google.ads.googleads.v3.resource" +
+      "s.CarrierConstant\">\202\323\344\223\002(\022&/v3/{resource" +
+      "_name=carrierConstants/*}\332A\rresource_nam" +
+      "e\032\033\312A\030googleads.googleapis.comB\202\002\n$com.g" +
+      "oogle.ads.googleads.v3.servicesB\033Carrier" +
+      "ConstantServiceProtoP\001ZHgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v3/s" +
+      "ervices;services\242\002\003GAA\252\002 Google.Ads.Goog" +
+      "leAds.V3.Services\312\002 Google\\Ads\\GoogleAds" +
+      "\\V3\\Services\352\002$Google::Ads::GoogleAds::V" +
+      "3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -65,6 +67,7 @@ public final class CarrierConstantServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetCarrierConstantRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -78,12 +81,14 @@ public final class CarrierConstantServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.CarrierConstantProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

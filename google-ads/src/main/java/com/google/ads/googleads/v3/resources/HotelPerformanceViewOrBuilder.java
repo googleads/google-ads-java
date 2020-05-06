@@ -9,22 +9,22 @@ public interface HotelPerformanceViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the hotel performance view.
+   * Output only. The resource name of the hotel performance view.
    * Hotel performance view resource names have the form:
    * `customers/{customer_id}/hotelPerformanceView`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the hotel performance view.
+   * Output only. The resource name of the hotel performance view.
    * Hotel performance view resource names have the form:
    * `customers/{customer_id}/hotelPerformanceView`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();

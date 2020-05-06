@@ -229,6 +229,8 @@ import com.google.ads.googleads.v2.services.VideoServiceClient;
 import com.google.ads.googleads.v2.services.VideoServiceSettings;
 import com.google.ads.googleads.v3.services.CurrencyConstantServiceClient;
 import com.google.ads.googleads.v3.services.CurrencyConstantServiceSettings;
+import com.google.ads.googleads.v3.services.OfflineUserDataJobServiceClient;
+import com.google.ads.googleads.v3.services.UserDataServiceClient;
 import com.google.api.gax.core.FixedCredentialsProvider;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
@@ -4717,6 +4719,21 @@ class GeneratedCatalog implements ApiCatalog {
     }
 
     @Override
+    public OfflineUserDataJobServiceClient createOfflineUserDataJobServiceClient() {
+      try {
+        com.google.ads.googleads.v3.services.OfflineUserDataJobServiceSettings settings =
+            com.google.ads.googleads.v3.services.OfflineUserDataJobServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.OfflineUserDataJobServiceClient
+            .create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
     public com.google.ads.googleads.v3.services.OperatingSystemVersionConstantServiceClient createOperatingSystemVersionConstantServiceClient(
     ) {
       try {
@@ -4944,6 +4961,20 @@ class GeneratedCatalog implements ApiCatalog {
                 .setTransportChannelProvider(provider)
                 .build();
         return com.google.ads.googleads.v3.services.TopicViewServiceClient.create(settings);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
+    }
+
+    @Override
+    public UserDataServiceClient createUserDataServiceClient() {
+      try {
+        com.google.ads.googleads.v3.services.UserDataServiceSettings settings =
+            com.google.ads.googleads.v3.services.UserDataServiceSettings.newBuilder()
+                .setCredentialsProvider(FixedCredentialsProvider.create(credentials))
+                .setTransportChannelProvider(provider)
+                .build();
+        return com.google.ads.googleads.v3.services.UserDataServiceClient.create(settings);
       } catch (IOException e) {
         throw new RuntimeException(e);
       }

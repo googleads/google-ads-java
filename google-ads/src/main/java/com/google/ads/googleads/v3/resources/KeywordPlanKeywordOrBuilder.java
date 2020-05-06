@@ -9,22 +9,22 @@ public interface KeywordPlanKeywordOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the Keyword Plan ad group keyword.
+   * Immutable. The resource name of the Keyword Plan ad group keyword.
    * KeywordPlanKeyword resource names have the form:
    * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the Keyword Plan ad group keyword.
+   * Immutable. The resource name of the Keyword Plan ad group keyword.
    * KeywordPlanKeyword resource names have the form:
    * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -34,7 +34,7 @@ public interface KeywordPlanKeywordOrBuilder extends
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   boolean hasKeywordPlanAdGroup();
   /**
@@ -42,7 +42,7 @@ public interface KeywordPlanKeywordOrBuilder extends
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getKeywordPlanAdGroup();
   /**
@@ -50,32 +50,32 @@ public interface KeywordPlanKeywordOrBuilder extends
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getKeywordPlanAdGroupOrBuilder();
 
   /**
    * <pre>
-   * The ID of the Keyword Plan keyword.
+   * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the Keyword Plan keyword.
+   * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the Keyword Plan keyword.
+   * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 

@@ -30,21 +30,23 @@ public final class LandingPageViewProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v3/resources/land" +
       "ing_page_view.proto\022!google.ads.googlead" +
-      "s.v3.resources\032\031google/api/resource.prot" +
-      "o\032\036google/protobuf/wrappers.proto\032\034googl" +
-      "e/api/annotations.proto\"\316\001\n\017LandingPageV" +
-      "iew\022\025\n\rresource_name\030\001 \001(\t\022:\n\024unexpanded" +
-      "_final_url\030\002 \001(\0132\034.google.protobuf.Strin" +
-      "gValue:h\352Ae\n(googleads.googleapis.com/La" +
-      "ndingPageView\0229customers/{customer}/land" +
-      "ingPageViews/{landing_page_view}B\201\002\n%com" +
-      ".google.ads.googleads.v3.resourcesB\024Land" +
-      "ingPageViewProtoP\001ZJgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v3/resou" +
-      "rces;resources\242\002\003GAA\252\002!Google.Ads.Google" +
-      "Ads.V3.Resources\312\002!Google\\Ads\\GoogleAds\\" +
-      "V3\\Resources\352\002%Google::Ads::GoogleAds::V" +
-      "3::Resourcesb\006proto3"
+      "s.v3.resources\032\037google/api/field_behavio" +
+      "r.proto\032\031google/api/resource.proto\032\036goog" +
+      "le/protobuf/wrappers.proto\032\034google/api/a" +
+      "nnotations.proto\"\205\002\n\017LandingPageView\022G\n\r" +
+      "resource_name\030\001 \001(\tB0\340A\003\372A*\n(googleads.g" +
+      "oogleapis.com/LandingPageView\022?\n\024unexpan" +
+      "ded_final_url\030\002 \001(\0132\034.google.protobuf.St" +
+      "ringValueB\003\340A\003:h\352Ae\n(googleads.googleapi" +
+      "s.com/LandingPageView\0229customers/{custom" +
+      "er}/landingPageViews/{landing_page_view}" +
+      "B\201\002\n%com.google.ads.googleads.v3.resourc" +
+      "esB\024LandingPageViewProtoP\001ZJgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v3/resources;resources\242\002\003GAA\252\002!Google.Ad" +
+      "s.GoogleAds.V3.Resources\312\002!Google\\Ads\\Go" +
+      "ogleAds\\V3\\Resources\352\002%Google::Ads::Goog" +
+      "leAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -57,6 +59,7 @@ public final class LandingPageViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -69,9 +72,12 @@ public final class LandingPageViewProto {
         new java.lang.String[] { "ResourceName", "UnexpandedFinalUrl", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

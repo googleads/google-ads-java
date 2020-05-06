@@ -95,30 +95,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BytesValue data_;
   /**
    * <pre>
-   * Raw image data.
+   * Immutable. Raw image data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasData() {
     return data_ != null;
   }
   /**
    * <pre>
-   * Raw image data.
+   * Immutable. Raw image data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.BytesValue getData() {
     return data_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : data_;
   }
   /**
    * <pre>
-   * Raw image data.
+   * Immutable. Raw image data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.BytesValueOrBuilder getDataOrBuilder() {
     return getData();
@@ -448,20 +448,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> dataBuilder_;
     /**
      * <pre>
-     * Raw image data.
+     * Immutable. Raw image data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasData() {
       return dataBuilder_ != null || data_ != null;
     }
     /**
      * <pre>
-     * Raw image data.
+     * Immutable. Raw image data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.BytesValue getData() {
       if (dataBuilder_ == null) {
@@ -472,10 +472,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw image data.
+     * Immutable. Raw image data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setData(com.google.protobuf.BytesValue value) {
       if (dataBuilder_ == null) {
@@ -492,10 +492,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw image data.
+     * Immutable. Raw image data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setData(
         com.google.protobuf.BytesValue.Builder builderForValue) {
@@ -510,10 +510,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw image data.
+     * Immutable. Raw image data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeData(com.google.protobuf.BytesValue value) {
       if (dataBuilder_ == null) {
@@ -532,10 +532,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw image data.
+     * Immutable. Raw image data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearData() {
       if (dataBuilder_ == null) {
@@ -550,10 +550,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw image data.
+     * Immutable. Raw image data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.BytesValue.Builder getDataBuilder() {
       
@@ -562,10 +562,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw image data.
+     * Immutable. Raw image data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.BytesValueOrBuilder getDataOrBuilder() {
       if (dataBuilder_ != null) {
@@ -577,10 +577,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Raw image data.
+     * Immutable. Raw image data.
      * </pre>
      *
-     * <code>.google.protobuf.BytesValue data = 1;</code>
+     * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> 

@@ -9,73 +9,73 @@ public interface CustomerClientLinkOrBuilder extends
 
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * CustomerClientLink resource names have the form:
    * `customers/{customer_id}/customerClientLinks/{client_customer_id}~{manager_link_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * CustomerClientLink resource names have the form:
    * `customers/{customer_id}/customerClientLinks/{client_customer_id}~{manager_link_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The client customer linked to this customer.
+   * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue client_customer = 3;</code>
+   * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasClientCustomer();
   /**
    * <pre>
-   * The client customer linked to this customer.
+   * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue client_customer = 3;</code>
+   * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValue getClientCustomer();
   /**
    * <pre>
-   * The client customer linked to this customer.
+   * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue client_customer = 3;</code>
+   * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getClientCustomerOrBuilder();
 
   /**
    * <pre>
-   * This is uniquely identifies a customer client link. Read only.
+   * Output only. This is uniquely identifies a customer client link. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+   * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasManagerLinkId();
   /**
    * <pre>
-   * This is uniquely identifies a customer client link. Read only.
+   * Output only. This is uniquely identifies a customer client link. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+   * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getManagerLinkId();
   /**
    * <pre>
-   * This is uniquely identifies a customer client link. Read only.
+   * Output only. This is uniquely identifies a customer client link. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+   * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getManagerLinkIdOrBuilder();
 

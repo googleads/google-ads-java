@@ -649,6 +649,12 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 952: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 119;
+            errorCode_ = rawValue;
+            break;
+          }
           case 960: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 120;
@@ -694,6 +700,18 @@ private static final long serialVersionUID = 0L;
           case 1024: {
             int rawValue = input.readEnum();
             errorCodeCase_ = 128;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 1032: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 129;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 1040: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 130;
             errorCode_ = rawValue;
             break;
           }
@@ -833,6 +851,7 @@ private static final long serialVersionUID = 0L;
     PARTIAL_FAILURE_ERROR(112),
     POLICY_VALIDATION_PARAMETER_ERROR(114),
     SIZE_LIMIT_ERROR(118),
+    OFFLINE_USER_DATA_JOB_ERROR(119),
     NOT_WHITELISTED_ERROR(120),
     MANAGER_LINK_ERROR(121),
     CURRENCY_CODE_ERROR(122),
@@ -841,6 +860,8 @@ private static final long serialVersionUID = 0L;
     INVOICE_ERROR(126),
     PAYMENTS_ACCOUNT_ERROR(127),
     TIME_ZONE_ERROR(128),
+    ASSET_LINK_ERROR(129),
+    USER_DATA_ERROR(130),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -956,6 +977,7 @@ private static final long serialVersionUID = 0L;
         case 112: return PARTIAL_FAILURE_ERROR;
         case 114: return POLICY_VALIDATION_PARAMETER_ERROR;
         case 118: return SIZE_LIMIT_ERROR;
+        case 119: return OFFLINE_USER_DATA_JOB_ERROR;
         case 120: return NOT_WHITELISTED_ERROR;
         case 121: return MANAGER_LINK_ERROR;
         case 122: return CURRENCY_CODE_ERROR;
@@ -964,6 +986,8 @@ private static final long serialVersionUID = 0L;
         case 126: return INVOICE_ERROR;
         case 127: return PAYMENTS_ACCOUNT_ERROR;
         case 128: return TIME_ZONE_ERROR;
+        case 129: return ASSET_LINK_ERROR;
+        case 130: return USER_DATA_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -4079,6 +4103,37 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v3.errors.SizeLimitErrorEnum.SizeLimitError.UNSPECIFIED;
   }
 
+  public static final int OFFLINE_USER_DATA_JOB_ERROR_FIELD_NUMBER = 119;
+  /**
+   * <pre>
+   * The reasons for the offline user data job error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+   */
+  public int getOfflineUserDataJobErrorValue() {
+    if (errorCodeCase_ == 119) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the offline user data job error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+   */
+  public com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError getOfflineUserDataJobError() {
+    if (errorCodeCase_ == 119) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError result = com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError.UNSPECIFIED;
+  }
+
   public static final int NOT_WHITELISTED_ERROR_FIELD_NUMBER = 120;
   /**
    * <pre>
@@ -4325,6 +4380,68 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError.UNSPECIFIED;
+  }
+
+  public static final int ASSET_LINK_ERROR_FIELD_NUMBER = 129;
+  /**
+   * <pre>
+   * The reasons for the asset link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+   */
+  public int getAssetLinkErrorValue() {
+    if (errorCodeCase_ == 129) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the asset link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+   */
+  public com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError getAssetLinkError() {
+    if (errorCodeCase_ == 129) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError result = com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError.UNSPECIFIED;
+  }
+
+  public static final int USER_DATA_ERROR_FIELD_NUMBER = 130;
+  /**
+   * <pre>
+   * The reasons for the user data error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+   */
+  public int getUserDataErrorValue() {
+    if (errorCodeCase_ == 130) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the user data error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+   */
+  public com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError getUserDataError() {
+    if (errorCodeCase_ == 130) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError result = com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError.UNSPECIFIED;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -4641,6 +4758,9 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 118) {
       output.writeEnum(118, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 119) {
+      output.writeEnum(119, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 120) {
       output.writeEnum(120, ((java.lang.Integer) errorCode_));
     }
@@ -4664,6 +4784,12 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 128) {
       output.writeEnum(128, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 129) {
+      output.writeEnum(129, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 130) {
+      output.writeEnum(130, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -5074,6 +5200,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(118, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 119) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(119, ((java.lang.Integer) errorCode_));
+    }
     if (errorCodeCase_ == 120) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(120, ((java.lang.Integer) errorCode_));
@@ -5105,6 +5235,14 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 128) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(128, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 129) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(129, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 130) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(130, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -5523,6 +5661,10 @@ private static final long serialVersionUID = 0L;
         if (getSizeLimitErrorValue()
             != other.getSizeLimitErrorValue()) return false;
         break;
+      case 119:
+        if (getOfflineUserDataJobErrorValue()
+            != other.getOfflineUserDataJobErrorValue()) return false;
+        break;
       case 120:
         if (getNotWhitelistedErrorValue()
             != other.getNotWhitelistedErrorValue()) return false;
@@ -5554,6 +5696,14 @@ private static final long serialVersionUID = 0L;
       case 128:
         if (getTimeZoneErrorValue()
             != other.getTimeZoneErrorValue()) return false;
+        break;
+      case 129:
+        if (getAssetLinkErrorValue()
+            != other.getAssetLinkErrorValue()) return false;
+        break;
+      case 130:
+        if (getUserDataErrorValue()
+            != other.getUserDataErrorValue()) return false;
         break;
       case 0:
       default:
@@ -5970,6 +6120,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SIZE_LIMIT_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getSizeLimitErrorValue();
         break;
+      case 119:
+        hash = (37 * hash) + OFFLINE_USER_DATA_JOB_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getOfflineUserDataJobErrorValue();
+        break;
       case 120:
         hash = (37 * hash) + NOT_WHITELISTED_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getNotWhitelistedErrorValue();
@@ -6001,6 +6155,14 @@ private static final long serialVersionUID = 0L;
       case 128:
         hash = (37 * hash) + TIME_ZONE_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getTimeZoneErrorValue();
+        break;
+      case 129:
+        hash = (37 * hash) + ASSET_LINK_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetLinkErrorValue();
+        break;
+      case 130:
+        hash = (37 * hash) + USER_DATA_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getUserDataErrorValue();
         break;
       case 0:
       default:
@@ -6470,6 +6632,9 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 118) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 119) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 120) {
         result.errorCode_ = errorCode_;
       }
@@ -6492,6 +6657,12 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 128) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 129) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 130) {
         result.errorCode_ = errorCode_;
       }
       result.errorCodeCase_ = errorCodeCase_;
@@ -6944,6 +7115,10 @@ private static final long serialVersionUID = 0L;
           setSizeLimitErrorValue(other.getSizeLimitErrorValue());
           break;
         }
+        case OFFLINE_USER_DATA_JOB_ERROR: {
+          setOfflineUserDataJobErrorValue(other.getOfflineUserDataJobErrorValue());
+          break;
+        }
         case NOT_WHITELISTED_ERROR: {
           setNotWhitelistedErrorValue(other.getNotWhitelistedErrorValue());
           break;
@@ -6974,6 +7149,14 @@ private static final long serialVersionUID = 0L;
         }
         case TIME_ZONE_ERROR: {
           setTimeZoneErrorValue(other.getTimeZoneErrorValue());
+          break;
+        }
+        case ASSET_LINK_ERROR: {
+          setAssetLinkErrorValue(other.getAssetLinkErrorValue());
+          break;
+        }
+        case USER_DATA_ERROR: {
+          setUserDataErrorValue(other.getUserDataErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -14426,6 +14609,80 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * The reasons for the offline user data job error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+     */
+    public int getOfflineUserDataJobErrorValue() {
+      if (errorCodeCase_ == 119) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the offline user data job error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+     */
+    public Builder setOfflineUserDataJobErrorValue(int value) {
+      errorCodeCase_ = 119;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the offline user data job error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+     */
+    public com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError getOfflineUserDataJobError() {
+      if (errorCodeCase_ == 119) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError result = com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the offline user data job error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+     */
+    public Builder setOfflineUserDataJobError(com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 119;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the offline user data job error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+     */
+    public Builder clearOfflineUserDataJobError() {
+      if (errorCodeCase_ == 119) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
      * The reasons for the not whitelisted error
      * </pre>
      *
@@ -15009,6 +15266,154 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearTimeZoneError() {
       if (errorCodeCase_ == 128) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the asset link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+     */
+    public int getAssetLinkErrorValue() {
+      if (errorCodeCase_ == 129) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the asset link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+     */
+    public Builder setAssetLinkErrorValue(int value) {
+      errorCodeCase_ = 129;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the asset link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+     */
+    public com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError getAssetLinkError() {
+      if (errorCodeCase_ == 129) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError result = com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the asset link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+     */
+    public Builder setAssetLinkError(com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 129;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the asset link error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+     */
+    public Builder clearAssetLinkError() {
+      if (errorCodeCase_ == 129) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the user data error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+     */
+    public int getUserDataErrorValue() {
+      if (errorCodeCase_ == 130) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the user data error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+     */
+    public Builder setUserDataErrorValue(int value) {
+      errorCodeCase_ = 130;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the user data error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+     */
+    public com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError getUserDataError() {
+      if (errorCodeCase_ == 130) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError result = com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the user data error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+     */
+    public Builder setUserDataError(com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 130;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the user data error.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+     */
+    public Builder clearUserDataError() {
+      if (errorCodeCase_ == 130) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

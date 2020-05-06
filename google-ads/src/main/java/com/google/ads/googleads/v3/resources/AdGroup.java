@@ -379,12 +379,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the ad group.
+   * Immutable. The resource name of the ad group.
    * Ad group resource names have the form:
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -400,12 +400,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the ad group.
+   * Immutable. The resource name of the ad group.
    * Ad group resource names have the form:
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -425,30 +425,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the ad group.
+   * Output only. The ID of the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the ad group.
+   * Output only. The ID of the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the ad group.
+   * Output only. The ID of the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -531,20 +531,20 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * The type of the ad group.
+   * Immutable. The type of the ad group.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * The type of the ad group.
+   * Immutable. The type of the ad group.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType getType() {
     @SuppressWarnings("deprecation")
@@ -581,42 +581,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue baseAdGroup_;
   /**
    * <pre>
-   * For draft or experiment ad groups, this field is the resource name of the
+   * Output only. For draft or experiment ad groups, this field is the resource name of the
    * base ad group from which this ad group was created. If a draft or
    * experiment ad group does not have a base ad group, then this field is null.
    * For base ad groups, this field equals the ad group resource name.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasBaseAdGroup() {
     return baseAdGroup_ != null;
   }
   /**
    * <pre>
-   * For draft or experiment ad groups, this field is the resource name of the
+   * Output only. For draft or experiment ad groups, this field is the resource name of the
    * base ad group from which this ad group was created. If a draft or
    * experiment ad group does not have a base ad group, then this field is null.
    * For base ad groups, this field equals the ad group resource name.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getBaseAdGroup() {
     return baseAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : baseAdGroup_;
   }
   /**
    * <pre>
-   * For draft or experiment ad groups, this field is the resource name of the
+   * Output only. For draft or experiment ad groups, this field is the resource name of the
    * base ad group from which this ad group was created. If a draft or
    * experiment ad group does not have a base ad group, then this field is null.
    * For base ad groups, this field equals the ad group resource name.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder() {
     return getBaseAdGroup();
@@ -719,30 +719,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue campaign_;
   /**
    * <pre>
-   * The campaign to which the ad group belongs.
+   * Immutable. The campaign to which the ad group belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 10;</code>
+   * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasCampaign() {
     return campaign_ != null;
   }
   /**
    * <pre>
-   * The campaign to which the ad group belongs.
+   * Immutable. The campaign to which the ad group belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 10;</code>
+   * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getCampaign() {
     return campaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaign_;
   }
   /**
    * <pre>
-   * The campaign to which the ad group belongs.
+   * Immutable. The campaign to which the ad group belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 10;</code>
+   * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     return getCampaign();
@@ -851,30 +851,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value cpvBidMicros_;
   /**
    * <pre>
-   * The CPV (cost-per-view) bid.
+   * Output only. The CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCpvBidMicros() {
     return cpvBidMicros_ != null;
   }
   /**
    * <pre>
-   * The CPV (cost-per-view) bid.
+   * Output only. The CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getCpvBidMicros() {
     return cpvBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpvBidMicros_;
   }
   /**
    * <pre>
-   * The CPV (cost-per-view) bid.
+   * Output only. The CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+   * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getCpvBidMicrosOrBuilder() {
     return getCpvBidMicros();
@@ -1129,33 +1129,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value effectiveTargetCpaMicros_;
   /**
    * <pre>
-   * The effective target CPA (cost-per-acquisition).
+   * Output only. The effective target CPA (cost-per-acquisition).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasEffectiveTargetCpaMicros() {
     return effectiveTargetCpaMicros_ != null;
   }
   /**
    * <pre>
-   * The effective target CPA (cost-per-acquisition).
+   * Output only. The effective target CPA (cost-per-acquisition).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getEffectiveTargetCpaMicros() {
     return effectiveTargetCpaMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveTargetCpaMicros_;
   }
   /**
    * <pre>
-   * The effective target CPA (cost-per-acquisition).
+   * Output only. The effective target CPA (cost-per-acquisition).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+   * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getEffectiveTargetCpaMicrosOrBuilder() {
     return getEffectiveTargetCpaMicros();
@@ -1165,22 +1165,22 @@ private static final long serialVersionUID = 0L;
   private int effectiveTargetCpaSource_;
   /**
    * <pre>
-   * Source of the effective target CPA.
+   * Output only. Source of the effective target CPA.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getEffectiveTargetCpaSourceValue() {
     return effectiveTargetCpaSource_;
   }
   /**
    * <pre>
-   * Source of the effective target CPA.
+   * Output only. Source of the effective target CPA.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetCpaSource() {
     @SuppressWarnings("deprecation")
@@ -1192,33 +1192,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue effectiveTargetRoas_;
   /**
    * <pre>
-   * The effective target ROAS (return-on-ad-spend).
+   * Output only. The effective target ROAS (return-on-ad-spend).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasEffectiveTargetRoas() {
     return effectiveTargetRoas_ != null;
   }
   /**
    * <pre>
-   * The effective target ROAS (return-on-ad-spend).
+   * Output only. The effective target ROAS (return-on-ad-spend).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.DoubleValue getEffectiveTargetRoas() {
     return effectiveTargetRoas_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : effectiveTargetRoas_;
   }
   /**
    * <pre>
-   * The effective target ROAS (return-on-ad-spend).
+   * Output only. The effective target ROAS (return-on-ad-spend).
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+   * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.DoubleValueOrBuilder getEffectiveTargetRoasOrBuilder() {
     return getEffectiveTargetRoas();
@@ -1228,22 +1228,22 @@ private static final long serialVersionUID = 0L;
   private int effectiveTargetRoasSource_;
   /**
    * <pre>
-   * Source of the effective target ROAS.
+   * Output only. Source of the effective target ROAS.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getEffectiveTargetRoasSourceValue() {
     return effectiveTargetRoasSource_;
   }
   /**
    * <pre>
-   * Source of the effective target ROAS.
+   * Output only. Source of the effective target ROAS.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetRoasSource() {
     @SuppressWarnings("deprecation")
@@ -1255,20 +1255,20 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.protobuf.StringValue> labels_;
   /**
    * <pre>
-   * The resource names of labels attached to this ad group.
+   * Output only. The resource names of labels attached to this ad group.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.util.List<com.google.protobuf.StringValue> getLabelsList() {
     return labels_;
   }
   /**
    * <pre>
-   * The resource names of labels attached to this ad group.
+   * Output only. The resource names of labels attached to this ad group.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getLabelsOrBuilderList() {
@@ -1276,30 +1276,30 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource names of labels attached to this ad group.
+   * Output only. The resource names of labels attached to this ad group.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public int getLabelsCount() {
     return labels_.size();
   }
   /**
    * <pre>
-   * The resource names of labels attached to this ad group.
+   * Output only. The resource names of labels attached to this ad group.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getLabels(int index) {
     return labels_.get(index);
   }
   /**
    * <pre>
-   * The resource names of labels attached to this ad group.
+   * Output only. The resource names of labels attached to this ad group.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getLabelsOrBuilder(
       int index) {
@@ -2335,12 +2335,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the ad group.
+     * Immutable. The resource name of the ad group.
      * Ad group resource names have the form:
      * `customers/{customer_id}/adGroups/{ad_group_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -2356,12 +2356,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group.
+     * Immutable. The resource name of the ad group.
      * Ad group resource names have the form:
      * `customers/{customer_id}/adGroups/{ad_group_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -2378,12 +2378,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group.
+     * Immutable. The resource name of the ad group.
      * Ad group resource names have the form:
      * `customers/{customer_id}/adGroups/{ad_group_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -2397,12 +2397,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group.
+     * Immutable. The resource name of the ad group.
      * Ad group resource names have the form:
      * `customers/{customer_id}/adGroups/{ad_group_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -2412,12 +2412,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group.
+     * Immutable. The resource name of the ad group.
      * Ad group resource names have the form:
      * `customers/{customer_id}/adGroups/{ad_group_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -2436,20 +2436,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the ad group.
+     * Output only. The ID of the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the ad group.
+     * Output only. The ID of the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -2460,10 +2460,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad group.
+     * Output only. The ID of the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -2480,10 +2480,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad group.
+     * Output only. The ID of the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2498,10 +2498,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad group.
+     * Output only. The ID of the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -2520,10 +2520,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad group.
+     * Output only. The ID of the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -2538,10 +2538,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad group.
+     * Output only. The ID of the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -2550,10 +2550,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad group.
+     * Output only. The ID of the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -2565,10 +2565,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad group.
+     * Output only. The ID of the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2850,20 +2850,20 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The type of the ad group.
+     * Immutable. The type of the ad group.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * The type of the ad group.
+     * Immutable. The type of the ad group.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -2872,10 +2872,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the ad group.
+     * Immutable. The type of the ad group.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType getType() {
       @SuppressWarnings("deprecation")
@@ -2884,10 +2884,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the ad group.
+     * Immutable. The type of the ad group.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setType(com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType value) {
       if (value == null) {
@@ -2900,10 +2900,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the ad group.
+     * Immutable. The type of the ad group.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearType() {
       
@@ -2982,28 +2982,28 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> baseAdGroupBuilder_;
     /**
      * <pre>
-     * For draft or experiment ad groups, this field is the resource name of the
+     * Output only. For draft or experiment ad groups, this field is the resource name of the
      * base ad group from which this ad group was created. If a draft or
      * experiment ad group does not have a base ad group, then this field is null.
      * For base ad groups, this field equals the ad group resource name.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasBaseAdGroup() {
       return baseAdGroupBuilder_ != null || baseAdGroup_ != null;
     }
     /**
      * <pre>
-     * For draft or experiment ad groups, this field is the resource name of the
+     * Output only. For draft or experiment ad groups, this field is the resource name of the
      * base ad group from which this ad group was created. If a draft or
      * experiment ad group does not have a base ad group, then this field is null.
      * For base ad groups, this field equals the ad group resource name.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getBaseAdGroup() {
       if (baseAdGroupBuilder_ == null) {
@@ -3014,14 +3014,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * For draft or experiment ad groups, this field is the resource name of the
+     * Output only. For draft or experiment ad groups, this field is the resource name of the
      * base ad group from which this ad group was created. If a draft or
      * experiment ad group does not have a base ad group, then this field is null.
      * For base ad groups, this field equals the ad group resource name.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setBaseAdGroup(com.google.protobuf.StringValue value) {
       if (baseAdGroupBuilder_ == null) {
@@ -3038,14 +3038,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * For draft or experiment ad groups, this field is the resource name of the
+     * Output only. For draft or experiment ad groups, this field is the resource name of the
      * base ad group from which this ad group was created. If a draft or
      * experiment ad group does not have a base ad group, then this field is null.
      * For base ad groups, this field equals the ad group resource name.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setBaseAdGroup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3060,14 +3060,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * For draft or experiment ad groups, this field is the resource name of the
+     * Output only. For draft or experiment ad groups, this field is the resource name of the
      * base ad group from which this ad group was created. If a draft or
      * experiment ad group does not have a base ad group, then this field is null.
      * For base ad groups, this field equals the ad group resource name.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeBaseAdGroup(com.google.protobuf.StringValue value) {
       if (baseAdGroupBuilder_ == null) {
@@ -3086,14 +3086,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * For draft or experiment ad groups, this field is the resource name of the
+     * Output only. For draft or experiment ad groups, this field is the resource name of the
      * base ad group from which this ad group was created. If a draft or
      * experiment ad group does not have a base ad group, then this field is null.
      * For base ad groups, this field equals the ad group resource name.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearBaseAdGroup() {
       if (baseAdGroupBuilder_ == null) {
@@ -3108,14 +3108,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * For draft or experiment ad groups, this field is the resource name of the
+     * Output only. For draft or experiment ad groups, this field is the resource name of the
      * base ad group from which this ad group was created. If a draft or
      * experiment ad group does not have a base ad group, then this field is null.
      * For base ad groups, this field equals the ad group resource name.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getBaseAdGroupBuilder() {
       
@@ -3124,14 +3124,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * For draft or experiment ad groups, this field is the resource name of the
+     * Output only. For draft or experiment ad groups, this field is the resource name of the
      * base ad group from which this ad group was created. If a draft or
      * experiment ad group does not have a base ad group, then this field is null.
      * For base ad groups, this field equals the ad group resource name.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder() {
       if (baseAdGroupBuilder_ != null) {
@@ -3143,14 +3143,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * For draft or experiment ad groups, this field is the resource name of the
+     * Output only. For draft or experiment ad groups, this field is the resource name of the
      * base ad group from which this ad group was created. If a draft or
      * experiment ad group does not have a base ad group, then this field is null.
      * For base ad groups, this field equals the ad group resource name.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 18;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -3654,20 +3654,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignBuilder_;
     /**
      * <pre>
-     * The campaign to which the ad group belongs.
+     * Immutable. The campaign to which the ad group belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 10;</code>
+     * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasCampaign() {
       return campaignBuilder_ != null || campaign_ != null;
     }
     /**
      * <pre>
-     * The campaign to which the ad group belongs.
+     * Immutable. The campaign to which the ad group belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 10;</code>
+     * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getCampaign() {
       if (campaignBuilder_ == null) {
@@ -3678,10 +3678,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the ad group belongs.
+     * Immutable. The campaign to which the ad group belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 10;</code>
+     * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -3698,10 +3698,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the ad group belongs.
+     * Immutable. The campaign to which the ad group belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 10;</code>
+     * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3716,10 +3716,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the ad group belongs.
+     * Immutable. The campaign to which the ad group belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 10;</code>
+     * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -3738,10 +3738,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the ad group belongs.
+     * Immutable. The campaign to which the ad group belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 10;</code>
+     * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearCampaign() {
       if (campaignBuilder_ == null) {
@@ -3756,10 +3756,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the ad group belongs.
+     * Immutable. The campaign to which the ad group belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 10;</code>
+     * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getCampaignBuilder() {
       
@@ -3768,10 +3768,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the ad group belongs.
+     * Immutable. The campaign to which the ad group belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 10;</code>
+     * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
       if (campaignBuilder_ != null) {
@@ -3783,10 +3783,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the ad group belongs.
+     * Immutable. The campaign to which the ad group belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 10;</code>
+     * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -4266,20 +4266,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> cpvBidMicrosBuilder_;
     /**
      * <pre>
-     * The CPV (cost-per-view) bid.
+     * Output only. The CPV (cost-per-view) bid.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCpvBidMicros() {
       return cpvBidMicrosBuilder_ != null || cpvBidMicros_ != null;
     }
     /**
      * <pre>
-     * The CPV (cost-per-view) bid.
+     * Output only. The CPV (cost-per-view) bid.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getCpvBidMicros() {
       if (cpvBidMicrosBuilder_ == null) {
@@ -4290,10 +4290,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CPV (cost-per-view) bid.
+     * Output only. The CPV (cost-per-view) bid.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCpvBidMicros(com.google.protobuf.Int64Value value) {
       if (cpvBidMicrosBuilder_ == null) {
@@ -4310,10 +4310,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CPV (cost-per-view) bid.
+     * Output only. The CPV (cost-per-view) bid.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCpvBidMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -4328,10 +4328,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CPV (cost-per-view) bid.
+     * Output only. The CPV (cost-per-view) bid.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCpvBidMicros(com.google.protobuf.Int64Value value) {
       if (cpvBidMicrosBuilder_ == null) {
@@ -4350,10 +4350,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CPV (cost-per-view) bid.
+     * Output only. The CPV (cost-per-view) bid.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCpvBidMicros() {
       if (cpvBidMicrosBuilder_ == null) {
@@ -4368,10 +4368,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CPV (cost-per-view) bid.
+     * Output only. The CPV (cost-per-view) bid.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getCpvBidMicrosBuilder() {
       
@@ -4380,10 +4380,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CPV (cost-per-view) bid.
+     * Output only. The CPV (cost-per-view) bid.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getCpvBidMicrosOrBuilder() {
       if (cpvBidMicrosBuilder_ != null) {
@@ -4395,10 +4395,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The CPV (cost-per-view) bid.
+     * Output only. The CPV (cost-per-view) bid.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17;</code>
+     * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -5466,22 +5466,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> effectiveTargetCpaMicrosBuilder_;
     /**
      * <pre>
-     * The effective target CPA (cost-per-acquisition).
+     * Output only. The effective target CPA (cost-per-acquisition).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasEffectiveTargetCpaMicros() {
       return effectiveTargetCpaMicrosBuilder_ != null || effectiveTargetCpaMicros_ != null;
     }
     /**
      * <pre>
-     * The effective target CPA (cost-per-acquisition).
+     * Output only. The effective target CPA (cost-per-acquisition).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getEffectiveTargetCpaMicros() {
       if (effectiveTargetCpaMicrosBuilder_ == null) {
@@ -5492,11 +5492,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target CPA (cost-per-acquisition).
+     * Output only. The effective target CPA (cost-per-acquisition).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEffectiveTargetCpaMicros(com.google.protobuf.Int64Value value) {
       if (effectiveTargetCpaMicrosBuilder_ == null) {
@@ -5513,11 +5513,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target CPA (cost-per-acquisition).
+     * Output only. The effective target CPA (cost-per-acquisition).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEffectiveTargetCpaMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -5532,11 +5532,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target CPA (cost-per-acquisition).
+     * Output only. The effective target CPA (cost-per-acquisition).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeEffectiveTargetCpaMicros(com.google.protobuf.Int64Value value) {
       if (effectiveTargetCpaMicrosBuilder_ == null) {
@@ -5555,11 +5555,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target CPA (cost-per-acquisition).
+     * Output only. The effective target CPA (cost-per-acquisition).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearEffectiveTargetCpaMicros() {
       if (effectiveTargetCpaMicrosBuilder_ == null) {
@@ -5574,11 +5574,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target CPA (cost-per-acquisition).
+     * Output only. The effective target CPA (cost-per-acquisition).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getEffectiveTargetCpaMicrosBuilder() {
       
@@ -5587,11 +5587,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target CPA (cost-per-acquisition).
+     * Output only. The effective target CPA (cost-per-acquisition).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getEffectiveTargetCpaMicrosOrBuilder() {
       if (effectiveTargetCpaMicrosBuilder_ != null) {
@@ -5603,11 +5603,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target CPA (cost-per-acquisition).
+     * Output only. The effective target CPA (cost-per-acquisition).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28;</code>
+     * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -5626,22 +5626,22 @@ private static final long serialVersionUID = 0L;
     private int effectiveTargetCpaSource_ = 0;
     /**
      * <pre>
-     * Source of the effective target CPA.
+     * Output only. Source of the effective target CPA.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getEffectiveTargetCpaSourceValue() {
       return effectiveTargetCpaSource_;
     }
     /**
      * <pre>
-     * Source of the effective target CPA.
+     * Output only. Source of the effective target CPA.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEffectiveTargetCpaSourceValue(int value) {
       effectiveTargetCpaSource_ = value;
@@ -5650,11 +5650,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Source of the effective target CPA.
+     * Output only. Source of the effective target CPA.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetCpaSource() {
       @SuppressWarnings("deprecation")
@@ -5663,11 +5663,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Source of the effective target CPA.
+     * Output only. Source of the effective target CPA.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEffectiveTargetCpaSource(com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource value) {
       if (value == null) {
@@ -5680,11 +5680,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Source of the effective target CPA.
+     * Output only. Source of the effective target CPA.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearEffectiveTargetCpaSource() {
       
@@ -5698,22 +5698,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> effectiveTargetRoasBuilder_;
     /**
      * <pre>
-     * The effective target ROAS (return-on-ad-spend).
+     * Output only. The effective target ROAS (return-on-ad-spend).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasEffectiveTargetRoas() {
       return effectiveTargetRoasBuilder_ != null || effectiveTargetRoas_ != null;
     }
     /**
      * <pre>
-     * The effective target ROAS (return-on-ad-spend).
+     * Output only. The effective target ROAS (return-on-ad-spend).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.DoubleValue getEffectiveTargetRoas() {
       if (effectiveTargetRoasBuilder_ == null) {
@@ -5724,11 +5724,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target ROAS (return-on-ad-spend).
+     * Output only. The effective target ROAS (return-on-ad-spend).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEffectiveTargetRoas(com.google.protobuf.DoubleValue value) {
       if (effectiveTargetRoasBuilder_ == null) {
@@ -5745,11 +5745,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target ROAS (return-on-ad-spend).
+     * Output only. The effective target ROAS (return-on-ad-spend).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEffectiveTargetRoas(
         com.google.protobuf.DoubleValue.Builder builderForValue) {
@@ -5764,11 +5764,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target ROAS (return-on-ad-spend).
+     * Output only. The effective target ROAS (return-on-ad-spend).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeEffectiveTargetRoas(com.google.protobuf.DoubleValue value) {
       if (effectiveTargetRoasBuilder_ == null) {
@@ -5787,11 +5787,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target ROAS (return-on-ad-spend).
+     * Output only. The effective target ROAS (return-on-ad-spend).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearEffectiveTargetRoas() {
       if (effectiveTargetRoasBuilder_ == null) {
@@ -5806,11 +5806,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target ROAS (return-on-ad-spend).
+     * Output only. The effective target ROAS (return-on-ad-spend).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.DoubleValue.Builder getEffectiveTargetRoasBuilder() {
       
@@ -5819,11 +5819,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target ROAS (return-on-ad-spend).
+     * Output only. The effective target ROAS (return-on-ad-spend).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.DoubleValueOrBuilder getEffectiveTargetRoasOrBuilder() {
       if (effectiveTargetRoasBuilder_ != null) {
@@ -5835,11 +5835,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The effective target ROAS (return-on-ad-spend).
+     * Output only. The effective target ROAS (return-on-ad-spend).
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue effective_target_roas = 31;</code>
+     * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
@@ -5858,22 +5858,22 @@ private static final long serialVersionUID = 0L;
     private int effectiveTargetRoasSource_ = 0;
     /**
      * <pre>
-     * Source of the effective target ROAS.
+     * Output only. Source of the effective target ROAS.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getEffectiveTargetRoasSourceValue() {
       return effectiveTargetRoasSource_;
     }
     /**
      * <pre>
-     * Source of the effective target ROAS.
+     * Output only. Source of the effective target ROAS.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEffectiveTargetRoasSourceValue(int value) {
       effectiveTargetRoasSource_ = value;
@@ -5882,11 +5882,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Source of the effective target ROAS.
+     * Output only. Source of the effective target ROAS.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetRoasSource() {
       @SuppressWarnings("deprecation")
@@ -5895,11 +5895,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Source of the effective target ROAS.
+     * Output only. Source of the effective target ROAS.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEffectiveTargetRoasSource(com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource value) {
       if (value == null) {
@@ -5912,11 +5912,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Source of the effective target ROAS.
+     * Output only. Source of the effective target ROAS.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearEffectiveTargetRoasSource() {
       
@@ -5939,10 +5939,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getLabelsList() {
       if (labelsBuilder_ == null) {
@@ -5953,10 +5953,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public int getLabelsCount() {
       if (labelsBuilder_ == null) {
@@ -5967,10 +5967,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getLabels(int index) {
       if (labelsBuilder_ == null) {
@@ -5981,10 +5981,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setLabels(
         int index, com.google.protobuf.StringValue value) {
@@ -6002,10 +6002,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setLabels(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -6020,10 +6020,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLabels(com.google.protobuf.StringValue value) {
       if (labelsBuilder_ == null) {
@@ -6040,10 +6040,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLabels(
         int index, com.google.protobuf.StringValue value) {
@@ -6061,10 +6061,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLabels(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -6079,10 +6079,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLabels(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -6097,10 +6097,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder addAllLabels(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -6116,10 +6116,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearLabels() {
       if (labelsBuilder_ == null) {
@@ -6133,10 +6133,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder removeLabels(int index) {
       if (labelsBuilder_ == null) {
@@ -6150,10 +6150,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getLabelsBuilder(
         int index) {
@@ -6161,10 +6161,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLabelsOrBuilder(
         int index) {
@@ -6175,10 +6175,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getLabelsOrBuilderList() {
@@ -6190,10 +6190,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder addLabelsBuilder() {
       return getLabelsFieldBuilder().addBuilder(
@@ -6201,10 +6201,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder addLabelsBuilder(
         int index) {
@@ -6213,10 +6213,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this ad group.
+     * Output only. The resource names of labels attached to this ad group.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 33;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getLabelsBuilderList() {

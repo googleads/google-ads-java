@@ -34,24 +34,26 @@ public final class MobileAppCategoryConstantServiceProto {
       "ads/googleads/v3/resources/mobile_app_ca" +
       "tegory_constant.proto\032\034google/api/annota" +
       "tions.proto\032\027google/api/client.proto\032\037go" +
-      "ogle/api/field_behavior.proto\"A\n#GetMobi" +
-      "leAppCategoryConstantRequest\022\032\n\rresource" +
-      "_name\030\001 \001(\tB\003\340A\0022\257\002\n MobileAppCategoryCo" +
-      "nstantService\022\355\001\n\034GetMobileAppCategoryCo" +
-      "nstant\022E.google.ads.googleads.v3.service" +
-      "s.GetMobileAppCategoryConstantRequest\032<." +
-      "google.ads.googleads.v3.resources.Mobile" +
-      "AppCategoryConstant\"H\202\323\344\223\0022\0220/v3/{resour" +
-      "ce_name=mobileAppCategoryConstants/*}\332A\r" +
-      "resource_name\032\033\312A\030googleads.googleapis.c" +
-      "omB\214\002\n$com.google.ads.googleads.v3.servi" +
-      "cesB%MobileAppCategoryConstantServicePro" +
-      "toP\001ZHgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v3/services;services\242\002" +
-      "\003GAA\252\002 Google.Ads.GoogleAds.V3.Services\312" +
-      "\002 Google\\Ads\\GoogleAds\\V3\\Services\352\002$Goo" +
-      "gle::Ads::GoogleAds::V3::Servicesb\006proto" +
-      "3"
+      "ogle/api/field_behavior.proto\032\031google/ap" +
+      "i/resource.proto\"x\n#GetMobileAppCategory" +
+      "ConstantRequest\022Q\n\rresource_name\030\001 \001(\tB:" +
+      "\340A\002\372A4\n2googleads.googleapis.com/MobileA" +
+      "ppCategoryConstant2\257\002\n MobileAppCategory" +
+      "ConstantService\022\355\001\n\034GetMobileAppCategory" +
+      "Constant\022E.google.ads.googleads.v3.servi" +
+      "ces.GetMobileAppCategoryConstantRequest\032" +
+      "<.google.ads.googleads.v3.resources.Mobi" +
+      "leAppCategoryConstant\"H\202\323\344\223\0022\0220/v3/{reso" +
+      "urce_name=mobileAppCategoryConstants/*}\332" +
+      "A\rresource_name\032\033\312A\030googleads.googleapis" +
+      ".comB\214\002\n$com.google.ads.googleads.v3.ser" +
+      "vicesB%MobileAppCategoryConstantServiceP" +
+      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v3/services;services" +
+      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.Service" +
+      "s\312\002 Google\\Ads\\GoogleAds\\V3\\Services\352\002$G" +
+      "oogle::Ads::GoogleAds::V3::Servicesb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -68,6 +70,7 @@ public final class MobileAppCategoryConstantServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetMobileAppCategoryConstantRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -81,12 +84,14 @@ public final class MobileAppCategoryConstantServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.MobileAppCategoryConstantProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

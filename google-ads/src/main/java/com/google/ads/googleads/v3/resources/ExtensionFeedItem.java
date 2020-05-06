@@ -465,12 +465,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the extension feed item.
+   * Immutable. The resource name of the extension feed item.
    * Extension feed item resource names have the form:
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -486,12 +486,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the extension feed item.
+   * Immutable. The resource name of the extension feed item.
    * Extension feed item resource names have the form:
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -511,30 +511,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of this feed item. Read-only.
+   * Output only. The ID of this feed item. Read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 24;</code>
+   * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of this feed item. Read-only.
+   * Output only. The ID of this feed item. Read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 24;</code>
+   * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of this feed item. Read-only.
+   * Output only. The ID of this feed item. Read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 24;</code>
+   * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -544,22 +544,22 @@ private static final long serialVersionUID = 0L;
   private int extensionType_;
   /**
    * <pre>
-   * The extension type of the extension feed item.
+   * Output only. The extension type of the extension feed item.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+   * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getExtensionTypeValue() {
     return extensionType_;
   }
   /**
    * <pre>
-   * The extension type of the extension feed item.
+   * Output only. The extension type of the extension feed item.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+   * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
     @SuppressWarnings("deprecation")
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasTargetedGeoTargetConstant() {
     return targetedGeoTargetConstant_ != null;
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getTargetedGeoTargetConstant() {
     return targetedGeoTargetConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : targetedGeoTargetConstant_;
@@ -768,7 +768,7 @@ private static final long serialVersionUID = 0L;
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+   * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getTargetedGeoTargetConstantOrBuilder() {
     return getTargetedGeoTargetConstant();
@@ -811,22 +811,22 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Status of the feed item.
+   * Output only. Status of the feed item.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Status of the feed item.
+   * Output only. Status of the feed item.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -1141,22 +1141,22 @@ private static final long serialVersionUID = 0L;
   public static final int LOCATION_FEED_ITEM_FIELD_NUMBER = 14;
   /**
    * <pre>
-   * Location extension. Locations are synced from a GMB account into a feed.
+   * Output only. Location extension. Locations are synced from a GMB account into a feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+   * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasLocationFeedItem() {
     return extensionCase_ == 14;
   }
   /**
    * <pre>
-   * Location extension. Locations are synced from a GMB account into a feed.
+   * Output only. Location extension. Locations are synced from a GMB account into a feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+   * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.LocationFeedItem getLocationFeedItem() {
     if (extensionCase_ == 14) {
@@ -1166,11 +1166,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Location extension. Locations are synced from a GMB account into a feed.
+   * Output only. Location extension. Locations are synced from a GMB account into a feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+   * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.LocationFeedItemOrBuilder getLocationFeedItemOrBuilder() {
     if (extensionCase_ == 14) {
@@ -1182,24 +1182,24 @@ private static final long serialVersionUID = 0L;
   public static final int AFFILIATE_LOCATION_FEED_ITEM_FIELD_NUMBER = 15;
   /**
    * <pre>
-   * Affiliate location extension. Feed locations are populated by Google Ads
+   * Output only. Affiliate location extension. Feed locations are populated by Google Ads
    * based on a chain ID.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasAffiliateLocationFeedItem() {
     return extensionCase_ == 15;
   }
   /**
    * <pre>
-   * Affiliate location extension. Feed locations are populated by Google Ads
+   * Output only. Affiliate location extension. Feed locations are populated by Google Ads
    * based on a chain ID.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.AffiliateLocationFeedItem getAffiliateLocationFeedItem() {
     if (extensionCase_ == 15) {
@@ -1209,12 +1209,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Affiliate location extension. Feed locations are populated by Google Ads
+   * Output only. Affiliate location extension. Feed locations are populated by Google Ads
    * based on a chain ID.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+   * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.AffiliateLocationFeedItemOrBuilder getAffiliateLocationFeedItemOrBuilder() {
     if (extensionCase_ == 15) {
@@ -1267,7 +1267,7 @@ private static final long serialVersionUID = 0L;
    * The targeted campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasTargetedCampaign() {
     return servingResourceTargetingCase_ == 18;
@@ -1277,7 +1277,7 @@ private static final long serialVersionUID = 0L;
    * The targeted campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getTargetedCampaign() {
     if (servingResourceTargetingCase_ == 18) {
@@ -1290,7 +1290,7 @@ private static final long serialVersionUID = 0L;
    * The targeted campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+   * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getTargetedCampaignOrBuilder() {
     if (servingResourceTargetingCase_ == 18) {
@@ -1305,7 +1305,7 @@ private static final long serialVersionUID = 0L;
    * The targeted ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasTargetedAdGroup() {
     return servingResourceTargetingCase_ == 19;
@@ -1315,7 +1315,7 @@ private static final long serialVersionUID = 0L;
    * The targeted ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getTargetedAdGroup() {
     if (servingResourceTargetingCase_ == 19) {
@@ -1328,7 +1328,7 @@ private static final long serialVersionUID = 0L;
    * The targeted ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+   * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getTargetedAdGroupOrBuilder() {
     if (servingResourceTargetingCase_ == 19) {
@@ -2305,12 +2305,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the extension feed item.
+     * Immutable. The resource name of the extension feed item.
      * Extension feed item resource names have the form:
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -2326,12 +2326,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the extension feed item.
+     * Immutable. The resource name of the extension feed item.
      * Extension feed item resource names have the form:
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -2348,12 +2348,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the extension feed item.
+     * Immutable. The resource name of the extension feed item.
      * Extension feed item resource names have the form:
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -2367,12 +2367,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the extension feed item.
+     * Immutable. The resource name of the extension feed item.
      * Extension feed item resource names have the form:
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -2382,12 +2382,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the extension feed item.
+     * Immutable. The resource name of the extension feed item.
      * Extension feed item resource names have the form:
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -2406,20 +2406,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of this feed item. Read-only.
+     * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 24;</code>
+     * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of this feed item. Read-only.
+     * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 24;</code>
+     * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -2430,10 +2430,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item. Read-only.
+     * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 24;</code>
+     * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -2450,10 +2450,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item. Read-only.
+     * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 24;</code>
+     * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2468,10 +2468,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item. Read-only.
+     * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 24;</code>
+     * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -2490,10 +2490,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item. Read-only.
+     * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 24;</code>
+     * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -2508,10 +2508,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item. Read-only.
+     * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 24;</code>
+     * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -2520,10 +2520,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item. Read-only.
+     * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 24;</code>
+     * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -2535,10 +2535,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item. Read-only.
+     * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 24;</code>
+     * <code>.google.protobuf.Int64Value id = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2557,22 +2557,22 @@ private static final long serialVersionUID = 0L;
     private int extensionType_ = 0;
     /**
      * <pre>
-     * The extension type of the extension feed item.
+     * Output only. The extension type of the extension feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getExtensionTypeValue() {
       return extensionType_;
     }
     /**
      * <pre>
-     * The extension type of the extension feed item.
+     * Output only. The extension type of the extension feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setExtensionTypeValue(int value) {
       extensionType_ = value;
@@ -2581,11 +2581,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The extension type of the extension feed item.
+     * Output only. The extension type of the extension feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
       @SuppressWarnings("deprecation")
@@ -2594,11 +2594,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The extension type of the extension feed item.
+     * Output only. The extension type of the extension feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setExtensionType(com.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType value) {
       if (value == null) {
@@ -2611,11 +2611,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The extension type of the extension feed item.
+     * Output only. The extension type of the extension feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearExtensionType() {
       
@@ -3405,7 +3405,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasTargetedGeoTargetConstant() {
       return targetedGeoTargetConstantBuilder_ != null || targetedGeoTargetConstant_ != null;
@@ -3415,7 +3415,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getTargetedGeoTargetConstant() {
       if (targetedGeoTargetConstantBuilder_ == null) {
@@ -3429,7 +3429,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setTargetedGeoTargetConstant(com.google.protobuf.StringValue value) {
       if (targetedGeoTargetConstantBuilder_ == null) {
@@ -3449,7 +3449,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setTargetedGeoTargetConstant(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3467,7 +3467,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeTargetedGeoTargetConstant(com.google.protobuf.StringValue value) {
       if (targetedGeoTargetConstantBuilder_ == null) {
@@ -3489,7 +3489,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearTargetedGeoTargetConstant() {
       if (targetedGeoTargetConstantBuilder_ == null) {
@@ -3507,7 +3507,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getTargetedGeoTargetConstantBuilder() {
       
@@ -3519,7 +3519,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getTargetedGeoTargetConstantOrBuilder() {
       if (targetedGeoTargetConstantBuilder_ != null) {
@@ -3534,7 +3534,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20;</code>
+     * <code>.google.protobuf.StringValue targeted_geo_target_constant = 20 [(.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -3706,22 +3706,22 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Status of the feed item.
+     * Output only. Status of the feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Status of the feed item.
+     * Output only. Status of the feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -3730,11 +3730,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed item.
+     * Output only. Status of the feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -3743,11 +3743,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed item.
+     * Output only. Status of the feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus value) {
       if (value == null) {
@@ -3760,11 +3760,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed item.
+     * Output only. Status of the feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       
@@ -5153,22 +5153,22 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.LocationFeedItem, com.google.ads.googleads.v3.common.LocationFeedItem.Builder, com.google.ads.googleads.v3.common.LocationFeedItemOrBuilder> locationFeedItemBuilder_;
     /**
      * <pre>
-     * Location extension. Locations are synced from a GMB account into a feed.
+     * Output only. Location extension. Locations are synced from a GMB account into a feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasLocationFeedItem() {
       return extensionCase_ == 14;
     }
     /**
      * <pre>
-     * Location extension. Locations are synced from a GMB account into a feed.
+     * Output only. Location extension. Locations are synced from a GMB account into a feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.LocationFeedItem getLocationFeedItem() {
       if (locationFeedItemBuilder_ == null) {
@@ -5185,11 +5185,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location extension. Locations are synced from a GMB account into a feed.
+     * Output only. Location extension. Locations are synced from a GMB account into a feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLocationFeedItem(com.google.ads.googleads.v3.common.LocationFeedItem value) {
       if (locationFeedItemBuilder_ == null) {
@@ -5206,11 +5206,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location extension. Locations are synced from a GMB account into a feed.
+     * Output only. Location extension. Locations are synced from a GMB account into a feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLocationFeedItem(
         com.google.ads.googleads.v3.common.LocationFeedItem.Builder builderForValue) {
@@ -5225,11 +5225,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location extension. Locations are synced from a GMB account into a feed.
+     * Output only. Location extension. Locations are synced from a GMB account into a feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLocationFeedItem(com.google.ads.googleads.v3.common.LocationFeedItem value) {
       if (locationFeedItemBuilder_ == null) {
@@ -5252,11 +5252,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location extension. Locations are synced from a GMB account into a feed.
+     * Output only. Location extension. Locations are synced from a GMB account into a feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLocationFeedItem() {
       if (locationFeedItemBuilder_ == null) {
@@ -5276,22 +5276,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location extension. Locations are synced from a GMB account into a feed.
+     * Output only. Location extension. Locations are synced from a GMB account into a feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.LocationFeedItem.Builder getLocationFeedItemBuilder() {
       return getLocationFeedItemFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Location extension. Locations are synced from a GMB account into a feed.
+     * Output only. Location extension. Locations are synced from a GMB account into a feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.LocationFeedItemOrBuilder getLocationFeedItemOrBuilder() {
       if ((extensionCase_ == 14) && (locationFeedItemBuilder_ != null)) {
@@ -5305,11 +5305,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location extension. Locations are synced from a GMB account into a feed.
+     * Output only. Location extension. Locations are synced from a GMB account into a feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14;</code>
+     * <code>.google.ads.googleads.v3.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.LocationFeedItem, com.google.ads.googleads.v3.common.LocationFeedItem.Builder, com.google.ads.googleads.v3.common.LocationFeedItemOrBuilder> 
@@ -5334,24 +5334,24 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.AffiliateLocationFeedItem, com.google.ads.googleads.v3.common.AffiliateLocationFeedItem.Builder, com.google.ads.googleads.v3.common.AffiliateLocationFeedItemOrBuilder> affiliateLocationFeedItemBuilder_;
     /**
      * <pre>
-     * Affiliate location extension. Feed locations are populated by Google Ads
+     * Output only. Affiliate location extension. Feed locations are populated by Google Ads
      * based on a chain ID.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasAffiliateLocationFeedItem() {
       return extensionCase_ == 15;
     }
     /**
      * <pre>
-     * Affiliate location extension. Feed locations are populated by Google Ads
+     * Output only. Affiliate location extension. Feed locations are populated by Google Ads
      * based on a chain ID.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.AffiliateLocationFeedItem getAffiliateLocationFeedItem() {
       if (affiliateLocationFeedItemBuilder_ == null) {
@@ -5368,12 +5368,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Affiliate location extension. Feed locations are populated by Google Ads
+     * Output only. Affiliate location extension. Feed locations are populated by Google Ads
      * based on a chain ID.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAffiliateLocationFeedItem(com.google.ads.googleads.v3.common.AffiliateLocationFeedItem value) {
       if (affiliateLocationFeedItemBuilder_ == null) {
@@ -5390,12 +5390,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Affiliate location extension. Feed locations are populated by Google Ads
+     * Output only. Affiliate location extension. Feed locations are populated by Google Ads
      * based on a chain ID.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAffiliateLocationFeedItem(
         com.google.ads.googleads.v3.common.AffiliateLocationFeedItem.Builder builderForValue) {
@@ -5410,12 +5410,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Affiliate location extension. Feed locations are populated by Google Ads
+     * Output only. Affiliate location extension. Feed locations are populated by Google Ads
      * based on a chain ID.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAffiliateLocationFeedItem(com.google.ads.googleads.v3.common.AffiliateLocationFeedItem value) {
       if (affiliateLocationFeedItemBuilder_ == null) {
@@ -5438,12 +5438,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Affiliate location extension. Feed locations are populated by Google Ads
+     * Output only. Affiliate location extension. Feed locations are populated by Google Ads
      * based on a chain ID.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAffiliateLocationFeedItem() {
       if (affiliateLocationFeedItemBuilder_ == null) {
@@ -5463,24 +5463,24 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Affiliate location extension. Feed locations are populated by Google Ads
+     * Output only. Affiliate location extension. Feed locations are populated by Google Ads
      * based on a chain ID.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.AffiliateLocationFeedItem.Builder getAffiliateLocationFeedItemBuilder() {
       return getAffiliateLocationFeedItemFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Affiliate location extension. Feed locations are populated by Google Ads
+     * Output only. Affiliate location extension. Feed locations are populated by Google Ads
      * based on a chain ID.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.AffiliateLocationFeedItemOrBuilder getAffiliateLocationFeedItemOrBuilder() {
       if ((extensionCase_ == 15) && (affiliateLocationFeedItemBuilder_ != null)) {
@@ -5494,12 +5494,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Affiliate location extension. Feed locations are populated by Google Ads
+     * Output only. Affiliate location extension. Feed locations are populated by Google Ads
      * based on a chain ID.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;</code>
+     * <code>.google.ads.googleads.v3.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.AffiliateLocationFeedItem, com.google.ads.googleads.v3.common.AffiliateLocationFeedItem.Builder, com.google.ads.googleads.v3.common.AffiliateLocationFeedItemOrBuilder> 
@@ -5699,7 +5699,7 @@ private static final long serialVersionUID = 0L;
      * The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasTargetedCampaign() {
       return servingResourceTargetingCase_ == 18;
@@ -5709,7 +5709,7 @@ private static final long serialVersionUID = 0L;
      * The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getTargetedCampaign() {
       if (targetedCampaignBuilder_ == null) {
@@ -5729,7 +5729,7 @@ private static final long serialVersionUID = 0L;
      * The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setTargetedCampaign(com.google.protobuf.StringValue value) {
       if (targetedCampaignBuilder_ == null) {
@@ -5749,7 +5749,7 @@ private static final long serialVersionUID = 0L;
      * The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setTargetedCampaign(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5767,7 +5767,7 @@ private static final long serialVersionUID = 0L;
      * The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeTargetedCampaign(com.google.protobuf.StringValue value) {
       if (targetedCampaignBuilder_ == null) {
@@ -5793,7 +5793,7 @@ private static final long serialVersionUID = 0L;
      * The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearTargetedCampaign() {
       if (targetedCampaignBuilder_ == null) {
@@ -5816,7 +5816,7 @@ private static final long serialVersionUID = 0L;
      * The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getTargetedCampaignBuilder() {
       return getTargetedCampaignFieldBuilder().getBuilder();
@@ -5826,7 +5826,7 @@ private static final long serialVersionUID = 0L;
      * The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getTargetedCampaignOrBuilder() {
       if ((servingResourceTargetingCase_ == 18) && (targetedCampaignBuilder_ != null)) {
@@ -5843,7 +5843,7 @@ private static final long serialVersionUID = 0L;
      * The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_campaign = 18;</code>
+     * <code>.google.protobuf.StringValue targeted_campaign = 18 [(.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -5871,7 +5871,7 @@ private static final long serialVersionUID = 0L;
      * The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasTargetedAdGroup() {
       return servingResourceTargetingCase_ == 19;
@@ -5881,7 +5881,7 @@ private static final long serialVersionUID = 0L;
      * The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getTargetedAdGroup() {
       if (targetedAdGroupBuilder_ == null) {
@@ -5901,7 +5901,7 @@ private static final long serialVersionUID = 0L;
      * The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setTargetedAdGroup(com.google.protobuf.StringValue value) {
       if (targetedAdGroupBuilder_ == null) {
@@ -5921,7 +5921,7 @@ private static final long serialVersionUID = 0L;
      * The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setTargetedAdGroup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5939,7 +5939,7 @@ private static final long serialVersionUID = 0L;
      * The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeTargetedAdGroup(com.google.protobuf.StringValue value) {
       if (targetedAdGroupBuilder_ == null) {
@@ -5965,7 +5965,7 @@ private static final long serialVersionUID = 0L;
      * The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearTargetedAdGroup() {
       if (targetedAdGroupBuilder_ == null) {
@@ -5988,7 +5988,7 @@ private static final long serialVersionUID = 0L;
      * The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getTargetedAdGroupBuilder() {
       return getTargetedAdGroupFieldBuilder().getBuilder();
@@ -5998,7 +5998,7 @@ private static final long serialVersionUID = 0L;
      * The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getTargetedAdGroupOrBuilder() {
       if ((servingResourceTargetingCase_ == 19) && (targetedAdGroupBuilder_ != null)) {
@@ -6015,7 +6015,7 @@ private static final long serialVersionUID = 0L;
      * The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue targeted_ad_group = 19;</code>
+     * <code>.google.protobuf.StringValue targeted_ad_group = 19 [(.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

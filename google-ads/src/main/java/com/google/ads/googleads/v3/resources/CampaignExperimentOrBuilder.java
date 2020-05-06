@@ -9,76 +9,76 @@ public interface CampaignExperimentOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the campaign experiment.
+   * Immutable. The resource name of the campaign experiment.
    * Campaign experiment resource names have the form:
    * `customers/{customer_id}/campaignExperiments/{campaign_experiment_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the campaign experiment.
+   * Immutable. The resource name of the campaign experiment.
    * Campaign experiment resource names have the form:
    * `customers/{customer_id}/campaignExperiments/{campaign_experiment_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the campaign experiment.
+   * Output only. The ID of the campaign experiment.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the campaign experiment.
+   * Output only. The ID of the campaign experiment.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the campaign experiment.
+   * Output only. The ID of the campaign experiment.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * The campaign draft with staged changes to the base campaign.
+   * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+   * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasCampaignDraft();
   /**
    * <pre>
-   * The campaign draft with staged changes to the base campaign.
+   * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+   * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getCampaignDraft();
   /**
    * <pre>
-   * The campaign draft with staged changes to the base campaign.
+   * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+   * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCampaignDraftOrBuilder();
 
@@ -149,122 +149,122 @@ public interface CampaignExperimentOrBuilder extends
 
   /**
    * <pre>
-   * Share of traffic directed to experiment as a percent (must be between 1 and
+   * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
    * 99 inclusive. Base campaign receives the remainder of the traffic
    * (100 - traffic_split_percent). Required for create.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+   * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasTrafficSplitPercent();
   /**
    * <pre>
-   * Share of traffic directed to experiment as a percent (must be between 1 and
+   * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
    * 99 inclusive. Base campaign receives the remainder of the traffic
    * (100 - traffic_split_percent). Required for create.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+   * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.Int64Value getTrafficSplitPercent();
   /**
    * <pre>
-   * Share of traffic directed to experiment as a percent (must be between 1 and
+   * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
    * 99 inclusive. Base campaign receives the remainder of the traffic
    * (100 - traffic_split_percent). Required for create.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+   * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getTrafficSplitPercentOrBuilder();
 
   /**
    * <pre>
-   * Determines the behavior of the traffic split.
+   * Immutable. Determines the behavior of the traffic split.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getTrafficSplitTypeValue();
   /**
    * <pre>
-   * Determines the behavior of the traffic split.
+   * Immutable. Determines the behavior of the traffic split.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType getTrafficSplitType();
 
   /**
    * <pre>
-   * The experiment campaign, as opposed to the base campaign.
+   * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+   * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasExperimentCampaign();
   /**
    * <pre>
-   * The experiment campaign, as opposed to the base campaign.
+   * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+   * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getExperimentCampaign();
   /**
    * <pre>
-   * The experiment campaign, as opposed to the base campaign.
+   * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+   * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getExperimentCampaignOrBuilder();
 
   /**
    * <pre>
-   * The status of the campaign experiment. This field is read-only.
+   * Output only. The status of the campaign experiment. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getStatusValue();
   /**
    * <pre>
-   * The status of the campaign experiment. This field is read-only.
+   * Output only. The status of the campaign experiment. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus getStatus();
 
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion of experiment create or promote. The most recent long
    * running operation is returned.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasLongRunningOperation();
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion of experiment create or promote. The most recent long
    * running operation is returned.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getLongRunningOperation();
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion of experiment create or promote. The most recent long
    * running operation is returned.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder();
 

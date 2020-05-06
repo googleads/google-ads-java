@@ -33,39 +33,53 @@ public final class ChangeStatusProto {
       ".resources\032;google/ads/googleads/v3/enum" +
       "s/change_status_operation.proto\032?google/" +
       "ads/googleads/v3/enums/change_status_res" +
-      "ource_type.proto\032\031google/api/resource.pr" +
-      "oto\032\036google/protobuf/wrappers.proto\032\034goo" +
-      "gle/api/annotations.proto\"\242\007\n\014ChangeStat" +
-      "us\022\025\n\rresource_name\030\001 \001(\t\022;\n\025last_change" +
+      "ource_type.proto\032\037google/api/field_behav" +
+      "ior.proto\032\031google/api/resource.proto\032\036go" +
+      "ogle/protobuf/wrappers.proto\032\034google/api" +
+      "/annotations.proto\"\254\013\n\014ChangeStatus\022D\n\rr" +
+      "esource_name\030\001 \001(\tB-\340A\003\372A\'\n%googleads.go" +
+      "ogleapis.com/ChangeStatus\022@\n\025last_change" +
       "_date_time\030\003 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022k\n\rresource_type\030\004 \001(\0162T.google.a" +
-      "ds.googleads.v3.enums.ChangeStatusResour" +
-      "ceTypeEnum.ChangeStatusResourceType\022.\n\010c" +
-      "ampaign\030\005 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022.\n\010ad_group\030\006 \001(\0132\034.google.protobuf." +
-      "StringValue\022g\n\017resource_status\030\010 \001(\0162N.g" +
-      "oogle.ads.googleads.v3.enums.ChangeStatu" +
-      "sOperationEnum.ChangeStatusOperation\0221\n\013" +
-      "ad_group_ad\030\t \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\0228\n\022ad_group_criterion\030\n \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\0228\n\022campaign_cr" +
-      "iterion\030\013 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022*\n\004feed\030\014 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022/\n\tfeed_item\030\r \001(\0132\034.google.prot" +
-      "obuf.StringValue\0223\n\rad_group_feed\030\016 \001(\0132" +
-      "\034.google.protobuf.StringValue\0223\n\rcampaig" +
-      "n_feed\030\017 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022;\n\025ad_group_bid_modifier\030\020 \001(\0132\034.goog" +
-      "le.protobuf.StringValue:]\352AZ\n%googleads." +
-      "googleapis.com/ChangeStatus\0221customers/{" +
-      "customer}/changeStatus/{change_status}B\376" +
-      "\001\n%com.google.ads.googleads.v3.resources" +
-      "B\021ChangeStatusProtoP\001ZJgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v3/re" +
-      "sources;resources\242\002\003GAA\252\002!Google.Ads.Goo" +
-      "gleAds.V3.Resources\312\002!Google\\Ads\\GoogleA" +
-      "ds\\V3\\Resources\352\002%Google::Ads::GoogleAds" +
-      "::V3::Resourcesb\006proto3"
+      "gValueB\003\340A\003\022p\n\rresource_type\030\004 \001(\0162T.goo" +
+      "gle.ads.googleads.v3.enums.ChangeStatusR" +
+      "esourceTypeEnum.ChangeStatusResourceType" +
+      "B\003\340A\003\022Y\n\010campaign\030\005 \001(\0132\034.google.protobu" +
+      "f.StringValueB)\340A\003\372A#\n!googleads.googlea" +
+      "pis.com/Campaign\022X\n\010ad_group\030\006 \001(\0132\034.goo" +
+      "gle.protobuf.StringValueB(\340A\003\372A\"\n google" +
+      "ads.googleapis.com/AdGroup\022l\n\017resource_s" +
+      "tatus\030\010 \001(\0162N.google.ads.googleads.v3.en" +
+      "ums.ChangeStatusOperationEnum.ChangeStat" +
+      "usOperationB\003\340A\003\022]\n\013ad_group_ad\030\t \001(\0132\034." +
+      "google.protobuf.StringValueB*\340A\003\372A$\n\"goo" +
+      "gleads.googleapis.com/AdGroupAd\022k\n\022ad_gr" +
+      "oup_criterion\030\n \001(\0132\034.google.protobuf.St" +
+      "ringValueB1\340A\003\372A+\n)googleads.googleapis." +
+      "com/AdGroupCriterion\022l\n\022campaign_criteri" +
+      "on\030\013 \001(\0132\034.google.protobuf.StringValueB2" +
+      "\340A\003\372A,\n*googleads.googleapis.com/Campaig" +
+      "nCriterion\022Q\n\004feed\030\014 \001(\0132\034.google.protob" +
+      "uf.StringValueB%\340A\003\372A\037\n\035googleads.google" +
+      "apis.com/Feed\022Z\n\tfeed_item\030\r \001(\0132\034.googl" +
+      "e.protobuf.StringValueB)\340A\003\372A#\n!googlead" +
+      "s.googleapis.com/FeedItem\022a\n\rad_group_fe" +
+      "ed\030\016 \001(\0132\034.google.protobuf.StringValueB," +
+      "\340A\003\372A&\n$googleads.googleapis.com/AdGroup" +
+      "Feed\022b\n\rcampaign_feed\030\017 \001(\0132\034.google.pro" +
+      "tobuf.StringValueB-\340A\003\372A\'\n%googleads.goo" +
+      "gleapis.com/CampaignFeed\022p\n\025ad_group_bid" +
+      "_modifier\030\020 \001(\0132\034.google.protobuf.String" +
+      "ValueB3\340A\003\372A-\n+googleads.googleapis.com/" +
+      "AdGroupBidModifier:]\352AZ\n%googleads.googl" +
+      "eapis.com/ChangeStatus\0221customers/{custo" +
+      "mer}/changeStatus/{change_status}B\376\001\n%co" +
+      "m.google.ads.googleads.v3.resourcesB\021Cha" +
+      "ngeStatusProtoP\001ZJgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v3/resourc" +
+      "es;resources\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
+      "s.V3.Resources\312\002!Google\\Ads\\GoogleAds\\V3" +
+      "\\Resources\352\002%Google::Ads::GoogleAds::V3:" +
+      ":Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -80,6 +94,7 @@ public final class ChangeStatusProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.ChangeStatusOperationProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -92,11 +107,14 @@ public final class ChangeStatusProto {
         new java.lang.String[] { "ResourceName", "LastChangeDateTime", "ResourceType", "Campaign", "AdGroup", "ResourceStatus", "AdGroupAd", "AdGroupCriterion", "CampaignCriterion", "Feed", "FeedItem", "AdGroupFeed", "CampaignFeed", "AdGroupBidModifier", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.ChangeStatusOperationProto.getDescriptor();
     com.google.ads.googleads.v3.enums.ChangeStatusResourceTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

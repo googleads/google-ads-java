@@ -920,6 +920,54 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_TARGET_USER_LIST_FOR_SMART_DISPLAY_CAMPAIGNS = 99;</code>
      */
     CANNOT_TARGET_USER_LIST_FOR_SMART_DISPLAY_CAMPAIGNS(99),
+    /**
+     * <pre>
+     * Listing scope contains too many dimension types.
+     * </pre>
+     *
+     * <code>LISTING_SCOPE_TOO_MANY_DIMENSION_TYPES = 100;</code>
+     */
+    LISTING_SCOPE_TOO_MANY_DIMENSION_TYPES(100),
+    /**
+     * <pre>
+     * Listing scope has too many IN operators.
+     * </pre>
+     *
+     * <code>LISTING_SCOPE_TOO_MANY_IN_OPERATORS = 101;</code>
+     */
+    LISTING_SCOPE_TOO_MANY_IN_OPERATORS(101),
+    /**
+     * <pre>
+     * Listing scope contains IN operator on an unsupported dimension type.
+     * </pre>
+     *
+     * <code>LISTING_SCOPE_IN_OPERATOR_NOT_SUPPORTED = 102;</code>
+     */
+    LISTING_SCOPE_IN_OPERATOR_NOT_SUPPORTED(102),
+    /**
+     * <pre>
+     * There are dimensions with duplicate dimension type.
+     * </pre>
+     *
+     * <code>DUPLICATE_LISTING_DIMENSION_TYPE = 103;</code>
+     */
+    DUPLICATE_LISTING_DIMENSION_TYPE(103),
+    /**
+     * <pre>
+     * There are dimensions with duplicate dimension value.
+     * </pre>
+     *
+     * <code>DUPLICATE_LISTING_DIMENSION_VALUE = 104;</code>
+     */
+    DUPLICATE_LISTING_DIMENSION_VALUE(104),
+    /**
+     * <pre>
+     * Listing group SUBDIVISION nodes cannot have bids.
+     * </pre>
+     *
+     * <code>CANNOT_SET_BIDS_ON_LISTING_GROUP_SUBDIVISION = 105;</code>
+     */
+    CANNOT_SET_BIDS_ON_LISTING_GROUP_SUBDIVISION(105),
     UNRECOGNIZED(-1),
     ;
 
@@ -1757,6 +1805,54 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_TARGET_USER_LIST_FOR_SMART_DISPLAY_CAMPAIGNS = 99;</code>
      */
     public static final int CANNOT_TARGET_USER_LIST_FOR_SMART_DISPLAY_CAMPAIGNS_VALUE = 99;
+    /**
+     * <pre>
+     * Listing scope contains too many dimension types.
+     * </pre>
+     *
+     * <code>LISTING_SCOPE_TOO_MANY_DIMENSION_TYPES = 100;</code>
+     */
+    public static final int LISTING_SCOPE_TOO_MANY_DIMENSION_TYPES_VALUE = 100;
+    /**
+     * <pre>
+     * Listing scope has too many IN operators.
+     * </pre>
+     *
+     * <code>LISTING_SCOPE_TOO_MANY_IN_OPERATORS = 101;</code>
+     */
+    public static final int LISTING_SCOPE_TOO_MANY_IN_OPERATORS_VALUE = 101;
+    /**
+     * <pre>
+     * Listing scope contains IN operator on an unsupported dimension type.
+     * </pre>
+     *
+     * <code>LISTING_SCOPE_IN_OPERATOR_NOT_SUPPORTED = 102;</code>
+     */
+    public static final int LISTING_SCOPE_IN_OPERATOR_NOT_SUPPORTED_VALUE = 102;
+    /**
+     * <pre>
+     * There are dimensions with duplicate dimension type.
+     * </pre>
+     *
+     * <code>DUPLICATE_LISTING_DIMENSION_TYPE = 103;</code>
+     */
+    public static final int DUPLICATE_LISTING_DIMENSION_TYPE_VALUE = 103;
+    /**
+     * <pre>
+     * There are dimensions with duplicate dimension value.
+     * </pre>
+     *
+     * <code>DUPLICATE_LISTING_DIMENSION_VALUE = 104;</code>
+     */
+    public static final int DUPLICATE_LISTING_DIMENSION_VALUE_VALUE = 104;
+    /**
+     * <pre>
+     * Listing group SUBDIVISION nodes cannot have bids.
+     * </pre>
+     *
+     * <code>CANNOT_SET_BIDS_ON_LISTING_GROUP_SUBDIVISION = 105;</code>
+     */
+    public static final int CANNOT_SET_BIDS_ON_LISTING_GROUP_SUBDIVISION_VALUE = 105;
 
 
     public final int getNumber() {
@@ -1877,6 +1973,12 @@ private static final long serialVersionUID = 0L;
         case 94: return WEBPAGE_CRITERION_URL_EQUALS_CAN_HAVE_ONLY_ONE_CONDITION;
         case 95: return WEBPAGE_CRITERION_NOT_SUPPORTED_ON_NON_DSA_AD_GROUP;
         case 99: return CANNOT_TARGET_USER_LIST_FOR_SMART_DISPLAY_CAMPAIGNS;
+        case 100: return LISTING_SCOPE_TOO_MANY_DIMENSION_TYPES;
+        case 101: return LISTING_SCOPE_TOO_MANY_IN_OPERATORS;
+        case 102: return LISTING_SCOPE_IN_OPERATOR_NOT_SUPPORTED;
+        case 103: return DUPLICATE_LISTING_DIMENSION_TYPE;
+        case 104: return DUPLICATE_LISTING_DIMENSION_VALUE;
+        case 105: return CANNOT_SET_BIDS_ON_LISTING_GROUP_SUBDIVISION;
         default: return null;
       }
     }

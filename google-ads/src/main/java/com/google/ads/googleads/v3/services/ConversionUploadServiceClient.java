@@ -168,9 +168,9 @@ public class ConversionUploadServiceClient implements BackgroundResource {
    *
    * @param customerId Required. The ID of the customer performing the upload.
    * @param conversions Required. The conversions that are being uploaded.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. This should always be set to true.
+   * @param partialFailure Required. If true, successful operations will be carried out and invalid
+   *     operations will return errors. If false, all operations will be carried out in one
+   *     transaction if and only if they are all valid. This should always be set to true.
    * @param validateOnly If true, the request is validated but not executed. Only errors are
    *     returned, not results.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -289,9 +289,9 @@ public class ConversionUploadServiceClient implements BackgroundResource {
    *
    * @param customerId Required. The ID of the customer performing the upload.
    * @param conversions Required. The conversions that are being uploaded.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. This should always be set to true.
+   * @param partialFailure Required. If true, successful operations will be carried out and invalid
+   *     operations will return errors. If false, all operations will be carried out in one
+   *     transaction if and only if they are all valid. This should always be set to true.
    * @param validateOnly If true, the request is validated but not executed. Only errors are
    *     returned, not results.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails

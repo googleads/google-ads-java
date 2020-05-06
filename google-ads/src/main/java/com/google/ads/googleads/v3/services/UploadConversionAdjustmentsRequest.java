@@ -211,13 +211,13 @@ private static final long serialVersionUID = 0L;
   private boolean partialFailure_;
   /**
    * <pre>
-   * If true, successful operations will be carried out and invalid
+   * Required. If true, successful operations will be carried out and invalid
    * operations will return errors. If false, all operations will be carried out
    * in one transaction if and only if they are all valid. This should always be
    * set to true.
    * </pre>
    *
-   * <code>bool partial_failure = 3;</code>
+   * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public boolean getPartialFailure() {
     return partialFailure_;
@@ -1043,26 +1043,26 @@ private static final long serialVersionUID = 0L;
     private boolean partialFailure_ ;
     /**
      * <pre>
-     * If true, successful operations will be carried out and invalid
+     * Required. If true, successful operations will be carried out and invalid
      * operations will return errors. If false, all operations will be carried out
      * in one transaction if and only if they are all valid. This should always be
      * set to true.
      * </pre>
      *
-     * <code>bool partial_failure = 3;</code>
+     * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public boolean getPartialFailure() {
       return partialFailure_;
     }
     /**
      * <pre>
-     * If true, successful operations will be carried out and invalid
+     * Required. If true, successful operations will be carried out and invalid
      * operations will return errors. If false, all operations will be carried out
      * in one transaction if and only if they are all valid. This should always be
      * set to true.
      * </pre>
      *
-     * <code>bool partial_failure = 3;</code>
+     * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setPartialFailure(boolean value) {
       
@@ -1072,13 +1072,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If true, successful operations will be carried out and invalid
+     * Required. If true, successful operations will be carried out and invalid
      * operations will return errors. If false, all operations will be carried out
      * in one transaction if and only if they are all valid. This should always be
      * set to true.
      * </pre>
      *
-     * <code>bool partial_failure = 3;</code>
+     * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearPartialFailure() {
       

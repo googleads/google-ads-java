@@ -34,24 +34,26 @@ public final class PaidOrganicSearchTermViewServiceProto {
       "/ads/googleads/v3/resources/paid_organic" +
       "_search_term_view.proto\032\034google/api/anno" +
       "tations.proto\032\027google/api/client.proto\032\037" +
-      "google/api/field_behavior.proto\"A\n#GetPa" +
-      "idOrganicSearchTermViewRequest\022\032\n\rresour" +
-      "ce_name\030\001 \001(\tB\003\340A\0022\273\002\n PaidOrganicSearch" +
-      "TermViewService\022\371\001\n\034GetPaidOrganicSearch" +
-      "TermView\022E.google.ads.googleads.v3.servi" +
-      "ces.GetPaidOrganicSearchTermViewRequest\032" +
-      "<.google.ads.googleads.v3.resources.Paid" +
-      "OrganicSearchTermView\"T\202\323\344\223\002>\022</v3/{reso" +
-      "urce_name=customers/*/paidOrganicSearchT" +
-      "ermViews/*}\332A\rresource_name\032\033\312A\030googlead" +
-      "s.googleapis.comB\214\002\n$com.google.ads.goog" +
-      "leads.v3.servicesB%PaidOrganicSearchTerm" +
-      "ViewServiceProtoP\001ZHgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v3/servi" +
-      "ces;services\242\002\003GAA\252\002 Google.Ads.GoogleAd" +
-      "s.V3.Services\312\002 Google\\Ads\\GoogleAds\\V3\\" +
-      "Services\352\002$Google::Ads::GoogleAds::V3::S" +
-      "ervicesb\006proto3"
+      "google/api/field_behavior.proto\032\031google/" +
+      "api/resource.proto\"x\n#GetPaidOrganicSear" +
+      "chTermViewRequest\022Q\n\rresource_name\030\001 \001(\t" +
+      "B:\340A\002\372A4\n2googleads.googleapis.com/PaidO" +
+      "rganicSearchTermView2\273\002\n PaidOrganicSear" +
+      "chTermViewService\022\371\001\n\034GetPaidOrganicSear" +
+      "chTermView\022E.google.ads.googleads.v3.ser" +
+      "vices.GetPaidOrganicSearchTermViewReques" +
+      "t\032<.google.ads.googleads.v3.resources.Pa" +
+      "idOrganicSearchTermView\"T\202\323\344\223\002>\022</v3/{re" +
+      "source_name=customers/*/paidOrganicSearc" +
+      "hTermViews/*}\332A\rresource_name\032\033\312A\030google" +
+      "ads.googleapis.comB\214\002\n$com.google.ads.go" +
+      "ogleads.v3.servicesB%PaidOrganicSearchTe" +
+      "rmViewServiceProtoP\001ZHgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v3/ser" +
+      "vices;services\242\002\003GAA\252\002 Google.Ads.Google" +
+      "Ads.V3.Services\312\002 Google\\Ads\\GoogleAds\\V" +
+      "3\\Services\352\002$Google::Ads::GoogleAds::V3:" +
+      ":Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -68,6 +70,7 @@ public final class PaidOrganicSearchTermViewServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetPaidOrganicSearchTermViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -81,12 +84,14 @@ public final class PaidOrganicSearchTermViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.PaidOrganicSearchTermViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

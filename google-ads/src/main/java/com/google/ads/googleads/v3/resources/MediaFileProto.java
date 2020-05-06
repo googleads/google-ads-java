@@ -52,45 +52,49 @@ public final class MediaFileProto {
       "a_file.proto\022!google.ads.googleads.v3.re" +
       "sources\032.google/ads/googleads/v3/enums/m" +
       "edia_type.proto\032-google/ads/googleads/v3" +
-      "/enums/mime_type.proto\032\031google/api/resou" +
-      "rce.proto\032\036google/protobuf/wrappers.prot" +
-      "o\032\034google/api/annotations.proto\"\324\005\n\tMedi" +
-      "aFile\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022D\n\004type\030\005 " +
-      "\001(\01626.google.ads.googleads.v3.enums.Medi" +
-      "aTypeEnum.MediaType\022G\n\tmime_type\030\006 \001(\01624" +
-      ".google.ads.googleads.v3.enums.MimeTypeE" +
-      "num.MimeType\0220\n\nsource_url\030\007 \001(\0132\034.googl" +
-      "e.protobuf.StringValue\022*\n\004name\030\010 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\022.\n\tfile_size\030" +
-      "\t \001(\0132\033.google.protobuf.Int64Value\022>\n\005im" +
-      "age\030\003 \001(\0132-.google.ads.googleads.v3.reso" +
-      "urces.MediaImageH\000\022F\n\014media_bundle\030\004 \001(\013" +
-      "2..google.ads.googleads.v3.resources.Med" +
-      "iaBundleH\000\022>\n\005audio\030\n \001(\0132-.google.ads.g" +
-      "oogleads.v3.resources.MediaAudioH\000\022>\n\005vi" +
-      "deo\030\013 \001(\0132-.google.ads.googleads.v3.reso" +
-      "urces.MediaVideoH\000:U\352AR\n\"googleads.googl" +
-      "eapis.com/MediaFile\022,customers/{customer" +
-      "}/mediaFiles/{media_file}B\013\n\tmediatype\"7" +
-      "\n\nMediaImage\022)\n\004data\030\001 \001(\0132\033.google.prot" +
-      "obuf.BytesValue\"8\n\013MediaBundle\022)\n\004data\030\001" +
-      " \001(\0132\033.google.protobuf.BytesValue\"E\n\nMed" +
-      "iaAudio\0227\n\022ad_duration_millis\030\001 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\"\351\001\n\nMediaVideo\022" +
-      "7\n\022ad_duration_millis\030\001 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0226\n\020youtube_video_id\030\002 \001" +
-      "(\0132\034.google.protobuf.StringValue\0229\n\023adve" +
-      "rtising_id_code\030\003 \001(\0132\034.google.protobuf." +
-      "StringValue\022/\n\tisci_code\030\004 \001(\0132\034.google." +
-      "protobuf.StringValueB\373\001\n%com.google.ads." +
-      "googleads.v3.resourcesB\016MediaFileProtoP\001" +
-      "ZJgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v3/resources;resources\242\002\003G" +
-      "AA\252\002!Google.Ads.GoogleAds.V3.Resources\312\002" +
-      "!Google\\Ads\\GoogleAds\\V3\\Resources\352\002%Goo" +
-      "gle::Ads::GoogleAds::V3::Resourcesb\006prot" +
-      "o3"
+      "/enums/mime_type.proto\032\037google/api/field" +
+      "_behavior.proto\032\031google/api/resource.pro" +
+      "to\032\036google/protobuf/wrappers.proto\032\034goog" +
+      "le/api/annotations.proto\"\262\006\n\tMediaFile\022A" +
+      "\n\rresource_name\030\001 \001(\tB*\340A\005\372A$\n\"googleads" +
+      ".googleapis.com/MediaFile\022,\n\002id\030\002 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\003\340A\003\022I\n\004type\030" +
+      "\005 \001(\01626.google.ads.googleads.v3.enums.Me" +
+      "diaTypeEnum.MediaTypeB\003\340A\005\022L\n\tmime_type\030" +
+      "\006 \001(\01624.google.ads.googleads.v3.enums.Mi" +
+      "meTypeEnum.MimeTypeB\003\340A\003\0225\n\nsource_url\030\007" +
+      " \001(\0132\034.google.protobuf.StringValueB\003\340A\005\022" +
+      "/\n\004name\030\010 \001(\0132\034.google.protobuf.StringVa" +
+      "lueB\003\340A\005\0223\n\tfile_size\030\t \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\003\340A\003\022C\n\005image\030\003 \001(\0132-.g" +
+      "oogle.ads.googleads.v3.resources.MediaIm" +
+      "ageB\003\340A\005H\000\022K\n\014media_bundle\030\004 \001(\0132..googl" +
+      "e.ads.googleads.v3.resources.MediaBundle" +
+      "B\003\340A\005H\000\022C\n\005audio\030\n \001(\0132-.google.ads.goog" +
+      "leads.v3.resources.MediaAudioB\003\340A\003H\000\022C\n\005" +
+      "video\030\013 \001(\0132-.google.ads.googleads.v3.re" +
+      "sources.MediaVideoB\003\340A\005H\000:U\352AR\n\"googlead" +
+      "s.googleapis.com/MediaFile\022,customers/{c" +
+      "ustomer}/mediaFiles/{media_file}B\013\n\tmedi" +
+      "atype\"<\n\nMediaImage\022.\n\004data\030\001 \001(\0132\033.goog" +
+      "le.protobuf.BytesValueB\003\340A\005\"=\n\013MediaBund" +
+      "le\022.\n\004data\030\001 \001(\0132\033.google.protobuf.Bytes" +
+      "ValueB\003\340A\005\"J\n\nMediaAudio\022<\n\022ad_duration_" +
+      "millis\030\001 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\003\340A\003\"\375\001\n\nMediaVideo\022<\n\022ad_duration_mil" +
+      "lis\030\001 \001(\0132\033.google.protobuf.Int64ValueB\003" +
+      "\340A\003\022;\n\020youtube_video_id\030\002 \001(\0132\034.google.p" +
+      "rotobuf.StringValueB\003\340A\005\022>\n\023advertising_" +
+      "id_code\030\003 \001(\0132\034.google.protobuf.StringVa" +
+      "lueB\003\340A\003\0224\n\tisci_code\030\004 \001(\0132\034.google.pro" +
+      "tobuf.StringValueB\003\340A\003B\373\001\n%com.google.ad" +
+      "s.googleads.v3.resourcesB\016MediaFileProto" +
+      "P\001ZJgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v3/resources;resources\242\002" +
+      "\003GAA\252\002!Google.Ads.GoogleAds.V3.Resources" +
+      "\312\002!Google\\Ads\\GoogleAds\\V3\\Resources\352\002%G" +
+      "oogle::Ads::GoogleAds::V3::Resourcesb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -105,6 +109,7 @@ public final class MediaFileProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.MediaTypeProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.MimeTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -141,11 +146,14 @@ public final class MediaFileProto {
         new java.lang.String[] { "AdDurationMillis", "YoutubeVideoId", "AdvertisingIdCode", "IsciCode", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.MediaTypeProto.getDescriptor();
     com.google.ads.googleads.v3.enums.MimeTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

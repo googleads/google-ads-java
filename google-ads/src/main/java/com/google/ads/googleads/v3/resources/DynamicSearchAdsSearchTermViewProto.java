@@ -30,31 +30,34 @@ public final class DynamicSearchAdsSearchTermViewProto {
     java.lang.String[] descriptorData = {
       "\nKgoogle/ads/googleads/v3/resources/dyna" +
       "mic_search_ads_search_term_view.proto\022!g" +
-      "oogle.ads.googleads.v3.resources\032\031google" +
-      "/api/resource.proto\032\036google/protobuf/wra" +
-      "ppers.proto\032\034google/api/annotations.prot" +
-      "o\"\304\004\n\036DynamicSearchAdsSearchTermView\022\025\n\r" +
-      "resource_name\030\001 \001(\t\0221\n\013search_term\030\002 \001(\013" +
-      "2\034.google.protobuf.StringValue\022.\n\010headli" +
-      "ne\030\003 \001(\0132\034.google.protobuf.StringValue\0222" +
-      "\n\014landing_page\030\004 \001(\0132\034.google.protobuf.S" +
-      "tringValue\022.\n\010page_url\030\005 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\0228\n\024has_negative_keywo" +
-      "rd\030\006 \001(\0132\032.google.protobuf.BoolValue\0228\n\024" +
-      "has_matching_keyword\030\007 \001(\0132\032.google.prot" +
-      "obuf.BoolValue\0224\n\020has_negative_url\030\010 \001(\013" +
-      "2\032.google.protobuf.BoolValue:\231\001\352A\225\001\n7goo" +
-      "gleads.googleapis.com/DynamicSearchAdsSe" +
-      "archTermView\022Zcustomers/{customer}/dynam" +
-      "icSearchAdsSearchTermViews/{dynamic_sear" +
-      "ch_ads_search_term_view}B\220\002\n%com.google." +
-      "ads.googleads.v3.resourcesB#DynamicSearc" +
-      "hAdsSearchTermViewProtoP\001ZJgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "3/resources;resources\242\002\003GAA\252\002!Google.Ads" +
-      ".GoogleAds.V3.Resources\312\002!Google\\Ads\\Goo" +
-      "gleAds\\V3\\Resources\352\002%Google::Ads::Googl" +
-      "eAds::V3::Resourcesb\006proto3"
+      "oogle.ads.googleads.v3.resources\032\037google" +
+      "/api/field_behavior.proto\032\031google/api/re" +
+      "source.proto\032\036google/protobuf/wrappers.p" +
+      "roto\032\034google/api/annotations.proto\"\250\005\n\036D" +
+      "ynamicSearchAdsSearchTermView\022V\n\rresourc" +
+      "e_name\030\001 \001(\tB?\340A\003\372A9\n7googleads.googleap" +
+      "is.com/DynamicSearchAdsSearchTermView\0226\n" +
+      "\013search_term\030\002 \001(\0132\034.google.protobuf.Str" +
+      "ingValueB\003\340A\003\0223\n\010headline\030\003 \001(\0132\034.google" +
+      ".protobuf.StringValueB\003\340A\003\0227\n\014landing_pa" +
+      "ge\030\004 \001(\0132\034.google.protobuf.StringValueB\003" +
+      "\340A\003\0223\n\010page_url\030\005 \001(\0132\034.google.protobuf." +
+      "StringValueB\003\340A\003\022=\n\024has_negative_keyword" +
+      "\030\006 \001(\0132\032.google.protobuf.BoolValueB\003\340A\003\022" +
+      "=\n\024has_matching_keyword\030\007 \001(\0132\032.google.p" +
+      "rotobuf.BoolValueB\003\340A\003\0229\n\020has_negative_u" +
+      "rl\030\010 \001(\0132\032.google.protobuf.BoolValueB\003\340A" +
+      "\003:\231\001\352A\225\001\n7googleads.googleapis.com/Dynam" +
+      "icSearchAdsSearchTermView\022Zcustomers/{cu" +
+      "stomer}/dynamicSearchAdsSearchTermViews/" +
+      "{dynamic_search_ads_search_term_view}B\220\002" +
+      "\n%com.google.ads.googleads.v3.resourcesB" +
+      "#DynamicSearchAdsSearchTermViewProtoP\001ZJ" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v3/resources;resources\242\002\003GAA" +
+      "\252\002!Google.Ads.GoogleAds.V3.Resources\312\002!G" +
+      "oogle\\Ads\\GoogleAds\\V3\\Resources\352\002%Googl" +
+      "e::Ads::GoogleAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -67,6 +70,7 @@ public final class DynamicSearchAdsSearchTermViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -79,9 +83,12 @@ public final class DynamicSearchAdsSearchTermViewProto {
         new java.lang.String[] { "ResourceName", "SearchTerm", "Headline", "LandingPage", "PageUrl", "HasNegativeKeyword", "HasMatchingKeyword", "HasNegativeUrl", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

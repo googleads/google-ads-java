@@ -9,182 +9,182 @@ public interface CampaignCriterionSimulationOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the campaign criterion simulation.
+   * Output only. The resource name of the campaign criterion simulation.
    * Campaign criterion simulation resource names have the form:
    * `customers/{customer_id}/campaignCriterionSimulations/{campaign_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the campaign criterion simulation.
+   * Output only. The resource name of the campaign criterion simulation.
    * Campaign criterion simulation resource names have the form:
    * `customers/{customer_id}/campaignCriterionSimulations/{campaign_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * Campaign ID of the simulation.
+   * Output only. Campaign ID of the simulation.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_id = 2;</code>
+   * <code>.google.protobuf.Int64Value campaign_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCampaignId();
   /**
    * <pre>
-   * Campaign ID of the simulation.
+   * Output only. Campaign ID of the simulation.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_id = 2;</code>
+   * <code>.google.protobuf.Int64Value campaign_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getCampaignId();
   /**
    * <pre>
-   * Campaign ID of the simulation.
+   * Output only. Campaign ID of the simulation.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_id = 2;</code>
+   * <code>.google.protobuf.Int64Value campaign_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getCampaignIdOrBuilder();
 
   /**
    * <pre>
-   * Criterion ID of the simulation.
+   * Output only. Criterion ID of the simulation.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCriterionId();
   /**
    * <pre>
-   * Criterion ID of the simulation.
+   * Output only. Criterion ID of the simulation.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getCriterionId();
   /**
    * <pre>
-   * Criterion ID of the simulation.
+   * Output only. Criterion ID of the simulation.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder();
 
   /**
    * <pre>
-   * The field that the simulation modifies.
+   * Output only. The field that the simulation modifies.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getTypeValue();
   /**
    * <pre>
-   * The field that the simulation modifies.
+   * Output only. The field that the simulation modifies.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType getType();
 
   /**
    * <pre>
-   * How the simulation modifies the field.
+   * Output only. How the simulation modifies the field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getModificationMethodValue();
   /**
    * <pre>
-   * How the simulation modifies the field.
+   * Output only. How the simulation modifies the field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod getModificationMethod();
 
   /**
    * <pre>
-   * First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date = 6;</code>
+   * <code>.google.protobuf.StringValue start_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasStartDate();
   /**
    * <pre>
-   * First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date = 6;</code>
+   * <code>.google.protobuf.StringValue start_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getStartDate();
   /**
    * <pre>
-   * First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date = 6;</code>
+   * <code>.google.protobuf.StringValue start_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getStartDateOrBuilder();
 
   /**
    * <pre>
-   * Last day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date = 7;</code>
+   * <code>.google.protobuf.StringValue end_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasEndDate();
   /**
    * <pre>
-   * Last day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date = 7;</code>
+   * <code>.google.protobuf.StringValue end_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getEndDate();
   /**
    * <pre>
-   * Last day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date = 7;</code>
+   * <code>.google.protobuf.StringValue end_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getEndDateOrBuilder();
 
   /**
    * <pre>
-   * Simulation points if the simulation type is BID_MODIFIER.
+   * Output only. Simulation points if the simulation type is BID_MODIFIER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.BidModifierSimulationPointList bid_modifier_point_list = 8;</code>
+   * <code>.google.ads.googleads.v3.common.BidModifierSimulationPointList bid_modifier_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasBidModifierPointList();
   /**
    * <pre>
-   * Simulation points if the simulation type is BID_MODIFIER.
+   * Output only. Simulation points if the simulation type is BID_MODIFIER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.BidModifierSimulationPointList bid_modifier_point_list = 8;</code>
+   * <code>.google.ads.googleads.v3.common.BidModifierSimulationPointList bid_modifier_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.common.BidModifierSimulationPointList getBidModifierPointList();
   /**
    * <pre>
-   * Simulation points if the simulation type is BID_MODIFIER.
+   * Output only. Simulation points if the simulation type is BID_MODIFIER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.BidModifierSimulationPointList bid_modifier_point_list = 8;</code>
+   * <code>.google.ads.googleads.v3.common.BidModifierSimulationPointList bid_modifier_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.common.BidModifierSimulationPointListOrBuilder getBidModifierPointListOrBuilder();
 

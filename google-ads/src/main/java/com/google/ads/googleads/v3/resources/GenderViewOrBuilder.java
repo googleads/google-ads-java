@@ -9,22 +9,22 @@ public interface GenderViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the gender view.
+   * Output only. The resource name of the gender view.
    * Gender view resource names have the form:
    * `customers/{customer_id}/genderViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the gender view.
+   * Output only. The resource name of the gender view.
    * Gender view resource names have the form:
    * `customers/{customer_id}/genderViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();

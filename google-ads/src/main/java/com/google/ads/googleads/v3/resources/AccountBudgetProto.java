@@ -41,81 +41,89 @@ public final class AccountBudgetProto {
       "get_status.proto\0327google/ads/googleads/v" +
       "3/enums/spending_limit_type.proto\032-googl" +
       "e/ads/googleads/v3/enums/time_type.proto" +
-      "\032\031google/api/resource.proto\032\036google/prot" +
-      "obuf/wrappers.proto\032\034google/api/annotati" +
-      "ons.proto\"\253\024\n\rAccountBudget\022\025\n\rresource_" +
-      "name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.google.protobuf" +
-      ".Int64Value\0223\n\rbilling_setup\030\003 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022Z\n\006status\030\004 \001(\016" +
-      "2J.google.ads.googleads.v3.enums.Account" +
-      "BudgetStatusEnum.AccountBudgetStatus\022*\n\004" +
-      "name\030\005 \001(\0132\034.google.protobuf.StringValue" +
-      "\022>\n\030proposed_start_date_time\030\006 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022>\n\030approved_sta" +
-      "rt_date_time\030\007 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\022=\n\030total_adjustments_micros\030\022 \001" +
-      "(\0132\033.google.protobuf.Int64Value\0229\n\024amoun" +
-      "t_served_micros\030\023 \001(\0132\033.google.protobuf." +
-      "Int64Value\022;\n\025purchase_order_number\030\024 \001(" +
-      "\0132\034.google.protobuf.StringValue\022+\n\005notes" +
-      "\030\025 \001(\0132\034.google.protobuf.StringValue\022g\n\020" +
-      "pending_proposal\030\026 \001(\0132M.google.ads.goog" +
-      "leads.v3.resources.AccountBudget.Pending" +
-      "AccountBudgetProposal\022>\n\026proposed_end_da" +
-      "te_time\030\010 \001(\0132\034.google.protobuf.StringVa" +
-      "lueH\000\022V\n\026proposed_end_time_type\030\t \001(\01624." +
-      "google.ads.googleads.v3.enums.TimeTypeEn" +
-      "um.TimeTypeH\000\022>\n\026approved_end_date_time\030" +
-      "\n \001(\0132\034.google.protobuf.StringValueH\001\022V\n" +
-      "\026approved_end_time_type\030\013 \001(\01624.google.a" +
-      "ds.googleads.v3.enums.TimeTypeEnum.TimeT" +
-      "ypeH\001\022E\n\036proposed_spending_limit_micros\030" +
-      "\014 \001(\0132\033.google.protobuf.Int64ValueH\002\022n\n\034" +
-      "proposed_spending_limit_type\030\r \001(\0162F.goo" +
-      "gle.ads.googleads.v3.enums.SpendingLimit" +
-      "TypeEnum.SpendingLimitTypeH\002\022E\n\036approved" +
-      "_spending_limit_micros\030\016 \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueH\003\022n\n\034approved_spending" +
-      "_limit_type\030\017 \001(\0162F.google.ads.googleads" +
-      ".v3.enums.SpendingLimitTypeEnum.Spending" +
-      "LimitTypeH\003\022E\n\036adjusted_spending_limit_m" +
-      "icros\030\020 \001(\0132\033.google.protobuf.Int64Value" +
-      "H\004\022n\n\034adjusted_spending_limit_type\030\021 \001(\016" +
-      "2F.google.ads.googleads.v3.enums.Spendin" +
-      "gLimitTypeEnum.SpendingLimitTypeH\004\032\234\006\n\034P" +
-      "endingAccountBudgetProposal\022=\n\027account_b" +
-      "udget_proposal\030\001 \001(\0132\034.google.protobuf.S" +
-      "tringValue\022m\n\rproposal_type\030\002 \001(\0162V.goog" +
-      "le.ads.googleads.v3.enums.AccountBudgetP" +
-      "roposalTypeEnum.AccountBudgetProposalTyp" +
-      "e\022*\n\004name\030\003 \001(\0132\034.google.protobuf.String" +
-      "Value\0225\n\017start_date_time\030\004 \001(\0132\034.google." +
-      "protobuf.StringValue\022;\n\025purchase_order_n" +
-      "umber\030\t \001(\0132\034.google.protobuf.StringValu" +
-      "e\022+\n\005notes\030\n \001(\0132\034.google.protobuf.Strin" +
-      "gValue\0228\n\022creation_date_time\030\013 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\0225\n\rend_date_tim" +
-      "e\030\005 \001(\0132\034.google.protobuf.StringValueH\000\022" +
-      "M\n\rend_time_type\030\006 \001(\01624.google.ads.goog" +
-      "leads.v3.enums.TimeTypeEnum.TimeTypeH\000\022<" +
-      "\n\025spending_limit_micros\030\007 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueH\001\022e\n\023spending_limit_t" +
-      "ype\030\010 \001(\0162F.google.ads.googleads.v3.enum" +
-      "s.SpendingLimitTypeEnum.SpendingLimitTyp" +
-      "eH\001B\n\n\010end_timeB\020\n\016spending_limit:a\352A^\n&" +
-      "googleads.googleapis.com/AccountBudget\0224" +
-      "customers/{customer}/accountBudgets/{acc" +
-      "ount_budget}B\023\n\021proposed_end_timeB\023\n\021app" +
-      "roved_end_timeB\031\n\027proposed_spending_limi" +
-      "tB\031\n\027approved_spending_limitB\031\n\027adjusted" +
-      "_spending_limitB\377\001\n%com.google.ads.googl" +
-      "eads.v3.resourcesB\022AccountBudgetProtoP\001Z" +
-      "Jgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v3/resources;resources\242\002\003GA" +
-      "A\252\002!Google.Ads.GoogleAds.V3.Resources\312\002!" +
-      "Google\\Ads\\GoogleAds\\V3\\Resources\352\002%Goog" +
-      "le::Ads::GoogleAds::V3::Resourcesb\006proto" +
-      "3"
+      "\032\037google/api/field_behavior.proto\032\031googl" +
+      "e/api/resource.proto\032\036google/protobuf/wr" +
+      "appers.proto\032\034google/api/annotations.pro" +
+      "to\"\330\026\n\rAccountBudget\022E\n\rresource_name\030\001 " +
+      "\001(\tB.\340A\003\372A(\n&googleads.googleapis.com/Ac" +
+      "countBudget\022,\n\002id\030\002 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\003\340A\003\022b\n\rbilling_setup\030\003 \001(\013" +
+      "2\034.google.protobuf.StringValueB-\340A\003\372A\'\n%" +
+      "googleads.googleapis.com/BillingSetup\022_\n" +
+      "\006status\030\004 \001(\0162J.google.ads.googleads.v3." +
+      "enums.AccountBudgetStatusEnum.AccountBud" +
+      "getStatusB\003\340A\003\022/\n\004name\030\005 \001(\0132\034.google.pr" +
+      "otobuf.StringValueB\003\340A\003\022C\n\030proposed_star" +
+      "t_date_time\030\006 \001(\0132\034.google.protobuf.Stri" +
+      "ngValueB\003\340A\003\022C\n\030approved_start_date_time" +
+      "\030\007 \001(\0132\034.google.protobuf.StringValueB\003\340A" +
+      "\003\022B\n\030total_adjustments_micros\030\022 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\003\340A\003\022>\n\024amount_" +
+      "served_micros\030\023 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\003\340A\003\022@\n\025purchase_order_number\030\024" +
+      " \001(\0132\034.google.protobuf.StringValueB\003\340A\003\022" +
+      "0\n\005notes\030\025 \001(\0132\034.google.protobuf.StringV" +
+      "alueB\003\340A\003\022l\n\020pending_proposal\030\026 \001(\0132M.go" +
+      "ogle.ads.googleads.v3.resources.AccountB" +
+      "udget.PendingAccountBudgetProposalB\003\340A\003\022" +
+      "C\n\026proposed_end_date_time\030\010 \001(\0132\034.google" +
+      ".protobuf.StringValueB\003\340A\003H\000\022[\n\026proposed" +
+      "_end_time_type\030\t \001(\01624.google.ads.google" +
+      "ads.v3.enums.TimeTypeEnum.TimeTypeB\003\340A\003H" +
+      "\000\022C\n\026approved_end_date_time\030\n \001(\0132\034.goog" +
+      "le.protobuf.StringValueB\003\340A\003H\001\022[\n\026approv" +
+      "ed_end_time_type\030\013 \001(\01624.google.ads.goog" +
+      "leads.v3.enums.TimeTypeEnum.TimeTypeB\003\340A" +
+      "\003H\001\022J\n\036proposed_spending_limit_micros\030\014 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\003\340A\003H\002\022" +
+      "s\n\034proposed_spending_limit_type\030\r \001(\0162F." +
+      "google.ads.googleads.v3.enums.SpendingLi" +
+      "mitTypeEnum.SpendingLimitTypeB\003\340A\003H\002\022J\n\036" +
+      "approved_spending_limit_micros\030\016 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\003\340A\003H\003\022s\n\034appr" +
+      "oved_spending_limit_type\030\017 \001(\0162F.google." +
+      "ads.googleads.v3.enums.SpendingLimitType" +
+      "Enum.SpendingLimitTypeB\003\340A\003H\003\022J\n\036adjuste" +
+      "d_spending_limit_micros\030\020 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\003\340A\003H\004\022s\n\034adjusted_sp" +
+      "ending_limit_type\030\021 \001(\0162F.google.ads.goo" +
+      "gleads.v3.enums.SpendingLimitTypeEnum.Sp" +
+      "endingLimitTypeB\003\340A\003H\004\032\206\007\n\034PendingAccoun" +
+      "tBudgetProposal\022u\n\027account_budget_propos" +
+      "al\030\001 \001(\0132\034.google.protobuf.StringValueB6" +
+      "\340A\003\372A0\n.googleads.googleapis.com/Account" +
+      "BudgetProposal\022r\n\rproposal_type\030\002 \001(\0162V." +
+      "google.ads.googleads.v3.enums.AccountBud" +
+      "getProposalTypeEnum.AccountBudgetProposa" +
+      "lTypeB\003\340A\003\022/\n\004name\030\003 \001(\0132\034.google.protob" +
+      "uf.StringValueB\003\340A\003\022:\n\017start_date_time\030\004" +
+      " \001(\0132\034.google.protobuf.StringValueB\003\340A\003\022" +
+      "@\n\025purchase_order_number\030\t \001(\0132\034.google." +
+      "protobuf.StringValueB\003\340A\003\0220\n\005notes\030\n \001(\013" +
+      "2\034.google.protobuf.StringValueB\003\340A\003\022=\n\022c" +
+      "reation_date_time\030\013 \001(\0132\034.google.protobu" +
+      "f.StringValueB\003\340A\003\022:\n\rend_date_time\030\005 \001(" +
+      "\0132\034.google.protobuf.StringValueB\003\340A\003H\000\022R" +
+      "\n\rend_time_type\030\006 \001(\01624.google.ads.googl" +
+      "eads.v3.enums.TimeTypeEnum.TimeTypeB\003\340A\003" +
+      "H\000\022A\n\025spending_limit_micros\030\007 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\003\340A\003H\001\022j\n\023spendin" +
+      "g_limit_type\030\010 \001(\0162F.google.ads.googlead" +
+      "s.v3.enums.SpendingLimitTypeEnum.Spendin" +
+      "gLimitTypeB\003\340A\003H\001B\n\n\010end_timeB\020\n\016spendin" +
+      "g_limit:a\352A^\n&googleads.googleapis.com/A" +
+      "ccountBudget\0224customers/{customer}/accou" +
+      "ntBudgets/{account_budget}B\023\n\021proposed_e" +
+      "nd_timeB\023\n\021approved_end_timeB\031\n\027proposed" +
+      "_spending_limitB\031\n\027approved_spending_lim" +
+      "itB\031\n\027adjusted_spending_limitB\377\001\n%com.go" +
+      "ogle.ads.googleads.v3.resourcesB\022Account" +
+      "BudgetProtoP\001ZJgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v3/resources;" +
+      "resources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
+      "3.Resources\312\002!Google\\Ads\\GoogleAds\\V3\\Re" +
+      "sources\352\002%Google::Ads::GoogleAds::V3::Re" +
+      "sourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -132,6 +140,7 @@ public final class AccountBudgetProto {
           com.google.ads.googleads.v3.enums.AccountBudgetStatusProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.SpendingLimitTypeProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.TimeTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -150,13 +159,16 @@ public final class AccountBudgetProto {
         new java.lang.String[] { "AccountBudgetProposal", "ProposalType", "Name", "StartDateTime", "PurchaseOrderNumber", "Notes", "CreationDateTime", "EndDateTime", "EndTimeType", "SpendingLimitMicros", "SpendingLimitType", "EndTime", "SpendingLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.AccountBudgetProposalTypeProto.getDescriptor();
     com.google.ads.googleads.v3.enums.AccountBudgetStatusProto.getDescriptor();
     com.google.ads.googleads.v3.enums.SpendingLimitTypeProto.getDescriptor();
     com.google.ads.googleads.v3.enums.TimeTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

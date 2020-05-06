@@ -54,47 +54,49 @@ public final class AdGroupBidModifierServiceProto {
       "gleads/v3/resources/ad_group_bid_modifie" +
       "r.proto\032\034google/api/annotations.proto\032\027g" +
       "oogle/api/client.proto\032\037google/api/field" +
-      "_behavior.proto\032 google/protobuf/field_m" +
-      "ask.proto\032\027google/rpc/status.proto\":\n\034Ge" +
-      "tAdGroupBidModifierRequest\022\032\n\rresource_n" +
-      "ame\030\001 \001(\tB\003\340A\002\"\304\001\n MutateAdGroupBidModif" +
-      "iersRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022V\n" +
-      "\noperations\030\002 \003(\0132=.google.ads.googleads" +
-      ".v3.services.AdGroupBidModifierOperation" +
-      "B\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalida" +
-      "te_only\030\004 \001(\010\"\377\001\n\033AdGroupBidModifierOper" +
-      "ation\022/\n\013update_mask\030\004 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\022G\n\006create\030\001 \001(\01325.google." +
-      "ads.googleads.v3.resources.AdGroupBidMod" +
-      "ifierH\000\022G\n\006update\030\002 \001(\01325.google.ads.goo" +
-      "gleads.v3.resources.AdGroupBidModifierH\000" +
-      "\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\251\001\n!Muta" +
-      "teAdGroupBidModifiersResponse\0221\n\025partial" +
-      "_failure_error\030\003 \001(\0132\022.google.rpc.Status" +
-      "\022Q\n\007results\030\002 \003(\0132@.google.ads.googleads" +
-      ".v3.services.MutateAdGroupBidModifierRes" +
-      "ult\"7\n\036MutateAdGroupBidModifierResult\022\025\n" +
-      "\rresource_name\030\001 \001(\t2\235\004\n\031AdGroupBidModif" +
-      "ierService\022\335\001\n\025GetAdGroupBidModifier\022>.g" +
-      "oogle.ads.googleads.v3.services.GetAdGro" +
-      "upBidModifierRequest\0325.google.ads.google" +
-      "ads.v3.resources.AdGroupBidModifier\"M\202\323\344" +
-      "\223\0027\0225/v3/{resource_name=customers/*/adGr" +
-      "oupBidModifiers/*}\332A\rresource_name\022\202\002\n\031M" +
-      "utateAdGroupBidModifiers\022B.google.ads.go" +
-      "ogleads.v3.services.MutateAdGroupBidModi" +
-      "fiersRequest\032C.google.ads.googleads.v3.s" +
-      "ervices.MutateAdGroupBidModifiersRespons" +
-      "e\"\\\202\323\344\223\002=\"8/v3/customers/{customer_id=*}" +
-      "/adGroupBidModifiers:mutate:\001*\332A\026custome" +
-      "r_id,operations\032\033\312A\030googleads.googleapis" +
-      ".comB\205\002\n$com.google.ads.googleads.v3.ser" +
-      "vicesB\036AdGroupBidModifierServiceProtoP\001Z" +
-      "Hgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v3/services;services\242\002\003GAA\252" +
-      "\002 Google.Ads.GoogleAds.V3.Services\312\002 Goo" +
-      "gle\\Ads\\GoogleAds\\V3\\Services\352\002$Google::" +
-      "Ads::GoogleAds::V3::Servicesb\006proto3"
+      "_behavior.proto\032\031google/api/resource.pro" +
+      "to\032 google/protobuf/field_mask.proto\032\027go" +
+      "ogle/rpc/status.proto\"j\n\034GetAdGroupBidMo" +
+      "difierRequest\022J\n\rresource_name\030\001 \001(\tB3\340A" +
+      "\002\372A-\n+googleads.googleapis.com/AdGroupBi" +
+      "dModifier\"\304\001\n MutateAdGroupBidModifiersR" +
+      "equest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022V\n\noper" +
+      "ations\030\002 \003(\0132=.google.ads.googleads.v3.s" +
+      "ervices.AdGroupBidModifierOperationB\003\340A\002" +
+      "\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_on" +
+      "ly\030\004 \001(\010\"\377\001\n\033AdGroupBidModifierOperation" +
+      "\022/\n\013update_mask\030\004 \001(\0132\032.google.protobuf." +
+      "FieldMask\022G\n\006create\030\001 \001(\01325.google.ads.g" +
+      "oogleads.v3.resources.AdGroupBidModifier" +
+      "H\000\022G\n\006update\030\002 \001(\01325.google.ads.googlead" +
+      "s.v3.resources.AdGroupBidModifierH\000\022\020\n\006r" +
+      "emove\030\003 \001(\tH\000B\013\n\toperation\"\251\001\n!MutateAdG" +
+      "roupBidModifiersResponse\0221\n\025partial_fail" +
+      "ure_error\030\003 \001(\0132\022.google.rpc.Status\022Q\n\007r" +
+      "esults\030\002 \003(\0132@.google.ads.googleads.v3.s" +
+      "ervices.MutateAdGroupBidModifierResult\"7" +
+      "\n\036MutateAdGroupBidModifierResult\022\025\n\rreso" +
+      "urce_name\030\001 \001(\t2\235\004\n\031AdGroupBidModifierSe" +
+      "rvice\022\335\001\n\025GetAdGroupBidModifier\022>.google" +
+      ".ads.googleads.v3.services.GetAdGroupBid" +
+      "ModifierRequest\0325.google.ads.googleads.v" +
+      "3.resources.AdGroupBidModifier\"M\202\323\344\223\0027\0225" +
+      "/v3/{resource_name=customers/*/adGroupBi" +
+      "dModifiers/*}\332A\rresource_name\022\202\002\n\031Mutate" +
+      "AdGroupBidModifiers\022B.google.ads.googlea" +
+      "ds.v3.services.MutateAdGroupBidModifiers" +
+      "Request\032C.google.ads.googleads.v3.servic" +
+      "es.MutateAdGroupBidModifiersResponse\"\\\202\323" +
+      "\344\223\002=\"8/v3/customers/{customer_id=*}/adGr" +
+      "oupBidModifiers:mutate:\001*\332A\026customer_id," +
+      "operations\032\033\312A\030googleads.googleapis.comB" +
+      "\205\002\n$com.google.ads.googleads.v3.services" +
+      "B\036AdGroupBidModifierServiceProtoP\001ZHgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v3/services;services\242\002\003GAA\252\002 Goo" +
+      "gle.Ads.GoogleAds.V3.Services\312\002 Google\\A" +
+      "ds\\GoogleAds\\V3\\Services\352\002$Google::Ads::" +
+      "GoogleAds::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -111,6 +113,7 @@ public final class AdGroupBidModifierServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
@@ -150,12 +153,14 @@ public final class AdGroupBidModifierServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.AdGroupBidModifierProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }

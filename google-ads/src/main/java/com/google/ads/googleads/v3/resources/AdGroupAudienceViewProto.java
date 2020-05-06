@@ -30,19 +30,22 @@ public final class AdGroupAudienceViewProto {
     java.lang.String[] descriptorData = {
       "\n>google/ads/googleads/v3/resources/ad_g" +
       "roup_audience_view.proto\022!google.ads.goo" +
-      "gleads.v3.resources\032\031google/api/resource" +
-      ".proto\032\034google/api/annotations.proto\"\243\001\n" +
-      "\023AdGroupAudienceView\022\025\n\rresource_name\030\001 " +
-      "\001(\t:u\352Ar\n,googleads.googleapis.com/AdGro" +
-      "upAudienceView\022Bcustomers/{customer}/adG" +
-      "roupAudienceViews/{ad_group_audience_vie" +
-      "w}B\205\002\n%com.google.ads.googleads.v3.resou" +
-      "rcesB\030AdGroupAudienceViewProtoP\001ZJgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v3/resources;resources\242\002\003GAA\252\002!Goo" +
-      "gle.Ads.GoogleAds.V3.Resources\312\002!Google\\" +
-      "Ads\\GoogleAds\\V3\\Resources\352\002%Google::Ads" +
-      "::GoogleAds::V3::Resourcesb\006proto3"
+      "gleads.v3.resources\032\037google/api/field_be" +
+      "havior.proto\032\031google/api/resource.proto\032" +
+      "\034google/api/annotations.proto\"\331\001\n\023AdGrou" +
+      "pAudienceView\022K\n\rresource_name\030\001 \001(\tB4\340A" +
+      "\003\372A.\n,googleads.googleapis.com/AdGroupAu" +
+      "dienceView:u\352Ar\n,googleads.googleapis.co" +
+      "m/AdGroupAudienceView\022Bcustomers/{custom" +
+      "er}/adGroupAudienceViews/{ad_group_audie" +
+      "nce_view}B\205\002\n%com.google.ads.googleads.v" +
+      "3.resourcesB\030AdGroupAudienceViewProtoP\001Z" +
+      "Jgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v3/resources;resources\242\002\003GA" +
+      "A\252\002!Google.Ads.GoogleAds.V3.Resources\312\002!" +
+      "Google\\Ads\\GoogleAds\\V3\\Resources\352\002%Goog" +
+      "le::Ads::GoogleAds::V3::Resourcesb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -55,6 +58,7 @@ public final class AdGroupAudienceViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
@@ -66,9 +70,12 @@ public final class AdGroupAudienceViewProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

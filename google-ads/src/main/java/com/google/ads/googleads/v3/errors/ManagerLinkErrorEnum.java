@@ -224,6 +224,22 @@ private static final long serialVersionUID = 0L;
      * <code>CLIENT_OUTSIDE_TREE = 16;</code>
      */
     CLIENT_OUTSIDE_TREE(16),
+    /**
+     * <pre>
+     * The changed status for mutate link is invalid.
+     * </pre>
+     *
+     * <code>INVALID_STATUS_CHANGE = 17;</code>
+     */
+    INVALID_STATUS_CHANGE(17),
+    /**
+     * <pre>
+     * The change for mutate link is invalid.
+     * </pre>
+     *
+     * <code>INVALID_CHANGE = 18;</code>
+     */
+    INVALID_CHANGE(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -365,6 +381,22 @@ private static final long serialVersionUID = 0L;
      * <code>CLIENT_OUTSIDE_TREE = 16;</code>
      */
     public static final int CLIENT_OUTSIDE_TREE_VALUE = 16;
+    /**
+     * <pre>
+     * The changed status for mutate link is invalid.
+     * </pre>
+     *
+     * <code>INVALID_STATUS_CHANGE = 17;</code>
+     */
+    public static final int INVALID_STATUS_CHANGE_VALUE = 17;
+    /**
+     * <pre>
+     * The change for mutate link is invalid.
+     * </pre>
+     *
+     * <code>INVALID_CHANGE = 18;</code>
+     */
+    public static final int INVALID_CHANGE_VALUE = 18;
 
 
     public final int getNumber() {
@@ -402,6 +434,8 @@ private static final long serialVersionUID = 0L;
         case 14: return NON_OWNER_USER_CANNOT_MODIFY_LINK;
         case 15: return SUSPENDED_ACCOUNT_CANNOT_ADD_CLIENTS;
         case 16: return CLIENT_OUTSIDE_TREE;
+        case 17: return INVALID_STATUS_CHANGE;
+        case 18: return INVALID_CHANGE;
         default: return null;
       }
     }

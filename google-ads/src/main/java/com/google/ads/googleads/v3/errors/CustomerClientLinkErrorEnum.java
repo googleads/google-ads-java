@@ -158,6 +158,14 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOMER_HAS_TOO_MANY_ACCOUNTS_AT_MANAGER = 8;</code>
      */
     CUSTOMER_HAS_TOO_MANY_ACCOUNTS_AT_MANAGER(8),
+    /**
+     * <pre>
+     * Client has too many managers.
+     * </pre>
+     *
+     * <code>CLIENT_HAS_TOO_MANY_MANAGERS = 9;</code>
+     */
+    CLIENT_HAS_TOO_MANY_MANAGERS(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -233,6 +241,14 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOMER_HAS_TOO_MANY_ACCOUNTS_AT_MANAGER = 8;</code>
      */
     public static final int CUSTOMER_HAS_TOO_MANY_ACCOUNTS_AT_MANAGER_VALUE = 8;
+    /**
+     * <pre>
+     * Client has too many managers.
+     * </pre>
+     *
+     * <code>CLIENT_HAS_TOO_MANY_MANAGERS = 9;</code>
+     */
+    public static final int CLIENT_HAS_TOO_MANY_MANAGERS_VALUE = 9;
 
 
     public final int getNumber() {
@@ -262,6 +278,7 @@ private static final long serialVersionUID = 0L;
         case 6: return CLIENT_HAS_TOO_MANY_INVITATIONS;
         case 7: return CANNOT_HIDE_OR_UNHIDE_MANAGER_ACCOUNTS;
         case 8: return CUSTOMER_HAS_TOO_MANY_ACCOUNTS_AT_MANAGER;
+        case 9: return CLIENT_HAS_TOO_MANY_MANAGERS;
         default: return null;
       }
     }

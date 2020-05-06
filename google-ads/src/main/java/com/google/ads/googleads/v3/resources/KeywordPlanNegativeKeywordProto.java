@@ -32,27 +32,30 @@ public final class KeywordPlanNegativeKeywordProto {
       "ord_plan_negative_keyword.proto\022!google." +
       "ads.googleads.v3.resources\0326google/ads/g" +
       "oogleads/v3/enums/keyword_match_type.pro" +
-      "to\032\031google/api/resource.proto\032\036google/pr" +
-      "otobuf/wrappers.proto\032\034google/api/annota" +
-      "tions.proto\"\255\003\n\032KeywordPlanNegativeKeywo" +
-      "rd\022\025\n\rresource_name\030\001 \001(\t\022;\n\025keyword_pla" +
-      "n_campaign\030\002 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022\'\n\002id\030\003 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022*\n\004text\030\004 \001(\0132\034.google.protobuf." +
-      "StringValue\022X\n\nmatch_type\030\005 \001(\0162D.google" +
-      ".ads.googleads.v3.enums.KeywordMatchType" +
-      "Enum.KeywordMatchType:\213\001\352A\207\001\n3googleads." +
-      "googleapis.com/KeywordPlanNegativeKeywor" +
-      "d\022Pcustomers/{customer}/keywordPlanNegat" +
-      "iveKeywords/{keyword_plan_negative_keywo" +
-      "rd}B\214\002\n%com.google.ads.googleads.v3.reso" +
-      "urcesB\037KeywordPlanNegativeKeywordProtoP\001" +
-      "ZJgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v3/resources;resources\242\002\003G" +
-      "AA\252\002!Google.Ads.GoogleAds.V3.Resources\312\002" +
-      "!Google\\Ads\\GoogleAds\\V3\\Resources\352\002%Goo" +
-      "gle::Ads::GoogleAds::V3::Resourcesb\006prot" +
-      "o3"
+      "to\032\037google/api/field_behavior.proto\032\031goo" +
+      "gle/api/resource.proto\032\036google/protobuf/" +
+      "wrappers.proto\032\034google/api/annotations.p" +
+      "roto\"\242\004\n\032KeywordPlanNegativeKeyword\022R\n\rr" +
+      "esource_name\030\001 \001(\tB;\340A\005\372A5\n3googleads.go" +
+      "ogleapis.com/KeywordPlanNegativeKeyword\022" +
+      "n\n\025keyword_plan_campaign\030\002 \001(\0132\034.google." +
+      "protobuf.StringValueB1\372A.\n,googleads.goo" +
+      "gleapis.com/KeywordPlanCampaign\022,\n\002id\030\003 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\003\340A\003\022*\n" +
+      "\004text\030\004 \001(\0132\034.google.protobuf.StringValu" +
+      "e\022X\n\nmatch_type\030\005 \001(\0162D.google.ads.googl" +
+      "eads.v3.enums.KeywordMatchTypeEnum.Keywo" +
+      "rdMatchType:\213\001\352A\207\001\n3googleads.googleapis" +
+      ".com/KeywordPlanNegativeKeyword\022Pcustome" +
+      "rs/{customer}/keywordPlanNegativeKeyword" +
+      "s/{keyword_plan_negative_keyword}B\214\002\n%co" +
+      "m.google.ads.googleads.v3.resourcesB\037Key" +
+      "wordPlanNegativeKeywordProtoP\001ZJgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v3/resources;resources\242\002\003GAA\252\002!Googl" +
+      "e.Ads.GoogleAds.V3.Resources\312\002!Google\\Ad" +
+      "s\\GoogleAds\\V3\\Resources\352\002%Google::Ads::" +
+      "GoogleAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,6 +69,7 @@ public final class KeywordPlanNegativeKeywordProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.KeywordMatchTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -78,10 +82,13 @@ public final class KeywordPlanNegativeKeywordProto {
         new java.lang.String[] { "ResourceName", "KeywordPlanCampaign", "Id", "Text", "MatchType", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.KeywordMatchTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

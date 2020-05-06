@@ -54,10 +54,12 @@ public final class AdGroupExtensionSettingServiceProto {
       "s/googleads/v3/resources/ad_group_extens" +
       "ion_setting.proto\032\034google/api/annotation" +
       "s.proto\032\027google/api/client.proto\032\037google" +
-      "/api/field_behavior.proto\032 google/protob" +
-      "uf/field_mask.proto\032\027google/rpc/status.p" +
-      "roto\"?\n!GetAdGroupExtensionSettingReques" +
-      "t\022\032\n\rresource_name\030\001 \001(\tB\003\340A\002\"\316\001\n%Mutate" +
+      "/api/field_behavior.proto\032\031google/api/re" +
+      "source.proto\032 google/protobuf/field_mask" +
+      ".proto\032\027google/rpc/status.proto\"t\n!GetAd" +
+      "GroupExtensionSettingRequest\022O\n\rresource" +
+      "_name\030\001 \001(\tB8\340A\002\372A2\n0googleads.googleapi" +
+      "s.com/AdGroupExtensionSetting\"\316\001\n%Mutate" +
       "AdGroupExtensionSettingsRequest\022\030\n\013custo" +
       "mer_id\030\001 \001(\tB\003\340A\002\022[\n\noperations\030\002 \003(\0132B." +
       "google.ads.googleads.v3.services.AdGroup" +
@@ -114,6 +116,7 @@ public final class AdGroupExtensionSettingServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
@@ -153,12 +156,14 @@ public final class AdGroupExtensionSettingServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.AdGroupExtensionSettingProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }

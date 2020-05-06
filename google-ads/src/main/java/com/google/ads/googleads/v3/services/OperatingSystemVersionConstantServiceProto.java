@@ -34,25 +34,27 @@ public final class OperatingSystemVersionConstantServiceProto {
       "ogle/ads/googleads/v3/resources/operatin" +
       "g_system_version_constant.proto\032\034google/" +
       "api/annotations.proto\032\027google/api/client" +
-      ".proto\032\037google/api/field_behavior.proto\"" +
-      "F\n(GetOperatingSystemVersionConstantRequ" +
-      "est\022\032\n\rresource_name\030\001 \001(\tB\003\340A\0022\310\002\n%Oper" +
-      "atingSystemVersionConstantService\022\201\002\n!Ge" +
-      "tOperatingSystemVersionConstant\022J.google" +
-      ".ads.googleads.v3.services.GetOperatingS" +
-      "ystemVersionConstantRequest\032A.google.ads" +
-      ".googleads.v3.resources.OperatingSystemV" +
-      "ersionConstant\"M\202\323\344\223\0027\0225/v3/{resource_na" +
-      "me=operatingSystemVersionConstants/*}\332A\r" +
-      "resource_name\032\033\312A\030googleads.googleapis.c" +
-      "omB\221\002\n$com.google.ads.googleads.v3.servi" +
-      "cesB*OperatingSystemVersionConstantServi" +
-      "ceProtoP\001ZHgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v3/services;servi" +
-      "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.Serv" +
-      "ices\312\002 Google\\Ads\\GoogleAds\\V3\\Services\352" +
-      "\002$Google::Ads::GoogleAds::V3::Servicesb\006" +
-      "proto3"
+      ".proto\032\037google/api/field_behavior.proto\032" +
+      "\031google/api/resource.proto\"\202\001\n(GetOperat" +
+      "ingSystemVersionConstantRequest\022V\n\rresou" +
+      "rce_name\030\001 \001(\tB?\340A\002\372A9\n7googleads.google" +
+      "apis.com/OperatingSystemVersionConstant2" +
+      "\310\002\n%OperatingSystemVersionConstantServic" +
+      "e\022\201\002\n!GetOperatingSystemVersionConstant\022" +
+      "J.google.ads.googleads.v3.services.GetOp" +
+      "eratingSystemVersionConstantRequest\032A.go" +
+      "ogle.ads.googleads.v3.resources.Operatin" +
+      "gSystemVersionConstant\"M\202\323\344\223\0027\0225/v3/{res" +
+      "ource_name=operatingSystemVersionConstan" +
+      "ts/*}\332A\rresource_name\032\033\312A\030googleads.goog" +
+      "leapis.comB\221\002\n$com.google.ads.googleads." +
+      "v3.servicesB*OperatingSystemVersionConst" +
+      "antServiceProtoP\001ZHgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v3/servic" +
+      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
+      ".V3.Services\312\002 Google\\Ads\\GoogleAds\\V3\\S" +
+      "ervices\352\002$Google::Ads::GoogleAds::V3::Se" +
+      "rvicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -69,6 +71,7 @@ public final class OperatingSystemVersionConstantServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetOperatingSystemVersionConstantRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -82,12 +85,14 @@ public final class OperatingSystemVersionConstantServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.OperatingSystemVersionConstantProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

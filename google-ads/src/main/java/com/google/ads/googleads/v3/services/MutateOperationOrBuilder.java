@@ -234,6 +234,31 @@ public interface MutateOperationOrBuilder extends
 
   /**
    * <pre>
+   * An ad mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+   */
+  boolean hasAdOperation();
+  /**
+   * <pre>
+   * An ad mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+   */
+  com.google.ads.googleads.v3.services.AdOperation getAdOperation();
+  /**
+   * <pre>
+   * An ad mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+   */
+  com.google.ads.googleads.v3.services.AdOperationOrBuilder getAdOperationOrBuilder();
+
+  /**
+   * <pre>
    * An ad parameter mutate operation.
    * </pre>
    *

@@ -9,126 +9,126 @@ public interface CurrencyConstantOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the currency constant.
+   * Output only. The resource name of the currency constant.
    * Currency constant resource names have the form:
    * `currencyConstants/{currency_code}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the currency constant.
+   * Output only. The resource name of the currency constant.
    * Currency constant resource names have the form:
    * `currencyConstants/{currency_code}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * ISO 4217 three-letter currency code, e.g. "USD"
+   * Output only. ISO 4217 three-letter currency code, e.g. "USD"
    * </pre>
    *
-   * <code>.google.protobuf.StringValue code = 2;</code>
+   * <code>.google.protobuf.StringValue code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCode();
   /**
    * <pre>
-   * ISO 4217 three-letter currency code, e.g. "USD"
+   * Output only. ISO 4217 three-letter currency code, e.g. "USD"
    * </pre>
    *
-   * <code>.google.protobuf.StringValue code = 2;</code>
+   * <code>.google.protobuf.StringValue code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getCode();
   /**
    * <pre>
-   * ISO 4217 three-letter currency code, e.g. "USD"
+   * Output only. ISO 4217 three-letter currency code, e.g. "USD"
    * </pre>
    *
-   * <code>.google.protobuf.StringValue code = 2;</code>
+   * <code>.google.protobuf.StringValue code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCodeOrBuilder();
 
   /**
    * <pre>
-   * Full English name of the currency.
+   * Output only. Full English name of the currency.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasName();
   /**
    * <pre>
-   * Full English name of the currency.
+   * Output only. Full English name of the currency.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * Full English name of the currency.
+   * Output only. Full English name of the currency.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 
   /**
    * <pre>
-   * Standard symbol for describing this currency, e.g. '$' for US Dollars.
+   * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue symbol = 4;</code>
+   * <code>.google.protobuf.StringValue symbol = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasSymbol();
   /**
    * <pre>
-   * Standard symbol for describing this currency, e.g. '$' for US Dollars.
+   * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue symbol = 4;</code>
+   * <code>.google.protobuf.StringValue symbol = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getSymbol();
   /**
    * <pre>
-   * Standard symbol for describing this currency, e.g. '$' for US Dollars.
+   * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue symbol = 4;</code>
+   * <code>.google.protobuf.StringValue symbol = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSymbolOrBuilder();
 
   /**
    * <pre>
-   * The billable unit for this currency. Billed amounts should be multiples of
+   * Output only. The billable unit for this currency. Billed amounts should be multiples of
    * this value.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value billable_unit_micros = 5;</code>
+   * <code>.google.protobuf.Int64Value billable_unit_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasBillableUnitMicros();
   /**
    * <pre>
-   * The billable unit for this currency. Billed amounts should be multiples of
+   * Output only. The billable unit for this currency. Billed amounts should be multiples of
    * this value.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value billable_unit_micros = 5;</code>
+   * <code>.google.protobuf.Int64Value billable_unit_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getBillableUnitMicros();
   /**
    * <pre>
-   * The billable unit for this currency. Billed amounts should be multiples of
+   * Output only. The billable unit for this currency. Billed amounts should be multiples of
    * this value.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value billable_unit_micros = 5;</code>
+   * <code>.google.protobuf.Int64Value billable_unit_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getBillableUnitMicrosOrBuilder();
 }

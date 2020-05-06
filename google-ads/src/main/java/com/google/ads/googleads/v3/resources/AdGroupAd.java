@@ -142,12 +142,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the ad.
+   * Immutable. The resource name of the ad.
    * Ad group ad resource names have the form:
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -163,12 +163,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the ad.
+   * Immutable. The resource name of the ad.
    * Ad group ad resource names have the form:
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -213,30 +213,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroup_;
   /**
    * <pre>
-   * The ad group to which the ad belongs.
+   * Immutable. The ad group to which the ad belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 4;</code>
+   * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasAdGroup() {
     return adGroup_ != null;
   }
   /**
    * <pre>
-   * The ad group to which the ad belongs.
+   * Immutable. The ad group to which the ad belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 4;</code>
+   * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getAdGroup() {
     return adGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroup_;
   }
   /**
    * <pre>
-   * The ad group to which the ad belongs.
+   * Immutable. The ad group to which the ad belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 4;</code>
+   * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     return getAdGroup();
@@ -246,30 +246,30 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v3.resources.Ad ad_;
   /**
    * <pre>
-   * The ad.
+   * Immutable. The ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+   * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasAd() {
     return ad_ != null;
   }
   /**
    * <pre>
-   * The ad.
+   * Immutable. The ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+   * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.resources.Ad getAd() {
     return ad_ == null ? com.google.ads.googleads.v3.resources.Ad.getDefaultInstance() : ad_;
   }
   /**
    * <pre>
-   * The ad.
+   * Immutable. The ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+   * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.resources.AdOrBuilder getAdOrBuilder() {
     return getAd();
@@ -279,30 +279,30 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policySummary_;
   /**
    * <pre>
-   * Policy information for the ad.
+   * Output only. Policy information for the ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasPolicySummary() {
     return policySummary_ != null;
   }
   /**
    * <pre>
-   * Policy information for the ad.
+   * Output only. Policy information for the ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary getPolicySummary() {
     return policySummary_ == null ? com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary.getDefaultInstance() : policySummary_;
   }
   /**
    * <pre>
-   * Policy information for the ad.
+   * Output only. Policy information for the ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.AdGroupAdPolicySummaryOrBuilder getPolicySummaryOrBuilder() {
     return getPolicySummary();
@@ -312,20 +312,20 @@ private static final long serialVersionUID = 0L;
   private int adStrength_;
   /**
    * <pre>
-   * Overall ad strength for this ad group ad.
+   * Output only. Overall ad strength for this ad group ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getAdStrengthValue() {
     return adStrength_;
   }
   /**
    * <pre>
-   * Overall ad strength for this ad group ad.
+   * Output only. Overall ad strength for this ad group ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength getAdStrength() {
     @SuppressWarnings("deprecation")
@@ -764,12 +764,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the ad.
+     * Immutable. The resource name of the ad.
      * Ad group ad resource names have the form:
      * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -785,12 +785,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad.
+     * Immutable. The resource name of the ad.
      * Ad group ad resource names have the form:
      * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -807,12 +807,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad.
+     * Immutable. The resource name of the ad.
      * Ad group ad resource names have the form:
      * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -826,12 +826,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad.
+     * Immutable. The resource name of the ad.
      * Ad group ad resource names have the form:
      * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -841,12 +841,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad.
+     * Immutable. The resource name of the ad.
      * Ad group ad resource names have the form:
      * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -930,20 +930,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupBuilder_;
     /**
      * <pre>
-     * The ad group to which the ad belongs.
+     * Immutable. The ad group to which the ad belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 4;</code>
+     * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasAdGroup() {
       return adGroupBuilder_ != null || adGroup_ != null;
     }
     /**
      * <pre>
-     * The ad group to which the ad belongs.
+     * Immutable. The ad group to which the ad belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 4;</code>
+     * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -954,10 +954,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which the ad belongs.
+     * Immutable. The ad group to which the ad belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 4;</code>
+     * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -974,10 +974,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which the ad belongs.
+     * Immutable. The ad group to which the ad belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 4;</code>
+     * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -992,10 +992,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which the ad belongs.
+     * Immutable. The ad group to which the ad belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 4;</code>
+     * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -1014,10 +1014,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which the ad belongs.
+     * Immutable. The ad group to which the ad belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 4;</code>
+     * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -1032,10 +1032,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which the ad belongs.
+     * Immutable. The ad group to which the ad belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 4;</code>
+     * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupBuilder() {
       
@@ -1044,10 +1044,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which the ad belongs.
+     * Immutable. The ad group to which the ad belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 4;</code>
+     * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
       if (adGroupBuilder_ != null) {
@@ -1059,10 +1059,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which the ad belongs.
+     * Immutable. The ad group to which the ad belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 4;</code>
+     * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1083,20 +1083,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.resources.Ad, com.google.ads.googleads.v3.resources.Ad.Builder, com.google.ads.googleads.v3.resources.AdOrBuilder> adBuilder_;
     /**
      * <pre>
-     * The ad.
+     * Immutable. The ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+     * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasAd() {
       return adBuilder_ != null || ad_ != null;
     }
     /**
      * <pre>
-     * The ad.
+     * Immutable. The ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+     * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.resources.Ad getAd() {
       if (adBuilder_ == null) {
@@ -1107,10 +1107,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad.
+     * Immutable. The ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+     * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setAd(com.google.ads.googleads.v3.resources.Ad value) {
       if (adBuilder_ == null) {
@@ -1127,10 +1127,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad.
+     * Immutable. The ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+     * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setAd(
         com.google.ads.googleads.v3.resources.Ad.Builder builderForValue) {
@@ -1145,10 +1145,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad.
+     * Immutable. The ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+     * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeAd(com.google.ads.googleads.v3.resources.Ad value) {
       if (adBuilder_ == null) {
@@ -1167,10 +1167,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad.
+     * Immutable. The ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+     * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearAd() {
       if (adBuilder_ == null) {
@@ -1185,10 +1185,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad.
+     * Immutable. The ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+     * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.resources.Ad.Builder getAdBuilder() {
       
@@ -1197,10 +1197,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad.
+     * Immutable. The ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+     * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.resources.AdOrBuilder getAdOrBuilder() {
       if (adBuilder_ != null) {
@@ -1212,10 +1212,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad.
+     * Immutable. The ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+     * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.resources.Ad, com.google.ads.googleads.v3.resources.Ad.Builder, com.google.ads.googleads.v3.resources.AdOrBuilder> 
@@ -1236,20 +1236,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary, com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary.Builder, com.google.ads.googleads.v3.resources.AdGroupAdPolicySummaryOrBuilder> policySummaryBuilder_;
     /**
      * <pre>
-     * Policy information for the ad.
+     * Output only. Policy information for the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPolicySummary() {
       return policySummaryBuilder_ != null || policySummary_ != null;
     }
     /**
      * <pre>
-     * Policy information for the ad.
+     * Output only. Policy information for the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary getPolicySummary() {
       if (policySummaryBuilder_ == null) {
@@ -1260,10 +1260,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad.
+     * Output only. Policy information for the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPolicySummary(com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary value) {
       if (policySummaryBuilder_ == null) {
@@ -1280,10 +1280,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad.
+     * Output only. Policy information for the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPolicySummary(
         com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary.Builder builderForValue) {
@@ -1298,10 +1298,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad.
+     * Output only. Policy information for the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePolicySummary(com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary value) {
       if (policySummaryBuilder_ == null) {
@@ -1320,10 +1320,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad.
+     * Output only. Policy information for the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPolicySummary() {
       if (policySummaryBuilder_ == null) {
@@ -1338,10 +1338,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad.
+     * Output only. Policy information for the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary.Builder getPolicySummaryBuilder() {
       
@@ -1350,10 +1350,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad.
+     * Output only. Policy information for the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.AdGroupAdPolicySummaryOrBuilder getPolicySummaryOrBuilder() {
       if (policySummaryBuilder_ != null) {
@@ -1365,10 +1365,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Policy information for the ad.
+     * Output only. Policy information for the ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+     * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary, com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary.Builder, com.google.ads.googleads.v3.resources.AdGroupAdPolicySummaryOrBuilder> 
@@ -1387,20 +1387,20 @@ private static final long serialVersionUID = 0L;
     private int adStrength_ = 0;
     /**
      * <pre>
-     * Overall ad strength for this ad group ad.
+     * Output only. Overall ad strength for this ad group ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getAdStrengthValue() {
       return adStrength_;
     }
     /**
      * <pre>
-     * Overall ad strength for this ad group ad.
+     * Output only. Overall ad strength for this ad group ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdStrengthValue(int value) {
       adStrength_ = value;
@@ -1409,10 +1409,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Overall ad strength for this ad group ad.
+     * Output only. Overall ad strength for this ad group ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength getAdStrength() {
       @SuppressWarnings("deprecation")
@@ -1421,10 +1421,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Overall ad strength for this ad group ad.
+     * Output only. Overall ad strength for this ad group ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdStrength(com.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength value) {
       if (value == null) {
@@ -1437,10 +1437,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Overall ad strength for this ad group ad.
+     * Output only. Overall ad strength for this ad group ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAdStrength() {
       

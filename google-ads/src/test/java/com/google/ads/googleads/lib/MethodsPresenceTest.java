@@ -14,23 +14,29 @@
 
 package com.google.ads.googleads.lib;
 
+import static org.junit.Assert.assertEquals;
+
 import com.google.common.base.Charsets;
+import com.google.common.collect.Sets;
+import com.google.common.collect.Sets.SetView;
 import com.google.common.io.Resources;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 @RunWith(JUnit4.class)
 public class MethodsPresenceTest {
+
+  private static final String CONFIG_FILE_RESOURCE_PATH = "testdata/avail_service_clients.txt";
+
   /**
    * Verifies that the list of all service client methods in a given GoogleAdsVersion class matches
    * that provided in the testdata/avail_service_clients.txt file.
@@ -56,11 +62,26 @@ public class MethodsPresenceTest {
     }
 
     // Retrieves the list of service client methods in the provided avail_service_clients.txt file.
-    URL resource = Resources.getResource("testdata/avail_service_clients.txt");
+    URL resource = Resources.getResource(CONFIG_FILE_RESOURCE_PATH);
     Set<String> serviceListResource =
         new HashSet<>(Resources.asCharSource(resource, Charsets.UTF_8).readLines());
-    serviceListResource.remove("");
 
-    assertEquals(serviceListResource, serviceListReflection);
+    SetView<String> newlyAdded = Sets.difference(serviceListReflection, serviceListResource);
+    SetView<String> newlyRemoved = Sets.difference(serviceListResource, serviceListReflection);
+
+    assertEquals(
+        "Service clients have been newly added: "
+            + newlyAdded
+            + " Please verify this is expected and update "
+            + CONFIG_FILE_RESOURCE_PATH,
+        Collections.emptySet(),
+        newlyAdded);
+    assertEquals(
+        "Service clients have been newly removed: "
+            + newlyRemoved
+            + " Please verify this is expected and update "
+            + CONFIG_FILE_RESOURCE_PATH,
+        Collections.emptySet(),
+        newlyRemoved);
   }
 }

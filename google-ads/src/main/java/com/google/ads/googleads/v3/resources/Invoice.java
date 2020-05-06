@@ -308,274 +308,274 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The resource name of the customer associated with this account budget.
+     * Output only. The resource name of the customer associated with this account budget.
      * This contains the customer ID, which appears on the invoice PDF as
      * "Account ID".
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 1;</code>
+     * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasCustomer();
     /**
      * <pre>
-     * The resource name of the customer associated with this account budget.
+     * Output only. The resource name of the customer associated with this account budget.
      * This contains the customer ID, which appears on the invoice PDF as
      * "Account ID".
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 1;</code>
+     * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getCustomer();
     /**
      * <pre>
-     * The resource name of the customer associated with this account budget.
+     * Output only. The resource name of the customer associated with this account budget.
      * This contains the customer ID, which appears on the invoice PDF as
      * "Account ID".
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 1;</code>
+     * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getCustomerOrBuilder();
 
     /**
      * <pre>
-     * The descriptive name of the account budget’s customer. It appears on the
+     * Output only. The descriptive name of the account budget’s customer. It appears on the
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+     * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasCustomerDescriptiveName();
     /**
      * <pre>
-     * The descriptive name of the account budget’s customer. It appears on the
+     * Output only. The descriptive name of the account budget’s customer. It appears on the
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+     * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getCustomerDescriptiveName();
     /**
      * <pre>
-     * The descriptive name of the account budget’s customer. It appears on the
+     * Output only. The descriptive name of the account budget’s customer. It appears on the
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+     * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getCustomerDescriptiveNameOrBuilder();
 
     /**
      * <pre>
-     * The resource name of the account budget associated with this summarized
+     * Output only. The resource name of the account budget associated with this summarized
      * billable cost.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget = 3;</code>
+     * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasAccountBudget();
     /**
      * <pre>
-     * The resource name of the account budget associated with this summarized
+     * Output only. The resource name of the account budget associated with this summarized
      * billable cost.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget = 3;</code>
+     * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getAccountBudget();
     /**
      * <pre>
-     * The resource name of the account budget associated with this summarized
+     * Output only. The resource name of the account budget associated with this summarized
      * billable cost.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget = 3;</code>
+     * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getAccountBudgetOrBuilder();
 
     /**
      * <pre>
-     * The name of the account budget. It appears on the invoice PDF as "Account
+     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
      * budget".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+     * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasAccountBudgetName();
     /**
      * <pre>
-     * The name of the account budget. It appears on the invoice PDF as "Account
+     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
      * budget".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+     * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getAccountBudgetName();
     /**
      * <pre>
-     * The name of the account budget. It appears on the invoice PDF as "Account
+     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
      * budget".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+     * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getAccountBudgetNameOrBuilder();
 
     /**
      * <pre>
-     * The purchase order number of the account budget. It appears on the
+     * Output only. The purchase order number of the account budget. It appears on the
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasPurchaseOrderNumber();
     /**
      * <pre>
-     * The purchase order number of the account budget. It appears on the
+     * Output only. The purchase order number of the account budget. It appears on the
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getPurchaseOrderNumber();
     /**
      * <pre>
-     * The purchase order number of the account budget. It appears on the
+     * Output only. The purchase order number of the account budget. It appears on the
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getPurchaseOrderNumberOrBuilder();
 
     /**
      * <pre>
-     * The pretax subtotal amount attributable to this budget during the service
+     * Output only. The pretax subtotal amount attributable to this budget during the service
      * period, in micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasSubtotalAmountMicros();
     /**
      * <pre>
-     * The pretax subtotal amount attributable to this budget during the service
+     * Output only. The pretax subtotal amount attributable to this budget during the service
      * period, in micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64Value getSubtotalAmountMicros();
     /**
      * <pre>
-     * The pretax subtotal amount attributable to this budget during the service
+     * Output only. The pretax subtotal amount attributable to this budget during the service
      * period, in micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getSubtotalAmountMicrosOrBuilder();
 
     /**
      * <pre>
-     * The tax amount attributable to this budget during the service period, in
+     * Output only. The tax amount attributable to this budget during the service period, in
      * micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasTaxAmountMicros();
     /**
      * <pre>
-     * The tax amount attributable to this budget during the service period, in
+     * Output only. The tax amount attributable to this budget during the service period, in
      * micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64Value getTaxAmountMicros();
     /**
      * <pre>
-     * The tax amount attributable to this budget during the service period, in
+     * Output only. The tax amount attributable to this budget during the service period, in
      * micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getTaxAmountMicrosOrBuilder();
 
     /**
      * <pre>
-     * The total amount attributable to this budget during the service period,
+     * Output only. The total amount attributable to this budget during the service period,
      * in micros. This equals the sum of the account budget subtotal amount and
      * the account budget tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasTotalAmountMicros();
     /**
      * <pre>
-     * The total amount attributable to this budget during the service period,
+     * Output only. The total amount attributable to this budget during the service period,
      * in micros. This equals the sum of the account budget subtotal amount and
      * the account budget tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64Value getTotalAmountMicros();
     /**
      * <pre>
-     * The total amount attributable to this budget during the service period,
+     * Output only. The total amount attributable to this budget during the service period,
      * in micros. This equals the sum of the account budget subtotal amount and
      * the account budget tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder();
 
     /**
      * <pre>
-     * The billable activity date range of the account budget, within the
+     * Output only. The billable activity date range of the account budget, within the
      * service date range of this invoice. The end date is inclusive. This can
      * be different from the account budget's start and end time.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasBillableActivityDateRange();
     /**
      * <pre>
-     * The billable activity date range of the account budget, within the
+     * Output only. The billable activity date range of the account budget, within the
      * service date range of this invoice. The end date is inclusive. This can
      * be different from the account budget's start and end time.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.ads.googleads.v3.common.DateRange getBillableActivityDateRange();
     /**
      * <pre>
-     * The billable activity date range of the account budget, within the
+     * Output only. The billable activity date range of the account budget, within the
      * service date range of this invoice. The end date is inclusive. This can
      * be different from the account budget's start and end time.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.ads.googleads.v3.common.DateRangeOrBuilder getBillableActivityDateRangeOrBuilder();
   }
@@ -775,42 +775,42 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue customer_;
     /**
      * <pre>
-     * The resource name of the customer associated with this account budget.
+     * Output only. The resource name of the customer associated with this account budget.
      * This contains the customer ID, which appears on the invoice PDF as
      * "Account ID".
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 1;</code>
+     * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCustomer() {
       return customer_ != null;
     }
     /**
      * <pre>
-     * The resource name of the customer associated with this account budget.
+     * Output only. The resource name of the customer associated with this account budget.
      * This contains the customer ID, which appears on the invoice PDF as
      * "Account ID".
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 1;</code>
+     * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCustomer() {
       return customer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customer_;
     }
     /**
      * <pre>
-     * The resource name of the customer associated with this account budget.
+     * Output only. The resource name of the customer associated with this account budget.
      * This contains the customer ID, which appears on the invoice PDF as
      * "Account ID".
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 1;</code>
+     * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCustomerOrBuilder() {
       return getCustomer();
@@ -820,33 +820,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue customerDescriptiveName_;
     /**
      * <pre>
-     * The descriptive name of the account budget’s customer. It appears on the
+     * Output only. The descriptive name of the account budget’s customer. It appears on the
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+     * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCustomerDescriptiveName() {
       return customerDescriptiveName_ != null;
     }
     /**
      * <pre>
-     * The descriptive name of the account budget’s customer. It appears on the
+     * Output only. The descriptive name of the account budget’s customer. It appears on the
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+     * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCustomerDescriptiveName() {
       return customerDescriptiveName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerDescriptiveName_;
     }
     /**
      * <pre>
-     * The descriptive name of the account budget’s customer. It appears on the
+     * Output only. The descriptive name of the account budget’s customer. It appears on the
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+     * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCustomerDescriptiveNameOrBuilder() {
       return getCustomerDescriptiveName();
@@ -856,39 +856,39 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue accountBudget_;
     /**
      * <pre>
-     * The resource name of the account budget associated with this summarized
+     * Output only. The resource name of the account budget associated with this summarized
      * billable cost.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget = 3;</code>
+     * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasAccountBudget() {
       return accountBudget_ != null;
     }
     /**
      * <pre>
-     * The resource name of the account budget associated with this summarized
+     * Output only. The resource name of the account budget associated with this summarized
      * billable cost.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget = 3;</code>
+     * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getAccountBudget() {
       return accountBudget_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : accountBudget_;
     }
     /**
      * <pre>
-     * The resource name of the account budget associated with this summarized
+     * Output only. The resource name of the account budget associated with this summarized
      * billable cost.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget = 3;</code>
+     * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAccountBudgetOrBuilder() {
       return getAccountBudget();
@@ -898,33 +898,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue accountBudgetName_;
     /**
      * <pre>
-     * The name of the account budget. It appears on the invoice PDF as "Account
+     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
      * budget".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+     * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasAccountBudgetName() {
       return accountBudgetName_ != null;
     }
     /**
      * <pre>
-     * The name of the account budget. It appears on the invoice PDF as "Account
+     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
      * budget".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+     * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getAccountBudgetName() {
       return accountBudgetName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : accountBudgetName_;
     }
     /**
      * <pre>
-     * The name of the account budget. It appears on the invoice PDF as "Account
+     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
      * budget".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+     * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAccountBudgetNameOrBuilder() {
       return getAccountBudgetName();
@@ -934,33 +934,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue purchaseOrderNumber_;
     /**
      * <pre>
-     * The purchase order number of the account budget. It appears on the
+     * Output only. The purchase order number of the account budget. It appears on the
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPurchaseOrderNumber() {
       return purchaseOrderNumber_ != null;
     }
     /**
      * <pre>
-     * The purchase order number of the account budget. It appears on the
+     * Output only. The purchase order number of the account budget. It appears on the
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPurchaseOrderNumber() {
       return purchaseOrderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : purchaseOrderNumber_;
     }
     /**
      * <pre>
-     * The purchase order number of the account budget. It appears on the
+     * Output only. The purchase order number of the account budget. It appears on the
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPurchaseOrderNumberOrBuilder() {
       return getPurchaseOrderNumber();
@@ -970,33 +970,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Int64Value subtotalAmountMicros_;
     /**
      * <pre>
-     * The pretax subtotal amount attributable to this budget during the service
+     * Output only. The pretax subtotal amount attributable to this budget during the service
      * period, in micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSubtotalAmountMicros() {
       return subtotalAmountMicros_ != null;
     }
     /**
      * <pre>
-     * The pretax subtotal amount attributable to this budget during the service
+     * Output only. The pretax subtotal amount attributable to this budget during the service
      * period, in micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getSubtotalAmountMicros() {
       return subtotalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : subtotalAmountMicros_;
     }
     /**
      * <pre>
-     * The pretax subtotal amount attributable to this budget during the service
+     * Output only. The pretax subtotal amount attributable to this budget during the service
      * period, in micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getSubtotalAmountMicrosOrBuilder() {
       return getSubtotalAmountMicros();
@@ -1006,33 +1006,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Int64Value taxAmountMicros_;
     /**
      * <pre>
-     * The tax amount attributable to this budget during the service period, in
+     * Output only. The tax amount attributable to this budget during the service period, in
      * micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTaxAmountMicros() {
       return taxAmountMicros_ != null;
     }
     /**
      * <pre>
-     * The tax amount attributable to this budget during the service period, in
+     * Output only. The tax amount attributable to this budget during the service period, in
      * micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getTaxAmountMicros() {
       return taxAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : taxAmountMicros_;
     }
     /**
      * <pre>
-     * The tax amount attributable to this budget during the service period, in
+     * Output only. The tax amount attributable to this budget during the service period, in
      * micros.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getTaxAmountMicrosOrBuilder() {
       return getTaxAmountMicros();
@@ -1042,36 +1042,36 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Int64Value totalAmountMicros_;
     /**
      * <pre>
-     * The total amount attributable to this budget during the service period,
+     * Output only. The total amount attributable to this budget during the service period,
      * in micros. This equals the sum of the account budget subtotal amount and
      * the account budget tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTotalAmountMicros() {
       return totalAmountMicros_ != null;
     }
     /**
      * <pre>
-     * The total amount attributable to this budget during the service period,
+     * Output only. The total amount attributable to this budget during the service period,
      * in micros. This equals the sum of the account budget subtotal amount and
      * the account budget tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getTotalAmountMicros() {
       return totalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalAmountMicros_;
     }
     /**
      * <pre>
-     * The total amount attributable to this budget during the service period,
+     * Output only. The total amount attributable to this budget during the service period,
      * in micros. This equals the sum of the account budget subtotal amount and
      * the account budget tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder() {
       return getTotalAmountMicros();
@@ -1081,36 +1081,36 @@ private static final long serialVersionUID = 0L;
     private com.google.ads.googleads.v3.common.DateRange billableActivityDateRange_;
     /**
      * <pre>
-     * The billable activity date range of the account budget, within the
+     * Output only. The billable activity date range of the account budget, within the
      * service date range of this invoice. The end date is inclusive. This can
      * be different from the account budget's start and end time.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasBillableActivityDateRange() {
       return billableActivityDateRange_ != null;
     }
     /**
      * <pre>
-     * The billable activity date range of the account budget, within the
+     * Output only. The billable activity date range of the account budget, within the
      * service date range of this invoice. The end date is inclusive. This can
      * be different from the account budget's start and end time.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.DateRange getBillableActivityDateRange() {
       return billableActivityDateRange_ == null ? com.google.ads.googleads.v3.common.DateRange.getDefaultInstance() : billableActivityDateRange_;
     }
     /**
      * <pre>
-     * The billable activity date range of the account budget, within the
+     * Output only. The billable activity date range of the account budget, within the
      * service date range of this invoice. The end date is inclusive. This can
      * be different from the account budget's start and end time.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.DateRangeOrBuilder getBillableActivityDateRangeOrBuilder() {
       return getBillableActivityDateRange();
@@ -1680,28 +1680,28 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> customerBuilder_;
       /**
        * <pre>
-       * The resource name of the customer associated with this account budget.
+       * Output only. The resource name of the customer associated with this account budget.
        * This contains the customer ID, which appears on the invoice PDF as
        * "Account ID".
        * Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer = 1;</code>
+       * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasCustomer() {
         return customerBuilder_ != null || customer_ != null;
       }
       /**
        * <pre>
-       * The resource name of the customer associated with this account budget.
+       * Output only. The resource name of the customer associated with this account budget.
        * This contains the customer ID, which appears on the invoice PDF as
        * "Account ID".
        * Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer = 1;</code>
+       * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getCustomer() {
         if (customerBuilder_ == null) {
@@ -1712,14 +1712,14 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the customer associated with this account budget.
+       * Output only. The resource name of the customer associated with this account budget.
        * This contains the customer ID, which appears on the invoice PDF as
        * "Account ID".
        * Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer = 1;</code>
+       * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setCustomer(com.google.protobuf.StringValue value) {
         if (customerBuilder_ == null) {
@@ -1736,14 +1736,14 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the customer associated with this account budget.
+       * Output only. The resource name of the customer associated with this account budget.
        * This contains the customer ID, which appears on the invoice PDF as
        * "Account ID".
        * Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer = 1;</code>
+       * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setCustomer(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1758,14 +1758,14 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the customer associated with this account budget.
+       * Output only. The resource name of the customer associated with this account budget.
        * This contains the customer ID, which appears on the invoice PDF as
        * "Account ID".
        * Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer = 1;</code>
+       * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeCustomer(com.google.protobuf.StringValue value) {
         if (customerBuilder_ == null) {
@@ -1784,14 +1784,14 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the customer associated with this account budget.
+       * Output only. The resource name of the customer associated with this account budget.
        * This contains the customer ID, which appears on the invoice PDF as
        * "Account ID".
        * Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer = 1;</code>
+       * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearCustomer() {
         if (customerBuilder_ == null) {
@@ -1806,14 +1806,14 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the customer associated with this account budget.
+       * Output only. The resource name of the customer associated with this account budget.
        * This contains the customer ID, which appears on the invoice PDF as
        * "Account ID".
        * Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer = 1;</code>
+       * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getCustomerBuilder() {
         
@@ -1822,14 +1822,14 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the customer associated with this account budget.
+       * Output only. The resource name of the customer associated with this account budget.
        * This contains the customer ID, which appears on the invoice PDF as
        * "Account ID".
        * Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer = 1;</code>
+       * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getCustomerOrBuilder() {
         if (customerBuilder_ != null) {
@@ -1841,14 +1841,14 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the customer associated with this account budget.
+       * Output only. The resource name of the customer associated with this account budget.
        * This contains the customer ID, which appears on the invoice PDF as
        * "Account ID".
        * Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer = 1;</code>
+       * <code>.google.protobuf.StringValue customer = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1869,22 +1869,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> customerDescriptiveNameBuilder_;
       /**
        * <pre>
-       * The descriptive name of the account budget’s customer. It appears on the
+       * Output only. The descriptive name of the account budget’s customer. It appears on the
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+       * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasCustomerDescriptiveName() {
         return customerDescriptiveNameBuilder_ != null || customerDescriptiveName_ != null;
       }
       /**
        * <pre>
-       * The descriptive name of the account budget’s customer. It appears on the
+       * Output only. The descriptive name of the account budget’s customer. It appears on the
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+       * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getCustomerDescriptiveName() {
         if (customerDescriptiveNameBuilder_ == null) {
@@ -1895,11 +1895,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The descriptive name of the account budget’s customer. It appears on the
+       * Output only. The descriptive name of the account budget’s customer. It appears on the
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+       * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setCustomerDescriptiveName(com.google.protobuf.StringValue value) {
         if (customerDescriptiveNameBuilder_ == null) {
@@ -1916,11 +1916,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The descriptive name of the account budget’s customer. It appears on the
+       * Output only. The descriptive name of the account budget’s customer. It appears on the
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+       * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setCustomerDescriptiveName(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1935,11 +1935,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The descriptive name of the account budget’s customer. It appears on the
+       * Output only. The descriptive name of the account budget’s customer. It appears on the
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+       * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeCustomerDescriptiveName(com.google.protobuf.StringValue value) {
         if (customerDescriptiveNameBuilder_ == null) {
@@ -1958,11 +1958,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The descriptive name of the account budget’s customer. It appears on the
+       * Output only. The descriptive name of the account budget’s customer. It appears on the
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+       * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearCustomerDescriptiveName() {
         if (customerDescriptiveNameBuilder_ == null) {
@@ -1977,11 +1977,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The descriptive name of the account budget’s customer. It appears on the
+       * Output only. The descriptive name of the account budget’s customer. It appears on the
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+       * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getCustomerDescriptiveNameBuilder() {
         
@@ -1990,11 +1990,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The descriptive name of the account budget’s customer. It appears on the
+       * Output only. The descriptive name of the account budget’s customer. It appears on the
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+       * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getCustomerDescriptiveNameOrBuilder() {
         if (customerDescriptiveNameBuilder_ != null) {
@@ -2006,11 +2006,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The descriptive name of the account budget’s customer. It appears on the
+       * Output only. The descriptive name of the account budget’s customer. It appears on the
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_descriptive_name = 2;</code>
+       * <code>.google.protobuf.StringValue customer_descriptive_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2031,26 +2031,26 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> accountBudgetBuilder_;
       /**
        * <pre>
-       * The resource name of the account budget associated with this summarized
+       * Output only. The resource name of the account budget associated with this summarized
        * billable cost.
        * AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget = 3;</code>
+       * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasAccountBudget() {
         return accountBudgetBuilder_ != null || accountBudget_ != null;
       }
       /**
        * <pre>
-       * The resource name of the account budget associated with this summarized
+       * Output only. The resource name of the account budget associated with this summarized
        * billable cost.
        * AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget = 3;</code>
+       * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getAccountBudget() {
         if (accountBudgetBuilder_ == null) {
@@ -2061,13 +2061,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the account budget associated with this summarized
+       * Output only. The resource name of the account budget associated with this summarized
        * billable cost.
        * AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget = 3;</code>
+       * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setAccountBudget(com.google.protobuf.StringValue value) {
         if (accountBudgetBuilder_ == null) {
@@ -2084,13 +2084,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the account budget associated with this summarized
+       * Output only. The resource name of the account budget associated with this summarized
        * billable cost.
        * AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget = 3;</code>
+       * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setAccountBudget(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2105,13 +2105,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the account budget associated with this summarized
+       * Output only. The resource name of the account budget associated with this summarized
        * billable cost.
        * AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget = 3;</code>
+       * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeAccountBudget(com.google.protobuf.StringValue value) {
         if (accountBudgetBuilder_ == null) {
@@ -2130,13 +2130,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the account budget associated with this summarized
+       * Output only. The resource name of the account budget associated with this summarized
        * billable cost.
        * AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget = 3;</code>
+       * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearAccountBudget() {
         if (accountBudgetBuilder_ == null) {
@@ -2151,13 +2151,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the account budget associated with this summarized
+       * Output only. The resource name of the account budget associated with this summarized
        * billable cost.
        * AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget = 3;</code>
+       * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getAccountBudgetBuilder() {
         
@@ -2166,13 +2166,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the account budget associated with this summarized
+       * Output only. The resource name of the account budget associated with this summarized
        * billable cost.
        * AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget = 3;</code>
+       * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getAccountBudgetOrBuilder() {
         if (accountBudgetBuilder_ != null) {
@@ -2184,13 +2184,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the account budget associated with this summarized
+       * Output only. The resource name of the account budget associated with this summarized
        * billable cost.
        * AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget = 3;</code>
+       * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2211,22 +2211,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> accountBudgetNameBuilder_;
       /**
        * <pre>
-       * The name of the account budget. It appears on the invoice PDF as "Account
+       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
        * budget".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+       * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasAccountBudgetName() {
         return accountBudgetNameBuilder_ != null || accountBudgetName_ != null;
       }
       /**
        * <pre>
-       * The name of the account budget. It appears on the invoice PDF as "Account
+       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
        * budget".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+       * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getAccountBudgetName() {
         if (accountBudgetNameBuilder_ == null) {
@@ -2237,11 +2237,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the account budget. It appears on the invoice PDF as "Account
+       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
        * budget".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+       * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setAccountBudgetName(com.google.protobuf.StringValue value) {
         if (accountBudgetNameBuilder_ == null) {
@@ -2258,11 +2258,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the account budget. It appears on the invoice PDF as "Account
+       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
        * budget".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+       * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setAccountBudgetName(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2277,11 +2277,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the account budget. It appears on the invoice PDF as "Account
+       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
        * budget".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+       * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeAccountBudgetName(com.google.protobuf.StringValue value) {
         if (accountBudgetNameBuilder_ == null) {
@@ -2300,11 +2300,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the account budget. It appears on the invoice PDF as "Account
+       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
        * budget".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+       * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearAccountBudgetName() {
         if (accountBudgetNameBuilder_ == null) {
@@ -2319,11 +2319,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the account budget. It appears on the invoice PDF as "Account
+       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
        * budget".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+       * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getAccountBudgetNameBuilder() {
         
@@ -2332,11 +2332,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the account budget. It appears on the invoice PDF as "Account
+       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
        * budget".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+       * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getAccountBudgetNameOrBuilder() {
         if (accountBudgetNameBuilder_ != null) {
@@ -2348,11 +2348,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the account budget. It appears on the invoice PDF as "Account
+       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
        * budget".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_name = 4;</code>
+       * <code>.google.protobuf.StringValue account_budget_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2373,22 +2373,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> purchaseOrderNumberBuilder_;
       /**
        * <pre>
-       * The purchase order number of the account budget. It appears on the
+       * Output only. The purchase order number of the account budget. It appears on the
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasPurchaseOrderNumber() {
         return purchaseOrderNumberBuilder_ != null || purchaseOrderNumber_ != null;
       }
       /**
        * <pre>
-       * The purchase order number of the account budget. It appears on the
+       * Output only. The purchase order number of the account budget. It appears on the
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getPurchaseOrderNumber() {
         if (purchaseOrderNumberBuilder_ == null) {
@@ -2399,11 +2399,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The purchase order number of the account budget. It appears on the
+       * Output only. The purchase order number of the account budget. It appears on the
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setPurchaseOrderNumber(com.google.protobuf.StringValue value) {
         if (purchaseOrderNumberBuilder_ == null) {
@@ -2420,11 +2420,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The purchase order number of the account budget. It appears on the
+       * Output only. The purchase order number of the account budget. It appears on the
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setPurchaseOrderNumber(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2439,11 +2439,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The purchase order number of the account budget. It appears on the
+       * Output only. The purchase order number of the account budget. It appears on the
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergePurchaseOrderNumber(com.google.protobuf.StringValue value) {
         if (purchaseOrderNumberBuilder_ == null) {
@@ -2462,11 +2462,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The purchase order number of the account budget. It appears on the
+       * Output only. The purchase order number of the account budget. It appears on the
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearPurchaseOrderNumber() {
         if (purchaseOrderNumberBuilder_ == null) {
@@ -2481,11 +2481,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The purchase order number of the account budget. It appears on the
+       * Output only. The purchase order number of the account budget. It appears on the
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getPurchaseOrderNumberBuilder() {
         
@@ -2494,11 +2494,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The purchase order number of the account budget. It appears on the
+       * Output only. The purchase order number of the account budget. It appears on the
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getPurchaseOrderNumberOrBuilder() {
         if (purchaseOrderNumberBuilder_ != null) {
@@ -2510,11 +2510,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The purchase order number of the account budget. It appears on the
+       * Output only. The purchase order number of the account budget. It appears on the
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 5;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2535,22 +2535,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> subtotalAmountMicrosBuilder_;
       /**
        * <pre>
-       * The pretax subtotal amount attributable to this budget during the service
+       * Output only. The pretax subtotal amount attributable to this budget during the service
        * period, in micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasSubtotalAmountMicros() {
         return subtotalAmountMicrosBuilder_ != null || subtotalAmountMicros_ != null;
       }
       /**
        * <pre>
-       * The pretax subtotal amount attributable to this budget during the service
+       * Output only. The pretax subtotal amount attributable to this budget during the service
        * period, in micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value getSubtotalAmountMicros() {
         if (subtotalAmountMicrosBuilder_ == null) {
@@ -2561,11 +2561,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The pretax subtotal amount attributable to this budget during the service
+       * Output only. The pretax subtotal amount attributable to this budget during the service
        * period, in micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setSubtotalAmountMicros(com.google.protobuf.Int64Value value) {
         if (subtotalAmountMicrosBuilder_ == null) {
@@ -2582,11 +2582,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The pretax subtotal amount attributable to this budget during the service
+       * Output only. The pretax subtotal amount attributable to this budget during the service
        * period, in micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setSubtotalAmountMicros(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2601,11 +2601,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The pretax subtotal amount attributable to this budget during the service
+       * Output only. The pretax subtotal amount attributable to this budget during the service
        * period, in micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeSubtotalAmountMicros(com.google.protobuf.Int64Value value) {
         if (subtotalAmountMicrosBuilder_ == null) {
@@ -2624,11 +2624,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The pretax subtotal amount attributable to this budget during the service
+       * Output only. The pretax subtotal amount attributable to this budget during the service
        * period, in micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearSubtotalAmountMicros() {
         if (subtotalAmountMicrosBuilder_ == null) {
@@ -2643,11 +2643,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The pretax subtotal amount attributable to this budget during the service
+       * Output only. The pretax subtotal amount attributable to this budget during the service
        * period, in micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value.Builder getSubtotalAmountMicrosBuilder() {
         
@@ -2656,11 +2656,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The pretax subtotal amount attributable to this budget during the service
+       * Output only. The pretax subtotal amount attributable to this budget during the service
        * period, in micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getSubtotalAmountMicrosOrBuilder() {
         if (subtotalAmountMicrosBuilder_ != null) {
@@ -2672,11 +2672,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The pretax subtotal amount attributable to this budget during the service
+       * Output only. The pretax subtotal amount attributable to this budget during the service
        * period, in micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6;</code>
+       * <code>.google.protobuf.Int64Value subtotal_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2697,22 +2697,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> taxAmountMicrosBuilder_;
       /**
        * <pre>
-       * The tax amount attributable to this budget during the service period, in
+       * Output only. The tax amount attributable to this budget during the service period, in
        * micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasTaxAmountMicros() {
         return taxAmountMicrosBuilder_ != null || taxAmountMicros_ != null;
       }
       /**
        * <pre>
-       * The tax amount attributable to this budget during the service period, in
+       * Output only. The tax amount attributable to this budget during the service period, in
        * micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value getTaxAmountMicros() {
         if (taxAmountMicrosBuilder_ == null) {
@@ -2723,11 +2723,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The tax amount attributable to this budget during the service period, in
+       * Output only. The tax amount attributable to this budget during the service period, in
        * micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setTaxAmountMicros(com.google.protobuf.Int64Value value) {
         if (taxAmountMicrosBuilder_ == null) {
@@ -2744,11 +2744,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The tax amount attributable to this budget during the service period, in
+       * Output only. The tax amount attributable to this budget during the service period, in
        * micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setTaxAmountMicros(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2763,11 +2763,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The tax amount attributable to this budget during the service period, in
+       * Output only. The tax amount attributable to this budget during the service period, in
        * micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeTaxAmountMicros(com.google.protobuf.Int64Value value) {
         if (taxAmountMicrosBuilder_ == null) {
@@ -2786,11 +2786,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The tax amount attributable to this budget during the service period, in
+       * Output only. The tax amount attributable to this budget during the service period, in
        * micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearTaxAmountMicros() {
         if (taxAmountMicrosBuilder_ == null) {
@@ -2805,11 +2805,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The tax amount attributable to this budget during the service period, in
+       * Output only. The tax amount attributable to this budget during the service period, in
        * micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value.Builder getTaxAmountMicrosBuilder() {
         
@@ -2818,11 +2818,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The tax amount attributable to this budget during the service period, in
+       * Output only. The tax amount attributable to this budget during the service period, in
        * micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getTaxAmountMicrosOrBuilder() {
         if (taxAmountMicrosBuilder_ != null) {
@@ -2834,11 +2834,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The tax amount attributable to this budget during the service period, in
+       * Output only. The tax amount attributable to this budget during the service period, in
        * micros.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tax_amount_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value tax_amount_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2859,24 +2859,24 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> totalAmountMicrosBuilder_;
       /**
        * <pre>
-       * The total amount attributable to this budget during the service period,
+       * Output only. The total amount attributable to this budget during the service period,
        * in micros. This equals the sum of the account budget subtotal amount and
        * the account budget tax amount.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+       * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasTotalAmountMicros() {
         return totalAmountMicrosBuilder_ != null || totalAmountMicros_ != null;
       }
       /**
        * <pre>
-       * The total amount attributable to this budget during the service period,
+       * Output only. The total amount attributable to this budget during the service period,
        * in micros. This equals the sum of the account budget subtotal amount and
        * the account budget tax amount.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+       * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value getTotalAmountMicros() {
         if (totalAmountMicrosBuilder_ == null) {
@@ -2887,12 +2887,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The total amount attributable to this budget during the service period,
+       * Output only. The total amount attributable to this budget during the service period,
        * in micros. This equals the sum of the account budget subtotal amount and
        * the account budget tax amount.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+       * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setTotalAmountMicros(com.google.protobuf.Int64Value value) {
         if (totalAmountMicrosBuilder_ == null) {
@@ -2909,12 +2909,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The total amount attributable to this budget during the service period,
+       * Output only. The total amount attributable to this budget during the service period,
        * in micros. This equals the sum of the account budget subtotal amount and
        * the account budget tax amount.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+       * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setTotalAmountMicros(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2929,12 +2929,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The total amount attributable to this budget during the service period,
+       * Output only. The total amount attributable to this budget during the service period,
        * in micros. This equals the sum of the account budget subtotal amount and
        * the account budget tax amount.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+       * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeTotalAmountMicros(com.google.protobuf.Int64Value value) {
         if (totalAmountMicrosBuilder_ == null) {
@@ -2953,12 +2953,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The total amount attributable to this budget during the service period,
+       * Output only. The total amount attributable to this budget during the service period,
        * in micros. This equals the sum of the account budget subtotal amount and
        * the account budget tax amount.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+       * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearTotalAmountMicros() {
         if (totalAmountMicrosBuilder_ == null) {
@@ -2973,12 +2973,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The total amount attributable to this budget during the service period,
+       * Output only. The total amount attributable to this budget during the service period,
        * in micros. This equals the sum of the account budget subtotal amount and
        * the account budget tax amount.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+       * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value.Builder getTotalAmountMicrosBuilder() {
         
@@ -2987,12 +2987,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The total amount attributable to this budget during the service period,
+       * Output only. The total amount attributable to this budget during the service period,
        * in micros. This equals the sum of the account budget subtotal amount and
        * the account budget tax amount.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+       * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder() {
         if (totalAmountMicrosBuilder_ != null) {
@@ -3004,12 +3004,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The total amount attributable to this budget during the service period,
+       * Output only. The total amount attributable to this budget during the service period,
        * in micros. This equals the sum of the account budget subtotal amount and
        * the account budget tax amount.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value total_amount_micros = 8;</code>
+       * <code>.google.protobuf.Int64Value total_amount_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3030,24 +3030,24 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v3.common.DateRange, com.google.ads.googleads.v3.common.DateRange.Builder, com.google.ads.googleads.v3.common.DateRangeOrBuilder> billableActivityDateRangeBuilder_;
       /**
        * <pre>
-       * The billable activity date range of the account budget, within the
+       * Output only. The billable activity date range of the account budget, within the
        * service date range of this invoice. The end date is inclusive. This can
        * be different from the account budget's start and end time.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasBillableActivityDateRange() {
         return billableActivityDateRangeBuilder_ != null || billableActivityDateRange_ != null;
       }
       /**
        * <pre>
-       * The billable activity date range of the account budget, within the
+       * Output only. The billable activity date range of the account budget, within the
        * service date range of this invoice. The end date is inclusive. This can
        * be different from the account budget's start and end time.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v3.common.DateRange getBillableActivityDateRange() {
         if (billableActivityDateRangeBuilder_ == null) {
@@ -3058,12 +3058,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The billable activity date range of the account budget, within the
+       * Output only. The billable activity date range of the account budget, within the
        * service date range of this invoice. The end date is inclusive. This can
        * be different from the account budget's start and end time.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setBillableActivityDateRange(com.google.ads.googleads.v3.common.DateRange value) {
         if (billableActivityDateRangeBuilder_ == null) {
@@ -3080,12 +3080,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The billable activity date range of the account budget, within the
+       * Output only. The billable activity date range of the account budget, within the
        * service date range of this invoice. The end date is inclusive. This can
        * be different from the account budget's start and end time.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setBillableActivityDateRange(
           com.google.ads.googleads.v3.common.DateRange.Builder builderForValue) {
@@ -3100,12 +3100,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The billable activity date range of the account budget, within the
+       * Output only. The billable activity date range of the account budget, within the
        * service date range of this invoice. The end date is inclusive. This can
        * be different from the account budget's start and end time.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeBillableActivityDateRange(com.google.ads.googleads.v3.common.DateRange value) {
         if (billableActivityDateRangeBuilder_ == null) {
@@ -3124,12 +3124,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The billable activity date range of the account budget, within the
+       * Output only. The billable activity date range of the account budget, within the
        * service date range of this invoice. The end date is inclusive. This can
        * be different from the account budget's start and end time.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearBillableActivityDateRange() {
         if (billableActivityDateRangeBuilder_ == null) {
@@ -3144,12 +3144,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The billable activity date range of the account budget, within the
+       * Output only. The billable activity date range of the account budget, within the
        * service date range of this invoice. The end date is inclusive. This can
        * be different from the account budget's start and end time.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v3.common.DateRange.Builder getBillableActivityDateRangeBuilder() {
         
@@ -3158,12 +3158,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The billable activity date range of the account budget, within the
+       * Output only. The billable activity date range of the account budget, within the
        * service date range of this invoice. The end date is inclusive. This can
        * be different from the account budget's start and end time.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v3.common.DateRangeOrBuilder getBillableActivityDateRangeOrBuilder() {
         if (billableActivityDateRangeBuilder_ != null) {
@@ -3175,12 +3175,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The billable activity date range of the account budget, within the
+       * Output only. The billable activity date range of the account budget, within the
        * service date range of this invoice. The end date is inclusive. This can
        * be different from the account budget's start and end time.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9;</code>
+       * <code>.google.ads.googleads.v3.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.ads.googleads.v3.common.DateRange, com.google.ads.googleads.v3.common.DateRange.Builder, com.google.ads.googleads.v3.common.DateRangeOrBuilder> 
@@ -3253,13 +3253,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the invoice. Multiple customers can share a given
+   * Output only. The resource name of the invoice. Multiple customers can share a given
    * invoice, so multiple resource names may point to the same invoice.
    * Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -3275,13 +3275,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the invoice. Multiple customers can share a given
+   * Output only. The resource name of the invoice. Multiple customers can share a given
    * invoice, so multiple resource names may point to the same invoice.
    * Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -3301,30 +3301,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue id_;
   /**
    * <pre>
-   * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+   * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue id = 2;</code>
+   * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+   * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue id = 2;</code>
+   * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getId() {
     return id_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+   * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue id = 2;</code>
+   * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -3334,20 +3334,20 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * The type of invoice.
+   * Output only. The type of invoice.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * The type of invoice.
+   * Output only. The type of invoice.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType getType() {
     @SuppressWarnings("deprecation")
@@ -3359,33 +3359,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue billingSetup_;
   /**
    * <pre>
-   * The resource name of this invoice’s billing setup.
+   * Output only. The resource name of this invoice’s billing setup.
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+   * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasBillingSetup() {
     return billingSetup_ != null;
   }
   /**
    * <pre>
-   * The resource name of this invoice’s billing setup.
+   * Output only. The resource name of this invoice’s billing setup.
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+   * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getBillingSetup() {
     return billingSetup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : billingSetup_;
   }
   /**
    * <pre>
-   * The resource name of this invoice’s billing setup.
+   * Output only. The resource name of this invoice’s billing setup.
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+   * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getBillingSetupOrBuilder() {
     return getBillingSetup();
@@ -3395,36 +3395,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue paymentsAccountId_;
   /**
    * <pre>
-   * A 16 digit ID used to identify the payments account associated with the
+   * Output only. A 16 digit ID used to identify the payments account associated with the
    * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
    * "Billing Account Number".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+   * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasPaymentsAccountId() {
     return paymentsAccountId_ != null;
   }
   /**
    * <pre>
-   * A 16 digit ID used to identify the payments account associated with the
+   * Output only. A 16 digit ID used to identify the payments account associated with the
    * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
    * "Billing Account Number".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+   * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getPaymentsAccountId() {
     return paymentsAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
   }
   /**
    * <pre>
-   * A 16 digit ID used to identify the payments account associated with the
+   * Output only. A 16 digit ID used to identify the payments account associated with the
    * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
    * "Billing Account Number".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+   * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
     return getPaymentsAccountId();
@@ -3434,36 +3434,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue paymentsProfileId_;
   /**
    * <pre>
-   * A 12 digit ID used to identify the payments profile associated with the
+   * Output only. A 12 digit ID used to identify the payments profile associated with the
    * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
    * "Billing ID".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+   * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasPaymentsProfileId() {
     return paymentsProfileId_ != null;
   }
   /**
    * <pre>
-   * A 12 digit ID used to identify the payments profile associated with the
+   * Output only. A 12 digit ID used to identify the payments profile associated with the
    * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
    * "Billing ID".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+   * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getPaymentsProfileId() {
     return paymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
   }
   /**
    * <pre>
-   * A 12 digit ID used to identify the payments profile associated with the
+   * Output only. A 12 digit ID used to identify the payments profile associated with the
    * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
    * "Billing ID".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+   * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
     return getPaymentsProfileId();
@@ -3473,33 +3473,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue issueDate_;
   /**
    * <pre>
-   * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
    * either "Issue date" or "Invoice date".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue issue_date = 7;</code>
+   * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasIssueDate() {
     return issueDate_ != null;
   }
   /**
    * <pre>
-   * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
    * either "Issue date" or "Invoice date".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue issue_date = 7;</code>
+   * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getIssueDate() {
     return issueDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : issueDate_;
   }
   /**
    * <pre>
-   * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
    * either "Issue date" or "Invoice date".
    * </pre>
    *
-   * <code>.google.protobuf.StringValue issue_date = 7;</code>
+   * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getIssueDateOrBuilder() {
     return getIssueDate();
@@ -3509,30 +3509,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue dueDate_;
   /**
    * <pre>
-   * The due date in yyyy-mm-dd format.
+   * Output only. The due date in yyyy-mm-dd format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue due_date = 8;</code>
+   * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasDueDate() {
     return dueDate_ != null;
   }
   /**
    * <pre>
-   * The due date in yyyy-mm-dd format.
+   * Output only. The due date in yyyy-mm-dd format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue due_date = 8;</code>
+   * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getDueDate() {
     return dueDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dueDate_;
   }
   /**
    * <pre>
-   * The due date in yyyy-mm-dd format.
+   * Output only. The due date in yyyy-mm-dd format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue due_date = 8;</code>
+   * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getDueDateOrBuilder() {
     return getDueDate();
@@ -3542,30 +3542,30 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v3.common.DateRange serviceDateRange_;
   /**
    * <pre>
-   * The service period date range of this invoice. The end date is inclusive.
+   * Output only. The service period date range of this invoice. The end date is inclusive.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+   * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasServiceDateRange() {
     return serviceDateRange_ != null;
   }
   /**
    * <pre>
-   * The service period date range of this invoice. The end date is inclusive.
+   * Output only. The service period date range of this invoice. The end date is inclusive.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+   * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.DateRange getServiceDateRange() {
     return serviceDateRange_ == null ? com.google.ads.googleads.v3.common.DateRange.getDefaultInstance() : serviceDateRange_;
   }
   /**
    * <pre>
-   * The service period date range of this invoice. The end date is inclusive.
+   * Output only. The service period date range of this invoice. The end date is inclusive.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+   * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.DateRangeOrBuilder getServiceDateRangeOrBuilder() {
     return getServiceDateRange();
@@ -3575,33 +3575,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue currencyCode_;
   /**
    * <pre>
-   * The currency code. All costs are returned in this currency. A subset of the
+   * Output only. The currency code. All costs are returned in this currency. A subset of the
    * currency codes derived from the ISO 4217 standard is supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 10;</code>
+   * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
   /**
    * <pre>
-   * The currency code. All costs are returned in this currency. A subset of the
+   * Output only. The currency code. All costs are returned in this currency. A subset of the
    * currency codes derived from the ISO 4217 standard is supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 10;</code>
+   * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
   /**
    * <pre>
-   * The currency code. All costs are returned in this currency. A subset of the
+   * Output only. The currency code. All costs are returned in this currency. A subset of the
    * currency codes derived from the ISO 4217 standard is supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 10;</code>
+   * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
@@ -3611,33 +3611,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value invoiceLevelAdjustmentsMicros_;
   /**
    * <pre>
-   * The total amount of invoice level adjustments. These adjustments are made
+   * Output only. The total amount of invoice level adjustments. These adjustments are made
    * on the invoice, not on a specific account budget.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+   * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasInvoiceLevelAdjustmentsMicros() {
     return invoiceLevelAdjustmentsMicros_ != null;
   }
   /**
    * <pre>
-   * The total amount of invoice level adjustments. These adjustments are made
+   * Output only. The total amount of invoice level adjustments. These adjustments are made
    * on the invoice, not on a specific account budget.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+   * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getInvoiceLevelAdjustmentsMicros() {
     return invoiceLevelAdjustmentsMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : invoiceLevelAdjustmentsMicros_;
   }
   /**
    * <pre>
-   * The total amount of invoice level adjustments. These adjustments are made
+   * Output only. The total amount of invoice level adjustments. These adjustments are made
    * on the invoice, not on a specific account budget.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+   * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getInvoiceLevelAdjustmentsMicrosOrBuilder() {
     return getInvoiceLevelAdjustmentsMicros();
@@ -3647,33 +3647,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value subtotalAmountMicros_;
   /**
    * <pre>
-   * The pretax subtotal amount, in micros. This equals the sum of the
+   * Output only. The pretax subtotal amount, in micros. This equals the sum of the
    * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+   * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasSubtotalAmountMicros() {
     return subtotalAmountMicros_ != null;
   }
   /**
    * <pre>
-   * The pretax subtotal amount, in micros. This equals the sum of the
+   * Output only. The pretax subtotal amount, in micros. This equals the sum of the
    * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+   * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getSubtotalAmountMicros() {
     return subtotalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : subtotalAmountMicros_;
   }
   /**
    * <pre>
-   * The pretax subtotal amount, in micros. This equals the sum of the
+   * Output only. The pretax subtotal amount, in micros. This equals the sum of the
    * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+   * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getSubtotalAmountMicrosOrBuilder() {
     return getSubtotalAmountMicros();
@@ -3683,36 +3683,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value taxAmountMicros_;
   /**
    * <pre>
-   * The sum of all taxes on the invoice, in micros. This equals the sum of the
+   * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
    * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
    * account budget.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+   * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasTaxAmountMicros() {
     return taxAmountMicros_ != null;
   }
   /**
    * <pre>
-   * The sum of all taxes on the invoice, in micros. This equals the sum of the
+   * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
    * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
    * account budget.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+   * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getTaxAmountMicros() {
     return taxAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : taxAmountMicros_;
   }
   /**
    * <pre>
-   * The sum of all taxes on the invoice, in micros. This equals the sum of the
+   * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
    * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
    * account budget.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+   * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getTaxAmountMicrosOrBuilder() {
     return getTaxAmountMicros();
@@ -3722,33 +3722,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value totalAmountMicros_;
   /**
    * <pre>
-   * The total amount, in micros. This equals the sum of the invoice subtotal
+   * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
    * amount and the invoice tax amount.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+   * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasTotalAmountMicros() {
     return totalAmountMicros_ != null;
   }
   /**
    * <pre>
-   * The total amount, in micros. This equals the sum of the invoice subtotal
+   * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
    * amount and the invoice tax amount.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+   * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getTotalAmountMicros() {
     return totalAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalAmountMicros_;
   }
   /**
    * <pre>
-   * The total amount, in micros. This equals the sum of the invoice subtotal
+   * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
    * amount and the invoice tax amount.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+   * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder() {
     return getTotalAmountMicros();
@@ -3758,42 +3758,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue correctedInvoice_;
   /**
    * <pre>
-   * The resource name of the original invoice corrected, wrote off, or canceled
+   * Output only. The resource name of the original invoice corrected, wrote off, or canceled
    * by this invoice, if applicable. If `corrected_invoice` is set,
    * `replaced_invoices` will not be set.
    * Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+   * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCorrectedInvoice() {
     return correctedInvoice_ != null;
   }
   /**
    * <pre>
-   * The resource name of the original invoice corrected, wrote off, or canceled
+   * Output only. The resource name of the original invoice corrected, wrote off, or canceled
    * by this invoice, if applicable. If `corrected_invoice` is set,
    * `replaced_invoices` will not be set.
    * Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+   * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getCorrectedInvoice() {
     return correctedInvoice_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : correctedInvoice_;
   }
   /**
    * <pre>
-   * The resource name of the original invoice corrected, wrote off, or canceled
+   * Output only. The resource name of the original invoice corrected, wrote off, or canceled
    * by this invoice, if applicable. If `corrected_invoice` is set,
    * `replaced_invoices` will not be set.
    * Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+   * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCorrectedInvoiceOrBuilder() {
     return getCorrectedInvoice();
@@ -3803,7 +3803,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.protobuf.StringValue> replacedInvoices_;
   /**
    * <pre>
-   * The resource name of the original invoice(s) being rebilled or replaced by
+   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
    * this invoice, if applicable. There might be multiple replaced invoices due
    * to invoice consolidation. The replaced invoices may not belong to the same
    * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -3812,14 +3812,14 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+   * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.protobuf.StringValue> getReplacedInvoicesList() {
     return replacedInvoices_;
   }
   /**
    * <pre>
-   * The resource name of the original invoice(s) being rebilled or replaced by
+   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
    * this invoice, if applicable. There might be multiple replaced invoices due
    * to invoice consolidation. The replaced invoices may not belong to the same
    * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -3828,7 +3828,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+   * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getReplacedInvoicesOrBuilderList() {
@@ -3836,7 +3836,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the original invoice(s) being rebilled or replaced by
+   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
    * this invoice, if applicable. There might be multiple replaced invoices due
    * to invoice consolidation. The replaced invoices may not belong to the same
    * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -3845,14 +3845,14 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+   * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getReplacedInvoicesCount() {
     return replacedInvoices_.size();
   }
   /**
    * <pre>
-   * The resource name of the original invoice(s) being rebilled or replaced by
+   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
    * this invoice, if applicable. There might be multiple replaced invoices due
    * to invoice consolidation. The replaced invoices may not belong to the same
    * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -3861,14 +3861,14 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+   * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getReplacedInvoices(int index) {
     return replacedInvoices_.get(index);
   }
   /**
    * <pre>
-   * The resource name of the original invoice(s) being rebilled or replaced by
+   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
    * this invoice, if applicable. There might be multiple replaced invoices due
    * to invoice consolidation. The replaced invoices may not belong to the same
    * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -3877,7 +3877,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+   * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getReplacedInvoicesOrBuilder(
       int index) {
@@ -3888,33 +3888,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue pdfUrl_;
   /**
    * <pre>
-   * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+   * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
    * token to request the PDF with this URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+   * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasPdfUrl() {
     return pdfUrl_ != null;
   }
   /**
    * <pre>
-   * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+   * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
    * token to request the PDF with this URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+   * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getPdfUrl() {
     return pdfUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : pdfUrl_;
   }
   /**
    * <pre>
-   * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+   * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
    * token to request the PDF with this URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+   * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getPdfUrlOrBuilder() {
     return getPdfUrl();
@@ -3924,22 +3924,22 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary> accountBudgetSummaries_;
   /**
    * <pre>
-   * The list of summarized account budget information associated with this
+   * Output only. The list of summarized account budget information associated with this
    * invoice.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+   * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary> getAccountBudgetSummariesList() {
     return accountBudgetSummaries_;
   }
   /**
    * <pre>
-   * The list of summarized account budget information associated with this
+   * Output only. The list of summarized account budget information associated with this
    * invoice.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+   * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummaryOrBuilder> 
       getAccountBudgetSummariesOrBuilderList() {
@@ -3947,33 +3947,33 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of summarized account budget information associated with this
+   * Output only. The list of summarized account budget information associated with this
    * invoice.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+   * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getAccountBudgetSummariesCount() {
     return accountBudgetSummaries_.size();
   }
   /**
    * <pre>
-   * The list of summarized account budget information associated with this
+   * Output only. The list of summarized account budget information associated with this
    * invoice.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+   * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary getAccountBudgetSummaries(int index) {
     return accountBudgetSummaries_.get(index);
   }
   /**
    * <pre>
-   * The list of summarized account budget information associated with this
+   * Output only. The list of summarized account budget information associated with this
    * invoice.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+   * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummaryOrBuilder getAccountBudgetSummariesOrBuilder(
       int index) {
@@ -4841,13 +4841,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the invoice. Multiple customers can share a given
+     * Output only. The resource name of the invoice. Multiple customers can share a given
      * invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -4863,13 +4863,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the invoice. Multiple customers can share a given
+     * Output only. The resource name of the invoice. Multiple customers can share a given
      * invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -4886,13 +4886,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the invoice. Multiple customers can share a given
+     * Output only. The resource name of the invoice. Multiple customers can share a given
      * invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -4906,13 +4906,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the invoice. Multiple customers can share a given
+     * Output only. The resource name of the invoice. Multiple customers can share a given
      * invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -4922,13 +4922,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the invoice. Multiple customers can share a given
+     * Output only. The resource name of the invoice. Multiple customers can share a given
      * invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -4947,20 +4947,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getId() {
       if (idBuilder_ == null) {
@@ -4971,10 +4971,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.StringValue value) {
       if (idBuilder_ == null) {
@@ -4991,10 +4991,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5009,10 +5009,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.StringValue value) {
       if (idBuilder_ == null) {
@@ -5031,10 +5031,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -5049,10 +5049,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getIdBuilder() {
       
@@ -5061,10 +5061,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -5076,10 +5076,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -5098,20 +5098,20 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The type of invoice.
+     * Output only. The type of invoice.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * The type of invoice.
+     * Output only. The type of invoice.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -5120,10 +5120,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of invoice.
+     * Output only. The type of invoice.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType getType() {
       @SuppressWarnings("deprecation")
@@ -5132,10 +5132,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of invoice.
+     * Output only. The type of invoice.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setType(com.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType value) {
       if (value == null) {
@@ -5148,10 +5148,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of invoice.
+     * Output only. The type of invoice.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.InvoiceTypeEnum.InvoiceType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearType() {
       
@@ -5165,22 +5165,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> billingSetupBuilder_;
     /**
      * <pre>
-     * The resource name of this invoice’s billing setup.
+     * Output only. The resource name of this invoice’s billing setup.
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasBillingSetup() {
       return billingSetupBuilder_ != null || billingSetup_ != null;
     }
     /**
      * <pre>
-     * The resource name of this invoice’s billing setup.
+     * Output only. The resource name of this invoice’s billing setup.
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getBillingSetup() {
       if (billingSetupBuilder_ == null) {
@@ -5191,11 +5191,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of this invoice’s billing setup.
+     * Output only. The resource name of this invoice’s billing setup.
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setBillingSetup(com.google.protobuf.StringValue value) {
       if (billingSetupBuilder_ == null) {
@@ -5212,11 +5212,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of this invoice’s billing setup.
+     * Output only. The resource name of this invoice’s billing setup.
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setBillingSetup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5231,11 +5231,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of this invoice’s billing setup.
+     * Output only. The resource name of this invoice’s billing setup.
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeBillingSetup(com.google.protobuf.StringValue value) {
       if (billingSetupBuilder_ == null) {
@@ -5254,11 +5254,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of this invoice’s billing setup.
+     * Output only. The resource name of this invoice’s billing setup.
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearBillingSetup() {
       if (billingSetupBuilder_ == null) {
@@ -5273,11 +5273,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of this invoice’s billing setup.
+     * Output only. The resource name of this invoice’s billing setup.
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getBillingSetupBuilder() {
       
@@ -5286,11 +5286,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of this invoice’s billing setup.
+     * Output only. The resource name of this invoice’s billing setup.
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getBillingSetupOrBuilder() {
       if (billingSetupBuilder_ != null) {
@@ -5302,11 +5302,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of this invoice’s billing setup.
+     * Output only. The resource name of this invoice’s billing setup.
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 4;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -5327,24 +5327,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountIdBuilder_;
     /**
      * <pre>
-     * A 16 digit ID used to identify the payments account associated with the
+     * Output only. A 16 digit ID used to identify the payments account associated with the
      * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
      * "Billing Account Number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPaymentsAccountId() {
       return paymentsAccountIdBuilder_ != null || paymentsAccountId_ != null;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify the payments account associated with the
+     * Output only. A 16 digit ID used to identify the payments account associated with the
      * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
      * "Billing Account Number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPaymentsAccountId() {
       if (paymentsAccountIdBuilder_ == null) {
@@ -5355,12 +5355,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify the payments account associated with the
+     * Output only. A 16 digit ID used to identify the payments account associated with the
      * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
      * "Billing Account Number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPaymentsAccountId(com.google.protobuf.StringValue value) {
       if (paymentsAccountIdBuilder_ == null) {
@@ -5377,12 +5377,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify the payments account associated with the
+     * Output only. A 16 digit ID used to identify the payments account associated with the
      * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
      * "Billing Account Number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPaymentsAccountId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5397,12 +5397,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify the payments account associated with the
+     * Output only. A 16 digit ID used to identify the payments account associated with the
      * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
      * "Billing Account Number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePaymentsAccountId(com.google.protobuf.StringValue value) {
       if (paymentsAccountIdBuilder_ == null) {
@@ -5421,12 +5421,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify the payments account associated with the
+     * Output only. A 16 digit ID used to identify the payments account associated with the
      * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
      * "Billing Account Number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPaymentsAccountId() {
       if (paymentsAccountIdBuilder_ == null) {
@@ -5441,12 +5441,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify the payments account associated with the
+     * Output only. A 16 digit ID used to identify the payments account associated with the
      * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
      * "Billing Account Number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getPaymentsAccountIdBuilder() {
       
@@ -5455,12 +5455,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify the payments account associated with the
+     * Output only. A 16 digit ID used to identify the payments account associated with the
      * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
      * "Billing Account Number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
       if (paymentsAccountIdBuilder_ != null) {
@@ -5472,12 +5472,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify the payments account associated with the
+     * Output only. A 16 digit ID used to identify the payments account associated with the
      * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
      * "Billing Account Number".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -5498,24 +5498,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileIdBuilder_;
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
      * "Billing ID".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPaymentsProfileId() {
       return paymentsProfileIdBuilder_ != null || paymentsProfileId_ != null;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
      * "Billing ID".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPaymentsProfileId() {
       if (paymentsProfileIdBuilder_ == null) {
@@ -5526,12 +5526,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
      * "Billing ID".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPaymentsProfileId(com.google.protobuf.StringValue value) {
       if (paymentsProfileIdBuilder_ == null) {
@@ -5548,12 +5548,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
      * "Billing ID".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPaymentsProfileId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5568,12 +5568,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
      * "Billing ID".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePaymentsProfileId(com.google.protobuf.StringValue value) {
       if (paymentsProfileIdBuilder_ == null) {
@@ -5592,12 +5592,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
      * "Billing ID".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPaymentsProfileId() {
       if (paymentsProfileIdBuilder_ == null) {
@@ -5612,12 +5612,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
      * "Billing ID".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getPaymentsProfileIdBuilder() {
       
@@ -5626,12 +5626,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
      * "Billing ID".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
       if (paymentsProfileIdBuilder_ != null) {
@@ -5643,12 +5643,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
      * "Billing ID".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -5669,22 +5669,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> issueDateBuilder_;
     /**
      * <pre>
-     * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue issue_date = 7;</code>
+     * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasIssueDate() {
       return issueDateBuilder_ != null || issueDate_ != null;
     }
     /**
      * <pre>
-     * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue issue_date = 7;</code>
+     * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getIssueDate() {
       if (issueDateBuilder_ == null) {
@@ -5695,11 +5695,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue issue_date = 7;</code>
+     * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setIssueDate(com.google.protobuf.StringValue value) {
       if (issueDateBuilder_ == null) {
@@ -5716,11 +5716,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue issue_date = 7;</code>
+     * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setIssueDate(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5735,11 +5735,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue issue_date = 7;</code>
+     * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeIssueDate(com.google.protobuf.StringValue value) {
       if (issueDateBuilder_ == null) {
@@ -5758,11 +5758,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue issue_date = 7;</code>
+     * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearIssueDate() {
       if (issueDateBuilder_ == null) {
@@ -5777,11 +5777,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue issue_date = 7;</code>
+     * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getIssueDateBuilder() {
       
@@ -5790,11 +5790,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue issue_date = 7;</code>
+     * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getIssueDateOrBuilder() {
       if (issueDateBuilder_ != null) {
@@ -5806,11 +5806,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue issue_date = 7;</code>
+     * <code>.google.protobuf.StringValue issue_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -5831,20 +5831,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> dueDateBuilder_;
     /**
      * <pre>
-     * The due date in yyyy-mm-dd format.
+     * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue due_date = 8;</code>
+     * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasDueDate() {
       return dueDateBuilder_ != null || dueDate_ != null;
     }
     /**
      * <pre>
-     * The due date in yyyy-mm-dd format.
+     * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue due_date = 8;</code>
+     * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getDueDate() {
       if (dueDateBuilder_ == null) {
@@ -5855,10 +5855,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The due date in yyyy-mm-dd format.
+     * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue due_date = 8;</code>
+     * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setDueDate(com.google.protobuf.StringValue value) {
       if (dueDateBuilder_ == null) {
@@ -5875,10 +5875,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The due date in yyyy-mm-dd format.
+     * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue due_date = 8;</code>
+     * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setDueDate(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5893,10 +5893,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The due date in yyyy-mm-dd format.
+     * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue due_date = 8;</code>
+     * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeDueDate(com.google.protobuf.StringValue value) {
       if (dueDateBuilder_ == null) {
@@ -5915,10 +5915,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The due date in yyyy-mm-dd format.
+     * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue due_date = 8;</code>
+     * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearDueDate() {
       if (dueDateBuilder_ == null) {
@@ -5933,10 +5933,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The due date in yyyy-mm-dd format.
+     * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue due_date = 8;</code>
+     * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getDueDateBuilder() {
       
@@ -5945,10 +5945,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The due date in yyyy-mm-dd format.
+     * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue due_date = 8;</code>
+     * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getDueDateOrBuilder() {
       if (dueDateBuilder_ != null) {
@@ -5960,10 +5960,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The due date in yyyy-mm-dd format.
+     * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue due_date = 8;</code>
+     * <code>.google.protobuf.StringValue due_date = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -5984,20 +5984,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.DateRange, com.google.ads.googleads.v3.common.DateRange.Builder, com.google.ads.googleads.v3.common.DateRangeOrBuilder> serviceDateRangeBuilder_;
     /**
      * <pre>
-     * The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is inclusive.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasServiceDateRange() {
       return serviceDateRangeBuilder_ != null || serviceDateRange_ != null;
     }
     /**
      * <pre>
-     * The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is inclusive.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.DateRange getServiceDateRange() {
       if (serviceDateRangeBuilder_ == null) {
@@ -6008,10 +6008,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is inclusive.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setServiceDateRange(com.google.ads.googleads.v3.common.DateRange value) {
       if (serviceDateRangeBuilder_ == null) {
@@ -6028,10 +6028,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is inclusive.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setServiceDateRange(
         com.google.ads.googleads.v3.common.DateRange.Builder builderForValue) {
@@ -6046,10 +6046,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is inclusive.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeServiceDateRange(com.google.ads.googleads.v3.common.DateRange value) {
       if (serviceDateRangeBuilder_ == null) {
@@ -6068,10 +6068,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is inclusive.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearServiceDateRange() {
       if (serviceDateRangeBuilder_ == null) {
@@ -6086,10 +6086,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is inclusive.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.DateRange.Builder getServiceDateRangeBuilder() {
       
@@ -6098,10 +6098,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is inclusive.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.DateRangeOrBuilder getServiceDateRangeOrBuilder() {
       if (serviceDateRangeBuilder_ != null) {
@@ -6113,10 +6113,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is inclusive.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9;</code>
+     * <code>.google.ads.googleads.v3.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.DateRange, com.google.ads.googleads.v3.common.DateRange.Builder, com.google.ads.googleads.v3.common.DateRangeOrBuilder> 
@@ -6137,22 +6137,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyCodeBuilder_;
     /**
      * <pre>
-     * The currency code. All costs are returned in this currency. A subset of the
+     * Output only. The currency code. All costs are returned in this currency. A subset of the
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCurrencyCode() {
       return currencyCodeBuilder_ != null || currencyCode_ != null;
     }
     /**
      * <pre>
-     * The currency code. All costs are returned in this currency. A subset of the
+     * Output only. The currency code. All costs are returned in this currency. A subset of the
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -6163,11 +6163,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code. All costs are returned in this currency. A subset of the
+     * Output only. The currency code. All costs are returned in this currency. A subset of the
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCurrencyCode(com.google.protobuf.StringValue value) {
       if (currencyCodeBuilder_ == null) {
@@ -6184,11 +6184,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code. All costs are returned in this currency. A subset of the
+     * Output only. The currency code. All costs are returned in this currency. A subset of the
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCurrencyCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -6203,11 +6203,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code. All costs are returned in this currency. A subset of the
+     * Output only. The currency code. All costs are returned in this currency. A subset of the
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCurrencyCode(com.google.protobuf.StringValue value) {
       if (currencyCodeBuilder_ == null) {
@@ -6226,11 +6226,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code. All costs are returned in this currency. A subset of the
+     * Output only. The currency code. All costs are returned in this currency. A subset of the
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -6245,11 +6245,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code. All costs are returned in this currency. A subset of the
+     * Output only. The currency code. All costs are returned in this currency. A subset of the
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getCurrencyCodeBuilder() {
       
@@ -6258,11 +6258,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code. All costs are returned in this currency. A subset of the
+     * Output only. The currency code. All costs are returned in this currency. A subset of the
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
       if (currencyCodeBuilder_ != null) {
@@ -6274,11 +6274,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code. All costs are returned in this currency. A subset of the
+     * Output only. The currency code. All costs are returned in this currency. A subset of the
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 10;</code>
+     * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -6299,22 +6299,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> invoiceLevelAdjustmentsMicrosBuilder_;
     /**
      * <pre>
-     * The total amount of invoice level adjustments. These adjustments are made
+     * Output only. The total amount of invoice level adjustments. These adjustments are made
      * on the invoice, not on a specific account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasInvoiceLevelAdjustmentsMicros() {
       return invoiceLevelAdjustmentsMicrosBuilder_ != null || invoiceLevelAdjustmentsMicros_ != null;
     }
     /**
      * <pre>
-     * The total amount of invoice level adjustments. These adjustments are made
+     * Output only. The total amount of invoice level adjustments. These adjustments are made
      * on the invoice, not on a specific account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getInvoiceLevelAdjustmentsMicros() {
       if (invoiceLevelAdjustmentsMicrosBuilder_ == null) {
@@ -6325,11 +6325,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount of invoice level adjustments. These adjustments are made
+     * Output only. The total amount of invoice level adjustments. These adjustments are made
      * on the invoice, not on a specific account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setInvoiceLevelAdjustmentsMicros(com.google.protobuf.Int64Value value) {
       if (invoiceLevelAdjustmentsMicrosBuilder_ == null) {
@@ -6346,11 +6346,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount of invoice level adjustments. These adjustments are made
+     * Output only. The total amount of invoice level adjustments. These adjustments are made
      * on the invoice, not on a specific account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setInvoiceLevelAdjustmentsMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -6365,11 +6365,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount of invoice level adjustments. These adjustments are made
+     * Output only. The total amount of invoice level adjustments. These adjustments are made
      * on the invoice, not on a specific account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeInvoiceLevelAdjustmentsMicros(com.google.protobuf.Int64Value value) {
       if (invoiceLevelAdjustmentsMicrosBuilder_ == null) {
@@ -6388,11 +6388,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount of invoice level adjustments. These adjustments are made
+     * Output only. The total amount of invoice level adjustments. These adjustments are made
      * on the invoice, not on a specific account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearInvoiceLevelAdjustmentsMicros() {
       if (invoiceLevelAdjustmentsMicrosBuilder_ == null) {
@@ -6407,11 +6407,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount of invoice level adjustments. These adjustments are made
+     * Output only. The total amount of invoice level adjustments. These adjustments are made
      * on the invoice, not on a specific account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getInvoiceLevelAdjustmentsMicrosBuilder() {
       
@@ -6420,11 +6420,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount of invoice level adjustments. These adjustments are made
+     * Output only. The total amount of invoice level adjustments. These adjustments are made
      * on the invoice, not on a specific account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getInvoiceLevelAdjustmentsMicrosOrBuilder() {
       if (invoiceLevelAdjustmentsMicrosBuilder_ != null) {
@@ -6436,11 +6436,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount of invoice level adjustments. These adjustments are made
+     * Output only. The total amount of invoice level adjustments. These adjustments are made
      * on the invoice, not on a specific account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11;</code>
+     * <code>.google.protobuf.Int64Value invoice_level_adjustments_micros = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -6461,22 +6461,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> subtotalAmountMicrosBuilder_;
     /**
      * <pre>
-     * The pretax subtotal amount, in micros. This equals the sum of the
+     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
      * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSubtotalAmountMicros() {
       return subtotalAmountMicrosBuilder_ != null || subtotalAmountMicros_ != null;
     }
     /**
      * <pre>
-     * The pretax subtotal amount, in micros. This equals the sum of the
+     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
      * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getSubtotalAmountMicros() {
       if (subtotalAmountMicrosBuilder_ == null) {
@@ -6487,11 +6487,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pretax subtotal amount, in micros. This equals the sum of the
+     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
      * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSubtotalAmountMicros(com.google.protobuf.Int64Value value) {
       if (subtotalAmountMicrosBuilder_ == null) {
@@ -6508,11 +6508,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pretax subtotal amount, in micros. This equals the sum of the
+     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
      * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSubtotalAmountMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -6527,11 +6527,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pretax subtotal amount, in micros. This equals the sum of the
+     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
      * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeSubtotalAmountMicros(com.google.protobuf.Int64Value value) {
       if (subtotalAmountMicrosBuilder_ == null) {
@@ -6550,11 +6550,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pretax subtotal amount, in micros. This equals the sum of the
+     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
      * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSubtotalAmountMicros() {
       if (subtotalAmountMicrosBuilder_ == null) {
@@ -6569,11 +6569,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pretax subtotal amount, in micros. This equals the sum of the
+     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
      * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getSubtotalAmountMicrosBuilder() {
       
@@ -6582,11 +6582,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pretax subtotal amount, in micros. This equals the sum of the
+     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
      * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getSubtotalAmountMicrosOrBuilder() {
       if (subtotalAmountMicrosBuilder_ != null) {
@@ -6598,11 +6598,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pretax subtotal amount, in micros. This equals the sum of the
+     * Output only. The pretax subtotal amount, in micros. This equals the sum of the
      * AccountBudgetSummary subtotal amounts, plus the invoice level adjustments.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value subtotal_amount_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -6623,24 +6623,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> taxAmountMicrosBuilder_;
     /**
      * <pre>
-     * The sum of all taxes on the invoice, in micros. This equals the sum of the
+     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
      * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
      * account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTaxAmountMicros() {
       return taxAmountMicrosBuilder_ != null || taxAmountMicros_ != null;
     }
     /**
      * <pre>
-     * The sum of all taxes on the invoice, in micros. This equals the sum of the
+     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
      * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
      * account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getTaxAmountMicros() {
       if (taxAmountMicrosBuilder_ == null) {
@@ -6651,12 +6651,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The sum of all taxes on the invoice, in micros. This equals the sum of the
+     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
      * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
      * account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTaxAmountMicros(com.google.protobuf.Int64Value value) {
       if (taxAmountMicrosBuilder_ == null) {
@@ -6673,12 +6673,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The sum of all taxes on the invoice, in micros. This equals the sum of the
+     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
      * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
      * account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTaxAmountMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -6693,12 +6693,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The sum of all taxes on the invoice, in micros. This equals the sum of the
+     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
      * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
      * account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTaxAmountMicros(com.google.protobuf.Int64Value value) {
       if (taxAmountMicrosBuilder_ == null) {
@@ -6717,12 +6717,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The sum of all taxes on the invoice, in micros. This equals the sum of the
+     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
      * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
      * account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTaxAmountMicros() {
       if (taxAmountMicrosBuilder_ == null) {
@@ -6737,12 +6737,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The sum of all taxes on the invoice, in micros. This equals the sum of the
+     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
      * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
      * account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getTaxAmountMicrosBuilder() {
       
@@ -6751,12 +6751,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The sum of all taxes on the invoice, in micros. This equals the sum of the
+     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
      * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
      * account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getTaxAmountMicrosOrBuilder() {
       if (taxAmountMicrosBuilder_ != null) {
@@ -6768,12 +6768,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The sum of all taxes on the invoice, in micros. This equals the sum of the
+     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
      * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
      * account budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tax_amount_micros = 13;</code>
+     * <code>.google.protobuf.Int64Value tax_amount_micros = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -6794,22 +6794,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> totalAmountMicrosBuilder_;
     /**
      * <pre>
-     * The total amount, in micros. This equals the sum of the invoice subtotal
+     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
      * amount and the invoice tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTotalAmountMicros() {
       return totalAmountMicrosBuilder_ != null || totalAmountMicros_ != null;
     }
     /**
      * <pre>
-     * The total amount, in micros. This equals the sum of the invoice subtotal
+     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
      * amount and the invoice tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getTotalAmountMicros() {
       if (totalAmountMicrosBuilder_ == null) {
@@ -6820,11 +6820,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount, in micros. This equals the sum of the invoice subtotal
+     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
      * amount and the invoice tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTotalAmountMicros(com.google.protobuf.Int64Value value) {
       if (totalAmountMicrosBuilder_ == null) {
@@ -6841,11 +6841,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount, in micros. This equals the sum of the invoice subtotal
+     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
      * amount and the invoice tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTotalAmountMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -6860,11 +6860,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount, in micros. This equals the sum of the invoice subtotal
+     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
      * amount and the invoice tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTotalAmountMicros(com.google.protobuf.Int64Value value) {
       if (totalAmountMicrosBuilder_ == null) {
@@ -6883,11 +6883,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount, in micros. This equals the sum of the invoice subtotal
+     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
      * amount and the invoice tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTotalAmountMicros() {
       if (totalAmountMicrosBuilder_ == null) {
@@ -6902,11 +6902,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount, in micros. This equals the sum of the invoice subtotal
+     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
      * amount and the invoice tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getTotalAmountMicrosBuilder() {
       
@@ -6915,11 +6915,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount, in micros. This equals the sum of the invoice subtotal
+     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
      * amount and the invoice tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getTotalAmountMicrosOrBuilder() {
       if (totalAmountMicrosBuilder_ != null) {
@@ -6931,11 +6931,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total amount, in micros. This equals the sum of the invoice subtotal
+     * Output only. The total amount, in micros. This equals the sum of the invoice subtotal
      * amount and the invoice tax amount.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_amount_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value total_amount_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -6956,28 +6956,28 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> correctedInvoiceBuilder_;
     /**
      * <pre>
-     * The resource name of the original invoice corrected, wrote off, or canceled
+     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
      * by this invoice, if applicable. If `corrected_invoice` is set,
      * `replaced_invoices` will not be set.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+     * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCorrectedInvoice() {
       return correctedInvoiceBuilder_ != null || correctedInvoice_ != null;
     }
     /**
      * <pre>
-     * The resource name of the original invoice corrected, wrote off, or canceled
+     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
      * by this invoice, if applicable. If `corrected_invoice` is set,
      * `replaced_invoices` will not be set.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+     * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCorrectedInvoice() {
       if (correctedInvoiceBuilder_ == null) {
@@ -6988,14 +6988,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice corrected, wrote off, or canceled
+     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
      * by this invoice, if applicable. If `corrected_invoice` is set,
      * `replaced_invoices` will not be set.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+     * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCorrectedInvoice(com.google.protobuf.StringValue value) {
       if (correctedInvoiceBuilder_ == null) {
@@ -7012,14 +7012,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice corrected, wrote off, or canceled
+     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
      * by this invoice, if applicable. If `corrected_invoice` is set,
      * `replaced_invoices` will not be set.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+     * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCorrectedInvoice(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -7034,14 +7034,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice corrected, wrote off, or canceled
+     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
      * by this invoice, if applicable. If `corrected_invoice` is set,
      * `replaced_invoices` will not be set.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+     * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCorrectedInvoice(com.google.protobuf.StringValue value) {
       if (correctedInvoiceBuilder_ == null) {
@@ -7060,14 +7060,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice corrected, wrote off, or canceled
+     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
      * by this invoice, if applicable. If `corrected_invoice` is set,
      * `replaced_invoices` will not be set.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+     * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCorrectedInvoice() {
       if (correctedInvoiceBuilder_ == null) {
@@ -7082,14 +7082,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice corrected, wrote off, or canceled
+     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
      * by this invoice, if applicable. If `corrected_invoice` is set,
      * `replaced_invoices` will not be set.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+     * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getCorrectedInvoiceBuilder() {
       
@@ -7098,14 +7098,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice corrected, wrote off, or canceled
+     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
      * by this invoice, if applicable. If `corrected_invoice` is set,
      * `replaced_invoices` will not be set.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+     * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCorrectedInvoiceOrBuilder() {
       if (correctedInvoiceBuilder_ != null) {
@@ -7117,14 +7117,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice corrected, wrote off, or canceled
+     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
      * by this invoice, if applicable. If `corrected_invoice` is set,
      * `replaced_invoices` will not be set.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue corrected_invoice = 15;</code>
+     * <code>.google.protobuf.StringValue corrected_invoice = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -7154,7 +7154,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7163,7 +7163,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getReplacedInvoicesList() {
       if (replacedInvoicesBuilder_ == null) {
@@ -7174,7 +7174,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7183,7 +7183,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getReplacedInvoicesCount() {
       if (replacedInvoicesBuilder_ == null) {
@@ -7194,7 +7194,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7203,7 +7203,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getReplacedInvoices(int index) {
       if (replacedInvoicesBuilder_ == null) {
@@ -7214,7 +7214,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7223,7 +7223,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setReplacedInvoices(
         int index, com.google.protobuf.StringValue value) {
@@ -7241,7 +7241,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7250,7 +7250,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setReplacedInvoices(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -7265,7 +7265,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7274,7 +7274,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addReplacedInvoices(com.google.protobuf.StringValue value) {
       if (replacedInvoicesBuilder_ == null) {
@@ -7291,7 +7291,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7300,7 +7300,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addReplacedInvoices(
         int index, com.google.protobuf.StringValue value) {
@@ -7318,7 +7318,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7327,7 +7327,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addReplacedInvoices(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -7342,7 +7342,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7351,7 +7351,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addReplacedInvoices(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -7366,7 +7366,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7375,7 +7375,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllReplacedInvoices(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -7391,7 +7391,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7400,7 +7400,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearReplacedInvoices() {
       if (replacedInvoicesBuilder_ == null) {
@@ -7414,7 +7414,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7423,7 +7423,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removeReplacedInvoices(int index) {
       if (replacedInvoicesBuilder_ == null) {
@@ -7437,7 +7437,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7446,7 +7446,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getReplacedInvoicesBuilder(
         int index) {
@@ -7454,7 +7454,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7463,7 +7463,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getReplacedInvoicesOrBuilder(
         int index) {
@@ -7474,7 +7474,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7483,7 +7483,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getReplacedInvoicesOrBuilderList() {
@@ -7495,7 +7495,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7504,7 +7504,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addReplacedInvoicesBuilder() {
       return getReplacedInvoicesFieldBuilder().addBuilder(
@@ -7512,7 +7512,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7521,7 +7521,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addReplacedInvoicesBuilder(
         int index) {
@@ -7530,7 +7530,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the original invoice(s) being rebilled or replaced by
+     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
      * this invoice, if applicable. There might be multiple replaced invoices due
      * to invoice consolidation. The replaced invoices may not belong to the same
      * payments account. If `replaced_invoices` is set, `corrected_invoice` will
@@ -7539,7 +7539,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16;</code>
+     * <code>repeated .google.protobuf.StringValue replaced_invoices = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getReplacedInvoicesBuilderList() {
@@ -7565,22 +7565,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> pdfUrlBuilder_;
     /**
      * <pre>
-     * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+     * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPdfUrl() {
       return pdfUrlBuilder_ != null || pdfUrl_ != null;
     }
     /**
      * <pre>
-     * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+     * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPdfUrl() {
       if (pdfUrlBuilder_ == null) {
@@ -7591,11 +7591,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+     * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPdfUrl(com.google.protobuf.StringValue value) {
       if (pdfUrlBuilder_ == null) {
@@ -7612,11 +7612,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+     * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPdfUrl(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -7631,11 +7631,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+     * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePdfUrl(com.google.protobuf.StringValue value) {
       if (pdfUrlBuilder_ == null) {
@@ -7654,11 +7654,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+     * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPdfUrl() {
       if (pdfUrlBuilder_ == null) {
@@ -7673,11 +7673,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+     * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getPdfUrlBuilder() {
       
@@ -7686,11 +7686,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+     * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPdfUrlOrBuilder() {
       if (pdfUrlBuilder_ != null) {
@@ -7702,11 +7702,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL to a PDF copy of the invoice. Users need to pass in their OAuth
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue pdf_url = 17;</code>
+     * <code>.google.protobuf.StringValue pdf_url = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -7736,11 +7736,11 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary> getAccountBudgetSummariesList() {
       if (accountBudgetSummariesBuilder_ == null) {
@@ -7751,11 +7751,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getAccountBudgetSummariesCount() {
       if (accountBudgetSummariesBuilder_ == null) {
@@ -7766,11 +7766,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary getAccountBudgetSummaries(int index) {
       if (accountBudgetSummariesBuilder_ == null) {
@@ -7781,11 +7781,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAccountBudgetSummaries(
         int index, com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary value) {
@@ -7803,11 +7803,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAccountBudgetSummaries(
         int index, com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary.Builder builderForValue) {
@@ -7822,11 +7822,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAccountBudgetSummaries(com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary value) {
       if (accountBudgetSummariesBuilder_ == null) {
@@ -7843,11 +7843,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAccountBudgetSummaries(
         int index, com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary value) {
@@ -7865,11 +7865,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAccountBudgetSummaries(
         com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary.Builder builderForValue) {
@@ -7884,11 +7884,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAccountBudgetSummaries(
         int index, com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary.Builder builderForValue) {
@@ -7903,11 +7903,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllAccountBudgetSummaries(
         java.lang.Iterable<? extends com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary> values) {
@@ -7923,11 +7923,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAccountBudgetSummaries() {
       if (accountBudgetSummariesBuilder_ == null) {
@@ -7941,11 +7941,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removeAccountBudgetSummaries(int index) {
       if (accountBudgetSummariesBuilder_ == null) {
@@ -7959,11 +7959,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary.Builder getAccountBudgetSummariesBuilder(
         int index) {
@@ -7971,11 +7971,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummaryOrBuilder getAccountBudgetSummariesOrBuilder(
         int index) {
@@ -7986,11 +7986,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummaryOrBuilder> 
          getAccountBudgetSummariesOrBuilderList() {
@@ -8002,11 +8002,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary.Builder addAccountBudgetSummariesBuilder() {
       return getAccountBudgetSummariesFieldBuilder().addBuilder(
@@ -8014,11 +8014,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary.Builder addAccountBudgetSummariesBuilder(
         int index) {
@@ -8027,11 +8027,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of summarized account budget information associated with this
+     * Output only. The list of summarized account budget information associated with this
      * invoice.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.resources.Invoice.AccountBudgetSummary.Builder> 
          getAccountBudgetSummariesBuilderList() {

@@ -185,32 +185,32 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Required authentication token (from OAuth API) for the email.
+     * Immutable. Required authentication token (from OAuth API) for the email.
      * This field can only be specified in a create request. All its subfields
      * are not selectable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     boolean hasOauthInfo();
     /**
      * <pre>
-     * Required authentication token (from OAuth API) for the email.
+     * Immutable. Required authentication token (from OAuth API) for the email.
      * This field can only be specified in a create request. All its subfields
      * are not selectable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo getOauthInfo();
     /**
      * <pre>
-     * Required authentication token (from OAuth API) for the email.
+     * Immutable. Required authentication token (from OAuth API) for the email.
      * This field can only be specified in a create request. All its subfields
      * are not selectable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfoOrBuilder getOauthInfoOrBuilder();
 
@@ -1766,36 +1766,36 @@ private static final long serialVersionUID = 0L;
     private com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauthInfo_;
     /**
      * <pre>
-     * Required authentication token (from OAuth API) for the email.
+     * Immutable. Required authentication token (from OAuth API) for the email.
      * This field can only be specified in a create request. All its subfields
      * are not selectable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasOauthInfo() {
       return oauthInfo_ != null;
     }
     /**
      * <pre>
-     * Required authentication token (from OAuth API) for the email.
+     * Immutable. Required authentication token (from OAuth API) for the email.
      * This field can only be specified in a create request. All its subfields
      * are not selectable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo getOauthInfo() {
       return oauthInfo_ == null ? com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo.getDefaultInstance() : oauthInfo_;
     }
     /**
      * <pre>
-     * Required authentication token (from OAuth API) for the email.
+     * Immutable. Required authentication token (from OAuth API) for the email.
      * This field can only be specified in a create request. All its subfields
      * are not selectable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfoOrBuilder getOauthInfoOrBuilder() {
       return getOauthInfo();
@@ -2587,24 +2587,24 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo, com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo.Builder, com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfoOrBuilder> oauthInfoBuilder_;
       /**
        * <pre>
-       * Required authentication token (from OAuth API) for the email.
+       * Immutable. Required authentication token (from OAuth API) for the email.
        * This field can only be specified in a create request. All its subfields
        * are not selectable.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public boolean hasOauthInfo() {
         return oauthInfoBuilder_ != null || oauthInfo_ != null;
       }
       /**
        * <pre>
-       * Required authentication token (from OAuth API) for the email.
+       * Immutable. Required authentication token (from OAuth API) for the email.
        * This field can only be specified in a create request. All its subfields
        * are not selectable.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo getOauthInfo() {
         if (oauthInfoBuilder_ == null) {
@@ -2615,12 +2615,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required authentication token (from OAuth API) for the email.
+       * Immutable. Required authentication token (from OAuth API) for the email.
        * This field can only be specified in a create request. All its subfields
        * are not selectable.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setOauthInfo(com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo value) {
         if (oauthInfoBuilder_ == null) {
@@ -2637,12 +2637,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required authentication token (from OAuth API) for the email.
+       * Immutable. Required authentication token (from OAuth API) for the email.
        * This field can only be specified in a create request. All its subfields
        * are not selectable.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setOauthInfo(
           com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo.Builder builderForValue) {
@@ -2657,12 +2657,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required authentication token (from OAuth API) for the email.
+       * Immutable. Required authentication token (from OAuth API) for the email.
        * This field can only be specified in a create request. All its subfields
        * are not selectable.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder mergeOauthInfo(com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo value) {
         if (oauthInfoBuilder_ == null) {
@@ -2681,12 +2681,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required authentication token (from OAuth API) for the email.
+       * Immutable. Required authentication token (from OAuth API) for the email.
        * This field can only be specified in a create request. All its subfields
        * are not selectable.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder clearOauthInfo() {
         if (oauthInfoBuilder_ == null) {
@@ -2701,12 +2701,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required authentication token (from OAuth API) for the email.
+       * Immutable. Required authentication token (from OAuth API) for the email.
        * This field can only be specified in a create request. All its subfields
        * are not selectable.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo.Builder getOauthInfoBuilder() {
         
@@ -2715,12 +2715,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required authentication token (from OAuth API) for the email.
+       * Immutable. Required authentication token (from OAuth API) for the email.
        * This field can only be specified in a create request. All its subfields
        * are not selectable.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfoOrBuilder getOauthInfoOrBuilder() {
         if (oauthInfoBuilder_ != null) {
@@ -2732,12 +2732,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required authentication token (from OAuth API) for the email.
+       * Immutable. Required authentication token (from OAuth API) for the email.
        * This field can only be specified in a create request. All its subfields
        * are not selectable.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1;</code>
+       * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo, com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfo.Builder, com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData.OAuthInfoOrBuilder> 
@@ -5157,12 +5157,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the feed.
+   * Immutable. The resource name of the feed.
    * Feed resource names have the form:
    * `customers/{customer_id}/feeds/{feed_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -5178,12 +5178,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the feed.
+   * Immutable. The resource name of the feed.
    * Feed resource names have the form:
    * `customers/{customer_id}/feeds/{feed_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -5203,33 +5203,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the feed.
+   * Output only. The ID of the feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the feed.
+   * Output only. The ID of the feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the feed.
+   * Output only. The ID of the feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -5239,30 +5239,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * Name of the feed. Required.
+   * Immutable. Name of the feed. Required.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * Name of the feed. Required.
+   * Immutable. Name of the feed. Required.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * Name of the feed. Required.
+   * Immutable. Name of the feed. Required.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
@@ -5402,20 +5402,20 @@ private static final long serialVersionUID = 0L;
   private int origin_;
   /**
    * <pre>
-   * Specifies who manages the FeedAttributes for the Feed.
+   * Immutable. Specifies who manages the FeedAttributes for the Feed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getOriginValue() {
     return origin_;
   }
   /**
    * <pre>
-   * Specifies who manages the FeedAttributes for the Feed.
+   * Immutable. Specifies who manages the FeedAttributes for the Feed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin getOrigin() {
     @SuppressWarnings("deprecation")
@@ -5427,22 +5427,22 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Status of the feed.
+   * Output only. Status of the feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Status of the feed.
+   * Output only. Status of the feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -6131,12 +6131,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the feed.
+     * Immutable. The resource name of the feed.
      * Feed resource names have the form:
      * `customers/{customer_id}/feeds/{feed_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -6152,12 +6152,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed.
+     * Immutable. The resource name of the feed.
      * Feed resource names have the form:
      * `customers/{customer_id}/feeds/{feed_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -6174,12 +6174,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed.
+     * Immutable. The resource name of the feed.
      * Feed resource names have the form:
      * `customers/{customer_id}/feeds/{feed_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -6193,12 +6193,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed.
+     * Immutable. The resource name of the feed.
      * Feed resource names have the form:
      * `customers/{customer_id}/feeds/{feed_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -6208,12 +6208,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed.
+     * Immutable. The resource name of the feed.
      * Feed resource names have the form:
      * `customers/{customer_id}/feeds/{feed_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -6232,22 +6232,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the feed.
+     * Output only. The ID of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the feed.
+     * Output only. The ID of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -6258,11 +6258,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the feed.
+     * Output only. The ID of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -6279,11 +6279,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the feed.
+     * Output only. The ID of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -6298,11 +6298,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the feed.
+     * Output only. The ID of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -6321,11 +6321,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the feed.
+     * Output only. The ID of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -6340,11 +6340,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the feed.
+     * Output only. The ID of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -6353,11 +6353,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the feed.
+     * Output only. The ID of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -6369,11 +6369,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the feed.
+     * Output only. The ID of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -6394,20 +6394,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * Name of the feed. Required.
+     * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * Name of the feed. Required.
+     * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -6418,10 +6418,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the feed. Required.
+     * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -6438,10 +6438,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the feed. Required.
+     * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -6456,10 +6456,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the feed. Required.
+     * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -6478,10 +6478,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the feed. Required.
+     * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -6496,10 +6496,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the feed. Required.
+     * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -6508,10 +6508,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the feed. Required.
+     * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -6523,10 +6523,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the feed. Required.
+     * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -7241,20 +7241,20 @@ private static final long serialVersionUID = 0L;
     private int origin_ = 0;
     /**
      * <pre>
-     * Specifies who manages the FeedAttributes for the Feed.
+     * Immutable. Specifies who manages the FeedAttributes for the Feed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getOriginValue() {
       return origin_;
     }
     /**
      * <pre>
-     * Specifies who manages the FeedAttributes for the Feed.
+     * Immutable. Specifies who manages the FeedAttributes for the Feed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setOriginValue(int value) {
       origin_ = value;
@@ -7263,10 +7263,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies who manages the FeedAttributes for the Feed.
+     * Immutable. Specifies who manages the FeedAttributes for the Feed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin getOrigin() {
       @SuppressWarnings("deprecation")
@@ -7275,10 +7275,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies who manages the FeedAttributes for the Feed.
+     * Immutable. Specifies who manages the FeedAttributes for the Feed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setOrigin(com.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin value) {
       if (value == null) {
@@ -7291,10 +7291,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Specifies who manages the FeedAttributes for the Feed.
+     * Immutable. Specifies who manages the FeedAttributes for the Feed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearOrigin() {
       
@@ -7306,22 +7306,22 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Status of the feed.
+     * Output only. Status of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Status of the feed.
+     * Output only. Status of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -7330,11 +7330,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed.
+     * Output only. Status of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -7343,11 +7343,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed.
+     * Output only. Status of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus value) {
       if (value == null) {
@@ -7360,11 +7360,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed.
+     * Output only. Status of the feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       

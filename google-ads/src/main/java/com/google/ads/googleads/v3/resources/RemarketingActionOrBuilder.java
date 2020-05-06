@@ -9,48 +9,48 @@ public interface RemarketingActionOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the remarketing action.
+   * Immutable. The resource name of the remarketing action.
    * Remarketing action resource names have the form:
    * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the remarketing action.
+   * Immutable. The resource name of the remarketing action.
    * Remarketing action resource names have the form:
    * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * Id of the remarketing action.
+   * Output only. Id of the remarketing action.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * Id of the remarketing action.
+   * Output only. Id of the remarketing action.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * Id of the remarketing action.
+   * Output only. Id of the remarketing action.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
@@ -87,44 +87,44 @@ public interface RemarketingActionOrBuilder extends
 
   /**
    * <pre>
-   * The snippets used for tracking remarketing actions.
+   * Output only. The snippets used for tracking remarketing actions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<com.google.ads.googleads.v3.common.TagSnippet> 
       getTagSnippetsList();
   /**
    * <pre>
-   * The snippets used for tracking remarketing actions.
+   * Output only. The snippets used for tracking remarketing actions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.common.TagSnippet getTagSnippets(int index);
   /**
    * <pre>
-   * The snippets used for tracking remarketing actions.
+   * Output only. The snippets used for tracking remarketing actions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getTagSnippetsCount();
   /**
    * <pre>
-   * The snippets used for tracking remarketing actions.
+   * Output only. The snippets used for tracking remarketing actions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<? extends com.google.ads.googleads.v3.common.TagSnippetOrBuilder> 
       getTagSnippetsOrBuilderList();
   /**
    * <pre>
-   * The snippets used for tracking remarketing actions.
+   * Output only. The snippets used for tracking remarketing actions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.common.TagSnippetOrBuilder getTagSnippetsOrBuilder(
       int index);

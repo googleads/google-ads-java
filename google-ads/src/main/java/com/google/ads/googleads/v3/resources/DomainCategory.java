@@ -196,12 +196,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the domain category.
+   * Output only. The resource name of the domain category.
    * Domain category resource names have the form:
    * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -217,12 +217,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the domain category.
+   * Output only. The resource name of the domain category.
    * Domain category resource names have the form:
    * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -242,30 +242,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue campaign_;
   /**
    * <pre>
-   * The campaign this category is recommended for.
+   * Output only. The campaign this category is recommended for.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 2;</code>
+   * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasCampaign() {
     return campaign_ != null;
   }
   /**
    * <pre>
-   * The campaign this category is recommended for.
+   * Output only. The campaign this category is recommended for.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 2;</code>
+   * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getCampaign() {
     return campaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaign_;
   }
   /**
    * <pre>
-   * The campaign this category is recommended for.
+   * Output only. The campaign this category is recommended for.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 2;</code>
+   * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     return getCampaign();
@@ -275,33 +275,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue category_;
   /**
    * <pre>
-   * Recommended category for the website domain. e.g. if you have a website
+   * Output only. Recommended category for the website domain. e.g. if you have a website
    * about electronics, the categories could be "cameras", "televisions", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue category = 3;</code>
+   * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCategory() {
     return category_ != null;
   }
   /**
    * <pre>
-   * Recommended category for the website domain. e.g. if you have a website
+   * Output only. Recommended category for the website domain. e.g. if you have a website
    * about electronics, the categories could be "cameras", "televisions", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue category = 3;</code>
+   * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getCategory() {
     return category_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : category_;
   }
   /**
    * <pre>
-   * Recommended category for the website domain. e.g. if you have a website
+   * Output only. Recommended category for the website domain. e.g. if you have a website
    * about electronics, the categories could be "cameras", "televisions", etc.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue category = 3;</code>
+   * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCategoryOrBuilder() {
     return getCategory();
@@ -311,42 +311,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue languageCode_;
   /**
    * <pre>
-   * The language code specifying the language of the website. e.g. "en" for
+   * Output only. The language code specifying the language of the website. e.g. "en" for
    * English. The language can be specified in the DynamicSearchAdsSetting
    * required for dynamic search ads. This is the language of the pages from
    * your website that you want Google Ads to find, create ads for,
    * and match searches with.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language_code = 4;</code>
+   * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasLanguageCode() {
     return languageCode_ != null;
   }
   /**
    * <pre>
-   * The language code specifying the language of the website. e.g. "en" for
+   * Output only. The language code specifying the language of the website. e.g. "en" for
    * English. The language can be specified in the DynamicSearchAdsSetting
    * required for dynamic search ads. This is the language of the pages from
    * your website that you want Google Ads to find, create ads for,
    * and match searches with.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language_code = 4;</code>
+   * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getLanguageCode() {
     return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
   }
   /**
    * <pre>
-   * The language code specifying the language of the website. e.g. "en" for
+   * Output only. The language code specifying the language of the website. e.g. "en" for
    * English. The language can be specified in the DynamicSearchAdsSetting
    * required for dynamic search ads. This is the language of the pages from
    * your website that you want Google Ads to find, create ads for,
    * and match searches with.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language_code = 4;</code>
+   * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
     return getLanguageCode();
@@ -356,33 +356,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue domain_;
   /**
    * <pre>
-   * The domain for the website. The domain can be specified in the
+   * Output only. The domain for the website. The domain can be specified in the
    * DynamicSearchAdsSetting required for dynamic search ads.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue domain = 5;</code>
+   * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasDomain() {
     return domain_ != null;
   }
   /**
    * <pre>
-   * The domain for the website. The domain can be specified in the
+   * Output only. The domain for the website. The domain can be specified in the
    * DynamicSearchAdsSetting required for dynamic search ads.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue domain = 5;</code>
+   * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getDomain() {
     return domain_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : domain_;
   }
   /**
    * <pre>
-   * The domain for the website. The domain can be specified in the
+   * Output only. The domain for the website. The domain can be specified in the
    * DynamicSearchAdsSetting required for dynamic search ads.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue domain = 5;</code>
+   * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getDomainOrBuilder() {
     return getDomain();
@@ -392,30 +392,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue coverageFraction_;
   /**
    * <pre>
-   * Fraction of pages on your site that this category matches.
+   * Output only. Fraction of pages on your site that this category matches.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+   * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCoverageFraction() {
     return coverageFraction_ != null;
   }
   /**
    * <pre>
-   * Fraction of pages on your site that this category matches.
+   * Output only. Fraction of pages on your site that this category matches.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+   * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.DoubleValue getCoverageFraction() {
     return coverageFraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : coverageFraction_;
   }
   /**
    * <pre>
-   * Fraction of pages on your site that this category matches.
+   * Output only. Fraction of pages on your site that this category matches.
    * </pre>
    *
-   * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+   * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.DoubleValueOrBuilder getCoverageFractionOrBuilder() {
     return getCoverageFraction();
@@ -425,33 +425,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value categoryRank_;
   /**
    * <pre>
-   * The position of this category in the set of categories. Lower numbers
+   * Output only. The position of this category in the set of categories. Lower numbers
    * indicate a better match for the domain. null indicates not recommended.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+   * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCategoryRank() {
     return categoryRank_ != null;
   }
   /**
    * <pre>
-   * The position of this category in the set of categories. Lower numbers
+   * Output only. The position of this category in the set of categories. Lower numbers
    * indicate a better match for the domain. null indicates not recommended.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+   * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getCategoryRank() {
     return categoryRank_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : categoryRank_;
   }
   /**
    * <pre>
-   * The position of this category in the set of categories. Lower numbers
+   * Output only. The position of this category in the set of categories. Lower numbers
    * indicate a better match for the domain. null indicates not recommended.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+   * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getCategoryRankOrBuilder() {
     return getCategoryRank();
@@ -461,30 +461,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue hasChildren_;
   /**
    * <pre>
-   * Indicates whether this category has sub-categories.
+   * Output only. Indicates whether this category has sub-categories.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_children = 8;</code>
+   * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasHasChildren() {
     return hasChildren_ != null;
   }
   /**
    * <pre>
-   * Indicates whether this category has sub-categories.
+   * Output only. Indicates whether this category has sub-categories.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_children = 8;</code>
+   * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getHasChildren() {
     return hasChildren_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasChildren_;
   }
   /**
    * <pre>
-   * Indicates whether this category has sub-categories.
+   * Output only. Indicates whether this category has sub-categories.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_children = 8;</code>
+   * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getHasChildrenOrBuilder() {
     return getHasChildren();
@@ -494,30 +494,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value recommendedCpcBidMicros_;
   /**
    * <pre>
-   * The recommended cost per click for the category.
+   * Output only. The recommended cost per click for the category.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+   * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasRecommendedCpcBidMicros() {
     return recommendedCpcBidMicros_ != null;
   }
   /**
    * <pre>
-   * The recommended cost per click for the category.
+   * Output only. The recommended cost per click for the category.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+   * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getRecommendedCpcBidMicros() {
     return recommendedCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : recommendedCpcBidMicros_;
   }
   /**
    * <pre>
-   * The recommended cost per click for the category.
+   * Output only. The recommended cost per click for the category.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+   * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getRecommendedCpcBidMicrosOrBuilder() {
     return getRecommendedCpcBidMicros();
@@ -1075,12 +1075,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the domain category.
+     * Output only. The resource name of the domain category.
      * Domain category resource names have the form:
      * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1096,12 +1096,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the domain category.
+     * Output only. The resource name of the domain category.
      * Domain category resource names have the form:
      * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1118,12 +1118,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the domain category.
+     * Output only. The resource name of the domain category.
      * Domain category resource names have the form:
      * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1137,12 +1137,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the domain category.
+     * Output only. The resource name of the domain category.
      * Domain category resource names have the form:
      * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1152,12 +1152,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the domain category.
+     * Output only. The resource name of the domain category.
      * Domain category resource names have the form:
      * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1176,20 +1176,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignBuilder_;
     /**
      * <pre>
-     * The campaign this category is recommended for.
+     * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasCampaign() {
       return campaignBuilder_ != null || campaign_ != null;
     }
     /**
      * <pre>
-     * The campaign this category is recommended for.
+     * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getCampaign() {
       if (campaignBuilder_ == null) {
@@ -1200,10 +1200,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign this category is recommended for.
+     * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -1220,10 +1220,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign this category is recommended for.
+     * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1238,10 +1238,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign this category is recommended for.
+     * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -1260,10 +1260,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign this category is recommended for.
+     * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearCampaign() {
       if (campaignBuilder_ == null) {
@@ -1278,10 +1278,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign this category is recommended for.
+     * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getCampaignBuilder() {
       
@@ -1290,10 +1290,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign this category is recommended for.
+     * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
       if (campaignBuilder_ != null) {
@@ -1305,10 +1305,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign this category is recommended for.
+     * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1329,22 +1329,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> categoryBuilder_;
     /**
      * <pre>
-     * Recommended category for the website domain. e.g. if you have a website
+     * Output only. Recommended category for the website domain. e.g. if you have a website
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue category = 3;</code>
+     * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCategory() {
       return categoryBuilder_ != null || category_ != null;
     }
     /**
      * <pre>
-     * Recommended category for the website domain. e.g. if you have a website
+     * Output only. Recommended category for the website domain. e.g. if you have a website
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue category = 3;</code>
+     * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCategory() {
       if (categoryBuilder_ == null) {
@@ -1355,11 +1355,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Recommended category for the website domain. e.g. if you have a website
+     * Output only. Recommended category for the website domain. e.g. if you have a website
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue category = 3;</code>
+     * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCategory(com.google.protobuf.StringValue value) {
       if (categoryBuilder_ == null) {
@@ -1376,11 +1376,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Recommended category for the website domain. e.g. if you have a website
+     * Output only. Recommended category for the website domain. e.g. if you have a website
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue category = 3;</code>
+     * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCategory(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1395,11 +1395,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Recommended category for the website domain. e.g. if you have a website
+     * Output only. Recommended category for the website domain. e.g. if you have a website
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue category = 3;</code>
+     * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCategory(com.google.protobuf.StringValue value) {
       if (categoryBuilder_ == null) {
@@ -1418,11 +1418,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Recommended category for the website domain. e.g. if you have a website
+     * Output only. Recommended category for the website domain. e.g. if you have a website
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue category = 3;</code>
+     * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCategory() {
       if (categoryBuilder_ == null) {
@@ -1437,11 +1437,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Recommended category for the website domain. e.g. if you have a website
+     * Output only. Recommended category for the website domain. e.g. if you have a website
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue category = 3;</code>
+     * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getCategoryBuilder() {
       
@@ -1450,11 +1450,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Recommended category for the website domain. e.g. if you have a website
+     * Output only. Recommended category for the website domain. e.g. if you have a website
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue category = 3;</code>
+     * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCategoryOrBuilder() {
       if (categoryBuilder_ != null) {
@@ -1466,11 +1466,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Recommended category for the website domain. e.g. if you have a website
+     * Output only. Recommended category for the website domain. e.g. if you have a website
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue category = 3;</code>
+     * <code>.google.protobuf.StringValue category = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1491,28 +1491,28 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> languageCodeBuilder_;
     /**
      * <pre>
-     * The language code specifying the language of the website. e.g. "en" for
+     * Output only. The language code specifying the language of the website. e.g. "en" for
      * English. The language can be specified in the DynamicSearchAdsSetting
      * required for dynamic search ads. This is the language of the pages from
      * your website that you want Google Ads to find, create ads for,
      * and match searches with.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasLanguageCode() {
       return languageCodeBuilder_ != null || languageCode_ != null;
     }
     /**
      * <pre>
-     * The language code specifying the language of the website. e.g. "en" for
+     * Output only. The language code specifying the language of the website. e.g. "en" for
      * English. The language can be specified in the DynamicSearchAdsSetting
      * required for dynamic search ads. This is the language of the pages from
      * your website that you want Google Ads to find, create ads for,
      * and match searches with.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getLanguageCode() {
       if (languageCodeBuilder_ == null) {
@@ -1523,14 +1523,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code specifying the language of the website. e.g. "en" for
+     * Output only. The language code specifying the language of the website. e.g. "en" for
      * English. The language can be specified in the DynamicSearchAdsSetting
      * required for dynamic search ads. This is the language of the pages from
      * your website that you want Google Ads to find, create ads for,
      * and match searches with.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLanguageCode(com.google.protobuf.StringValue value) {
       if (languageCodeBuilder_ == null) {
@@ -1547,14 +1547,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code specifying the language of the website. e.g. "en" for
+     * Output only. The language code specifying the language of the website. e.g. "en" for
      * English. The language can be specified in the DynamicSearchAdsSetting
      * required for dynamic search ads. This is the language of the pages from
      * your website that you want Google Ads to find, create ads for,
      * and match searches with.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLanguageCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1569,14 +1569,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code specifying the language of the website. e.g. "en" for
+     * Output only. The language code specifying the language of the website. e.g. "en" for
      * English. The language can be specified in the DynamicSearchAdsSetting
      * required for dynamic search ads. This is the language of the pages from
      * your website that you want Google Ads to find, create ads for,
      * and match searches with.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLanguageCode(com.google.protobuf.StringValue value) {
       if (languageCodeBuilder_ == null) {
@@ -1595,14 +1595,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code specifying the language of the website. e.g. "en" for
+     * Output only. The language code specifying the language of the website. e.g. "en" for
      * English. The language can be specified in the DynamicSearchAdsSetting
      * required for dynamic search ads. This is the language of the pages from
      * your website that you want Google Ads to find, create ads for,
      * and match searches with.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLanguageCode() {
       if (languageCodeBuilder_ == null) {
@@ -1617,14 +1617,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code specifying the language of the website. e.g. "en" for
+     * Output only. The language code specifying the language of the website. e.g. "en" for
      * English. The language can be specified in the DynamicSearchAdsSetting
      * required for dynamic search ads. This is the language of the pages from
      * your website that you want Google Ads to find, create ads for,
      * and match searches with.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getLanguageCodeBuilder() {
       
@@ -1633,14 +1633,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code specifying the language of the website. e.g. "en" for
+     * Output only. The language code specifying the language of the website. e.g. "en" for
      * English. The language can be specified in the DynamicSearchAdsSetting
      * required for dynamic search ads. This is the language of the pages from
      * your website that you want Google Ads to find, create ads for,
      * and match searches with.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
       if (languageCodeBuilder_ != null) {
@@ -1652,14 +1652,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The language code specifying the language of the website. e.g. "en" for
+     * Output only. The language code specifying the language of the website. e.g. "en" for
      * English. The language can be specified in the DynamicSearchAdsSetting
      * required for dynamic search ads. This is the language of the pages from
      * your website that you want Google Ads to find, create ads for,
      * and match searches with.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 4;</code>
+     * <code>.google.protobuf.StringValue language_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1680,22 +1680,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> domainBuilder_;
     /**
      * <pre>
-     * The domain for the website. The domain can be specified in the
+     * Output only. The domain for the website. The domain can be specified in the
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue domain = 5;</code>
+     * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasDomain() {
       return domainBuilder_ != null || domain_ != null;
     }
     /**
      * <pre>
-     * The domain for the website. The domain can be specified in the
+     * Output only. The domain for the website. The domain can be specified in the
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue domain = 5;</code>
+     * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getDomain() {
       if (domainBuilder_ == null) {
@@ -1706,11 +1706,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The domain for the website. The domain can be specified in the
+     * Output only. The domain for the website. The domain can be specified in the
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue domain = 5;</code>
+     * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setDomain(com.google.protobuf.StringValue value) {
       if (domainBuilder_ == null) {
@@ -1727,11 +1727,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The domain for the website. The domain can be specified in the
+     * Output only. The domain for the website. The domain can be specified in the
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue domain = 5;</code>
+     * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setDomain(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1746,11 +1746,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The domain for the website. The domain can be specified in the
+     * Output only. The domain for the website. The domain can be specified in the
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue domain = 5;</code>
+     * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeDomain(com.google.protobuf.StringValue value) {
       if (domainBuilder_ == null) {
@@ -1769,11 +1769,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The domain for the website. The domain can be specified in the
+     * Output only. The domain for the website. The domain can be specified in the
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue domain = 5;</code>
+     * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearDomain() {
       if (domainBuilder_ == null) {
@@ -1788,11 +1788,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The domain for the website. The domain can be specified in the
+     * Output only. The domain for the website. The domain can be specified in the
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue domain = 5;</code>
+     * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getDomainBuilder() {
       
@@ -1801,11 +1801,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The domain for the website. The domain can be specified in the
+     * Output only. The domain for the website. The domain can be specified in the
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue domain = 5;</code>
+     * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getDomainOrBuilder() {
       if (domainBuilder_ != null) {
@@ -1817,11 +1817,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The domain for the website. The domain can be specified in the
+     * Output only. The domain for the website. The domain can be specified in the
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue domain = 5;</code>
+     * <code>.google.protobuf.StringValue domain = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1842,20 +1842,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> coverageFractionBuilder_;
     /**
      * <pre>
-     * Fraction of pages on your site that this category matches.
+     * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+     * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCoverageFraction() {
       return coverageFractionBuilder_ != null || coverageFraction_ != null;
     }
     /**
      * <pre>
-     * Fraction of pages on your site that this category matches.
+     * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+     * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.DoubleValue getCoverageFraction() {
       if (coverageFractionBuilder_ == null) {
@@ -1866,10 +1866,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Fraction of pages on your site that this category matches.
+     * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+     * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCoverageFraction(com.google.protobuf.DoubleValue value) {
       if (coverageFractionBuilder_ == null) {
@@ -1886,10 +1886,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Fraction of pages on your site that this category matches.
+     * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+     * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCoverageFraction(
         com.google.protobuf.DoubleValue.Builder builderForValue) {
@@ -1904,10 +1904,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Fraction of pages on your site that this category matches.
+     * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+     * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCoverageFraction(com.google.protobuf.DoubleValue value) {
       if (coverageFractionBuilder_ == null) {
@@ -1926,10 +1926,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Fraction of pages on your site that this category matches.
+     * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+     * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCoverageFraction() {
       if (coverageFractionBuilder_ == null) {
@@ -1944,10 +1944,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Fraction of pages on your site that this category matches.
+     * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+     * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.DoubleValue.Builder getCoverageFractionBuilder() {
       
@@ -1956,10 +1956,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Fraction of pages on your site that this category matches.
+     * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+     * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.DoubleValueOrBuilder getCoverageFractionOrBuilder() {
       if (coverageFractionBuilder_ != null) {
@@ -1971,10 +1971,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Fraction of pages on your site that this category matches.
+     * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue coverage_fraction = 6;</code>
+     * <code>.google.protobuf.DoubleValue coverage_fraction = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
@@ -1995,22 +1995,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> categoryRankBuilder_;
     /**
      * <pre>
-     * The position of this category in the set of categories. Lower numbers
+     * Output only. The position of this category in the set of categories. Lower numbers
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+     * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCategoryRank() {
       return categoryRankBuilder_ != null || categoryRank_ != null;
     }
     /**
      * <pre>
-     * The position of this category in the set of categories. Lower numbers
+     * Output only. The position of this category in the set of categories. Lower numbers
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+     * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getCategoryRank() {
       if (categoryRankBuilder_ == null) {
@@ -2021,11 +2021,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The position of this category in the set of categories. Lower numbers
+     * Output only. The position of this category in the set of categories. Lower numbers
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+     * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCategoryRank(com.google.protobuf.Int64Value value) {
       if (categoryRankBuilder_ == null) {
@@ -2042,11 +2042,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The position of this category in the set of categories. Lower numbers
+     * Output only. The position of this category in the set of categories. Lower numbers
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+     * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCategoryRank(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2061,11 +2061,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The position of this category in the set of categories. Lower numbers
+     * Output only. The position of this category in the set of categories. Lower numbers
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+     * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCategoryRank(com.google.protobuf.Int64Value value) {
       if (categoryRankBuilder_ == null) {
@@ -2084,11 +2084,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The position of this category in the set of categories. Lower numbers
+     * Output only. The position of this category in the set of categories. Lower numbers
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+     * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCategoryRank() {
       if (categoryRankBuilder_ == null) {
@@ -2103,11 +2103,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The position of this category in the set of categories. Lower numbers
+     * Output only. The position of this category in the set of categories. Lower numbers
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+     * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getCategoryRankBuilder() {
       
@@ -2116,11 +2116,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The position of this category in the set of categories. Lower numbers
+     * Output only. The position of this category in the set of categories. Lower numbers
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+     * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getCategoryRankOrBuilder() {
       if (categoryRankBuilder_ != null) {
@@ -2132,11 +2132,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The position of this category in the set of categories. Lower numbers
+     * Output only. The position of this category in the set of categories. Lower numbers
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value category_rank = 7;</code>
+     * <code>.google.protobuf.Int64Value category_rank = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2157,20 +2157,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> hasChildrenBuilder_;
     /**
      * <pre>
-     * Indicates whether this category has sub-categories.
+     * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_children = 8;</code>
+     * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasHasChildren() {
       return hasChildrenBuilder_ != null || hasChildren_ != null;
     }
     /**
      * <pre>
-     * Indicates whether this category has sub-categories.
+     * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_children = 8;</code>
+     * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getHasChildren() {
       if (hasChildrenBuilder_ == null) {
@@ -2181,10 +2181,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether this category has sub-categories.
+     * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_children = 8;</code>
+     * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setHasChildren(com.google.protobuf.BoolValue value) {
       if (hasChildrenBuilder_ == null) {
@@ -2201,10 +2201,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether this category has sub-categories.
+     * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_children = 8;</code>
+     * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setHasChildren(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -2219,10 +2219,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether this category has sub-categories.
+     * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_children = 8;</code>
+     * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeHasChildren(com.google.protobuf.BoolValue value) {
       if (hasChildrenBuilder_ == null) {
@@ -2241,10 +2241,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether this category has sub-categories.
+     * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_children = 8;</code>
+     * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearHasChildren() {
       if (hasChildrenBuilder_ == null) {
@@ -2259,10 +2259,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether this category has sub-categories.
+     * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_children = 8;</code>
+     * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getHasChildrenBuilder() {
       
@@ -2271,10 +2271,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether this category has sub-categories.
+     * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_children = 8;</code>
+     * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getHasChildrenOrBuilder() {
       if (hasChildrenBuilder_ != null) {
@@ -2286,10 +2286,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether this category has sub-categories.
+     * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_children = 8;</code>
+     * <code>.google.protobuf.BoolValue has_children = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -2310,20 +2310,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> recommendedCpcBidMicrosBuilder_;
     /**
      * <pre>
-     * The recommended cost per click for the category.
+     * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasRecommendedCpcBidMicros() {
       return recommendedCpcBidMicrosBuilder_ != null || recommendedCpcBidMicros_ != null;
     }
     /**
      * <pre>
-     * The recommended cost per click for the category.
+     * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getRecommendedCpcBidMicros() {
       if (recommendedCpcBidMicrosBuilder_ == null) {
@@ -2334,10 +2334,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended cost per click for the category.
+     * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedCpcBidMicros(com.google.protobuf.Int64Value value) {
       if (recommendedCpcBidMicrosBuilder_ == null) {
@@ -2354,10 +2354,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended cost per click for the category.
+     * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRecommendedCpcBidMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2372,10 +2372,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended cost per click for the category.
+     * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeRecommendedCpcBidMicros(com.google.protobuf.Int64Value value) {
       if (recommendedCpcBidMicrosBuilder_ == null) {
@@ -2394,10 +2394,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended cost per click for the category.
+     * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearRecommendedCpcBidMicros() {
       if (recommendedCpcBidMicrosBuilder_ == null) {
@@ -2412,10 +2412,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended cost per click for the category.
+     * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getRecommendedCpcBidMicrosBuilder() {
       
@@ -2424,10 +2424,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended cost per click for the category.
+     * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getRecommendedCpcBidMicrosOrBuilder() {
       if (recommendedCpcBidMicrosBuilder_ != null) {
@@ -2439,10 +2439,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The recommended cost per click for the category.
+     * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9;</code>
+     * <code>.google.protobuf.Int64Value recommended_cpc_bid_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
