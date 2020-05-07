@@ -60,66 +60,69 @@ public final class FeedProto {
       "\0327google/ads/googleads/v3/enums/feed_att" +
       "ribute_type.proto\032/google/ads/googleads/" +
       "v3/enums/feed_origin.proto\032/google/ads/g" +
-      "oogleads/v3/enums/feed_status.proto\032\031goo" +
-      "gle/api/resource.proto\032\036google/protobuf/" +
-      "wrappers.proto\032\034google/api/annotations.p" +
-      "roto\"\201\014\n\004Feed\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002" +
-      "id\030\002 \001(\0132\033.google.protobuf.Int64Value\022*\n" +
-      "\004name\030\003 \001(\0132\034.google.protobuf.StringValu" +
-      "e\022D\n\nattributes\030\004 \003(\01320.google.ads.googl" +
-      "eads.v3.resources.FeedAttribute\022W\n\024attri" +
-      "bute_operations\030\t \003(\01329.google.ads.googl" +
-      "eads.v3.resources.FeedAttributeOperation" +
-      "\022H\n\006origin\030\005 \001(\01628.google.ads.googleads." +
-      "v3.enums.FeedOriginEnum.FeedOrigin\022H\n\006st" +
-      "atus\030\010 \001(\01628.google.ads.googleads.v3.enu" +
-      "ms.FeedStatusEnum.FeedStatus\022c\n\031places_l" +
-      "ocation_feed_data\030\006 \001(\0132>.google.ads.goo" +
-      "gleads.v3.resources.Feed.PlacesLocationF" +
-      "eedDataH\000\022i\n\034affiliate_location_feed_dat" +
-      "a\030\007 \001(\0132A.google.ads.googleads.v3.resour" +
-      "ces.Feed.AffiliateLocationFeedDataH\000\032\311\004\n" +
-      "\026PlacesLocationFeedData\022\\\n\noauth_info\030\001 " +
-      "\001(\0132H.google.ads.googleads.v3.resources." +
-      "Feed.PlacesLocationFeedData.OAuthInfo\0223\n" +
-      "\remail_address\030\002 \001(\0132\034.google.protobuf.S" +
-      "tringValue\0229\n\023business_account_id\030\n \001(\0132" +
-      "\034.google.protobuf.StringValue\022:\n\024busines" +
-      "s_name_filter\030\004 \001(\0132\034.google.protobuf.St" +
-      "ringValue\0226\n\020category_filters\030\005 \003(\0132\034.go" +
-      "ogle.protobuf.StringValue\0223\n\rlabel_filte" +
-      "rs\030\006 \003(\0132\034.google.protobuf.StringValue\032\267" +
-      "\001\n\tOAuthInfo\0221\n\013http_method\030\001 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0226\n\020http_request_" +
-      "url\030\002 \001(\0132\034.google.protobuf.StringValue\022" +
-      "?\n\031http_authorization_header\030\003 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\032\327\001\n\031AffiliateLo" +
-      "cationFeedData\022.\n\tchain_ids\030\001 \003(\0132\033.goog" +
-      "le.protobuf.Int64Value\022\211\001\n\021relationship_" +
-      "type\030\002 \001(\0162n.google.ads.googleads.v3.enu" +
-      "ms.AffiliateLocationFeedRelationshipType" +
-      "Enum.AffiliateLocationFeedRelationshipTy" +
-      "pe:E\352AB\n\035googleads.googleapis.com/Feed\022!" +
-      "customers/{customer}/feeds/{feed}B\035\n\033sys" +
-      "tem_feed_generation_data\"\356\001\n\rFeedAttribu" +
-      "te\022\'\n\002id\030\001 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022*\n\004name\030\002 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022T\n\004type\030\003 \001(\0162F.google.ads.googl" +
-      "eads.v3.enums.FeedAttributeTypeEnum.Feed" +
-      "AttributeType\0222\n\016is_part_of_key\030\004 \001(\0132\032." +
-      "google.protobuf.BoolValue\"\342\001\n\026FeedAttrib" +
-      "uteOperation\022T\n\010operator\030\001 \001(\0162B.google." +
-      "ads.googleads.v3.resources.FeedAttribute" +
-      "Operation.Operator\022?\n\005value\030\002 \001(\01320.goog" +
-      "le.ads.googleads.v3.resources.FeedAttrib" +
-      "ute\"1\n\010Operator\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKN" +
-      "OWN\020\001\022\007\n\003ADD\020\002B\366\001\n%com.google.ads.google" +
-      "ads.v3.resourcesB\tFeedProtoP\001ZJgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v3/resources;resources\242\002\003GAA\252\002!Google" +
-      ".Ads.GoogleAds.V3.Resources\312\002!Google\\Ads" +
-      "\\GoogleAds\\V3\\Resources\352\002%Google::Ads::G" +
-      "oogleAds::V3::Resourcesb\006proto3"
+      "oogleads/v3/enums/feed_status.proto\032\037goo" +
+      "gle/api/field_behavior.proto\032\031google/api" +
+      "/resource.proto\032\036google/protobuf/wrapper" +
+      "s.proto\032\034google/api/annotations.proto\"\301\014" +
+      "\n\004Feed\022<\n\rresource_name\030\001 \001(\tB%\340A\005\372A\037\n\035g" +
+      "oogleads.googleapis.com/Feed\022,\n\002id\030\002 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\003\340A\003\022/\n\004na" +
+      "me\030\003 \001(\0132\034.google.protobuf.StringValueB\003" +
+      "\340A\005\022D\n\nattributes\030\004 \003(\01320.google.ads.goo" +
+      "gleads.v3.resources.FeedAttribute\022W\n\024att" +
+      "ribute_operations\030\t \003(\01329.google.ads.goo" +
+      "gleads.v3.resources.FeedAttributeOperati" +
+      "on\022M\n\006origin\030\005 \001(\01628.google.ads.googlead" +
+      "s.v3.enums.FeedOriginEnum.FeedOriginB\003\340A" +
+      "\005\022M\n\006status\030\010 \001(\01628.google.ads.googleads" +
+      ".v3.enums.FeedStatusEnum.FeedStatusB\003\340A\003" +
+      "\022c\n\031places_location_feed_data\030\006 \001(\0132>.go" +
+      "ogle.ads.googleads.v3.resources.Feed.Pla" +
+      "cesLocationFeedDataH\000\022i\n\034affiliate_locat" +
+      "ion_feed_data\030\007 \001(\0132A.google.ads.googlea" +
+      "ds.v3.resources.Feed.AffiliateLocationFe" +
+      "edDataH\000\032\316\004\n\026PlacesLocationFeedData\022a\n\no" +
+      "auth_info\030\001 \001(\0132H.google.ads.googleads.v" +
+      "3.resources.Feed.PlacesLocationFeedData." +
+      "OAuthInfoB\003\340A\005\0223\n\remail_address\030\002 \001(\0132\034." +
+      "google.protobuf.StringValue\0229\n\023business_" +
+      "account_id\030\n \001(\0132\034.google.protobuf.Strin" +
+      "gValue\022:\n\024business_name_filter\030\004 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\0226\n\020category_f" +
+      "ilters\030\005 \003(\0132\034.google.protobuf.StringVal" +
+      "ue\0223\n\rlabel_filters\030\006 \003(\0132\034.google.proto" +
+      "buf.StringValue\032\267\001\n\tOAuthInfo\0221\n\013http_me" +
+      "thod\030\001 \001(\0132\034.google.protobuf.StringValue" +
+      "\0226\n\020http_request_url\030\002 \001(\0132\034.google.prot" +
+      "obuf.StringValue\022?\n\031http_authorization_h" +
+      "eader\030\003 \001(\0132\034.google.protobuf.StringValu" +
+      "e\032\327\001\n\031AffiliateLocationFeedData\022.\n\tchain" +
+      "_ids\030\001 \003(\0132\033.google.protobuf.Int64Value\022" +
+      "\211\001\n\021relationship_type\030\002 \001(\0162n.google.ads" +
+      ".googleads.v3.enums.AffiliateLocationFee" +
+      "dRelationshipTypeEnum.AffiliateLocationF" +
+      "eedRelationshipType:E\352AB\n\035googleads.goog" +
+      "leapis.com/Feed\022!customers/{customer}/fe" +
+      "eds/{feed}B\035\n\033system_feed_generation_dat" +
+      "a\"\356\001\n\rFeedAttribute\022\'\n\002id\030\001 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022*\n\004name\030\002 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\022T\n\004type\030\003 \001(\0162F" +
+      ".google.ads.googleads.v3.enums.FeedAttri" +
+      "buteTypeEnum.FeedAttributeType\0222\n\016is_par" +
+      "t_of_key\030\004 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\"\354\001\n\026FeedAttributeOperation\022Y\n\010operato" +
+      "r\030\001 \001(\0162B.google.ads.googleads.v3.resour" +
+      "ces.FeedAttributeOperation.OperatorB\003\340A\003" +
+      "\022D\n\005value\030\002 \001(\01320.google.ads.googleads.v" +
+      "3.resources.FeedAttributeB\003\340A\003\"1\n\010Operat" +
+      "or\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\007\n\003ADD\020" +
+      "\002B\366\001\n%com.google.ads.googleads.v3.resour" +
+      "cesB\tFeedProtoP\001ZJgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v3/resourc" +
+      "es;resources\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
+      "s.V3.Resources\312\002!Google\\Ads\\GoogleAds\\V3" +
+      "\\Resources\352\002%Google::Ads::GoogleAds::V3:" +
+      ":Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -136,6 +139,7 @@ public final class FeedProto {
           com.google.ads.googleads.v3.enums.FeedAttributeTypeProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.FeedOriginProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.FeedStatusProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -178,13 +182,16 @@ public final class FeedProto {
         new java.lang.String[] { "Operator", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.AffiliateLocationFeedRelationshipTypeProto.getDescriptor();
     com.google.ads.googleads.v3.enums.FeedAttributeTypeProto.getDescriptor();
     com.google.ads.googleads.v3.enums.FeedOriginProto.getDescriptor();
     com.google.ads.googleads.v3.enums.FeedStatusProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

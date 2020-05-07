@@ -9,73 +9,73 @@ public interface UserLocationViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the user location view.
+   * Output only. The resource name of the user location view.
    * UserLocation view resource names have the form:
    * `customers/{customer_id}/userLocationViews/{country_criterion_id}~{targeting_location}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the user location view.
+   * Output only. The resource name of the user location view.
    * UserLocation view resource names have the form:
    * `customers/{customer_id}/userLocationViews/{country_criterion_id}~{targeting_location}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * Criterion Id for the country.
+   * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value country_criterion_id = 2;</code>
+   * <code>.google.protobuf.Int64Value country_criterion_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCountryCriterionId();
   /**
    * <pre>
-   * Criterion Id for the country.
+   * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value country_criterion_id = 2;</code>
+   * <code>.google.protobuf.Int64Value country_criterion_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getCountryCriterionId();
   /**
    * <pre>
-   * Criterion Id for the country.
+   * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value country_criterion_id = 2;</code>
+   * <code>.google.protobuf.Int64Value country_criterion_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getCountryCriterionIdOrBuilder();
 
   /**
    * <pre>
-   * Indicates whether location was targeted or not.
+   * Output only. Indicates whether location was targeted or not.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue targeting_location = 3;</code>
+   * <code>.google.protobuf.BoolValue targeting_location = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasTargetingLocation();
   /**
    * <pre>
-   * Indicates whether location was targeted or not.
+   * Output only. Indicates whether location was targeted or not.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue targeting_location = 3;</code>
+   * <code>.google.protobuf.BoolValue targeting_location = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValue getTargetingLocation();
   /**
    * <pre>
-   * Indicates whether location was targeted or not.
+   * Output only. Indicates whether location was targeted or not.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue targeting_location = 3;</code>
+   * <code>.google.protobuf.BoolValue targeting_location = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getTargetingLocationOrBuilder();
 }

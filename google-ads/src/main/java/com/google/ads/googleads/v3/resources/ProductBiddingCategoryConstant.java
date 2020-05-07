@@ -168,12 +168,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the product bidding category.
+   * Output only. The resource name of the product bidding category.
    * Product bidding category resource names have the form:
    * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -189,12 +189,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the product bidding category.
+   * Output only. The resource name of the product bidding category.
    * Product bidding category resource names have the form:
    * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -214,36 +214,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * ID of the product bidding category.
+   * Output only. ID of the product bidding category.
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * ID of the product bidding category.
+   * Output only. ID of the product bidding category.
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * ID of the product bidding category.
+   * Output only. ID of the product bidding category.
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -253,30 +253,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue countryCode_;
   /**
    * <pre>
-   * Two-letter upper-case country code of the product bidding category.
+   * Output only. Two-letter upper-case country code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 3;</code>
+   * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCountryCode() {
     return countryCode_ != null;
   }
   /**
    * <pre>
-   * Two-letter upper-case country code of the product bidding category.
+   * Output only. Two-letter upper-case country code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 3;</code>
+   * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getCountryCode() {
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
   /**
    * <pre>
-   * Two-letter upper-case country code of the product bidding category.
+   * Output only. Two-letter upper-case country code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 3;</code>
+   * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
     return getCountryCode();
@@ -286,30 +286,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue productBiddingCategoryConstantParent_;
   /**
    * <pre>
-   * Resource name of the parent product bidding category.
+   * Output only. Resource name of the parent product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasProductBiddingCategoryConstantParent() {
     return productBiddingCategoryConstantParent_ != null;
   }
   /**
    * <pre>
-   * Resource name of the parent product bidding category.
+   * Output only. Resource name of the parent product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getProductBiddingCategoryConstantParent() {
     return productBiddingCategoryConstantParent_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productBiddingCategoryConstantParent_;
   }
   /**
    * <pre>
-   * Resource name of the parent product bidding category.
+   * Output only. Resource name of the parent product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+   * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getProductBiddingCategoryConstantParentOrBuilder() {
     return getProductBiddingCategoryConstantParent();
@@ -319,20 +319,20 @@ private static final long serialVersionUID = 0L;
   private int level_;
   /**
    * <pre>
-   * Level of the product bidding category.
+   * Output only. Level of the product bidding category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getLevelValue() {
     return level_;
   }
   /**
    * <pre>
-   * Level of the product bidding category.
+   * Output only. Level of the product bidding category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel() {
     @SuppressWarnings("deprecation")
@@ -344,20 +344,20 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Status of the product bidding category.
+   * Output only. Status of the product bidding category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Status of the product bidding category.
+   * Output only. Status of the product bidding category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -369,30 +369,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue languageCode_;
   /**
    * <pre>
-   * Language code of the product bidding category.
+   * Output only. Language code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language_code = 7;</code>
+   * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasLanguageCode() {
     return languageCode_ != null;
   }
   /**
    * <pre>
-   * Language code of the product bidding category.
+   * Output only. Language code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language_code = 7;</code>
+   * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getLanguageCode() {
     return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
   }
   /**
    * <pre>
-   * Language code of the product bidding category.
+   * Output only. Language code of the product bidding category.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language_code = 7;</code>
+   * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
     return getLanguageCode();
@@ -402,33 +402,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue localizedName_;
   /**
    * <pre>
-   * Display value of the product bidding category localized according to
+   * Output only. Display value of the product bidding category localized according to
    * language_code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue localized_name = 8;</code>
+   * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasLocalizedName() {
     return localizedName_ != null;
   }
   /**
    * <pre>
-   * Display value of the product bidding category localized according to
+   * Output only. Display value of the product bidding category localized according to
    * language_code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue localized_name = 8;</code>
+   * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getLocalizedName() {
     return localizedName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : localizedName_;
   }
   /**
    * <pre>
-   * Display value of the product bidding category localized according to
+   * Output only. Display value of the product bidding category localized according to
    * language_code.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue localized_name = 8;</code>
+   * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getLocalizedNameOrBuilder() {
     return getLocalizedName();
@@ -925,12 +925,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the product bidding category.
+     * Output only. The resource name of the product bidding category.
      * Product bidding category resource names have the form:
      * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -946,12 +946,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the product bidding category.
+     * Output only. The resource name of the product bidding category.
      * Product bidding category resource names have the form:
      * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -968,12 +968,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the product bidding category.
+     * Output only. The resource name of the product bidding category.
      * Product bidding category resource names have the form:
      * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -987,12 +987,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the product bidding category.
+     * Output only. The resource name of the product bidding category.
      * Product bidding category resource names have the form:
      * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1002,12 +1002,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the product bidding category.
+     * Output only. The resource name of the product bidding category.
      * Product bidding category resource names have the form:
      * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1026,24 +1026,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * ID of the product bidding category.
+     * Output only. ID of the product bidding category.
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * ID of the product bidding category.
+     * Output only. ID of the product bidding category.
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1054,12 +1054,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the product bidding category.
+     * Output only. ID of the product bidding category.
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1076,12 +1076,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the product bidding category.
+     * Output only. ID of the product bidding category.
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1096,12 +1096,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the product bidding category.
+     * Output only. ID of the product bidding category.
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1120,12 +1120,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the product bidding category.
+     * Output only. ID of the product bidding category.
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1140,12 +1140,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the product bidding category.
+     * Output only. ID of the product bidding category.
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1154,12 +1154,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the product bidding category.
+     * Output only. ID of the product bidding category.
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1171,12 +1171,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the product bidding category.
+     * Output only. ID of the product bidding category.
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1197,20 +1197,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> countryCodeBuilder_;
     /**
      * <pre>
-     * Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 3;</code>
+     * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCountryCode() {
       return countryCodeBuilder_ != null || countryCode_ != null;
     }
     /**
      * <pre>
-     * Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 3;</code>
+     * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCountryCode() {
       if (countryCodeBuilder_ == null) {
@@ -1221,10 +1221,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 3;</code>
+     * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCountryCode(com.google.protobuf.StringValue value) {
       if (countryCodeBuilder_ == null) {
@@ -1241,10 +1241,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 3;</code>
+     * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCountryCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1259,10 +1259,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 3;</code>
+     * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCountryCode(com.google.protobuf.StringValue value) {
       if (countryCodeBuilder_ == null) {
@@ -1281,10 +1281,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 3;</code>
+     * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCountryCode() {
       if (countryCodeBuilder_ == null) {
@@ -1299,10 +1299,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 3;</code>
+     * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getCountryCodeBuilder() {
       
@@ -1311,10 +1311,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 3;</code>
+     * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
       if (countryCodeBuilder_ != null) {
@@ -1326,10 +1326,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 3;</code>
+     * <code>.google.protobuf.StringValue country_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1350,20 +1350,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> productBiddingCategoryConstantParentBuilder_;
     /**
      * <pre>
-     * Resource name of the parent product bidding category.
+     * Output only. Resource name of the parent product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasProductBiddingCategoryConstantParent() {
       return productBiddingCategoryConstantParentBuilder_ != null || productBiddingCategoryConstantParent_ != null;
     }
     /**
      * <pre>
-     * Resource name of the parent product bidding category.
+     * Output only. Resource name of the parent product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getProductBiddingCategoryConstantParent() {
       if (productBiddingCategoryConstantParentBuilder_ == null) {
@@ -1374,10 +1374,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the parent product bidding category.
+     * Output only. Resource name of the parent product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setProductBiddingCategoryConstantParent(com.google.protobuf.StringValue value) {
       if (productBiddingCategoryConstantParentBuilder_ == null) {
@@ -1394,10 +1394,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the parent product bidding category.
+     * Output only. Resource name of the parent product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setProductBiddingCategoryConstantParent(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1412,10 +1412,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the parent product bidding category.
+     * Output only. Resource name of the parent product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeProductBiddingCategoryConstantParent(com.google.protobuf.StringValue value) {
       if (productBiddingCategoryConstantParentBuilder_ == null) {
@@ -1434,10 +1434,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the parent product bidding category.
+     * Output only. Resource name of the parent product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearProductBiddingCategoryConstantParent() {
       if (productBiddingCategoryConstantParentBuilder_ == null) {
@@ -1452,10 +1452,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the parent product bidding category.
+     * Output only. Resource name of the parent product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getProductBiddingCategoryConstantParentBuilder() {
       
@@ -1464,10 +1464,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the parent product bidding category.
+     * Output only. Resource name of the parent product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getProductBiddingCategoryConstantParentOrBuilder() {
       if (productBiddingCategoryConstantParentBuilder_ != null) {
@@ -1479,10 +1479,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of the parent product bidding category.
+     * Output only. Resource name of the parent product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4;</code>
+     * <code>.google.protobuf.StringValue product_bidding_category_constant_parent = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1501,20 +1501,20 @@ private static final long serialVersionUID = 0L;
     private int level_ = 0;
     /**
      * <pre>
-     * Level of the product bidding category.
+     * Output only. Level of the product bidding category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getLevelValue() {
       return level_;
     }
     /**
      * <pre>
-     * Level of the product bidding category.
+     * Output only. Level of the product bidding category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLevelValue(int value) {
       level_ = value;
@@ -1523,10 +1523,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Level of the product bidding category.
+     * Output only. Level of the product bidding category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel() {
       @SuppressWarnings("deprecation")
@@ -1535,10 +1535,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Level of the product bidding category.
+     * Output only. Level of the product bidding category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLevel(com.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel value) {
       if (value == null) {
@@ -1551,10 +1551,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Level of the product bidding category.
+     * Output only. Level of the product bidding category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLevel() {
       
@@ -1566,20 +1566,20 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Status of the product bidding category.
+     * Output only. Status of the product bidding category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Status of the product bidding category.
+     * Output only. Status of the product bidding category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -1588,10 +1588,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the product bidding category.
+     * Output only. Status of the product bidding category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -1600,10 +1600,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the product bidding category.
+     * Output only. Status of the product bidding category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus value) {
       if (value == null) {
@@ -1616,10 +1616,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the product bidding category.
+     * Output only. Status of the product bidding category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       
@@ -1633,20 +1633,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> languageCodeBuilder_;
     /**
      * <pre>
-     * Language code of the product bidding category.
+     * Output only. Language code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 7;</code>
+     * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasLanguageCode() {
       return languageCodeBuilder_ != null || languageCode_ != null;
     }
     /**
      * <pre>
-     * Language code of the product bidding category.
+     * Output only. Language code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 7;</code>
+     * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getLanguageCode() {
       if (languageCodeBuilder_ == null) {
@@ -1657,10 +1657,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Language code of the product bidding category.
+     * Output only. Language code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 7;</code>
+     * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLanguageCode(com.google.protobuf.StringValue value) {
       if (languageCodeBuilder_ == null) {
@@ -1677,10 +1677,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Language code of the product bidding category.
+     * Output only. Language code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 7;</code>
+     * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLanguageCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1695,10 +1695,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Language code of the product bidding category.
+     * Output only. Language code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 7;</code>
+     * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLanguageCode(com.google.protobuf.StringValue value) {
       if (languageCodeBuilder_ == null) {
@@ -1717,10 +1717,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Language code of the product bidding category.
+     * Output only. Language code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 7;</code>
+     * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLanguageCode() {
       if (languageCodeBuilder_ == null) {
@@ -1735,10 +1735,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Language code of the product bidding category.
+     * Output only. Language code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 7;</code>
+     * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getLanguageCodeBuilder() {
       
@@ -1747,10 +1747,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Language code of the product bidding category.
+     * Output only. Language code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 7;</code>
+     * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
       if (languageCodeBuilder_ != null) {
@@ -1762,10 +1762,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Language code of the product bidding category.
+     * Output only. Language code of the product bidding category.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language_code = 7;</code>
+     * <code>.google.protobuf.StringValue language_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1786,22 +1786,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> localizedNameBuilder_;
     /**
      * <pre>
-     * Display value of the product bidding category localized according to
+     * Output only. Display value of the product bidding category localized according to
      * language_code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue localized_name = 8;</code>
+     * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasLocalizedName() {
       return localizedNameBuilder_ != null || localizedName_ != null;
     }
     /**
      * <pre>
-     * Display value of the product bidding category localized according to
+     * Output only. Display value of the product bidding category localized according to
      * language_code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue localized_name = 8;</code>
+     * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getLocalizedName() {
       if (localizedNameBuilder_ == null) {
@@ -1812,11 +1812,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display value of the product bidding category localized according to
+     * Output only. Display value of the product bidding category localized according to
      * language_code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue localized_name = 8;</code>
+     * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLocalizedName(com.google.protobuf.StringValue value) {
       if (localizedNameBuilder_ == null) {
@@ -1833,11 +1833,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display value of the product bidding category localized according to
+     * Output only. Display value of the product bidding category localized according to
      * language_code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue localized_name = 8;</code>
+     * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLocalizedName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1852,11 +1852,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display value of the product bidding category localized according to
+     * Output only. Display value of the product bidding category localized according to
      * language_code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue localized_name = 8;</code>
+     * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLocalizedName(com.google.protobuf.StringValue value) {
       if (localizedNameBuilder_ == null) {
@@ -1875,11 +1875,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display value of the product bidding category localized according to
+     * Output only. Display value of the product bidding category localized according to
      * language_code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue localized_name = 8;</code>
+     * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLocalizedName() {
       if (localizedNameBuilder_ == null) {
@@ -1894,11 +1894,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display value of the product bidding category localized according to
+     * Output only. Display value of the product bidding category localized according to
      * language_code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue localized_name = 8;</code>
+     * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getLocalizedNameBuilder() {
       
@@ -1907,11 +1907,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display value of the product bidding category localized according to
+     * Output only. Display value of the product bidding category localized according to
      * language_code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue localized_name = 8;</code>
+     * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLocalizedNameOrBuilder() {
       if (localizedNameBuilder_ != null) {
@@ -1923,11 +1923,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Display value of the product bidding category localized according to
+     * Output only. Display value of the product bidding category localized according to
      * language_code.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue localized_name = 8;</code>
+     * <code>.google.protobuf.StringValue localized_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

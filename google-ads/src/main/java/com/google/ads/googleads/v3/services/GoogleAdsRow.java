@@ -1336,6 +1336,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 1098: {
+            com.google.ads.googleads.v3.resources.OfflineUserDataJob.Builder subBuilder = null;
+            if (offlineUserDataJob_ != null) {
+              subBuilder = offlineUserDataJob_.toBuilder();
+            }
+            offlineUserDataJob_ = input.readMessage(com.google.ads.googleads.v3.resources.OfflineUserDataJob.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(offlineUserDataJob_);
+              offlineUserDataJob_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -4008,6 +4021,39 @@ private static final long serialVersionUID = 0L;
     return getMutateJob();
   }
 
+  public static final int OFFLINE_USER_DATA_JOB_FIELD_NUMBER = 137;
+  private com.google.ads.googleads.v3.resources.OfflineUserDataJob offlineUserDataJob_;
+  /**
+   * <pre>
+   * The offline user data job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+   */
+  public boolean hasOfflineUserDataJob() {
+    return offlineUserDataJob_ != null;
+  }
+  /**
+   * <pre>
+   * The offline user data job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+   */
+  public com.google.ads.googleads.v3.resources.OfflineUserDataJob getOfflineUserDataJob() {
+    return offlineUserDataJob_ == null ? com.google.ads.googleads.v3.resources.OfflineUserDataJob.getDefaultInstance() : offlineUserDataJob_;
+  }
+  /**
+   * <pre>
+   * The offline user data job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+   */
+  public com.google.ads.googleads.v3.resources.OfflineUserDataJobOrBuilder getOfflineUserDataJobOrBuilder() {
+    return getOfflineUserDataJob();
+  }
+
   public static final int OPERATING_SYSTEM_VERSION_CONSTANT_FIELD_NUMBER = 86;
   private com.google.ads.googleads.v3.resources.OperatingSystemVersionConstant operatingSystemVersionConstant_;
   /**
@@ -4946,6 +4992,9 @@ private static final long serialVersionUID = 0L;
     if (userLocationView_ != null) {
       output.writeMessage(135, getUserLocationView());
     }
+    if (offlineUserDataJob_ != null) {
+      output.writeMessage(137, getOfflineUserDataJob());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -5350,6 +5399,10 @@ private static final long serialVersionUID = 0L;
     if (userLocationView_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(135, getUserLocationView());
+    }
+    if (offlineUserDataJob_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(137, getOfflineUserDataJob());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -5765,6 +5818,11 @@ private static final long serialVersionUID = 0L;
     if (hasMutateJob()) {
       if (!getMutateJob()
           .equals(other.getMutateJob())) return false;
+    }
+    if (hasOfflineUserDataJob() != other.hasOfflineUserDataJob()) return false;
+    if (hasOfflineUserDataJob()) {
+      if (!getOfflineUserDataJob()
+          .equals(other.getOfflineUserDataJob())) return false;
     }
     if (hasOperatingSystemVersionConstant() != other.hasOperatingSystemVersionConstant()) return false;
     if (hasOperatingSystemVersionConstant()) {
@@ -6191,6 +6249,10 @@ private static final long serialVersionUID = 0L;
     if (hasMutateJob()) {
       hash = (37 * hash) + MUTATE_JOB_FIELD_NUMBER;
       hash = (53 * hash) + getMutateJob().hashCode();
+    }
+    if (hasOfflineUserDataJob()) {
+      hash = (37 * hash) + OFFLINE_USER_DATA_JOB_FIELD_NUMBER;
+      hash = (53 * hash) + getOfflineUserDataJob().hashCode();
     }
     if (hasOperatingSystemVersionConstant()) {
       hash = (37 * hash) + OPERATING_SYSTEM_VERSION_CONSTANT_FIELD_NUMBER;
@@ -6885,6 +6947,12 @@ private static final long serialVersionUID = 0L;
         mutateJob_ = null;
         mutateJobBuilder_ = null;
       }
+      if (offlineUserDataJobBuilder_ == null) {
+        offlineUserDataJob_ = null;
+      } else {
+        offlineUserDataJob_ = null;
+        offlineUserDataJobBuilder_ = null;
+      }
       if (operatingSystemVersionConstantBuilder_ == null) {
         operatingSystemVersionConstant_ = null;
       } else {
@@ -7425,6 +7493,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.mutateJob_ = mutateJobBuilder_.build();
       }
+      if (offlineUserDataJobBuilder_ == null) {
+        result.offlineUserDataJob_ = offlineUserDataJob_;
+      } else {
+        result.offlineUserDataJob_ = offlineUserDataJobBuilder_.build();
+      }
       if (operatingSystemVersionConstantBuilder_ == null) {
         result.operatingSystemVersionConstant_ = operatingSystemVersionConstant_;
       } else {
@@ -7807,6 +7880,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasMutateJob()) {
         mergeMutateJob(other.getMutateJob());
+      }
+      if (other.hasOfflineUserDataJob()) {
+        mergeOfflineUserDataJob(other.getOfflineUserDataJob());
       }
       if (other.hasOperatingSystemVersionConstant()) {
         mergeOperatingSystemVersionConstant(other.getOperatingSystemVersionConstant());
@@ -20132,6 +20208,159 @@ private static final long serialVersionUID = 0L;
         mutateJob_ = null;
       }
       return mutateJobBuilder_;
+    }
+
+    private com.google.ads.googleads.v3.resources.OfflineUserDataJob offlineUserDataJob_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v3.resources.OfflineUserDataJob, com.google.ads.googleads.v3.resources.OfflineUserDataJob.Builder, com.google.ads.googleads.v3.resources.OfflineUserDataJobOrBuilder> offlineUserDataJobBuilder_;
+    /**
+     * <pre>
+     * The offline user data job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+     */
+    public boolean hasOfflineUserDataJob() {
+      return offlineUserDataJobBuilder_ != null || offlineUserDataJob_ != null;
+    }
+    /**
+     * <pre>
+     * The offline user data job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+     */
+    public com.google.ads.googleads.v3.resources.OfflineUserDataJob getOfflineUserDataJob() {
+      if (offlineUserDataJobBuilder_ == null) {
+        return offlineUserDataJob_ == null ? com.google.ads.googleads.v3.resources.OfflineUserDataJob.getDefaultInstance() : offlineUserDataJob_;
+      } else {
+        return offlineUserDataJobBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The offline user data job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+     */
+    public Builder setOfflineUserDataJob(com.google.ads.googleads.v3.resources.OfflineUserDataJob value) {
+      if (offlineUserDataJobBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        offlineUserDataJob_ = value;
+        onChanged();
+      } else {
+        offlineUserDataJobBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The offline user data job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+     */
+    public Builder setOfflineUserDataJob(
+        com.google.ads.googleads.v3.resources.OfflineUserDataJob.Builder builderForValue) {
+      if (offlineUserDataJobBuilder_ == null) {
+        offlineUserDataJob_ = builderForValue.build();
+        onChanged();
+      } else {
+        offlineUserDataJobBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The offline user data job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+     */
+    public Builder mergeOfflineUserDataJob(com.google.ads.googleads.v3.resources.OfflineUserDataJob value) {
+      if (offlineUserDataJobBuilder_ == null) {
+        if (offlineUserDataJob_ != null) {
+          offlineUserDataJob_ =
+            com.google.ads.googleads.v3.resources.OfflineUserDataJob.newBuilder(offlineUserDataJob_).mergeFrom(value).buildPartial();
+        } else {
+          offlineUserDataJob_ = value;
+        }
+        onChanged();
+      } else {
+        offlineUserDataJobBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The offline user data job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+     */
+    public Builder clearOfflineUserDataJob() {
+      if (offlineUserDataJobBuilder_ == null) {
+        offlineUserDataJob_ = null;
+        onChanged();
+      } else {
+        offlineUserDataJob_ = null;
+        offlineUserDataJobBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The offline user data job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+     */
+    public com.google.ads.googleads.v3.resources.OfflineUserDataJob.Builder getOfflineUserDataJobBuilder() {
+      
+      onChanged();
+      return getOfflineUserDataJobFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The offline user data job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+     */
+    public com.google.ads.googleads.v3.resources.OfflineUserDataJobOrBuilder getOfflineUserDataJobOrBuilder() {
+      if (offlineUserDataJobBuilder_ != null) {
+        return offlineUserDataJobBuilder_.getMessageOrBuilder();
+      } else {
+        return offlineUserDataJob_ == null ?
+            com.google.ads.googleads.v3.resources.OfflineUserDataJob.getDefaultInstance() : offlineUserDataJob_;
+      }
+    }
+    /**
+     * <pre>
+     * The offline user data job referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v3.resources.OfflineUserDataJob, com.google.ads.googleads.v3.resources.OfflineUserDataJob.Builder, com.google.ads.googleads.v3.resources.OfflineUserDataJobOrBuilder> 
+        getOfflineUserDataJobFieldBuilder() {
+      if (offlineUserDataJobBuilder_ == null) {
+        offlineUserDataJobBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v3.resources.OfflineUserDataJob, com.google.ads.googleads.v3.resources.OfflineUserDataJob.Builder, com.google.ads.googleads.v3.resources.OfflineUserDataJobOrBuilder>(
+                getOfflineUserDataJob(),
+                getParentForChildren(),
+                isClean());
+        offlineUserDataJob_ = null;
+      }
+      return offlineUserDataJobBuilder_;
     }
 
     private com.google.ads.googleads.v3.resources.OperatingSystemVersionConstant operatingSystemVersionConstant_;

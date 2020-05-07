@@ -80,7 +80,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Set of errors that are related to requests dealing with Customer.
-   * Next id: 26
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v3.errors.CustomerErrorEnum.CustomerError}

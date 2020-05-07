@@ -110,20 +110,20 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEntry> policyTopicEntries_;
   /**
    * <pre>
-   * The list of policy findings for this ad.
+   * Output only. The list of policy findings for this ad.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEntry> getPolicyTopicEntriesList() {
     return policyTopicEntries_;
   }
   /**
    * <pre>
-   * The list of policy findings for this ad.
+   * Output only. The list of policy findings for this ad.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder> 
       getPolicyTopicEntriesOrBuilderList() {
@@ -131,30 +131,30 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of policy findings for this ad.
+   * Output only. The list of policy findings for this ad.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getPolicyTopicEntriesCount() {
     return policyTopicEntries_.size();
   }
   /**
    * <pre>
-   * The list of policy findings for this ad.
+   * Output only. The list of policy findings for this ad.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.PolicyTopicEntry getPolicyTopicEntries(int index) {
     return policyTopicEntries_.get(index);
   }
   /**
    * <pre>
-   * The list of policy findings for this ad.
+   * Output only. The list of policy findings for this ad.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder getPolicyTopicEntriesOrBuilder(
       int index) {
@@ -165,20 +165,20 @@ private static final long serialVersionUID = 0L;
   private int reviewStatus_;
   /**
    * <pre>
-   * Where in the review process this ad is.
+   * Output only. Where in the review process this ad is.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getReviewStatusValue() {
     return reviewStatus_;
   }
   /**
    * <pre>
-   * Where in the review process this ad is.
+   * Output only. Where in the review process this ad is.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
     @SuppressWarnings("deprecation")
@@ -190,22 +190,22 @@ private static final long serialVersionUID = 0L;
   private int approvalStatus_;
   /**
    * <pre>
-   * The overall approval status of this ad, calculated based on the status of
+   * Output only. The overall approval status of this ad, calculated based on the status of
    * its individual policy topic entries.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getApprovalStatusValue() {
     return approvalStatus_;
   }
   /**
    * <pre>
-   * The overall approval status of this ad, calculated based on the status of
+   * Output only. The overall approval status of this ad, calculated based on the status of
    * its individual policy topic entries.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
     @SuppressWarnings("deprecation")
@@ -607,10 +607,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEntry> getPolicyTopicEntriesList() {
       if (policyTopicEntriesBuilder_ == null) {
@@ -621,10 +621,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getPolicyTopicEntriesCount() {
       if (policyTopicEntriesBuilder_ == null) {
@@ -635,10 +635,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.PolicyTopicEntry getPolicyTopicEntries(int index) {
       if (policyTopicEntriesBuilder_ == null) {
@@ -649,10 +649,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPolicyTopicEntries(
         int index, com.google.ads.googleads.v3.common.PolicyTopicEntry value) {
@@ -670,10 +670,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPolicyTopicEntries(
         int index, com.google.ads.googleads.v3.common.PolicyTopicEntry.Builder builderForValue) {
@@ -688,10 +688,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPolicyTopicEntries(com.google.ads.googleads.v3.common.PolicyTopicEntry value) {
       if (policyTopicEntriesBuilder_ == null) {
@@ -708,10 +708,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPolicyTopicEntries(
         int index, com.google.ads.googleads.v3.common.PolicyTopicEntry value) {
@@ -729,10 +729,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPolicyTopicEntries(
         com.google.ads.googleads.v3.common.PolicyTopicEntry.Builder builderForValue) {
@@ -747,10 +747,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPolicyTopicEntries(
         int index, com.google.ads.googleads.v3.common.PolicyTopicEntry.Builder builderForValue) {
@@ -765,10 +765,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllPolicyTopicEntries(
         java.lang.Iterable<? extends com.google.ads.googleads.v3.common.PolicyTopicEntry> values) {
@@ -784,10 +784,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPolicyTopicEntries() {
       if (policyTopicEntriesBuilder_ == null) {
@@ -801,10 +801,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removePolicyTopicEntries(int index) {
       if (policyTopicEntriesBuilder_ == null) {
@@ -818,10 +818,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.PolicyTopicEntry.Builder getPolicyTopicEntriesBuilder(
         int index) {
@@ -829,10 +829,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder getPolicyTopicEntriesOrBuilder(
         int index) {
@@ -843,10 +843,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder> 
          getPolicyTopicEntriesOrBuilderList() {
@@ -858,10 +858,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.PolicyTopicEntry.Builder addPolicyTopicEntriesBuilder() {
       return getPolicyTopicEntriesFieldBuilder().addBuilder(
@@ -869,10 +869,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.PolicyTopicEntry.Builder addPolicyTopicEntriesBuilder(
         int index) {
@@ -881,10 +881,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of policy findings for this ad.
+     * Output only. The list of policy findings for this ad.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+     * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEntry.Builder> 
          getPolicyTopicEntriesBuilderList() {
@@ -908,20 +908,20 @@ private static final long serialVersionUID = 0L;
     private int reviewStatus_ = 0;
     /**
      * <pre>
-     * Where in the review process this ad is.
+     * Output only. Where in the review process this ad is.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getReviewStatusValue() {
       return reviewStatus_;
     }
     /**
      * <pre>
-     * Where in the review process this ad is.
+     * Output only. Where in the review process this ad is.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setReviewStatusValue(int value) {
       reviewStatus_ = value;
@@ -930,10 +930,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Where in the review process this ad is.
+     * Output only. Where in the review process this ad is.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
       @SuppressWarnings("deprecation")
@@ -942,10 +942,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Where in the review process this ad is.
+     * Output only. Where in the review process this ad is.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setReviewStatus(com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus value) {
       if (value == null) {
@@ -958,10 +958,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Where in the review process this ad is.
+     * Output only. Where in the review process this ad is.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearReviewStatus() {
       
@@ -973,22 +973,22 @@ private static final long serialVersionUID = 0L;
     private int approvalStatus_ = 0;
     /**
      * <pre>
-     * The overall approval status of this ad, calculated based on the status of
+     * Output only. The overall approval status of this ad, calculated based on the status of
      * its individual policy topic entries.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getApprovalStatusValue() {
       return approvalStatus_;
     }
     /**
      * <pre>
-     * The overall approval status of this ad, calculated based on the status of
+     * Output only. The overall approval status of this ad, calculated based on the status of
      * its individual policy topic entries.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovalStatusValue(int value) {
       approvalStatus_ = value;
@@ -997,11 +997,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The overall approval status of this ad, calculated based on the status of
+     * Output only. The overall approval status of this ad, calculated based on the status of
      * its individual policy topic entries.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
       @SuppressWarnings("deprecation")
@@ -1010,11 +1010,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The overall approval status of this ad, calculated based on the status of
+     * Output only. The overall approval status of this ad, calculated based on the status of
      * its individual policy topic entries.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovalStatus(com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus value) {
       if (value == null) {
@@ -1027,11 +1027,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The overall approval status of this ad, calculated based on the status of
+     * Output only. The overall approval status of this ad, calculated based on the status of
      * its individual policy topic entries.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearApprovalStatus() {
       

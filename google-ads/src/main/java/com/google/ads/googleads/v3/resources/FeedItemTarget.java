@@ -251,12 +251,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the feed item target.
+   * Immutable. The resource name of the feed item target.
    * Feed item target resource names have the form:
    * `customers/{customer_id}/feedItemTargets/{feed_id}~{feed_item_id}~{feed_item_target_type}~{feed_item_target_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -272,12 +272,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the feed item target.
+   * Immutable. The resource name of the feed item target.
    * Feed item target resource names have the form:
    * `customers/{customer_id}/feedItemTargets/{feed_id}~{feed_item_id}~{feed_item_target_type}~{feed_item_target_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -297,30 +297,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue feedItem_;
   /**
    * <pre>
-   * The feed item to which this feed item target belongs.
+   * Immutable. The feed item to which this feed item target belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed_item = 2;</code>
+   * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasFeedItem() {
     return feedItem_ != null;
   }
   /**
    * <pre>
-   * The feed item to which this feed item target belongs.
+   * Immutable. The feed item to which this feed item target belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed_item = 2;</code>
+   * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getFeedItem() {
     return feedItem_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feedItem_;
   }
   /**
    * <pre>
-   * The feed item to which this feed item target belongs.
+   * Immutable. The feed item to which this feed item target belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed_item = 2;</code>
+   * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getFeedItemOrBuilder() {
     return getFeedItem();
@@ -330,20 +330,20 @@ private static final long serialVersionUID = 0L;
   private int feedItemTargetType_;
   /**
    * <pre>
-   * The target type of this feed item target. This field is read-only.
+   * Output only. The target type of this feed item target. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getFeedItemTargetTypeValue() {
     return feedItemTargetType_;
   }
   /**
    * <pre>
-   * The target type of this feed item target. This field is read-only.
+   * Output only. The target type of this feed item target. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType getFeedItemTargetType() {
     @SuppressWarnings("deprecation")
@@ -355,30 +355,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value feedItemTargetId_;
   /**
    * <pre>
-   * The ID of the targeted resource. This field is read-only.
+   * Output only. The ID of the targeted resource. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+   * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasFeedItemTargetId() {
     return feedItemTargetId_ != null;
   }
   /**
    * <pre>
-   * The ID of the targeted resource. This field is read-only.
+   * Output only. The ID of the targeted resource. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+   * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getFeedItemTargetId() {
     return feedItemTargetId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : feedItemTargetId_;
   }
   /**
    * <pre>
-   * The ID of the targeted resource. This field is read-only.
+   * Output only. The ID of the targeted resource. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+   * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getFeedItemTargetIdOrBuilder() {
     return getFeedItemTargetId();
@@ -388,22 +388,22 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Status of the feed item target.
+   * Output only. Status of the feed item target.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Status of the feed item target.
+   * Output only. Status of the feed item target.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -414,20 +414,20 @@ private static final long serialVersionUID = 0L;
   public static final int CAMPAIGN_FIELD_NUMBER = 4;
   /**
    * <pre>
-   * The targeted campaign.
+   * Immutable. The targeted campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 4;</code>
+   * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasCampaign() {
     return targetCase_ == 4;
   }
   /**
    * <pre>
-   * The targeted campaign.
+   * Immutable. The targeted campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 4;</code>
+   * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getCampaign() {
     if (targetCase_ == 4) {
@@ -437,10 +437,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The targeted campaign.
+   * Immutable. The targeted campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 4;</code>
+   * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     if (targetCase_ == 4) {
@@ -452,20 +452,20 @@ private static final long serialVersionUID = 0L;
   public static final int AD_GROUP_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * The targeted ad group.
+   * Immutable. The targeted ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 5;</code>
+   * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasAdGroup() {
     return targetCase_ == 5;
   }
   /**
    * <pre>
-   * The targeted ad group.
+   * Immutable. The targeted ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 5;</code>
+   * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getAdGroup() {
     if (targetCase_ == 5) {
@@ -475,10 +475,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The targeted ad group.
+   * Immutable. The targeted ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 5;</code>
+   * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     if (targetCase_ == 5) {
@@ -490,20 +490,20 @@ private static final long serialVersionUID = 0L;
   public static final int KEYWORD_FIELD_NUMBER = 7;
   /**
    * <pre>
-   * The targeted keyword.
+   * Immutable. The targeted keyword.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasKeyword() {
     return targetCase_ == 7;
   }
   /**
    * <pre>
-   * The targeted keyword.
+   * Immutable. The targeted keyword.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.KeywordInfo getKeyword() {
     if (targetCase_ == 7) {
@@ -513,10 +513,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The targeted keyword.
+   * Immutable. The targeted keyword.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.KeywordInfoOrBuilder getKeywordOrBuilder() {
     if (targetCase_ == 7) {
@@ -528,20 +528,20 @@ private static final long serialVersionUID = 0L;
   public static final int GEO_TARGET_CONSTANT_FIELD_NUMBER = 8;
   /**
    * <pre>
-   * The targeted geo target constant resource name.
+   * Immutable. The targeted geo target constant resource name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+   * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasGeoTargetConstant() {
     return targetCase_ == 8;
   }
   /**
    * <pre>
-   * The targeted geo target constant resource name.
+   * Immutable. The targeted geo target constant resource name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+   * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getGeoTargetConstant() {
     if (targetCase_ == 8) {
@@ -551,10 +551,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The targeted geo target constant resource name.
+   * Immutable. The targeted geo target constant resource name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+   * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder() {
     if (targetCase_ == 8) {
@@ -566,10 +566,10 @@ private static final long serialVersionUID = 0L;
   public static final int DEVICE_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * The targeted device.
+   * Immutable. The targeted device.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getDeviceValue() {
     if (targetCase_ == 9) {
@@ -579,10 +579,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The targeted device.
+   * Immutable. The targeted device.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice() {
     if (targetCase_ == 9) {
@@ -597,20 +597,20 @@ private static final long serialVersionUID = 0L;
   public static final int AD_SCHEDULE_FIELD_NUMBER = 10;
   /**
    * <pre>
-   * The targeted schedule.
+   * Immutable. The targeted schedule.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+   * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasAdSchedule() {
     return targetCase_ == 10;
   }
   /**
    * <pre>
-   * The targeted schedule.
+   * Immutable. The targeted schedule.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+   * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.AdScheduleInfo getAdSchedule() {
     if (targetCase_ == 10) {
@@ -620,10 +620,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The targeted schedule.
+   * Immutable. The targeted schedule.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+   * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.AdScheduleInfoOrBuilder getAdScheduleOrBuilder() {
     if (targetCase_ == 10) {
@@ -1217,12 +1217,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the feed item target.
+     * Immutable. The resource name of the feed item target.
      * Feed item target resource names have the form:
      * `customers/{customer_id}/feedItemTargets/{feed_id}~{feed_item_id}~{feed_item_target_type}~{feed_item_target_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1238,12 +1238,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed item target.
+     * Immutable. The resource name of the feed item target.
      * Feed item target resource names have the form:
      * `customers/{customer_id}/feedItemTargets/{feed_id}~{feed_item_id}~{feed_item_target_type}~{feed_item_target_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1260,12 +1260,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed item target.
+     * Immutable. The resource name of the feed item target.
      * Feed item target resource names have the form:
      * `customers/{customer_id}/feedItemTargets/{feed_id}~{feed_item_id}~{feed_item_target_type}~{feed_item_target_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1279,12 +1279,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed item target.
+     * Immutable. The resource name of the feed item target.
      * Feed item target resource names have the form:
      * `customers/{customer_id}/feedItemTargets/{feed_id}~{feed_item_id}~{feed_item_target_type}~{feed_item_target_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1294,12 +1294,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed item target.
+     * Immutable. The resource name of the feed item target.
      * Feed item target resource names have the form:
      * `customers/{customer_id}/feedItemTargets/{feed_id}~{feed_item_id}~{feed_item_target_type}~{feed_item_target_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1318,20 +1318,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedItemBuilder_;
     /**
      * <pre>
-     * The feed item to which this feed item target belongs.
+     * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 2;</code>
+     * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasFeedItem() {
       return feedItemBuilder_ != null || feedItem_ != null;
     }
     /**
      * <pre>
-     * The feed item to which this feed item target belongs.
+     * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 2;</code>
+     * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getFeedItem() {
       if (feedItemBuilder_ == null) {
@@ -1342,10 +1342,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed item to which this feed item target belongs.
+     * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 2;</code>
+     * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeedItem(com.google.protobuf.StringValue value) {
       if (feedItemBuilder_ == null) {
@@ -1362,10 +1362,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed item to which this feed item target belongs.
+     * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 2;</code>
+     * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeedItem(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1380,10 +1380,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed item to which this feed item target belongs.
+     * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 2;</code>
+     * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeFeedItem(com.google.protobuf.StringValue value) {
       if (feedItemBuilder_ == null) {
@@ -1402,10 +1402,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed item to which this feed item target belongs.
+     * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 2;</code>
+     * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearFeedItem() {
       if (feedItemBuilder_ == null) {
@@ -1420,10 +1420,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed item to which this feed item target belongs.
+     * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 2;</code>
+     * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getFeedItemBuilder() {
       
@@ -1432,10 +1432,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed item to which this feed item target belongs.
+     * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 2;</code>
+     * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getFeedItemOrBuilder() {
       if (feedItemBuilder_ != null) {
@@ -1447,10 +1447,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed item to which this feed item target belongs.
+     * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed_item = 2;</code>
+     * <code>.google.protobuf.StringValue feed_item = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1469,20 +1469,20 @@ private static final long serialVersionUID = 0L;
     private int feedItemTargetType_ = 0;
     /**
      * <pre>
-     * The target type of this feed item target. This field is read-only.
+     * Output only. The target type of this feed item target. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getFeedItemTargetTypeValue() {
       return feedItemTargetType_;
     }
     /**
      * <pre>
-     * The target type of this feed item target. This field is read-only.
+     * Output only. The target type of this feed item target. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFeedItemTargetTypeValue(int value) {
       feedItemTargetType_ = value;
@@ -1491,10 +1491,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target type of this feed item target. This field is read-only.
+     * Output only. The target type of this feed item target. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType getFeedItemTargetType() {
       @SuppressWarnings("deprecation")
@@ -1503,10 +1503,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target type of this feed item target. This field is read-only.
+     * Output only. The target type of this feed item target. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFeedItemTargetType(com.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType value) {
       if (value == null) {
@@ -1519,10 +1519,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target type of this feed item target. This field is read-only.
+     * Output only. The target type of this feed item target. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearFeedItemTargetType() {
       
@@ -1536,20 +1536,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> feedItemTargetIdBuilder_;
     /**
      * <pre>
-     * The ID of the targeted resource. This field is read-only.
+     * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+     * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasFeedItemTargetId() {
       return feedItemTargetIdBuilder_ != null || feedItemTargetId_ != null;
     }
     /**
      * <pre>
-     * The ID of the targeted resource. This field is read-only.
+     * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+     * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getFeedItemTargetId() {
       if (feedItemTargetIdBuilder_ == null) {
@@ -1560,10 +1560,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the targeted resource. This field is read-only.
+     * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+     * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFeedItemTargetId(com.google.protobuf.Int64Value value) {
       if (feedItemTargetIdBuilder_ == null) {
@@ -1580,10 +1580,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the targeted resource. This field is read-only.
+     * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+     * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFeedItemTargetId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1598,10 +1598,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the targeted resource. This field is read-only.
+     * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+     * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeFeedItemTargetId(com.google.protobuf.Int64Value value) {
       if (feedItemTargetIdBuilder_ == null) {
@@ -1620,10 +1620,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the targeted resource. This field is read-only.
+     * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+     * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearFeedItemTargetId() {
       if (feedItemTargetIdBuilder_ == null) {
@@ -1638,10 +1638,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the targeted resource. This field is read-only.
+     * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+     * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getFeedItemTargetIdBuilder() {
       
@@ -1650,10 +1650,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the targeted resource. This field is read-only.
+     * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+     * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getFeedItemTargetIdOrBuilder() {
       if (feedItemTargetIdBuilder_ != null) {
@@ -1665,10 +1665,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the targeted resource. This field is read-only.
+     * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_item_target_id = 6;</code>
+     * <code>.google.protobuf.Int64Value feed_item_target_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1687,22 +1687,22 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Status of the feed item target.
+     * Output only. Status of the feed item target.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Status of the feed item target.
+     * Output only. Status of the feed item target.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -1711,11 +1711,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed item target.
+     * Output only. Status of the feed item target.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -1724,11 +1724,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed item target.
+     * Output only. Status of the feed item target.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus value) {
       if (value == null) {
@@ -1741,11 +1741,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed item target.
+     * Output only. Status of the feed item target.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetStatusEnum.FeedItemTargetStatus status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       
@@ -1758,20 +1758,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignBuilder_;
     /**
      * <pre>
-     * The targeted campaign.
+     * Immutable. The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 4;</code>
+     * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasCampaign() {
       return targetCase_ == 4;
     }
     /**
      * <pre>
-     * The targeted campaign.
+     * Immutable. The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 4;</code>
+     * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getCampaign() {
       if (campaignBuilder_ == null) {
@@ -1788,10 +1788,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted campaign.
+     * Immutable. The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 4;</code>
+     * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -1808,10 +1808,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted campaign.
+     * Immutable. The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 4;</code>
+     * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1826,10 +1826,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted campaign.
+     * Immutable. The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 4;</code>
+     * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -1852,10 +1852,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted campaign.
+     * Immutable. The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 4;</code>
+     * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearCampaign() {
       if (campaignBuilder_ == null) {
@@ -1875,20 +1875,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted campaign.
+     * Immutable. The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 4;</code>
+     * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getCampaignBuilder() {
       return getCampaignFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The targeted campaign.
+     * Immutable. The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 4;</code>
+     * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
       if ((targetCase_ == 4) && (campaignBuilder_ != null)) {
@@ -1902,10 +1902,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted campaign.
+     * Immutable. The targeted campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 4;</code>
+     * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1930,20 +1930,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupBuilder_;
     /**
      * <pre>
-     * The targeted ad group.
+     * Immutable. The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasAdGroup() {
       return targetCase_ == 5;
     }
     /**
      * <pre>
-     * The targeted ad group.
+     * Immutable. The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -1960,10 +1960,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted ad group.
+     * Immutable. The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -1980,10 +1980,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted ad group.
+     * Immutable. The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1998,10 +1998,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted ad group.
+     * Immutable. The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -2024,10 +2024,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted ad group.
+     * Immutable. The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -2047,20 +2047,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted ad group.
+     * Immutable. The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupBuilder() {
       return getAdGroupFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The targeted ad group.
+     * Immutable. The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
       if ((targetCase_ == 5) && (adGroupBuilder_ != null)) {
@@ -2074,10 +2074,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted ad group.
+     * Immutable. The targeted ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 5;</code>
+     * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2102,20 +2102,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.KeywordInfo, com.google.ads.googleads.v3.common.KeywordInfo.Builder, com.google.ads.googleads.v3.common.KeywordInfoOrBuilder> keywordBuilder_;
     /**
      * <pre>
-     * The targeted keyword.
+     * Immutable. The targeted keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasKeyword() {
       return targetCase_ == 7;
     }
     /**
      * <pre>
-     * The targeted keyword.
+     * Immutable. The targeted keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.KeywordInfo getKeyword() {
       if (keywordBuilder_ == null) {
@@ -2132,10 +2132,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted keyword.
+     * Immutable. The targeted keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setKeyword(com.google.ads.googleads.v3.common.KeywordInfo value) {
       if (keywordBuilder_ == null) {
@@ -2152,10 +2152,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted keyword.
+     * Immutable. The targeted keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setKeyword(
         com.google.ads.googleads.v3.common.KeywordInfo.Builder builderForValue) {
@@ -2170,10 +2170,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted keyword.
+     * Immutable. The targeted keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeKeyword(com.google.ads.googleads.v3.common.KeywordInfo value) {
       if (keywordBuilder_ == null) {
@@ -2196,10 +2196,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted keyword.
+     * Immutable. The targeted keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearKeyword() {
       if (keywordBuilder_ == null) {
@@ -2219,20 +2219,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted keyword.
+     * Immutable. The targeted keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.KeywordInfo.Builder getKeywordBuilder() {
       return getKeywordFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The targeted keyword.
+     * Immutable. The targeted keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.KeywordInfoOrBuilder getKeywordOrBuilder() {
       if ((targetCase_ == 7) && (keywordBuilder_ != null)) {
@@ -2246,10 +2246,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted keyword.
+     * Immutable. The targeted keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.KeywordInfo, com.google.ads.googleads.v3.common.KeywordInfo.Builder, com.google.ads.googleads.v3.common.KeywordInfoOrBuilder> 
@@ -2274,20 +2274,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> geoTargetConstantBuilder_;
     /**
      * <pre>
-     * The targeted geo target constant resource name.
+     * Immutable. The targeted geo target constant resource name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasGeoTargetConstant() {
       return targetCase_ == 8;
     }
     /**
      * <pre>
-     * The targeted geo target constant resource name.
+     * Immutable. The targeted geo target constant resource name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getGeoTargetConstant() {
       if (geoTargetConstantBuilder_ == null) {
@@ -2304,10 +2304,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted geo target constant resource name.
+     * Immutable. The targeted geo target constant resource name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setGeoTargetConstant(com.google.protobuf.StringValue value) {
       if (geoTargetConstantBuilder_ == null) {
@@ -2324,10 +2324,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted geo target constant resource name.
+     * Immutable. The targeted geo target constant resource name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setGeoTargetConstant(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2342,10 +2342,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted geo target constant resource name.
+     * Immutable. The targeted geo target constant resource name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeGeoTargetConstant(com.google.protobuf.StringValue value) {
       if (geoTargetConstantBuilder_ == null) {
@@ -2368,10 +2368,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted geo target constant resource name.
+     * Immutable. The targeted geo target constant resource name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearGeoTargetConstant() {
       if (geoTargetConstantBuilder_ == null) {
@@ -2391,20 +2391,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted geo target constant resource name.
+     * Immutable. The targeted geo target constant resource name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getGeoTargetConstantBuilder() {
       return getGeoTargetConstantFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The targeted geo target constant resource name.
+     * Immutable. The targeted geo target constant resource name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder() {
       if ((targetCase_ == 8) && (geoTargetConstantBuilder_ != null)) {
@@ -2418,10 +2418,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted geo target constant resource name.
+     * Immutable. The targeted geo target constant resource name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 8;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2444,10 +2444,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The targeted device.
+     * Immutable. The targeted device.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getDeviceValue() {
       if (targetCase_ == 9) {
@@ -2457,10 +2457,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted device.
+     * Immutable. The targeted device.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setDeviceValue(int value) {
       targetCase_ = 9;
@@ -2470,10 +2470,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted device.
+     * Immutable. The targeted device.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice getDevice() {
       if (targetCase_ == 9) {
@@ -2486,10 +2486,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted device.
+     * Immutable. The targeted device.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setDevice(com.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice value) {
       if (value == null) {
@@ -2502,10 +2502,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted device.
+     * Immutable. The targeted device.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice device = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearDevice() {
       if (targetCase_ == 9) {
@@ -2520,20 +2520,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.AdScheduleInfo, com.google.ads.googleads.v3.common.AdScheduleInfo.Builder, com.google.ads.googleads.v3.common.AdScheduleInfoOrBuilder> adScheduleBuilder_;
     /**
      * <pre>
-     * The targeted schedule.
+     * Immutable. The targeted schedule.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasAdSchedule() {
       return targetCase_ == 10;
     }
     /**
      * <pre>
-     * The targeted schedule.
+     * Immutable. The targeted schedule.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.AdScheduleInfo getAdSchedule() {
       if (adScheduleBuilder_ == null) {
@@ -2550,10 +2550,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted schedule.
+     * Immutable. The targeted schedule.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setAdSchedule(com.google.ads.googleads.v3.common.AdScheduleInfo value) {
       if (adScheduleBuilder_ == null) {
@@ -2570,10 +2570,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted schedule.
+     * Immutable. The targeted schedule.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setAdSchedule(
         com.google.ads.googleads.v3.common.AdScheduleInfo.Builder builderForValue) {
@@ -2588,10 +2588,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted schedule.
+     * Immutable. The targeted schedule.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeAdSchedule(com.google.ads.googleads.v3.common.AdScheduleInfo value) {
       if (adScheduleBuilder_ == null) {
@@ -2614,10 +2614,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted schedule.
+     * Immutable. The targeted schedule.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearAdSchedule() {
       if (adScheduleBuilder_ == null) {
@@ -2637,20 +2637,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted schedule.
+     * Immutable. The targeted schedule.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.AdScheduleInfo.Builder getAdScheduleBuilder() {
       return getAdScheduleFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The targeted schedule.
+     * Immutable. The targeted schedule.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.AdScheduleInfoOrBuilder getAdScheduleOrBuilder() {
       if ((targetCase_ == 10) && (adScheduleBuilder_ != null)) {
@@ -2664,10 +2664,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The targeted schedule.
+     * Immutable. The targeted schedule.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10;</code>
+     * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.AdScheduleInfo, com.google.ads.googleads.v3.common.AdScheduleInfo.Builder, com.google.ads.googleads.v3.common.AdScheduleInfoOrBuilder> 

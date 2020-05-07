@@ -1,3 +1,9 @@
+5.1.0 - 2020-05-06
+------------------
+- Added support for Google Ads API v3_1.
+- Fixed missing entity from ResourceNames for Ad.
+- Added various examples.
+
 5.0.0 - 2020-03-04
 ------------------
 - Added support for Google Ads API v3_0.

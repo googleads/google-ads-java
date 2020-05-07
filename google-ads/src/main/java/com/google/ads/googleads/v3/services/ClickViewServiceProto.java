@@ -33,21 +33,23 @@ public final class ClickViewServiceProto {
       "s.v3.services\0322google/ads/googleads/v3/r" +
       "esources/click_view.proto\032\034google/api/an" +
       "notations.proto\032\027google/api/client.proto" +
-      "\032\037google/api/field_behavior.proto\"1\n\023Get" +
-      "ClickViewRequest\022\032\n\rresource_name\030\001 \001(\tB" +
-      "\003\340A\0022\353\001\n\020ClickViewService\022\271\001\n\014GetClickVi" +
-      "ew\0225.google.ads.googleads.v3.services.Ge" +
-      "tClickViewRequest\032,.google.ads.googleads" +
-      ".v3.resources.ClickView\"D\202\323\344\223\002.\022,/v3/{re" +
-      "source_name=customers/*/clickViews/*}\332A\r" +
-      "resource_name\032\033\312A\030googleads.googleapis.c" +
-      "omB\374\001\n$com.google.ads.googleads.v3.servi" +
-      "cesB\025ClickViewServiceProtoP\001ZHgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v3/services;services\242\002\003GAA\252\002 Google.Ad" +
-      "s.GoogleAds.V3.Services\312\002 Google\\Ads\\Goo" +
-      "gleAds\\V3\\Services\352\002$Google::Ads::Google" +
-      "Ads::V3::Servicesb\006proto3"
+      "\032\037google/api/field_behavior.proto\032\031googl" +
+      "e/api/resource.proto\"X\n\023GetClickViewRequ" +
+      "est\022A\n\rresource_name\030\001 \001(\tB*\340A\002\372A$\n\"goog" +
+      "leads.googleapis.com/ClickView2\353\001\n\020Click" +
+      "ViewService\022\271\001\n\014GetClickView\0225.google.ad" +
+      "s.googleads.v3.services.GetClickViewRequ" +
+      "est\032,.google.ads.googleads.v3.resources." +
+      "ClickView\"D\202\323\344\223\002.\022,/v3/{resource_name=cu" +
+      "stomers/*/clickViews/*}\332A\rresource_name\032" +
+      "\033\312A\030googleads.googleapis.comB\374\001\n$com.goo" +
+      "gle.ads.googleads.v3.servicesB\025ClickView" +
+      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v3/services;" +
+      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3" +
+      ".Services\312\002 Google\\Ads\\GoogleAds\\V3\\Serv" +
+      "ices\352\002$Google::Ads::GoogleAds::V3::Servi" +
+      "cesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -64,6 +66,7 @@ public final class ClickViewServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetClickViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -77,12 +80,14 @@ public final class ClickViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.ClickViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

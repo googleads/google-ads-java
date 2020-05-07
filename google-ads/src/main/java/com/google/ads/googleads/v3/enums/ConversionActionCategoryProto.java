@@ -31,17 +31,24 @@ public final class ConversionActionCategoryProto {
       "\n>google/ads/googleads/v3/enums/conversi" +
       "on_action_category.proto\022\035google.ads.goo" +
       "gleads.v3.enums\032\034google/api/annotations." +
-      "proto\"\247\001\n\034ConversionActionCategoryEnum\"\206" +
-      "\001\n\030ConversionActionCategory\022\017\n\013UNSPECIFI" +
+      "proto\"\255\003\n\034ConversionActionCategoryEnum\"\214" +
+      "\003\n\030ConversionActionCategory\022\017\n\013UNSPECIFI" +
       "ED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007DEFAULT\020\002\022\r\n\tPAGE_V" +
       "IEW\020\003\022\014\n\010PURCHASE\020\004\022\n\n\006SIGNUP\020\005\022\010\n\004LEAD\020" +
-      "\006\022\014\n\010DOWNLOAD\020\007B\362\001\n!com.google.ads.googl" +
-      "eads.v3.enumsB\035ConversionActionCategoryP" +
-      "rotoP\001ZBgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v3/enums;enums\242\002\003GAA" +
-      "\252\002\035Google.Ads.GoogleAds.V3.Enums\312\002\035Googl" +
-      "e\\Ads\\GoogleAds\\V3\\Enums\352\002!Google::Ads::" +
-      "GoogleAds::V3::Enumsb\006proto3"
+      "\006\022\014\n\010DOWNLOAD\020\007\022\017\n\013ADD_TO_CART\020\010\022\022\n\016BEGI" +
+      "N_CHECKOUT\020\t\022\022\n\016SUBSCRIBE_PAID\020\n\022\023\n\017PHON" +
+      "E_CALL_LEAD\020\013\022\021\n\rIMPORTED_LEAD\020\014\022\024\n\020SUBM" +
+      "IT_LEAD_FORM\020\r\022\024\n\020BOOK_APPOINTMENT\020\016\022\021\n\r" +
+      "REQUEST_QUOTE\020\017\022\022\n\016GET_DIRECTIONS\020\020\022\022\n\016O" +
+      "UTBOUND_CLICK\020\021\022\013\n\007CONTACT\020\022\022\016\n\nENGAGEME" +
+      "NT\020\023\022\017\n\013STORE_VISIT\020\024\022\016\n\nSTORE_SALE\020\025B\362\001" +
+      "\n!com.google.ads.googleads.v3.enumsB\035Con" +
+      "versionActionCategoryProtoP\001ZBgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v3/enums;enums\242\002\003GAA\252\002\035Google.Ads.Goog" +
+      "leAds.V3.Enums\312\002\035Google\\Ads\\GoogleAds\\V3" +
+      "\\Enums\352\002!Google::Ads::GoogleAds::V3::Enu" +
+      "msb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

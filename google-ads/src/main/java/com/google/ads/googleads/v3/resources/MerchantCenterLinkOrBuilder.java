@@ -9,79 +9,79 @@ public interface MerchantCenterLinkOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the merchant center link.
+   * Immutable. The resource name of the merchant center link.
    * Merchant center link resource names have the form:
    * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the merchant center link.
+   * Immutable. The resource name of the merchant center link.
    * Merchant center link resource names have the form:
    * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the Merchant Center account.
+   * Output only. The ID of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the Merchant Center account.
+   * Output only. The ID of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the Merchant Center account.
+   * Output only. The ID of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * The name of the Merchant Center account.
+   * Output only. The name of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+   * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasMerchantCenterAccountName();
   /**
    * <pre>
-   * The name of the Merchant Center account.
+   * Output only. The name of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+   * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getMerchantCenterAccountName();
   /**
    * <pre>
-   * The name of the Merchant Center account.
+   * Output only. The name of the Merchant Center account.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue merchant_center_account_name = 4;</code>
+   * <code>.google.protobuf.StringValue merchant_center_account_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getMerchantCenterAccountNameOrBuilder();
 

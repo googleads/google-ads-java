@@ -9,48 +9,48 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the ad.
+   * Immutable. The resource name of the ad.
    * Ad resource names have the form:
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
-   * <code>string resource_name = 37;</code>
+   * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the ad.
+   * Immutable. The resource name of the ad.
    * Ad resource names have the form:
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
-   * <code>string resource_name = 37;</code>
+   * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the ad.
+   * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 1;</code>
+   * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the ad.
+   * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 1;</code>
+   * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the ad.
+   * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 1;</code>
+   * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
@@ -255,6 +255,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -265,6 +266,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -274,6 +276,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -283,6 +286,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -293,6 +297,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -327,52 +332,52 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * The type of ad.
+   * Output only. The type of ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getTypeValue();
   /**
    * <pre>
-   * The type of ad.
+   * Output only. The type of ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.AdTypeEnum.AdType getType();
 
   /**
    * <pre>
-   * Indicates if this ad was automatically added by Google Ads and not by a
+   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
    * user. For example, this could happen when ads are automatically created as
    * suggestions for new ads based on knowledge of how existing ads are
    * performing.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasAddedByGoogleAds();
   /**
    * <pre>
-   * Indicates if this ad was automatically added by Google Ads and not by a
+   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
    * user. For example, this could happen when ads are automatically created as
    * suggestions for new ads based on knowledge of how existing ads are
    * performing.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValue getAddedByGoogleAds();
   /**
    * <pre>
-   * Indicates if this ad was automatically added by Google Ads and not by a
+   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
    * user. For example, this could happen when ads are automatically created as
    * suggestions for new ads based on knowledge of how existing ads are
    * performing.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getAddedByGoogleAdsOrBuilder();
 
@@ -454,48 +459,48 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * The name of the ad. This is only used to be able to identify the ad. It
+   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
    * does not need to be unique and does not affect the served ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 23;</code>
+   * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasName();
   /**
    * <pre>
-   * The name of the ad. This is only used to be able to identify the ad. It
+   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
    * does not need to be unique and does not affect the served ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 23;</code>
+   * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * The name of the ad. This is only used to be able to identify the ad. It
+   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
    * does not need to be unique and does not affect the served ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 23;</code>
+   * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 
   /**
    * <pre>
-   * If this ad is system managed, then this field will indicate the source.
+   * Output only. If this ad is system managed, then this field will indicate the source.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+   * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getSystemManagedResourceSourceValue();
   /**
    * <pre>
-   * If this ad is system managed, then this field will indicate the source.
+   * Output only. If this ad is system managed, then this field will indicate the source.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+   * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource getSystemManagedResourceSource();
 
@@ -838,26 +843,26 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * Details pertaining to a legacy app install ad.
+   * Immutable. Details pertaining to a legacy app install ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasLegacyAppInstallAd();
   /**
    * <pre>
-   * Details pertaining to a legacy app install ad.
+   * Immutable. Details pertaining to a legacy app install ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo getLegacyAppInstallAd();
   /**
    * <pre>
-   * Details pertaining to a legacy app install ad.
+   * Immutable. Details pertaining to a legacy app install ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.common.LegacyAppInstallAdInfoOrBuilder getLegacyAppInstallAdOrBuilder();
 

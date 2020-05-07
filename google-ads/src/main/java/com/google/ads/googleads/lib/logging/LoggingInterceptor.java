@@ -150,12 +150,22 @@ public class LoggingInterceptor implements ClientInterceptor {
   }
 
   private static String getCustomerId(Object request) {
+    // Most requests have a customerId field.
     Optional<Method> getter =
         Stream.of(request.getClass().getMethods())
             .filter(method -> method.getName().equals("getCustomerId"))
             .findFirst();
+    // However, some requests only have a resource name (e.g. CustomerService.get()).
+    if (!getter.isPresent()) {
+      getter =
+          Stream.of(request.getClass().getMethods())
+              .filter(method -> method.getName().equals("getResourceName"))
+              .findFirst();
+    }
     if (getter.isPresent()) {
       try {
+        // If the customer ID is stored as a resource name we return the entire resource name rather
+        // than attempting to extract the customer ID.
         return (String) getter.get().invoke(request);
       } catch (IllegalAccessException | InvocationTargetException e) {
         thisClassLogger.error("Unable to retrieve customer ID from " + request);

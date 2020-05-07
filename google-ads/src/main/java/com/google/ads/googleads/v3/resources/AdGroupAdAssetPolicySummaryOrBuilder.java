@@ -9,81 +9,81 @@ public interface AdGroupAdAssetPolicySummaryOrBuilder extends
 
   /**
    * <pre>
-   * The list of policy findings for the ad group ad asset.
+   * Output only. The list of policy findings for the ad group ad asset.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEntry> 
       getPolicyTopicEntriesList();
   /**
    * <pre>
-   * The list of policy findings for the ad group ad asset.
+   * Output only. The list of policy findings for the ad group ad asset.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.common.PolicyTopicEntry getPolicyTopicEntries(int index);
   /**
    * <pre>
-   * The list of policy findings for the ad group ad asset.
+   * Output only. The list of policy findings for the ad group ad asset.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getPolicyTopicEntriesCount();
   /**
    * <pre>
-   * The list of policy findings for the ad group ad asset.
+   * Output only. The list of policy findings for the ad group ad asset.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   java.util.List<? extends com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder> 
       getPolicyTopicEntriesOrBuilderList();
   /**
    * <pre>
-   * The list of policy findings for the ad group ad asset.
+   * Output only. The list of policy findings for the ad group ad asset.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1;</code>
+   * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEntry policy_topic_entries = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.common.PolicyTopicEntryOrBuilder getPolicyTopicEntriesOrBuilder(
       int index);
 
   /**
    * <pre>
-   * Where in the review process this ad group ad asset is.
+   * Output only. Where in the review process this ad group ad asset is.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getReviewStatusValue();
   /**
    * <pre>
-   * Where in the review process this ad group ad asset is.
+   * Output only. Where in the review process this ad group ad asset is.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus();
 
   /**
    * <pre>
-   * The overall approval status of this ad group ad asset, calculated based on
+   * Output only. The overall approval status of this ad group ad asset, calculated based on
    * the status of its individual policy topic entries.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getApprovalStatusValue();
   /**
    * <pre>
-   * The overall approval status of this ad group ad asset, calculated based on
+   * Output only. The overall approval status of this ad group ad asset, calculated based on
    * the status of its individual policy topic entries.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus();
 }

@@ -5,7 +5,7 @@ package com.google.ads.googleads.v3.common;
 
 /**
  * <pre>
- * An atomic rule fragment.
+ * An atomic rule item.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v3.common.UserListRuleItemInfo}
@@ -230,7 +230,7 @@ private static final long serialVersionUID = 0L;
   public static final int NUMBER_RULE_ITEM_FIELD_NUMBER = 2;
   /**
    * <pre>
-   * An atomic rule fragment composed of a number operation.
+   * An atomic rule item composed of a number operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -240,7 +240,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An atomic rule fragment composed of a number operation.
+   * An atomic rule item composed of a number operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An atomic rule fragment composed of a number operation.
+   * An atomic rule item composed of a number operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
   public static final int STRING_RULE_ITEM_FIELD_NUMBER = 3;
   /**
    * <pre>
-   * An atomic rule fragment composed of a string operation.
+   * An atomic rule item composed of a string operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -278,7 +278,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An atomic rule fragment composed of a string operation.
+   * An atomic rule item composed of a string operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -291,7 +291,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An atomic rule fragment composed of a string operation.
+   * An atomic rule item composed of a string operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -306,7 +306,7 @@ private static final long serialVersionUID = 0L;
   public static final int DATE_RULE_ITEM_FIELD_NUMBER = 4;
   /**
    * <pre>
-   * An atomic rule fragment composed of a date operation.
+   * An atomic rule item composed of a date operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An atomic rule fragment composed of a date operation.
+   * An atomic rule item composed of a date operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -329,7 +329,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An atomic rule fragment composed of a date operation.
+   * An atomic rule item composed of a date operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An atomic rule fragment.
+   * An atomic rule item.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v3.common.UserListRuleItemInfo}
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.UserListNumberRuleItemInfo, com.google.ads.googleads.v3.common.UserListNumberRuleItemInfo.Builder, com.google.ads.googleads.v3.common.UserListNumberRuleItemInfoOrBuilder> numberRuleItemBuilder_;
     /**
      * <pre>
-     * An atomic rule fragment composed of a number operation.
+     * An atomic rule item composed of a number operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -1000,7 +1000,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a number operation.
+     * An atomic rule item composed of a number operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -1020,7 +1020,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a number operation.
+     * An atomic rule item composed of a number operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -1040,7 +1040,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a number operation.
+     * An atomic rule item composed of a number operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -1058,7 +1058,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a number operation.
+     * An atomic rule item composed of a number operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -1084,7 +1084,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a number operation.
+     * An atomic rule item composed of a number operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -1107,7 +1107,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a number operation.
+     * An atomic rule item composed of a number operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -1117,7 +1117,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a number operation.
+     * An atomic rule item composed of a number operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -1134,7 +1134,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a number operation.
+     * An atomic rule item composed of a number operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListNumberRuleItemInfo number_rule_item = 2;</code>
@@ -1162,7 +1162,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.UserListStringRuleItemInfo, com.google.ads.googleads.v3.common.UserListStringRuleItemInfo.Builder, com.google.ads.googleads.v3.common.UserListStringRuleItemInfoOrBuilder> stringRuleItemBuilder_;
     /**
      * <pre>
-     * An atomic rule fragment composed of a string operation.
+     * An atomic rule item composed of a string operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -1172,7 +1172,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a string operation.
+     * An atomic rule item composed of a string operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -1192,7 +1192,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a string operation.
+     * An atomic rule item composed of a string operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -1212,7 +1212,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a string operation.
+     * An atomic rule item composed of a string operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -1230,7 +1230,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a string operation.
+     * An atomic rule item composed of a string operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -1256,7 +1256,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a string operation.
+     * An atomic rule item composed of a string operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -1279,7 +1279,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a string operation.
+     * An atomic rule item composed of a string operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -1289,7 +1289,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a string operation.
+     * An atomic rule item composed of a string operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -1306,7 +1306,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a string operation.
+     * An atomic rule item composed of a string operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListStringRuleItemInfo string_rule_item = 3;</code>
@@ -1334,7 +1334,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.UserListDateRuleItemInfo, com.google.ads.googleads.v3.common.UserListDateRuleItemInfo.Builder, com.google.ads.googleads.v3.common.UserListDateRuleItemInfoOrBuilder> dateRuleItemBuilder_;
     /**
      * <pre>
-     * An atomic rule fragment composed of a date operation.
+     * An atomic rule item composed of a date operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -1344,7 +1344,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a date operation.
+     * An atomic rule item composed of a date operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -1364,7 +1364,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a date operation.
+     * An atomic rule item composed of a date operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -1384,7 +1384,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a date operation.
+     * An atomic rule item composed of a date operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -1402,7 +1402,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a date operation.
+     * An atomic rule item composed of a date operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -1428,7 +1428,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a date operation.
+     * An atomic rule item composed of a date operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -1451,7 +1451,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a date operation.
+     * An atomic rule item composed of a date operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -1461,7 +1461,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a date operation.
+     * An atomic rule item composed of a date operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>
@@ -1478,7 +1478,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An atomic rule fragment composed of a date operation.
+     * An atomic rule item composed of a date operation.
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserListDateRuleItemInfo date_rule_item = 4;</code>

@@ -9,73 +9,73 @@ public interface CampaignFeedOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the campaign feed.
+   * Immutable. The resource name of the campaign feed.
    * Campaign feed resource names have the form:
    * `customers/{customer_id}/campaignFeeds/{campaign_id}~{feed_id}
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the campaign feed.
+   * Immutable. The resource name of the campaign feed.
    * Campaign feed resource names have the form:
    * `customers/{customer_id}/campaignFeeds/{campaign_id}~{feed_id}
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The feed to which the CampaignFeed belongs.
+   * Immutable. The feed to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasFeed();
   /**
    * <pre>
-   * The feed to which the CampaignFeed belongs.
+   * Immutable. The feed to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getFeed();
   /**
    * <pre>
-   * The feed to which the CampaignFeed belongs.
+   * Immutable. The feed to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getFeedOrBuilder();
 
   /**
    * <pre>
-   * The campaign to which the CampaignFeed belongs.
+   * Immutable. The campaign to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 3;</code>
+   * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasCampaign();
   /**
    * <pre>
-   * The campaign to which the CampaignFeed belongs.
+   * Immutable. The campaign to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 3;</code>
+   * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getCampaign();
   /**
    * <pre>
-   * The campaign to which the CampaignFeed belongs.
+   * Immutable. The campaign to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 3;</code>
+   * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder();
 
@@ -159,20 +159,20 @@ public interface CampaignFeedOrBuilder extends
 
   /**
    * <pre>
-   * Status of the campaign feed.
+   * Output only. Status of the campaign feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getStatusValue();
   /**
    * <pre>
-   * Status of the campaign feed.
+   * Output only. Status of the campaign feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.FeedLinkStatusEnum.FeedLinkStatus getStatus();
 }

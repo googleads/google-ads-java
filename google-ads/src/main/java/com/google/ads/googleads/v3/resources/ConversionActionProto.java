@@ -50,60 +50,62 @@ public final class ConversionActionProto {
       "ums/conversion_action_status.proto\032:goog" +
       "le/ads/googleads/v3/enums/conversion_act" +
       "ion_type.proto\032<google/ads/googleads/v3/" +
-      "enums/data_driven_model_status.proto\032\031go" +
-      "ogle/api/resource.proto\032\036google/protobuf" +
-      "/wrappers.proto\032\034google/api/annotations." +
-      "proto\"\300\r\n\020ConversionAction\022\025\n\rresource_n" +
-      "ame\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.google.protobuf." +
-      "Int64Value\022*\n\004name\030\003 \001(\0132\034.google.protob" +
-      "uf.StringValue\022`\n\006status\030\004 \001(\0162P.google." +
-      "ads.googleads.v3.enums.ConversionActionS" +
-      "tatusEnum.ConversionActionStatus\022Z\n\004type" +
-      "\030\005 \001(\0162L.google.ads.googleads.v3.enums.C" +
-      "onversionActionTypeEnum.ConversionAction" +
-      "Type\022f\n\010category\030\006 \001(\0162T.google.ads.goog" +
-      "leads.v3.enums.ConversionActionCategoryE" +
-      "num.ConversionActionCategory\0224\n\016owner_cu" +
-      "stomer\030\007 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022A\n\035include_in_conversions_metric\030\010 \001(" +
-      "\0132\032.google.protobuf.BoolValue\022G\n\"click_t" +
-      "hrough_lookback_window_days\030\t \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022F\n!view_through_l" +
-      "ookback_window_days\030\n \001(\0132\033.google.proto" +
-      "buf.Int64Value\022Y\n\016value_settings\030\013 \001(\0132A" +
-      ".google.ads.googleads.v3.resources.Conve" +
-      "rsionAction.ValueSettings\022s\n\rcounting_ty" +
-      "pe\030\014 \001(\0162\\.google.ads.googleads.v3.enums" +
-      ".ConversionActionCountingTypeEnum.Conver" +
-      "sionActionCountingType\022p\n\032attribution_mo" +
-      "del_settings\030\r \001(\0132L.google.ads.googlead" +
-      "s.v3.resources.ConversionAction.Attribut" +
-      "ionModelSettings\022@\n\014tag_snippets\030\016 \003(\0132*" +
-      ".google.ads.googleads.v3.common.TagSnipp" +
-      "et\022@\n\033phone_call_duration_seconds\030\017 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022,\n\006app_id\030\020" +
-      " \001(\0132\034.google.protobuf.StringValue\032\355\001\n\030A" +
-      "ttributionModelSettings\022_\n\021attribution_m" +
-      "odel\030\001 \001(\0162D.google.ads.googleads.v3.enu" +
-      "ms.AttributionModelEnum.AttributionModel" +
-      "\022p\n\030data_driven_model_status\030\002 \001(\0162N.goo" +
-      "gle.ads.googleads.v3.enums.DataDrivenMod" +
-      "elStatusEnum.DataDrivenModelStatus\032\277\001\n\rV" +
-      "alueSettings\0223\n\rdefault_value\030\001 \001(\0132\034.go" +
-      "ogle.protobuf.DoubleValue\022;\n\025default_cur" +
-      "rency_code\030\002 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022<\n\030always_use_default_value\030\003 \001(\013" +
-      "2\032.google.protobuf.BoolValue:j\352Ag\n)googl" +
-      "eads.googleapis.com/ConversionAction\022:cu" +
-      "stomers/{customer}/conversionActions/{co" +
-      "nversion_action}B\202\002\n%com.google.ads.goog" +
-      "leads.v3.resourcesB\025ConversionActionProt" +
-      "oP\001ZJgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v3/resources;resources\242" +
-      "\002\003GAA\252\002!Google.Ads.GoogleAds.V3.Resource" +
-      "s\312\002!Google\\Ads\\GoogleAds\\V3\\Resources\352\002%" +
-      "Google::Ads::GoogleAds::V3::Resourcesb\006p" +
-      "roto3"
+      "enums/data_driven_model_status.proto\032\037go" +
+      "ogle/api/field_behavior.proto\032\031google/ap" +
+      "i/resource.proto\032\036google/protobuf/wrappe" +
+      "rs.proto\032\034google/api/annotations.proto\"\214" +
+      "\016\n\020ConversionAction\022H\n\rresource_name\030\001 \001" +
+      "(\tB1\340A\005\372A+\n)googleads.googleapis.com/Con" +
+      "versionAction\022,\n\002id\030\002 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\003\340A\003\022*\n\004name\030\003 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\022`\n\006status\030\004 \001(\0162" +
+      "P.google.ads.googleads.v3.enums.Conversi" +
+      "onActionStatusEnum.ConversionActionStatu" +
+      "s\022_\n\004type\030\005 \001(\0162L.google.ads.googleads.v" +
+      "3.enums.ConversionActionTypeEnum.Convers" +
+      "ionActionTypeB\003\340A\005\022f\n\010category\030\006 \001(\0162T.g" +
+      "oogle.ads.googleads.v3.enums.ConversionA" +
+      "ctionCategoryEnum.ConversionActionCatego" +
+      "ry\0229\n\016owner_customer\030\007 \001(\0132\034.google.prot" +
+      "obuf.StringValueB\003\340A\003\022A\n\035include_in_conv" +
+      "ersions_metric\030\010 \001(\0132\032.google.protobuf.B" +
+      "oolValue\022G\n\"click_through_lookback_windo" +
+      "w_days\030\t \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022F\n!view_through_lookback_window_days\030\n" +
+      " \001(\0132\033.google.protobuf.Int64Value\022Y\n\016val" +
+      "ue_settings\030\013 \001(\0132A.google.ads.googleads" +
+      ".v3.resources.ConversionAction.ValueSett" +
+      "ings\022s\n\rcounting_type\030\014 \001(\0162\\.google.ads" +
+      ".googleads.v3.enums.ConversionActionCoun" +
+      "tingTypeEnum.ConversionActionCountingTyp" +
+      "e\022p\n\032attribution_model_settings\030\r \001(\0132L." +
+      "google.ads.googleads.v3.resources.Conver" +
+      "sionAction.AttributionModelSettings\022E\n\014t" +
+      "ag_snippets\030\016 \003(\0132*.google.ads.googleads" +
+      ".v3.common.TagSnippetB\003\340A\003\022@\n\033phone_call" +
+      "_duration_seconds\030\017 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022,\n\006app_id\030\020 \001(\0132\034.google.pr" +
+      "otobuf.StringValue\032\362\001\n\030AttributionModelS" +
+      "ettings\022_\n\021attribution_model\030\001 \001(\0162D.goo" +
+      "gle.ads.googleads.v3.enums.AttributionMo" +
+      "delEnum.AttributionModel\022u\n\030data_driven_" +
+      "model_status\030\002 \001(\0162N.google.ads.googlead" +
+      "s.v3.enums.DataDrivenModelStatusEnum.Dat" +
+      "aDrivenModelStatusB\003\340A\003\032\277\001\n\rValueSetting" +
+      "s\0223\n\rdefault_value\030\001 \001(\0132\034.google.protob" +
+      "uf.DoubleValue\022;\n\025default_currency_code\030" +
+      "\002 \001(\0132\034.google.protobuf.StringValue\022<\n\030a" +
+      "lways_use_default_value\030\003 \001(\0132\032.google.p" +
+      "rotobuf.BoolValue:j\352Ag\n)googleads.google" +
+      "apis.com/ConversionAction\022:customers/{cu" +
+      "stomer}/conversionActions/{conversion_ac" +
+      "tion}B\202\002\n%com.google.ads.googleads.v3.re" +
+      "sourcesB\025ConversionActionProtoP\001ZJgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v3/resources;resources\242\002\003GAA\252\002!Goo" +
+      "gle.Ads.GoogleAds.V3.Resources\312\002!Google\\" +
+      "Ads\\GoogleAds\\V3\\Resources\352\002%Google::Ads" +
+      "::GoogleAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -123,6 +125,7 @@ public final class ConversionActionProto {
           com.google.ads.googleads.v3.enums.ConversionActionStatusProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.ConversionActionTypeProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.DataDrivenModelStatusProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -147,7 +150,9 @@ public final class ConversionActionProto {
         new java.lang.String[] { "DefaultValue", "DefaultCurrencyCode", "AlwaysUseDefaultValue", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.common.TagSnippetProto.getDescriptor();
@@ -157,6 +162,7 @@ public final class ConversionActionProto {
     com.google.ads.googleads.v3.enums.ConversionActionStatusProto.getDescriptor();
     com.google.ads.googleads.v3.enums.ConversionActionTypeProto.getDescriptor();
     com.google.ads.googleads.v3.enums.DataDrivenModelStatusProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

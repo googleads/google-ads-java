@@ -341,269 +341,269 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The resource name of the proposal.
+     * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+     * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     boolean hasAccountBudgetProposal();
     /**
      * <pre>
-     * The resource name of the proposal.
+     * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+     * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     com.google.protobuf.StringValue getAccountBudgetProposal();
     /**
      * <pre>
-     * The resource name of the proposal.
+     * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+     * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     com.google.protobuf.StringValueOrBuilder getAccountBudgetProposalOrBuilder();
 
     /**
      * <pre>
-     * The type of this proposal, e.g. END to end the budget associated
+     * Output only. The type of this proposal, e.g. END to end the budget associated
      * with this proposal.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     int getProposalTypeValue();
     /**
      * <pre>
-     * The type of this proposal, e.g. END to end the budget associated
+     * Output only. The type of this proposal, e.g. END to end the budget associated
      * with this proposal.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType getProposalType();
 
     /**
      * <pre>
-     * The name to assign to the account-level budget.
+     * Output only. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasName();
     /**
      * <pre>
-     * The name to assign to the account-level budget.
+     * Output only. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getName();
     /**
      * <pre>
-     * The name to assign to the account-level budget.
+     * Output only. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 
     /**
      * <pre>
-     * The start time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasStartDateTime();
     /**
      * <pre>
-     * The start time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getStartDateTime();
     /**
      * <pre>
-     * The start time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder();
 
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasPurchaseOrderNumber();
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getPurchaseOrderNumber();
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getPurchaseOrderNumberOrBuilder();
 
     /**
      * <pre>
-     * Notes associated with this budget.
+     * Output only. Notes associated with this budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 10;</code>
+     * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasNotes();
     /**
      * <pre>
-     * Notes associated with this budget.
+     * Output only. Notes associated with this budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 10;</code>
+     * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getNotes();
     /**
      * <pre>
-     * Notes associated with this budget.
+     * Output only. Notes associated with this budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 10;</code>
+     * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getNotesOrBuilder();
 
     /**
      * <pre>
-     * The time when this account-level budget proposal was created.
+     * Output only. The time when this account-level budget proposal was created.
      * Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasCreationDateTime();
     /**
      * <pre>
-     * The time when this account-level budget proposal was created.
+     * Output only. The time when this account-level budget proposal was created.
      * Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getCreationDateTime();
     /**
      * <pre>
-     * The time when this account-level budget proposal was created.
+     * Output only. The time when this account-level budget proposal was created.
      * Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getCreationDateTimeOrBuilder();
 
     /**
      * <pre>
-     * The end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasEndDateTime();
     /**
      * <pre>
-     * The end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getEndDateTime();
     /**
      * <pre>
-     * The end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder();
 
     /**
      * <pre>
-     * The end time as a well-defined type, e.g. FOREVER.
+     * Output only. The end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     int getEndTimeTypeValue();
     /**
      * <pre>
-     * The end time as a well-defined type, e.g. FOREVER.
+     * Output only. The end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getEndTimeType();
 
     /**
      * <pre>
-     * The spending limit in micros.  One million is equivalent to
+     * Output only. The spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasSpendingLimitMicros();
     /**
      * <pre>
-     * The spending limit in micros.  One million is equivalent to
+     * Output only. The spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64Value getSpendingLimitMicros();
     /**
      * <pre>
-     * The spending limit in micros.  One million is equivalent to
+     * Output only. The spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getSpendingLimitMicrosOrBuilder();
 
     /**
      * <pre>
-     * The spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The spending limit as a well-defined type, e.g. INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     int getSpendingLimitTypeValue();
     /**
      * <pre>
-     * The spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The spending limit as a well-defined type, e.g. INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getSpendingLimitType();
 
@@ -892,36 +892,36 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue accountBudgetProposal_;
     /**
      * <pre>
-     * The resource name of the proposal.
+     * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+     * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasAccountBudgetProposal() {
       return accountBudgetProposal_ != null;
     }
     /**
      * <pre>
-     * The resource name of the proposal.
+     * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+     * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getAccountBudgetProposal() {
       return accountBudgetProposal_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : accountBudgetProposal_;
     }
     /**
      * <pre>
-     * The resource name of the proposal.
+     * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+     * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAccountBudgetProposalOrBuilder() {
       return getAccountBudgetProposal();
@@ -931,22 +931,22 @@ private static final long serialVersionUID = 0L;
     private int proposalType_;
     /**
      * <pre>
-     * The type of this proposal, e.g. END to end the budget associated
+     * Output only. The type of this proposal, e.g. END to end the budget associated
      * with this proposal.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getProposalTypeValue() {
       return proposalType_;
     }
     /**
      * <pre>
-     * The type of this proposal, e.g. END to end the budget associated
+     * Output only. The type of this proposal, e.g. END to end the budget associated
      * with this proposal.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType getProposalType() {
       @SuppressWarnings("deprecation")
@@ -958,30 +958,30 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue name_;
     /**
      * <pre>
-     * The name to assign to the account-level budget.
+     * Output only. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasName() {
       return name_ != null;
     }
     /**
      * <pre>
-     * The name to assign to the account-level budget.
+     * Output only. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getName() {
       return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
     }
     /**
      * <pre>
-     * The name to assign to the account-level budget.
+     * Output only. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       return getName();
@@ -991,30 +991,30 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue startDateTime_;
     /**
      * <pre>
-     * The start time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasStartDateTime() {
       return startDateTime_ != null;
     }
     /**
      * <pre>
-     * The start time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getStartDateTime() {
       return startDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : startDateTime_;
     }
     /**
      * <pre>
-     * The start time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
       return getStartDateTime();
@@ -1024,33 +1024,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue purchaseOrderNumber_;
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPurchaseOrderNumber() {
       return purchaseOrderNumber_ != null;
     }
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPurchaseOrderNumber() {
       return purchaseOrderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : purchaseOrderNumber_;
     }
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPurchaseOrderNumberOrBuilder() {
       return getPurchaseOrderNumber();
@@ -1060,30 +1060,30 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue notes_;
     /**
      * <pre>
-     * Notes associated with this budget.
+     * Output only. Notes associated with this budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 10;</code>
+     * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasNotes() {
       return notes_ != null;
     }
     /**
      * <pre>
-     * Notes associated with this budget.
+     * Output only. Notes associated with this budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 10;</code>
+     * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getNotes() {
       return notes_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : notes_;
     }
     /**
      * <pre>
-     * Notes associated with this budget.
+     * Output only. Notes associated with this budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 10;</code>
+     * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNotesOrBuilder() {
       return getNotes();
@@ -1093,33 +1093,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue creationDateTime_;
     /**
      * <pre>
-     * The time when this account-level budget proposal was created.
+     * Output only. The time when this account-level budget proposal was created.
      * Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCreationDateTime() {
       return creationDateTime_ != null;
     }
     /**
      * <pre>
-     * The time when this account-level budget proposal was created.
+     * Output only. The time when this account-level budget proposal was created.
      * Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCreationDateTime() {
       return creationDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creationDateTime_;
     }
     /**
      * <pre>
-     * The time when this account-level budget proposal was created.
+     * Output only. The time when this account-level budget proposal was created.
      * Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCreationDateTimeOrBuilder() {
       return getCreationDateTime();
@@ -1128,20 +1128,20 @@ private static final long serialVersionUID = 0L;
     public static final int END_DATE_TIME_FIELD_NUMBER = 5;
     /**
      * <pre>
-     * The end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasEndDateTime() {
       return endTimeCase_ == 5;
     }
     /**
      * <pre>
-     * The end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getEndDateTime() {
       if (endTimeCase_ == 5) {
@@ -1151,10 +1151,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
       if (endTimeCase_ == 5) {
@@ -1166,10 +1166,10 @@ private static final long serialVersionUID = 0L;
     public static final int END_TIME_TYPE_FIELD_NUMBER = 6;
     /**
      * <pre>
-     * The end time as a well-defined type, e.g. FOREVER.
+     * Output only. The end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getEndTimeTypeValue() {
       if (endTimeCase_ == 6) {
@@ -1179,10 +1179,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end time as a well-defined type, e.g. FOREVER.
+     * Output only. The end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getEndTimeType() {
       if (endTimeCase_ == 6) {
@@ -1197,22 +1197,22 @@ private static final long serialVersionUID = 0L;
     public static final int SPENDING_LIMIT_MICROS_FIELD_NUMBER = 7;
     /**
      * <pre>
-     * The spending limit in micros.  One million is equivalent to
+     * Output only. The spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSpendingLimitMicros() {
       return spendingLimitCase_ == 7;
     }
     /**
      * <pre>
-     * The spending limit in micros.  One million is equivalent to
+     * Output only. The spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getSpendingLimitMicros() {
       if (spendingLimitCase_ == 7) {
@@ -1222,11 +1222,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The spending limit in micros.  One million is equivalent to
+     * Output only. The spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+     * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getSpendingLimitMicrosOrBuilder() {
       if (spendingLimitCase_ == 7) {
@@ -1238,10 +1238,10 @@ private static final long serialVersionUID = 0L;
     public static final int SPENDING_LIMIT_TYPE_FIELD_NUMBER = 8;
     /**
      * <pre>
-     * The spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The spending limit as a well-defined type, e.g. INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getSpendingLimitTypeValue() {
       if (spendingLimitCase_ == 8) {
@@ -1251,10 +1251,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The spending limit as a well-defined type, e.g. INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getSpendingLimitType() {
       if (spendingLimitCase_ == 8) {
@@ -1917,24 +1917,24 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> accountBudgetProposalBuilder_;
       /**
        * <pre>
-       * The resource name of the proposal.
+       * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+       * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public boolean hasAccountBudgetProposal() {
         return accountBudgetProposalBuilder_ != null || accountBudgetProposal_ != null;
       }
       /**
        * <pre>
-       * The resource name of the proposal.
+       * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+       * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public com.google.protobuf.StringValue getAccountBudgetProposal() {
         if (accountBudgetProposalBuilder_ == null) {
@@ -1945,12 +1945,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the proposal.
+       * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+       * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder setAccountBudgetProposal(com.google.protobuf.StringValue value) {
         if (accountBudgetProposalBuilder_ == null) {
@@ -1967,12 +1967,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the proposal.
+       * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+       * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder setAccountBudgetProposal(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1987,12 +1987,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the proposal.
+       * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+       * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder mergeAccountBudgetProposal(com.google.protobuf.StringValue value) {
         if (accountBudgetProposalBuilder_ == null) {
@@ -2011,12 +2011,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the proposal.
+       * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+       * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder clearAccountBudgetProposal() {
         if (accountBudgetProposalBuilder_ == null) {
@@ -2031,12 +2031,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the proposal.
+       * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+       * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public com.google.protobuf.StringValue.Builder getAccountBudgetProposalBuilder() {
         
@@ -2045,12 +2045,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the proposal.
+       * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+       * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public com.google.protobuf.StringValueOrBuilder getAccountBudgetProposalOrBuilder() {
         if (accountBudgetProposalBuilder_ != null) {
@@ -2062,12 +2062,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The resource name of the proposal.
+       * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
-       * <code>.google.protobuf.StringValue account_budget_proposal = 1;</code>
+       * <code>.google.protobuf.StringValue account_budget_proposal = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2086,22 +2086,22 @@ private static final long serialVersionUID = 0L;
       private int proposalType_ = 0;
       /**
        * <pre>
-       * The type of this proposal, e.g. END to end the budget associated
+       * Output only. The type of this proposal, e.g. END to end the budget associated
        * with this proposal.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2;</code>
+       * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public int getProposalTypeValue() {
         return proposalType_;
       }
       /**
        * <pre>
-       * The type of this proposal, e.g. END to end the budget associated
+       * Output only. The type of this proposal, e.g. END to end the budget associated
        * with this proposal.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2;</code>
+       * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setProposalTypeValue(int value) {
         proposalType_ = value;
@@ -2110,11 +2110,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The type of this proposal, e.g. END to end the budget associated
+       * Output only. The type of this proposal, e.g. END to end the budget associated
        * with this proposal.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2;</code>
+       * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType getProposalType() {
         @SuppressWarnings("deprecation")
@@ -2123,11 +2123,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The type of this proposal, e.g. END to end the budget associated
+       * Output only. The type of this proposal, e.g. END to end the budget associated
        * with this proposal.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2;</code>
+       * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setProposalType(com.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType value) {
         if (value == null) {
@@ -2140,11 +2140,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The type of this proposal, e.g. END to end the budget associated
+       * Output only. The type of this proposal, e.g. END to end the budget associated
        * with this proposal.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2;</code>
+       * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearProposalType() {
         
@@ -2158,20 +2158,20 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
       /**
        * <pre>
-       * The name to assign to the account-level budget.
+       * Output only. The name to assign to the account-level budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 3;</code>
+       * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasName() {
         return nameBuilder_ != null || name_ != null;
       }
       /**
        * <pre>
-       * The name to assign to the account-level budget.
+       * Output only. The name to assign to the account-level budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 3;</code>
+       * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getName() {
         if (nameBuilder_ == null) {
@@ -2182,10 +2182,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name to assign to the account-level budget.
+       * Output only. The name to assign to the account-level budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 3;</code>
+       * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setName(com.google.protobuf.StringValue value) {
         if (nameBuilder_ == null) {
@@ -2202,10 +2202,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name to assign to the account-level budget.
+       * Output only. The name to assign to the account-level budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 3;</code>
+       * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setName(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2220,10 +2220,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name to assign to the account-level budget.
+       * Output only. The name to assign to the account-level budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 3;</code>
+       * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeName(com.google.protobuf.StringValue value) {
         if (nameBuilder_ == null) {
@@ -2242,10 +2242,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name to assign to the account-level budget.
+       * Output only. The name to assign to the account-level budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 3;</code>
+       * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearName() {
         if (nameBuilder_ == null) {
@@ -2260,10 +2260,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name to assign to the account-level budget.
+       * Output only. The name to assign to the account-level budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 3;</code>
+       * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getNameBuilder() {
         
@@ -2272,10 +2272,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name to assign to the account-level budget.
+       * Output only. The name to assign to the account-level budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 3;</code>
+       * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
         if (nameBuilder_ != null) {
@@ -2287,10 +2287,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name to assign to the account-level budget.
+       * Output only. The name to assign to the account-level budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 3;</code>
+       * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2311,20 +2311,20 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> startDateTimeBuilder_;
       /**
        * <pre>
-       * The start time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+       * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasStartDateTime() {
         return startDateTimeBuilder_ != null || startDateTime_ != null;
       }
       /**
        * <pre>
-       * The start time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+       * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getStartDateTime() {
         if (startDateTimeBuilder_ == null) {
@@ -2335,10 +2335,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The start time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+       * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setStartDateTime(com.google.protobuf.StringValue value) {
         if (startDateTimeBuilder_ == null) {
@@ -2355,10 +2355,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The start time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+       * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setStartDateTime(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2373,10 +2373,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The start time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+       * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeStartDateTime(com.google.protobuf.StringValue value) {
         if (startDateTimeBuilder_ == null) {
@@ -2395,10 +2395,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The start time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+       * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearStartDateTime() {
         if (startDateTimeBuilder_ == null) {
@@ -2413,10 +2413,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The start time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+       * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getStartDateTimeBuilder() {
         
@@ -2425,10 +2425,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The start time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+       * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
         if (startDateTimeBuilder_ != null) {
@@ -2440,10 +2440,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The start time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+       * <code>.google.protobuf.StringValue start_date_time = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2464,22 +2464,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> purchaseOrderNumberBuilder_;
       /**
        * <pre>
-       * A purchase order number is a value that helps users reference this budget
+       * Output only. A purchase order number is a value that helps users reference this budget
        * in their monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasPurchaseOrderNumber() {
         return purchaseOrderNumberBuilder_ != null || purchaseOrderNumber_ != null;
       }
       /**
        * <pre>
-       * A purchase order number is a value that helps users reference this budget
+       * Output only. A purchase order number is a value that helps users reference this budget
        * in their monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getPurchaseOrderNumber() {
         if (purchaseOrderNumberBuilder_ == null) {
@@ -2490,11 +2490,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A purchase order number is a value that helps users reference this budget
+       * Output only. A purchase order number is a value that helps users reference this budget
        * in their monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setPurchaseOrderNumber(com.google.protobuf.StringValue value) {
         if (purchaseOrderNumberBuilder_ == null) {
@@ -2511,11 +2511,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A purchase order number is a value that helps users reference this budget
+       * Output only. A purchase order number is a value that helps users reference this budget
        * in their monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setPurchaseOrderNumber(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2530,11 +2530,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A purchase order number is a value that helps users reference this budget
+       * Output only. A purchase order number is a value that helps users reference this budget
        * in their monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergePurchaseOrderNumber(com.google.protobuf.StringValue value) {
         if (purchaseOrderNumberBuilder_ == null) {
@@ -2553,11 +2553,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A purchase order number is a value that helps users reference this budget
+       * Output only. A purchase order number is a value that helps users reference this budget
        * in their monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearPurchaseOrderNumber() {
         if (purchaseOrderNumberBuilder_ == null) {
@@ -2572,11 +2572,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A purchase order number is a value that helps users reference this budget
+       * Output only. A purchase order number is a value that helps users reference this budget
        * in their monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getPurchaseOrderNumberBuilder() {
         
@@ -2585,11 +2585,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A purchase order number is a value that helps users reference this budget
+       * Output only. A purchase order number is a value that helps users reference this budget
        * in their monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getPurchaseOrderNumberOrBuilder() {
         if (purchaseOrderNumberBuilder_ != null) {
@@ -2601,11 +2601,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A purchase order number is a value that helps users reference this budget
+       * Output only. A purchase order number is a value that helps users reference this budget
        * in their monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue purchase_order_number = 9;</code>
+       * <code>.google.protobuf.StringValue purchase_order_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2626,20 +2626,20 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> notesBuilder_;
       /**
        * <pre>
-       * Notes associated with this budget.
+       * Output only. Notes associated with this budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue notes = 10;</code>
+       * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasNotes() {
         return notesBuilder_ != null || notes_ != null;
       }
       /**
        * <pre>
-       * Notes associated with this budget.
+       * Output only. Notes associated with this budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue notes = 10;</code>
+       * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getNotes() {
         if (notesBuilder_ == null) {
@@ -2650,10 +2650,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Notes associated with this budget.
+       * Output only. Notes associated with this budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue notes = 10;</code>
+       * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setNotes(com.google.protobuf.StringValue value) {
         if (notesBuilder_ == null) {
@@ -2670,10 +2670,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Notes associated with this budget.
+       * Output only. Notes associated with this budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue notes = 10;</code>
+       * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setNotes(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2688,10 +2688,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Notes associated with this budget.
+       * Output only. Notes associated with this budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue notes = 10;</code>
+       * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeNotes(com.google.protobuf.StringValue value) {
         if (notesBuilder_ == null) {
@@ -2710,10 +2710,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Notes associated with this budget.
+       * Output only. Notes associated with this budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue notes = 10;</code>
+       * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearNotes() {
         if (notesBuilder_ == null) {
@@ -2728,10 +2728,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Notes associated with this budget.
+       * Output only. Notes associated with this budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue notes = 10;</code>
+       * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getNotesBuilder() {
         
@@ -2740,10 +2740,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Notes associated with this budget.
+       * Output only. Notes associated with this budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue notes = 10;</code>
+       * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getNotesOrBuilder() {
         if (notesBuilder_ != null) {
@@ -2755,10 +2755,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Notes associated with this budget.
+       * Output only. Notes associated with this budget.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue notes = 10;</code>
+       * <code>.google.protobuf.StringValue notes = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2779,22 +2779,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> creationDateTimeBuilder_;
       /**
        * <pre>
-       * The time when this account-level budget proposal was created.
+       * Output only. The time when this account-level budget proposal was created.
        * Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasCreationDateTime() {
         return creationDateTimeBuilder_ != null || creationDateTime_ != null;
       }
       /**
        * <pre>
-       * The time when this account-level budget proposal was created.
+       * Output only. The time when this account-level budget proposal was created.
        * Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getCreationDateTime() {
         if (creationDateTimeBuilder_ == null) {
@@ -2805,11 +2805,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this account-level budget proposal was created.
+       * Output only. The time when this account-level budget proposal was created.
        * Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setCreationDateTime(com.google.protobuf.StringValue value) {
         if (creationDateTimeBuilder_ == null) {
@@ -2826,11 +2826,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this account-level budget proposal was created.
+       * Output only. The time when this account-level budget proposal was created.
        * Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setCreationDateTime(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2845,11 +2845,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this account-level budget proposal was created.
+       * Output only. The time when this account-level budget proposal was created.
        * Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeCreationDateTime(com.google.protobuf.StringValue value) {
         if (creationDateTimeBuilder_ == null) {
@@ -2868,11 +2868,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this account-level budget proposal was created.
+       * Output only. The time when this account-level budget proposal was created.
        * Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearCreationDateTime() {
         if (creationDateTimeBuilder_ == null) {
@@ -2887,11 +2887,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this account-level budget proposal was created.
+       * Output only. The time when this account-level budget proposal was created.
        * Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getCreationDateTimeBuilder() {
         
@@ -2900,11 +2900,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this account-level budget proposal was created.
+       * Output only. The time when this account-level budget proposal was created.
        * Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getCreationDateTimeOrBuilder() {
         if (creationDateTimeBuilder_ != null) {
@@ -2916,11 +2916,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this account-level budget proposal was created.
+       * Output only. The time when this account-level budget proposal was created.
        * Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 11;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2940,20 +2940,20 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> endDateTimeBuilder_;
       /**
        * <pre>
-       * The end time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+       * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasEndDateTime() {
         return endTimeCase_ == 5;
       }
       /**
        * <pre>
-       * The end time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+       * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getEndDateTime() {
         if (endDateTimeBuilder_ == null) {
@@ -2970,10 +2970,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The end time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+       * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setEndDateTime(com.google.protobuf.StringValue value) {
         if (endDateTimeBuilder_ == null) {
@@ -2990,10 +2990,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The end time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+       * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setEndDateTime(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3008,10 +3008,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The end time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+       * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeEndDateTime(com.google.protobuf.StringValue value) {
         if (endDateTimeBuilder_ == null) {
@@ -3034,10 +3034,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The end time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+       * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearEndDateTime() {
         if (endDateTimeBuilder_ == null) {
@@ -3057,20 +3057,20 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The end time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+       * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getEndDateTimeBuilder() {
         return getEndDateTimeFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * The end time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+       * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
         if ((endTimeCase_ == 5) && (endDateTimeBuilder_ != null)) {
@@ -3084,10 +3084,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The end time in yyyy-MM-dd HH:mm:ss format.
+       * Output only. The end time in yyyy-MM-dd HH:mm:ss format.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+       * <code>.google.protobuf.StringValue end_date_time = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -3110,10 +3110,10 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, e.g. FOREVER.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6;</code>
+       * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public int getEndTimeTypeValue() {
         if (endTimeCase_ == 6) {
@@ -3123,10 +3123,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, e.g. FOREVER.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6;</code>
+       * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setEndTimeTypeValue(int value) {
         endTimeCase_ = 6;
@@ -3136,10 +3136,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, e.g. FOREVER.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6;</code>
+       * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getEndTimeType() {
         if (endTimeCase_ == 6) {
@@ -3152,10 +3152,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, e.g. FOREVER.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6;</code>
+       * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setEndTimeType(com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType value) {
         if (value == null) {
@@ -3168,10 +3168,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, e.g. FOREVER.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6;</code>
+       * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearEndTimeType() {
         if (endTimeCase_ == 6) {
@@ -3186,22 +3186,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> spendingLimitMicrosBuilder_;
       /**
        * <pre>
-       * The spending limit in micros.  One million is equivalent to
+       * Output only. The spending limit in micros.  One million is equivalent to
        * one unit.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasSpendingLimitMicros() {
         return spendingLimitCase_ == 7;
       }
       /**
        * <pre>
-       * The spending limit in micros.  One million is equivalent to
+       * Output only. The spending limit in micros.  One million is equivalent to
        * one unit.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value getSpendingLimitMicros() {
         if (spendingLimitMicrosBuilder_ == null) {
@@ -3218,11 +3218,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The spending limit in micros.  One million is equivalent to
+       * Output only. The spending limit in micros.  One million is equivalent to
        * one unit.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setSpendingLimitMicros(com.google.protobuf.Int64Value value) {
         if (spendingLimitMicrosBuilder_ == null) {
@@ -3239,11 +3239,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The spending limit in micros.  One million is equivalent to
+       * Output only. The spending limit in micros.  One million is equivalent to
        * one unit.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setSpendingLimitMicros(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3258,11 +3258,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The spending limit in micros.  One million is equivalent to
+       * Output only. The spending limit in micros.  One million is equivalent to
        * one unit.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeSpendingLimitMicros(com.google.protobuf.Int64Value value) {
         if (spendingLimitMicrosBuilder_ == null) {
@@ -3285,11 +3285,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The spending limit in micros.  One million is equivalent to
+       * Output only. The spending limit in micros.  One million is equivalent to
        * one unit.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearSpendingLimitMicros() {
         if (spendingLimitMicrosBuilder_ == null) {
@@ -3309,22 +3309,22 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The spending limit in micros.  One million is equivalent to
+       * Output only. The spending limit in micros.  One million is equivalent to
        * one unit.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value.Builder getSpendingLimitMicrosBuilder() {
         return getSpendingLimitMicrosFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * The spending limit in micros.  One million is equivalent to
+       * Output only. The spending limit in micros.  One million is equivalent to
        * one unit.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getSpendingLimitMicrosOrBuilder() {
         if ((spendingLimitCase_ == 7) && (spendingLimitMicrosBuilder_ != null)) {
@@ -3338,11 +3338,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The spending limit in micros.  One million is equivalent to
+       * Output only. The spending limit in micros.  One million is equivalent to
        * one unit.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value spending_limit_micros = 7;</code>
+       * <code>.google.protobuf.Int64Value spending_limit_micros = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3365,10 +3365,10 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8;</code>
+       * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public int getSpendingLimitTypeValue() {
         if (spendingLimitCase_ == 8) {
@@ -3378,10 +3378,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8;</code>
+       * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setSpendingLimitTypeValue(int value) {
         spendingLimitCase_ = 8;
@@ -3391,10 +3391,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8;</code>
+       * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getSpendingLimitType() {
         if (spendingLimitCase_ == 8) {
@@ -3407,10 +3407,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8;</code>
+       * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setSpendingLimitType(com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType value) {
         if (value == null) {
@@ -3423,10 +3423,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
        * </pre>
        *
-       * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8;</code>
+       * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearSpendingLimitType() {
         if (spendingLimitCase_ == 8) {
@@ -3683,12 +3683,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the account-level budget.
+   * Output only. The resource name of the account-level budget.
    * AccountBudget resource names have the form:
    * `customers/{customer_id}/accountBudgets/{account_budget_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -3704,12 +3704,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the account-level budget.
+   * Output only. The resource name of the account-level budget.
    * AccountBudget resource names have the form:
    * `customers/{customer_id}/accountBudgets/{account_budget_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -3729,30 +3729,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the account-level budget.
+   * Output only. The ID of the account-level budget.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the account-level budget.
+   * Output only. The ID of the account-level budget.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the account-level budget.
+   * Output only. The ID of the account-level budget.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -3762,36 +3762,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue billingSetup_;
   /**
    * <pre>
-   * The resource name of the billing setup associated with this account-level
+   * Output only. The resource name of the billing setup associated with this account-level
    * budget.  BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+   * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasBillingSetup() {
     return billingSetup_ != null;
   }
   /**
    * <pre>
-   * The resource name of the billing setup associated with this account-level
+   * Output only. The resource name of the billing setup associated with this account-level
    * budget.  BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+   * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getBillingSetup() {
     return billingSetup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : billingSetup_;
   }
   /**
    * <pre>
-   * The resource name of the billing setup associated with this account-level
+   * Output only. The resource name of the billing setup associated with this account-level
    * budget.  BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+   * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getBillingSetupOrBuilder() {
     return getBillingSetup();
@@ -3801,20 +3801,20 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * The status of this account-level budget.
+   * Output only. The status of this account-level budget.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * The status of this account-level budget.
+   * Output only. The status of this account-level budget.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -3826,30 +3826,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * The name of the account-level budget.
+   * Output only. The name of the account-level budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 5;</code>
+   * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * The name of the account-level budget.
+   * Output only. The name of the account-level budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 5;</code>
+   * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * The name of the account-level budget.
+   * Output only. The name of the account-level budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 5;</code>
+   * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
@@ -3859,36 +3859,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue proposedStartDateTime_;
   /**
    * <pre>
-   * The proposed start time of the account-level budget in
+   * Output only. The proposed start time of the account-level budget in
    * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
    * this is the time of request.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+   * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasProposedStartDateTime() {
     return proposedStartDateTime_ != null;
   }
   /**
    * <pre>
-   * The proposed start time of the account-level budget in
+   * Output only. The proposed start time of the account-level budget in
    * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
    * this is the time of request.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+   * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getProposedStartDateTime() {
     return proposedStartDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : proposedStartDateTime_;
   }
   /**
    * <pre>
-   * The proposed start time of the account-level budget in
+   * Output only. The proposed start time of the account-level budget in
    * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
    * this is the time of request.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+   * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getProposedStartDateTimeOrBuilder() {
     return getProposedStartDateTime();
@@ -3898,39 +3898,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue approvedStartDateTime_;
   /**
    * <pre>
-   * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+   * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
    * format.
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+   * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasApprovedStartDateTime() {
     return approvedStartDateTime_ != null;
   }
   /**
    * <pre>
-   * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+   * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
    * format.
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+   * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getApprovedStartDateTime() {
     return approvedStartDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : approvedStartDateTime_;
   }
   /**
    * <pre>
-   * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+   * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
    * format.
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+   * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getApprovedStartDateTimeOrBuilder() {
     return getApprovedStartDateTime();
@@ -3940,33 +3940,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value totalAdjustmentsMicros_;
   /**
    * <pre>
-   * The total adjustments amount.
+   * Output only. The total adjustments amount.
    * An example of an adjustment is courtesy credits.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+   * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasTotalAdjustmentsMicros() {
     return totalAdjustmentsMicros_ != null;
   }
   /**
    * <pre>
-   * The total adjustments amount.
+   * Output only. The total adjustments amount.
    * An example of an adjustment is courtesy credits.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+   * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getTotalAdjustmentsMicros() {
     return totalAdjustmentsMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : totalAdjustmentsMicros_;
   }
   /**
    * <pre>
-   * The total adjustments amount.
+   * Output only. The total adjustments amount.
    * An example of an adjustment is courtesy credits.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+   * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getTotalAdjustmentsMicrosOrBuilder() {
     return getTotalAdjustmentsMicros();
@@ -3976,36 +3976,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value amountServedMicros_;
   /**
    * <pre>
-   * The value of Ads that have been served, in micros.
+   * Output only. The value of Ads that have been served, in micros.
    * This includes overdelivery costs, in which case a credit might be
    * automatically applied to the budget (see total_adjustments_micros).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+   * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasAmountServedMicros() {
     return amountServedMicros_ != null;
   }
   /**
    * <pre>
-   * The value of Ads that have been served, in micros.
+   * Output only. The value of Ads that have been served, in micros.
    * This includes overdelivery costs, in which case a credit might be
    * automatically applied to the budget (see total_adjustments_micros).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+   * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getAmountServedMicros() {
     return amountServedMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : amountServedMicros_;
   }
   /**
    * <pre>
-   * The value of Ads that have been served, in micros.
+   * Output only. The value of Ads that have been served, in micros.
    * This includes overdelivery costs, in which case a credit might be
    * automatically applied to the budget (see total_adjustments_micros).
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+   * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getAmountServedMicrosOrBuilder() {
     return getAmountServedMicros();
@@ -4015,33 +4015,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue purchaseOrderNumber_;
   /**
    * <pre>
-   * A purchase order number is a value that helps users reference this budget
+   * Output only. A purchase order number is a value that helps users reference this budget
    * in their monthly invoices.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+   * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasPurchaseOrderNumber() {
     return purchaseOrderNumber_ != null;
   }
   /**
    * <pre>
-   * A purchase order number is a value that helps users reference this budget
+   * Output only. A purchase order number is a value that helps users reference this budget
    * in their monthly invoices.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+   * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getPurchaseOrderNumber() {
     return purchaseOrderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : purchaseOrderNumber_;
   }
   /**
    * <pre>
-   * A purchase order number is a value that helps users reference this budget
+   * Output only. A purchase order number is a value that helps users reference this budget
    * in their monthly invoices.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+   * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getPurchaseOrderNumberOrBuilder() {
     return getPurchaseOrderNumber();
@@ -4051,30 +4051,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue notes_;
   /**
    * <pre>
-   * Notes associated with the budget.
+   * Output only. Notes associated with the budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue notes = 21;</code>
+   * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasNotes() {
     return notes_ != null;
   }
   /**
    * <pre>
-   * Notes associated with the budget.
+   * Output only. Notes associated with the budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue notes = 21;</code>
+   * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getNotes() {
     return notes_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : notes_;
   }
   /**
    * <pre>
-   * Notes associated with the budget.
+   * Output only. Notes associated with the budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue notes = 21;</code>
+   * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getNotesOrBuilder() {
     return getNotes();
@@ -4084,30 +4084,30 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pendingProposal_;
   /**
    * <pre>
-   * The pending proposal to modify this budget, if applicable.
+   * Output only. The pending proposal to modify this budget, if applicable.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+   * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasPendingProposal() {
     return pendingProposal_ != null;
   }
   /**
    * <pre>
-   * The pending proposal to modify this budget, if applicable.
+   * Output only. The pending proposal to modify this budget, if applicable.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+   * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal getPendingProposal() {
     return pendingProposal_ == null ? com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal.getDefaultInstance() : pendingProposal_;
   }
   /**
    * <pre>
-   * The pending proposal to modify this budget, if applicable.
+   * Output only. The pending proposal to modify this budget, if applicable.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+   * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposalOrBuilder getPendingProposalOrBuilder() {
     return getPendingProposal();
@@ -4116,20 +4116,20 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_END_DATE_TIME_FIELD_NUMBER = 8;
   /**
    * <pre>
-   * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+   * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+   * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasProposedEndDateTime() {
     return proposedEndTimeCase_ == 8;
   }
   /**
    * <pre>
-   * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+   * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+   * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getProposedEndDateTime() {
     if (proposedEndTimeCase_ == 8) {
@@ -4139,10 +4139,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+   * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+   * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getProposedEndDateTimeOrBuilder() {
     if (proposedEndTimeCase_ == 8) {
@@ -4154,10 +4154,10 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_END_TIME_TYPE_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * The proposed end time as a well-defined type, e.g. FOREVER.
+   * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getProposedEndTimeTypeValue() {
     if (proposedEndTimeCase_ == 9) {
@@ -4167,10 +4167,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The proposed end time as a well-defined type, e.g. FOREVER.
+   * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getProposedEndTimeType() {
     if (proposedEndTimeCase_ == 9) {
@@ -4185,20 +4185,20 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_END_DATE_TIME_FIELD_NUMBER = 10;
   /**
    * <pre>
-   * The approved end time in yyyy-MM-dd HH:mm:ss format.
+   * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+   * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasApprovedEndDateTime() {
     return approvedEndTimeCase_ == 10;
   }
   /**
    * <pre>
-   * The approved end time in yyyy-MM-dd HH:mm:ss format.
+   * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+   * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getApprovedEndDateTime() {
     if (approvedEndTimeCase_ == 10) {
@@ -4208,10 +4208,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The approved end time in yyyy-MM-dd HH:mm:ss format.
+   * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+   * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getApprovedEndDateTimeOrBuilder() {
     if (approvedEndTimeCase_ == 10) {
@@ -4223,10 +4223,10 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_END_TIME_TYPE_FIELD_NUMBER = 11;
   /**
    * <pre>
-   * The approved end time as a well-defined type, e.g. FOREVER.
+   * Output only. The approved end time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getApprovedEndTimeTypeValue() {
     if (approvedEndTimeCase_ == 11) {
@@ -4236,10 +4236,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The approved end time as a well-defined type, e.g. FOREVER.
+   * Output only. The approved end time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getApprovedEndTimeType() {
     if (approvedEndTimeCase_ == 11) {
@@ -4254,22 +4254,22 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_SPENDING_LIMIT_MICROS_FIELD_NUMBER = 12;
   /**
    * <pre>
-   * The proposed spending limit in micros.  One million is equivalent to
+   * Output only. The proposed spending limit in micros.  One million is equivalent to
    * one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasProposedSpendingLimitMicros() {
     return proposedSpendingLimitCase_ == 12;
   }
   /**
    * <pre>
-   * The proposed spending limit in micros.  One million is equivalent to
+   * Output only. The proposed spending limit in micros.  One million is equivalent to
    * one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getProposedSpendingLimitMicros() {
     if (proposedSpendingLimitCase_ == 12) {
@@ -4279,11 +4279,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The proposed spending limit in micros.  One million is equivalent to
+   * Output only. The proposed spending limit in micros.  One million is equivalent to
    * one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getProposedSpendingLimitMicrosOrBuilder() {
     if (proposedSpendingLimitCase_ == 12) {
@@ -4295,10 +4295,10 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 13;
   /**
    * <pre>
-   * The proposed spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13;</code>
+   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getProposedSpendingLimitTypeValue() {
     if (proposedSpendingLimitCase_ == 13) {
@@ -4308,10 +4308,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The proposed spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13;</code>
+   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getProposedSpendingLimitType() {
     if (proposedSpendingLimitCase_ == 13) {
@@ -4326,26 +4326,26 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_SPENDING_LIMIT_MICROS_FIELD_NUMBER = 14;
   /**
    * <pre>
-   * The approved spending limit in micros.  One million is equivalent to
+   * Output only. The approved spending limit in micros.  One million is equivalent to
    * one unit.  This will only be populated if the proposed spending limit
    * is finite, and will always be greater than or equal to the
    * proposed spending limit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasApprovedSpendingLimitMicros() {
     return approvedSpendingLimitCase_ == 14;
   }
   /**
    * <pre>
-   * The approved spending limit in micros.  One million is equivalent to
+   * Output only. The approved spending limit in micros.  One million is equivalent to
    * one unit.  This will only be populated if the proposed spending limit
    * is finite, and will always be greater than or equal to the
    * proposed spending limit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getApprovedSpendingLimitMicros() {
     if (approvedSpendingLimitCase_ == 14) {
@@ -4355,13 +4355,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The approved spending limit in micros.  One million is equivalent to
+   * Output only. The approved spending limit in micros.  One million is equivalent to
    * one unit.  This will only be populated if the proposed spending limit
    * is finite, and will always be greater than or equal to the
    * proposed spending limit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getApprovedSpendingLimitMicrosOrBuilder() {
     if (approvedSpendingLimitCase_ == 14) {
@@ -4373,11 +4373,11 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 15;
   /**
    * <pre>
-   * The approved spending limit as a well-defined type, e.g. INFINITE.  This
+   * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
    * will only be populated if the approved spending limit is INFINITE.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getApprovedSpendingLimitTypeValue() {
     if (approvedSpendingLimitCase_ == 15) {
@@ -4387,11 +4387,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The approved spending limit as a well-defined type, e.g. INFINITE.  This
+   * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
    * will only be populated if the approved spending limit is INFINITE.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getApprovedSpendingLimitType() {
     if (approvedSpendingLimitCase_ == 15) {
@@ -4406,7 +4406,7 @@ private static final long serialVersionUID = 0L;
   public static final int ADJUSTED_SPENDING_LIMIT_MICROS_FIELD_NUMBER = 16;
   /**
    * <pre>
-   * The adjusted spending limit in micros.  One million is equivalent to
+   * Output only. The adjusted spending limit in micros.  One million is equivalent to
    * one unit.
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
@@ -4417,14 +4417,14 @@ private static final long serialVersionUID = 0L;
    * allowed to spend.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+   * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasAdjustedSpendingLimitMicros() {
     return adjustedSpendingLimitCase_ == 16;
   }
   /**
    * <pre>
-   * The adjusted spending limit in micros.  One million is equivalent to
+   * Output only. The adjusted spending limit in micros.  One million is equivalent to
    * one unit.
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
@@ -4435,7 +4435,7 @@ private static final long serialVersionUID = 0L;
    * allowed to spend.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+   * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getAdjustedSpendingLimitMicros() {
     if (adjustedSpendingLimitCase_ == 16) {
@@ -4445,7 +4445,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The adjusted spending limit in micros.  One million is equivalent to
+   * Output only. The adjusted spending limit in micros.  One million is equivalent to
    * one unit.
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
@@ -4456,7 +4456,7 @@ private static final long serialVersionUID = 0L;
    * allowed to spend.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+   * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getAdjustedSpendingLimitMicrosOrBuilder() {
     if (adjustedSpendingLimitCase_ == 16) {
@@ -4468,13 +4468,13 @@ private static final long serialVersionUID = 0L;
   public static final int ADJUSTED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 17;
   /**
    * <pre>
-   * The adjusted spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
    * This will only be populated if the adjusted spending limit is INFINITE,
    * which is guaranteed to be true if the approved spending limit is
    * INFINITE.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17;</code>
+   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getAdjustedSpendingLimitTypeValue() {
     if (adjustedSpendingLimitCase_ == 17) {
@@ -4484,13 +4484,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The adjusted spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
    * This will only be populated if the adjusted spending limit is INFINITE,
    * which is guaranteed to be true if the approved spending limit is
    * INFINITE.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17;</code>
+   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getAdjustedSpendingLimitType() {
     if (adjustedSpendingLimitCase_ == 17) {
@@ -5540,12 +5540,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the account-level budget.
+     * Output only. The resource name of the account-level budget.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -5561,12 +5561,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the account-level budget.
+     * Output only. The resource name of the account-level budget.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -5583,12 +5583,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the account-level budget.
+     * Output only. The resource name of the account-level budget.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -5602,12 +5602,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the account-level budget.
+     * Output only. The resource name of the account-level budget.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -5617,12 +5617,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the account-level budget.
+     * Output only. The resource name of the account-level budget.
      * AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -5641,20 +5641,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the account-level budget.
+     * Output only. The ID of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the account-level budget.
+     * Output only. The ID of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -5665,10 +5665,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the account-level budget.
+     * Output only. The ID of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -5685,10 +5685,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the account-level budget.
+     * Output only. The ID of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -5703,10 +5703,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the account-level budget.
+     * Output only. The ID of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -5725,10 +5725,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the account-level budget.
+     * Output only. The ID of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -5743,10 +5743,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the account-level budget.
+     * Output only. The ID of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -5755,10 +5755,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the account-level budget.
+     * Output only. The ID of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -5770,10 +5770,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the account-level budget.
+     * Output only. The ID of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -5794,24 +5794,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> billingSetupBuilder_;
     /**
      * <pre>
-     * The resource name of the billing setup associated with this account-level
+     * Output only. The resource name of the billing setup associated with this account-level
      * budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasBillingSetup() {
       return billingSetupBuilder_ != null || billingSetup_ != null;
     }
     /**
      * <pre>
-     * The resource name of the billing setup associated with this account-level
+     * Output only. The resource name of the billing setup associated with this account-level
      * budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getBillingSetup() {
       if (billingSetupBuilder_ == null) {
@@ -5822,12 +5822,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup associated with this account-level
+     * Output only. The resource name of the billing setup associated with this account-level
      * budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setBillingSetup(com.google.protobuf.StringValue value) {
       if (billingSetupBuilder_ == null) {
@@ -5844,12 +5844,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup associated with this account-level
+     * Output only. The resource name of the billing setup associated with this account-level
      * budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setBillingSetup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5864,12 +5864,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup associated with this account-level
+     * Output only. The resource name of the billing setup associated with this account-level
      * budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeBillingSetup(com.google.protobuf.StringValue value) {
       if (billingSetupBuilder_ == null) {
@@ -5888,12 +5888,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup associated with this account-level
+     * Output only. The resource name of the billing setup associated with this account-level
      * budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearBillingSetup() {
       if (billingSetupBuilder_ == null) {
@@ -5908,12 +5908,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup associated with this account-level
+     * Output only. The resource name of the billing setup associated with this account-level
      * budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getBillingSetupBuilder() {
       
@@ -5922,12 +5922,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup associated with this account-level
+     * Output only. The resource name of the billing setup associated with this account-level
      * budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getBillingSetupOrBuilder() {
       if (billingSetupBuilder_ != null) {
@@ -5939,12 +5939,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup associated with this account-level
+     * Output only. The resource name of the billing setup associated with this account-level
      * budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>.google.protobuf.StringValue billing_setup = 3;</code>
+     * <code>.google.protobuf.StringValue billing_setup = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -5963,20 +5963,20 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * The status of this account-level budget.
+     * Output only. The status of this account-level budget.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * The status of this account-level budget.
+     * Output only. The status of this account-level budget.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -5985,10 +5985,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this account-level budget.
+     * Output only. The status of this account-level budget.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -5997,10 +5997,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this account-level budget.
+     * Output only. The status of this account-level budget.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus value) {
       if (value == null) {
@@ -6013,10 +6013,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this account-level budget.
+     * Output only. The status of this account-level budget.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AccountBudgetStatusEnum.AccountBudgetStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       
@@ -6030,20 +6030,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * The name of the account-level budget.
+     * Output only. The name of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 5;</code>
+     * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * The name of the account-level budget.
+     * Output only. The name of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 5;</code>
+     * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -6054,10 +6054,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the account-level budget.
+     * Output only. The name of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 5;</code>
+     * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -6074,10 +6074,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the account-level budget.
+     * Output only. The name of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 5;</code>
+     * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -6092,10 +6092,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the account-level budget.
+     * Output only. The name of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 5;</code>
+     * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -6114,10 +6114,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the account-level budget.
+     * Output only. The name of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 5;</code>
+     * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -6132,10 +6132,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the account-level budget.
+     * Output only. The name of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 5;</code>
+     * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -6144,10 +6144,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the account-level budget.
+     * Output only. The name of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 5;</code>
+     * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -6159,10 +6159,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the account-level budget.
+     * Output only. The name of the account-level budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 5;</code>
+     * <code>.google.protobuf.StringValue name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -6183,24 +6183,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> proposedStartDateTimeBuilder_;
     /**
      * <pre>
-     * The proposed start time of the account-level budget in
+     * Output only. The proposed start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
      * this is the time of request.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+     * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasProposedStartDateTime() {
       return proposedStartDateTimeBuilder_ != null || proposedStartDateTime_ != null;
     }
     /**
      * <pre>
-     * The proposed start time of the account-level budget in
+     * Output only. The proposed start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
      * this is the time of request.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+     * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getProposedStartDateTime() {
       if (proposedStartDateTimeBuilder_ == null) {
@@ -6211,12 +6211,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed start time of the account-level budget in
+     * Output only. The proposed start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
      * this is the time of request.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+     * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setProposedStartDateTime(com.google.protobuf.StringValue value) {
       if (proposedStartDateTimeBuilder_ == null) {
@@ -6233,12 +6233,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed start time of the account-level budget in
+     * Output only. The proposed start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
      * this is the time of request.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+     * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setProposedStartDateTime(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -6253,12 +6253,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed start time of the account-level budget in
+     * Output only. The proposed start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
      * this is the time of request.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+     * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeProposedStartDateTime(com.google.protobuf.StringValue value) {
       if (proposedStartDateTimeBuilder_ == null) {
@@ -6277,12 +6277,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed start time of the account-level budget in
+     * Output only. The proposed start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
      * this is the time of request.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+     * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearProposedStartDateTime() {
       if (proposedStartDateTimeBuilder_ == null) {
@@ -6297,12 +6297,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed start time of the account-level budget in
+     * Output only. The proposed start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
      * this is the time of request.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+     * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getProposedStartDateTimeBuilder() {
       
@@ -6311,12 +6311,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed start time of the account-level budget in
+     * Output only. The proposed start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
      * this is the time of request.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+     * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getProposedStartDateTimeOrBuilder() {
       if (proposedStartDateTimeBuilder_ != null) {
@@ -6328,12 +6328,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed start time of the account-level budget in
+     * Output only. The proposed start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.  If a start time type of NOW was proposed,
      * this is the time of request.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_start_date_time = 6;</code>
+     * <code>.google.protobuf.StringValue proposed_start_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -6354,26 +6354,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> approvedStartDateTimeBuilder_;
     /**
      * <pre>
-     * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
      * format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+     * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasApprovedStartDateTime() {
       return approvedStartDateTimeBuilder_ != null || approvedStartDateTime_ != null;
     }
     /**
      * <pre>
-     * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
      * format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+     * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getApprovedStartDateTime() {
       if (approvedStartDateTimeBuilder_ == null) {
@@ -6384,13 +6384,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
      * format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+     * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovedStartDateTime(com.google.protobuf.StringValue value) {
       if (approvedStartDateTimeBuilder_ == null) {
@@ -6407,13 +6407,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
      * format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+     * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovedStartDateTime(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -6428,13 +6428,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
      * format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+     * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeApprovedStartDateTime(com.google.protobuf.StringValue value) {
       if (approvedStartDateTimeBuilder_ == null) {
@@ -6453,13 +6453,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
      * format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+     * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearApprovedStartDateTime() {
       if (approvedStartDateTimeBuilder_ == null) {
@@ -6474,13 +6474,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
      * format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+     * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getApprovedStartDateTimeBuilder() {
       
@@ -6489,13 +6489,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
      * format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+     * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getApprovedStartDateTimeOrBuilder() {
       if (approvedStartDateTimeBuilder_ != null) {
@@ -6507,13 +6507,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
+     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
      * format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_start_date_time = 7;</code>
+     * <code>.google.protobuf.StringValue approved_start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -6534,22 +6534,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> totalAdjustmentsMicrosBuilder_;
     /**
      * <pre>
-     * The total adjustments amount.
+     * Output only. The total adjustments amount.
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTotalAdjustmentsMicros() {
       return totalAdjustmentsMicrosBuilder_ != null || totalAdjustmentsMicros_ != null;
     }
     /**
      * <pre>
-     * The total adjustments amount.
+     * Output only. The total adjustments amount.
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getTotalAdjustmentsMicros() {
       if (totalAdjustmentsMicrosBuilder_ == null) {
@@ -6560,11 +6560,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total adjustments amount.
+     * Output only. The total adjustments amount.
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTotalAdjustmentsMicros(com.google.protobuf.Int64Value value) {
       if (totalAdjustmentsMicrosBuilder_ == null) {
@@ -6581,11 +6581,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total adjustments amount.
+     * Output only. The total adjustments amount.
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTotalAdjustmentsMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -6600,11 +6600,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total adjustments amount.
+     * Output only. The total adjustments amount.
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTotalAdjustmentsMicros(com.google.protobuf.Int64Value value) {
       if (totalAdjustmentsMicrosBuilder_ == null) {
@@ -6623,11 +6623,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total adjustments amount.
+     * Output only. The total adjustments amount.
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTotalAdjustmentsMicros() {
       if (totalAdjustmentsMicrosBuilder_ == null) {
@@ -6642,11 +6642,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total adjustments amount.
+     * Output only. The total adjustments amount.
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getTotalAdjustmentsMicrosBuilder() {
       
@@ -6655,11 +6655,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total adjustments amount.
+     * Output only. The total adjustments amount.
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getTotalAdjustmentsMicrosOrBuilder() {
       if (totalAdjustmentsMicrosBuilder_ != null) {
@@ -6671,11 +6671,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total adjustments amount.
+     * Output only. The total adjustments amount.
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18;</code>
+     * <code>.google.protobuf.Int64Value total_adjustments_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -6696,24 +6696,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> amountServedMicrosBuilder_;
     /**
      * <pre>
-     * The value of Ads that have been served, in micros.
+     * Output only. The value of Ads that have been served, in micros.
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+     * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasAmountServedMicros() {
       return amountServedMicrosBuilder_ != null || amountServedMicros_ != null;
     }
     /**
      * <pre>
-     * The value of Ads that have been served, in micros.
+     * Output only. The value of Ads that have been served, in micros.
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+     * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getAmountServedMicros() {
       if (amountServedMicrosBuilder_ == null) {
@@ -6724,12 +6724,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of Ads that have been served, in micros.
+     * Output only. The value of Ads that have been served, in micros.
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+     * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAmountServedMicros(com.google.protobuf.Int64Value value) {
       if (amountServedMicrosBuilder_ == null) {
@@ -6746,12 +6746,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of Ads that have been served, in micros.
+     * Output only. The value of Ads that have been served, in micros.
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+     * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAmountServedMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -6766,12 +6766,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of Ads that have been served, in micros.
+     * Output only. The value of Ads that have been served, in micros.
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+     * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAmountServedMicros(com.google.protobuf.Int64Value value) {
       if (amountServedMicrosBuilder_ == null) {
@@ -6790,12 +6790,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of Ads that have been served, in micros.
+     * Output only. The value of Ads that have been served, in micros.
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+     * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAmountServedMicros() {
       if (amountServedMicrosBuilder_ == null) {
@@ -6810,12 +6810,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of Ads that have been served, in micros.
+     * Output only. The value of Ads that have been served, in micros.
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+     * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getAmountServedMicrosBuilder() {
       
@@ -6824,12 +6824,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of Ads that have been served, in micros.
+     * Output only. The value of Ads that have been served, in micros.
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+     * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getAmountServedMicrosOrBuilder() {
       if (amountServedMicrosBuilder_ != null) {
@@ -6841,12 +6841,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The value of Ads that have been served, in micros.
+     * Output only. The value of Ads that have been served, in micros.
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value amount_served_micros = 19;</code>
+     * <code>.google.protobuf.Int64Value amount_served_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -6867,22 +6867,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> purchaseOrderNumberBuilder_;
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPurchaseOrderNumber() {
       return purchaseOrderNumberBuilder_ != null || purchaseOrderNumber_ != null;
     }
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPurchaseOrderNumber() {
       if (purchaseOrderNumberBuilder_ == null) {
@@ -6893,11 +6893,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPurchaseOrderNumber(com.google.protobuf.StringValue value) {
       if (purchaseOrderNumberBuilder_ == null) {
@@ -6914,11 +6914,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPurchaseOrderNumber(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -6933,11 +6933,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePurchaseOrderNumber(com.google.protobuf.StringValue value) {
       if (purchaseOrderNumberBuilder_ == null) {
@@ -6956,11 +6956,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPurchaseOrderNumber() {
       if (purchaseOrderNumberBuilder_ == null) {
@@ -6975,11 +6975,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getPurchaseOrderNumberBuilder() {
       
@@ -6988,11 +6988,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPurchaseOrderNumberOrBuilder() {
       if (purchaseOrderNumberBuilder_ != null) {
@@ -7004,11 +7004,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A purchase order number is a value that helps users reference this budget
+     * Output only. A purchase order number is a value that helps users reference this budget
      * in their monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue purchase_order_number = 20;</code>
+     * <code>.google.protobuf.StringValue purchase_order_number = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -7029,20 +7029,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> notesBuilder_;
     /**
      * <pre>
-     * Notes associated with the budget.
+     * Output only. Notes associated with the budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 21;</code>
+     * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasNotes() {
       return notesBuilder_ != null || notes_ != null;
     }
     /**
      * <pre>
-     * Notes associated with the budget.
+     * Output only. Notes associated with the budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 21;</code>
+     * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getNotes() {
       if (notesBuilder_ == null) {
@@ -7053,10 +7053,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Notes associated with the budget.
+     * Output only. Notes associated with the budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 21;</code>
+     * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setNotes(com.google.protobuf.StringValue value) {
       if (notesBuilder_ == null) {
@@ -7073,10 +7073,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Notes associated with the budget.
+     * Output only. Notes associated with the budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 21;</code>
+     * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setNotes(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -7091,10 +7091,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Notes associated with the budget.
+     * Output only. Notes associated with the budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 21;</code>
+     * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeNotes(com.google.protobuf.StringValue value) {
       if (notesBuilder_ == null) {
@@ -7113,10 +7113,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Notes associated with the budget.
+     * Output only. Notes associated with the budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 21;</code>
+     * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearNotes() {
       if (notesBuilder_ == null) {
@@ -7131,10 +7131,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Notes associated with the budget.
+     * Output only. Notes associated with the budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 21;</code>
+     * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getNotesBuilder() {
       
@@ -7143,10 +7143,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Notes associated with the budget.
+     * Output only. Notes associated with the budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 21;</code>
+     * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNotesOrBuilder() {
       if (notesBuilder_ != null) {
@@ -7158,10 +7158,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Notes associated with the budget.
+     * Output only. Notes associated with the budget.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue notes = 21;</code>
+     * <code>.google.protobuf.StringValue notes = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -7182,20 +7182,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal, com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal.Builder, com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposalOrBuilder> pendingProposalBuilder_;
     /**
      * <pre>
-     * The pending proposal to modify this budget, if applicable.
+     * Output only. The pending proposal to modify this budget, if applicable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPendingProposal() {
       return pendingProposalBuilder_ != null || pendingProposal_ != null;
     }
     /**
      * <pre>
-     * The pending proposal to modify this budget, if applicable.
+     * Output only. The pending proposal to modify this budget, if applicable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal getPendingProposal() {
       if (pendingProposalBuilder_ == null) {
@@ -7206,10 +7206,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pending proposal to modify this budget, if applicable.
+     * Output only. The pending proposal to modify this budget, if applicable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPendingProposal(com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal value) {
       if (pendingProposalBuilder_ == null) {
@@ -7226,10 +7226,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pending proposal to modify this budget, if applicable.
+     * Output only. The pending proposal to modify this budget, if applicable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPendingProposal(
         com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal.Builder builderForValue) {
@@ -7244,10 +7244,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pending proposal to modify this budget, if applicable.
+     * Output only. The pending proposal to modify this budget, if applicable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePendingProposal(com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal value) {
       if (pendingProposalBuilder_ == null) {
@@ -7266,10 +7266,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pending proposal to modify this budget, if applicable.
+     * Output only. The pending proposal to modify this budget, if applicable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPendingProposal() {
       if (pendingProposalBuilder_ == null) {
@@ -7284,10 +7284,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pending proposal to modify this budget, if applicable.
+     * Output only. The pending proposal to modify this budget, if applicable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal.Builder getPendingProposalBuilder() {
       
@@ -7296,10 +7296,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pending proposal to modify this budget, if applicable.
+     * Output only. The pending proposal to modify this budget, if applicable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposalOrBuilder getPendingProposalOrBuilder() {
       if (pendingProposalBuilder_ != null) {
@@ -7311,10 +7311,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The pending proposal to modify this budget, if applicable.
+     * Output only. The pending proposal to modify this budget, if applicable.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22;</code>
+     * <code>.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal, com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposal.Builder, com.google.ads.googleads.v3.resources.AccountBudget.PendingAccountBudgetProposalOrBuilder> 
@@ -7334,20 +7334,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> proposedEndDateTimeBuilder_;
     /**
      * <pre>
-     * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+     * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasProposedEndDateTime() {
       return proposedEndTimeCase_ == 8;
     }
     /**
      * <pre>
-     * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+     * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getProposedEndDateTime() {
       if (proposedEndDateTimeBuilder_ == null) {
@@ -7364,10 +7364,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+     * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setProposedEndDateTime(com.google.protobuf.StringValue value) {
       if (proposedEndDateTimeBuilder_ == null) {
@@ -7384,10 +7384,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+     * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setProposedEndDateTime(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -7402,10 +7402,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+     * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeProposedEndDateTime(com.google.protobuf.StringValue value) {
       if (proposedEndDateTimeBuilder_ == null) {
@@ -7428,10 +7428,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+     * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearProposedEndDateTime() {
       if (proposedEndDateTimeBuilder_ == null) {
@@ -7451,20 +7451,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+     * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getProposedEndDateTimeBuilder() {
       return getProposedEndDateTimeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+     * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getProposedEndDateTimeOrBuilder() {
       if ((proposedEndTimeCase_ == 8) && (proposedEndDateTimeBuilder_ != null)) {
@@ -7478,10 +7478,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The proposed end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue proposed_end_date_time = 8;</code>
+     * <code>.google.protobuf.StringValue proposed_end_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -7504,10 +7504,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getProposedEndTimeTypeValue() {
       if (proposedEndTimeCase_ == 9) {
@@ -7517,10 +7517,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setProposedEndTimeTypeValue(int value) {
       proposedEndTimeCase_ = 9;
@@ -7530,10 +7530,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getProposedEndTimeType() {
       if (proposedEndTimeCase_ == 9) {
@@ -7546,10 +7546,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setProposedEndTimeType(com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType value) {
       if (value == null) {
@@ -7562,10 +7562,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearProposedEndTimeType() {
       if (proposedEndTimeCase_ == 9) {
@@ -7580,20 +7580,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> approvedEndDateTimeBuilder_;
     /**
      * <pre>
-     * The approved end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+     * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasApprovedEndDateTime() {
       return approvedEndTimeCase_ == 10;
     }
     /**
      * <pre>
-     * The approved end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+     * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getApprovedEndDateTime() {
       if (approvedEndDateTimeBuilder_ == null) {
@@ -7610,10 +7610,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+     * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovedEndDateTime(com.google.protobuf.StringValue value) {
       if (approvedEndDateTimeBuilder_ == null) {
@@ -7630,10 +7630,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+     * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovedEndDateTime(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -7648,10 +7648,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+     * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeApprovedEndDateTime(com.google.protobuf.StringValue value) {
       if (approvedEndDateTimeBuilder_ == null) {
@@ -7674,10 +7674,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+     * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearApprovedEndDateTime() {
       if (approvedEndDateTimeBuilder_ == null) {
@@ -7697,20 +7697,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+     * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getApprovedEndDateTimeBuilder() {
       return getApprovedEndDateTimeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The approved end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+     * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getApprovedEndDateTimeOrBuilder() {
       if ((approvedEndTimeCase_ == 10) && (approvedEndDateTimeBuilder_ != null)) {
@@ -7724,10 +7724,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved end time in yyyy-MM-dd HH:mm:ss format.
+     * Output only. The approved end time in yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue approved_end_date_time = 10;</code>
+     * <code>.google.protobuf.StringValue approved_end_date_time = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -7750,10 +7750,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getApprovedEndTimeTypeValue() {
       if (approvedEndTimeCase_ == 11) {
@@ -7763,10 +7763,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovedEndTimeTypeValue(int value) {
       approvedEndTimeCase_ = 11;
@@ -7776,10 +7776,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getApprovedEndTimeType() {
       if (approvedEndTimeCase_ == 11) {
@@ -7792,10 +7792,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovedEndTimeType(com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType value) {
       if (value == null) {
@@ -7808,10 +7808,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearApprovedEndTimeType() {
       if (approvedEndTimeCase_ == 11) {
@@ -7826,22 +7826,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> proposedSpendingLimitMicrosBuilder_;
     /**
      * <pre>
-     * The proposed spending limit in micros.  One million is equivalent to
+     * Output only. The proposed spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasProposedSpendingLimitMicros() {
       return proposedSpendingLimitCase_ == 12;
     }
     /**
      * <pre>
-     * The proposed spending limit in micros.  One million is equivalent to
+     * Output only. The proposed spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getProposedSpendingLimitMicros() {
       if (proposedSpendingLimitMicrosBuilder_ == null) {
@@ -7858,11 +7858,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed spending limit in micros.  One million is equivalent to
+     * Output only. The proposed spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setProposedSpendingLimitMicros(com.google.protobuf.Int64Value value) {
       if (proposedSpendingLimitMicrosBuilder_ == null) {
@@ -7879,11 +7879,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed spending limit in micros.  One million is equivalent to
+     * Output only. The proposed spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setProposedSpendingLimitMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -7898,11 +7898,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed spending limit in micros.  One million is equivalent to
+     * Output only. The proposed spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeProposedSpendingLimitMicros(com.google.protobuf.Int64Value value) {
       if (proposedSpendingLimitMicrosBuilder_ == null) {
@@ -7925,11 +7925,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed spending limit in micros.  One million is equivalent to
+     * Output only. The proposed spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearProposedSpendingLimitMicros() {
       if (proposedSpendingLimitMicrosBuilder_ == null) {
@@ -7949,22 +7949,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed spending limit in micros.  One million is equivalent to
+     * Output only. The proposed spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getProposedSpendingLimitMicrosBuilder() {
       return getProposedSpendingLimitMicrosFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The proposed spending limit in micros.  One million is equivalent to
+     * Output only. The proposed spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getProposedSpendingLimitMicrosOrBuilder() {
       if ((proposedSpendingLimitCase_ == 12) && (proposedSpendingLimitMicrosBuilder_ != null)) {
@@ -7978,11 +7978,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed spending limit in micros.  One million is equivalent to
+     * Output only. The proposed spending limit in micros.  One million is equivalent to
      * one unit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12;</code>
+     * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -8005,10 +8005,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getProposedSpendingLimitTypeValue() {
       if (proposedSpendingLimitCase_ == 13) {
@@ -8018,10 +8018,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setProposedSpendingLimitTypeValue(int value) {
       proposedSpendingLimitCase_ = 13;
@@ -8031,10 +8031,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getProposedSpendingLimitType() {
       if (proposedSpendingLimitCase_ == 13) {
@@ -8047,10 +8047,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setProposedSpendingLimitType(com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType value) {
       if (value == null) {
@@ -8063,10 +8063,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearProposedSpendingLimitType() {
       if (proposedSpendingLimitCase_ == 13) {
@@ -8081,26 +8081,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> approvedSpendingLimitMicrosBuilder_;
     /**
      * <pre>
-     * The approved spending limit in micros.  One million is equivalent to
+     * Output only. The approved spending limit in micros.  One million is equivalent to
      * one unit.  This will only be populated if the proposed spending limit
      * is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasApprovedSpendingLimitMicros() {
       return approvedSpendingLimitCase_ == 14;
     }
     /**
      * <pre>
-     * The approved spending limit in micros.  One million is equivalent to
+     * Output only. The approved spending limit in micros.  One million is equivalent to
      * one unit.  This will only be populated if the proposed spending limit
      * is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getApprovedSpendingLimitMicros() {
       if (approvedSpendingLimitMicrosBuilder_ == null) {
@@ -8117,13 +8117,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved spending limit in micros.  One million is equivalent to
+     * Output only. The approved spending limit in micros.  One million is equivalent to
      * one unit.  This will only be populated if the proposed spending limit
      * is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovedSpendingLimitMicros(com.google.protobuf.Int64Value value) {
       if (approvedSpendingLimitMicrosBuilder_ == null) {
@@ -8140,13 +8140,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved spending limit in micros.  One million is equivalent to
+     * Output only. The approved spending limit in micros.  One million is equivalent to
      * one unit.  This will only be populated if the proposed spending limit
      * is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovedSpendingLimitMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -8161,13 +8161,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved spending limit in micros.  One million is equivalent to
+     * Output only. The approved spending limit in micros.  One million is equivalent to
      * one unit.  This will only be populated if the proposed spending limit
      * is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeApprovedSpendingLimitMicros(com.google.protobuf.Int64Value value) {
       if (approvedSpendingLimitMicrosBuilder_ == null) {
@@ -8190,13 +8190,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved spending limit in micros.  One million is equivalent to
+     * Output only. The approved spending limit in micros.  One million is equivalent to
      * one unit.  This will only be populated if the proposed spending limit
      * is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearApprovedSpendingLimitMicros() {
       if (approvedSpendingLimitMicrosBuilder_ == null) {
@@ -8216,26 +8216,26 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved spending limit in micros.  One million is equivalent to
+     * Output only. The approved spending limit in micros.  One million is equivalent to
      * one unit.  This will only be populated if the proposed spending limit
      * is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getApprovedSpendingLimitMicrosBuilder() {
       return getApprovedSpendingLimitMicrosFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The approved spending limit in micros.  One million is equivalent to
+     * Output only. The approved spending limit in micros.  One million is equivalent to
      * one unit.  This will only be populated if the proposed spending limit
      * is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getApprovedSpendingLimitMicrosOrBuilder() {
       if ((approvedSpendingLimitCase_ == 14) && (approvedSpendingLimitMicrosBuilder_ != null)) {
@@ -8249,13 +8249,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved spending limit in micros.  One million is equivalent to
+     * Output only. The approved spending limit in micros.  One million is equivalent to
      * one unit.  This will only be populated if the proposed spending limit
      * is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14;</code>
+     * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -8278,11 +8278,11 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The approved spending limit as a well-defined type, e.g. INFINITE.  This
+     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
      * will only be populated if the approved spending limit is INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getApprovedSpendingLimitTypeValue() {
       if (approvedSpendingLimitCase_ == 15) {
@@ -8292,11 +8292,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved spending limit as a well-defined type, e.g. INFINITE.  This
+     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
      * will only be populated if the approved spending limit is INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovedSpendingLimitTypeValue(int value) {
       approvedSpendingLimitCase_ = 15;
@@ -8306,11 +8306,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved spending limit as a well-defined type, e.g. INFINITE.  This
+     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
      * will only be populated if the approved spending limit is INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getApprovedSpendingLimitType() {
       if (approvedSpendingLimitCase_ == 15) {
@@ -8323,11 +8323,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved spending limit as a well-defined type, e.g. INFINITE.  This
+     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
      * will only be populated if the approved spending limit is INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setApprovedSpendingLimitType(com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType value) {
       if (value == null) {
@@ -8340,11 +8340,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The approved spending limit as a well-defined type, e.g. INFINITE.  This
+     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
      * will only be populated if the approved spending limit is INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearApprovedSpendingLimitType() {
       if (approvedSpendingLimitCase_ == 15) {
@@ -8359,7 +8359,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> adjustedSpendingLimitMicrosBuilder_;
     /**
      * <pre>
-     * The adjusted spending limit in micros.  One million is equivalent to
+     * Output only. The adjusted spending limit in micros.  One million is equivalent to
      * one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
@@ -8370,14 +8370,14 @@ private static final long serialVersionUID = 0L;
      * allowed to spend.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasAdjustedSpendingLimitMicros() {
       return adjustedSpendingLimitCase_ == 16;
     }
     /**
      * <pre>
-     * The adjusted spending limit in micros.  One million is equivalent to
+     * Output only. The adjusted spending limit in micros.  One million is equivalent to
      * one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
@@ -8388,7 +8388,7 @@ private static final long serialVersionUID = 0L;
      * allowed to spend.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getAdjustedSpendingLimitMicros() {
       if (adjustedSpendingLimitMicrosBuilder_ == null) {
@@ -8405,7 +8405,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The adjusted spending limit in micros.  One million is equivalent to
+     * Output only. The adjusted spending limit in micros.  One million is equivalent to
      * one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
@@ -8416,7 +8416,7 @@ private static final long serialVersionUID = 0L;
      * allowed to spend.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdjustedSpendingLimitMicros(com.google.protobuf.Int64Value value) {
       if (adjustedSpendingLimitMicrosBuilder_ == null) {
@@ -8433,7 +8433,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The adjusted spending limit in micros.  One million is equivalent to
+     * Output only. The adjusted spending limit in micros.  One million is equivalent to
      * one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
@@ -8444,7 +8444,7 @@ private static final long serialVersionUID = 0L;
      * allowed to spend.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdjustedSpendingLimitMicros(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -8459,7 +8459,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The adjusted spending limit in micros.  One million is equivalent to
+     * Output only. The adjusted spending limit in micros.  One million is equivalent to
      * one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
@@ -8470,7 +8470,7 @@ private static final long serialVersionUID = 0L;
      * allowed to spend.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAdjustedSpendingLimitMicros(com.google.protobuf.Int64Value value) {
       if (adjustedSpendingLimitMicrosBuilder_ == null) {
@@ -8493,7 +8493,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The adjusted spending limit in micros.  One million is equivalent to
+     * Output only. The adjusted spending limit in micros.  One million is equivalent to
      * one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
@@ -8504,7 +8504,7 @@ private static final long serialVersionUID = 0L;
      * allowed to spend.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAdjustedSpendingLimitMicros() {
       if (adjustedSpendingLimitMicrosBuilder_ == null) {
@@ -8524,7 +8524,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The adjusted spending limit in micros.  One million is equivalent to
+     * Output only. The adjusted spending limit in micros.  One million is equivalent to
      * one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
@@ -8535,14 +8535,14 @@ private static final long serialVersionUID = 0L;
      * allowed to spend.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getAdjustedSpendingLimitMicrosBuilder() {
       return getAdjustedSpendingLimitMicrosFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The adjusted spending limit in micros.  One million is equivalent to
+     * Output only. The adjusted spending limit in micros.  One million is equivalent to
      * one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
@@ -8553,7 +8553,7 @@ private static final long serialVersionUID = 0L;
      * allowed to spend.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getAdjustedSpendingLimitMicrosOrBuilder() {
       if ((adjustedSpendingLimitCase_ == 16) && (adjustedSpendingLimitMicrosBuilder_ != null)) {
@@ -8567,7 +8567,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The adjusted spending limit in micros.  One million is equivalent to
+     * Output only. The adjusted spending limit in micros.  One million is equivalent to
      * one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
@@ -8578,7 +8578,7 @@ private static final long serialVersionUID = 0L;
      * allowed to spend.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16;</code>
+     * <code>.google.protobuf.Int64Value adjusted_spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -8601,13 +8601,13 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The adjusted spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
      * This will only be populated if the adjusted spending limit is INFINITE,
      * which is guaranteed to be true if the approved spending limit is
      * INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getAdjustedSpendingLimitTypeValue() {
       if (adjustedSpendingLimitCase_ == 17) {
@@ -8617,13 +8617,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The adjusted spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
      * This will only be populated if the adjusted spending limit is INFINITE,
      * which is guaranteed to be true if the approved spending limit is
      * INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdjustedSpendingLimitTypeValue(int value) {
       adjustedSpendingLimitCase_ = 17;
@@ -8633,13 +8633,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The adjusted spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
      * This will only be populated if the adjusted spending limit is INFINITE,
      * which is guaranteed to be true if the approved spending limit is
      * INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getAdjustedSpendingLimitType() {
       if (adjustedSpendingLimitCase_ == 17) {
@@ -8652,13 +8652,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The adjusted spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
      * This will only be populated if the adjusted spending limit is INFINITE,
      * which is guaranteed to be true if the approved spending limit is
      * INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdjustedSpendingLimitType(com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType value) {
       if (value == null) {
@@ -8671,13 +8671,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The adjusted spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
      * This will only be populated if the adjusted spending limit is INFINITE,
      * which is guaranteed to be true if the approved spending limit is
      * INFINITE.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17;</code>
+     * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAdjustedSpendingLimitType() {
       if (adjustedSpendingLimitCase_ == 17) {

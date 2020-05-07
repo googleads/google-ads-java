@@ -5,7 +5,10 @@ package com.google.ads.googleads.v3.common;
 
 /**
  * <pre>
- * Historical metrics.
+ * Historical metrics specific to the targeting options selected.
+ * Targeting options include geographies, network, etc.
+ * Refer to https://support.google.com/google-ads/answer/3022575 for more
+ * details.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v3.common.KeywordPlanHistoricalMetrics}
@@ -102,7 +105,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value avgMonthlySearches_;
   /**
    * <pre>
-   * Average monthly searches for the past 12 months.
+   * Approximate number of monthly searches on this query averaged
+   * for the past 12 months.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -112,7 +116,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Average monthly searches for the past 12 months.
+   * Approximate number of monthly searches on this query averaged
+   * for the past 12 months.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -122,7 +127,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Average monthly searches for the past 12 months.
+   * Approximate number of monthly searches on this query averaged
+   * for the past 12 months.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -328,7 +334,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Historical metrics.
+   * Historical metrics specific to the targeting options selected.
+   * Targeting options include geographies, network, etc.
+   * Refer to https://support.google.com/google-ads/answer/3022575 for more
+   * details.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v3.common.KeywordPlanHistoricalMetrics}
@@ -496,7 +505,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> avgMonthlySearchesBuilder_;
     /**
      * <pre>
-     * Average monthly searches for the past 12 months.
+     * Approximate number of monthly searches on this query averaged
+     * for the past 12 months.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -506,7 +516,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average monthly searches for the past 12 months.
+     * Approximate number of monthly searches on this query averaged
+     * for the past 12 months.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -520,7 +531,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average monthly searches for the past 12 months.
+     * Approximate number of monthly searches on this query averaged
+     * for the past 12 months.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -540,7 +552,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average monthly searches for the past 12 months.
+     * Approximate number of monthly searches on this query averaged
+     * for the past 12 months.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -558,7 +571,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average monthly searches for the past 12 months.
+     * Approximate number of monthly searches on this query averaged
+     * for the past 12 months.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -580,7 +594,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average monthly searches for the past 12 months.
+     * Approximate number of monthly searches on this query averaged
+     * for the past 12 months.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -598,7 +613,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average monthly searches for the past 12 months.
+     * Approximate number of monthly searches on this query averaged
+     * for the past 12 months.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -610,7 +626,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average monthly searches for the past 12 months.
+     * Approximate number of monthly searches on this query averaged
+     * for the past 12 months.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -625,7 +642,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average monthly searches for the past 12 months.
+     * Approximate number of monthly searches on this query averaged
+     * for the past 12 months.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>

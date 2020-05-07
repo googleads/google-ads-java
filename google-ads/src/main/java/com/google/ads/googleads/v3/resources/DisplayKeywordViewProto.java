@@ -30,19 +30,21 @@ public final class DisplayKeywordViewProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v3/resources/disp" +
       "lay_keyword_view.proto\022!google.ads.googl" +
-      "eads.v3.resources\032\031google/api/resource.p" +
-      "roto\032\034google/api/annotations.proto\"\236\001\n\022D" +
-      "isplayKeywordView\022\025\n\rresource_name\030\001 \001(\t" +
-      ":q\352An\n+googleads.googleapis.com/DisplayK" +
-      "eywordView\022?customers/{customer}/display" +
-      "KeywordViews/{display_keyword_view}B\204\002\n%" +
-      "com.google.ads.googleads.v3.resourcesB\027D" +
-      "isplayKeywordViewProtoP\001ZJgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v3" +
-      "/resources;resources\242\002\003GAA\252\002!Google.Ads." +
-      "GoogleAds.V3.Resources\312\002!Google\\Ads\\Goog" +
-      "leAds\\V3\\Resources\352\002%Google::Ads::Google" +
-      "Ads::V3::Resourcesb\006proto3"
+      "eads.v3.resources\032\037google/api/field_beha" +
+      "vior.proto\032\031google/api/resource.proto\032\034g" +
+      "oogle/api/annotations.proto\"\323\001\n\022DisplayK" +
+      "eywordView\022J\n\rresource_name\030\001 \001(\tB3\340A\003\372A" +
+      "-\n+googleads.googleapis.com/DisplayKeywo" +
+      "rdView:q\352An\n+googleads.googleapis.com/Di" +
+      "splayKeywordView\022?customers/{customer}/d" +
+      "isplayKeywordViews/{display_keyword_view" +
+      "}B\204\002\n%com.google.ads.googleads.v3.resour" +
+      "cesB\027DisplayKeywordViewProtoP\001ZJgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v3/resources;resources\242\002\003GAA\252\002!Googl" +
+      "e.Ads.GoogleAds.V3.Resources\312\002!Google\\Ad" +
+      "s\\GoogleAds\\V3\\Resources\352\002%Google::Ads::" +
+      "GoogleAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -55,6 +57,7 @@ public final class DisplayKeywordViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
@@ -66,9 +69,12 @@ public final class DisplayKeywordViewProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

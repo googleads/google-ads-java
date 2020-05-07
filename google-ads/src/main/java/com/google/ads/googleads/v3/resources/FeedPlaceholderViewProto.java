@@ -31,22 +31,24 @@ public final class FeedPlaceholderViewProto {
       "\n=google/ads/googleads/v3/resources/feed" +
       "_placeholder_view.proto\022!google.ads.goog" +
       "leads.v3.resources\0324google/ads/googleads" +
-      "/v3/enums/placeholder_type.proto\032\031google" +
-      "/api/resource.proto\032\034google/api/annotati" +
-      "ons.proto\"\200\002\n\023FeedPlaceholderView\022\025\n\rres" +
-      "ource_name\030\001 \001(\t\022\\\n\020placeholder_type\030\002 \001" +
-      "(\0162B.google.ads.googleads.v3.enums.Place" +
-      "holderTypeEnum.PlaceholderType:t\352Aq\n,goo" +
-      "gleads.googleapis.com/FeedPlaceholderVie" +
-      "w\022Acustomers/{customer}/feedPlaceholderV" +
-      "iews/{feed_placeholder_view}B\205\002\n%com.goo" +
-      "gle.ads.googleads.v3.resourcesB\030FeedPlac" +
-      "eholderViewProtoP\001ZJgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v3/resou" +
-      "rces;resources\242\002\003GAA\252\002!Google.Ads.Google" +
-      "Ads.V3.Resources\312\002!Google\\Ads\\GoogleAds\\" +
-      "V3\\Resources\352\002%Google::Ads::GoogleAds::V" +
-      "3::Resourcesb\006proto3"
+      "/v3/enums/placeholder_type.proto\032\037google" +
+      "/api/field_behavior.proto\032\031google/api/re" +
+      "source.proto\032\034google/api/annotations.pro" +
+      "to\"\273\002\n\023FeedPlaceholderView\022K\n\rresource_n" +
+      "ame\030\001 \001(\tB4\340A\003\372A.\n,googleads.googleapis." +
+      "com/FeedPlaceholderView\022a\n\020placeholder_t" +
+      "ype\030\002 \001(\0162B.google.ads.googleads.v3.enum" +
+      "s.PlaceholderTypeEnum.PlaceholderTypeB\003\340" +
+      "A\003:t\352Aq\n,googleads.googleapis.com/FeedPl" +
+      "aceholderView\022Acustomers/{customer}/feed" +
+      "PlaceholderViews/{feed_placeholder_view}" +
+      "B\205\002\n%com.google.ads.googleads.v3.resourc" +
+      "esB\030FeedPlaceholderViewProtoP\001ZJgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v3/resources;resources\242\002\003GAA\252\002!Googl" +
+      "e.Ads.GoogleAds.V3.Resources\312\002!Google\\Ad" +
+      "s\\GoogleAds\\V3\\Resources\352\002%Google::Ads::" +
+      "GoogleAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -60,6 +62,7 @@ public final class FeedPlaceholderViewProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.PlaceholderTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
@@ -71,10 +74,13 @@ public final class FeedPlaceholderViewProto {
         new java.lang.String[] { "ResourceName", "PlaceholderType", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.PlaceholderTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

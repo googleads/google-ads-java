@@ -30,8 +30,8 @@ public final class AdTypeProto {
     java.lang.String[] descriptorData = {
       "\n+google/ads/googleads/v3/enums/ad_type." +
       "proto\022\035google.ads.googleads.v3.enums\032\034go" +
-      "ogle/api/annotations.proto\"\326\003\n\nAdTypeEnu" +
-      "m\"\307\003\n\006AdType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN" +
+      "ogle/api/annotations.proto\"\357\003\n\nAdTypeEnu" +
+      "m\"\340\003\n\006AdType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN" +
       "\020\001\022\013\n\007TEXT_AD\020\002\022\024\n\020EXPANDED_TEXT_AD\020\003\022\020\n" +
       "\014CALL_ONLY_AD\020\006\022\036\n\032EXPANDED_DYNAMIC_SEAR" +
       "CH_AD\020\007\022\014\n\010HOTEL_AD\020\010\022\025\n\021SHOPPING_SMART_" +
@@ -42,13 +42,13 @@ public final class AdTypeProto {
       "STALL_AD\020\022\022\031\n\025RESPONSIVE_DISPLAY_AD\020\023\022\023\n" +
       "\017HTML5_UPLOAD_AD\020\025\022\024\n\020DYNAMIC_HTML5_AD\020\026" +
       "\022\025\n\021APP_ENGAGEMENT_AD\020\027\022\"\n\036SHOPPING_COMP" +
-      "ARISON_LISTING_AD\020\030B\340\001\n!com.google.ads.g" +
-      "oogleads.v3.enumsB\013AdTypeProtoP\001ZBgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v3/enums;enums\242\002\003GAA\252\002\035Google.Ads." +
-      "GoogleAds.V3.Enums\312\002\035Google\\Ads\\GoogleAd" +
-      "s\\V3\\Enums\352\002!Google::Ads::GoogleAds::V3:" +
-      ":Enumsb\006proto3"
+      "ARISON_LISTING_AD\020\030\022\027\n\023VIDEO_RESPONSIVE_" +
+      "AD\020\036B\340\001\n!com.google.ads.googleads.v3.enu" +
+      "msB\013AdTypeProtoP\001ZBgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v3/enums;" +
+      "enums\242\002\003GAA\252\002\035Google.Ads.GoogleAds.V3.En" +
+      "ums\312\002\035Google\\Ads\\GoogleAds\\V3\\Enums\352\002!Go" +
+      "ogle::Ads::GoogleAds::V3::Enumsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

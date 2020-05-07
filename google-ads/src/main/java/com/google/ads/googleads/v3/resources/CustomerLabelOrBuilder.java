@@ -9,82 +9,82 @@ public interface CustomerLabelOrBuilder extends
 
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * Customer label resource names have the form:
    * `customers/{customer_id}/customerLabels/{label_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * Customer label resource names have the form:
    * `customers/{customer_id}/customerLabels/{label_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The resource name of the customer to which the label is attached.
+   * Output only. The resource name of the customer to which the label is attached.
    * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue customer = 2;</code>
+   * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCustomer();
   /**
    * <pre>
-   * The resource name of the customer to which the label is attached.
+   * Output only. The resource name of the customer to which the label is attached.
    * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue customer = 2;</code>
+   * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getCustomer();
   /**
    * <pre>
-   * The resource name of the customer to which the label is attached.
+   * Output only. The resource name of the customer to which the label is attached.
    * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue customer = 2;</code>
+   * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCustomerOrBuilder();
 
   /**
    * <pre>
-   * The resource name of the label assigned to the customer.
+   * Output only. The resource name of the label assigned to the customer.
    * Note: the Customer ID portion of the label resource name is not
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasLabel();
   /**
    * <pre>
-   * The resource name of the label assigned to the customer.
+   * Output only. The resource name of the label assigned to the customer.
    * Note: the Customer ID portion of the label resource name is not
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getLabel();
   /**
    * <pre>
-   * The resource name of the label assigned to the customer.
+   * Output only. The resource name of the label assigned to the customer.
    * Note: the Customer ID portion of the label resource name is not
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getLabelOrBuilder();
 }

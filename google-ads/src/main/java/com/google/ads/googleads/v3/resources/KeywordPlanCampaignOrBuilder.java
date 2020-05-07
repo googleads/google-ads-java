@@ -9,22 +9,22 @@ public interface KeywordPlanCampaignOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the Keyword Plan campaign.
+   * Immutable. The resource name of the Keyword Plan campaign.
    * KeywordPlanCampaign resource names have the form:
    * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the Keyword Plan campaign.
+   * Immutable. The resource name of the Keyword Plan campaign.
    * KeywordPlanCampaign resource names have the form:
    * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -34,7 +34,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * The keyword plan this campaign belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   boolean hasKeywordPlan();
   /**
@@ -42,7 +42,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * The keyword plan this campaign belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getKeywordPlan();
   /**
@@ -50,32 +50,32 @@ public interface KeywordPlanCampaignOrBuilder extends
    * The keyword plan this campaign belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getKeywordPlanOrBuilder();
 
   /**
    * <pre>
-   * The ID of the Keyword Plan campaign.
+   * Output only. The ID of the Keyword Plan campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the Keyword Plan campaign.
+   * Output only. The ID of the Keyword Plan campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the Keyword Plan campaign.
+   * Output only. The ID of the Keyword Plan campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
@@ -116,7 +116,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * Max allowed: 1.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+   * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
   java.util.List<com.google.protobuf.StringValue> 
       getLanguageConstantsList();
@@ -126,7 +126,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * Max allowed: 1.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+   * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getLanguageConstants(int index);
   /**
@@ -135,7 +135,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * Max allowed: 1.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+   * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
   int getLanguageConstantsCount();
   /**
@@ -144,7 +144,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * Max allowed: 1.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+   * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
   java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getLanguageConstantsOrBuilderList();
@@ -154,7 +154,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * Max allowed: 1.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+   * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getLanguageConstantsOrBuilder(
       int index);

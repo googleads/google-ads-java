@@ -32,30 +32,32 @@ public final class AssetProto {
       "t.proto\022!google.ads.googleads.v3.resourc" +
       "es\0320google/ads/googleads/v3/common/asset" +
       "_types.proto\032.google/ads/googleads/v3/en" +
-      "ums/asset_type.proto\032\031google/api/resourc" +
-      "e.proto\032\036google/protobuf/wrappers.proto\032" +
-      "\034google/api/annotations.proto\"\267\004\n\005Asset\022" +
-      "\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022*\n\004name\030\003 \001(\0132\034." +
-      "google.protobuf.StringValue\022D\n\004type\030\004 \001(" +
-      "\01626.google.ads.googleads.v3.enums.AssetT" +
-      "ypeEnum.AssetType\022P\n\023youtube_video_asset" +
-      "\030\005 \001(\01321.google.ads.googleads.v3.common." +
-      "YoutubeVideoAssetH\000\022N\n\022media_bundle_asse" +
-      "t\030\006 \001(\01320.google.ads.googleads.v3.common" +
-      ".MediaBundleAssetH\000\022A\n\013image_asset\030\007 \001(\013" +
-      "2*.google.ads.googleads.v3.common.ImageA" +
-      "ssetH\000\022?\n\ntext_asset\030\010 \001(\0132).google.ads." +
-      "googleads.v3.common.TextAssetH\000:H\352AE\n\036go" +
-      "ogleads.googleapis.com/Asset\022#customers/" +
-      "{customer}/assets/{asset}B\014\n\nasset_dataB" +
-      "\367\001\n%com.google.ads.googleads.v3.resource" +
-      "sB\nAssetProtoP\001ZJgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v3/resource" +
-      "s;resources\242\002\003GAA\252\002!Google.Ads.GoogleAds" +
-      ".V3.Resources\312\002!Google\\Ads\\GoogleAds\\V3\\" +
-      "Resources\352\002%Google::Ads::GoogleAds::V3::" +
-      "Resourcesb\006proto3"
+      "ums/asset_type.proto\032\037google/api/field_b" +
+      "ehavior.proto\032\031google/api/resource.proto" +
+      "\032\036google/protobuf/wrappers.proto\032\034google" +
+      "/api/annotations.proto\"\375\004\n\005Asset\022=\n\rreso" +
+      "urce_name\030\001 \001(\tB&\340A\005\372A \n\036googleads.googl" +
+      "eapis.com/Asset\022,\n\002id\030\002 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\003\340A\003\022*\n\004name\030\003 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\022I\n\004type\030\004 \001(\0162" +
+      "6.google.ads.googleads.v3.enums.AssetTyp" +
+      "eEnum.AssetTypeB\003\340A\003\022U\n\023youtube_video_as" +
+      "set\030\005 \001(\01321.google.ads.googleads.v3.comm" +
+      "on.YoutubeVideoAssetB\003\340A\005H\000\022S\n\022media_bun" +
+      "dle_asset\030\006 \001(\01320.google.ads.googleads.v" +
+      "3.common.MediaBundleAssetB\003\340A\005H\000\022F\n\013imag" +
+      "e_asset\030\007 \001(\0132*.google.ads.googleads.v3." +
+      "common.ImageAssetB\003\340A\003H\000\022D\n\ntext_asset\030\010" +
+      " \001(\0132).google.ads.googleads.v3.common.Te" +
+      "xtAssetB\003\340A\003H\000:H\352AE\n\036googleads.googleapi" +
+      "s.com/Asset\022#customers/{customer}/assets" +
+      "/{asset}B\014\n\nasset_dataB\367\001\n%com.google.ad" +
+      "s.googleads.v3.resourcesB\nAssetProtoP\001ZJ" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v3/resources;resources\242\002\003GAA" +
+      "\252\002!Google.Ads.GoogleAds.V3.Resources\312\002!G" +
+      "oogle\\Ads\\GoogleAds\\V3\\Resources\352\002%Googl" +
+      "e::Ads::GoogleAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -70,6 +72,7 @@ public final class AssetProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.common.AssetTypesProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.AssetTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -82,11 +85,14 @@ public final class AssetProto {
         new java.lang.String[] { "ResourceName", "Id", "Name", "Type", "YoutubeVideoAsset", "MediaBundleAsset", "ImageAsset", "TextAsset", "AssetData", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.common.AssetTypesProto.getDescriptor();
     com.google.ads.googleads.v3.enums.AssetTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

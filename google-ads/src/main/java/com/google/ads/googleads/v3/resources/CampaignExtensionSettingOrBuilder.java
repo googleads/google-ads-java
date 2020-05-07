@@ -9,74 +9,74 @@ public interface CampaignExtensionSettingOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the campaign extension setting.
+   * Immutable. The resource name of the campaign extension setting.
    * CampaignExtensionSetting resource names have the form:
    * `customers/{customer_id}/campaignExtensionSettings/{campaign_id}~{extension_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the campaign extension setting.
+   * Immutable. The resource name of the campaign extension setting.
    * CampaignExtensionSetting resource names have the form:
    * `customers/{customer_id}/campaignExtensionSettings/{campaign_id}~{extension_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The extension type of the customer extension setting.
+   * Immutable. The extension type of the customer extension setting.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getExtensionTypeValue();
   /**
    * <pre>
-   * The extension type of the customer extension setting.
+   * Immutable. The extension type of the customer extension setting.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType getExtensionType();
 
   /**
    * <pre>
-   * The resource name of the campaign. The linked extension feed items will
+   * Immutable. The resource name of the campaign. The linked extension feed items will
    * serve under this campaign.
    * Campaign resource names have the form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 3;</code>
+   * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasCampaign();
   /**
    * <pre>
-   * The resource name of the campaign. The linked extension feed items will
+   * Immutable. The resource name of the campaign. The linked extension feed items will
    * serve under this campaign.
    * Campaign resource names have the form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 3;</code>
+   * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getCampaign();
   /**
    * <pre>
-   * The resource name of the campaign. The linked extension feed items will
+   * Immutable. The resource name of the campaign. The linked extension feed items will
    * serve under this campaign.
    * Campaign resource names have the form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 3;</code>
+   * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder();
 
@@ -87,7 +87,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4 [(.google.api.resource_reference) = { ... }</code>
    */
   java.util.List<com.google.protobuf.StringValue> 
       getExtensionFeedItemsList();
@@ -98,7 +98,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getExtensionFeedItems(int index);
   /**
@@ -108,7 +108,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4 [(.google.api.resource_reference) = { ... }</code>
    */
   int getExtensionFeedItemsCount();
   /**
@@ -118,7 +118,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4 [(.google.api.resource_reference) = { ... }</code>
    */
   java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getExtensionFeedItemsOrBuilderList();
@@ -129,7 +129,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4;</code>
+   * <code>repeated .google.protobuf.StringValue extension_feed_items = 4 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getExtensionFeedItemsOrBuilder(
       int index);

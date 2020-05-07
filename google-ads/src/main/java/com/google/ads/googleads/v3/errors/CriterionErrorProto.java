@@ -30,8 +30,8 @@ public final class CriterionErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v3/errors/criteri" +
       "on_error.proto\022\036google.ads.googleads.v3." +
-      "errors\032\034google/api/annotations.proto\"\341\035\n" +
-      "\022CriterionErrorEnum\"\312\035\n\016CriterionError\022\017" +
+      "errors\032\034google/api/annotations.proto\"\342\037\n" +
+      "\022CriterionErrorEnum\"\313\037\n\016CriterionError\022\017" +
       "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032\n\026CONCRETE" +
       "_TYPE_REQUIRED\020\002\022\035\n\031INVALID_EXCLUDED_CAT" +
       "EGORY\020\003\022\030\n\024INVALID_KEYWORD_TEXT\020\004\022\031\n\025KEY" +
@@ -126,13 +126,19 @@ public final class CriterionErrorProto {
       "NE_CONDITION\020^\0227\n3WEBPAGE_CRITERION_NOT_" +
       "SUPPORTED_ON_NON_DSA_AD_GROUP\020_\0227\n3CANNO" +
       "T_TARGET_USER_LIST_FOR_SMART_DISPLAY_CAM" +
-      "PAIGNS\020cB\356\001\n\"com.google.ads.googleads.v3" +
-      ".errorsB\023CriterionErrorProtoP\001ZDgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v3/errors;errors\242\002\003GAA\252\002\036Google.Ads." +
-      "GoogleAds.V3.Errors\312\002\036Google\\Ads\\GoogleA" +
-      "ds\\V3\\Errors\352\002\"Google::Ads::GoogleAds::V" +
-      "3::Errorsb\006proto3"
+      "PAIGNS\020c\022*\n&LISTING_SCOPE_TOO_MANY_DIMEN" +
+      "SION_TYPES\020d\022\'\n#LISTING_SCOPE_TOO_MANY_I" +
+      "N_OPERATORS\020e\022+\n\'LISTING_SCOPE_IN_OPERAT" +
+      "OR_NOT_SUPPORTED\020f\022$\n DUPLICATE_LISTING_" +
+      "DIMENSION_TYPE\020g\022%\n!DUPLICATE_LISTING_DI" +
+      "MENSION_VALUE\020h\0220\n,CANNOT_SET_BIDS_ON_LI" +
+      "STING_GROUP_SUBDIVISION\020iB\356\001\n\"com.google" +
+      ".ads.googleads.v3.errorsB\023CriterionError" +
+      "ProtoP\001ZDgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v3/errors;errors\242\002\003" +
+      "GAA\252\002\036Google.Ads.GoogleAds.V3.Errors\312\002\036G" +
+      "oogle\\Ads\\GoogleAds\\V3\\Errors\352\002\"Google::" +
+      "Ads::GoogleAds::V3::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

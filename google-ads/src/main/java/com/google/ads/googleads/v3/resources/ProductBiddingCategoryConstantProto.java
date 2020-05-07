@@ -34,33 +34,38 @@ public final class ProductBiddingCategoryConstantProto {
       "ds/googleads/v3/enums/product_bidding_ca" +
       "tegory_level.proto\032Cgoogle/ads/googleads" +
       "/v3/enums/product_bidding_category_statu" +
-      "s.proto\032\031google/api/resource.proto\032\036goog" +
-      "le/protobuf/wrappers.proto\032\034google/api/a" +
-      "nnotations.proto\"\254\005\n\036ProductBiddingCateg" +
-      "oryConstant\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id" +
-      "\030\002 \001(\0132\033.google.protobuf.Int64Value\0222\n\014c" +
-      "ountry_code\030\003 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022N\n(product_bidding_category_cons" +
-      "tant_parent\030\004 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022i\n\005level\030\005 \001(\0162Z.google.ads.goog" +
-      "leads.v3.enums.ProductBiddingCategoryLev" +
-      "elEnum.ProductBiddingCategoryLevel\022l\n\006st" +
-      "atus\030\006 \001(\0162\\.google.ads.googleads.v3.enu" +
-      "ms.ProductBiddingCategoryStatusEnum.Prod" +
-      "uctBiddingCategoryStatus\0223\n\rlanguage_cod" +
-      "e\030\007 \001(\0132\034.google.protobuf.StringValue\0224\n" +
-      "\016localized_name\030\010 \001(\0132\034.google.protobuf." +
-      "StringValue:\201\001\352A~\n7googleads.googleapis." +
-      "com/ProductBiddingCategoryConstant\022Cprod" +
-      "uctBiddingCategoryConstants/{product_bid" +
-      "ding_category_constant}B\220\002\n%com.google.a" +
-      "ds.googleads.v3.resourcesB#ProductBiddin" +
-      "gCategoryConstantProtoP\001ZJgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v3" +
-      "/resources;resources\242\002\003GAA\252\002!Google.Ads." +
-      "GoogleAds.V3.Resources\312\002!Google\\Ads\\Goog" +
-      "leAds\\V3\\Resources\352\002%Google::Ads::Google" +
-      "Ads::V3::Resourcesb\006proto3"
+      "s.proto\032\037google/api/field_behavior.proto" +
+      "\032\031google/api/resource.proto\032\036google/prot" +
+      "obuf/wrappers.proto\032\034google/api/annotati" +
+      "ons.proto\"\315\006\n\036ProductBiddingCategoryCons" +
+      "tant\022V\n\rresource_name\030\001 \001(\tB?\340A\003\372A9\n7goo" +
+      "gleads.googleapis.com/ProductBiddingCate" +
+      "goryConstant\022,\n\002id\030\002 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\003\340A\003\0227\n\014country_code\030\003 \001(\013" +
+      "2\034.google.protobuf.StringValueB\003\340A\003\022\217\001\n(" +
+      "product_bidding_category_constant_parent" +
+      "\030\004 \001(\0132\034.google.protobuf.StringValueB?\340A" +
+      "\003\372A9\n7googleads.googleapis.com/ProductBi" +
+      "ddingCategoryConstant\022n\n\005level\030\005 \001(\0162Z.g" +
+      "oogle.ads.googleads.v3.enums.ProductBidd" +
+      "ingCategoryLevelEnum.ProductBiddingCateg" +
+      "oryLevelB\003\340A\003\022q\n\006status\030\006 \001(\0162\\.google.a" +
+      "ds.googleads.v3.enums.ProductBiddingCate" +
+      "goryStatusEnum.ProductBiddingCategorySta" +
+      "tusB\003\340A\003\0228\n\rlanguage_code\030\007 \001(\0132\034.google" +
+      ".protobuf.StringValueB\003\340A\003\0229\n\016localized_" +
+      "name\030\010 \001(\0132\034.google.protobuf.StringValue" +
+      "B\003\340A\003:\201\001\352A~\n7googleads.googleapis.com/Pr" +
+      "oductBiddingCategoryConstant\022CproductBid" +
+      "dingCategoryConstants/{product_bidding_c" +
+      "ategory_constant}B\220\002\n%com.google.ads.goo" +
+      "gleads.v3.resourcesB#ProductBiddingCateg" +
+      "oryConstantProtoP\001ZJgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v3/resou" +
+      "rces;resources\242\002\003GAA\252\002!Google.Ads.Google" +
+      "Ads.V3.Resources\312\002!Google\\Ads\\GoogleAds\\" +
+      "V3\\Resources\352\002%Google::Ads::GoogleAds::V" +
+      "3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -75,6 +80,7 @@ public final class ProductBiddingCategoryConstantProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -87,11 +93,14 @@ public final class ProductBiddingCategoryConstantProto {
         new java.lang.String[] { "ResourceName", "Id", "CountryCode", "ProductBiddingCategoryConstantParent", "Level", "Status", "LanguageCode", "LocalizedName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.ProductBiddingCategoryLevelProto.getDescriptor();
     com.google.ads.googleads.v3.enums.ProductBiddingCategoryStatusProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

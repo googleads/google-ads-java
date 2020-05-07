@@ -32,29 +32,32 @@ public final class OperatingSystemVersionConstantProto {
       "ating_system_version_constant.proto\022!goo" +
       "gle.ads.googleads.v3.resources\032Jgoogle/a" +
       "ds/googleads/v3/enums/operating_system_v" +
-      "ersion_operator_type.proto\032\031google/api/r" +
-      "esource.proto\032\036google/protobuf/wrappers." +
-      "proto\032\034google/api/annotations.proto\"\377\003\n\036" +
-      "OperatingSystemVersionConstant\022\025\n\rresour" +
-      "ce_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022*\n\004name\030\003 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\0225\n\020os_major_version\030\004" +
-      " \001(\0132\033.google.protobuf.Int32Value\0225\n\020os_" +
-      "minor_version\030\005 \001(\0132\033.google.protobuf.In" +
-      "t32Value\022\177\n\roperator_type\030\006 \001(\0162h.google" +
-      ".ads.googleads.v3.enums.OperatingSystemV" +
-      "ersionOperatorTypeEnum.OperatingSystemVe" +
-      "rsionOperatorType:\201\001\352A~\n7googleads.googl" +
-      "eapis.com/OperatingSystemVersionConstant" +
-      "\022CoperatingSystemVersionConstants/{opera" +
-      "ting_system_version_constant}B\220\002\n%com.go" +
-      "ogle.ads.googleads.v3.resourcesB#Operati" +
-      "ngSystemVersionConstantProtoP\001ZJgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v3/resources;resources\242\002\003GAA\252\002!Googl" +
-      "e.Ads.GoogleAds.V3.Resources\312\002!Google\\Ad" +
-      "s\\GoogleAds\\V3\\Resources\352\002%Google::Ads::" +
-      "GoogleAds::V3::Resourcesb\006proto3"
+      "ersion_operator_type.proto\032\037google/api/f" +
+      "ield_behavior.proto\032\031google/api/resource" +
+      ".proto\032\036google/protobuf/wrappers.proto\032\034" +
+      "google/api/annotations.proto\"\332\004\n\036Operati" +
+      "ngSystemVersionConstant\022V\n\rresource_name" +
+      "\030\001 \001(\tB?\340A\003\372A9\n7googleads.googleapis.com" +
+      "/OperatingSystemVersionConstant\022,\n\002id\030\002 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\003\340A\003\022/\n" +
+      "\004name\030\003 \001(\0132\034.google.protobuf.StringValu" +
+      "eB\003\340A\003\022:\n\020os_major_version\030\004 \001(\0132\033.googl" +
+      "e.protobuf.Int32ValueB\003\340A\003\022:\n\020os_minor_v" +
+      "ersion\030\005 \001(\0132\033.google.protobuf.Int32Valu" +
+      "eB\003\340A\003\022\204\001\n\roperator_type\030\006 \001(\0162h.google." +
+      "ads.googleads.v3.enums.OperatingSystemVe" +
+      "rsionOperatorTypeEnum.OperatingSystemVer" +
+      "sionOperatorTypeB\003\340A\003:\201\001\352A~\n7googleads.g" +
+      "oogleapis.com/OperatingSystemVersionCons" +
+      "tant\022CoperatingSystemVersionConstants/{o" +
+      "perating_system_version_constant}B\220\002\n%co" +
+      "m.google.ads.googleads.v3.resourcesB#Ope" +
+      "ratingSystemVersionConstantProtoP\001ZJgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v3/resources;resources\242\002\003GAA\252\002!G" +
+      "oogle.Ads.GoogleAds.V3.Resources\312\002!Googl" +
+      "e\\Ads\\GoogleAds\\V3\\Resources\352\002%Google::A" +
+      "ds::GoogleAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -68,6 +71,7 @@ public final class OperatingSystemVersionConstantProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.OperatingSystemVersionOperatorTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -80,10 +84,13 @@ public final class OperatingSystemVersionConstantProto {
         new java.lang.String[] { "ResourceName", "Id", "Name", "OsMajorVersion", "OsMinorVersion", "OperatorType", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.OperatingSystemVersionOperatorTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

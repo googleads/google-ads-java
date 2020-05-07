@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * Required. The resource name of the MutateJob.
    * </pre>
    *
-   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
    * Required. The resource name of the MutateJob.
    * </pre>
    *
-   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the MutateJob.
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -695,7 +695,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the MutateJob.
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -715,7 +715,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the MutateJob.
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the MutateJob.
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the MutateJob.
      * </pre>
      *
-     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {

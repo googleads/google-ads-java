@@ -30,19 +30,21 @@ public final class HotelGroupViewProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v3/resources/hote" +
       "l_group_view.proto\022!google.ads.googleads" +
-      ".v3.resources\032\031google/api/resource.proto" +
-      "\032\034google/api/annotations.proto\"\216\001\n\016Hotel" +
-      "GroupView\022\025\n\rresource_name\030\001 \001(\t:e\352Ab\n\'g" +
-      "oogleads.googleapis.com/HotelGroupView\0227" +
-      "customers/{customer}/hotelGroupViews/{ho" +
-      "tel_group_view}B\200\002\n%com.google.ads.googl" +
-      "eads.v3.resourcesB\023HotelGroupViewProtoP\001" +
-      "ZJgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v3/resources;resources\242\002\003G" +
-      "AA\252\002!Google.Ads.GoogleAds.V3.Resources\312\002" +
-      "!Google\\Ads\\GoogleAds\\V3\\Resources\352\002%Goo" +
-      "gle::Ads::GoogleAds::V3::Resourcesb\006prot" +
-      "o3"
+      ".v3.resources\032\037google/api/field_behavior" +
+      ".proto\032\031google/api/resource.proto\032\034googl" +
+      "e/api/annotations.proto\"\277\001\n\016HotelGroupVi" +
+      "ew\022F\n\rresource_name\030\001 \001(\tB/\340A\003\372A)\n\'googl" +
+      "eads.googleapis.com/HotelGroupView:e\352Ab\n" +
+      "\'googleads.googleapis.com/HotelGroupView" +
+      "\0227customers/{customer}/hotelGroupViews/{" +
+      "hotel_group_view}B\200\002\n%com.google.ads.goo" +
+      "gleads.v3.resourcesB\023HotelGroupViewProto" +
+      "P\001ZJgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v3/resources;resources\242\002" +
+      "\003GAA\252\002!Google.Ads.GoogleAds.V3.Resources" +
+      "\312\002!Google\\Ads\\GoogleAds\\V3\\Resources\352\002%G" +
+      "oogle::Ads::GoogleAds::V3::Resourcesb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -55,6 +57,7 @@ public final class HotelGroupViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
@@ -66,9 +69,12 @@ public final class HotelGroupViewProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

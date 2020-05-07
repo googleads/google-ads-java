@@ -9,22 +9,22 @@ public interface AdGroupAdOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the ad.
+   * Immutable. The resource name of the ad.
    * Ad group ad resource names have the form:
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the ad.
+   * Immutable. The resource name of the ad.
    * Ad group ad resource names have the form:
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -48,93 +48,93 @@ public interface AdGroupAdOrBuilder extends
 
   /**
    * <pre>
-   * The ad group to which the ad belongs.
+   * Immutable. The ad group to which the ad belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 4;</code>
+   * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasAdGroup();
   /**
    * <pre>
-   * The ad group to which the ad belongs.
+   * Immutable. The ad group to which the ad belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 4;</code>
+   * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
    * <pre>
-   * The ad group to which the ad belongs.
+   * Immutable. The ad group to which the ad belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 4;</code>
+   * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder();
 
   /**
    * <pre>
-   * The ad.
+   * Immutable. The ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+   * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasAd();
   /**
    * <pre>
-   * The ad.
+   * Immutable. The ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+   * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.Ad getAd();
   /**
    * <pre>
-   * The ad.
+   * Immutable. The ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Ad ad = 5;</code>
+   * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.AdOrBuilder getAdOrBuilder();
 
   /**
    * <pre>
-   * Policy information for the ad.
+   * Output only. Policy information for the ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasPolicySummary();
   /**
    * <pre>
-   * Policy information for the ad.
+   * Output only. Policy information for the ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary getPolicySummary();
   /**
    * <pre>
-   * Policy information for the ad.
+   * Output only. Policy information for the ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6;</code>
+   * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.resources.AdGroupAdPolicySummaryOrBuilder getPolicySummaryOrBuilder();
 
   /**
    * <pre>
-   * Overall ad strength for this ad group ad.
+   * Output only. Overall ad strength for this ad group ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getAdStrengthValue();
   /**
    * <pre>
-   * Overall ad strength for this ad group ad.
+   * Output only. Overall ad strength for this ad group ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength getAdStrength();
 }

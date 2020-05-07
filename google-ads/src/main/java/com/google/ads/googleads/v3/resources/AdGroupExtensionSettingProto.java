@@ -33,28 +33,33 @@ public final class AdGroupExtensionSettingProto {
       ".googleads.v3.resources\032<google/ads/goog" +
       "leads/v3/enums/extension_setting_device." +
       "proto\0322google/ads/googleads/v3/enums/ext" +
-      "ension_type.proto\032\031google/api/resource.p" +
-      "roto\032\036google/protobuf/wrappers.proto\032\034go" +
-      "ogle/api/annotations.proto\"\332\003\n\027AdGroupEx" +
-      "tensionSetting\022\025\n\rresource_name\030\001 \001(\t\022V\n" +
-      "\016extension_type\030\002 \001(\0162>.google.ads.googl" +
-      "eads.v3.enums.ExtensionTypeEnum.Extensio" +
-      "nType\022.\n\010ad_group\030\003 \001(\0132\034.google.protobu" +
-      "f.StringValue\022:\n\024extension_feed_items\030\004 " +
-      "\003(\0132\034.google.protobuf.StringValue\022`\n\006dev" +
-      "ice\030\005 \001(\0162P.google.ads.googleads.v3.enum" +
-      "s.ExtensionSettingDeviceEnum.ExtensionSe" +
-      "ttingDevice:\201\001\352A~\n0googleads.googleapis." +
-      "com/AdGroupExtensionSetting\022Jcustomers/{" +
-      "customer}/adGroupExtensionSettings/{ad_g" +
-      "roup_extension_setting}B\211\002\n%com.google.a" +
-      "ds.googleads.v3.resourcesB\034AdGroupExtens" +
-      "ionSettingProtoP\001ZJgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v3/resour" +
-      "ces;resources\242\002\003GAA\252\002!Google.Ads.GoogleA" +
-      "ds.V3.Resources\312\002!Google\\Ads\\GoogleAds\\V" +
-      "3\\Resources\352\002%Google::Ads::GoogleAds::V3" +
-      "::Resourcesb\006proto3"
+      "ension_type.proto\032\037google/api/field_beha" +
+      "vior.proto\032\031google/api/resource.proto\032\036g" +
+      "oogle/protobuf/wrappers.proto\032\034google/ap" +
+      "i/annotations.proto\"\364\004\n\027AdGroupExtension" +
+      "Setting\022O\n\rresource_name\030\001 \001(\tB8\340A\005\372A2\n0" +
+      "googleads.googleapis.com/AdGroupExtensio" +
+      "nSetting\022[\n\016extension_type\030\002 \001(\0162>.googl" +
+      "e.ads.googleads.v3.enums.ExtensionTypeEn" +
+      "um.ExtensionTypeB\003\340A\005\022X\n\010ad_group\030\003 \001(\0132" +
+      "\034.google.protobuf.StringValueB(\340A\005\372A\"\n g" +
+      "oogleads.googleapis.com/AdGroup\022k\n\024exten" +
+      "sion_feed_items\030\004 \003(\0132\034.google.protobuf." +
+      "StringValueB/\372A,\n*googleads.googleapis.c" +
+      "om/ExtensionFeedItem\022`\n\006device\030\005 \001(\0162P.g" +
+      "oogle.ads.googleads.v3.enums.ExtensionSe" +
+      "ttingDeviceEnum.ExtensionSettingDevice:\201" +
+      "\001\352A~\n0googleads.googleapis.com/AdGroupEx" +
+      "tensionSetting\022Jcustomers/{customer}/adG" +
+      "roupExtensionSettings/{ad_group_extensio" +
+      "n_setting}B\211\002\n%com.google.ads.googleads." +
+      "v3.resourcesB\034AdGroupExtensionSettingPro" +
+      "toP\001ZJgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v3/resources;resources" +
+      "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V3.Resourc" +
+      "es\312\002!Google\\Ads\\GoogleAds\\V3\\Resources\352\002" +
+      "%Google::Ads::GoogleAds::V3::Resourcesb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -69,6 +74,7 @@ public final class AdGroupExtensionSettingProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.ExtensionSettingDeviceProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.ExtensionTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -81,11 +87,14 @@ public final class AdGroupExtensionSettingProto {
         new java.lang.String[] { "ResourceName", "ExtensionType", "AdGroup", "ExtensionFeedItems", "Device", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.ExtensionSettingDeviceProto.getDescriptor();
     com.google.ads.googleads.v3.enums.ExtensionTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

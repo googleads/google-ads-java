@@ -593,6 +593,20 @@ private static final long serialVersionUID = 0L;
             operationCase_ = 43;
             break;
           }
+          case 394: {
+            com.google.ads.googleads.v3.services.AdOperation.Builder subBuilder = null;
+            if (operationCase_ == 49) {
+              subBuilder = ((com.google.ads.googleads.v3.services.AdOperation) operation_).toBuilder();
+            }
+            operation_ =
+                input.readMessage(com.google.ads.googleads.v3.services.AdOperation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v3.services.AdOperation) operation_);
+              operation_ = subBuilder.buildPartial();
+            }
+            operationCase_ = 49;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -638,6 +652,7 @@ private static final long serialVersionUID = 0L;
     AD_GROUP_FEED_OPERATION(20),
     AD_GROUP_LABEL_OPERATION(21),
     AD_GROUP_OPERATION(5),
+    AD_OPERATION(49),
     AD_PARAMETER_OPERATION(22),
     ASSET_OPERATION(23),
     BIDDING_STRATEGY_OPERATION(6),
@@ -692,6 +707,7 @@ private static final long serialVersionUID = 0L;
         case 20: return AD_GROUP_FEED_OPERATION;
         case 21: return AD_GROUP_LABEL_OPERATION;
         case 5: return AD_GROUP_OPERATION;
+        case 49: return AD_OPERATION;
         case 22: return AD_PARAMETER_OPERATION;
         case 23: return ASSET_OPERATION;
         case 6: return BIDDING_STRATEGY_OPERATION;
@@ -1077,6 +1093,44 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v3.services.AdGroupOperation) operation_;
     }
     return com.google.ads.googleads.v3.services.AdGroupOperation.getDefaultInstance();
+  }
+
+  public static final int AD_OPERATION_FIELD_NUMBER = 49;
+  /**
+   * <pre>
+   * An ad mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+   */
+  public boolean hasAdOperation() {
+    return operationCase_ == 49;
+  }
+  /**
+   * <pre>
+   * An ad mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+   */
+  public com.google.ads.googleads.v3.services.AdOperation getAdOperation() {
+    if (operationCase_ == 49) {
+       return (com.google.ads.googleads.v3.services.AdOperation) operation_;
+    }
+    return com.google.ads.googleads.v3.services.AdOperation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * An ad mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+   */
+  public com.google.ads.googleads.v3.services.AdOperationOrBuilder getAdOperationOrBuilder() {
+    if (operationCase_ == 49) {
+       return (com.google.ads.googleads.v3.services.AdOperation) operation_;
+    }
+    return com.google.ads.googleads.v3.services.AdOperation.getDefaultInstance();
   }
 
   public static final int AD_PARAMETER_OPERATION_FIELD_NUMBER = 22;
@@ -2350,6 +2404,9 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 43) {
       output.writeMessage(43, (com.google.ads.googleads.v3.services.RemarketingActionOperation) operation_);
     }
+    if (operationCase_ == 49) {
+      output.writeMessage(49, (com.google.ads.googleads.v3.services.AdOperation) operation_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2515,6 +2572,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(43, (com.google.ads.googleads.v3.services.RemarketingActionOperation) operation_);
     }
+    if (operationCase_ == 49) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(49, (com.google.ads.googleads.v3.services.AdOperation) operation_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2567,6 +2628,10 @@ private static final long serialVersionUID = 0L;
       case 5:
         if (!getAdGroupOperation()
             .equals(other.getAdGroupOperation())) return false;
+        break;
+      case 49:
+        if (!getAdOperation()
+            .equals(other.getAdOperation())) return false;
         break;
       case 22:
         if (!getAdParameterOperation()
@@ -2738,6 +2803,10 @@ private static final long serialVersionUID = 0L;
       case 5:
         hash = (37 * hash) + AD_GROUP_OPERATION_FIELD_NUMBER;
         hash = (53 * hash) + getAdGroupOperation().hashCode();
+        break;
+      case 49:
+        hash = (37 * hash) + AD_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getAdOperation().hashCode();
         break;
       case 22:
         hash = (37 * hash) + AD_PARAMETER_OPERATION_FIELD_NUMBER;
@@ -3090,6 +3159,13 @@ private static final long serialVersionUID = 0L;
           result.operation_ = adGroupOperationBuilder_.build();
         }
       }
+      if (operationCase_ == 49) {
+        if (adOperationBuilder_ == null) {
+          result.operation_ = operation_;
+        } else {
+          result.operation_ = adOperationBuilder_.build();
+        }
+      }
       if (operationCase_ == 22) {
         if (adParameterOperationBuilder_ == null) {
           result.operation_ = operation_;
@@ -3384,6 +3460,10 @@ private static final long serialVersionUID = 0L;
         }
         case AD_GROUP_OPERATION: {
           mergeAdGroupOperation(other.getAdGroupOperation());
+          break;
+        }
+        case AD_OPERATION: {
+          mergeAdOperation(other.getAdOperation());
           break;
         }
         case AD_PARAMETER_OPERATION: {
@@ -5100,6 +5180,178 @@ private static final long serialVersionUID = 0L;
       operationCase_ = 5;
       onChanged();;
       return adGroupOperationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v3.services.AdOperation, com.google.ads.googleads.v3.services.AdOperation.Builder, com.google.ads.googleads.v3.services.AdOperationOrBuilder> adOperationBuilder_;
+    /**
+     * <pre>
+     * An ad mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+     */
+    public boolean hasAdOperation() {
+      return operationCase_ == 49;
+    }
+    /**
+     * <pre>
+     * An ad mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+     */
+    public com.google.ads.googleads.v3.services.AdOperation getAdOperation() {
+      if (adOperationBuilder_ == null) {
+        if (operationCase_ == 49) {
+          return (com.google.ads.googleads.v3.services.AdOperation) operation_;
+        }
+        return com.google.ads.googleads.v3.services.AdOperation.getDefaultInstance();
+      } else {
+        if (operationCase_ == 49) {
+          return adOperationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v3.services.AdOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * An ad mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+     */
+    public Builder setAdOperation(com.google.ads.googleads.v3.services.AdOperation value) {
+      if (adOperationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        operation_ = value;
+        onChanged();
+      } else {
+        adOperationBuilder_.setMessage(value);
+      }
+      operationCase_ = 49;
+      return this;
+    }
+    /**
+     * <pre>
+     * An ad mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+     */
+    public Builder setAdOperation(
+        com.google.ads.googleads.v3.services.AdOperation.Builder builderForValue) {
+      if (adOperationBuilder_ == null) {
+        operation_ = builderForValue.build();
+        onChanged();
+      } else {
+        adOperationBuilder_.setMessage(builderForValue.build());
+      }
+      operationCase_ = 49;
+      return this;
+    }
+    /**
+     * <pre>
+     * An ad mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+     */
+    public Builder mergeAdOperation(com.google.ads.googleads.v3.services.AdOperation value) {
+      if (adOperationBuilder_ == null) {
+        if (operationCase_ == 49 &&
+            operation_ != com.google.ads.googleads.v3.services.AdOperation.getDefaultInstance()) {
+          operation_ = com.google.ads.googleads.v3.services.AdOperation.newBuilder((com.google.ads.googleads.v3.services.AdOperation) operation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          operation_ = value;
+        }
+        onChanged();
+      } else {
+        if (operationCase_ == 49) {
+          adOperationBuilder_.mergeFrom(value);
+        }
+        adOperationBuilder_.setMessage(value);
+      }
+      operationCase_ = 49;
+      return this;
+    }
+    /**
+     * <pre>
+     * An ad mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+     */
+    public Builder clearAdOperation() {
+      if (adOperationBuilder_ == null) {
+        if (operationCase_ == 49) {
+          operationCase_ = 0;
+          operation_ = null;
+          onChanged();
+        }
+      } else {
+        if (operationCase_ == 49) {
+          operationCase_ = 0;
+          operation_ = null;
+        }
+        adOperationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * An ad mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+     */
+    public com.google.ads.googleads.v3.services.AdOperation.Builder getAdOperationBuilder() {
+      return getAdOperationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * An ad mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+     */
+    public com.google.ads.googleads.v3.services.AdOperationOrBuilder getAdOperationOrBuilder() {
+      if ((operationCase_ == 49) && (adOperationBuilder_ != null)) {
+        return adOperationBuilder_.getMessageOrBuilder();
+      } else {
+        if (operationCase_ == 49) {
+          return (com.google.ads.googleads.v3.services.AdOperation) operation_;
+        }
+        return com.google.ads.googleads.v3.services.AdOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * An ad mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.AdOperation ad_operation = 49;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v3.services.AdOperation, com.google.ads.googleads.v3.services.AdOperation.Builder, com.google.ads.googleads.v3.services.AdOperationOrBuilder> 
+        getAdOperationFieldBuilder() {
+      if (adOperationBuilder_ == null) {
+        if (!(operationCase_ == 49)) {
+          operation_ = com.google.ads.googleads.v3.services.AdOperation.getDefaultInstance();
+        }
+        adOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v3.services.AdOperation, com.google.ads.googleads.v3.services.AdOperation.Builder, com.google.ads.googleads.v3.services.AdOperationOrBuilder>(
+                (com.google.ads.googleads.v3.services.AdOperation) operation_,
+                getParentForChildren(),
+                isClean());
+        operation_ = null;
+      }
+      operationCase_ = 49;
+      onChanged();;
+      return adOperationBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

@@ -31,27 +31,30 @@ public final class MobileDeviceConstantProto {
       "\n>google/ads/googleads/v3/resources/mobi" +
       "le_device_constant.proto\022!google.ads.goo" +
       "gleads.v3.resources\0326google/ads/googlead" +
-      "s/v3/enums/mobile_device_type.proto\032\031goo" +
-      "gle/api/resource.proto\032\036google/protobuf/" +
-      "wrappers.proto\032\034google/api/annotations.p" +
-      "roto\"\260\003\n\024MobileDeviceConstant\022\025\n\rresourc" +
-      "e_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022*\n\004name\030\003 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\0227\n\021manufacturer_name\030\004" +
-      " \001(\0132\034.google.protobuf.StringValue\022;\n\025op" +
-      "erating_system_name\030\005 \001(\0132\034.google.proto" +
-      "buf.StringValue\022R\n\004type\030\006 \001(\0162D.google.a" +
-      "ds.googleads.v3.enums.MobileDeviceTypeEn" +
-      "um.MobileDeviceType:b\352A_\n-googleads.goog" +
-      "leapis.com/MobileDeviceConstant\022.mobileD" +
-      "eviceConstants/{mobile_device_constant}B" +
-      "\206\002\n%com.google.ads.googleads.v3.resource" +
-      "sB\031MobileDeviceConstantProtoP\001ZJgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v3/resources;resources\242\002\003GAA\252\002!Googl" +
-      "e.Ads.GoogleAds.V3.Resources\312\002!Google\\Ad" +
-      "s\\GoogleAds\\V3\\Resources\352\002%Google::Ads::" +
-      "GoogleAds::V3::Resourcesb\006proto3"
+      "s/v3/enums/mobile_device_type.proto\032\037goo" +
+      "gle/api/field_behavior.proto\032\031google/api" +
+      "/resource.proto\032\036google/protobuf/wrapper" +
+      "s.proto\032\034google/api/annotations.proto\"\200\004" +
+      "\n\024MobileDeviceConstant\022L\n\rresource_name\030" +
+      "\001 \001(\tB5\340A\003\372A/\n-googleads.googleapis.com/" +
+      "MobileDeviceConstant\022,\n\002id\030\002 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\003\340A\003\022/\n\004name\030\003 \001(\013" +
+      "2\034.google.protobuf.StringValueB\003\340A\003\022<\n\021m" +
+      "anufacturer_name\030\004 \001(\0132\034.google.protobuf" +
+      ".StringValueB\003\340A\003\022@\n\025operating_system_na" +
+      "me\030\005 \001(\0132\034.google.protobuf.StringValueB\003" +
+      "\340A\003\022W\n\004type\030\006 \001(\0162D.google.ads.googleads" +
+      ".v3.enums.MobileDeviceTypeEnum.MobileDev" +
+      "iceTypeB\003\340A\003:b\352A_\n-googleads.googleapis." +
+      "com/MobileDeviceConstant\022.mobileDeviceCo" +
+      "nstants/{mobile_device_constant}B\206\002\n%com" +
+      ".google.ads.googleads.v3.resourcesB\031Mobi" +
+      "leDeviceConstantProtoP\001ZJgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v3/" +
+      "resources;resources\242\002\003GAA\252\002!Google.Ads.G" +
+      "oogleAds.V3.Resources\312\002!Google\\Ads\\Googl" +
+      "eAds\\V3\\Resources\352\002%Google::Ads::GoogleA" +
+      "ds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -65,6 +68,7 @@ public final class MobileDeviceConstantProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.MobileDeviceTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -77,10 +81,13 @@ public final class MobileDeviceConstantProto {
         new java.lang.String[] { "ResourceName", "Id", "Name", "ManufacturerName", "OperatingSystemName", "Type", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.MobileDeviceTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

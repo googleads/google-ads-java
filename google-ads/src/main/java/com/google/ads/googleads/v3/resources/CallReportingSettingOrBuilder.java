@@ -67,7 +67,7 @@ public interface CallReportingSettingOrBuilder extends
    * call_conversion_reporting_enabled is set to true.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue call_conversion_action = 9;</code>
+   * <code>.google.protobuf.StringValue call_conversion_action = 9 [(.google.api.resource_reference) = { ... }</code>
    */
   boolean hasCallConversionAction();
   /**
@@ -77,7 +77,7 @@ public interface CallReportingSettingOrBuilder extends
    * call_conversion_reporting_enabled is set to true.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue call_conversion_action = 9;</code>
+   * <code>.google.protobuf.StringValue call_conversion_action = 9 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getCallConversionAction();
   /**
@@ -87,7 +87,7 @@ public interface CallReportingSettingOrBuilder extends
    * call_conversion_reporting_enabled is set to true.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue call_conversion_action = 9;</code>
+   * <code>.google.protobuf.StringValue call_conversion_action = 9 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCallConversionActionOrBuilder();
 }

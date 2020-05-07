@@ -269,12 +269,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the bidding strategy.
+   * Immutable. The resource name of the bidding strategy.
    * Bidding strategy resource names have the form:
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -290,12 +290,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the bidding strategy.
+   * Immutable. The resource name of the bidding strategy.
    * Bidding strategy resource names have the form:
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -315,30 +315,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the bidding strategy.
+   * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the bidding strategy.
+   * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the bidding strategy.
+   * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -390,22 +390,22 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * The status of the bidding strategy.
+   * Output only. The status of the bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * The status of the bidding strategy.
+   * Output only. The status of the bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -417,24 +417,24 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * The type of the bidding strategy.
+   * Output only. The type of the bidding strategy.
    * Create a bidding strategy by setting the bidding scheme.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * The type of the bidding strategy.
+   * Output only. The type of the bidding strategy.
    * Create a bidding strategy by setting the bidding scheme.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType getType() {
     @SuppressWarnings("deprecation")
@@ -446,33 +446,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value campaignCount_;
   /**
    * <pre>
-   * The number of campaigns attached to this bidding strategy.
+   * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+   * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCampaignCount() {
     return campaignCount_ != null;
   }
   /**
    * <pre>
-   * The number of campaigns attached to this bidding strategy.
+   * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+   * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getCampaignCount() {
     return campaignCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : campaignCount_;
   }
   /**
    * <pre>
-   * The number of campaigns attached to this bidding strategy.
+   * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+   * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getCampaignCountOrBuilder() {
     return getCampaignCount();
@@ -482,33 +482,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value nonRemovedCampaignCount_;
   /**
    * <pre>
-   * The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasNonRemovedCampaignCount() {
     return nonRemovedCampaignCount_ != null;
   }
   /**
    * <pre>
-   * The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getNonRemovedCampaignCount() {
     return nonRemovedCampaignCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : nonRemovedCampaignCount_;
   }
   /**
    * <pre>
-   * The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getNonRemovedCampaignCountOrBuilder() {
     return getNonRemovedCampaignCount();
@@ -1345,12 +1345,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the bidding strategy.
+     * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1366,12 +1366,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the bidding strategy.
+     * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1388,12 +1388,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the bidding strategy.
+     * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1407,12 +1407,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the bidding strategy.
+     * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1422,12 +1422,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the bidding strategy.
+     * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1446,20 +1446,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1470,10 +1470,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1490,10 +1490,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1508,10 +1508,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1530,10 +1530,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1548,10 +1548,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1560,10 +1560,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1575,10 +1575,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1777,22 +1777,22 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * The status of the bidding strategy.
+     * Output only. The status of the bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * The status of the bidding strategy.
+     * Output only. The status of the bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -1801,11 +1801,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the bidding strategy.
+     * Output only. The status of the bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -1814,11 +1814,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the bidding strategy.
+     * Output only. The status of the bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus value) {
       if (value == null) {
@@ -1831,11 +1831,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the bidding strategy.
+     * Output only. The status of the bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       
@@ -1847,24 +1847,24 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The type of the bidding strategy.
+     * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * The type of the bidding strategy.
+     * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -1873,12 +1873,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the bidding strategy.
+     * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType getType() {
       @SuppressWarnings("deprecation")
@@ -1887,12 +1887,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the bidding strategy.
+     * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setType(com.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType value) {
       if (value == null) {
@@ -1905,12 +1905,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the bidding strategy.
+     * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearType() {
       
@@ -1924,22 +1924,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> campaignCountBuilder_;
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCampaignCount() {
       return campaignCountBuilder_ != null || campaignCount_ != null;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getCampaignCount() {
       if (campaignCountBuilder_ == null) {
@@ -1950,11 +1950,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCampaignCount(com.google.protobuf.Int64Value value) {
       if (campaignCountBuilder_ == null) {
@@ -1971,11 +1971,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCampaignCount(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1990,11 +1990,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCampaignCount(com.google.protobuf.Int64Value value) {
       if (campaignCountBuilder_ == null) {
@@ -2013,11 +2013,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCampaignCount() {
       if (campaignCountBuilder_ == null) {
@@ -2032,11 +2032,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getCampaignCountBuilder() {
       
@@ -2045,11 +2045,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getCampaignCountOrBuilder() {
       if (campaignCountBuilder_ != null) {
@@ -2061,11 +2061,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2086,22 +2086,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> nonRemovedCampaignCountBuilder_;
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasNonRemovedCampaignCount() {
       return nonRemovedCampaignCountBuilder_ != null || nonRemovedCampaignCount_ != null;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getNonRemovedCampaignCount() {
       if (nonRemovedCampaignCountBuilder_ == null) {
@@ -2112,11 +2112,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setNonRemovedCampaignCount(com.google.protobuf.Int64Value value) {
       if (nonRemovedCampaignCountBuilder_ == null) {
@@ -2133,11 +2133,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setNonRemovedCampaignCount(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2152,11 +2152,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeNonRemovedCampaignCount(com.google.protobuf.Int64Value value) {
       if (nonRemovedCampaignCountBuilder_ == null) {
@@ -2175,11 +2175,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearNonRemovedCampaignCount() {
       if (nonRemovedCampaignCountBuilder_ == null) {
@@ -2194,11 +2194,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getNonRemovedCampaignCountBuilder() {
       
@@ -2207,11 +2207,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getNonRemovedCampaignCountOrBuilder() {
       if (nonRemovedCampaignCountBuilder_ != null) {
@@ -2223,11 +2223,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

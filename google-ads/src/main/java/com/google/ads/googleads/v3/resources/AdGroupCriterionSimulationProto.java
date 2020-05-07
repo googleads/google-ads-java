@@ -34,34 +34,37 @@ public final class AdGroupCriterionSimulationProto {
       "oogleads/v3/common/simulation.proto\032Bgoo" +
       "gle/ads/googleads/v3/enums/simulation_mo" +
       "dification_method.proto\0323google/ads/goog" +
-      "leads/v3/enums/simulation_type.proto\032\031go" +
-      "ogle/api/resource.proto\032\036google/protobuf" +
-      "/wrappers.proto\032\034google/api/annotations." +
-      "proto\"\272\005\n\032AdGroupCriterionSimulation\022\025\n\r" +
-      "resource_name\030\001 \001(\t\0220\n\013ad_group_id\030\002 \001(\013" +
-      "2\033.google.protobuf.Int64Value\0221\n\014criteri" +
-      "on_id\030\003 \001(\0132\033.google.protobuf.Int64Value" +
-      "\022N\n\004type\030\004 \001(\0162@.google.ads.googleads.v3" +
-      ".enums.SimulationTypeEnum.SimulationType" +
-      "\022y\n\023modification_method\030\005 \001(\0162\\.google.a" +
-      "ds.googleads.v3.enums.SimulationModifica" +
-      "tionMethodEnum.SimulationModificationMet" +
-      "hod\0220\n\nstart_date\030\006 \001(\0132\034.google.protobu" +
-      "f.StringValue\022.\n\010end_date\030\007 \001(\0132\034.google" +
-      ".protobuf.StringValue\022W\n\022cpc_bid_point_l" +
-      "ist\030\010 \001(\01329.google.ads.googleads.v3.comm" +
-      "on.CpcBidSimulationPointListH\000:\213\001\352A\207\001\n3g" +
-      "oogleads.googleapis.com/AdGroupCriterion" +
-      "Simulation\022Pcustomers/{customer}/adGroup" +
-      "CriterionSimulations/{ad_group_criterion" +
-      "_simulation}B\014\n\npoint_listB\214\002\n%com.googl" +
-      "e.ads.googleads.v3.resourcesB\037AdGroupCri" +
-      "terionSimulationProtoP\001ZJgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v3/" +
-      "resources;resources\242\002\003GAA\252\002!Google.Ads.G" +
-      "oogleAds.V3.Resources\312\002!Google\\Ads\\Googl" +
-      "eAds\\V3\\Resources\352\002%Google::Ads::GoogleA" +
-      "ds::V3::Resourcesb\006proto3"
+      "leads/v3/enums/simulation_type.proto\032\037go" +
+      "ogle/api/field_behavior.proto\032\031google/ap" +
+      "i/resource.proto\032\036google/protobuf/wrappe" +
+      "rs.proto\032\034google/api/annotations.proto\"\232" +
+      "\006\n\032AdGroupCriterionSimulation\022R\n\rresourc" +
+      "e_name\030\001 \001(\tB;\340A\003\372A5\n3googleads.googleap" +
+      "is.com/AdGroupCriterionSimulation\0225\n\013ad_" +
+      "group_id\030\002 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\003\340A\003\0226\n\014criterion_id\030\003 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\003\340A\003\022S\n\004type\030\004 \001(\0162@" +
+      ".google.ads.googleads.v3.enums.Simulatio" +
+      "nTypeEnum.SimulationTypeB\003\340A\003\022~\n\023modific" +
+      "ation_method\030\005 \001(\0162\\.google.ads.googlead" +
+      "s.v3.enums.SimulationModificationMethodE" +
+      "num.SimulationModificationMethodB\003\340A\003\0225\n" +
+      "\nstart_date\030\006 \001(\0132\034.google.protobuf.Stri" +
+      "ngValueB\003\340A\003\0223\n\010end_date\030\007 \001(\0132\034.google." +
+      "protobuf.StringValueB\003\340A\003\022\\\n\022cpc_bid_poi" +
+      "nt_list\030\010 \001(\01329.google.ads.googleads.v3." +
+      "common.CpcBidSimulationPointListB\003\340A\003H\000:" +
+      "\213\001\352A\207\001\n3googleads.googleapis.com/AdGroup" +
+      "CriterionSimulation\022Pcustomers/{customer" +
+      "}/adGroupCriterionSimulations/{ad_group_" +
+      "criterion_simulation}B\014\n\npoint_listB\214\002\n%" +
+      "com.google.ads.googleads.v3.resourcesB\037A" +
+      "dGroupCriterionSimulationProtoP\001ZJgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v3/resources;resources\242\002\003GAA\252\002!Goo" +
+      "gle.Ads.GoogleAds.V3.Resources\312\002!Google\\" +
+      "Ads\\GoogleAds\\V3\\Resources\352\002%Google::Ads" +
+      "::GoogleAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -77,6 +80,7 @@ public final class AdGroupCriterionSimulationProto {
           com.google.ads.googleads.v3.common.SimulationProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.SimulationModificationMethodProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.SimulationTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -89,12 +93,15 @@ public final class AdGroupCriterionSimulationProto {
         new java.lang.String[] { "ResourceName", "AdGroupId", "CriterionId", "Type", "ModificationMethod", "StartDate", "EndDate", "CpcBidPointList", "PointList", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.common.SimulationProto.getDescriptor();
     com.google.ads.googleads.v3.enums.SimulationModificationMethodProto.getDescriptor();
     com.google.ads.googleads.v3.enums.SimulationTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

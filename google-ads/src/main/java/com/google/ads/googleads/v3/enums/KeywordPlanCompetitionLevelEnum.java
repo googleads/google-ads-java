@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Low competition.
+     * Low competition. The Competition Index range for this is [0, 33].
      * </pre>
      *
      * <code>LOW = 2;</code>
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
     LOW(2),
     /**
      * <pre>
-     * Medium competition.
+     * Medium competition. The Competition Index range for this is [34, 66].
      * </pre>
      *
      * <code>MEDIUM = 3;</code>
@@ -124,7 +124,7 @@ private static final long serialVersionUID = 0L;
     MEDIUM(3),
     /**
      * <pre>
-     * High competition.
+     * High competition. The Competition Index range for this is [67, 100].
      * </pre>
      *
      * <code>HIGH = 4;</code>
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Low competition.
+     * Low competition. The Competition Index range for this is [0, 33].
      * </pre>
      *
      * <code>LOW = 2;</code>
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
     public static final int LOW_VALUE = 2;
     /**
      * <pre>
-     * Medium competition.
+     * Medium competition. The Competition Index range for this is [34, 66].
      * </pre>
      *
      * <code>MEDIUM = 3;</code>
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
     public static final int MEDIUM_VALUE = 3;
     /**
      * <pre>
-     * High competition.
+     * High competition. The Competition Index range for this is [67, 100].
      * </pre>
      *
      * <code>HIGH = 4;</code>

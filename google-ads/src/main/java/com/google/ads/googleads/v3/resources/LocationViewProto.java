@@ -30,9 +30,11 @@ public final class LocationViewProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v3/resources/loca" +
       "tion_view.proto\022!google.ads.googleads.v3" +
-      ".resources\032\031google/api/resource.proto\032\034g" +
-      "oogle/api/annotations.proto\"\205\001\n\014Location" +
-      "View\022\025\n\rresource_name\030\001 \001(\t:^\352A[\n%google" +
+      ".resources\032\037google/api/field_behavior.pr" +
+      "oto\032\031google/api/resource.proto\032\034google/a" +
+      "pi/annotations.proto\"\264\001\n\014LocationView\022D\n" +
+      "\rresource_name\030\001 \001(\tB-\340A\003\372A\'\n%googleads." +
+      "googleapis.com/LocationView:^\352A[\n%google" +
       "ads.googleapis.com/LocationView\0222custome" +
       "rs/{customer}/locationViews/{location_vi" +
       "ew}B\376\001\n%com.google.ads.googleads.v3.reso" +
@@ -54,6 +56,7 @@ public final class LocationViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
@@ -65,9 +68,12 @@ public final class LocationViewProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

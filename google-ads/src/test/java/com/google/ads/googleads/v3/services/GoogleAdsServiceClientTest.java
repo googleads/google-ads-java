@@ -131,6 +131,7 @@ public class GoogleAdsServiceClientTest {
   private static MockMobileAppCategoryConstantService mockMobileAppCategoryConstantService;
   private static MockMobileDeviceConstantService mockMobileDeviceConstantService;
   private static MockMutateJobService mockMutateJobService;
+  private static MockOfflineUserDataJobService mockOfflineUserDataJobService;
   private static MockOperatingSystemVersionConstantService
       mockOperatingSystemVersionConstantService;
   private static MockPaidOrganicSearchTermViewService mockPaidOrganicSearchTermViewService;
@@ -148,6 +149,7 @@ public class GoogleAdsServiceClientTest {
   private static MockShoppingPerformanceViewService mockShoppingPerformanceViewService;
   private static MockTopicConstantService mockTopicConstantService;
   private static MockTopicViewService mockTopicViewService;
+  private static MockUserDataService mockUserDataService;
   private static MockUserInterestService mockUserInterestService;
   private static MockUserListService mockUserListService;
   private static MockUserLocationViewService mockUserLocationViewService;
@@ -246,6 +248,7 @@ public class GoogleAdsServiceClientTest {
     mockMobileAppCategoryConstantService = new MockMobileAppCategoryConstantService();
     mockMobileDeviceConstantService = new MockMobileDeviceConstantService();
     mockMutateJobService = new MockMutateJobService();
+    mockOfflineUserDataJobService = new MockOfflineUserDataJobService();
     mockOperatingSystemVersionConstantService = new MockOperatingSystemVersionConstantService();
     mockPaidOrganicSearchTermViewService = new MockPaidOrganicSearchTermViewService();
     mockParentalStatusViewService = new MockParentalStatusViewService();
@@ -261,6 +264,7 @@ public class GoogleAdsServiceClientTest {
     mockShoppingPerformanceViewService = new MockShoppingPerformanceViewService();
     mockTopicConstantService = new MockTopicConstantService();
     mockTopicViewService = new MockTopicViewService();
+    mockUserDataService = new MockUserDataService();
     mockUserInterestService = new MockUserInterestService();
     mockUserListService = new MockUserListService();
     mockUserLocationViewService = new MockUserLocationViewService();
@@ -357,6 +361,7 @@ public class GoogleAdsServiceClientTest {
                 mockMobileAppCategoryConstantService,
                 mockMobileDeviceConstantService,
                 mockMutateJobService,
+                mockOfflineUserDataJobService,
                 mockOperatingSystemVersionConstantService,
                 mockPaidOrganicSearchTermViewService,
                 mockParentalStatusViewService,
@@ -372,6 +377,7 @@ public class GoogleAdsServiceClientTest {
                 mockShoppingPerformanceViewService,
                 mockTopicConstantService,
                 mockTopicViewService,
+                mockUserDataService,
                 mockUserInterestService,
                 mockUserListService,
                 mockUserLocationViewService,

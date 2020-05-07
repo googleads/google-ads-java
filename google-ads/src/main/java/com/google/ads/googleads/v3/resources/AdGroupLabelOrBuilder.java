@@ -9,73 +9,73 @@ public interface AdGroupLabelOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the ad group label.
+   * Immutable. The resource name of the ad group label.
    * Ad group label resource names have the form:
    * `customers/{customer_id}/adGroupLabels/{ad_group_id}~{label_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the ad group label.
+   * Immutable. The resource name of the ad group label.
    * Ad group label resource names have the form:
    * `customers/{customer_id}/adGroupLabels/{ad_group_id}~{label_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ad group to which the label is attached.
+   * Immutable. The ad group to which the label is attached.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasAdGroup();
   /**
    * <pre>
-   * The ad group to which the label is attached.
+   * Immutable. The ad group to which the label is attached.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
    * <pre>
-   * The ad group to which the label is attached.
+   * Immutable. The ad group to which the label is attached.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder();
 
   /**
    * <pre>
-   * The label assigned to the ad group.
+   * Immutable. The label assigned to the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasLabel();
   /**
    * <pre>
-   * The label assigned to the ad group.
+   * Immutable. The label assigned to the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getLabel();
   /**
    * <pre>
-   * The label assigned to the ad group.
+   * Immutable. The label assigned to the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getLabelOrBuilder();
 }

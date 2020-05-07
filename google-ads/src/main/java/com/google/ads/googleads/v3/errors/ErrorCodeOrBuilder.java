@@ -1709,6 +1709,23 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the offline user data job error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+   */
+  int getOfflineUserDataJobErrorValue();
+  /**
+   * <pre>
+   * The reasons for the offline user data job error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError offline_user_data_job_error = 119;</code>
+   */
+  com.google.ads.googleads.v3.errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError getOfflineUserDataJobError();
+
+  /**
+   * <pre>
    * The reasons for the not whitelisted error
    * </pre>
    *
@@ -1842,6 +1859,40 @@ public interface ErrorCodeOrBuilder extends
    * <code>.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError time_zone_error = 128;</code>
    */
   com.google.ads.googleads.v3.errors.TimeZoneErrorEnum.TimeZoneError getTimeZoneError();
+
+  /**
+   * <pre>
+   * The reasons for the asset link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+   */
+  int getAssetLinkErrorValue();
+  /**
+   * <pre>
+   * The reasons for the asset link error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError asset_link_error = 129;</code>
+   */
+  com.google.ads.googleads.v3.errors.AssetLinkErrorEnum.AssetLinkError getAssetLinkError();
+
+  /**
+   * <pre>
+   * The reasons for the user data error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+   */
+  int getUserDataErrorValue();
+  /**
+   * <pre>
+   * The reasons for the user data error.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError user_data_error = 130;</code>
+   */
+  com.google.ads.googleads.v3.errors.UserDataErrorEnum.UserDataError getUserDataError();
 
   public com.google.ads.googleads.v3.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

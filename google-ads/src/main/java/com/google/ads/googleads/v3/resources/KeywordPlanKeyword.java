@@ -149,12 +149,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the Keyword Plan ad group keyword.
+   * Immutable. The resource name of the Keyword Plan ad group keyword.
    * KeywordPlanKeyword resource names have the form:
    * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -170,12 +170,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the Keyword Plan ad group keyword.
+   * Immutable. The resource name of the Keyword Plan ad group keyword.
    * KeywordPlanKeyword resource names have the form:
    * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -198,7 +198,7 @@ private static final long serialVersionUID = 0L;
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasKeywordPlanAdGroup() {
     return keywordPlanAdGroup_ != null;
@@ -208,7 +208,7 @@ private static final long serialVersionUID = 0L;
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getKeywordPlanAdGroup() {
     return keywordPlanAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlanAdGroup_;
@@ -218,7 +218,7 @@ private static final long serialVersionUID = 0L;
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanAdGroupOrBuilder() {
     return getKeywordPlanAdGroup();
@@ -228,30 +228,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the Keyword Plan keyword.
+   * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the Keyword Plan keyword.
+   * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the Keyword Plan keyword.
+   * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -797,12 +797,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the Keyword Plan ad group keyword.
+     * Immutable. The resource name of the Keyword Plan ad group keyword.
      * KeywordPlanKeyword resource names have the form:
      * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -818,12 +818,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan ad group keyword.
+     * Immutable. The resource name of the Keyword Plan ad group keyword.
      * KeywordPlanKeyword resource names have the form:
      * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -840,12 +840,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan ad group keyword.
+     * Immutable. The resource name of the Keyword Plan ad group keyword.
      * KeywordPlanKeyword resource names have the form:
      * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -859,12 +859,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan ad group keyword.
+     * Immutable. The resource name of the Keyword Plan ad group keyword.
      * KeywordPlanKeyword resource names have the form:
      * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -874,12 +874,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan ad group keyword.
+     * Immutable. The resource name of the Keyword Plan ad group keyword.
      * KeywordPlanKeyword resource names have the form:
      * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasKeywordPlanAdGroup() {
       return keywordPlanAdGroupBuilder_ != null || keywordPlanAdGroup_ != null;
@@ -911,7 +911,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getKeywordPlanAdGroup() {
       if (keywordPlanAdGroupBuilder_ == null) {
@@ -925,7 +925,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setKeywordPlanAdGroup(com.google.protobuf.StringValue value) {
       if (keywordPlanAdGroupBuilder_ == null) {
@@ -945,7 +945,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setKeywordPlanAdGroup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -963,7 +963,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeKeywordPlanAdGroup(com.google.protobuf.StringValue value) {
       if (keywordPlanAdGroupBuilder_ == null) {
@@ -985,7 +985,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearKeywordPlanAdGroup() {
       if (keywordPlanAdGroupBuilder_ == null) {
@@ -1003,7 +1003,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getKeywordPlanAdGroupBuilder() {
       
@@ -1015,7 +1015,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getKeywordPlanAdGroupOrBuilder() {
       if (keywordPlanAdGroupBuilder_ != null) {
@@ -1030,7 +1030,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1051,20 +1051,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the Keyword Plan keyword.
+     * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan keyword.
+     * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1075,10 +1075,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan keyword.
+     * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1095,10 +1095,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan keyword.
+     * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1113,10 +1113,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan keyword.
+     * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1135,10 +1135,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan keyword.
+     * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1153,10 +1153,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan keyword.
+     * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1165,10 +1165,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan keyword.
+     * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1180,10 +1180,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan keyword.
+     * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

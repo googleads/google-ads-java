@@ -9,26 +9,26 @@ public interface MediaBundleOrBuilder extends
 
   /**
    * <pre>
-   * Raw zipped data.
+   * Immutable. Raw zipped data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasData();
   /**
    * <pre>
-   * Raw zipped data.
+   * Immutable. Raw zipped data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.BytesValue getData();
   /**
    * <pre>
-   * Raw zipped data.
+   * Immutable. Raw zipped data.
    * </pre>
    *
-   * <code>.google.protobuf.BytesValue data = 1;</code>
+   * <code>.google.protobuf.BytesValue data = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.BytesValueOrBuilder getDataOrBuilder();
 }

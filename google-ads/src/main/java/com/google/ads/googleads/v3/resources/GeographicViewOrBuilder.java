@@ -9,65 +9,65 @@ public interface GeographicViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the geographic view.
+   * Output only. The resource name of the geographic view.
    * Geographic view resource names have the form:
    * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the geographic view.
+   * Output only. The resource name of the geographic view.
    * Geographic view resource names have the form:
    * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * Type of the geo targeting of the campaign.
+   * Output only. Type of the geo targeting of the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getLocationTypeValue();
   /**
    * <pre>
-   * Type of the geo targeting of the campaign.
+   * Output only. Type of the geo targeting of the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType getLocationType();
 
   /**
    * <pre>
-   * Criterion Id for the country.
+   * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+   * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCountryCriterionId();
   /**
    * <pre>
-   * Criterion Id for the country.
+   * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+   * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getCountryCriterionId();
   /**
    * <pre>
-   * Criterion Id for the country.
+   * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+   * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getCountryCriterionIdOrBuilder();
 }

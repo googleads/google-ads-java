@@ -256,6 +256,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_COMPARISON_LISTING_AD = 24;</code>
      */
     SHOPPING_COMPARISON_LISTING_AD(24),
+    /**
+     * <pre>
+     * Video responsive ad.
+     * </pre>
+     *
+     * <code>VIDEO_RESPONSIVE_AD = 30;</code>
+     */
+    VIDEO_RESPONSIVE_AD(30),
     UNRECOGNIZED(-1),
     ;
 
@@ -429,6 +437,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_COMPARISON_LISTING_AD = 24;</code>
      */
     public static final int SHOPPING_COMPARISON_LISTING_AD_VALUE = 24;
+    /**
+     * <pre>
+     * Video responsive ad.
+     * </pre>
+     *
+     * <code>VIDEO_RESPONSIVE_AD = 30;</code>
+     */
+    public static final int VIDEO_RESPONSIVE_AD_VALUE = 30;
 
 
     public final int getNumber() {
@@ -470,6 +486,7 @@ private static final long serialVersionUID = 0L;
         case 22: return DYNAMIC_HTML5_AD;
         case 23: return APP_ENGAGEMENT_AD;
         case 24: return SHOPPING_COMPARISON_LISTING_AD;
+        case 30: return VIDEO_RESPONSIVE_AD;
         default: return null;
       }
     }

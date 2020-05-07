@@ -247,33 +247,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue language_;
   /**
    * <pre>
-   * The resource name of the language to target.
+   * Required. The resource name of the language to target.
    * Required
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language = 7;</code>
+   * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public boolean hasLanguage() {
     return language_ != null;
   }
   /**
    * <pre>
-   * The resource name of the language to target.
+   * Required. The resource name of the language to target.
    * Required
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language = 7;</code>
+   * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public com.google.protobuf.StringValue getLanguage() {
     return language_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : language_;
   }
   /**
    * <pre>
-   * The resource name of the language to target.
+   * Required. The resource name of the language to target.
    * Required
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language = 7;</code>
+   * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getLanguageOrBuilder() {
     return getLanguage();
@@ -1096,22 +1096,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> languageBuilder_;
     /**
      * <pre>
-     * The resource name of the language to target.
+     * Required. The resource name of the language to target.
      * Required
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language = 7;</code>
+     * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public boolean hasLanguage() {
       return languageBuilder_ != null || language_ != null;
     }
     /**
      * <pre>
-     * The resource name of the language to target.
+     * Required. The resource name of the language to target.
      * Required
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language = 7;</code>
+     * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.StringValue getLanguage() {
       if (languageBuilder_ == null) {
@@ -1122,11 +1122,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language to target.
+     * Required. The resource name of the language to target.
      * Required
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language = 7;</code>
+     * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setLanguage(com.google.protobuf.StringValue value) {
       if (languageBuilder_ == null) {
@@ -1143,11 +1143,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language to target.
+     * Required. The resource name of the language to target.
      * Required
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language = 7;</code>
+     * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setLanguage(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1162,11 +1162,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language to target.
+     * Required. The resource name of the language to target.
      * Required
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language = 7;</code>
+     * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeLanguage(com.google.protobuf.StringValue value) {
       if (languageBuilder_ == null) {
@@ -1185,11 +1185,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language to target.
+     * Required. The resource name of the language to target.
      * Required
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language = 7;</code>
+     * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearLanguage() {
       if (languageBuilder_ == null) {
@@ -1204,11 +1204,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language to target.
+     * Required. The resource name of the language to target.
      * Required
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language = 7;</code>
+     * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.StringValue.Builder getLanguageBuilder() {
       
@@ -1217,11 +1217,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language to target.
+     * Required. The resource name of the language to target.
      * Required
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language = 7;</code>
+     * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLanguageOrBuilder() {
       if (languageBuilder_ != null) {
@@ -1233,11 +1233,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the language to target.
+     * Required. The resource name of the language to target.
      * Required
      * </pre>
      *
-     * <code>.google.protobuf.StringValue language = 7;</code>
+     * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

@@ -285,6 +285,9 @@ public interface GoogleAdsVersion {
   @ServiceClientDescriptor(settingsClass = MutateJobServiceSettings.class)
   MutateJobServiceClient createMutateJobServiceClient();
 
+  @ServiceClientDescriptor(settingsClass = OfflineUserDataJobServiceSettings.class)
+  OfflineUserDataJobServiceClient createOfflineUserDataJobServiceClient();
+
   @ServiceClientDescriptor(settingsClass = OperatingSystemVersionConstantServiceSettings.class)
   OperatingSystemVersionConstantServiceClient createOperatingSystemVersionConstantServiceClient();
 
@@ -329,6 +332,9 @@ public interface GoogleAdsVersion {
 
   @ServiceClientDescriptor(settingsClass = TopicViewServiceSettings.class)
   TopicViewServiceClient createTopicViewServiceClient();
+
+  @ServiceClientDescriptor(settingsClass = UserDataServiceSettings.class)
+  UserDataServiceClient createUserDataServiceClient();
 
   @ServiceClientDescriptor(settingsClass = UserInterestServiceSettings.class)
   UserInterestServiceClient createUserInterestServiceClient();

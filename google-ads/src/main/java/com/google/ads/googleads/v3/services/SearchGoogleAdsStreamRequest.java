@@ -6,7 +6,6 @@ package com.google.ads.googleads.v3.services;
 /**
  * <pre>
  * Request message for [GoogleAdsService.SearchStream][google.ads.googleads.v3.services.GoogleAdsService.SearchStream].
- * Next tag: 5
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v3.services.SearchGoogleAdsStreamRequest}
@@ -390,7 +389,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for [GoogleAdsService.SearchStream][google.ads.googleads.v3.services.GoogleAdsService.SearchStream].
-   * Next tag: 5
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v3.services.SearchGoogleAdsStreamRequest}

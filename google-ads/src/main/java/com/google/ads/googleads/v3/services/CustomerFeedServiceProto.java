@@ -54,44 +54,46 @@ public final class CustomerFeedServiceProto {
       "3/resources/customer_feed.proto\032\034google/" +
       "api/annotations.proto\032\027google/api/client" +
       ".proto\032\037google/api/field_behavior.proto\032" +
-      " google/protobuf/field_mask.proto\032\027googl" +
-      "e/rpc/status.proto\"4\n\026GetCustomerFeedReq" +
-      "uest\022\032\n\rresource_name\030\001 \001(\tB\003\340A\002\"\270\001\n\032Mut" +
-      "ateCustomerFeedsRequest\022\030\n\013customer_id\030\001" +
-      " \001(\tB\003\340A\002\022P\n\noperations\030\002 \003(\01327.google.a" +
-      "ds.googleads.v3.services.CustomerFeedOpe" +
-      "rationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\r" +
-      "validate_only\030\004 \001(\010\"\355\001\n\025CustomerFeedOper" +
-      "ation\022/\n\013update_mask\030\004 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\022A\n\006create\030\001 \001(\0132/.google." +
-      "ads.googleads.v3.resources.CustomerFeedH" +
-      "\000\022A\n\006update\030\002 \001(\0132/.google.ads.googleads" +
-      ".v3.resources.CustomerFeedH\000\022\020\n\006remove\030\003" +
-      " \001(\tH\000B\013\n\toperation\"\235\001\n\033MutateCustomerFe" +
-      "edsResponse\0221\n\025partial_failure_error\030\003 \001" +
-      "(\0132\022.google.rpc.Status\022K\n\007results\030\002 \003(\0132" +
-      ":.google.ads.googleads.v3.services.Mutat" +
-      "eCustomerFeedResult\"1\n\030MutateCustomerFee" +
-      "dResult\022\025\n\rresource_name\030\001 \001(\t2\347\003\n\023Custo" +
-      "merFeedService\022\305\001\n\017GetCustomerFeed\0228.goo" +
-      "gle.ads.googleads.v3.services.GetCustome" +
-      "rFeedRequest\032/.google.ads.googleads.v3.r" +
-      "esources.CustomerFeed\"G\202\323\344\223\0021\022//v3/{reso" +
-      "urce_name=customers/*/customerFeeds/*}\332A" +
-      "\rresource_name\022\352\001\n\023MutateCustomerFeeds\022<" +
-      ".google.ads.googleads.v3.services.Mutate" +
-      "CustomerFeedsRequest\032=.google.ads.google" +
-      "ads.v3.services.MutateCustomerFeedsRespo" +
-      "nse\"V\202\323\344\223\0027\"2/v3/customers/{customer_id=" +
-      "*}/customerFeeds:mutate:\001*\332A\026customer_id" +
-      ",operations\032\033\312A\030googleads.googleapis.com" +
-      "B\377\001\n$com.google.ads.googleads.v3.service" +
-      "sB\030CustomerFeedServiceProtoP\001ZHgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v3/services;services\242\002\003GAA\252\002 Google.A" +
-      "ds.GoogleAds.V3.Services\312\002 Google\\Ads\\Go" +
-      "ogleAds\\V3\\Services\352\002$Google::Ads::Googl" +
-      "eAds::V3::Servicesb\006proto3"
+      "\031google/api/resource.proto\032 google/proto" +
+      "buf/field_mask.proto\032\027google/rpc/status." +
+      "proto\"^\n\026GetCustomerFeedRequest\022D\n\rresou" +
+      "rce_name\030\001 \001(\tB-\340A\002\372A\'\n%googleads.google" +
+      "apis.com/CustomerFeed\"\270\001\n\032MutateCustomer" +
+      "FeedsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022P" +
+      "\n\noperations\030\002 \003(\01327.google.ads.googlead" +
+      "s.v3.services.CustomerFeedOperationB\003\340A\002" +
+      "\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_on" +
+      "ly\030\004 \001(\010\"\355\001\n\025CustomerFeedOperation\022/\n\013up" +
+      "date_mask\030\004 \001(\0132\032.google.protobuf.FieldM" +
+      "ask\022A\n\006create\030\001 \001(\0132/.google.ads.googlea" +
+      "ds.v3.resources.CustomerFeedH\000\022A\n\006update" +
+      "\030\002 \001(\0132/.google.ads.googleads.v3.resourc" +
+      "es.CustomerFeedH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\to" +
+      "peration\"\235\001\n\033MutateCustomerFeedsResponse" +
+      "\0221\n\025partial_failure_error\030\003 \001(\0132\022.google" +
+      ".rpc.Status\022K\n\007results\030\002 \003(\0132:.google.ad" +
+      "s.googleads.v3.services.MutateCustomerFe" +
+      "edResult\"1\n\030MutateCustomerFeedResult\022\025\n\r" +
+      "resource_name\030\001 \001(\t2\347\003\n\023CustomerFeedServ" +
+      "ice\022\305\001\n\017GetCustomerFeed\0228.google.ads.goo" +
+      "gleads.v3.services.GetCustomerFeedReques" +
+      "t\032/.google.ads.googleads.v3.resources.Cu" +
+      "stomerFeed\"G\202\323\344\223\0021\022//v3/{resource_name=c" +
+      "ustomers/*/customerFeeds/*}\332A\rresource_n" +
+      "ame\022\352\001\n\023MutateCustomerFeeds\022<.google.ads" +
+      ".googleads.v3.services.MutateCustomerFee" +
+      "dsRequest\032=.google.ads.googleads.v3.serv" +
+      "ices.MutateCustomerFeedsResponse\"V\202\323\344\223\0027" +
+      "\"2/v3/customers/{customer_id=*}/customer" +
+      "Feeds:mutate:\001*\332A\026customer_id,operations" +
+      "\032\033\312A\030googleads.googleapis.comB\377\001\n$com.go" +
+      "ogle.ads.googleads.v3.servicesB\030Customer" +
+      "FeedServiceProtoP\001ZHgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v3/servi" +
+      "ces;services\242\002\003GAA\252\002 Google.Ads.GoogleAd" +
+      "s.V3.Services\312\002 Google\\Ads\\GoogleAds\\V3\\" +
+      "Services\352\002$Google::Ads::GoogleAds::V3::S" +
+      "ervicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -108,6 +110,7 @@ public final class CustomerFeedServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
@@ -147,12 +150,14 @@ public final class CustomerFeedServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.CustomerFeedProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }

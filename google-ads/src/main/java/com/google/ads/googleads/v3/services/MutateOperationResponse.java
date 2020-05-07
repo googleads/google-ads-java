@@ -593,6 +593,20 @@ private static final long serialVersionUID = 0L;
             responseCase_ = 43;
             break;
           }
+          case 394: {
+            com.google.ads.googleads.v3.services.MutateAdResult.Builder subBuilder = null;
+            if (responseCase_ == 49) {
+              subBuilder = ((com.google.ads.googleads.v3.services.MutateAdResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v3.services.MutateAdResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v3.services.MutateAdResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 49;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -639,6 +653,7 @@ private static final long serialVersionUID = 0L;
     AD_GROUP_LABEL_RESULT(21),
     AD_GROUP_RESULT(5),
     AD_PARAMETER_RESULT(22),
+    AD_RESULT(49),
     ASSET_RESULT(23),
     BIDDING_STRATEGY_RESULT(6),
     CAMPAIGN_BID_MODIFIER_RESULT(7),
@@ -693,6 +708,7 @@ private static final long serialVersionUID = 0L;
         case 21: return AD_GROUP_LABEL_RESULT;
         case 5: return AD_GROUP_RESULT;
         case 22: return AD_PARAMETER_RESULT;
+        case 49: return AD_RESULT;
         case 23: return ASSET_RESULT;
         case 6: return BIDDING_STRATEGY_RESULT;
         case 7: return CAMPAIGN_BID_MODIFIER_RESULT;
@@ -1115,6 +1131,44 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v3.services.MutateAdParameterResult) response_;
     }
     return com.google.ads.googleads.v3.services.MutateAdParameterResult.getDefaultInstance();
+  }
+
+  public static final int AD_RESULT_FIELD_NUMBER = 49;
+  /**
+   * <pre>
+   * The result for the ad mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+   */
+  public boolean hasAdResult() {
+    return responseCase_ == 49;
+  }
+  /**
+   * <pre>
+   * The result for the ad mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+   */
+  public com.google.ads.googleads.v3.services.MutateAdResult getAdResult() {
+    if (responseCase_ == 49) {
+       return (com.google.ads.googleads.v3.services.MutateAdResult) response_;
+    }
+    return com.google.ads.googleads.v3.services.MutateAdResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the ad mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+   */
+  public com.google.ads.googleads.v3.services.MutateAdResultOrBuilder getAdResultOrBuilder() {
+    if (responseCase_ == 49) {
+       return (com.google.ads.googleads.v3.services.MutateAdResult) response_;
+    }
+    return com.google.ads.googleads.v3.services.MutateAdResult.getDefaultInstance();
   }
 
   public static final int ASSET_RESULT_FIELD_NUMBER = 23;
@@ -2350,6 +2404,9 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 43) {
       output.writeMessage(43, (com.google.ads.googleads.v3.services.MutateRemarketingActionResult) response_);
     }
+    if (responseCase_ == 49) {
+      output.writeMessage(49, (com.google.ads.googleads.v3.services.MutateAdResult) response_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -2515,6 +2572,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(43, (com.google.ads.googleads.v3.services.MutateRemarketingActionResult) response_);
     }
+    if (responseCase_ == 49) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(49, (com.google.ads.googleads.v3.services.MutateAdResult) response_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2571,6 +2632,10 @@ private static final long serialVersionUID = 0L;
       case 22:
         if (!getAdParameterResult()
             .equals(other.getAdParameterResult())) return false;
+        break;
+      case 49:
+        if (!getAdResult()
+            .equals(other.getAdResult())) return false;
         break;
       case 23:
         if (!getAssetResult()
@@ -2742,6 +2807,10 @@ private static final long serialVersionUID = 0L;
       case 22:
         hash = (37 * hash) + AD_PARAMETER_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getAdParameterResult().hashCode();
+        break;
+      case 49:
+        hash = (37 * hash) + AD_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getAdResult().hashCode();
         break;
       case 23:
         hash = (37 * hash) + ASSET_RESULT_FIELD_NUMBER;
@@ -3097,6 +3166,13 @@ private static final long serialVersionUID = 0L;
           result.response_ = adParameterResultBuilder_.build();
         }
       }
+      if (responseCase_ == 49) {
+        if (adResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = adResultBuilder_.build();
+        }
+      }
       if (responseCase_ == 23) {
         if (assetResultBuilder_ == null) {
           result.response_ = response_;
@@ -3388,6 +3464,10 @@ private static final long serialVersionUID = 0L;
         }
         case AD_PARAMETER_RESULT: {
           mergeAdParameterResult(other.getAdParameterResult());
+          break;
+        }
+        case AD_RESULT: {
+          mergeAdResult(other.getAdResult());
           break;
         }
         case ASSET_RESULT: {
@@ -5272,6 +5352,178 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 22;
       onChanged();;
       return adParameterResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v3.services.MutateAdResult, com.google.ads.googleads.v3.services.MutateAdResult.Builder, com.google.ads.googleads.v3.services.MutateAdResultOrBuilder> adResultBuilder_;
+    /**
+     * <pre>
+     * The result for the ad mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+     */
+    public boolean hasAdResult() {
+      return responseCase_ == 49;
+    }
+    /**
+     * <pre>
+     * The result for the ad mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+     */
+    public com.google.ads.googleads.v3.services.MutateAdResult getAdResult() {
+      if (adResultBuilder_ == null) {
+        if (responseCase_ == 49) {
+          return (com.google.ads.googleads.v3.services.MutateAdResult) response_;
+        }
+        return com.google.ads.googleads.v3.services.MutateAdResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 49) {
+          return adResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v3.services.MutateAdResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the ad mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+     */
+    public Builder setAdResult(com.google.ads.googleads.v3.services.MutateAdResult value) {
+      if (adResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        adResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 49;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the ad mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+     */
+    public Builder setAdResult(
+        com.google.ads.googleads.v3.services.MutateAdResult.Builder builderForValue) {
+      if (adResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        adResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 49;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the ad mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+     */
+    public Builder mergeAdResult(com.google.ads.googleads.v3.services.MutateAdResult value) {
+      if (adResultBuilder_ == null) {
+        if (responseCase_ == 49 &&
+            response_ != com.google.ads.googleads.v3.services.MutateAdResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v3.services.MutateAdResult.newBuilder((com.google.ads.googleads.v3.services.MutateAdResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 49) {
+          adResultBuilder_.mergeFrom(value);
+        }
+        adResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 49;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the ad mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+     */
+    public Builder clearAdResult() {
+      if (adResultBuilder_ == null) {
+        if (responseCase_ == 49) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 49) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        adResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the ad mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+     */
+    public com.google.ads.googleads.v3.services.MutateAdResult.Builder getAdResultBuilder() {
+      return getAdResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the ad mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+     */
+    public com.google.ads.googleads.v3.services.MutateAdResultOrBuilder getAdResultOrBuilder() {
+      if ((responseCase_ == 49) && (adResultBuilder_ != null)) {
+        return adResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 49) {
+          return (com.google.ads.googleads.v3.services.MutateAdResult) response_;
+        }
+        return com.google.ads.googleads.v3.services.MutateAdResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the ad mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v3.services.MutateAdResult, com.google.ads.googleads.v3.services.MutateAdResult.Builder, com.google.ads.googleads.v3.services.MutateAdResultOrBuilder> 
+        getAdResultFieldBuilder() {
+      if (adResultBuilder_ == null) {
+        if (!(responseCase_ == 49)) {
+          response_ = com.google.ads.googleads.v3.services.MutateAdResult.getDefaultInstance();
+        }
+        adResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v3.services.MutateAdResult, com.google.ads.googleads.v3.services.MutateAdResult.Builder, com.google.ads.googleads.v3.services.MutateAdResultOrBuilder>(
+                (com.google.ads.googleads.v3.services.MutateAdResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 49;
+      onChanged();;
+      return adResultBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

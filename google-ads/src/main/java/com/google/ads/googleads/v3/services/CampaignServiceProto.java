@@ -53,43 +53,45 @@ public final class CampaignServiceProto {
       "v3.services\0320google/ads/googleads/v3/res" +
       "ources/campaign.proto\032\034google/api/annota" +
       "tions.proto\032\027google/api/client.proto\032\037go" +
-      "ogle/api/field_behavior.proto\032 google/pr" +
-      "otobuf/field_mask.proto\032\027google/rpc/stat" +
-      "us.proto\"0\n\022GetCampaignRequest\022\032\n\rresour" +
-      "ce_name\030\001 \001(\tB\003\340A\002\"\260\001\n\026MutateCampaignsRe" +
-      "quest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022L\n\nopera" +
-      "tions\030\002 \003(\01323.google.ads.googleads.v3.se" +
-      "rvices.CampaignOperationB\003\340A\002\022\027\n\017partial" +
-      "_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\341\001" +
-      "\n\021CampaignOperation\022/\n\013update_mask\030\004 \001(\013" +
-      "2\032.google.protobuf.FieldMask\022=\n\006create\030\001" +
-      " \001(\0132+.google.ads.googleads.v3.resources" +
-      ".CampaignH\000\022=\n\006update\030\002 \001(\0132+.google.ads" +
-      ".googleads.v3.resources.CampaignH\000\022\020\n\006re" +
-      "move\030\003 \001(\tH\000B\013\n\toperation\"\225\001\n\027MutateCamp" +
-      "aignsResponse\0221\n\025partial_failure_error\030\003" +
-      " \001(\0132\022.google.rpc.Status\022G\n\007results\030\002 \003(" +
-      "\01326.google.ads.googleads.v3.services.Mut" +
-      "ateCampaignResult\"-\n\024MutateCampaignResul" +
-      "t\022\025\n\rresource_name\030\001 \001(\t2\303\003\n\017CampaignSer" +
-      "vice\022\265\001\n\013GetCampaign\0224.google.ads.google" +
-      "ads.v3.services.GetCampaignRequest\032+.goo" +
-      "gle.ads.googleads.v3.resources.Campaign\"" +
-      "C\202\323\344\223\002-\022+/v3/{resource_name=customers/*/" +
-      "campaigns/*}\332A\rresource_name\022\332\001\n\017MutateC" +
-      "ampaigns\0228.google.ads.googleads.v3.servi" +
-      "ces.MutateCampaignsRequest\0329.google.ads." +
-      "googleads.v3.services.MutateCampaignsRes" +
-      "ponse\"R\202\323\344\223\0023\"./v3/customers/{customer_i" +
-      "d=*}/campaigns:mutate:\001*\332A\026customer_id,o" +
-      "perations\032\033\312A\030googleads.googleapis.comB\373" +
-      "\001\n$com.google.ads.googleads.v3.servicesB" +
-      "\024CampaignServiceProtoP\001ZHgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v3/" +
-      "services;services\242\002\003GAA\252\002 Google.Ads.Goo" +
-      "gleAds.V3.Services\312\002 Google\\Ads\\GoogleAd" +
-      "s\\V3\\Services\352\002$Google::Ads::GoogleAds::" +
-      "V3::Servicesb\006proto3"
+      "ogle/api/field_behavior.proto\032\031google/ap" +
+      "i/resource.proto\032 google/protobuf/field_" +
+      "mask.proto\032\027google/rpc/status.proto\"V\n\022G" +
+      "etCampaignRequest\022@\n\rresource_name\030\001 \001(\t" +
+      "B)\340A\002\372A#\n!googleads.googleapis.com/Campa" +
+      "ign\"\260\001\n\026MutateCampaignsRequest\022\030\n\013custom" +
+      "er_id\030\001 \001(\tB\003\340A\002\022L\n\noperations\030\002 \003(\01323.g" +
+      "oogle.ads.googleads.v3.services.Campaign" +
+      "OperationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022" +
+      "\025\n\rvalidate_only\030\004 \001(\010\"\341\001\n\021CampaignOpera" +
+      "tion\022/\n\013update_mask\030\004 \001(\0132\032.google.proto" +
+      "buf.FieldMask\022=\n\006create\030\001 \001(\0132+.google.a" +
+      "ds.googleads.v3.resources.CampaignH\000\022=\n\006" +
+      "update\030\002 \001(\0132+.google.ads.googleads.v3.r" +
+      "esources.CampaignH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n" +
+      "\toperation\"\225\001\n\027MutateCampaignsResponse\0221" +
+      "\n\025partial_failure_error\030\003 \001(\0132\022.google.r" +
+      "pc.Status\022G\n\007results\030\002 \003(\01326.google.ads." +
+      "googleads.v3.services.MutateCampaignResu" +
+      "lt\"-\n\024MutateCampaignResult\022\025\n\rresource_n" +
+      "ame\030\001 \001(\t2\303\003\n\017CampaignService\022\265\001\n\013GetCam" +
+      "paign\0224.google.ads.googleads.v3.services" +
+      ".GetCampaignRequest\032+.google.ads.googlea" +
+      "ds.v3.resources.Campaign\"C\202\323\344\223\002-\022+/v3/{r" +
+      "esource_name=customers/*/campaigns/*}\332A\r" +
+      "resource_name\022\332\001\n\017MutateCampaigns\0228.goog" +
+      "le.ads.googleads.v3.services.MutateCampa" +
+      "ignsRequest\0329.google.ads.googleads.v3.se" +
+      "rvices.MutateCampaignsResponse\"R\202\323\344\223\0023\"." +
+      "/v3/customers/{customer_id=*}/campaigns:" +
+      "mutate:\001*\332A\026customer_id,operations\032\033\312A\030g" +
+      "oogleads.googleapis.comB\373\001\n$com.google.a" +
+      "ds.googleads.v3.servicesB\024CampaignServic" +
+      "eProtoP\001ZHgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v3/services;servic" +
+      "es\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.Servi" +
+      "ces\312\002 Google\\Ads\\GoogleAds\\V3\\Services\352\002" +
+      "$Google::Ads::GoogleAds::V3::Servicesb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -106,6 +108,7 @@ public final class CampaignServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
@@ -145,12 +148,14 @@ public final class CampaignServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.CampaignProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }

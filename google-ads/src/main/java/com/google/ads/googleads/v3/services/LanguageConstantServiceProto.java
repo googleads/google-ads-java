@@ -34,21 +34,23 @@ public final class LanguageConstantServiceProto {
       "ds/v3/resources/language_constant.proto\032" +
       "\034google/api/annotations.proto\032\027google/ap" +
       "i/client.proto\032\037google/api/field_behavio" +
-      "r.proto\"8\n\032GetLanguageConstantRequest\022\032\n" +
-      "\rresource_name\030\001 \001(\tB\003\340A\0022\202\002\n\027LanguageCo" +
-      "nstantService\022\311\001\n\023GetLanguageConstant\022<." +
-      "google.ads.googleads.v3.services.GetLang" +
-      "uageConstantRequest\0323.google.ads.googlea" +
-      "ds.v3.resources.LanguageConstant\"?\202\323\344\223\002)" +
-      "\022\'/v3/{resource_name=languageConstants/*" +
-      "}\332A\rresource_name\032\033\312A\030googleads.googleap" +
-      "is.comB\203\002\n$com.google.ads.googleads.v3.s" +
-      "ervicesB\034LanguageConstantServiceProtoP\001Z" +
-      "Hgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v3/services;services\242\002\003GAA\252" +
-      "\002 Google.Ads.GoogleAds.V3.Services\312\002 Goo" +
-      "gle\\Ads\\GoogleAds\\V3\\Services\352\002$Google::" +
-      "Ads::GoogleAds::V3::Servicesb\006proto3"
+      "r.proto\032\031google/api/resource.proto\"f\n\032Ge" +
+      "tLanguageConstantRequest\022H\n\rresource_nam" +
+      "e\030\001 \001(\tB1\340A\002\372A+\n)googleads.googleapis.co" +
+      "m/LanguageConstant2\202\002\n\027LanguageConstantS" +
+      "ervice\022\311\001\n\023GetLanguageConstant\022<.google." +
+      "ads.googleads.v3.services.GetLanguageCon" +
+      "stantRequest\0323.google.ads.googleads.v3.r" +
+      "esources.LanguageConstant\"?\202\323\344\223\002)\022\'/v3/{" +
+      "resource_name=languageConstants/*}\332A\rres" +
+      "ource_name\032\033\312A\030googleads.googleapis.comB" +
+      "\203\002\n$com.google.ads.googleads.v3.services" +
+      "B\034LanguageConstantServiceProtoP\001ZHgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v3/services;services\242\002\003GAA\252\002 Googl" +
+      "e.Ads.GoogleAds.V3.Services\312\002 Google\\Ads" +
+      "\\GoogleAds\\V3\\Services\352\002$Google::Ads::Go" +
+      "ogleAds::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -65,6 +67,7 @@ public final class LanguageConstantServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetLanguageConstantRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -78,12 +81,14 @@ public final class LanguageConstantServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.LanguageConstantProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

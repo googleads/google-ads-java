@@ -113,12 +113,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the geographic view.
+   * Output only. The resource name of the geographic view.
    * Geographic view resource names have the form:
    * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -134,12 +134,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the geographic view.
+   * Output only. The resource name of the geographic view.
    * Geographic view resource names have the form:
    * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -159,20 +159,20 @@ private static final long serialVersionUID = 0L;
   private int locationType_;
   /**
    * <pre>
-   * Type of the geo targeting of the campaign.
+   * Output only. Type of the geo targeting of the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getLocationTypeValue() {
     return locationType_;
   }
   /**
    * <pre>
-   * Type of the geo targeting of the campaign.
+   * Output only. Type of the geo targeting of the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType getLocationType() {
     @SuppressWarnings("deprecation")
@@ -184,30 +184,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value countryCriterionId_;
   /**
    * <pre>
-   * Criterion Id for the country.
+   * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+   * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCountryCriterionId() {
     return countryCriterionId_ != null;
   }
   /**
    * <pre>
-   * Criterion Id for the country.
+   * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+   * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getCountryCriterionId() {
     return countryCriterionId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : countryCriterionId_;
   }
   /**
    * <pre>
-   * Criterion Id for the country.
+   * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+   * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getCountryCriterionIdOrBuilder() {
     return getCountryCriterionId();
@@ -572,12 +572,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the geographic view.
+     * Output only. The resource name of the geographic view.
      * Geographic view resource names have the form:
      * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -593,12 +593,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the geographic view.
+     * Output only. The resource name of the geographic view.
      * Geographic view resource names have the form:
      * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -615,12 +615,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the geographic view.
+     * Output only. The resource name of the geographic view.
      * Geographic view resource names have the form:
      * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -634,12 +634,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the geographic view.
+     * Output only. The resource name of the geographic view.
      * Geographic view resource names have the form:
      * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -649,12 +649,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the geographic view.
+     * Output only. The resource name of the geographic view.
      * Geographic view resource names have the form:
      * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -671,20 +671,20 @@ private static final long serialVersionUID = 0L;
     private int locationType_ = 0;
     /**
      * <pre>
-     * Type of the geo targeting of the campaign.
+     * Output only. Type of the geo targeting of the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getLocationTypeValue() {
       return locationType_;
     }
     /**
      * <pre>
-     * Type of the geo targeting of the campaign.
+     * Output only. Type of the geo targeting of the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLocationTypeValue(int value) {
       locationType_ = value;
@@ -693,10 +693,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of the geo targeting of the campaign.
+     * Output only. Type of the geo targeting of the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType getLocationType() {
       @SuppressWarnings("deprecation")
@@ -705,10 +705,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of the geo targeting of the campaign.
+     * Output only. Type of the geo targeting of the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLocationType(com.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType value) {
       if (value == null) {
@@ -721,10 +721,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of the geo targeting of the campaign.
+     * Output only. Type of the geo targeting of the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.GeoTargetingTypeEnum.GeoTargetingType location_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLocationType() {
       
@@ -738,20 +738,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> countryCriterionIdBuilder_;
     /**
      * <pre>
-     * Criterion Id for the country.
+     * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+     * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCountryCriterionId() {
       return countryCriterionIdBuilder_ != null || countryCriterionId_ != null;
     }
     /**
      * <pre>
-     * Criterion Id for the country.
+     * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+     * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getCountryCriterionId() {
       if (countryCriterionIdBuilder_ == null) {
@@ -762,10 +762,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion Id for the country.
+     * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+     * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCountryCriterionId(com.google.protobuf.Int64Value value) {
       if (countryCriterionIdBuilder_ == null) {
@@ -782,10 +782,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion Id for the country.
+     * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+     * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCountryCriterionId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -800,10 +800,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion Id for the country.
+     * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+     * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCountryCriterionId(com.google.protobuf.Int64Value value) {
       if (countryCriterionIdBuilder_ == null) {
@@ -822,10 +822,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion Id for the country.
+     * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+     * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCountryCriterionId() {
       if (countryCriterionIdBuilder_ == null) {
@@ -840,10 +840,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion Id for the country.
+     * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+     * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getCountryCriterionIdBuilder() {
       
@@ -852,10 +852,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion Id for the country.
+     * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+     * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getCountryCriterionIdOrBuilder() {
       if (countryCriterionIdBuilder_ != null) {
@@ -867,10 +867,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion Id for the country.
+     * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value country_criterion_id = 4;</code>
+     * <code>.google.protobuf.Int64Value country_criterion_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

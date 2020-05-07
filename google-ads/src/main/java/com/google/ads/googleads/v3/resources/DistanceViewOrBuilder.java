@@ -9,65 +9,65 @@ public interface DistanceViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the distance view.
+   * Output only. The resource name of the distance view.
    * Distance view resource names have the form:
    * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the distance view.
+   * Output only. The resource name of the distance view.
    * Distance view resource names have the form:
    * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * Grouping of user distance from location extensions.
+   * Output only. Grouping of user distance from location extensions.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getDistanceBucketValue();
   /**
    * <pre>
-   * Grouping of user distance from location extensions.
+   * Output only. Grouping of user distance from location extensions.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.DistanceBucketEnum.DistanceBucket getDistanceBucket();
 
   /**
    * <pre>
-   * True if the DistanceBucket is using the metric system, false otherwise.
+   * Output only. True if the DistanceBucket is using the metric system, false otherwise.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+   * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasMetricSystem();
   /**
    * <pre>
-   * True if the DistanceBucket is using the metric system, false otherwise.
+   * Output only. True if the DistanceBucket is using the metric system, false otherwise.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+   * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValue getMetricSystem();
   /**
    * <pre>
-   * True if the DistanceBucket is using the metric system, false otherwise.
+   * Output only. True if the DistanceBucket is using the metric system, false otherwise.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+   * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getMetricSystemOrBuilder();
 }

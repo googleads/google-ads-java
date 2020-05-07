@@ -30,18 +30,20 @@ public final class GenderViewProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v3/resources/gend" +
       "er_view.proto\022!google.ads.googleads.v3.r" +
-      "esources\032\031google/api/resource.proto\032\034goo" +
-      "gle/api/annotations.proto\"}\n\nGenderView\022" +
-      "\025\n\rresource_name\030\001 \001(\t:X\352AU\n#googleads.g" +
-      "oogleapis.com/GenderView\022.customers/{cus" +
-      "tomer}/genderViews/{gender_view}B\374\001\n%com" +
-      ".google.ads.googleads.v3.resourcesB\017Gend" +
-      "erViewProtoP\001ZJgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v3/resources;" +
-      "resources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
-      "3.Resources\312\002!Google\\Ads\\GoogleAds\\V3\\Re" +
-      "sources\352\002%Google::Ads::GoogleAds::V3::Re" +
-      "sourcesb\006proto3"
+      "esources\032\037google/api/field_behavior.prot" +
+      "o\032\031google/api/resource.proto\032\034google/api" +
+      "/annotations.proto\"\252\001\n\nGenderView\022B\n\rres" +
+      "ource_name\030\001 \001(\tB+\340A\003\372A%\n#googleads.goog" +
+      "leapis.com/GenderView:X\352AU\n#googleads.go" +
+      "ogleapis.com/GenderView\022.customers/{cust" +
+      "omer}/genderViews/{gender_view}B\374\001\n%com." +
+      "google.ads.googleads.v3.resourcesB\017Gende" +
+      "rViewProtoP\001ZJgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v3/resources;r" +
+      "esources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V3" +
+      ".Resources\312\002!Google\\Ads\\GoogleAds\\V3\\Res" +
+      "ources\352\002%Google::Ads::GoogleAds::V3::Res" +
+      "ourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -54,6 +56,7 @@ public final class GenderViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
@@ -65,9 +68,12 @@ public final class GenderViewProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

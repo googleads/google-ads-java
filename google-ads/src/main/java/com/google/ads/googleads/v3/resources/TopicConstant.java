@@ -131,12 +131,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the topic constant.
+   * Output only. The resource name of the topic constant.
    * topic constant resource names have the form:
    * `topicConstants/{topic_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -152,12 +152,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the topic constant.
+   * Output only. The resource name of the topic constant.
    * topic constant resource names have the form:
    * `topicConstants/{topic_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -177,30 +177,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the topic.
+   * Output only. The ID of the topic.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the topic.
+   * Output only. The ID of the topic.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the topic.
+   * Output only. The ID of the topic.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -210,30 +210,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue topicConstantParent_;
   /**
    * <pre>
-   * Resource name of parent of the topic constant.
+   * Output only. Resource name of parent of the topic constant.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+   * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasTopicConstantParent() {
     return topicConstantParent_ != null;
   }
   /**
    * <pre>
-   * Resource name of parent of the topic constant.
+   * Output only. Resource name of parent of the topic constant.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+   * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getTopicConstantParent() {
     return topicConstantParent_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : topicConstantParent_;
   }
   /**
    * <pre>
-   * Resource name of parent of the topic constant.
+   * Output only. Resource name of parent of the topic constant.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+   * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getTopicConstantParentOrBuilder() {
     return getTopicConstantParent();
@@ -243,28 +243,28 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.protobuf.StringValue> path_;
   /**
    * <pre>
-   * The category to target or exclude. Each subsequent element in the array
+   * Output only. The category to target or exclude. Each subsequent element in the array
    * describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
    * https://developers.google.com/adwords/api/docs/appendix/verticals
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue path = 4;</code>
+   * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.protobuf.StringValue> getPathList() {
     return path_;
   }
   /**
    * <pre>
-   * The category to target or exclude. Each subsequent element in the array
+   * Output only. The category to target or exclude. Each subsequent element in the array
    * describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
    * https://developers.google.com/adwords/api/docs/appendix/verticals
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue path = 4;</code>
+   * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getPathOrBuilderList() {
@@ -272,42 +272,42 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The category to target or exclude. Each subsequent element in the array
+   * Output only. The category to target or exclude. Each subsequent element in the array
    * describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
    * https://developers.google.com/adwords/api/docs/appendix/verticals
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue path = 4;</code>
+   * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getPathCount() {
     return path_.size();
   }
   /**
    * <pre>
-   * The category to target or exclude. Each subsequent element in the array
+   * Output only. The category to target or exclude. Each subsequent element in the array
    * describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
    * https://developers.google.com/adwords/api/docs/appendix/verticals
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue path = 4;</code>
+   * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getPath(int index) {
     return path_.get(index);
   }
   /**
    * <pre>
-   * The category to target or exclude. Each subsequent element in the array
+   * Output only. The category to target or exclude. Each subsequent element in the array
    * describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
    * https://developers.google.com/adwords/api/docs/appendix/verticals
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue path = 4;</code>
+   * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getPathOrBuilder(
       int index) {
@@ -744,12 +744,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the topic constant.
+     * Output only. The resource name of the topic constant.
      * topic constant resource names have the form:
      * `topicConstants/{topic_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -765,12 +765,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the topic constant.
+     * Output only. The resource name of the topic constant.
      * topic constant resource names have the form:
      * `topicConstants/{topic_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -787,12 +787,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the topic constant.
+     * Output only. The resource name of the topic constant.
      * topic constant resource names have the form:
      * `topicConstants/{topic_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -806,12 +806,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the topic constant.
+     * Output only. The resource name of the topic constant.
      * topic constant resource names have the form:
      * `topicConstants/{topic_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -821,12 +821,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the topic constant.
+     * Output only. The resource name of the topic constant.
      * topic constant resource names have the form:
      * `topicConstants/{topic_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -845,20 +845,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the topic.
+     * Output only. The ID of the topic.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the topic.
+     * Output only. The ID of the topic.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -869,10 +869,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the topic.
+     * Output only. The ID of the topic.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -889,10 +889,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the topic.
+     * Output only. The ID of the topic.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -907,10 +907,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the topic.
+     * Output only. The ID of the topic.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -929,10 +929,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the topic.
+     * Output only. The ID of the topic.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -947,10 +947,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the topic.
+     * Output only. The ID of the topic.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -959,10 +959,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the topic.
+     * Output only. The ID of the topic.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -974,10 +974,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the topic.
+     * Output only. The ID of the topic.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -998,20 +998,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> topicConstantParentBuilder_;
     /**
      * <pre>
-     * Resource name of parent of the topic constant.
+     * Output only. Resource name of parent of the topic constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+     * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasTopicConstantParent() {
       return topicConstantParentBuilder_ != null || topicConstantParent_ != null;
     }
     /**
      * <pre>
-     * Resource name of parent of the topic constant.
+     * Output only. Resource name of parent of the topic constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+     * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getTopicConstantParent() {
       if (topicConstantParentBuilder_ == null) {
@@ -1022,10 +1022,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of parent of the topic constant.
+     * Output only. Resource name of parent of the topic constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+     * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setTopicConstantParent(com.google.protobuf.StringValue value) {
       if (topicConstantParentBuilder_ == null) {
@@ -1042,10 +1042,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of parent of the topic constant.
+     * Output only. Resource name of parent of the topic constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+     * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setTopicConstantParent(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1060,10 +1060,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of parent of the topic constant.
+     * Output only. Resource name of parent of the topic constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+     * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeTopicConstantParent(com.google.protobuf.StringValue value) {
       if (topicConstantParentBuilder_ == null) {
@@ -1082,10 +1082,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of parent of the topic constant.
+     * Output only. Resource name of parent of the topic constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+     * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearTopicConstantParent() {
       if (topicConstantParentBuilder_ == null) {
@@ -1100,10 +1100,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of parent of the topic constant.
+     * Output only. Resource name of parent of the topic constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+     * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getTopicConstantParentBuilder() {
       
@@ -1112,10 +1112,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of parent of the topic constant.
+     * Output only. Resource name of parent of the topic constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+     * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getTopicConstantParentOrBuilder() {
       if (topicConstantParentBuilder_ != null) {
@@ -1127,10 +1127,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Resource name of parent of the topic constant.
+     * Output only. Resource name of parent of the topic constant.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue topic_constant_parent = 3;</code>
+     * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1160,14 +1160,14 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getPathList() {
       if (pathBuilder_ == null) {
@@ -1178,14 +1178,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getPathCount() {
       if (pathBuilder_ == null) {
@@ -1196,14 +1196,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPath(int index) {
       if (pathBuilder_ == null) {
@@ -1214,14 +1214,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPath(
         int index, com.google.protobuf.StringValue value) {
@@ -1239,14 +1239,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPath(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1261,14 +1261,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPath(com.google.protobuf.StringValue value) {
       if (pathBuilder_ == null) {
@@ -1285,14 +1285,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPath(
         int index, com.google.protobuf.StringValue value) {
@@ -1310,14 +1310,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPath(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1332,14 +1332,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPath(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1354,14 +1354,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllPath(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -1377,14 +1377,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPath() {
       if (pathBuilder_ == null) {
@@ -1398,14 +1398,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removePath(int index) {
       if (pathBuilder_ == null) {
@@ -1419,14 +1419,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getPathBuilder(
         int index) {
@@ -1434,14 +1434,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPathOrBuilder(
         int index) {
@@ -1452,14 +1452,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getPathOrBuilderList() {
@@ -1471,14 +1471,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addPathBuilder() {
       return getPathFieldBuilder().addBuilder(
@@ -1486,14 +1486,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder addPathBuilder(
         int index) {
@@ -1502,14 +1502,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The category to target or exclude. Each subsequent element in the array
+     * Output only. The category to target or exclude. Each subsequent element in the array
      * describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
      * https://developers.google.com/adwords/api/docs/appendix/verticals
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue path = 4;</code>
+     * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getPathBuilderList() {

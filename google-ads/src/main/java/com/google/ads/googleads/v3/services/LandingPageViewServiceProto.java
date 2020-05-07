@@ -34,22 +34,23 @@ public final class LandingPageViewServiceProto {
       "ds/v3/resources/landing_page_view.proto\032" +
       "\034google/api/annotations.proto\032\027google/ap" +
       "i/client.proto\032\037google/api/field_behavio" +
-      "r.proto\"7\n\031GetLandingPageViewRequest\022\032\n\r" +
-      "resource_name\030\001 \001(\tB\003\340A\0022\211\002\n\026LandingPage" +
-      "ViewService\022\321\001\n\022GetLandingPageView\022;.goo" +
-      "gle.ads.googleads.v3.services.GetLanding" +
-      "PageViewRequest\0322.google.ads.googleads.v" +
-      "3.resources.LandingPageView\"J\202\323\344\223\0024\0222/v3" +
-      "/{resource_name=customers/*/landingPageV" +
-      "iews/*}\332A\rresource_name\032\033\312A\030googleads.go" +
-      "ogleapis.comB\202\002\n$com.google.ads.googlead" +
-      "s.v3.servicesB\033LandingPageViewServicePro" +
-      "toP\001ZHgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v3/services;services\242\002" +
-      "\003GAA\252\002 Google.Ads.GoogleAds.V3.Services\312" +
-      "\002 Google\\Ads\\GoogleAds\\V3\\Services\352\002$Goo" +
-      "gle::Ads::GoogleAds::V3::Servicesb\006proto" +
-      "3"
+      "r.proto\032\031google/api/resource.proto\"d\n\031Ge" +
+      "tLandingPageViewRequest\022G\n\rresource_name" +
+      "\030\001 \001(\tB0\340A\002\372A*\n(googleads.googleapis.com" +
+      "/LandingPageView2\211\002\n\026LandingPageViewServ" +
+      "ice\022\321\001\n\022GetLandingPageView\022;.google.ads." +
+      "googleads.v3.services.GetLandingPageView" +
+      "Request\0322.google.ads.googleads.v3.resour" +
+      "ces.LandingPageView\"J\202\323\344\223\0024\0222/v3/{resour" +
+      "ce_name=customers/*/landingPageViews/*}\332" +
+      "A\rresource_name\032\033\312A\030googleads.googleapis" +
+      ".comB\202\002\n$com.google.ads.googleads.v3.ser" +
+      "vicesB\033LandingPageViewServiceProtoP\001ZHgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v3/services;services\242\002\003GAA\252\002 G" +
+      "oogle.Ads.GoogleAds.V3.Services\312\002 Google" +
+      "\\Ads\\GoogleAds\\V3\\Services\352\002$Google::Ads" +
+      "::GoogleAds::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,6 +67,7 @@ public final class LandingPageViewServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetLandingPageViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -79,12 +81,14 @@ public final class LandingPageViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.LandingPageViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

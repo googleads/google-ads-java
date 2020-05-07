@@ -221,12 +221,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the campaign experiment.
+   * Immutable. The resource name of the campaign experiment.
    * Campaign experiment resource names have the form:
    * `customers/{customer_id}/campaignExperiments/{campaign_experiment_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -242,12 +242,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the campaign experiment.
+   * Immutable. The resource name of the campaign experiment.
    * Campaign experiment resource names have the form:
    * `customers/{customer_id}/campaignExperiments/{campaign_experiment_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -267,33 +267,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the campaign experiment.
+   * Output only. The ID of the campaign experiment.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the campaign experiment.
+   * Output only. The ID of the campaign experiment.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the campaign experiment.
+   * Output only. The ID of the campaign experiment.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -303,30 +303,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue campaignDraft_;
   /**
    * <pre>
-   * The campaign draft with staged changes to the base campaign.
+   * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+   * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasCampaignDraft() {
     return campaignDraft_ != null;
   }
   /**
    * <pre>
-   * The campaign draft with staged changes to the base campaign.
+   * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+   * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getCampaignDraft() {
     return campaignDraft_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaignDraft_;
   }
   /**
    * <pre>
-   * The campaign draft with staged changes to the base campaign.
+   * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+   * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCampaignDraftOrBuilder() {
     return getCampaignDraft();
@@ -417,36 +417,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value trafficSplitPercent_;
   /**
    * <pre>
-   * Share of traffic directed to experiment as a percent (must be between 1 and
+   * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
    * 99 inclusive. Base campaign receives the remainder of the traffic
    * (100 - traffic_split_percent). Required for create.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+   * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasTrafficSplitPercent() {
     return trafficSplitPercent_ != null;
   }
   /**
    * <pre>
-   * Share of traffic directed to experiment as a percent (must be between 1 and
+   * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
    * 99 inclusive. Base campaign receives the remainder of the traffic
    * (100 - traffic_split_percent). Required for create.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+   * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.Int64Value getTrafficSplitPercent() {
     return trafficSplitPercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : trafficSplitPercent_;
   }
   /**
    * <pre>
-   * Share of traffic directed to experiment as a percent (must be between 1 and
+   * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
    * 99 inclusive. Base campaign receives the remainder of the traffic
    * (100 - traffic_split_percent). Required for create.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+   * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getTrafficSplitPercentOrBuilder() {
     return getTrafficSplitPercent();
@@ -456,20 +456,20 @@ private static final long serialVersionUID = 0L;
   private int trafficSplitType_;
   /**
    * <pre>
-   * Determines the behavior of the traffic split.
+   * Immutable. Determines the behavior of the traffic split.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getTrafficSplitTypeValue() {
     return trafficSplitType_;
   }
   /**
    * <pre>
-   * Determines the behavior of the traffic split.
+   * Immutable. Determines the behavior of the traffic split.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType getTrafficSplitType() {
     @SuppressWarnings("deprecation")
@@ -481,30 +481,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue experimentCampaign_;
   /**
    * <pre>
-   * The experiment campaign, as opposed to the base campaign.
+   * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+   * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasExperimentCampaign() {
     return experimentCampaign_ != null;
   }
   /**
    * <pre>
-   * The experiment campaign, as opposed to the base campaign.
+   * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+   * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getExperimentCampaign() {
     return experimentCampaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : experimentCampaign_;
   }
   /**
    * <pre>
-   * The experiment campaign, as opposed to the base campaign.
+   * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+   * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getExperimentCampaignOrBuilder() {
     return getExperimentCampaign();
@@ -514,20 +514,20 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * The status of the campaign experiment. This field is read-only.
+   * Output only. The status of the campaign experiment. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * The status of the campaign experiment. This field is read-only.
+   * Output only. The status of the campaign experiment. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -539,36 +539,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue longRunningOperation_;
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion of experiment create or promote. The most recent long
    * running operation is returned.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasLongRunningOperation() {
     return longRunningOperation_ != null;
   }
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion of experiment create or promote. The most recent long
    * running operation is returned.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getLongRunningOperation() {
     return longRunningOperation_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : longRunningOperation_;
   }
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion of experiment create or promote. The most recent long
    * running operation is returned.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder() {
     return getLongRunningOperation();
@@ -1279,12 +1279,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the campaign experiment.
+     * Immutable. The resource name of the campaign experiment.
      * Campaign experiment resource names have the form:
      * `customers/{customer_id}/campaignExperiments/{campaign_experiment_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1300,12 +1300,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign experiment.
+     * Immutable. The resource name of the campaign experiment.
      * Campaign experiment resource names have the form:
      * `customers/{customer_id}/campaignExperiments/{campaign_experiment_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1322,12 +1322,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign experiment.
+     * Immutable. The resource name of the campaign experiment.
      * Campaign experiment resource names have the form:
      * `customers/{customer_id}/campaignExperiments/{campaign_experiment_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1341,12 +1341,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign experiment.
+     * Immutable. The resource name of the campaign experiment.
      * Campaign experiment resource names have the form:
      * `customers/{customer_id}/campaignExperiments/{campaign_experiment_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1356,12 +1356,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign experiment.
+     * Immutable. The resource name of the campaign experiment.
      * Campaign experiment resource names have the form:
      * `customers/{customer_id}/campaignExperiments/{campaign_experiment_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1380,22 +1380,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the campaign experiment.
+     * Output only. The ID of the campaign experiment.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the campaign experiment.
+     * Output only. The ID of the campaign experiment.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1406,11 +1406,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign experiment.
+     * Output only. The ID of the campaign experiment.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1427,11 +1427,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign experiment.
+     * Output only. The ID of the campaign experiment.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1446,11 +1446,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign experiment.
+     * Output only. The ID of the campaign experiment.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1469,11 +1469,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign experiment.
+     * Output only. The ID of the campaign experiment.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1488,11 +1488,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign experiment.
+     * Output only. The ID of the campaign experiment.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1501,11 +1501,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign experiment.
+     * Output only. The ID of the campaign experiment.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1517,11 +1517,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign experiment.
+     * Output only. The ID of the campaign experiment.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1542,20 +1542,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignDraftBuilder_;
     /**
      * <pre>
-     * The campaign draft with staged changes to the base campaign.
+     * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+     * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasCampaignDraft() {
       return campaignDraftBuilder_ != null || campaignDraft_ != null;
     }
     /**
      * <pre>
-     * The campaign draft with staged changes to the base campaign.
+     * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+     * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getCampaignDraft() {
       if (campaignDraftBuilder_ == null) {
@@ -1566,10 +1566,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign draft with staged changes to the base campaign.
+     * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+     * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaignDraft(com.google.protobuf.StringValue value) {
       if (campaignDraftBuilder_ == null) {
@@ -1586,10 +1586,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign draft with staged changes to the base campaign.
+     * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+     * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaignDraft(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1604,10 +1604,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign draft with staged changes to the base campaign.
+     * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+     * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeCampaignDraft(com.google.protobuf.StringValue value) {
       if (campaignDraftBuilder_ == null) {
@@ -1626,10 +1626,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign draft with staged changes to the base campaign.
+     * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+     * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearCampaignDraft() {
       if (campaignDraftBuilder_ == null) {
@@ -1644,10 +1644,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign draft with staged changes to the base campaign.
+     * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+     * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getCampaignDraftBuilder() {
       
@@ -1656,10 +1656,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign draft with staged changes to the base campaign.
+     * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+     * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCampaignDraftOrBuilder() {
       if (campaignDraftBuilder_ != null) {
@@ -1671,10 +1671,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign draft with staged changes to the base campaign.
+     * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_draft = 3;</code>
+     * <code>.google.protobuf.StringValue campaign_draft = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2046,24 +2046,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> trafficSplitPercentBuilder_;
     /**
      * <pre>
-     * Share of traffic directed to experiment as a percent (must be between 1 and
+     * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
      * 99 inclusive. Base campaign receives the remainder of the traffic
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+     * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasTrafficSplitPercent() {
       return trafficSplitPercentBuilder_ != null || trafficSplitPercent_ != null;
     }
     /**
      * <pre>
-     * Share of traffic directed to experiment as a percent (must be between 1 and
+     * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
      * 99 inclusive. Base campaign receives the remainder of the traffic
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+     * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.Int64Value getTrafficSplitPercent() {
       if (trafficSplitPercentBuilder_ == null) {
@@ -2074,12 +2074,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Share of traffic directed to experiment as a percent (must be between 1 and
+     * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
      * 99 inclusive. Base campaign receives the remainder of the traffic
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+     * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTrafficSplitPercent(com.google.protobuf.Int64Value value) {
       if (trafficSplitPercentBuilder_ == null) {
@@ -2096,12 +2096,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Share of traffic directed to experiment as a percent (must be between 1 and
+     * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
      * 99 inclusive. Base campaign receives the remainder of the traffic
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+     * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTrafficSplitPercent(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2116,12 +2116,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Share of traffic directed to experiment as a percent (must be between 1 and
+     * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
      * 99 inclusive. Base campaign receives the remainder of the traffic
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+     * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeTrafficSplitPercent(com.google.protobuf.Int64Value value) {
       if (trafficSplitPercentBuilder_ == null) {
@@ -2140,12 +2140,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Share of traffic directed to experiment as a percent (must be between 1 and
+     * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
      * 99 inclusive. Base campaign receives the remainder of the traffic
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+     * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearTrafficSplitPercent() {
       if (trafficSplitPercentBuilder_ == null) {
@@ -2160,12 +2160,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Share of traffic directed to experiment as a percent (must be between 1 and
+     * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
      * 99 inclusive. Base campaign receives the remainder of the traffic
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+     * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.Int64Value.Builder getTrafficSplitPercentBuilder() {
       
@@ -2174,12 +2174,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Share of traffic directed to experiment as a percent (must be between 1 and
+     * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
      * 99 inclusive. Base campaign receives the remainder of the traffic
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+     * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getTrafficSplitPercentOrBuilder() {
       if (trafficSplitPercentBuilder_ != null) {
@@ -2191,12 +2191,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Share of traffic directed to experiment as a percent (must be between 1 and
+     * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
      * 99 inclusive. Base campaign receives the remainder of the traffic
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value traffic_split_percent = 6;</code>
+     * <code>.google.protobuf.Int64Value traffic_split_percent = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2215,20 +2215,20 @@ private static final long serialVersionUID = 0L;
     private int trafficSplitType_ = 0;
     /**
      * <pre>
-     * Determines the behavior of the traffic split.
+     * Immutable. Determines the behavior of the traffic split.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getTrafficSplitTypeValue() {
       return trafficSplitType_;
     }
     /**
      * <pre>
-     * Determines the behavior of the traffic split.
+     * Immutable. Determines the behavior of the traffic split.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTrafficSplitTypeValue(int value) {
       trafficSplitType_ = value;
@@ -2237,10 +2237,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Determines the behavior of the traffic split.
+     * Immutable. Determines the behavior of the traffic split.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType getTrafficSplitType() {
       @SuppressWarnings("deprecation")
@@ -2249,10 +2249,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Determines the behavior of the traffic split.
+     * Immutable. Determines the behavior of the traffic split.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTrafficSplitType(com.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType value) {
       if (value == null) {
@@ -2265,10 +2265,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Determines the behavior of the traffic split.
+     * Immutable. Determines the behavior of the traffic split.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType traffic_split_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearTrafficSplitType() {
       
@@ -2282,20 +2282,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> experimentCampaignBuilder_;
     /**
      * <pre>
-     * The experiment campaign, as opposed to the base campaign.
+     * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+     * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasExperimentCampaign() {
       return experimentCampaignBuilder_ != null || experimentCampaign_ != null;
     }
     /**
      * <pre>
-     * The experiment campaign, as opposed to the base campaign.
+     * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+     * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getExperimentCampaign() {
       if (experimentCampaignBuilder_ == null) {
@@ -2306,10 +2306,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The experiment campaign, as opposed to the base campaign.
+     * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+     * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setExperimentCampaign(com.google.protobuf.StringValue value) {
       if (experimentCampaignBuilder_ == null) {
@@ -2326,10 +2326,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The experiment campaign, as opposed to the base campaign.
+     * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+     * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setExperimentCampaign(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2344,10 +2344,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The experiment campaign, as opposed to the base campaign.
+     * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+     * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeExperimentCampaign(com.google.protobuf.StringValue value) {
       if (experimentCampaignBuilder_ == null) {
@@ -2366,10 +2366,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The experiment campaign, as opposed to the base campaign.
+     * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+     * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearExperimentCampaign() {
       if (experimentCampaignBuilder_ == null) {
@@ -2384,10 +2384,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The experiment campaign, as opposed to the base campaign.
+     * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+     * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getExperimentCampaignBuilder() {
       
@@ -2396,10 +2396,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The experiment campaign, as opposed to the base campaign.
+     * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+     * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getExperimentCampaignOrBuilder() {
       if (experimentCampaignBuilder_ != null) {
@@ -2411,10 +2411,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The experiment campaign, as opposed to the base campaign.
+     * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue experiment_campaign = 8;</code>
+     * <code>.google.protobuf.StringValue experiment_campaign = 8 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2433,20 +2433,20 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * The status of the campaign experiment. This field is read-only.
+     * Output only. The status of the campaign experiment. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * The status of the campaign experiment. This field is read-only.
+     * Output only. The status of the campaign experiment. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -2455,10 +2455,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the campaign experiment. This field is read-only.
+     * Output only. The status of the campaign experiment. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -2467,10 +2467,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the campaign experiment. This field is read-only.
+     * Output only. The status of the campaign experiment. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus value) {
       if (value == null) {
@@ -2483,10 +2483,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the campaign experiment. This field is read-only.
+     * Output only. The status of the campaign experiment. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       
@@ -2500,24 +2500,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> longRunningOperationBuilder_;
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion of experiment create or promote. The most recent long
      * running operation is returned.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasLongRunningOperation() {
       return longRunningOperationBuilder_ != null || longRunningOperation_ != null;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion of experiment create or promote. The most recent long
      * running operation is returned.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getLongRunningOperation() {
       if (longRunningOperationBuilder_ == null) {
@@ -2528,12 +2528,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion of experiment create or promote. The most recent long
      * running operation is returned.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLongRunningOperation(com.google.protobuf.StringValue value) {
       if (longRunningOperationBuilder_ == null) {
@@ -2550,12 +2550,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion of experiment create or promote. The most recent long
      * running operation is returned.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLongRunningOperation(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2570,12 +2570,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion of experiment create or promote. The most recent long
      * running operation is returned.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLongRunningOperation(com.google.protobuf.StringValue value) {
       if (longRunningOperationBuilder_ == null) {
@@ -2594,12 +2594,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion of experiment create or promote. The most recent long
      * running operation is returned.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLongRunningOperation() {
       if (longRunningOperationBuilder_ == null) {
@@ -2614,12 +2614,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion of experiment create or promote. The most recent long
      * running operation is returned.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getLongRunningOperationBuilder() {
       
@@ -2628,12 +2628,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion of experiment create or promote. The most recent long
      * running operation is returned.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder() {
       if (longRunningOperationBuilder_ != null) {
@@ -2645,12 +2645,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion of experiment create or promote. The most recent long
      * running operation is returned.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 10;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

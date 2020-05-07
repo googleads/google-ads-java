@@ -259,6 +259,31 @@ public interface MutateOperationResponseOrBuilder extends
 
   /**
    * <pre>
+   * The result for the ad mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+   */
+  boolean hasAdResult();
+  /**
+   * <pre>
+   * The result for the ad mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+   */
+  com.google.ads.googleads.v3.services.MutateAdResult getAdResult();
+  /**
+   * <pre>
+   * The result for the ad mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.services.MutateAdResult ad_result = 49;</code>
+   */
+  com.google.ads.googleads.v3.services.MutateAdResultOrBuilder getAdResultOrBuilder();
+
+  /**
+   * <pre>
    * The result for the asset mutate.
    * </pre>
    *

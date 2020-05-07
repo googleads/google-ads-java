@@ -9,22 +9,22 @@ public interface AgeRangeViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the age range view.
+   * Output only. The resource name of the age range view.
    * Age range view resource names have the form:
    * `customers/{customer_id}/ageRangeViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the age range view.
+   * Output only. The resource name of the age range view.
    * Age range view resource names have the form:
    * `customers/{customer_id}/ageRangeViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();

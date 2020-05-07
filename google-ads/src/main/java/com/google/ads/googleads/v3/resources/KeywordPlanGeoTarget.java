@@ -6,7 +6,6 @@ package com.google.ads.googleads.v3.resources;
 /**
  * <pre>
  * A geo target.
- * Next ID: 3
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.KeywordPlanGeoTarget}
@@ -99,7 +98,7 @@ private static final long serialVersionUID = 0L;
    * Required. The resource name of the geo target.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasGeoTargetConstant() {
     return geoTargetConstant_ != null;
@@ -109,7 +108,7 @@ private static final long serialVersionUID = 0L;
    * Required. The resource name of the geo target.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getGeoTargetConstant() {
     return geoTargetConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetConstant_;
@@ -119,7 +118,7 @@ private static final long serialVersionUID = 0L;
    * Required. The resource name of the geo target.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder() {
     return getGeoTargetConstant();
@@ -288,7 +287,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A geo target.
-   * Next ID: 3
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v3.resources.KeywordPlanGeoTarget}
@@ -453,7 +451,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the geo target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasGeoTargetConstant() {
       return geoTargetConstantBuilder_ != null || geoTargetConstant_ != null;
@@ -463,7 +461,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the geo target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getGeoTargetConstant() {
       if (geoTargetConstantBuilder_ == null) {
@@ -477,7 +475,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the geo target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setGeoTargetConstant(com.google.protobuf.StringValue value) {
       if (geoTargetConstantBuilder_ == null) {
@@ -497,7 +495,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the geo target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setGeoTargetConstant(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -515,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the geo target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeGeoTargetConstant(com.google.protobuf.StringValue value) {
       if (geoTargetConstantBuilder_ == null) {
@@ -537,7 +535,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the geo target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearGeoTargetConstant() {
       if (geoTargetConstantBuilder_ == null) {
@@ -555,7 +553,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the geo target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getGeoTargetConstantBuilder() {
       
@@ -567,7 +565,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the geo target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder() {
       if (geoTargetConstantBuilder_ != null) {
@@ -582,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * Required. The resource name of the geo target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * <code>.google.protobuf.StringValue geo_target_constant = 1 [(.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

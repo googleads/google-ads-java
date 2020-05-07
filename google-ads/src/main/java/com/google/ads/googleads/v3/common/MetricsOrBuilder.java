@@ -1689,7 +1689,7 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -1697,7 +1697,7 @@ public interface MetricsOrBuilder extends
   boolean hasHotelAverageLeadValueMicros();
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -1705,7 +1705,7 @@ public interface MetricsOrBuilder extends
   com.google.protobuf.DoubleValue getHotelAverageLeadValueMicros();
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>

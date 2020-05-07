@@ -30,8 +30,8 @@ public final class AdGroupErrorProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v3/errors/ad_grou" +
       "p_error.proto\022\036google.ads.googleads.v3.e" +
-      "rrors\032\034google/api/annotations.proto\"\240\004\n\020" +
-      "AdGroupErrorEnum\"\213\004\n\014AdGroupError\022\017\n\013UNS" +
+      "rrors\032\034google/api/annotations.proto\"\331\004\n\020" +
+      "AdGroupErrorEnum\"\304\004\n\014AdGroupError\022\017\n\013UNS" +
       "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032\n\026DUPLICATE_ADG" +
       "ROUP_NAME\020\002\022\030\n\024INVALID_ADGROUP_NAME\020\003\022%\n" +
       "!ADVERTISER_NOT_ON_CONTENT_NETWORK\020\005\022\017\n\013" +
@@ -44,13 +44,15 @@ public final class AdGroupErrorProto {
       "_CHANNEL_TYPE\020\014\0229\n5ADGROUP_TYPE_NOT_SUPP" +
       "ORTED_FOR_CAMPAIGN_SALES_COUNTRY\020\r\022B\n>CA" +
       "NNOT_ADD_ADGROUP_OF_TYPE_DSA_TO_CAMPAIGN" +
-      "_WITHOUT_DSA_SETTING\020\016B\354\001\n\"com.google.ad" +
-      "s.googleads.v3.errorsB\021AdGroupErrorProto" +
-      "P\001ZDgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v3/errors;errors\242\002\003GAA\252\002" +
-      "\036Google.Ads.GoogleAds.V3.Errors\312\002\036Google" +
-      "\\Ads\\GoogleAds\\V3\\Errors\352\002\"Google::Ads::" +
-      "GoogleAds::V3::Errorsb\006proto3"
+      "_WITHOUT_DSA_SETTING\020\016\0227\n3PROMOTED_HOTEL" +
+      "_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER\020\017B" +
+      "\354\001\n\"com.google.ads.googleads.v3.errorsB\021" +
+      "AdGroupErrorProtoP\001ZDgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v3/erro" +
+      "rs;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
+      "3.Errors\312\002\036Google\\Ads\\GoogleAds\\V3\\Error" +
+      "s\352\002\"Google::Ads::GoogleAds::V3::Errorsb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

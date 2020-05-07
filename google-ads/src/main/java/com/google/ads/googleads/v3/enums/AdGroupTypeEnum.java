@@ -209,6 +209,14 @@ private static final long serialVersionUID = 0L;
      * <code>PROMOTED_HOTEL_ADS = 15;</code>
      */
     PROMOTED_HOTEL_ADS(15),
+    /**
+     * <pre>
+     * Video responsive ad groups.
+     * </pre>
+     *
+     * <code>VIDEO_RESPONSIVE = 16;</code>
+     */
+    VIDEO_RESPONSIVE(16),
     UNRECOGNIZED(-1),
     ;
 
@@ -333,6 +341,14 @@ private static final long serialVersionUID = 0L;
      * <code>PROMOTED_HOTEL_ADS = 15;</code>
      */
     public static final int PROMOTED_HOTEL_ADS_VALUE = 15;
+    /**
+     * <pre>
+     * Video responsive ad groups.
+     * </pre>
+     *
+     * <code>VIDEO_RESPONSIVE = 16;</code>
+     */
+    public static final int VIDEO_RESPONSIVE_VALUE = 16;
 
 
     public final int getNumber() {
@@ -368,6 +384,7 @@ private static final long serialVersionUID = 0L;
         case 13: return SEARCH_DYNAMIC_ADS;
         case 14: return SHOPPING_COMPARISON_LISTING_ADS;
         case 15: return PROMOTED_HOTEL_ADS;
+        case 16: return VIDEO_RESPONSIVE;
         default: return null;
       }
     }

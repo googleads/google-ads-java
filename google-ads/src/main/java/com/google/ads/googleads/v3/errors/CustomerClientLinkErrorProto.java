@@ -31,8 +31,8 @@ public final class CustomerClientLinkErrorProto {
       "\n?google/ads/googleads/v3/errors/custome" +
       "r_client_link_error.proto\022\036google.ads.go" +
       "ogleads.v3.errors\032\034google/api/annotation" +
-      "s.proto\"\355\002\n\033CustomerClientLinkErrorEnum\"" +
-      "\315\002\n\027CustomerClientLinkError\022\017\n\013UNSPECIFI" +
+      "s.proto\"\217\003\n\033CustomerClientLinkErrorEnum\"" +
+      "\357\002\n\027CustomerClientLinkError\022\017\n\013UNSPECIFI" +
       "ED\020\000\022\013\n\007UNKNOWN\020\001\022*\n&CLIENT_ALREADY_INVI" +
       "TED_BY_THIS_MANAGER\020\002\022\'\n#CLIENT_ALREADY_" +
       "MANAGED_IN_HIERARCHY\020\003\022\033\n\027CYCLIC_LINK_NO" +
@@ -40,13 +40,14 @@ public final class CustomerClientLinkErrorProto {
       "OUNTS\020\005\022#\n\037CLIENT_HAS_TOO_MANY_INVITATIO" +
       "NS\020\006\022*\n&CANNOT_HIDE_OR_UNHIDE_MANAGER_AC" +
       "COUNTS\020\007\022-\n)CUSTOMER_HAS_TOO_MANY_ACCOUN" +
-      "TS_AT_MANAGER\020\010B\367\001\n\"com.google.ads.googl" +
-      "eads.v3.errorsB\034CustomerClientLinkErrorP" +
-      "rotoP\001ZDgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v3/errors;errors\242\002\003G" +
-      "AA\252\002\036Google.Ads.GoogleAds.V3.Errors\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V3\\Errors\352\002\"Google::A" +
-      "ds::GoogleAds::V3::Errorsb\006proto3"
+      "TS_AT_MANAGER\020\010\022 \n\034CLIENT_HAS_TOO_MANY_M" +
+      "ANAGERS\020\tB\367\001\n\"com.google.ads.googleads.v" +
+      "3.errorsB\034CustomerClientLinkErrorProtoP\001" +
+      "ZDgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v3/errors;errors\242\002\003GAA\252\002\036G" +
+      "oogle.Ads.GoogleAds.V3.Errors\312\002\036Google\\A" +
+      "ds\\GoogleAds\\V3\\Errors\352\002\"Google::Ads::Go" +
+      "ogleAds::V3::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

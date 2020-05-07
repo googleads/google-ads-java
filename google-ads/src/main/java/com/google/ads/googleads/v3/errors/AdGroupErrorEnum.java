@@ -201,6 +201,14 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_ADD_ADGROUP_OF_TYPE_DSA_TO_CAMPAIGN_WITHOUT_DSA_SETTING = 14;</code>
      */
     CANNOT_ADD_ADGROUP_OF_TYPE_DSA_TO_CAMPAIGN_WITHOUT_DSA_SETTING(14),
+    /**
+     * <pre>
+     * Promoted hotels ad groups are only available to whitelisted customers.
+     * </pre>
+     *
+     * <code>PROMOTED_HOTEL_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER = 15;</code>
+     */
+    PROMOTED_HOTEL_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER(15),
     UNRECOGNIZED(-1),
     ;
 
@@ -319,6 +327,14 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_ADD_ADGROUP_OF_TYPE_DSA_TO_CAMPAIGN_WITHOUT_DSA_SETTING = 14;</code>
      */
     public static final int CANNOT_ADD_ADGROUP_OF_TYPE_DSA_TO_CAMPAIGN_WITHOUT_DSA_SETTING_VALUE = 14;
+    /**
+     * <pre>
+     * Promoted hotels ad groups are only available to whitelisted customers.
+     * </pre>
+     *
+     * <code>PROMOTED_HOTEL_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER = 15;</code>
+     */
+    public static final int PROMOTED_HOTEL_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER_VALUE = 15;
 
 
     public final int getNumber() {
@@ -353,6 +369,7 @@ private static final long serialVersionUID = 0L;
         case 12: return AD_GROUP_TYPE_NOT_VALID_FOR_ADVERTISING_CHANNEL_TYPE;
         case 13: return ADGROUP_TYPE_NOT_SUPPORTED_FOR_CAMPAIGN_SALES_COUNTRY;
         case 14: return CANNOT_ADD_ADGROUP_OF_TYPE_DSA_TO_CAMPAIGN_WITHOUT_DSA_SETTING;
+        case 15: return PROMOTED_HOTEL_AD_GROUPS_NOT_AVAILABLE_FOR_CUSTOMER;
         default: return null;
       }
     }

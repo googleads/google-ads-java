@@ -31,8 +31,8 @@ public final class AccountBudgetProposalErrorProto {
       "\nBgoogle/ads/googleads/v3/errors/account" +
       "_budget_proposal_error.proto\022\036google.ads" +
       ".googleads.v3.errors\032\034google/api/annotat" +
-      "ions.proto\"\324\006\n\036AccountBudgetProposalErro" +
-      "rEnum\"\261\006\n\032AccountBudgetProposalError\022\017\n\013" +
+      "ions.proto\"\362\006\n\036AccountBudgetProposalErro" +
+      "rEnum\"\317\006\n\032AccountBudgetProposalError\022\017\n\013" +
       "UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032\n\026FIELD_MASK" +
       "_NOT_ALLOWED\020\002\022\023\n\017IMMUTABLE_FIELD\020\003\022\032\n\026R" +
       "EQUIRED_FIELD_MISSING\020\004\022#\n\037CANNOT_CANCEL" +
@@ -52,14 +52,14 @@ public final class AccountBudgetProposalErrorProto {
       "O_OP\020\023\022#\n\037END_TIME_MUST_FOLLOW_START_TIM" +
       "E\020\024\0225\n1BUDGET_DATE_RANGE_INCOMPATIBLE_WI" +
       "TH_BILLING_SETUP\020\025\022\022\n\016NOT_AUTHORIZED\020\026\022\031" +
-      "\n\025INVALID_BILLING_SETUP\020\027B\372\001\n\"com.google" +
-      ".ads.googleads.v3.errorsB\037AccountBudgetP" +
-      "roposalErrorProtoP\001ZDgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v3/erro" +
-      "rs;errors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
-      "3.Errors\312\002\036Google\\Ads\\GoogleAds\\V3\\Error" +
-      "s\352\002\"Google::Ads::GoogleAds::V3::Errorsb\006" +
-      "proto3"
+      "\n\025INVALID_BILLING_SETUP\020\027\022\034\n\030OVERLAPS_EX" +
+      "ISTING_BUDGET\020\030B\372\001\n\"com.google.ads.googl" +
+      "eads.v3.errorsB\037AccountBudgetProposalErr" +
+      "orProtoP\001ZDgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v3/errors;errors\242" +
+      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V3.Errors\312\002" +
+      "\036Google\\Ads\\GoogleAds\\V3\\Errors\352\002\"Google" +
+      "::Ads::GoogleAds::V3::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

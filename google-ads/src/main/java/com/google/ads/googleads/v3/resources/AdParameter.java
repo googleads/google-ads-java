@@ -133,12 +133,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the ad parameter.
+   * Immutable. The resource name of the ad parameter.
    * Ad parameter resource names have the form:
    * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -154,12 +154,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the ad parameter.
+   * Immutable. The resource name of the ad parameter.
    * Ad parameter resource names have the form:
    * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -179,30 +179,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroupCriterion_;
   /**
    * <pre>
-   * The ad group criterion that this ad parameter belongs to.
+   * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasAdGroupCriterion() {
     return adGroupCriterion_ != null;
   }
   /**
    * <pre>
-   * The ad group criterion that this ad parameter belongs to.
+   * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getAdGroupCriterion() {
     return adGroupCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupCriterion_;
   }
   /**
    * <pre>
-   * The ad group criterion that this ad parameter belongs to.
+   * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getAdGroupCriterionOrBuilder() {
     return getAdGroupCriterion();
@@ -212,30 +212,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value parameterIndex_;
   /**
    * <pre>
-   * The unique index of this ad parameter. Must be either 1 or 2.
+   * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+   * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasParameterIndex() {
     return parameterIndex_ != null;
   }
   /**
    * <pre>
-   * The unique index of this ad parameter. Must be either 1 or 2.
+   * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+   * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.Int64Value getParameterIndex() {
     return parameterIndex_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parameterIndex_;
   }
   /**
    * <pre>
-   * The unique index of this ad parameter. Must be either 1 or 2.
+   * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+   * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getParameterIndexOrBuilder() {
     return getParameterIndex();
@@ -714,12 +714,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the ad parameter.
+     * Immutable. The resource name of the ad parameter.
      * Ad parameter resource names have the form:
      * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -735,12 +735,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad parameter.
+     * Immutable. The resource name of the ad parameter.
      * Ad parameter resource names have the form:
      * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -757,12 +757,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad parameter.
+     * Immutable. The resource name of the ad parameter.
      * Ad parameter resource names have the form:
      * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -776,12 +776,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad parameter.
+     * Immutable. The resource name of the ad parameter.
      * Ad parameter resource names have the form:
      * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -791,12 +791,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad parameter.
+     * Immutable. The resource name of the ad parameter.
      * Ad parameter resource names have the form:
      * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -815,20 +815,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupCriterionBuilder_;
     /**
      * <pre>
-     * The ad group criterion that this ad parameter belongs to.
+     * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasAdGroupCriterion() {
       return adGroupCriterionBuilder_ != null || adGroupCriterion_ != null;
     }
     /**
      * <pre>
-     * The ad group criterion that this ad parameter belongs to.
+     * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getAdGroupCriterion() {
       if (adGroupCriterionBuilder_ == null) {
@@ -839,10 +839,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group criterion that this ad parameter belongs to.
+     * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupCriterion(com.google.protobuf.StringValue value) {
       if (adGroupCriterionBuilder_ == null) {
@@ -859,10 +859,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group criterion that this ad parameter belongs to.
+     * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroupCriterion(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -877,10 +877,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group criterion that this ad parameter belongs to.
+     * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroupCriterion(com.google.protobuf.StringValue value) {
       if (adGroupCriterionBuilder_ == null) {
@@ -899,10 +899,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group criterion that this ad parameter belongs to.
+     * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroupCriterion() {
       if (adGroupCriterionBuilder_ == null) {
@@ -917,10 +917,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group criterion that this ad parameter belongs to.
+     * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupCriterionBuilder() {
       
@@ -929,10 +929,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group criterion that this ad parameter belongs to.
+     * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupCriterionOrBuilder() {
       if (adGroupCriterionBuilder_ != null) {
@@ -944,10 +944,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group criterion that this ad parameter belongs to.
+     * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -968,20 +968,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> parameterIndexBuilder_;
     /**
      * <pre>
-     * The unique index of this ad parameter. Must be either 1 or 2.
+     * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+     * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasParameterIndex() {
       return parameterIndexBuilder_ != null || parameterIndex_ != null;
     }
     /**
      * <pre>
-     * The unique index of this ad parameter. Must be either 1 or 2.
+     * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+     * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.Int64Value getParameterIndex() {
       if (parameterIndexBuilder_ == null) {
@@ -992,10 +992,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique index of this ad parameter. Must be either 1 or 2.
+     * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+     * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setParameterIndex(com.google.protobuf.Int64Value value) {
       if (parameterIndexBuilder_ == null) {
@@ -1012,10 +1012,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique index of this ad parameter. Must be either 1 or 2.
+     * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+     * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setParameterIndex(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1030,10 +1030,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique index of this ad parameter. Must be either 1 or 2.
+     * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+     * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeParameterIndex(com.google.protobuf.Int64Value value) {
       if (parameterIndexBuilder_ == null) {
@@ -1052,10 +1052,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique index of this ad parameter. Must be either 1 or 2.
+     * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+     * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearParameterIndex() {
       if (parameterIndexBuilder_ == null) {
@@ -1070,10 +1070,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique index of this ad parameter. Must be either 1 or 2.
+     * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+     * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.Int64Value.Builder getParameterIndexBuilder() {
       
@@ -1082,10 +1082,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique index of this ad parameter. Must be either 1 or 2.
+     * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+     * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getParameterIndexOrBuilder() {
       if (parameterIndexBuilder_ != null) {
@@ -1097,10 +1097,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique index of this ad parameter. Must be either 1 or 2.
+     * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+     * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

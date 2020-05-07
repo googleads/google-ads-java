@@ -105,6 +105,7 @@ import com.google.ads.googleads.v3.resources.MerchantCenterLinkName;
 import com.google.ads.googleads.v3.resources.MobileAppCategoryConstantName;
 import com.google.ads.googleads.v3.resources.MobileDeviceConstantName;
 import com.google.ads.googleads.v3.resources.MutateJobName;
+import com.google.ads.googleads.v3.resources.OfflineUserDataJobName;
 import com.google.ads.googleads.v3.resources.OperatingSystemVersionConstantName;
 import com.google.ads.googleads.v3.resources.PaidOrganicSearchTermViewName;
 import com.google.ads.googleads.v3.resources.ParentalStatusViewName;
@@ -817,6 +818,12 @@ public class ResourceNames {
    */
   public static String mutateJob(long customerId, long mutateJobId) {
     return MutateJobName.format(String.valueOf(customerId), String.valueOf(mutateJobId));
+  }
+
+  /** Returns the Offline User Data Job resource name for the specified components. */
+  public static String offlineUserDataJob(long customerId, long offlineUserDataJobId) {
+    return OfflineUserDataJobName.format(
+        String.valueOf(customerId), String.valueOf(offlineUserDataJobId));
   }
 
   /**
