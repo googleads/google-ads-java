@@ -30,25 +30,25 @@ import com.google.ads.googleads.v3.services.AdGroupCriterionOperation;
 import com.google.ads.googleads.v3.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v3.services.MutateAdGroupCriteriaResponse;
 import com.google.ads.googleads.v3.utils.ResourceNames;
+import com.google.common.collect.ImmutableList;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
  * Demonstrates how to request an exemption for policy violations of a keyword.
  *
  * <p>The example uses an exemptible policy-violating keyword by default. If you use a keyword that
- * contains non-exemptible policy violations, they will not be sent for exemption request and you
+ * contains non-exemptible policy violations, it will not be sent with exemptions requested and you
  * will still fail to create a keyword.
  *
  * <p>If you specify a keyword that doesn't violate any policies, this example will just add the
  * keyword as usual, similar to what the AddKeywords example does.
  *
- * <p>Once you've requested policy exemption for a keyword, when you send a request for adding it
- * again, the request will pass like when you add a non-violating keyword.
+ * <p>When you send a request to add a keyword after requesting a policy exemption for that keyword,
+ * the request will pass as if you were adding a non-violating keyword.
  */
 public class HandleKeywordPolicyViolations {
 
@@ -145,7 +145,14 @@ public class HandleKeywordPolicyViolations {
       try {
         MutateAdGroupCriteriaResponse response =
             adGroupCriterionServiceClient.mutateAdGroupCriteria(
-                String.valueOf(customerId), Arrays.asList(operation));
+                String.valueOf(customerId), ImmutableList.of(operation));
+        // If the request succeeded, then either the keyword does not require a policy exemption or
+        // a policy exemption was previously submitted for the keyword. In either case, returns and
+        // skips the remaining portion of this example that resubmits with an exemption request.
+        System.out.printf(
+            "Successfully added a keyword with resource name '%s'. No exemptions needed.%n",
+            response.getResults(0).getResourceName());
+        return;
       } catch (GoogleAdsException e) {
         exemptibleKeys = extractExemptiblePolicyViolationKeys(e);
         errorCount = e.getGoogleAdsFailure().getErrorsCount();
@@ -164,7 +171,7 @@ public class HandleKeywordPolicyViolations {
         // Tries sending the mutate request again.
         MutateAdGroupCriteriaResponse response =
             adGroupCriterionServiceClient.mutateAdGroupCriteria(
-                String.valueOf(customerId), Arrays.asList(operation));
+                String.valueOf(customerId), ImmutableList.of(operation));
         System.out.printf(
             "Successfully added a keyword with resource name '%s' by requesting "
                 + "policy violation exemptions.%n",
