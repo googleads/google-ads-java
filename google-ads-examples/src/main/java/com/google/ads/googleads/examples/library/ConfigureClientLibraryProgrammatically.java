@@ -18,7 +18,12 @@ import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
 import com.google.auth.oauth2.UserCredentials;
 
-/** Shows how to configure the client library programmatically. */
+/**
+ * Shows how to configure the client library programmatically.
+ *
+ * <p>This is useful when you authenticate with many sets of credentials. For example, if you
+ * authenticate on behalf of third-party advertisers.
+ */
 public class ConfigureClientLibraryProgrammatically {
 
   private static final String DEVELOPER_TOKEN = "INSERT_DEVELOPER_TOKEN";
