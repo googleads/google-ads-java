@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.examples.basicoperations;
+package com.google.ads.googleads.examples.library;
 
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
 import com.google.auth.oauth2.UserCredentials;
 
-/** Shows how to configure the client library with API access credentials with builder. */
-public class ConfigureClientLibraryWithBuilder {
+/** Shows how to configure the client library with programmatically. */
+public class ConfigureClientLibraryProgrammatically {
 
   private static final String DEVELOPER_TOKEN = "INSERT_DEVELOPER_TOKEN";
   private static final String OAUTH_CLIENT_ID = "INSERT_CLIENT_ID";
