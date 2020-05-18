@@ -18,7 +18,7 @@ import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
 import com.google.auth.oauth2.UserCredentials;
 
-/** Shows how to configure the client library with programmatically. */
+/** Shows how to configure the client library programmatically. */
 public class ConfigureClientLibraryProgrammatically {
 
   private static final String DEVELOPER_TOKEN = "INSERT_DEVELOPER_TOKEN";
@@ -51,7 +51,7 @@ public class ConfigureClientLibraryProgrammatically {
             .setLoginCustomerId(Long.valueOf(LOGIN_CUSTOMER_ID))
             .build();
 
-    // Now use the client configured with these credentials.
+    // Uses the client configured with these credentials.
     try (GoogleAdsServiceClient googleAdsServiceClient =
         client.getLatestVersion().createGoogleAdsServiceClient()) {
       googleAdsServiceClient.search(OPERATING_CUSTOMER_ID, "SELECT campaign.id FROM campaign");
