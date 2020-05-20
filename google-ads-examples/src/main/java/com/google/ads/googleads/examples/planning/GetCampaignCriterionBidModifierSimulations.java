@@ -18,6 +18,7 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.v3.common.BidModifierSimulationPoint;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
 import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.CampaignCriterionSimulation;
@@ -125,10 +126,25 @@ public class GetCampaignCriterionBidModifierSimulations {
           CampaignCriterionSimulation simulation = googleAdsRow.getCampaignCriterionSimulation();
           System.out.printf(
               "Found campaign-level criterion bid modifier simulation for "
-                  + "criterion with ID %d, start date '%s', end date '%s', and points:%s'",
+                  + "criterion with ID %d, start date '%s', end date '%s', and points:%n'",
               simulation.getCriterionId().getValue(),
               simulation.getStartDate().getValue(),
               simulation.getEndDate().getValue());
+          for (BidModifierSimulationPoint point :
+              simulation.getBidModifierPointList().getPointsList()) {
+            System.out.printf(
+                " bid modifier: %.2f => clicks: %d, cost: %d, impressions: %d, "
+                    + "parent clicks: %d, parent cost: %d, parent impressions: %d, "
+                    + "parent required budget: %d%n",
+                point.getBidModifier().getValue(),
+                point.getClicks().getValue(),
+                point.getCostMicros().getValue(),
+                point.getImpressions().getValue(),
+                point.getParentClicks().getValue(),
+                point.getParentCostMicros().getValue(),
+                point.getParentImpressions().getValue(),
+                point.getParentRequiredBudgetMicros().getValue());
+          }
         }
       }
     }
