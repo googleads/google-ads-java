@@ -131,7 +131,7 @@ public class CreateCampaignExperiment {
         CampaignExperiment.newBuilder()
             .setCampaignDraft(
                 StringValue.of(ResourceNames.campaignDraft(customerId, baseCampaignId, draftId)))
-            .setName(StringValue.of("Campaign experiment #" + UUID.randomUUID()))
+            .setName(StringValue.of("Campaign experiment #" + System.currentTimeMillis()))
             .setTrafficSplitPercent(Int64Value.of(50))
             .setTrafficSplitType(CampaignExperimentTrafficSplitType.RANDOM_QUERY)
             .build();
