@@ -5,7 +5,7 @@ package com.google.ads.googleads.v3.common;
 
 /**
  * <pre>
- * A rule item composed of number operation.
+ * A rule item composed of a number operation.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v3.common.UserListNumberRuleItemInfo}
@@ -338,7 +338,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A rule item composed of number operation.
+   * A rule item composed of a number operation.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v3.common.UserListNumberRuleItemInfo}

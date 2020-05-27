@@ -36,37 +36,44 @@ public final class FeedItemTargetProto {
       "o\032;google/ads/googleads/v3/enums/feed_it" +
       "em_target_status.proto\0329google/ads/googl" +
       "eads/v3/enums/feed_item_target_type.prot" +
-      "o\032\031google/api/resource.proto\032\036google/pro" +
-      "tobuf/wrappers.proto\032\034google/api/annotat" +
-      "ions.proto\"\322\006\n\016FeedItemTarget\022\025\n\rresourc" +
-      "e_name\030\001 \001(\t\022/\n\tfeed_item\030\002 \001(\0132\034.google" +
-      ".protobuf.StringValue\022g\n\025feed_item_targe" +
-      "t_type\030\003 \001(\0162H.google.ads.googleads.v3.e" +
-      "nums.FeedItemTargetTypeEnum.FeedItemTarg" +
-      "etType\0228\n\023feed_item_target_id\030\006 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022\\\n\006status\030\013 \001(\016" +
-      "2L.google.ads.googleads.v3.enums.FeedIte" +
-      "mTargetStatusEnum.FeedItemTargetStatus\0220" +
-      "\n\010campaign\030\004 \001(\0132\034.google.protobuf.Strin" +
-      "gValueH\000\0220\n\010ad_group\030\005 \001(\0132\034.google.prot" +
-      "obuf.StringValueH\000\022>\n\007keyword\030\007 \001(\0132+.go" +
-      "ogle.ads.googleads.v3.common.KeywordInfo" +
-      "H\000\022;\n\023geo_target_constant\030\010 \001(\0132\034.google" +
-      ".protobuf.StringValueH\000\022^\n\006device\030\t \001(\0162" +
-      "L.google.ads.googleads.v3.enums.FeedItem" +
-      "TargetDeviceEnum.FeedItemTargetDeviceH\000\022" +
-      "E\n\013ad_schedule\030\n \001(\0132..google.ads.google" +
-      "ads.v3.common.AdScheduleInfoH\000:e\352Ab\n\'goo" +
-      "gleads.googleapis.com/FeedItemTarget\0227cu" +
-      "stomers/{customer}/feedItemTargets/{feed" +
-      "_item_target}B\010\n\006targetB\200\002\n%com.google.a" +
-      "ds.googleads.v3.resourcesB\023FeedItemTarge" +
-      "tProtoP\001ZJgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v3/resources;resou" +
-      "rces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V3.Res" +
-      "ources\312\002!Google\\Ads\\GoogleAds\\V3\\Resourc" +
-      "es\352\002%Google::Ads::GoogleAds::V3::Resourc" +
-      "esb\006proto3"
+      "o\032\037google/api/field_behavior.proto\032\031goog" +
+      "le/api/resource.proto\032\036google/protobuf/w" +
+      "rappers.proto\032\034google/api/annotations.pr" +
+      "oto\"\325\010\n\016FeedItemTarget\022F\n\rresource_name\030" +
+      "\001 \001(\tB/\340A\005\372A)\n\'googleads.googleapis.com/" +
+      "FeedItemTarget\022Z\n\tfeed_item\030\002 \001(\0132\034.goog" +
+      "le.protobuf.StringValueB)\340A\005\372A#\n!googlea" +
+      "ds.googleapis.com/FeedItem\022l\n\025feed_item_" +
+      "target_type\030\003 \001(\0162H.google.ads.googleads" +
+      ".v3.enums.FeedItemTargetTypeEnum.FeedIte" +
+      "mTargetTypeB\003\340A\003\022=\n\023feed_item_target_id\030" +
+      "\006 \001(\0132\033.google.protobuf.Int64ValueB\003\340A\003\022" +
+      "a\n\006status\030\013 \001(\0162L.google.ads.googleads.v" +
+      "3.enums.FeedItemTargetStatusEnum.FeedIte" +
+      "mTargetStatusB\003\340A\003\022[\n\010campaign\030\004 \001(\0132\034.g" +
+      "oogle.protobuf.StringValueB)\340A\005\372A#\n!goog" +
+      "leads.googleapis.com/CampaignH\000\022Z\n\010ad_gr" +
+      "oup\030\005 \001(\0132\034.google.protobuf.StringValueB" +
+      "(\340A\005\372A\"\n googleads.googleapis.com/AdGrou" +
+      "pH\000\022C\n\007keyword\030\007 \001(\0132+.google.ads.google" +
+      "ads.v3.common.KeywordInfoB\003\340A\005H\000\022o\n\023geo_" +
+      "target_constant\030\010 \001(\0132\034.google.protobuf." +
+      "StringValueB2\340A\005\372A,\n*googleads.googleapi" +
+      "s.com/GeoTargetConstantH\000\022c\n\006device\030\t \001(" +
+      "\0162L.google.ads.googleads.v3.enums.FeedIt" +
+      "emTargetDeviceEnum.FeedItemTargetDeviceB" +
+      "\003\340A\005H\000\022J\n\013ad_schedule\030\n \001(\0132..google.ads" +
+      ".googleads.v3.common.AdScheduleInfoB\003\340A\005" +
+      "H\000:e\352Ab\n\'googleads.googleapis.com/FeedIt" +
+      "emTarget\0227customers/{customer}/feedItemT" +
+      "argets/{feed_item_target}B\010\n\006targetB\200\002\n%" +
+      "com.google.ads.googleads.v3.resourcesB\023F" +
+      "eedItemTargetProtoP\001ZJgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v3/res" +
+      "ources;resources\242\002\003GAA\252\002!Google.Ads.Goog" +
+      "leAds.V3.Resources\312\002!Google\\Ads\\GoogleAd" +
+      "s\\V3\\Resources\352\002%Google::Ads::GoogleAds:" +
+      ":V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -83,6 +90,7 @@ public final class FeedItemTargetProto {
           com.google.ads.googleads.v3.enums.FeedItemTargetDeviceProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.FeedItemTargetStatusProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.FeedItemTargetTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -95,13 +103,16 @@ public final class FeedItemTargetProto {
         new java.lang.String[] { "ResourceName", "FeedItem", "FeedItemTargetType", "FeedItemTargetId", "Status", "Campaign", "AdGroup", "Keyword", "GeoTargetConstant", "Device", "AdSchedule", "Target", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v3.enums.FeedItemTargetDeviceProto.getDescriptor();
     com.google.ads.googleads.v3.enums.FeedItemTargetStatusProto.getDescriptor();
     com.google.ads.googleads.v3.enums.FeedItemTargetTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

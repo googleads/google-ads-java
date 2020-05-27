@@ -34,21 +34,23 @@ public final class AccountBudgetServiceProto {
       "v3/resources/account_budget.proto\032\034googl" +
       "e/api/annotations.proto\032\027google/api/clie" +
       "nt.proto\032\037google/api/field_behavior.prot" +
-      "o\"5\n\027GetAccountBudgetRequest\022\032\n\rresource" +
-      "_name\030\001 \001(\tB\003\340A\0022\377\001\n\024AccountBudgetServic" +
-      "e\022\311\001\n\020GetAccountBudget\0229.google.ads.goog" +
-      "leads.v3.services.GetAccountBudgetReques" +
-      "t\0320.google.ads.googleads.v3.resources.Ac" +
-      "countBudget\"H\202\323\344\223\0022\0220/v3/{resource_name=" +
-      "customers/*/accountBudgets/*}\332A\rresource" +
-      "_name\032\033\312A\030googleads.googleapis.comB\200\002\n$c" +
-      "om.google.ads.googleads.v3.servicesB\031Acc" +
-      "ountBudgetServiceProtoP\001ZHgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v3" +
-      "/services;services\242\002\003GAA\252\002 Google.Ads.Go" +
-      "ogleAds.V3.Services\312\002 Google\\Ads\\GoogleA" +
-      "ds\\V3\\Services\352\002$Google::Ads::GoogleAds:" +
-      ":V3::Servicesb\006proto3"
+      "o\032\031google/api/resource.proto\"`\n\027GetAccou" +
+      "ntBudgetRequest\022E\n\rresource_name\030\001 \001(\tB." +
+      "\340A\002\372A(\n&googleads.googleapis.com/Account" +
+      "Budget2\377\001\n\024AccountBudgetService\022\311\001\n\020GetA" +
+      "ccountBudget\0229.google.ads.googleads.v3.s" +
+      "ervices.GetAccountBudgetRequest\0320.google" +
+      ".ads.googleads.v3.resources.AccountBudge" +
+      "t\"H\202\323\344\223\0022\0220/v3/{resource_name=customers/" +
+      "*/accountBudgets/*}\332A\rresource_name\032\033\312A\030" +
+      "googleads.googleapis.comB\200\002\n$com.google." +
+      "ads.googleads.v3.servicesB\031AccountBudget" +
+      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v3/services;" +
+      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3" +
+      ".Services\312\002 Google\\Ads\\GoogleAds\\V3\\Serv" +
+      "ices\352\002$Google::Ads::GoogleAds::V3::Servi" +
+      "cesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -65,6 +67,7 @@ public final class AccountBudgetServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetAccountBudgetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -78,12 +81,14 @@ public final class AccountBudgetServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.AccountBudgetProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

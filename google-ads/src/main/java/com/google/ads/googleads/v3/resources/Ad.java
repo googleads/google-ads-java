@@ -577,12 +577,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the ad.
+   * Immutable. The resource name of the ad.
    * Ad resource names have the form:
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
-   * <code>string resource_name = 37;</code>
+   * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -598,12 +598,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the ad.
+   * Immutable. The resource name of the ad.
    * Ad resource names have the form:
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
-   * <code>string resource_name = 37;</code>
+   * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -623,30 +623,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the ad.
+   * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 1;</code>
+   * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the ad.
+   * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 1;</code>
+   * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the ad.
+   * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 1;</code>
+   * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -904,6 +904,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -915,6 +916,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -927,6 +929,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -938,6 +941,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -949,6 +953,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+   * For mutates, please use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -995,20 +1000,20 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * The type of ad.
+   * Output only. The type of ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * The type of ad.
+   * Output only. The type of ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.AdTypeEnum.AdType getType() {
     @SuppressWarnings("deprecation")
@@ -1020,39 +1025,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue addedByGoogleAds_;
   /**
    * <pre>
-   * Indicates if this ad was automatically added by Google Ads and not by a
+   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
    * user. For example, this could happen when ads are automatically created as
    * suggestions for new ads based on knowledge of how existing ads are
    * performing.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasAddedByGoogleAds() {
     return addedByGoogleAds_ != null;
   }
   /**
    * <pre>
-   * Indicates if this ad was automatically added by Google Ads and not by a
+   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
    * user. For example, this could happen when ads are automatically created as
    * suggestions for new ads based on knowledge of how existing ads are
    * performing.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getAddedByGoogleAds() {
     return addedByGoogleAds_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : addedByGoogleAds_;
   }
   /**
    * <pre>
-   * Indicates if this ad was automatically added by Google Ads and not by a
+   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
    * user. For example, this could happen when ads are automatically created as
    * suggestions for new ads based on knowledge of how existing ads are
    * performing.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+   * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getAddedByGoogleAdsOrBuilder() {
     return getAddedByGoogleAds();
@@ -1157,33 +1162,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * The name of the ad. This is only used to be able to identify the ad. It
+   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
    * does not need to be unique and does not affect the served ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 23;</code>
+   * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * The name of the ad. This is only used to be able to identify the ad. It
+   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
    * does not need to be unique and does not affect the served ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 23;</code>
+   * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * The name of the ad. This is only used to be able to identify the ad. It
+   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
    * does not need to be unique and does not affect the served ad.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 23;</code>
+   * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
@@ -1193,22 +1198,22 @@ private static final long serialVersionUID = 0L;
   private int systemManagedResourceSource_;
   /**
    * <pre>
-   * If this ad is system managed, then this field will indicate the source.
+   * Output only. If this ad is system managed, then this field will indicate the source.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+   * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getSystemManagedResourceSourceValue() {
     return systemManagedResourceSource_;
   }
   /**
    * <pre>
-   * If this ad is system managed, then this field will indicate the source.
+   * Output only. If this ad is system managed, then this field will indicate the source.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+   * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource getSystemManagedResourceSource() {
     @SuppressWarnings("deprecation")
@@ -1725,20 +1730,20 @@ private static final long serialVersionUID = 0L;
   public static final int LEGACY_APP_INSTALL_AD_FIELD_NUMBER = 30;
   /**
    * <pre>
-   * Details pertaining to a legacy app install ad.
+   * Immutable. Details pertaining to a legacy app install ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasLegacyAppInstallAd() {
     return adDataCase_ == 30;
   }
   /**
    * <pre>
-   * Details pertaining to a legacy app install ad.
+   * Immutable. Details pertaining to a legacy app install ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo getLegacyAppInstallAd() {
     if (adDataCase_ == 30) {
@@ -1748,10 +1753,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Details pertaining to a legacy app install ad.
+   * Immutable. Details pertaining to a legacy app install ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+   * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.LegacyAppInstallAdInfoOrBuilder getLegacyAppInstallAdOrBuilder() {
     if (adDataCase_ == 30) {
@@ -3230,12 +3235,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the ad.
+     * Immutable. The resource name of the ad.
      * Ad resource names have the form:
      * `customers/{customer_id}/ads/{ad_id}`
      * </pre>
      *
-     * <code>string resource_name = 37;</code>
+     * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -3251,12 +3256,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad.
+     * Immutable. The resource name of the ad.
      * Ad resource names have the form:
      * `customers/{customer_id}/ads/{ad_id}`
      * </pre>
      *
-     * <code>string resource_name = 37;</code>
+     * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -3273,12 +3278,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad.
+     * Immutable. The resource name of the ad.
      * Ad resource names have the form:
      * `customers/{customer_id}/ads/{ad_id}`
      * </pre>
      *
-     * <code>string resource_name = 37;</code>
+     * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -3292,12 +3297,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad.
+     * Immutable. The resource name of the ad.
      * Ad resource names have the form:
      * `customers/{customer_id}/ads/{ad_id}`
      * </pre>
      *
-     * <code>string resource_name = 37;</code>
+     * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -3307,12 +3312,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad.
+     * Immutable. The resource name of the ad.
      * Ad resource names have the form:
      * `customers/{customer_id}/ads/{ad_id}`
      * </pre>
      *
-     * <code>string resource_name = 37;</code>
+     * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -3331,20 +3336,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the ad.
+     * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 1;</code>
+     * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the ad.
+     * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 1;</code>
+     * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -3355,10 +3360,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad.
+     * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 1;</code>
+     * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -3375,10 +3380,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad.
+     * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 1;</code>
+     * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3393,10 +3398,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad.
+     * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 1;</code>
+     * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -3415,10 +3420,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad.
+     * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 1;</code>
+     * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -3433,10 +3438,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad.
+     * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 1;</code>
+     * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -3445,10 +3450,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad.
+     * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 1;</code>
+     * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -3460,10 +3465,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the ad.
+     * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 1;</code>
+     * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -4791,6 +4796,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4806,6 +4812,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4821,6 +4828,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4836,6 +4844,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4858,6 +4867,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4877,6 +4887,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4898,6 +4909,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4920,6 +4932,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4939,6 +4952,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4958,6 +4972,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4978,6 +4993,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4996,6 +5012,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5014,6 +5031,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5026,6 +5044,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5041,6 +5060,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5057,6 +5077,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5069,6 +5090,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5082,6 +5104,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
+     * For mutates, please use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5261,20 +5284,20 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The type of ad.
+     * Output only. The type of ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * The type of ad.
+     * Output only. The type of ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -5283,10 +5306,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of ad.
+     * Output only. The type of ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.AdTypeEnum.AdType getType() {
       @SuppressWarnings("deprecation")
@@ -5295,10 +5318,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of ad.
+     * Output only. The type of ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setType(com.google.ads.googleads.v3.enums.AdTypeEnum.AdType value) {
       if (value == null) {
@@ -5311,10 +5334,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of ad.
+     * Output only. The type of ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearType() {
       
@@ -5328,26 +5351,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> addedByGoogleAdsBuilder_;
     /**
      * <pre>
-     * Indicates if this ad was automatically added by Google Ads and not by a
+     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
      * user. For example, this could happen when ads are automatically created as
      * suggestions for new ads based on knowledge of how existing ads are
      * performing.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasAddedByGoogleAds() {
       return addedByGoogleAdsBuilder_ != null || addedByGoogleAds_ != null;
     }
     /**
      * <pre>
-     * Indicates if this ad was automatically added by Google Ads and not by a
+     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
      * user. For example, this could happen when ads are automatically created as
      * suggestions for new ads based on knowledge of how existing ads are
      * performing.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getAddedByGoogleAds() {
       if (addedByGoogleAdsBuilder_ == null) {
@@ -5358,13 +5381,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates if this ad was automatically added by Google Ads and not by a
+     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
      * user. For example, this could happen when ads are automatically created as
      * suggestions for new ads based on knowledge of how existing ads are
      * performing.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAddedByGoogleAds(com.google.protobuf.BoolValue value) {
       if (addedByGoogleAdsBuilder_ == null) {
@@ -5381,13 +5404,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates if this ad was automatically added by Google Ads and not by a
+     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
      * user. For example, this could happen when ads are automatically created as
      * suggestions for new ads based on knowledge of how existing ads are
      * performing.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAddedByGoogleAds(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -5402,13 +5425,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates if this ad was automatically added by Google Ads and not by a
+     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
      * user. For example, this could happen when ads are automatically created as
      * suggestions for new ads based on knowledge of how existing ads are
      * performing.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAddedByGoogleAds(com.google.protobuf.BoolValue value) {
       if (addedByGoogleAdsBuilder_ == null) {
@@ -5427,13 +5450,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates if this ad was automatically added by Google Ads and not by a
+     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
      * user. For example, this could happen when ads are automatically created as
      * suggestions for new ads based on knowledge of how existing ads are
      * performing.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAddedByGoogleAds() {
       if (addedByGoogleAdsBuilder_ == null) {
@@ -5448,13 +5471,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates if this ad was automatically added by Google Ads and not by a
+     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
      * user. For example, this could happen when ads are automatically created as
      * suggestions for new ads based on knowledge of how existing ads are
      * performing.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getAddedByGoogleAdsBuilder() {
       
@@ -5463,13 +5486,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates if this ad was automatically added by Google Ads and not by a
+     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
      * user. For example, this could happen when ads are automatically created as
      * suggestions for new ads based on knowledge of how existing ads are
      * performing.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getAddedByGoogleAdsOrBuilder() {
       if (addedByGoogleAdsBuilder_ != null) {
@@ -5481,13 +5504,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates if this ad was automatically added by Google Ads and not by a
+     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
      * user. For example, this could happen when ads are automatically created as
      * suggestions for new ads based on knowledge of how existing ads are
      * performing.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue added_by_google_ads = 19;</code>
+     * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -5928,22 +5951,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * The name of the ad. This is only used to be able to identify the ad. It
+     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
      * does not need to be unique and does not affect the served ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 23;</code>
+     * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * The name of the ad. This is only used to be able to identify the ad. It
+     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
      * does not need to be unique and does not affect the served ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 23;</code>
+     * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -5954,11 +5977,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the ad. This is only used to be able to identify the ad. It
+     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
      * does not need to be unique and does not affect the served ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 23;</code>
+     * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -5975,11 +5998,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the ad. This is only used to be able to identify the ad. It
+     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
      * does not need to be unique and does not affect the served ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 23;</code>
+     * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5994,11 +6017,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the ad. This is only used to be able to identify the ad. It
+     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
      * does not need to be unique and does not affect the served ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 23;</code>
+     * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -6017,11 +6040,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the ad. This is only used to be able to identify the ad. It
+     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
      * does not need to be unique and does not affect the served ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 23;</code>
+     * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -6036,11 +6059,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the ad. This is only used to be able to identify the ad. It
+     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
      * does not need to be unique and does not affect the served ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 23;</code>
+     * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -6049,11 +6072,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the ad. This is only used to be able to identify the ad. It
+     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
      * does not need to be unique and does not affect the served ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 23;</code>
+     * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -6065,11 +6088,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the ad. This is only used to be able to identify the ad. It
+     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
      * does not need to be unique and does not affect the served ad.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 23;</code>
+     * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -6088,22 +6111,22 @@ private static final long serialVersionUID = 0L;
     private int systemManagedResourceSource_ = 0;
     /**
      * <pre>
-     * If this ad is system managed, then this field will indicate the source.
+     * Output only. If this ad is system managed, then this field will indicate the source.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+     * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getSystemManagedResourceSourceValue() {
       return systemManagedResourceSource_;
     }
     /**
      * <pre>
-     * If this ad is system managed, then this field will indicate the source.
+     * Output only. If this ad is system managed, then this field will indicate the source.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+     * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSystemManagedResourceSourceValue(int value) {
       systemManagedResourceSource_ = value;
@@ -6112,11 +6135,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If this ad is system managed, then this field will indicate the source.
+     * Output only. If this ad is system managed, then this field will indicate the source.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+     * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource getSystemManagedResourceSource() {
       @SuppressWarnings("deprecation")
@@ -6125,11 +6148,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If this ad is system managed, then this field will indicate the source.
+     * Output only. If this ad is system managed, then this field will indicate the source.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+     * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSystemManagedResourceSource(com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource value) {
       if (value == null) {
@@ -6142,11 +6165,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If this ad is system managed, then this field will indicate the source.
+     * Output only. If this ad is system managed, then this field will indicate the source.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27;</code>
+     * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSystemManagedResourceSource() {
       
@@ -8431,20 +8454,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo, com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo.Builder, com.google.ads.googleads.v3.common.LegacyAppInstallAdInfoOrBuilder> legacyAppInstallAdBuilder_;
     /**
      * <pre>
-     * Details pertaining to a legacy app install ad.
+     * Immutable. Details pertaining to a legacy app install ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasLegacyAppInstallAd() {
       return adDataCase_ == 30;
     }
     /**
      * <pre>
-     * Details pertaining to a legacy app install ad.
+     * Immutable. Details pertaining to a legacy app install ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo getLegacyAppInstallAd() {
       if (legacyAppInstallAdBuilder_ == null) {
@@ -8461,10 +8484,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a legacy app install ad.
+     * Immutable. Details pertaining to a legacy app install ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setLegacyAppInstallAd(com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo value) {
       if (legacyAppInstallAdBuilder_ == null) {
@@ -8481,10 +8504,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a legacy app install ad.
+     * Immutable. Details pertaining to a legacy app install ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setLegacyAppInstallAd(
         com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo.Builder builderForValue) {
@@ -8499,10 +8522,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a legacy app install ad.
+     * Immutable. Details pertaining to a legacy app install ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeLegacyAppInstallAd(com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo value) {
       if (legacyAppInstallAdBuilder_ == null) {
@@ -8525,10 +8548,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a legacy app install ad.
+     * Immutable. Details pertaining to a legacy app install ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearLegacyAppInstallAd() {
       if (legacyAppInstallAdBuilder_ == null) {
@@ -8548,20 +8571,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a legacy app install ad.
+     * Immutable. Details pertaining to a legacy app install ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo.Builder getLegacyAppInstallAdBuilder() {
       return getLegacyAppInstallAdFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Details pertaining to a legacy app install ad.
+     * Immutable. Details pertaining to a legacy app install ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.LegacyAppInstallAdInfoOrBuilder getLegacyAppInstallAdOrBuilder() {
       if ((adDataCase_ == 30) && (legacyAppInstallAdBuilder_ != null)) {
@@ -8575,10 +8598,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a legacy app install ad.
+     * Immutable. Details pertaining to a legacy app install ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30;</code>
+     * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo, com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo.Builder, com.google.ads.googleads.v3.common.LegacyAppInstallAdInfoOrBuilder> 

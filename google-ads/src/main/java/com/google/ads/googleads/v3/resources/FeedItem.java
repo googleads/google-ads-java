@@ -195,12 +195,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the feed item.
+   * Immutable. The resource name of the feed item.
    * Feed item resource names have the form:
    * `customers/{customer_id}/feedItems/{feed_id}~{feed_item_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -216,12 +216,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the feed item.
+   * Immutable. The resource name of the feed item.
    * Feed item resource names have the form:
    * `customers/{customer_id}/feedItems/{feed_id}~{feed_item_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -241,30 +241,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue feed_;
   /**
    * <pre>
-   * The feed to which this feed item belongs.
+   * Immutable. The feed to which this feed item belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasFeed() {
     return feed_ != null;
   }
   /**
    * <pre>
-   * The feed to which this feed item belongs.
+   * Immutable. The feed to which this feed item belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getFeed() {
     return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
   }
   /**
    * <pre>
-   * The feed to which this feed item belongs.
+   * Immutable. The feed to which this feed item belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
     return getFeed();
@@ -274,30 +274,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of this feed item.
+   * Output only. The ID of this feed item.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of this feed item.
+   * Output only. The ID of this feed item.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of this feed item.
+   * Output only. The ID of this feed item.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -533,22 +533,22 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Status of the feed item.
+   * Output only. Status of the feed item.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Status of the feed item.
+   * Output only. Status of the feed item.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -560,7 +560,7 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo> policyInfos_;
   /**
    * <pre>
-   * List of info about a feed item's validation and approval state for active
+   * Output only. List of info about a feed item's validation and approval state for active
    * feed mappings. There will be an entry in the list for each type of feed
    * mapping associated with the feed, e.g. a feed with a sitelink and a call
    * feed mapping would cause every feed item associated with that feed to have
@@ -568,14 +568,14 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo> getPolicyInfosList() {
     return policyInfos_;
   }
   /**
    * <pre>
-   * List of info about a feed item's validation and approval state for active
+   * Output only. List of info about a feed item's validation and approval state for active
    * feed mappings. There will be an entry in the list for each type of feed
    * mapping associated with the feed, e.g. a feed with a sitelink and a call
    * feed mapping would cause every feed item associated with that feed to have
@@ -583,7 +583,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfoOrBuilder> 
       getPolicyInfosOrBuilderList() {
@@ -591,7 +591,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of info about a feed item's validation and approval state for active
+   * Output only. List of info about a feed item's validation and approval state for active
    * feed mappings. There will be an entry in the list for each type of feed
    * mapping associated with the feed, e.g. a feed with a sitelink and a call
    * feed mapping would cause every feed item associated with that feed to have
@@ -599,14 +599,14 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getPolicyInfosCount() {
     return policyInfos_.size();
   }
   /**
    * <pre>
-   * List of info about a feed item's validation and approval state for active
+   * Output only. List of info about a feed item's validation and approval state for active
    * feed mappings. There will be an entry in the list for each type of feed
    * mapping associated with the feed, e.g. a feed with a sitelink and a call
    * feed mapping would cause every feed item associated with that feed to have
@@ -614,14 +614,14 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo getPolicyInfos(int index) {
     return policyInfos_.get(index);
   }
   /**
    * <pre>
-   * List of info about a feed item's validation and approval state for active
+   * Output only. List of info about a feed item's validation and approval state for active
    * feed mappings. There will be an entry in the list for each type of feed
    * mapping associated with the feed, e.g. a feed with a sitelink and a call
    * feed mapping would cause every feed item associated with that feed to have
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+   * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfoOrBuilder getPolicyInfosOrBuilder(
       int index) {
@@ -1266,12 +1266,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the feed item.
+     * Immutable. The resource name of the feed item.
      * Feed item resource names have the form:
      * `customers/{customer_id}/feedItems/{feed_id}~{feed_item_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1287,12 +1287,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed item.
+     * Immutable. The resource name of the feed item.
      * Feed item resource names have the form:
      * `customers/{customer_id}/feedItems/{feed_id}~{feed_item_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1309,12 +1309,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed item.
+     * Immutable. The resource name of the feed item.
      * Feed item resource names have the form:
      * `customers/{customer_id}/feedItems/{feed_id}~{feed_item_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1328,12 +1328,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed item.
+     * Immutable. The resource name of the feed item.
      * Feed item resource names have the form:
      * `customers/{customer_id}/feedItems/{feed_id}~{feed_item_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1343,12 +1343,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed item.
+     * Immutable. The resource name of the feed item.
      * Feed item resource names have the form:
      * `customers/{customer_id}/feedItems/{feed_id}~{feed_item_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1367,20 +1367,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedBuilder_;
     /**
      * <pre>
-     * The feed to which this feed item belongs.
+     * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasFeed() {
       return feedBuilder_ != null || feed_ != null;
     }
     /**
      * <pre>
-     * The feed to which this feed item belongs.
+     * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getFeed() {
       if (feedBuilder_ == null) {
@@ -1391,10 +1391,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed to which this feed item belongs.
+     * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeed(com.google.protobuf.StringValue value) {
       if (feedBuilder_ == null) {
@@ -1411,10 +1411,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed to which this feed item belongs.
+     * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeed(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1429,10 +1429,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed to which this feed item belongs.
+     * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeFeed(com.google.protobuf.StringValue value) {
       if (feedBuilder_ == null) {
@@ -1451,10 +1451,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed to which this feed item belongs.
+     * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearFeed() {
       if (feedBuilder_ == null) {
@@ -1469,10 +1469,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed to which this feed item belongs.
+     * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getFeedBuilder() {
       
@@ -1481,10 +1481,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed to which this feed item belongs.
+     * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
       if (feedBuilder_ != null) {
@@ -1496,10 +1496,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed to which this feed item belongs.
+     * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1520,20 +1520,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of this feed item.
+     * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of this feed item.
+     * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1544,10 +1544,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item.
+     * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1564,10 +1564,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item.
+     * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1582,10 +1582,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item.
+     * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1604,10 +1604,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item.
+     * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1622,10 +1622,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item.
+     * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1634,10 +1634,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item.
+     * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1649,10 +1649,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of this feed item.
+     * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2743,22 +2743,22 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Status of the feed item.
+     * Output only. Status of the feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Status of the feed item.
+     * Output only. Status of the feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -2767,11 +2767,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed item.
+     * Output only. Status of the feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -2780,11 +2780,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed item.
+     * Output only. Status of the feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus value) {
       if (value == null) {
@@ -2797,11 +2797,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed item.
+     * Output only. Status of the feed item.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       
@@ -2824,7 +2824,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -2832,7 +2832,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo> getPolicyInfosList() {
       if (policyInfosBuilder_ == null) {
@@ -2843,7 +2843,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -2851,7 +2851,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getPolicyInfosCount() {
       if (policyInfosBuilder_ == null) {
@@ -2862,7 +2862,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -2870,7 +2870,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo getPolicyInfos(int index) {
       if (policyInfosBuilder_ == null) {
@@ -2881,7 +2881,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -2889,7 +2889,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPolicyInfos(
         int index, com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo value) {
@@ -2907,7 +2907,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -2915,7 +2915,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPolicyInfos(
         int index, com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.Builder builderForValue) {
@@ -2930,7 +2930,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -2938,7 +2938,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPolicyInfos(com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo value) {
       if (policyInfosBuilder_ == null) {
@@ -2955,7 +2955,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -2963,7 +2963,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPolicyInfos(
         int index, com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo value) {
@@ -2981,7 +2981,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -2989,7 +2989,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPolicyInfos(
         com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.Builder builderForValue) {
@@ -3004,7 +3004,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -3012,7 +3012,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPolicyInfos(
         int index, com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.Builder builderForValue) {
@@ -3027,7 +3027,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -3035,7 +3035,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllPolicyInfos(
         java.lang.Iterable<? extends com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo> values) {
@@ -3051,7 +3051,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -3059,7 +3059,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPolicyInfos() {
       if (policyInfosBuilder_ == null) {
@@ -3073,7 +3073,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -3081,7 +3081,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removePolicyInfos(int index) {
       if (policyInfosBuilder_ == null) {
@@ -3095,7 +3095,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -3103,7 +3103,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.Builder getPolicyInfosBuilder(
         int index) {
@@ -3111,7 +3111,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -3119,7 +3119,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfoOrBuilder getPolicyInfosOrBuilder(
         int index) {
@@ -3130,7 +3130,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -3138,7 +3138,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfoOrBuilder> 
          getPolicyInfosOrBuilderList() {
@@ -3150,7 +3150,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -3158,7 +3158,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.Builder addPolicyInfosBuilder() {
       return getPolicyInfosFieldBuilder().addBuilder(
@@ -3166,7 +3166,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -3174,7 +3174,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.Builder addPolicyInfosBuilder(
         int index) {
@@ -3183,7 +3183,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of info about a feed item's validation and approval state for active
+     * Output only. List of info about a feed item's validation and approval state for active
      * feed mappings. There will be an entry in the list for each type of feed
      * mapping associated with the feed, e.g. a feed with a sitelink and a call
      * feed mapping would cause every feed item associated with that feed to have
@@ -3191,7 +3191,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10;</code>
+     * <code>repeated .google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.resources.FeedItemPlaceholderPolicyInfo.Builder> 
          getPolicyInfosBuilderList() {

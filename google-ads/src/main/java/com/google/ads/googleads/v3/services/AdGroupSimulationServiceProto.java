@@ -34,22 +34,24 @@ public final class AdGroupSimulationServiceProto {
       "eads/v3/resources/ad_group_simulation.pr" +
       "oto\032\034google/api/annotations.proto\032\027googl" +
       "e/api/client.proto\032\037google/api/field_beh" +
-      "avior.proto\"9\n\033GetAdGroupSimulationReque" +
-      "st\022\032\n\rresource_name\030\001 \001(\tB\003\340A\0022\223\002\n\030AdGro" +
-      "upSimulationService\022\331\001\n\024GetAdGroupSimula" +
-      "tion\022=.google.ads.googleads.v3.services." +
-      "GetAdGroupSimulationRequest\0324.google.ads" +
-      ".googleads.v3.resources.AdGroupSimulatio" +
-      "n\"L\202\323\344\223\0026\0224/v3/{resource_name=customers/" +
-      "*/adGroupSimulations/*}\332A\rresource_name\032" +
-      "\033\312A\030googleads.googleapis.comB\204\002\n$com.goo" +
-      "gle.ads.googleads.v3.servicesB\035AdGroupSi" +
-      "mulationServiceProtoP\001ZHgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v3/s" +
-      "ervices;services\242\002\003GAA\252\002 Google.Ads.Goog" +
-      "leAds.V3.Services\312\002 Google\\Ads\\GoogleAds" +
-      "\\V3\\Services\352\002$Google::Ads::GoogleAds::V" +
-      "3::Servicesb\006proto3"
+      "avior.proto\032\031google/api/resource.proto\"h" +
+      "\n\033GetAdGroupSimulationRequest\022I\n\rresourc" +
+      "e_name\030\001 \001(\tB2\340A\002\372A,\n*googleads.googleap" +
+      "is.com/AdGroupSimulation2\223\002\n\030AdGroupSimu" +
+      "lationService\022\331\001\n\024GetAdGroupSimulation\022=" +
+      ".google.ads.googleads.v3.services.GetAdG" +
+      "roupSimulationRequest\0324.google.ads.googl" +
+      "eads.v3.resources.AdGroupSimulation\"L\202\323\344" +
+      "\223\0026\0224/v3/{resource_name=customers/*/adGr" +
+      "oupSimulations/*}\332A\rresource_name\032\033\312A\030go" +
+      "ogleads.googleapis.comB\204\002\n$com.google.ad" +
+      "s.googleads.v3.servicesB\035AdGroupSimulati" +
+      "onServiceProtoP\001ZHgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v3/service" +
+      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
+      "V3.Services\312\002 Google\\Ads\\GoogleAds\\V3\\Se" +
+      "rvices\352\002$Google::Ads::GoogleAds::V3::Ser" +
+      "vicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,6 +68,7 @@ public final class AdGroupSimulationServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetAdGroupSimulationRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -79,12 +82,14 @@ public final class AdGroupSimulationServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.AdGroupSimulationProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

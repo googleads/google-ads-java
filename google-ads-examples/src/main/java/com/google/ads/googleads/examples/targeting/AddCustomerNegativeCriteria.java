@@ -35,8 +35,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Adds various types of negative criteria as exclusions at the customer level. These
- * criteria will be applied to all campaigns for the customer.
+ * Adds various types of negative criteria as exclusions at the customer level. These criteria will
+ * be applied to all campaigns for the customer.
  */
 public class AddCustomerNegativeCriteria {
 

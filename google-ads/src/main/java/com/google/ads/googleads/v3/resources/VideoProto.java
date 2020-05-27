@@ -30,23 +30,25 @@ public final class VideoProto {
     java.lang.String[] descriptorData = {
       "\n-google/ads/googleads/v3/resources/vide" +
       "o.proto\022!google.ads.googleads.v3.resourc" +
-      "es\032\031google/api/resource.proto\032\036google/pr" +
-      "otobuf/wrappers.proto\032\034google/api/annota" +
-      "tions.proto\"\247\002\n\005Video\022\025\n\rresource_name\030\001" +
-      " \001(\t\022(\n\002id\030\002 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\0220\n\nchannel_id\030\003 \001(\0132\034.google.prot" +
-      "obuf.StringValue\0224\n\017duration_millis\030\004 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022+\n\005title\030" +
-      "\005 \001(\0132\034.google.protobuf.StringValue:H\352AE" +
-      "\n\036googleads.googleapis.com/Video\022#custom" +
-      "ers/{customer}/videos/{video}B\367\001\n%com.go" +
-      "ogle.ads.googleads.v3.resourcesB\nVideoPr" +
-      "otoP\001ZJgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v3/resources;resource" +
-      "s\242\002\003GAA\252\002!Google.Ads.GoogleAds.V3.Resour" +
-      "ces\312\002!Google\\Ads\\GoogleAds\\V3\\Resources\352" +
-      "\002%Google::Ads::GoogleAds::V3::Resourcesb" +
-      "\006proto3"
+      "es\032\037google/api/field_behavior.proto\032\031goo" +
+      "gle/api/resource.proto\032\036google/protobuf/" +
+      "wrappers.proto\032\034google/api/annotations.p" +
+      "roto\"\343\002\n\005Video\022=\n\rresource_name\030\001 \001(\tB&\340" +
+      "A\003\372A \n\036googleads.googleapis.com/Video\022-\n" +
+      "\002id\030\002 \001(\0132\034.google.protobuf.StringValueB" +
+      "\003\340A\003\0225\n\nchannel_id\030\003 \001(\0132\034.google.protob" +
+      "uf.StringValueB\003\340A\003\0229\n\017duration_millis\030\004" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\003\340A\003\0220" +
+      "\n\005title\030\005 \001(\0132\034.google.protobuf.StringVa" +
+      "lueB\003\340A\003:H\352AE\n\036googleads.googleapis.com/" +
+      "Video\022#customers/{customer}/videos/{vide" +
+      "o}B\367\001\n%com.google.ads.googleads.v3.resou" +
+      "rcesB\nVideoProtoP\001ZJgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v3/resou" +
+      "rces;resources\242\002\003GAA\252\002!Google.Ads.Google" +
+      "Ads.V3.Resources\312\002!Google\\Ads\\GoogleAds\\" +
+      "V3\\Resources\352\002%Google::Ads::GoogleAds::V" +
+      "3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -59,6 +61,7 @@ public final class VideoProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -71,9 +74,12 @@ public final class VideoProto {
         new java.lang.String[] { "ResourceName", "Id", "ChannelId", "DurationMillis", "Title", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

@@ -131,12 +131,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the remarketing action.
+   * Immutable. The resource name of the remarketing action.
    * Remarketing action resource names have the form:
    * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -152,12 +152,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the remarketing action.
+   * Immutable. The resource name of the remarketing action.
    * Remarketing action resource names have the form:
    * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -177,30 +177,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * Id of the remarketing action.
+   * Output only. Id of the remarketing action.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * Id of the remarketing action.
+   * Output only. Id of the remarketing action.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * Id of the remarketing action.
+   * Output only. Id of the remarketing action.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -249,20 +249,20 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v3.common.TagSnippet> tagSnippets_;
   /**
    * <pre>
-   * The snippets used for tracking remarketing actions.
+   * Output only. The snippets used for tracking remarketing actions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.ads.googleads.v3.common.TagSnippet> getTagSnippetsList() {
     return tagSnippets_;
   }
   /**
    * <pre>
-   * The snippets used for tracking remarketing actions.
+   * Output only. The snippets used for tracking remarketing actions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<? extends com.google.ads.googleads.v3.common.TagSnippetOrBuilder> 
       getTagSnippetsOrBuilderList() {
@@ -270,30 +270,30 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The snippets used for tracking remarketing actions.
+   * Output only. The snippets used for tracking remarketing actions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getTagSnippetsCount() {
     return tagSnippets_.size();
   }
   /**
    * <pre>
-   * The snippets used for tracking remarketing actions.
+   * Output only. The snippets used for tracking remarketing actions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.TagSnippet getTagSnippets(int index) {
     return tagSnippets_.get(index);
   }
   /**
    * <pre>
-   * The snippets used for tracking remarketing actions.
+   * Output only. The snippets used for tracking remarketing actions.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+   * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.TagSnippetOrBuilder getTagSnippetsOrBuilder(
       int index) {
@@ -730,12 +730,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the remarketing action.
+     * Immutable. The resource name of the remarketing action.
      * Remarketing action resource names have the form:
      * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -751,12 +751,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the remarketing action.
+     * Immutable. The resource name of the remarketing action.
      * Remarketing action resource names have the form:
      * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -773,12 +773,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the remarketing action.
+     * Immutable. The resource name of the remarketing action.
      * Remarketing action resource names have the form:
      * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -792,12 +792,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the remarketing action.
+     * Immutable. The resource name of the remarketing action.
      * Remarketing action resource names have the form:
      * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -807,12 +807,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the remarketing action.
+     * Immutable. The resource name of the remarketing action.
      * Remarketing action resource names have the form:
      * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -831,20 +831,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * Id of the remarketing action.
+     * Output only. Id of the remarketing action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * Id of the remarketing action.
+     * Output only. Id of the remarketing action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -855,10 +855,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the remarketing action.
+     * Output only. Id of the remarketing action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -875,10 +875,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the remarketing action.
+     * Output only. Id of the remarketing action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -893,10 +893,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the remarketing action.
+     * Output only. Id of the remarketing action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -915,10 +915,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the remarketing action.
+     * Output only. Id of the remarketing action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -933,10 +933,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the remarketing action.
+     * Output only. Id of the remarketing action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -945,10 +945,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the remarketing action.
+     * Output only. Id of the remarketing action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -960,10 +960,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the remarketing action.
+     * Output only. Id of the remarketing action.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1164,10 +1164,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.common.TagSnippet> getTagSnippetsList() {
       if (tagSnippetsBuilder_ == null) {
@@ -1178,10 +1178,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getTagSnippetsCount() {
       if (tagSnippetsBuilder_ == null) {
@@ -1192,10 +1192,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TagSnippet getTagSnippets(int index) {
       if (tagSnippetsBuilder_ == null) {
@@ -1206,10 +1206,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTagSnippets(
         int index, com.google.ads.googleads.v3.common.TagSnippet value) {
@@ -1227,10 +1227,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTagSnippets(
         int index, com.google.ads.googleads.v3.common.TagSnippet.Builder builderForValue) {
@@ -1245,10 +1245,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addTagSnippets(com.google.ads.googleads.v3.common.TagSnippet value) {
       if (tagSnippetsBuilder_ == null) {
@@ -1265,10 +1265,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addTagSnippets(
         int index, com.google.ads.googleads.v3.common.TagSnippet value) {
@@ -1286,10 +1286,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addTagSnippets(
         com.google.ads.googleads.v3.common.TagSnippet.Builder builderForValue) {
@@ -1304,10 +1304,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addTagSnippets(
         int index, com.google.ads.googleads.v3.common.TagSnippet.Builder builderForValue) {
@@ -1322,10 +1322,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllTagSnippets(
         java.lang.Iterable<? extends com.google.ads.googleads.v3.common.TagSnippet> values) {
@@ -1341,10 +1341,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTagSnippets() {
       if (tagSnippetsBuilder_ == null) {
@@ -1358,10 +1358,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder removeTagSnippets(int index) {
       if (tagSnippetsBuilder_ == null) {
@@ -1375,10 +1375,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TagSnippet.Builder getTagSnippetsBuilder(
         int index) {
@@ -1386,10 +1386,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TagSnippetOrBuilder getTagSnippetsOrBuilder(
         int index) {
@@ -1400,10 +1400,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<? extends com.google.ads.googleads.v3.common.TagSnippetOrBuilder> 
          getTagSnippetsOrBuilderList() {
@@ -1415,10 +1415,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TagSnippet.Builder addTagSnippetsBuilder() {
       return getTagSnippetsFieldBuilder().addBuilder(
@@ -1426,10 +1426,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TagSnippet.Builder addTagSnippetsBuilder(
         int index) {
@@ -1438,10 +1438,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The snippets used for tracking remarketing actions.
+     * Output only. The snippets used for tracking remarketing actions.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4;</code>
+     * <code>repeated .google.ads.googleads.v3.common.TagSnippet tag_snippets = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.common.TagSnippet.Builder> 
          getTagSnippetsBuilderList() {

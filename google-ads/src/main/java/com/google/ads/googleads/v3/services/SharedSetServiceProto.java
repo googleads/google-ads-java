@@ -53,44 +53,45 @@ public final class SharedSetServiceProto {
       "s.v3.services\0322google/ads/googleads/v3/r" +
       "esources/shared_set.proto\032\034google/api/an" +
       "notations.proto\032\027google/api/client.proto" +
-      "\032\037google/api/field_behavior.proto\032 googl" +
-      "e/protobuf/field_mask.proto\032\027google/rpc/" +
-      "status.proto\"1\n\023GetSharedSetRequest\022\032\n\rr" +
-      "esource_name\030\001 \001(\tB\003\340A\002\"\262\001\n\027MutateShared" +
-      "SetsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022M\n" +
-      "\noperations\030\002 \003(\01324.google.ads.googleads" +
-      ".v3.services.SharedSetOperationB\003\340A\002\022\027\n\017" +
-      "partial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004" +
-      " \001(\010\"\344\001\n\022SharedSetOperation\022/\n\013update_ma" +
-      "sk\030\004 \001(\0132\032.google.protobuf.FieldMask\022>\n\006" +
-      "create\030\001 \001(\0132,.google.ads.googleads.v3.r" +
-      "esources.SharedSetH\000\022>\n\006update\030\002 \001(\0132,.g" +
+      "\032\037google/api/field_behavior.proto\032\031googl" +
+      "e/api/resource.proto\032 google/protobuf/fi" +
+      "eld_mask.proto\032\027google/rpc/status.proto\"" +
+      "X\n\023GetSharedSetRequest\022A\n\rresource_name\030" +
+      "\001 \001(\tB*\340A\002\372A$\n\"googleads.googleapis.com/" +
+      "SharedSet\"\262\001\n\027MutateSharedSetsRequest\022\030\n" +
+      "\013customer_id\030\001 \001(\tB\003\340A\002\022M\n\noperations\030\002 " +
+      "\003(\01324.google.ads.googleads.v3.services.S" +
+      "haredSetOperationB\003\340A\002\022\027\n\017partial_failur" +
+      "e\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\344\001\n\022Share" +
+      "dSetOperation\022/\n\013update_mask\030\004 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMask\022>\n\006create\030\001 \001(\0132," +
+      ".google.ads.googleads.v3.resources.Share" +
+      "dSetH\000\022>\n\006update\030\002 \001(\0132,.google.ads.goog" +
+      "leads.v3.resources.SharedSetH\000\022\020\n\006remove" +
+      "\030\003 \001(\tH\000B\013\n\toperation\"\227\001\n\030MutateSharedSe" +
+      "tsResponse\0221\n\025partial_failure_error\030\003 \001(" +
+      "\0132\022.google.rpc.Status\022H\n\007results\030\002 \003(\01327" +
+      ".google.ads.googleads.v3.services.Mutate" +
+      "SharedSetResult\".\n\025MutateSharedSetResult" +
+      "\022\025\n\rresource_name\030\001 \001(\t2\314\003\n\020SharedSetSer" +
+      "vice\022\271\001\n\014GetSharedSet\0225.google.ads.googl" +
+      "eads.v3.services.GetSharedSetRequest\032,.g" +
       "oogle.ads.googleads.v3.resources.SharedS" +
-      "etH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\227\001\n\030" +
-      "MutateSharedSetsResponse\0221\n\025partial_fail" +
-      "ure_error\030\003 \001(\0132\022.google.rpc.Status\022H\n\007r" +
-      "esults\030\002 \003(\01327.google.ads.googleads.v3.s" +
-      "ervices.MutateSharedSetResult\".\n\025MutateS" +
-      "haredSetResult\022\025\n\rresource_name\030\001 \001(\t2\314\003" +
-      "\n\020SharedSetService\022\271\001\n\014GetSharedSet\0225.go" +
-      "ogle.ads.googleads.v3.services.GetShared" +
-      "SetRequest\032,.google.ads.googleads.v3.res" +
-      "ources.SharedSet\"D\202\323\344\223\002.\022,/v3/{resource_" +
-      "name=customers/*/sharedSets/*}\332A\rresourc" +
-      "e_name\022\336\001\n\020MutateSharedSets\0229.google.ads" +
-      ".googleads.v3.services.MutateSharedSetsR" +
-      "equest\032:.google.ads.googleads.v3.service" +
-      "s.MutateSharedSetsResponse\"S\202\323\344\223\0024\"//v3/" +
-      "customers/{customer_id=*}/sharedSets:mut" +
-      "ate:\001*\332A\026customer_id,operations\032\033\312A\030goog" +
-      "leads.googleapis.comB\374\001\n$com.google.ads." +
-      "googleads.v3.servicesB\025SharedSetServiceP" +
-      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v3/services;services" +
-      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.Service" +
-      "s\312\002 Google\\Ads\\GoogleAds\\V3\\Services\352\002$G" +
-      "oogle::Ads::GoogleAds::V3::Servicesb\006pro" +
-      "to3"
+      "et\"D\202\323\344\223\002.\022,/v3/{resource_name=customers" +
+      "/*/sharedSets/*}\332A\rresource_name\022\336\001\n\020Mut" +
+      "ateSharedSets\0229.google.ads.googleads.v3." +
+      "services.MutateSharedSetsRequest\032:.googl" +
+      "e.ads.googleads.v3.services.MutateShared" +
+      "SetsResponse\"S\202\323\344\223\0024\"//v3/customers/{cus" +
+      "tomer_id=*}/sharedSets:mutate:\001*\332A\026custo" +
+      "mer_id,operations\032\033\312A\030googleads.googleap" +
+      "is.comB\374\001\n$com.google.ads.googleads.v3.s" +
+      "ervicesB\025SharedSetServiceProtoP\001ZHgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v3/services;services\242\002\003GAA\252\002 Googl" +
+      "e.Ads.GoogleAds.V3.Services\312\002 Google\\Ads" +
+      "\\GoogleAds\\V3\\Services\352\002$Google::Ads::Go" +
+      "ogleAds::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -107,6 +108,7 @@ public final class SharedSetServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
@@ -146,12 +148,14 @@ public final class SharedSetServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.SharedSetProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }

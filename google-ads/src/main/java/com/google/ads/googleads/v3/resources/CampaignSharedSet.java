@@ -123,12 +123,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the campaign shared set.
+   * Immutable. The resource name of the campaign shared set.
    * Campaign shared set resource names have the form:
    * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -144,12 +144,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the campaign shared set.
+   * Immutable. The resource name of the campaign shared set.
    * Campaign shared set resource names have the form:
    * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -169,30 +169,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue campaign_;
   /**
    * <pre>
-   * The campaign to which the campaign shared set belongs.
+   * Immutable. The campaign to which the campaign shared set belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 3;</code>
+   * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasCampaign() {
     return campaign_ != null;
   }
   /**
    * <pre>
-   * The campaign to which the campaign shared set belongs.
+   * Immutable. The campaign to which the campaign shared set belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 3;</code>
+   * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getCampaign() {
     return campaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaign_;
   }
   /**
    * <pre>
-   * The campaign to which the campaign shared set belongs.
+   * Immutable. The campaign to which the campaign shared set belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 3;</code>
+   * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     return getCampaign();
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue sharedSet_;
   /**
    * <pre>
-   * The shared set associated with the campaign. This may be a negative keyword
+   * Immutable. The shared set associated with the campaign. This may be a negative keyword
    * shared set of another customer. This customer should be a manager of the
    * other customer, otherwise the campaign shared set will exist but have no
    * serving effect. Only negative keyword shared sets can be associated with
@@ -210,14 +210,14 @@ private static final long serialVersionUID = 0L;
    * with Display mobile app campaigns.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue shared_set = 4;</code>
+   * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasSharedSet() {
     return sharedSet_ != null;
   }
   /**
    * <pre>
-   * The shared set associated with the campaign. This may be a negative keyword
+   * Immutable. The shared set associated with the campaign. This may be a negative keyword
    * shared set of another customer. This customer should be a manager of the
    * other customer, otherwise the campaign shared set will exist but have no
    * serving effect. Only negative keyword shared sets can be associated with
@@ -225,14 +225,14 @@ private static final long serialVersionUID = 0L;
    * with Display mobile app campaigns.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue shared_set = 4;</code>
+   * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getSharedSet() {
     return sharedSet_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : sharedSet_;
   }
   /**
    * <pre>
-   * The shared set associated with the campaign. This may be a negative keyword
+   * Immutable. The shared set associated with the campaign. This may be a negative keyword
    * shared set of another customer. This customer should be a manager of the
    * other customer, otherwise the campaign shared set will exist but have no
    * serving effect. Only negative keyword shared sets can be associated with
@@ -240,7 +240,7 @@ private static final long serialVersionUID = 0L;
    * with Display mobile app campaigns.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue shared_set = 4;</code>
+   * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getSharedSetOrBuilder() {
     return getSharedSet();
@@ -250,20 +250,20 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * The status of this campaign shared set. Read only.
+   * Output only. The status of this campaign shared set. Read only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * The status of this campaign shared set. Read only.
+   * Output only. The status of this campaign shared set. Read only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -657,12 +657,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the campaign shared set.
+     * Immutable. The resource name of the campaign shared set.
      * Campaign shared set resource names have the form:
      * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -678,12 +678,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign shared set.
+     * Immutable. The resource name of the campaign shared set.
      * Campaign shared set resource names have the form:
      * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -700,12 +700,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign shared set.
+     * Immutable. The resource name of the campaign shared set.
      * Campaign shared set resource names have the form:
      * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -719,12 +719,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign shared set.
+     * Immutable. The resource name of the campaign shared set.
      * Campaign shared set resource names have the form:
      * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -734,12 +734,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign shared set.
+     * Immutable. The resource name of the campaign shared set.
      * Campaign shared set resource names have the form:
      * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -758,20 +758,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignBuilder_;
     /**
      * <pre>
-     * The campaign to which the campaign shared set belongs.
+     * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 3;</code>
+     * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasCampaign() {
       return campaignBuilder_ != null || campaign_ != null;
     }
     /**
      * <pre>
-     * The campaign to which the campaign shared set belongs.
+     * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 3;</code>
+     * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getCampaign() {
       if (campaignBuilder_ == null) {
@@ -782,10 +782,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the campaign shared set belongs.
+     * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 3;</code>
+     * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -802,10 +802,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the campaign shared set belongs.
+     * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 3;</code>
+     * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -820,10 +820,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the campaign shared set belongs.
+     * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 3;</code>
+     * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -842,10 +842,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the campaign shared set belongs.
+     * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 3;</code>
+     * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearCampaign() {
       if (campaignBuilder_ == null) {
@@ -860,10 +860,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the campaign shared set belongs.
+     * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 3;</code>
+     * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getCampaignBuilder() {
       
@@ -872,10 +872,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the campaign shared set belongs.
+     * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 3;</code>
+     * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
       if (campaignBuilder_ != null) {
@@ -887,10 +887,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which the campaign shared set belongs.
+     * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 3;</code>
+     * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -911,7 +911,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> sharedSetBuilder_;
     /**
      * <pre>
-     * The shared set associated with the campaign. This may be a negative keyword
+     * Immutable. The shared set associated with the campaign. This may be a negative keyword
      * shared set of another customer. This customer should be a manager of the
      * other customer, otherwise the campaign shared set will exist but have no
      * serving effect. Only negative keyword shared sets can be associated with
@@ -919,14 +919,14 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 4;</code>
+     * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasSharedSet() {
       return sharedSetBuilder_ != null || sharedSet_ != null;
     }
     /**
      * <pre>
-     * The shared set associated with the campaign. This may be a negative keyword
+     * Immutable. The shared set associated with the campaign. This may be a negative keyword
      * shared set of another customer. This customer should be a manager of the
      * other customer, otherwise the campaign shared set will exist but have no
      * serving effect. Only negative keyword shared sets can be associated with
@@ -934,7 +934,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 4;</code>
+     * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getSharedSet() {
       if (sharedSetBuilder_ == null) {
@@ -945,7 +945,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set associated with the campaign. This may be a negative keyword
+     * Immutable. The shared set associated with the campaign. This may be a negative keyword
      * shared set of another customer. This customer should be a manager of the
      * other customer, otherwise the campaign shared set will exist but have no
      * serving effect. Only negative keyword shared sets can be associated with
@@ -953,7 +953,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 4;</code>
+     * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setSharedSet(com.google.protobuf.StringValue value) {
       if (sharedSetBuilder_ == null) {
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set associated with the campaign. This may be a negative keyword
+     * Immutable. The shared set associated with the campaign. This may be a negative keyword
      * shared set of another customer. This customer should be a manager of the
      * other customer, otherwise the campaign shared set will exist but have no
      * serving effect. Only negative keyword shared sets can be associated with
@@ -978,7 +978,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 4;</code>
+     * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setSharedSet(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -993,7 +993,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set associated with the campaign. This may be a negative keyword
+     * Immutable. The shared set associated with the campaign. This may be a negative keyword
      * shared set of another customer. This customer should be a manager of the
      * other customer, otherwise the campaign shared set will exist but have no
      * serving effect. Only negative keyword shared sets can be associated with
@@ -1001,7 +1001,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 4;</code>
+     * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeSharedSet(com.google.protobuf.StringValue value) {
       if (sharedSetBuilder_ == null) {
@@ -1020,7 +1020,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set associated with the campaign. This may be a negative keyword
+     * Immutable. The shared set associated with the campaign. This may be a negative keyword
      * shared set of another customer. This customer should be a manager of the
      * other customer, otherwise the campaign shared set will exist but have no
      * serving effect. Only negative keyword shared sets can be associated with
@@ -1028,7 +1028,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 4;</code>
+     * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearSharedSet() {
       if (sharedSetBuilder_ == null) {
@@ -1043,7 +1043,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set associated with the campaign. This may be a negative keyword
+     * Immutable. The shared set associated with the campaign. This may be a negative keyword
      * shared set of another customer. This customer should be a manager of the
      * other customer, otherwise the campaign shared set will exist but have no
      * serving effect. Only negative keyword shared sets can be associated with
@@ -1051,7 +1051,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 4;</code>
+     * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getSharedSetBuilder() {
       
@@ -1060,7 +1060,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set associated with the campaign. This may be a negative keyword
+     * Immutable. The shared set associated with the campaign. This may be a negative keyword
      * shared set of another customer. This customer should be a manager of the
      * other customer, otherwise the campaign shared set will exist but have no
      * serving effect. Only negative keyword shared sets can be associated with
@@ -1068,7 +1068,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 4;</code>
+     * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSharedSetOrBuilder() {
       if (sharedSetBuilder_ != null) {
@@ -1080,7 +1080,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set associated with the campaign. This may be a negative keyword
+     * Immutable. The shared set associated with the campaign. This may be a negative keyword
      * shared set of another customer. This customer should be a manager of the
      * other customer, otherwise the campaign shared set will exist but have no
      * serving effect. Only negative keyword shared sets can be associated with
@@ -1088,7 +1088,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 4;</code>
+     * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1107,20 +1107,20 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * The status of this campaign shared set. Read only.
+     * Output only. The status of this campaign shared set. Read only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * The status of this campaign shared set. Read only.
+     * Output only. The status of this campaign shared set. Read only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -1129,10 +1129,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this campaign shared set. Read only.
+     * Output only. The status of this campaign shared set. Read only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -1141,10 +1141,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this campaign shared set. Read only.
+     * Output only. The status of this campaign shared set. Read only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus value) {
       if (value == null) {
@@ -1157,10 +1157,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of this campaign shared set. Read only.
+     * Output only. The status of this campaign shared set. Read only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2;</code>
+     * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       

@@ -18,10 +18,10 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.common.DeviceInfo;
 import com.google.ads.googleads.v3.enums.DeviceEnum.Device;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.AdGroupBidModifier;
 import com.google.ads.googleads.v3.resources.AdGroupName;
 import com.google.ads.googleads.v3.services.AdGroupBidModifierOperation;
@@ -35,8 +35,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Demonstrates how to add an ad group bid modifier for mobile devices. To get ad group
- * bid modifiers, see advancedoperations/GetAdGroupBidModifiers.java.
+ * Demonstrates how to add an ad group bid modifier for mobile devices. To get ad group bid
+ * modifiers, see advancedoperations/GetAdGroupBidModifiers.java.
  */
 public class AddAdGroupBidModifier {
 
@@ -80,8 +80,7 @@ public class AddAdGroupBidModifier {
 
     try {
       new AddAdGroupBidModifier()
-          .runExample(
-              googleAdsClient, params.customerId, params.adGroupId, params.bidModifier);
+          .runExample(googleAdsClient, params.customerId, params.adGroupId, params.bidModifier);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a

@@ -30,22 +30,25 @@ public final class PaidOrganicSearchTermViewProto {
     java.lang.String[] descriptorData = {
       "\nEgoogle/ads/googleads/v3/resources/paid" +
       "_organic_search_term_view.proto\022!google." +
-      "ads.googleads.v3.resources\032\031google/api/r" +
-      "esource.proto\032\036google/protobuf/wrappers." +
-      "proto\032\034google/api/annotations.proto\"\361\001\n\031" +
-      "PaidOrganicSearchTermView\022\025\n\rresource_na" +
-      "me\030\001 \001(\t\0221\n\013search_term\030\002 \001(\0132\034.google.p" +
-      "rotobuf.StringValue:\211\001\352A\205\001\n2googleads.go" +
-      "ogleapis.com/PaidOrganicSearchTermView\022O" +
-      "customers/{customer}/paidOrganicSearchTe" +
-      "rmViews/{paid_organic_search_term_view}B" +
-      "\213\002\n%com.google.ads.googleads.v3.resource" +
-      "sB\036PaidOrganicSearchTermViewProtoP\001ZJgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v3/resources;resources\242\002\003GAA\252\002!" +
-      "Google.Ads.GoogleAds.V3.Resources\312\002!Goog" +
-      "le\\Ads\\GoogleAds\\V3\\Resources\352\002%Google::" +
-      "Ads::GoogleAds::V3::Resourcesb\006proto3"
+      "ads.googleads.v3.resources\032\037google/api/f" +
+      "ield_behavior.proto\032\031google/api/resource" +
+      ".proto\032\036google/protobuf/wrappers.proto\032\034" +
+      "google/api/annotations.proto\"\262\002\n\031PaidOrg" +
+      "anicSearchTermView\022Q\n\rresource_name\030\001 \001(" +
+      "\tB:\340A\003\372A4\n2googleads.googleapis.com/Paid" +
+      "OrganicSearchTermView\0226\n\013search_term\030\002 \001" +
+      "(\0132\034.google.protobuf.StringValueB\003\340A\003:\211\001" +
+      "\352A\205\001\n2googleads.googleapis.com/PaidOrgan" +
+      "icSearchTermView\022Ocustomers/{customer}/p" +
+      "aidOrganicSearchTermViews/{paid_organic_" +
+      "search_term_view}B\213\002\n%com.google.ads.goo" +
+      "gleads.v3.resourcesB\036PaidOrganicSearchTe" +
+      "rmViewProtoP\001ZJgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v3/resources;" +
+      "resources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
+      "3.Resources\312\002!Google\\Ads\\GoogleAds\\V3\\Re" +
+      "sources\352\002%Google::Ads::GoogleAds::V3::Re" +
+      "sourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -58,6 +61,7 @@ public final class PaidOrganicSearchTermViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -70,9 +74,12 @@ public final class PaidOrganicSearchTermViewProto {
         new java.lang.String[] { "ResourceName", "SearchTerm", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

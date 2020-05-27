@@ -283,7 +283,7 @@ private static final long serialVersionUID = 0L;
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified no cap is applied.
+   * If not specified, no cap is applied.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -297,7 +297,7 @@ private static final long serialVersionUID = 0L;
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified no cap is applied.
+   * If not specified, no cap is applied.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -311,7 +311,7 @@ private static final long serialVersionUID = 0L;
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified no cap is applied.
+   * If not specified, no cap is applied.
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -369,8 +369,6 @@ private static final long serialVersionUID = 0L;
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
    * advertising product, please consult an implementation specialist.
-   * If no targeting dimensions are specified, then campaigns will target
-   * everywhere and everyone.
    * See specific metrics for details on how targeting affects them.
    * In some cases, targeting may be overridden using the
    * PlannedProduct.advanced_product_targeting field.
@@ -386,8 +384,6 @@ private static final long serialVersionUID = 0L;
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
    * advertising product, please consult an implementation specialist.
-   * If no targeting dimensions are specified, then campaigns will target
-   * everywhere and everyone.
    * See specific metrics for details on how targeting affects them.
    * In some cases, targeting may be overridden using the
    * PlannedProduct.advanced_product_targeting field.
@@ -403,8 +399,6 @@ private static final long serialVersionUID = 0L;
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
    * advertising product, please consult an implementation specialist.
-   * If no targeting dimensions are specified, then campaigns will target
-   * everywhere and everyone.
    * See specific metrics for details on how targeting affects them.
    * In some cases, targeting may be overridden using the
    * PlannedProduct.advanced_product_targeting field.
@@ -420,7 +414,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v3.services.PlannedProduct> plannedProducts_;
   /**
    * <pre>
-   * Required. The product to be planned.
+   * Required. The products to be forecast.
+   * The max number of allowed planned products is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -430,7 +425,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The product to be planned.
+   * Required. The products to be forecast.
+   * The max number of allowed planned products is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -441,7 +437,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The product to be planned.
+   * Required. The products to be forecast.
+   * The max number of allowed planned products is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -451,7 +448,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The product to be planned.
+   * Required. The products to be forecast.
+   * The max number of allowed planned products is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -461,7 +459,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The product to be planned.
+   * Required. The products to be forecast.
+   * The max number of allowed planned products is 15.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1399,7 +1398,7 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1413,7 +1412,7 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1431,7 +1430,7 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1455,7 +1454,7 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1477,7 +1476,7 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1503,7 +1502,7 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1525,7 +1524,7 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1541,7 +1540,7 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1560,7 +1559,7 @@ private static final long serialVersionUID = 0L;
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cookie_frequency_cap = 4;</code>
@@ -1767,8 +1766,6 @@ private static final long serialVersionUID = 0L;
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
      * advertising product, please consult an implementation specialist.
-     * If no targeting dimensions are specified, then campaigns will target
-     * everywhere and everyone.
      * See specific metrics for details on how targeting affects them.
      * In some cases, targeting may be overridden using the
      * PlannedProduct.advanced_product_targeting field.
@@ -1784,8 +1781,6 @@ private static final long serialVersionUID = 0L;
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
      * advertising product, please consult an implementation specialist.
-     * If no targeting dimensions are specified, then campaigns will target
-     * everywhere and everyone.
      * See specific metrics for details on how targeting affects them.
      * In some cases, targeting may be overridden using the
      * PlannedProduct.advanced_product_targeting field.
@@ -1805,8 +1800,6 @@ private static final long serialVersionUID = 0L;
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
      * advertising product, please consult an implementation specialist.
-     * If no targeting dimensions are specified, then campaigns will target
-     * everywhere and everyone.
      * See specific metrics for details on how targeting affects them.
      * In some cases, targeting may be overridden using the
      * PlannedProduct.advanced_product_targeting field.
@@ -1832,8 +1825,6 @@ private static final long serialVersionUID = 0L;
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
      * advertising product, please consult an implementation specialist.
-     * If no targeting dimensions are specified, then campaigns will target
-     * everywhere and everyone.
      * See specific metrics for details on how targeting affects them.
      * In some cases, targeting may be overridden using the
      * PlannedProduct.advanced_product_targeting field.
@@ -1857,8 +1848,6 @@ private static final long serialVersionUID = 0L;
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
      * advertising product, please consult an implementation specialist.
-     * If no targeting dimensions are specified, then campaigns will target
-     * everywhere and everyone.
      * See specific metrics for details on how targeting affects them.
      * In some cases, targeting may be overridden using the
      * PlannedProduct.advanced_product_targeting field.
@@ -1886,8 +1875,6 @@ private static final long serialVersionUID = 0L;
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
      * advertising product, please consult an implementation specialist.
-     * If no targeting dimensions are specified, then campaigns will target
-     * everywhere and everyone.
      * See specific metrics for details on how targeting affects them.
      * In some cases, targeting may be overridden using the
      * PlannedProduct.advanced_product_targeting field.
@@ -1911,8 +1898,6 @@ private static final long serialVersionUID = 0L;
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
      * advertising product, please consult an implementation specialist.
-     * If no targeting dimensions are specified, then campaigns will target
-     * everywhere and everyone.
      * See specific metrics for details on how targeting affects them.
      * In some cases, targeting may be overridden using the
      * PlannedProduct.advanced_product_targeting field.
@@ -1930,8 +1915,6 @@ private static final long serialVersionUID = 0L;
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
      * advertising product, please consult an implementation specialist.
-     * If no targeting dimensions are specified, then campaigns will target
-     * everywhere and everyone.
      * See specific metrics for details on how targeting affects them.
      * In some cases, targeting may be overridden using the
      * PlannedProduct.advanced_product_targeting field.
@@ -1952,8 +1935,6 @@ private static final long serialVersionUID = 0L;
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
      * advertising product, please consult an implementation specialist.
-     * If no targeting dimensions are specified, then campaigns will target
-     * everywhere and everyone.
      * See specific metrics for details on how targeting affects them.
      * In some cases, targeting may be overridden using the
      * PlannedProduct.advanced_product_targeting field.
@@ -1989,7 +1970,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2003,7 +1985,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2017,7 +2000,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2031,7 +2015,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2052,7 +2037,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2070,7 +2056,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2090,7 +2077,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2111,7 +2099,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2129,7 +2118,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2147,7 +2137,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2166,7 +2157,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2183,7 +2175,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2200,7 +2193,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2211,7 +2205,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2225,7 +2220,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2240,7 +2236,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2251,7 +2248,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -2263,7 +2261,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The product to be planned.
+     * Required. The products to be forecast.
+     * The max number of allowed planned products is 15.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>

@@ -30,23 +30,26 @@ public final class LanguageConstantProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v3/resources/lang" +
       "uage_constant.proto\022!google.ads.googlead" +
-      "s.v3.resources\032\031google/api/resource.prot" +
-      "o\032\036google/protobuf/wrappers.proto\032\034googl" +
-      "e/api/annotations.proto\"\261\002\n\020LanguageCons" +
-      "tant\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022*\n\004code\030\003 \001" +
-      "(\0132\034.google.protobuf.StringValue\022*\n\004name" +
-      "\030\004 \001(\0132\034.google.protobuf.StringValue\022.\n\n" +
-      "targetable\030\005 \001(\0132\032.google.protobuf.BoolV" +
-      "alue:U\352AR\n)googleads.googleapis.com/Lang" +
-      "uageConstant\022%languageConstants/{languag" +
-      "e_constant}B\202\002\n%com.google.ads.googleads" +
-      ".v3.resourcesB\025LanguageConstantProtoP\001ZJ" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v3/resources;resources\242\002\003GAA" +
-      "\252\002!Google.Ads.GoogleAds.V3.Resources\312\002!G" +
-      "oogle\\Ads\\GoogleAds\\V3\\Resources\352\002%Googl" +
-      "e::Ads::GoogleAds::V3::Resourcesb\006proto3"
+      "s.v3.resources\032\037google/api/field_behavio" +
+      "r.proto\032\031google/api/resource.proto\032\036goog" +
+      "le/protobuf/wrappers.proto\032\034google/api/a" +
+      "nnotations.proto\"\370\002\n\020LanguageConstant\022H\n" +
+      "\rresource_name\030\001 \001(\tB1\340A\003\372A+\n)googleads." +
+      "googleapis.com/LanguageConstant\022,\n\002id\030\002 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\003\340A\003\022/\n" +
+      "\004code\030\003 \001(\0132\034.google.protobuf.StringValu" +
+      "eB\003\340A\003\022/\n\004name\030\004 \001(\0132\034.google.protobuf.S" +
+      "tringValueB\003\340A\003\0223\n\ntargetable\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.BoolValueB\003\340A\003:U\352AR\n)googl" +
+      "eads.googleapis.com/LanguageConstant\022%la" +
+      "nguageConstants/{language_constant}B\202\002\n%" +
+      "com.google.ads.googleads.v3.resourcesB\025L" +
+      "anguageConstantProtoP\001ZJgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v3/r" +
+      "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
+      "ogleAds.V3.Resources\312\002!Google\\Ads\\Google" +
+      "Ads\\V3\\Resources\352\002%Google::Ads::GoogleAd" +
+      "s::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -59,6 +62,7 @@ public final class LanguageConstantProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -71,9 +75,12 @@ public final class LanguageConstantProto {
         new java.lang.String[] { "ResourceName", "Id", "Code", "Name", "Targetable", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

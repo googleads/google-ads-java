@@ -161,12 +161,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the geo target constant.
+   * Output only. The resource name of the geo target constant.
    * Geo target constant resource names have the form:
    * `geoTargetConstants/{geo_target_constant_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -182,12 +182,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the geo target constant.
+   * Output only. The resource name of the geo target constant.
    * Geo target constant resource names have the form:
    * `geoTargetConstants/{geo_target_constant_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -207,30 +207,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the geo target constant.
+   * Output only. The ID of the geo target constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the geo target constant.
+   * Output only. The ID of the geo target constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the geo target constant.
+   * Output only. The ID of the geo target constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -240,30 +240,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * Geo target constant English name.
+   * Output only. Geo target constant English name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 4;</code>
+   * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * Geo target constant English name.
+   * Output only. Geo target constant English name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 4;</code>
+   * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * Geo target constant English name.
+   * Output only. Geo target constant English name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 4;</code>
+   * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
@@ -273,30 +273,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue countryCode_;
   /**
    * <pre>
-   * The ISO-3166-1 alpha-2 country code that is associated with the target.
+   * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 5;</code>
+   * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCountryCode() {
     return countryCode_ != null;
   }
   /**
    * <pre>
-   * The ISO-3166-1 alpha-2 country code that is associated with the target.
+   * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 5;</code>
+   * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getCountryCode() {
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
   /**
    * <pre>
-   * The ISO-3166-1 alpha-2 country code that is associated with the target.
+   * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue country_code = 5;</code>
+   * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
     return getCountryCode();
@@ -306,30 +306,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue targetType_;
   /**
    * <pre>
-   * Geo target constant target type.
+   * Output only. Geo target constant target type.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue target_type = 6;</code>
+   * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasTargetType() {
     return targetType_ != null;
   }
   /**
    * <pre>
-   * Geo target constant target type.
+   * Output only. Geo target constant target type.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue target_type = 6;</code>
+   * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getTargetType() {
     return targetType_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : targetType_;
   }
   /**
    * <pre>
-   * Geo target constant target type.
+   * Output only. Geo target constant target type.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue target_type = 6;</code>
+   * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getTargetTypeOrBuilder() {
     return getTargetType();
@@ -339,20 +339,20 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Geo target constant status.
+   * Output only. Geo target constant status.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Geo target constant status.
+   * Output only. Geo target constant status.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -364,33 +364,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue canonicalName_;
   /**
    * <pre>
-   * The fully qualified English name, consisting of the target's name and that
+   * Output only. The fully qualified English name, consisting of the target's name and that
    * of its parent and country.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+   * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCanonicalName() {
     return canonicalName_ != null;
   }
   /**
    * <pre>
-   * The fully qualified English name, consisting of the target's name and that
+   * Output only. The fully qualified English name, consisting of the target's name and that
    * of its parent and country.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+   * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getCanonicalName() {
     return canonicalName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : canonicalName_;
   }
   /**
    * <pre>
-   * The fully qualified English name, consisting of the target's name and that
+   * Output only. The fully qualified English name, consisting of the target's name and that
    * of its parent and country.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+   * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCanonicalNameOrBuilder() {
     return getCanonicalName();
@@ -871,12 +871,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the geo target constant.
+     * Output only. The resource name of the geo target constant.
      * Geo target constant resource names have the form:
      * `geoTargetConstants/{geo_target_constant_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -892,12 +892,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the geo target constant.
+     * Output only. The resource name of the geo target constant.
      * Geo target constant resource names have the form:
      * `geoTargetConstants/{geo_target_constant_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -914,12 +914,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the geo target constant.
+     * Output only. The resource name of the geo target constant.
      * Geo target constant resource names have the form:
      * `geoTargetConstants/{geo_target_constant_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -933,12 +933,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the geo target constant.
+     * Output only. The resource name of the geo target constant.
      * Geo target constant resource names have the form:
      * `geoTargetConstants/{geo_target_constant_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -948,12 +948,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the geo target constant.
+     * Output only. The resource name of the geo target constant.
      * Geo target constant resource names have the form:
      * `geoTargetConstants/{geo_target_constant_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -972,20 +972,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the geo target constant.
+     * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the geo target constant.
+     * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -996,10 +996,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the geo target constant.
+     * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1016,10 +1016,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the geo target constant.
+     * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1034,10 +1034,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the geo target constant.
+     * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1056,10 +1056,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the geo target constant.
+     * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1074,10 +1074,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the geo target constant.
+     * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1086,10 +1086,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the geo target constant.
+     * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1101,10 +1101,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the geo target constant.
+     * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1125,20 +1125,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * Geo target constant English name.
+     * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * Geo target constant English name.
+     * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1149,10 +1149,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant English name.
+     * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1169,10 +1169,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant English name.
+     * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1187,10 +1187,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant English name.
+     * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1209,10 +1209,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant English name.
+     * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -1227,10 +1227,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant English name.
+     * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -1239,10 +1239,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant English name.
+     * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -1254,10 +1254,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant English name.
+     * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1278,20 +1278,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> countryCodeBuilder_;
     /**
      * <pre>
-     * The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCountryCode() {
       return countryCodeBuilder_ != null || countryCode_ != null;
     }
     /**
      * <pre>
-     * The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCountryCode() {
       if (countryCodeBuilder_ == null) {
@@ -1302,10 +1302,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCountryCode(com.google.protobuf.StringValue value) {
       if (countryCodeBuilder_ == null) {
@@ -1322,10 +1322,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCountryCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1340,10 +1340,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCountryCode(com.google.protobuf.StringValue value) {
       if (countryCodeBuilder_ == null) {
@@ -1362,10 +1362,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCountryCode() {
       if (countryCodeBuilder_ == null) {
@@ -1380,10 +1380,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getCountryCodeBuilder() {
       
@@ -1392,10 +1392,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
       if (countryCodeBuilder_ != null) {
@@ -1407,10 +1407,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1431,20 +1431,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> targetTypeBuilder_;
     /**
      * <pre>
-     * Geo target constant target type.
+     * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_type = 6;</code>
+     * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTargetType() {
       return targetTypeBuilder_ != null || targetType_ != null;
     }
     /**
      * <pre>
-     * Geo target constant target type.
+     * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_type = 6;</code>
+     * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getTargetType() {
       if (targetTypeBuilder_ == null) {
@@ -1455,10 +1455,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant target type.
+     * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_type = 6;</code>
+     * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTargetType(com.google.protobuf.StringValue value) {
       if (targetTypeBuilder_ == null) {
@@ -1475,10 +1475,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant target type.
+     * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_type = 6;</code>
+     * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTargetType(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1493,10 +1493,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant target type.
+     * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_type = 6;</code>
+     * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTargetType(com.google.protobuf.StringValue value) {
       if (targetTypeBuilder_ == null) {
@@ -1515,10 +1515,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant target type.
+     * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_type = 6;</code>
+     * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTargetType() {
       if (targetTypeBuilder_ == null) {
@@ -1533,10 +1533,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant target type.
+     * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_type = 6;</code>
+     * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getTargetTypeBuilder() {
       
@@ -1545,10 +1545,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant target type.
+     * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_type = 6;</code>
+     * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getTargetTypeOrBuilder() {
       if (targetTypeBuilder_ != null) {
@@ -1560,10 +1560,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant target type.
+     * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue target_type = 6;</code>
+     * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1582,20 +1582,20 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Geo target constant status.
+     * Output only. Geo target constant status.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Geo target constant status.
+     * Output only. Geo target constant status.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -1604,10 +1604,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant status.
+     * Output only. Geo target constant status.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -1616,10 +1616,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant status.
+     * Output only. Geo target constant status.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus value) {
       if (value == null) {
@@ -1632,10 +1632,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Geo target constant status.
+     * Output only. Geo target constant status.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       
@@ -1649,22 +1649,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> canonicalNameBuilder_;
     /**
      * <pre>
-     * The fully qualified English name, consisting of the target's name and that
+     * Output only. The fully qualified English name, consisting of the target's name and that
      * of its parent and country.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCanonicalName() {
       return canonicalNameBuilder_ != null || canonicalName_ != null;
     }
     /**
      * <pre>
-     * The fully qualified English name, consisting of the target's name and that
+     * Output only. The fully qualified English name, consisting of the target's name and that
      * of its parent and country.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCanonicalName() {
       if (canonicalNameBuilder_ == null) {
@@ -1675,11 +1675,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The fully qualified English name, consisting of the target's name and that
+     * Output only. The fully qualified English name, consisting of the target's name and that
      * of its parent and country.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCanonicalName(com.google.protobuf.StringValue value) {
       if (canonicalNameBuilder_ == null) {
@@ -1696,11 +1696,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The fully qualified English name, consisting of the target's name and that
+     * Output only. The fully qualified English name, consisting of the target's name and that
      * of its parent and country.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCanonicalName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1715,11 +1715,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The fully qualified English name, consisting of the target's name and that
+     * Output only. The fully qualified English name, consisting of the target's name and that
      * of its parent and country.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCanonicalName(com.google.protobuf.StringValue value) {
       if (canonicalNameBuilder_ == null) {
@@ -1738,11 +1738,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The fully qualified English name, consisting of the target's name and that
+     * Output only. The fully qualified English name, consisting of the target's name and that
      * of its parent and country.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCanonicalName() {
       if (canonicalNameBuilder_ == null) {
@@ -1757,11 +1757,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The fully qualified English name, consisting of the target's name and that
+     * Output only. The fully qualified English name, consisting of the target's name and that
      * of its parent and country.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getCanonicalNameBuilder() {
       
@@ -1770,11 +1770,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The fully qualified English name, consisting of the target's name and that
+     * Output only. The fully qualified English name, consisting of the target's name and that
      * of its parent and country.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCanonicalNameOrBuilder() {
       if (canonicalNameBuilder_ != null) {
@@ -1786,11 +1786,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The fully qualified English name, consisting of the target's name and that
+     * Output only. The fully qualified English name, consisting of the target's name and that
      * of its parent and country.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue canonical_name = 8;</code>
+     * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

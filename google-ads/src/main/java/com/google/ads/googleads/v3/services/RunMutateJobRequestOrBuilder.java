@@ -12,7 +12,7 @@ public interface RunMutateJobRequestOrBuilder extends
    * Required. The resource name of the MutateJob to run.
    * </pre>
    *
-   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
@@ -20,7 +20,7 @@ public interface RunMutateJobRequestOrBuilder extends
    * Required. The resource name of the MutateJob to run.
    * </pre>
    *
-   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();

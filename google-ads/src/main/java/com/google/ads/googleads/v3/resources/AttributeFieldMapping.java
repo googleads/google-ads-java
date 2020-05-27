@@ -310,30 +310,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value feedAttributeId_;
   /**
    * <pre>
-   * Feed attribute from which to map.
+   * Immutable. Feed attribute from which to map.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+   * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasFeedAttributeId() {
     return feedAttributeId_ != null;
   }
   /**
    * <pre>
-   * Feed attribute from which to map.
+   * Immutable. Feed attribute from which to map.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+   * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.Int64Value getFeedAttributeId() {
     return feedAttributeId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : feedAttributeId_;
   }
   /**
    * <pre>
-   * Feed attribute from which to map.
+   * Immutable. Feed attribute from which to map.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+   * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getFeedAttributeIdOrBuilder() {
     return getFeedAttributeId();
@@ -343,39 +343,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value fieldId_;
   /**
    * <pre>
-   * The placeholder field ID. If a placeholder field enum is not published in
+   * Output only. The placeholder field ID. If a placeholder field enum is not published in
    * the current API version, then this field will be populated and the field
    * oneof will be empty.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value field_id = 2;</code>
+   * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasFieldId() {
     return fieldId_ != null;
   }
   /**
    * <pre>
-   * The placeholder field ID. If a placeholder field enum is not published in
+   * Output only. The placeholder field ID. If a placeholder field enum is not published in
    * the current API version, then this field will be populated and the field
    * oneof will be empty.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value field_id = 2;</code>
+   * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getFieldId() {
     return fieldId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fieldId_;
   }
   /**
    * <pre>
-   * The placeholder field ID. If a placeholder field enum is not published in
+   * Output only. The placeholder field ID. If a placeholder field enum is not published in
    * the current API version, then this field will be populated and the field
    * oneof will be empty.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value field_id = 2;</code>
+   * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getFieldIdOrBuilder() {
     return getFieldId();
@@ -384,10 +384,10 @@ private static final long serialVersionUID = 0L;
   public static final int SITELINK_FIELD_FIELD_NUMBER = 3;
   /**
    * <pre>
-   * Sitelink Placeholder Fields.
+   * Immutable. Sitelink Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getSitelinkFieldValue() {
     if (fieldCase_ == 3) {
@@ -397,10 +397,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Sitelink Placeholder Fields.
+   * Immutable. Sitelink Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField getSitelinkField() {
     if (fieldCase_ == 3) {
@@ -415,10 +415,10 @@ private static final long serialVersionUID = 0L;
   public static final int CALL_FIELD_FIELD_NUMBER = 4;
   /**
    * <pre>
-   * Call Placeholder Fields.
+   * Immutable. Call Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getCallFieldValue() {
     if (fieldCase_ == 4) {
@@ -428,10 +428,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Call Placeholder Fields.
+   * Immutable. Call Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField getCallField() {
     if (fieldCase_ == 4) {
@@ -446,10 +446,10 @@ private static final long serialVersionUID = 0L;
   public static final int APP_FIELD_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * App Placeholder Fields.
+   * Immutable. App Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getAppFieldValue() {
     if (fieldCase_ == 5) {
@@ -459,10 +459,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * App Placeholder Fields.
+   * Immutable. App Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField getAppField() {
     if (fieldCase_ == 5) {
@@ -477,10 +477,10 @@ private static final long serialVersionUID = 0L;
   public static final int LOCATION_FIELD_FIELD_NUMBER = 6;
   /**
    * <pre>
-   * Location Placeholder Fields. This field is read-only.
+   * Output only. Location Placeholder Fields. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getLocationFieldValue() {
     if (fieldCase_ == 6) {
@@ -490,10 +490,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Location Placeholder Fields. This field is read-only.
+   * Output only. Location Placeholder Fields. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField getLocationField() {
     if (fieldCase_ == 6) {
@@ -508,10 +508,10 @@ private static final long serialVersionUID = 0L;
   public static final int AFFILIATE_LOCATION_FIELD_FIELD_NUMBER = 7;
   /**
    * <pre>
-   * Affiliate Location Placeholder Fields. This field is read-only.
+   * Output only. Affiliate Location Placeholder Fields. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getAffiliateLocationFieldValue() {
     if (fieldCase_ == 7) {
@@ -521,10 +521,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Affiliate Location Placeholder Fields. This field is read-only.
+   * Output only. Affiliate Location Placeholder Fields. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField getAffiliateLocationField() {
     if (fieldCase_ == 7) {
@@ -539,10 +539,10 @@ private static final long serialVersionUID = 0L;
   public static final int CALLOUT_FIELD_FIELD_NUMBER = 8;
   /**
    * <pre>
-   * Callout Placeholder Fields.
+   * Immutable. Callout Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8;</code>
+   * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getCalloutFieldValue() {
     if (fieldCase_ == 8) {
@@ -552,10 +552,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Callout Placeholder Fields.
+   * Immutable. Callout Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8;</code>
+   * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField getCalloutField() {
     if (fieldCase_ == 8) {
@@ -570,10 +570,10 @@ private static final long serialVersionUID = 0L;
   public static final int STRUCTURED_SNIPPET_FIELD_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * Structured Snippet Placeholder Fields.
+   * Immutable. Structured Snippet Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getStructuredSnippetFieldValue() {
     if (fieldCase_ == 9) {
@@ -583,10 +583,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Structured Snippet Placeholder Fields.
+   * Immutable. Structured Snippet Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField getStructuredSnippetField() {
     if (fieldCase_ == 9) {
@@ -601,10 +601,10 @@ private static final long serialVersionUID = 0L;
   public static final int MESSAGE_FIELD_FIELD_NUMBER = 10;
   /**
    * <pre>
-   * Message Placeholder Fields.
+   * Immutable. Message Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getMessageFieldValue() {
     if (fieldCase_ == 10) {
@@ -614,10 +614,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Message Placeholder Fields.
+   * Immutable. Message Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField getMessageField() {
     if (fieldCase_ == 10) {
@@ -632,10 +632,10 @@ private static final long serialVersionUID = 0L;
   public static final int PRICE_FIELD_FIELD_NUMBER = 11;
   /**
    * <pre>
-   * Price Placeholder Fields.
+   * Immutable. Price Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11;</code>
+   * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getPriceFieldValue() {
     if (fieldCase_ == 11) {
@@ -645,10 +645,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Price Placeholder Fields.
+   * Immutable. Price Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11;</code>
+   * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField getPriceField() {
     if (fieldCase_ == 11) {
@@ -663,10 +663,10 @@ private static final long serialVersionUID = 0L;
   public static final int PROMOTION_FIELD_FIELD_NUMBER = 12;
   /**
    * <pre>
-   * Promotion Placeholder Fields.
+   * Immutable. Promotion Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getPromotionFieldValue() {
     if (fieldCase_ == 12) {
@@ -676,10 +676,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Promotion Placeholder Fields.
+   * Immutable. Promotion Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField getPromotionField() {
     if (fieldCase_ == 12) {
@@ -694,10 +694,10 @@ private static final long serialVersionUID = 0L;
   public static final int AD_CUSTOMIZER_FIELD_FIELD_NUMBER = 13;
   /**
    * <pre>
-   * Ad Customizer Placeholder Fields
+   * Immutable. Ad Customizer Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13;</code>
+   * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getAdCustomizerFieldValue() {
     if (fieldCase_ == 13) {
@@ -707,10 +707,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Ad Customizer Placeholder Fields
+   * Immutable. Ad Customizer Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13;</code>
+   * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField getAdCustomizerField() {
     if (fieldCase_ == 13) {
@@ -725,10 +725,10 @@ private static final long serialVersionUID = 0L;
   public static final int DSA_PAGE_FEED_FIELD_FIELD_NUMBER = 14;
   /**
    * <pre>
-   * Dynamic Search Ad Page Feed Fields.
+   * Immutable. Dynamic Search Ad Page Feed Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14;</code>
+   * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getDsaPageFeedFieldValue() {
     if (fieldCase_ == 14) {
@@ -738,10 +738,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Dynamic Search Ad Page Feed Fields.
+   * Immutable. Dynamic Search Ad Page Feed Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14;</code>
+   * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField getDsaPageFeedField() {
     if (fieldCase_ == 14) {
@@ -756,10 +756,10 @@ private static final long serialVersionUID = 0L;
   public static final int LOCATION_EXTENSION_TARGETING_FIELD_FIELD_NUMBER = 15;
   /**
    * <pre>
-   * Location Target Fields.
+   * Immutable. Location Target Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getLocationExtensionTargetingFieldValue() {
     if (fieldCase_ == 15) {
@@ -769,10 +769,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Location Target Fields.
+   * Immutable. Location Target Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField getLocationExtensionTargetingField() {
     if (fieldCase_ == 15) {
@@ -787,10 +787,10 @@ private static final long serialVersionUID = 0L;
   public static final int EDUCATION_FIELD_FIELD_NUMBER = 16;
   /**
    * <pre>
-   * Education Placeholder Fields
+   * Immutable. Education Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16;</code>
+   * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getEducationFieldValue() {
     if (fieldCase_ == 16) {
@@ -800,10 +800,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Education Placeholder Fields
+   * Immutable. Education Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16;</code>
+   * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField getEducationField() {
     if (fieldCase_ == 16) {
@@ -818,10 +818,10 @@ private static final long serialVersionUID = 0L;
   public static final int FLIGHT_FIELD_FIELD_NUMBER = 17;
   /**
    * <pre>
-   * Flight Placeholder Fields
+   * Immutable. Flight Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17;</code>
+   * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getFlightFieldValue() {
     if (fieldCase_ == 17) {
@@ -831,10 +831,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Flight Placeholder Fields
+   * Immutable. Flight Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17;</code>
+   * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField getFlightField() {
     if (fieldCase_ == 17) {
@@ -849,10 +849,10 @@ private static final long serialVersionUID = 0L;
   public static final int CUSTOM_FIELD_FIELD_NUMBER = 18;
   /**
    * <pre>
-   * Custom Placeholder Fields
+   * Immutable. Custom Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18;</code>
+   * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getCustomFieldValue() {
     if (fieldCase_ == 18) {
@@ -862,10 +862,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Custom Placeholder Fields
+   * Immutable. Custom Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18;</code>
+   * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField getCustomField() {
     if (fieldCase_ == 18) {
@@ -880,10 +880,10 @@ private static final long serialVersionUID = 0L;
   public static final int HOTEL_FIELD_FIELD_NUMBER = 19;
   /**
    * <pre>
-   * Hotel Placeholder Fields
+   * Immutable. Hotel Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19;</code>
+   * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getHotelFieldValue() {
     if (fieldCase_ == 19) {
@@ -893,10 +893,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Hotel Placeholder Fields
+   * Immutable. Hotel Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19;</code>
+   * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField getHotelField() {
     if (fieldCase_ == 19) {
@@ -911,10 +911,10 @@ private static final long serialVersionUID = 0L;
   public static final int REAL_ESTATE_FIELD_FIELD_NUMBER = 20;
   /**
    * <pre>
-   * Real Estate Placeholder Fields
+   * Immutable. Real Estate Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20;</code>
+   * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getRealEstateFieldValue() {
     if (fieldCase_ == 20) {
@@ -924,10 +924,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Real Estate Placeholder Fields
+   * Immutable. Real Estate Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20;</code>
+   * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField getRealEstateField() {
     if (fieldCase_ == 20) {
@@ -942,10 +942,10 @@ private static final long serialVersionUID = 0L;
   public static final int TRAVEL_FIELD_FIELD_NUMBER = 21;
   /**
    * <pre>
-   * Travel Placeholder Fields
+   * Immutable. Travel Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21;</code>
+   * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getTravelFieldValue() {
     if (fieldCase_ == 21) {
@@ -955,10 +955,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Travel Placeholder Fields
+   * Immutable. Travel Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21;</code>
+   * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField getTravelField() {
     if (fieldCase_ == 21) {
@@ -973,10 +973,10 @@ private static final long serialVersionUID = 0L;
   public static final int LOCAL_FIELD_FIELD_NUMBER = 22;
   /**
    * <pre>
-   * Local Placeholder Fields
+   * Immutable. Local Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22;</code>
+   * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getLocalFieldValue() {
     if (fieldCase_ == 22) {
@@ -986,10 +986,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Local Placeholder Fields
+   * Immutable. Local Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22;</code>
+   * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField getLocalField() {
     if (fieldCase_ == 22) {
@@ -1004,10 +1004,10 @@ private static final long serialVersionUID = 0L;
   public static final int JOB_FIELD_FIELD_NUMBER = 23;
   /**
    * <pre>
-   * Job Placeholder Fields
+   * Immutable. Job Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23;</code>
+   * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getJobFieldValue() {
     if (fieldCase_ == 23) {
@@ -1017,10 +1017,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Job Placeholder Fields
+   * Immutable. Job Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23;</code>
+   * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField getJobField() {
     if (fieldCase_ == 23) {
@@ -1880,20 +1880,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> feedAttributeIdBuilder_;
     /**
      * <pre>
-     * Feed attribute from which to map.
+     * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasFeedAttributeId() {
       return feedAttributeIdBuilder_ != null || feedAttributeId_ != null;
     }
     /**
      * <pre>
-     * Feed attribute from which to map.
+     * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.Int64Value getFeedAttributeId() {
       if (feedAttributeIdBuilder_ == null) {
@@ -1904,10 +1904,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attribute from which to map.
+     * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setFeedAttributeId(com.google.protobuf.Int64Value value) {
       if (feedAttributeIdBuilder_ == null) {
@@ -1924,10 +1924,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attribute from which to map.
+     * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setFeedAttributeId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1942,10 +1942,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attribute from which to map.
+     * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeFeedAttributeId(com.google.protobuf.Int64Value value) {
       if (feedAttributeIdBuilder_ == null) {
@@ -1964,10 +1964,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attribute from which to map.
+     * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearFeedAttributeId() {
       if (feedAttributeIdBuilder_ == null) {
@@ -1982,10 +1982,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attribute from which to map.
+     * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.Int64Value.Builder getFeedAttributeIdBuilder() {
       
@@ -1994,10 +1994,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attribute from which to map.
+     * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getFeedAttributeIdOrBuilder() {
       if (feedAttributeIdBuilder_ != null) {
@@ -2009,10 +2009,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attribute from which to map.
+     * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2033,26 +2033,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> fieldIdBuilder_;
     /**
      * <pre>
-     * The placeholder field ID. If a placeholder field enum is not published in
+     * Output only. The placeholder field ID. If a placeholder field enum is not published in
      * the current API version, then this field will be populated and the field
      * oneof will be empty.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value field_id = 2;</code>
+     * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasFieldId() {
       return fieldIdBuilder_ != null || fieldId_ != null;
     }
     /**
      * <pre>
-     * The placeholder field ID. If a placeholder field enum is not published in
+     * Output only. The placeholder field ID. If a placeholder field enum is not published in
      * the current API version, then this field will be populated and the field
      * oneof will be empty.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value field_id = 2;</code>
+     * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getFieldId() {
       if (fieldIdBuilder_ == null) {
@@ -2063,13 +2063,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder field ID. If a placeholder field enum is not published in
+     * Output only. The placeholder field ID. If a placeholder field enum is not published in
      * the current API version, then this field will be populated and the field
      * oneof will be empty.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value field_id = 2;</code>
+     * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFieldId(com.google.protobuf.Int64Value value) {
       if (fieldIdBuilder_ == null) {
@@ -2086,13 +2086,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder field ID. If a placeholder field enum is not published in
+     * Output only. The placeholder field ID. If a placeholder field enum is not published in
      * the current API version, then this field will be populated and the field
      * oneof will be empty.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value field_id = 2;</code>
+     * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFieldId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2107,13 +2107,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder field ID. If a placeholder field enum is not published in
+     * Output only. The placeholder field ID. If a placeholder field enum is not published in
      * the current API version, then this field will be populated and the field
      * oneof will be empty.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value field_id = 2;</code>
+     * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeFieldId(com.google.protobuf.Int64Value value) {
       if (fieldIdBuilder_ == null) {
@@ -2132,13 +2132,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder field ID. If a placeholder field enum is not published in
+     * Output only. The placeholder field ID. If a placeholder field enum is not published in
      * the current API version, then this field will be populated and the field
      * oneof will be empty.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value field_id = 2;</code>
+     * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearFieldId() {
       if (fieldIdBuilder_ == null) {
@@ -2153,13 +2153,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder field ID. If a placeholder field enum is not published in
+     * Output only. The placeholder field ID. If a placeholder field enum is not published in
      * the current API version, then this field will be populated and the field
      * oneof will be empty.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value field_id = 2;</code>
+     * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getFieldIdBuilder() {
       
@@ -2168,13 +2168,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder field ID. If a placeholder field enum is not published in
+     * Output only. The placeholder field ID. If a placeholder field enum is not published in
      * the current API version, then this field will be populated and the field
      * oneof will be empty.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value field_id = 2;</code>
+     * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getFieldIdOrBuilder() {
       if (fieldIdBuilder_ != null) {
@@ -2186,13 +2186,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder field ID. If a placeholder field enum is not published in
+     * Output only. The placeholder field ID. If a placeholder field enum is not published in
      * the current API version, then this field will be populated and the field
      * oneof will be empty.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value field_id = 2;</code>
+     * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2210,10 +2210,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Sitelink Placeholder Fields.
+     * Immutable. Sitelink Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getSitelinkFieldValue() {
       if (fieldCase_ == 3) {
@@ -2223,10 +2223,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink Placeholder Fields.
+     * Immutable. Sitelink Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setSitelinkFieldValue(int value) {
       fieldCase_ = 3;
@@ -2236,10 +2236,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink Placeholder Fields.
+     * Immutable. Sitelink Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField getSitelinkField() {
       if (fieldCase_ == 3) {
@@ -2252,10 +2252,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink Placeholder Fields.
+     * Immutable. Sitelink Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setSitelinkField(com.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField value) {
       if (value == null) {
@@ -2268,10 +2268,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink Placeholder Fields.
+     * Immutable. Sitelink Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearSitelinkField() {
       if (fieldCase_ == 3) {
@@ -2284,10 +2284,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Call Placeholder Fields.
+     * Immutable. Call Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getCallFieldValue() {
       if (fieldCase_ == 4) {
@@ -2297,10 +2297,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Call Placeholder Fields.
+     * Immutable. Call Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setCallFieldValue(int value) {
       fieldCase_ = 4;
@@ -2310,10 +2310,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Call Placeholder Fields.
+     * Immutable. Call Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField getCallField() {
       if (fieldCase_ == 4) {
@@ -2326,10 +2326,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Call Placeholder Fields.
+     * Immutable. Call Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setCallField(com.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField value) {
       if (value == null) {
@@ -2342,10 +2342,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Call Placeholder Fields.
+     * Immutable. Call Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearCallField() {
       if (fieldCase_ == 4) {
@@ -2358,10 +2358,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * App Placeholder Fields.
+     * Immutable. App Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getAppFieldValue() {
       if (fieldCase_ == 5) {
@@ -2371,10 +2371,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * App Placeholder Fields.
+     * Immutable. App Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setAppFieldValue(int value) {
       fieldCase_ = 5;
@@ -2384,10 +2384,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * App Placeholder Fields.
+     * Immutable. App Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField getAppField() {
       if (fieldCase_ == 5) {
@@ -2400,10 +2400,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * App Placeholder Fields.
+     * Immutable. App Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setAppField(com.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField value) {
       if (value == null) {
@@ -2416,10 +2416,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * App Placeholder Fields.
+     * Immutable. App Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearAppField() {
       if (fieldCase_ == 5) {
@@ -2432,10 +2432,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Location Placeholder Fields. This field is read-only.
+     * Output only. Location Placeholder Fields. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getLocationFieldValue() {
       if (fieldCase_ == 6) {
@@ -2445,10 +2445,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location Placeholder Fields. This field is read-only.
+     * Output only. Location Placeholder Fields. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLocationFieldValue(int value) {
       fieldCase_ = 6;
@@ -2458,10 +2458,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location Placeholder Fields. This field is read-only.
+     * Output only. Location Placeholder Fields. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField getLocationField() {
       if (fieldCase_ == 6) {
@@ -2474,10 +2474,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location Placeholder Fields. This field is read-only.
+     * Output only. Location Placeholder Fields. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLocationField(com.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField value) {
       if (value == null) {
@@ -2490,10 +2490,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location Placeholder Fields. This field is read-only.
+     * Output only. Location Placeholder Fields. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6;</code>
+     * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLocationField() {
       if (fieldCase_ == 6) {
@@ -2506,10 +2506,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Affiliate Location Placeholder Fields. This field is read-only.
+     * Output only. Affiliate Location Placeholder Fields. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getAffiliateLocationFieldValue() {
       if (fieldCase_ == 7) {
@@ -2519,10 +2519,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Affiliate Location Placeholder Fields. This field is read-only.
+     * Output only. Affiliate Location Placeholder Fields. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAffiliateLocationFieldValue(int value) {
       fieldCase_ = 7;
@@ -2532,10 +2532,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Affiliate Location Placeholder Fields. This field is read-only.
+     * Output only. Affiliate Location Placeholder Fields. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField getAffiliateLocationField() {
       if (fieldCase_ == 7) {
@@ -2548,10 +2548,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Affiliate Location Placeholder Fields. This field is read-only.
+     * Output only. Affiliate Location Placeholder Fields. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAffiliateLocationField(com.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField value) {
       if (value == null) {
@@ -2564,10 +2564,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Affiliate Location Placeholder Fields. This field is read-only.
+     * Output only. Affiliate Location Placeholder Fields. This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7;</code>
+     * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAffiliateLocationField() {
       if (fieldCase_ == 7) {
@@ -2580,10 +2580,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Callout Placeholder Fields.
+     * Immutable. Callout Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getCalloutFieldValue() {
       if (fieldCase_ == 8) {
@@ -2593,10 +2593,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Callout Placeholder Fields.
+     * Immutable. Callout Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setCalloutFieldValue(int value) {
       fieldCase_ = 8;
@@ -2606,10 +2606,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Callout Placeholder Fields.
+     * Immutable. Callout Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField getCalloutField() {
       if (fieldCase_ == 8) {
@@ -2622,10 +2622,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Callout Placeholder Fields.
+     * Immutable. Callout Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setCalloutField(com.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField value) {
       if (value == null) {
@@ -2638,10 +2638,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Callout Placeholder Fields.
+     * Immutable. Callout Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8;</code>
+     * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearCalloutField() {
       if (fieldCase_ == 8) {
@@ -2654,10 +2654,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Structured Snippet Placeholder Fields.
+     * Immutable. Structured Snippet Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getStructuredSnippetFieldValue() {
       if (fieldCase_ == 9) {
@@ -2667,10 +2667,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured Snippet Placeholder Fields.
+     * Immutable. Structured Snippet Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setStructuredSnippetFieldValue(int value) {
       fieldCase_ = 9;
@@ -2680,10 +2680,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured Snippet Placeholder Fields.
+     * Immutable. Structured Snippet Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField getStructuredSnippetField() {
       if (fieldCase_ == 9) {
@@ -2696,10 +2696,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured Snippet Placeholder Fields.
+     * Immutable. Structured Snippet Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setStructuredSnippetField(com.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField value) {
       if (value == null) {
@@ -2712,10 +2712,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Structured Snippet Placeholder Fields.
+     * Immutable. Structured Snippet Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9;</code>
+     * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearStructuredSnippetField() {
       if (fieldCase_ == 9) {
@@ -2728,10 +2728,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Message Placeholder Fields.
+     * Immutable. Message Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getMessageFieldValue() {
       if (fieldCase_ == 10) {
@@ -2741,10 +2741,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Message Placeholder Fields.
+     * Immutable. Message Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setMessageFieldValue(int value) {
       fieldCase_ = 10;
@@ -2754,10 +2754,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Message Placeholder Fields.
+     * Immutable. Message Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField getMessageField() {
       if (fieldCase_ == 10) {
@@ -2770,10 +2770,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Message Placeholder Fields.
+     * Immutable. Message Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setMessageField(com.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField value) {
       if (value == null) {
@@ -2786,10 +2786,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Message Placeholder Fields.
+     * Immutable. Message Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearMessageField() {
       if (fieldCase_ == 10) {
@@ -2802,10 +2802,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Price Placeholder Fields.
+     * Immutable. Price Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getPriceFieldValue() {
       if (fieldCase_ == 11) {
@@ -2815,10 +2815,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Price Placeholder Fields.
+     * Immutable. Price Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setPriceFieldValue(int value) {
       fieldCase_ = 11;
@@ -2828,10 +2828,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Price Placeholder Fields.
+     * Immutable. Price Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField getPriceField() {
       if (fieldCase_ == 11) {
@@ -2844,10 +2844,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Price Placeholder Fields.
+     * Immutable. Price Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setPriceField(com.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField value) {
       if (value == null) {
@@ -2860,10 +2860,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Price Placeholder Fields.
+     * Immutable. Price Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11;</code>
+     * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearPriceField() {
       if (fieldCase_ == 11) {
@@ -2876,10 +2876,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Promotion Placeholder Fields.
+     * Immutable. Promotion Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getPromotionFieldValue() {
       if (fieldCase_ == 12) {
@@ -2889,10 +2889,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Promotion Placeholder Fields.
+     * Immutable. Promotion Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setPromotionFieldValue(int value) {
       fieldCase_ = 12;
@@ -2902,10 +2902,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Promotion Placeholder Fields.
+     * Immutable. Promotion Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField getPromotionField() {
       if (fieldCase_ == 12) {
@@ -2918,10 +2918,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Promotion Placeholder Fields.
+     * Immutable. Promotion Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setPromotionField(com.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField value) {
       if (value == null) {
@@ -2934,10 +2934,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Promotion Placeholder Fields.
+     * Immutable. Promotion Placeholder Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearPromotionField() {
       if (fieldCase_ == 12) {
@@ -2950,10 +2950,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Ad Customizer Placeholder Fields
+     * Immutable. Ad Customizer Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getAdCustomizerFieldValue() {
       if (fieldCase_ == 13) {
@@ -2963,10 +2963,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad Customizer Placeholder Fields
+     * Immutable. Ad Customizer Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setAdCustomizerFieldValue(int value) {
       fieldCase_ = 13;
@@ -2976,10 +2976,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad Customizer Placeholder Fields
+     * Immutable. Ad Customizer Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField getAdCustomizerField() {
       if (fieldCase_ == 13) {
@@ -2992,10 +2992,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad Customizer Placeholder Fields
+     * Immutable. Ad Customizer Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setAdCustomizerField(com.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField value) {
       if (value == null) {
@@ -3008,10 +3008,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad Customizer Placeholder Fields
+     * Immutable. Ad Customizer Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearAdCustomizerField() {
       if (fieldCase_ == 13) {
@@ -3024,10 +3024,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Dynamic Search Ad Page Feed Fields.
+     * Immutable. Dynamic Search Ad Page Feed Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14;</code>
+     * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getDsaPageFeedFieldValue() {
       if (fieldCase_ == 14) {
@@ -3037,10 +3037,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Dynamic Search Ad Page Feed Fields.
+     * Immutable. Dynamic Search Ad Page Feed Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14;</code>
+     * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setDsaPageFeedFieldValue(int value) {
       fieldCase_ = 14;
@@ -3050,10 +3050,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Dynamic Search Ad Page Feed Fields.
+     * Immutable. Dynamic Search Ad Page Feed Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14;</code>
+     * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField getDsaPageFeedField() {
       if (fieldCase_ == 14) {
@@ -3066,10 +3066,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Dynamic Search Ad Page Feed Fields.
+     * Immutable. Dynamic Search Ad Page Feed Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14;</code>
+     * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setDsaPageFeedField(com.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField value) {
       if (value == null) {
@@ -3082,10 +3082,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Dynamic Search Ad Page Feed Fields.
+     * Immutable. Dynamic Search Ad Page Feed Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14;</code>
+     * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearDsaPageFeedField() {
       if (fieldCase_ == 14) {
@@ -3098,10 +3098,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Location Target Fields.
+     * Immutable. Location Target Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getLocationExtensionTargetingFieldValue() {
       if (fieldCase_ == 15) {
@@ -3111,10 +3111,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location Target Fields.
+     * Immutable. Location Target Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setLocationExtensionTargetingFieldValue(int value) {
       fieldCase_ = 15;
@@ -3124,10 +3124,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location Target Fields.
+     * Immutable. Location Target Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField getLocationExtensionTargetingField() {
       if (fieldCase_ == 15) {
@@ -3140,10 +3140,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location Target Fields.
+     * Immutable. Location Target Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setLocationExtensionTargetingField(com.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField value) {
       if (value == null) {
@@ -3156,10 +3156,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Location Target Fields.
+     * Immutable. Location Target Fields.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearLocationExtensionTargetingField() {
       if (fieldCase_ == 15) {
@@ -3172,10 +3172,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Education Placeholder Fields
+     * Immutable. Education Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16;</code>
+     * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getEducationFieldValue() {
       if (fieldCase_ == 16) {
@@ -3185,10 +3185,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Education Placeholder Fields
+     * Immutable. Education Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16;</code>
+     * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setEducationFieldValue(int value) {
       fieldCase_ = 16;
@@ -3198,10 +3198,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Education Placeholder Fields
+     * Immutable. Education Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16;</code>
+     * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField getEducationField() {
       if (fieldCase_ == 16) {
@@ -3214,10 +3214,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Education Placeholder Fields
+     * Immutable. Education Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16;</code>
+     * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setEducationField(com.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField value) {
       if (value == null) {
@@ -3230,10 +3230,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Education Placeholder Fields
+     * Immutable. Education Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16;</code>
+     * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearEducationField() {
       if (fieldCase_ == 16) {
@@ -3246,10 +3246,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Flight Placeholder Fields
+     * Immutable. Flight Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17;</code>
+     * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getFlightFieldValue() {
       if (fieldCase_ == 17) {
@@ -3259,10 +3259,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flight Placeholder Fields
+     * Immutable. Flight Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17;</code>
+     * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setFlightFieldValue(int value) {
       fieldCase_ = 17;
@@ -3272,10 +3272,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flight Placeholder Fields
+     * Immutable. Flight Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17;</code>
+     * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField getFlightField() {
       if (fieldCase_ == 17) {
@@ -3288,10 +3288,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flight Placeholder Fields
+     * Immutable. Flight Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17;</code>
+     * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setFlightField(com.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField value) {
       if (value == null) {
@@ -3304,10 +3304,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flight Placeholder Fields
+     * Immutable. Flight Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17;</code>
+     * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearFlightField() {
       if (fieldCase_ == 17) {
@@ -3320,10 +3320,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Custom Placeholder Fields
+     * Immutable. Custom Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18;</code>
+     * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getCustomFieldValue() {
       if (fieldCase_ == 18) {
@@ -3333,10 +3333,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Custom Placeholder Fields
+     * Immutable. Custom Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18;</code>
+     * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setCustomFieldValue(int value) {
       fieldCase_ = 18;
@@ -3346,10 +3346,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Custom Placeholder Fields
+     * Immutable. Custom Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18;</code>
+     * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField getCustomField() {
       if (fieldCase_ == 18) {
@@ -3362,10 +3362,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Custom Placeholder Fields
+     * Immutable. Custom Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18;</code>
+     * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setCustomField(com.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField value) {
       if (value == null) {
@@ -3378,10 +3378,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Custom Placeholder Fields
+     * Immutable. Custom Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18;</code>
+     * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearCustomField() {
       if (fieldCase_ == 18) {
@@ -3394,10 +3394,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Hotel Placeholder Fields
+     * Immutable. Hotel Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19;</code>
+     * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getHotelFieldValue() {
       if (fieldCase_ == 19) {
@@ -3407,10 +3407,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Hotel Placeholder Fields
+     * Immutable. Hotel Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19;</code>
+     * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelFieldValue(int value) {
       fieldCase_ = 19;
@@ -3420,10 +3420,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Hotel Placeholder Fields
+     * Immutable. Hotel Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19;</code>
+     * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField getHotelField() {
       if (fieldCase_ == 19) {
@@ -3436,10 +3436,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Hotel Placeholder Fields
+     * Immutable. Hotel Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19;</code>
+     * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelField(com.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField value) {
       if (value == null) {
@@ -3452,10 +3452,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Hotel Placeholder Fields
+     * Immutable. Hotel Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19;</code>
+     * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearHotelField() {
       if (fieldCase_ == 19) {
@@ -3468,10 +3468,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Real Estate Placeholder Fields
+     * Immutable. Real Estate Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20;</code>
+     * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getRealEstateFieldValue() {
       if (fieldCase_ == 20) {
@@ -3481,10 +3481,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Real Estate Placeholder Fields
+     * Immutable. Real Estate Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20;</code>
+     * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setRealEstateFieldValue(int value) {
       fieldCase_ = 20;
@@ -3494,10 +3494,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Real Estate Placeholder Fields
+     * Immutable. Real Estate Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20;</code>
+     * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField getRealEstateField() {
       if (fieldCase_ == 20) {
@@ -3510,10 +3510,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Real Estate Placeholder Fields
+     * Immutable. Real Estate Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20;</code>
+     * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setRealEstateField(com.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField value) {
       if (value == null) {
@@ -3526,10 +3526,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Real Estate Placeholder Fields
+     * Immutable. Real Estate Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20;</code>
+     * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearRealEstateField() {
       if (fieldCase_ == 20) {
@@ -3542,10 +3542,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Travel Placeholder Fields
+     * Immutable. Travel Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21;</code>
+     * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getTravelFieldValue() {
       if (fieldCase_ == 21) {
@@ -3555,10 +3555,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Travel Placeholder Fields
+     * Immutable. Travel Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21;</code>
+     * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTravelFieldValue(int value) {
       fieldCase_ = 21;
@@ -3568,10 +3568,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Travel Placeholder Fields
+     * Immutable. Travel Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21;</code>
+     * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField getTravelField() {
       if (fieldCase_ == 21) {
@@ -3584,10 +3584,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Travel Placeholder Fields
+     * Immutable. Travel Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21;</code>
+     * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTravelField(com.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField value) {
       if (value == null) {
@@ -3600,10 +3600,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Travel Placeholder Fields
+     * Immutable. Travel Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21;</code>
+     * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearTravelField() {
       if (fieldCase_ == 21) {
@@ -3616,10 +3616,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Local Placeholder Fields
+     * Immutable. Local Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22;</code>
+     * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getLocalFieldValue() {
       if (fieldCase_ == 22) {
@@ -3629,10 +3629,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Local Placeholder Fields
+     * Immutable. Local Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22;</code>
+     * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setLocalFieldValue(int value) {
       fieldCase_ = 22;
@@ -3642,10 +3642,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Local Placeholder Fields
+     * Immutable. Local Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22;</code>
+     * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField getLocalField() {
       if (fieldCase_ == 22) {
@@ -3658,10 +3658,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Local Placeholder Fields
+     * Immutable. Local Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22;</code>
+     * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setLocalField(com.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField value) {
       if (value == null) {
@@ -3674,10 +3674,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Local Placeholder Fields
+     * Immutable. Local Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22;</code>
+     * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearLocalField() {
       if (fieldCase_ == 22) {
@@ -3690,10 +3690,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Job Placeholder Fields
+     * Immutable. Job Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23;</code>
+     * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getJobFieldValue() {
       if (fieldCase_ == 23) {
@@ -3703,10 +3703,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job Placeholder Fields
+     * Immutable. Job Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23;</code>
+     * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setJobFieldValue(int value) {
       fieldCase_ = 23;
@@ -3716,10 +3716,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job Placeholder Fields
+     * Immutable. Job Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23;</code>
+     * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField getJobField() {
       if (fieldCase_ == 23) {
@@ -3732,10 +3732,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job Placeholder Fields
+     * Immutable. Job Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23;</code>
+     * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setJobField(com.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField value) {
       if (value == null) {
@@ -3748,10 +3748,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job Placeholder Fields
+     * Immutable. Job Placeholder Fields
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23;</code>
+     * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearJobField() {
       if (fieldCase_ == 23) {

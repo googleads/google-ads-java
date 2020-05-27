@@ -34,28 +34,32 @@ public final class CampaignFeedProto {
       "on/matching_function.proto\0324google/ads/g" +
       "oogleads/v3/enums/feed_link_status.proto" +
       "\0324google/ads/googleads/v3/enums/placehol" +
-      "der_type.proto\032\031google/api/resource.prot" +
-      "o\032\036google/protobuf/wrappers.proto\032\034googl" +
-      "e/api/annotations.proto\"\337\003\n\014CampaignFeed" +
-      "\022\025\n\rresource_name\030\001 \001(\t\022*\n\004feed\030\002 \001(\0132\034." +
-      "google.protobuf.StringValue\022.\n\010campaign\030" +
-      "\003 \001(\0132\034.google.protobuf.StringValue\022]\n\021p" +
-      "laceholder_types\030\004 \003(\0162B.google.ads.goog" +
-      "leads.v3.enums.PlaceholderTypeEnum.Place" +
-      "holderType\022K\n\021matching_function\030\005 \001(\01320." +
-      "google.ads.googleads.v3.common.MatchingF" +
-      "unction\022P\n\006status\030\006 \001(\0162@.google.ads.goo" +
-      "gleads.v3.enums.FeedLinkStatusEnum.FeedL" +
-      "inkStatus:^\352A[\n%googleads.googleapis.com" +
-      "/CampaignFeed\0222customers/{customer}/camp" +
-      "aignFeeds/{campaign_feed}B\376\001\n%com.google" +
-      ".ads.googleads.v3.resourcesB\021CampaignFee" +
-      "dProtoP\001ZJgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v3/resources;resou" +
-      "rces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V3.Res" +
-      "ources\312\002!Google\\Ads\\GoogleAds\\V3\\Resourc" +
-      "es\352\002%Google::Ads::GoogleAds::V3::Resourc" +
-      "esb\006proto3"
+      "der_type.proto\032\037google/api/field_behavio" +
+      "r.proto\032\031google/api/resource.proto\032\036goog" +
+      "le/protobuf/wrappers.proto\032\034google/api/a" +
+      "nnotations.proto\"\345\004\n\014CampaignFeed\022D\n\rres" +
+      "ource_name\030\001 \001(\tB-\340A\005\372A\'\n%googleads.goog" +
+      "leapis.com/CampaignFeed\022Q\n\004feed\030\002 \001(\0132\034." +
+      "google.protobuf.StringValueB%\340A\005\372A\037\n\035goo" +
+      "gleads.googleapis.com/Feed\022Y\n\010campaign\030\003" +
+      " \001(\0132\034.google.protobuf.StringValueB)\340A\005\372" +
+      "A#\n!googleads.googleapis.com/Campaign\022]\n" +
+      "\021placeholder_types\030\004 \003(\0162B.google.ads.go" +
+      "ogleads.v3.enums.PlaceholderTypeEnum.Pla" +
+      "ceholderType\022K\n\021matching_function\030\005 \001(\0132" +
+      "0.google.ads.googleads.v3.common.Matchin" +
+      "gFunction\022U\n\006status\030\006 \001(\0162@.google.ads.g" +
+      "oogleads.v3.enums.FeedLinkStatusEnum.Fee" +
+      "dLinkStatusB\003\340A\003:^\352A[\n%googleads.googlea" +
+      "pis.com/CampaignFeed\0222customers/{custome" +
+      "r}/campaignFeeds/{campaign_feed}B\376\001\n%com" +
+      ".google.ads.googleads.v3.resourcesB\021Camp" +
+      "aignFeedProtoP\001ZJgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v3/resource" +
+      "s;resources\242\002\003GAA\252\002!Google.Ads.GoogleAds" +
+      ".V3.Resources\312\002!Google\\Ads\\GoogleAds\\V3\\" +
+      "Resources\352\002%Google::Ads::GoogleAds::V3::" +
+      "Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -71,6 +75,7 @@ public final class CampaignFeedProto {
           com.google.ads.googleads.v3.common.MatchingFunctionProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.FeedLinkStatusProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.PlaceholderTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -83,12 +88,15 @@ public final class CampaignFeedProto {
         new java.lang.String[] { "ResourceName", "Feed", "Campaign", "PlaceholderTypes", "MatchingFunction", "Status", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.common.MatchingFunctionProto.getDescriptor();
     com.google.ads.googleads.v3.enums.FeedLinkStatusProto.getDescriptor();
     com.google.ads.googleads.v3.enums.PlaceholderTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

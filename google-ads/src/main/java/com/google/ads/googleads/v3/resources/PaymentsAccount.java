@@ -118,6 +118,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 58: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (payingManagerCustomer_ != null) {
+              subBuilder = payingManagerCustomer_.toBuilder();
+            }
+            payingManagerCustomer_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(payingManagerCustomer_);
+              payingManagerCustomer_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -154,12 +167,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the payments account.
+   * Output only. The resource name of the payments account.
    * PaymentsAccount resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -175,12 +188,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the payments account.
+   * Output only. The resource name of the payments account.
    * PaymentsAccount resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -200,30 +213,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue paymentsAccountId_;
   /**
    * <pre>
-   * A 16 digit ID used to identify a payments account.
+   * Output only. A 16 digit ID used to identify a payments account.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+   * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasPaymentsAccountId() {
     return paymentsAccountId_ != null;
   }
   /**
    * <pre>
-   * A 16 digit ID used to identify a payments account.
+   * Output only. A 16 digit ID used to identify a payments account.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+   * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getPaymentsAccountId() {
     return paymentsAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
   }
   /**
    * <pre>
-   * A 16 digit ID used to identify a payments account.
+   * Output only. A 16 digit ID used to identify a payments account.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+   * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
     return getPaymentsAccountId();
@@ -233,30 +246,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * The name of the payments account.
+   * Output only. The name of the payments account.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * The name of the payments account.
+   * Output only. The name of the payments account.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * The name of the payments account.
+   * Output only. The name of the payments account.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
@@ -266,36 +279,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue currencyCode_;
   /**
    * <pre>
-   * The currency code of the payments account.
+   * Output only. The currency code of the payments account.
    * A subset of the currency codes derived from the ISO 4217 standard is
    * supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 4;</code>
+   * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
   /**
    * <pre>
-   * The currency code of the payments account.
+   * Output only. The currency code of the payments account.
    * A subset of the currency codes derived from the ISO 4217 standard is
    * supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 4;</code>
+   * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
   /**
    * <pre>
-   * The currency code of the payments account.
+   * Output only. The currency code of the payments account.
    * A subset of the currency codes derived from the ISO 4217 standard is
    * supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 4;</code>
+   * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
@@ -305,33 +318,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue paymentsProfileId_;
   /**
    * <pre>
-   * A 12 digit ID used to identify the payments profile associated with the
+   * Output only. A 12 digit ID used to identify the payments profile associated with the
    * payments account.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+   * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasPaymentsProfileId() {
     return paymentsProfileId_ != null;
   }
   /**
    * <pre>
-   * A 12 digit ID used to identify the payments profile associated with the
+   * Output only. A 12 digit ID used to identify the payments profile associated with the
    * payments account.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+   * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getPaymentsProfileId() {
     return paymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
   }
   /**
    * <pre>
-   * A 12 digit ID used to identify the payments profile associated with the
+   * Output only. A 12 digit ID used to identify the payments profile associated with the
    * payments account.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+   * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
     return getPaymentsProfileId();
@@ -341,36 +354,69 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue secondaryPaymentsProfileId_;
   /**
    * <pre>
-   * A secondary payments profile ID present in uncommon situations, e.g.
+   * Output only. A secondary payments profile ID present in uncommon situations, e.g.
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasSecondaryPaymentsProfileId() {
     return secondaryPaymentsProfileId_ != null;
   }
   /**
    * <pre>
-   * A secondary payments profile ID present in uncommon situations, e.g.
+   * Output only. A secondary payments profile ID present in uncommon situations, e.g.
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
     return secondaryPaymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : secondaryPaymentsProfileId_;
   }
   /**
    * <pre>
-   * A secondary payments profile ID present in uncommon situations, e.g.
+   * Output only. A secondary payments profile ID present in uncommon situations, e.g.
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+   * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder() {
     return getSecondaryPaymentsProfileId();
+  }
+
+  public static final int PAYING_MANAGER_CUSTOMER_FIELD_NUMBER = 7;
+  private com.google.protobuf.StringValue payingManagerCustomer_;
+  /**
+   * <pre>
+   * Output only. Paying manager of this payment account.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  public boolean hasPayingManagerCustomer() {
+    return payingManagerCustomer_ != null;
+  }
+  /**
+   * <pre>
+   * Output only. Paying manager of this payment account.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  public com.google.protobuf.StringValue getPayingManagerCustomer() {
+    return payingManagerCustomer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : payingManagerCustomer_;
+  }
+  /**
+   * <pre>
+   * Output only. Paying manager of this payment account.
+   * </pre>
+   *
+   * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  public com.google.protobuf.StringValueOrBuilder getPayingManagerCustomerOrBuilder() {
+    return getPayingManagerCustomer();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -405,6 +451,9 @@ private static final long serialVersionUID = 0L;
     if (secondaryPaymentsProfileId_ != null) {
       output.writeMessage(6, getSecondaryPaymentsProfileId());
     }
+    if (payingManagerCustomer_ != null) {
+      output.writeMessage(7, getPayingManagerCustomer());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -436,6 +485,10 @@ private static final long serialVersionUID = 0L;
     if (secondaryPaymentsProfileId_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getSecondaryPaymentsProfileId());
+    }
+    if (payingManagerCustomer_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getPayingManagerCustomer());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -479,6 +532,11 @@ private static final long serialVersionUID = 0L;
       if (!getSecondaryPaymentsProfileId()
           .equals(other.getSecondaryPaymentsProfileId())) return false;
     }
+    if (hasPayingManagerCustomer() != other.hasPayingManagerCustomer()) return false;
+    if (hasPayingManagerCustomer()) {
+      if (!getPayingManagerCustomer()
+          .equals(other.getPayingManagerCustomer())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -511,6 +569,10 @@ private static final long serialVersionUID = 0L;
     if (hasSecondaryPaymentsProfileId()) {
       hash = (37 * hash) + SECONDARY_PAYMENTS_PROFILE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSecondaryPaymentsProfileId().hashCode();
+    }
+    if (hasPayingManagerCustomer()) {
+      hash = (37 * hash) + PAYING_MANAGER_CUSTOMER_FIELD_NUMBER;
+      hash = (53 * hash) + getPayingManagerCustomer().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -681,6 +743,12 @@ private static final long serialVersionUID = 0L;
         secondaryPaymentsProfileId_ = null;
         secondaryPaymentsProfileIdBuilder_ = null;
       }
+      if (payingManagerCustomerBuilder_ == null) {
+        payingManagerCustomer_ = null;
+      } else {
+        payingManagerCustomer_ = null;
+        payingManagerCustomerBuilder_ = null;
+      }
       return this;
     }
 
@@ -732,6 +800,11 @@ private static final long serialVersionUID = 0L;
         result.secondaryPaymentsProfileId_ = secondaryPaymentsProfileId_;
       } else {
         result.secondaryPaymentsProfileId_ = secondaryPaymentsProfileIdBuilder_.build();
+      }
+      if (payingManagerCustomerBuilder_ == null) {
+        result.payingManagerCustomer_ = payingManagerCustomer_;
+      } else {
+        result.payingManagerCustomer_ = payingManagerCustomerBuilder_.build();
       }
       onBuilt();
       return result;
@@ -800,6 +873,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasSecondaryPaymentsProfileId()) {
         mergeSecondaryPaymentsProfileId(other.getSecondaryPaymentsProfileId());
       }
+      if (other.hasPayingManagerCustomer()) {
+        mergePayingManagerCustomer(other.getPayingManagerCustomer());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -832,12 +908,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the payments account.
+     * Output only. The resource name of the payments account.
      * PaymentsAccount resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -853,12 +929,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account.
+     * Output only. The resource name of the payments account.
      * PaymentsAccount resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -875,12 +951,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account.
+     * Output only. The resource name of the payments account.
      * PaymentsAccount resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -894,12 +970,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account.
+     * Output only. The resource name of the payments account.
      * PaymentsAccount resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -909,12 +985,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account.
+     * Output only. The resource name of the payments account.
      * PaymentsAccount resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -933,20 +1009,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountIdBuilder_;
     /**
      * <pre>
-     * A 16 digit ID used to identify a payments account.
+     * Output only. A 16 digit ID used to identify a payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPaymentsAccountId() {
       return paymentsAccountIdBuilder_ != null || paymentsAccountId_ != null;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a payments account.
+     * Output only. A 16 digit ID used to identify a payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPaymentsAccountId() {
       if (paymentsAccountIdBuilder_ == null) {
@@ -957,10 +1033,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a payments account.
+     * Output only. A 16 digit ID used to identify a payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPaymentsAccountId(com.google.protobuf.StringValue value) {
       if (paymentsAccountIdBuilder_ == null) {
@@ -977,10 +1053,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a payments account.
+     * Output only. A 16 digit ID used to identify a payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPaymentsAccountId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -995,10 +1071,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a payments account.
+     * Output only. A 16 digit ID used to identify a payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePaymentsAccountId(com.google.protobuf.StringValue value) {
       if (paymentsAccountIdBuilder_ == null) {
@@ -1017,10 +1093,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a payments account.
+     * Output only. A 16 digit ID used to identify a payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPaymentsAccountId() {
       if (paymentsAccountIdBuilder_ == null) {
@@ -1035,10 +1111,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a payments account.
+     * Output only. A 16 digit ID used to identify a payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getPaymentsAccountIdBuilder() {
       
@@ -1047,10 +1123,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a payments account.
+     * Output only. A 16 digit ID used to identify a payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
       if (paymentsAccountIdBuilder_ != null) {
@@ -1062,10 +1138,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 16 digit ID used to identify a payments account.
+     * Output only. A 16 digit ID used to identify a payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1086,20 +1162,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * The name of the payments account.
+     * Output only. The name of the payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * The name of the payments account.
+     * Output only. The name of the payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1110,10 +1186,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the payments account.
+     * Output only. The name of the payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1130,10 +1206,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the payments account.
+     * Output only. The name of the payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1148,10 +1224,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the payments account.
+     * Output only. The name of the payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1170,10 +1246,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the payments account.
+     * Output only. The name of the payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -1188,10 +1264,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the payments account.
+     * Output only. The name of the payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -1200,10 +1276,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the payments account.
+     * Output only. The name of the payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -1215,10 +1291,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the payments account.
+     * Output only. The name of the payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 3;</code>
+     * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1239,24 +1315,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyCodeBuilder_;
     /**
      * <pre>
-     * The currency code of the payments account.
+     * Output only. The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 4;</code>
+     * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCurrencyCode() {
       return currencyCodeBuilder_ != null || currencyCode_ != null;
     }
     /**
      * <pre>
-     * The currency code of the payments account.
+     * Output only. The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 4;</code>
+     * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -1267,12 +1343,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the payments account.
+     * Output only. The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 4;</code>
+     * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCurrencyCode(com.google.protobuf.StringValue value) {
       if (currencyCodeBuilder_ == null) {
@@ -1289,12 +1365,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the payments account.
+     * Output only. The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 4;</code>
+     * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCurrencyCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1309,12 +1385,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the payments account.
+     * Output only. The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 4;</code>
+     * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCurrencyCode(com.google.protobuf.StringValue value) {
       if (currencyCodeBuilder_ == null) {
@@ -1333,12 +1409,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the payments account.
+     * Output only. The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 4;</code>
+     * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -1353,12 +1429,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the payments account.
+     * Output only. The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 4;</code>
+     * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getCurrencyCodeBuilder() {
       
@@ -1367,12 +1443,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the payments account.
+     * Output only. The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 4;</code>
+     * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
       if (currencyCodeBuilder_ != null) {
@@ -1384,12 +1460,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency code of the payments account.
+     * Output only. The currency code of the payments account.
      * A subset of the currency codes derived from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 4;</code>
+     * <code>.google.protobuf.StringValue currency_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1410,22 +1486,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileIdBuilder_;
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPaymentsProfileId() {
       return paymentsProfileIdBuilder_ != null || paymentsProfileId_ != null;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPaymentsProfileId() {
       if (paymentsProfileIdBuilder_ == null) {
@@ -1436,11 +1512,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPaymentsProfileId(com.google.protobuf.StringValue value) {
       if (paymentsProfileIdBuilder_ == null) {
@@ -1457,11 +1533,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPaymentsProfileId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1476,11 +1552,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePaymentsProfileId(com.google.protobuf.StringValue value) {
       if (paymentsProfileIdBuilder_ == null) {
@@ -1499,11 +1575,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPaymentsProfileId() {
       if (paymentsProfileIdBuilder_ == null) {
@@ -1518,11 +1594,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getPaymentsProfileIdBuilder() {
       
@@ -1531,11 +1607,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
       if (paymentsProfileIdBuilder_ != null) {
@@ -1547,11 +1623,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A 12 digit ID used to identify the payments profile associated with the
+     * Output only. A 12 digit ID used to identify the payments profile associated with the
      * payments account.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1572,22 +1648,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> secondaryPaymentsProfileIdBuilder_;
     /**
      * <pre>
-     * A secondary payments profile ID present in uncommon situations, e.g.
+     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSecondaryPaymentsProfileId() {
       return secondaryPaymentsProfileIdBuilder_ != null || secondaryPaymentsProfileId_ != null;
     }
     /**
      * <pre>
-     * A secondary payments profile ID present in uncommon situations, e.g.
+     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
       if (secondaryPaymentsProfileIdBuilder_ == null) {
@@ -1598,11 +1674,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary payments profile ID present in uncommon situations, e.g.
+     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSecondaryPaymentsProfileId(com.google.protobuf.StringValue value) {
       if (secondaryPaymentsProfileIdBuilder_ == null) {
@@ -1619,11 +1695,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary payments profile ID present in uncommon situations, e.g.
+     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSecondaryPaymentsProfileId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1638,11 +1714,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary payments profile ID present in uncommon situations, e.g.
+     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeSecondaryPaymentsProfileId(com.google.protobuf.StringValue value) {
       if (secondaryPaymentsProfileIdBuilder_ == null) {
@@ -1661,11 +1737,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary payments profile ID present in uncommon situations, e.g.
+     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSecondaryPaymentsProfileId() {
       if (secondaryPaymentsProfileIdBuilder_ == null) {
@@ -1680,11 +1756,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary payments profile ID present in uncommon situations, e.g.
+     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getSecondaryPaymentsProfileIdBuilder() {
       
@@ -1693,11 +1769,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary payments profile ID present in uncommon situations, e.g.
+     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder() {
       if (secondaryPaymentsProfileIdBuilder_ != null) {
@@ -1709,11 +1785,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A secondary payments profile ID present in uncommon situations, e.g.
+     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1727,6 +1803,159 @@ private static final long serialVersionUID = 0L;
         secondaryPaymentsProfileId_ = null;
       }
       return secondaryPaymentsProfileIdBuilder_;
+    }
+
+    private com.google.protobuf.StringValue payingManagerCustomer_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> payingManagerCustomerBuilder_;
+    /**
+     * <pre>
+     * Output only. Paying manager of this payment account.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public boolean hasPayingManagerCustomer() {
+      return payingManagerCustomerBuilder_ != null || payingManagerCustomer_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. Paying manager of this payment account.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.protobuf.StringValue getPayingManagerCustomer() {
+      if (payingManagerCustomerBuilder_ == null) {
+        return payingManagerCustomer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : payingManagerCustomer_;
+      } else {
+        return payingManagerCustomerBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Paying manager of this payment account.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setPayingManagerCustomer(com.google.protobuf.StringValue value) {
+      if (payingManagerCustomerBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        payingManagerCustomer_ = value;
+        onChanged();
+      } else {
+        payingManagerCustomerBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Paying manager of this payment account.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setPayingManagerCustomer(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (payingManagerCustomerBuilder_ == null) {
+        payingManagerCustomer_ = builderForValue.build();
+        onChanged();
+      } else {
+        payingManagerCustomerBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Paying manager of this payment account.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergePayingManagerCustomer(com.google.protobuf.StringValue value) {
+      if (payingManagerCustomerBuilder_ == null) {
+        if (payingManagerCustomer_ != null) {
+          payingManagerCustomer_ =
+            com.google.protobuf.StringValue.newBuilder(payingManagerCustomer_).mergeFrom(value).buildPartial();
+        } else {
+          payingManagerCustomer_ = value;
+        }
+        onChanged();
+      } else {
+        payingManagerCustomerBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Paying manager of this payment account.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearPayingManagerCustomer() {
+      if (payingManagerCustomerBuilder_ == null) {
+        payingManagerCustomer_ = null;
+        onChanged();
+      } else {
+        payingManagerCustomer_ = null;
+        payingManagerCustomerBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Paying manager of this payment account.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getPayingManagerCustomerBuilder() {
+      
+      onChanged();
+      return getPayingManagerCustomerFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. Paying manager of this payment account.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getPayingManagerCustomerOrBuilder() {
+      if (payingManagerCustomerBuilder_ != null) {
+        return payingManagerCustomerBuilder_.getMessageOrBuilder();
+      } else {
+        return payingManagerCustomer_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : payingManagerCustomer_;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Paying manager of this payment account.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue paying_manager_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getPayingManagerCustomerFieldBuilder() {
+      if (payingManagerCustomerBuilder_ == null) {
+        payingManagerCustomerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getPayingManagerCustomer(),
+                getParentForChildren(),
+                isClean());
+        payingManagerCustomer_ = null;
+      }
+      return payingManagerCustomerBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

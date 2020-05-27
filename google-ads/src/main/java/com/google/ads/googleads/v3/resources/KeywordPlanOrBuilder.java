@@ -9,48 +9,48 @@ public interface KeywordPlanOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the Keyword Planner plan.
+   * Immutable. The resource name of the Keyword Planner plan.
    * KeywordPlan resource names have the form:
    * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the Keyword Planner plan.
+   * Immutable. The resource name of the Keyword Planner plan.
    * KeywordPlan resource names have the form:
    * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the keyword plan.
+   * Output only. The ID of the keyword plan.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the keyword plan.
+   * Output only. The ID of the keyword plan.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the keyword plan.
+   * Output only. The ID of the keyword plan.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 

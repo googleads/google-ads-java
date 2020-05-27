@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Pay per guest stay value. This mode is only supported by campaigns with
      * AdvertisingChannelType.HOTEL, BiddingStrategyType.COMMISSION, and
-     * BudgetType.HOTEL_ADS_COMMISSION.
+     * BudgetType.STANDARD.
      * </pre>
      *
      * <code>GUEST_STAY = 7;</code>
@@ -195,7 +195,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Pay per guest stay value. This mode is only supported by campaigns with
      * AdvertisingChannelType.HOTEL, BiddingStrategyType.COMMISSION, and
-     * BudgetType.HOTEL_ADS_COMMISSION.
+     * BudgetType.STANDARD.
      * </pre>
      *
      * <code>GUEST_STAY = 7;</code>

@@ -178,12 +178,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the campaign bid modifier.
+   * Immutable. The resource name of the campaign bid modifier.
    * Campaign bid modifier resource names have the form:
    * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -199,12 +199,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the campaign bid modifier.
+   * Immutable. The resource name of the campaign bid modifier.
    * Campaign bid modifier resource names have the form:
    * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -224,30 +224,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue campaign_;
   /**
    * <pre>
-   * The campaign to which this criterion belongs.
+   * Output only. The campaign to which this criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 2;</code>
+   * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasCampaign() {
     return campaign_ != null;
   }
   /**
    * <pre>
-   * The campaign to which this criterion belongs.
+   * Output only. The campaign to which this criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 2;</code>
+   * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getCampaign() {
     return campaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaign_;
   }
   /**
    * <pre>
-   * The campaign to which this criterion belongs.
+   * Output only. The campaign to which this criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 2;</code>
+   * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     return getCampaign();
@@ -257,33 +257,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value criterionId_;
   /**
    * <pre>
-   * The ID of the criterion to bid modify.
+   * Output only. The ID of the criterion to bid modify.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCriterionId() {
     return criterionId_ != null;
   }
   /**
    * <pre>
-   * The ID of the criterion to bid modify.
+   * Output only. The ID of the criterion to bid modify.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getCriterionId() {
     return criterionId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : criterionId_;
   }
   /**
    * <pre>
-   * The ID of the criterion to bid modify.
+   * Output only. The ID of the criterion to bid modify.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder() {
     return getCriterionId();
@@ -325,20 +325,20 @@ private static final long serialVersionUID = 0L;
   public static final int INTERACTION_TYPE_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * Criterion for interaction type. Only supported for search campaigns.
+   * Immutable. Criterion for interaction type. Only supported for search campaigns.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+   * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasInteractionType() {
     return criterionCase_ == 5;
   }
   /**
    * <pre>
-   * Criterion for interaction type. Only supported for search campaigns.
+   * Immutable. Criterion for interaction type. Only supported for search campaigns.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+   * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.InteractionTypeInfo getInteractionType() {
     if (criterionCase_ == 5) {
@@ -348,10 +348,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Criterion for interaction type. Only supported for search campaigns.
+   * Immutable. Criterion for interaction type. Only supported for search campaigns.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+   * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.InteractionTypeInfoOrBuilder getInteractionTypeOrBuilder() {
     if (criterionCase_ == 5) {
@@ -817,12 +817,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the campaign bid modifier.
+     * Immutable. The resource name of the campaign bid modifier.
      * Campaign bid modifier resource names have the form:
      * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -838,12 +838,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign bid modifier.
+     * Immutable. The resource name of the campaign bid modifier.
      * Campaign bid modifier resource names have the form:
      * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -860,12 +860,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign bid modifier.
+     * Immutable. The resource name of the campaign bid modifier.
      * Campaign bid modifier resource names have the form:
      * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -879,12 +879,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign bid modifier.
+     * Immutable. The resource name of the campaign bid modifier.
      * Campaign bid modifier resource names have the form:
      * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -894,12 +894,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign bid modifier.
+     * Immutable. The resource name of the campaign bid modifier.
      * Campaign bid modifier resource names have the form:
      * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -918,20 +918,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> campaignBuilder_;
     /**
      * <pre>
-     * The campaign to which this criterion belongs.
+     * Output only. The campaign to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasCampaign() {
       return campaignBuilder_ != null || campaign_ != null;
     }
     /**
      * <pre>
-     * The campaign to which this criterion belongs.
+     * Output only. The campaign to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getCampaign() {
       if (campaignBuilder_ == null) {
@@ -942,10 +942,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which this criterion belongs.
+     * Output only. The campaign to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -962,10 +962,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which this criterion belongs.
+     * Output only. The campaign to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaign(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -980,10 +980,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which this criterion belongs.
+     * Output only. The campaign to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeCampaign(com.google.protobuf.StringValue value) {
       if (campaignBuilder_ == null) {
@@ -1002,10 +1002,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which this criterion belongs.
+     * Output only. The campaign to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearCampaign() {
       if (campaignBuilder_ == null) {
@@ -1020,10 +1020,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which this criterion belongs.
+     * Output only. The campaign to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getCampaignBuilder() {
       
@@ -1032,10 +1032,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which this criterion belongs.
+     * Output only. The campaign to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
       if (campaignBuilder_ != null) {
@@ -1047,10 +1047,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The campaign to which this criterion belongs.
+     * Output only. The campaign to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign = 2;</code>
+     * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1071,22 +1071,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> criterionIdBuilder_;
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCriterionId() {
       return criterionIdBuilder_ != null || criterionId_ != null;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getCriterionId() {
       if (criterionIdBuilder_ == null) {
@@ -1097,11 +1097,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCriterionId(com.google.protobuf.Int64Value value) {
       if (criterionIdBuilder_ == null) {
@@ -1118,11 +1118,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCriterionId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1137,11 +1137,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCriterionId(com.google.protobuf.Int64Value value) {
       if (criterionIdBuilder_ == null) {
@@ -1160,11 +1160,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCriterionId() {
       if (criterionIdBuilder_ == null) {
@@ -1179,11 +1179,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getCriterionIdBuilder() {
       
@@ -1192,11 +1192,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder() {
       if (criterionIdBuilder_ != null) {
@@ -1208,11 +1208,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1385,20 +1385,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.InteractionTypeInfo, com.google.ads.googleads.v3.common.InteractionTypeInfo.Builder, com.google.ads.googleads.v3.common.InteractionTypeInfoOrBuilder> interactionTypeBuilder_;
     /**
      * <pre>
-     * Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search campaigns.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasInteractionType() {
       return criterionCase_ == 5;
     }
     /**
      * <pre>
-     * Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search campaigns.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.InteractionTypeInfo getInteractionType() {
       if (interactionTypeBuilder_ == null) {
@@ -1415,10 +1415,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search campaigns.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setInteractionType(com.google.ads.googleads.v3.common.InteractionTypeInfo value) {
       if (interactionTypeBuilder_ == null) {
@@ -1435,10 +1435,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search campaigns.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setInteractionType(
         com.google.ads.googleads.v3.common.InteractionTypeInfo.Builder builderForValue) {
@@ -1453,10 +1453,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search campaigns.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeInteractionType(com.google.ads.googleads.v3.common.InteractionTypeInfo value) {
       if (interactionTypeBuilder_ == null) {
@@ -1479,10 +1479,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search campaigns.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearInteractionType() {
       if (interactionTypeBuilder_ == null) {
@@ -1502,20 +1502,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search campaigns.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.InteractionTypeInfo.Builder getInteractionTypeBuilder() {
       return getInteractionTypeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search campaigns.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.InteractionTypeInfoOrBuilder getInteractionTypeOrBuilder() {
       if ((criterionCase_ == 5) && (interactionTypeBuilder_ != null)) {
@@ -1529,10 +1529,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search campaigns.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5;</code>
+     * <code>.google.ads.googleads.v3.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.InteractionTypeInfo, com.google.ads.googleads.v3.common.InteractionTypeInfo.Builder, com.google.ads.googleads.v3.common.InteractionTypeInfoOrBuilder> 

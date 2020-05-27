@@ -9,26 +9,26 @@ public interface MediaAudioOrBuilder extends
 
   /**
    * <pre>
-   * The duration of the Audio in milliseconds.
+   * Output only. The duration of the Audio in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+   * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasAdDurationMillis();
   /**
    * <pre>
-   * The duration of the Audio in milliseconds.
+   * Output only. The duration of the Audio in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+   * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getAdDurationMillis();
   /**
    * <pre>
-   * The duration of the Audio in milliseconds.
+   * Output only. The duration of the Audio in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+   * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getAdDurationMillisOrBuilder();
 }

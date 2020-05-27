@@ -31,7 +31,7 @@ public final class ManagerLinkErrorProto {
       "\n7google/ads/googleads/v3/errors/manager" +
       "_link_error.proto\022\036google.ads.googleads." +
       "v3.errors\032\034google/api/annotations.proto\"" +
-      "\226\004\n\024ManagerLinkErrorEnum\"\375\003\n\020ManagerLink" +
+      "\305\004\n\024ManagerLinkErrorEnum\"\254\004\n\020ManagerLink" +
       "Error\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\'\n#A" +
       "CCOUNTS_NOT_COMPATIBLE_FOR_LINKING\020\002\022\025\n\021" +
       "TOO_MANY_MANAGERS\020\003\022\024\n\020TOO_MANY_INVITES\020" +
@@ -44,13 +44,14 @@ public final class ManagerLinkErrorProto {
       "TOO_MANY_ACCOUNTS_AT_MANAGER\020\r\022%\n!NON_OW" +
       "NER_USER_CANNOT_MODIFY_LINK\020\016\022(\n$SUSPEND" +
       "ED_ACCOUNT_CANNOT_ADD_CLIENTS\020\017\022\027\n\023CLIEN" +
-      "T_OUTSIDE_TREE\020\020B\360\001\n\"com.google.ads.goog" +
-      "leads.v3.errorsB\025ManagerLinkErrorProtoP\001" +
-      "ZDgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v3/errors;errors\242\002\003GAA\252\002\036G" +
-      "oogle.Ads.GoogleAds.V3.Errors\312\002\036Google\\A" +
-      "ds\\GoogleAds\\V3\\Errors\352\002\"Google::Ads::Go" +
-      "ogleAds::V3::Errorsb\006proto3"
+      "T_OUTSIDE_TREE\020\020\022\031\n\025INVALID_STATUS_CHANG" +
+      "E\020\021\022\022\n\016INVALID_CHANGE\020\022B\360\001\n\"com.google.a" +
+      "ds.googleads.v3.errorsB\025ManagerLinkError" +
+      "ProtoP\001ZDgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v3/errors;errors\242\002\003" +
+      "GAA\252\002\036Google.Ads.GoogleAds.V3.Errors\312\002\036G" +
+      "oogle\\Ads\\GoogleAds\\V3\\Errors\352\002\"Google::" +
+      "Ads::GoogleAds::V3::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

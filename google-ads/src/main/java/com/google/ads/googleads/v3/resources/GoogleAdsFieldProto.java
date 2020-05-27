@@ -33,38 +33,41 @@ public final class GoogleAdsFieldProto {
       ".v3.resources\032=google/ads/googleads/v3/e" +
       "nums/google_ads_field_category.proto\032>go" +
       "ogle/ads/googleads/v3/enums/google_ads_f" +
-      "ield_data_type.proto\032\031google/api/resourc" +
-      "e.proto\032\036google/protobuf/wrappers.proto\032" +
-      "\034google/api/annotations.proto\"\341\006\n\016Google" +
-      "AdsField\022\025\n\rresource_name\030\001 \001(\t\022*\n\004name\030" +
-      "\002 \001(\0132\034.google.protobuf.StringValue\022b\n\010c" +
-      "ategory\030\003 \001(\0162P.google.ads.googleads.v3." +
-      "enums.GoogleAdsFieldCategoryEnum.GoogleA" +
-      "dsFieldCategory\022.\n\nselectable\030\004 \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022.\n\nfilterable\030\005 " +
-      "\001(\0132\032.google.protobuf.BoolValue\022,\n\010sorta" +
-      "ble\030\006 \001(\0132\032.google.protobuf.BoolValue\0225\n" +
-      "\017selectable_with\030\007 \003(\0132\034.google.protobuf" +
-      ".StringValue\0229\n\023attribute_resources\030\010 \003(" +
-      "\0132\034.google.protobuf.StringValue\022-\n\007metri" +
-      "cs\030\t \003(\0132\034.google.protobuf.StringValue\022." +
-      "\n\010segments\030\n \003(\0132\034.google.protobuf.Strin" +
-      "gValue\0221\n\013enum_values\030\013 \003(\0132\034.google.pro" +
-      "tobuf.StringValue\022c\n\tdata_type\030\014 \001(\0162P.g" +
-      "oogle.ads.googleads.v3.enums.GoogleAdsFi" +
-      "eldDataTypeEnum.GoogleAdsFieldDataType\022." +
-      "\n\010type_url\030\r \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022/\n\013is_repeated\030\016 \001(\0132\032.google.pro" +
-      "tobuf.BoolValue:P\352AM\n\'googleads.googleap" +
-      "is.com/GoogleAdsField\022\"googleAdsFields/{" +
-      "google_ads_field}B\200\002\n%com.google.ads.goo" +
-      "gleads.v3.resourcesB\023GoogleAdsFieldProto" +
-      "P\001ZJgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v3/resources;resources\242\002" +
-      "\003GAA\252\002!Google.Ads.GoogleAds.V3.Resources" +
-      "\312\002!Google\\Ads\\GoogleAds\\V3\\Resources\352\002%G" +
-      "oogle::Ads::GoogleAds::V3::Resourcesb\006pr" +
-      "oto3"
+      "ield_data_type.proto\032\037google/api/field_b" +
+      "ehavior.proto\032\031google/api/resource.proto" +
+      "\032\036google/protobuf/wrappers.proto\032\034google" +
+      "/api/annotations.proto\"\323\007\n\016GoogleAdsFiel" +
+      "d\022F\n\rresource_name\030\001 \001(\tB/\340A\003\372A)\n\'google" +
+      "ads.googleapis.com/GoogleAdsField\022/\n\004nam" +
+      "e\030\002 \001(\0132\034.google.protobuf.StringValueB\003\340" +
+      "A\003\022g\n\010category\030\003 \001(\0162P.google.ads.google" +
+      "ads.v3.enums.GoogleAdsFieldCategoryEnum." +
+      "GoogleAdsFieldCategoryB\003\340A\003\0223\n\nselectabl" +
+      "e\030\004 \001(\0132\032.google.protobuf.BoolValueB\003\340A\003" +
+      "\0223\n\nfilterable\030\005 \001(\0132\032.google.protobuf.B" +
+      "oolValueB\003\340A\003\0221\n\010sortable\030\006 \001(\0132\032.google" +
+      ".protobuf.BoolValueB\003\340A\003\022:\n\017selectable_w" +
+      "ith\030\007 \003(\0132\034.google.protobuf.StringValueB" +
+      "\003\340A\003\022>\n\023attribute_resources\030\010 \003(\0132\034.goog" +
+      "le.protobuf.StringValueB\003\340A\003\0222\n\007metrics\030" +
+      "\t \003(\0132\034.google.protobuf.StringValueB\003\340A\003" +
+      "\0223\n\010segments\030\n \003(\0132\034.google.protobuf.Str" +
+      "ingValueB\003\340A\003\0226\n\013enum_values\030\013 \003(\0132\034.goo" +
+      "gle.protobuf.StringValueB\003\340A\003\022h\n\tdata_ty" +
+      "pe\030\014 \001(\0162P.google.ads.googleads.v3.enums" +
+      ".GoogleAdsFieldDataTypeEnum.GoogleAdsFie" +
+      "ldDataTypeB\003\340A\003\0223\n\010type_url\030\r \001(\0132\034.goog" +
+      "le.protobuf.StringValueB\003\340A\003\0224\n\013is_repea" +
+      "ted\030\016 \001(\0132\032.google.protobuf.BoolValueB\003\340" +
+      "A\003:P\352AM\n\'googleads.googleapis.com/Google" +
+      "AdsField\022\"googleAdsFields/{google_ads_fi" +
+      "eld}B\200\002\n%com.google.ads.googleads.v3.res" +
+      "ourcesB\023GoogleAdsFieldProtoP\001ZJgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v3/resources;resources\242\002\003GAA\252\002!Google" +
+      ".Ads.GoogleAds.V3.Resources\312\002!Google\\Ads" +
+      "\\GoogleAds\\V3\\Resources\352\002%Google::Ads::G" +
+      "oogleAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -79,6 +82,7 @@ public final class GoogleAdsFieldProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryProto.getDescriptor(),
           com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -91,11 +95,14 @@ public final class GoogleAdsFieldProto {
         new java.lang.String[] { "ResourceName", "Name", "Category", "Selectable", "Filterable", "Sortable", "SelectableWith", "AttributeResources", "Metrics", "Segments", "EnumValues", "DataType", "TypeUrl", "IsRepeated", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.GoogleAdsFieldCategoryProto.getDescriptor();
     com.google.ads.googleads.v3.enums.GoogleAdsFieldDataTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

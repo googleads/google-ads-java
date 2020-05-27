@@ -174,6 +174,21 @@ public class LoggingInterceptorTest {
     runDefaultCall();
   }
 
+  /** Ensures that the CID is extracted from requests where it's present in the resource name. */
+  @Test
+  public void logsCustomerId_fromResourceName() {
+    request =
+        new Object() {
+          // This method is accessed using reflection in the logging impl.
+          @SuppressWarnings("unused")
+          public String getResourceName() {
+            return "dummyResourceName";
+          }
+        };
+    customerId = "dummyResourceName";
+    runDefaultCall();
+  }
+
   /** Ensures that can read the requestID from trailers. */
   @Test
   public void canReadRequestIdFromTrailers() {

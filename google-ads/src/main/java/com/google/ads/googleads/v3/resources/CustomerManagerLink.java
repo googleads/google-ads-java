@@ -122,12 +122,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * CustomerManagerLink resource names have the form:
    * `customers/{customer_id}/customerManagerLinks/{manager_customer_id}~{manager_link_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -143,12 +143,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * CustomerManagerLink resource names have the form:
    * `customers/{customer_id}/customerManagerLinks/{manager_customer_id}~{manager_link_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -168,30 +168,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue managerCustomer_;
   /**
    * <pre>
-   * The manager customer linked to the customer.
+   * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+   * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasManagerCustomer() {
     return managerCustomer_ != null;
   }
   /**
    * <pre>
-   * The manager customer linked to the customer.
+   * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+   * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getManagerCustomer() {
     return managerCustomer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : managerCustomer_;
   }
   /**
    * <pre>
-   * The manager customer linked to the customer.
+   * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+   * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getManagerCustomerOrBuilder() {
     return getManagerCustomer();
@@ -201,30 +201,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value managerLinkId_;
   /**
    * <pre>
-   * ID of the customer-manager link. This field is read only.
+   * Output only. ID of the customer-manager link. This field is read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+   * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasManagerLinkId() {
     return managerLinkId_ != null;
   }
   /**
    * <pre>
-   * ID of the customer-manager link. This field is read only.
+   * Output only. ID of the customer-manager link. This field is read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+   * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getManagerLinkId() {
     return managerLinkId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : managerLinkId_;
   }
   /**
    * <pre>
-   * ID of the customer-manager link. This field is read only.
+   * Output only. ID of the customer-manager link. This field is read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+   * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getManagerLinkIdOrBuilder() {
     return getManagerLinkId();
@@ -640,12 +640,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * CustomerManagerLink resource names have the form:
      * `customers/{customer_id}/customerManagerLinks/{manager_customer_id}~{manager_link_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -661,12 +661,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * CustomerManagerLink resource names have the form:
      * `customers/{customer_id}/customerManagerLinks/{manager_customer_id}~{manager_link_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -683,12 +683,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * CustomerManagerLink resource names have the form:
      * `customers/{customer_id}/customerManagerLinks/{manager_customer_id}~{manager_link_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -702,12 +702,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * CustomerManagerLink resource names have the form:
      * `customers/{customer_id}/customerManagerLinks/{manager_customer_id}~{manager_link_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -717,12 +717,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * CustomerManagerLink resource names have the form:
      * `customers/{customer_id}/customerManagerLinks/{manager_customer_id}~{manager_link_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -741,20 +741,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> managerCustomerBuilder_;
     /**
      * <pre>
-     * The manager customer linked to the customer.
+     * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+     * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasManagerCustomer() {
       return managerCustomerBuilder_ != null || managerCustomer_ != null;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer.
+     * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+     * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getManagerCustomer() {
       if (managerCustomerBuilder_ == null) {
@@ -765,10 +765,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer.
+     * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+     * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setManagerCustomer(com.google.protobuf.StringValue value) {
       if (managerCustomerBuilder_ == null) {
@@ -785,10 +785,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer.
+     * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+     * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setManagerCustomer(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -803,10 +803,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer.
+     * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+     * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeManagerCustomer(com.google.protobuf.StringValue value) {
       if (managerCustomerBuilder_ == null) {
@@ -825,10 +825,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer.
+     * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+     * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearManagerCustomer() {
       if (managerCustomerBuilder_ == null) {
@@ -843,10 +843,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer.
+     * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+     * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getManagerCustomerBuilder() {
       
@@ -855,10 +855,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer.
+     * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+     * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getManagerCustomerOrBuilder() {
       if (managerCustomerBuilder_ != null) {
@@ -870,10 +870,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The manager customer linked to the customer.
+     * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue manager_customer = 3;</code>
+     * <code>.google.protobuf.StringValue manager_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -894,20 +894,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> managerLinkIdBuilder_;
     /**
      * <pre>
-     * ID of the customer-manager link. This field is read only.
+     * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+     * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasManagerLinkId() {
       return managerLinkIdBuilder_ != null || managerLinkId_ != null;
     }
     /**
      * <pre>
-     * ID of the customer-manager link. This field is read only.
+     * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+     * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getManagerLinkId() {
       if (managerLinkIdBuilder_ == null) {
@@ -918,10 +918,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the customer-manager link. This field is read only.
+     * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+     * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setManagerLinkId(com.google.protobuf.Int64Value value) {
       if (managerLinkIdBuilder_ == null) {
@@ -938,10 +938,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the customer-manager link. This field is read only.
+     * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+     * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setManagerLinkId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -956,10 +956,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the customer-manager link. This field is read only.
+     * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+     * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeManagerLinkId(com.google.protobuf.Int64Value value) {
       if (managerLinkIdBuilder_ == null) {
@@ -978,10 +978,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the customer-manager link. This field is read only.
+     * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+     * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearManagerLinkId() {
       if (managerLinkIdBuilder_ == null) {
@@ -996,10 +996,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the customer-manager link. This field is read only.
+     * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+     * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getManagerLinkIdBuilder() {
       
@@ -1008,10 +1008,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the customer-manager link. This field is read only.
+     * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+     * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getManagerLinkIdOrBuilder() {
       if (managerLinkIdBuilder_ != null) {
@@ -1023,10 +1023,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of the customer-manager link. This field is read only.
+     * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value manager_link_id = 4;</code>
+     * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

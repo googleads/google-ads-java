@@ -18,20 +18,20 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.services.AdGroupCriterionOperation;
 import com.google.ads.googleads.v3.services.AdGroupCriterionServiceClient;
 import com.google.ads.googleads.v3.services.MutateAdGroupCriteriaResponse;
 import com.google.ads.googleads.v3.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v3.utils.ResourceNames;
 import com.google.common.collect.Lists;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Deletes a keyword as an ad group criterion using the 'REMOVE' operation. To get
- * keyword, run GetKeywords.java.
+ * Deletes a keyword as an ad group criterion using the 'REMOVE' operation. To get keyword, run
+ * GetKeywords.java.
  */
 public class RemoveKeyword {
 
@@ -101,7 +101,8 @@ public class RemoveKeyword {
       GoogleAdsClient googleAdsClient, long customerId, long adGroupId, long criterionId) {
     try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
         googleAdsClient.getLatestVersion().createAdGroupCriterionServiceClient()) {
-      String adGroupCriterionResourceName = ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId);
+      String adGroupCriterionResourceName =
+          ResourceNames.adGroupCriterion(customerId, adGroupId, criterionId);
 
       // Constructs an operation that will remove the keyword with the specified resource name.
       AdGroupCriterionOperation operation =

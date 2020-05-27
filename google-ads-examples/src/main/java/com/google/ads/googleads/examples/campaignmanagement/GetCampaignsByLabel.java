@@ -18,8 +18,8 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.services.GoogleAdsRow;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient.SearchPagedResponse;
@@ -36,7 +36,6 @@ public class GetCampaignsByLabel {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
-
 
     @Parameter(names = ArgumentNames.LABEL_ID, required = true)
     private Long labelId;
@@ -57,7 +56,7 @@ public class GetCampaignsByLabel {
       googleAdsClient = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
     } catch (FileNotFoundException fnfe) {
       System.err.printf(
-        "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
+          "Failed to load GoogleAdsClient configuration from file. Exception: %s%n", fnfe);
       return;
     } catch (IOException ioe) {
       System.err.printf("Failed to create GoogleAdsClient. Exception: %s%n", ioe);
@@ -72,8 +71,8 @@ public class GetCampaignsByLabel {
       // collection of GoogleAdsErrors that indicate the underlying causes of the
       // GoogleAdsException.
       System.err.printf(
-        "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
-        gae.getRequestId());
+          "Request ID %s failed due to GoogleAdsException. Underlying errors:%n",
+          gae.getRequestId());
       int i = 0;
       for (GoogleAdsError googleAdsError : gae.getGoogleAdsFailure().getErrorsList()) {
         System.err.printf("  Error %d: %s%n", i++, googleAdsError);
@@ -91,16 +90,19 @@ public class GetCampaignsByLabel {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long labelId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
-           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Creates a request that will retrieve all campaign labels with the specified
       // labelId using pages of the specified page size.
       SearchGoogleAdsRequest request =
-        SearchGoogleAdsRequest.newBuilder()
-          .setCustomerId(Long.toString(customerId))
-          .setPageSize(PAGE_SIZE)
-          .setQuery("SELECT campaign.id, campaign.name, label.id, label.name " +
-            "FROM campaign_label WHERE label.id = " + labelId + " ORDER BY campaign.id")
-          .build();
+          SearchGoogleAdsRequest.newBuilder()
+              .setCustomerId(Long.toString(customerId))
+              .setPageSize(PAGE_SIZE)
+              .setQuery(
+                  "SELECT campaign.id, campaign.name, label.id, label.name "
+                      + "FROM campaign_label WHERE label.id = "
+                      + labelId
+                      + " ORDER BY campaign.id")
+              .build();
       // Issues the search request.
       SearchPagedResponse searchPagedResponse = googleAdsServiceClient.search(request);
       // Checks if the total results count is greater than 0.
@@ -110,10 +112,10 @@ public class GetCampaignsByLabel {
         // objects because these were included in the search criteria.
         for (GoogleAdsRow googleAdsRow : searchPagedResponse.iterateAll()) {
           System.out.printf(
-            "Campaign found with name '%s', ID %d, and label: %s.%n",
-            googleAdsRow.getCampaign().getName().getValue(),
-            googleAdsRow.getCampaign().getId().getValue(),
-            googleAdsRow.getLabel().getName().getValue());
+              "Campaign found with name '%s', ID %d, and label: %s.%n",
+              googleAdsRow.getCampaign().getName().getValue(),
+              googleAdsRow.getCampaign().getId().getValue(),
+              googleAdsRow.getLabel().getName().getValue());
         }
       } else {
         System.out.println("No campaigns were found.");

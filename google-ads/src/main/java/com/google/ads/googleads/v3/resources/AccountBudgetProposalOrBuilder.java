@@ -9,511 +9,511 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the proposal.
+   * Immutable. The resource name of the proposal.
    * AccountBudgetProposal resource names have the form:
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the proposal.
+   * Immutable. The resource name of the proposal.
    * AccountBudgetProposal resource names have the form:
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the proposal.
+   * Output only. The ID of the proposal.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 14;</code>
+   * <code>.google.protobuf.Int64Value id = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the proposal.
+   * Output only. The ID of the proposal.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 14;</code>
+   * <code>.google.protobuf.Int64Value id = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the proposal.
+   * Output only. The ID of the proposal.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 14;</code>
+   * <code>.google.protobuf.Int64Value id = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * The resource name of the billing setup associated with this proposal.
+   * Immutable. The resource name of the billing setup associated with this proposal.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue billing_setup = 2;</code>
+   * <code>.google.protobuf.StringValue billing_setup = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasBillingSetup();
   /**
    * <pre>
-   * The resource name of the billing setup associated with this proposal.
+   * Immutable. The resource name of the billing setup associated with this proposal.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue billing_setup = 2;</code>
+   * <code>.google.protobuf.StringValue billing_setup = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getBillingSetup();
   /**
    * <pre>
-   * The resource name of the billing setup associated with this proposal.
+   * Immutable. The resource name of the billing setup associated with this proposal.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue billing_setup = 2;</code>
+   * <code>.google.protobuf.StringValue billing_setup = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getBillingSetupOrBuilder();
 
   /**
    * <pre>
-   * The resource name of the account-level budget associated with this
+   * Immutable. The resource name of the account-level budget associated with this
    * proposal.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue account_budget = 3;</code>
+   * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasAccountBudget();
   /**
    * <pre>
-   * The resource name of the account-level budget associated with this
+   * Immutable. The resource name of the account-level budget associated with this
    * proposal.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue account_budget = 3;</code>
+   * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getAccountBudget();
   /**
    * <pre>
-   * The resource name of the account-level budget associated with this
+   * Immutable. The resource name of the account-level budget associated with this
    * proposal.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue account_budget = 3;</code>
+   * <code>.google.protobuf.StringValue account_budget = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAccountBudgetOrBuilder();
 
   /**
    * <pre>
-   * The type of this proposal, e.g. END to end the budget associated with this
+   * Immutable. The type of this proposal, e.g. END to end the budget associated with this
    * proposal.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getProposalTypeValue();
   /**
    * <pre>
-   * The type of this proposal, e.g. END to end the budget associated with this
+   * Immutable. The type of this proposal, e.g. END to end the budget associated with this
    * proposal.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType getProposalType();
 
   /**
    * <pre>
-   * The status of this proposal.
+   * Output only. The status of this proposal.
    * When a new proposal is created, the status defaults to PENDING.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus status = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getStatusValue();
   /**
    * <pre>
-   * The status of this proposal.
+   * Output only. The status of this proposal.
    * When a new proposal is created, the status defaults to PENDING.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus status = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus getStatus();
 
   /**
    * <pre>
-   * The name to assign to the account-level budget.
+   * Immutable. The name to assign to the account-level budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_name = 5;</code>
+   * <code>.google.protobuf.StringValue proposed_name = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasProposedName();
   /**
    * <pre>
-   * The name to assign to the account-level budget.
+   * Immutable. The name to assign to the account-level budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_name = 5;</code>
+   * <code>.google.protobuf.StringValue proposed_name = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValue getProposedName();
   /**
    * <pre>
-   * The name to assign to the account-level budget.
+   * Immutable. The name to assign to the account-level budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_name = 5;</code>
+   * <code>.google.protobuf.StringValue proposed_name = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getProposedNameOrBuilder();
 
   /**
    * <pre>
-   * The approved start date time in yyyy-mm-dd hh:mm:ss format.
+   * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+   * <code>.google.protobuf.StringValue approved_start_date_time = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasApprovedStartDateTime();
   /**
    * <pre>
-   * The approved start date time in yyyy-mm-dd hh:mm:ss format.
+   * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+   * <code>.google.protobuf.StringValue approved_start_date_time = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getApprovedStartDateTime();
   /**
    * <pre>
-   * The approved start date time in yyyy-mm-dd hh:mm:ss format.
+   * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_start_date_time = 20;</code>
+   * <code>.google.protobuf.StringValue approved_start_date_time = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getApprovedStartDateTimeOrBuilder();
 
   /**
    * <pre>
-   * A purchase order number is a value that enables the user to help them
+   * Immutable. A purchase order number is a value that enables the user to help them
    * reference this budget in their monthly invoices.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_purchase_order_number = 12;</code>
+   * <code>.google.protobuf.StringValue proposed_purchase_order_number = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasProposedPurchaseOrderNumber();
   /**
    * <pre>
-   * A purchase order number is a value that enables the user to help them
+   * Immutable. A purchase order number is a value that enables the user to help them
    * reference this budget in their monthly invoices.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_purchase_order_number = 12;</code>
+   * <code>.google.protobuf.StringValue proposed_purchase_order_number = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValue getProposedPurchaseOrderNumber();
   /**
    * <pre>
-   * A purchase order number is a value that enables the user to help them
+   * Immutable. A purchase order number is a value that enables the user to help them
    * reference this budget in their monthly invoices.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_purchase_order_number = 12;</code>
+   * <code>.google.protobuf.StringValue proposed_purchase_order_number = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getProposedPurchaseOrderNumberOrBuilder();
 
   /**
    * <pre>
-   * Notes associated with this budget.
+   * Immutable. Notes associated with this budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_notes = 13;</code>
+   * <code>.google.protobuf.StringValue proposed_notes = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasProposedNotes();
   /**
    * <pre>
-   * Notes associated with this budget.
+   * Immutable. Notes associated with this budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_notes = 13;</code>
+   * <code>.google.protobuf.StringValue proposed_notes = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValue getProposedNotes();
   /**
    * <pre>
-   * Notes associated with this budget.
+   * Immutable. Notes associated with this budget.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_notes = 13;</code>
+   * <code>.google.protobuf.StringValue proposed_notes = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getProposedNotesOrBuilder();
 
   /**
    * <pre>
-   * The date time when this account-level budget proposal was created, which is
+   * Output only. The date time when this account-level budget proposal was created, which is
    * not the same as its approval date time, if applicable.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue creation_date_time = 16;</code>
+   * <code>.google.protobuf.StringValue creation_date_time = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCreationDateTime();
   /**
    * <pre>
-   * The date time when this account-level budget proposal was created, which is
+   * Output only. The date time when this account-level budget proposal was created, which is
    * not the same as its approval date time, if applicable.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue creation_date_time = 16;</code>
+   * <code>.google.protobuf.StringValue creation_date_time = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getCreationDateTime();
   /**
    * <pre>
-   * The date time when this account-level budget proposal was created, which is
+   * Output only. The date time when this account-level budget proposal was created, which is
    * not the same as its approval date time, if applicable.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue creation_date_time = 16;</code>
+   * <code>.google.protobuf.StringValue creation_date_time = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCreationDateTimeOrBuilder();
 
   /**
    * <pre>
-   * The date time when this account-level budget was approved, if applicable.
+   * Output only. The date time when this account-level budget was approved, if applicable.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approval_date_time = 17;</code>
+   * <code>.google.protobuf.StringValue approval_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasApprovalDateTime();
   /**
    * <pre>
-   * The date time when this account-level budget was approved, if applicable.
+   * Output only. The date time when this account-level budget was approved, if applicable.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approval_date_time = 17;</code>
+   * <code>.google.protobuf.StringValue approval_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getApprovalDateTime();
   /**
    * <pre>
-   * The date time when this account-level budget was approved, if applicable.
+   * Output only. The date time when this account-level budget was approved, if applicable.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approval_date_time = 17;</code>
+   * <code>.google.protobuf.StringValue approval_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getApprovalDateTimeOrBuilder();
 
   /**
    * <pre>
-   * The proposed start date time in yyyy-mm-dd hh:mm:ss format.
+   * Immutable. The proposed start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_start_date_time = 18;</code>
+   * <code>.google.protobuf.StringValue proposed_start_date_time = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasProposedStartDateTime();
   /**
    * <pre>
-   * The proposed start date time in yyyy-mm-dd hh:mm:ss format.
+   * Immutable. The proposed start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_start_date_time = 18;</code>
+   * <code>.google.protobuf.StringValue proposed_start_date_time = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValue getProposedStartDateTime();
   /**
    * <pre>
-   * The proposed start date time in yyyy-mm-dd hh:mm:ss format.
+   * Immutable. The proposed start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_start_date_time = 18;</code>
+   * <code>.google.protobuf.StringValue proposed_start_date_time = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getProposedStartDateTimeOrBuilder();
 
   /**
    * <pre>
-   * The proposed start date time as a well-defined type, e.g. NOW.
+   * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getProposedStartTimeTypeValue();
   /**
    * <pre>
-   * The proposed start date time as a well-defined type, e.g. NOW.
+   * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getProposedStartTimeType();
 
   /**
    * <pre>
-   * The proposed end date time in yyyy-mm-dd hh:mm:ss format.
+   * Immutable. The proposed end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_end_date_time = 19;</code>
+   * <code>.google.protobuf.StringValue proposed_end_date_time = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasProposedEndDateTime();
   /**
    * <pre>
-   * The proposed end date time in yyyy-mm-dd hh:mm:ss format.
+   * Immutable. The proposed end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_end_date_time = 19;</code>
+   * <code>.google.protobuf.StringValue proposed_end_date_time = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValue getProposedEndDateTime();
   /**
    * <pre>
-   * The proposed end date time in yyyy-mm-dd hh:mm:ss format.
+   * Immutable. The proposed end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue proposed_end_date_time = 19;</code>
+   * <code>.google.protobuf.StringValue proposed_end_date_time = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getProposedEndDateTimeOrBuilder();
 
   /**
    * <pre>
-   * The proposed end date time as a well-defined type, e.g. FOREVER.
+   * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getProposedEndTimeTypeValue();
   /**
    * <pre>
-   * The proposed end date time as a well-defined type, e.g. FOREVER.
+   * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getProposedEndTimeType();
 
   /**
    * <pre>
-   * The approved end date time in yyyy-mm-dd hh:mm:ss format.
+   * Output only. The approved end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+   * <code>.google.protobuf.StringValue approved_end_date_time = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasApprovedEndDateTime();
   /**
    * <pre>
-   * The approved end date time in yyyy-mm-dd hh:mm:ss format.
+   * Output only. The approved end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+   * <code>.google.protobuf.StringValue approved_end_date_time = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getApprovedEndDateTime();
   /**
    * <pre>
-   * The approved end date time in yyyy-mm-dd hh:mm:ss format.
+   * Output only. The approved end date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue approved_end_date_time = 21;</code>
+   * <code>.google.protobuf.StringValue approved_end_date_time = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getApprovedEndDateTimeOrBuilder();
 
   /**
    * <pre>
-   * The approved end date time as a well-defined type, e.g. FOREVER.
+   * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getApprovedEndTimeTypeValue();
   /**
    * <pre>
-   * The approved end date time as a well-defined type, e.g. FOREVER.
+   * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 22;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getApprovedEndTimeType();
 
   /**
    * <pre>
-   * The proposed spending limit in micros.  One million is equivalent to
+   * Immutable. The proposed spending limit in micros.  One million is equivalent to
    * one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10;</code>
+   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasProposedSpendingLimitMicros();
   /**
    * <pre>
-   * The proposed spending limit in micros.  One million is equivalent to
+   * Immutable. The proposed spending limit in micros.  One million is equivalent to
    * one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10;</code>
+   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.Int64Value getProposedSpendingLimitMicros();
   /**
    * <pre>
-   * The proposed spending limit in micros.  One million is equivalent to
+   * Immutable. The proposed spending limit in micros.  One million is equivalent to
    * one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10;</code>
+   * <code>.google.protobuf.Int64Value proposed_spending_limit_micros = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getProposedSpendingLimitMicrosOrBuilder();
 
   /**
    * <pre>
-   * The proposed spending limit as a well-defined type, e.g. INFINITE.
+   * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11;</code>
+   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getProposedSpendingLimitTypeValue();
   /**
    * <pre>
-   * The proposed spending limit as a well-defined type, e.g. INFINITE.
+   * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11;</code>
+   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getProposedSpendingLimitType();
 
   /**
    * <pre>
-   * The approved spending limit in micros.  One million is equivalent to
+   * Output only. The approved spending limit in micros.  One million is equivalent to
    * one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasApprovedSpendingLimitMicros();
   /**
    * <pre>
-   * The approved spending limit in micros.  One million is equivalent to
+   * Output only. The approved spending limit in micros.  One million is equivalent to
    * one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getApprovedSpendingLimitMicros();
   /**
    * <pre>
-   * The approved spending limit in micros.  One million is equivalent to
+   * Output only. The approved spending limit in micros.  One million is equivalent to
    * one unit.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23;</code>
+   * <code>.google.protobuf.Int64Value approved_spending_limit_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getApprovedSpendingLimitMicrosOrBuilder();
 
   /**
    * <pre>
-   * The approved spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getApprovedSpendingLimitTypeValue();
   /**
    * <pre>
-   * The approved spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24;</code>
+   * <code>.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.SpendingLimitTypeEnum.SpendingLimitType getApprovedSpendingLimitType();
 

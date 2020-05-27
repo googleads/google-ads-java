@@ -103,13 +103,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the search term view.
+   * Output only. The resource name of the search term view.
    * Search term view resource names have the form:
    * `customers/{customer_id}/paidOrganicSearchTermViews/{campaign_id}~
    * {ad_group_id}~{URL-base64 search term}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -125,13 +125,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the search term view.
+   * Output only. The resource name of the search term view.
    * Search term view resource names have the form:
    * `customers/{customer_id}/paidOrganicSearchTermViews/{campaign_id}~
    * {ad_group_id}~{URL-base64 search term}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -151,30 +151,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue searchTerm_;
   /**
    * <pre>
-   * The search term.
+   * Output only. The search term.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasSearchTerm() {
     return searchTerm_ != null;
   }
   /**
    * <pre>
-   * The search term.
+   * Output only. The search term.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getSearchTerm() {
     return searchTerm_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : searchTerm_;
   }
   /**
    * <pre>
-   * The search term.
+   * Output only. The search term.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getSearchTermOrBuilder() {
     return getSearchTerm();
@@ -520,13 +520,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the search term view.
+     * Output only. The resource name of the search term view.
      * Search term view resource names have the form:
      * `customers/{customer_id}/paidOrganicSearchTermViews/{campaign_id}~
      * {ad_group_id}~{URL-base64 search term}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -542,13 +542,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the search term view.
+     * Output only. The resource name of the search term view.
      * Search term view resource names have the form:
      * `customers/{customer_id}/paidOrganicSearchTermViews/{campaign_id}~
      * {ad_group_id}~{URL-base64 search term}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -565,13 +565,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the search term view.
+     * Output only. The resource name of the search term view.
      * Search term view resource names have the form:
      * `customers/{customer_id}/paidOrganicSearchTermViews/{campaign_id}~
      * {ad_group_id}~{URL-base64 search term}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -585,13 +585,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the search term view.
+     * Output only. The resource name of the search term view.
      * Search term view resource names have the form:
      * `customers/{customer_id}/paidOrganicSearchTermViews/{campaign_id}~
      * {ad_group_id}~{URL-base64 search term}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -601,13 +601,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the search term view.
+     * Output only. The resource name of the search term view.
      * Search term view resource names have the form:
      * `customers/{customer_id}/paidOrganicSearchTermViews/{campaign_id}~
      * {ad_group_id}~{URL-base64 search term}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -626,20 +626,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> searchTermBuilder_;
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSearchTerm() {
       return searchTermBuilder_ != null || searchTerm_ != null;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getSearchTerm() {
       if (searchTermBuilder_ == null) {
@@ -650,10 +650,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSearchTerm(com.google.protobuf.StringValue value) {
       if (searchTermBuilder_ == null) {
@@ -670,10 +670,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSearchTerm(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -688,10 +688,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeSearchTerm(com.google.protobuf.StringValue value) {
       if (searchTermBuilder_ == null) {
@@ -710,10 +710,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSearchTerm() {
       if (searchTermBuilder_ == null) {
@@ -728,10 +728,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getSearchTermBuilder() {
       
@@ -740,10 +740,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSearchTermOrBuilder() {
       if (searchTermBuilder_ != null) {
@@ -755,10 +755,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

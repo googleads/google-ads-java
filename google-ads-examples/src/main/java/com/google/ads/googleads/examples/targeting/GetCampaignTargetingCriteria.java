@@ -18,8 +18,8 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.CampaignCriterion;
 import com.google.ads.googleads.v3.resources.CampaignCriterion.CriterionCase;
 import com.google.ads.googleads.v3.services.GoogleAdsRow;
@@ -29,9 +29,7 @@ import com.google.ads.googleads.v3.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Gets all campaign criteria. To add campaign criteria, run AddCampaignCriteria.java.
- */
+/** Gets all campaign criteria. To add campaign criteria, run AddCampaignCriteria.java. */
 public class GetCampaignTargetingCriteria {
 
   private static final int PAGE_SIZE = 1_000;

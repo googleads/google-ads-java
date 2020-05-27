@@ -27,29 +27,29 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the language to target.
+   * Required. The resource name of the language to target.
    * Required
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language = 7;</code>
+   * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   boolean hasLanguage();
   /**
    * <pre>
-   * The resource name of the language to target.
+   * Required. The resource name of the language to target.
    * Required
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language = 7;</code>
+   * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.StringValue getLanguage();
   /**
    * <pre>
-   * The resource name of the language to target.
+   * Required. The resource name of the language to target.
    * Required
    * </pre>
    *
-   * <code>.google.protobuf.StringValue language = 7;</code>
+   * <code>.google.protobuf.StringValue language = 7 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.StringValueOrBuilder getLanguageOrBuilder();
 

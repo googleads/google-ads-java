@@ -30,22 +30,26 @@ public final class TopicConstantProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v3/resources/topi" +
       "c_constant.proto\022!google.ads.googleads.v" +
-      "3.resources\032\031google/api/resource.proto\032\036" +
-      "google/protobuf/wrappers.proto\032\034google/a" +
-      "pi/annotations.proto\"\206\002\n\rTopicConstant\022\025" +
-      "\n\rresource_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022;\n\025topic_constant" +
-      "_parent\030\003 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022*\n\004path\030\004 \003(\0132\034.google.protobuf.Stri" +
-      "ngValue:L\352AI\n&googleads.googleapis.com/T" +
-      "opicConstant\022\037topicConstants/{topic_cons" +
-      "tant}B\377\001\n%com.google.ads.googleads.v3.re" +
-      "sourcesB\022TopicConstantProtoP\001ZJgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v3/resources;resources\242\002\003GAA\252\002!Google" +
-      ".Ads.GoogleAds.V3.Resources\312\002!Google\\Ads" +
-      "\\GoogleAds\\V3\\Resources\352\002%Google::Ads::G" +
-      "oogleAds::V3::Resourcesb\006proto3"
+      "3.resources\032\037google/api/field_behavior.p" +
+      "roto\032\031google/api/resource.proto\032\036google/" +
+      "protobuf/wrappers.proto\032\034google/api/anno" +
+      "tations.proto\"\360\002\n\rTopicConstant\022E\n\rresou" +
+      "rce_name\030\001 \001(\tB.\340A\003\372A(\n&googleads.google" +
+      "apis.com/TopicConstant\022,\n\002id\030\002 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\003\340A\003\022k\n\025topic_co" +
+      "nstant_parent\030\003 \001(\0132\034.google.protobuf.St" +
+      "ringValueB.\340A\003\372A(\n&googleads.googleapis." +
+      "com/TopicConstant\022/\n\004path\030\004 \003(\0132\034.google" +
+      ".protobuf.StringValueB\003\340A\003:L\352AI\n&googlea" +
+      "ds.googleapis.com/TopicConstant\022\037topicCo" +
+      "nstants/{topic_constant}B\377\001\n%com.google." +
+      "ads.googleads.v3.resourcesB\022TopicConstan" +
+      "tProtoP\001ZJgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v3/resources;resou" +
+      "rces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V3.Res" +
+      "ources\312\002!Google\\Ads\\GoogleAds\\V3\\Resourc" +
+      "es\352\002%Google::Ads::GoogleAds::V3::Resourc" +
+      "esb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -58,6 +62,7 @@ public final class TopicConstantProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -70,9 +75,12 @@ public final class TopicConstantProto {
         new java.lang.String[] { "ResourceName", "Id", "TopicConstantParent", "Path", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

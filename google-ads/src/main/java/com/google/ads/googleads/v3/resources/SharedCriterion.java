@@ -252,12 +252,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the shared criterion.
+   * Immutable. The resource name of the shared criterion.
    * Shared set resource names have the form:
    * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -273,12 +273,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the shared criterion.
+   * Immutable. The resource name of the shared criterion.
    * Shared set resource names have the form:
    * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -298,30 +298,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue sharedSet_;
   /**
    * <pre>
-   * The shared set to which the shared criterion belongs.
+   * Immutable. The shared set to which the shared criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue shared_set = 2;</code>
+   * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasSharedSet() {
     return sharedSet_ != null;
   }
   /**
    * <pre>
-   * The shared set to which the shared criterion belongs.
+   * Immutable. The shared set to which the shared criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue shared_set = 2;</code>
+   * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getSharedSet() {
     return sharedSet_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : sharedSet_;
   }
   /**
    * <pre>
-   * The shared set to which the shared criterion belongs.
+   * Immutable. The shared set to which the shared criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue shared_set = 2;</code>
+   * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getSharedSetOrBuilder() {
     return getSharedSet();
@@ -331,33 +331,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value criterionId_;
   /**
    * <pre>
-   * The ID of the criterion.
+   * Output only. The ID of the criterion.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCriterionId() {
     return criterionId_ != null;
   }
   /**
    * <pre>
-   * The ID of the criterion.
+   * Output only. The ID of the criterion.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getCriterionId() {
     return criterionId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : criterionId_;
   }
   /**
    * <pre>
-   * The ID of the criterion.
+   * Output only. The ID of the criterion.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder() {
     return getCriterionId();
@@ -367,20 +367,20 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * The type of the criterion.
+   * Output only. The type of the criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * The type of the criterion.
+   * Output only. The type of the criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType getType() {
     @SuppressWarnings("deprecation")
@@ -391,20 +391,20 @@ private static final long serialVersionUID = 0L;
   public static final int KEYWORD_FIELD_NUMBER = 3;
   /**
    * <pre>
-   * Keyword.
+   * Immutable. Keyword.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasKeyword() {
     return criterionCase_ == 3;
   }
   /**
    * <pre>
-   * Keyword.
+   * Immutable. Keyword.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.KeywordInfo getKeyword() {
     if (criterionCase_ == 3) {
@@ -414,10 +414,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Keyword.
+   * Immutable. Keyword.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+   * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.KeywordInfoOrBuilder getKeywordOrBuilder() {
     if (criterionCase_ == 3) {
@@ -429,20 +429,20 @@ private static final long serialVersionUID = 0L;
   public static final int YOUTUBE_VIDEO_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * YouTube Video.
+   * Immutable. YouTube Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasYoutubeVideo() {
     return criterionCase_ == 5;
   }
   /**
    * <pre>
-   * YouTube Video.
+   * Immutable. YouTube Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.YouTubeVideoInfo getYoutubeVideo() {
     if (criterionCase_ == 5) {
@@ -452,10 +452,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * YouTube Video.
+   * Immutable. YouTube Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder() {
     if (criterionCase_ == 5) {
@@ -467,20 +467,20 @@ private static final long serialVersionUID = 0L;
   public static final int YOUTUBE_CHANNEL_FIELD_NUMBER = 6;
   /**
    * <pre>
-   * YouTube Channel.
+   * Immutable. YouTube Channel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasYoutubeChannel() {
     return criterionCase_ == 6;
   }
   /**
    * <pre>
-   * YouTube Channel.
+   * Immutable. YouTube Channel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.YouTubeChannelInfo getYoutubeChannel() {
     if (criterionCase_ == 6) {
@@ -490,10 +490,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * YouTube Channel.
+   * Immutable. YouTube Channel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+   * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder() {
     if (criterionCase_ == 6) {
@@ -505,20 +505,20 @@ private static final long serialVersionUID = 0L;
   public static final int PLACEMENT_FIELD_NUMBER = 7;
   /**
    * <pre>
-   * Placement.
+   * Immutable. Placement.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasPlacement() {
     return criterionCase_ == 7;
   }
   /**
    * <pre>
-   * Placement.
+   * Immutable. Placement.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.PlacementInfo getPlacement() {
     if (criterionCase_ == 7) {
@@ -528,10 +528,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Placement.
+   * Immutable. Placement.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+   * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.PlacementInfoOrBuilder getPlacementOrBuilder() {
     if (criterionCase_ == 7) {
@@ -543,20 +543,20 @@ private static final long serialVersionUID = 0L;
   public static final int MOBILE_APP_CATEGORY_FIELD_NUMBER = 8;
   /**
    * <pre>
-   * Mobile App Category.
+   * Immutable. Mobile App Category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasMobileAppCategory() {
     return criterionCase_ == 8;
   }
   /**
    * <pre>
-   * Mobile App Category.
+   * Immutable. Mobile App Category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.MobileAppCategoryInfo getMobileAppCategory() {
     if (criterionCase_ == 8) {
@@ -566,10 +566,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Mobile App Category.
+   * Immutable. Mobile App Category.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+   * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder() {
     if (criterionCase_ == 8) {
@@ -581,20 +581,20 @@ private static final long serialVersionUID = 0L;
   public static final int MOBILE_APPLICATION_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * Mobile application.
+   * Immutable. Mobile application.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasMobileApplication() {
     return criterionCase_ == 9;
   }
   /**
    * <pre>
-   * Mobile application.
+   * Immutable. Mobile application.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.MobileApplicationInfo getMobileApplication() {
     if (criterionCase_ == 9) {
@@ -604,10 +604,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Mobile application.
+   * Immutable. Mobile application.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+   * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder() {
     if (criterionCase_ == 9) {
@@ -1189,12 +1189,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the shared criterion.
+     * Immutable. The resource name of the shared criterion.
      * Shared set resource names have the form:
      * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1210,12 +1210,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the shared criterion.
+     * Immutable. The resource name of the shared criterion.
      * Shared set resource names have the form:
      * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1232,12 +1232,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the shared criterion.
+     * Immutable. The resource name of the shared criterion.
      * Shared set resource names have the form:
      * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1251,12 +1251,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the shared criterion.
+     * Immutable. The resource name of the shared criterion.
      * Shared set resource names have the form:
      * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1266,12 +1266,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the shared criterion.
+     * Immutable. The resource name of the shared criterion.
      * Shared set resource names have the form:
      * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1290,20 +1290,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> sharedSetBuilder_;
     /**
      * <pre>
-     * The shared set to which the shared criterion belongs.
+     * Immutable. The shared set to which the shared criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 2;</code>
+     * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasSharedSet() {
       return sharedSetBuilder_ != null || sharedSet_ != null;
     }
     /**
      * <pre>
-     * The shared set to which the shared criterion belongs.
+     * Immutable. The shared set to which the shared criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 2;</code>
+     * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getSharedSet() {
       if (sharedSetBuilder_ == null) {
@@ -1314,10 +1314,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set to which the shared criterion belongs.
+     * Immutable. The shared set to which the shared criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 2;</code>
+     * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setSharedSet(com.google.protobuf.StringValue value) {
       if (sharedSetBuilder_ == null) {
@@ -1334,10 +1334,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set to which the shared criterion belongs.
+     * Immutable. The shared set to which the shared criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 2;</code>
+     * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setSharedSet(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1352,10 +1352,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set to which the shared criterion belongs.
+     * Immutable. The shared set to which the shared criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 2;</code>
+     * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeSharedSet(com.google.protobuf.StringValue value) {
       if (sharedSetBuilder_ == null) {
@@ -1374,10 +1374,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set to which the shared criterion belongs.
+     * Immutable. The shared set to which the shared criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 2;</code>
+     * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearSharedSet() {
       if (sharedSetBuilder_ == null) {
@@ -1392,10 +1392,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set to which the shared criterion belongs.
+     * Immutable. The shared set to which the shared criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 2;</code>
+     * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getSharedSetBuilder() {
       
@@ -1404,10 +1404,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set to which the shared criterion belongs.
+     * Immutable. The shared set to which the shared criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 2;</code>
+     * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSharedSetOrBuilder() {
       if (sharedSetBuilder_ != null) {
@@ -1419,10 +1419,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The shared set to which the shared criterion belongs.
+     * Immutable. The shared set to which the shared criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue shared_set = 2;</code>
+     * <code>.google.protobuf.StringValue shared_set = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1443,22 +1443,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> criterionIdBuilder_;
     /**
      * <pre>
-     * The ID of the criterion.
+     * Output only. The ID of the criterion.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCriterionId() {
       return criterionIdBuilder_ != null || criterionId_ != null;
     }
     /**
      * <pre>
-     * The ID of the criterion.
+     * Output only. The ID of the criterion.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getCriterionId() {
       if (criterionIdBuilder_ == null) {
@@ -1469,11 +1469,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion.
+     * Output only. The ID of the criterion.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCriterionId(com.google.protobuf.Int64Value value) {
       if (criterionIdBuilder_ == null) {
@@ -1490,11 +1490,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion.
+     * Output only. The ID of the criterion.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCriterionId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1509,11 +1509,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion.
+     * Output only. The ID of the criterion.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCriterionId(com.google.protobuf.Int64Value value) {
       if (criterionIdBuilder_ == null) {
@@ -1532,11 +1532,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion.
+     * Output only. The ID of the criterion.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCriterionId() {
       if (criterionIdBuilder_ == null) {
@@ -1551,11 +1551,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion.
+     * Output only. The ID of the criterion.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getCriterionIdBuilder() {
       
@@ -1564,11 +1564,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion.
+     * Output only. The ID of the criterion.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder() {
       if (criterionIdBuilder_ != null) {
@@ -1580,11 +1580,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion.
+     * Output only. The ID of the criterion.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 26;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1603,20 +1603,20 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The type of the criterion.
+     * Output only. The type of the criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * The type of the criterion.
+     * Output only. The type of the criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -1625,10 +1625,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the criterion.
+     * Output only. The type of the criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType getType() {
       @SuppressWarnings("deprecation")
@@ -1637,10 +1637,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the criterion.
+     * Output only. The type of the criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setType(com.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType value) {
       if (value == null) {
@@ -1653,10 +1653,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the criterion.
+     * Output only. The type of the criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearType() {
       
@@ -1669,20 +1669,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.KeywordInfo, com.google.ads.googleads.v3.common.KeywordInfo.Builder, com.google.ads.googleads.v3.common.KeywordInfoOrBuilder> keywordBuilder_;
     /**
      * <pre>
-     * Keyword.
+     * Immutable. Keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasKeyword() {
       return criterionCase_ == 3;
     }
     /**
      * <pre>
-     * Keyword.
+     * Immutable. Keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.KeywordInfo getKeyword() {
       if (keywordBuilder_ == null) {
@@ -1699,10 +1699,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Keyword.
+     * Immutable. Keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setKeyword(com.google.ads.googleads.v3.common.KeywordInfo value) {
       if (keywordBuilder_ == null) {
@@ -1719,10 +1719,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Keyword.
+     * Immutable. Keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setKeyword(
         com.google.ads.googleads.v3.common.KeywordInfo.Builder builderForValue) {
@@ -1737,10 +1737,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Keyword.
+     * Immutable. Keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeKeyword(com.google.ads.googleads.v3.common.KeywordInfo value) {
       if (keywordBuilder_ == null) {
@@ -1763,10 +1763,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Keyword.
+     * Immutable. Keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearKeyword() {
       if (keywordBuilder_ == null) {
@@ -1786,20 +1786,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Keyword.
+     * Immutable. Keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.KeywordInfo.Builder getKeywordBuilder() {
       return getKeywordFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Keyword.
+     * Immutable. Keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.KeywordInfoOrBuilder getKeywordOrBuilder() {
       if ((criterionCase_ == 3) && (keywordBuilder_ != null)) {
@@ -1813,10 +1813,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Keyword.
+     * Immutable. Keyword.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3;</code>
+     * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.KeywordInfo, com.google.ads.googleads.v3.common.KeywordInfo.Builder, com.google.ads.googleads.v3.common.KeywordInfoOrBuilder> 
@@ -1841,20 +1841,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.YouTubeVideoInfo, com.google.ads.googleads.v3.common.YouTubeVideoInfo.Builder, com.google.ads.googleads.v3.common.YouTubeVideoInfoOrBuilder> youtubeVideoBuilder_;
     /**
      * <pre>
-     * YouTube Video.
+     * Immutable. YouTube Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasYoutubeVideo() {
       return criterionCase_ == 5;
     }
     /**
      * <pre>
-     * YouTube Video.
+     * Immutable. YouTube Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.YouTubeVideoInfo getYoutubeVideo() {
       if (youtubeVideoBuilder_ == null) {
@@ -1871,10 +1871,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Video.
+     * Immutable. YouTube Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setYoutubeVideo(com.google.ads.googleads.v3.common.YouTubeVideoInfo value) {
       if (youtubeVideoBuilder_ == null) {
@@ -1891,10 +1891,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Video.
+     * Immutable. YouTube Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setYoutubeVideo(
         com.google.ads.googleads.v3.common.YouTubeVideoInfo.Builder builderForValue) {
@@ -1909,10 +1909,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Video.
+     * Immutable. YouTube Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeYoutubeVideo(com.google.ads.googleads.v3.common.YouTubeVideoInfo value) {
       if (youtubeVideoBuilder_ == null) {
@@ -1935,10 +1935,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Video.
+     * Immutable. YouTube Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearYoutubeVideo() {
       if (youtubeVideoBuilder_ == null) {
@@ -1958,20 +1958,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Video.
+     * Immutable. YouTube Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.YouTubeVideoInfo.Builder getYoutubeVideoBuilder() {
       return getYoutubeVideoFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * YouTube Video.
+     * Immutable. YouTube Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder() {
       if ((criterionCase_ == 5) && (youtubeVideoBuilder_ != null)) {
@@ -1985,10 +1985,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Video.
+     * Immutable. YouTube Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.YouTubeVideoInfo, com.google.ads.googleads.v3.common.YouTubeVideoInfo.Builder, com.google.ads.googleads.v3.common.YouTubeVideoInfoOrBuilder> 
@@ -2013,20 +2013,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.YouTubeChannelInfo, com.google.ads.googleads.v3.common.YouTubeChannelInfo.Builder, com.google.ads.googleads.v3.common.YouTubeChannelInfoOrBuilder> youtubeChannelBuilder_;
     /**
      * <pre>
-     * YouTube Channel.
+     * Immutable. YouTube Channel.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasYoutubeChannel() {
       return criterionCase_ == 6;
     }
     /**
      * <pre>
-     * YouTube Channel.
+     * Immutable. YouTube Channel.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.YouTubeChannelInfo getYoutubeChannel() {
       if (youtubeChannelBuilder_ == null) {
@@ -2043,10 +2043,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel.
+     * Immutable. YouTube Channel.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setYoutubeChannel(com.google.ads.googleads.v3.common.YouTubeChannelInfo value) {
       if (youtubeChannelBuilder_ == null) {
@@ -2063,10 +2063,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel.
+     * Immutable. YouTube Channel.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setYoutubeChannel(
         com.google.ads.googleads.v3.common.YouTubeChannelInfo.Builder builderForValue) {
@@ -2081,10 +2081,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel.
+     * Immutable. YouTube Channel.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeYoutubeChannel(com.google.ads.googleads.v3.common.YouTubeChannelInfo value) {
       if (youtubeChannelBuilder_ == null) {
@@ -2107,10 +2107,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel.
+     * Immutable. YouTube Channel.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearYoutubeChannel() {
       if (youtubeChannelBuilder_ == null) {
@@ -2130,20 +2130,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel.
+     * Immutable. YouTube Channel.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.YouTubeChannelInfo.Builder getYoutubeChannelBuilder() {
       return getYoutubeChannelFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * YouTube Channel.
+     * Immutable. YouTube Channel.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder() {
       if ((criterionCase_ == 6) && (youtubeChannelBuilder_ != null)) {
@@ -2157,10 +2157,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * YouTube Channel.
+     * Immutable. YouTube Channel.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6;</code>
+     * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.YouTubeChannelInfo, com.google.ads.googleads.v3.common.YouTubeChannelInfo.Builder, com.google.ads.googleads.v3.common.YouTubeChannelInfoOrBuilder> 
@@ -2185,20 +2185,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.PlacementInfo, com.google.ads.googleads.v3.common.PlacementInfo.Builder, com.google.ads.googleads.v3.common.PlacementInfoOrBuilder> placementBuilder_;
     /**
      * <pre>
-     * Placement.
+     * Immutable. Placement.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasPlacement() {
       return criterionCase_ == 7;
     }
     /**
      * <pre>
-     * Placement.
+     * Immutable. Placement.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.PlacementInfo getPlacement() {
       if (placementBuilder_ == null) {
@@ -2215,10 +2215,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Placement.
+     * Immutable. Placement.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setPlacement(com.google.ads.googleads.v3.common.PlacementInfo value) {
       if (placementBuilder_ == null) {
@@ -2235,10 +2235,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Placement.
+     * Immutable. Placement.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setPlacement(
         com.google.ads.googleads.v3.common.PlacementInfo.Builder builderForValue) {
@@ -2253,10 +2253,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Placement.
+     * Immutable. Placement.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergePlacement(com.google.ads.googleads.v3.common.PlacementInfo value) {
       if (placementBuilder_ == null) {
@@ -2279,10 +2279,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Placement.
+     * Immutable. Placement.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearPlacement() {
       if (placementBuilder_ == null) {
@@ -2302,20 +2302,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Placement.
+     * Immutable. Placement.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.PlacementInfo.Builder getPlacementBuilder() {
       return getPlacementFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Placement.
+     * Immutable. Placement.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.PlacementInfoOrBuilder getPlacementOrBuilder() {
       if ((criterionCase_ == 7) && (placementBuilder_ != null)) {
@@ -2329,10 +2329,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Placement.
+     * Immutable. Placement.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7;</code>
+     * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.PlacementInfo, com.google.ads.googleads.v3.common.PlacementInfo.Builder, com.google.ads.googleads.v3.common.PlacementInfoOrBuilder> 
@@ -2357,20 +2357,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.MobileAppCategoryInfo, com.google.ads.googleads.v3.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v3.common.MobileAppCategoryInfoOrBuilder> mobileAppCategoryBuilder_;
     /**
      * <pre>
-     * Mobile App Category.
+     * Immutable. Mobile App Category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasMobileAppCategory() {
       return criterionCase_ == 8;
     }
     /**
      * <pre>
-     * Mobile App Category.
+     * Immutable. Mobile App Category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.MobileAppCategoryInfo getMobileAppCategory() {
       if (mobileAppCategoryBuilder_ == null) {
@@ -2387,10 +2387,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile App Category.
+     * Immutable. Mobile App Category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setMobileAppCategory(com.google.ads.googleads.v3.common.MobileAppCategoryInfo value) {
       if (mobileAppCategoryBuilder_ == null) {
@@ -2407,10 +2407,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile App Category.
+     * Immutable. Mobile App Category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setMobileAppCategory(
         com.google.ads.googleads.v3.common.MobileAppCategoryInfo.Builder builderForValue) {
@@ -2425,10 +2425,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile App Category.
+     * Immutable. Mobile App Category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeMobileAppCategory(com.google.ads.googleads.v3.common.MobileAppCategoryInfo value) {
       if (mobileAppCategoryBuilder_ == null) {
@@ -2451,10 +2451,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile App Category.
+     * Immutable. Mobile App Category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearMobileAppCategory() {
       if (mobileAppCategoryBuilder_ == null) {
@@ -2474,20 +2474,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile App Category.
+     * Immutable. Mobile App Category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.MobileAppCategoryInfo.Builder getMobileAppCategoryBuilder() {
       return getMobileAppCategoryFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Mobile App Category.
+     * Immutable. Mobile App Category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder() {
       if ((criterionCase_ == 8) && (mobileAppCategoryBuilder_ != null)) {
@@ -2501,10 +2501,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile App Category.
+     * Immutable. Mobile App Category.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8;</code>
+     * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.MobileAppCategoryInfo, com.google.ads.googleads.v3.common.MobileAppCategoryInfo.Builder, com.google.ads.googleads.v3.common.MobileAppCategoryInfoOrBuilder> 
@@ -2529,20 +2529,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.MobileApplicationInfo, com.google.ads.googleads.v3.common.MobileApplicationInfo.Builder, com.google.ads.googleads.v3.common.MobileApplicationInfoOrBuilder> mobileApplicationBuilder_;
     /**
      * <pre>
-     * Mobile application.
+     * Immutable. Mobile application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasMobileApplication() {
       return criterionCase_ == 9;
     }
     /**
      * <pre>
-     * Mobile application.
+     * Immutable. Mobile application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.MobileApplicationInfo getMobileApplication() {
       if (mobileApplicationBuilder_ == null) {
@@ -2559,10 +2559,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile application.
+     * Immutable. Mobile application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setMobileApplication(com.google.ads.googleads.v3.common.MobileApplicationInfo value) {
       if (mobileApplicationBuilder_ == null) {
@@ -2579,10 +2579,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile application.
+     * Immutable. Mobile application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setMobileApplication(
         com.google.ads.googleads.v3.common.MobileApplicationInfo.Builder builderForValue) {
@@ -2597,10 +2597,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile application.
+     * Immutable. Mobile application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeMobileApplication(com.google.ads.googleads.v3.common.MobileApplicationInfo value) {
       if (mobileApplicationBuilder_ == null) {
@@ -2623,10 +2623,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile application.
+     * Immutable. Mobile application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearMobileApplication() {
       if (mobileApplicationBuilder_ == null) {
@@ -2646,20 +2646,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile application.
+     * Immutable. Mobile application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.MobileApplicationInfo.Builder getMobileApplicationBuilder() {
       return getMobileApplicationFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Mobile application.
+     * Immutable. Mobile application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder() {
       if ((criterionCase_ == 9) && (mobileApplicationBuilder_ != null)) {
@@ -2673,10 +2673,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Mobile application.
+     * Immutable. Mobile application.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9;</code>
+     * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.MobileApplicationInfo, com.google.ads.googleads.v3.common.MobileApplicationInfo.Builder, com.google.ads.googleads.v3.common.MobileApplicationInfoOrBuilder> 

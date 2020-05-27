@@ -169,7 +169,7 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
    * </code></pre>
    *
    * @param customerId The ID of the customer with the recommendation.
-   * @param language The resource name of the language to target. Required
+   * @param language Required. The resource name of the language to target. Required
    * @param geoTargetConstants The resource names of the location to target. Max 10
    * @param keywordPlanNetwork Targeting network.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails

@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
-   * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+   * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
-   * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+   * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -131,7 +131,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
-   * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+   * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the Keyword Plan campaign related to the forecast.
-     * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+     * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the Keyword Plan campaign related to the forecast.
-     * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+     * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the Keyword Plan campaign related to the forecast.
-     * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+     * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -575,7 +575,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the Keyword Plan campaign related to the forecast.
-     * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+     * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the Keyword Plan campaign related to the forecast.
-     * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+     * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the Keyword Plan campaign related to the forecast.
-     * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+     * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the Keyword Plan campaign related to the forecast.
-     * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+     * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the Keyword Plan campaign related to the forecast.
-     * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+     * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -665,7 +665,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the Keyword Plan campaign related to the forecast.
-     * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+     * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>

@@ -34,24 +34,26 @@ public final class CampaignCriterionSimulationServiceProto {
       "/ads/googleads/v3/resources/campaign_cri" +
       "terion_simulation.proto\032\034google/api/anno" +
       "tations.proto\032\027google/api/client.proto\032\037" +
-      "google/api/field_behavior.proto\"C\n%GetCa" +
-      "mpaignCriterionSimulationRequest\022\032\n\rreso" +
-      "urce_name\030\001 \001(\tB\003\340A\0022\305\002\n\"CampaignCriteri" +
-      "onSimulationService\022\201\002\n\036GetCampaignCrite" +
-      "rionSimulation\022G.google.ads.googleads.v3" +
-      ".services.GetCampaignCriterionSimulation" +
-      "Request\032>.google.ads.googleads.v3.resour" +
-      "ces.CampaignCriterionSimulation\"V\202\323\344\223\002@\022" +
-      ">/v3/{resource_name=customers/*/campaign" +
-      "CriterionSimulations/*}\332A\rresource_name\032" +
-      "\033\312A\030googleads.googleapis.comB\216\002\n$com.goo" +
-      "gle.ads.googleads.v3.servicesB\'CampaignC" +
-      "riterionSimulationServiceProtoP\001ZHgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v3/services;services\242\002\003GAA\252\002 Googl" +
-      "e.Ads.GoogleAds.V3.Services\312\002 Google\\Ads" +
-      "\\GoogleAds\\V3\\Services\352\002$Google::Ads::Go" +
-      "ogleAds::V3::Servicesb\006proto3"
+      "google/api/field_behavior.proto\032\031google/" +
+      "api/resource.proto\"|\n%GetCampaignCriteri" +
+      "onSimulationRequest\022S\n\rresource_name\030\001 \001" +
+      "(\tB<\340A\002\372A6\n4googleads.googleapis.com/Cam" +
+      "paignCriterionSimulation2\305\002\n\"CampaignCri" +
+      "terionSimulationService\022\201\002\n\036GetCampaignC" +
+      "riterionSimulation\022G.google.ads.googlead" +
+      "s.v3.services.GetCampaignCriterionSimula" +
+      "tionRequest\032>.google.ads.googleads.v3.re" +
+      "sources.CampaignCriterionSimulation\"V\202\323\344" +
+      "\223\002@\022>/v3/{resource_name=customers/*/camp" +
+      "aignCriterionSimulations/*}\332A\rresource_n" +
+      "ame\032\033\312A\030googleads.googleapis.comB\216\002\n$com" +
+      ".google.ads.googleads.v3.servicesB\'Campa" +
+      "ignCriterionSimulationServiceProtoP\001ZHgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v3/services;services\242\002\003GAA\252\002 G" +
+      "oogle.Ads.GoogleAds.V3.Services\312\002 Google" +
+      "\\Ads\\GoogleAds\\V3\\Services\352\002$Google::Ads" +
+      "::GoogleAds::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -68,6 +70,7 @@ public final class CampaignCriterionSimulationServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetCampaignCriterionSimulationRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -81,12 +84,14 @@ public final class CampaignCriterionSimulationServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.CampaignCriterionSimulationProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

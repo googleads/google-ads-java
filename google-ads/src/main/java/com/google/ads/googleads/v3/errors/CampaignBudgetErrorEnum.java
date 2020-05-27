@@ -227,6 +227,14 @@ private static final long serialVersionUID = 0L;
      * <code>NON_MULTIPLE_OF_MINIMUM_CURRENCY_UNIT = 16;</code>
      */
     NON_MULTIPLE_OF_MINIMUM_CURRENCY_UNIT(16),
+    /**
+     * <pre>
+     * Total budget amount must be unset when BudgetPeriod is DAILY.
+     * </pre>
+     *
+     * <code>TOTAL_BUDGET_AMOUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_DAILY = 18;</code>
+     */
+    TOTAL_BUDGET_AMOUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_DAILY(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -371,6 +379,14 @@ private static final long serialVersionUID = 0L;
      * <code>NON_MULTIPLE_OF_MINIMUM_CURRENCY_UNIT = 16;</code>
      */
     public static final int NON_MULTIPLE_OF_MINIMUM_CURRENCY_UNIT_VALUE = 16;
+    /**
+     * <pre>
+     * Total budget amount must be unset when BudgetPeriod is DAILY.
+     * </pre>
+     *
+     * <code>TOTAL_BUDGET_AMOUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_DAILY = 18;</code>
+     */
+    public static final int TOTAL_BUDGET_AMOUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_DAILY_VALUE = 18;
 
 
     public final int getNumber() {
@@ -408,6 +424,7 @@ private static final long serialVersionUID = 0L;
         case 14: return MONEY_AMOUNT_TOO_LARGE;
         case 15: return NEGATIVE_MONEY_AMOUNT;
         case 16: return NON_MULTIPLE_OF_MINIMUM_CURRENCY_UNIT;
+        case 18: return TOTAL_BUDGET_AMOUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_DAILY;
         default: return null;
       }
     }

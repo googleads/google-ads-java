@@ -9,76 +9,76 @@ public interface CampaignDraftOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the campaign draft.
+   * Immutable. The resource name of the campaign draft.
    * Campaign draft resource names have the form:
    * `customers/{customer_id}/campaignDrafts/{base_campaign_id}~{draft_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the campaign draft.
+   * Immutable. The resource name of the campaign draft.
    * Campaign draft resource names have the form:
    * `customers/{customer_id}/campaignDrafts/{base_campaign_id}~{draft_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the draft.
+   * Output only. The ID of the draft.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value draft_id = 2;</code>
+   * <code>.google.protobuf.Int64Value draft_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasDraftId();
   /**
    * <pre>
-   * The ID of the draft.
+   * Output only. The ID of the draft.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value draft_id = 2;</code>
+   * <code>.google.protobuf.Int64Value draft_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getDraftId();
   /**
    * <pre>
-   * The ID of the draft.
+   * Output only. The ID of the draft.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value draft_id = 2;</code>
+   * <code>.google.protobuf.Int64Value draft_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getDraftIdOrBuilder();
 
   /**
    * <pre>
-   * The base campaign to which the draft belongs.
+   * Immutable. The base campaign to which the draft belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_campaign = 3;</code>
+   * <code>.google.protobuf.StringValue base_campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasBaseCampaign();
   /**
    * <pre>
-   * The base campaign to which the draft belongs.
+   * Immutable. The base campaign to which the draft belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_campaign = 3;</code>
+   * <code>.google.protobuf.StringValue base_campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getBaseCampaign();
   /**
    * <pre>
-   * The base campaign to which the draft belongs.
+   * Immutable. The base campaign to which the draft belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_campaign = 3;</code>
+   * <code>.google.protobuf.StringValue base_campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getBaseCampaignOrBuilder();
 
@@ -121,107 +121,107 @@ public interface CampaignDraftOrBuilder extends
 
   /**
    * <pre>
-   * Resource name of the Campaign that results from overlaying the draft
+   * Output only. Resource name of the Campaign that results from overlaying the draft
    * changes onto the base campaign.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue draft_campaign = 5;</code>
+   * <code>.google.protobuf.StringValue draft_campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasDraftCampaign();
   /**
    * <pre>
-   * Resource name of the Campaign that results from overlaying the draft
+   * Output only. Resource name of the Campaign that results from overlaying the draft
    * changes onto the base campaign.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue draft_campaign = 5;</code>
+   * <code>.google.protobuf.StringValue draft_campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getDraftCampaign();
   /**
    * <pre>
-   * Resource name of the Campaign that results from overlaying the draft
+   * Output only. Resource name of the Campaign that results from overlaying the draft
    * changes onto the base campaign.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue draft_campaign = 5;</code>
+   * <code>.google.protobuf.StringValue draft_campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getDraftCampaignOrBuilder();
 
   /**
    * <pre>
-   * The status of the campaign draft. This field is read-only.
+   * Output only. The status of the campaign draft. This field is read-only.
    * When a new campaign draft is added, the status defaults to PROPOSED.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getStatusValue();
   /**
    * <pre>
-   * The status of the campaign draft. This field is read-only.
+   * Output only. The status of the campaign draft. This field is read-only.
    * When a new campaign draft is added, the status defaults to PROPOSED.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus getStatus();
 
   /**
    * <pre>
-   * Whether there is an experiment based on this draft currently serving.
+   * Output only. Whether there is an experiment based on this draft currently serving.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_experiment_running = 7;</code>
+   * <code>.google.protobuf.BoolValue has_experiment_running = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasHasExperimentRunning();
   /**
    * <pre>
-   * Whether there is an experiment based on this draft currently serving.
+   * Output only. Whether there is an experiment based on this draft currently serving.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_experiment_running = 7;</code>
+   * <code>.google.protobuf.BoolValue has_experiment_running = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValue getHasExperimentRunning();
   /**
    * <pre>
-   * Whether there is an experiment based on this draft currently serving.
+   * Output only. Whether there is an experiment based on this draft currently serving.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_experiment_running = 7;</code>
+   * <code>.google.protobuf.BoolValue has_experiment_running = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getHasExperimentRunningOrBuilder();
 
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion of draft promotion. This is only set if the draft promotion
    * is in progress or finished.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 8;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasLongRunningOperation();
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion of draft promotion. This is only set if the draft promotion
    * is in progress or finished.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 8;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getLongRunningOperation();
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion of draft promotion. This is only set if the draft promotion
    * is in progress or finished.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 8;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder();
 }

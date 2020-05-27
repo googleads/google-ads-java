@@ -30,23 +30,25 @@ public final class UserLocationViewProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v3/resources/user" +
       "_location_view.proto\022!google.ads.googlea" +
-      "ds.v3.resources\032\031google/api/resource.pro" +
-      "to\032\036google/protobuf/wrappers.proto\032\034goog" +
-      "le/api/annotations.proto\"\211\002\n\020UserLocatio" +
-      "nView\022\025\n\rresource_name\030\001 \001(\t\0229\n\024country_" +
-      "criterion_id\030\002 \001(\0132\033.google.protobuf.Int" +
-      "64Value\0226\n\022targeting_location\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue:k\352Ah\n)googleads." +
-      "googleapis.com/UserLocationView\022;custome" +
-      "rs/{customer}/userLocationViews/{user_lo" +
-      "cation_view}B\202\002\n%com.google.ads.googlead" +
-      "s.v3.resourcesB\025UserLocationViewProtoP\001Z" +
-      "Jgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v3/resources;resources\242\002\003GA" +
-      "A\252\002!Google.Ads.GoogleAds.V3.Resources\312\002!" +
-      "Google\\Ads\\GoogleAds\\V3\\Resources\352\002%Goog" +
-      "le::Ads::GoogleAds::V3::Resourcesb\006proto" +
-      "3"
+      "ds.v3.resources\032\037google/api/field_behavi" +
+      "or.proto\032\031google/api/resource.proto\032\036goo" +
+      "gle/protobuf/wrappers.proto\032\034google/api/" +
+      "annotations.proto\"\306\002\n\020UserLocationView\022H" +
+      "\n\rresource_name\030\001 \001(\tB1\340A\003\372A+\n)googleads" +
+      ".googleapis.com/UserLocationView\022>\n\024coun" +
+      "try_criterion_id\030\002 \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\003\340A\003\022;\n\022targeting_location\030\003" +
+      " \001(\0132\032.google.protobuf.BoolValueB\003\340A\003:k\352" +
+      "Ah\n)googleads.googleapis.com/UserLocatio" +
+      "nView\022;customers/{customer}/userLocation" +
+      "Views/{user_location_view}B\202\002\n%com.googl" +
+      "e.ads.googleads.v3.resourcesB\025UserLocati" +
+      "onViewProtoP\001ZJgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v3/resources;" +
+      "resources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
+      "3.Resources\312\002!Google\\Ads\\GoogleAds\\V3\\Re" +
+      "sources\352\002%Google::Ads::GoogleAds::V3::Re" +
+      "sourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -59,6 +61,7 @@ public final class UserLocationViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -71,9 +74,12 @@ public final class UserLocationViewProto {
         new java.lang.String[] { "ResourceName", "CountryCriterionId", "TargetingLocation", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

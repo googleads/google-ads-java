@@ -191,7 +191,7 @@ public class AddGmailAd {
    * @param customerId the client customer ID.
    * @param adGroupId the ad group ID.
    * @param mediaFiles a map with keys of unique string identifiers and values of media file
-   *                   resource names.
+   *     resource names.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    * @throws IOException if there is an error opening the image files.
    */

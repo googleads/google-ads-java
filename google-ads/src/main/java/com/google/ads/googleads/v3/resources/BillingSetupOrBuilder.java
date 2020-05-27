@@ -9,71 +9,71 @@ public interface BillingSetupOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the billing setup.
+   * Immutable. The resource name of the billing setup.
    * BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the billing setup.
+   * Immutable. The resource name of the billing setup.
    * BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the billing setup.
+   * Output only. The ID of the billing setup.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the billing setup.
+   * Output only. The ID of the billing setup.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the billing setup.
+   * Output only. The ID of the billing setup.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * The status of the billing setup.
+   * Output only. The status of the billing setup.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getStatusValue();
   /**
    * <pre>
-   * The status of the billing setup.
+   * Output only. The status of the billing setup.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus getStatus();
 
   /**
    * <pre>
-   * The resource name of the payments account associated with this billing
+   * Immutable. The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
@@ -82,12 +82,12 @@ public interface BillingSetupOrBuilder extends
    * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account = 11;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasPaymentsAccount();
   /**
    * <pre>
-   * The resource name of the payments account associated with this billing
+   * Immutable. The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
@@ -96,12 +96,12 @@ public interface BillingSetupOrBuilder extends
    * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account = 11;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getPaymentsAccount();
   /**
    * <pre>
-   * The resource name of the payments account associated with this billing
+   * Immutable. The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
@@ -110,131 +110,131 @@ public interface BillingSetupOrBuilder extends
    * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account = 11;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getPaymentsAccountOrBuilder();
 
   /**
    * <pre>
-   * The payments account information associated with this billing setup.
+   * Immutable. The payments account information associated with this billing setup.
    * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasPaymentsAccountInfo();
   /**
    * <pre>
-   * The payments account information associated with this billing setup.
+   * Immutable. The payments account information associated with this billing setup.
    * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo getPaymentsAccountInfo();
   /**
    * <pre>
-   * The payments account information associated with this billing setup.
+   * Immutable. The payments account information associated with this billing setup.
    * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfoOrBuilder getPaymentsAccountInfoOrBuilder();
 
   /**
    * <pre>
-   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
    * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasStartDateTime();
   /**
    * <pre>
-   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
    * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValue getStartDateTime();
   /**
    * <pre>
-   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
    * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder();
 
   /**
    * <pre>
-   * The start time as a type. Only NOW is allowed.
+   * Immutable. The start time as a type. Only NOW is allowed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getStartTimeTypeValue();
   /**
    * <pre>
-   * The start time as a type. Only NOW is allowed.
+   * Immutable. The start time as a type. Only NOW is allowed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getStartTimeType();
 
   /**
    * <pre>
-   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasEndDateTime();
   /**
    * <pre>
-   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getEndDateTime();
   /**
    * <pre>
-   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder();
 
   /**
    * <pre>
-   * The end time as a type.  The only possible value is FOREVER.
+   * Output only. The end time as a type.  The only possible value is FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getEndTimeTypeValue();
   /**
    * <pre>
-   * The end time as a type.  The only possible value is FOREVER.
+   * Output only. The end time as a type.  The only possible value is FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getEndTimeType();
 

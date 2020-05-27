@@ -221,12 +221,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the asset.
+   * Immutable. The resource name of the asset.
    * Asset resource names have the form:
    * `customers/{customer_id}/assets/{asset_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -242,12 +242,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the asset.
+   * Immutable. The resource name of the asset.
    * Asset resource names have the form:
    * `customers/{customer_id}/assets/{asset_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -267,30 +267,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the asset.
+   * Output only. The ID of the asset.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the asset.
+   * Output only. The ID of the asset.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the asset.
+   * Output only. The ID of the asset.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -333,20 +333,20 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * Type of the asset.
+   * Output only. Type of the asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * Type of the asset.
+   * Output only. Type of the asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType getType() {
     @SuppressWarnings("deprecation")
@@ -357,20 +357,20 @@ private static final long serialVersionUID = 0L;
   public static final int YOUTUBE_VIDEO_ASSET_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * A YouTube video asset.
+   * Immutable. A YouTube video asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+   * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasYoutubeVideoAsset() {
     return assetDataCase_ == 5;
   }
   /**
    * <pre>
-   * A YouTube video asset.
+   * Immutable. A YouTube video asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+   * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.YoutubeVideoAsset getYoutubeVideoAsset() {
     if (assetDataCase_ == 5) {
@@ -380,10 +380,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A YouTube video asset.
+   * Immutable. A YouTube video asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+   * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.YoutubeVideoAssetOrBuilder getYoutubeVideoAssetOrBuilder() {
     if (assetDataCase_ == 5) {
@@ -395,20 +395,20 @@ private static final long serialVersionUID = 0L;
   public static final int MEDIA_BUNDLE_ASSET_FIELD_NUMBER = 6;
   /**
    * <pre>
-   * A media bundle asset.
+   * Immutable. A media bundle asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+   * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasMediaBundleAsset() {
     return assetDataCase_ == 6;
   }
   /**
    * <pre>
-   * A media bundle asset.
+   * Immutable. A media bundle asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+   * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.MediaBundleAsset getMediaBundleAsset() {
     if (assetDataCase_ == 6) {
@@ -418,10 +418,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A media bundle asset.
+   * Immutable. A media bundle asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+   * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.common.MediaBundleAssetOrBuilder getMediaBundleAssetOrBuilder() {
     if (assetDataCase_ == 6) {
@@ -433,20 +433,20 @@ private static final long serialVersionUID = 0L;
   public static final int IMAGE_ASSET_FIELD_NUMBER = 7;
   /**
    * <pre>
-   * An image asset.
+   * Output only. An image asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+   * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasImageAsset() {
     return assetDataCase_ == 7;
   }
   /**
    * <pre>
-   * An image asset.
+   * Output only. An image asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+   * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.ImageAsset getImageAsset() {
     if (assetDataCase_ == 7) {
@@ -456,10 +456,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An image asset.
+   * Output only. An image asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+   * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.ImageAssetOrBuilder getImageAssetOrBuilder() {
     if (assetDataCase_ == 7) {
@@ -471,20 +471,20 @@ private static final long serialVersionUID = 0L;
   public static final int TEXT_ASSET_FIELD_NUMBER = 8;
   /**
    * <pre>
-   * A text asset.
+   * Output only. A text asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+   * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasTextAsset() {
     return assetDataCase_ == 8;
   }
   /**
    * <pre>
-   * A text asset.
+   * Output only. A text asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+   * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.TextAsset getTextAsset() {
     if (assetDataCase_ == 8) {
@@ -494,10 +494,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A text asset.
+   * Output only. A text asset.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+   * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.TextAssetOrBuilder getTextAssetOrBuilder() {
     if (assetDataCase_ == 8) {
@@ -1028,12 +1028,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the asset.
+     * Immutable. The resource name of the asset.
      * Asset resource names have the form:
      * `customers/{customer_id}/assets/{asset_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1049,12 +1049,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the asset.
+     * Immutable. The resource name of the asset.
      * Asset resource names have the form:
      * `customers/{customer_id}/assets/{asset_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1071,12 +1071,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the asset.
+     * Immutable. The resource name of the asset.
      * Asset resource names have the form:
      * `customers/{customer_id}/assets/{asset_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1090,12 +1090,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the asset.
+     * Immutable. The resource name of the asset.
      * Asset resource names have the form:
      * `customers/{customer_id}/assets/{asset_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1105,12 +1105,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the asset.
+     * Immutable. The resource name of the asset.
      * Asset resource names have the form:
      * `customers/{customer_id}/assets/{asset_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1129,20 +1129,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the asset.
+     * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the asset.
+     * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1153,10 +1153,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the asset.
+     * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1173,10 +1173,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the asset.
+     * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1191,10 +1191,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the asset.
+     * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1213,10 +1213,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the asset.
+     * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1231,10 +1231,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the asset.
+     * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1243,10 +1243,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the asset.
+     * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1258,10 +1258,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the asset.
+     * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1433,20 +1433,20 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * Type of the asset.
+     * Output only. Type of the asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * Type of the asset.
+     * Output only. Type of the asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -1455,10 +1455,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of the asset.
+     * Output only. Type of the asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType getType() {
       @SuppressWarnings("deprecation")
@@ -1467,10 +1467,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of the asset.
+     * Output only. Type of the asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setType(com.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType value) {
       if (value == null) {
@@ -1483,10 +1483,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of the asset.
+     * Output only. Type of the asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearType() {
       
@@ -1499,20 +1499,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.YoutubeVideoAsset, com.google.ads.googleads.v3.common.YoutubeVideoAsset.Builder, com.google.ads.googleads.v3.common.YoutubeVideoAssetOrBuilder> youtubeVideoAssetBuilder_;
     /**
      * <pre>
-     * A YouTube video asset.
+     * Immutable. A YouTube video asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasYoutubeVideoAsset() {
       return assetDataCase_ == 5;
     }
     /**
      * <pre>
-     * A YouTube video asset.
+     * Immutable. A YouTube video asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.YoutubeVideoAsset getYoutubeVideoAsset() {
       if (youtubeVideoAssetBuilder_ == null) {
@@ -1529,10 +1529,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A YouTube video asset.
+     * Immutable. A YouTube video asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setYoutubeVideoAsset(com.google.ads.googleads.v3.common.YoutubeVideoAsset value) {
       if (youtubeVideoAssetBuilder_ == null) {
@@ -1549,10 +1549,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A YouTube video asset.
+     * Immutable. A YouTube video asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setYoutubeVideoAsset(
         com.google.ads.googleads.v3.common.YoutubeVideoAsset.Builder builderForValue) {
@@ -1567,10 +1567,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A YouTube video asset.
+     * Immutable. A YouTube video asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeYoutubeVideoAsset(com.google.ads.googleads.v3.common.YoutubeVideoAsset value) {
       if (youtubeVideoAssetBuilder_ == null) {
@@ -1593,10 +1593,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A YouTube video asset.
+     * Immutable. A YouTube video asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearYoutubeVideoAsset() {
       if (youtubeVideoAssetBuilder_ == null) {
@@ -1616,20 +1616,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A YouTube video asset.
+     * Immutable. A YouTube video asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.YoutubeVideoAsset.Builder getYoutubeVideoAssetBuilder() {
       return getYoutubeVideoAssetFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * A YouTube video asset.
+     * Immutable. A YouTube video asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.YoutubeVideoAssetOrBuilder getYoutubeVideoAssetOrBuilder() {
       if ((assetDataCase_ == 5) && (youtubeVideoAssetBuilder_ != null)) {
@@ -1643,10 +1643,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A YouTube video asset.
+     * Immutable. A YouTube video asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5;</code>
+     * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.YoutubeVideoAsset, com.google.ads.googleads.v3.common.YoutubeVideoAsset.Builder, com.google.ads.googleads.v3.common.YoutubeVideoAssetOrBuilder> 
@@ -1671,20 +1671,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.MediaBundleAsset, com.google.ads.googleads.v3.common.MediaBundleAsset.Builder, com.google.ads.googleads.v3.common.MediaBundleAssetOrBuilder> mediaBundleAssetBuilder_;
     /**
      * <pre>
-     * A media bundle asset.
+     * Immutable. A media bundle asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasMediaBundleAsset() {
       return assetDataCase_ == 6;
     }
     /**
      * <pre>
-     * A media bundle asset.
+     * Immutable. A media bundle asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.MediaBundleAsset getMediaBundleAsset() {
       if (mediaBundleAssetBuilder_ == null) {
@@ -1701,10 +1701,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A media bundle asset.
+     * Immutable. A media bundle asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setMediaBundleAsset(com.google.ads.googleads.v3.common.MediaBundleAsset value) {
       if (mediaBundleAssetBuilder_ == null) {
@@ -1721,10 +1721,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A media bundle asset.
+     * Immutable. A media bundle asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setMediaBundleAsset(
         com.google.ads.googleads.v3.common.MediaBundleAsset.Builder builderForValue) {
@@ -1739,10 +1739,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A media bundle asset.
+     * Immutable. A media bundle asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeMediaBundleAsset(com.google.ads.googleads.v3.common.MediaBundleAsset value) {
       if (mediaBundleAssetBuilder_ == null) {
@@ -1765,10 +1765,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A media bundle asset.
+     * Immutable. A media bundle asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearMediaBundleAsset() {
       if (mediaBundleAssetBuilder_ == null) {
@@ -1788,20 +1788,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A media bundle asset.
+     * Immutable. A media bundle asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.MediaBundleAsset.Builder getMediaBundleAssetBuilder() {
       return getMediaBundleAssetFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * A media bundle asset.
+     * Immutable. A media bundle asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.MediaBundleAssetOrBuilder getMediaBundleAssetOrBuilder() {
       if ((assetDataCase_ == 6) && (mediaBundleAssetBuilder_ != null)) {
@@ -1815,10 +1815,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A media bundle asset.
+     * Immutable. A media bundle asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6;</code>
+     * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.MediaBundleAsset, com.google.ads.googleads.v3.common.MediaBundleAsset.Builder, com.google.ads.googleads.v3.common.MediaBundleAssetOrBuilder> 
@@ -1843,20 +1843,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.ImageAsset, com.google.ads.googleads.v3.common.ImageAsset.Builder, com.google.ads.googleads.v3.common.ImageAssetOrBuilder> imageAssetBuilder_;
     /**
      * <pre>
-     * An image asset.
+     * Output only. An image asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasImageAsset() {
       return assetDataCase_ == 7;
     }
     /**
      * <pre>
-     * An image asset.
+     * Output only. An image asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.ImageAsset getImageAsset() {
       if (imageAssetBuilder_ == null) {
@@ -1873,10 +1873,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An image asset.
+     * Output only. An image asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setImageAsset(com.google.ads.googleads.v3.common.ImageAsset value) {
       if (imageAssetBuilder_ == null) {
@@ -1893,10 +1893,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An image asset.
+     * Output only. An image asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setImageAsset(
         com.google.ads.googleads.v3.common.ImageAsset.Builder builderForValue) {
@@ -1911,10 +1911,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An image asset.
+     * Output only. An image asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeImageAsset(com.google.ads.googleads.v3.common.ImageAsset value) {
       if (imageAssetBuilder_ == null) {
@@ -1937,10 +1937,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An image asset.
+     * Output only. An image asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearImageAsset() {
       if (imageAssetBuilder_ == null) {
@@ -1960,20 +1960,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An image asset.
+     * Output only. An image asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.ImageAsset.Builder getImageAssetBuilder() {
       return getImageAssetFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * An image asset.
+     * Output only. An image asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.ImageAssetOrBuilder getImageAssetOrBuilder() {
       if ((assetDataCase_ == 7) && (imageAssetBuilder_ != null)) {
@@ -1987,10 +1987,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * An image asset.
+     * Output only. An image asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.ImageAsset, com.google.ads.googleads.v3.common.ImageAsset.Builder, com.google.ads.googleads.v3.common.ImageAssetOrBuilder> 
@@ -2015,20 +2015,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.TextAsset, com.google.ads.googleads.v3.common.TextAsset.Builder, com.google.ads.googleads.v3.common.TextAssetOrBuilder> textAssetBuilder_;
     /**
      * <pre>
-     * A text asset.
+     * Output only. A text asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTextAsset() {
       return assetDataCase_ == 8;
     }
     /**
      * <pre>
-     * A text asset.
+     * Output only. A text asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TextAsset getTextAsset() {
       if (textAssetBuilder_ == null) {
@@ -2045,10 +2045,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A text asset.
+     * Output only. A text asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTextAsset(com.google.ads.googleads.v3.common.TextAsset value) {
       if (textAssetBuilder_ == null) {
@@ -2065,10 +2065,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A text asset.
+     * Output only. A text asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTextAsset(
         com.google.ads.googleads.v3.common.TextAsset.Builder builderForValue) {
@@ -2083,10 +2083,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A text asset.
+     * Output only. A text asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTextAsset(com.google.ads.googleads.v3.common.TextAsset value) {
       if (textAssetBuilder_ == null) {
@@ -2109,10 +2109,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A text asset.
+     * Output only. A text asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTextAsset() {
       if (textAssetBuilder_ == null) {
@@ -2132,20 +2132,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A text asset.
+     * Output only. A text asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TextAsset.Builder getTextAssetBuilder() {
       return getTextAssetFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * A text asset.
+     * Output only. A text asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TextAssetOrBuilder getTextAssetOrBuilder() {
       if ((assetDataCase_ == 8) && (textAssetBuilder_ != null)) {
@@ -2159,10 +2159,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A text asset.
+     * Output only. A text asset.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8;</code>
+     * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.TextAsset, com.google.ads.googleads.v3.common.TextAsset.Builder, com.google.ads.googleads.v3.common.TextAssetOrBuilder> 

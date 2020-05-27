@@ -18,8 +18,8 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.GoogleAdsField;
 import com.google.ads.googleads.v3.services.GoogleAdsFieldServiceClient;
 import com.google.ads.googleads.v3.services.GoogleAdsFieldServiceClient.SearchGoogleAdsFieldsPagedResponse;
@@ -34,10 +34,10 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Gets the metadata, such as whether the artifact is selectable, filterable and
- * sortable, of an artifact. The artifact can be either a resource (such as customer, campaign) or a
- * field (such as metrics.impressions, campaign.id). It'll also show the data type and artifacts
- * that are selectable with the artifact.
+ * Gets the metadata, such as whether the artifact is selectable, filterable and sortable, of an
+ * artifact. The artifact can be either a resource (such as customer, campaign) or a field (such as
+ * metrics.impressions, campaign.id). It'll also show the data type and artifacts that are
+ * selectable with the artifact.
  */
 public class GetArtifactMetadata {
 

@@ -34,22 +34,24 @@ public final class ProductGroupViewServiceProto {
       "ads/v3/resources/product_group_view.prot" +
       "o\032\034google/api/annotations.proto\032\027google/" +
       "api/client.proto\032\037google/api/field_behav" +
-      "ior.proto\"8\n\032GetProductGroupViewRequest\022" +
-      "\032\n\rresource_name\030\001 \001(\tB\003\340A\0022\216\002\n\027ProductG" +
-      "roupViewService\022\325\001\n\023GetProductGroupView\022" +
-      "<.google.ads.googleads.v3.services.GetPr" +
-      "oductGroupViewRequest\0323.google.ads.googl" +
-      "eads.v3.resources.ProductGroupView\"K\202\323\344\223" +
-      "\0025\0223/v3/{resource_name=customers/*/produ" +
-      "ctGroupViews/*}\332A\rresource_name\032\033\312A\030goog" +
-      "leads.googleapis.comB\203\002\n$com.google.ads." +
-      "googleads.v3.servicesB\034ProductGroupViewS" +
-      "erviceProtoP\001ZHgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v3/services;s" +
-      "ervices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3." +
-      "Services\312\002 Google\\Ads\\GoogleAds\\V3\\Servi" +
-      "ces\352\002$Google::Ads::GoogleAds::V3::Servic" +
-      "esb\006proto3"
+      "ior.proto\032\031google/api/resource.proto\"f\n\032" +
+      "GetProductGroupViewRequest\022H\n\rresource_n" +
+      "ame\030\001 \001(\tB1\340A\002\372A+\n)googleads.googleapis." +
+      "com/ProductGroupView2\216\002\n\027ProductGroupVie" +
+      "wService\022\325\001\n\023GetProductGroupView\022<.googl" +
+      "e.ads.googleads.v3.services.GetProductGr" +
+      "oupViewRequest\0323.google.ads.googleads.v3" +
+      ".resources.ProductGroupView\"K\202\323\344\223\0025\0223/v3" +
+      "/{resource_name=customers/*/productGroup" +
+      "Views/*}\332A\rresource_name\032\033\312A\030googleads.g" +
+      "oogleapis.comB\203\002\n$com.google.ads.googlea" +
+      "ds.v3.servicesB\034ProductGroupViewServiceP" +
+      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v3/services;services" +
+      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.Service" +
+      "s\312\002 Google\\Ads\\GoogleAds\\V3\\Services\352\002$G" +
+      "oogle::Ads::GoogleAds::V3::Servicesb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,6 +68,7 @@ public final class ProductGroupViewServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetProductGroupViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -79,12 +82,14 @@ public final class ProductGroupViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.ProductGroupViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

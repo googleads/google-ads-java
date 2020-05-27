@@ -152,138 +152,138 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The time when this mutate job was created.
+     * Output only. The time when this mutate job was created.
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasCreationDateTime();
     /**
      * <pre>
-     * The time when this mutate job was created.
+     * Output only. The time when this mutate job was created.
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getCreationDateTime();
     /**
      * <pre>
-     * The time when this mutate job was created.
+     * Output only. The time when this mutate job was created.
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getCreationDateTimeOrBuilder();
 
     /**
      * <pre>
-     * The time when this mutate job was completed.
+     * Output only. The time when this mutate job was completed.
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+     * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasCompletionDateTime();
     /**
      * <pre>
-     * The time when this mutate job was completed.
+     * Output only. The time when this mutate job was completed.
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+     * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getCompletionDateTime();
     /**
      * <pre>
-     * The time when this mutate job was completed.
+     * Output only. The time when this mutate job was completed.
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+     * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getCompletionDateTimeOrBuilder();
 
     /**
      * <pre>
-     * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
      * This is empty if the job hasn't started running yet.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasEstimatedCompletionRatio();
     /**
      * <pre>
-     * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
      * This is empty if the job hasn't started running yet.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.DoubleValue getEstimatedCompletionRatio();
     /**
      * <pre>
-     * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
      * This is empty if the job hasn't started running yet.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.DoubleValueOrBuilder getEstimatedCompletionRatioOrBuilder();
 
     /**
      * <pre>
-     * The number of mutate operations in the mutate job.
+     * Output only. The number of mutate operations in the mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasOperationCount();
     /**
      * <pre>
-     * The number of mutate operations in the mutate job.
+     * Output only. The number of mutate operations in the mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64Value getOperationCount();
     /**
      * <pre>
-     * The number of mutate operations in the mutate job.
+     * Output only. The number of mutate operations in the mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getOperationCountOrBuilder();
 
     /**
      * <pre>
-     * The number of mutate operations executed by the mutate job.
+     * Output only. The number of mutate operations executed by the mutate job.
      * Present only if the job has started running.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasExecutedOperationCount();
     /**
      * <pre>
-     * The number of mutate operations executed by the mutate job.
+     * Output only. The number of mutate operations executed by the mutate job.
      * Present only if the job has started running.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64Value getExecutedOperationCount();
     /**
      * <pre>
-     * The number of mutate operations executed by the mutate job.
+     * Output only. The number of mutate operations executed by the mutate job.
      * Present only if the job has started running.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getExecutedOperationCountOrBuilder();
   }
@@ -432,33 +432,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue creationDateTime_;
     /**
      * <pre>
-     * The time when this mutate job was created.
+     * Output only. The time when this mutate job was created.
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCreationDateTime() {
       return creationDateTime_ != null;
     }
     /**
      * <pre>
-     * The time when this mutate job was created.
+     * Output only. The time when this mutate job was created.
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCreationDateTime() {
       return creationDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creationDateTime_;
     }
     /**
      * <pre>
-     * The time when this mutate job was created.
+     * Output only. The time when this mutate job was created.
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+     * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCreationDateTimeOrBuilder() {
       return getCreationDateTime();
@@ -468,33 +468,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue completionDateTime_;
     /**
      * <pre>
-     * The time when this mutate job was completed.
+     * Output only. The time when this mutate job was completed.
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+     * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCompletionDateTime() {
       return completionDateTime_ != null;
     }
     /**
      * <pre>
-     * The time when this mutate job was completed.
+     * Output only. The time when this mutate job was completed.
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+     * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getCompletionDateTime() {
       return completionDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : completionDateTime_;
     }
     /**
      * <pre>
-     * The time when this mutate job was completed.
+     * Output only. The time when this mutate job was completed.
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+     * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCompletionDateTimeOrBuilder() {
       return getCompletionDateTime();
@@ -504,33 +504,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.DoubleValue estimatedCompletionRatio_;
     /**
      * <pre>
-     * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
      * This is empty if the job hasn't started running yet.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasEstimatedCompletionRatio() {
       return estimatedCompletionRatio_ != null;
     }
     /**
      * <pre>
-     * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
      * This is empty if the job hasn't started running yet.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.DoubleValue getEstimatedCompletionRatio() {
       return estimatedCompletionRatio_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : estimatedCompletionRatio_;
     }
     /**
      * <pre>
-     * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
      * This is empty if the job hasn't started running yet.
      * </pre>
      *
-     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+     * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.DoubleValueOrBuilder getEstimatedCompletionRatioOrBuilder() {
       return getEstimatedCompletionRatio();
@@ -540,30 +540,30 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Int64Value operationCount_;
     /**
      * <pre>
-     * The number of mutate operations in the mutate job.
+     * Output only. The number of mutate operations in the mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasOperationCount() {
       return operationCount_ != null;
     }
     /**
      * <pre>
-     * The number of mutate operations in the mutate job.
+     * Output only. The number of mutate operations in the mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getOperationCount() {
       return operationCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : operationCount_;
     }
     /**
      * <pre>
-     * The number of mutate operations in the mutate job.
+     * Output only. The number of mutate operations in the mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+     * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getOperationCountOrBuilder() {
       return getOperationCount();
@@ -573,33 +573,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Int64Value executedOperationCount_;
     /**
      * <pre>
-     * The number of mutate operations executed by the mutate job.
+     * Output only. The number of mutate operations executed by the mutate job.
      * Present only if the job has started running.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasExecutedOperationCount() {
       return executedOperationCount_ != null;
     }
     /**
      * <pre>
-     * The number of mutate operations executed by the mutate job.
+     * Output only. The number of mutate operations executed by the mutate job.
      * Present only if the job has started running.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getExecutedOperationCount() {
       return executedOperationCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : executedOperationCount_;
     }
     /**
      * <pre>
-     * The number of mutate operations executed by the mutate job.
+     * Output only. The number of mutate operations executed by the mutate job.
      * Present only if the job has started running.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+     * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getExecutedOperationCountOrBuilder() {
       return getExecutedOperationCount();
@@ -1050,22 +1050,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> creationDateTimeBuilder_;
       /**
        * <pre>
-       * The time when this mutate job was created.
+       * Output only. The time when this mutate job was created.
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasCreationDateTime() {
         return creationDateTimeBuilder_ != null || creationDateTime_ != null;
       }
       /**
        * <pre>
-       * The time when this mutate job was created.
+       * Output only. The time when this mutate job was created.
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getCreationDateTime() {
         if (creationDateTimeBuilder_ == null) {
@@ -1076,11 +1076,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was created.
+       * Output only. The time when this mutate job was created.
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setCreationDateTime(com.google.protobuf.StringValue value) {
         if (creationDateTimeBuilder_ == null) {
@@ -1097,11 +1097,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was created.
+       * Output only. The time when this mutate job was created.
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setCreationDateTime(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1116,11 +1116,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was created.
+       * Output only. The time when this mutate job was created.
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeCreationDateTime(com.google.protobuf.StringValue value) {
         if (creationDateTimeBuilder_ == null) {
@@ -1139,11 +1139,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was created.
+       * Output only. The time when this mutate job was created.
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearCreationDateTime() {
         if (creationDateTimeBuilder_ == null) {
@@ -1158,11 +1158,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was created.
+       * Output only. The time when this mutate job was created.
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getCreationDateTimeBuilder() {
         
@@ -1171,11 +1171,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was created.
+       * Output only. The time when this mutate job was created.
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getCreationDateTimeOrBuilder() {
         if (creationDateTimeBuilder_ != null) {
@@ -1187,11 +1187,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was created.
+       * Output only. The time when this mutate job was created.
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue creation_date_time = 1;</code>
+       * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1212,22 +1212,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> completionDateTimeBuilder_;
       /**
        * <pre>
-       * The time when this mutate job was completed.
+       * Output only. The time when this mutate job was completed.
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+       * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasCompletionDateTime() {
         return completionDateTimeBuilder_ != null || completionDateTime_ != null;
       }
       /**
        * <pre>
-       * The time when this mutate job was completed.
+       * Output only. The time when this mutate job was completed.
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+       * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getCompletionDateTime() {
         if (completionDateTimeBuilder_ == null) {
@@ -1238,11 +1238,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was completed.
+       * Output only. The time when this mutate job was completed.
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+       * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setCompletionDateTime(com.google.protobuf.StringValue value) {
         if (completionDateTimeBuilder_ == null) {
@@ -1259,11 +1259,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was completed.
+       * Output only. The time when this mutate job was completed.
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+       * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setCompletionDateTime(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1278,11 +1278,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was completed.
+       * Output only. The time when this mutate job was completed.
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+       * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeCompletionDateTime(com.google.protobuf.StringValue value) {
         if (completionDateTimeBuilder_ == null) {
@@ -1301,11 +1301,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was completed.
+       * Output only. The time when this mutate job was completed.
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+       * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearCompletionDateTime() {
         if (completionDateTimeBuilder_ == null) {
@@ -1320,11 +1320,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was completed.
+       * Output only. The time when this mutate job was completed.
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+       * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getCompletionDateTimeBuilder() {
         
@@ -1333,11 +1333,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was completed.
+       * Output only. The time when this mutate job was completed.
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+       * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getCompletionDateTimeOrBuilder() {
         if (completionDateTimeBuilder_ != null) {
@@ -1349,11 +1349,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The time when this mutate job was completed.
+       * Output only. The time when this mutate job was completed.
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>.google.protobuf.StringValue completion_date_time = 2;</code>
+       * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1374,22 +1374,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> estimatedCompletionRatioBuilder_;
       /**
        * <pre>
-       * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasEstimatedCompletionRatio() {
         return estimatedCompletionRatioBuilder_ != null || estimatedCompletionRatio_ != null;
       }
       /**
        * <pre>
-       * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.DoubleValue getEstimatedCompletionRatio() {
         if (estimatedCompletionRatioBuilder_ == null) {
@@ -1400,11 +1400,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setEstimatedCompletionRatio(com.google.protobuf.DoubleValue value) {
         if (estimatedCompletionRatioBuilder_ == null) {
@@ -1421,11 +1421,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setEstimatedCompletionRatio(
           com.google.protobuf.DoubleValue.Builder builderForValue) {
@@ -1440,11 +1440,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeEstimatedCompletionRatio(com.google.protobuf.DoubleValue value) {
         if (estimatedCompletionRatioBuilder_ == null) {
@@ -1463,11 +1463,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearEstimatedCompletionRatio() {
         if (estimatedCompletionRatioBuilder_ == null) {
@@ -1482,11 +1482,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.DoubleValue.Builder getEstimatedCompletionRatioBuilder() {
         
@@ -1495,11 +1495,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.DoubleValueOrBuilder getEstimatedCompletionRatioOrBuilder() {
         if (estimatedCompletionRatioBuilder_ != null) {
@@ -1511,11 +1511,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The fraction (between 0.0 and 1.0) of mutates that have been processed.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3;</code>
+       * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
@@ -1536,20 +1536,20 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> operationCountBuilder_;
       /**
        * <pre>
-       * The number of mutate operations in the mutate job.
+       * Output only. The number of mutate operations in the mutate job.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasOperationCount() {
         return operationCountBuilder_ != null || operationCount_ != null;
       }
       /**
        * <pre>
-       * The number of mutate operations in the mutate job.
+       * Output only. The number of mutate operations in the mutate job.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value getOperationCount() {
         if (operationCountBuilder_ == null) {
@@ -1560,10 +1560,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations in the mutate job.
+       * Output only. The number of mutate operations in the mutate job.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setOperationCount(com.google.protobuf.Int64Value value) {
         if (operationCountBuilder_ == null) {
@@ -1580,10 +1580,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations in the mutate job.
+       * Output only. The number of mutate operations in the mutate job.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setOperationCount(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1598,10 +1598,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations in the mutate job.
+       * Output only. The number of mutate operations in the mutate job.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeOperationCount(com.google.protobuf.Int64Value value) {
         if (operationCountBuilder_ == null) {
@@ -1620,10 +1620,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations in the mutate job.
+       * Output only. The number of mutate operations in the mutate job.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearOperationCount() {
         if (operationCountBuilder_ == null) {
@@ -1638,10 +1638,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations in the mutate job.
+       * Output only. The number of mutate operations in the mutate job.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value.Builder getOperationCountBuilder() {
         
@@ -1650,10 +1650,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations in the mutate job.
+       * Output only. The number of mutate operations in the mutate job.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getOperationCountOrBuilder() {
         if (operationCountBuilder_ != null) {
@@ -1665,10 +1665,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations in the mutate job.
+       * Output only. The number of mutate operations in the mutate job.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value operation_count = 4;</code>
+       * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1689,22 +1689,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> executedOperationCountBuilder_;
       /**
        * <pre>
-       * The number of mutate operations executed by the mutate job.
+       * Output only. The number of mutate operations executed by the mutate job.
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasExecutedOperationCount() {
         return executedOperationCountBuilder_ != null || executedOperationCount_ != null;
       }
       /**
        * <pre>
-       * The number of mutate operations executed by the mutate job.
+       * Output only. The number of mutate operations executed by the mutate job.
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value getExecutedOperationCount() {
         if (executedOperationCountBuilder_ == null) {
@@ -1715,11 +1715,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations executed by the mutate job.
+       * Output only. The number of mutate operations executed by the mutate job.
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setExecutedOperationCount(com.google.protobuf.Int64Value value) {
         if (executedOperationCountBuilder_ == null) {
@@ -1736,11 +1736,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations executed by the mutate job.
+       * Output only. The number of mutate operations executed by the mutate job.
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setExecutedOperationCount(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1755,11 +1755,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations executed by the mutate job.
+       * Output only. The number of mutate operations executed by the mutate job.
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeExecutedOperationCount(com.google.protobuf.Int64Value value) {
         if (executedOperationCountBuilder_ == null) {
@@ -1778,11 +1778,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations executed by the mutate job.
+       * Output only. The number of mutate operations executed by the mutate job.
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearExecutedOperationCount() {
         if (executedOperationCountBuilder_ == null) {
@@ -1797,11 +1797,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations executed by the mutate job.
+       * Output only. The number of mutate operations executed by the mutate job.
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64Value.Builder getExecutedOperationCountBuilder() {
         
@@ -1810,11 +1810,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations executed by the mutate job.
+       * Output only. The number of mutate operations executed by the mutate job.
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getExecutedOperationCountOrBuilder() {
         if (executedOperationCountBuilder_ != null) {
@@ -1826,11 +1826,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The number of mutate operations executed by the mutate job.
+       * Output only. The number of mutate operations executed by the mutate job.
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value executed_operation_count = 5;</code>
+       * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1902,12 +1902,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the mutate job.
+   * Immutable. The resource name of the mutate job.
    * Mutate job resource names have the form:
    * `customers/{customer_id}/mutateJobs/{mutate_job_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -1923,12 +1923,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the mutate job.
+   * Immutable. The resource name of the mutate job.
    * Mutate job resource names have the form:
    * `customers/{customer_id}/mutateJobs/{mutate_job_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -1948,30 +1948,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * ID of this mutate job.
+   * Output only. ID of this mutate job.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * ID of this mutate job.
+   * Output only. ID of this mutate job.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * ID of this mutate job.
+   * Output only. ID of this mutate job.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -1981,33 +1981,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue nextAddSequenceToken_;
   /**
    * <pre>
-   * The next sequence token to use when adding operations. Only set when the
+   * Output only. The next sequence token to use when adding operations. Only set when the
    * mutate job status is PENDING.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+   * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasNextAddSequenceToken() {
     return nextAddSequenceToken_ != null;
   }
   /**
    * <pre>
-   * The next sequence token to use when adding operations. Only set when the
+   * Output only. The next sequence token to use when adding operations. Only set when the
    * mutate job status is PENDING.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+   * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getNextAddSequenceToken() {
     return nextAddSequenceToken_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : nextAddSequenceToken_;
   }
   /**
    * <pre>
-   * The next sequence token to use when adding operations. Only set when the
+   * Output only. The next sequence token to use when adding operations. Only set when the
    * mutate job status is PENDING.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+   * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getNextAddSequenceTokenOrBuilder() {
     return getNextAddSequenceToken();
@@ -2017,30 +2017,30 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata_;
   /**
    * <pre>
-   * Contains additional information about this mutate job.
+   * Output only. Contains additional information about this mutate job.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+   * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasMetadata() {
     return metadata_ != null;
   }
   /**
    * <pre>
-   * Contains additional information about this mutate job.
+   * Output only. Contains additional information about this mutate job.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+   * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata getMetadata() {
     return metadata_ == null ? com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata.getDefaultInstance() : metadata_;
   }
   /**
    * <pre>
-   * Contains additional information about this mutate job.
+   * Output only. Contains additional information about this mutate job.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+   * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadataOrBuilder getMetadataOrBuilder() {
     return getMetadata();
@@ -2050,20 +2050,20 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Status of this mutate job.
+   * Output only. Status of this mutate job.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Status of this mutate job.
+   * Output only. Status of this mutate job.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -2075,33 +2075,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue longRunningOperation_;
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion. Only set when the mutate job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasLongRunningOperation() {
     return longRunningOperation_ != null;
   }
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion. Only set when the mutate job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getLongRunningOperation() {
     return longRunningOperation_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : longRunningOperation_;
   }
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion. Only set when the mutate job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder() {
     return getLongRunningOperation();
@@ -2554,12 +2554,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the mutate job.
+     * Immutable. The resource name of the mutate job.
      * Mutate job resource names have the form:
      * `customers/{customer_id}/mutateJobs/{mutate_job_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -2575,12 +2575,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mutate job.
+     * Immutable. The resource name of the mutate job.
      * Mutate job resource names have the form:
      * `customers/{customer_id}/mutateJobs/{mutate_job_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -2597,12 +2597,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mutate job.
+     * Immutable. The resource name of the mutate job.
      * Mutate job resource names have the form:
      * `customers/{customer_id}/mutateJobs/{mutate_job_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -2616,12 +2616,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mutate job.
+     * Immutable. The resource name of the mutate job.
      * Mutate job resource names have the form:
      * `customers/{customer_id}/mutateJobs/{mutate_job_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -2631,12 +2631,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the mutate job.
+     * Immutable. The resource name of the mutate job.
      * Mutate job resource names have the form:
      * `customers/{customer_id}/mutateJobs/{mutate_job_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -2655,20 +2655,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * ID of this mutate job.
+     * Output only. ID of this mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * ID of this mutate job.
+     * Output only. ID of this mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -2679,10 +2679,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of this mutate job.
+     * Output only. ID of this mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -2699,10 +2699,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of this mutate job.
+     * Output only. ID of this mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2717,10 +2717,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of this mutate job.
+     * Output only. ID of this mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -2739,10 +2739,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of this mutate job.
+     * Output only. ID of this mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -2757,10 +2757,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of this mutate job.
+     * Output only. ID of this mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -2769,10 +2769,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of this mutate job.
+     * Output only. ID of this mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -2784,10 +2784,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * ID of this mutate job.
+     * Output only. ID of this mutate job.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2808,22 +2808,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nextAddSequenceTokenBuilder_;
     /**
      * <pre>
-     * The next sequence token to use when adding operations. Only set when the
+     * Output only. The next sequence token to use when adding operations. Only set when the
      * mutate job status is PENDING.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+     * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasNextAddSequenceToken() {
       return nextAddSequenceTokenBuilder_ != null || nextAddSequenceToken_ != null;
     }
     /**
      * <pre>
-     * The next sequence token to use when adding operations. Only set when the
+     * Output only. The next sequence token to use when adding operations. Only set when the
      * mutate job status is PENDING.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+     * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getNextAddSequenceToken() {
       if (nextAddSequenceTokenBuilder_ == null) {
@@ -2834,11 +2834,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The next sequence token to use when adding operations. Only set when the
+     * Output only. The next sequence token to use when adding operations. Only set when the
      * mutate job status is PENDING.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+     * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setNextAddSequenceToken(com.google.protobuf.StringValue value) {
       if (nextAddSequenceTokenBuilder_ == null) {
@@ -2855,11 +2855,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The next sequence token to use when adding operations. Only set when the
+     * Output only. The next sequence token to use when adding operations. Only set when the
      * mutate job status is PENDING.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+     * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setNextAddSequenceToken(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2874,11 +2874,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The next sequence token to use when adding operations. Only set when the
+     * Output only. The next sequence token to use when adding operations. Only set when the
      * mutate job status is PENDING.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+     * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeNextAddSequenceToken(com.google.protobuf.StringValue value) {
       if (nextAddSequenceTokenBuilder_ == null) {
@@ -2897,11 +2897,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The next sequence token to use when adding operations. Only set when the
+     * Output only. The next sequence token to use when adding operations. Only set when the
      * mutate job status is PENDING.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+     * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearNextAddSequenceToken() {
       if (nextAddSequenceTokenBuilder_ == null) {
@@ -2916,11 +2916,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The next sequence token to use when adding operations. Only set when the
+     * Output only. The next sequence token to use when adding operations. Only set when the
      * mutate job status is PENDING.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+     * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getNextAddSequenceTokenBuilder() {
       
@@ -2929,11 +2929,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The next sequence token to use when adding operations. Only set when the
+     * Output only. The next sequence token to use when adding operations. Only set when the
      * mutate job status is PENDING.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+     * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNextAddSequenceTokenOrBuilder() {
       if (nextAddSequenceTokenBuilder_ != null) {
@@ -2945,11 +2945,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The next sequence token to use when adding operations. Only set when the
+     * Output only. The next sequence token to use when adding operations. Only set when the
      * mutate job status is PENDING.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+     * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2970,20 +2970,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata, com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata.Builder, com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadataOrBuilder> metadataBuilder_;
     /**
      * <pre>
-     * Contains additional information about this mutate job.
+     * Output only. Contains additional information about this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasMetadata() {
       return metadataBuilder_ != null || metadata_ != null;
     }
     /**
      * <pre>
-     * Contains additional information about this mutate job.
+     * Output only. Contains additional information about this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata getMetadata() {
       if (metadataBuilder_ == null) {
@@ -2994,10 +2994,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contains additional information about this mutate job.
+     * Output only. Contains additional information about this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setMetadata(com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata value) {
       if (metadataBuilder_ == null) {
@@ -3014,10 +3014,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contains additional information about this mutate job.
+     * Output only. Contains additional information about this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setMetadata(
         com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata.Builder builderForValue) {
@@ -3032,10 +3032,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contains additional information about this mutate job.
+     * Output only. Contains additional information about this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeMetadata(com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata value) {
       if (metadataBuilder_ == null) {
@@ -3054,10 +3054,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contains additional information about this mutate job.
+     * Output only. Contains additional information about this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearMetadata() {
       if (metadataBuilder_ == null) {
@@ -3072,10 +3072,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contains additional information about this mutate job.
+     * Output only. Contains additional information about this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata.Builder getMetadataBuilder() {
       
@@ -3084,10 +3084,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contains additional information about this mutate job.
+     * Output only. Contains additional information about this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadataOrBuilder getMetadataOrBuilder() {
       if (metadataBuilder_ != null) {
@@ -3099,10 +3099,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contains additional information about this mutate job.
+     * Output only. Contains additional information about this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+     * <code>.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata, com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadata.Builder, com.google.ads.googleads.v3.resources.MutateJob.MutateJobMetadataOrBuilder> 
@@ -3121,20 +3121,20 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Status of this mutate job.
+     * Output only. Status of this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Status of this mutate job.
+     * Output only. Status of this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -3143,10 +3143,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of this mutate job.
+     * Output only. Status of this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -3155,10 +3155,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of this mutate job.
+     * Output only. Status of this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus value) {
       if (value == null) {
@@ -3171,10 +3171,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of this mutate job.
+     * Output only. Status of this mutate job.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5;</code>
+     * <code>.google.ads.googleads.v3.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       
@@ -3188,22 +3188,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> longRunningOperationBuilder_;
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion. Only set when the mutate job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasLongRunningOperation() {
       return longRunningOperationBuilder_ != null || longRunningOperation_ != null;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion. Only set when the mutate job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getLongRunningOperation() {
       if (longRunningOperationBuilder_ == null) {
@@ -3214,11 +3214,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion. Only set when the mutate job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLongRunningOperation(com.google.protobuf.StringValue value) {
       if (longRunningOperationBuilder_ == null) {
@@ -3235,11 +3235,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion. Only set when the mutate job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLongRunningOperation(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3254,11 +3254,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion. Only set when the mutate job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLongRunningOperation(com.google.protobuf.StringValue value) {
       if (longRunningOperationBuilder_ == null) {
@@ -3277,11 +3277,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion. Only set when the mutate job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLongRunningOperation() {
       if (longRunningOperationBuilder_ == null) {
@@ -3296,11 +3296,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion. Only set when the mutate job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getLongRunningOperationBuilder() {
       
@@ -3309,11 +3309,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion. Only set when the mutate job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder() {
       if (longRunningOperationBuilder_ != null) {
@@ -3325,11 +3325,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the long-running operation that can be used to poll
+     * Output only. The resource name of the long-running operation that can be used to poll
      * for completion. Only set when the mutate job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+     * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

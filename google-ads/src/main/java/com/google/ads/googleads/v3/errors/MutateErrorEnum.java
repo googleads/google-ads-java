@@ -151,6 +151,22 @@ private static final long serialVersionUID = 0L;
      * <code>RESOURCE_ALREADY_EXISTS = 11;</code>
      */
     RESOURCE_ALREADY_EXISTS(11),
+    /**
+     * <pre>
+     * This resource cannot be used with "validate_only".
+     * </pre>
+     *
+     * <code>RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY = 12;</code>
+     */
+    RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY(12),
+    /**
+     * <pre>
+     * Attempt to write to read-only fields.
+     * </pre>
+     *
+     * <code>RESOURCE_READ_ONLY = 13;</code>
+     */
+    RESOURCE_READ_ONLY(13),
     UNRECOGNIZED(-1),
     ;
 
@@ -219,6 +235,22 @@ private static final long serialVersionUID = 0L;
      * <code>RESOURCE_ALREADY_EXISTS = 11;</code>
      */
     public static final int RESOURCE_ALREADY_EXISTS_VALUE = 11;
+    /**
+     * <pre>
+     * This resource cannot be used with "validate_only".
+     * </pre>
+     *
+     * <code>RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY = 12;</code>
+     */
+    public static final int RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY_VALUE = 12;
+    /**
+     * <pre>
+     * Attempt to write to read-only fields.
+     * </pre>
+     *
+     * <code>RESOURCE_READ_ONLY = 13;</code>
+     */
+    public static final int RESOURCE_READ_ONLY_VALUE = 13;
 
 
     public final int getNumber() {
@@ -247,6 +279,8 @@ private static final long serialVersionUID = 0L;
         case 9: return MUTATE_NOT_ALLOWED;
         case 10: return RESOURCE_NOT_IN_GOOGLE_ADS;
         case 11: return RESOURCE_ALREADY_EXISTS;
+        case 12: return RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY;
+        case 13: return RESOURCE_READ_ONLY;
         default: return null;
       }
     }

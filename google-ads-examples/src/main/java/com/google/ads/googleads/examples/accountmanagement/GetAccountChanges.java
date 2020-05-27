@@ -18,8 +18,8 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.ChangeStatus;
 import com.google.ads.googleads.v3.services.GoogleAdsRow;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
@@ -85,18 +85,24 @@ public class GetAccountChanges {
     String query =
         "SELECT change_status.resource_name, "
             + "change_status.last_change_date_time, "
-            + "change_status.resource_type, "
-            + "change_status.campaign, "
-            + "change_status.ad_group, "
             + "change_status.resource_status, "
+            + "change_status.resource_type, "
+            + "change_status.ad_group, "
             + "change_status.ad_group_ad, "
+            + "change_status.ad_group_bid_modifier, "
             + "change_status.ad_group_criterion, "
-            + "change_status.campaign_criterion "
+            + "change_status.ad_group_feed, "
+            + "change_status.campaign, "
+            + "change_status.campaign_criterion, "
+            + "change_status.campaign_feed, "
+            + "change_status.feed, "
+            + "change_status.feed_item "
             + "FROM change_status "
             + "WHERE change_status.last_change_date_time DURING LAST_7_DAYS "
             + "ORDER BY change_status.last_change_date_time";
 
-    try (GoogleAdsServiceClient client = googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+    try (GoogleAdsServiceClient client =
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       SearchPagedResponse response = client.search(String.valueOf(customerId), query);
 
       for (GoogleAdsRow row : response.iterateAll()) {
@@ -134,14 +140,29 @@ public class GetAccountChanges {
       case AD_GROUP_AD:
         resourceName = changeStatus.getAdGroupAd().getValue();
         break;
+      case AD_GROUP_BID_MODIFIER:
+        resourceName = changeStatus.getAdGroupBidModifier().getValue();
+        break;
       case AD_GROUP_CRITERION:
         resourceName = changeStatus.getAdGroup().getValue();
+        break;
+      case AD_GROUP_FEED:
+        resourceName = changeStatus.getAdGroupFeed().getValue();
         break;
       case CAMPAIGN:
         resourceName = changeStatus.getCampaign().getValue();
         break;
       case CAMPAIGN_CRITERION:
         resourceName = changeStatus.getCampaignCriterion().getValue();
+        break;
+      case CAMPAIGN_FEED:
+        resourceName = changeStatus.getCampaignFeed().getValue();
+        break;
+      case FEED:
+        resourceName = changeStatus.getFeed().getValue();
+        break;
+      case FEED_ITEM:
+        resourceName = changeStatus.getFeedItem().getValue();
         break;
     }
     return Optional.ofNullable(resourceName);

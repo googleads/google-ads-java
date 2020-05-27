@@ -3664,7 +3664,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue hotelAverageLeadValueMicros_;
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -3674,7 +3674,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -3684,7 +3684,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18784,7 +18784,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> hotelAverageLeadValueMicrosBuilder_;
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18794,7 +18794,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18808,7 +18808,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18828,7 +18828,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18846,7 +18846,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18868,7 +18868,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18886,7 +18886,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18898,7 +18898,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18913,7 +18913,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>

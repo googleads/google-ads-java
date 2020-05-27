@@ -34,8 +34,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Updates a sitelink extension feed item {@code SitelinkFeedItem} with the specified link text
- * and URL.
+ * Updates a sitelink extension feed item {@code SitelinkFeedItem} with the specified link text and
+ * URL.
  */
 public class UpdateSitelink {
 
@@ -106,11 +106,12 @@ public class UpdateSitelink {
     try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient =
         googleAdsClient.getLatestVersion().createExtensionFeedItemServiceClient()) {
       // Creates an extension feed item using the specified feed item ID and sitelink text.
-      ExtensionFeedItem extensionFeedItem = ExtensionFeedItem.newBuilder()
-          .setResourceName(ResourceNames.extensionFeedItem(customerId, feedItemId))
-          .setSitelinkFeedItem(
-              SitelinkFeedItem.newBuilder().setLinkText(StringValue.of(sitelinkText)).build())
-          .build();
+      ExtensionFeedItem extensionFeedItem =
+          ExtensionFeedItem.newBuilder()
+              .setResourceName(ResourceNames.extensionFeedItem(customerId, feedItemId))
+              .setSitelinkFeedItem(
+                  SitelinkFeedItem.newBuilder().setLinkText(StringValue.of(sitelinkText)).build())
+              .build();
       // Constructs an operation that will update the extension feed item, using the FieldMasks
       // utility to derive the update mask. This mask tells the Google Ads API which attributes of
       // the extension feed item you want to change.
@@ -124,8 +125,8 @@ public class UpdateSitelink {
           extensionFeedItemServiceClient.mutateExtensionFeedItems(
               Long.toString(customerId), ImmutableList.of(operation));
       // Prints the resource name of each updated object.
-      for (MutateExtensionFeedItemResult mutateExtensionFeedItemResult : response
-          .getResultsList()) {
+      for (MutateExtensionFeedItemResult mutateExtensionFeedItemResult :
+          response.getResultsList()) {
         System.out.printf(
             "Updated extension feed item with the resource name: '%s'.%n",
             mutateExtensionFeedItemResult.getResourceName());

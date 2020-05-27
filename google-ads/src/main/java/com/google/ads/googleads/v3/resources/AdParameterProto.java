@@ -30,23 +30,26 @@ public final class AdParameterProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v3/resources/ad_p" +
       "arameter.proto\022!google.ads.googleads.v3." +
-      "resources\032\031google/api/resource.proto\032\036go" +
-      "ogle/protobuf/wrappers.proto\032\034google/api" +
-      "/annotations.proto\"\247\002\n\013AdParameter\022\025\n\rre" +
-      "source_name\030\001 \001(\t\0228\n\022ad_group_criterion\030" +
-      "\002 \001(\0132\034.google.protobuf.StringValue\0224\n\017p" +
-      "arameter_index\030\003 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0224\n\016insertion_text\030\004 \001(\0132\034.goog" +
-      "le.protobuf.StringValue:[\352AX\n$googleads." +
-      "googleapis.com/AdParameter\0220customers/{c" +
-      "ustomer}/adParameters/{ad_parameter}B\375\001\n" +
-      "%com.google.ads.googleads.v3.resourcesB\020" +
-      "AdParameterProtoP\001ZJgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v3/resou" +
-      "rces;resources\242\002\003GAA\252\002!Google.Ads.Google" +
-      "Ads.V3.Resources\312\002!Google\\Ads\\GoogleAds\\" +
-      "V3\\Resources\352\002%Google::Ads::GoogleAds::V" +
-      "3::Resourcesb\006proto3"
+      "resources\032\037google/api/field_behavior.pro" +
+      "to\032\031google/api/resource.proto\032\036google/pr" +
+      "otobuf/wrappers.proto\032\034google/api/annota" +
+      "tions.proto\"\215\003\n\013AdParameter\022C\n\rresource_" +
+      "name\030\001 \001(\tB,\340A\005\372A&\n$googleads.googleapis" +
+      ".com/AdParameter\022k\n\022ad_group_criterion\030\002" +
+      " \001(\0132\034.google.protobuf.StringValueB1\340A\005\372" +
+      "A+\n)googleads.googleapis.com/AdGroupCrit" +
+      "erion\0229\n\017parameter_index\030\003 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\003\340A\005\0224\n\016insertion_te" +
+      "xt\030\004 \001(\0132\034.google.protobuf.StringValue:[" +
+      "\352AX\n$googleads.googleapis.com/AdParamete" +
+      "r\0220customers/{customer}/adParameters/{ad" +
+      "_parameter}B\375\001\n%com.google.ads.googleads" +
+      ".v3.resourcesB\020AdParameterProtoP\001ZJgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v3/resources;resources\242\002\003GAA\252\002!Go" +
+      "ogle.Ads.GoogleAds.V3.Resources\312\002!Google" +
+      "\\Ads\\GoogleAds\\V3\\Resources\352\002%Google::Ad" +
+      "s::GoogleAds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -59,6 +62,7 @@ public final class AdParameterProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -71,9 +75,12 @@ public final class AdParameterProto {
         new java.lang.String[] { "ResourceName", "AdGroupCriterion", "ParameterIndex", "InsertionText", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

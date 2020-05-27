@@ -34,21 +34,22 @@ public final class TopicConstantServiceProto {
       "v3/resources/topic_constant.proto\032\034googl" +
       "e/api/annotations.proto\032\027google/api/clie" +
       "nt.proto\032\037google/api/field_behavior.prot" +
-      "o\"5\n\027GetTopicConstantRequest\022\032\n\rresource" +
-      "_name\030\001 \001(\tB\003\340A\0022\363\001\n\024TopicConstantServic" +
-      "e\022\275\001\n\020GetTopicConstant\0229.google.ads.goog" +
-      "leads.v3.services.GetTopicConstantReques" +
-      "t\0320.google.ads.googleads.v3.resources.To" +
-      "picConstant\"<\202\323\344\223\002&\022$/v3/{resource_name=" +
-      "topicConstants/*}\332A\rresource_name\032\033\312A\030go" +
-      "ogleads.googleapis.comB\200\002\n$com.google.ad" +
-      "s.googleads.v3.servicesB\031TopicConstantSe" +
-      "rviceProtoP\001ZHgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v3/services;se" +
-      "rvices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.S" +
-      "ervices\312\002 Google\\Ads\\GoogleAds\\V3\\Servic" +
-      "es\352\002$Google::Ads::GoogleAds::V3::Service" +
-      "sb\006proto3"
+      "o\032\031google/api/resource.proto\"`\n\027GetTopic" +
+      "ConstantRequest\022E\n\rresource_name\030\001 \001(\tB." +
+      "\340A\002\372A(\n&googleads.googleapis.com/TopicCo" +
+      "nstant2\363\001\n\024TopicConstantService\022\275\001\n\020GetT" +
+      "opicConstant\0229.google.ads.googleads.v3.s" +
+      "ervices.GetTopicConstantRequest\0320.google" +
+      ".ads.googleads.v3.resources.TopicConstan" +
+      "t\"<\202\323\344\223\002&\022$/v3/{resource_name=topicConst" +
+      "ants/*}\332A\rresource_name\032\033\312A\030googleads.go" +
+      "ogleapis.comB\200\002\n$com.google.ads.googlead" +
+      "s.v3.servicesB\031TopicConstantServiceProto" +
+      "P\001ZHgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v3/services;services\242\002\003G" +
+      "AA\252\002 Google.Ads.GoogleAds.V3.Services\312\002 " +
+      "Google\\Ads\\GoogleAds\\V3\\Services\352\002$Googl" +
+      "e::Ads::GoogleAds::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -65,6 +66,7 @@ public final class TopicConstantServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetTopicConstantRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -78,12 +80,14 @@ public final class TopicConstantServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.TopicConstantProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

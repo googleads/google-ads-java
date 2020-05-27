@@ -176,12 +176,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the Keyword Plan campaign.
+   * Immutable. The resource name of the Keyword Plan campaign.
    * KeywordPlanCampaign resource names have the form:
    * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -197,12 +197,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the Keyword Plan campaign.
+   * Immutable. The resource name of the Keyword Plan campaign.
    * KeywordPlanCampaign resource names have the form:
    * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -225,7 +225,7 @@ private static final long serialVersionUID = 0L;
    * The keyword plan this campaign belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasKeywordPlan() {
     return keywordPlan_ != null;
@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * The keyword plan this campaign belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getKeywordPlan() {
     return keywordPlan_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlan_;
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 0L;
    * The keyword plan this campaign belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanOrBuilder() {
     return getKeywordPlan();
@@ -255,30 +255,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the Keyword Plan campaign.
+   * Output only. The ID of the Keyword Plan campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the Keyword Plan campaign.
+   * Output only. The ID of the Keyword Plan campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the Keyword Plan campaign.
+   * Output only. The ID of the Keyword Plan campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -331,7 +331,7 @@ private static final long serialVersionUID = 0L;
    * Max allowed: 1.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+   * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
   public java.util.List<com.google.protobuf.StringValue> getLanguageConstantsList() {
     return languageConstants_;
@@ -342,7 +342,7 @@ private static final long serialVersionUID = 0L;
    * Max allowed: 1.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+   * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getLanguageConstantsOrBuilderList() {
@@ -354,7 +354,7 @@ private static final long serialVersionUID = 0L;
    * Max allowed: 1.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+   * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
   public int getLanguageConstantsCount() {
     return languageConstants_.size();
@@ -365,7 +365,7 @@ private static final long serialVersionUID = 0L;
    * Max allowed: 1.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+   * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getLanguageConstants(int index) {
     return languageConstants_.get(index);
@@ -376,7 +376,7 @@ private static final long serialVersionUID = 0L;
    * Max allowed: 1.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+   * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getLanguageConstantsOrBuilder(
       int index) {
@@ -1074,12 +1074,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the Keyword Plan campaign.
+     * Immutable. The resource name of the Keyword Plan campaign.
      * KeywordPlanCampaign resource names have the form:
      * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1095,12 +1095,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan campaign.
+     * Immutable. The resource name of the Keyword Plan campaign.
      * KeywordPlanCampaign resource names have the form:
      * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1117,12 +1117,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan campaign.
+     * Immutable. The resource name of the Keyword Plan campaign.
      * KeywordPlanCampaign resource names have the form:
      * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1136,12 +1136,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan campaign.
+     * Immutable. The resource name of the Keyword Plan campaign.
      * KeywordPlanCampaign resource names have the form:
      * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1151,12 +1151,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the Keyword Plan campaign.
+     * Immutable. The resource name of the Keyword Plan campaign.
      * KeywordPlanCampaign resource names have the form:
      * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1178,7 +1178,7 @@ private static final long serialVersionUID = 0L;
      * The keyword plan this campaign belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasKeywordPlan() {
       return keywordPlanBuilder_ != null || keywordPlan_ != null;
@@ -1188,7 +1188,7 @@ private static final long serialVersionUID = 0L;
      * The keyword plan this campaign belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getKeywordPlan() {
       if (keywordPlanBuilder_ == null) {
@@ -1202,7 +1202,7 @@ private static final long serialVersionUID = 0L;
      * The keyword plan this campaign belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setKeywordPlan(com.google.protobuf.StringValue value) {
       if (keywordPlanBuilder_ == null) {
@@ -1222,7 +1222,7 @@ private static final long serialVersionUID = 0L;
      * The keyword plan this campaign belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setKeywordPlan(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1240,7 +1240,7 @@ private static final long serialVersionUID = 0L;
      * The keyword plan this campaign belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeKeywordPlan(com.google.protobuf.StringValue value) {
       if (keywordPlanBuilder_ == null) {
@@ -1262,7 +1262,7 @@ private static final long serialVersionUID = 0L;
      * The keyword plan this campaign belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearKeywordPlan() {
       if (keywordPlanBuilder_ == null) {
@@ -1280,7 +1280,7 @@ private static final long serialVersionUID = 0L;
      * The keyword plan this campaign belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getKeywordPlanBuilder() {
       
@@ -1292,7 +1292,7 @@ private static final long serialVersionUID = 0L;
      * The keyword plan this campaign belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getKeywordPlanOrBuilder() {
       if (keywordPlanBuilder_ != null) {
@@ -1307,7 +1307,7 @@ private static final long serialVersionUID = 0L;
      * The keyword plan this campaign belongs to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue keyword_plan = 2;</code>
+     * <code>.google.protobuf.StringValue keyword_plan = 2 [(.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1328,20 +1328,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the Keyword Plan campaign.
+     * Output only. The ID of the Keyword Plan campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan campaign.
+     * Output only. The ID of the Keyword Plan campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1352,10 +1352,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan campaign.
+     * Output only. The ID of the Keyword Plan campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1372,10 +1372,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan campaign.
+     * Output only. The ID of the Keyword Plan campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1390,10 +1390,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan campaign.
+     * Output only. The ID of the Keyword Plan campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1412,10 +1412,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan campaign.
+     * Output only. The ID of the Keyword Plan campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1430,10 +1430,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan campaign.
+     * Output only. The ID of the Keyword Plan campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1442,10 +1442,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan campaign.
+     * Output only. The ID of the Keyword Plan campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1457,10 +1457,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Keyword Plan campaign.
+     * Output only. The ID of the Keyword Plan campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1665,7 +1665,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getLanguageConstantsList() {
       if (languageConstantsBuilder_ == null) {
@@ -1680,7 +1680,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public int getLanguageConstantsCount() {
       if (languageConstantsBuilder_ == null) {
@@ -1695,7 +1695,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getLanguageConstants(int index) {
       if (languageConstantsBuilder_ == null) {
@@ -1710,7 +1710,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setLanguageConstants(
         int index, com.google.protobuf.StringValue value) {
@@ -1732,7 +1732,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setLanguageConstants(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1751,7 +1751,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLanguageConstants(com.google.protobuf.StringValue value) {
       if (languageConstantsBuilder_ == null) {
@@ -1772,7 +1772,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLanguageConstants(
         int index, com.google.protobuf.StringValue value) {
@@ -1794,7 +1794,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLanguageConstants(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1813,7 +1813,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLanguageConstants(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1832,7 +1832,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder addAllLanguageConstants(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -1852,7 +1852,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearLanguageConstants() {
       if (languageConstantsBuilder_ == null) {
@@ -1870,7 +1870,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder removeLanguageConstants(int index) {
       if (languageConstantsBuilder_ == null) {
@@ -1888,7 +1888,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getLanguageConstantsBuilder(
         int index) {
@@ -1900,7 +1900,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLanguageConstantsOrBuilder(
         int index) {
@@ -1915,7 +1915,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getLanguageConstantsOrBuilderList() {
@@ -1931,7 +1931,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder addLanguageConstantsBuilder() {
       return getLanguageConstantsFieldBuilder().addBuilder(
@@ -1943,7 +1943,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder addLanguageConstantsBuilder(
         int index) {
@@ -1956,7 +1956,7 @@ private static final long serialVersionUID = 0L;
      * Max allowed: 1.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue language_constants = 5;</code>
+     * <code>repeated .google.protobuf.StringValue language_constants = 5 [(.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getLanguageConstantsBuilderList() {

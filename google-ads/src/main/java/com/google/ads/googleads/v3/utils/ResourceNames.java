@@ -37,6 +37,7 @@ import com.google.ads.googleads.v3.resources.AdGroupFeedName;
 import com.google.ads.googleads.v3.resources.AdGroupLabelName;
 import com.google.ads.googleads.v3.resources.AdGroupName;
 import com.google.ads.googleads.v3.resources.AdGroupSimulationName;
+import com.google.ads.googleads.v3.resources.AdName;
 import com.google.ads.googleads.v3.resources.AdParameterName;
 import com.google.ads.googleads.v3.resources.AdScheduleViewName;
 import com.google.ads.googleads.v3.resources.AgeRangeViewName;
@@ -104,6 +105,7 @@ import com.google.ads.googleads.v3.resources.MerchantCenterLinkName;
 import com.google.ads.googleads.v3.resources.MobileAppCategoryConstantName;
 import com.google.ads.googleads.v3.resources.MobileDeviceConstantName;
 import com.google.ads.googleads.v3.resources.MutateJobName;
+import com.google.ads.googleads.v3.resources.OfflineUserDataJobName;
 import com.google.ads.googleads.v3.resources.OperatingSystemVersionConstantName;
 import com.google.ads.googleads.v3.resources.PaidOrganicSearchTermViewName;
 import com.google.ads.googleads.v3.resources.ParentalStatusViewName;
@@ -154,6 +156,13 @@ public class ResourceNames {
   public static String accountBudgetProposal(long customerId, long accountBudgetProposalId) {
     return AccountBudgetProposalName.format(
         String.valueOf(customerId), String.valueOf(accountBudgetProposalId));
+  }
+
+  /**
+   * Returns the ad resource name for the specified components.
+   */
+  public static String ad(long customerId, long adId) {
+    return AdName.format(String.valueOf(customerId), String.valueOf(adId));
   }
 
   /**
@@ -521,8 +530,17 @@ public class ResourceNames {
 
   /**
    * Returns the customer negative criterion for the specified components.
+   *
+   * @deprecated use {@link #customerNegativeCriterion(long, long)} instead.
    */
+  @Deprecated
   public static String customerNegativeCriteria(long customerId, long criterionId) {
+    return CustomerNegativeCriteriaName.format(
+        String.valueOf(customerId), String.valueOf(criterionId));
+  }
+
+  /** Returns the customer negative criterion for the specified components. */
+  public static String customerNegativeCriterion(long customerId, long criterionId) {
     return CustomerNegativeCriteriaName.format(
         String.valueOf(customerId), String.valueOf(criterionId));
   }
@@ -800,6 +818,12 @@ public class ResourceNames {
    */
   public static String mutateJob(long customerId, long mutateJobId) {
     return MutateJobName.format(String.valueOf(customerId), String.valueOf(mutateJobId));
+  }
+
+  /** Returns the Offline User Data Job resource name for the specified components. */
+  public static String offlineUserDataJob(long customerId, long offlineUserDataJobId) {
+    return OfflineUserDataJobName.format(
+        String.valueOf(customerId), String.valueOf(offlineUserDataJobId));
   }
 
   /**

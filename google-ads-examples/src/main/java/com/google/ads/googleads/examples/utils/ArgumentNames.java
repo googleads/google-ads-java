@@ -43,6 +43,7 @@ public final class ArgumentNames {
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String LANGUAGE_ID = "--languageId";
   public static final String LOCATION_ID = "--locationId";
+  public static final String LOGIN_CUSTOMER_ID = "--loginCustomerId";
   public static final String RECOMMENDATION_ID = "--recommendationId";
   public static final String RESTATEMENT_VALUE = "--restatementValue";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
@@ -59,4 +60,10 @@ public final class ArgumentNames {
   public static final String CALLOUT_TEXT = "--calloutText";
   public static final String LANGUAGE_CODE = "--languageCode";
   public static final String SITELINK_TEXT = "--sitelinkText";
+  public static final String MARKETING_IMAGE_ASSET_RESOURCE_NAME =
+      "--marketingImageAssetResourceName";
+  public static final String SQUARE_MARKETING_IMAGE_ASSET_RESOURCE_NAME =
+      "--squareMarketingImageAssetResourceName";
+  public static final String LANGUAGE_NAME = "--languageName";
+  public static final String COUNTRY_CODE = "--countryCode";
 }

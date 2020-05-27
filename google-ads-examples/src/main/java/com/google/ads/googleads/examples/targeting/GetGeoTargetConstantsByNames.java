@@ -15,8 +15,8 @@
 package com.google.ads.googleads.examples.targeting;
 
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.services.GeoTargetConstantServiceClient;
 import com.google.ads.googleads.v3.services.GeoTargetConstantSuggestion;
 import com.google.ads.googleads.v3.services.SuggestGeoTargetConstantsRequest;
@@ -60,41 +60,49 @@ public class GetGeoTargetConstantsByNames {
     }
   }
 
+  /**
+   * Runs the example.
+   *
+   * @param googleAdsClient the Google Ads API client.
+   * @throws GoogleAdsException if an API request failed with one or more service errors.
+   */
   private void runExample(GoogleAdsClient googleAdsClient) {
-    GeoTargetConstantServiceClient geoTargetClient =
-        googleAdsClient.getLatestVersion().createGeoTargetConstantServiceClient();
+    try (GeoTargetConstantServiceClient geoTargetClient =
+        googleAdsClient.getLatestVersion().createGeoTargetConstantServiceClient()) {
 
-    SuggestGeoTargetConstantsRequest.Builder requestBuilder =
-        SuggestGeoTargetConstantsRequest.newBuilder();
+      SuggestGeoTargetConstantsRequest.Builder requestBuilder =
+          SuggestGeoTargetConstantsRequest.newBuilder();
 
-    // Locale is using ISO 639-1 format. If an invalid locale is given, 'en' is used by default.
-    requestBuilder.setLocale(StringValue.of("en"));
+      // Locale is using ISO 639-1 format. If an invalid locale is given, 'en' is used by default.
+      requestBuilder.setLocale(StringValue.of("en"));
 
-    // A list of country codes can be referenced here:
-    // https://developers.google.com/adwords/api/docs/appendix/geotargeting
-    requestBuilder.setCountryCode(StringValue.of("FR"));
+      // A list of country codes can be referenced here:
+      // https://developers.google.com/adwords/api/docs/appendix/geotargeting
+      requestBuilder.setCountryCode(StringValue.of("FR"));
 
-    requestBuilder
-        .getLocationNamesBuilder()
-        .addAllNames(
-            Stream.of("Paris", "Quebec", "Spain", "Deutschland")
-                .map(StringValue::of)
-                .collect(Collectors.toList()));
+      requestBuilder
+          .getLocationNamesBuilder()
+          .addAllNames(
+              Stream.of("Paris", "Quebec", "Spain", "Deutschland")
+                  .map(StringValue::of)
+                  .collect(Collectors.toList()));
 
-    SuggestGeoTargetConstantsResponse response =
-        geoTargetClient.suggestGeoTargetConstants(requestBuilder.build());
+      SuggestGeoTargetConstantsResponse response =
+          geoTargetClient.suggestGeoTargetConstants(requestBuilder.build());
 
-    for (GeoTargetConstantSuggestion suggestion : response.getGeoTargetConstantSuggestionsList()) {
-      System.out.printf(
-          "%s (%s,%s,%s,%s) is found in locale (%s) with reach (%d) for search term (%s).%n",
-          suggestion.getGeoTargetConstant().getResourceName(),
-          suggestion.getGeoTargetConstant().getName().getValue(),
-          suggestion.getGeoTargetConstant().getCountryCode().getValue(),
-          suggestion.getGeoTargetConstant().getTargetType().getValue(),
-          suggestion.getGeoTargetConstant().getStatus().name(),
-          suggestion.getLocale().getValue(),
-          suggestion.getReach().getValue(),
-          suggestion.getSearchTerm().getValue());
+      for (GeoTargetConstantSuggestion suggestion :
+          response.getGeoTargetConstantSuggestionsList()) {
+        System.out.printf(
+            "%s (%s,%s,%s,%s) is found in locale (%s) with reach (%d) for search term (%s).%n",
+            suggestion.getGeoTargetConstant().getResourceName(),
+            suggestion.getGeoTargetConstant().getName().getValue(),
+            suggestion.getGeoTargetConstant().getCountryCode().getValue(),
+            suggestion.getGeoTargetConstant().getTargetType().getValue(),
+            suggestion.getGeoTargetConstant().getStatus().name(),
+            suggestion.getLocale().getValue(),
+            suggestion.getReach().getValue(),
+            suggestion.getSearchTerm().getValue());
+      }
     }
   }
 }

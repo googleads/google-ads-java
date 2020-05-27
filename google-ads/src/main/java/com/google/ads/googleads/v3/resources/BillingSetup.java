@@ -178,150 +178,150 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * A 16 digit id used to identify the payments account associated with the
+     * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasPaymentsAccountId();
     /**
      * <pre>
-     * A 16 digit id used to identify the payments account associated with the
+     * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getPaymentsAccountId();
     /**
      * <pre>
-     * A 16 digit id used to identify the payments account associated with the
+     * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder();
 
     /**
      * <pre>
-     * The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     boolean hasPaymentsAccountName();
     /**
      * <pre>
-     * The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     com.google.protobuf.StringValue getPaymentsAccountName();
     /**
      * <pre>
-     * The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     com.google.protobuf.StringValueOrBuilder getPaymentsAccountNameOrBuilder();
 
     /**
      * <pre>
-     * A 12 digit id used to identify the payments profile associated with the
+     * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     boolean hasPaymentsProfileId();
     /**
      * <pre>
-     * A 12 digit id used to identify the payments profile associated with the
+     * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     com.google.protobuf.StringValue getPaymentsProfileId();
     /**
      * <pre>
-     * A 12 digit id used to identify the payments profile associated with the
+     * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder();
 
     /**
      * <pre>
-     * The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasPaymentsProfileName();
     /**
      * <pre>
-     * The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getPaymentsProfileName();
     /**
      * <pre>
-     * The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getPaymentsProfileNameOrBuilder();
 
     /**
      * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
+     * Output only. A secondary payments profile id present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     boolean hasSecondaryPaymentsProfileId();
     /**
      * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
+     * Output only. A secondary payments profile id present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValue getSecondaryPaymentsProfileId();
     /**
      * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
+     * Output only. A secondary payments profile id present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder();
   }
@@ -469,36 +469,36 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue paymentsAccountId_;
     /**
      * <pre>
-     * A 16 digit id used to identify the payments account associated with the
+     * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPaymentsAccountId() {
       return paymentsAccountId_ != null;
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the payments account associated with the
+     * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPaymentsAccountId() {
       return paymentsAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
     }
     /**
      * <pre>
-     * A 16 digit id used to identify the payments account associated with the
+     * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+     * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
       return getPaymentsAccountId();
@@ -508,39 +508,39 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue paymentsAccountName_;
     /**
      * <pre>
-     * The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasPaymentsAccountName() {
       return paymentsAccountName_ != null;
     }
     /**
      * <pre>
-     * The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue getPaymentsAccountName() {
       return paymentsAccountName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountName_;
     }
     /**
      * <pre>
-     * The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+     * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPaymentsAccountNameOrBuilder() {
       return getPaymentsAccountName();
@@ -550,36 +550,36 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue paymentsProfileId_;
     /**
      * <pre>
-     * A 12 digit id used to identify the payments profile associated with the
+     * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasPaymentsProfileId() {
       return paymentsProfileId_ != null;
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the payments profile associated with the
+     * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue getPaymentsProfileId() {
       return paymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
     }
     /**
      * <pre>
-     * A 12 digit id used to identify the payments profile associated with the
+     * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+     * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
       return getPaymentsProfileId();
@@ -589,30 +589,30 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue paymentsProfileName_;
     /**
      * <pre>
-     * The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasPaymentsProfileName() {
       return paymentsProfileName_ != null;
     }
     /**
      * <pre>
-     * The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getPaymentsProfileName() {
       return paymentsProfileName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileName_;
     }
     /**
      * <pre>
-     * The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+     * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPaymentsProfileNameOrBuilder() {
       return getPaymentsProfileName();
@@ -622,33 +622,33 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue secondaryPaymentsProfileId_;
     /**
      * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
+     * Output only. A secondary payments profile id present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSecondaryPaymentsProfileId() {
       return secondaryPaymentsProfileId_ != null;
     }
     /**
      * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
+     * Output only. A secondary payments profile id present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
       return secondaryPaymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : secondaryPaymentsProfileId_;
     }
     /**
      * <pre>
-     * A secondary payments profile id present in uncommon situations, e.g.
+     * Output only. A secondary payments profile id present in uncommon situations, e.g.
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+     * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder() {
       return getSecondaryPaymentsProfileId();
@@ -1098,24 +1098,24 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountIdBuilder_;
       /**
        * <pre>
-       * A 16 digit id used to identify the payments account associated with the
+       * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasPaymentsAccountId() {
         return paymentsAccountIdBuilder_ != null || paymentsAccountId_ != null;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the payments account associated with the
+       * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getPaymentsAccountId() {
         if (paymentsAccountIdBuilder_ == null) {
@@ -1126,12 +1126,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the payments account associated with the
+       * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setPaymentsAccountId(com.google.protobuf.StringValue value) {
         if (paymentsAccountIdBuilder_ == null) {
@@ -1148,12 +1148,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the payments account associated with the
+       * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setPaymentsAccountId(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1168,12 +1168,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the payments account associated with the
+       * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergePaymentsAccountId(com.google.protobuf.StringValue value) {
         if (paymentsAccountIdBuilder_ == null) {
@@ -1192,12 +1192,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the payments account associated with the
+       * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearPaymentsAccountId() {
         if (paymentsAccountIdBuilder_ == null) {
@@ -1212,12 +1212,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the payments account associated with the
+       * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getPaymentsAccountIdBuilder() {
         
@@ -1226,12 +1226,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the payments account associated with the
+       * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
         if (paymentsAccountIdBuilder_ != null) {
@@ -1243,12 +1243,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 16 digit id used to identify the payments account associated with the
+       * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_id = 1;</code>
+       * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1269,26 +1269,26 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountNameBuilder_;
       /**
        * <pre>
-       * The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public boolean hasPaymentsAccountName() {
         return paymentsAccountNameBuilder_ != null || paymentsAccountName_ != null;
       }
       /**
        * <pre>
-       * The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.StringValue getPaymentsAccountName() {
         if (paymentsAccountNameBuilder_ == null) {
@@ -1299,13 +1299,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setPaymentsAccountName(com.google.protobuf.StringValue value) {
         if (paymentsAccountNameBuilder_ == null) {
@@ -1322,13 +1322,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setPaymentsAccountName(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1343,13 +1343,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder mergePaymentsAccountName(com.google.protobuf.StringValue value) {
         if (paymentsAccountNameBuilder_ == null) {
@@ -1368,13 +1368,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder clearPaymentsAccountName() {
         if (paymentsAccountNameBuilder_ == null) {
@@ -1389,13 +1389,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.StringValue.Builder getPaymentsAccountNameBuilder() {
         
@@ -1404,13 +1404,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getPaymentsAccountNameOrBuilder() {
         if (paymentsAccountNameBuilder_ != null) {
@@ -1422,13 +1422,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_account_name = 2;</code>
+       * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1449,24 +1449,24 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileIdBuilder_;
       /**
        * <pre>
-       * A 12 digit id used to identify the payments profile associated with the
+       * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public boolean hasPaymentsProfileId() {
         return paymentsProfileIdBuilder_ != null || paymentsProfileId_ != null;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the payments profile associated with the
+       * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.StringValue getPaymentsProfileId() {
         if (paymentsProfileIdBuilder_ == null) {
@@ -1477,12 +1477,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the payments profile associated with the
+       * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setPaymentsProfileId(com.google.protobuf.StringValue value) {
         if (paymentsProfileIdBuilder_ == null) {
@@ -1499,12 +1499,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the payments profile associated with the
+       * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setPaymentsProfileId(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1519,12 +1519,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the payments profile associated with the
+       * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder mergePaymentsProfileId(com.google.protobuf.StringValue value) {
         if (paymentsProfileIdBuilder_ == null) {
@@ -1543,12 +1543,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the payments profile associated with the
+       * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder clearPaymentsProfileId() {
         if (paymentsProfileIdBuilder_ == null) {
@@ -1563,12 +1563,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the payments profile associated with the
+       * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.StringValue.Builder getPaymentsProfileIdBuilder() {
         
@@ -1577,12 +1577,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the payments profile associated with the
+       * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
         if (paymentsProfileIdBuilder_ != null) {
@@ -1594,12 +1594,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A 12 digit id used to identify the payments profile associated with the
+       * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_id = 3;</code>
+       * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1620,20 +1620,20 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsProfileNameBuilder_;
       /**
        * <pre>
-       * The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasPaymentsProfileName() {
         return paymentsProfileNameBuilder_ != null || paymentsProfileName_ != null;
       }
       /**
        * <pre>
-       * The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getPaymentsProfileName() {
         if (paymentsProfileNameBuilder_ == null) {
@@ -1644,10 +1644,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setPaymentsProfileName(com.google.protobuf.StringValue value) {
         if (paymentsProfileNameBuilder_ == null) {
@@ -1664,10 +1664,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setPaymentsProfileName(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1682,10 +1682,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergePaymentsProfileName(com.google.protobuf.StringValue value) {
         if (paymentsProfileNameBuilder_ == null) {
@@ -1704,10 +1704,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearPaymentsProfileName() {
         if (paymentsProfileNameBuilder_ == null) {
@@ -1722,10 +1722,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getPaymentsProfileNameBuilder() {
         
@@ -1734,10 +1734,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getPaymentsProfileNameOrBuilder() {
         if (paymentsProfileNameBuilder_ != null) {
@@ -1749,10 +1749,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue payments_profile_name = 4;</code>
+       * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1773,22 +1773,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> secondaryPaymentsProfileIdBuilder_;
       /**
        * <pre>
-       * A secondary payments profile id present in uncommon situations, e.g.
+       * Output only. A secondary payments profile id present in uncommon situations, e.g.
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public boolean hasSecondaryPaymentsProfileId() {
         return secondaryPaymentsProfileIdBuilder_ != null || secondaryPaymentsProfileId_ != null;
       }
       /**
        * <pre>
-       * A secondary payments profile id present in uncommon situations, e.g.
+       * Output only. A secondary payments profile id present in uncommon situations, e.g.
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
         if (secondaryPaymentsProfileIdBuilder_ == null) {
@@ -1799,11 +1799,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A secondary payments profile id present in uncommon situations, e.g.
+       * Output only. A secondary payments profile id present in uncommon situations, e.g.
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setSecondaryPaymentsProfileId(com.google.protobuf.StringValue value) {
         if (secondaryPaymentsProfileIdBuilder_ == null) {
@@ -1820,11 +1820,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A secondary payments profile id present in uncommon situations, e.g.
+       * Output only. A secondary payments profile id present in uncommon situations, e.g.
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder setSecondaryPaymentsProfileId(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1839,11 +1839,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A secondary payments profile id present in uncommon situations, e.g.
+       * Output only. A secondary payments profile id present in uncommon situations, e.g.
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeSecondaryPaymentsProfileId(com.google.protobuf.StringValue value) {
         if (secondaryPaymentsProfileIdBuilder_ == null) {
@@ -1862,11 +1862,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A secondary payments profile id present in uncommon situations, e.g.
+       * Output only. A secondary payments profile id present in uncommon situations, e.g.
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearSecondaryPaymentsProfileId() {
         if (secondaryPaymentsProfileIdBuilder_ == null) {
@@ -1881,11 +1881,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A secondary payments profile id present in uncommon situations, e.g.
+       * Output only. A secondary payments profile id present in uncommon situations, e.g.
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValue.Builder getSecondaryPaymentsProfileIdBuilder() {
         
@@ -1894,11 +1894,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A secondary payments profile id present in uncommon situations, e.g.
+       * Output only. A secondary payments profile id present in uncommon situations, e.g.
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder() {
         if (secondaryPaymentsProfileIdBuilder_ != null) {
@@ -1910,11 +1910,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * A secondary payments profile id present in uncommon situations, e.g.
+       * Output only. A secondary payments profile id present in uncommon situations, e.g.
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5;</code>
+       * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2062,12 +2062,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the billing setup.
+   * Immutable. The resource name of the billing setup.
    * BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -2083,12 +2083,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the billing setup.
+   * Immutable. The resource name of the billing setup.
    * BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -2108,30 +2108,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the billing setup.
+   * Output only. The ID of the billing setup.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the billing setup.
+   * Output only. The ID of the billing setup.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the billing setup.
+   * Output only. The ID of the billing setup.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -2141,20 +2141,20 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * The status of the billing setup.
+   * Output only. The status of the billing setup.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * The status of the billing setup.
+   * Output only. The status of the billing setup.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus getStatus() {
     @SuppressWarnings("deprecation")
@@ -2166,7 +2166,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue paymentsAccount_;
   /**
    * <pre>
-   * The resource name of the payments account associated with this billing
+   * Immutable. The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
@@ -2175,14 +2175,14 @@ private static final long serialVersionUID = 0L;
    * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account = 11;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public boolean hasPaymentsAccount() {
     return paymentsAccount_ != null;
   }
   /**
    * <pre>
-   * The resource name of the payments account associated with this billing
+   * Immutable. The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
@@ -2191,14 +2191,14 @@ private static final long serialVersionUID = 0L;
    * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account = 11;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValue getPaymentsAccount() {
     return paymentsAccount_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccount_;
   }
   /**
    * <pre>
-   * The resource name of the payments account associated with this billing
+   * Immutable. The resource name of the payments account associated with this billing
    * setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
@@ -2207,7 +2207,7 @@ private static final long serialVersionUID = 0L;
    * populated.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue payments_account = 11;</code>
+   * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.StringValueOrBuilder getPaymentsAccountOrBuilder() {
     return getPaymentsAccount();
@@ -2217,42 +2217,42 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo paymentsAccountInfo_;
   /**
    * <pre>
-   * The payments account information associated with this billing setup.
+   * Immutable. The payments account information associated with this billing setup.
    * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasPaymentsAccountInfo() {
     return paymentsAccountInfo_ != null;
   }
   /**
    * <pre>
-   * The payments account information associated with this billing setup.
+   * Immutable. The payments account information associated with this billing setup.
    * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo getPaymentsAccountInfo() {
     return paymentsAccountInfo_ == null ? com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo.getDefaultInstance() : paymentsAccountInfo_;
   }
   /**
    * <pre>
-   * The payments account information associated with this billing setup.
+   * Immutable. The payments account information associated with this billing setup.
    * When setting up billing, this is used to signup with a new payments account
    * (and then payments_account should not be set).
    * When getting a billing setup, this and payments_account will be
    * populated.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+   * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfoOrBuilder getPaymentsAccountInfoOrBuilder() {
     return getPaymentsAccountInfo();
@@ -2261,22 +2261,22 @@ private static final long serialVersionUID = 0L;
   public static final int START_DATE_TIME_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
    * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasStartDateTime() {
     return startTimeCase_ == 9;
   }
   /**
    * <pre>
-   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
    * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.StringValue getStartDateTime() {
     if (startTimeCase_ == 9) {
@@ -2286,11 +2286,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
    * future time is allowed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+   * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
     if (startTimeCase_ == 9) {
@@ -2302,10 +2302,10 @@ private static final long serialVersionUID = 0L;
   public static final int START_TIME_TYPE_FIELD_NUMBER = 10;
   /**
    * <pre>
-   * The start time as a type. Only NOW is allowed.
+   * Immutable. The start time as a type. Only NOW is allowed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public int getStartTimeTypeValue() {
     if (startTimeCase_ == 10) {
@@ -2315,10 +2315,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The start time as a type. Only NOW is allowed.
+   * Immutable. The start time as a type. Only NOW is allowed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getStartTimeType() {
     if (startTimeCase_ == 10) {
@@ -2333,20 +2333,20 @@ private static final long serialVersionUID = 0L;
   public static final int END_DATE_TIME_FIELD_NUMBER = 13;
   /**
    * <pre>
-   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasEndDateTime() {
     return endTimeCase_ == 13;
   }
   /**
    * <pre>
-   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getEndDateTime() {
     if (endTimeCase_ == 13) {
@@ -2356,10 +2356,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+   * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
     if (endTimeCase_ == 13) {
@@ -2371,10 +2371,10 @@ private static final long serialVersionUID = 0L;
   public static final int END_TIME_TYPE_FIELD_NUMBER = 14;
   /**
    * <pre>
-   * The end time as a type.  The only possible value is FOREVER.
+   * Output only. The end time as a type.  The only possible value is FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getEndTimeTypeValue() {
     if (endTimeCase_ == 14) {
@@ -2384,10 +2384,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The end time as a type.  The only possible value is FOREVER.
+   * Output only. The end time as a type.  The only possible value is FOREVER.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+   * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getEndTimeType() {
     if (endTimeCase_ == 14) {
@@ -2975,12 +2975,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the billing setup.
+     * Immutable. The resource name of the billing setup.
      * BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -2996,12 +2996,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup.
+     * Immutable. The resource name of the billing setup.
      * BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -3018,12 +3018,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup.
+     * Immutable. The resource name of the billing setup.
      * BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -3037,12 +3037,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup.
+     * Immutable. The resource name of the billing setup.
      * BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -3052,12 +3052,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the billing setup.
+     * Immutable. The resource name of the billing setup.
      * BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -3076,20 +3076,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the billing setup.
+     * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the billing setup.
+     * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -3100,10 +3100,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the billing setup.
+     * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -3120,10 +3120,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the billing setup.
+     * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3138,10 +3138,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the billing setup.
+     * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -3160,10 +3160,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the billing setup.
+     * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -3178,10 +3178,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the billing setup.
+     * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -3190,10 +3190,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the billing setup.
+     * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -3205,10 +3205,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the billing setup.
+     * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3227,20 +3227,20 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * The status of the billing setup.
+     * Output only. The status of the billing setup.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * The status of the billing setup.
+     * Output only. The status of the billing setup.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatusValue(int value) {
       status_ = value;
@@ -3249,10 +3249,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the billing setup.
+     * Output only. The status of the billing setup.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus getStatus() {
       @SuppressWarnings("deprecation")
@@ -3261,10 +3261,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the billing setup.
+     * Output only. The status of the billing setup.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus value) {
       if (value == null) {
@@ -3277,10 +3277,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the billing setup.
+     * Output only. The status of the billing setup.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStatus() {
       
@@ -3294,7 +3294,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentsAccountBuilder_;
     /**
      * <pre>
-     * The resource name of the payments account associated with this billing
+     * Immutable. The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
@@ -3303,14 +3303,14 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account = 11;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public boolean hasPaymentsAccount() {
       return paymentsAccountBuilder_ != null || paymentsAccount_ != null;
     }
     /**
      * <pre>
-     * The resource name of the payments account associated with this billing
+     * Immutable. The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
@@ -3319,7 +3319,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account = 11;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getPaymentsAccount() {
       if (paymentsAccountBuilder_ == null) {
@@ -3330,7 +3330,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account associated with this billing
+     * Immutable. The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
@@ -3339,7 +3339,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account = 11;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setPaymentsAccount(com.google.protobuf.StringValue value) {
       if (paymentsAccountBuilder_ == null) {
@@ -3356,7 +3356,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account associated with this billing
+     * Immutable. The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
@@ -3365,7 +3365,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account = 11;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setPaymentsAccount(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3380,7 +3380,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account associated with this billing
+     * Immutable. The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
@@ -3389,7 +3389,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account = 11;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergePaymentsAccount(com.google.protobuf.StringValue value) {
       if (paymentsAccountBuilder_ == null) {
@@ -3408,7 +3408,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account associated with this billing
+     * Immutable. The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
@@ -3417,7 +3417,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account = 11;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearPaymentsAccount() {
       if (paymentsAccountBuilder_ == null) {
@@ -3432,7 +3432,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account associated with this billing
+     * Immutable. The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
@@ -3441,7 +3441,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account = 11;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getPaymentsAccountBuilder() {
       
@@ -3450,7 +3450,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account associated with this billing
+     * Immutable. The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
@@ -3459,7 +3459,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account = 11;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPaymentsAccountOrBuilder() {
       if (paymentsAccountBuilder_ != null) {
@@ -3471,7 +3471,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the payments account associated with this billing
+     * Immutable. The resource name of the payments account associated with this billing
      * setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
@@ -3480,7 +3480,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue payments_account = 11;</code>
+     * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -3501,28 +3501,28 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo, com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo.Builder, com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfoOrBuilder> paymentsAccountInfoBuilder_;
     /**
      * <pre>
-     * The payments account information associated with this billing setup.
+     * Immutable. The payments account information associated with this billing setup.
      * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasPaymentsAccountInfo() {
       return paymentsAccountInfoBuilder_ != null || paymentsAccountInfo_ != null;
     }
     /**
      * <pre>
-     * The payments account information associated with this billing setup.
+     * Immutable. The payments account information associated with this billing setup.
      * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo getPaymentsAccountInfo() {
       if (paymentsAccountInfoBuilder_ == null) {
@@ -3533,14 +3533,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The payments account information associated with this billing setup.
+     * Immutable. The payments account information associated with this billing setup.
      * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setPaymentsAccountInfo(com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo value) {
       if (paymentsAccountInfoBuilder_ == null) {
@@ -3557,14 +3557,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The payments account information associated with this billing setup.
+     * Immutable. The payments account information associated with this billing setup.
      * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setPaymentsAccountInfo(
         com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo.Builder builderForValue) {
@@ -3579,14 +3579,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The payments account information associated with this billing setup.
+     * Immutable. The payments account information associated with this billing setup.
      * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergePaymentsAccountInfo(com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo value) {
       if (paymentsAccountInfoBuilder_ == null) {
@@ -3605,14 +3605,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The payments account information associated with this billing setup.
+     * Immutable. The payments account information associated with this billing setup.
      * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearPaymentsAccountInfo() {
       if (paymentsAccountInfoBuilder_ == null) {
@@ -3627,14 +3627,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The payments account information associated with this billing setup.
+     * Immutable. The payments account information associated with this billing setup.
      * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo.Builder getPaymentsAccountInfoBuilder() {
       
@@ -3643,14 +3643,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The payments account information associated with this billing setup.
+     * Immutable. The payments account information associated with this billing setup.
      * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfoOrBuilder getPaymentsAccountInfoOrBuilder() {
       if (paymentsAccountInfoBuilder_ != null) {
@@ -3662,14 +3662,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The payments account information associated with this billing setup.
+     * Immutable. The payments account information associated with this billing setup.
      * When setting up billing, this is used to signup with a new payments account
      * (and then payments_account should not be set).
      * When getting a billing setup, this and payments_account will be
      * populated.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12;</code>
+     * <code>.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo, com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfo.Builder, com.google.ads.googleads.v3.resources.BillingSetup.PaymentsAccountInfoOrBuilder> 
@@ -3689,22 +3689,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> startDateTimeBuilder_;
     /**
      * <pre>
-     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
      * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasStartDateTime() {
       return startTimeCase_ == 9;
     }
     /**
      * <pre>
-     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
      * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue getStartDateTime() {
       if (startDateTimeBuilder_ == null) {
@@ -3721,11 +3721,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
      * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setStartDateTime(com.google.protobuf.StringValue value) {
       if (startDateTimeBuilder_ == null) {
@@ -3742,11 +3742,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
      * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setStartDateTime(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -3761,11 +3761,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
      * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeStartDateTime(com.google.protobuf.StringValue value) {
       if (startDateTimeBuilder_ == null) {
@@ -3788,11 +3788,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
      * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearStartDateTime() {
       if (startDateTimeBuilder_ == null) {
@@ -3812,22 +3812,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
      * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue.Builder getStartDateTimeBuilder() {
       return getStartDateTimeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
      * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
       if ((startTimeCase_ == 9) && (startDateTimeBuilder_ != null)) {
@@ -3841,11 +3841,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
      * future time is allowed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date_time = 9;</code>
+     * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -3868,10 +3868,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The start time as a type. Only NOW is allowed.
+     * Immutable. The start time as a type. Only NOW is allowed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getStartTimeTypeValue() {
       if (startTimeCase_ == 10) {
@@ -3881,10 +3881,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The start time as a type. Only NOW is allowed.
+     * Immutable. The start time as a type. Only NOW is allowed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setStartTimeTypeValue(int value) {
       startTimeCase_ = 10;
@@ -3894,10 +3894,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The start time as a type. Only NOW is allowed.
+     * Immutable. The start time as a type. Only NOW is allowed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getStartTimeType() {
       if (startTimeCase_ == 10) {
@@ -3910,10 +3910,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The start time as a type. Only NOW is allowed.
+     * Immutable. The start time as a type. Only NOW is allowed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setStartTimeType(com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType value) {
       if (value == null) {
@@ -3926,10 +3926,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The start time as a type. Only NOW is allowed.
+     * Immutable. The start time as a type. Only NOW is allowed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearStartTimeType() {
       if (startTimeCase_ == 10) {
@@ -3944,20 +3944,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> endDateTimeBuilder_;
     /**
      * <pre>
-     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasEndDateTime() {
       return endTimeCase_ == 13;
     }
     /**
      * <pre>
-     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getEndDateTime() {
       if (endDateTimeBuilder_ == null) {
@@ -3974,10 +3974,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEndDateTime(com.google.protobuf.StringValue value) {
       if (endDateTimeBuilder_ == null) {
@@ -3994,10 +3994,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEndDateTime(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -4012,10 +4012,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeEndDateTime(com.google.protobuf.StringValue value) {
       if (endDateTimeBuilder_ == null) {
@@ -4038,10 +4038,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearEndDateTime() {
       if (endDateTimeBuilder_ == null) {
@@ -4061,20 +4061,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getEndDateTimeBuilder() {
       return getEndDateTimeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
       if ((endTimeCase_ == 13) && (endDateTimeBuilder_ != null)) {
@@ -4088,10 +4088,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date_time = 13;</code>
+     * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -4114,10 +4114,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The end time as a type.  The only possible value is FOREVER.
+     * Output only. The end time as a type.  The only possible value is FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getEndTimeTypeValue() {
       if (endTimeCase_ == 14) {
@@ -4127,10 +4127,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end time as a type.  The only possible value is FOREVER.
+     * Output only. The end time as a type.  The only possible value is FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEndTimeTypeValue(int value) {
       endTimeCase_ = 14;
@@ -4140,10 +4140,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end time as a type.  The only possible value is FOREVER.
+     * Output only. The end time as a type.  The only possible value is FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType getEndTimeType() {
       if (endTimeCase_ == 14) {
@@ -4156,10 +4156,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end time as a type.  The only possible value is FOREVER.
+     * Output only. The end time as a type.  The only possible value is FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEndTimeType(com.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType value) {
       if (value == null) {
@@ -4172,10 +4172,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The end time as a type.  The only possible value is FOREVER.
+     * Output only. The end time as a type.  The only possible value is FOREVER.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14;</code>
+     * <code>.google.ads.googleads.v3.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearEndTimeType() {
       if (endTimeCase_ == 14) {

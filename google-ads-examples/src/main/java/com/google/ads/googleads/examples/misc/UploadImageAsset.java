@@ -94,23 +94,23 @@ public class UploadImageAsset {
     byte[] imageData = ByteStreams.toByteArray(new URL(IMAGE_URL).openStream());
 
     // Create the image asset.
-    ImageAsset imageAsset = ImageAsset.newBuilder()
-        .setData(BytesValue.of(ByteString.copyFrom(imageData)))
-        .build();
+    ImageAsset imageAsset =
+        ImageAsset.newBuilder().setData(BytesValue.of(ByteString.copyFrom(imageData))).build();
 
     // Creates an asset.
-    Asset asset = Asset.newBuilder()
-        // Optional: Provide a unique friendly name to identify your asset.
-        // If you specify the name field, then both the asset name and the image being
-        // uploaded should be unique, and should not match another ACTIVE asset in this
-        // customer account.
-        // .setName(StringValue.of("Jupiter Trip # " + System.currentTimeMillis()))
-        .setType(AssetType.IMAGE)
-        .setImageAsset(imageAsset)
-        .build();
+    Asset asset =
+        Asset.newBuilder()
+            // Optional: Provide a unique friendly name to identify your asset.
+            // If you specify the name field, then both the asset name and the image being
+            // uploaded should be unique, and should not match another ACTIVE asset in this
+            // customer account.
+            // .setName(StringValue.of("Jupiter Trip # " + System.currentTimeMillis()))
+            .setType(AssetType.IMAGE)
+            .setImageAsset(imageAsset)
+            .build();
 
     // Creates the operation.
-    AssetOperation operation =  AssetOperation.newBuilder().setCreate(asset).build();
+    AssetOperation operation = AssetOperation.newBuilder().setCreate(asset).build();
 
     // Creates the service client.
     try (AssetServiceClient assetServiceClient =
@@ -119,7 +119,8 @@ public class UploadImageAsset {
       MutateAssetsResponse response =
           assetServiceClient.mutateAssets(Long.toString(customerId), ImmutableList.of(operation));
       // Prints the result.
-      System.out.printf("The image asset with resource name '%s' was created.%n",
+      System.out.printf(
+          "The image asset with resource name '%s' was created.%n",
           response.getResults(0).getResourceName());
     }
   }

@@ -54,40 +54,42 @@ public final class AdGroupLabelServiceProto {
       "v3/resources/ad_group_label.proto\032\034googl" +
       "e/api/annotations.proto\032\027google/api/clie" +
       "nt.proto\032\037google/api/field_behavior.prot" +
-      "o\032\027google/rpc/status.proto\"4\n\026GetAdGroup" +
-      "LabelRequest\022\032\n\rresource_name\030\001 \001(\tB\003\340A\002" +
-      "\"\270\001\n\032MutateAdGroupLabelsRequest\022\030\n\013custo" +
-      "mer_id\030\001 \001(\tB\003\340A\002\022P\n\noperations\030\002 \003(\01327." +
-      "google.ads.googleads.v3.services.AdGroup" +
-      "LabelOperationB\003\340A\002\022\027\n\017partial_failure\030\003" +
-      " \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"y\n\025AdGroupLa" +
-      "belOperation\022A\n\006create\030\001 \001(\0132/.google.ad" +
-      "s.googleads.v3.resources.AdGroupLabelH\000\022" +
-      "\020\n\006remove\030\002 \001(\tH\000B\013\n\toperation\"\235\001\n\033Mutat" +
-      "eAdGroupLabelsResponse\0221\n\025partial_failur" +
-      "e_error\030\003 \001(\0132\022.google.rpc.Status\022K\n\007res" +
-      "ults\030\002 \003(\0132:.google.ads.googleads.v3.ser" +
-      "vices.MutateAdGroupLabelResult\"1\n\030Mutate" +
-      "AdGroupLabelResult\022\025\n\rresource_name\030\001 \001(" +
-      "\t2\347\003\n\023AdGroupLabelService\022\305\001\n\017GetAdGroup" +
-      "Label\0228.google.ads.googleads.v3.services" +
-      ".GetAdGroupLabelRequest\032/.google.ads.goo" +
-      "gleads.v3.resources.AdGroupLabel\"G\202\323\344\223\0021" +
-      "\022//v3/{resource_name=customers/*/adGroup" +
-      "Labels/*}\332A\rresource_name\022\352\001\n\023MutateAdGr" +
-      "oupLabels\022<.google.ads.googleads.v3.serv" +
-      "ices.MutateAdGroupLabelsRequest\032=.google" +
-      ".ads.googleads.v3.services.MutateAdGroup" +
-      "LabelsResponse\"V\202\323\344\223\0027\"2/v3/customers/{c" +
-      "ustomer_id=*}/adGroupLabels:mutate:\001*\332A\026" +
-      "customer_id,operations\032\033\312A\030googleads.goo" +
-      "gleapis.comB\377\001\n$com.google.ads.googleads" +
-      ".v3.servicesB\030AdGroupLabelServiceProtoP\001" +
-      "ZHgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v3/services;services\242\002\003GAA" +
-      "\252\002 Google.Ads.GoogleAds.V3.Services\312\002 Go" +
-      "ogle\\Ads\\GoogleAds\\V3\\Services\352\002$Google:" +
-      ":Ads::GoogleAds::V3::Servicesb\006proto3"
+      "o\032\031google/api/resource.proto\032\027google/rpc" +
+      "/status.proto\"^\n\026GetAdGroupLabelRequest\022" +
+      "D\n\rresource_name\030\001 \001(\tB-\340A\002\372A\'\n%googlead" +
+      "s.googleapis.com/AdGroupLabel\"\270\001\n\032Mutate" +
+      "AdGroupLabelsRequest\022\030\n\013customer_id\030\001 \001(" +
+      "\tB\003\340A\002\022P\n\noperations\030\002 \003(\01327.google.ads." +
+      "googleads.v3.services.AdGroupLabelOperat" +
+      "ionB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rval" +
+      "idate_only\030\004 \001(\010\"y\n\025AdGroupLabelOperatio" +
+      "n\022A\n\006create\030\001 \001(\0132/.google.ads.googleads" +
+      ".v3.resources.AdGroupLabelH\000\022\020\n\006remove\030\002" +
+      " \001(\tH\000B\013\n\toperation\"\235\001\n\033MutateAdGroupLab" +
+      "elsResponse\0221\n\025partial_failure_error\030\003 \001" +
+      "(\0132\022.google.rpc.Status\022K\n\007results\030\002 \003(\0132" +
+      ":.google.ads.googleads.v3.services.Mutat" +
+      "eAdGroupLabelResult\"1\n\030MutateAdGroupLabe" +
+      "lResult\022\025\n\rresource_name\030\001 \001(\t2\347\003\n\023AdGro" +
+      "upLabelService\022\305\001\n\017GetAdGroupLabel\0228.goo" +
+      "gle.ads.googleads.v3.services.GetAdGroup" +
+      "LabelRequest\032/.google.ads.googleads.v3.r" +
+      "esources.AdGroupLabel\"G\202\323\344\223\0021\022//v3/{reso" +
+      "urce_name=customers/*/adGroupLabels/*}\332A" +
+      "\rresource_name\022\352\001\n\023MutateAdGroupLabels\022<" +
+      ".google.ads.googleads.v3.services.Mutate" +
+      "AdGroupLabelsRequest\032=.google.ads.google" +
+      "ads.v3.services.MutateAdGroupLabelsRespo" +
+      "nse\"V\202\323\344\223\0027\"2/v3/customers/{customer_id=" +
+      "*}/adGroupLabels:mutate:\001*\332A\026customer_id" +
+      ",operations\032\033\312A\030googleads.googleapis.com" +
+      "B\377\001\n$com.google.ads.googleads.v3.service" +
+      "sB\030AdGroupLabelServiceProtoP\001ZHgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v3/services;services\242\002\003GAA\252\002 Google.A" +
+      "ds.GoogleAds.V3.Services\312\002 Google\\Ads\\Go" +
+      "ogleAds\\V3\\Services\352\002$Google::Ads::Googl" +
+      "eAds::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -104,6 +106,7 @@ public final class AdGroupLabelServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetAdGroupLabelRequest_descriptor =
@@ -142,12 +145,14 @@ public final class AdGroupLabelServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.AdGroupLabelProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }
 

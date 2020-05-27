@@ -34,9 +34,11 @@ public final class ExpandedLandingPageViewServiceProto {
       "s/googleads/v3/resources/expanded_landin" +
       "g_page_view.proto\032\034google/api/annotation" +
       "s.proto\032\027google/api/client.proto\032\037google" +
-      "/api/field_behavior.proto\"?\n!GetExpanded" +
-      "LandingPageViewRequest\022\032\n\rresource_name\030" +
-      "\001 \001(\tB\003\340A\0022\261\002\n\036ExpandedLandingPageViewSe" +
+      "/api/field_behavior.proto\032\031google/api/re" +
+      "source.proto\"t\n!GetExpandedLandingPageVi" +
+      "ewRequest\022O\n\rresource_name\030\001 \001(\tB8\340A\002\372A2" +
+      "\n0googleads.googleapis.com/ExpandedLandi" +
+      "ngPageView2\261\002\n\036ExpandedLandingPageViewSe" +
       "rvice\022\361\001\n\032GetExpandedLandingPageView\022C.g" +
       "oogle.ads.googleads.v3.services.GetExpan" +
       "dedLandingPageViewRequest\032:.google.ads.g" +
@@ -67,6 +69,7 @@ public final class ExpandedLandingPageViewServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetExpandedLandingPageViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -80,12 +83,14 @@ public final class ExpandedLandingPageViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.ExpandedLandingPageViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

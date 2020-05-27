@@ -34,22 +34,24 @@ public final class AdGroupAdAssetViewServiceProto {
       "ogleads/v3/resources/ad_group_ad_asset_v" +
       "iew.proto\032\034google/api/annotations.proto\032" +
       "\027google/api/client.proto\032\037google/api/fie" +
-      "ld_behavior.proto\":\n\034GetAdGroupAdAssetVi" +
-      "ewRequest\022\032\n\rresource_name\030\001 \001(\tB\003\340A\0022\230\002" +
-      "\n\031AdGroupAdAssetViewService\022\335\001\n\025GetAdGro" +
-      "upAdAssetView\022>.google.ads.googleads.v3." +
-      "services.GetAdGroupAdAssetViewRequest\0325." +
-      "google.ads.googleads.v3.resources.AdGrou" +
-      "pAdAssetView\"M\202\323\344\223\0027\0225/v3/{resource_name" +
-      "=customers/*/adGroupAdAssetViews/*}\332A\rre" +
-      "source_name\032\033\312A\030googleads.googleapis.com" +
-      "B\205\002\n$com.google.ads.googleads.v3.service" +
-      "sB\036AdGroupAdAssetViewServiceProtoP\001ZHgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v3/services;services\242\002\003GAA\252\002 Go" +
-      "ogle.Ads.GoogleAds.V3.Services\312\002 Google\\" +
-      "Ads\\GoogleAds\\V3\\Services\352\002$Google::Ads:" +
-      ":GoogleAds::V3::Servicesb\006proto3"
+      "ld_behavior.proto\032\031google/api/resource.p" +
+      "roto\"j\n\034GetAdGroupAdAssetViewRequest\022J\n\r" +
+      "resource_name\030\001 \001(\tB3\340A\002\372A-\n+googleads.g" +
+      "oogleapis.com/AdGroupAdAssetView2\230\002\n\031AdG" +
+      "roupAdAssetViewService\022\335\001\n\025GetAdGroupAdA" +
+      "ssetView\022>.google.ads.googleads.v3.servi" +
+      "ces.GetAdGroupAdAssetViewRequest\0325.googl" +
+      "e.ads.googleads.v3.resources.AdGroupAdAs" +
+      "setView\"M\202\323\344\223\0027\0225/v3/{resource_name=cust" +
+      "omers/*/adGroupAdAssetViews/*}\332A\rresourc" +
+      "e_name\032\033\312A\030googleads.googleapis.comB\205\002\n$" +
+      "com.google.ads.googleads.v3.servicesB\036Ad" +
+      "GroupAdAssetViewServiceProtoP\001ZHgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v3/services;services\242\002\003GAA\252\002 Google." +
+      "Ads.GoogleAds.V3.Services\312\002 Google\\Ads\\G" +
+      "oogleAds\\V3\\Services\352\002$Google::Ads::Goog" +
+      "leAds::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -66,6 +68,7 @@ public final class AdGroupAdAssetViewServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetAdGroupAdAssetViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -79,12 +82,14 @@ public final class AdGroupAdAssetViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.AdGroupAdAssetViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

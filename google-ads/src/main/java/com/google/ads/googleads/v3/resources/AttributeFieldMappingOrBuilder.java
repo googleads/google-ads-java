@@ -9,417 +9,417 @@ public interface AttributeFieldMappingOrBuilder extends
 
   /**
    * <pre>
-   * Feed attribute from which to map.
+   * Immutable. Feed attribute from which to map.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+   * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasFeedAttributeId();
   /**
    * <pre>
-   * Feed attribute from which to map.
+   * Immutable. Feed attribute from which to map.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+   * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.Int64Value getFeedAttributeId();
   /**
    * <pre>
-   * Feed attribute from which to map.
+   * Immutable. Feed attribute from which to map.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+   * <code>.google.protobuf.Int64Value feed_attribute_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getFeedAttributeIdOrBuilder();
 
   /**
    * <pre>
-   * The placeholder field ID. If a placeholder field enum is not published in
+   * Output only. The placeholder field ID. If a placeholder field enum is not published in
    * the current API version, then this field will be populated and the field
    * oneof will be empty.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value field_id = 2;</code>
+   * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasFieldId();
   /**
    * <pre>
-   * The placeholder field ID. If a placeholder field enum is not published in
+   * Output only. The placeholder field ID. If a placeholder field enum is not published in
    * the current API version, then this field will be populated and the field
    * oneof will be empty.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value field_id = 2;</code>
+   * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getFieldId();
   /**
    * <pre>
-   * The placeholder field ID. If a placeholder field enum is not published in
+   * Output only. The placeholder field ID. If a placeholder field enum is not published in
    * the current API version, then this field will be populated and the field
    * oneof will be empty.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value field_id = 2;</code>
+   * <code>.google.protobuf.Int64Value field_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getFieldIdOrBuilder();
 
   /**
    * <pre>
-   * Sitelink Placeholder Fields.
+   * Immutable. Sitelink Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getSitelinkFieldValue();
   /**
    * <pre>
-   * Sitelink Placeholder Fields.
+   * Immutable. Sitelink Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField sitelink_field = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField getSitelinkField();
 
   /**
    * <pre>
-   * Call Placeholder Fields.
+   * Immutable. Call Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getCallFieldValue();
   /**
    * <pre>
-   * Call Placeholder Fields.
+   * Immutable. Call Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField call_field = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.CallPlaceholderFieldEnum.CallPlaceholderField getCallField();
 
   /**
    * <pre>
-   * App Placeholder Fields.
+   * Immutable. App Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getAppFieldValue();
   /**
    * <pre>
-   * App Placeholder Fields.
+   * Immutable. App Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5;</code>
+   * <code>.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField app_field = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.AppPlaceholderFieldEnum.AppPlaceholderField getAppField();
 
   /**
    * <pre>
-   * Location Placeholder Fields. This field is read-only.
+   * Output only. Location Placeholder Fields. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getLocationFieldValue();
   /**
    * <pre>
-   * Location Placeholder Fields. This field is read-only.
+   * Output only. Location Placeholder Fields. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6;</code>
+   * <code>.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField location_field = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.LocationPlaceholderFieldEnum.LocationPlaceholderField getLocationField();
 
   /**
    * <pre>
-   * Affiliate Location Placeholder Fields. This field is read-only.
+   * Output only. Affiliate Location Placeholder Fields. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getAffiliateLocationFieldValue();
   /**
    * <pre>
-   * Affiliate Location Placeholder Fields. This field is read-only.
+   * Output only. Affiliate Location Placeholder Fields. This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7;</code>
+   * <code>.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField getAffiliateLocationField();
 
   /**
    * <pre>
-   * Callout Placeholder Fields.
+   * Immutable. Callout Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8;</code>
+   * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getCalloutFieldValue();
   /**
    * <pre>
-   * Callout Placeholder Fields.
+   * Immutable. Callout Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8;</code>
+   * <code>.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField callout_field = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField getCalloutField();
 
   /**
    * <pre>
-   * Structured Snippet Placeholder Fields.
+   * Immutable. Structured Snippet Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getStructuredSnippetFieldValue();
   /**
    * <pre>
-   * Structured Snippet Placeholder Fields.
+   * Immutable. Structured Snippet Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField structured_snippet_field = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField getStructuredSnippetField();
 
   /**
    * <pre>
-   * Message Placeholder Fields.
+   * Immutable. Message Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getMessageFieldValue();
   /**
    * <pre>
-   * Message Placeholder Fields.
+   * Immutable. Message Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField message_field = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.MessagePlaceholderFieldEnum.MessagePlaceholderField getMessageField();
 
   /**
    * <pre>
-   * Price Placeholder Fields.
+   * Immutable. Price Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11;</code>
+   * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getPriceFieldValue();
   /**
    * <pre>
-   * Price Placeholder Fields.
+   * Immutable. Price Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11;</code>
+   * <code>.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField price_field = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.PricePlaceholderFieldEnum.PricePlaceholderField getPriceField();
 
   /**
    * <pre>
-   * Promotion Placeholder Fields.
+   * Immutable. Promotion Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getPromotionFieldValue();
   /**
    * <pre>
-   * Promotion Placeholder Fields.
+   * Immutable. Promotion Placeholder Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField promotion_field = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField getPromotionField();
 
   /**
    * <pre>
-   * Ad Customizer Placeholder Fields
+   * Immutable. Ad Customizer Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13;</code>
+   * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getAdCustomizerFieldValue();
   /**
    * <pre>
-   * Ad Customizer Placeholder Fields
+   * Immutable. Ad Customizer Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13;</code>
+   * <code>.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField ad_customizer_field = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField getAdCustomizerField();
 
   /**
    * <pre>
-   * Dynamic Search Ad Page Feed Fields.
+   * Immutable. Dynamic Search Ad Page Feed Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14;</code>
+   * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getDsaPageFeedFieldValue();
   /**
    * <pre>
-   * Dynamic Search Ad Page Feed Fields.
+   * Immutable. Dynamic Search Ad Page Feed Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14;</code>
+   * <code>.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField dsa_page_feed_field = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField getDsaPageFeedField();
 
   /**
    * <pre>
-   * Location Target Fields.
+   * Immutable. Location Target Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getLocationExtensionTargetingFieldValue();
   /**
    * <pre>
-   * Location Target Fields.
+   * Immutable. Location Target Fields.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField location_extension_targeting_field = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField getLocationExtensionTargetingField();
 
   /**
    * <pre>
-   * Education Placeholder Fields
+   * Immutable. Education Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16;</code>
+   * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getEducationFieldValue();
   /**
    * <pre>
-   * Education Placeholder Fields
+   * Immutable. Education Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16;</code>
+   * <code>.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField education_field = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.EducationPlaceholderFieldEnum.EducationPlaceholderField getEducationField();
 
   /**
    * <pre>
-   * Flight Placeholder Fields
+   * Immutable. Flight Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17;</code>
+   * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getFlightFieldValue();
   /**
    * <pre>
-   * Flight Placeholder Fields
+   * Immutable. Flight Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17;</code>
+   * <code>.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField flight_field = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.FlightPlaceholderFieldEnum.FlightPlaceholderField getFlightField();
 
   /**
    * <pre>
-   * Custom Placeholder Fields
+   * Immutable. Custom Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18;</code>
+   * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getCustomFieldValue();
   /**
    * <pre>
-   * Custom Placeholder Fields
+   * Immutable. Custom Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18;</code>
+   * <code>.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField custom_field = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.CustomPlaceholderFieldEnum.CustomPlaceholderField getCustomField();
 
   /**
    * <pre>
-   * Hotel Placeholder Fields
+   * Immutable. Hotel Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19;</code>
+   * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getHotelFieldValue();
   /**
    * <pre>
-   * Hotel Placeholder Fields
+   * Immutable. Hotel Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19;</code>
+   * <code>.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField hotel_field = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.HotelPlaceholderFieldEnum.HotelPlaceholderField getHotelField();
 
   /**
    * <pre>
-   * Real Estate Placeholder Fields
+   * Immutable. Real Estate Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20;</code>
+   * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getRealEstateFieldValue();
   /**
    * <pre>
-   * Real Estate Placeholder Fields
+   * Immutable. Real Estate Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20;</code>
+   * <code>.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField real_estate_field = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField getRealEstateField();
 
   /**
    * <pre>
-   * Travel Placeholder Fields
+   * Immutable. Travel Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21;</code>
+   * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getTravelFieldValue();
   /**
    * <pre>
-   * Travel Placeholder Fields
+   * Immutable. Travel Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21;</code>
+   * <code>.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField travel_field = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.TravelPlaceholderFieldEnum.TravelPlaceholderField getTravelField();
 
   /**
    * <pre>
-   * Local Placeholder Fields
+   * Immutable. Local Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22;</code>
+   * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getLocalFieldValue();
   /**
    * <pre>
-   * Local Placeholder Fields
+   * Immutable. Local Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22;</code>
+   * <code>.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField local_field = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.LocalPlaceholderFieldEnum.LocalPlaceholderField getLocalField();
 
   /**
    * <pre>
-   * Job Placeholder Fields
+   * Immutable. Job Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23;</code>
+   * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getJobFieldValue();
   /**
    * <pre>
-   * Job Placeholder Fields
+   * Immutable. Job Placeholder Fields
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23;</code>
+   * <code>.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField job_field = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.JobPlaceholderFieldEnum.JobPlaceholderField getJobField();
 

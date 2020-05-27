@@ -95,30 +95,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value adDurationMillis_;
   /**
    * <pre>
-   * The duration of the Audio in milliseconds.
+   * Output only. The duration of the Audio in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+   * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasAdDurationMillis() {
     return adDurationMillis_ != null;
   }
   /**
    * <pre>
-   * The duration of the Audio in milliseconds.
+   * Output only. The duration of the Audio in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+   * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getAdDurationMillis() {
     return adDurationMillis_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : adDurationMillis_;
   }
   /**
    * <pre>
-   * The duration of the Audio in milliseconds.
+   * Output only. The duration of the Audio in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+   * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getAdDurationMillisOrBuilder() {
     return getAdDurationMillis();
@@ -448,20 +448,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> adDurationMillisBuilder_;
     /**
      * <pre>
-     * The duration of the Audio in milliseconds.
+     * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasAdDurationMillis() {
       return adDurationMillisBuilder_ != null || adDurationMillis_ != null;
     }
     /**
      * <pre>
-     * The duration of the Audio in milliseconds.
+     * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getAdDurationMillis() {
       if (adDurationMillisBuilder_ == null) {
@@ -472,10 +472,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Audio in milliseconds.
+     * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdDurationMillis(com.google.protobuf.Int64Value value) {
       if (adDurationMillisBuilder_ == null) {
@@ -492,10 +492,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Audio in milliseconds.
+     * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdDurationMillis(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -510,10 +510,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Audio in milliseconds.
+     * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAdDurationMillis(com.google.protobuf.Int64Value value) {
       if (adDurationMillisBuilder_ == null) {
@@ -532,10 +532,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Audio in milliseconds.
+     * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAdDurationMillis() {
       if (adDurationMillisBuilder_ == null) {
@@ -550,10 +550,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Audio in milliseconds.
+     * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getAdDurationMillisBuilder() {
       
@@ -562,10 +562,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Audio in milliseconds.
+     * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getAdDurationMillisOrBuilder() {
       if (adDurationMillisBuilder_ != null) {
@@ -577,10 +577,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the Audio in milliseconds.
+     * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_duration_millis = 1;</code>
+     * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 

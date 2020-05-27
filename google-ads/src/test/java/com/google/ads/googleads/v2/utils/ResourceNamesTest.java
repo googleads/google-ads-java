@@ -48,6 +48,12 @@ public class ResourceNamesTest {
   }
 
   @Test
+  public void testAd() {
+    String expected = "customers/1234/ads/5678";
+    assertEquals(expected, ResourceNames.ad(1234L, 5678L));
+  }
+
+  @Test
   public void testAdGroupAd() {
     String expected = "customers/1234/adGroupAds/5678~1011";
     assertEquals(expected, ResourceNames.adGroupAd(1234L, 5678L, 1011L));

@@ -34,23 +34,25 @@ public final class ManagedPlacementViewServiceProto {
       "ogleads/v3/resources/managed_placement_v" +
       "iew.proto\032\034google/api/annotations.proto\032" +
       "\027google/api/client.proto\032\037google/api/fie" +
-      "ld_behavior.proto\"<\n\036GetManagedPlacement" +
-      "ViewRequest\022\032\n\rresource_name\030\001 \001(\tB\003\340A\0022" +
-      "\242\002\n\033ManagedPlacementViewService\022\345\001\n\027GetM" +
-      "anagedPlacementView\022@.google.ads.googlea" +
-      "ds.v3.services.GetManagedPlacementViewRe" +
-      "quest\0327.google.ads.googleads.v3.resource" +
-      "s.ManagedPlacementView\"O\202\323\344\223\0029\0227/v3/{res" +
-      "ource_name=customers/*/managedPlacementV" +
-      "iews/*}\332A\rresource_name\032\033\312A\030googleads.go" +
-      "ogleapis.comB\207\002\n$com.google.ads.googlead" +
-      "s.v3.servicesB ManagedPlacementViewServi" +
-      "ceProtoP\001ZHgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v3/services;servi" +
-      "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.Serv" +
-      "ices\312\002 Google\\Ads\\GoogleAds\\V3\\Services\352" +
-      "\002$Google::Ads::GoogleAds::V3::Servicesb\006" +
-      "proto3"
+      "ld_behavior.proto\032\031google/api/resource.p" +
+      "roto\"n\n\036GetManagedPlacementViewRequest\022L" +
+      "\n\rresource_name\030\001 \001(\tB5\340A\002\372A/\n-googleads" +
+      ".googleapis.com/ManagedPlacementView2\242\002\n" +
+      "\033ManagedPlacementViewService\022\345\001\n\027GetMana" +
+      "gedPlacementView\022@.google.ads.googleads." +
+      "v3.services.GetManagedPlacementViewReque" +
+      "st\0327.google.ads.googleads.v3.resources.M" +
+      "anagedPlacementView\"O\202\323\344\223\0029\0227/v3/{resour" +
+      "ce_name=customers/*/managedPlacementView" +
+      "s/*}\332A\rresource_name\032\033\312A\030googleads.googl" +
+      "eapis.comB\207\002\n$com.google.ads.googleads.v" +
+      "3.servicesB ManagedPlacementViewServiceP" +
+      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v3/services;services" +
+      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.Service" +
+      "s\312\002 Google\\Ads\\GoogleAds\\V3\\Services\352\002$G" +
+      "oogle::Ads::GoogleAds::V3::Servicesb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -67,6 +69,7 @@ public final class ManagedPlacementViewServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetManagedPlacementViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -80,12 +83,14 @@ public final class ManagedPlacementViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.ManagedPlacementViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

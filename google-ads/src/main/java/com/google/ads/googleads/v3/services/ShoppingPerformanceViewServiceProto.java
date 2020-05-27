@@ -34,9 +34,11 @@ public final class ShoppingPerformanceViewServiceProto {
       "/googleads/v3/resources/shopping_perform" +
       "ance_view.proto\032\034google/api/annotations." +
       "proto\032\027google/api/client.proto\032\037google/a" +
-      "pi/field_behavior.proto\"?\n!GetShoppingPe" +
-      "rformanceViewRequest\022\032\n\rresource_name\030\001 " +
-      "\001(\tB\003\340A\0022\256\002\n\036ShoppingPerformanceViewServ" +
+      "pi/field_behavior.proto\032\031google/api/reso" +
+      "urce.proto\"t\n!GetShoppingPerformanceView" +
+      "Request\022O\n\rresource_name\030\001 \001(\tB8\340A\002\372A2\n0" +
+      "googleads.googleapis.com/ShoppingPerform" +
+      "anceView2\256\002\n\036ShoppingPerformanceViewServ" +
       "ice\022\356\001\n\032GetShoppingPerformanceView\022C.goo" +
       "gle.ads.googleads.v3.services.GetShoppin" +
       "gPerformanceViewRequest\032:.google.ads.goo" +
@@ -67,6 +69,7 @@ public final class ShoppingPerformanceViewServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetShoppingPerformanceViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -80,12 +83,14 @@ public final class ShoppingPerformanceViewServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.ShoppingPerformanceViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

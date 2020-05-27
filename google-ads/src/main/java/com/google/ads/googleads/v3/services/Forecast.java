@@ -246,7 +246,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Total number of ad impressions. This includes impressions that may fall
-   * outside the specified Targeting, due to insufficent information on
+   * outside the specified Targeting, due to insufficient information on
    * signed-in users.
    * </pre>
    *
@@ -258,7 +258,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Total number of ad impressions. This includes impressions that may fall
-   * outside the specified Targeting, due to insufficent information on
+   * outside the specified Targeting, due to insufficient information on
    * signed-in users.
    * </pre>
    *
@@ -270,7 +270,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Total number of ad impressions. This includes impressions that may fall
-   * outside the specified Targeting, due to insufficent information on
+   * outside the specified Targeting, due to insufficient information on
    * signed-in users.
    * </pre>
    *
@@ -1190,7 +1190,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of ad impressions. This includes impressions that may fall
-     * outside the specified Targeting, due to insufficent information on
+     * outside the specified Targeting, due to insufficient information on
      * signed-in users.
      * </pre>
      *
@@ -1202,7 +1202,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of ad impressions. This includes impressions that may fall
-     * outside the specified Targeting, due to insufficent information on
+     * outside the specified Targeting, due to insufficient information on
      * signed-in users.
      * </pre>
      *
@@ -1218,7 +1218,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of ad impressions. This includes impressions that may fall
-     * outside the specified Targeting, due to insufficent information on
+     * outside the specified Targeting, due to insufficient information on
      * signed-in users.
      * </pre>
      *
@@ -1240,7 +1240,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of ad impressions. This includes impressions that may fall
-     * outside the specified Targeting, due to insufficent information on
+     * outside the specified Targeting, due to insufficient information on
      * signed-in users.
      * </pre>
      *
@@ -1260,7 +1260,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of ad impressions. This includes impressions that may fall
-     * outside the specified Targeting, due to insufficent information on
+     * outside the specified Targeting, due to insufficient information on
      * signed-in users.
      * </pre>
      *
@@ -1284,7 +1284,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of ad impressions. This includes impressions that may fall
-     * outside the specified Targeting, due to insufficent information on
+     * outside the specified Targeting, due to insufficient information on
      * signed-in users.
      * </pre>
      *
@@ -1304,7 +1304,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of ad impressions. This includes impressions that may fall
-     * outside the specified Targeting, due to insufficent information on
+     * outside the specified Targeting, due to insufficient information on
      * signed-in users.
      * </pre>
      *
@@ -1318,7 +1318,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of ad impressions. This includes impressions that may fall
-     * outside the specified Targeting, due to insufficent information on
+     * outside the specified Targeting, due to insufficient information on
      * signed-in users.
      * </pre>
      *
@@ -1335,7 +1335,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Total number of ad impressions. This includes impressions that may fall
-     * outside the specified Targeting, due to insufficent information on
+     * outside the specified Targeting, due to insufficient information on
      * signed-in users.
      * </pre>
      *

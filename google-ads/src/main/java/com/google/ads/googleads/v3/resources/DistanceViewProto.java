@@ -31,23 +31,25 @@ public final class DistanceViewProto {
       "\n5google/ads/googleads/v3/resources/dist" +
       "ance_view.proto\022!google.ads.googleads.v3" +
       ".resources\0323google/ads/googleads/v3/enum" +
-      "s/distance_bucket.proto\032\031google/api/reso" +
-      "urce.proto\032\036google/protobuf/wrappers.pro" +
-      "to\032\034google/api/annotations.proto\"\223\002\n\014Dis" +
-      "tanceView\022\025\n\rresource_name\030\001 \001(\t\022Y\n\017dist" +
+      "s/distance_bucket.proto\032\037google/api/fiel" +
+      "d_behavior.proto\032\031google/api/resource.pr" +
+      "oto\032\036google/protobuf/wrappers.proto\032\034goo" +
+      "gle/api/annotations.proto\"\314\002\n\014DistanceVi" +
+      "ew\022D\n\rresource_name\030\001 \001(\tB-\340A\003\372A\'\n%googl" +
+      "eads.googleapis.com/DistanceView\022^\n\017dist" +
       "ance_bucket\030\002 \001(\0162@.google.ads.googleads" +
       ".v3.enums.DistanceBucketEnum.DistanceBuc" +
-      "ket\0221\n\rmetric_system\030\003 \001(\0132\032.google.prot" +
-      "obuf.BoolValue:^\352A[\n%googleads.googleapi" +
-      "s.com/DistanceView\0222customers/{customer}" +
-      "/distanceViews/{distance_view}B\376\001\n%com.g" +
-      "oogle.ads.googleads.v3.resourcesB\021Distan" +
-      "ceViewProtoP\001ZJgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v3/resources;" +
-      "resources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
-      "3.Resources\312\002!Google\\Ads\\GoogleAds\\V3\\Re" +
-      "sources\352\002%Google::Ads::GoogleAds::V3::Re" +
-      "sourcesb\006proto3"
+      "ketB\003\340A\003\0226\n\rmetric_system\030\003 \001(\0132\032.google" +
+      ".protobuf.BoolValueB\003\340A\003:^\352A[\n%googleads" +
+      ".googleapis.com/DistanceView\0222customers/" +
+      "{customer}/distanceViews/{distance_view}" +
+      "B\376\001\n%com.google.ads.googleads.v3.resourc" +
+      "esB\021DistanceViewProtoP\001ZJgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v3/" +
+      "resources;resources\242\002\003GAA\252\002!Google.Ads.G" +
+      "oogleAds.V3.Resources\312\002!Google\\Ads\\Googl" +
+      "eAds\\V3\\Resources\352\002%Google::Ads::GoogleA" +
+      "ds::V3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -61,6 +63,7 @@ public final class DistanceViewProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.enums.DistanceBucketProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -73,10 +76,13 @@ public final class DistanceViewProto {
         new java.lang.String[] { "ResourceName", "DistanceBucket", "MetricSystem", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.enums.DistanceBucketProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

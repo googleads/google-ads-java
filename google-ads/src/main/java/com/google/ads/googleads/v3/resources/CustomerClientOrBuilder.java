@@ -9,263 +9,263 @@ public interface CustomerClientOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the customer client.
+   * Output only. The resource name of the customer client.
    * CustomerClient resource names have the form:
    * `customers/{customer_id}/customerClients/{client_customer_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the customer client.
+   * Output only. The resource name of the customer client.
    * CustomerClient resource names have the form:
    * `customers/{customer_id}/customerClients/{client_customer_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The resource name of the client-customer which is linked to
+   * Output only. The resource name of the client-customer which is linked to
    * the given customer. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue client_customer = 3;</code>
+   * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasClientCustomer();
   /**
    * <pre>
-   * The resource name of the client-customer which is linked to
+   * Output only. The resource name of the client-customer which is linked to
    * the given customer. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue client_customer = 3;</code>
+   * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getClientCustomer();
   /**
    * <pre>
-   * The resource name of the client-customer which is linked to
+   * Output only. The resource name of the client-customer which is linked to
    * the given customer. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue client_customer = 3;</code>
+   * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getClientCustomerOrBuilder();
 
   /**
    * <pre>
-   * Specifies whether this is a
+   * Output only. Specifies whether this is a
    * [hidden account](https://support.google.com/google-ads/answer/7519830).
    * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue hidden = 4;</code>
+   * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasHidden();
   /**
    * <pre>
-   * Specifies whether this is a
+   * Output only. Specifies whether this is a
    * [hidden account](https://support.google.com/google-ads/answer/7519830).
    * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue hidden = 4;</code>
+   * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValue getHidden();
   /**
    * <pre>
-   * Specifies whether this is a
+   * Output only. Specifies whether this is a
    * [hidden account](https://support.google.com/google-ads/answer/7519830).
    * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue hidden = 4;</code>
+   * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getHiddenOrBuilder();
 
   /**
    * <pre>
-   * Distance between given customer and client. For self link, the level value
+   * Output only. Distance between given customer and client. For self link, the level value
    * will be 0. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value level = 5;</code>
+   * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasLevel();
   /**
    * <pre>
-   * Distance between given customer and client. For self link, the level value
+   * Output only. Distance between given customer and client. For self link, the level value
    * will be 0. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value level = 5;</code>
+   * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getLevel();
   /**
    * <pre>
-   * Distance between given customer and client. For self link, the level value
+   * Output only. Distance between given customer and client. For self link, the level value
    * will be 0. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value level = 5;</code>
+   * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getLevelOrBuilder();
 
   /**
    * <pre>
-   * Common Locale Data Repository (CLDR) string representation of the
+   * Output only. Common Locale Data Repository (CLDR) string representation of the
    * time zone of the client, e.g. America/Los_Angeles. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasTimeZone();
   /**
    * <pre>
-   * Common Locale Data Repository (CLDR) string representation of the
+   * Output only. Common Locale Data Repository (CLDR) string representation of the
    * time zone of the client, e.g. America/Los_Angeles. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getTimeZone();
   /**
    * <pre>
-   * Common Locale Data Repository (CLDR) string representation of the
+   * Output only. Common Locale Data Repository (CLDR) string representation of the
    * time zone of the client, e.g. America/Los_Angeles. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getTimeZoneOrBuilder();
 
   /**
    * <pre>
-   * Identifies if the client is a test account. Read only.
+   * Output only. Identifies if the client is a test account. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue test_account = 7;</code>
+   * <code>.google.protobuf.BoolValue test_account = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasTestAccount();
   /**
    * <pre>
-   * Identifies if the client is a test account. Read only.
+   * Output only. Identifies if the client is a test account. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue test_account = 7;</code>
+   * <code>.google.protobuf.BoolValue test_account = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValue getTestAccount();
   /**
    * <pre>
-   * Identifies if the client is a test account. Read only.
+   * Output only. Identifies if the client is a test account. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue test_account = 7;</code>
+   * <code>.google.protobuf.BoolValue test_account = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder();
 
   /**
    * <pre>
-   * Identifies if the client is a manager. Read only.
+   * Output only. Identifies if the client is a manager. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue manager = 8;</code>
+   * <code>.google.protobuf.BoolValue manager = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasManager();
   /**
    * <pre>
-   * Identifies if the client is a manager. Read only.
+   * Output only. Identifies if the client is a manager. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue manager = 8;</code>
+   * <code>.google.protobuf.BoolValue manager = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValue getManager();
   /**
    * <pre>
-   * Identifies if the client is a manager. Read only.
+   * Output only. Identifies if the client is a manager. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue manager = 8;</code>
+   * <code>.google.protobuf.BoolValue manager = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder();
 
   /**
    * <pre>
-   * Descriptive name for the client. Read only.
+   * Output only. Descriptive name for the client. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+   * <code>.google.protobuf.StringValue descriptive_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasDescriptiveName();
   /**
    * <pre>
-   * Descriptive name for the client. Read only.
+   * Output only. Descriptive name for the client. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+   * <code>.google.protobuf.StringValue descriptive_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getDescriptiveName();
   /**
    * <pre>
-   * Descriptive name for the client. Read only.
+   * Output only. Descriptive name for the client. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue descriptive_name = 9;</code>
+   * <code>.google.protobuf.StringValue descriptive_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getDescriptiveNameOrBuilder();
 
   /**
    * <pre>
-   * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 10;</code>
+   * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasCurrencyCode();
   /**
    * <pre>
-   * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 10;</code>
+   * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
    * <pre>
-   * Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 10;</code>
+   * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder();
 
   /**
    * <pre>
-   * The ID of the client customer. Read only.
+   * Output only. The ID of the client customer. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 11;</code>
+   * <code>.google.protobuf.Int64Value id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the client customer. Read only.
+   * Output only. The ID of the client customer. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 11;</code>
+   * <code>.google.protobuf.Int64Value id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the client customer. Read only.
+   * Output only. The ID of the client customer. Read only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 11;</code>
+   * <code>.google.protobuf.Int64Value id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 }

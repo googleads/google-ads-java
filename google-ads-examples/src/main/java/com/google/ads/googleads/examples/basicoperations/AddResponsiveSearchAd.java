@@ -36,10 +36,7 @@ import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- * Adds a responsive search ad to a given ad group. To get ad groups, run
- * GetAdGroups.java.
- */
+/** Adds a responsive search ad to a given ad group. To get ad groups, run GetAdGroups.java. */
 public class AddResponsiveSearchAd {
 
   private static class AddResponsiveSearchAdParams extends CodeSampleParams {

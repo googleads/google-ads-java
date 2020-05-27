@@ -57,8 +57,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Creates a keyword plan, which can be reused for retrieving forecast metrics and
- * historic metrics.
+ * Creates a keyword plan, which can be reused for retrieving forecast metrics and historic metrics.
  */
 public class AddKeywordPlan {
 
@@ -232,14 +231,13 @@ public class AddKeywordPlan {
     }
   }
 
-
   /**
    * Creates keywords for the keyword plan.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param planAdGroupResource plan ad group resource name.
-   * */
+   */
   private static void createKeywordPlanKeywords(
       GoogleAdsClient googleAdsClient, Long customerId, String planAdGroupResource) {
     // Creates the keywords for keyword plan.
@@ -289,7 +287,7 @@ public class AddKeywordPlan {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param planCampaignResource plan campaign resource name.
-   * */
+   */
   private void createKeywordPlanNegativeKeywords(
       GoogleAdsClient googleAdsClient, Long customerId, String planCampaignResource) {
     KeywordPlanNegativeKeyword negativeKeyword =

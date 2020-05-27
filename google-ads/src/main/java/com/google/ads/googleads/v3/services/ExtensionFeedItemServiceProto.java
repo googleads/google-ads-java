@@ -54,47 +54,49 @@ public final class ExtensionFeedItemServiceProto {
       "eads/v3/resources/extension_feed_item.pr" +
       "oto\032\034google/api/annotations.proto\032\027googl" +
       "e/api/client.proto\032\037google/api/field_beh" +
-      "avior.proto\032 google/protobuf/field_mask." +
-      "proto\032\027google/rpc/status.proto\"9\n\033GetExt" +
-      "ensionFeedItemRequest\022\032\n\rresource_name\030\001" +
-      " \001(\tB\003\340A\002\"\302\001\n\037MutateExtensionFeedItemsRe" +
-      "quest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022U\n\nopera" +
-      "tions\030\002 \003(\0132<.google.ads.googleads.v3.se" +
-      "rvices.ExtensionFeedItemOperationB\003\340A\002\022\027" +
-      "\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_only" +
-      "\030\004 \001(\010\"\374\001\n\032ExtensionFeedItemOperation\022/\n" +
-      "\013update_mask\030\004 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\022F\n\006create\030\001 \001(\01324.google.ads.goog" +
-      "leads.v3.resources.ExtensionFeedItemH\000\022F" +
-      "\n\006update\030\002 \001(\01324.google.ads.googleads.v3" +
-      ".resources.ExtensionFeedItemH\000\022\020\n\006remove" +
-      "\030\003 \001(\tH\000B\013\n\toperation\"\247\001\n MutateExtensio" +
-      "nFeedItemsResponse\0221\n\025partial_failure_er" +
-      "ror\030\003 \001(\0132\022.google.rpc.Status\022P\n\007results" +
-      "\030\002 \003(\0132?.google.ads.googleads.v3.service" +
-      "s.MutateExtensionFeedItemResult\"6\n\035Mutat" +
-      "eExtensionFeedItemResult\022\025\n\rresource_nam" +
-      "e\030\001 \001(\t2\224\004\n\030ExtensionFeedItemService\022\331\001\n" +
-      "\024GetExtensionFeedItem\022=.google.ads.googl" +
-      "eads.v3.services.GetExtensionFeedItemReq" +
-      "uest\0324.google.ads.googleads.v3.resources" +
-      ".ExtensionFeedItem\"L\202\323\344\223\0026\0224/v3/{resourc" +
-      "e_name=customers/*/extensionFeedItems/*}" +
-      "\332A\rresource_name\022\376\001\n\030MutateExtensionFeed" +
-      "Items\022A.google.ads.googleads.v3.services" +
-      ".MutateExtensionFeedItemsRequest\032B.googl" +
-      "e.ads.googleads.v3.services.MutateExtens" +
-      "ionFeedItemsResponse\"[\202\323\344\223\002<\"7/v3/custom" +
-      "ers/{customer_id=*}/extensionFeedItems:m" +
-      "utate:\001*\332A\026customer_id,operations\032\033\312A\030go" +
-      "ogleads.googleapis.comB\204\002\n$com.google.ad" +
-      "s.googleads.v3.servicesB\035ExtensionFeedIt" +
-      "emServiceProtoP\001ZHgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v3/service" +
-      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
-      "V3.Services\312\002 Google\\Ads\\GoogleAds\\V3\\Se" +
-      "rvices\352\002$Google::Ads::GoogleAds::V3::Ser" +
-      "vicesb\006proto3"
+      "avior.proto\032\031google/api/resource.proto\032 " +
+      "google/protobuf/field_mask.proto\032\027google" +
+      "/rpc/status.proto\"h\n\033GetExtensionFeedIte" +
+      "mRequest\022I\n\rresource_name\030\001 \001(\tB2\340A\002\372A,\n" +
+      "*googleads.googleapis.com/ExtensionFeedI" +
+      "tem\"\302\001\n\037MutateExtensionFeedItemsRequest\022" +
+      "\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022U\n\noperations\030" +
+      "\002 \003(\0132<.google.ads.googleads.v3.services" +
+      ".ExtensionFeedItemOperationB\003\340A\002\022\027\n\017part" +
+      "ial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010" +
+      "\"\374\001\n\032ExtensionFeedItemOperation\022/\n\013updat" +
+      "e_mask\030\004 \001(\0132\032.google.protobuf.FieldMask" +
+      "\022F\n\006create\030\001 \001(\01324.google.ads.googleads." +
+      "v3.resources.ExtensionFeedItemH\000\022F\n\006upda" +
+      "te\030\002 \001(\01324.google.ads.googleads.v3.resou" +
+      "rces.ExtensionFeedItemH\000\022\020\n\006remove\030\003 \001(\t" +
+      "H\000B\013\n\toperation\"\247\001\n MutateExtensionFeedI" +
+      "temsResponse\0221\n\025partial_failure_error\030\003 " +
+      "\001(\0132\022.google.rpc.Status\022P\n\007results\030\002 \003(\013" +
+      "2?.google.ads.googleads.v3.services.Muta" +
+      "teExtensionFeedItemResult\"6\n\035MutateExten" +
+      "sionFeedItemResult\022\025\n\rresource_name\030\001 \001(" +
+      "\t2\224\004\n\030ExtensionFeedItemService\022\331\001\n\024GetEx" +
+      "tensionFeedItem\022=.google.ads.googleads.v" +
+      "3.services.GetExtensionFeedItemRequest\0324" +
+      ".google.ads.googleads.v3.resources.Exten" +
+      "sionFeedItem\"L\202\323\344\223\0026\0224/v3/{resource_name" +
+      "=customers/*/extensionFeedItems/*}\332A\rres" +
+      "ource_name\022\376\001\n\030MutateExtensionFeedItems\022" +
+      "A.google.ads.googleads.v3.services.Mutat" +
+      "eExtensionFeedItemsRequest\032B.google.ads." +
+      "googleads.v3.services.MutateExtensionFee" +
+      "dItemsResponse\"[\202\323\344\223\002<\"7/v3/customers/{c" +
+      "ustomer_id=*}/extensionFeedItems:mutate:" +
+      "\001*\332A\026customer_id,operations\032\033\312A\030googlead" +
+      "s.googleapis.comB\204\002\n$com.google.ads.goog" +
+      "leads.v3.servicesB\035ExtensionFeedItemServ" +
+      "iceProtoP\001ZHgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v3/services;serv" +
+      "ices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V3.Ser" +
+      "vices\312\002 Google\\Ads\\GoogleAds\\V3\\Services" +
+      "\352\002$Google::Ads::GoogleAds::V3::Servicesb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -111,6 +113,7 @@ public final class ExtensionFeedItemServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         }, assigner);
@@ -150,12 +153,14 @@ public final class ExtensionFeedItemServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.ExtensionFeedItemProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }

@@ -30,19 +30,21 @@ public final class MutateErrorProto {
     java.lang.String[] descriptorData = {
       "\n1google/ads/googleads/v3/errors/mutate_" +
       "error.proto\022\036google.ads.googleads.v3.err" +
-      "ors\032\034google/api/annotations.proto\"\356\001\n\017Mu" +
-      "tateErrorEnum\"\332\001\n\013MutateError\022\017\n\013UNSPECI" +
+      "ors\032\034google/api/annotations.proto\"\263\002\n\017Mu" +
+      "tateErrorEnum\"\237\002\n\013MutateError\022\017\n\013UNSPECI" +
       "FIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022RESOURCE_NOT_FOUN" +
       "D\020\003\022!\n\035ID_EXISTS_IN_MULTIPLE_MUTATES\020\007\022\035" +
       "\n\031INCONSISTENT_FIELD_VALUES\020\010\022\026\n\022MUTATE_" +
       "NOT_ALLOWED\020\t\022\036\n\032RESOURCE_NOT_IN_GOOGLE_" +
-      "ADS\020\n\022\033\n\027RESOURCE_ALREADY_EXISTS\020\013B\353\001\n\"c" +
-      "om.google.ads.googleads.v3.errorsB\020Mutat" +
-      "eErrorProtoP\001ZDgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v3/errors;err" +
-      "ors\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V3.Erro" +
-      "rs\312\002\036Google\\Ads\\GoogleAds\\V3\\Errors\352\002\"Go" +
-      "ogle::Ads::GoogleAds::V3::Errorsb\006proto3"
+      "ADS\020\n\022\033\n\027RESOURCE_ALREADY_EXISTS\020\013\022+\n\'RE" +
+      "SOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY\020\014\022" +
+      "\026\n\022RESOURCE_READ_ONLY\020\rB\353\001\n\"com.google.a" +
+      "ds.googleads.v3.errorsB\020MutateErrorProto" +
+      "P\001ZDgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v3/errors;errors\242\002\003GAA\252\002" +
+      "\036Google.Ads.GoogleAds.V3.Errors\312\002\036Google" +
+      "\\Ads\\GoogleAds\\V3\\Errors\352\002\"Google::Ads::" +
+      "GoogleAds::V3::Errorsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

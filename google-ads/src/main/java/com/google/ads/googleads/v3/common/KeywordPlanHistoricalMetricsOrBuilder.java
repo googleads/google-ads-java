@@ -9,7 +9,8 @@ public interface KeywordPlanHistoricalMetricsOrBuilder extends
 
   /**
    * <pre>
-   * Average monthly searches for the past 12 months.
+   * Approximate number of monthly searches on this query averaged
+   * for the past 12 months.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -17,7 +18,8 @@ public interface KeywordPlanHistoricalMetricsOrBuilder extends
   boolean hasAvgMonthlySearches();
   /**
    * <pre>
-   * Average monthly searches for the past 12 months.
+   * Approximate number of monthly searches on this query averaged
+   * for the past 12 months.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
@@ -25,7 +27,8 @@ public interface KeywordPlanHistoricalMetricsOrBuilder extends
   com.google.protobuf.Int64Value getAvgMonthlySearches();
   /**
    * <pre>
-   * Average monthly searches for the past 12 months.
+   * Approximate number of monthly searches on this query averaged
+   * for the past 12 months.
    * </pre>
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>

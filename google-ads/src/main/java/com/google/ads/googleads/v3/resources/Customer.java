@@ -286,12 +286,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the customer.
+   * Immutable. The resource name of the customer.
    * Customer resource names have the form:
    * `customers/{customer_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -307,12 +307,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the customer.
+   * Immutable. The resource name of the customer.
    * Customer resource names have the form:
    * `customers/{customer_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -332,30 +332,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the customer.
+   * Output only. The ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the customer.
+   * Output only. The ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the customer.
+   * Output only. The ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -398,36 +398,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue currencyCode_;
   /**
    * <pre>
-   * The currency in which the account operates.
+   * Immutable. The currency in which the account operates.
    * A subset of the currency codes from the ISO 4217 standard is
    * supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 5;</code>
+   * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
   /**
    * <pre>
-   * The currency in which the account operates.
+   * Immutable. The currency in which the account operates.
    * A subset of the currency codes from the ISO 4217 standard is
    * supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 5;</code>
+   * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
   /**
    * <pre>
-   * The currency in which the account operates.
+   * Immutable. The currency in which the account operates.
    * A subset of the currency codes from the ISO 4217 standard is
    * supported.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue currency_code = 5;</code>
+   * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
@@ -437,30 +437,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue timeZone_;
   /**
    * <pre>
-   * The local timezone ID of the customer.
+   * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public boolean hasTimeZone() {
     return timeZone_ != null;
   }
   /**
    * <pre>
-   * The local timezone ID of the customer.
+   * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.StringValue getTimeZone() {
     return timeZone_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : timeZone_;
   }
   /**
    * <pre>
-   * The local timezone ID of the customer.
+   * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue time_zone = 6;</code>
+   * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getTimeZoneOrBuilder() {
     return getTimeZone();
@@ -569,36 +569,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue hasPartnersBadge_;
   /**
    * <pre>
-   * Whether the Customer has a Partners program badge. If the Customer is not
+   * Output only. Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
    * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasHasPartnersBadge() {
     return hasPartnersBadge_ != null;
   }
   /**
    * <pre>
-   * Whether the Customer has a Partners program badge. If the Customer is not
+   * Output only. Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
    * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getHasPartnersBadge() {
     return hasPartnersBadge_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasPartnersBadge_;
   }
   /**
    * <pre>
-   * Whether the Customer has a Partners program badge. If the Customer is not
+   * Output only. Whether the Customer has a Partners program badge. If the Customer is not
    * associated with the Partners program, this will be false. For more
    * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+   * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getHasPartnersBadgeOrBuilder() {
     return getHasPartnersBadge();
@@ -608,30 +608,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue manager_;
   /**
    * <pre>
-   * Whether the customer is a manager.
+   * Output only. Whether the customer is a manager.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasManager() {
     return manager_ != null;
   }
   /**
    * <pre>
-   * Whether the customer is a manager.
+   * Output only. Whether the customer is a manager.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getManager() {
     return manager_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : manager_;
   }
   /**
    * <pre>
-   * Whether the customer is a manager.
+   * Output only. Whether the customer is a manager.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue manager = 12;</code>
+   * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder() {
     return getManager();
@@ -641,30 +641,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue testAccount_;
   /**
    * <pre>
-   * Whether the customer is a test account.
+   * Output only. Whether the customer is a test account.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasTestAccount() {
     return testAccount_ != null;
   }
   /**
    * <pre>
-   * Whether the customer is a test account.
+   * Output only. Whether the customer is a test account.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getTestAccount() {
     return testAccount_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : testAccount_;
   }
   /**
    * <pre>
-   * Whether the customer is a test account.
+   * Output only. Whether the customer is a test account.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue test_account = 13;</code>
+   * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder() {
     return getTestAccount();
@@ -707,30 +707,30 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v3.resources.ConversionTrackingSetting conversionTrackingSetting_;
   /**
    * <pre>
-   * Conversion tracking setting for a customer.
+   * Output only. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasConversionTrackingSetting() {
     return conversionTrackingSetting_ != null;
   }
   /**
    * <pre>
-   * Conversion tracking setting for a customer.
+   * Output only. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.ConversionTrackingSetting getConversionTrackingSetting() {
     return conversionTrackingSetting_ == null ? com.google.ads.googleads.v3.resources.ConversionTrackingSetting.getDefaultInstance() : conversionTrackingSetting_;
   }
   /**
    * <pre>
-   * Conversion tracking setting for a customer.
+   * Output only. Conversion tracking setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+   * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder() {
     return getConversionTrackingSetting();
@@ -740,30 +740,30 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v3.resources.RemarketingSetting remarketingSetting_;
   /**
    * <pre>
-   * Remarketing setting for a customer.
+   * Output only. Remarketing setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+   * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasRemarketingSetting() {
     return remarketingSetting_ != null;
   }
   /**
    * <pre>
-   * Remarketing setting for a customer.
+   * Output only. Remarketing setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+   * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.RemarketingSetting getRemarketingSetting() {
     return remarketingSetting_ == null ? com.google.ads.googleads.v3.resources.RemarketingSetting.getDefaultInstance() : remarketingSetting_;
   }
   /**
    * <pre>
-   * Remarketing setting for a customer.
+   * Output only. Remarketing setting for a customer.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+   * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.RemarketingSettingOrBuilder getRemarketingSettingOrBuilder() {
     return getRemarketingSetting();
@@ -783,11 +783,11 @@ private static final long serialVersionUID = 0L;
           };
   /**
    * <pre>
-   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
    * the list is empty, the customer is eligible. This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> getPayPerConversionEligibilityFailureReasonsList() {
     return new com.google.protobuf.Internal.ListAdapter<
@@ -795,33 +795,33 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
    * the list is empty, the customer is eligible. This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getPayPerConversionEligibilityFailureReasonsCount() {
     return payPerConversionEligibilityFailureReasons_.size();
   }
   /**
    * <pre>
-   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
    * the list is empty, the customer is eligible. This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason getPayPerConversionEligibilityFailureReasons(int index) {
     return payPerConversionEligibilityFailureReasons_converter_.convert(payPerConversionEligibilityFailureReasons_.get(index));
   }
   /**
    * <pre>
-   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
    * the list is empty, the customer is eligible. This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public java.util.List<java.lang.Integer>
   getPayPerConversionEligibilityFailureReasonsValueList() {
@@ -829,11 +829,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
    * the list is empty, the customer is eligible. This field is read-only.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+   * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getPayPerConversionEligibilityFailureReasonsValue(int index) {
     return payPerConversionEligibilityFailureReasons_.get(index);
@@ -1585,12 +1585,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the customer.
+     * Immutable. The resource name of the customer.
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1606,12 +1606,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer.
+     * Immutable. The resource name of the customer.
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1628,12 +1628,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer.
+     * Immutable. The resource name of the customer.
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1647,12 +1647,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer.
+     * Immutable. The resource name of the customer.
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1662,12 +1662,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer.
+     * Immutable. The resource name of the customer.
      * Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1686,20 +1686,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the customer.
+     * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1710,10 +1710,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1730,10 +1730,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1748,10 +1748,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1770,10 +1770,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1788,10 +1788,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1800,10 +1800,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1815,10 +1815,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer.
+     * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1992,24 +1992,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyCodeBuilder_;
     /**
      * <pre>
-     * The currency in which the account operates.
+     * Immutable. The currency in which the account operates.
      * A subset of the currency codes from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 5;</code>
+     * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasCurrencyCode() {
       return currencyCodeBuilder_ != null || currencyCode_ != null;
     }
     /**
      * <pre>
-     * The currency in which the account operates.
+     * Immutable. The currency in which the account operates.
      * A subset of the currency codes from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 5;</code>
+     * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue getCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -2020,12 +2020,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency in which the account operates.
+     * Immutable. The currency in which the account operates.
      * A subset of the currency codes from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 5;</code>
+     * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setCurrencyCode(com.google.protobuf.StringValue value) {
       if (currencyCodeBuilder_ == null) {
@@ -2042,12 +2042,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency in which the account operates.
+     * Immutable. The currency in which the account operates.
      * A subset of the currency codes from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 5;</code>
+     * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setCurrencyCode(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2062,12 +2062,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency in which the account operates.
+     * Immutable. The currency in which the account operates.
      * A subset of the currency codes from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 5;</code>
+     * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeCurrencyCode(com.google.protobuf.StringValue value) {
       if (currencyCodeBuilder_ == null) {
@@ -2086,12 +2086,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency in which the account operates.
+     * Immutable. The currency in which the account operates.
      * A subset of the currency codes from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 5;</code>
+     * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearCurrencyCode() {
       if (currencyCodeBuilder_ == null) {
@@ -2106,12 +2106,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency in which the account operates.
+     * Immutable. The currency in which the account operates.
      * A subset of the currency codes from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 5;</code>
+     * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue.Builder getCurrencyCodeBuilder() {
       
@@ -2120,12 +2120,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency in which the account operates.
+     * Immutable. The currency in which the account operates.
      * A subset of the currency codes from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 5;</code>
+     * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
       if (currencyCodeBuilder_ != null) {
@@ -2137,12 +2137,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The currency in which the account operates.
+     * Immutable. The currency in which the account operates.
      * A subset of the currency codes from the ISO 4217 standard is
      * supported.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency_code = 5;</code>
+     * <code>.google.protobuf.StringValue currency_code = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2163,20 +2163,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> timeZoneBuilder_;
     /**
      * <pre>
-     * The local timezone ID of the customer.
+     * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public boolean hasTimeZone() {
       return timeZoneBuilder_ != null || timeZone_ != null;
     }
     /**
      * <pre>
-     * The local timezone ID of the customer.
+     * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue getTimeZone() {
       if (timeZoneBuilder_ == null) {
@@ -2187,10 +2187,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The local timezone ID of the customer.
+     * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTimeZone(com.google.protobuf.StringValue value) {
       if (timeZoneBuilder_ == null) {
@@ -2207,10 +2207,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The local timezone ID of the customer.
+     * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTimeZone(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2225,10 +2225,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The local timezone ID of the customer.
+     * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeTimeZone(com.google.protobuf.StringValue value) {
       if (timeZoneBuilder_ == null) {
@@ -2247,10 +2247,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The local timezone ID of the customer.
+     * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearTimeZone() {
       if (timeZoneBuilder_ == null) {
@@ -2265,10 +2265,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The local timezone ID of the customer.
+     * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue.Builder getTimeZoneBuilder() {
       
@@ -2277,10 +2277,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The local timezone ID of the customer.
+     * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getTimeZoneOrBuilder() {
       if (timeZoneBuilder_ != null) {
@@ -2292,10 +2292,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The local timezone ID of the customer.
+     * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue time_zone = 6;</code>
+     * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2775,24 +2775,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> hasPartnersBadgeBuilder_;
     /**
      * <pre>
-     * Whether the Customer has a Partners program badge. If the Customer is not
+     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasHasPartnersBadge() {
       return hasPartnersBadgeBuilder_ != null || hasPartnersBadge_ != null;
     }
     /**
      * <pre>
-     * Whether the Customer has a Partners program badge. If the Customer is not
+     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getHasPartnersBadge() {
       if (hasPartnersBadgeBuilder_ == null) {
@@ -2803,12 +2803,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the Customer has a Partners program badge. If the Customer is not
+     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setHasPartnersBadge(com.google.protobuf.BoolValue value) {
       if (hasPartnersBadgeBuilder_ == null) {
@@ -2825,12 +2825,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the Customer has a Partners program badge. If the Customer is not
+     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setHasPartnersBadge(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -2845,12 +2845,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the Customer has a Partners program badge. If the Customer is not
+     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeHasPartnersBadge(com.google.protobuf.BoolValue value) {
       if (hasPartnersBadgeBuilder_ == null) {
@@ -2869,12 +2869,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the Customer has a Partners program badge. If the Customer is not
+     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearHasPartnersBadge() {
       if (hasPartnersBadgeBuilder_ == null) {
@@ -2889,12 +2889,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the Customer has a Partners program badge. If the Customer is not
+     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getHasPartnersBadgeBuilder() {
       
@@ -2903,12 +2903,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the Customer has a Partners program badge. If the Customer is not
+     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getHasPartnersBadgeOrBuilder() {
       if (hasPartnersBadgeBuilder_ != null) {
@@ -2920,12 +2920,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the Customer has a Partners program badge. If the Customer is not
+     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
      * associated with the Partners program, this will be false. For more
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue has_partners_badge = 9;</code>
+     * <code>.google.protobuf.BoolValue has_partners_badge = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -2946,20 +2946,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> managerBuilder_;
     /**
      * <pre>
-     * Whether the customer is a manager.
+     * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasManager() {
       return managerBuilder_ != null || manager_ != null;
     }
     /**
      * <pre>
-     * Whether the customer is a manager.
+     * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getManager() {
       if (managerBuilder_ == null) {
@@ -2970,10 +2970,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a manager.
+     * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setManager(com.google.protobuf.BoolValue value) {
       if (managerBuilder_ == null) {
@@ -2990,10 +2990,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a manager.
+     * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setManager(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -3008,10 +3008,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a manager.
+     * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeManager(com.google.protobuf.BoolValue value) {
       if (managerBuilder_ == null) {
@@ -3030,10 +3030,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a manager.
+     * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearManager() {
       if (managerBuilder_ == null) {
@@ -3048,10 +3048,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a manager.
+     * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getManagerBuilder() {
       
@@ -3060,10 +3060,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a manager.
+     * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder() {
       if (managerBuilder_ != null) {
@@ -3075,10 +3075,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a manager.
+     * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue manager = 12;</code>
+     * <code>.google.protobuf.BoolValue manager = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -3099,20 +3099,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> testAccountBuilder_;
     /**
      * <pre>
-     * Whether the customer is a test account.
+     * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTestAccount() {
       return testAccountBuilder_ != null || testAccount_ != null;
     }
     /**
      * <pre>
-     * Whether the customer is a test account.
+     * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getTestAccount() {
       if (testAccountBuilder_ == null) {
@@ -3123,10 +3123,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a test account.
+     * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTestAccount(com.google.protobuf.BoolValue value) {
       if (testAccountBuilder_ == null) {
@@ -3143,10 +3143,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a test account.
+     * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTestAccount(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -3161,10 +3161,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a test account.
+     * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTestAccount(com.google.protobuf.BoolValue value) {
       if (testAccountBuilder_ == null) {
@@ -3183,10 +3183,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a test account.
+     * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTestAccount() {
       if (testAccountBuilder_ == null) {
@@ -3201,10 +3201,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a test account.
+     * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getTestAccountBuilder() {
       
@@ -3213,10 +3213,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a test account.
+     * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder() {
       if (testAccountBuilder_ != null) {
@@ -3228,10 +3228,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Whether the customer is a test account.
+     * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue test_account = 13;</code>
+     * <code>.google.protobuf.BoolValue test_account = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -3405,20 +3405,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.resources.ConversionTrackingSetting, com.google.ads.googleads.v3.resources.ConversionTrackingSetting.Builder, com.google.ads.googleads.v3.resources.ConversionTrackingSettingOrBuilder> conversionTrackingSettingBuilder_;
     /**
      * <pre>
-     * Conversion tracking setting for a customer.
+     * Output only. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasConversionTrackingSetting() {
       return conversionTrackingSettingBuilder_ != null || conversionTrackingSetting_ != null;
     }
     /**
      * <pre>
-     * Conversion tracking setting for a customer.
+     * Output only. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.ConversionTrackingSetting getConversionTrackingSetting() {
       if (conversionTrackingSettingBuilder_ == null) {
@@ -3429,10 +3429,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversion tracking setting for a customer.
+     * Output only. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setConversionTrackingSetting(com.google.ads.googleads.v3.resources.ConversionTrackingSetting value) {
       if (conversionTrackingSettingBuilder_ == null) {
@@ -3449,10 +3449,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversion tracking setting for a customer.
+     * Output only. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setConversionTrackingSetting(
         com.google.ads.googleads.v3.resources.ConversionTrackingSetting.Builder builderForValue) {
@@ -3467,10 +3467,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversion tracking setting for a customer.
+     * Output only. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeConversionTrackingSetting(com.google.ads.googleads.v3.resources.ConversionTrackingSetting value) {
       if (conversionTrackingSettingBuilder_ == null) {
@@ -3489,10 +3489,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversion tracking setting for a customer.
+     * Output only. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearConversionTrackingSetting() {
       if (conversionTrackingSettingBuilder_ == null) {
@@ -3507,10 +3507,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversion tracking setting for a customer.
+     * Output only. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.ConversionTrackingSetting.Builder getConversionTrackingSettingBuilder() {
       
@@ -3519,10 +3519,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversion tracking setting for a customer.
+     * Output only. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder() {
       if (conversionTrackingSettingBuilder_ != null) {
@@ -3534,10 +3534,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Conversion tracking setting for a customer.
+     * Output only. Conversion tracking setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14;</code>
+     * <code>.google.ads.googleads.v3.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.resources.ConversionTrackingSetting, com.google.ads.googleads.v3.resources.ConversionTrackingSetting.Builder, com.google.ads.googleads.v3.resources.ConversionTrackingSettingOrBuilder> 
@@ -3558,20 +3558,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.resources.RemarketingSetting, com.google.ads.googleads.v3.resources.RemarketingSetting.Builder, com.google.ads.googleads.v3.resources.RemarketingSettingOrBuilder> remarketingSettingBuilder_;
     /**
      * <pre>
-     * Remarketing setting for a customer.
+     * Output only. Remarketing setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasRemarketingSetting() {
       return remarketingSettingBuilder_ != null || remarketingSetting_ != null;
     }
     /**
      * <pre>
-     * Remarketing setting for a customer.
+     * Output only. Remarketing setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.RemarketingSetting getRemarketingSetting() {
       if (remarketingSettingBuilder_ == null) {
@@ -3582,10 +3582,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remarketing setting for a customer.
+     * Output only. Remarketing setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRemarketingSetting(com.google.ads.googleads.v3.resources.RemarketingSetting value) {
       if (remarketingSettingBuilder_ == null) {
@@ -3602,10 +3602,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remarketing setting for a customer.
+     * Output only. Remarketing setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setRemarketingSetting(
         com.google.ads.googleads.v3.resources.RemarketingSetting.Builder builderForValue) {
@@ -3620,10 +3620,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remarketing setting for a customer.
+     * Output only. Remarketing setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeRemarketingSetting(com.google.ads.googleads.v3.resources.RemarketingSetting value) {
       if (remarketingSettingBuilder_ == null) {
@@ -3642,10 +3642,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remarketing setting for a customer.
+     * Output only. Remarketing setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearRemarketingSetting() {
       if (remarketingSettingBuilder_ == null) {
@@ -3660,10 +3660,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remarketing setting for a customer.
+     * Output only. Remarketing setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.RemarketingSetting.Builder getRemarketingSettingBuilder() {
       
@@ -3672,10 +3672,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remarketing setting for a customer.
+     * Output only. Remarketing setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.RemarketingSettingOrBuilder getRemarketingSettingOrBuilder() {
       if (remarketingSettingBuilder_ != null) {
@@ -3687,10 +3687,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remarketing setting for a customer.
+     * Output only. Remarketing setting for a customer.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15;</code>
+     * <code>.google.ads.googleads.v3.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.resources.RemarketingSetting, com.google.ads.googleads.v3.resources.RemarketingSetting.Builder, com.google.ads.googleads.v3.resources.RemarketingSettingOrBuilder> 
@@ -3716,11 +3716,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> getPayPerConversionEligibilityFailureReasonsList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -3728,33 +3728,33 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getPayPerConversionEligibilityFailureReasonsCount() {
       return payPerConversionEligibilityFailureReasons_.size();
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason getPayPerConversionEligibilityFailureReasons(int index) {
       return payPerConversionEligibilityFailureReasons_converter_.convert(payPerConversionEligibilityFailureReasons_.get(index));
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPayPerConversionEligibilityFailureReasons(
         int index, com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason value) {
@@ -3768,11 +3768,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPayPerConversionEligibilityFailureReasons(com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason value) {
       if (value == null) {
@@ -3785,11 +3785,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllPayPerConversionEligibilityFailureReasons(
         java.lang.Iterable<? extends com.google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> values) {
@@ -3802,11 +3802,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPayPerConversionEligibilityFailureReasons() {
       payPerConversionEligibilityFailureReasons_ = java.util.Collections.emptyList();
@@ -3816,11 +3816,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public java.util.List<java.lang.Integer>
     getPayPerConversionEligibilityFailureReasonsValueList() {
@@ -3828,22 +3828,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getPayPerConversionEligibilityFailureReasonsValue(int index) {
       return payPerConversionEligibilityFailureReasons_.get(index);
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPayPerConversionEligibilityFailureReasonsValue(
         int index, int value) {
@@ -3854,11 +3854,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addPayPerConversionEligibilityFailureReasonsValue(int value) {
       ensurePayPerConversionEligibilityFailureReasonsIsMutable();
@@ -3868,11 +3868,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
+     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
      * the list is empty, the customer is eligible. This field is read-only.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16;</code>
+     * <code>repeated .google.ads.googleads.v3.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder addAllPayPerConversionEligibilityFailureReasonsValue(
         java.lang.Iterable<java.lang.Integer> values) {

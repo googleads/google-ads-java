@@ -103,12 +103,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the expanded landing page view.
+   * Output only. The resource name of the expanded landing page view.
    * Expanded landing page view resource names have the form:
    * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -124,12 +124,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the expanded landing page view.
+   * Output only. The resource name of the expanded landing page view.
    * Expanded landing page view resource names have the form:
    * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -149,30 +149,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue expandedFinalUrl_;
   /**
    * <pre>
-   * The final URL that clicks are directed to.
+   * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+   * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasExpandedFinalUrl() {
     return expandedFinalUrl_ != null;
   }
   /**
    * <pre>
-   * The final URL that clicks are directed to.
+   * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+   * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getExpandedFinalUrl() {
     return expandedFinalUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : expandedFinalUrl_;
   }
   /**
    * <pre>
-   * The final URL that clicks are directed to.
+   * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+   * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getExpandedFinalUrlOrBuilder() {
     return getExpandedFinalUrl();
@@ -518,12 +518,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the expanded landing page view.
+     * Output only. The resource name of the expanded landing page view.
      * Expanded landing page view resource names have the form:
      * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -539,12 +539,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the expanded landing page view.
+     * Output only. The resource name of the expanded landing page view.
      * Expanded landing page view resource names have the form:
      * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -561,12 +561,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the expanded landing page view.
+     * Output only. The resource name of the expanded landing page view.
      * Expanded landing page view resource names have the form:
      * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -580,12 +580,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the expanded landing page view.
+     * Output only. The resource name of the expanded landing page view.
      * Expanded landing page view resource names have the form:
      * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -595,12 +595,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the expanded landing page view.
+     * Output only. The resource name of the expanded landing page view.
      * Expanded landing page view resource names have the form:
      * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -619,20 +619,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> expandedFinalUrlBuilder_;
     /**
      * <pre>
-     * The final URL that clicks are directed to.
+     * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+     * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasExpandedFinalUrl() {
       return expandedFinalUrlBuilder_ != null || expandedFinalUrl_ != null;
     }
     /**
      * <pre>
-     * The final URL that clicks are directed to.
+     * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+     * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getExpandedFinalUrl() {
       if (expandedFinalUrlBuilder_ == null) {
@@ -643,10 +643,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The final URL that clicks are directed to.
+     * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+     * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setExpandedFinalUrl(com.google.protobuf.StringValue value) {
       if (expandedFinalUrlBuilder_ == null) {
@@ -663,10 +663,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The final URL that clicks are directed to.
+     * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+     * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setExpandedFinalUrl(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -681,10 +681,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The final URL that clicks are directed to.
+     * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+     * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeExpandedFinalUrl(com.google.protobuf.StringValue value) {
       if (expandedFinalUrlBuilder_ == null) {
@@ -703,10 +703,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The final URL that clicks are directed to.
+     * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+     * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearExpandedFinalUrl() {
       if (expandedFinalUrlBuilder_ == null) {
@@ -721,10 +721,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The final URL that clicks are directed to.
+     * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+     * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getExpandedFinalUrlBuilder() {
       
@@ -733,10 +733,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The final URL that clicks are directed to.
+     * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+     * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getExpandedFinalUrlOrBuilder() {
       if (expandedFinalUrlBuilder_ != null) {
@@ -748,10 +748,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The final URL that clicks are directed to.
+     * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue expanded_final_url = 2;</code>
+     * <code>.google.protobuf.StringValue expanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

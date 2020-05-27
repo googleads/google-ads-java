@@ -382,12 +382,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the user list.
+   * Immutable. The resource name of the user list.
    * User list resource names have the form:
    * `customers/{customer_id}/userLists/{user_list_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -403,12 +403,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the user list.
+   * Immutable. The resource name of the user list.
    * User list resource names have the form:
    * `customers/{customer_id}/userLists/{user_list_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -428,30 +428,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * Id of the user list.
+   * Output only. Id of the user list.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * Id of the user list.
+   * Output only. Id of the user list.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * Id of the user list.
+   * Output only. Id of the user list.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
@@ -461,39 +461,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue readOnly_;
   /**
    * <pre>
-   * A flag that indicates if a user may edit a list. Depends on the list
+   * Output only. A flag that indicates if a user may edit a list. Depends on the list
    * ownership and list type. For example, external remarketing user lists are
    * not editable.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue read_only = 3;</code>
+   * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasReadOnly() {
     return readOnly_ != null;
   }
   /**
    * <pre>
-   * A flag that indicates if a user may edit a list. Depends on the list
+   * Output only. A flag that indicates if a user may edit a list. Depends on the list
    * ownership and list type. For example, external remarketing user lists are
    * not editable.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue read_only = 3;</code>
+   * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getReadOnly() {
     return readOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : readOnly_;
   }
   /**
    * <pre>
-   * A flag that indicates if a user may edit a list. Depends on the list
+   * Output only. A flag that indicates if a user may edit a list. Depends on the list
    * ownership and list type. For example, external remarketing user lists are
    * not editable.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue read_only = 3;</code>
+   * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getReadOnlyOrBuilder() {
     return getReadOnly();
@@ -682,36 +682,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value sizeForDisplay_;
   /**
    * <pre>
-   * Estimated number of users in this user list, on the Google Display Network.
+   * Output only. Estimated number of users in this user list, on the Google Display Network.
    * This value is null if the number of users has not yet been determined.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+   * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasSizeForDisplay() {
     return sizeForDisplay_ != null;
   }
   /**
    * <pre>
-   * Estimated number of users in this user list, on the Google Display Network.
+   * Output only. Estimated number of users in this user list, on the Google Display Network.
    * This value is null if the number of users has not yet been determined.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+   * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getSizeForDisplay() {
     return sizeForDisplay_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sizeForDisplay_;
   }
   /**
    * <pre>
-   * Estimated number of users in this user list, on the Google Display Network.
+   * Output only. Estimated number of users in this user list, on the Google Display Network.
    * This value is null if the number of users has not yet been determined.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+   * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getSizeForDisplayOrBuilder() {
     return getSizeForDisplay();
@@ -721,24 +721,24 @@ private static final long serialVersionUID = 0L;
   private int sizeRangeForDisplay_;
   /**
    * <pre>
-   * Size range in terms of number of users of the UserList, on the Google
+   * Output only. Size range in terms of number of users of the UserList, on the Google
    * Display Network.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getSizeRangeForDisplayValue() {
     return sizeRangeForDisplay_;
   }
   /**
    * <pre>
-   * Size range in terms of number of users of the UserList, on the Google
+   * Output only. Size range in terms of number of users of the UserList, on the Google
    * Display Network.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange getSizeRangeForDisplay() {
     @SuppressWarnings("deprecation")
@@ -750,39 +750,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value sizeForSearch_;
   /**
    * <pre>
-   * Estimated number of users in this user list in the google.com domain.
+   * Output only. Estimated number of users in this user list in the google.com domain.
    * These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+   * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasSizeForSearch() {
     return sizeForSearch_ != null;
   }
   /**
    * <pre>
-   * Estimated number of users in this user list in the google.com domain.
+   * Output only. Estimated number of users in this user list in the google.com domain.
    * These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+   * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getSizeForSearch() {
     return sizeForSearch_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sizeForSearch_;
   }
   /**
    * <pre>
-   * Estimated number of users in this user list in the google.com domain.
+   * Output only. Estimated number of users in this user list in the google.com domain.
    * These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+   * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getSizeForSearchOrBuilder() {
     return getSizeForSearch();
@@ -792,22 +792,22 @@ private static final long serialVersionUID = 0L;
   private int sizeRangeForSearch_;
   /**
    * <pre>
-   * Size range in terms of number of users of the UserList, for Search ads.
+   * Output only. Size range in terms of number of users of the UserList, for Search ads.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getSizeRangeForSearchValue() {
     return sizeRangeForSearch_;
   }
   /**
    * <pre>
-   * Size range in terms of number of users of the UserList, for Search ads.
+   * Output only. Size range in terms of number of users of the UserList, for Search ads.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12;</code>
+   * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange getSizeRangeForSearch() {
     @SuppressWarnings("deprecation")
@@ -819,22 +819,22 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * Type of this list.
+   * Output only. Type of this list.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13;</code>
+   * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * Type of this list.
+   * Output only. Type of this list.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13;</code>
+   * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType getType() {
     @SuppressWarnings("deprecation")
@@ -875,24 +875,24 @@ private static final long serialVersionUID = 0L;
   private int accessReason_;
   /**
    * <pre>
-   * Indicates the reason this account has been granted access to the list.
+   * Output only. Indicates the reason this account has been granted access to the list.
    * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getAccessReasonValue() {
     return accessReason_;
   }
   /**
    * <pre>
-   * Indicates the reason this account has been granted access to the list.
+   * Output only. Indicates the reason this account has been granted access to the list.
    * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15;</code>
+   * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason getAccessReason() {
     @SuppressWarnings("deprecation")
@@ -968,33 +968,33 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue eligibleForDisplay_;
   /**
    * <pre>
-   * Indicates this user list is eligible for Google Display Network.
+   * Output only. Indicates this user list is eligible for Google Display Network.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+   * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasEligibleForDisplay() {
     return eligibleForDisplay_ != null;
   }
   /**
    * <pre>
-   * Indicates this user list is eligible for Google Display Network.
+   * Output only. Indicates this user list is eligible for Google Display Network.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+   * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValue getEligibleForDisplay() {
     return eligibleForDisplay_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : eligibleForDisplay_;
   }
   /**
    * <pre>
-   * Indicates this user list is eligible for Google Display Network.
+   * Output only. Indicates this user list is eligible for Google Display Network.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+   * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.BoolValueOrBuilder getEligibleForDisplayOrBuilder() {
     return getEligibleForDisplay();
@@ -1041,22 +1041,22 @@ private static final long serialVersionUID = 0L;
   public static final int SIMILAR_USER_LIST_FIELD_NUMBER = 20;
   /**
    * <pre>
-   * User list which are similar to users from another UserList.
+   * Output only. User list which are similar to users from another UserList.
    * These lists are readonly and automatically created by google.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+   * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasSimilarUserList() {
     return userListCase_ == 20;
   }
   /**
    * <pre>
-   * User list which are similar to users from another UserList.
+   * Output only. User list which are similar to users from another UserList.
    * These lists are readonly and automatically created by google.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+   * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.SimilarUserListInfo getSimilarUserList() {
     if (userListCase_ == 20) {
@@ -1066,11 +1066,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * User list which are similar to users from another UserList.
+   * Output only. User list which are similar to users from another UserList.
    * These lists are readonly and automatically created by google.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+   * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.SimilarUserListInfoOrBuilder getSimilarUserListOrBuilder() {
     if (userListCase_ == 20) {
@@ -2076,12 +2076,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the user list.
+     * Immutable. The resource name of the user list.
      * User list resource names have the form:
      * `customers/{customer_id}/userLists/{user_list_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -2097,12 +2097,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the user list.
+     * Immutable. The resource name of the user list.
      * User list resource names have the form:
      * `customers/{customer_id}/userLists/{user_list_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -2119,12 +2119,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the user list.
+     * Immutable. The resource name of the user list.
      * User list resource names have the form:
      * `customers/{customer_id}/userLists/{user_list_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -2138,12 +2138,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the user list.
+     * Immutable. The resource name of the user list.
      * User list resource names have the form:
      * `customers/{customer_id}/userLists/{user_list_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -2153,12 +2153,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the user list.
+     * Immutable. The resource name of the user list.
      * User list resource names have the form:
      * `customers/{customer_id}/userLists/{user_list_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -2177,20 +2177,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * Id of the user list.
+     * Output only. Id of the user list.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * Id of the user list.
+     * Output only. Id of the user list.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -2201,10 +2201,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the user list.
+     * Output only. Id of the user list.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -2221,10 +2221,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the user list.
+     * Output only. Id of the user list.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2239,10 +2239,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the user list.
+     * Output only. Id of the user list.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -2261,10 +2261,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the user list.
+     * Output only. Id of the user list.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -2279,10 +2279,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the user list.
+     * Output only. Id of the user list.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -2291,10 +2291,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the user list.
+     * Output only. Id of the user list.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -2306,10 +2306,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Id of the user list.
+     * Output only. Id of the user list.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2330,26 +2330,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> readOnlyBuilder_;
     /**
      * <pre>
-     * A flag that indicates if a user may edit a list. Depends on the list
+     * Output only. A flag that indicates if a user may edit a list. Depends on the list
      * ownership and list type. For example, external remarketing user lists are
      * not editable.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue read_only = 3;</code>
+     * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasReadOnly() {
       return readOnlyBuilder_ != null || readOnly_ != null;
     }
     /**
      * <pre>
-     * A flag that indicates if a user may edit a list. Depends on the list
+     * Output only. A flag that indicates if a user may edit a list. Depends on the list
      * ownership and list type. For example, external remarketing user lists are
      * not editable.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue read_only = 3;</code>
+     * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getReadOnly() {
       if (readOnlyBuilder_ == null) {
@@ -2360,13 +2360,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A flag that indicates if a user may edit a list. Depends on the list
+     * Output only. A flag that indicates if a user may edit a list. Depends on the list
      * ownership and list type. For example, external remarketing user lists are
      * not editable.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue read_only = 3;</code>
+     * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setReadOnly(com.google.protobuf.BoolValue value) {
       if (readOnlyBuilder_ == null) {
@@ -2383,13 +2383,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A flag that indicates if a user may edit a list. Depends on the list
+     * Output only. A flag that indicates if a user may edit a list. Depends on the list
      * ownership and list type. For example, external remarketing user lists are
      * not editable.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue read_only = 3;</code>
+     * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setReadOnly(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -2404,13 +2404,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A flag that indicates if a user may edit a list. Depends on the list
+     * Output only. A flag that indicates if a user may edit a list. Depends on the list
      * ownership and list type. For example, external remarketing user lists are
      * not editable.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue read_only = 3;</code>
+     * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeReadOnly(com.google.protobuf.BoolValue value) {
       if (readOnlyBuilder_ == null) {
@@ -2429,13 +2429,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A flag that indicates if a user may edit a list. Depends on the list
+     * Output only. A flag that indicates if a user may edit a list. Depends on the list
      * ownership and list type. For example, external remarketing user lists are
      * not editable.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue read_only = 3;</code>
+     * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearReadOnly() {
       if (readOnlyBuilder_ == null) {
@@ -2450,13 +2450,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A flag that indicates if a user may edit a list. Depends on the list
+     * Output only. A flag that indicates if a user may edit a list. Depends on the list
      * ownership and list type. For example, external remarketing user lists are
      * not editable.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue read_only = 3;</code>
+     * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getReadOnlyBuilder() {
       
@@ -2465,13 +2465,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A flag that indicates if a user may edit a list. Depends on the list
+     * Output only. A flag that indicates if a user may edit a list. Depends on the list
      * ownership and list type. For example, external remarketing user lists are
      * not editable.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue read_only = 3;</code>
+     * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getReadOnlyOrBuilder() {
       if (readOnlyBuilder_ != null) {
@@ -2483,13 +2483,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A flag that indicates if a user may edit a list. Depends on the list
+     * Output only. A flag that indicates if a user may edit a list. Depends on the list
      * ownership and list type. For example, external remarketing user lists are
      * not editable.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue read_only = 3;</code>
+     * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -3251,24 +3251,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sizeForDisplayBuilder_;
     /**
      * <pre>
-     * Estimated number of users in this user list, on the Google Display Network.
+     * Output only. Estimated number of users in this user list, on the Google Display Network.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+     * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSizeForDisplay() {
       return sizeForDisplayBuilder_ != null || sizeForDisplay_ != null;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list, on the Google Display Network.
+     * Output only. Estimated number of users in this user list, on the Google Display Network.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+     * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getSizeForDisplay() {
       if (sizeForDisplayBuilder_ == null) {
@@ -3279,12 +3279,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list, on the Google Display Network.
+     * Output only. Estimated number of users in this user list, on the Google Display Network.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+     * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSizeForDisplay(com.google.protobuf.Int64Value value) {
       if (sizeForDisplayBuilder_ == null) {
@@ -3301,12 +3301,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list, on the Google Display Network.
+     * Output only. Estimated number of users in this user list, on the Google Display Network.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+     * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSizeForDisplay(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3321,12 +3321,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list, on the Google Display Network.
+     * Output only. Estimated number of users in this user list, on the Google Display Network.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+     * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeSizeForDisplay(com.google.protobuf.Int64Value value) {
       if (sizeForDisplayBuilder_ == null) {
@@ -3345,12 +3345,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list, on the Google Display Network.
+     * Output only. Estimated number of users in this user list, on the Google Display Network.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+     * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSizeForDisplay() {
       if (sizeForDisplayBuilder_ == null) {
@@ -3365,12 +3365,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list, on the Google Display Network.
+     * Output only. Estimated number of users in this user list, on the Google Display Network.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+     * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getSizeForDisplayBuilder() {
       
@@ -3379,12 +3379,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list, on the Google Display Network.
+     * Output only. Estimated number of users in this user list, on the Google Display Network.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+     * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getSizeForDisplayOrBuilder() {
       if (sizeForDisplayBuilder_ != null) {
@@ -3396,12 +3396,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list, on the Google Display Network.
+     * Output only. Estimated number of users in this user list, on the Google Display Network.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_display = 9;</code>
+     * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3420,24 +3420,24 @@ private static final long serialVersionUID = 0L;
     private int sizeRangeForDisplay_ = 0;
     /**
      * <pre>
-     * Size range in terms of number of users of the UserList, on the Google
+     * Output only. Size range in terms of number of users of the UserList, on the Google
      * Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getSizeRangeForDisplayValue() {
       return sizeRangeForDisplay_;
     }
     /**
      * <pre>
-     * Size range in terms of number of users of the UserList, on the Google
+     * Output only. Size range in terms of number of users of the UserList, on the Google
      * Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSizeRangeForDisplayValue(int value) {
       sizeRangeForDisplay_ = value;
@@ -3446,12 +3446,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Size range in terms of number of users of the UserList, on the Google
+     * Output only. Size range in terms of number of users of the UserList, on the Google
      * Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange getSizeRangeForDisplay() {
       @SuppressWarnings("deprecation")
@@ -3460,12 +3460,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Size range in terms of number of users of the UserList, on the Google
+     * Output only. Size range in terms of number of users of the UserList, on the Google
      * Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSizeRangeForDisplay(com.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange value) {
       if (value == null) {
@@ -3478,12 +3478,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Size range in terms of number of users of the UserList, on the Google
+     * Output only. Size range in terms of number of users of the UserList, on the Google
      * Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSizeRangeForDisplay() {
       
@@ -3497,26 +3497,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sizeForSearchBuilder_;
     /**
      * <pre>
-     * Estimated number of users in this user list in the google.com domain.
+     * Output only. Estimated number of users in this user list in the google.com domain.
      * These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+     * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSizeForSearch() {
       return sizeForSearchBuilder_ != null || sizeForSearch_ != null;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list in the google.com domain.
+     * Output only. Estimated number of users in this user list in the google.com domain.
      * These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+     * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getSizeForSearch() {
       if (sizeForSearchBuilder_ == null) {
@@ -3527,13 +3527,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list in the google.com domain.
+     * Output only. Estimated number of users in this user list in the google.com domain.
      * These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+     * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSizeForSearch(com.google.protobuf.Int64Value value) {
       if (sizeForSearchBuilder_ == null) {
@@ -3550,13 +3550,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list in the google.com domain.
+     * Output only. Estimated number of users in this user list in the google.com domain.
      * These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+     * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSizeForSearch(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -3571,13 +3571,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list in the google.com domain.
+     * Output only. Estimated number of users in this user list in the google.com domain.
      * These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+     * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeSizeForSearch(com.google.protobuf.Int64Value value) {
       if (sizeForSearchBuilder_ == null) {
@@ -3596,13 +3596,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list in the google.com domain.
+     * Output only. Estimated number of users in this user list in the google.com domain.
      * These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+     * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSizeForSearch() {
       if (sizeForSearchBuilder_ == null) {
@@ -3617,13 +3617,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list in the google.com domain.
+     * Output only. Estimated number of users in this user list in the google.com domain.
      * These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+     * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getSizeForSearchBuilder() {
       
@@ -3632,13 +3632,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list in the google.com domain.
+     * Output only. Estimated number of users in this user list in the google.com domain.
      * These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+     * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getSizeForSearchOrBuilder() {
       if (sizeForSearchBuilder_ != null) {
@@ -3650,13 +3650,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Estimated number of users in this user list in the google.com domain.
+     * Output only. Estimated number of users in this user list in the google.com domain.
      * These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value size_for_search = 11;</code>
+     * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -3675,22 +3675,22 @@ private static final long serialVersionUID = 0L;
     private int sizeRangeForSearch_ = 0;
     /**
      * <pre>
-     * Size range in terms of number of users of the UserList, for Search ads.
+     * Output only. Size range in terms of number of users of the UserList, for Search ads.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getSizeRangeForSearchValue() {
       return sizeRangeForSearch_;
     }
     /**
      * <pre>
-     * Size range in terms of number of users of the UserList, for Search ads.
+     * Output only. Size range in terms of number of users of the UserList, for Search ads.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSizeRangeForSearchValue(int value) {
       sizeRangeForSearch_ = value;
@@ -3699,11 +3699,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Size range in terms of number of users of the UserList, for Search ads.
+     * Output only. Size range in terms of number of users of the UserList, for Search ads.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange getSizeRangeForSearch() {
       @SuppressWarnings("deprecation")
@@ -3712,11 +3712,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Size range in terms of number of users of the UserList, for Search ads.
+     * Output only. Size range in terms of number of users of the UserList, for Search ads.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSizeRangeForSearch(com.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange value) {
       if (value == null) {
@@ -3729,11 +3729,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Size range in terms of number of users of the UserList, for Search ads.
+     * Output only. Size range in terms of number of users of the UserList, for Search ads.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSizeRangeForSearch() {
       
@@ -3745,22 +3745,22 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * Type of this list.
+     * Output only. Type of this list.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * Type of this list.
+     * Output only. Type of this list.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -3769,11 +3769,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of this list.
+     * Output only. Type of this list.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType getType() {
       @SuppressWarnings("deprecation")
@@ -3782,11 +3782,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of this list.
+     * Output only. Type of this list.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setType(com.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType value) {
       if (value == null) {
@@ -3799,11 +3799,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of this list.
+     * Output only. Type of this list.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13;</code>
+     * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearType() {
       
@@ -3890,24 +3890,24 @@ private static final long serialVersionUID = 0L;
     private int accessReason_ = 0;
     /**
      * <pre>
-     * Indicates the reason this account has been granted access to the list.
+     * Output only. Indicates the reason this account has been granted access to the list.
      * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getAccessReasonValue() {
       return accessReason_;
     }
     /**
      * <pre>
-     * Indicates the reason this account has been granted access to the list.
+     * Output only. Indicates the reason this account has been granted access to the list.
      * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAccessReasonValue(int value) {
       accessReason_ = value;
@@ -3916,12 +3916,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates the reason this account has been granted access to the list.
+     * Output only. Indicates the reason this account has been granted access to the list.
      * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason getAccessReason() {
       @SuppressWarnings("deprecation")
@@ -3930,12 +3930,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates the reason this account has been granted access to the list.
+     * Output only. Indicates the reason this account has been granted access to the list.
      * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAccessReason(com.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason value) {
       if (value == null) {
@@ -3948,12 +3948,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates the reason this account has been granted access to the list.
+     * Output only. Indicates the reason this account has been granted access to the list.
      * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15;</code>
+     * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAccessReason() {
       
@@ -4200,22 +4200,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> eligibleForDisplayBuilder_;
     /**
      * <pre>
-     * Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+     * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasEligibleForDisplay() {
       return eligibleForDisplayBuilder_ != null || eligibleForDisplay_ != null;
     }
     /**
      * <pre>
-     * Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+     * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue getEligibleForDisplay() {
       if (eligibleForDisplayBuilder_ == null) {
@@ -4226,11 +4226,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+     * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEligibleForDisplay(com.google.protobuf.BoolValue value) {
       if (eligibleForDisplayBuilder_ == null) {
@@ -4247,11 +4247,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+     * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEligibleForDisplay(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -4266,11 +4266,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+     * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeEligibleForDisplay(com.google.protobuf.BoolValue value) {
       if (eligibleForDisplayBuilder_ == null) {
@@ -4289,11 +4289,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+     * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearEligibleForDisplay() {
       if (eligibleForDisplayBuilder_ == null) {
@@ -4308,11 +4308,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+     * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getEligibleForDisplayBuilder() {
       
@@ -4321,11 +4321,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+     * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getEligibleForDisplayOrBuilder() {
       if (eligibleForDisplayBuilder_ != null) {
@@ -4337,11 +4337,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display Network.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue eligible_for_display = 18;</code>
+     * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -4533,22 +4533,22 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.SimilarUserListInfo, com.google.ads.googleads.v3.common.SimilarUserListInfo.Builder, com.google.ads.googleads.v3.common.SimilarUserListInfoOrBuilder> similarUserListBuilder_;
     /**
      * <pre>
-     * User list which are similar to users from another UserList.
+     * Output only. User list which are similar to users from another UserList.
      * These lists are readonly and automatically created by google.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasSimilarUserList() {
       return userListCase_ == 20;
     }
     /**
      * <pre>
-     * User list which are similar to users from another UserList.
+     * Output only. User list which are similar to users from another UserList.
      * These lists are readonly and automatically created by google.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.SimilarUserListInfo getSimilarUserList() {
       if (similarUserListBuilder_ == null) {
@@ -4565,11 +4565,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * User list which are similar to users from another UserList.
+     * Output only. User list which are similar to users from another UserList.
      * These lists are readonly and automatically created by google.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSimilarUserList(com.google.ads.googleads.v3.common.SimilarUserListInfo value) {
       if (similarUserListBuilder_ == null) {
@@ -4586,11 +4586,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * User list which are similar to users from another UserList.
+     * Output only. User list which are similar to users from another UserList.
      * These lists are readonly and automatically created by google.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSimilarUserList(
         com.google.ads.googleads.v3.common.SimilarUserListInfo.Builder builderForValue) {
@@ -4605,11 +4605,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * User list which are similar to users from another UserList.
+     * Output only. User list which are similar to users from another UserList.
      * These lists are readonly and automatically created by google.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeSimilarUserList(com.google.ads.googleads.v3.common.SimilarUserListInfo value) {
       if (similarUserListBuilder_ == null) {
@@ -4632,11 +4632,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * User list which are similar to users from another UserList.
+     * Output only. User list which are similar to users from another UserList.
      * These lists are readonly and automatically created by google.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSimilarUserList() {
       if (similarUserListBuilder_ == null) {
@@ -4656,22 +4656,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * User list which are similar to users from another UserList.
+     * Output only. User list which are similar to users from another UserList.
      * These lists are readonly and automatically created by google.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.SimilarUserListInfo.Builder getSimilarUserListBuilder() {
       return getSimilarUserListFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * User list which are similar to users from another UserList.
+     * Output only. User list which are similar to users from another UserList.
      * These lists are readonly and automatically created by google.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.SimilarUserListInfoOrBuilder getSimilarUserListOrBuilder() {
       if ((userListCase_ == 20) && (similarUserListBuilder_ != null)) {
@@ -4685,11 +4685,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * User list which are similar to users from another UserList.
+     * Output only. User list which are similar to users from another UserList.
      * These lists are readonly and automatically created by google.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20;</code>
+     * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.SimilarUserListInfo, com.google.ads.googleads.v3.common.SimilarUserListInfo.Builder, com.google.ads.googleads.v3.common.SimilarUserListInfoOrBuilder> 

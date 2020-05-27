@@ -237,20 +237,20 @@ private static final long serialVersionUID = 0L;
   private int operator_;
   /**
    * <pre>
-   * Type of list operation to perform.
+   * Output only. Type of list operation to perform.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1;</code>
+   * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getOperatorValue() {
     return operator_;
   }
   /**
    * <pre>
-   * Type of list operation to perform.
+   * Output only. Type of list operation to perform.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1;</code>
+   * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator getOperator() {
     @SuppressWarnings("deprecation")
@@ -262,30 +262,30 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v3.resources.FeedAttribute value_;
   /**
    * <pre>
-   * The feed attribute being added to the list.
+   * Output only. The feed attribute being added to the list.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+   * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasValue() {
     return value_ != null;
   }
   /**
    * <pre>
-   * The feed attribute being added to the list.
+   * Output only. The feed attribute being added to the list.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+   * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.FeedAttribute getValue() {
     return value_ == null ? com.google.ads.googleads.v3.resources.FeedAttribute.getDefaultInstance() : value_;
   }
   /**
    * <pre>
-   * The feed attribute being added to the list.
+   * Output only. The feed attribute being added to the list.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+   * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.resources.FeedAttributeOrBuilder getValueOrBuilder() {
     return getValue();
@@ -629,20 +629,20 @@ private static final long serialVersionUID = 0L;
     private int operator_ = 0;
     /**
      * <pre>
-     * Type of list operation to perform.
+     * Output only. Type of list operation to perform.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getOperatorValue() {
       return operator_;
     }
     /**
      * <pre>
-     * Type of list operation to perform.
+     * Output only. Type of list operation to perform.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setOperatorValue(int value) {
       operator_ = value;
@@ -651,10 +651,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of list operation to perform.
+     * Output only. Type of list operation to perform.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator getOperator() {
       @SuppressWarnings("deprecation")
@@ -663,10 +663,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of list operation to perform.
+     * Output only. Type of list operation to perform.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setOperator(com.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator value) {
       if (value == null) {
@@ -679,10 +679,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of list operation to perform.
+     * Output only. Type of list operation to perform.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttributeOperation.Operator operator = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearOperator() {
       
@@ -696,20 +696,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.resources.FeedAttribute, com.google.ads.googleads.v3.resources.FeedAttribute.Builder, com.google.ads.googleads.v3.resources.FeedAttributeOrBuilder> valueBuilder_;
     /**
      * <pre>
-     * The feed attribute being added to the list.
+     * Output only. The feed attribute being added to the list.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasValue() {
       return valueBuilder_ != null || value_ != null;
     }
     /**
      * <pre>
-     * The feed attribute being added to the list.
+     * Output only. The feed attribute being added to the list.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.FeedAttribute getValue() {
       if (valueBuilder_ == null) {
@@ -720,10 +720,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed attribute being added to the list.
+     * Output only. The feed attribute being added to the list.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setValue(com.google.ads.googleads.v3.resources.FeedAttribute value) {
       if (valueBuilder_ == null) {
@@ -740,10 +740,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed attribute being added to the list.
+     * Output only. The feed attribute being added to the list.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setValue(
         com.google.ads.googleads.v3.resources.FeedAttribute.Builder builderForValue) {
@@ -758,10 +758,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed attribute being added to the list.
+     * Output only. The feed attribute being added to the list.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeValue(com.google.ads.googleads.v3.resources.FeedAttribute value) {
       if (valueBuilder_ == null) {
@@ -780,10 +780,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed attribute being added to the list.
+     * Output only. The feed attribute being added to the list.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearValue() {
       if (valueBuilder_ == null) {
@@ -798,10 +798,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed attribute being added to the list.
+     * Output only. The feed attribute being added to the list.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.FeedAttribute.Builder getValueBuilder() {
       
@@ -810,10 +810,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed attribute being added to the list.
+     * Output only. The feed attribute being added to the list.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.resources.FeedAttributeOrBuilder getValueOrBuilder() {
       if (valueBuilder_ != null) {
@@ -825,10 +825,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed attribute being added to the list.
+     * Output only. The feed attribute being added to the list.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2;</code>
+     * <code>.google.ads.googleads.v3.resources.FeedAttribute value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.resources.FeedAttribute, com.google.ads.googleads.v3.resources.FeedAttribute.Builder, com.google.ads.googleads.v3.resources.FeedAttributeOrBuilder> 

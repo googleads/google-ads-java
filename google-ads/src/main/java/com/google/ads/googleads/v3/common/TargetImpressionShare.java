@@ -8,7 +8,7 @@ package com.google.ads.googleads.v3.common;
  * An automated bidding strategy that sets bids so that a certain percentage of
  * search ads are shown at the top of the first page (or other targeted
  * location).
- * Next Id = 4
+ * next tag = 4
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v3.common.TargetImpressionShare}
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
    * An automated bidding strategy that sets bids so that a certain percentage of
    * search ads are shown at the top of the first page (or other targeted
    * location).
-   * Next Id = 4
+   * next tag = 4
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v3.common.TargetImpressionShare}

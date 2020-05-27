@@ -17,8 +17,8 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.errors.GoogleAdsError;
+import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.resources.AccountBudgetProposal;
 import com.google.ads.googleads.v3.services.GoogleAdsRow;
 import com.google.ads.googleads.v3.services.GoogleAdsServiceClient;
@@ -81,6 +81,7 @@ public class GetAccountBudgetProposals {
 
   /**
    * Runs the example.
+   *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the customer ID for which to retrieve AccountBudgetProposals.
    */

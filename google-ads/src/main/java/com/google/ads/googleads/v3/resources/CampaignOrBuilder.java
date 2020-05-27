@@ -9,48 +9,48 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the campaign.
+   * Immutable. The resource name of the campaign.
    * Campaign resource names have the form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the campaign.
+   * Immutable. The resource name of the campaign.
    * Campaign resource names have the form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the campaign.
+   * Output only. The ID of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the campaign.
+   * Output only. The ID of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the campaign.
+   * Output only. The ID of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
@@ -112,18 +112,18 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * The ad serving status of the campaign.
+   * Output only. The ad serving status of the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getServingStatusValue();
   /**
    * <pre>
-   * The ad serving status of the campaign.
+   * Output only. The ad serving status of the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.CampaignServingStatusEnum.CampaignServingStatus getServingStatus();
 
@@ -146,7 +146,7 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * The primary serving target for ads within the campaign.
+   * Immutable. The primary serving target for ads within the campaign.
    * The targeting options can be refined in `network_settings`.
    * This field is required and should not be empty when creating new
    * campaigns.
@@ -154,12 +154,12 @@ public interface CampaignOrBuilder extends
    * After the campaign is created, the field can not be changed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getAdvertisingChannelTypeValue();
   /**
    * <pre>
-   * The primary serving target for ads within the campaign.
+   * Immutable. The primary serving target for ads within the campaign.
    * The targeting options can be refined in `network_settings`.
    * This field is required and should not be empty when creating new
    * campaigns.
@@ -167,30 +167,30 @@ public interface CampaignOrBuilder extends
    * After the campaign is created, the field can not be changed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9;</code>
+   * <code>.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType getAdvertisingChannelType();
 
   /**
    * <pre>
-   * Optional refinement to `advertising_channel_type`.
+   * Immutable. Optional refinement to `advertising_channel_type`.
    * Must be a valid sub-type of the parent channel type.
    * Can be set only when creating campaigns.
    * After campaign is created, the field can not be changed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   int getAdvertisingChannelSubTypeValue();
   /**
    * <pre>
-   * Optional refinement to `advertising_channel_type`.
+   * Immutable. Optional refinement to `advertising_channel_type`.
    * Must be a valid sub-type of the parent channel type.
    * Can be set only when creating campaigns.
    * After campaign is created, the field can not be changed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10;</code>
+   * <code>.google.ads.googleads.v3.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType getAdvertisingChannelSubType();
 
@@ -323,26 +323,26 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * The hotel setting for the campaign.
+   * Immutable. The hotel setting for the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   * <code>.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   boolean hasHotelSetting();
   /**
    * <pre>
-   * The hotel setting for the campaign.
+   * Immutable. The hotel setting for the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   * <code>.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo getHotelSetting();
   /**
    * <pre>
-   * The hotel setting for the campaign.
+   * Immutable. The hotel setting for the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   * <code>.google.ads.googleads.v3.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v3.resources.Campaign.HotelSettingInfoOrBuilder getHotelSettingOrBuilder();
 
@@ -473,93 +473,93 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * The resource names of labels attached to this campaign.
+   * Output only. The resource names of labels attached to this campaign.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.util.List<com.google.protobuf.StringValue> 
       getLabelsList();
   /**
    * <pre>
-   * The resource names of labels attached to this campaign.
+   * Output only. The resource names of labels attached to this campaign.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getLabels(int index);
   /**
    * <pre>
-   * The resource names of labels attached to this campaign.
+   * Output only. The resource names of labels attached to this campaign.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   int getLabelsCount();
   /**
    * <pre>
-   * The resource names of labels attached to this campaign.
+   * Output only. The resource names of labels attached to this campaign.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getLabelsOrBuilderList();
   /**
    * <pre>
-   * The resource names of labels attached to this campaign.
+   * Output only. The resource names of labels attached to this campaign.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getLabelsOrBuilder(
       int index);
 
   /**
    * <pre>
-   * The type of campaign: normal, draft, or experiment.
+   * Output only. The type of campaign: normal, draft, or experiment.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getExperimentTypeValue();
   /**
    * <pre>
-   * The type of campaign: normal, draft, or experiment.
+   * Output only. The type of campaign: normal, draft, or experiment.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+   * <code>.google.ads.googleads.v3.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.CampaignExperimentTypeEnum.CampaignExperimentType getExperimentType();
 
   /**
    * <pre>
-   * The resource name of the base campaign of a draft or experiment campaign.
+   * Output only. The resource name of the base campaign of a draft or experiment campaign.
    * For base campaigns, this is equal to `resource_name`.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+   * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   boolean hasBaseCampaign();
   /**
    * <pre>
-   * The resource name of the base campaign of a draft or experiment campaign.
+   * Output only. The resource name of the base campaign of a draft or experiment campaign.
    * For base campaigns, this is equal to `resource_name`.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+   * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getBaseCampaign();
   /**
    * <pre>
-   * The resource name of the base campaign of a draft or experiment campaign.
+   * Output only. The resource name of the base campaign of a draft or experiment campaign.
    * For base campaigns, this is equal to `resource_name`.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+   * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getBaseCampaignOrBuilder();
 
@@ -568,7 +568,7 @@ public interface CampaignOrBuilder extends
    * The budget of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+   * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
    */
   boolean hasCampaignBudget();
   /**
@@ -576,7 +576,7 @@ public interface CampaignOrBuilder extends
    * The budget of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+   * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getCampaignBudget();
   /**
@@ -584,32 +584,32 @@ public interface CampaignOrBuilder extends
    * The budget of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+   * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCampaignBudgetOrBuilder();
 
   /**
    * <pre>
-   * The type of bidding strategy.
+   * Output only. The type of bidding strategy.
    * A bidding strategy can be created by setting either the bidding scheme to
    * create a standard bidding strategy or the `bidding_strategy` field to
    * create a portfolio bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getBiddingStrategyTypeValue();
   /**
    * <pre>
-   * The type of bidding strategy.
+   * Output only. The type of bidding strategy.
    * A bidding strategy can be created by setting either the bidding scheme to
    * create a standard bidding strategy or the `bidding_strategy` field to
    * create a portfolio bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22;</code>
+   * <code>.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.BiddingStrategyTypeEnum.BiddingStrategyType getBiddingStrategyType();
 
@@ -743,18 +743,18 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * 3-Tier Brand Safety setting for the campaign.
+   * Output only. 3-Tier Brand Safety setting for the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+   * <code>.google.ads.googleads.v3.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   int getVideoBrandSafetySuitabilityValue();
   /**
    * <pre>
-   * 3-Tier Brand Safety setting for the campaign.
+   * Output only. 3-Tier Brand Safety setting for the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+   * <code>.google.ads.googleads.v3.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability getVideoBrandSafetySuitability();
 
@@ -813,26 +813,26 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * Campaign-level settings for tracking information.
+   * Output only. Campaign-level settings for tracking information.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+   * <code>.google.ads.googleads.v3.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasTrackingSetting();
   /**
    * <pre>
-   * Campaign-level settings for tracking information.
+   * Output only. Campaign-level settings for tracking information.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+   * <code>.google.ads.googleads.v3.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.resources.Campaign.TrackingSetting getTrackingSetting();
   /**
    * <pre>
-   * Campaign-level settings for tracking information.
+   * Output only. Campaign-level settings for tracking information.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+   * <code>.google.ads.googleads.v3.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.resources.Campaign.TrackingSettingOrBuilder getTrackingSettingOrBuilder();
 
@@ -855,10 +855,53 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * Output only. Optimization score of the campaign.
+   * Optimization score is an estimate of how well a campaign is set to perform.
+   * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
+   * campaign is performing at full potential.
+   * See "About optimization score" at
+   * https://support.google.com/google-ads/answer/9061546.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue optimization_score = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  boolean hasOptimizationScore();
+  /**
+   * <pre>
+   * Output only. Optimization score of the campaign.
+   * Optimization score is an estimate of how well a campaign is set to perform.
+   * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
+   * campaign is performing at full potential.
+   * See "About optimization score" at
+   * https://support.google.com/google-ads/answer/9061546.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue optimization_score = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.protobuf.DoubleValue getOptimizationScore();
+  /**
+   * <pre>
+   * Output only. Optimization score of the campaign.
+   * Optimization score is an estimate of how well a campaign is set to perform.
+   * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
+   * campaign is performing at full potential.
+   * See "About optimization score" at
+   * https://support.google.com/google-ads/answer/9061546.
+   * This field is read-only.
+   * </pre>
+   *
+   * <code>.google.protobuf.DoubleValue optimization_score = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.protobuf.DoubleValueOrBuilder getOptimizationScoreOrBuilder();
+
+  /**
+   * <pre>
    * Portfolio bidding strategy used by campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+   * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
    */
   boolean hasBiddingStrategy();
   /**
@@ -866,7 +909,7 @@ public interface CampaignOrBuilder extends
    * Portfolio bidding strategy used by campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+   * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValue getBiddingStrategy();
   /**
@@ -874,7 +917,7 @@ public interface CampaignOrBuilder extends
    * Portfolio bidding strategy used by campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+   * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getBiddingStrategyOrBuilder();
 
@@ -967,26 +1010,26 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * A bidding strategy that pays a configurable amount per video view.
+   * Output only. A bidding strategy that pays a configurable amount per video view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ManualCpv manual_cpv = 37;</code>
+   * <code>.google.ads.googleads.v3.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   boolean hasManualCpv();
   /**
    * <pre>
-   * A bidding strategy that pays a configurable amount per video view.
+   * Output only. A bidding strategy that pays a configurable amount per video view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ManualCpv manual_cpv = 37;</code>
+   * <code>.google.ads.googleads.v3.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.common.ManualCpv getManualCpv();
   /**
    * <pre>
-   * A bidding strategy that pays a configurable amount per video view.
+   * Output only. A bidding strategy that pays a configurable amount per video view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ManualCpv manual_cpv = 37;</code>
+   * <code>.google.ads.googleads.v3.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v3.common.ManualCpvOrBuilder getManualCpvOrBuilder();
 

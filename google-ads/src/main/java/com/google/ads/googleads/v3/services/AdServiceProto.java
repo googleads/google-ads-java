@@ -53,35 +53,36 @@ public final class AdServiceProto {
       "vices\032*google/ads/googleads/v3/resources" +
       "/ad.proto\032\034google/api/annotations.proto\032" +
       "\027google/api/client.proto\032\037google/api/fie" +
-      "ld_behavior.proto\032 google/protobuf/field" +
-      "_mask.proto\"*\n\014GetAdRequest\022\032\n\rresource_" +
-      "name\030\001 \001(\tB\003\340A\002\"t\n\020MutateAdsRequest\022\030\n\013c" +
-      "ustomer_id\030\001 \001(\tB\003\340A\002\022F\n\noperations\030\002 \003(" +
-      "\0132-.google.ads.googleads.v3.services.AdO" +
-      "perationB\003\340A\002\"\204\001\n\013AdOperation\022/\n\013update_" +
-      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\0227" +
-      "\n\006update\030\001 \001(\0132%.google.ads.googleads.v3" +
-      ".resources.AdH\000B\013\n\toperation\"V\n\021MutateAd" +
-      "sResponse\022A\n\007results\030\002 \003(\01320.google.ads." +
-      "googleads.v3.services.MutateAdResult\"\'\n\016" +
-      "MutateAdResult\022\025\n\rresource_name\030\001 \001(\t2\215\003" +
-      "\n\tAdService\022\235\001\n\005GetAd\022..google.ads.googl" +
-      "eads.v3.services.GetAdRequest\032%.google.a" +
-      "ds.googleads.v3.resources.Ad\"=\202\323\344\223\002\'\022%/v" +
-      "3/{resource_name=customers/*/ads/*}\332A\rre" +
-      "source_name\022\302\001\n\tMutateAds\0222.google.ads.g" +
-      "oogleads.v3.services.MutateAdsRequest\0323." +
-      "google.ads.googleads.v3.services.MutateA" +
-      "dsResponse\"L\202\323\344\223\002-\"(/v3/customers/{custo" +
-      "mer_id=*}/ads:mutate:\001*\332A\026customer_id,op" +
-      "erations\032\033\312A\030googleads.googleapis.comB\365\001" +
-      "\n$com.google.ads.googleads.v3.servicesB\016" +
-      "AdServiceProtoP\001ZHgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v3/service" +
-      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
-      "V3.Services\312\002 Google\\Ads\\GoogleAds\\V3\\Se" +
-      "rvices\352\002$Google::Ads::GoogleAds::V3::Ser" +
-      "vicesb\006proto3"
+      "ld_behavior.proto\032\031google/api/resource.p" +
+      "roto\032 google/protobuf/field_mask.proto\"J" +
+      "\n\014GetAdRequest\022:\n\rresource_name\030\001 \001(\tB#\340" +
+      "A\002\372A\035\n\033googleads.googleapis.com/Ad\"t\n\020Mu" +
+      "tateAdsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002" +
+      "\022F\n\noperations\030\002 \003(\0132-.google.ads.google" +
+      "ads.v3.services.AdOperationB\003\340A\002\"\204\001\n\013AdO" +
+      "peration\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
+      "rotobuf.FieldMask\0227\n\006update\030\001 \001(\0132%.goog" +
+      "le.ads.googleads.v3.resources.AdH\000B\013\n\top" +
+      "eration\"V\n\021MutateAdsResponse\022A\n\007results\030" +
+      "\002 \003(\01320.google.ads.googleads.v3.services" +
+      ".MutateAdResult\"\'\n\016MutateAdResult\022\025\n\rres" +
+      "ource_name\030\001 \001(\t2\215\003\n\tAdService\022\235\001\n\005GetAd" +
+      "\022..google.ads.googleads.v3.services.GetA" +
+      "dRequest\032%.google.ads.googleads.v3.resou" +
+      "rces.Ad\"=\202\323\344\223\002\'\022%/v3/{resource_name=cust" +
+      "omers/*/ads/*}\332A\rresource_name\022\302\001\n\tMutat" +
+      "eAds\0222.google.ads.googleads.v3.services." +
+      "MutateAdsRequest\0323.google.ads.googleads." +
+      "v3.services.MutateAdsResponse\"L\202\323\344\223\002-\"(/" +
+      "v3/customers/{customer_id=*}/ads:mutate:" +
+      "\001*\332A\026customer_id,operations\032\033\312A\030googlead" +
+      "s.googleapis.comB\365\001\n$com.google.ads.goog" +
+      "leads.v3.servicesB\016AdServiceProtoP\001ZHgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v3/services;services\242\002\003GAA\252\002 Go" +
+      "ogle.Ads.GoogleAds.V3.Services\312\002 Google\\" +
+      "Ads\\GoogleAds\\V3\\Services\352\002$Google::Ads:" +
+      ":GoogleAds::V3::Servicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -98,6 +99,7 @@ public final class AdServiceProto {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
         }, assigner);
     internal_static_google_ads_googleads_v3_services_GetAdRequest_descriptor =
@@ -136,12 +138,14 @@ public final class AdServiceProto {
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v3.resources.AdProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 

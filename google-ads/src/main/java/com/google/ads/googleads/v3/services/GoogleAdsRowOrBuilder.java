@@ -2009,6 +2009,31 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The offline user data job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+   */
+  boolean hasOfflineUserDataJob();
+  /**
+   * <pre>
+   * The offline user data job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+   */
+  com.google.ads.googleads.v3.resources.OfflineUserDataJob getOfflineUserDataJob();
+  /**
+   * <pre>
+   * The offline user data job referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v3.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
+   */
+  com.google.ads.googleads.v3.resources.OfflineUserDataJobOrBuilder getOfflineUserDataJobOrBuilder();
+
+  /**
+   * <pre>
    * The operating system version constant referenced in the query.
    * </pre>
    *

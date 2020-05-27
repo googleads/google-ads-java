@@ -30,27 +30,31 @@ public final class PaymentsAccountProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v3/resources/paym" +
       "ents_account.proto\022!google.ads.googleads" +
-      ".v3.resources\032\031google/api/resource.proto" +
-      "\032\036google/protobuf/wrappers.proto\032\034google" +
-      "/api/annotations.proto\"\255\003\n\017PaymentsAccou" +
-      "nt\022\025\n\rresource_name\030\001 \001(\t\0229\n\023payments_ac" +
-      "count_id\030\002 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022*\n\004name\030\003 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\0223\n\rcurrency_code\030\004 \001(\0132\034.google" +
-      ".protobuf.StringValue\0229\n\023payments_profil" +
-      "e_id\030\005 \001(\0132\034.google.protobuf.StringValue" +
-      "\022C\n\035secondary_payments_profile_id\030\006 \001(\0132" +
-      "\034.google.protobuf.StringValue:g\352Ad\n(goog" +
-      "leads.googleapis.com/PaymentsAccount\0228cu" +
-      "stomers/{customer}/paymentsAccounts/{pay" +
-      "ments_account}B\201\002\n%com.google.ads.google" +
-      "ads.v3.resourcesB\024PaymentsAccountProtoP\001" +
-      "ZJgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v3/resources;resources\242\002\003G" +
-      "AA\252\002!Google.Ads.GoogleAds.V3.Resources\312\002" +
-      "!Google\\Ads\\GoogleAds\\V3\\Resources\352\002%Goo" +
-      "gle::Ads::GoogleAds::V3::Resourcesb\006prot" +
-      "o3"
+      ".v3.resources\032\037google/api/field_behavior" +
+      ".proto\032\031google/api/resource.proto\032\036googl" +
+      "e/protobuf/wrappers.proto\032\034google/api/an" +
+      "notations.proto\"\274\004\n\017PaymentsAccount\022G\n\rr" +
+      "esource_name\030\001 \001(\tB0\340A\003\372A*\n(googleads.go" +
+      "ogleapis.com/PaymentsAccount\022>\n\023payments" +
+      "_account_id\030\002 \001(\0132\034.google.protobuf.Stri" +
+      "ngValueB\003\340A\003\022/\n\004name\030\003 \001(\0132\034.google.prot" +
+      "obuf.StringValueB\003\340A\003\0228\n\rcurrency_code\030\004" +
+      " \001(\0132\034.google.protobuf.StringValueB\003\340A\003\022" +
+      ">\n\023payments_profile_id\030\005 \001(\0132\034.google.pr" +
+      "otobuf.StringValueB\003\340A\003\022H\n\035secondary_pay" +
+      "ments_profile_id\030\006 \001(\0132\034.google.protobuf" +
+      ".StringValueB\003\340A\003\022B\n\027paying_manager_cust" +
+      "omer\030\007 \001(\0132\034.google.protobuf.StringValue" +
+      "B\003\340A\003:g\352Ad\n(googleads.googleapis.com/Pay" +
+      "mentsAccount\0228customers/{customer}/payme" +
+      "ntsAccounts/{payments_account}B\201\002\n%com.g" +
+      "oogle.ads.googleads.v3.resourcesB\024Paymen" +
+      "tsAccountProtoP\001ZJgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v3/resourc" +
+      "es;resources\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
+      "s.V3.Resources\312\002!Google\\Ads\\GoogleAds\\V3" +
+      "\\Resources\352\002%Google::Ads::GoogleAds::V3:" +
+      ":Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -63,6 +67,7 @@ public final class PaymentsAccountProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -72,12 +77,15 @@ public final class PaymentsAccountProto {
     internal_static_google_ads_googleads_v3_resources_PaymentsAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v3_resources_PaymentsAccount_descriptor,
-        new java.lang.String[] { "ResourceName", "PaymentsAccountId", "Name", "CurrencyCode", "PaymentsProfileId", "SecondaryPaymentsProfileId", });
+        new java.lang.String[] { "ResourceName", "PaymentsAccountId", "Name", "CurrencyCode", "PaymentsProfileId", "SecondaryPaymentsProfileId", "PayingManagerCustomer", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

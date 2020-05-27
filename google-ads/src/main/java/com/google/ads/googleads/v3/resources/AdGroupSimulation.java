@@ -234,12 +234,12 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the ad group simulation.
+   * Output only. The resource name of the ad group simulation.
    * Ad group simulation resource names have the form:
    * `customers/{customer_id}/adGroupSimulations/{ad_group_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
@@ -255,12 +255,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the ad group simulation.
+   * Output only. The resource name of the ad group simulation.
    * Ad group simulation resource names have the form:
    * `customers/{customer_id}/adGroupSimulations/{ad_group_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
@@ -280,30 +280,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value adGroupId_;
   /**
    * <pre>
-   * Ad group id of the simulation.
+   * Output only. Ad group id of the simulation.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+   * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasAdGroupId() {
     return adGroupId_ != null;
   }
   /**
    * <pre>
-   * Ad group id of the simulation.
+   * Output only. Ad group id of the simulation.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+   * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64Value getAdGroupId() {
     return adGroupId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : adGroupId_;
   }
   /**
    * <pre>
-   * Ad group id of the simulation.
+   * Output only. Ad group id of the simulation.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+   * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.Int64ValueOrBuilder getAdGroupIdOrBuilder() {
     return getAdGroupId();
@@ -313,20 +313,20 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * The field that the simulation modifies.
+   * Output only. The field that the simulation modifies.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * The field that the simulation modifies.
+   * Output only. The field that the simulation modifies.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3;</code>
+   * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType getType() {
     @SuppressWarnings("deprecation")
@@ -338,20 +338,20 @@ private static final long serialVersionUID = 0L;
   private int modificationMethod_;
   /**
    * <pre>
-   * How the simulation modifies the field.
+   * Output only. How the simulation modifies the field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public int getModificationMethodValue() {
     return modificationMethod_;
   }
   /**
    * <pre>
-   * How the simulation modifies the field.
+   * Output only. How the simulation modifies the field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4;</code>
+   * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod getModificationMethod() {
     @SuppressWarnings("deprecation")
@@ -363,30 +363,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue startDate_;
   /**
    * <pre>
-   * First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date = 5;</code>
+   * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasStartDate() {
     return startDate_ != null;
   }
   /**
    * <pre>
-   * First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date = 5;</code>
+   * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getStartDate() {
     return startDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : startDate_;
   }
   /**
    * <pre>
-   * First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue start_date = 5;</code>
+   * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getStartDateOrBuilder() {
     return getStartDate();
@@ -396,30 +396,30 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue endDate_;
   /**
    * <pre>
-   * Last day on which the simulation is based, in YYYY-MM-DD format
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date = 6;</code>
+   * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasEndDate() {
     return endDate_ != null;
   }
   /**
    * <pre>
-   * Last day on which the simulation is based, in YYYY-MM-DD format
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date = 6;</code>
+   * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValue getEndDate() {
     return endDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : endDate_;
   }
   /**
    * <pre>
-   * Last day on which the simulation is based, in YYYY-MM-DD format
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
    * </pre>
    *
-   * <code>.google.protobuf.StringValue end_date = 6;</code>
+   * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.protobuf.StringValueOrBuilder getEndDateOrBuilder() {
     return getEndDate();
@@ -428,20 +428,20 @@ private static final long serialVersionUID = 0L;
   public static final int CPC_BID_POINT_LIST_FIELD_NUMBER = 8;
   /**
    * <pre>
-   * Simulation points if the simulation type is CPC_BID.
+   * Output only. Simulation points if the simulation type is CPC_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+   * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCpcBidPointList() {
     return pointListCase_ == 8;
   }
   /**
    * <pre>
-   * Simulation points if the simulation type is CPC_BID.
+   * Output only. Simulation points if the simulation type is CPC_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+   * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.CpcBidSimulationPointList getCpcBidPointList() {
     if (pointListCase_ == 8) {
@@ -451,10 +451,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Simulation points if the simulation type is CPC_BID.
+   * Output only. Simulation points if the simulation type is CPC_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+   * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.CpcBidSimulationPointListOrBuilder getCpcBidPointListOrBuilder() {
     if (pointListCase_ == 8) {
@@ -466,20 +466,20 @@ private static final long serialVersionUID = 0L;
   public static final int CPV_BID_POINT_LIST_FIELD_NUMBER = 10;
   /**
    * <pre>
-   * Simulation points if the simulation type is CPV_BID.
+   * Output only. Simulation points if the simulation type is CPV_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+   * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasCpvBidPointList() {
     return pointListCase_ == 10;
   }
   /**
    * <pre>
-   * Simulation points if the simulation type is CPV_BID.
+   * Output only. Simulation points if the simulation type is CPV_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+   * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.CpvBidSimulationPointList getCpvBidPointList() {
     if (pointListCase_ == 10) {
@@ -489,10 +489,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Simulation points if the simulation type is CPV_BID.
+   * Output only. Simulation points if the simulation type is CPV_BID.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+   * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.CpvBidSimulationPointListOrBuilder getCpvBidPointListOrBuilder() {
     if (pointListCase_ == 10) {
@@ -504,20 +504,20 @@ private static final long serialVersionUID = 0L;
   public static final int TARGET_CPA_POINT_LIST_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * Simulation points if the simulation type is TARGET_CPA.
+   * Output only. Simulation points if the simulation type is TARGET_CPA.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+   * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public boolean hasTargetCpaPointList() {
     return pointListCase_ == 9;
   }
   /**
    * <pre>
-   * Simulation points if the simulation type is TARGET_CPA.
+   * Output only. Simulation points if the simulation type is TARGET_CPA.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+   * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.TargetCpaSimulationPointList getTargetCpaPointList() {
     if (pointListCase_ == 9) {
@@ -527,10 +527,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Simulation points if the simulation type is TARGET_CPA.
+   * Output only. Simulation points if the simulation type is TARGET_CPA.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+   * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   public com.google.ads.googleads.v3.common.TargetCpaSimulationPointListOrBuilder getTargetCpaPointListOrBuilder() {
     if (pointListCase_ == 9) {
@@ -1090,12 +1090,12 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the ad group simulation.
+     * Output only. The resource name of the ad group simulation.
      * Ad group simulation resource names have the form:
      * `customers/{customer_id}/adGroupSimulations/{ad_group_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1111,12 +1111,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group simulation.
+     * Output only. The resource name of the ad group simulation.
      * Ad group simulation resource names have the form:
      * `customers/{customer_id}/adGroupSimulations/{ad_group_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1133,12 +1133,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group simulation.
+     * Output only. The resource name of the ad group simulation.
      * Ad group simulation resource names have the form:
      * `customers/{customer_id}/adGroupSimulations/{ad_group_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1152,12 +1152,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group simulation.
+     * Output only. The resource name of the ad group simulation.
      * Ad group simulation resource names have the form:
      * `customers/{customer_id}/adGroupSimulations/{ad_group_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearResourceName() {
       
@@ -1167,12 +1167,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group simulation.
+     * Output only. The resource name of the ad group simulation.
      * Ad group simulation resource names have the form:
      * `customers/{customer_id}/adGroupSimulations/{ad_group_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1191,20 +1191,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> adGroupIdBuilder_;
     /**
      * <pre>
-     * Ad group id of the simulation.
+     * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+     * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasAdGroupId() {
       return adGroupIdBuilder_ != null || adGroupId_ != null;
     }
     /**
      * <pre>
-     * Ad group id of the simulation.
+     * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+     * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value getAdGroupId() {
       if (adGroupIdBuilder_ == null) {
@@ -1215,10 +1215,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad group id of the simulation.
+     * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+     * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdGroupId(com.google.protobuf.Int64Value value) {
       if (adGroupIdBuilder_ == null) {
@@ -1235,10 +1235,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad group id of the simulation.
+     * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+     * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAdGroupId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1253,10 +1253,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad group id of the simulation.
+     * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+     * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAdGroupId(com.google.protobuf.Int64Value value) {
       if (adGroupIdBuilder_ == null) {
@@ -1275,10 +1275,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad group id of the simulation.
+     * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+     * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAdGroupId() {
       if (adGroupIdBuilder_ == null) {
@@ -1293,10 +1293,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad group id of the simulation.
+     * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+     * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getAdGroupIdBuilder() {
       
@@ -1305,10 +1305,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad group id of the simulation.
+     * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+     * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getAdGroupIdOrBuilder() {
       if (adGroupIdBuilder_ != null) {
@@ -1320,10 +1320,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Ad group id of the simulation.
+     * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value ad_group_id = 2;</code>
+     * <code>.google.protobuf.Int64Value ad_group_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1342,20 +1342,20 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The field that the simulation modifies.
+     * Output only. The field that the simulation modifies.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * The field that the simulation modifies.
+     * Output only. The field that the simulation modifies.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTypeValue(int value) {
       type_ = value;
@@ -1364,10 +1364,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The field that the simulation modifies.
+     * Output only. The field that the simulation modifies.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType getType() {
       @SuppressWarnings("deprecation")
@@ -1376,10 +1376,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The field that the simulation modifies.
+     * Output only. The field that the simulation modifies.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setType(com.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType value) {
       if (value == null) {
@@ -1392,10 +1392,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The field that the simulation modifies.
+     * Output only. The field that the simulation modifies.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3;</code>
+     * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearType() {
       
@@ -1407,20 +1407,20 @@ private static final long serialVersionUID = 0L;
     private int modificationMethod_ = 0;
     /**
      * <pre>
-     * How the simulation modifies the field.
+     * Output only. How the simulation modifies the field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public int getModificationMethodValue() {
       return modificationMethod_;
     }
     /**
      * <pre>
-     * How the simulation modifies the field.
+     * Output only. How the simulation modifies the field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setModificationMethodValue(int value) {
       modificationMethod_ = value;
@@ -1429,10 +1429,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * How the simulation modifies the field.
+     * Output only. How the simulation modifies the field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod getModificationMethod() {
       @SuppressWarnings("deprecation")
@@ -1441,10 +1441,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * How the simulation modifies the field.
+     * Output only. How the simulation modifies the field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setModificationMethod(com.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod value) {
       if (value == null) {
@@ -1457,10 +1457,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * How the simulation modifies the field.
+     * Output only. How the simulation modifies the field.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4;</code>
+     * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearModificationMethod() {
       
@@ -1474,20 +1474,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> startDateBuilder_;
     /**
      * <pre>
-     * First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date = 5;</code>
+     * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasStartDate() {
       return startDateBuilder_ != null || startDate_ != null;
     }
     /**
      * <pre>
-     * First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date = 5;</code>
+     * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getStartDate() {
       if (startDateBuilder_ == null) {
@@ -1498,10 +1498,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date = 5;</code>
+     * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStartDate(com.google.protobuf.StringValue value) {
       if (startDateBuilder_ == null) {
@@ -1518,10 +1518,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date = 5;</code>
+     * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setStartDate(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1536,10 +1536,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date = 5;</code>
+     * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeStartDate(com.google.protobuf.StringValue value) {
       if (startDateBuilder_ == null) {
@@ -1558,10 +1558,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date = 5;</code>
+     * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearStartDate() {
       if (startDateBuilder_ == null) {
@@ -1576,10 +1576,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date = 5;</code>
+     * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getStartDateBuilder() {
       
@@ -1588,10 +1588,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date = 5;</code>
+     * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getStartDateOrBuilder() {
       if (startDateBuilder_ != null) {
@@ -1603,10 +1603,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue start_date = 5;</code>
+     * <code>.google.protobuf.StringValue start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1627,20 +1627,20 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> endDateBuilder_;
     /**
      * <pre>
-     * Last day on which the simulation is based, in YYYY-MM-DD format
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date = 6;</code>
+     * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasEndDate() {
       return endDateBuilder_ != null || endDate_ != null;
     }
     /**
      * <pre>
-     * Last day on which the simulation is based, in YYYY-MM-DD format
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date = 6;</code>
+     * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue getEndDate() {
       if (endDateBuilder_ == null) {
@@ -1651,10 +1651,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Last day on which the simulation is based, in YYYY-MM-DD format
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date = 6;</code>
+     * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEndDate(com.google.protobuf.StringValue value) {
       if (endDateBuilder_ == null) {
@@ -1671,10 +1671,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Last day on which the simulation is based, in YYYY-MM-DD format
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date = 6;</code>
+     * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setEndDate(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1689,10 +1689,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Last day on which the simulation is based, in YYYY-MM-DD format
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date = 6;</code>
+     * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeEndDate(com.google.protobuf.StringValue value) {
       if (endDateBuilder_ == null) {
@@ -1711,10 +1711,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Last day on which the simulation is based, in YYYY-MM-DD format
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date = 6;</code>
+     * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearEndDate() {
       if (endDateBuilder_ == null) {
@@ -1729,10 +1729,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Last day on which the simulation is based, in YYYY-MM-DD format
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date = 6;</code>
+     * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getEndDateBuilder() {
       
@@ -1741,10 +1741,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Last day on which the simulation is based, in YYYY-MM-DD format
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date = 6;</code>
+     * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getEndDateOrBuilder() {
       if (endDateBuilder_ != null) {
@@ -1756,10 +1756,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Last day on which the simulation is based, in YYYY-MM-DD format
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>.google.protobuf.StringValue end_date = 6;</code>
+     * <code>.google.protobuf.StringValue end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1779,20 +1779,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.CpcBidSimulationPointList, com.google.ads.googleads.v3.common.CpcBidSimulationPointList.Builder, com.google.ads.googleads.v3.common.CpcBidSimulationPointListOrBuilder> cpcBidPointListBuilder_;
     /**
      * <pre>
-     * Simulation points if the simulation type is CPC_BID.
+     * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCpcBidPointList() {
       return pointListCase_ == 8;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPC_BID.
+     * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.CpcBidSimulationPointList getCpcBidPointList() {
       if (cpcBidPointListBuilder_ == null) {
@@ -1809,10 +1809,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPC_BID.
+     * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCpcBidPointList(com.google.ads.googleads.v3.common.CpcBidSimulationPointList value) {
       if (cpcBidPointListBuilder_ == null) {
@@ -1829,10 +1829,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPC_BID.
+     * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCpcBidPointList(
         com.google.ads.googleads.v3.common.CpcBidSimulationPointList.Builder builderForValue) {
@@ -1847,10 +1847,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPC_BID.
+     * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCpcBidPointList(com.google.ads.googleads.v3.common.CpcBidSimulationPointList value) {
       if (cpcBidPointListBuilder_ == null) {
@@ -1873,10 +1873,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPC_BID.
+     * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCpcBidPointList() {
       if (cpcBidPointListBuilder_ == null) {
@@ -1896,20 +1896,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPC_BID.
+     * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.CpcBidSimulationPointList.Builder getCpcBidPointListBuilder() {
       return getCpcBidPointListFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPC_BID.
+     * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.CpcBidSimulationPointListOrBuilder getCpcBidPointListOrBuilder() {
       if ((pointListCase_ == 8) && (cpcBidPointListBuilder_ != null)) {
@@ -1923,10 +1923,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPC_BID.
+     * Output only. Simulation points if the simulation type is CPC_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8;</code>
+     * <code>.google.ads.googleads.v3.common.CpcBidSimulationPointList cpc_bid_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.CpcBidSimulationPointList, com.google.ads.googleads.v3.common.CpcBidSimulationPointList.Builder, com.google.ads.googleads.v3.common.CpcBidSimulationPointListOrBuilder> 
@@ -1951,20 +1951,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.CpvBidSimulationPointList, com.google.ads.googleads.v3.common.CpvBidSimulationPointList.Builder, com.google.ads.googleads.v3.common.CpvBidSimulationPointListOrBuilder> cpvBidPointListBuilder_;
     /**
      * <pre>
-     * Simulation points if the simulation type is CPV_BID.
+     * Output only. Simulation points if the simulation type is CPV_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasCpvBidPointList() {
       return pointListCase_ == 10;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPV_BID.
+     * Output only. Simulation points if the simulation type is CPV_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.CpvBidSimulationPointList getCpvBidPointList() {
       if (cpvBidPointListBuilder_ == null) {
@@ -1981,10 +1981,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPV_BID.
+     * Output only. Simulation points if the simulation type is CPV_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCpvBidPointList(com.google.ads.googleads.v3.common.CpvBidSimulationPointList value) {
       if (cpvBidPointListBuilder_ == null) {
@@ -2001,10 +2001,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPV_BID.
+     * Output only. Simulation points if the simulation type is CPV_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCpvBidPointList(
         com.google.ads.googleads.v3.common.CpvBidSimulationPointList.Builder builderForValue) {
@@ -2019,10 +2019,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPV_BID.
+     * Output only. Simulation points if the simulation type is CPV_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCpvBidPointList(com.google.ads.googleads.v3.common.CpvBidSimulationPointList value) {
       if (cpvBidPointListBuilder_ == null) {
@@ -2045,10 +2045,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPV_BID.
+     * Output only. Simulation points if the simulation type is CPV_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCpvBidPointList() {
       if (cpvBidPointListBuilder_ == null) {
@@ -2068,20 +2068,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPV_BID.
+     * Output only. Simulation points if the simulation type is CPV_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.CpvBidSimulationPointList.Builder getCpvBidPointListBuilder() {
       return getCpvBidPointListFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPV_BID.
+     * Output only. Simulation points if the simulation type is CPV_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.CpvBidSimulationPointListOrBuilder getCpvBidPointListOrBuilder() {
       if ((pointListCase_ == 10) && (cpvBidPointListBuilder_ != null)) {
@@ -2095,10 +2095,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is CPV_BID.
+     * Output only. Simulation points if the simulation type is CPV_BID.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10;</code>
+     * <code>.google.ads.googleads.v3.common.CpvBidSimulationPointList cpv_bid_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.CpvBidSimulationPointList, com.google.ads.googleads.v3.common.CpvBidSimulationPointList.Builder, com.google.ads.googleads.v3.common.CpvBidSimulationPointListOrBuilder> 
@@ -2123,20 +2123,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.TargetCpaSimulationPointList, com.google.ads.googleads.v3.common.TargetCpaSimulationPointList.Builder, com.google.ads.googleads.v3.common.TargetCpaSimulationPointListOrBuilder> targetCpaPointListBuilder_;
     /**
      * <pre>
-     * Simulation points if the simulation type is TARGET_CPA.
+     * Output only. Simulation points if the simulation type is TARGET_CPA.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public boolean hasTargetCpaPointList() {
       return pointListCase_ == 9;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is TARGET_CPA.
+     * Output only. Simulation points if the simulation type is TARGET_CPA.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TargetCpaSimulationPointList getTargetCpaPointList() {
       if (targetCpaPointListBuilder_ == null) {
@@ -2153,10 +2153,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is TARGET_CPA.
+     * Output only. Simulation points if the simulation type is TARGET_CPA.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTargetCpaPointList(com.google.ads.googleads.v3.common.TargetCpaSimulationPointList value) {
       if (targetCpaPointListBuilder_ == null) {
@@ -2173,10 +2173,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is TARGET_CPA.
+     * Output only. Simulation points if the simulation type is TARGET_CPA.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTargetCpaPointList(
         com.google.ads.googleads.v3.common.TargetCpaSimulationPointList.Builder builderForValue) {
@@ -2191,10 +2191,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is TARGET_CPA.
+     * Output only. Simulation points if the simulation type is TARGET_CPA.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTargetCpaPointList(com.google.ads.googleads.v3.common.TargetCpaSimulationPointList value) {
       if (targetCpaPointListBuilder_ == null) {
@@ -2217,10 +2217,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is TARGET_CPA.
+     * Output only. Simulation points if the simulation type is TARGET_CPA.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTargetCpaPointList() {
       if (targetCpaPointListBuilder_ == null) {
@@ -2240,20 +2240,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is TARGET_CPA.
+     * Output only. Simulation points if the simulation type is TARGET_CPA.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TargetCpaSimulationPointList.Builder getTargetCpaPointListBuilder() {
       return getTargetCpaPointListFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is TARGET_CPA.
+     * Output only. Simulation points if the simulation type is TARGET_CPA.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v3.common.TargetCpaSimulationPointListOrBuilder getTargetCpaPointListOrBuilder() {
       if ((pointListCase_ == 9) && (targetCpaPointListBuilder_ != null)) {
@@ -2267,10 +2267,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Simulation points if the simulation type is TARGET_CPA.
+     * Output only. Simulation points if the simulation type is TARGET_CPA.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9;</code>
+     * <code>.google.ads.googleads.v3.common.TargetCpaSimulationPointList target_cpa_point_list = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.TargetCpaSimulationPointList, com.google.ads.googleads.v3.common.TargetCpaSimulationPointList.Builder, com.google.ads.googleads.v3.common.TargetCpaSimulationPointListOrBuilder> 

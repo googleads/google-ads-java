@@ -151,6 +151,121 @@ private static final long serialVersionUID = 0L;
      * <code>DOWNLOAD = 7;</code>
      */
     DOWNLOAD(7),
+    /**
+     * <pre>
+     * The addition of items to a shopping cart or bag on an advertiser site.
+     * </pre>
+     *
+     * <code>ADD_TO_CART = 8;</code>
+     */
+    ADD_TO_CART(8),
+    /**
+     * <pre>
+     * When someone enters the checkout flow on an advertiser site.
+     * </pre>
+     *
+     * <code>BEGIN_CHECKOUT = 9;</code>
+     */
+    BEGIN_CHECKOUT(9),
+    /**
+     * <pre>
+     * The start of a paid subscription for a product or service.
+     * </pre>
+     *
+     * <code>SUBSCRIBE_PAID = 10;</code>
+     */
+    SUBSCRIBE_PAID(10),
+    /**
+     * <pre>
+     * A call to indicate interest in an advertiser's offering.
+     * </pre>
+     *
+     * <code>PHONE_CALL_LEAD = 11;</code>
+     */
+    PHONE_CALL_LEAD(11),
+    /**
+     * <pre>
+     * A lead conversion imported from an external source into Google Ads.
+     * </pre>
+     *
+     * <code>IMPORTED_LEAD = 12;</code>
+     */
+    IMPORTED_LEAD(12),
+    /**
+     * <pre>
+     * A submission of a form on an advertiser site indicating business
+     * interest.
+     * </pre>
+     *
+     * <code>SUBMIT_LEAD_FORM = 13;</code>
+     */
+    SUBMIT_LEAD_FORM(13),
+    /**
+     * <pre>
+     * A booking of an appointment with an advertiser's business.
+     * </pre>
+     *
+     * <code>BOOK_APPOINTMENT = 14;</code>
+     */
+    BOOK_APPOINTMENT(14),
+    /**
+     * <pre>
+     * A quote or price estimate request.
+     * </pre>
+     *
+     * <code>REQUEST_QUOTE = 15;</code>
+     */
+    REQUEST_QUOTE(15),
+    /**
+     * <pre>
+     * A search for an advertiser's business location with intention to visit.
+     * </pre>
+     *
+     * <code>GET_DIRECTIONS = 16;</code>
+     */
+    GET_DIRECTIONS(16),
+    /**
+     * <pre>
+     * A click to an advertiser's partner's site.
+     * </pre>
+     *
+     * <code>OUTBOUND_CLICK = 17;</code>
+     */
+    OUTBOUND_CLICK(17),
+    /**
+     * <pre>
+     * A call, SMS, email, chat or other type of contact to an advertiser.
+     * </pre>
+     *
+     * <code>CONTACT = 18;</code>
+     */
+    CONTACT(18),
+    /**
+     * <pre>
+     * A website engagement event such as long site time or a Google Analytics
+     * (GA) Smart Goal. Intended to be used for GA, Firebase, GA Gold goal
+     * imports.
+     * </pre>
+     *
+     * <code>ENGAGEMENT = 19;</code>
+     */
+    ENGAGEMENT(19),
+    /**
+     * <pre>
+     * A visit to a physical store location.
+     * </pre>
+     *
+     * <code>STORE_VISIT = 20;</code>
+     */
+    STORE_VISIT(20),
+    /**
+     * <pre>
+     * A sale occurring in a physical store.
+     * </pre>
+     *
+     * <code>STORE_SALE = 21;</code>
+     */
+    STORE_SALE(21),
     UNRECOGNIZED(-1),
     ;
 
@@ -218,6 +333,121 @@ private static final long serialVersionUID = 0L;
      * <code>DOWNLOAD = 7;</code>
      */
     public static final int DOWNLOAD_VALUE = 7;
+    /**
+     * <pre>
+     * The addition of items to a shopping cart or bag on an advertiser site.
+     * </pre>
+     *
+     * <code>ADD_TO_CART = 8;</code>
+     */
+    public static final int ADD_TO_CART_VALUE = 8;
+    /**
+     * <pre>
+     * When someone enters the checkout flow on an advertiser site.
+     * </pre>
+     *
+     * <code>BEGIN_CHECKOUT = 9;</code>
+     */
+    public static final int BEGIN_CHECKOUT_VALUE = 9;
+    /**
+     * <pre>
+     * The start of a paid subscription for a product or service.
+     * </pre>
+     *
+     * <code>SUBSCRIBE_PAID = 10;</code>
+     */
+    public static final int SUBSCRIBE_PAID_VALUE = 10;
+    /**
+     * <pre>
+     * A call to indicate interest in an advertiser's offering.
+     * </pre>
+     *
+     * <code>PHONE_CALL_LEAD = 11;</code>
+     */
+    public static final int PHONE_CALL_LEAD_VALUE = 11;
+    /**
+     * <pre>
+     * A lead conversion imported from an external source into Google Ads.
+     * </pre>
+     *
+     * <code>IMPORTED_LEAD = 12;</code>
+     */
+    public static final int IMPORTED_LEAD_VALUE = 12;
+    /**
+     * <pre>
+     * A submission of a form on an advertiser site indicating business
+     * interest.
+     * </pre>
+     *
+     * <code>SUBMIT_LEAD_FORM = 13;</code>
+     */
+    public static final int SUBMIT_LEAD_FORM_VALUE = 13;
+    /**
+     * <pre>
+     * A booking of an appointment with an advertiser's business.
+     * </pre>
+     *
+     * <code>BOOK_APPOINTMENT = 14;</code>
+     */
+    public static final int BOOK_APPOINTMENT_VALUE = 14;
+    /**
+     * <pre>
+     * A quote or price estimate request.
+     * </pre>
+     *
+     * <code>REQUEST_QUOTE = 15;</code>
+     */
+    public static final int REQUEST_QUOTE_VALUE = 15;
+    /**
+     * <pre>
+     * A search for an advertiser's business location with intention to visit.
+     * </pre>
+     *
+     * <code>GET_DIRECTIONS = 16;</code>
+     */
+    public static final int GET_DIRECTIONS_VALUE = 16;
+    /**
+     * <pre>
+     * A click to an advertiser's partner's site.
+     * </pre>
+     *
+     * <code>OUTBOUND_CLICK = 17;</code>
+     */
+    public static final int OUTBOUND_CLICK_VALUE = 17;
+    /**
+     * <pre>
+     * A call, SMS, email, chat or other type of contact to an advertiser.
+     * </pre>
+     *
+     * <code>CONTACT = 18;</code>
+     */
+    public static final int CONTACT_VALUE = 18;
+    /**
+     * <pre>
+     * A website engagement event such as long site time or a Google Analytics
+     * (GA) Smart Goal. Intended to be used for GA, Firebase, GA Gold goal
+     * imports.
+     * </pre>
+     *
+     * <code>ENGAGEMENT = 19;</code>
+     */
+    public static final int ENGAGEMENT_VALUE = 19;
+    /**
+     * <pre>
+     * A visit to a physical store location.
+     * </pre>
+     *
+     * <code>STORE_VISIT = 20;</code>
+     */
+    public static final int STORE_VISIT_VALUE = 20;
+    /**
+     * <pre>
+     * A sale occurring in a physical store.
+     * </pre>
+     *
+     * <code>STORE_SALE = 21;</code>
+     */
+    public static final int STORE_SALE_VALUE = 21;
 
 
     public final int getNumber() {
@@ -246,6 +476,20 @@ private static final long serialVersionUID = 0L;
         case 5: return SIGNUP;
         case 6: return LEAD;
         case 7: return DOWNLOAD;
+        case 8: return ADD_TO_CART;
+        case 9: return BEGIN_CHECKOUT;
+        case 10: return SUBSCRIBE_PAID;
+        case 11: return PHONE_CALL_LEAD;
+        case 12: return IMPORTED_LEAD;
+        case 13: return SUBMIT_LEAD_FORM;
+        case 14: return BOOK_APPOINTMENT;
+        case 15: return REQUEST_QUOTE;
+        case 16: return GET_DIRECTIONS;
+        case 17: return OUTBOUND_CLICK;
+        case 18: return CONTACT;
+        case 19: return ENGAGEMENT;
+        case 20: return STORE_VISIT;
+        case 21: return STORE_SALE;
         default: return null;
       }
     }

@@ -37,6 +37,7 @@ import com.google.ads.googleads.v2.resources.AdGroupFeedName;
 import com.google.ads.googleads.v2.resources.AdGroupLabelName;
 import com.google.ads.googleads.v2.resources.AdGroupName;
 import com.google.ads.googleads.v2.resources.AdGroupSimulationName;
+import com.google.ads.googleads.v2.resources.AdName;
 import com.google.ads.googleads.v2.resources.AdParameterName;
 import com.google.ads.googleads.v2.resources.AdScheduleViewName;
 import com.google.ads.googleads.v2.resources.AgeRangeViewName;
@@ -148,6 +149,11 @@ public class ResourceNames {
   public static String accountBudgetProposal(long customerId, long accountBudgetProposalId) {
     return AccountBudgetProposalName.format(
         String.valueOf(customerId), String.valueOf(accountBudgetProposalId));
+  }
+
+  /** Returns the ad resource name for the specified components. */
+  public static String ad(long customerId, long adId) {
+    return AdName.format(String.valueOf(customerId), String.valueOf(adId));
   }
 
   /** Returns the ad group resource name for the specified components. */
@@ -417,8 +423,19 @@ public class ResourceNames {
         String.valueOf(customerId), concatIdentifiers(managerCustomerId, managerLinkId));
   }
 
-  /** Returns the customer negative criterion for the specified components. */
+  /**
+   * Returns the customer negative criterion for the specified components.
+   *
+   * @deprecated use {@link #customerNegativeCriterion(long, long)} instead.
+   */
+  @Deprecated
   public static String customerNegativeCriteria(long customerId, long criterionId) {
+    return CustomerNegativeCriteriaName.format(
+        String.valueOf(customerId), String.valueOf(criterionId));
+  }
+
+  /** Returns the customer negative criterion for the specified components. */
+  public static String customerNegativeCriterion(long customerId, long criterionId) {
     return CustomerNegativeCriteriaName.format(
         String.valueOf(customerId), String.valueOf(criterionId));
   }

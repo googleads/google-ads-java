@@ -30,19 +30,21 @@ public final class HotelPerformanceViewProto {
     java.lang.String[] descriptorData = {
       "\n>google/ads/googleads/v3/resources/hote" +
       "l_performance_view.proto\022!google.ads.goo" +
-      "gleads.v3.resources\032\031google/api/resource" +
-      ".proto\032\034google/api/annotations.proto\"\214\001\n" +
-      "\024HotelPerformanceView\022\025\n\rresource_name\030\001" +
-      " \001(\t:]\352AZ\n-googleads.googleapis.com/Hote" +
-      "lPerformanceView\022)customers/{customer}/h" +
-      "otelPerformanceViewB\206\002\n%com.google.ads.g" +
-      "oogleads.v3.resourcesB\031HotelPerformanceV" +
-      "iewProtoP\001ZJgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v3/resources;res" +
-      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V3.R" +
-      "esources\312\002!Google\\Ads\\GoogleAds\\V3\\Resou" +
-      "rces\352\002%Google::Ads::GoogleAds::V3::Resou" +
-      "rcesb\006proto3"
+      "gleads.v3.resources\032\037google/api/field_be" +
+      "havior.proto\032\031google/api/resource.proto\032" +
+      "\034google/api/annotations.proto\"\303\001\n\024HotelP" +
+      "erformanceView\022L\n\rresource_name\030\001 \001(\tB5\340" +
+      "A\003\372A/\n-googleads.googleapis.com/HotelPer" +
+      "formanceView:]\352AZ\n-googleads.googleapis." +
+      "com/HotelPerformanceView\022)customers/{cus" +
+      "tomer}/hotelPerformanceViewB\206\002\n%com.goog" +
+      "le.ads.googleads.v3.resourcesB\031HotelPerf" +
+      "ormanceViewProtoP\001ZJgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v3/resou" +
+      "rces;resources\242\002\003GAA\252\002!Google.Ads.Google" +
+      "Ads.V3.Resources\312\002!Google\\Ads\\GoogleAds\\" +
+      "V3\\Resources\352\002%Google::Ads::GoogleAds::V" +
+      "3::Resourcesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -55,6 +57,7 @@ public final class HotelPerformanceViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
@@ -66,9 +69,12 @@ public final class HotelPerformanceViewProto {
         new java.lang.String[] { "ResourceName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
