@@ -59,6 +59,7 @@ public class CreateCampaignExperiment {
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.baseCampaignId = Long.valueOf("INSERT_CAMPAIGN_ID_HERE");
+      params.draftId = Long.parseLong("INSERT_DRAFT_ID_HERE");
     }
 
     GoogleAdsClient googleAdsClient;
@@ -91,7 +92,14 @@ public class CreateCampaignExperiment {
     }
   }
 
-  /** Runs the example. */
+  /**
+   * Runs the example.
+   *
+   * @param googleAdsClient the API client to use.
+   * @param customerId the customer ID to operate on.
+   * @param baseCampaignId the original campaign ID.
+   * @param draftId the ID of a draft campaign.
+   */
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long baseCampaignId, long draftId) {
     // Creates the campaign experiment.
@@ -109,6 +117,12 @@ public class CreateCampaignExperiment {
   /**
    * Creates an experiment by issuing an asynchronous operation and immediately blocking to get the
    * result.
+   *
+   * @param googleAdsClient the API client to use.
+   * @param customerId the customer ID to operate on.
+   * @param baseCampaignId the original campaign ID.
+   * @param draftId the draft campaign ID.
+   * @return a newly created experiment.
    */
   private CreateCampaignExperimentMetadata createExperiment(
       GoogleAdsClient googleAdsClient, long customerId, long baseCampaignId, long draftId) {
@@ -117,7 +131,7 @@ public class CreateCampaignExperiment {
         CampaignExperiment.newBuilder()
             .setCampaignDraft(
                 StringValue.of(ResourceNames.campaignDraft(customerId, baseCampaignId, draftId)))
-            .setName(StringValue.of("Campaign experiment = " + UUID.randomUUID()))
+            .setName(StringValue.of("Campaign experiment #" + UUID.randomUUID()))
             .setTrafficSplitPercent(Int64Value.of(50))
             .setTrafficSplitType(CampaignExperimentTrafficSplitType.RANDOM_QUERY)
             .build();
@@ -139,14 +153,20 @@ public class CreateCampaignExperiment {
     }
   }
 
-  /** Retrieves a CampaignExperiment and prints associated information. */
+  /**
+   * Retrieves a CampaignExperiment and prints associated information.
+   *
+   * @param googleAdsClient the API client to use.
+   * @param customerId the customer ID to use.
+   * @param metadata the experiment to retrieve information from.
+   */
   private void printExperimentDetails(
       GoogleAdsClient googleAdsClient, long customerId, CreateCampaignExperimentMetadata metadata) {
     // Defines a basic query to retrieve the experiment.
     String query =
-        "SELECT campaign_experiment.experiment_campaign\n"
-            + "FROM campaign_experiment\n"
-            + "WHERE campaign_experiment.resource_name = '"
+        "SELECT campaign_experiment.experiment_campaign"
+            + " FROM campaign_experiment"
+            + " WHERE campaign_experiment.resource_name = '"
             + metadata.getCampaignExperiment()
             + "'";
 
@@ -160,7 +180,7 @@ public class CreateCampaignExperiment {
       // Iterates through the results and prints the information returned.
       for (GoogleAdsRow row : response.iterateAll()) {
         System.out.printf(
-            "Experiment campaign with resource ID = '%s' created successfully.%n",
+            "Experiment campaign with resource name = '%s' created successfully.%n",
             row.getCampaignExperiment().getResourceName());
       }
     }
