@@ -126,7 +126,7 @@ public class ParallelReportDownload {
       // IMPORTANT: You should avoid hitting the same customer ID in parallel. There are rate limits
       // at the customer ID level which are much stricter than limits at the developer token level.
       // Hitting these limits frequently enough will significantly reduce throughput as the client
-      // library will retry with exponential back-off before eventually failing the request.
+      // library will automatically retry with exponential back-off before failing the request.
       for (String gaqlQuery : GAQL_QUERY_STRINGS) {
         // Uses a list of futures to make sure that we wait for this report to complete on all
         // customer IDs before proceeding. The Future data type here is just for demonstration.
