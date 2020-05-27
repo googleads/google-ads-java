@@ -44,8 +44,12 @@ public class ParallelReportDownload {
   /** Defines the Google Ads Query Language (GAQL) query strings to run for each customer ID. */
   private static final List<String> GAQL_QUERY_STRINGS =
       ImmutableList.of(
-          "SELECT campaign.id, metrics.impressions, metrics.clicks FROM campaign",
-          "SELECT campaign.id, ad_group.id, metrics.impressions, metrics.clicks FROM ad_group");
+          "SELECT campaign.id, metrics.impressions, metrics.clicks"
+              + " FROM campaign"
+              + " WHERE segments.date DURING LAST_30_DAYS",
+          "SELECT campaign.id, ad_group.id, metrics.impressions, metrics.clicks"
+              + " FROM ad_group"
+              + " WHERE segments.date DURING LAST_30_DAYS");
 
   /** Specifies the maximum duration that this code example may run for. */
   private static final int MAX_WAIT_TIME_SECONDS = 60 * 60; // 1 hour.
@@ -112,16 +116,17 @@ public class ParallelReportDownload {
    * reports to complete.
    *
    * @param googleAdsClient the client library instance for API access.
+   * @param customerIds the customer IDs to run against.
    */
   private void runExample(GoogleAdsClient googleAdsClient, List<Long> customerIds) {
     // Creates a single client which can be shared by all threads.
     // gRPC handles multiplexing parallel requests to the underlying API connection.
     try (GoogleAdsServiceClient serviceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-      // IMPORTANT: You should avoid hitting the same customer ID in parallel. There are rate limit
-      // errors at the customer ID level, but not at the developer token level. Rate limits are
-      // retried by the client library with exponential back-off, and therefore would reduce overall
-      // throughput.
+      // IMPORTANT: You should avoid hitting the same customer ID in parallel. There are rate limits
+      // at the customer ID level which are much stricter than limits at the developer token level.
+      // Hitting these limits frequently enough will significantly reduce throughput as the client
+      // library will retry with exponential back-off before eventually failing the request.
       for (String gaqlQuery : GAQL_QUERY_STRINGS) {
         // Uses a list of futures to make sure that we wait for this report to complete on all
         // customer IDs before proceeding. The Future data type here is just for demonstration.
@@ -173,7 +178,7 @@ public class ParallelReportDownload {
 
     private final long customerId;
     private final SettableFuture<ReportSummary> future = SettableFuture.create();
-    private AtomicLong numRecords = new AtomicLong(0);
+    private final AtomicLong numResponses = new AtomicLong(0);
 
     ResponseCountingObserver(long customerId) {
       this.customerId = customerId;
@@ -186,26 +191,25 @@ public class ParallelReportDownload {
 
     @Override
     public void onResponse(SearchGoogleAdsStreamResponse response) {
-      // Does something useful with the row. In this case we just count the
-      // records. Note that this method may be called from multiple threads, though always in
-      // sequence.
-      numRecords.incrementAndGet();
+      // Does something useful with the response. In this case we just count the responses.
+      // Note: this method may be called from multiple threads, though always in sequence.
+      numResponses.incrementAndGet();
     }
 
     @Override
     public void onError(Throwable t) {
       // Notify that this report failed.
-      notifyComplete(new ReportSummary(customerId, numRecords.get(), t));
+      notifyResultReady(new ReportSummary(customerId, numResponses.get(), t));
     }
 
     @Override
     public void onComplete() {
       // Notify that this report succeeded.
-      notifyComplete(new ReportSummary(customerId, numRecords.get()));
+      notifyResultReady(new ReportSummary(customerId, numResponses.get()));
     }
 
     /** Sets the value on the future and unblocks any threads waiting for result. */
-    private void notifyComplete(ReportSummary summary) {
+    private void notifyResultReady(ReportSummary summary) {
       future.set(summary);
     }
 
@@ -219,17 +223,17 @@ public class ParallelReportDownload {
   private static class ReportSummary {
 
     private final Long customerId;
-    private final long numRecords;
+    private final long numResponses;
     private final Throwable throwable;
 
-    ReportSummary(Long customerId, long numRecords, Throwable throwable) {
+    ReportSummary(Long customerId, long numResponses, Throwable throwable) {
       this.customerId = customerId;
       this.throwable = throwable;
-      this.numRecords = numRecords;
+      this.numResponses = numResponses;
     }
 
-    ReportSummary(Long customerId, long numRecords) {
-      this(customerId, numRecords, null);
+    ReportSummary(Long customerId, long numResponses) {
+      this(customerId, numResponses, null);
     }
 
     boolean isSuccess() {
@@ -240,8 +244,8 @@ public class ParallelReportDownload {
     public String toString() {
       return "Customer ID "
           + customerId
-          + " Number of records: "
-          + numRecords
+          + " Number of responses: "
+          + numResponses
           + " IsSuccess? "
           + (isSuccess() ? "Yes!" : "No :-( " + throwable.getMessage());
     }
