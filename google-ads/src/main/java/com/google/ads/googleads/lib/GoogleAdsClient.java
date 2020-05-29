@@ -20,6 +20,7 @@ import com.google.ads.googleads.lib.logging.RequestLogger;
 import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
+import com.google.auth.oauth2.ServiceAccountCredentials;
 import com.google.auth.oauth2.UserCredentials;
 import com.google.auto.value.AutoValue;
 import com.google.common.annotations.Beta;
@@ -28,10 +29,13 @@ import com.google.common.base.MoreObjects;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Collections;
 import java.util.Properties;
 import java.util.function.Supplier;
 import javax.annotation.Nullable;
@@ -43,9 +47,9 @@ import javax.annotation.concurrent.ThreadSafe;
  *
  * <p>Instances of this class are both immutable and thread safe.
  *
- * <p>Implements {@link GoogleAdsAllVersions} to simplify instantiation of service client objects using
- * the GoogleAdsClient as a {@link TransportChannelProvider} and default service settings, as shown
- * in the following example.
+ * <p>Implements {@link GoogleAdsAllVersions} to simplify instantiation of service client objects
+ * using the GoogleAdsClient as a {@link TransportChannelProvider} and default service settings, as
+ * shown in the following example.
  *
  * <pre>
  * <code>
@@ -119,17 +123,45 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
   @AutoValue.Builder
   public abstract static class Builder {
 
+    /** Interface to allow tests to mock service account credentials creation. */
+    @VisibleForTesting
+    interface ServiceAccountCredentialsFactory {
+      ServiceAccountCredentials fromStream(InputStream inputStream) throws IOException;
+    }
     /**
      * The default file name for the properties configuration file. This does <em>not</em> include a
      * path.
      */
     public static final String DEFAULT_PROPERTIES_CONFIG_FILE_NAME = "ads.properties";
+
+    /** Required scope of credentials for the Google Ads API. */
+    private static final String GOOGLE_ADS_API_SCOPE = "https://www.googleapis.com/auth/adwords";
+
+    /** Keys for creating installed app/web flow credentials. */
+    private static final ImmutableSet<ConfigPropertyKey> INSTALLED_APP_OAUTH_KEYS =
+        ImmutableSet.of(
+            ConfigPropertyKey.CLIENT_ID,
+            ConfigPropertyKey.CLIENT_SECRET,
+            ConfigPropertyKey.REFRESH_TOKEN);
+
+    /** Keys for creating service account credentials. */
+    private static final ImmutableSet<ConfigPropertyKey> SERVICE_ACCOUNT_OAUTH_KEYS =
+        ImmutableSet.of(
+            ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH, ConfigPropertyKey.SERVICE_ACCOUNT_USER);
+
     /**
      * Allows injecting a different default configuration file, instead of using {@value
      * #DEFAULT_PROPERTIES_CONFIG_FILE_NAME}. Only for testing.
      */
     private Supplier<File> configurationFileSupplier =
         () -> new File(System.getProperty("user.home"), DEFAULT_PROPERTIES_CONFIG_FILE_NAME);
+
+    /**
+     * Allows injecting a different factory method for creating {@link ServiceAccountCredentials}
+     * from a stream. Only for testing.
+     */
+    private ServiceAccountCredentialsFactory serviceAccountCredentialsFactory =
+        inputStream -> ServiceAccountCredentials.fromStream(inputStream);
 
     /** Returns the credentials currently configured. */
     public abstract Credentials getCredentials();
@@ -143,15 +175,64 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
      */
     public abstract Builder setCredentials(Credentials credentials);
 
-    private void setCredentials(Properties properties) {
-      UserCredentials credentials =
-          UserCredentials.newBuilder()
-              .setClientId(properties.getProperty(ConfigPropertyKey.CLIENT_ID.getPropertyKey()))
-              .setClientSecret(
-                  properties.getProperty(ConfigPropertyKey.CLIENT_SECRET.getPropertyKey()))
-              .setRefreshToken(
-                  properties.getProperty(ConfigPropertyKey.REFRESH_TOKEN.getPropertyKey()))
-              .build();
+    private void setCredentials(Properties properties) throws IOException {
+      Credentials credentials;
+      String serviceAccountSecretsPath =
+          ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH.getPropertyValue(properties);
+      String refreshToken = ConfigPropertyKey.REFRESH_TOKEN.getPropertyValue(properties);
+      // Validates that entries are present for exactly one of installed app/web flow credentials or
+      // service account credentials.
+      if (serviceAccountSecretsPath == null && refreshToken == null) {
+        // Entries missing for both types of credentials.
+        throw new IllegalArgumentException(
+            String.format(
+                "Missing properties for credentials. Please modify properties to include entries"
+                    + " for %s if using installed application/web flow credentials, or %s if using"
+                    + " service account credentials.",
+                INSTALLED_APP_OAUTH_KEYS, SERVICE_ACCOUNT_OAUTH_KEYS));
+      } else if (serviceAccountSecretsPath != null && refreshToken != null) {
+        // Entries specified for both types of credentials.
+        throw new IllegalArgumentException(
+            String.format(
+                "Entries found in properties for both %s and %s. Please modify properties to either"
+                    + " include entries for %s if using installed application/web flow credentials,"
+                    + " or %s if using service account credentials.",
+                ConfigPropertyKey.SERVICE_ACCOUNT_SECRETS_PATH,
+                ConfigPropertyKey.REFRESH_TOKEN,
+                INSTALLED_APP_OAUTH_KEYS,
+                SERVICE_ACCOUNT_OAUTH_KEYS));
+      }
+
+      // Constructs the credentials object using the appropriate set of properties.
+      if (serviceAccountSecretsPath != null) {
+        // Service accounts secrets path is specified, so constructs service account credentials.
+        String serviceAccountUser =
+            ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyValue(properties);
+        // Confirms the service account user is specified. This is required for service account
+        // credentials when using the Google Ads API.
+        Preconditions.checkNotNull(
+            serviceAccountUser,
+            "No service account user specified under the key: %s",
+            ConfigPropertyKey.SERVICE_ACCOUNT_USER);
+        // Creates base service account credentials from the secrets JSON file.
+        ServiceAccountCredentials baseCredentials =
+            serviceAccountCredentialsFactory.fromStream(
+                new FileInputStream(serviceAccountSecretsPath));
+        // Decorates the base credentials with the service account user and scopes.
+        credentials =
+            baseCredentials.toBuilder()
+                .setServiceAccountUser(serviceAccountUser)
+                .setScopes(Collections.singletonList(GOOGLE_ADS_API_SCOPE))
+                .build();
+      } else {
+        // Refresh token is specified, so constructs user credentials.
+        credentials =
+            UserCredentials.newBuilder()
+                .setClientId(ConfigPropertyKey.CLIENT_ID.getPropertyValue(properties))
+                .setClientSecret(ConfigPropertyKey.CLIENT_SECRET.getPropertyValue(properties))
+                .setRefreshToken(ConfigPropertyKey.REFRESH_TOKEN.getPropertyValue(properties))
+                .build();
+      }
       setCredentials(credentials);
     }
 
@@ -160,6 +241,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     abstract TransportChannelProvider getTransportChannelProvider();
 
     /** Sets the TransportChannelProvider to use. */
+    @VisibleForTesting
     abstract Builder setTransportChannelProvider(TransportChannelProvider transportChannelProvider);
 
     /** Returns the developer token currently configured. */
@@ -169,7 +251,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     public abstract Builder setDeveloperToken(String developerToken);
 
     private void setDeveloperToken(Properties properties) {
-      setDeveloperToken(properties.getProperty(ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyKey()));
+      setDeveloperToken(ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyValue(properties));
     }
 
     /** Returns the login customer ID currently configured. */
@@ -187,7 +269,7 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
 
     private void setLoginCustomerId(Properties properties) {
       String configuredLoginCustomer =
-          properties.getProperty(ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyKey());
+          ConfigPropertyKey.LOGIN_CUSTOMER_ID.getPropertyValue(properties);
       if (configuredLoginCustomer != null) {
         try {
           setLoginCustomerId(Long.parseLong(configuredLoginCustomer));
@@ -205,8 +287,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
 
     /**
      * By default, this library uses reflection to build the ApiCatalog. In order to reduce latency,
-     * users may use a pre-generated ApiCatalog that does not use of reflection.
-     * This feature is still experimental.
+     * users may use a pre-generated ApiCatalog that does not use of reflection. This feature is
+     * still experimental.
      */
     @Beta
     public abstract Builder setEnableGeneratedCatalog(boolean enableGeneratedCatalog);
@@ -229,9 +311,9 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     private void setEndpoint(Properties properties) {
       String endpoint =
           MoreObjects.firstNonNull(
-              properties.getProperty(ConfigPropertyKey.ENDPOINT.getPropertyKey()),
+              ConfigPropertyKey.ENDPOINT.getPropertyValue(properties),
               MoreObjects.firstNonNull(
-                  System.getProperty(ConfigPropertyKey.ENDPOINT.getPropertyKey()),
+                  ConfigPropertyKey.ENDPOINT.getPropertyValue(System.getProperties()),
                   DEFAULT_ENDPOINT));
       setEndpoint(endpoint);
     }
@@ -284,7 +366,11 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
      *     file.
      */
     public Builder fromProperties(Properties properties) {
-      setCredentials(properties);
+      try {
+        setCredentials(properties);
+      } catch (IOException ioe) {
+        throw new IllegalArgumentException("Failed to create credentials from properties", ioe);
+      }
       setDeveloperToken(properties);
       setEndpoint(properties);
       setLoginCustomerId(properties);
@@ -331,8 +417,20 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     }
 
     @VisibleForTesting
-    void setConfigurationFileSupplier(Supplier<File> configurationFileSupplier) {
+    Builder setConfigurationFileSupplier(Supplier<File> configurationFileSupplier) {
       this.configurationFileSupplier = configurationFileSupplier;
+      return this;
+    }
+
+    /**
+     * Sets the service accounts credentials factory for this builder. Required for tests since the
+     * ServiceAccountCredentials#fromStream method requires a valid service account secrets JSON
+     * file, but tests need to provide mock credentials.
+     */
+    @VisibleForTesting
+    Builder setServiceAccountCredentialsFactory(ServiceAccountCredentialsFactory factory) {
+      this.serviceAccountCredentialsFactory = factory;
+      return this;
     }
 
     /** Enum of keys expected in the {@value DEFAULT_PROPERTIES_CONFIG_FILE_NAME}. */
@@ -343,7 +441,10 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       REFRESH_TOKEN("api.googleads.refreshToken"),
       ENDPOINT("api.googleads.endpoint"),
       LOGIN_CUSTOMER_ID("api.googleads.loginCustomerId"),
-      ENABLE_GENERATED_CATALOG("api.googleads.enableGeneratedCatalog");
+      ENABLE_GENERATED_CATALOG("api.googleads.enableGeneratedCatalog"),
+      // Service account keys
+      SERVICE_ACCOUNT_SECRETS_PATH("api.googleads.serviceAccountSecretsPath"),
+      SERVICE_ACCOUNT_USER("api.googleads.serviceAccountUser");
 
       private final String key;
 
@@ -354,6 +455,19 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       /** The key corresponding to this config property. */
       public String getPropertyKey() {
         return key;
+      }
+
+      /**
+       * Convenience method that gets the value for this config key from the specified {@code
+       * properties}.
+       *
+       * @param properties the properties from which the value will be fetched
+       * @return the property value for this key, or {@code null} if no such entry exists.
+       * @throws NullPointerException if {@code properties == null}.
+       */
+      public String getPropertyValue(Properties properties) {
+        return Preconditions.checkNotNull(properties, "Null properties")
+            .getProperty(getPropertyKey());
       }
     }
   }
