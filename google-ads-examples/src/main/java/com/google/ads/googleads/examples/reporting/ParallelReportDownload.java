@@ -178,6 +178,7 @@ public class ParallelReportDownload {
     private final long customerId;
     private final SettableFuture<ReportSummary> future = SettableFuture.create();
     private final AtomicLong numResponses = new AtomicLong(0);
+    private StreamController controller;
 
     ResponseCountingObserver(long customerId) {
       this.customerId = customerId;
@@ -244,12 +245,12 @@ public class ParallelReportDownload {
 
     @Override
     public String toString() {
-      return "Customer ID "
+      return "Customer ID '"
           + customerId
-          + " Number of responses: "
+          + "' Number of responses: "
           + numResponses
           + " IsSuccess? "
-          + (isSuccess() ? "Yes!" : "No :-( " + throwable.getMessage());
+          + (isSuccess() ? "Yes!" : "No :-( Why? " + throwable.getMessage());
     }
   }
 }
