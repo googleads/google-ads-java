@@ -178,7 +178,6 @@ public class ParallelReportDownload {
     private final long customerId;
     private final SettableFuture<ReportSummary> future = SettableFuture.create();
     private final AtomicLong numResponses = new AtomicLong(0);
-    private StreamController controller;
 
     ResponseCountingObserver(long customerId) {
       this.customerId = customerId;
