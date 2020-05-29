@@ -34,8 +34,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class ParallelReportDownload {
@@ -50,13 +48,6 @@ public class ParallelReportDownload {
           "SELECT campaign.id, ad_group.id, metrics.impressions, metrics.clicks"
               + " FROM ad_group"
               + " WHERE segments.date DURING LAST_30_DAYS");
-
-  /** Specifies the maximum duration that this code example may run for. */
-  private static final int MAX_WAIT_TIME_SECONDS = 60 * 60; // 1 hour.
-
-  /** Absolute wall clock time by when the job must be completed. */
-  private static final long DEADLINE_MILLIS =
-      System.currentTimeMillis() + MAX_WAIT_TIME_SECONDS * 1000;
 
   private static class ParallelReportDownloadParams extends CodeSampleParams {
 
@@ -157,9 +148,7 @@ public class ParallelReportDownload {
         // This is a naive implementation for illustrative purposes. It is possible to optimize the
         // utilization of each customer ID by providing a queue of work (or similar). However, this
         // would complicate the example code and so is omitted here.
-        List<ReportSummary> results =
-            Futures.allAsList(futures)
-                .get(DEADLINE_MILLIS - System.currentTimeMillis(), TimeUnit.MILLISECONDS);
+        List<ReportSummary> results = Futures.allAsList(futures).get();
 
         System.out.println("Report results for query: " + gaqlQuery);
         results.forEach(System.out::println);
@@ -167,7 +156,7 @@ public class ParallelReportDownload {
     } catch (InterruptedException e) {
       Thread.currentThread().interrupt();
       throw new RuntimeException(e);
-    } catch (ExecutionException | TimeoutException e) {
+    } catch (ExecutionException e) {
       throw new RuntimeException(e);
     }
   }
