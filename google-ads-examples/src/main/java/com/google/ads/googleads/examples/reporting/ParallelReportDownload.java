@@ -36,9 +36,16 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * Shows how to download a set of reports from a list of accounts in parallel.
+ *
+ * <p>If you need to obtain a list of accounts, please see the {@link
+ * com.google.ads.googleads.examples.accountmanagement.GetAccountHierarchy} or {@link
+ * com.google.ads.googleads.examples.accountmanagement.ListAccessibleCustomers} examples.
+ */
 public class ParallelReportDownload {
 
-  // Adjust these fields as required.
+  // Adjust as required.
   /** Defines the Google Ads Query Language (GAQL) query strings to run for each customer ID. */
   private static final List<String> GAQL_QUERY_STRINGS =
       ImmutableList.of(
@@ -51,14 +58,20 @@ public class ParallelReportDownload {
 
   private static class ParallelReportDownloadParams extends CodeSampleParams {
 
-    @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
+    @Parameter(
+        names = ArgumentNames.CUSTOMER_ID,
+        required = true,
+        description = "Specify a comma-separated list of customer IDs to downloads reports from.")
     List<Long> customerIds;
 
-    @Parameter(names = ArgumentNames.LOGIN_CUSTOMER_ID)
+    @Parameter(
+        names = ArgumentNames.LOGIN_CUSTOMER_ID,
+        description =
+            "Optionally specify the manager account ID which provides access to the customer IDs")
     Long loginCustomerId;
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InterruptedException {
     ParallelReportDownloadParams params = new ParallelReportDownloadParams();
     if (!params.parseArguments(args)) {
       // Either pass the required parameters for this example on the command line, or insert them
@@ -103,13 +116,13 @@ public class ParallelReportDownload {
   }
 
   /**
-   * Runs the example. This method may block for up to MAX_WAIT_TIME_SECONDS while waiting for
-   * reports to complete.
+   * Runs the example.
    *
    * @param googleAdsClient the client library instance for API access.
    * @param customerIds the customer IDs to run against.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, List<Long> customerIds) {
+  private void runExample(GoogleAdsClient googleAdsClient, List<Long> customerIds)
+      throws InterruptedException {
     // Creates a single client which can be shared by all threads.
     // gRPC handles multiplexing parallel requests to the underlying API connection.
     try (GoogleAdsServiceClient serviceClient =
@@ -123,7 +136,7 @@ public class ParallelReportDownload {
         // customer IDs before proceeding. The Future data type here is just for demonstration.
         List<ListenableFuture<ReportSummary>> futures = new ArrayList<>();
 
-        // Calls the API for each customer ID on the current report.
+        // Uses the API to retrieve the report for each customer ID.
         for (Long customerId : customerIds) {
           // Uses the gRPC asynchronous API to download the reports in parallel. This saves having
           // to create/manage our own thread pool.
@@ -153,9 +166,6 @@ public class ParallelReportDownload {
         System.out.println("Report results for query: " + gaqlQuery);
         results.forEach(System.out::println);
       }
-    } catch (InterruptedException e) {
-      Thread.currentThread().interrupt();
-      throw new RuntimeException(e);
     } catch (ExecutionException e) {
       throw new RuntimeException(e);
     }
@@ -180,9 +190,12 @@ public class ParallelReportDownload {
 
     @Override
     public void onResponse(SearchGoogleAdsStreamResponse response) {
-      // Does something useful with the response. In this case we just count the responses.
-      // Note: this method may be called from multiple threads, though always in sequence.
+      // Does something useful with the response. In this case we just count the responses, but
+      // could also write the response to a database/file, pass the response on to another method
+      // for further processing, etc.
       numResponses.incrementAndGet();
+      // Note: this method may be called from multiple threads, though responses will always arrive
+      // in the same order as returned by the API.
     }
 
     @Override
