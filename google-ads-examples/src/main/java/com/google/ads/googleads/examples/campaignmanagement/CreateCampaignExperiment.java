@@ -34,7 +34,6 @@ import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 
 /** Adds a campaign experiment for a draft campaign. */
@@ -102,7 +101,10 @@ public class CreateCampaignExperiment {
    */
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, long baseCampaignId, long draftId) {
-    // Creates the campaign experiment.
+    // Creates the campaign experiment. Here we obtain a metadata object, rather than the full
+    // entity. This is because the experiment is created asynchronously via the long running
+    // operations API. We can use the information in the metadata to retrieve the entity, if
+    // required.
     CreateCampaignExperimentMetadata metadata =
         createExperiment(googleAdsClient, customerId, baseCampaignId, draftId);
 
