@@ -34,7 +34,7 @@ import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** illustrates how to graduate a campaign experiment. */
+/** Illustrates how to graduate a campaign experiment. */
 public class GraduateCampaignExperiment {
 
   private static class GraduateCampaignExperimentParams extends CodeSampleParams {
@@ -86,6 +86,12 @@ public class GraduateCampaignExperiment {
     }
   }
 
+  /** Runs the example.
+   *
+   * @param googleAdsClient the client to use.
+   * @param customerId the customer ID.
+   * @param experimentId the experiment ID.
+   */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long experimentId) {
     // Graduating a campaign experiment requires a new budget. Since the budget for the base
     // campaign has explicitly_shared set to false, the budget cannot be shared with the campaign
@@ -100,6 +106,7 @@ public class GraduateCampaignExperiment {
     CampaignBudgetOperation operation =
         CampaignBudgetOperation.newBuilder().setCreate(budget).build();
 
+    // Creates the budget.
     String budgetResourceName;
     try (CampaignBudgetServiceClient budgetServiceClient =
         googleAdsClient.getLatestVersion().createCampaignBudgetServiceClient()) {
@@ -109,6 +116,7 @@ public class GraduateCampaignExperiment {
       budgetResourceName = response.getResults(0).getResourceName();
     }
 
+    // Graduates the experiment, given it's new budget.
     try (CampaignExperimentServiceClient experimentServiceClient =
         googleAdsClient.getLatestVersion().createCampaignExperimentServiceClient()) {
       GraduateCampaignExperimentResponse response =
