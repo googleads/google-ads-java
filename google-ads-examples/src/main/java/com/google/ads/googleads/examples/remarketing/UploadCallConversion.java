@@ -23,6 +23,7 @@ import com.google.ads.googleads.v3.errors.GoogleAdsException;
 import com.google.ads.googleads.v3.services.CallConversion;
 import com.google.ads.googleads.v3.services.CallConversionResult;
 import com.google.ads.googleads.v3.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v3.services.UploadCallConversionsRequest;
 import com.google.ads.googleads.v3.services.UploadCallConversionsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.DoubleValue;
@@ -38,28 +39,38 @@ import java.io.IOException;
 public class UploadCallConversion {
 
   private static class UploadCallConversionParams extends CodeSampleParams {
-    @Parameter(names = ArgumentNames.CUSTOMER_ID)
+    @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private long customerId;
 
-    @Parameter(names = ArgumentNames.CONVERSION_ACTION_ID)
+    @Parameter(
+        names = ArgumentNames.CONVERSION_ACTION_ID,
+        required = true,
+        description = "Numeric ID of conversion action entity.")
     private String conversionActionId;
 
-    @Parameter(names = ArgumentNames.CALLER_ID)
+    @Parameter(
+        names = ArgumentNames.CALLER_ID,
+        required = true,
+        description =
+            "Caller id is expected to be in E.164 format with preceding '+' sign. e.g."
+                + " \"+16502531234\"")
     private String callerId;
 
     @Parameter(
         names = ArgumentNames.CALL_START_DATE_TIME,
+        required = true,
         description =
             "Format is \"yyyy-mm-dd hh:mm:ss+|-hh:mm\", e.g. \"2019-01-01 12:32:45-08:00\"")
     private String callStartDateTime;
 
     @Parameter(
         names = ArgumentNames.CONVERSION_DATE_TIME,
+        required = true,
         description =
             "Format is \"yyyy-mm-dd hh:mm:ss+|-hh:mm\", e.g. \"2019-01-01 12:32:45-08:00\"")
     private String conversionDateTime;
 
-    @Parameter(names = ArgumentNames.CONVERSION_VALUE)
+    @Parameter(names = ArgumentNames.CONVERSION_VALUE, required = true)
     private double conversionValue;
   }
 
@@ -96,6 +107,7 @@ public class UploadCallConversion {
               params.conversionActionId,
               params.callerId,
               params.callStartDateTime,
+              params.conversionDateTime,
               params.conversionValue);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
@@ -119,7 +131,7 @@ public class UploadCallConversion {
    * @param customerId the customer ID.
    * @param conversionActionId the conversion action ID.
    * @param callerId the caller ID.
-   * @param callStartDateTime the call start date time
+   * @param callStartDateTime the call start date time.
    * @param conversionValue the value of the conversion in USD.
    */
   private void runExample(
@@ -128,6 +140,7 @@ public class UploadCallConversion {
       String conversionActionId,
       String callerId,
       String callStartDateTime,
+      String conversionDateTime,
       double conversionValue) {
     // Create a call conversion by specifying currency as USD.
     CallConversion conversion =
@@ -135,6 +148,7 @@ public class UploadCallConversion {
             .setConversionAction(StringValue.of(conversionActionId))
             .setCallerId(StringValue.of(callerId))
             .setCallStartDateTime(StringValue.of(callStartDateTime))
+            .setConversionDateTime(StringValue.of(conversionDateTime))
             .setConversionValue(DoubleValue.of(conversionValue))
             .setCurrencyCode(StringValue.of("USD"))
             .build();
@@ -145,7 +159,11 @@ public class UploadCallConversion {
       // Partial failure MUST be enabled for this request.
       UploadCallConversionsResponse response =
           conversionUploadServiceClient.uploadCallConversions(
-              String.valueOf(customerId), ImmutableList.of(conversion), true, false);
+              UploadCallConversionsRequest.newBuilder()
+                  .setCustomerId(String.valueOf(customerId))
+                  .addAllConversions(ImmutableList.of(conversion))
+                  .setPartialFailure(true)
+                  .build());
 
       // Prints any partial failure errors returned.
       if (response.hasPartialFailureError()) {
@@ -156,8 +174,8 @@ public class UploadCallConversion {
       // Prints the result if valid.
       CallConversionResult result = response.getResults(0);
       System.out.printf(
-          "Uploaded call conversion that occurred at '%' for caller ID '%' to the conversion"
-              + " action with resource name '%'.%n",
+          "Uploaded call conversion that occurred at '%s' for caller ID '%s' to the conversion"
+              + " action with resource name '%s'.%n",
           result.getCallStartDateTime().getValue(),
           result.getCallerId().getValue(),
           result.getConversionAction().getValue());
