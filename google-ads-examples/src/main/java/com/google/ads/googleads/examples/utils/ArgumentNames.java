@@ -34,6 +34,7 @@ public final class ArgumentNames {
   public static final String CONVERSION_VALUE = "--conversionValue";
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
   public static final String CPC_BID_CEILING_MICRO_AMOUNT = "--cpcBidCeilingMicroAmount";
+  public static final String DRAFT_ID = "--draftId";
   public static final String ARTIFACT_NAME = "--artifactName";
   public static final String EXPERIMENT_ID = "--experimentId";
   public static final String FEED_ID = "--feedId";
