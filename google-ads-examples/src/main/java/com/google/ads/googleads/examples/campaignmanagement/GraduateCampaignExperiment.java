@@ -86,7 +86,8 @@ public class GraduateCampaignExperiment {
     }
   }
 
-  /** Runs the example.
+  /**
+   * Runs the example.
    *
    * @param googleAdsClient the client to use.
    * @param customerId the customer ID.
@@ -114,15 +115,17 @@ public class GraduateCampaignExperiment {
           budgetServiceClient.mutateCampaignBudgets(
               String.valueOf(customerId), ImmutableList.of(operation));
       budgetResourceName = response.getResults(0).getResourceName();
+      System.out.printf(
+          "Created new budget %s to add to experiment during graduation.%n", budgetResourceName);
     }
 
-    // Graduates the experiment, given it's new budget.
+    // Graduates the experiment, given its new budget.
     try (CampaignExperimentServiceClient experimentServiceClient =
         googleAdsClient.getLatestVersion().createCampaignExperimentServiceClient()) {
       GraduateCampaignExperimentResponse response =
           experimentServiceClient.graduateCampaignExperiment(
               ResourceNames.campaignExperiment(customerId, experimentId), budgetResourceName);
-      System.out.println("Campaign " + response.getGraduatedCampaign() + " is now graduated.");
+      System.out.printf("Campaign %s is now graduated.%n", response.getGraduatedCampaign());
     }
   }
 }
