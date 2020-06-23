@@ -108,23 +108,16 @@ public class AddDisplayUploadAd {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId)
       throws IOException {
-    try {
-      // There are several types of display upload ads. For this example, we will create
-      // an HTML5 upload ad, which requires a media bundle.
-      // The DisplayUploadProductType field lists the available display upload types:
-      // https://developers.google.com/google-ads/api/reference/rpc/v3/DisplayUploadAdInfo
-      // Creates a new media bundle asset and returns the resource name.
-      String adAssetResourceName = CreateMediaBundleAsset(googleAdsClient, customerId);
+    // There are several types of display upload ads. For this example, we will create
+    // an HTML5 upload ad, which requires a media bundle.
+    // The DisplayUploadProductType field lists the available display upload types:
+    // https://developers.google.com/google-ads/api/reference/rpc/v3/DisplayUploadAdInfo
 
-      // Creates a new display upload ad and associates it with the specified ad group.
-      CreateDisplayUploadAdGroupAd(googleAdsClient, customerId, adGroupId, adAssetResourceName);
-    } catch (GoogleAdsException e) {
-      System.err.println("Failure:");
-      System.err.printf("Message: %s%n", e.getMessage());
-      System.err.printf("Failure: %s%n", e.getGoogleAdsFailure());
-      System.err.printf("Request ID: %s%n", e.getRequestId());
-      throw e;
-    }
+    // Creates a new media bundle asset and returns the resource name.
+    String adAssetResourceName = createMediaBundleAsset(googleAdsClient, customerId);
+
+    // Creates a new display upload ad and associates it with the specified ad group.
+    createDisplayUploadAdGroupAd(googleAdsClient, customerId, adGroupId, adAssetResourceName);
   }
 
   /**
@@ -136,7 +129,7 @@ public class AddDisplayUploadAd {
    * @return the resource name of the newly created media bundle.
    * @throws IOException if there is an error reading the media bundle.
    */
-  private String CreateMediaBundleAsset(GoogleAdsClient googleAdsClient, long customerId)
+  private String createMediaBundleAsset(GoogleAdsClient googleAdsClient, long customerId)
       throws IOException {
     // The HTML5 zip file contains all the HTML, CSS, and images needed for the
     // HTML5 ad. For help on creating an HTML5 zip file, check out Google Web
@@ -178,7 +171,7 @@ public class AddDisplayUploadAd {
    * @param adGroupId the ad group ID.
    * @param adAssetResourceName The ID of the ad group to which the new ad will be added.
    */
-  private void CreateDisplayUploadAdGroupAd(
+  private void createDisplayUploadAdGroupAd(
       GoogleAdsClient googleAdsClient,
       long customerId,
       long adGroupId,
