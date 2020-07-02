@@ -21,16 +21,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.migration.utils.ArgumentNames;
 import com.google.ads.googleads.migration.utils.CodeSampleParams;
-import com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CampaignBudget;
-import com.google.ads.googleads.v4.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v4.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
 import com.google.api.ads.adwords.axis.factory.AdWordsServices;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroup;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupAd;
@@ -223,9 +223,9 @@ public class CreateCompleteCampaignBothApisPhase1 {
     // Creates the budget.
     CampaignBudget budget =
       CampaignBudget.newBuilder()
-        .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
+        .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
         .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-        .setAmountMicros(Int64Value.of(10_000_000))
+        .setAmountMicros(10_000_000)
         .build();
 
     // Creates the operation.
@@ -244,7 +244,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
       // Displays the results.
       System.out.printf(
         "Budget with ID %s and name '%s' was created.%n",
-        newBudget.getId().getValue(), newBudget.getName().getValue());
+        newBudget.getId(), newBudget.getName());
       return newBudget;
     }
   }
@@ -316,7 +316,7 @@ public class CreateCompleteCampaignBothApisPhase1 {
 
     // Only the budgetId should be sent, all other fields will be ignored by CampaignService.
     Budget newBudget = new Budget();
-    newBudget.setBudgetId(budget.getId().getValue());
+    newBudget.setBudgetId(budget.getId());
     campaign.setBudget(newBudget);
 
     campaign.setAdvertisingChannelType(AdvertisingChannelType.SEARCH);

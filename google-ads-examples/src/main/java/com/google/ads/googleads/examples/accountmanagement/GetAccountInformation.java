@@ -18,11 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Customer;
-import com.google.ads.googleads.v4.services.CustomerServiceClient;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Customer;
+import com.google.ads.googleads.v5.services.CustomerServiceClient;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -92,12 +92,12 @@ public class GetAccountInformation {
       System.out.printf(
           "Customer with ID %d, descriptive name '%s', currency code '%s', timezone '%s', "
               + "tracking URL template '%s' and auto tagging enabled '%s' was retrieved.%n",
-          customer.getId().getValue(),
-          customer.getDescriptiveName().getValue(),
-          customer.getCurrencyCode().getValue(),
-          customer.getTimeZone().getValue(),
-          customer.getTrackingUrlTemplate().getValue(),
-          customer.getAutoTaggingEnabled().getValue());
+          customer.getId(),
+          customer.getDescriptiveName(),
+          customer.getCurrencyCode(),
+          customer.getTimeZone(),
+          customer.getTrackingUrlTemplate(),
+          customer.getAutoTaggingEnabled());
     }
   }
 }

@@ -19,15 +19,15 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v4.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdGroup;
-import com.google.ads.googleads.v4.services.AdGroupOperation;
-import com.google.ads.googleads.v4.services.AdGroupServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupResult;
-import com.google.ads.googleads.v4.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Int64Value;
 import java.io.FileNotFoundException;
@@ -107,7 +107,7 @@ public class UpdateAdGroup {
       AdGroup adGroup =
           AdGroup.newBuilder()
               .setResourceName(ResourceNames.adGroup(customerId, adGroupId))
-              .setCpcBidMicros(Int64Value.of(bidMicroAmount))
+              .setCpcBidMicros(bidMicroAmount)
               .setStatus(AdGroupStatus.PAUSED)
               .build();
       // Constructs an operation that will update the ad group, using the FieldMasks utility to

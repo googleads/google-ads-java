@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CampaignCriterion;
-import com.google.ads.googleads.v4.resources.CampaignCriterion.CriterionCase;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignCriterion;
+import com.google.ads.googleads.v5.resources.CampaignCriterion.CriterionCase;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -117,12 +117,12 @@ public class GetCampaignTargetingCriteria {
         CampaignCriterion campaignCriterion = googleAdsRow.getCampaignCriterion();
         System.out.printf(
             "Campaign criterion with ID %d was found as a %s",
-            campaignCriterion.getCriterionId().getValue(),
-            campaignCriterion.getNegative().getValue() ? "negative " : "");
+            campaignCriterion.getCriterionId(),
+            campaignCriterion.getNegative() ? "negative " : "");
         if (CriterionCase.KEYWORD.equals(campaignCriterion.getCriterionCase())) {
           System.out.printf(
               "keyword with text '%s' and match type '%s'.%n",
-              campaignCriterion.getKeyword().getText().getValue(),
+              campaignCriterion.getKeyword().getText(),
               campaignCriterion.getKeyword().getMatchType());
         } else {
           System.out.printf("non-keyword.%n");

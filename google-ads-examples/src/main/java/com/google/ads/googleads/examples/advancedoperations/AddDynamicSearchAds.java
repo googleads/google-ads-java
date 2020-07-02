@@ -18,42 +18,42 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ExpandedDynamicSearchAdInfo;
-import com.google.ads.googleads.v4.common.ManualCpc;
-import com.google.ads.googleads.v4.common.WebpageConditionInfo;
-import com.google.ads.googleads.v4.common.WebpageInfo;
-import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v4.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v4.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v4.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v4.enums.WebpageConditionOperandEnum.WebpageConditionOperand;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroup;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.resources.Campaign;
-import com.google.ads.googleads.v4.resources.Campaign.DynamicSearchAdsSetting;
-import com.google.ads.googleads.v4.resources.CampaignBudget;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v4.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v4.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v4.services.AdGroupOperation;
-import com.google.ads.googleads.v4.services.AdGroupServiceClient;
-import com.google.ads.googleads.v4.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v4.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v4.services.CampaignOperation;
-import com.google.ads.googleads.v4.services.CampaignServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v5.common.ExpandedDynamicSearchAdInfo;
+import com.google.ads.googleads.v5.common.ManualCpc;
+import com.google.ads.googleads.v5.common.WebpageConditionInfo;
+import com.google.ads.googleads.v5.common.WebpageInfo;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v5.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v5.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v5.enums.WebpageConditionOperandEnum.WebpageConditionOperand;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.Campaign.DynamicSearchAdsSetting;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.CampaignServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
@@ -132,8 +132,8 @@ public class AddDynamicSearchAds {
     // Creates the budget.
     CampaignBudget campaignBudget =
         CampaignBudget.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
-            .setAmountMicros(Int64Value.of(3_000_000))
+            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
+            .setAmountMicros(3_000_000)
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             .build();
 
@@ -168,19 +168,19 @@ public class AddDynamicSearchAds {
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
+            .setName("Interplanetary Cruise #" + System.currentTimeMillis())
             .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
             .setStatus(CampaignStatus.PAUSED)
             .setManualCpc(ManualCpc.newBuilder().build())
-            .setCampaignBudget(StringValue.of(budgetResourceName))
+            .setCampaignBudget(budgetResourceName)
             // Enables the campaign for DSAs.
             .setDynamicSearchAdsSetting(
                 DynamicSearchAdsSetting.newBuilder()
-                    .setDomainName(StringValue.of("example.com"))
-                    .setLanguageCode(StringValue.of("en"))
+                    .setDomainName("example.com")
+                    .setLanguageCode("en")
                     .build())
-            .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
-            .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
+            .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
+            .setEndDate(new DateTime().plusDays(30).toString("yyyyMMdd"))
             .build();
 
     // Creates the operation.
@@ -214,13 +214,12 @@ public class AddDynamicSearchAds {
     // Creates the ad group.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
+            .setCampaign(campaignResourceName)
             .setType(AdGroupType.SEARCH_DYNAMIC_ADS)
             .setStatus(AdGroupStatus.PAUSED)
-            .setTrackingUrlTemplate(
-                StringValue.of("http://tracker.examples.com/traveltracker/{escapedlpurl}"))
-            .setCpcBidMicros(Int64Value.of(50_000))
+            .setTrackingUrlTemplate("http://tracker.examples.com/traveltracker/{escapedlpurl}")
+            .setCpcBidMicros(50_000)
             .build();
 
     // Creates the operation.
@@ -251,7 +250,7 @@ public class AddDynamicSearchAds {
     // Creates an ad group ad.
     AdGroupAd adGroupAd =
         AdGroupAd.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setStatus(AdGroupAdStatus.PAUSED)
             // Sets the ad as an expanded dynamic search ad
             .setAd(
@@ -291,18 +290,18 @@ public class AddDynamicSearchAds {
     // Creates the criteria.
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
-            .setCpcBidMicros(Int64Value.of(1_000_000))
+            .setAdGroup(adGroupResourceName)
+            .setCpcBidMicros(1_000_000)
             .setStatus(AdGroupCriterionStatus.PAUSED)
             // Sets the webpage targeting criteria.
             .setWebpage(
                 WebpageInfo.newBuilder()
-                    .setCriterionName(StringValue.of("Special Offers"))
+                    .setCriterionName("Special Offers")
                     // Adds the url targeting criteria.
                     .addConditions(
                         WebpageConditionInfo.newBuilder()
                             .setOperand(WebpageConditionOperand.URL)
-                            .setArgument(StringValue.of("/specialoffers"))
+                            .setArgument("/specialoffers")
                             .build())
                     // Adds the page title criteria.
                     // The list of webpage targeting conditions are
@@ -310,7 +309,7 @@ public class AddDynamicSearchAds {
                     .addConditions(
                         WebpageConditionInfo.newBuilder()
                             .setOperand(WebpageConditionOperand.PAGE_TITLE)
-                            .setArgument(StringValue.of("Special Offer"))
+                            .setArgument("Special Offer")
                             .build())
                     .build())
             .build();

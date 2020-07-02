@@ -18,15 +18,15 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.enums.MediaTypeEnum.MediaType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.MediaFile;
-import com.google.ads.googleads.v4.resources.MediaImage;
-import com.google.ads.googleads.v4.services.MediaFileOperation;
-import com.google.ads.googleads.v4.services.MediaFileServiceClient;
-import com.google.ads.googleads.v4.services.MutateMediaFileResult;
-import com.google.ads.googleads.v4.services.MutateMediaFilesResponse;
+import com.google.ads.googleads.v5.enums.MediaTypeEnum.MediaType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.MediaFile;
+import com.google.ads.googleads.v5.resources.MediaImage;
+import com.google.ads.googleads.v5.services.MediaFileOperation;
+import com.google.ads.googleads.v5.services.MediaFileServiceClient;
+import com.google.ads.googleads.v5.services.MutateMediaFileResult;
+import com.google.ads.googleads.v5.services.MutateMediaFilesResponse;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.BytesValue;
@@ -95,13 +95,13 @@ public class UploadImage {
     byte[] imageData = ByteStreams.toByteArray(new URL("https://goo.gl/3b9Wfh").openStream());
 
     MediaImage image =
-        MediaImage.newBuilder().setData(BytesValue.of(ByteString.copyFrom(imageData))).build();
+        MediaImage.newBuilder().setData(ByteString.copyFrom(imageData)).build();
 
     MediaFile file =
         MediaFile.newBuilder()
-            .setName(StringValue.of("Ad Image"))
+            .setName("Ad Image")
             .setType(MediaType.IMAGE)
-            .setSourceUrl(StringValue.of("https://goo.gl/3b9Wfh"))
+            .setSourceUrl("https://goo.gl/3b9Wfh")
             .setImage(image)
             .build();
 

@@ -18,41 +18,41 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ListingGroupInfo;
-import com.google.ads.googleads.v4.common.MaximizeConversionValue;
-import com.google.ads.googleads.v4.common.ShoppingSmartAdInfo;
-import com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v4.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v4.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v4.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
-import com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v4.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroup;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.resources.Campaign;
-import com.google.ads.googleads.v4.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v4.resources.CampaignBudget;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v4.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v4.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v4.services.AdGroupOperation;
-import com.google.ads.googleads.v4.services.AdGroupServiceClient;
-import com.google.ads.googleads.v4.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v4.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v4.services.CampaignOperation;
-import com.google.ads.googleads.v4.services.CampaignServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v4.services.MutateAdGroupResult;
-import com.google.ads.googleads.v4.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignResult;
+import com.google.ads.googleads.v5.common.ListingGroupInfo;
+import com.google.ads.googleads.v5.common.MaximizeConversionValue;
+import com.google.ads.googleads.v5.common.ShoppingSmartAdInfo;
+import com.google.ads.googleads.v5.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v5.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v5.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v5.enums.ListingGroupTypeEnum.ListingGroupType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.CampaignServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupResult;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignResult;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.DoubleValue;
@@ -181,14 +181,14 @@ public class AddShoppingSmartAd {
   private String addCampaignBudget(GoogleAdsClient googleAdsClient, long customerId) {
     CampaignBudget budget =
         CampaignBudget.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
+            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             // The budget is specified in the local currency of the account.
             // The amount should be specified in micros, where one million is equivalent to one
             // unit.
-            .setAmountMicros(Int64Value.of(5_000_000L))
+            .setAmountMicros(5_000_000L)
             // Budgets for Smart Shopping campaigns cannot be shared.
-            .setExplicitlyShared(BoolValue.of(false))
+            .setExplicitlyShared(false)
             .build();
 
     CampaignBudgetOperation op = CampaignBudgetOperation.newBuilder().setCreate(budget).build();
@@ -226,14 +226,14 @@ public class AddShoppingSmartAd {
             // Sets the sales country of products to include in the campaign.
             // Only products from Merchant Center targeting this country will appear in the
             // campaign.
-            .setSalesCountry(StringValue.of("US"))
-            .setMerchantId(Int64Value.of(merchantCenterAccountId))
+            .setSalesCountry("US")
+            .setMerchantId(merchantCenterAccountId)
             .build();
 
     // Creates the campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
+            .setName("Interplanetary Cruise #" + System.currentTimeMillis())
             // Configures settings related to shopping campaigns including advertising channel type,
             // advertising sub-type and shopping setting.
             .setAdvertisingChannelType(AdvertisingChannelType.SHOPPING)
@@ -254,9 +254,9 @@ public class AddShoppingSmartAd {
             // For more information on maximize conversion value, see the support article:
             // http://support.google.com/google-ads/answer/7684216)
             .setMaximizeConversionValue(
-                MaximizeConversionValue.newBuilder().setTargetRoas(DoubleValue.of(3.5)).build())
+                MaximizeConversionValue.newBuilder().setTargetRoas(3.5).build())
             // Sets the budget.
-            .setCampaignBudget(StringValue.of(budgetResourceName))
+            .setCampaignBudget(budgetResourceName)
             .build();
 
     // Creates a campaign operation.
@@ -290,8 +290,8 @@ public class AddShoppingSmartAd {
     // Creates an ad group.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
+            .setCampaign(campaignResourceName)
             // Sets the ad group type to SHOPPING_SMART_ADS. This cannot be set to other types.
             .setType(AdGroupType.SHOPPING_SMART_ADS)
             .setStatus(AdGroupStatus.ENABLED)
@@ -334,7 +334,7 @@ public class AddShoppingSmartAd {
             // Sets the ad to the ad created above.
             .setAd(ad)
             // Sets the ad group.
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .build();
 
     // Creates an ad group ad operation.
@@ -373,7 +373,7 @@ public class AddShoppingSmartAd {
     // This will be the listing group for 'All products' and will contain a single root node.
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setStatus(AdGroupCriterionStatus.ENABLED)
             // Creates a new listing group. This will be the top level listing group (root node)
             // Set the type of the listing group to be a unit.

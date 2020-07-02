@@ -18,16 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.TagSnippet;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.RemarketingAction;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.MutateRemarketingActionsResponse;
-import com.google.ads.googleads.v4.services.RemarketingActionOperation;
-import com.google.ads.googleads.v4.services.RemarketingActionServiceClient;
+import com.google.ads.googleads.v5.common.TagSnippet;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.RemarketingAction;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.MutateRemarketingActionsResponse;
+import com.google.ads.googleads.v5.services.RemarketingActionOperation;
+import com.google.ads.googleads.v5.services.RemarketingActionServiceClient;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -92,7 +92,7 @@ public class AddRemarketingAction {
     // Creates a remarketing action with the specified name.
     RemarketingAction remarketingAction =
         RemarketingAction.newBuilder()
-            .setName(StringValue.of("Remarketing action #" + System.currentTimeMillis()))
+            .setName("Remarketing action #" + System.currentTimeMillis())
             .build();
 
     // Creates a remarketing action operation.
@@ -136,7 +136,7 @@ public class AddRemarketingAction {
       RemarketingAction newRemarketingAction = googleAdsRow.getRemarketingAction();
       System.out.printf(
           "Remarketing action has ID %d and name '%s'.%n%n",
-          newRemarketingAction.getId().getValue(), newRemarketingAction.getName().getValue());
+          newRemarketingAction.getId(), newRemarketingAction.getName());
       System.out.println("It has the following generated tag snippets:");
       for (TagSnippet tagSnippet : newRemarketingAction.getTagSnippetsList()) {
         System.out.printf(
@@ -144,9 +144,9 @@ public class AddRemarketingAction {
                 + " site tag:%n%s%n",
             tagSnippet.getType(),
             tagSnippet.getPageFormat(),
-            tagSnippet.getGlobalSiteTag().getValue());
+            tagSnippet.getGlobalSiteTag());
         System.out.printf(
-            "and the following event snippet:%n%s%n%n", tagSnippet.getEventSnippet().getValue());
+            "and the following event snippet:%n%s%n%n", tagSnippet.getEventSnippet());
       }
     }
   }

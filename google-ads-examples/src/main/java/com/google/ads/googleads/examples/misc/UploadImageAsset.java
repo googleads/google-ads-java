@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ImageAsset;
-import com.google.ads.googleads.v4.enums.AssetTypeEnum.AssetType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Asset;
-import com.google.ads.googleads.v4.services.AssetOperation;
-import com.google.ads.googleads.v4.services.AssetServiceClient;
-import com.google.ads.googleads.v4.services.MutateAssetsResponse;
+import com.google.ads.googleads.v5.common.ImageAsset;
+import com.google.ads.googleads.v5.enums.AssetTypeEnum.AssetType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Asset;
+import com.google.ads.googleads.v5.services.AssetOperation;
+import com.google.ads.googleads.v5.services.AssetServiceClient;
+import com.google.ads.googleads.v5.services.MutateAssetsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -95,7 +95,7 @@ public class UploadImageAsset {
 
     // Create the image asset.
     ImageAsset imageAsset =
-        ImageAsset.newBuilder().setData(BytesValue.of(ByteString.copyFrom(imageData))).build();
+        ImageAsset.newBuilder().setData(ByteString.copyFrom(imageData)).build();
 
     // Creates an asset.
     Asset asset =

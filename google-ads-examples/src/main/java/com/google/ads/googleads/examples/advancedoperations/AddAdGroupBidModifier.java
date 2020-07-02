@@ -18,16 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.DeviceInfo;
-import com.google.ads.googleads.v4.enums.DeviceEnum.Device;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v4.services.AdGroupBidModifierOperation;
-import com.google.ads.googleads.v4.services.AdGroupBidModifierServiceClient;
-import com.google.ads.googleads.v4.services.AdGroupName;
-import com.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult;
-import com.google.ads.googleads.v4.services.MutateAdGroupBidModifiersResponse;
+import com.google.ads.googleads.v5.common.DeviceInfo;
+import com.google.ads.googleads.v5.enums.DeviceEnum.Device;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroupBidModifier;
+import com.google.ads.googleads.v5.services.AdGroupBidModifierOperation;
+import com.google.ads.googleads.v5.services.AdGroupBidModifierServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupBidModifierResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupBidModifiersResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.DoubleValue;
 import com.google.protobuf.StringValue;
@@ -113,9 +113,8 @@ public class AddAdGroupBidModifier {
     AdGroupBidModifier adGroupBidModifier =
         AdGroupBidModifier.newBuilder()
             .setAdGroup(
-                StringValue.of(
-                    AdGroupName.format(Long.toString(customerId), Long.toString(adGroupId))))
-            .setBidModifier(DoubleValue.of(bidModifier))
+                    ResourceNames.adGroup(customerId, adGroupId))
+            .setBidModifier(bidModifier)
             .setDevice(DeviceInfo.newBuilder().setType(Device.MOBILE))
             .build();
 

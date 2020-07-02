@@ -17,12 +17,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -120,11 +120,11 @@ public class GetAllImageAssets {
         System.out.printf(
             "Image with name '%s', file size %d bytes, width %dpx, height %dpx, and url '%s' "
                 + "found.%n",
-            row.getAsset().getName().getValue(),
-            row.getAsset().getImageAsset().getFileSize().getValue(),
-            row.getAsset().getImageAsset().getFullSize().getWidthPixels().getValue(),
-            row.getAsset().getImageAsset().getFullSize().getHeightPixels().getValue(),
-            row.getAsset().getImageAsset().getFullSize().getUrl().getValue());
+            row.getAsset().getName(),
+            row.getAsset().getImageAsset().getFileSize(),
+            row.getAsset().getImageAsset().getFullSize().getWidthPixels(),
+            row.getAsset().getImageAsset().getFullSize().getHeightPixels(),
+            row.getAsset().getImageAsset().getFullSize().getUrl());
       }
     }
   }

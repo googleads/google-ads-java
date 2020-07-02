@@ -18,18 +18,18 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.KeywordInfo;
-import com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.errors.QuotaErrorEnum.QuotaError;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v4.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriteriaRequest;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.KeywordInfo;
+import com.google.ads.googleads.v5.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v5.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.errors.QuotaErrorEnum.QuotaError;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaRequest;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -165,12 +165,11 @@ public class HandleRateExceededError {
         KeywordInfo keywordInfo =
             KeywordInfo.newBuilder()
                 .setText(
-                    StringValue.of(
-                        "mars cruise thread "
-                            + String.valueOf(threadIndex)
-                            + " seed "
-                            + ""
-                            + String.valueOf(i)))
+                    "mars cruise thread "
+                        + String.valueOf(threadIndex)
+                        + " seed "
+                        + ""
+                        + String.valueOf(i))
                 .setMatchType(KeywordMatchType.EXACT)
                 .build();
 
@@ -179,7 +178,7 @@ public class HandleRateExceededError {
         // Constructs an ad group criterion using the keywordText configuration above.
         AdGroupCriterion criterion =
             AdGroupCriterion.newBuilder()
-                .setAdGroup(StringValue.of(adGroupResourceName))
+                .setAdGroup(adGroupResourceName)
                 .setStatus(AdGroupCriterionStatus.PAUSED)
                 .setKeyword(keywordInfo)
                 .build();

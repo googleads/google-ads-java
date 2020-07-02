@@ -18,16 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ContentLabelInfo;
-import com.google.ads.googleads.v4.common.PlacementInfo;
-import com.google.ads.googleads.v4.enums.ContentLabelTypeEnum.ContentLabelType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CustomerNegativeCriterion;
-import com.google.ads.googleads.v4.services.CustomerNegativeCriterionOperation;
-import com.google.ads.googleads.v4.services.CustomerNegativeCriterionServiceClient;
-import com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult;
+import com.google.ads.googleads.v5.common.ContentLabelInfo;
+import com.google.ads.googleads.v5.common.PlacementInfo;
+import com.google.ads.googleads.v5.enums.ContentLabelTypeEnum.ContentLabelType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CustomerNegativeCriterion;
+import com.google.ads.googleads.v5.services.CustomerNegativeCriterionOperation;
+import com.google.ads.googleads.v5.services.CustomerNegativeCriterionServiceClient;
+import com.google.ads.googleads.v5.services.MutateCustomerNegativeCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateCustomerNegativeCriteriaResult;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -108,7 +108,7 @@ public class AddCustomerNegativeCriteria {
           CustomerNegativeCriterion.newBuilder()
               .setPlacement(
                   PlacementInfo.newBuilder()
-                      .setUrl(StringValue.of("http://www.example.com"))
+                      .setUrl("http://www.example.com")
                       .build())
               .build();
 

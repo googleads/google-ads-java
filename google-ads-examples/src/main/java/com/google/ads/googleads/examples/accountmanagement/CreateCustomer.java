@@ -18,11 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Customer;
-import com.google.ads.googleads.v4.services.CreateCustomerClientResponse;
-import com.google.ads.googleads.v4.services.CustomerServiceClient;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Customer;
+import com.google.ads.googleads.v5.services.CreateCustomerClientResponse;
+import com.google.ads.googleads.v5.services.CustomerServiceClient;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -90,15 +90,14 @@ public class CreateCustomer {
     // Initializes a Customer object to be created.
     Customer customer =
         Customer.newBuilder()
-            .setDescriptiveName(
-                StringValue.of("Account created with CustomerService on '" + dateTime + "'"))
-            .setCurrencyCode(StringValue.of("USD"))
-            .setTimeZone(StringValue.of("America/New_York"))
+            .setDescriptiveName("Account created with CustomerService on '" + dateTime + "'")
+            .setCurrencyCode("USD")
+            .setTimeZone("America/New_York")
             // Optional: Sets additional attributes of the customer.
-            .setTrackingUrlTemplate(StringValue.of("{lpurl}?device={device}"))
+            .setTrackingUrlTemplate("{lpurl}?device={device}")
             .setFinalUrlSuffix(
-                StringValue.of("keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}"))
-            .setHasPartnersBadge(BoolValue.of(false))
+                "keyword={keyword}&matchtype={matchtype}&adgroupid={adgroupid}")
+            .setHasPartnersBadge(false)
             .build();
 
     // Sends the request to create the customer.

@@ -21,40 +21,40 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.migration.utils.ArgumentNames;
 import com.google.ads.googleads.migration.utils.CodeSampleParams;
-import com.google.ads.googleads.v4.utils.ResourceNames;
-import com.google.ads.googleads.v4.common.ExpandedTextAdInfo;
-import com.google.ads.googleads.v4.common.ManualCpc;
-import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v4.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v4.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v4.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroup;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.resources.Campaign;
-import com.google.ads.googleads.v4.resources.Campaign.NetworkSettings;
-import com.google.ads.googleads.v4.resources.CampaignBudget;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v4.services.AdGroupOperation;
-import com.google.ads.googleads.v4.services.AdGroupServiceClient;
-import com.google.ads.googleads.v4.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v4.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v4.services.CampaignOperation;
-import com.google.ads.googleads.v4.services.CampaignServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v4.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignsResponse;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v5.common.ManualCpc;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v5.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.Campaign.NetworkSettings;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.CampaignServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.api.ads.adwords.axis.factory.AdWordsServices;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupCriterion;
 import com.google.api.ads.adwords.axis.v201809.cm.AdGroupCriterionOperation;
@@ -75,8 +75,6 @@ import com.google.api.ads.common.lib.exception.OAuthException;
 import com.google.api.ads.common.lib.exception.ValidationException;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -223,9 +221,9 @@ public class CreateCompleteCampaignBothApisPhase4 {
     // Creates the budget.
     CampaignBudget budget =
       CampaignBudget.newBuilder()
-        .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
+        .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
         .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-        .setAmountMicros(Int64Value.of(10_000_000))
+        .setAmountMicros(10_000_000)
         .build();
 
     // Creates the operation.
@@ -244,7 +242,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
       // Displays the results.
       System.out.printf(
         "Budget with ID %s and name '%s' was created.%n",
-        newBudget.getId().getValue(), newBudget.getName().getValue());
+        newBudget.getId(), newBudget.getName());
       return newBudget;
     }
   }
@@ -292,21 +290,21 @@ public class CreateCompleteCampaignBothApisPhase4 {
    */
   private Campaign createCampaign(
     GoogleAdsClient googleAdsClient, long customerId, CampaignBudget budget) {
-    String budgetResourceName = ResourceNames.campaignBudget(customerId, budget.getId().getValue());
+    String budgetResourceName = ResourceNames.campaignBudget(customerId, budget.getId());
 
     // Configures the campaign network options
     NetworkSettings networkSettings =
       NetworkSettings.newBuilder()
-        .setTargetGoogleSearch(BoolValue.of(true))
-        .setTargetSearchNetwork(BoolValue.of(true))
-        .setTargetContentNetwork(BoolValue.of(false))
-        .setTargetPartnerSearchNetwork(BoolValue.of(false))
+        .setTargetGoogleSearch(true)
+        .setTargetSearchNetwork(true)
+        .setTargetContentNetwork(false)
+        .setTargetPartnerSearchNetwork(false)
         .build();
 
     // Creates the campaign.
     Campaign campaign =
       Campaign.newBuilder()
-        .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
+        .setName("Interplanetary Cruise #" + System.currentTimeMillis())
         .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
         // Recommendation: Set the campaign to PAUSED when creating it to prevent
         // the ads from immediately serving. Set to ENABLED once you've added
@@ -314,12 +312,12 @@ public class CreateCompleteCampaignBothApisPhase4 {
         .setStatus(CampaignStatus.PAUSED)
         // Sets the bidding strategy and budget.
         .setManualCpc(ManualCpc.newBuilder().build())
-        .setCampaignBudget(StringValue.of(budgetResourceName))
+        .setCampaignBudget(budgetResourceName)
         // Adds the networkSettings configured above.
         .setNetworkSettings(networkSettings)
         // Optional: sets the start & end dates.
-        .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
-        .setEndDate(StringValue.of(new DateTime().plusDays(30).toString("yyyyMMdd")))
+        .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
+        .setEndDate(new DateTime().plusDays(30).toString("yyyyMMdd"))
         .build();
 
     // Creates the operation.
@@ -337,7 +335,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
       // Displays the results.
       System.out.printf(
         "Campaign with ID %s and name '%s' was created.%n",
-        newCampaign.getId().getValue(), newCampaign.getName().getValue());
+        newCampaign.getId(), newCampaign.getName());
       return newCampaign;
     }
   }
@@ -385,16 +383,16 @@ public class CreateCompleteCampaignBothApisPhase4 {
    */
   private AdGroup createAdGroup(
     GoogleAdsClient googleAdsClient, long customerId, Campaign campaign) {
-    String campaignResourceName = ResourceNames.campaign(customerId, campaign.getId().getValue());
+    String campaignResourceName = ResourceNames.campaign(customerId, campaign.getId());
 
     // Creates ad group, setting an optional CPC value.
     AdGroup adGroup =
       AdGroup.newBuilder()
-        .setName(StringValue.of("Earth to Mars Cruises #" + System.currentTimeMillis()))
+        .setName("Earth to Mars Cruises #" + System.currentTimeMillis())
         .setStatus(AdGroupStatus.ENABLED)
-        .setCampaign(StringValue.of(campaignResourceName))
+        .setCampaign(campaignResourceName)
         .setType(AdGroupType.SEARCH_STANDARD)
-        .setCpcBidMicros(Int64Value.of(500_000L))
+        .setCpcBidMicros(500_000L)
         .build();
 
     // Creates the operation.
@@ -411,8 +409,8 @@ public class CreateCompleteCampaignBothApisPhase4 {
       AdGroup newAdGroup = getAdGroup(googleAdsClient, customerId, adGroupResourceName);
       // Displays the results.
       System.out.printf(
-        "Ad group with ID %s and name '%s' was created.%n",
-        newAdGroup.getId().getValue(), newAdGroup.getName().getValue());
+          "Ad group with ID %s and name '%s' was created.%n",
+          newAdGroup.getId(), newAdGroup.getName());
       return newAdGroup;
     }
   }
@@ -458,7 +456,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
    */
   private List<AdGroupAd> createTextAds(
     GoogleAdsClient googleAdsClient, long customerId, AdGroup adGroup, int numberOfAds) {
-    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroup.getId().getValue());
+    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroup.getId());
 
     List<AdGroupAdOperation> operations = new ArrayList<>();
 
@@ -466,16 +464,16 @@ public class CreateCompleteCampaignBothApisPhase4 {
       // Creates the text ad
       AdGroupAd adgroupAd =
         AdGroupAd.newBuilder()
-          .setAdGroup(StringValue.of(adGroupResourceName))
+          .setAdGroup(adGroupResourceName)
           .setStatus(AdGroupAdStatus.PAUSED)
           .setAd(
             Ad.newBuilder()
-              .addFinalUrls(StringValue.of("http://www.example.com/" + String.valueOf(i)))
+              .addFinalUrls("http://www.example.com/" + String.valueOf(i))
               .setExpandedTextAd(
                 ExpandedTextAdInfo.newBuilder()
                   .setDescription(StringValue.of("Buy your tickets now!"))
                   .setHeadlinePart1(
-                    StringValue.of("Cruise #" + String.valueOf(i) + " to Mars"))
+                    StringValue.of("Cruise #" + i + " to Mars"))
                   .setHeadlinePart2(StringValue.of("Best Space Cruise Line"))
                   .setPath1(StringValue.of("path1"))
                   .setPath2(StringValue.of("path2"))
@@ -510,11 +508,11 @@ public class CreateCompleteCampaignBothApisPhase4 {
         System.out.printf(
           "Expanded text ad with ID %s, status '%s', "
             + "and headline '%s - %s' was created in ad group with ID %s.%n",
-          ad.getId().getValue(),
+          ad.getId(),
           newAdGroupAd.getStatus(),
           expandedTextAdInfo.getHeadlinePart1().getValue(),
           expandedTextAdInfo.getHeadlinePart2().getValue(),
-          adGroup.getId().getValue());
+          adGroup.getId());
       }
       return newAdGroupAds;
     }
@@ -600,7 +598,7 @@ public class CreateCompleteCampaignBothApisPhase4 {
 
       // Creates biddable ad group criterion.
       BiddableAdGroupCriterion keywordBiddableAdGroupCriterion = new BiddableAdGroupCriterion();
-      keywordBiddableAdGroupCriterion.setAdGroupId(adGroup.getId().getValue());
+      keywordBiddableAdGroupCriterion.setAdGroupId(adGroup.getId());
       keywordBiddableAdGroupCriterion.setCriterion(keyword);
 
       // You can optionally provide these field(s).

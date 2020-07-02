@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.BidModifierSimulationPoint;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CampaignCriterionSimulation;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v5.common.BidModifierSimulationPoint;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignCriterionSimulation;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.rpc.ServerStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -127,23 +127,23 @@ public class GetCampaignCriterionBidModifierSimulations {
           System.out.printf(
               "Found campaign-level criterion bid modifier simulation for "
                   + "criterion with ID %d, start date '%s', end date '%s', and points:%n'",
-              simulation.getCriterionId().getValue(),
-              simulation.getStartDate().getValue(),
-              simulation.getEndDate().getValue());
+              simulation.getCriterionId(),
+              simulation.getStartDate(),
+              simulation.getEndDate());
           for (BidModifierSimulationPoint point :
               simulation.getBidModifierPointList().getPointsList()) {
             System.out.printf(
                 " bid modifier: %.2f => clicks: %d, cost: %d, impressions: %d, "
                     + "parent clicks: %d, parent cost: %d, parent impressions: %d, "
                     + "parent required budget: %d%n",
-                point.getBidModifier().getValue(),
-                point.getClicks().getValue(),
-                point.getCostMicros().getValue(),
-                point.getImpressions().getValue(),
-                point.getParentClicks().getValue(),
-                point.getParentCostMicros().getValue(),
-                point.getParentImpressions().getValue(),
-                point.getParentRequiredBudgetMicros().getValue());
+                point.getBidModifier(),
+                point.getClicks(),
+                point.getCostMicros(),
+                point.getImpressions(),
+                point.getParentClicks(),
+                point.getParentCostMicros(),
+                point.getParentImpressions(),
+                point.getParentRequiredBudgetMicros());
           }
         }
       }

@@ -15,17 +15,15 @@
 package com.google.ads.googleads.examples.targeting;
 
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.services.GeoTargetConstantServiceClient;
-import com.google.ads.googleads.v4.services.GeoTargetConstantSuggestion;
-import com.google.ads.googleads.v4.services.SuggestGeoTargetConstantsRequest;
-import com.google.ads.googleads.v4.services.SuggestGeoTargetConstantsResponse;
-import com.google.protobuf.StringValue;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.services.GeoTargetConstantServiceClient;
+import com.google.ads.googleads.v5.services.GeoTargetConstantSuggestion;
+import com.google.ads.googleads.v5.services.SuggestGeoTargetConstantsRequest;
+import com.google.ads.googleads.v5.services.SuggestGeoTargetConstantsResponse;
+import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /** Gets GeoTargetConstants by given location names. */
 public class GetGeoTargetConstantsByNames {
@@ -74,18 +72,15 @@ public class GetGeoTargetConstantsByNames {
           SuggestGeoTargetConstantsRequest.newBuilder();
 
       // Locale is using ISO 639-1 format. If an invalid locale is given, 'en' is used by default.
-      requestBuilder.setLocale(StringValue.of("en"));
+      requestBuilder.setLocale("en");
 
       // A list of country codes can be referenced here:
       // https://developers.google.com/adwords/api/docs/appendix/geotargeting
-      requestBuilder.setCountryCode(StringValue.of("FR"));
+      requestBuilder.setCountryCode("FR");
 
       requestBuilder
           .getLocationNamesBuilder()
-          .addAllNames(
-              Stream.of("Paris", "Quebec", "Spain", "Deutschland")
-                  .map(StringValue::of)
-                  .collect(Collectors.toList()));
+          .addAllNames(ImmutableList.of("Paris", "Quebec", "Spain", "Deutschland"));
 
       SuggestGeoTargetConstantsResponse response =
           geoTargetClient.suggestGeoTargetConstants(requestBuilder.build());
@@ -95,13 +90,13 @@ public class GetGeoTargetConstantsByNames {
         System.out.printf(
             "%s (%s,%s,%s,%s) is found in locale (%s) with reach (%d) for search term (%s).%n",
             suggestion.getGeoTargetConstant().getResourceName(),
-            suggestion.getGeoTargetConstant().getName().getValue(),
-            suggestion.getGeoTargetConstant().getCountryCode().getValue(),
-            suggestion.getGeoTargetConstant().getTargetType().getValue(),
+            suggestion.getGeoTargetConstant().getName(),
+            suggestion.getGeoTargetConstant().getCountryCode(),
+            suggestion.getGeoTargetConstant().getTargetType(),
             suggestion.getGeoTargetConstant().getStatus().name(),
-            suggestion.getLocale().getValue(),
-            suggestion.getReach().getValue(),
-            suggestion.getSearchTerm().getValue());
+            suggestion.getLocale(),
+            suggestion.getReach(),
+            suggestion.getSearchTerm());
       }
     }
   }

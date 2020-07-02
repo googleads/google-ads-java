@@ -18,19 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.PolicyTopicEntry;
-import com.google.ads.googleads.v4.common.PolicyTopicEvidence;
-import com.google.ads.googleads.v4.common.PolicyTopicEvidence.TextList;
-import com.google.ads.googleads.v4.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.resources.AdGroupAdPolicySummary;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.common.PolicyTopicEntry;
+import com.google.ads.googleads.v5.common.PolicyTopicEvidence;
+import com.google.ads.googleads.v5.common.PolicyTopicEvidence.TextList;
+import com.google.ads.googleads.v5.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.AdGroupAdPolicySummary;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -133,7 +133,7 @@ public class GetAllDisapprovedAds {
         System.out.printf(
             "Ad with ID %d and type '%s' was disapproved with the following policy "
                 + "topic entries:%n",
-            ad.getId().getValue(), ad.getType());
+            ad.getId(), ad.getType());
         for (PolicyTopicEntry policyTopicEntry : policySummary.getPolicyTopicEntriesList()) {
           System.out.printf(
               "  topic: '%s', type: '%s'%n",

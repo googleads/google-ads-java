@@ -18,12 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.rpc.ServerStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -102,8 +102,7 @@ public class GetCampaigns {
         for (GoogleAdsRow googleAdsRow : response.getResultsList()) {
           System.out.printf(
               "Campaign with ID %d and name '%s' was found.%n",
-              googleAdsRow.getCampaign().getId().getValue(),
-              googleAdsRow.getCampaign().getName().getValue());
+              googleAdsRow.getCampaign().getId(), googleAdsRow.getCampaign().getName());
         }
       }
     }

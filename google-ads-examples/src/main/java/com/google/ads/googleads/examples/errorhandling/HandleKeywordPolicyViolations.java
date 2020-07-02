@@ -18,18 +18,18 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.KeywordInfo;
-import com.google.ads.googleads.v4.common.PolicyViolationKey;
-import com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.errors.PolicyViolationDetails;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v4.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.KeywordInfo;
+import com.google.ads.googleads.v5.common.PolicyViolationKey;
+import com.google.ads.googleads.v5.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v5.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.errors.PolicyViolationDetails;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -123,14 +123,14 @@ public class HandleKeywordPolicyViolations {
       // Configures the keyword text and match type settings.
       KeywordInfo keywordInfo =
           KeywordInfo.newBuilder()
-              .setText(StringValue.of(keywordText))
+              .setText(keywordText)
               .setMatchType(KeywordMatchType.EXACT)
               .build();
 
       // Constructs an ad group criterion using the keyword text info above.
       AdGroupCriterion adGroupCriterion =
           AdGroupCriterion.newBuilder()
-              .setAdGroup(StringValue.of(ResourceNames.adGroup(customerId, adGroupId)))
+              .setAdGroup(ResourceNames.adGroup(customerId, adGroupId))
               .setStatus(AdGroupCriterionStatus.ENABLED)
               .setKeyword(keywordInfo)
               .build();
@@ -210,9 +210,9 @@ public class HandleKeywordPolicyViolations {
           PolicyViolationKey policyViolationKey = policyViolationDetails.getKey();
           exemptibleKeys.add(policyViolationKey);
           System.out.println("\t\tPolicy violation key:");
-          System.out.printf("\t\t\tName: '%s'%n", policyViolationKey.getPolicyName().getValue());
+          System.out.printf("\t\t\tName: '%s'%n", policyViolationKey.getPolicyName());
           System.out.printf(
-              "\t\t\tViolating text: '%s'%n", policyViolationKey.getViolatingText().getValue());
+              "\t\t\tViolating text: '%s'%n", policyViolationKey.getViolatingText());
         }
       }
     }

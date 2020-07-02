@@ -18,23 +18,21 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.AddressInfo;
-import com.google.ads.googleads.v4.common.KeywordInfo;
-import com.google.ads.googleads.v4.common.ProximityInfo;
-import com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v4.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CampaignCriterion;
-import com.google.ads.googleads.v4.resources.CampaignCriterion.Builder;
-import com.google.ads.googleads.v4.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v4.services.CampaignCriterionServiceClient;
-import com.google.ads.googleads.v4.services.CampaignName;
-import com.google.ads.googleads.v4.services.GeoTargetConstantName;
-import com.google.ads.googleads.v4.services.MutateCampaignCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignCriterionResult;
+import com.google.ads.googleads.v5.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.AddressInfo;
+import com.google.ads.googleads.v5.common.KeywordInfo;
+import com.google.ads.googleads.v5.common.ProximityInfo;
+import com.google.ads.googleads.v5.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v5.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignCriterion;
+import com.google.ads.googleads.v5.resources.CampaignCriterion.Builder;
+import com.google.ads.googleads.v5.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v5.services.CampaignCriterionServiceClient;
+import com.google.ads.googleads.v5.services.MutateCampaignCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignCriterionResult;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.BoolValue;
 import com.google.protobuf.DoubleValue;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -131,8 +129,7 @@ public class AddCampaignTargetingCriteria {
       long campaignId,
       String keywordText,
       long locationId) {
-    String campaignResourceName =
-        CampaignName.format(Long.toString(customerId), Long.toString(campaignId));
+    String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
 
     List<CampaignCriterionOperation> operations =
         ImmutableList.of(
@@ -168,12 +165,12 @@ public class AddCampaignTargetingCriteria {
   private static CampaignCriterion buildNegativeKeywordCriterion(
       String keywordText, String campaignResourceName) {
     return CampaignCriterion.newBuilder()
-        .setCampaign(StringValue.of(campaignResourceName))
-        .setNegative(BoolValue.of(true))
+        .setCampaign(campaignResourceName)
+        .setNegative(true)
         .setKeyword(
             KeywordInfo.newBuilder()
                 .setMatchType(KeywordMatchType.BROAD)
-                .setText(StringValue.of(keywordText))
+                .setText(keywordText)
                 .build())
         .build();
   }
@@ -189,13 +186,11 @@ public class AddCampaignTargetingCriteria {
    */
   private static CampaignCriterion buildLocationIdCriterion(
       long locationId, String campaignResourceName) {
-    Builder criterionBuilder =
-        CampaignCriterion.newBuilder().setCampaign(StringValue.of(campaignResourceName));
+    Builder criterionBuilder = CampaignCriterion.newBuilder().setCampaign(campaignResourceName);
 
     criterionBuilder
         .getLocationBuilder()
-        .setGeoTargetConstant(
-            StringValue.of(GeoTargetConstantName.format(String.valueOf(locationId))));
+        .setGeoTargetConstant(ResourceNames.geoTargetConstant(locationId));
 
     return criterionBuilder.build();
   }
@@ -208,17 +203,17 @@ public class AddCampaignTargetingCriteria {
    */
   private static CampaignCriterion buildProximityLocation(String campaignResourceName) {
     Builder builder =
-        CampaignCriterion.newBuilder().setCampaign(StringValue.of(campaignResourceName));
+        CampaignCriterion.newBuilder().setCampaign(campaignResourceName);
 
     ProximityInfo.Builder proximityBuilder = builder.getProximityBuilder();
-    proximityBuilder.setRadius(DoubleValue.of(10.0)).setRadiusUnits(ProximityRadiusUnits.MILES);
+    proximityBuilder.setRadius(10.0).setRadiusUnits(ProximityRadiusUnits.MILES);
 
     AddressInfo.Builder addressBuilder = proximityBuilder.getAddressBuilder();
     addressBuilder
-        .setStreetAddress(StringValue.of("38 avenue de l'Opéra"))
-        .setCityName(StringValue.of("Paris"))
-        .setPostalCode(StringValue.of("75002"))
-        .setCountryCode(StringValue.of("FR"));
+        .setStreetAddress("38 avenue de l'Opéra")
+        .setCityName("Paris")
+        .setPostalCode("75002")
+        .setCountryCode("FR");
 
     return builder.build();
   }

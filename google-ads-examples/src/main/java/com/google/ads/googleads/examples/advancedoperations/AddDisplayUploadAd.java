@@ -18,28 +18,27 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.AdMediaBundleAsset;
-import com.google.ads.googleads.v4.common.DisplayUploadAdInfo;
-import com.google.ads.googleads.v4.common.MediaBundleAsset;
-import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v4.enums.AssetTypeEnum.AssetType;
-import com.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.resources.Asset;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v4.services.AssetOperation;
-import com.google.ads.googleads.v4.services.AssetServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v4.services.MutateAssetsResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.AdMediaBundleAsset;
+import com.google.ads.googleads.v5.common.DisplayUploadAdInfo;
+import com.google.ads.googleads.v5.common.MediaBundleAsset;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.enums.AssetTypeEnum.AssetType;
+import com.google.ads.googleads.v5.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.Asset;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.AssetOperation;
+import com.google.ads.googleads.v5.services.AssetServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.services.MutateAssetsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
-import com.google.protobuf.BytesValue;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -141,9 +140,7 @@ public class AddDisplayUploadAd {
         Asset.newBuilder()
             .setType(AssetType.MEDIA_BUNDLE)
             .setMediaBundleAsset(
-                MediaBundleAsset.newBuilder()
-                    .setData(BytesValue.of(ByteString.copyFrom(html5Zip)))
-                    .build())
+                MediaBundleAsset.newBuilder().setData(ByteString.copyFrom(html5Zip)).build())
             .build();
 
     // Creates the asset operation.
@@ -179,8 +176,8 @@ public class AddDisplayUploadAd {
     // Creates the ad with the required fields.
     Ad displayUploadAd =
         Ad.newBuilder()
-            .setName(StringValue.of("Ad for HTML5"))
-            .addFinalUrls(StringValue.of("http://example.com/html5"))
+            .setName("Ad for HTML5")
+            .addFinalUrls("http://example.com/html5")
             // Exactly one ad data field must be included to specify the ad type. See
             // https://developers.google.com/google-ads/api/reference/rpc/v4/Ad for the full
             // list of available types.
@@ -199,7 +196,7 @@ public class AddDisplayUploadAd {
         AdGroupAd.newBuilder()
             .setAd(displayUploadAd)
             .setStatus(AdGroupAdStatus.PAUSED)
-            .setAdGroup(StringValue.of(ResourceNames.adGroup(customerId, adGroupId)))
+            .setAdGroup(ResourceNames.adGroup(customerId, adGroupId))
             .build();
 
     // Creates the ad group ad operation.

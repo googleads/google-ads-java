@@ -18,46 +18,46 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.AdTextAsset;
-import com.google.ads.googleads.v4.common.AppAdInfo;
-import com.google.ads.googleads.v4.common.LanguageInfo;
-import com.google.ads.googleads.v4.common.LocationInfo;
-import com.google.ads.googleads.v4.common.TargetCpa;
-import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v4.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v4.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
-import com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v4.enums.AppCampaignAppStoreEnum.AppCampaignAppStore;
-import com.google.ads.googleads.v4.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType;
-import com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v4.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroup;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.resources.Campaign;
-import com.google.ads.googleads.v4.resources.Campaign.AppCampaignSetting;
-import com.google.ads.googleads.v4.resources.CampaignBudget;
-import com.google.ads.googleads.v4.resources.CampaignCriterion;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v4.services.AdGroupOperation;
-import com.google.ads.googleads.v4.services.AdGroupServiceClient;
-import com.google.ads.googleads.v4.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v4.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v4.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v4.services.CampaignCriterionServiceClient;
-import com.google.ads.googleads.v4.services.CampaignOperation;
-import com.google.ads.googleads.v4.services.CampaignServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v4.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignCriterionResult;
-import com.google.ads.googleads.v4.services.MutateCampaignsResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.AdTextAsset;
+import com.google.ads.googleads.v5.common.AppAdInfo;
+import com.google.ads.googleads.v5.common.LanguageInfo;
+import com.google.ads.googleads.v5.common.LocationInfo;
+import com.google.ads.googleads.v5.common.TargetCpa;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v5.enums.AppCampaignAppStoreEnum.AppCampaignAppStore;
+import com.google.ads.googleads.v5.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v5.enums.CriterionTypeEnum.CriterionType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.Campaign.AppCampaignSetting;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.resources.CampaignCriterion;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AdGroupServiceClient;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v5.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v5.services.CampaignCriterionServiceClient;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.CampaignServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignCriterionResult;
+import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.Int64Value;
@@ -143,12 +143,12 @@ public class AddAppCampaign {
     // Creates a campaign budget.
     CampaignBudget campaignBudget =
         CampaignBudget.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
-            .setAmountMicros(Int64Value.of(50_000_000))
+            .setName("Interplanetary Cruise #" + System.currentTimeMillis())
+            .setAmountMicros(50_000_000)
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
             // An App campaign cannot use a shared campaign budget.
             // explicitly_shared must be set to false.
-            .setExplicitlyShared(BoolValue.of(false))
+            .setExplicitlyShared(false)
             .build();
 
     // Creates a campaign budget operation.
@@ -182,8 +182,8 @@ public class AddAppCampaign {
     // Creates a campaign.
     Campaign campaign =
         Campaign.newBuilder()
-            .setName(StringValue.of("Interplanetary Cruise App #" + System.currentTimeMillis()))
-            .setCampaignBudget(StringValue.of(budgetResourceName))
+            .setName("Interplanetary Cruise App #" + System.currentTimeMillis())
+            .setCampaignBudget(budgetResourceName)
             // Recommendation: Set the campaign to PAUSED when creating it to prevent
             // the ads from immediately serving. Set to ENABLED once you've added
             // targeting and the ads are ready to serve.
@@ -200,19 +200,19 @@ public class AddAppCampaign {
             // manual_cpc, commission, maximize_conversions, etc.
             // See https://developers.google.com/google-ads/api/reference/rpc
             // under current version / resources / Campaign.
-            .setTargetCpa(TargetCpa.newBuilder().setTargetCpaMicros(Int64Value.of(1000000)).build())
+            .setTargetCpa(TargetCpa.newBuilder().setTargetCpaMicros(1000000).build())
             // Sets the App campaign settings.
             .setAppCampaignSetting(
                 AppCampaignSetting.newBuilder()
-                    .setAppId(StringValue.of("com.google.android.apps.adwords"))
+                    .setAppId("com.google.android.apps.adwords")
                     .setAppStore(AppCampaignAppStore.GOOGLE_APP_STORE)
                     // Optional: Optimize this campaign for getting new users for your app.
                     .setBiddingStrategyGoalType(
                         AppCampaignBiddingStrategyGoalType.OPTIMIZE_INSTALLS_TARGET_INSTALL_COST)
                     .build())
             // Optional fields.
-            .setStartDate(StringValue.of(new DateTime().plusDays(1).toString("yyyyMMdd")))
-            .setEndDate(StringValue.of(new DateTime().plusDays(365).toString("yyyyMMdd")))
+            .setStartDate(new DateTime().plusDays(1).toString("yyyyMMdd"))
+            .setEndDate(new DateTime().plusDays(365).toString("yyyyMMdd"))
             // If you select the
             // OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST goal type, then also
             // specify your in-app conversion types so the Google Ads API can focus
@@ -268,12 +268,11 @@ public class AddAppCampaign {
       // Creates a campaign criterion.
       CampaignCriterion campaignCriterion =
           CampaignCriterion.newBuilder()
-              .setCampaign(StringValue.of(campaignResourceName))
+              .setCampaign(campaignResourceName)
               .setType(CriterionType.LOCATION)
               .setLocation(
                   LocationInfo.newBuilder()
-                      .setGeoTargetConstant(
-                          StringValue.of(ResourceNames.geoTargetConstant(locationId)))
+                      .setGeoTargetConstant(ResourceNames.geoTargetConstant(locationId))
                       .build())
               .build();
 
@@ -295,12 +294,11 @@ public class AddAppCampaign {
       // Creates a campaign criterion.
       CampaignCriterion campaignCriterion =
           CampaignCriterion.newBuilder()
-              .setCampaign(StringValue.of(campaignResourceName))
+              .setCampaign(campaignResourceName)
               .setType(CriterionType.LANGUAGE)
               .setLanguage(
                   LanguageInfo.newBuilder()
-                      .setLanguageConstant(
-                          StringValue.of(ResourceNames.languageConstant(languageId)))
+                      .setLanguageConstant(ResourceNames.languageConstant(languageId))
                       .build())
               .build();
 
@@ -343,9 +341,9 @@ public class AddAppCampaign {
     //   2. you cannot add ad group criteria.
     AdGroup adGroup =
         AdGroup.newBuilder()
-            .setName(StringValue.of("Earth to Mars cruises #" + System.currentTimeMillis()))
+            .setName("Earth to Mars cruises #" + System.currentTimeMillis())
             .setStatus(AdGroupStatus.ENABLED)
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setCampaign(campaignResourceName)
             .build();
 
     // Creates an ad group operation.
@@ -378,7 +376,7 @@ public class AddAppCampaign {
     AdGroupAd adGroupAd =
         AdGroupAd.newBuilder()
             .setStatus(AdGroupAdStatus.ENABLED)
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setAd(
                 // ad_data is a 'oneof' message so setting app_ad
                 // is mutually exclusive with ad data fields such as

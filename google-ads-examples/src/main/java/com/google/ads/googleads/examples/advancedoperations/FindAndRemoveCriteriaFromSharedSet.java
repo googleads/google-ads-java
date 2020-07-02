@@ -18,19 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.SharedCriterion;
-import com.google.ads.googleads.v4.resources.SharedSet;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateSharedCriterionResult;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v4.services.SharedCriterionOperation;
-import com.google.ads.googleads.v4.services.SharedCriterionServiceClient;
+import com.google.ads.googleads.v5.enums.CriterionTypeEnum.CriterionType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.SharedCriterion;
+import com.google.ads.googleads.v5.resources.SharedSet;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.MutateSharedCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateSharedCriterionResult;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.services.SharedCriterionOperation;
+import com.google.ads.googleads.v5.services.SharedCriterionServiceClient;
 import com.google.common.base.Joiner;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -128,8 +128,8 @@ public class FindAndRemoveCriteriaFromSharedSet {
         SharedSet sharedSet = googleAdsRow.getSharedSet();
         System.out.printf(
             "Campaign shared set with ID %d and name '%s' was found.%n",
-            sharedSet.getId().getValue(), sharedSet.getName().getValue());
-        sharedSetIds.add(sharedSet.getId().getValue());
+            sharedSet.getId(), sharedSet.getName());
+        sharedSetIds.add(sharedSet.getId());
       }
     }
 

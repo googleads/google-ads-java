@@ -18,45 +18,43 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ExpandedTextAdInfo;
-import com.google.ads.googleads.v4.common.KeywordInfo;
-import com.google.ads.googleads.v4.common.ManualCpc;
-import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v4.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v4.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroup;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.resources.BatchJob;
-import com.google.ads.googleads.v4.resources.Campaign;
-import com.google.ads.googleads.v4.resources.CampaignBudget;
-import com.google.ads.googleads.v4.resources.CampaignCriterion;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v4.services.AdGroupOperation;
-import com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest;
-import com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse;
-import com.google.ads.googleads.v4.services.BatchJobOperation;
-import com.google.ads.googleads.v4.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v4.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v4.services.CampaignOperation;
-import com.google.ads.googleads.v4.services.ListBatchJobResultsRequest;
-import com.google.ads.googleads.v4.services.BatchJobResult;
-import com.google.ads.googleads.v4.services.BatchJobServiceClient;
-import com.google.ads.googleads.v4.services.BatchJobServiceClient.ListBatchJobResultsPagedResponse;
-import com.google.ads.googleads.v4.services.MutateOperation;
-import com.google.ads.googleads.v4.services.MutateOperationResponse.ResponseCase;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v5.common.KeywordInfo;
+import com.google.ads.googleads.v5.common.ManualCpc;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v5.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v5.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroup;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.resources.BatchJob;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.resources.CampaignCriterion;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupOperation;
+import com.google.ads.googleads.v5.services.AddBatchJobOperationsRequest;
+import com.google.ads.googleads.v5.services.AddBatchJobOperationsResponse;
+import com.google.ads.googleads.v5.services.BatchJobOperation;
+import com.google.ads.googleads.v5.services.BatchJobResult;
+import com.google.ads.googleads.v5.services.BatchJobServiceClient;
+import com.google.ads.googleads.v5.services.BatchJobServiceClient.ListBatchJobResultsPagedResponse;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.ListBatchJobResultsRequest;
+import com.google.ads.googleads.v5.services.MutateOperation;
+import com.google.ads.googleads.v5.services.MutateOperationResponse.ResponseCase;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.api.gax.longrunning.OperationFuture;
-import com.google.protobuf.BoolValue;
-import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -91,8 +89,7 @@ public class AddCompleteCampaignsUsingBatchJob {
   }
 
   public static void main(String[] args) throws IOException {
-    AddCompleteCampaignsUsingBatchJobParams params =
-        new AddCompleteCampaignsUsingBatchJobParams();
+    AddCompleteCampaignsUsingBatchJobParams params = new AddCompleteCampaignsUsingBatchJobParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -141,8 +138,7 @@ public class AddCompleteCampaignsUsingBatchJob {
         googleAdsClient.getLatestVersion().createBatchJobServiceClient()) {
       String batchJobResourceName = createBatchJob(batchJobServiceClient, customerId);
       addAllBatchJobOperations(batchJobServiceClient, customerId, batchJobResourceName);
-      OperationFuture operationResponse =
-          runBatchJob(batchJobServiceClient, batchJobResourceName);
+      OperationFuture operationResponse = runBatchJob(batchJobServiceClient, batchJobResourceName);
       pollBatchJob(operationResponse);
       fetchAndPrintResults(batchJobServiceClient, batchJobResourceName);
     }
@@ -156,10 +152,13 @@ public class AddCompleteCampaignsUsingBatchJob {
    * @return the resource name of the created mutate job.
    */
   private String createBatchJob(BatchJobServiceClient batchJobServiceClient, long customerId) {
-    BatchJobOperation operation = BatchJobOperation.newBuilder()
-        .setCreate(BatchJob.newBuilder().build()).build();
+    BatchJobOperation operation =
+        BatchJobOperation.newBuilder().setCreate(BatchJob.newBuilder().build()).build();
     String batchJobResourceName =
-        batchJobServiceClient.mutateBatchJob(Long.toString(customerId), operation).getResult().getResourceName();
+        batchJobServiceClient
+            .mutateBatchJob(Long.toString(customerId), operation)
+            .getResult()
+            .getResourceName();
     System.out.printf("Created a mutate job with resource name: '%s'.%n", batchJobResourceName);
 
     return batchJobResourceName;
@@ -176,9 +175,7 @@ public class AddCompleteCampaignsUsingBatchJob {
    *     will be added.
    */
   private void addAllBatchJobOperations(
-      BatchJobServiceClient batchJobServiceClient,
-      long customerId,
-      String batchJobResourceName) {
+      BatchJobServiceClient batchJobServiceClient, long customerId, String batchJobResourceName) {
     AddBatchJobOperationsResponse response =
         batchJobServiceClient.addBatchJobOperations(
             AddBatchJobOperationsRequest.newBuilder()
@@ -333,9 +330,9 @@ public class AddCompleteCampaignsUsingBatchJob {
         CampaignBudget.newBuilder()
             // Creates a resource name using the temporary ID.
             .setResourceName(ResourceNames.campaignBudget(customerId, getNextTemporaryId()))
-            .setName(StringValue.of("Interplanetary Cruise Budget #" + System.currentTimeMillis()))
+            .setName("Interplanetary Cruise Budget #" + System.currentTimeMillis())
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-            .setAmountMicros(Int64Value.of(5_000_000))
+            .setAmountMicros(5_000_000)
             .build();
 
     // Creates a campaign budget operation.
@@ -361,9 +358,7 @@ public class AddCompleteCampaignsUsingBatchJob {
           Campaign.newBuilder()
               // Creates a resource name using the temporary ID.
               .setResourceName(ResourceNames.campaign(customerId, campaignId))
-              .setName(
-                  StringValue.of(
-                      "Mutate job campaign #" + System.currentTimeMillis() + "." + campaignId))
+              .setName("Mutate job campaign #" + System.currentTimeMillis() + "." + campaignId)
               .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
               // Recommendation: Set the campaign to PAUSED when creating it to prevent
               // the ads from immediately serving. Set to ENABLED once you've added
@@ -371,7 +366,7 @@ public class AddCompleteCampaignsUsingBatchJob {
               .setStatus(CampaignStatus.PAUSED)
               // Sets the bidding strategy and budget.
               .setManualCpc(ManualCpc.newBuilder().build())
-              .setCampaignBudget(StringValue.of(campaignBudgetResourceName))
+              .setCampaignBudget(campaignBudgetResourceName)
               .build();
 
       // Creates a campaign operation and adds it to the operations list.
@@ -398,12 +393,12 @@ public class AddCompleteCampaignsUsingBatchJob {
           CampaignCriterion.newBuilder()
               .setKeyword(
                   KeywordInfo.newBuilder()
-                      .setText(StringValue.of("venus"))
+                      .setText("venus")
                       .setMatchType(KeywordMatchType.BROAD)
                       .build())
               // Sets the campaign criterion as a negative criterion.
-              .setNegative(BoolValue.of(Boolean.TRUE))
-              .setCampaign(StringValue.of(campaignOperation.getCreate().getResourceName()))
+              .setNegative(Boolean.TRUE)
+              .setCampaign(campaignOperation.getCreate().getResourceName())
               .build();
 
       // Creates a campaign criterion operation and adds it to the operations list.
@@ -434,12 +429,10 @@ public class AddCompleteCampaignsUsingBatchJob {
             AdGroup.newBuilder()
                 // Creates a resource name using the temporary ID.
                 .setResourceName(ResourceNames.adGroup(customerId, adGroupId))
-                .setName(
-                    StringValue.of(
-                        "Mutate job ad group #" + System.currentTimeMillis() + "." + adGroupId))
-                .setCampaign(StringValue.of(campaignOperation.getCreate().getResourceName()))
+                .setName("Mutate job ad group #" + System.currentTimeMillis() + "." + adGroupId)
+                .setCampaign(campaignOperation.getCreate().getResourceName())
                 .setType(AdGroupType.SEARCH_STANDARD)
-                .setCpcBidMicros(Int64Value.of(10_000_000))
+                .setCpcBidMicros(10_000_000)
                 .build();
 
         // Creates an ad group operation and adds it to the operations list.
@@ -475,10 +468,10 @@ public class AddCompleteCampaignsUsingBatchJob {
             AdGroupCriterion.newBuilder()
                 .setKeyword(
                     KeywordInfo.newBuilder()
-                        .setText(StringValue.of(keywordText))
+                        .setText(keywordText)
                         .setMatchType(KeywordMatchType.BROAD)
                         .build())
-                .setAdGroup(StringValue.of(adGroupOperation.getCreate().getResourceName()))
+                .setAdGroup(adGroupOperation.getCreate().getResourceName())
                 .setStatus(AdGroupCriterionStatus.ENABLED)
                 .build();
 
@@ -517,9 +510,9 @@ public class AddCompleteCampaignsUsingBatchJob {
                               .setHeadlinePart2(StringValue.of("Best Space Cruise Line"))
                               .setDescription(StringValue.of("Buy your tickets now!"))
                               .build())
-                      .addFinalUrls(StringValue.of("http://www.example.com"))
+                      .addFinalUrls("http://www.example.com")
                       .build())
-              .setAdGroup(StringValue.of(adGroupOperation.getCreate().getResourceName()))
+              .setAdGroup(adGroupOperation.getCreate().getResourceName())
               .setStatus(AdGroupAdStatus.PAUSED)
               .build();
 

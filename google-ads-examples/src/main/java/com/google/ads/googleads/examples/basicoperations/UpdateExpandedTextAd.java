@@ -18,14 +18,14 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.services.AdOperation;
-import com.google.ads.googleads.v4.services.AdServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdResult;
-import com.google.ads.googleads.v4.services.MutateAdsResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.services.AdOperation;
+import com.google.ads.googleads.v5.services.AdServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdResult;
+import com.google.ads.googleads.v5.services.MutateAdsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -98,8 +98,8 @@ public class UpdateExpandedTextAd {
         adOperation
             .getUpdateBuilder()
             .setResourceName(ResourceNames.ad(customerId, adId))
-            .addFinalUrls(StringValue.of("http://www.example.com/"))
-            .addFinalMobileUrls(StringValue.of("http://www.example.com/mobile"));
+            .addFinalUrls("http://www.example.com/")
+            .addFinalMobileUrls("http://www.example.com/mobile");
 
     // Sets the expanded text ad properties to update on the ad.
     adBuilder

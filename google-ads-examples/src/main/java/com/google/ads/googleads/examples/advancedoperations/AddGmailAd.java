@@ -18,25 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.GmailAdInfo;
-import com.google.ads.googleads.v4.common.GmailTeaser;
-import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v4.enums.MediaTypeEnum.MediaType;
-import com.google.ads.googleads.v4.enums.MimeTypeEnum.MimeType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.AdGroupAd;
-import com.google.ads.googleads.v4.resources.MediaFile;
-import com.google.ads.googleads.v4.resources.MediaImage;
-import com.google.ads.googleads.v4.services.AdGroupAdOperation;
-import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v4.services.MediaFileOperation;
-import com.google.ads.googleads.v4.services.MediaFileServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v4.services.MutateMediaFileResult;
-import com.google.ads.googleads.v4.services.MutateMediaFilesResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.GmailAdInfo;
+import com.google.ads.googleads.v5.common.GmailTeaser;
+import com.google.ads.googleads.v5.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v5.enums.MediaTypeEnum.MediaType;
+import com.google.ads.googleads.v5.enums.MimeTypeEnum.MimeType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.AdGroupAd;
+import com.google.ads.googleads.v5.resources.MediaFile;
+import com.google.ads.googleads.v5.resources.MediaImage;
+import com.google.ads.googleads.v5.services.AdGroupAdOperation;
+import com.google.ads.googleads.v5.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v5.services.MediaFileOperation;
+import com.google.ads.googleads.v5.services.MediaFileServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v5.services.MutateMediaFileResult;
+import com.google.ads.googleads.v5.services.MutateMediaFilesResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -135,7 +135,7 @@ public class AddGmailAd {
             .setType(MediaType.IMAGE)
             .setImage(
                 MediaImage.newBuilder()
-                    .setData(BytesValue.of(ByteString.copyFrom(logoImageData)))
+                    .setData(ByteString.copyFrom(logoImageData))
                     .build())
             .setMimeType(MimeType.IMAGE_PNG)
             .build();
@@ -154,7 +154,7 @@ public class AddGmailAd {
             .setType(MediaType.IMAGE)
             .setImage(
                 MediaImage.newBuilder()
-                    .setData(BytesValue.of(ByteString.copyFrom(marketingImageData)))
+                    .setData(ByteString.copyFrom(marketingImageData))
                     .build())
             .setMimeType(MimeType.IMAGE_JPEG)
             .build();
@@ -220,8 +220,8 @@ public class AddGmailAd {
     // Creates the ad.
     Ad ad =
         Ad.newBuilder()
-            .setName(StringValue.of("Gmail Ad #" + System.currentTimeMillis()))
-            .addFinalUrls(StringValue.of("http://www.example.com"))
+            .setName("Gmail Ad #" + System.currentTimeMillis())
+            .addFinalUrls("http://www.example.com")
             .setGmailAd(gmailAdInfo)
             .build();
 
@@ -233,7 +233,7 @@ public class AddGmailAd {
         AdGroupAd.newBuilder()
             .setAd(ad)
             .setStatus(AdGroupAdStatus.PAUSED)
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .build();
 
     // Creates the operation.

@@ -18,12 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.ChangeStatus;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.ChangeStatus;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Optional;
@@ -135,7 +135,7 @@ public class GetAccountChanges {
     // See https://developers.google.com/google-ads/api/docs/change-status for a description.
     switch (changeStatus.getResourceType()) {
       case AD_GROUP:
-        resourceName = changeStatus.getAdGroup().getValue();
+        resourceName = changeStatus.getAdGroup();
         break;
       case AD_GROUP_AD:
         resourceName = changeStatus.getAdGroupAd().getValue();
@@ -144,13 +144,13 @@ public class GetAccountChanges {
         resourceName = changeStatus.getAdGroupBidModifier().getValue();
         break;
       case AD_GROUP_CRITERION:
-        resourceName = changeStatus.getAdGroup().getValue();
+        resourceName = changeStatus.getAdGroup();
         break;
       case AD_GROUP_FEED:
         resourceName = changeStatus.getAdGroupFeed().getValue();
         break;
       case CAMPAIGN:
-        resourceName = changeStatus.getCampaign().getValue();
+        resourceName = changeStatus.getCampaign();
         break;
       case CAMPAIGN_CRITERION:
         resourceName = changeStatus.getCampaignCriterion().getValue();

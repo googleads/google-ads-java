@@ -18,16 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.InteractionTypeInfo;
-import com.google.ads.googleads.v4.enums.InteractionTypeEnum;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CampaignBidModifier;
-import com.google.ads.googleads.v4.services.CampaignBidModifierOperation;
-import com.google.ads.googleads.v4.services.CampaignBidModifierServiceClient;
-import com.google.ads.googleads.v4.services.MutateCampaignBidModifierResult;
-import com.google.ads.googleads.v4.services.MutateCampaignBidModifiersResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.InteractionTypeInfo;
+import com.google.ads.googleads.v5.enums.InteractionTypeEnum;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignBidModifier;
+import com.google.ads.googleads.v5.services.CampaignBidModifierOperation;
+import com.google.ads.googleads.v5.services.CampaignBidModifierServiceClient;
+import com.google.ads.googleads.v5.services.MutateCampaignBidModifierResult;
+import com.google.ads.googleads.v5.services.MutateCampaignBidModifiersResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.DoubleValue;
 import com.google.protobuf.StringValue;
@@ -107,12 +107,12 @@ public class AddCampaignBidModifier {
     // Constructs a campaign bid modifier.
     CampaignBidModifier campaignBidModifier =
         CampaignBidModifier.newBuilder()
-            .setCampaign(StringValue.of(campaignResourceName))
+            .setCampaign(campaignResourceName)
             // Makes the bid modifier apply to call interactions.
             .setInteractionType(
                 InteractionTypeInfo.newBuilder().setType(InteractionTypeEnum.InteractionType.CALLS))
             // Uses the specified bid modifier value.
-            .setBidModifier(DoubleValue.of(bidModifier))
+            .setBidModifier(bidModifier)
             .build();
 
     // Constructs an operation to create the campaign bid modifier.

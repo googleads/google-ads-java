@@ -18,29 +18,29 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.TargetSpend;
-import com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v4.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v4.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.BiddingStrategy;
-import com.google.ads.googleads.v4.resources.Campaign;
-import com.google.ads.googleads.v4.resources.Campaign.NetworkSettings;
-import com.google.ads.googleads.v4.resources.CampaignBudget;
-import com.google.ads.googleads.v4.services.BiddingStrategyOperation;
-import com.google.ads.googleads.v4.services.BiddingStrategyServiceClient;
-import com.google.ads.googleads.v4.services.CampaignBudgetName;
-import com.google.ads.googleads.v4.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v4.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v4.services.CampaignOperation;
-import com.google.ads.googleads.v4.services.CampaignServiceClient;
-import com.google.ads.googleads.v4.services.MutateBiddingStrategiesResponse;
-import com.google.ads.googleads.v4.services.MutateBiddingStrategyResult;
-import com.google.ads.googleads.v4.services.MutateCampaignBudgetResult;
-import com.google.ads.googleads.v4.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignResult;
-import com.google.ads.googleads.v4.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v5.common.TargetSpend;
+import com.google.ads.googleads.v5.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v5.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v5.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.BiddingStrategy;
+import com.google.ads.googleads.v5.resources.Campaign;
+import com.google.ads.googleads.v5.resources.Campaign.NetworkSettings;
+import com.google.ads.googleads.v5.resources.CampaignBudget;
+import com.google.ads.googleads.v5.services.BiddingStrategyOperation;
+import com.google.ads.googleads.v5.services.BiddingStrategyServiceClient;
+import com.google.ads.googleads.v5.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v5.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v5.services.CampaignOperation;
+import com.google.ads.googleads.v5.services.CampaignServiceClient;
+import com.google.ads.googleads.v5.services.MutateBiddingStrategiesResponse;
+import com.google.ads.googleads.v5.services.MutateBiddingStrategyResult;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetResult;
+import com.google.ads.googleads.v5.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignResult;
+import com.google.ads.googleads.v5.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.Lists;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.Int64Value;
@@ -120,7 +120,7 @@ public class UsePortfolioBiddingStrategy {
       campaignBudgetResourceName = createSharedCampaignBudget(googleAdsClient, customerId);
     } else {
       campaignBudgetResourceName =
-          CampaignBudgetName.format(customerId.toString(), campaignBudgetId.toString());
+          ResourceNames.campaignBudget(customerId, campaignBudgetId);
     }
 
     createCampaignWithBiddingStrategy(
@@ -140,12 +140,12 @@ public class UsePortfolioBiddingStrategy {
       // Creates a portfolio bidding strategy.
       TargetSpend targetSpend =
           TargetSpend.newBuilder()
-              .setCpcBidCeilingMicros(Int64Value.of(2_000_000L))
-              .setTargetSpendMicros(Int64Value.of(20_000_000L))
+              .setCpcBidCeilingMicros(2_000_000L)
+              .setTargetSpendMicros(20_000_000L)
               .build();
       BiddingStrategy portfolioBiddingStrategy =
           BiddingStrategy.newBuilder()
-              .setName(StringValue.of("Maximize Clicks #" + System.currentTimeMillis()))
+              .setName("Maximize Clicks #" + System.currentTimeMillis())
               .setTargetSpend(targetSpend)
               .build();
       // Constructs an operation that will create a portfolio bidding strategy.
@@ -179,11 +179,10 @@ public class UsePortfolioBiddingStrategy {
       // Creates a shared budget.
       CampaignBudget budget =
           CampaignBudget.newBuilder()
-              .setName(
-                  StringValue.of("Shared Interplanetary Budget #" + System.currentTimeMillis()))
-              .setAmountMicros(Int64Value.of(50_000_000L))
+              .setName("Shared Interplanetary Budget #" + System.currentTimeMillis())
+              .setAmountMicros(50_000_000L)
               .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
-              .setExplicitlyShared(BoolValue.of(true))
+              .setExplicitlyShared(true)
               .build();
       // Constructs an operation that will create a shared budget.
       CampaignBudgetOperation operation =
@@ -222,16 +221,16 @@ public class UsePortfolioBiddingStrategy {
       // Creates the campaign.
       NetworkSettings networkSettings =
           NetworkSettings.newBuilder()
-              .setTargetGoogleSearch(BoolValue.of(true))
-              .setTargetSearchNetwork(BoolValue.of(true))
-              .setTargetContentNetwork(BoolValue.of(true))
+              .setTargetGoogleSearch(true)
+              .setTargetSearchNetwork(true)
+              .setTargetContentNetwork(true)
               .build();
       Campaign campaign =
           Campaign.newBuilder()
-              .setName(StringValue.of("Interplanetary Cruise #" + System.currentTimeMillis()))
+              .setName("Interplanetary Cruise #" + System.currentTimeMillis())
               .setStatus(CampaignStatus.PAUSED)
-              .setCampaignBudget(StringValue.of(campaignBudgetResourceName))
-              .setBiddingStrategy(StringValue.of(biddingStrategyResourceName))
+              .setCampaignBudget(campaignBudgetResourceName)
+              .setBiddingStrategy(biddingStrategyResourceName)
               .setAdvertisingChannelType(AdvertisingChannelType.SEARCH)
               .setNetworkSettings(networkSettings)
               .build();

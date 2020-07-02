@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.CpcBidSimulationPoint;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdGroupCriterionSimulation;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v5.common.CpcBidSimulationPoint;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroupCriterionSimulation;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.rpc.ServerStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -128,19 +128,19 @@ public class GetAdGroupCriterionCpcBidSimulations {
           System.out.printf(
               "Found ad group criterion CPC bid simulation for ad group ID %d, "
                   + "criterion ID %d, start date '%s', end date '%s', and points:%n",
-              simulation.getAdGroupId().getValue(),
-              simulation.getCriterionId().getValue(),
-              simulation.getStartDate().getValue(),
-              simulation.getEndDate().getValue());
+              simulation.getAdGroupId(),
+              simulation.getCriterionId(),
+              simulation.getStartDate(),
+              simulation.getEndDate());
           for (CpcBidSimulationPoint point : simulation.getCpcBidPointList().getPointsList()) {
             System.out.printf(
                 "  bid: %d => clicks: %d, cost: %d, impressions: %d, "
                     + "biddable conversions: %.2f, biddable conversions value: %.2f%s",
-                point.getCpcBidMicros().getValue(),
-                point.getClicks().getValue(),
-                point.getCostMicros().getValue(),
-                point.getImpressions().getValue(),
-                point.getBiddableConversions().getValue(),
+                point.getCpcBidMicros(),
+                point.getClicks(),
+                point.getCostMicros(),
+                point.getImpressions(),
+                point.getBiddableConversions(),
                 point.getBiddableConversions());
           }
         }

@@ -17,12 +17,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AccountBudget;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AccountBudget;
+import com.google.ads.googleads.v5.resources.AccountBudget.ApprovedEndTimeCase;
+import com.google.ads.googleads.v5.resources.AccountBudget.ApprovedSpendingLimitCase;
+import com.google.ads.googleads.v5.resources.AccountBudget.ProposedEndTimeCase;
+import com.google.ads.googleads.v5.resources.AccountBudget.ProposedSpendingLimitCase;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -121,24 +125,24 @@ public class GetAccountBudgets {
                 + ".%n",
             accountBudget.getResourceName(),
             accountBudget.getStatus(),
-            accountBudget.getBillingSetup().getValue(),
-            accountBudget.getAmountServedMicros().getValue() / 1_000_000.0,
-            accountBudget.getTotalAdjustmentsMicros().getValue() / 1_000_000.0,
-            accountBudget.hasApprovedSpendingLimitMicros()
+            accountBudget.getBillingSetup(),
+            accountBudget.getAmountServedMicros() / 1_000_000.0,
+            accountBudget.getTotalAdjustmentsMicros() / 1_000_000.0,
+            accountBudget.getApprovedSpendingLimitCase() == ApprovedSpendingLimitCase.APPROVED_SPENDING_LIMIT_MICROS
                 ? String.format(
-                    "%.2f", accountBudget.getApprovedSpendingLimitMicros().getValue() / 1_000_000.0)
+                    "%.2f", accountBudget.getApprovedSpendingLimitMicros() / 1_000_000.0)
                 : accountBudget.getApprovedSpendingLimitType().name(),
-            accountBudget.hasProposedSpendingLimitMicros()
+            accountBudget.getProposedSpendingLimitCase() == ProposedSpendingLimitCase.PROPOSED_SPENDING_LIMIT_MICROS
                 ? String.format(
-                    "%.2f", accountBudget.getProposedSpendingLimitMicros().getValue() / 1_000_000.0)
+                    "%.2f", accountBudget.getProposedSpendingLimitMicros() / 1_000_000.0)
                 : accountBudget.getProposedSpendingLimitType().name(),
-            accountBudget.getApprovedStartDateTime().getValue(),
-            accountBudget.getProposedStartDateTime().getValue(),
-            accountBudget.hasApprovedEndDateTime()
-                ? accountBudget.getApprovedEndDateTime().getValue()
+            accountBudget.getApprovedStartDateTime(),
+            accountBudget.getProposedStartDateTime(),
+            accountBudget.getApprovedEndTimeCase() == ApprovedEndTimeCase.APPROVED_END_DATE_TIME
+                ? accountBudget.getApprovedEndDateTime()
                 : accountBudget.getApprovedEndTimeType(),
-            accountBudget.hasProposedEndDateTime()
-                ? accountBudget.getProposedEndDateTime().getValue()
+            accountBudget.getProposedEndTimeCase() == ProposedEndTimeCase.PROPOSED_END_DATE_TIME
+                ? accountBudget.getProposedEndDateTime()
                 : accountBudget.getProposedEndTimeType());
       }
     }

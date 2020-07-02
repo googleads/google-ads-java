@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdParameter;
-import com.google.ads.googleads.v4.services.AdParameterOperation;
-import com.google.ads.googleads.v4.services.AdParameterServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdParameterResult;
-import com.google.ads.googleads.v4.services.MutateAdParametersResponse;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdParameter;
+import com.google.ads.googleads.v5.services.AdParameterOperation;
+import com.google.ads.googleads.v5.services.AdParameterServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdParameterResult;
+import com.google.ads.googleads.v5.services.MutateAdParametersResponse;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -108,22 +108,22 @@ public class SetAdParameters {
     // (One with parameter_index = 1 and one with parameter_index = 2.)
     AdParameter adParameter1 =
         AdParameter.newBuilder()
-            .setAdGroupCriterion(StringValue.of(adGroupCriterionResourceName))
+            .setAdGroupCriterion(adGroupCriterionResourceName)
             // The unique index of this ad parameter. Must be either 1 or 2.
-            .setParameterIndex(Int64Value.of(1))
+            .setParameterIndex(1)
             // String containing a numeric value to insert into the ad text.
             // The following restrictions apply: (a) can use comma or period as a separator,
             // with an optional period or comma (respectively) for fractional values,
             // (b) can be prepended or appended with a currency code, (c) can use plus or minus,
             // (d) can use '/' between two numbers.
-            .setInsertionText(StringValue.of("100"))
+            .setInsertionText("100")
             .build();
 
     AdParameter adParameter2 =
         AdParameter.newBuilder()
-            .setAdGroupCriterion(StringValue.of(adGroupCriterionResourceName))
-            .setParameterIndex(Int64Value.of(2))
-            .setInsertionText(StringValue.of("$40"))
+            .setAdGroupCriterion(adGroupCriterionResourceName)
+            .setParameterIndex(2)
+            .setInsertionText("$40")
             .build();
 
     List<AdParameterOperation> operations = new ArrayList<>();

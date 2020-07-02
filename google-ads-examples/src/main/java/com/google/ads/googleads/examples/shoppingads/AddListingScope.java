@@ -18,22 +18,21 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ListingScopeInfo;
-import com.google.ads.googleads.v4.common.ProductBrandInfo;
-import com.google.ads.googleads.v4.common.ProductCustomAttributeInfo;
-import com.google.ads.googleads.v4.common.ProductTypeInfo;
-import com.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex;
-import com.google.ads.googleads.v4.enums.ProductTypeLevelEnum.ProductTypeLevel;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CampaignCriterion;
-import com.google.ads.googleads.v4.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v4.services.CampaignCriterionServiceClient;
-import com.google.ads.googleads.v4.services.CampaignName;
-import com.google.ads.googleads.v4.services.MutateCampaignCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignCriterionResult;
+import com.google.ads.googleads.v5.common.ListingScopeInfo;
+import com.google.ads.googleads.v5.common.ProductBrandInfo;
+import com.google.ads.googleads.v5.common.ProductCustomAttributeInfo;
+import com.google.ads.googleads.v5.common.ProductTypeInfo;
+import com.google.ads.googleads.v5.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex;
+import com.google.ads.googleads.v5.enums.ProductTypeLevelEnum.ProductTypeLevel;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignCriterion;
+import com.google.ads.googleads.v5.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v5.services.CampaignCriterionServiceClient;
+import com.google.ads.googleads.v5.services.MutateCampaignCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignCriterionResult;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -112,11 +111,11 @@ public class AddListingScope {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long campaignId) {
     String campaignResourceName =
-        CampaignName.format(Long.toString(customerId), Long.toString(campaignId));
+        ResourceNames.campaign(customerId, campaignId);
 
     // Creates a campaign criterion to store the listing scope.
     CampaignCriterion.Builder campaignCriterionBuilder =
-        CampaignCriterion.newBuilder().setCampaign(StringValue.of(campaignResourceName));
+        CampaignCriterion.newBuilder().setCampaign(campaignResourceName);
 
     // A listing scope allows you to filter the products that will be included in a given campaign.
     // You can specify multiple dimensions with conditions that must be met for a product to be
@@ -131,7 +130,7 @@ public class AddListingScope {
         .addDimensionsBuilder()
         .setProductBrand(
             ProductBrandInfo.newBuilder()
-                .setValue(StringValue.newBuilder().setValue("google").build()));
+                .setValue("google"));
 
     // Creates a ProductCustomAttribute dimension for INDEX0 set to "top_selling_products".
     listingScopeBuilder
@@ -139,7 +138,7 @@ public class AddListingScope {
         .setProductCustomAttribute(
             ProductCustomAttributeInfo.newBuilder()
                 .setIndex(ProductCustomAttributeIndex.INDEX0)
-                .setValue(StringValue.of("top_selling_products"))
+                .setValue("top_selling_products")
                 .build());
 
     // Creates a ProductType dimension for LEVEL1 set to "electronics".
@@ -148,7 +147,7 @@ public class AddListingScope {
         .setProductType(
             ProductTypeInfo.newBuilder()
                 .setLevel(ProductTypeLevel.LEVEL1)
-                .setValue(StringValue.of("electronics"))
+                .setValue("electronics")
                 .build());
 
     // Creates a ProductType dimension for LEVEL2 set to "smartphones".
@@ -157,7 +156,7 @@ public class AddListingScope {
         .setProductType(
             ProductTypeInfo.newBuilder()
                 .setLevel(ProductTypeLevel.LEVEL2)
-                .setValue(StringValue.of("smartphones"))
+                .setValue("smartphones")
                 .build());
 
     // Create a new campaign criterion containing the listingScope on the campaign.

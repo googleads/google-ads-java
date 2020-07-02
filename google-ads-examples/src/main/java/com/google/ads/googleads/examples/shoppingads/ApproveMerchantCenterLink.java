@@ -19,16 +19,16 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v4.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.MerchantCenterLink;
-import com.google.ads.googleads.v4.services.ListMerchantCenterLinksRequest;
-import com.google.ads.googleads.v4.services.ListMerchantCenterLinksResponse;
-import com.google.ads.googleads.v4.services.MerchantCenterLinkOperation;
-import com.google.ads.googleads.v4.services.MerchantCenterLinkServiceClient;
-import com.google.ads.googleads.v4.services.MutateMerchantCenterLinkResponse;
-import com.google.ads.googleads.v4.services.MutateMerchantCenterLinkResult;
+import com.google.ads.googleads.v5.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.MerchantCenterLink;
+import com.google.ads.googleads.v5.services.ListMerchantCenterLinksRequest;
+import com.google.ads.googleads.v5.services.ListMerchantCenterLinksResponse;
+import com.google.ads.googleads.v5.services.MerchantCenterLinkOperation;
+import com.google.ads.googleads.v5.services.MerchantCenterLinkServiceClient;
+import com.google.ads.googleads.v5.services.MutateMerchantCenterLinkResponse;
+import com.google.ads.googleads.v5.services.MutateMerchantCenterLinkResult;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -124,7 +124,7 @@ public class ApproveMerchantCenterLink {
 
         // Checks if there is a link for the Merchant Center account we are looking for, then only
         // approves the link if it is in a 'PENDING' state.
-        if (merchantCenterAccountId == merchantCenterLink.getId().getValue()
+        if (merchantCenterAccountId == merchantCenterLink.getId()
             && merchantCenterLink.getStatus() == MerchantCenterLinkStatus.PENDING) {
           // Updates the status of Merchant Center link to 'ENABLED' to approve the link.
           updateMerchantCenterLinkStatus(

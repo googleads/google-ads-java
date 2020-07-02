@@ -18,18 +18,18 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.AgeRangeInfo;
-import com.google.ads.googleads.v4.common.GenderInfo;
-import com.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType;
-import com.google.ads.googleads.v4.enums.GenderTypeEnum.GenderType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v4.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.AgeRangeInfo;
+import com.google.ads.googleads.v5.common.GenderInfo;
+import com.google.ads.googleads.v5.enums.AgeRangeTypeEnum.AgeRangeType;
+import com.google.ads.googleads.v5.enums.GenderTypeEnum.GenderType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -103,15 +103,15 @@ public class AddDemographicTargetingCriteria {
     // Creates a gender demographic criterion.
     AdGroupCriterion genderAdGroupCriterionOperation =
         AdGroupCriterion.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setGender(GenderInfo.newBuilder().setType(GenderType.MALE).build())
             .build();
 
     // Creates an age range negative demographic criterion.
     AdGroupCriterion ageRangeNegativeAdGroupCriterionOperation =
         AdGroupCriterion.newBuilder()
-            .setAdGroup(StringValue.of(adGroupResourceName))
-            .setNegative(BoolValue.of(true))
+            .setAdGroup(adGroupResourceName)
+            .setNegative(true)
             .setAgeRange(AgeRangeInfo.newBuilder().setType(AgeRangeType.AGE_RANGE_18_24).build())
             .build();
 

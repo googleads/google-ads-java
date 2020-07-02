@@ -18,15 +18,15 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ExpandedTextAdInfo;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.Ad;
-import com.google.ads.googleads.v4.resources.Recommendation;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.Ad;
+import com.google.ads.googleads.v5.resources.Recommendation;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -126,13 +126,13 @@ public class GetTextAdRecommendations {
               eta.getDescription().getValue());
         }
         if (recommendedAd.getDisplayUrl() != null) {
-          System.out.printf("\tDisplay URL = '%s'%n", recommendedAd.getDisplayUrl().getValue());
+          System.out.printf("\tDisplay URL = '%s'%n", recommendedAd.getDisplayUrl());
         }
-        for (StringValue url : recommendedAd.getFinalUrlsList()) {
-          System.out.printf("\tFinal URL = '%s'%n", url.getValue());
+        for (String url : recommendedAd.getFinalUrlsList()) {
+          System.out.printf("\tFinal URL = '%s'%n", url);
         }
-        for (StringValue url : recommendedAd.getFinalMobileUrlsList()) {
-          System.out.printf("\tFinal Mobile URL = '%s'%n", url.getValue());
+        for (String url : recommendedAd.getFinalMobileUrlsList()) {
+          System.out.printf("\tFinal Mobile URL = '%s'%n", url);
         }
       }
     }

@@ -18,25 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.ListingDimensionInfo;
-import com.google.ads.googleads.v4.common.ListingGroupInfo;
-import com.google.ads.googleads.v4.common.ProductBrandInfo;
-import com.google.ads.googleads.v4.common.ProductConditionInfo;
-import com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v4.enums.ListingGroupTypeEnum.ListingGroupType;
-import com.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.AdGroupCriterion;
-import com.google.ads.googleads.v4.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v4.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.ListingDimensionInfo;
+import com.google.ads.googleads.v5.common.ListingGroupInfo;
+import com.google.ads.googleads.v5.common.ProductBrandInfo;
+import com.google.ads.googleads.v5.common.ProductConditionInfo;
+import com.google.ads.googleads.v5.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v5.enums.ListingGroupTypeEnum.ListingGroupType;
+import com.google.ads.googleads.v5.enums.ProductConditionEnum.ProductCondition;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.AdGroupCriterion;
+import com.google.ads.googleads.v5.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v5.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -220,7 +220,7 @@ public class AddShoppingProductListingGroupTree {
             adGroupCriterionResourceNameConditionOther,
             ListingDimensionInfo.newBuilder()
                 .setProductBrand(
-                    ProductBrandInfo.newBuilder().setValue(StringValue.of("CoolBrand")).build())
+                    ProductBrandInfo.newBuilder().setValue("CoolBrand").build())
                 .build(),
             900_000L);
     operations.add(
@@ -236,7 +236,7 @@ public class AddShoppingProductListingGroupTree {
             adGroupCriterionResourceNameConditionOther,
             ListingDimensionInfo.newBuilder()
                 .setProductBrand(
-                    ProductBrandInfo.newBuilder().setValue(StringValue.of("CheapBrand")).build())
+                    ProductBrandInfo.newBuilder().setValue("CheapBrand").build())
                 .build(),
             10_000L);
     operations.add(
@@ -356,7 +356,7 @@ public class AddShoppingProductListingGroupTree {
     AdGroupCriterion adGroupCriterion =
         AdGroupCriterion.newBuilder()
             // The ad group the listing group will be attached to.
-            .setAdGroup(StringValue.of(adGroupResourceName))
+            .setAdGroup(adGroupResourceName)
             .setStatus(AdGroupCriterionStatus.ENABLED)
             .setListingGroup(
                 ListingGroupInfo.newBuilder()
@@ -365,13 +365,13 @@ public class AddShoppingProductListingGroupTree {
                     // Sets the ad group criterion resource name for the parent listing group.
                     // This can include a temporary ID if the parent criterion is not yet created.
                     // Use StringValue to convert from a String to a compatible argument type.
-                    .setParentAdGroupCriterion(StringValue.of(parentAdGroupCriterionResourceName))
+                    .setParentAdGroupCriterion(parentAdGroupCriterionResourceName)
                     // Case values contain the listing dimension used for the node.
                     .setCaseValue(listingDimensionInfo)
                     .build())
             // Sets the bid for this listing group unit.
             // This will be used as the CPC bid for items that are included in this listing group
-            .setCpcBidMicros(Int64Value.of(cpcBidMicros))
+            .setCpcBidMicros(cpcBidMicros)
             .build();
 
     return adGroupCriterion;
@@ -411,7 +411,7 @@ public class AddShoppingProductListingGroupTree {
                     // Sets the ad group criterion resource name for the parent listing group.
                     // This can include a temporary ID if the parent criterion is not yet created.
                     // Uses StringValue to convert from a String to a compatible argument type.
-                    .setParentAdGroupCriterion(StringValue.of(parentAdGroupCriterionResourceName))
+                    .setParentAdGroupCriterion(parentAdGroupCriterionResourceName)
                     // Case values contain the listing dimension used for the node.
                     .setCaseValue(listingDimensionInfo)
                     .build())

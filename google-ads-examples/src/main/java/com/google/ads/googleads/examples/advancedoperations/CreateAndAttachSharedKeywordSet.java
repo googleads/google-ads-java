@@ -18,25 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.common.KeywordInfo;
-import com.google.ads.googleads.v4.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CampaignSharedSet;
-import com.google.ads.googleads.v4.resources.SharedCriterion;
-import com.google.ads.googleads.v4.resources.SharedSet;
-import com.google.ads.googleads.v4.services.CampaignName;
-import com.google.ads.googleads.v4.services.CampaignSharedSetOperation;
-import com.google.ads.googleads.v4.services.CampaignSharedSetServiceClient;
-import com.google.ads.googleads.v4.services.MutateCampaignSharedSetsResponse;
-import com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateSharedCriterionResult;
-import com.google.ads.googleads.v4.services.MutateSharedSetsResponse;
-import com.google.ads.googleads.v4.services.SharedCriterionOperation;
-import com.google.ads.googleads.v4.services.SharedCriterionServiceClient;
-import com.google.ads.googleads.v4.services.SharedSetOperation;
-import com.google.ads.googleads.v4.services.SharedSetServiceClient;
+import com.google.ads.googleads.v5.common.KeywordInfo;
+import com.google.ads.googleads.v5.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v5.enums.SharedSetTypeEnum.SharedSetType;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignSharedSet;
+import com.google.ads.googleads.v5.resources.SharedCriterion;
+import com.google.ads.googleads.v5.resources.SharedSet;
+import com.google.ads.googleads.v5.services.CampaignSharedSetOperation;
+import com.google.ads.googleads.v5.services.CampaignSharedSetServiceClient;
+import com.google.ads.googleads.v5.services.MutateCampaignSharedSetsResponse;
+import com.google.ads.googleads.v5.services.MutateSharedCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateSharedCriterionResult;
+import com.google.ads.googleads.v5.services.MutateSharedSetsResponse;
+import com.google.ads.googleads.v5.services.SharedCriterionOperation;
+import com.google.ads.googleads.v5.services.SharedCriterionServiceClient;
+import com.google.ads.googleads.v5.services.SharedSetOperation;
+import com.google.ads.googleads.v5.services.SharedSetServiceClient;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
@@ -113,7 +113,7 @@ public class CreateAndAttachSharedKeywordSet {
     // Creates shared negative keyword set.
     SharedSet sharedSet =
         SharedSet.newBuilder()
-            .setName(StringValue.of("API Negative keyword list - " + System.currentTimeMillis()))
+            .setName("API Negative keyword list - " + System.currentTimeMillis())
             .setType(SharedSetType.NEGATIVE_KEYWORDS)
             .build();
 
@@ -135,10 +135,10 @@ public class CreateAndAttachSharedKeywordSet {
           SharedCriterion.newBuilder()
               .setKeyword(
                   KeywordInfo.newBuilder()
-                      .setText(StringValue.of(keyword))
+                      .setText(keyword)
                       .setMatchType(KeywordMatchType.BROAD)
                       .build())
-              .setSharedSet(StringValue.of(sharedSetResourceName))
+              .setSharedSet(sharedSetResourceName)
               .build();
 
       SharedCriterionOperation sharedCriterionOperation =
@@ -158,11 +158,11 @@ public class CreateAndAttachSharedKeywordSet {
     }
 
     String campaignResourceName =
-        CampaignName.format(Long.toString(customerId), Long.toString(campaignId));
+        ResourceNames.campaign(customerId, campaignId);
     CampaignSharedSet campaignSharedSet =
         CampaignSharedSet.newBuilder()
-            .setCampaign(StringValue.of(campaignResourceName))
-            .setSharedSet(StringValue.of(sharedSetResourceName))
+            .setCampaign(campaignResourceName)
+            .setSharedSet(sharedSetResourceName)
             .build();
 
     CampaignSharedSetOperation campaignSharedSetOperation =

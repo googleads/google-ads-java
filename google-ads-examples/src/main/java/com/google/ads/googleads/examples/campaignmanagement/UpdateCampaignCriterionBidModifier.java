@@ -19,16 +19,16 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v4.common.DeviceInfo;
-import com.google.ads.googleads.v4.enums.DeviceEnum.Device;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CampaignCriterion;
-import com.google.ads.googleads.v4.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v4.services.CampaignCriterionServiceClient;
-import com.google.ads.googleads.v4.services.MutateCampaignCriteriaResponse;
-import com.google.ads.googleads.v4.services.MutateCampaignCriterionResult;
-import com.google.ads.googleads.v4.utils.ResourceNames;
+import com.google.ads.googleads.v5.common.DeviceInfo;
+import com.google.ads.googleads.v5.enums.DeviceEnum.Device;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CampaignCriterion;
+import com.google.ads.googleads.v5.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v5.services.CampaignCriterionServiceClient;
+import com.google.ads.googleads.v5.services.MutateCampaignCriteriaResponse;
+import com.google.ads.googleads.v5.services.MutateCampaignCriterionResult;
+import com.google.ads.googleads.v5.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.FloatValue;
 import java.io.FileNotFoundException;
@@ -127,7 +127,7 @@ public class UpdateCampaignCriterionBidModifier {
     CampaignCriterion campaignCriterion =
         CampaignCriterion.newBuilder()
             .setResourceName(criterionResourceName)
-            .setBidModifier(FloatValue.of(bidModifier))
+            .setBidModifier(bidModifier)
             .setDevice(DeviceInfo.newBuilder().setType(Device.MOBILE).build())
             .build();
 

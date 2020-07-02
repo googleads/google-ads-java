@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v4.errors.GoogleAdsError;
-import com.google.ads.googleads.v4.errors.GoogleAdsException;
-import com.google.ads.googleads.v4.resources.CarrierConstant;
-import com.google.ads.googleads.v4.resources.LanguageConstant;
-import com.google.ads.googleads.v4.services.GoogleAdsRow;
-import com.google.ads.googleads.v4.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v4.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v5.errors.GoogleAdsError;
+import com.google.ads.googleads.v5.errors.GoogleAdsException;
+import com.google.ads.googleads.v5.resources.CarrierConstant;
+import com.google.ads.googleads.v5.resources.LanguageConstant;
+import com.google.ads.googleads.v5.services.GoogleAdsRow;
+import com.google.ads.googleads.v5.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v5.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.rpc.ServerStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -157,10 +157,10 @@ public class SearchForLanguageAndCarrierConstants {
           LanguageConstant languageConstant = googleAdsRow.getLanguageConstant();
           System.out.printf(
               "Language with ID %d, code '%s', name '%s', and targetable '%s' was found.%n",
-              languageConstant.getId().getValue(),
-              languageConstant.getCode().getValue(),
-              languageConstant.getName().getValue(),
-              languageConstant.getTargetable().getValue());
+              languageConstant.getId(),
+              languageConstant.getCode(),
+              languageConstant.getName(),
+              languageConstant.getTargetable());
         }
       }
     }
@@ -206,9 +206,9 @@ public class SearchForLanguageAndCarrierConstants {
           CarrierConstant carrierConstant = googleAdsRow.getCarrierConstant();
           System.out.printf(
               "Carrier with ID %d, name '%s', and country code '%s' was found.%n",
-              carrierConstant.getId().getValue(),
-              carrierConstant.getName().getValue(),
-              carrierConstant.getCountryCode().getValue());
+              carrierConstant.getId(),
+              carrierConstant.getName(),
+              carrierConstant.getCountryCode());
         }
       }
     }
