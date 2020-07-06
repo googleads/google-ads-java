@@ -69,4 +69,9 @@ public final class ArgumentNames {
       "--squareMarketingImageAssetResourceName";
   public static final String LANGUAGE_NAME = "--languageName";
   public static final String COUNTRY_CODE = "--countryCode";
+  public static final String OFFLINE_USER_DATA_JOB_TYPE = "--offlineUserDataJobType";
+  public static final String EXTERNAL_ID = "--externalId";
+  public static final String ADVERTISER_UPLOAD_DATE_TIME = "--advertiserUploadDateTime";
+  public static final String BRIDGE_MAP_VERSION_ID = "--bridgeMapVersionId";
+  public static final String PARTNER_ID = "--partnerId";
 }
