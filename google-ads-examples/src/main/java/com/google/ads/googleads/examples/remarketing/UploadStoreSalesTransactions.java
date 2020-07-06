@@ -55,7 +55,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * Uploads offline data for store sales transactions.
  *
- * <p>This feature is only available to whitelisted accounts. See
+ * <p>This feature is only available to allowlisted accounts. See
  * https://support.google.com/google-ads/answer/7620302 for more details.
  */
 public class UploadStoreSalesTransactions {
