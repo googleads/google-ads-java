@@ -22,7 +22,7 @@ import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.lib.catalog.GoogleAdsVersionFactory;
 import com.google.ads.googleads.lib.catalog.Version;
 import com.google.ads.googleads.lib.catalog.annotation.ServiceClientDescriptor;
-import com.google.ads.googleads.lib.catalog.annotation.VersionDescriptor;
+import com.google.ads.googleads.annotations.api.VersionDescriptor;
 import com.google.ads.googleads.v1.services.MockGoogleAdsService;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
@@ -113,7 +113,8 @@ public class GoogleAdsVersionFactoryTest {
 
   @VersionDescriptor(
       versionName = "v1",
-      googleAdsExceptionFactory = BaseGoogleAdsException.Factory.class)
+      googleAdsExceptionFactory = BaseGoogleAdsException.Factory.class,
+      catalogName = "v1")
   public interface MissingService {
 
     DummyClient getClient();
@@ -121,7 +122,8 @@ public class GoogleAdsVersionFactoryTest {
 
   @VersionDescriptor(
       versionName = "v1",
-      googleAdsExceptionFactory = BaseGoogleAdsException.Factory.class)
+      googleAdsExceptionFactory = BaseGoogleAdsException.Factory.class,
+      catalogName = "v1")
   public interface WorkingExample {
 
     @ServiceClientDescriptor(settingsClass = DummySettings.class)

@@ -18,14 +18,15 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.services.GenerateKeywordIdeaResponse;
-import com.google.ads.googleads.v3.services.GenerateKeywordIdeaResult;
-import com.google.ads.googleads.v3.services.GenerateKeywordIdeasRequest;
-import com.google.ads.googleads.v3.services.KeywordPlanIdeaServiceClient;
-import com.google.ads.googleads.v3.utils.ResourceNames;
+import com.google.ads.googleads.v4.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork;
+import com.google.ads.googleads.v4.errors.GoogleAdsError;
+import com.google.ads.googleads.v4.errors.GoogleAdsException;
+import com.google.ads.googleads.v4.services.GenerateKeywordIdeaResponse;
+import com.google.ads.googleads.v4.services.GenerateKeywordIdeaResult;
+import com.google.ads.googleads.v4.services.GenerateKeywordIdeasRequest;
+import com.google.ads.googleads.v4.services.KeywordPlanIdeaServiceClient;
+import com.google.ads.googleads.v4.services.KeywordPlanIdeaServiceClient.GenerateKeywordIdeasPagedResponse;
+import com.google.ads.googleads.v4.utils.ResourceNames;
 import com.google.protobuf.StringValue;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -183,10 +184,10 @@ public class GenerateKeywordIdeas {
       }
 
       // Sends the keyword ideas request.
-      GenerateKeywordIdeaResponse response =
+      GenerateKeywordIdeasPagedResponse response =
           keywordPlanServiceClient.generateKeywordIdeas(requestBuilder.build());
       // Prints each result in the response.
-      for (GenerateKeywordIdeaResult result : response.getResultsList()) {
+      for (GenerateKeywordIdeaResult result : response.iterateAll()) {
         System.out.printf(
             "Keyword idea text '%s' has %d average monthly searches and '%s' competition.%n",
             result.getText().getValue(),

@@ -18,24 +18,24 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v3.common.AdMediaBundleAsset;
-import com.google.ads.googleads.v3.common.DisplayUploadAdInfo;
-import com.google.ads.googleads.v3.common.MediaBundleAsset;
-import com.google.ads.googleads.v3.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType;
-import com.google.ads.googleads.v3.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType;
-import com.google.ads.googleads.v3.errors.GoogleAdsError;
-import com.google.ads.googleads.v3.errors.GoogleAdsException;
-import com.google.ads.googleads.v3.resources.Ad;
-import com.google.ads.googleads.v3.resources.AdGroupAd;
-import com.google.ads.googleads.v3.resources.Asset;
-import com.google.ads.googleads.v3.services.AdGroupAdOperation;
-import com.google.ads.googleads.v3.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v3.services.AssetOperation;
-import com.google.ads.googleads.v3.services.AssetServiceClient;
-import com.google.ads.googleads.v3.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v3.services.MutateAssetsResponse;
-import com.google.ads.googleads.v3.utils.ResourceNames;
+import com.google.ads.googleads.v4.common.AdMediaBundleAsset;
+import com.google.ads.googleads.v4.common.DisplayUploadAdInfo;
+import com.google.ads.googleads.v4.common.MediaBundleAsset;
+import com.google.ads.googleads.v4.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v4.enums.AssetTypeEnum.AssetType;
+import com.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType;
+import com.google.ads.googleads.v4.errors.GoogleAdsError;
+import com.google.ads.googleads.v4.errors.GoogleAdsException;
+import com.google.ads.googleads.v4.resources.Ad;
+import com.google.ads.googleads.v4.resources.AdGroupAd;
+import com.google.ads.googleads.v4.resources.Asset;
+import com.google.ads.googleads.v4.services.AdGroupAdOperation;
+import com.google.ads.googleads.v4.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v4.services.AssetOperation;
+import com.google.ads.googleads.v4.services.AssetServiceClient;
+import com.google.ads.googleads.v4.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v4.services.MutateAssetsResponse;
+import com.google.ads.googleads.v4.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -111,7 +111,7 @@ public class AddDisplayUploadAd {
     // There are several types of display upload ads. For this example, we will create
     // an HTML5 upload ad, which requires a media bundle.
     // The DisplayUploadProductType field lists the available display upload types:
-    // https://developers.google.com/google-ads/api/reference/rpc/v3/DisplayUploadAdInfo
+    // https://developers.google.com/google-ads/api/reference/rpc/v4/DisplayUploadAdInfo
 
     // Creates a new media bundle asset and returns the resource name.
     String adAssetResourceName = createMediaBundleAsset(googleAdsClient, customerId);
@@ -182,7 +182,7 @@ public class AddDisplayUploadAd {
             .setName(StringValue.of("Ad for HTML5"))
             .addFinalUrls(StringValue.of("http://example.com/html5"))
             // Exactly one ad data field must be included to specify the ad type. See
-            // https://developers.google.com/google-ads/api/reference/rpc/v3/Ad for the full
+            // https://developers.google.com/google-ads/api/reference/rpc/v4/Ad for the full
             // list of available types.
             .setDisplayUploadAd(
                 DisplayUploadAdInfo.newBuilder()

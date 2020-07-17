@@ -18,9 +18,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import com.google.ads.googleads.annotations.api.VersionDescriptor;
 import com.google.ads.googleads.lib.BaseGoogleAdsException;
 import com.google.ads.googleads.lib.GoogleAdsAllVersions;
-import com.google.ads.googleads.lib.catalog.annotation.VersionDescriptor;
 import com.google.api.gax.rpc.ApiException;
 import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.InvalidProtocolBufferException;
@@ -54,7 +54,8 @@ public class VersionDescriptorLoaderTest {
   @Test
   public void loadsAllVersions() {
     assertEquals(
-        expectedVersions, VersionDescriptorLoader.forVersionList(GoogleAdsAllVersions.class).getVersions());
+        expectedVersions,
+        VersionDescriptorLoader.forVersionList(GoogleAdsAllVersions.class).getVersions());
   }
 
   /** Ensures that a missing VersionDescriptor annotation is ignored. */
@@ -99,12 +100,16 @@ public class VersionDescriptorLoaderTest {
     ServiceClientNoExceptionConstructor getClient();
   }
 
-  @VersionDescriptor(versionName = "v1", googleAdsExceptionFactory = FakeExceptionFactory.class)
+  @VersionDescriptor(
+      versionName = "v1",
+      googleAdsExceptionFactory = FakeExceptionFactory.class,
+      catalogName = "v1")
   interface ServiceClient {}
 
   @VersionDescriptor(
       versionName = "v1",
-      googleAdsExceptionFactory = FakeExceptionFactoryNoConstructor.class)
+      googleAdsExceptionFactory = FakeExceptionFactoryNoConstructor.class,
+      catalogName = "v1")
   interface ServiceClientNoExceptionConstructor {}
 
   static class FakeExceptionFactory extends BaseGoogleAdsException.Factory {
@@ -132,7 +137,29 @@ public class VersionDescriptorLoaderTest {
     }
   }
 
-  static class FakeExceptionFactoryNoConstructor extends FakeExceptionFactory {
+  static class FakeExceptionFactoryNoConstructor extends BaseGoogleAdsException.Factory {
     private FakeExceptionFactoryNoConstructor() {}
+
+    @Override
+    protected BaseGoogleAdsException createException(
+        ApiException source, byte[] protoData, Metadata metadata) {
+      return null;
+    }
+
+    @Override
+    public Metadata.Key<byte[]> getTrailerKey() {
+      return null;
+    }
+
+    @Override
+    public Message createGoogleAdsFailure() {
+      return null;
+    }
+
+    @Override
+    public Message createGoogleAdsFailure(byte[] serializedBytes)
+        throws InvalidProtocolBufferException {
+      return null;
+    }
   }
 }
