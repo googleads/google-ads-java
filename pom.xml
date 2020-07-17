@@ -211,10 +211,11 @@
 
   <modules>
     <module>google-ads</module>
+    <module>google-ads-annotation-processing</module>
   </modules>
 
   <profiles>
-    <!-- Enables the examples project by default.
+    <!-- Enables the examples projects by default.
          Provides a profile to disable for Sonatype deploy. -->
     <profile>
       <id>examples-project</id>

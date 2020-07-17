@@ -14,8 +14,8 @@
 
 package com.google.ads.googleads.lib.catalog;
 
+import com.google.ads.googleads.annotations.api.VersionDescriptor;
 import com.google.ads.googleads.lib.BaseGoogleAdsException;
-import com.google.ads.googleads.lib.catalog.annotation.VersionDescriptor;
 import com.google.common.base.Preconditions;
 import java.util.Objects;
 
@@ -35,7 +35,7 @@ public final class Version implements Comparable<Version> {
       throws IllegalAccessException, InstantiationException {
     this(
         descriptor.versionName(),
-        descriptor.googleAdsExceptionFactory().newInstance(),
+        (BaseGoogleAdsException.Factory) descriptor.googleAdsExceptionFactory().newInstance(),
         descriptorClass);
   }
 
@@ -52,6 +52,7 @@ public final class Version implements Comparable<Version> {
 
   /**
    * Returns the version name, e.g. "v1".
+   *
    * @return the version name
    */
   public String getVersionName() {

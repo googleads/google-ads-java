@@ -15,7 +15,7 @@
 package com.google.ads.googleads.v1.services;
 
 import com.google.ads.googleads.lib.catalog.annotation.ServiceClientDescriptor;
-import com.google.ads.googleads.lib.catalog.annotation.VersionDescriptor;
+import com.google.ads.googleads.annotations.api.VersionDescriptor;
 import com.google.ads.googleads.v1.errors.GoogleAdsException;
 
 @VersionDescriptor(versionName = "v1", googleAdsExceptionFactory = GoogleAdsException.Factory.class)
