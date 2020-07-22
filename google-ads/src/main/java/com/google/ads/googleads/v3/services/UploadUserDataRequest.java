@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.UploadUserDataRequest}
  */
-public  final class UploadUserDataRequest extends
+public final class UploadUserDataRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.UploadUserDataRequest)
     UploadUserDataRequestOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private UploadUserDataRequest() {
     customerId_ = "";
     operations_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UploadUserDataRequest();
   }
 
   @java.lang.Override
@@ -69,9 +76,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               operations_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.UserDataOperation>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             operations_.add(
                 input.readMessage(com.google.ads.googleads.v3.services.UserDataOperation.parser(), extensionRegistry));
@@ -92,7 +99,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         operations_ = java.util.Collections.unmodifiableList(operations_);
       }
       this.unknownFields = unknownFields.build();
@@ -112,11 +119,11 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.services.UploadUserDataRequest.class, com.google.ads.googleads.v3.services.UploadUserDataRequest.Builder.class);
   }
 
-  private int bitField0_;
   private int metadataCase_ = 0;
   private java.lang.Object metadata_;
   public enum MetadataCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CUSTOMER_MATCH_USER_LIST_METADATA(2),
     METADATA_NOT_SET(0);
     private final int value;
@@ -124,6 +131,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -157,7 +166,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -176,7 +187,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -200,6 +213,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.UserDataOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.UserDataOperation> getOperationsList() {
     return operations_;
   }
@@ -210,6 +224,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.UserDataOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.UserDataOperationOrBuilder> 
       getOperationsOrBuilderList() {
     return operations_;
@@ -221,6 +236,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.UserDataOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getOperationsCount() {
     return operations_.size();
   }
@@ -231,6 +247,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.UserDataOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.UserDataOperation getOperations(int index) {
     return operations_.get(index);
   }
@@ -241,6 +258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.UserDataOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.UserDataOperationOrBuilder getOperationsOrBuilder(
       int index) {
     return operations_.get(index);
@@ -253,7 +271,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 2;</code>
+   * @return Whether the customerMatchUserListMetadata field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerMatchUserListMetadata() {
     return metadataCase_ == 2;
   }
@@ -263,7 +283,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 2;</code>
+   * @return The customerMatchUserListMetadata.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CustomerMatchUserListMetadata getCustomerMatchUserListMetadata() {
     if (metadataCase_ == 2) {
        return (com.google.ads.googleads.v3.common.CustomerMatchUserListMetadata) metadata_;
@@ -277,6 +299,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CustomerMatchUserListMetadataOrBuilder getCustomerMatchUserListMetadataOrBuilder() {
     if (metadataCase_ == 2) {
        return (com.google.ads.googleads.v3.common.CustomerMatchUserListMetadata) metadata_;
@@ -522,7 +545,7 @@ private static final long serialVersionUID = 0L;
 
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         operationsBuilder_.clear();
       }
@@ -555,12 +578,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.services.UploadUserDataRequest buildPartial() {
       com.google.ads.googleads.v3.services.UploadUserDataRequest result = new com.google.ads.googleads.v3.services.UploadUserDataRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.customerId_ = customerId_;
       if (operationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.operations_ = operations_;
       } else {
@@ -573,7 +595,6 @@ private static final long serialVersionUID = 0L;
           result.metadata_ = customerMatchUserListMetadataBuilder_.build();
         }
       }
-      result.bitField0_ = to_bitField0_;
       result.metadataCase_ = metadataCase_;
       onBuilt();
       return result;
@@ -631,7 +652,7 @@ private static final long serialVersionUID = 0L;
         if (!other.operations_.isEmpty()) {
           if (operations_.isEmpty()) {
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureOperationsIsMutable();
             operations_.addAll(other.operations_);
@@ -644,7 +665,7 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.dispose();
             operationsBuilder_ = null;
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             operationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getOperationsFieldBuilder() : null;
@@ -714,6 +735,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -733,6 +755,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -753,6 +776,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -770,6 +795,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -783,6 +809,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -799,9 +827,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.services.UserDataOperation> operations_ =
       java.util.Collections.emptyList();
     private void ensureOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         operations_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.UserDataOperation>(operations_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -995,7 +1023,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearOperations() {
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         operationsBuilder_.clear();
@@ -1100,7 +1128,7 @@ private static final long serialVersionUID = 0L;
         operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.services.UserDataOperation, com.google.ads.googleads.v3.services.UserDataOperation.Builder, com.google.ads.googleads.v3.services.UserDataOperationOrBuilder>(
                 operations_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         operations_ = null;
@@ -1116,7 +1144,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 2;</code>
+     * @return Whether the customerMatchUserListMetadata field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerMatchUserListMetadata() {
       return metadataCase_ == 2;
     }
@@ -1126,7 +1156,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 2;</code>
+     * @return The customerMatchUserListMetadata.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.CustomerMatchUserListMetadata getCustomerMatchUserListMetadata() {
       if (customerMatchUserListMetadataBuilder_ == null) {
         if (metadataCase_ == 2) {
@@ -1244,6 +1276,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.CustomerMatchUserListMetadataOrBuilder getCustomerMatchUserListMetadataOrBuilder() {
       if ((metadataCase_ == 2) && (customerMatchUserListMetadataBuilder_ != null)) {
         return customerMatchUserListMetadataBuilder_.getMessageOrBuilder();

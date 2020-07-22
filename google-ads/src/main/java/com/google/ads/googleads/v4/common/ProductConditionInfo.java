@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ProductConditionInfo}
  */
-public  final class ProductConditionInfo extends
+public final class ProductConditionInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ProductConditionInfo)
     ProductConditionInfoOrBuilder {
@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
    * @return The enum numeric value on the wire for condition.
    */
-  public int getConditionValue() {
+  @java.lang.Override public int getConditionValue() {
     return condition_;
   }
   /**
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
    * @return The condition.
    */
-  public com.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition getCondition() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition getCondition() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition result = com.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition.valueOf(condition_);
     return result == null ? com.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition.UNRECOGNIZED : result;
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
      * @return The enum numeric value on the wire for condition.
      */
-    public int getConditionValue() {
+    @java.lang.Override public int getConditionValue() {
       return condition_;
     }
     /**
@@ -445,6 +445,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConditionValue(int value) {
+      
       condition_ = value;
       onChanged();
       return this;
@@ -457,6 +458,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
      * @return The condition.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition getCondition() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition result = com.google.ads.googleads.v4.enums.ProductConditionEnum.ProductCondition.valueOf(condition_);

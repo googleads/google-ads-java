@@ -15,6 +15,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -60,6 +64,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value external_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the externalId field is set.
    */
   boolean hasExternalId();
   /**
@@ -68,6 +73,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value external_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The externalId.
    */
   com.google.protobuf.Int64Value getExternalId();
   /**
@@ -85,6 +91,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -93,6 +100,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType getType();
 
@@ -102,6 +110,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -110,6 +119,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus getStatus();
 
@@ -119,6 +129,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason failure_reason = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for failureReason.
    */
   int getFailureReasonValue();
   /**
@@ -127,6 +138,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason failure_reason = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The failureReason.
    */
   com.google.ads.googleads.v3.enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason getFailureReason();
 
@@ -136,6 +148,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the customerMatchUserListMetadata field is set.
    */
   boolean hasCustomerMatchUserListMetadata();
   /**
@@ -144,6 +157,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomerMatchUserListMetadata customer_match_user_list_metadata = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The customerMatchUserListMetadata.
    */
   com.google.ads.googleads.v3.common.CustomerMatchUserListMetadata getCustomerMatchUserListMetadata();
   /**
@@ -161,6 +175,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.StoreSalesMetadata store_sales_metadata = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the storeSalesMetadata field is set.
    */
   boolean hasStoreSalesMetadata();
   /**
@@ -169,6 +184,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.StoreSalesMetadata store_sales_metadata = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The storeSalesMetadata.
    */
   com.google.ads.googleads.v3.common.StoreSalesMetadata getStoreSalesMetadata();
   /**

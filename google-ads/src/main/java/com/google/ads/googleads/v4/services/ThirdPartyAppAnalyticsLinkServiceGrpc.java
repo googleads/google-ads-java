@@ -22,7 +22,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/third_party_app_analytics_link_service.proto")
 public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
 
@@ -31,49 +31,49 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.ThirdPartyAppAnalyticsLinkService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetThirdPartyAppAnalyticsLinkMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest,
-      com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink> METHOD_GET_THIRD_PARTY_APP_ANALYTICS_LINK = getGetThirdPartyAppAnalyticsLinkMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest,
       com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink> getGetThirdPartyAppAnalyticsLinkMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetThirdPartyAppAnalyticsLink",
+      requestType = com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest,
       com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink> getGetThirdPartyAppAnalyticsLinkMethod() {
-    return getGetThirdPartyAppAnalyticsLinkMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest,
-      com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink> getGetThirdPartyAppAnalyticsLinkMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest, com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink> getGetThirdPartyAppAnalyticsLinkMethod;
     if ((getGetThirdPartyAppAnalyticsLinkMethod = ThirdPartyAppAnalyticsLinkServiceGrpc.getGetThirdPartyAppAnalyticsLinkMethod) == null) {
       synchronized (ThirdPartyAppAnalyticsLinkServiceGrpc.class) {
         if ((getGetThirdPartyAppAnalyticsLinkMethod = ThirdPartyAppAnalyticsLinkServiceGrpc.getGetThirdPartyAppAnalyticsLinkMethod) == null) {
-          ThirdPartyAppAnalyticsLinkServiceGrpc.getGetThirdPartyAppAnalyticsLinkMethod = getGetThirdPartyAppAnalyticsLinkMethod = 
+          ThirdPartyAppAnalyticsLinkServiceGrpc.getGetThirdPartyAppAnalyticsLinkMethod = getGetThirdPartyAppAnalyticsLinkMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest, com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.ThirdPartyAppAnalyticsLinkService", "GetThirdPartyAppAnalyticsLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetThirdPartyAppAnalyticsLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink.getDefaultInstance()))
-                  .setSchemaDescriptor(new ThirdPartyAppAnalyticsLinkServiceMethodDescriptorSupplier("GetThirdPartyAppAnalyticsLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ThirdPartyAppAnalyticsLinkServiceMethodDescriptorSupplier("GetThirdPartyAppAnalyticsLink"))
+              .build();
         }
-     }
-     return getGetThirdPartyAppAnalyticsLinkMethod;
+      }
+    }
+    return getGetThirdPartyAppAnalyticsLinkMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ThirdPartyAppAnalyticsLinkServiceStub newStub(io.grpc.Channel channel) {
-    return new ThirdPartyAppAnalyticsLinkServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ThirdPartyAppAnalyticsLinkServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ThirdPartyAppAnalyticsLinkServiceStub>() {
+        @java.lang.Override
+        public ThirdPartyAppAnalyticsLinkServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ThirdPartyAppAnalyticsLinkServiceStub(channel, callOptions);
+        }
+      };
+    return ThirdPartyAppAnalyticsLinkServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -81,7 +81,14 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
    */
   public static ThirdPartyAppAnalyticsLinkServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ThirdPartyAppAnalyticsLinkServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ThirdPartyAppAnalyticsLinkServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ThirdPartyAppAnalyticsLinkServiceBlockingStub>() {
+        @java.lang.Override
+        public ThirdPartyAppAnalyticsLinkServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ThirdPartyAppAnalyticsLinkServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ThirdPartyAppAnalyticsLinkServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -89,7 +96,14 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
    */
   public static ThirdPartyAppAnalyticsLinkServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ThirdPartyAppAnalyticsLinkServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ThirdPartyAppAnalyticsLinkServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ThirdPartyAppAnalyticsLinkServiceFutureStub>() {
+        @java.lang.Override
+        public ThirdPartyAppAnalyticsLinkServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ThirdPartyAppAnalyticsLinkServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ThirdPartyAppAnalyticsLinkServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -107,13 +121,13 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
      */
     public void getThirdPartyAppAnalyticsLink(com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetThirdPartyAppAnalyticsLinkMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetThirdPartyAppAnalyticsLinkMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetThirdPartyAppAnalyticsLinkMethodHelper(),
+            getGetThirdPartyAppAnalyticsLinkMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest,
@@ -129,19 +143,15 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
    * app analytics.
    * </pre>
    */
-  public static final class ThirdPartyAppAnalyticsLinkServiceStub extends io.grpc.stub.AbstractStub<ThirdPartyAppAnalyticsLinkServiceStub> {
-    private ThirdPartyAppAnalyticsLinkServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ThirdPartyAppAnalyticsLinkServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ThirdPartyAppAnalyticsLinkServiceStub extends io.grpc.stub.AbstractAsyncStub<ThirdPartyAppAnalyticsLinkServiceStub> {
+    private ThirdPartyAppAnalyticsLinkServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ThirdPartyAppAnalyticsLinkServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ThirdPartyAppAnalyticsLinkServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ThirdPartyAppAnalyticsLinkServiceStub(channel, callOptions);
     }
 
@@ -153,7 +163,7 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
     public void getThirdPartyAppAnalyticsLink(com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetThirdPartyAppAnalyticsLinkMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetThirdPartyAppAnalyticsLinkMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -163,19 +173,15 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
    * app analytics.
    * </pre>
    */
-  public static final class ThirdPartyAppAnalyticsLinkServiceBlockingStub extends io.grpc.stub.AbstractStub<ThirdPartyAppAnalyticsLinkServiceBlockingStub> {
-    private ThirdPartyAppAnalyticsLinkServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ThirdPartyAppAnalyticsLinkServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ThirdPartyAppAnalyticsLinkServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ThirdPartyAppAnalyticsLinkServiceBlockingStub> {
+    private ThirdPartyAppAnalyticsLinkServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ThirdPartyAppAnalyticsLinkServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ThirdPartyAppAnalyticsLinkServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ThirdPartyAppAnalyticsLinkServiceBlockingStub(channel, callOptions);
     }
 
@@ -186,7 +192,7 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink getThirdPartyAppAnalyticsLink(com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetThirdPartyAppAnalyticsLinkMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetThirdPartyAppAnalyticsLinkMethod(), getCallOptions(), request);
     }
   }
 
@@ -196,19 +202,15 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
    * app analytics.
    * </pre>
    */
-  public static final class ThirdPartyAppAnalyticsLinkServiceFutureStub extends io.grpc.stub.AbstractStub<ThirdPartyAppAnalyticsLinkServiceFutureStub> {
-    private ThirdPartyAppAnalyticsLinkServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ThirdPartyAppAnalyticsLinkServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ThirdPartyAppAnalyticsLinkServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ThirdPartyAppAnalyticsLinkServiceFutureStub> {
+    private ThirdPartyAppAnalyticsLinkServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ThirdPartyAppAnalyticsLinkServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ThirdPartyAppAnalyticsLinkServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ThirdPartyAppAnalyticsLinkServiceFutureStub(channel, callOptions);
     }
 
@@ -220,7 +222,7 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLink> getThirdPartyAppAnalyticsLink(
         com.google.ads.googleads.v4.services.GetThirdPartyAppAnalyticsLinkRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetThirdPartyAppAnalyticsLinkMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetThirdPartyAppAnalyticsLinkMethod(), getCallOptions()), request);
     }
   }
 
@@ -308,7 +310,7 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ThirdPartyAppAnalyticsLinkServiceFileDescriptorSupplier())
-              .addMethod(getGetThirdPartyAppAnalyticsLinkMethodHelper())
+              .addMethod(getGetThirdPartyAppAnalyticsLinkMethod())
               .build();
         }
       }

@@ -13,6 +13,7 @@ public interface GenerateReachForecastResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
+   * @return Whether the onTargetAudienceMetrics field is set.
    */
   boolean hasOnTargetAudienceMetrics();
   /**
@@ -21,6 +22,7 @@ public interface GenerateReachForecastResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
+   * @return The onTargetAudienceMetrics.
    */
   com.google.ads.googleads.v2.services.OnTargetAudienceMetrics getOnTargetAudienceMetrics();
   /**
@@ -38,6 +40,7 @@ public interface GenerateReachForecastResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ReachCurve reach_curve = 2;</code>
+   * @return Whether the reachCurve field is set.
    */
   boolean hasReachCurve();
   /**
@@ -46,6 +49,7 @@ public interface GenerateReachForecastResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ReachCurve reach_curve = 2;</code>
+   * @return The reachCurve.
    */
   com.google.ads.googleads.v2.services.ReachCurve getReachCurve();
   /**

@@ -13,6 +13,7 @@ public interface OnTargetAudienceMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value youtube_audience_size = 1;</code>
+   * @return Whether the youtubeAudienceSize field is set.
    */
   boolean hasYoutubeAudienceSize();
   /**
@@ -21,6 +22,7 @@ public interface OnTargetAudienceMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value youtube_audience_size = 1;</code>
+   * @return The youtubeAudienceSize.
    */
   com.google.protobuf.Int64Value getYoutubeAudienceSize();
   /**
@@ -38,6 +40,7 @@ public interface OnTargetAudienceMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value census_audience_size = 2;</code>
+   * @return Whether the censusAudienceSize field is set.
    */
   boolean hasCensusAudienceSize();
   /**
@@ -46,6 +49,7 @@ public interface OnTargetAudienceMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value census_audience_size = 2;</code>
+   * @return The censusAudienceSize.
    */
   com.google.protobuf.Int64Value getCensusAudienceSize();
   /**

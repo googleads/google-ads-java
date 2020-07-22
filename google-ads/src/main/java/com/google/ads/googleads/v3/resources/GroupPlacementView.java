@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.GroupPlacementView}
  */
-public  final class GroupPlacementView extends
+public final class GroupPlacementView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.GroupPlacementView)
     GroupPlacementViewOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private GroupPlacementView() {
     resourceName_ = "";
     placementType_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GroupPlacementView();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -141,7 +147,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -162,7 +170,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -186,7 +196,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the placement field is set.
    */
+  @java.lang.Override
   public boolean hasPlacement() {
     return placement_ != null;
   }
@@ -197,7 +209,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The placement.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPlacement() {
     return placement_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : placement_;
   }
@@ -209,6 +223,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPlacementOrBuilder() {
     return getPlacement();
   }
@@ -221,7 +236,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the displayName field is set.
    */
+  @java.lang.Override
   public boolean hasDisplayName() {
     return displayName_ != null;
   }
@@ -231,7 +248,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The displayName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDisplayName() {
     return displayName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : displayName_;
   }
@@ -242,6 +261,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDisplayNameOrBuilder() {
     return getDisplayName();
   }
@@ -255,7 +275,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the targetUrl field is set.
    */
+  @java.lang.Override
   public boolean hasTargetUrl() {
     return targetUrl_ != null;
   }
@@ -266,7 +288,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The targetUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTargetUrl() {
     return targetUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : targetUrl_;
   }
@@ -278,6 +302,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTargetUrlOrBuilder() {
     return getTargetUrl();
   }
@@ -290,8 +315,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for placementType.
    */
-  public int getPlacementTypeValue() {
+  @java.lang.Override public int getPlacementTypeValue() {
     return placementType_;
   }
   /**
@@ -300,8 +326,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The placementType.
    */
-  public com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType getPlacementType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType getPlacementType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType result = com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType.valueOf(placementType_);
     return result == null ? com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType.UNRECOGNIZED : result;
@@ -728,6 +755,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -749,6 +777,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -771,6 +800,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -790,6 +821,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -805,6 +837,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -828,6 +862,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the placement field is set.
      */
     public boolean hasPlacement() {
       return placementBuilder_ != null || placement_ != null;
@@ -839,6 +874,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The placement.
      */
     public com.google.protobuf.StringValue getPlacement() {
       if (placementBuilder_ == null) {
@@ -989,6 +1025,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the displayName field is set.
      */
     public boolean hasDisplayName() {
       return displayNameBuilder_ != null || displayName_ != null;
@@ -999,6 +1036,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The displayName.
      */
     public com.google.protobuf.StringValue getDisplayName() {
       if (displayNameBuilder_ == null) {
@@ -1143,6 +1181,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the targetUrl field is set.
      */
     public boolean hasTargetUrl() {
       return targetUrlBuilder_ != null || targetUrl_ != null;
@@ -1154,6 +1193,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The targetUrl.
      */
     public com.google.protobuf.StringValue getTargetUrl() {
       if (targetUrlBuilder_ == null) {
@@ -1302,8 +1342,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for placementType.
      */
-    public int getPlacementTypeValue() {
+    @java.lang.Override public int getPlacementTypeValue() {
       return placementType_;
     }
     /**
@@ -1312,8 +1353,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for placementType to set.
+     * @return This builder for chaining.
      */
     public Builder setPlacementTypeValue(int value) {
+      
       placementType_ = value;
       onChanged();
       return this;
@@ -1324,7 +1368,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The placementType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType getPlacementType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType result = com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType.valueOf(placementType_);
@@ -1336,6 +1382,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The placementType to set.
+     * @return This builder for chaining.
      */
     public Builder setPlacementType(com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType value) {
       if (value == null) {
@@ -1352,6 +1400,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearPlacementType() {
       

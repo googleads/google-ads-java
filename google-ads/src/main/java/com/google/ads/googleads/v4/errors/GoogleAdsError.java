@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.errors;
  *
  * Protobuf type {@code google.ads.googleads.v4.errors.GoogleAdsError}
  */
-public  final class GoogleAdsError extends
+public final class GoogleAdsError extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.errors.GoogleAdsError)
     GoogleAdsErrorOrBuilder {
@@ -153,6 +153,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.errors.ErrorCode error_code = 1;</code>
    * @return Whether the errorCode field is set.
    */
+  @java.lang.Override
   public boolean hasErrorCode() {
     return errorCode_ != null;
   }
@@ -164,6 +165,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.errors.ErrorCode error_code = 1;</code>
    * @return The errorCode.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.ErrorCode getErrorCode() {
     return errorCode_ == null ? com.google.ads.googleads.v4.errors.ErrorCode.getDefaultInstance() : errorCode_;
   }
@@ -174,6 +176,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.errors.ErrorCode error_code = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.ErrorCodeOrBuilder getErrorCodeOrBuilder() {
     return getErrorCode();
   }
@@ -188,6 +191,7 @@ private static final long serialVersionUID = 0L;
    * <code>string message = 2;</code>
    * @return The message.
    */
+  @java.lang.Override
   public java.lang.String getMessage() {
     java.lang.Object ref = message_;
     if (ref instanceof java.lang.String) {
@@ -208,6 +212,7 @@ private static final long serialVersionUID = 0L;
    * <code>string message = 2;</code>
    * @return The bytes for message.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getMessageBytes() {
     java.lang.Object ref = message_;
@@ -232,6 +237,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.Value trigger = 3;</code>
    * @return Whether the trigger field is set.
    */
+  @java.lang.Override
   public boolean hasTrigger() {
     return trigger_ != null;
   }
@@ -243,6 +249,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.Value trigger = 3;</code>
    * @return The trigger.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.Value getTrigger() {
     return trigger_ == null ? com.google.ads.googleads.v4.common.Value.getDefaultInstance() : trigger_;
   }
@@ -253,6 +260,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.Value trigger = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ValueOrBuilder getTriggerOrBuilder() {
     return getTrigger();
   }
@@ -267,6 +275,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.errors.ErrorLocation location = 4;</code>
    * @return Whether the location field is set.
    */
+  @java.lang.Override
   public boolean hasLocation() {
     return location_ != null;
   }
@@ -278,6 +287,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.errors.ErrorLocation location = 4;</code>
    * @return The location.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.ErrorLocation getLocation() {
     return location_ == null ? com.google.ads.googleads.v4.errors.ErrorLocation.getDefaultInstance() : location_;
   }
@@ -288,6 +298,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.errors.ErrorLocation location = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.ErrorLocationOrBuilder getLocationOrBuilder() {
     return getLocation();
   }
@@ -303,6 +314,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.errors.ErrorDetails details = 5;</code>
    * @return Whether the details field is set.
    */
+  @java.lang.Override
   public boolean hasDetails() {
     return details_ != null;
   }
@@ -315,6 +327,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.errors.ErrorDetails details = 5;</code>
    * @return The details.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.ErrorDetails getDetails() {
     return details_ == null ? com.google.ads.googleads.v4.errors.ErrorDetails.getDefaultInstance() : details_;
   }
@@ -326,6 +339,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.errors.ErrorDetails details = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.ErrorDetailsOrBuilder getDetailsOrBuilder() {
     return getDetails();
   }

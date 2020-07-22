@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.CustomerExtensionSetting}
  */
-public  final class CustomerExtensionSetting extends
+public final class CustomerExtensionSetting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.CustomerExtensionSetting)
     CustomerExtensionSettingOrBuilder {
@@ -131,6 +131,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -153,6 +154,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -177,7 +179,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The enum numeric value on the wire for extensionType.
    */
-  public int getExtensionTypeValue() {
+  @java.lang.Override public int getExtensionTypeValue() {
     return extensionType_;
   }
   /**
@@ -188,7 +190,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The extensionType.
    */
-  public com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType.valueOf(extensionType_);
     return result == null ? com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType.UNRECOGNIZED : result;
@@ -205,6 +207,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getExtensionFeedItemsList() {
     return extensionFeedItems_;
   }
@@ -217,6 +220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getExtensionFeedItemsOrBuilderList() {
     return extensionFeedItems_;
@@ -230,6 +234,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public int getExtensionFeedItemsCount() {
     return extensionFeedItems_.size();
   }
@@ -242,6 +247,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getExtensionFeedItems(int index) {
     return extensionFeedItems_.get(index);
   }
@@ -254,6 +260,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue extension_feed_items = 3 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getExtensionFeedItemsOrBuilder(
       int index) {
     return extensionFeedItems_.get(index);
@@ -269,7 +276,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
    * @return The enum numeric value on the wire for device.
    */
-  public int getDeviceValue() {
+  @java.lang.Override public int getDeviceValue() {
     return device_;
   }
   /**
@@ -280,7 +287,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
    * @return The device.
    */
-  public com.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice getDevice() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice getDevice() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice result = com.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.valueOf(device_);
     return result == null ? com.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.UNRECOGNIZED : result;
@@ -796,7 +803,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for extensionType.
      */
-    public int getExtensionTypeValue() {
+    @java.lang.Override public int getExtensionTypeValue() {
       return extensionType_;
     }
     /**
@@ -809,6 +816,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExtensionTypeValue(int value) {
+      
       extensionType_ = value;
       onChanged();
       return this;
@@ -821,6 +829,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The extensionType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v4.enums.ExtensionTypeEnum.ExtensionType.valueOf(extensionType_);
@@ -1216,7 +1225,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
      * @return The enum numeric value on the wire for device.
      */
-    public int getDeviceValue() {
+    @java.lang.Override public int getDeviceValue() {
       return device_;
     }
     /**
@@ -1229,6 +1238,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDeviceValue(int value) {
+      
       device_ = value;
       onChanged();
       return this;
@@ -1241,6 +1251,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
      * @return The device.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice getDevice() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice result = com.google.ads.googleads.v4.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.valueOf(device_);

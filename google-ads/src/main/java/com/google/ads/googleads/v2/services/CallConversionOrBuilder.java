@@ -14,6 +14,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue caller_id = 1;</code>
+   * @return Whether the callerId field is set.
    */
   boolean hasCallerId();
   /**
@@ -23,6 +24,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue caller_id = 1;</code>
+   * @return The callerId.
    */
   com.google.protobuf.StringValue getCallerId();
   /**
@@ -43,6 +45,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_start_date_time = 2;</code>
+   * @return Whether the callStartDateTime field is set.
    */
   boolean hasCallStartDateTime();
   /**
@@ -53,6 +56,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_start_date_time = 2;</code>
+   * @return The callStartDateTime.
    */
   com.google.protobuf.StringValue getCallStartDateTime();
   /**
@@ -75,6 +79,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
+   * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
   /**
@@ -86,6 +91,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
+   * @return The conversionAction.
    */
   com.google.protobuf.StringValue getConversionAction();
   /**
@@ -108,6 +114,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 4;</code>
+   * @return Whether the conversionDateTime field is set.
    */
   boolean hasConversionDateTime();
   /**
@@ -118,6 +125,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 4;</code>
+   * @return The conversionDateTime.
    */
   com.google.protobuf.StringValue getConversionDateTime();
   /**
@@ -137,6 +145,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversion_value = 5;</code>
+   * @return Whether the conversionValue field is set.
    */
   boolean hasConversionValue();
   /**
@@ -145,6 +154,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversion_value = 5;</code>
+   * @return The conversionValue.
    */
   com.google.protobuf.DoubleValue getConversionValue();
   /**
@@ -163,6 +173,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 6;</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -172,6 +183,7 @@ public interface CallConversionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 6;</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**

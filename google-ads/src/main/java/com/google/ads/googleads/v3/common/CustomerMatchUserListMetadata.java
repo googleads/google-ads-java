@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.CustomerMatchUserListMetadata}
  */
-public  final class CustomerMatchUserListMetadata extends
+public final class CustomerMatchUserListMetadata extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.CustomerMatchUserListMetadata)
     CustomerMatchUserListMetadataOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CustomerMatchUserListMetadata() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CustomerMatchUserListMetadata();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -100,7 +106,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_list = 1;</code>
+   * @return Whether the userList field is set.
    */
+  @java.lang.Override
   public boolean hasUserList() {
     return userList_ != null;
   }
@@ -111,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_list = 1;</code>
+   * @return The userList.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUserList() {
     return userList_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : userList_;
   }
@@ -123,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue user_list = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUserListOrBuilder() {
     return getUserList();
   }
@@ -456,6 +467,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue user_list = 1;</code>
+     * @return Whether the userList field is set.
      */
     public boolean hasUserList() {
       return userListBuilder_ != null || userList_ != null;
@@ -467,6 +479,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue user_list = 1;</code>
+     * @return The userList.
      */
     public com.google.protobuf.StringValue getUserList() {
       if (userListBuilder_ == null) {

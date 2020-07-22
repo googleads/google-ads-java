@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.ForecastMetrics}
  */
-public  final class ForecastMetrics extends
+public final class ForecastMetrics extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.ForecastMetrics)
     ForecastMetricsOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ForecastMetrics() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ForecastMetrics();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -151,7 +157,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue impressions = 1;</code>
+   * @return Whether the impressions field is set.
    */
+  @java.lang.Override
   public boolean hasImpressions() {
     return impressions_ != null;
   }
@@ -161,7 +169,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue impressions = 1;</code>
+   * @return The impressions.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getImpressions() {
     return impressions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : impressions_;
   }
@@ -172,6 +182,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue impressions = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getImpressionsOrBuilder() {
     return getImpressions();
   }
@@ -184,7 +195,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue ctr = 2;</code>
+   * @return Whether the ctr field is set.
    */
+  @java.lang.Override
   public boolean hasCtr() {
     return ctr_ != null;
   }
@@ -194,7 +207,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue ctr = 2;</code>
+   * @return The ctr.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCtr() {
     return ctr_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : ctr_;
   }
@@ -205,6 +220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue ctr = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCtrOrBuilder() {
     return getCtr();
   }
@@ -217,7 +233,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value average_cpc = 3;</code>
+   * @return Whether the averageCpc field is set.
    */
+  @java.lang.Override
   public boolean hasAverageCpc() {
     return averageCpc_ != null;
   }
@@ -227,7 +245,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value average_cpc = 3;</code>
+   * @return The averageCpc.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAverageCpc() {
     return averageCpc_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : averageCpc_;
   }
@@ -238,6 +258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value average_cpc = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAverageCpcOrBuilder() {
     return getAverageCpc();
   }
@@ -250,7 +271,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue clicks = 5;</code>
+   * @return Whether the clicks field is set.
    */
+  @java.lang.Override
   public boolean hasClicks() {
     return clicks_ != null;
   }
@@ -260,7 +283,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue clicks = 5;</code>
+   * @return The clicks.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getClicks() {
     return clicks_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : clicks_;
   }
@@ -271,6 +296,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue clicks = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getClicksOrBuilder() {
     return getClicks();
   }
@@ -283,7 +309,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 6;</code>
+   * @return Whether the costMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCostMicros() {
     return costMicros_ != null;
   }
@@ -293,7 +321,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 6;</code>
+   * @return The costMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCostMicros() {
     return costMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : costMicros_;
   }
@@ -304,6 +334,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cost_micros = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCostMicrosOrBuilder() {
     return getCostMicros();
   }
@@ -756,6 +787,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue impressions = 1;</code>
+     * @return Whether the impressions field is set.
      */
     public boolean hasImpressions() {
       return impressionsBuilder_ != null || impressions_ != null;
@@ -766,6 +798,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue impressions = 1;</code>
+     * @return The impressions.
      */
     public com.google.protobuf.DoubleValue getImpressions() {
       if (impressionsBuilder_ == null) {
@@ -909,6 +942,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue ctr = 2;</code>
+     * @return Whether the ctr field is set.
      */
     public boolean hasCtr() {
       return ctrBuilder_ != null || ctr_ != null;
@@ -919,6 +953,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue ctr = 2;</code>
+     * @return The ctr.
      */
     public com.google.protobuf.DoubleValue getCtr() {
       if (ctrBuilder_ == null) {
@@ -1062,6 +1097,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value average_cpc = 3;</code>
+     * @return Whether the averageCpc field is set.
      */
     public boolean hasAverageCpc() {
       return averageCpcBuilder_ != null || averageCpc_ != null;
@@ -1072,6 +1108,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value average_cpc = 3;</code>
+     * @return The averageCpc.
      */
     public com.google.protobuf.Int64Value getAverageCpc() {
       if (averageCpcBuilder_ == null) {
@@ -1215,6 +1252,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue clicks = 5;</code>
+     * @return Whether the clicks field is set.
      */
     public boolean hasClicks() {
       return clicksBuilder_ != null || clicks_ != null;
@@ -1225,6 +1263,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue clicks = 5;</code>
+     * @return The clicks.
      */
     public com.google.protobuf.DoubleValue getClicks() {
       if (clicksBuilder_ == null) {
@@ -1368,6 +1407,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_micros = 6;</code>
+     * @return Whether the costMicros field is set.
      */
     public boolean hasCostMicros() {
       return costMicrosBuilder_ != null || costMicros_ != null;
@@ -1378,6 +1418,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_micros = 6;</code>
+     * @return The costMicros.
      */
     public com.google.protobuf.Int64Value getCostMicros() {
       if (costMicrosBuilder_ == null) {

@@ -15,6 +15,7 @@ public interface UserListStringRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator operator = 1;</code>
+   * @return The enum numeric value on the wire for operator.
    */
   int getOperatorValue();
   /**
@@ -25,6 +26,7 @@ public interface UserListStringRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator operator = 1;</code>
+   * @return The operator.
    */
   com.google.ads.googleads.v2.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator getOperator();
 
@@ -37,6 +39,7 @@ public interface UserListStringRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 2;</code>
+   * @return Whether the value field is set.
    */
   boolean hasValue();
   /**
@@ -48,6 +51,7 @@ public interface UserListStringRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 2;</code>
+   * @return The value.
    */
   com.google.protobuf.StringValue getValue();
   /**

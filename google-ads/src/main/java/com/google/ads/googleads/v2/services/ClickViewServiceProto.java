@@ -33,12 +33,15 @@ public final class ClickViewServiceProto {
       "s.v2.services\0322google/ads/googleads/v2/r" +
       "esources/click_view.proto\032\034google/api/an" +
       "notations.proto\032\027google/api/client.proto" +
-      "\",\n\023GetClickViewRequest\022\025\n\rresource_name" +
-      "\030\001 \001(\t2\333\001\n\020ClickViewService\022\251\001\n\014GetClick" +
-      "View\0225.google.ads.googleads.v2.services." +
-      "GetClickViewRequest\032,.google.ads.googlea" +
-      "ds.v2.resources.ClickView\"4\202\323\344\223\002.\022,/v2/{" +
-      "resource_name=customers/*/clickViews/*}\032" +
+      "\032\037google/api/field_behavior.proto\032\031googl" +
+      "e/api/resource.proto\"X\n\023GetClickViewRequ" +
+      "est\022A\n\rresource_name\030\001 \001(\tB*\340A\002\372A$\n\"goog" +
+      "leads.googleapis.com/ClickView2\353\001\n\020Click" +
+      "ViewService\022\271\001\n\014GetClickView\0225.google.ad" +
+      "s.googleads.v2.services.GetClickViewRequ" +
+      "est\032,.google.ads.googleads.v2.resources." +
+      "ClickView\"D\202\323\344\223\002.\022,/v2/{resource_name=cu" +
+      "stomers/*/clickViews/*}\332A\rresource_name\032" +
       "\033\312A\030googleads.googleapis.comB\374\001\n$com.goo" +
       "gle.ads.googleads.v2.servicesB\025ClickView" +
       "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
@@ -48,21 +51,15 @@ public final class ClickViewServiceProto {
       "ices\352\002$Google::Ads::GoogleAds::V2::Servi" +
       "cesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.ClickViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_GetClickViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetClickViewRequest_fieldAccessorTable = new
@@ -72,12 +69,17 @@ public final class ClickViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.ClickViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/feed_placeholder_view_service.proto")
 public final class FeedPlaceholderViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class FeedPlaceholderViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.FeedPlaceholderViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetFeedPlaceholderViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest,
-      com.google.ads.googleads.v1.resources.FeedPlaceholderView> METHOD_GET_FEED_PLACEHOLDER_VIEW = getGetFeedPlaceholderViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest,
       com.google.ads.googleads.v1.resources.FeedPlaceholderView> getGetFeedPlaceholderViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetFeedPlaceholderView",
+      requestType = com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.FeedPlaceholderView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest,
       com.google.ads.googleads.v1.resources.FeedPlaceholderView> getGetFeedPlaceholderViewMethod() {
-    return getGetFeedPlaceholderViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest,
-      com.google.ads.googleads.v1.resources.FeedPlaceholderView> getGetFeedPlaceholderViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest, com.google.ads.googleads.v1.resources.FeedPlaceholderView> getGetFeedPlaceholderViewMethod;
     if ((getGetFeedPlaceholderViewMethod = FeedPlaceholderViewServiceGrpc.getGetFeedPlaceholderViewMethod) == null) {
       synchronized (FeedPlaceholderViewServiceGrpc.class) {
         if ((getGetFeedPlaceholderViewMethod = FeedPlaceholderViewServiceGrpc.getGetFeedPlaceholderViewMethod) == null) {
-          FeedPlaceholderViewServiceGrpc.getGetFeedPlaceholderViewMethod = getGetFeedPlaceholderViewMethod = 
+          FeedPlaceholderViewServiceGrpc.getGetFeedPlaceholderViewMethod = getGetFeedPlaceholderViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest, com.google.ads.googleads.v1.resources.FeedPlaceholderView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.FeedPlaceholderViewService", "GetFeedPlaceholderView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFeedPlaceholderView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.FeedPlaceholderView.getDefaultInstance()))
-                  .setSchemaDescriptor(new FeedPlaceholderViewServiceMethodDescriptorSupplier("GetFeedPlaceholderView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FeedPlaceholderViewServiceMethodDescriptorSupplier("GetFeedPlaceholderView"))
+              .build();
         }
-     }
-     return getGetFeedPlaceholderViewMethod;
+      }
+    }
+    return getGetFeedPlaceholderViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static FeedPlaceholderViewServiceStub newStub(io.grpc.Channel channel) {
-    return new FeedPlaceholderViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FeedPlaceholderViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FeedPlaceholderViewServiceStub>() {
+        @java.lang.Override
+        public FeedPlaceholderViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FeedPlaceholderViewServiceStub(channel, callOptions);
+        }
+      };
+    return FeedPlaceholderViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class FeedPlaceholderViewServiceGrpc {
    */
   public static FeedPlaceholderViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new FeedPlaceholderViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FeedPlaceholderViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FeedPlaceholderViewServiceBlockingStub>() {
+        @java.lang.Override
+        public FeedPlaceholderViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FeedPlaceholderViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return FeedPlaceholderViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class FeedPlaceholderViewServiceGrpc {
    */
   public static FeedPlaceholderViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new FeedPlaceholderViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FeedPlaceholderViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FeedPlaceholderViewServiceFutureStub>() {
+        @java.lang.Override
+        public FeedPlaceholderViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FeedPlaceholderViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return FeedPlaceholderViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class FeedPlaceholderViewServiceGrpc {
      */
     public void getFeedPlaceholderView(com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.FeedPlaceholderView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetFeedPlaceholderViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetFeedPlaceholderViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetFeedPlaceholderViewMethodHelper(),
+            getGetFeedPlaceholderViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest,
@@ -126,19 +140,15 @@ public final class FeedPlaceholderViewServiceGrpc {
    * Service to fetch feed placeholder views.
    * </pre>
    */
-  public static final class FeedPlaceholderViewServiceStub extends io.grpc.stub.AbstractStub<FeedPlaceholderViewServiceStub> {
-    private FeedPlaceholderViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FeedPlaceholderViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FeedPlaceholderViewServiceStub extends io.grpc.stub.AbstractAsyncStub<FeedPlaceholderViewServiceStub> {
+    private FeedPlaceholderViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FeedPlaceholderViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FeedPlaceholderViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FeedPlaceholderViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class FeedPlaceholderViewServiceGrpc {
     public void getFeedPlaceholderView(com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.FeedPlaceholderView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetFeedPlaceholderViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetFeedPlaceholderViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class FeedPlaceholderViewServiceGrpc {
    * Service to fetch feed placeholder views.
    * </pre>
    */
-  public static final class FeedPlaceholderViewServiceBlockingStub extends io.grpc.stub.AbstractStub<FeedPlaceholderViewServiceBlockingStub> {
-    private FeedPlaceholderViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FeedPlaceholderViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FeedPlaceholderViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FeedPlaceholderViewServiceBlockingStub> {
+    private FeedPlaceholderViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FeedPlaceholderViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FeedPlaceholderViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FeedPlaceholderViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class FeedPlaceholderViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.FeedPlaceholderView getFeedPlaceholderView(com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetFeedPlaceholderViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetFeedPlaceholderViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class FeedPlaceholderViewServiceGrpc {
    * Service to fetch feed placeholder views.
    * </pre>
    */
-  public static final class FeedPlaceholderViewServiceFutureStub extends io.grpc.stub.AbstractStub<FeedPlaceholderViewServiceFutureStub> {
-    private FeedPlaceholderViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FeedPlaceholderViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FeedPlaceholderViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FeedPlaceholderViewServiceFutureStub> {
+    private FeedPlaceholderViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FeedPlaceholderViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FeedPlaceholderViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FeedPlaceholderViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class FeedPlaceholderViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.FeedPlaceholderView> getFeedPlaceholderView(
         com.google.ads.googleads.v1.services.GetFeedPlaceholderViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetFeedPlaceholderViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetFeedPlaceholderViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class FeedPlaceholderViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new FeedPlaceholderViewServiceFileDescriptorSupplier())
-              .addMethod(getGetFeedPlaceholderViewMethodHelper())
+              .addMethod(getGetFeedPlaceholderViewMethod())
               .build();
         }
       }

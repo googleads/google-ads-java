@@ -47,68 +47,69 @@ public final class CustomerProto {
       "omer.proto\022!google.ads.googleads.v2.reso" +
       "urces\032Zgoogle/ads/googleads/v2/enums/cus" +
       "tomer_pay_per_conversion_eligibility_fai" +
-      "lure_reason.proto\032\036google/protobuf/wrapp" +
-      "ers.proto\032\034google/api/annotations.proto\"" +
-      "\376\007\n\010Customer\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002i" +
-      "d\030\003 \001(\0132\033.google.protobuf.Int64Value\0226\n\020" +
-      "descriptive_name\030\004 \001(\0132\034.google.protobuf" +
-      ".StringValue\0223\n\rcurrency_code\030\005 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\022/\n\ttime_zone\030\006" +
-      " \001(\0132\034.google.protobuf.StringValue\022;\n\025tr" +
-      "acking_url_template\030\007 \001(\0132\034.google.proto" +
-      "buf.StringValue\0226\n\020final_url_suffix\030\013 \001(" +
-      "\0132\034.google.protobuf.StringValue\0228\n\024auto_" +
-      "tagging_enabled\030\010 \001(\0132\032.google.protobuf." +
-      "BoolValue\0226\n\022has_partners_badge\030\t \001(\0132\032." +
-      "google.protobuf.BoolValue\022+\n\007manager\030\014 \001" +
-      "(\0132\032.google.protobuf.BoolValue\0220\n\014test_a" +
-      "ccount\030\r \001(\0132\032.google.protobuf.BoolValue" +
-      "\022W\n\026call_reporting_setting\030\n \001(\01327.googl" +
-      "e.ads.googleads.v2.resources.CallReporti" +
-      "ngSetting\022a\n\033conversion_tracking_setting" +
-      "\030\016 \001(\0132<.google.ads.googleads.v2.resourc" +
-      "es.ConversionTrackingSetting\022R\n\023remarket" +
-      "ing_setting\030\017 \001(\01325.google.ads.googleads" +
-      ".v2.resources.RemarketingSetting\022\275\001\n.pay" +
-      "_per_conversion_eligibility_failure_reas" +
-      "ons\030\020 \003(\0162\204\001.google.ads.googleads.v2.enu" +
-      "ms.CustomerPayPerConversionEligibilityFa" +
-      "ilureReasonEnum.CustomerPayPerConversion" +
-      "EligibilityFailureReason\"\327\001\n\024CallReporti" +
-      "ngSetting\022:\n\026call_reporting_enabled\030\001 \001(" +
-      "\0132\032.google.protobuf.BoolValue\022E\n!call_co" +
-      "nversion_reporting_enabled\030\002 \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\022<\n\026call_conversion_" +
-      "action\030\t \001(\0132\034.google.protobuf.StringVal" +
-      "ue\"\243\001\n\031ConversionTrackingSetting\022;\n\026conv" +
-      "ersion_tracking_id\030\001 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022I\n$cross_account_conversio" +
-      "n_tracking_id\030\002 \001(\0132\033.google.protobuf.In" +
-      "t64Value\"R\n\022RemarketingSetting\022<\n\026google" +
-      "_global_site_tag\030\001 \001(\0132\034.google.protobuf" +
-      ".StringValueB\372\001\n%com.google.ads.googlead" +
-      "s.v2.resourcesB\rCustomerProtoP\001ZJgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v2/resources;resources\242\002\003GAA\252\002!Goog" +
-      "le.Ads.GoogleAds.V2.Resources\312\002!Google\\A" +
-      "ds\\GoogleAds\\V2\\Resources\352\002%Google::Ads:" +
-      ":GoogleAds::V2::Resourcesb\006proto3"
+      "lure_reason.proto\032\037google/api/field_beha" +
+      "vior.proto\032\031google/api/resource.proto\032\036g" +
+      "oogle/protobuf/wrappers.proto\032\034google/ap" +
+      "i/annotations.proto\"\224\t\n\010Customer\022@\n\rreso" +
+      "urce_name\030\001 \001(\tB)\340A\005\372A#\n!googleads.googl" +
+      "eapis.com/Customer\022,\n\002id\030\003 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\003\340A\003\0226\n\020descriptive_" +
+      "name\030\004 \001(\0132\034.google.protobuf.StringValue" +
+      "\0228\n\rcurrency_code\030\005 \001(\0132\034.google.protobu" +
+      "f.StringValueB\003\340A\005\0224\n\ttime_zone\030\006 \001(\0132\034." +
+      "google.protobuf.StringValueB\003\340A\005\022;\n\025trac" +
+      "king_url_template\030\007 \001(\0132\034.google.protobu" +
+      "f.StringValue\0226\n\020final_url_suffix\030\013 \001(\0132" +
+      "\034.google.protobuf.StringValue\0228\n\024auto_ta" +
+      "gging_enabled\030\010 \001(\0132\032.google.protobuf.Bo" +
+      "olValue\022;\n\022has_partners_badge\030\t \001(\0132\032.go" +
+      "ogle.protobuf.BoolValueB\003\340A\003\0220\n\007manager\030" +
+      "\014 \001(\0132\032.google.protobuf.BoolValueB\003\340A\003\0225" +
+      "\n\014test_account\030\r \001(\0132\032.google.protobuf.B" +
+      "oolValueB\003\340A\003\022W\n\026call_reporting_setting\030" +
+      "\n \001(\01327.google.ads.googleads.v2.resource" +
+      "s.CallReportingSetting\022f\n\033conversion_tra" +
+      "cking_setting\030\016 \001(\0132<.google.ads.googlea" +
+      "ds.v2.resources.ConversionTrackingSettin" +
+      "gB\003\340A\003\022W\n\023remarketing_setting\030\017 \001(\01325.go" +
+      "ogle.ads.googleads.v2.resources.Remarket" +
+      "ingSettingB\003\340A\003\022\302\001\n.pay_per_conversion_e" +
+      "ligibility_failure_reasons\030\020 \003(\0162\204\001.goog" +
+      "le.ads.googleads.v2.enums.CustomerPayPer" +
+      "ConversionEligibilityFailureReasonEnum.C" +
+      "ustomerPayPerConversionEligibilityFailur" +
+      "eReasonB\003\340A\003:<\352A9\n!googleads.googleapis." +
+      "com/Customer\022\024customers/{customer}\"\207\002\n\024C" +
+      "allReportingSetting\022:\n\026call_reporting_en" +
+      "abled\030\001 \001(\0132\032.google.protobuf.BoolValue\022" +
+      "E\n!call_conversion_reporting_enabled\030\002 \001" +
+      "(\0132\032.google.protobuf.BoolValue\022l\n\026call_c" +
+      "onversion_action\030\t \001(\0132\034.google.protobuf" +
+      ".StringValueB.\372A+\n)googleads.googleapis." +
+      "com/ConversionAction\"\255\001\n\031ConversionTrack" +
+      "ingSetting\022@\n\026conversion_tracking_id\030\001 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\003\340A\003\022N\n$" +
+      "cross_account_conversion_tracking_id\030\002 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\003\340A\003\"W\n\022" +
+      "RemarketingSetting\022A\n\026google_global_site" +
+      "_tag\030\001 \001(\0132\034.google.protobuf.StringValue" +
+      "B\003\340A\003B\372\001\n%com.google.ads.googleads.v2.re" +
+      "sourcesB\rCustomerProtoP\001ZJgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v2" +
+      "/resources;resources\242\002\003GAA\252\002!Google.Ads." +
+      "GoogleAds.V2.Resources\312\002!Google\\Ads\\Goog" +
+      "leAds\\V2\\Resources\352\002%Google::Ads::Google" +
+      "Ads::V2::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_Customer_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_Customer_fieldAccessorTable = new
@@ -133,7 +134,16 @@ public final class CustomerProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_RemarketingSetting_descriptor,
         new java.lang.String[] { "GoogleGlobalSiteTag", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.enums.CustomerPayPerConversionEligibilityFailureReasonProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

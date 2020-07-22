@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.MutateJobResult}
  */
-public  final class MutateJobResult extends
+public final class MutateJobResult extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.MutateJobResult)
     MutateJobResultOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MutateJobResult() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateJobResult();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -117,7 +123,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 operation_index = 1;</code>
+   * @return The operationIndex.
    */
+  @java.lang.Override
   public long getOperationIndex() {
     return operationIndex_;
   }
@@ -131,7 +139,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateOperationResponse mutate_operation_response = 2;</code>
+   * @return Whether the mutateOperationResponse field is set.
    */
+  @java.lang.Override
   public boolean hasMutateOperationResponse() {
     return mutateOperationResponse_ != null;
   }
@@ -142,7 +152,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.MutateOperationResponse mutate_operation_response = 2;</code>
+   * @return The mutateOperationResponse.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.MutateOperationResponse getMutateOperationResponse() {
     return mutateOperationResponse_ == null ? com.google.ads.googleads.v2.services.MutateOperationResponse.getDefaultInstance() : mutateOperationResponse_;
   }
@@ -154,6 +166,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.MutateOperationResponse mutate_operation_response = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.MutateOperationResponseOrBuilder getMutateOperationResponseOrBuilder() {
     return getMutateOperationResponse();
   }
@@ -166,7 +179,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.Status status = 3;</code>
+   * @return Whether the status field is set.
    */
+  @java.lang.Override
   public boolean hasStatus() {
     return status_ != null;
   }
@@ -176,7 +191,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.Status status = 3;</code>
+   * @return The status.
    */
+  @java.lang.Override
   public com.google.rpc.Status getStatus() {
     return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
   }
@@ -187,6 +204,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.rpc.Status status = 3;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
     return getStatus();
   }
@@ -565,7 +583,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 operation_index = 1;</code>
+     * @return The operationIndex.
      */
+    @java.lang.Override
     public long getOperationIndex() {
       return operationIndex_;
     }
@@ -575,6 +595,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 operation_index = 1;</code>
+     * @param value The operationIndex to set.
+     * @return This builder for chaining.
      */
     public Builder setOperationIndex(long value) {
       
@@ -588,6 +610,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 operation_index = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearOperationIndex() {
       
@@ -606,6 +629,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.MutateOperationResponse mutate_operation_response = 2;</code>
+     * @return Whether the mutateOperationResponse field is set.
      */
     public boolean hasMutateOperationResponse() {
       return mutateOperationResponseBuilder_ != null || mutateOperationResponse_ != null;
@@ -617,6 +641,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.MutateOperationResponse mutate_operation_response = 2;</code>
+     * @return The mutateOperationResponse.
      */
     public com.google.ads.googleads.v2.services.MutateOperationResponse getMutateOperationResponse() {
       if (mutateOperationResponseBuilder_ == null) {
@@ -767,6 +792,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.Status status = 3;</code>
+     * @return Whether the status field is set.
      */
     public boolean hasStatus() {
       return statusBuilder_ != null || status_ != null;
@@ -777,6 +803,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.Status status = 3;</code>
+     * @return The status.
      */
     public com.google.rpc.Status getStatus() {
       if (statusBuilder_ == null) {

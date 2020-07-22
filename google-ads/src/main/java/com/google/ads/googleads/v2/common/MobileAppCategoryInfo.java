@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.MobileAppCategoryInfo}
  */
-public  final class MobileAppCategoryInfo extends
+public final class MobileAppCategoryInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.MobileAppCategoryInfo)
     MobileAppCategoryInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MobileAppCategoryInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MobileAppCategoryInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue mobile_app_category_constant = 1;</code>
+   * @return Whether the mobileAppCategoryConstant field is set.
    */
+  @java.lang.Override
   public boolean hasMobileAppCategoryConstant() {
     return mobileAppCategoryConstant_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue mobile_app_category_constant = 1;</code>
+   * @return The mobileAppCategoryConstant.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMobileAppCategoryConstant() {
     return mobileAppCategoryConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : mobileAppCategoryConstant_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue mobile_app_category_constant = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMobileAppCategoryConstantOrBuilder() {
     return getMobileAppCategoryConstant();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue mobile_app_category_constant = 1;</code>
+     * @return Whether the mobileAppCategoryConstant field is set.
      */
     public boolean hasMobileAppCategoryConstant() {
       return mobileAppCategoryConstantBuilder_ != null || mobileAppCategoryConstant_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue mobile_app_category_constant = 1;</code>
+     * @return The mobileAppCategoryConstant.
      */
     public com.google.protobuf.StringValue getMobileAppCategoryConstant() {
       if (mobileAppCategoryConstantBuilder_ == null) {

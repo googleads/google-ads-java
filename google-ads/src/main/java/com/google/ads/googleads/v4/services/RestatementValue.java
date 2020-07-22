@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.RestatementValue}
  */
-public  final class RestatementValue extends
+public final class RestatementValue extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.RestatementValue)
     RestatementValueOrBuilder {
@@ -122,6 +122,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue adjusted_value = 1;</code>
    * @return Whether the adjustedValue field is set.
    */
+  @java.lang.Override
   public boolean hasAdjustedValue() {
     return adjustedValue_ != null;
   }
@@ -135,6 +136,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue adjusted_value = 1;</code>
    * @return The adjustedValue.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAdjustedValue() {
     return adjustedValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : adjustedValue_;
   }
@@ -147,6 +149,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue adjusted_value = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAdjustedValueOrBuilder() {
     return getAdjustedValue();
   }
@@ -164,6 +167,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
    * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -178,6 +182,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
    * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -191,6 +196,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }

@@ -130,146 +130,144 @@ public final class ReachPlanServiceProto {
       "ds/v2/enums/reach_plan_ad_length.proto\0328" +
       "google/ads/googleads/v2/enums/reach_plan" +
       "_age_range.proto\032\034google/api/annotations" +
-      ".proto\032\036google/protobuf/wrappers.proto\032\027" +
-      "google/api/client.proto\"\037\n\035ListPlannable" +
-      "LocationsRequest\"r\n\036ListPlannableLocatio" +
-      "nsResponse\022P\n\023plannable_locations\030\001 \003(\0132" +
-      "3.google.ads.googleads.v2.services.Plann" +
-      "ableLocation\"\241\001\n\021PlannableLocation\022(\n\002id" +
-      "\030\001 \001(\0132\034.google.protobuf.StringValue\022*\n\004" +
-      "name\030\002 \001(\0132\034.google.protobuf.StringValue" +
-      "\0226\n\021parent_country_id\030\003 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\"[\n\034ListPlannableProduct" +
-      "sRequest\022;\n\025plannable_location_id\030\001 \001(\0132" +
-      "\034.google.protobuf.StringValue\"l\n\035ListPla" +
-      "nnableProductsResponse\022K\n\020product_metada" +
-      "ta\030\001 \003(\01321.google.ads.googleads.v2.servi" +
-      "ces.ProductMetadata\"\242\001\n\017ProductMetadata\022" +
-      "<\n\026plannable_product_code\030\001 \001(\0132\034.google" +
-      ".protobuf.StringValue\022Q\n\023plannable_targe" +
-      "ting\030\002 \001(\01324.google.ads.googleads.v2.ser" +
-      "vices.PlannableTargeting\"\352\001\n\022PlannableTa" +
-      "rgeting\022Z\n\nage_ranges\030\001 \003(\0162F.google.ads" +
-      ".googleads.v2.enums.ReachPlanAgeRangeEnu" +
-      "m.ReachPlanAgeRange\022;\n\007genders\030\002 \003(\0132*.g" +
-      "oogle.ads.googleads.v2.common.GenderInfo" +
-      "\022;\n\007devices\030\003 \003(\0132*.google.ads.googleads" +
-      ".v2.common.DeviceInfo\"\237\002\n\036GenerateProduc" +
-      "tMixIdeasRequest\022\023\n\013customer_id\030\001 \001(\t\022;\n" +
-      "\025plannable_location_id\030\002 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\0223\n\rcurrency_code\030\003 \001(" +
-      "\0132\034.google.protobuf.StringValue\0222\n\rbudge" +
-      "t_micros\030\004 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022B\n\013preferences\030\005 \001(\0132-.google.ads.go" +
-      "ogleads.v2.services.Preferences\"\301\002\n\013Pref" +
-      "erences\0220\n\014is_skippable\030\001 \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\0225\n\021starts_with_sound\030\002" +
-      " \001(\0132\032.google.protobuf.BoolValue\022Y\n\tad_l" +
-      "ength\030\003 \001(\0162F.google.ads.googleads.v2.en" +
-      "ums.ReachPlanAdLengthEnum.ReachPlanAdLen" +
-      "gth\0224\n\020top_content_only\030\004 \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\0228\n\024has_guaranteed_pric" +
-      "e\030\005 \001(\0132\032.google.protobuf.BoolValue\"r\n\037G" +
-      "enerateProductMixIdeasResponse\022O\n\022produc" +
-      "t_allocation\030\001 \003(\01323.google.ads.googlead" +
-      "s.v2.services.ProductAllocation\"\205\001\n\021Prod" +
-      "uctAllocation\022<\n\026plannable_product_code\030" +
-      "\001 \001(\0132\034.google.protobuf.StringValue\0222\n\rb" +
-      "udget_micros\030\002 \001(\0132\033.google.protobuf.Int" +
-      "64Value\"\274\003\n\034GenerateReachForecastRequest" +
-      "\022\023\n\013customer_id\030\001 \001(\t\0223\n\rcurrency_code\030\002" +
-      " \001(\0132\034.google.protobuf.StringValue\022M\n\021ca" +
-      "mpaign_duration\030\003 \001(\01322.google.ads.googl" +
-      "eads.v2.services.CampaignDuration\0229\n\024coo" +
-      "kie_frequency_cap\030\004 \001(\0132\033.google.protobu" +
-      "f.Int32Value\022<\n\027min_effective_frequency\030" +
-      "\005 \001(\0132\033.google.protobuf.Int32Value\022>\n\tta" +
-      "rgeting\030\006 \001(\0132+.google.ads.googleads.v2." +
-      "services.Targeting\022J\n\020planned_products\030\007" +
-      " \003(\01320.google.ads.googleads.v2.services." +
-      "PlannedProduct\"\235\002\n\tTargeting\022;\n\025plannabl" +
-      "e_location_id\030\001 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022Y\n\tage_range\030\002 \001(\0162F.google.ad" +
-      "s.googleads.v2.enums.ReachPlanAgeRangeEn" +
-      "um.ReachPlanAgeRange\022;\n\007genders\030\003 \003(\0132*." +
-      "google.ads.googleads.v2.common.GenderInf" +
-      "o\022;\n\007devices\030\004 \003(\0132*.google.ads.googlead" +
-      "s.v2.common.DeviceInfo\"I\n\020CampaignDurati" +
-      "on\0225\n\020duration_in_days\030\001 \001(\0132\033.google.pr" +
-      "otobuf.Int32Value\"\202\001\n\016PlannedProduct\022<\n\026" +
-      "plannable_product_code\030\001 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\0222\n\rbudget_micros\030\002 \001(" +
-      "\0132\033.google.protobuf.Int64Value\"\301\001\n\035Gener" +
-      "ateReachForecastResponse\022]\n\032on_target_au" +
-      "dience_metrics\030\001 \001(\01329.google.ads.google" +
-      "ads.v2.services.OnTargetAudienceMetrics\022" +
-      "A\n\013reach_curve\030\002 \001(\0132,.google.ads.google" +
-      "ads.v2.services.ReachCurve\"V\n\nReachCurve" +
-      "\022H\n\017reach_forecasts\030\001 \003(\0132/.google.ads.g" +
-      "oogleads.v2.services.ReachForecast\"\334\001\n\rR" +
-      "eachForecast\0220\n\013cost_micros\030\001 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022<\n\010forecast\030\002 \001(\013" +
-      "2*.google.ads.googleads.v2.services.Fore" +
-      "cast\022[\n\036forecasted_product_allocations\030\003" +
-      " \003(\01323.google.ads.googleads.v2.services." +
-      "ProductAllocation\"\346\001\n\010Forecast\0224\n\017on_tar" +
-      "get_reach\030\001 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0220\n\013total_reach\030\002 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022:\n\025on_target_impressions\030" +
-      "\003 \001(\0132\033.google.protobuf.Int64Value\0226\n\021to" +
-      "tal_impressions\030\004 \001(\0132\033.google.protobuf." +
-      "Int64Value\"\220\001\n\027OnTargetAudienceMetrics\022:" +
-      "\n\025youtube_audience_size\030\001 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\0229\n\024census_audience_si" +
-      "ze\030\002 \001(\0132\033.google.protobuf.Int64Value2\363\006" +
-      "\n\020ReachPlanService\022\302\001\n\026ListPlannableLoca" +
-      "tions\022?.google.ads.googleads.v2.services" +
-      ".ListPlannableLocationsRequest\032@.google." +
-      "ads.googleads.v2.services.ListPlannableL" +
-      "ocationsResponse\"%\202\323\344\223\002\037\"\032/v2:listPlanna" +
-      "bleLocations:\001*\022\276\001\n\025ListPlannableProduct" +
-      "s\022>.google.ads.googleads.v2.services.Lis" +
-      "tPlannableProductsRequest\032?.google.ads.g" +
-      "oogleads.v2.services.ListPlannableProduc" +
-      "tsResponse\"$\202\323\344\223\002\036\"\031/v2:listPlannablePro" +
-      "ducts:\001*\022\340\001\n\027GenerateProductMixIdeas\022@.g" +
-      "oogle.ads.googleads.v2.services.Generate" +
-      "ProductMixIdeasRequest\032A.google.ads.goog" +
-      "leads.v2.services.GenerateProductMixIdea" +
-      "sResponse\"@\202\323\344\223\002:\"5/v2/customers/{custom" +
-      "er_id=*}:generateProductMixIdeas:\001*\022\330\001\n\025" +
-      "GenerateReachForecast\022>.google.ads.googl" +
-      "eads.v2.services.GenerateReachForecastRe" +
-      "quest\032?.google.ads.googleads.v2.services" +
-      ".GenerateReachForecastResponse\">\202\323\344\223\0028\"3" +
-      "/v2/customers/{customer_id=*}:generateRe" +
-      "achForecast:\001*\032\033\312A\030googleads.googleapis." +
-      "comB\374\001\n$com.google.ads.googleads.v2.serv" +
-      "icesB\025ReachPlanServiceProtoP\001ZHgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v2/services;services\242\002\003GAA\252\002 Google.A" +
-      "ds.GoogleAds.V2.Services\312\002 Google\\Ads\\Go" +
-      "ogleAds\\V2\\Services\352\002$Google::Ads::Googl" +
-      "eAds::V2::Servicesb\006proto3"
+      ".proto\032\027google/api/client.proto\032\037google/" +
+      "api/field_behavior.proto\032\036google/protobu" +
+      "f/wrappers.proto\"\037\n\035ListPlannableLocatio" +
+      "nsRequest\"r\n\036ListPlannableLocationsRespo" +
+      "nse\022P\n\023plannable_locations\030\001 \003(\01323.googl" +
+      "e.ads.googleads.v2.services.PlannableLoc" +
+      "ation\"\241\001\n\021PlannableLocation\022(\n\002id\030\001 \001(\0132" +
+      "\034.google.protobuf.StringValue\022*\n\004name\030\002 " +
+      "\001(\0132\034.google.protobuf.StringValue\0226\n\021par" +
+      "ent_country_id\030\003 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\"`\n\034ListPlannableProductsReques" +
+      "t\022@\n\025plannable_location_id\030\001 \001(\0132\034.googl" +
+      "e.protobuf.StringValueB\003\340A\002\"l\n\035ListPlann" +
+      "ableProductsResponse\022K\n\020product_metadata" +
+      "\030\001 \003(\01321.google.ads.googleads.v2.service" +
+      "s.ProductMetadata\"\242\001\n\017ProductMetadata\022<\n" +
+      "\026plannable_product_code\030\001 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\022Q\n\023plannable_targeti" +
+      "ng\030\002 \001(\01324.google.ads.googleads.v2.servi" +
+      "ces.PlannableTargeting\"\352\001\n\022PlannableTarg" +
+      "eting\022Z\n\nage_ranges\030\001 \003(\0162F.google.ads.g" +
+      "oogleads.v2.enums.ReachPlanAgeRangeEnum." +
+      "ReachPlanAgeRange\022;\n\007genders\030\002 \003(\0132*.goo" +
+      "gle.ads.googleads.v2.common.GenderInfo\022;" +
+      "\n\007devices\030\003 \003(\0132*.google.ads.googleads.v" +
+      "2.common.DeviceInfo\"\263\002\n\036GenerateProductM" +
+      "ixIdeasRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002" +
+      "\022@\n\025plannable_location_id\030\002 \001(\0132\034.google" +
+      ".protobuf.StringValueB\003\340A\002\0228\n\rcurrency_c" +
+      "ode\030\003 \001(\0132\034.google.protobuf.StringValueB" +
+      "\003\340A\002\0227\n\rbudget_micros\030\004 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\003\340A\002\022B\n\013preferences\030\005 \001" +
+      "(\0132-.google.ads.googleads.v2.services.Pr" +
+      "eferences\"\301\002\n\013Preferences\0220\n\014is_skippabl" +
+      "e\030\001 \001(\0132\032.google.protobuf.BoolValue\0225\n\021s" +
+      "tarts_with_sound\030\002 \001(\0132\032.google.protobuf" +
+      ".BoolValue\022Y\n\tad_length\030\003 \001(\0162F.google.a" +
+      "ds.googleads.v2.enums.ReachPlanAdLengthE" +
+      "num.ReachPlanAdLength\0224\n\020top_content_onl" +
+      "y\030\004 \001(\0132\032.google.protobuf.BoolValue\0228\n\024h" +
+      "as_guaranteed_price\030\005 \001(\0132\032.google.proto" +
+      "buf.BoolValue\"r\n\037GenerateProductMixIdeas" +
+      "Response\022O\n\022product_allocation\030\001 \003(\01323.g" +
+      "oogle.ads.googleads.v2.services.ProductA" +
+      "llocation\"\205\001\n\021ProductAllocation\022<\n\026plann" +
+      "able_product_code\030\001 \001(\0132\034.google.protobu" +
+      "f.StringValue\0222\n\rbudget_micros\030\002 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\"\313\003\n\034GenerateRe" +
+      "achForecastRequest\022\030\n\013customer_id\030\001 \001(\tB" +
+      "\003\340A\002\0223\n\rcurrency_code\030\002 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022R\n\021campaign_duration\030\003" +
+      " \001(\01322.google.ads.googleads.v2.services." +
+      "CampaignDurationB\003\340A\002\0229\n\024cookie_frequenc" +
+      "y_cap\030\004 \001(\0132\033.google.protobuf.Int32Value" +
+      "\022<\n\027min_effective_frequency\030\005 \001(\0132\033.goog" +
+      "le.protobuf.Int32Value\022>\n\ttargeting\030\006 \001(" +
+      "\0132+.google.ads.googleads.v2.services.Tar" +
+      "geting\022O\n\020planned_products\030\007 \003(\01320.googl" +
+      "e.ads.googleads.v2.services.PlannedProdu" +
+      "ctB\003\340A\002\"\235\002\n\tTargeting\022;\n\025plannable_locat" +
+      "ion_id\030\001 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\022Y\n\tage_range\030\002 \001(\0162F.google.ads.googl" +
+      "eads.v2.enums.ReachPlanAgeRangeEnum.Reac" +
+      "hPlanAgeRange\022;\n\007genders\030\003 \003(\0132*.google." +
+      "ads.googleads.v2.common.GenderInfo\022;\n\007de" +
+      "vices\030\004 \003(\0132*.google.ads.googleads.v2.co" +
+      "mmon.DeviceInfo\"I\n\020CampaignDuration\0225\n\020d" +
+      "uration_in_days\030\001 \001(\0132\033.google.protobuf." +
+      "Int32Value\"\202\001\n\016PlannedProduct\022<\n\026plannab" +
+      "le_product_code\030\001 \001(\0132\034.google.protobuf." +
+      "StringValue\0222\n\rbudget_micros\030\002 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\"\301\001\n\035GenerateReac" +
+      "hForecastResponse\022]\n\032on_target_audience_" +
+      "metrics\030\001 \001(\01329.google.ads.googleads.v2." +
+      "services.OnTargetAudienceMetrics\022A\n\013reac" +
+      "h_curve\030\002 \001(\0132,.google.ads.googleads.v2." +
+      "services.ReachCurve\"V\n\nReachCurve\022H\n\017rea" +
+      "ch_forecasts\030\001 \003(\0132/.google.ads.googlead" +
+      "s.v2.services.ReachForecast\"\334\001\n\rReachFor" +
+      "ecast\0220\n\013cost_micros\030\001 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022<\n\010forecast\030\002 \001(\0132*.goog" +
+      "le.ads.googleads.v2.services.Forecast\022[\n" +
+      "\036forecasted_product_allocations\030\003 \003(\01323." +
+      "google.ads.googleads.v2.services.Product" +
+      "Allocation\"\346\001\n\010Forecast\0224\n\017on_target_rea" +
+      "ch\030\001 \001(\0132\033.google.protobuf.Int64Value\0220\n" +
+      "\013total_reach\030\002 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022:\n\025on_target_impressions\030\003 \001(\0132\033" +
+      ".google.protobuf.Int64Value\0226\n\021total_imp" +
+      "ressions\030\004 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\"\220\001\n\027OnTargetAudienceMetrics\022:\n\025youtu" +
+      "be_audience_size\030\001 \001(\0132\033.google.protobuf" +
+      ".Int64Value\0229\n\024census_audience_size\030\002 \001(" +
+      "\0132\033.google.protobuf.Int64Value2\375\007\n\020Reach" +
+      "PlanService\022\302\001\n\026ListPlannableLocations\022?" +
+      ".google.ads.googleads.v2.services.ListPl" +
+      "annableLocationsRequest\032@.google.ads.goo" +
+      "gleads.v2.services.ListPlannableLocation" +
+      "sResponse\"%\202\323\344\223\002\037\"\032/v2:listPlannableLoca" +
+      "tions:\001*\022\326\001\n\025ListPlannableProducts\022>.goo" +
+      "gle.ads.googleads.v2.services.ListPlanna" +
+      "bleProductsRequest\032?.google.ads.googlead" +
+      "s.v2.services.ListPlannableProductsRespo" +
+      "nse\"<\202\323\344\223\002\036\"\031/v2:listPlannableProducts:\001" +
+      "*\332A\025plannable_location_id\022\241\002\n\027GeneratePr" +
+      "oductMixIdeas\022@.google.ads.googleads.v2." +
+      "services.GenerateProductMixIdeasRequest\032" +
+      "A.google.ads.googleads.v2.services.Gener" +
+      "ateProductMixIdeasResponse\"\200\001\202\323\344\223\002:\"5/v2" +
+      "/customers/{customer_id=*}:generateProdu" +
+      "ctMixIdeas:\001*\332A=customer_id,plannable_lo" +
+      "cation_id,currency_code,budget_micros\022\211\002" +
+      "\n\025GenerateReachForecast\022>.google.ads.goo" +
+      "gleads.v2.services.GenerateReachForecast" +
+      "Request\032?.google.ads.googleads.v2.servic" +
+      "es.GenerateReachForecastResponse\"o\202\323\344\223\0028" +
+      "\"3/v2/customers/{customer_id=*}:generate" +
+      "ReachForecast:\001*\332A.customer_id,campaign_" +
+      "duration,planned_products\032\033\312A\030googleads." +
+      "googleapis.comB\374\001\n$com.google.ads.google" +
+      "ads.v2.servicesB\025ReachPlanServiceProtoP\001" +
+      "ZHgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v2/services;services\242\002\003GAA" +
+      "\252\002 Google.Ads.GoogleAds.V2.Services\312\002 Go" +
+      "ogle\\Ads\\GoogleAds\\V2\\Services\352\002$Google:" +
+      ":Ads::GoogleAds::V2::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.common.CriteriaProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.ReachPlanAdLengthProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.ReachPlanAgeRangeProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_ListPlannableLocationsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_ListPlannableLocationsRequest_fieldAccessorTable = new
@@ -393,15 +391,18 @@ public final class ReachPlanServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v2.enums.ReachPlanAdLengthProto.getDescriptor();
     com.google.ads.googleads.v2.enums.ReachPlanAgeRangeProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

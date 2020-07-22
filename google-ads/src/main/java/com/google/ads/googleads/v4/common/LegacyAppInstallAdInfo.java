@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.LegacyAppInstallAdInfo}
  */
-public  final class LegacyAppInstallAdInfo extends
+public final class LegacyAppInstallAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.LegacyAppInstallAdInfo)
     LegacyAppInstallAdInfoOrBuilder {
@@ -153,6 +153,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue app_id = 1;</code>
    * @return Whether the appId field is set.
    */
+  @java.lang.Override
   public boolean hasAppId() {
     return appId_ != null;
   }
@@ -164,6 +165,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue app_id = 1;</code>
    * @return The appId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAppId() {
     return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
   }
@@ -174,6 +176,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue app_id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
     return getAppId();
   }
@@ -188,7 +191,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore app_store = 2;</code>
    * @return The enum numeric value on the wire for appStore.
    */
-  public int getAppStoreValue() {
+  @java.lang.Override public int getAppStoreValue() {
     return appStore_;
   }
   /**
@@ -199,7 +202,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore app_store = 2;</code>
    * @return The appStore.
    */
-  public com.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore getAppStore() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore getAppStore() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore result = com.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore.valueOf(appStore_);
     return result == null ? com.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore.UNRECOGNIZED : result;
@@ -215,6 +218,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue headline = 3;</code>
    * @return Whether the headline field is set.
    */
+  @java.lang.Override
   public boolean hasHeadline() {
     return headline_ != null;
   }
@@ -226,6 +230,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue headline = 3;</code>
    * @return The headline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHeadline() {
     return headline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : headline_;
   }
@@ -236,6 +241,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue headline = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHeadlineOrBuilder() {
     return getHeadline();
   }
@@ -250,6 +256,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue description1 = 4;</code>
    * @return Whether the description1 field is set.
    */
+  @java.lang.Override
   public boolean hasDescription1() {
     return description1_ != null;
   }
@@ -261,6 +268,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue description1 = 4;</code>
    * @return The description1.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescription1() {
     return description1_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description1_;
   }
@@ -271,6 +279,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue description1 = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescription1OrBuilder() {
     return getDescription1();
   }
@@ -285,6 +294,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue description2 = 5;</code>
    * @return Whether the description2 field is set.
    */
+  @java.lang.Override
   public boolean hasDescription2() {
     return description2_ != null;
   }
@@ -296,6 +306,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue description2 = 5;</code>
    * @return The description2.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescription2() {
     return description2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description2_;
   }
@@ -306,6 +317,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue description2 = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescription2OrBuilder() {
     return getDescription2();
   }
@@ -899,7 +911,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore app_store = 2;</code>
      * @return The enum numeric value on the wire for appStore.
      */
-    public int getAppStoreValue() {
+    @java.lang.Override public int getAppStoreValue() {
       return appStore_;
     }
     /**
@@ -912,6 +924,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAppStoreValue(int value) {
+      
       appStore_ = value;
       onChanged();
       return this;
@@ -924,6 +937,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore app_store = 2;</code>
      * @return The appStore.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore getAppStore() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore result = com.google.ads.googleads.v4.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore.valueOf(appStore_);

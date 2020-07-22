@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.PromoteCampaignDraftRequest}
  */
-public  final class PromoteCampaignDraftRequest extends
+public final class PromoteCampaignDraftRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.PromoteCampaignDraftRequest)
     PromoteCampaignDraftRequestOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private PromoteCampaignDraftRequest() {
     campaignDraft_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PromoteCampaignDraftRequest();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -89,11 +95,13 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object campaignDraft_;
   /**
    * <pre>
-   * The resource name of the campaign draft to promote.
+   * Required. The resource name of the campaign draft to promote.
    * </pre>
    *
-   * <code>string campaign_draft = 1;</code>
+   * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignDraft.
    */
+  @java.lang.Override
   public java.lang.String getCampaignDraft() {
     java.lang.Object ref = campaignDraft_;
     if (ref instanceof java.lang.String) {
@@ -108,11 +116,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the campaign draft to promote.
+   * Required. The resource name of the campaign draft to promote.
    * </pre>
    *
-   * <code>string campaign_draft = 1;</code>
+   * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for campaignDraft.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCampaignDraftBytes() {
     java.lang.Object ref = campaignDraft_;
@@ -436,10 +446,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object campaignDraft_ = "";
     /**
      * <pre>
-     * The resource name of the campaign draft to promote.
+     * Required. The resource name of the campaign draft to promote.
      * </pre>
      *
-     * <code>string campaign_draft = 1;</code>
+     * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The campaignDraft.
      */
     public java.lang.String getCampaignDraft() {
       java.lang.Object ref = campaignDraft_;
@@ -455,10 +466,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign draft to promote.
+     * Required. The resource name of the campaign draft to promote.
      * </pre>
      *
-     * <code>string campaign_draft = 1;</code>
+     * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for campaignDraft.
      */
     public com.google.protobuf.ByteString
         getCampaignDraftBytes() {
@@ -475,10 +487,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign draft to promote.
+     * Required. The resource name of the campaign draft to promote.
      * </pre>
      *
-     * <code>string campaign_draft = 1;</code>
+     * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The campaignDraft to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignDraft(
         java.lang.String value) {
@@ -492,10 +506,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign draft to promote.
+     * Required. The resource name of the campaign draft to promote.
      * </pre>
      *
-     * <code>string campaign_draft = 1;</code>
+     * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCampaignDraft() {
       
@@ -505,10 +520,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign draft to promote.
+     * Required. The resource name of the campaign draft to promote.
      * </pre>
      *
-     * <code>string campaign_draft = 1;</code>
+     * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for campaignDraft to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignDraftBytes(
         com.google.protobuf.ByteString value) {

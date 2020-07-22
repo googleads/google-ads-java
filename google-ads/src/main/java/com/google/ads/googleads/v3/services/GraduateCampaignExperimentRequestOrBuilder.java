@@ -13,6 +13,7 @@ public interface GraduateCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignExperiment.
    */
   java.lang.String getCampaignExperiment();
   /**
@@ -21,6 +22,7 @@ public interface GraduateCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for campaignExperiment.
    */
   com.google.protobuf.ByteString
       getCampaignExperimentBytes();
@@ -32,6 +34,7 @@ public interface GraduateCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignBudget.
    */
   java.lang.String getCampaignBudget();
   /**
@@ -41,6 +44,7 @@ public interface GraduateCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for campaignBudget.
    */
   com.google.protobuf.ByteString
       getCampaignBudgetBytes();

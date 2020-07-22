@@ -13,6 +13,7 @@ public interface AdTextAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
+   * @return Whether the text field is set.
    */
   boolean hasText();
   /**
@@ -21,6 +22,7 @@ public interface AdTextAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
+   * @return The text.
    */
   com.google.protobuf.StringValue getText();
   /**
@@ -41,6 +43,7 @@ public interface AdTextAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType pinned_field = 2;</code>
+   * @return The enum numeric value on the wire for pinnedField.
    */
   int getPinnedFieldValue();
   /**
@@ -52,6 +55,7 @@ public interface AdTextAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType pinned_field = 2;</code>
+   * @return The pinnedField.
    */
   com.google.ads.googleads.v3.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType getPinnedField();
 }

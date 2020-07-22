@@ -14,6 +14,7 @@ public interface OfflineUserDataJobOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserData create = 1;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -23,6 +24,7 @@ public interface OfflineUserDataJobOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserData create = 1;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v3.common.UserData getCreate();
   /**
@@ -42,6 +44,7 @@ public interface OfflineUserDataJobOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserData remove = 2;</code>
+   * @return Whether the remove field is set.
    */
   boolean hasRemove();
   /**
@@ -51,6 +54,7 @@ public interface OfflineUserDataJobOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserData remove = 2;</code>
+   * @return The remove.
    */
   com.google.ads.googleads.v3.common.UserData getRemove();
   /**
@@ -70,6 +74,7 @@ public interface OfflineUserDataJobOperationOrBuilder extends
    * </pre>
    *
    * <code>bool remove_all = 3;</code>
+   * @return The removeAll.
    */
   boolean getRemoveAll();
 

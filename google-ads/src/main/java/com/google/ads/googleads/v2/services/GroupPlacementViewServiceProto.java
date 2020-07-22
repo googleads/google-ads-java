@@ -33,38 +33,35 @@ public final class GroupPlacementViewServiceProto {
       "s.googleads.v2.services\032<google/ads/goog" +
       "leads/v2/resources/group_placement_view." +
       "proto\032\034google/api/annotations.proto\032\027goo" +
-      "gle/api/client.proto\"5\n\034GetGroupPlacemen" +
-      "tViewRequest\022\025\n\rresource_name\030\001 \001(\t2\210\002\n\031" +
-      "GroupPlacementViewService\022\315\001\n\025GetGroupPl" +
-      "acementView\022>.google.ads.googleads.v2.se" +
-      "rvices.GetGroupPlacementViewRequest\0325.go" +
-      "ogle.ads.googleads.v2.resources.GroupPla" +
-      "cementView\"=\202\323\344\223\0027\0225/v2/{resource_name=c" +
-      "ustomers/*/groupPlacementViews/*}\032\033\312A\030go" +
-      "ogleads.googleapis.comB\205\002\n$com.google.ad" +
-      "s.googleads.v2.servicesB\036GroupPlacementV" +
-      "iewServiceProtoP\001ZHgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v2/servic" +
-      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
-      ".V2.Services\312\002 Google\\Ads\\GoogleAds\\V2\\S" +
-      "ervices\352\002$Google::Ads::GoogleAds::V2::Se" +
-      "rvicesb\006proto3"
+      "gle/api/client.proto\032\037google/api/field_b" +
+      "ehavior.proto\032\031google/api/resource.proto" +
+      "\"j\n\034GetGroupPlacementViewRequest\022J\n\rreso" +
+      "urce_name\030\001 \001(\tB3\340A\002\372A-\n+googleads.googl" +
+      "eapis.com/GroupPlacementView2\230\002\n\031GroupPl" +
+      "acementViewService\022\335\001\n\025GetGroupPlacement" +
+      "View\022>.google.ads.googleads.v2.services." +
+      "GetGroupPlacementViewRequest\0325.google.ad" +
+      "s.googleads.v2.resources.GroupPlacementV" +
+      "iew\"M\202\323\344\223\0027\0225/v2/{resource_name=customer" +
+      "s/*/groupPlacementViews/*}\332A\rresource_na" +
+      "me\032\033\312A\030googleads.googleapis.comB\205\002\n$com." +
+      "google.ads.googleads.v2.servicesB\036GroupP" +
+      "lacementViewServiceProtoP\001ZHgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v2/services;services\242\002\003GAA\252\002 Google.Ads." +
+      "GoogleAds.V2.Services\312\002 Google\\Ads\\Googl" +
+      "eAds\\V2\\Services\352\002$Google::Ads::GoogleAd" +
+      "s::V2::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.GroupPlacementViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_GetGroupPlacementViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetGroupPlacementViewRequest_fieldAccessorTable = new
@@ -74,12 +71,17 @@ public final class GroupPlacementViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.GroupPlacementViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

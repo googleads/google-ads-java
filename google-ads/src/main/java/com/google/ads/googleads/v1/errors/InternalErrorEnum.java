@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.errors;
  *
  * Protobuf type {@code google.ads.googleads.v1.errors.InternalErrorEnum}
  */
-public  final class InternalErrorEnum extends
+public final class InternalErrorEnum extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.errors.InternalErrorEnum)
     InternalErrorEnumOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private InternalErrorEnum() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new InternalErrorEnum();
   }
 
   @java.lang.Override
@@ -112,8 +119,8 @@ private static final long serialVersionUID = 0L;
     INTERNAL_ERROR(2),
     /**
      * <pre>
-     * The intended error code doesn't exist in any API version. This will be
-     * fixed by adding a new error code as soon as possible.
+     * The intended error code doesn't exist in specified API version. It will
+     * be released in a future API version.
      * </pre>
      *
      * <code>ERROR_CODE_NOT_PUBLISHED = 3;</code>
@@ -157,8 +164,8 @@ private static final long serialVersionUID = 0L;
     public static final int INTERNAL_ERROR_VALUE = 2;
     /**
      * <pre>
-     * The intended error code doesn't exist in any API version. This will be
-     * fixed by adding a new error code as soon as possible.
+     * The intended error code doesn't exist in specified API version. It will
+     * be released in a future API version.
      * </pre>
      *
      * <code>ERROR_CODE_NOT_PUBLISHED = 3;</code>
@@ -184,6 +191,8 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -191,6 +200,10 @@ private static final long serialVersionUID = 0L;
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static InternalError forNumber(int value) {
       switch (value) {
         case 0: return UNSPECIFIED;
@@ -216,6 +229,10 @@ private static final long serialVersionUID = 0L;
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor

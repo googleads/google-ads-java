@@ -11,27 +11,29 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
    * <pre>
    * ID of the product bidding category.
    * This ID is equivalent to the google_product_category ID as described in
-   * this article: https://support.google.com/merchants/answer/6324436.
+   * this article: https://support.google.com/merchants/answer/6324436
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 1;</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
    * ID of the product bidding category.
    * This ID is equivalent to the google_product_category ID as described in
-   * this article: https://support.google.com/merchants/answer/6324436.
+   * this article: https://support.google.com/merchants/answer/6324436
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 1;</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
    * ID of the product bidding category.
    * This ID is equivalent to the google_product_category ID as described in
-   * this article: https://support.google.com/merchants/answer/6324436.
+   * this article: https://support.google.com/merchants/answer/6324436
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 1;</code>
@@ -45,6 +47,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
   /**
@@ -54,6 +57,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return The countryCode.
    */
   com.google.protobuf.StringValue getCountryCode();
   /**
@@ -72,6 +76,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 3;</code>
+   * @return The enum numeric value on the wire for level.
    */
   int getLevelValue();
   /**
@@ -80,6 +85,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 3;</code>
+   * @return The level.
    */
   com.google.ads.googleads.v1.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel();
 }

@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.DetailPlacementViewServiceStubS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
- *   String formattedResourceName = DetailPlacementViewServiceClient.formatDetailPlacementViewName("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
- *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(formattedResourceName);
+ *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
+ *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,50 +98,6 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
   private final DetailPlacementViewServiceSettings settings;
   private final DetailPlacementViewServiceStub stub;
 
-  private static final PathTemplate DETAIL_PLACEMENT_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/detailPlacementViews/{detail_placement_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a detail_placement_view
-   * resource.
-   *
-   * @deprecated Use the {@link DetailPlacementViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatDetailPlacementViewName(
-      String customer, String detailPlacementView) {
-    return DETAIL_PLACEMENT_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "detail_placement_view", detailPlacementView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * detail_placement_view resource.
-   *
-   * @deprecated Use the {@link DetailPlacementViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromDetailPlacementViewName(
-      String detailPlacementViewName) {
-    return DETAIL_PLACEMENT_VIEW_PATH_TEMPLATE.parse(detailPlacementViewName).get("customer");
-  }
-
-  /**
-   * Parses the detail_placement_view from the given fully-qualified path which represents a
-   * detail_placement_view resource.
-   *
-   * @deprecated Use the {@link DetailPlacementViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseDetailPlacementViewFromDetailPlacementViewName(
-      String detailPlacementViewName) {
-    return DETAIL_PLACEMENT_VIEW_PATH_TEMPLATE
-        .parse(detailPlacementViewName)
-        .get("detail_placement_view");
-  }
-
   /** Constructs an instance of DetailPlacementViewServiceClient with default settings. */
   public static final DetailPlacementViewServiceClient create() throws IOException {
     return create(DetailPlacementViewServiceSettings.newBuilder().build());
@@ -201,8 +156,32 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
-   *   String formattedResourceName = DetailPlacementViewServiceClient.formatDetailPlacementViewName("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
-   *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(formattedResourceName);
+   *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
+   *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the Detail Placement view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final DetailPlacementView getDetailPlacementView(DetailPlacementViewName resourceName) {
+    GetDetailPlacementViewRequest request =
+        GetDetailPlacementViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getDetailPlacementView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Detail Placement view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
+   *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
+   *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -210,7 +189,6 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DetailPlacementView getDetailPlacementView(String resourceName) {
-    DETAIL_PLACEMENT_VIEW_PATH_TEMPLATE.validate(resourceName, "getDetailPlacementView");
     GetDetailPlacementViewRequest request =
         GetDetailPlacementViewRequest.newBuilder().setResourceName(resourceName).build();
     return getDetailPlacementView(request);
@@ -224,9 +202,9 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
-   *   String formattedResourceName = DetailPlacementViewServiceClient.formatDetailPlacementViewName("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
+   *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
    *   GetDetailPlacementViewRequest request = GetDetailPlacementViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(request);
    * }
@@ -247,9 +225,9 @@ public class DetailPlacementViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
-   *   String formattedResourceName = DetailPlacementViewServiceClient.formatDetailPlacementViewName("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
+   *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
    *   GetDetailPlacementViewRequest request = GetDetailPlacementViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;DetailPlacementView&gt; future = detailPlacementViewServiceClient.getDetailPlacementViewCallable().futureCall(request);
    *   // Do something

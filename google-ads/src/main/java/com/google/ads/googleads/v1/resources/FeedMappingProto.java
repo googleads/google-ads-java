@@ -73,101 +73,102 @@ public final class FeedMappingProto {
       "r_field.proto\032Hgoogle/ads/googleads/v1/e" +
       "nums/structured_snippet_placeholder_fiel" +
       "d.proto\032<google/ads/googleads/v1/enums/t" +
-      "ravel_placeholder_field.proto\032\036google/pr" +
-      "otobuf/wrappers.proto\032\034google/api/annota" +
-      "tions.proto\"\336\003\n\013FeedMapping\022\025\n\rresource_" +
-      "name\030\001 \001(\t\022*\n\004feed\030\002 \001(\0132\034.google.protob" +
-      "uf.StringValue\022Z\n\030attribute_field_mappin" +
-      "gs\030\005 \003(\01328.google.ads.googleads.v1.resou" +
-      "rces.AttributeFieldMapping\022V\n\006status\030\006 \001" +
-      "(\0162F.google.ads.googleads.v1.enums.FeedM" +
-      "appingStatusEnum.FeedMappingStatus\022^\n\020pl" +
-      "aceholder_type\030\003 \001(\0162B.google.ads.google" +
-      "ads.v1.enums.PlaceholderTypeEnum.Placeho" +
-      "lderTypeH\000\022n\n\016criterion_type\030\004 \001(\0162T.goo" +
+      "ravel_placeholder_field.proto\032\037google/ap" +
+      "i/field_behavior.proto\032\031google/api/resou" +
+      "rce.proto\032\036google/protobuf/wrappers.prot" +
+      "o\032\034google/api/annotations.proto\"\244\005\n\013Feed" +
+      "Mapping\022C\n\rresource_name\030\001 \001(\tB,\340A\005\372A&\n$" +
+      "googleads.googleapis.com/FeedMapping\022Q\n\004" +
+      "feed\030\002 \001(\0132\034.google.protobuf.StringValue" +
+      "B%\340A\005\372A\037\n\035googleads.googleapis.com/Feed\022" +
+      "_\n\030attribute_field_mappings\030\005 \003(\01328.goog" +
+      "le.ads.googleads.v1.resources.AttributeF" +
+      "ieldMappingB\003\340A\005\022[\n\006status\030\006 \001(\0162F.googl" +
+      "e.ads.googleads.v1.enums.FeedMappingStat" +
+      "usEnum.FeedMappingStatusB\003\340A\003\022c\n\020placeho" +
+      "lder_type\030\003 \001(\0162B.google.ads.googleads.v" +
+      "1.enums.PlaceholderTypeEnum.PlaceholderT" +
+      "ypeB\003\340A\005H\000\022s\n\016criterion_type\030\004 \001(\0162T.goo" +
       "gle.ads.googleads.v1.enums.FeedMappingCr" +
       "iterionTypeEnum.FeedMappingCriterionType" +
-      "H\000B\010\n\006target\"\352\023\n\025AttributeFieldMapping\0226" +
-      "\n\021feed_attribute_id\030\001 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022-\n\010field_id\030\002 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022n\n\016sitelink_field\030" +
-      "\003 \001(\0162T.google.ads.googleads.v1.enums.Si" +
-      "telinkPlaceholderFieldEnum.SitelinkPlace" +
-      "holderFieldH\000\022b\n\ncall_field\030\004 \001(\0162L.goog" +
-      "le.ads.googleads.v1.enums.CallPlaceholde" +
-      "rFieldEnum.CallPlaceholderFieldH\000\022_\n\tapp" +
-      "_field\030\005 \001(\0162J.google.ads.googleads.v1.e" +
-      "nums.AppPlaceholderFieldEnum.AppPlacehol" +
-      "derFieldH\000\022n\n\016location_field\030\006 \001(\0162T.goo" +
-      "gle.ads.googleads.v1.enums.LocationPlace" +
-      "holderFieldEnum.LocationPlaceholderField" +
-      "H\000\022\212\001\n\030affiliate_location_field\030\007 \001(\0162f." +
-      "google.ads.googleads.v1.enums.AffiliateL" +
-      "ocationPlaceholderFieldEnum.AffiliateLoc" +
-      "ationPlaceholderFieldH\000\022k\n\rcallout_field" +
-      "\030\010 \001(\0162R.google.ads.googleads.v1.enums.C" +
-      "alloutPlaceholderFieldEnum.CalloutPlaceh" +
-      "olderFieldH\000\022\212\001\n\030structured_snippet_fiel" +
-      "d\030\t \001(\0162f.google.ads.googleads.v1.enums." +
-      "StructuredSnippetPlaceholderFieldEnum.St" +
-      "ructuredSnippetPlaceholderFieldH\000\022k\n\rmes" +
-      "sage_field\030\n \001(\0162R.google.ads.googleads." +
-      "v1.enums.MessagePlaceholderFieldEnum.Mes" +
-      "sagePlaceholderFieldH\000\022e\n\013price_field\030\013 " +
-      "\001(\0162N.google.ads.googleads.v1.enums.Pric" +
-      "ePlaceholderFieldEnum.PricePlaceholderFi" +
-      "eldH\000\022q\n\017promotion_field\030\014 \001(\0162V.google." +
-      "ads.googleads.v1.enums.PromotionPlacehol" +
-      "derFieldEnum.PromotionPlaceholderFieldH\000" +
-      "\022{\n\023ad_customizer_field\030\r \001(\0162\\.google.a" +
-      "ds.googleads.v1.enums.AdCustomizerPlaceh" +
-      "olderFieldEnum.AdCustomizerPlaceholderFi" +
-      "eldH\000\022u\n\023dsa_page_feed_field\030\016 \001(\0162V.goo" +
-      "gle.ads.googleads.v1.enums.DsaPageFeedCr" +
-      "iterionFieldEnum.DsaPageFeedCriterionFie" +
-      "ldH\000\022\242\001\n\"location_extension_targeting_fi" +
-      "eld\030\017 \001(\0162t.google.ads.googleads.v1.enum" +
-      "s.LocationExtensionTargetingCriterionFie" +
-      "ldEnum.LocationExtensionTargetingCriteri" +
-      "onFieldH\000\022q\n\017education_field\030\020 \001(\0162V.goo" +
-      "gle.ads.googleads.v1.enums.EducationPlac" +
-      "eholderFieldEnum.EducationPlaceholderFie" +
-      "ldH\000\022h\n\014flight_field\030\021 \001(\0162P.google.ads." +
-      "googleads.v1.enums.FlightPlaceholderFiel" +
-      "dEnum.FlightPlaceholderFieldH\000\022h\n\014custom" +
-      "_field\030\022 \001(\0162P.google.ads.googleads.v1.e" +
-      "nums.CustomPlaceholderFieldEnum.CustomPl" +
-      "aceholderFieldH\000\022e\n\013hotel_field\030\023 \001(\0162N." +
-      "google.ads.googleads.v1.enums.HotelPlace" +
-      "holderFieldEnum.HotelPlaceholderFieldH\000\022" +
-      "u\n\021real_estate_field\030\024 \001(\0162X.google.ads." +
-      "googleads.v1.enums.RealEstatePlaceholder" +
-      "FieldEnum.RealEstatePlaceholderFieldH\000\022h" +
-      "\n\014travel_field\030\025 \001(\0162P.google.ads.google" +
-      "ads.v1.enums.TravelPlaceholderFieldEnum." +
-      "TravelPlaceholderFieldH\000\022e\n\013local_field\030" +
-      "\026 \001(\0162N.google.ads.googleads.v1.enums.Lo" +
-      "calPlaceholderFieldEnum.LocalPlaceholder" +
-      "FieldH\000\022_\n\tjob_field\030\027 \001(\0162J.google.ads." +
-      "googleads.v1.enums.JobPlaceholderFieldEn" +
-      "um.JobPlaceholderFieldH\000B\007\n\005fieldB\375\001\n%co" +
-      "m.google.ads.googleads.v1.resourcesB\020Fee" +
-      "dMappingProtoP\001ZJgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v1/resource" +
-      "s;resources\242\002\003GAA\252\002!Google.Ads.GoogleAds" +
-      ".V1.Resources\312\002!Google\\Ads\\GoogleAds\\V1\\" +
-      "Resources\352\002%Google::Ads::GoogleAds::V1::" +
-      "Resourcesb\006proto3"
+      "B\003\340A\005H\000:[\352AX\n$googleads.googleapis.com/F" +
+      "eedMapping\0220customers/{customer}/feedMap" +
+      "pings/{feed_mapping}B\010\n\006target\"\336\024\n\025Attri" +
+      "buteFieldMapping\022;\n\021feed_attribute_id\030\001 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\003\340A\005\0222\n" +
+      "\010field_id\030\002 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\003\340A\003\022s\n\016sitelink_field\030\003 \001(\0162T.goog" +
+      "le.ads.googleads.v1.enums.SitelinkPlaceh" +
+      "olderFieldEnum.SitelinkPlaceholderFieldB" +
+      "\003\340A\005H\000\022g\n\ncall_field\030\004 \001(\0162L.google.ads." +
+      "googleads.v1.enums.CallPlaceholderFieldE" +
+      "num.CallPlaceholderFieldB\003\340A\005H\000\022d\n\tapp_f" +
+      "ield\030\005 \001(\0162J.google.ads.googleads.v1.enu" +
+      "ms.AppPlaceholderFieldEnum.AppPlaceholde" +
+      "rFieldB\003\340A\005H\000\022s\n\016location_field\030\006 \001(\0162T." +
+      "google.ads.googleads.v1.enums.LocationPl" +
+      "aceholderFieldEnum.LocationPlaceholderFi" +
+      "eldB\003\340A\003H\000\022\217\001\n\030affiliate_location_field\030" +
+      "\007 \001(\0162f.google.ads.googleads.v1.enums.Af" +
+      "filiateLocationPlaceholderFieldEnum.Affi" +
+      "liateLocationPlaceholderFieldB\003\340A\003H\000\022p\n\r" +
+      "callout_field\030\010 \001(\0162R.google.ads.googlea" +
+      "ds.v1.enums.CalloutPlaceholderFieldEnum." +
+      "CalloutPlaceholderFieldB\003\340A\005H\000\022\217\001\n\030struc" +
+      "tured_snippet_field\030\t \001(\0162f.google.ads.g" +
+      "oogleads.v1.enums.StructuredSnippetPlace" +
+      "holderFieldEnum.StructuredSnippetPlaceho" +
+      "lderFieldB\003\340A\005H\000\022p\n\rmessage_field\030\n \001(\0162" +
+      "R.google.ads.googleads.v1.enums.MessageP" +
+      "laceholderFieldEnum.MessagePlaceholderFi" +
+      "eldB\003\340A\005H\000\022j\n\013price_field\030\013 \001(\0162N.google" +
+      ".ads.googleads.v1.enums.PricePlaceholder" +
+      "FieldEnum.PricePlaceholderFieldB\003\340A\005H\000\022v" +
+      "\n\017promotion_field\030\014 \001(\0162V.google.ads.goo" +
+      "gleads.v1.enums.PromotionPlaceholderFiel" +
+      "dEnum.PromotionPlaceholderFieldB\003\340A\005H\000\022\200" +
+      "\001\n\023ad_customizer_field\030\r \001(\0162\\.google.ad" +
+      "s.googleads.v1.enums.AdCustomizerPlaceho" +
+      "lderFieldEnum.AdCustomizerPlaceholderFie" +
+      "ldB\003\340A\005H\000\022z\n\023dsa_page_feed_field\030\016 \001(\0162V" +
+      ".google.ads.googleads.v1.enums.DsaPageFe" +
+      "edCriterionFieldEnum.DsaPageFeedCriterio" +
+      "nFieldB\003\340A\005H\000\022\247\001\n\"location_extension_tar" +
+      "geting_field\030\017 \001(\0162t.google.ads.googlead" +
+      "s.v1.enums.LocationExtensionTargetingCri" +
+      "terionFieldEnum.LocationExtensionTargeti" +
+      "ngCriterionFieldB\003\340A\005H\000\022v\n\017education_fie" +
+      "ld\030\020 \001(\0162V.google.ads.googleads.v1.enums" +
+      ".EducationPlaceholderFieldEnum.Education" +
+      "PlaceholderFieldB\003\340A\005H\000\022m\n\014flight_field\030" +
+      "\021 \001(\0162P.google.ads.googleads.v1.enums.Fl" +
+      "ightPlaceholderFieldEnum.FlightPlacehold" +
+      "erFieldB\003\340A\005H\000\022m\n\014custom_field\030\022 \001(\0162P.g" +
+      "oogle.ads.googleads.v1.enums.CustomPlace" +
+      "holderFieldEnum.CustomPlaceholderFieldB\003" +
+      "\340A\005H\000\022j\n\013hotel_field\030\023 \001(\0162N.google.ads." +
+      "googleads.v1.enums.HotelPlaceholderField" +
+      "Enum.HotelPlaceholderFieldB\003\340A\005H\000\022z\n\021rea" +
+      "l_estate_field\030\024 \001(\0162X.google.ads.google" +
+      "ads.v1.enums.RealEstatePlaceholderFieldE" +
+      "num.RealEstatePlaceholderFieldB\003\340A\005H\000\022m\n" +
+      "\014travel_field\030\025 \001(\0162P.google.ads.googlea" +
+      "ds.v1.enums.TravelPlaceholderFieldEnum.T" +
+      "ravelPlaceholderFieldB\003\340A\005H\000\022j\n\013local_fi" +
+      "eld\030\026 \001(\0162N.google.ads.googleads.v1.enum" +
+      "s.LocalPlaceholderFieldEnum.LocalPlaceho" +
+      "lderFieldB\003\340A\005H\000\022d\n\tjob_field\030\027 \001(\0162J.go" +
+      "ogle.ads.googleads.v1.enums.JobPlacehold" +
+      "erFieldEnum.JobPlaceholderFieldB\003\340A\005H\000B\007" +
+      "\n\005fieldB\375\001\n%com.google.ads.googleads.v1." +
+      "resourcesB\020FeedMappingProtoP\001ZJgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v1/resources;resources\242\002\003GAA\252\002!Google" +
+      ".Ads.GoogleAds.V1.Resources\312\002!Google\\Ads" +
+      "\\GoogleAds\\V1\\Resources\352\002%Google::Ads::G" +
+      "oogleAds::V1::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.enums.AdCustomizerPlaceholderFieldProto.getDescriptor(),
@@ -194,9 +195,11 @@ public final class FeedMappingProto {
           com.google.ads.googleads.v1.enums.SitelinkPlaceholderFieldProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.StructuredSnippetPlaceholderFieldProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.TravelPlaceholderFieldProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_FeedMapping_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_FeedMapping_fieldAccessorTable = new
@@ -209,6 +212,13 @@ public final class FeedMappingProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_AttributeFieldMapping_descriptor,
         new java.lang.String[] { "FeedAttributeId", "FieldId", "SitelinkField", "CallField", "AppField", "LocationField", "AffiliateLocationField", "CalloutField", "StructuredSnippetField", "MessageField", "PriceField", "PromotionField", "AdCustomizerField", "DsaPageFeedField", "LocationExtensionTargetingField", "EducationField", "FlightField", "CustomField", "HotelField", "RealEstateField", "TravelField", "LocalField", "JobField", "Field", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.enums.AdCustomizerPlaceholderFieldProto.getDescriptor();
     com.google.ads.googleads.v1.enums.AffiliateLocationPlaceholderFieldProto.getDescriptor();
     com.google.ads.googleads.v1.enums.AppPlaceholderFieldProto.getDescriptor();
@@ -233,6 +243,8 @@ public final class FeedMappingProto {
     com.google.ads.googleads.v1.enums.SitelinkPlaceholderFieldProto.getDescriptor();
     com.google.ads.googleads.v1.enums.StructuredSnippetPlaceholderFieldProto.getDescriptor();
     com.google.ads.googleads.v1.enums.TravelPlaceholderFieldProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

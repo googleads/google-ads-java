@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.AdTextAsset}
  */
-public  final class AdTextAsset extends
+public final class AdTextAsset extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.AdTextAsset)
     AdTextAssetOrBuilder {
@@ -114,6 +114,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue text = 1;</code>
    * @return Whether the text field is set.
    */
+  @java.lang.Override
   public boolean hasText() {
     return text_ != null;
   }
@@ -125,6 +126,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue text = 1;</code>
    * @return The text.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getText() {
     return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
   }
@@ -135,6 +137,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
     return getText();
   }
@@ -152,7 +155,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType pinned_field = 2;</code>
    * @return The enum numeric value on the wire for pinnedField.
    */
-  public int getPinnedFieldValue() {
+  @java.lang.Override public int getPinnedFieldValue() {
     return pinnedField_;
   }
   /**
@@ -166,7 +169,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType pinned_field = 2;</code>
    * @return The pinnedField.
    */
-  public com.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType getPinnedField() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType getPinnedField() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType result = com.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.valueOf(pinnedField_);
     return result == null ? com.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.UNRECOGNIZED : result;
@@ -674,7 +677,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType pinned_field = 2;</code>
      * @return The enum numeric value on the wire for pinnedField.
      */
-    public int getPinnedFieldValue() {
+    @java.lang.Override public int getPinnedFieldValue() {
       return pinnedField_;
     }
     /**
@@ -690,6 +693,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPinnedFieldValue(int value) {
+      
       pinnedField_ = value;
       onChanged();
       return this;
@@ -705,6 +709,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType pinned_field = 2;</code>
      * @return The pinnedField.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType getPinnedField() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType result = com.google.ads.googleads.v4.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.valueOf(pinnedField_);

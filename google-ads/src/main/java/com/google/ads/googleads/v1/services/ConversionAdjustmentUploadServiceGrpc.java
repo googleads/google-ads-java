@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/conversion_adjustment_upload_service.proto")
 public final class ConversionAdjustmentUploadServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class ConversionAdjustmentUploadServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.ConversionAdjustmentUploadService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getUploadConversionAdjustmentsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest,
-      com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse> METHOD_UPLOAD_CONVERSION_ADJUSTMENTS = getUploadConversionAdjustmentsMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest,
       com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse> getUploadConversionAdjustmentsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UploadConversionAdjustments",
+      requestType = com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest.class,
+      responseType = com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest,
       com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse> getUploadConversionAdjustmentsMethod() {
-    return getUploadConversionAdjustmentsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest,
-      com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse> getUploadConversionAdjustmentsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest, com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse> getUploadConversionAdjustmentsMethod;
     if ((getUploadConversionAdjustmentsMethod = ConversionAdjustmentUploadServiceGrpc.getUploadConversionAdjustmentsMethod) == null) {
       synchronized (ConversionAdjustmentUploadServiceGrpc.class) {
         if ((getUploadConversionAdjustmentsMethod = ConversionAdjustmentUploadServiceGrpc.getUploadConversionAdjustmentsMethod) == null) {
-          ConversionAdjustmentUploadServiceGrpc.getUploadConversionAdjustmentsMethod = getUploadConversionAdjustmentsMethod = 
+          ConversionAdjustmentUploadServiceGrpc.getUploadConversionAdjustmentsMethod = getUploadConversionAdjustmentsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest, com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.ConversionAdjustmentUploadService", "UploadConversionAdjustments"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadConversionAdjustments"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ConversionAdjustmentUploadServiceMethodDescriptorSupplier("UploadConversionAdjustments"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ConversionAdjustmentUploadServiceMethodDescriptorSupplier("UploadConversionAdjustments"))
+              .build();
         }
-     }
-     return getUploadConversionAdjustmentsMethod;
+      }
+    }
+    return getUploadConversionAdjustmentsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ConversionAdjustmentUploadServiceStub newStub(io.grpc.Channel channel) {
-    return new ConversionAdjustmentUploadServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ConversionAdjustmentUploadServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ConversionAdjustmentUploadServiceStub>() {
+        @java.lang.Override
+        public ConversionAdjustmentUploadServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ConversionAdjustmentUploadServiceStub(channel, callOptions);
+        }
+      };
+    return ConversionAdjustmentUploadServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class ConversionAdjustmentUploadServiceGrpc {
    */
   public static ConversionAdjustmentUploadServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ConversionAdjustmentUploadServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ConversionAdjustmentUploadServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ConversionAdjustmentUploadServiceBlockingStub>() {
+        @java.lang.Override
+        public ConversionAdjustmentUploadServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ConversionAdjustmentUploadServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ConversionAdjustmentUploadServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class ConversionAdjustmentUploadServiceGrpc {
    */
   public static ConversionAdjustmentUploadServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ConversionAdjustmentUploadServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ConversionAdjustmentUploadServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ConversionAdjustmentUploadServiceFutureStub>() {
+        @java.lang.Override
+        public ConversionAdjustmentUploadServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ConversionAdjustmentUploadServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ConversionAdjustmentUploadServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class ConversionAdjustmentUploadServiceGrpc {
      */
     public void uploadConversionAdjustments(com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUploadConversionAdjustmentsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getUploadConversionAdjustmentsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getUploadConversionAdjustmentsMethodHelper(),
+            getUploadConversionAdjustmentsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest,
@@ -126,19 +140,15 @@ public final class ConversionAdjustmentUploadServiceGrpc {
    * Service to upload conversion adjustments.
    * </pre>
    */
-  public static final class ConversionAdjustmentUploadServiceStub extends io.grpc.stub.AbstractStub<ConversionAdjustmentUploadServiceStub> {
-    private ConversionAdjustmentUploadServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ConversionAdjustmentUploadServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ConversionAdjustmentUploadServiceStub extends io.grpc.stub.AbstractAsyncStub<ConversionAdjustmentUploadServiceStub> {
+    private ConversionAdjustmentUploadServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ConversionAdjustmentUploadServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ConversionAdjustmentUploadServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ConversionAdjustmentUploadServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class ConversionAdjustmentUploadServiceGrpc {
     public void uploadConversionAdjustments(com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getUploadConversionAdjustmentsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUploadConversionAdjustmentsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class ConversionAdjustmentUploadServiceGrpc {
    * Service to upload conversion adjustments.
    * </pre>
    */
-  public static final class ConversionAdjustmentUploadServiceBlockingStub extends io.grpc.stub.AbstractStub<ConversionAdjustmentUploadServiceBlockingStub> {
-    private ConversionAdjustmentUploadServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ConversionAdjustmentUploadServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ConversionAdjustmentUploadServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConversionAdjustmentUploadServiceBlockingStub> {
+    private ConversionAdjustmentUploadServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ConversionAdjustmentUploadServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ConversionAdjustmentUploadServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ConversionAdjustmentUploadServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class ConversionAdjustmentUploadServiceGrpc {
      */
     public com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse uploadConversionAdjustments(com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getUploadConversionAdjustmentsMethodHelper(), getCallOptions(), request);
+          getChannel(), getUploadConversionAdjustmentsMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class ConversionAdjustmentUploadServiceGrpc {
    * Service to upload conversion adjustments.
    * </pre>
    */
-  public static final class ConversionAdjustmentUploadServiceFutureStub extends io.grpc.stub.AbstractStub<ConversionAdjustmentUploadServiceFutureStub> {
-    private ConversionAdjustmentUploadServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ConversionAdjustmentUploadServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ConversionAdjustmentUploadServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConversionAdjustmentUploadServiceFutureStub> {
+    private ConversionAdjustmentUploadServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ConversionAdjustmentUploadServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ConversionAdjustmentUploadServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ConversionAdjustmentUploadServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class ConversionAdjustmentUploadServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.services.UploadConversionAdjustmentsResponse> uploadConversionAdjustments(
         com.google.ads.googleads.v1.services.UploadConversionAdjustmentsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getUploadConversionAdjustmentsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getUploadConversionAdjustmentsMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class ConversionAdjustmentUploadServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ConversionAdjustmentUploadServiceFileDescriptorSupplier())
-              .addMethod(getUploadConversionAdjustmentsMethodHelper())
+              .addMethod(getUploadConversionAdjustmentsMethod())
               .build();
         }
       }

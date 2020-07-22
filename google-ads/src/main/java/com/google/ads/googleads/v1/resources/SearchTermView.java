@@ -11,7 +11,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.SearchTermView}
  */
-public  final class SearchTermView extends
+public final class SearchTermView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.SearchTermView)
     SearchTermViewOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   private SearchTermView() {
     resourceName_ = "";
     status_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new SearchTermView();
   }
 
   @java.lang.Override
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -123,13 +129,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the search term view.
+   * Output only. The resource name of the search term view.
    * Search term view resource names have the form:
    * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~{URL-base64_search_term}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -144,13 +152,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the search term view.
+   * Output only. The resource name of the search term view.
    * Search term view resource names have the form:
    * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~{URL-base64_search_term}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -169,31 +179,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue searchTerm_;
   /**
    * <pre>
-   * The search term.
+   * Output only. The search term.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the searchTerm field is set.
    */
+  @java.lang.Override
   public boolean hasSearchTerm() {
     return searchTerm_ != null;
   }
   /**
    * <pre>
-   * The search term.
+   * Output only. The search term.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The searchTerm.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSearchTerm() {
     return searchTerm_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : searchTerm_;
   }
   /**
    * <pre>
-   * The search term.
+   * Output only. The search term.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSearchTermOrBuilder() {
     return getSearchTerm();
   }
@@ -202,31 +217,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroup_;
   /**
    * <pre>
-   * The ad group the search term served in.
+   * Output only. The ad group the search term served in.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroup() {
     return adGroup_ != null;
   }
   /**
    * <pre>
-   * The ad group the search term served in.
+   * Output only. The ad group the search term served in.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroup() {
     return adGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroup_;
   }
   /**
    * <pre>
-   * The ad group the search term served in.
+   * Output only. The ad group the search term served in.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     return getAdGroup();
   }
@@ -235,24 +255,26 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Indicates whether the search term is currently one of your
+   * Output only. Indicates whether the search term is currently one of your
    * targeted or excluded keywords.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4;</code>
+   * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Indicates whether the search term is currently one of your
+   * Output only. Indicates whether the search term is currently one of your
    * targeted or excluded keywords.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4;</code>
+   * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus result = com.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus.UNRECOGNIZED : result;
@@ -644,12 +666,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the search term view.
+     * Output only. The resource name of the search term view.
      * Search term view resource names have the form:
      * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~{URL-base64_search_term}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -665,12 +688,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the search term view.
+     * Output only. The resource name of the search term view.
      * Search term view resource names have the form:
      * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~{URL-base64_search_term}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -687,12 +711,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the search term view.
+     * Output only. The resource name of the search term view.
      * Search term view resource names have the form:
      * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~{URL-base64_search_term}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -706,12 +732,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the search term view.
+     * Output only. The resource name of the search term view.
      * Search term view resource names have the form:
      * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~{URL-base64_search_term}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -721,12 +748,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the search term view.
+     * Output only. The resource name of the search term view.
      * Search term view resource names have the form:
      * `customers/{customer_id}/searchTermViews/{campaign_id}~{ad_group_id}~{URL-base64_search_term}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -745,20 +774,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> searchTermBuilder_;
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the searchTerm field is set.
      */
     public boolean hasSearchTerm() {
       return searchTermBuilder_ != null || searchTerm_ != null;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The searchTerm.
      */
     public com.google.protobuf.StringValue getSearchTerm() {
       if (searchTermBuilder_ == null) {
@@ -769,10 +800,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSearchTerm(com.google.protobuf.StringValue value) {
       if (searchTermBuilder_ == null) {
@@ -789,10 +820,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSearchTerm(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -807,10 +838,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeSearchTerm(com.google.protobuf.StringValue value) {
       if (searchTermBuilder_ == null) {
@@ -829,10 +860,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSearchTerm() {
       if (searchTermBuilder_ == null) {
@@ -847,10 +878,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getSearchTermBuilder() {
       
@@ -859,10 +890,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSearchTermOrBuilder() {
       if (searchTermBuilder_ != null) {
@@ -874,10 +905,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The search term.
+     * Output only. The search term.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -898,20 +929,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupBuilder_;
     /**
      * <pre>
-     * The ad group the search term served in.
+     * Output only. The ad group the search term served in.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
       return adGroupBuilder_ != null || adGroup_ != null;
     }
     /**
      * <pre>
-     * The ad group the search term served in.
+     * Output only. The ad group the search term served in.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroup.
      */
     public com.google.protobuf.StringValue getAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -922,10 +955,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group the search term served in.
+     * Output only. The ad group the search term served in.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -942,10 +975,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group the search term served in.
+     * Output only. The ad group the search term served in.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -960,10 +993,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group the search term served in.
+     * Output only. The ad group the search term served in.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -982,10 +1015,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group the search term served in.
+     * Output only. The ad group the search term served in.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -1000,10 +1033,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group the search term served in.
+     * Output only. The ad group the search term served in.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupBuilder() {
       
@@ -1012,10 +1045,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group the search term served in.
+     * Output only. The ad group the search term served in.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
       if (adGroupBuilder_ != null) {
@@ -1027,10 +1060,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group the search term served in.
+     * Output only. The ad group the search term served in.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1049,36 +1082,42 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Indicates whether the search term is currently one of your
+     * Output only. Indicates whether the search term is currently one of your
      * targeted or excluded keywords.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4;</code>
+     * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Indicates whether the search term is currently one of your
+     * Output only. Indicates whether the search term is currently one of your
      * targeted or excluded keywords.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4;</code>
+     * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Indicates whether the search term is currently one of your
+     * Output only. Indicates whether the search term is currently one of your
      * targeted or excluded keywords.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4;</code>
+     * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus result = com.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus.valueOf(status_);
@@ -1086,11 +1125,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether the search term is currently one of your
+     * Output only. Indicates whether the search term is currently one of your
      * targeted or excluded keywords.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4;</code>
+     * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus value) {
       if (value == null) {
@@ -1103,11 +1144,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates whether the search term is currently one of your
+     * Output only. Indicates whether the search term is currently one of your
      * targeted or excluded keywords.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4;</code>
+     * <code>.google.ads.googleads.v1.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       

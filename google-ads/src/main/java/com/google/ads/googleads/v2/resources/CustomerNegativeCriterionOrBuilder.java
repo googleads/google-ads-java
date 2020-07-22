@@ -9,215 +9,233 @@ public interface CustomerNegativeCriterionOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the customer negative criterion.
+   * Immutable. The resource name of the customer negative criterion.
    * Customer negative criterion resource names have the form:
    * `customers/{customer_id}/customerNegativeCriteria/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the customer negative criterion.
+   * Immutable. The resource name of the customer negative criterion.
    * Customer negative criterion resource names have the form:
    * `customers/{customer_id}/customerNegativeCriteria/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the criterion.
+   * Output only. The ID of the criterion.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the criterion.
+   * Output only. The ID of the criterion.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the criterion.
+   * Output only. The ID of the criterion.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * The type of the criterion.
+   * Output only. The type of the criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.CriterionTypeEnum.CriterionType type = 3;</code>
+   * <code>.google.ads.googleads.v2.enums.CriterionTypeEnum.CriterionType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
    * <pre>
-   * The type of the criterion.
+   * Output only. The type of the criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.CriterionTypeEnum.CriterionType type = 3;</code>
+   * <code>.google.ads.googleads.v2.enums.CriterionTypeEnum.CriterionType type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v2.enums.CriterionTypeEnum.CriterionType getType();
 
   /**
    * <pre>
-   * ContentLabel.
+   * Immutable. ContentLabel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ContentLabelInfo content_label = 4;</code>
+   * <code>.google.ads.googleads.v2.common.ContentLabelInfo content_label = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the contentLabel field is set.
    */
   boolean hasContentLabel();
   /**
    * <pre>
-   * ContentLabel.
+   * Immutable. ContentLabel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ContentLabelInfo content_label = 4;</code>
+   * <code>.google.ads.googleads.v2.common.ContentLabelInfo content_label = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The contentLabel.
    */
   com.google.ads.googleads.v2.common.ContentLabelInfo getContentLabel();
   /**
    * <pre>
-   * ContentLabel.
+   * Immutable. ContentLabel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ContentLabelInfo content_label = 4;</code>
+   * <code>.google.ads.googleads.v2.common.ContentLabelInfo content_label = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v2.common.ContentLabelInfoOrBuilder getContentLabelOrBuilder();
 
   /**
    * <pre>
-   * MobileApplication.
+   * Immutable. MobileApplication.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.MobileApplicationInfo mobile_application = 5;</code>
+   * <code>.google.ads.googleads.v2.common.MobileApplicationInfo mobile_application = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mobileApplication field is set.
    */
   boolean hasMobileApplication();
   /**
    * <pre>
-   * MobileApplication.
+   * Immutable. MobileApplication.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.MobileApplicationInfo mobile_application = 5;</code>
+   * <code>.google.ads.googleads.v2.common.MobileApplicationInfo mobile_application = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mobileApplication.
    */
   com.google.ads.googleads.v2.common.MobileApplicationInfo getMobileApplication();
   /**
    * <pre>
-   * MobileApplication.
+   * Immutable. MobileApplication.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.MobileApplicationInfo mobile_application = 5;</code>
+   * <code>.google.ads.googleads.v2.common.MobileApplicationInfo mobile_application = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v2.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder();
 
   /**
    * <pre>
-   * MobileAppCategory.
+   * Immutable. MobileAppCategory.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.MobileAppCategoryInfo mobile_app_category = 6;</code>
+   * <code>.google.ads.googleads.v2.common.MobileAppCategoryInfo mobile_app_category = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mobileAppCategory field is set.
    */
   boolean hasMobileAppCategory();
   /**
    * <pre>
-   * MobileAppCategory.
+   * Immutable. MobileAppCategory.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.MobileAppCategoryInfo mobile_app_category = 6;</code>
+   * <code>.google.ads.googleads.v2.common.MobileAppCategoryInfo mobile_app_category = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mobileAppCategory.
    */
   com.google.ads.googleads.v2.common.MobileAppCategoryInfo getMobileAppCategory();
   /**
    * <pre>
-   * MobileAppCategory.
+   * Immutable. MobileAppCategory.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.MobileAppCategoryInfo mobile_app_category = 6;</code>
+   * <code>.google.ads.googleads.v2.common.MobileAppCategoryInfo mobile_app_category = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v2.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder();
 
   /**
    * <pre>
-   * Placement.
+   * Immutable. Placement.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.PlacementInfo placement = 7;</code>
+   * <code>.google.ads.googleads.v2.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the placement field is set.
    */
   boolean hasPlacement();
   /**
    * <pre>
-   * Placement.
+   * Immutable. Placement.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.PlacementInfo placement = 7;</code>
+   * <code>.google.ads.googleads.v2.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The placement.
    */
   com.google.ads.googleads.v2.common.PlacementInfo getPlacement();
   /**
    * <pre>
-   * Placement.
+   * Immutable. Placement.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.PlacementInfo placement = 7;</code>
+   * <code>.google.ads.googleads.v2.common.PlacementInfo placement = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v2.common.PlacementInfoOrBuilder getPlacementOrBuilder();
 
   /**
    * <pre>
-   * YouTube Video.
+   * Immutable. YouTube Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.YouTubeVideoInfo youtube_video = 8;</code>
+   * <code>.google.ads.googleads.v2.common.YouTubeVideoInfo youtube_video = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeVideo field is set.
    */
   boolean hasYoutubeVideo();
   /**
    * <pre>
-   * YouTube Video.
+   * Immutable. YouTube Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.YouTubeVideoInfo youtube_video = 8;</code>
+   * <code>.google.ads.googleads.v2.common.YouTubeVideoInfo youtube_video = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeVideo.
    */
   com.google.ads.googleads.v2.common.YouTubeVideoInfo getYoutubeVideo();
   /**
    * <pre>
-   * YouTube Video.
+   * Immutable. YouTube Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.YouTubeVideoInfo youtube_video = 8;</code>
+   * <code>.google.ads.googleads.v2.common.YouTubeVideoInfo youtube_video = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v2.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder();
 
   /**
    * <pre>
-   * YouTube Channel.
+   * Immutable. YouTube Channel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.YouTubeChannelInfo youtube_channel = 9;</code>
+   * <code>.google.ads.googleads.v2.common.YouTubeChannelInfo youtube_channel = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeChannel field is set.
    */
   boolean hasYoutubeChannel();
   /**
    * <pre>
-   * YouTube Channel.
+   * Immutable. YouTube Channel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.YouTubeChannelInfo youtube_channel = 9;</code>
+   * <code>.google.ads.googleads.v2.common.YouTubeChannelInfo youtube_channel = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeChannel.
    */
   com.google.ads.googleads.v2.common.YouTubeChannelInfo getYoutubeChannel();
   /**
    * <pre>
-   * YouTube Channel.
+   * Immutable. YouTube Channel.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.YouTubeChannelInfo youtube_channel = 9;</code>
+   * <code>.google.ads.googleads.v2.common.YouTubeChannelInfo youtube_channel = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.ads.googleads.v2.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder();
 

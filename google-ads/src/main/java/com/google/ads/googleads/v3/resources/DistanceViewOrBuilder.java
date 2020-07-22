@@ -15,6 +15,7 @@ public interface DistanceViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface DistanceViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface DistanceViewOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for distanceBucket.
    */
   int getDistanceBucketValue();
   /**
@@ -43,6 +46,7 @@ public interface DistanceViewOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The distanceBucket.
    */
   com.google.ads.googleads.v3.enums.DistanceBucketEnum.DistanceBucket getDistanceBucket();
 
@@ -52,6 +56,7 @@ public interface DistanceViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the metricSystem field is set.
    */
   boolean hasMetricSystem();
   /**
@@ -60,6 +65,7 @@ public interface DistanceViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The metricSystem.
    */
   com.google.protobuf.BoolValue getMetricSystem();
   /**

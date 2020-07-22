@@ -13,6 +13,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value pixel_width = 4;</code>
+   * @return Whether the pixelWidth field is set.
    */
   boolean hasPixelWidth();
   /**
@@ -21,6 +22,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value pixel_width = 4;</code>
+   * @return The pixelWidth.
    */
   com.google.protobuf.Int64Value getPixelWidth();
   /**
@@ -38,6 +40,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value pixel_height = 5;</code>
+   * @return Whether the pixelHeight field is set.
    */
   boolean hasPixelHeight();
   /**
@@ -46,6 +49,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value pixel_height = 5;</code>
+   * @return The pixelHeight.
    */
   com.google.protobuf.Int64Value getPixelHeight();
   /**
@@ -63,6 +67,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue image_url = 6;</code>
+   * @return Whether the imageUrl field is set.
    */
   boolean hasImageUrl();
   /**
@@ -71,6 +76,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue image_url = 6;</code>
+   * @return The imageUrl.
    */
   com.google.protobuf.StringValue getImageUrl();
   /**
@@ -88,6 +94,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value preview_pixel_width = 7;</code>
+   * @return Whether the previewPixelWidth field is set.
    */
   boolean hasPreviewPixelWidth();
   /**
@@ -96,6 +103,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value preview_pixel_width = 7;</code>
+   * @return The previewPixelWidth.
    */
   com.google.protobuf.Int64Value getPreviewPixelWidth();
   /**
@@ -113,6 +121,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value preview_pixel_height = 8;</code>
+   * @return Whether the previewPixelHeight field is set.
    */
   boolean hasPreviewPixelHeight();
   /**
@@ -121,6 +130,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value preview_pixel_height = 8;</code>
+   * @return The previewPixelHeight.
    */
   com.google.protobuf.Int64Value getPreviewPixelHeight();
   /**
@@ -138,6 +148,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue preview_image_url = 9;</code>
+   * @return Whether the previewImageUrl field is set.
    */
   boolean hasPreviewImageUrl();
   /**
@@ -146,6 +157,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue preview_image_url = 9;</code>
+   * @return The previewImageUrl.
    */
   com.google.protobuf.StringValue getPreviewImageUrl();
   /**
@@ -163,6 +175,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 10;</code>
+   * @return The enum numeric value on the wire for mimeType.
    */
   int getMimeTypeValue();
   /**
@@ -171,6 +184,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType mime_type = 10;</code>
+   * @return The mimeType.
    */
   com.google.ads.googleads.v3.enums.MimeTypeEnum.MimeType getMimeType();
 
@@ -181,6 +195,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 11;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -190,6 +205,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 11;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -208,6 +224,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue media_file = 1;</code>
+   * @return Whether the mediaFile field is set.
    */
   boolean hasMediaFile();
   /**
@@ -216,6 +233,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue media_file = 1;</code>
+   * @return The mediaFile.
    */
   com.google.protobuf.StringValue getMediaFile();
   /**
@@ -233,6 +251,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 2;</code>
+   * @return Whether the data field is set.
    */
   boolean hasData();
   /**
@@ -241,6 +260,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 2;</code>
+   * @return The data.
    */
   com.google.protobuf.BytesValue getData();
   /**
@@ -258,6 +278,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value ad_id_to_copy_image_from = 3;</code>
+   * @return Whether the adIdToCopyImageFrom field is set.
    */
   boolean hasAdIdToCopyImageFrom();
   /**
@@ -266,6 +287,7 @@ public interface ImageAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value ad_id_to_copy_image_from = 3;</code>
+   * @return The adIdToCopyImageFrom.
    */
   com.google.protobuf.Int64Value getAdIdToCopyImageFrom();
   /**

@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.SimilarUserListInfo}
  */
-public  final class SimilarUserListInfo extends
+public final class SimilarUserListInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.SimilarUserListInfo)
     SimilarUserListInfoOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue seed_user_list = 1;</code>
    * @return Whether the seedUserList field is set.
    */
+  @java.lang.Override
   public boolean hasSeedUserList() {
     return seedUserList_ != null;
   }
@@ -119,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue seed_user_list = 1;</code>
    * @return The seedUserList.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSeedUserList() {
     return seedUserList_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : seedUserList_;
   }
@@ -129,6 +131,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue seed_user_list = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSeedUserListOrBuilder() {
     return getSeedUserList();
   }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.BiddingStrategyServiceStubSetti
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
- *   String formattedResourceName = BiddingStrategyServiceClient.formatBiddingStrategyName("[CUSTOMER]", "[BIDDING_STRATEGY]");
- *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(formattedResourceName);
+ *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER]", "[BIDDING_STRATEGY]");
+ *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,45 +99,6 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
   private final BiddingStrategyServiceSettings settings;
   private final BiddingStrategyServiceStub stub;
 
-  private static final PathTemplate BIDDING_STRATEGY_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/biddingStrategies/{bidding_strategy}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a bidding_strategy resource.
-   *
-   * @deprecated Use the {@link BiddingStrategyName} class instead.
-   */
-  @Deprecated
-  public static final String formatBiddingStrategyName(String customer, String biddingStrategy) {
-    return BIDDING_STRATEGY_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "bidding_strategy", biddingStrategy);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a bidding_strategy
-   * resource.
-   *
-   * @deprecated Use the {@link BiddingStrategyName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromBiddingStrategyName(String biddingStrategyName) {
-    return BIDDING_STRATEGY_PATH_TEMPLATE.parse(biddingStrategyName).get("customer");
-  }
-
-  /**
-   * Parses the bidding_strategy from the given fully-qualified path which represents a
-   * bidding_strategy resource.
-   *
-   * @deprecated Use the {@link BiddingStrategyName} class instead.
-   */
-  @Deprecated
-  public static final String parseBiddingStrategyFromBiddingStrategyName(
-      String biddingStrategyName) {
-    return BIDDING_STRATEGY_PATH_TEMPLATE.parse(biddingStrategyName).get("bidding_strategy");
-  }
-
   /** Constructs an instance of BiddingStrategyServiceClient with default settings. */
   public static final BiddingStrategyServiceClient create() throws IOException {
     return create(BiddingStrategyServiceSettings.newBuilder().build());
@@ -196,16 +156,39 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   String formattedResourceName = BiddingStrategyServiceClient.formatBiddingStrategyName("[CUSTOMER]", "[BIDDING_STRATEGY]");
-   *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(formattedResourceName);
+   *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER]", "[BIDDING_STRATEGY]");
+   *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the bidding strategy to fetch.
+   * @param resourceName Required. The resource name of the bidding strategy to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final BiddingStrategy getBiddingStrategy(BiddingStrategyName resourceName) {
+    GetBiddingStrategyRequest request =
+        GetBiddingStrategyRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getBiddingStrategy(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested bidding strategy in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
+   *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER]", "[BIDDING_STRATEGY]");
+   *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the bidding strategy to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final BiddingStrategy getBiddingStrategy(String resourceName) {
-    BIDDING_STRATEGY_PATH_TEMPLATE.validate(resourceName, "getBiddingStrategy");
     GetBiddingStrategyRequest request =
         GetBiddingStrategyRequest.newBuilder().setResourceName(resourceName).build();
     return getBiddingStrategy(request);
@@ -219,9 +202,9 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   String formattedResourceName = BiddingStrategyServiceClient.formatBiddingStrategyName("[CUSTOMER]", "[BIDDING_STRATEGY]");
+   *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER]", "[BIDDING_STRATEGY]");
    *   GetBiddingStrategyRequest request = GetBiddingStrategyRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(request);
    * }
@@ -242,9 +225,9 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   String formattedResourceName = BiddingStrategyServiceClient.formatBiddingStrategyName("[CUSTOMER]", "[BIDDING_STRATEGY]");
+   *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER]", "[BIDDING_STRATEGY]");
    *   GetBiddingStrategyRequest request = GetBiddingStrategyRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;BiddingStrategy&gt; future = biddingStrategyServiceClient.getBiddingStrategyCallable().futureCall(request);
    *   // Do something
@@ -267,58 +250,16 @@ public class BiddingStrategyServiceClient implements BackgroundResource {
    * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;BiddingStrategyOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateBiddingStrategiesResponse response = biddingStrategyServiceClient.mutateBiddingStrategies(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose bidding strategies are being modified.
-   * @param operations The list of operations to perform on individual bidding strategies.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateBiddingStrategiesResponse mutateBiddingStrategies(
-      String customerId,
-      List<BiddingStrategyOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateBiddingStrategiesRequest request =
-        MutateBiddingStrategiesRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateBiddingStrategies(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes bidding strategies. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;BiddingStrategyOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateBiddingStrategiesResponse response = biddingStrategyServiceClient.mutateBiddingStrategies(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose bidding strategies are being modified.
-   * @param operations The list of operations to perform on individual bidding strategies.
+   * @param customerId Required. The ID of the customer whose bidding strategies are being modified.
+   * @param operations Required. The list of operations to perform on individual bidding strategies.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateBiddingStrategiesResponse mutateBiddingStrategies(
       String customerId, List<BiddingStrategyOperation> operations) {
-
     MutateBiddingStrategiesRequest request =
         MutateBiddingStrategiesRequest.newBuilder()
             .setCustomerId(customerId)

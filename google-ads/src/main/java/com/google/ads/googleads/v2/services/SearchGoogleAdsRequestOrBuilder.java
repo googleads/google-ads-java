@@ -9,36 +9,40 @@ public interface SearchGoogleAdsRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer being queried.
+   * Required. The ID of the customer being queried.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer being queried.
+   * Required. The ID of the customer being queried.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * The query string.
+   * Required. The query string.
    * </pre>
    *
-   * <code>string query = 2;</code>
+   * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The query.
    */
   java.lang.String getQuery();
   /**
    * <pre>
-   * The query string.
+   * Required. The query string.
    * </pre>
    *
-   * <code>string query = 2;</code>
+   * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for query.
    */
   com.google.protobuf.ByteString
       getQueryBytes();
@@ -52,6 +56,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>string page_token = 3;</code>
+   * @return The pageToken.
    */
   java.lang.String getPageToken();
   /**
@@ -63,6 +68,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>string page_token = 3;</code>
+   * @return The bytes for pageToken.
    */
   com.google.protobuf.ByteString
       getPageTokenBytes();
@@ -75,6 +81,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 page_size = 4;</code>
+   * @return The pageSize.
    */
   int getPageSize();
 
@@ -84,6 +91,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 5;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 
@@ -94,6 +102,7 @@ public interface SearchGoogleAdsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool return_summary_row = 6;</code>
+   * @return The returnSummaryRow.
    */
   boolean getReturnSummaryRow();
 }

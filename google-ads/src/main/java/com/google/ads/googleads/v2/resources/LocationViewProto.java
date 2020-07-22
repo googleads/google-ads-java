@@ -30,35 +30,43 @@ public final class LocationViewProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v2/resources/loca" +
       "tion_view.proto\022!google.ads.googleads.v2" +
-      ".resources\032\034google/api/annotations.proto" +
-      "\"%\n\014LocationView\022\025\n\rresource_name\030\001 \001(\tB" +
-      "\376\001\n%com.google.ads.googleads.v2.resource" +
-      "sB\021LocationViewProtoP\001ZJgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v2/r" +
-      "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
-      "ogleAds.V2.Resources\312\002!Google\\Ads\\Google" +
-      "Ads\\V2\\Resources\352\002%Google::Ads::GoogleAd" +
-      "s::V2::Resourcesb\006proto3"
+      ".resources\032\037google/api/field_behavior.pr" +
+      "oto\032\031google/api/resource.proto\032\034google/a" +
+      "pi/annotations.proto\"\264\001\n\014LocationView\022D\n" +
+      "\rresource_name\030\001 \001(\tB-\340A\003\372A\'\n%googleads." +
+      "googleapis.com/LocationView:^\352A[\n%google" +
+      "ads.googleapis.com/LocationView\0222custome" +
+      "rs/{customer}/locationViews/{location_vi" +
+      "ew}B\376\001\n%com.google.ads.googleads.v2.reso" +
+      "urcesB\021LocationViewProtoP\001ZJgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v2/resources;resources\242\002\003GAA\252\002!Google.Ad" +
+      "s.GoogleAds.V2.Resources\312\002!Google\\Ads\\Go" +
+      "ogleAds\\V2\\Resources\352\002%Google::Ads::Goog" +
+      "leAds::V2::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_LocationView_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_LocationView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_LocationView_descriptor,
         new java.lang.String[] { "ResourceName", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

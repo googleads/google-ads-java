@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/user_interest_service.proto")
 public final class UserInterestServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class UserInterestServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.UserInterestService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetUserInterestMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetUserInterestRequest,
-      com.google.ads.googleads.v2.resources.UserInterest> METHOD_GET_USER_INTEREST = getGetUserInterestMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetUserInterestRequest,
       com.google.ads.googleads.v2.resources.UserInterest> getGetUserInterestMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetUserInterest",
+      requestType = com.google.ads.googleads.v2.services.GetUserInterestRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.UserInterest.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetUserInterestRequest,
       com.google.ads.googleads.v2.resources.UserInterest> getGetUserInterestMethod() {
-    return getGetUserInterestMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetUserInterestRequest,
-      com.google.ads.googleads.v2.resources.UserInterest> getGetUserInterestMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetUserInterestRequest, com.google.ads.googleads.v2.resources.UserInterest> getGetUserInterestMethod;
     if ((getGetUserInterestMethod = UserInterestServiceGrpc.getGetUserInterestMethod) == null) {
       synchronized (UserInterestServiceGrpc.class) {
         if ((getGetUserInterestMethod = UserInterestServiceGrpc.getGetUserInterestMethod) == null) {
-          UserInterestServiceGrpc.getGetUserInterestMethod = getGetUserInterestMethod = 
+          UserInterestServiceGrpc.getGetUserInterestMethod = getGetUserInterestMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetUserInterestRequest, com.google.ads.googleads.v2.resources.UserInterest>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.UserInterestService", "GetUserInterest"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserInterest"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetUserInterestRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.UserInterest.getDefaultInstance()))
-                  .setSchemaDescriptor(new UserInterestServiceMethodDescriptorSupplier("GetUserInterest"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UserInterestServiceMethodDescriptorSupplier("GetUserInterest"))
+              .build();
         }
-     }
-     return getGetUserInterestMethod;
+      }
+    }
+    return getGetUserInterestMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static UserInterestServiceStub newStub(io.grpc.Channel channel) {
-    return new UserInterestServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserInterestServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserInterestServiceStub>() {
+        @java.lang.Override
+        public UserInterestServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserInterestServiceStub(channel, callOptions);
+        }
+      };
+    return UserInterestServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class UserInterestServiceGrpc {
    */
   public static UserInterestServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new UserInterestServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserInterestServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserInterestServiceBlockingStub>() {
+        @java.lang.Override
+        public UserInterestServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserInterestServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return UserInterestServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class UserInterestServiceGrpc {
    */
   public static UserInterestServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new UserInterestServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserInterestServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserInterestServiceFutureStub>() {
+        @java.lang.Override
+        public UserInterestServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserInterestServiceFutureStub(channel, callOptions);
+        }
+      };
+    return UserInterestServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class UserInterestServiceGrpc {
      */
     public void getUserInterest(com.google.ads.googleads.v2.services.GetUserInterestRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.UserInterest> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetUserInterestMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserInterestMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetUserInterestMethodHelper(),
+            getGetUserInterestMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetUserInterestRequest,
@@ -126,19 +140,15 @@ public final class UserInterestServiceGrpc {
    * Service to fetch Google Ads User Interest.
    * </pre>
    */
-  public static final class UserInterestServiceStub extends io.grpc.stub.AbstractStub<UserInterestServiceStub> {
-    private UserInterestServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserInterestServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserInterestServiceStub extends io.grpc.stub.AbstractAsyncStub<UserInterestServiceStub> {
+    private UserInterestServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserInterestServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserInterestServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserInterestServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class UserInterestServiceGrpc {
     public void getUserInterest(com.google.ads.googleads.v2.services.GetUserInterestRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.UserInterest> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetUserInterestMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetUserInterestMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class UserInterestServiceGrpc {
    * Service to fetch Google Ads User Interest.
    * </pre>
    */
-  public static final class UserInterestServiceBlockingStub extends io.grpc.stub.AbstractStub<UserInterestServiceBlockingStub> {
-    private UserInterestServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserInterestServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserInterestServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserInterestServiceBlockingStub> {
+    private UserInterestServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserInterestServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserInterestServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserInterestServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class UserInterestServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.UserInterest getUserInterest(com.google.ads.googleads.v2.services.GetUserInterestRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetUserInterestMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetUserInterestMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class UserInterestServiceGrpc {
    * Service to fetch Google Ads User Interest.
    * </pre>
    */
-  public static final class UserInterestServiceFutureStub extends io.grpc.stub.AbstractStub<UserInterestServiceFutureStub> {
-    private UserInterestServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserInterestServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserInterestServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserInterestServiceFutureStub> {
+    private UserInterestServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserInterestServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserInterestServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserInterestServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class UserInterestServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.UserInterest> getUserInterest(
         com.google.ads.googleads.v2.services.GetUserInterestRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetUserInterestMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetUserInterestMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class UserInterestServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new UserInterestServiceFileDescriptorSupplier())
-              .addMethod(getGetUserInterestMethodHelper())
+              .addMethod(getGetUserInterestMethod())
               .build();
         }
       }

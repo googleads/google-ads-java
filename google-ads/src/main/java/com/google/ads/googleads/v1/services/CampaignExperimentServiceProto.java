@@ -92,115 +92,120 @@ public final class CampaignExperimentServiceProto {
       "ign_experiment_service.proto\022 google.ads" +
       ".googleads.v1.services\032;google/ads/googl" +
       "eads/v1/resources/campaign_experiment.pr" +
-      "oto\032\034google/api/annotations.proto\032#googl" +
-      "e/longrunning/operations.proto\032\033google/p" +
-      "rotobuf/empty.proto\032 google/protobuf/fie" +
-      "ld_mask.proto\032\036google/protobuf/wrappers." +
-      "proto\032\027google/rpc/status.proto\032\027google/a" +
-      "pi/client.proto\"5\n\034GetCampaignExperiment" +
-      "Request\022\025\n\rresource_name\030\001 \001(\t\"\272\001\n Mutat" +
-      "eCampaignExperimentsRequest\022\023\n\013customer_" +
-      "id\030\001 \001(\t\022Q\n\noperations\030\002 \003(\0132=.google.ad" +
-      "s.googleads.v1.services.CampaignExperime" +
-      "ntOperation\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\r" +
-      "validate_only\030\004 \001(\010\"\266\001\n\033CampaignExperime" +
-      "ntOperation\022/\n\013update_mask\030\003 \001(\0132\032.googl" +
-      "e.protobuf.FieldMask\022G\n\006update\030\001 \001(\01325.g" +
-      "oogle.ads.googleads.v1.resources.Campaig" +
-      "nExperimentH\000\022\020\n\006remove\030\002 \001(\tH\000B\013\n\topera" +
-      "tion\"\251\001\n!MutateCampaignExperimentsRespon" +
-      "se\0221\n\025partial_failure_error\030\003 \001(\0132\022.goog" +
-      "le.rpc.Status\022Q\n\007results\030\002 \003(\0132@.google." +
-      "ads.googleads.v1.services.MutateCampaign" +
-      "ExperimentResult\"7\n\036MutateCampaignExperi" +
-      "mentResult\022\025\n\rresource_name\030\001 \001(\t\"\241\001\n\037Cr" +
-      "eateCampaignExperimentRequest\022\023\n\013custome" +
-      "r_id\030\001 \001(\t\022R\n\023campaign_experiment\030\002 \001(\0132" +
-      "5.google.ads.googleads.v1.resources.Camp" +
-      "aignExperiment\022\025\n\rvalidate_only\030\003 \001(\010\"?\n" +
-      " CreateCampaignExperimentMetadata\022\033\n\023cam" +
-      "paign_experiment\030\001 \001(\t\"Y\n!GraduateCampai" +
-      "gnExperimentRequest\022\033\n\023campaign_experime" +
-      "nt\030\001 \001(\t\022\027\n\017campaign_budget\030\002 \001(\t\"@\n\"Gra" +
-      "duateCampaignExperimentResponse\022\032\n\022gradu" +
-      "ated_campaign\030\001 \001(\t\"?\n PromoteCampaignEx" +
-      "perimentRequest\022\033\n\023campaign_experiment\030\001" +
-      " \001(\t\";\n\034EndCampaignExperimentRequest\022\033\n\023" +
-      "campaign_experiment\030\001 \001(\t\"h\n(ListCampaig" +
-      "nExperimentAsyncErrorsRequest\022\025\n\rresourc" +
-      "e_name\030\001 \001(\t\022\022\n\npage_token\030\002 \001(\t\022\021\n\tpage" +
-      "_size\030\003 \001(\005\"h\n)ListCampaignExperimentAsy" +
-      "ncErrorsResponse\022\"\n\006errors\030\001 \003(\0132\022.googl" +
-      "e.rpc.Status\022\027\n\017next_page_token\030\002 \001(\t2\320\014" +
-      "\n\031CampaignExperimentService\022\315\001\n\025GetCampa" +
-      "ignExperiment\022>.google.ads.googleads.v1." +
-      "services.GetCampaignExperimentRequest\0325." +
-      "google.ads.googleads.v1.resources.Campai" +
-      "gnExperiment\"=\202\323\344\223\0027\0225/v1/{resource_name" +
-      "=customers/*/campaignExperiments/*}\022\301\001\n\030" +
-      "CreateCampaignExperiment\022A.google.ads.go" +
-      "ogleads.v1.services.CreateCampaignExperi" +
-      "mentRequest\032\035.google.longrunning.Operati" +
-      "on\"C\202\323\344\223\002=\"8/v1/customers/{customer_id=*" +
-      "}/campaignExperiments:create:\001*\022\351\001\n\031Muta" +
-      "teCampaignExperiments\022B.google.ads.googl" +
-      "eads.v1.services.MutateCampaignExperimen" +
-      "tsRequest\032C.google.ads.googleads.v1.serv" +
-      "ices.MutateCampaignExperimentsResponse\"C" +
-      "\202\323\344\223\002=\"8/v1/customers/{customer_id=*}/ca" +
-      "mpaignExperiments:mutate:\001*\022\370\001\n\032Graduate" +
-      "CampaignExperiment\022C.google.ads.googlead" +
-      "s.v1.services.GraduateCampaignExperiment" +
-      "Request\032D.google.ads.googleads.v1.servic" +
-      "es.GraduateCampaignExperimentResponse\"O\202" +
-      "\323\344\223\002I\"D/v1/{campaign_experiment=customer" +
-      "s/*/campaignExperiments/*}:graduate:\001*\022\316" +
-      "\001\n\031PromoteCampaignExperiment\022B.google.ad" +
-      "s.googleads.v1.services.PromoteCampaignE" +
-      "xperimentRequest\032\035.google.longrunning.Op" +
-      "eration\"N\202\323\344\223\002H\"C/v1/{campaign_experimen" +
-      "t=customers/*/campaignExperiments/*}:pro" +
-      "mote:\001*\022\273\001\n\025EndCampaignExperiment\022>.goog" +
-      "le.ads.googleads.v1.services.EndCampaign" +
-      "ExperimentRequest\032\026.google.protobuf.Empt" +
-      "y\"J\202\323\344\223\002D\"?/v1/{campaign_experiment=cust" +
-      "omers/*/campaignExperiments/*}:end:\001*\022\213\002" +
-      "\n!ListCampaignExperimentAsyncErrors\022J.go" +
-      "ogle.ads.googleads.v1.services.ListCampa" +
-      "ignExperimentAsyncErrorsRequest\032K.google" +
+      "oto\032\034google/api/annotations.proto\032\027googl" +
+      "e/api/client.proto\032\037google/api/field_beh" +
+      "avior.proto\032\031google/api/resource.proto\032#" +
+      "google/longrunning/operations.proto\032\033goo" +
+      "gle/protobuf/empty.proto\032 google/protobu" +
+      "f/field_mask.proto\032\027google/rpc/status.pr" +
+      "oto\"j\n\034GetCampaignExperimentRequest\022J\n\rr" +
+      "esource_name\030\001 \001(\tB3\340A\002\372A-\n+googleads.go" +
+      "ogleapis.com/CampaignExperiment\"\304\001\n Muta" +
+      "teCampaignExperimentsRequest\022\030\n\013customer" +
+      "_id\030\001 \001(\tB\003\340A\002\022V\n\noperations\030\002 \003(\0132=.goo" +
+      "gle.ads.googleads.v1.services.CampaignEx" +
+      "perimentOperationB\003\340A\002\022\027\n\017partial_failur" +
+      "e\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\266\001\n\033Campa" +
+      "ignExperimentOperation\022/\n\013update_mask\030\003 " +
+      "\001(\0132\032.google.protobuf.FieldMask\022G\n\006updat" +
+      "e\030\001 \001(\01325.google.ads.googleads.v1.resour" +
+      "ces.CampaignExperimentH\000\022\020\n\006remove\030\002 \001(\t" +
+      "H\000B\013\n\toperation\"\251\001\n!MutateCampaignExperi" +
+      "mentsResponse\0221\n\025partial_failure_error\030\003" +
+      " \001(\0132\022.google.rpc.Status\022Q\n\007results\030\002 \003(" +
+      "\0132@.google.ads.googleads.v1.services.Mut" +
+      "ateCampaignExperimentResult\"7\n\036MutateCam" +
+      "paignExperimentResult\022\025\n\rresource_name\030\001" +
+      " \001(\t\"\253\001\n\037CreateCampaignExperimentRequest" +
+      "\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022W\n\023campaign_e" +
+      "xperiment\030\002 \001(\01325.google.ads.googleads.v" +
+      "1.resources.CampaignExperimentB\003\340A\002\022\025\n\rv" +
+      "alidate_only\030\003 \001(\010\"?\n CreateCampaignExpe" +
+      "rimentMetadata\022\033\n\023campaign_experiment\030\001 " +
+      "\001(\t\"c\n!GraduateCampaignExperimentRequest" +
+      "\022 \n\023campaign_experiment\030\001 \001(\tB\003\340A\002\022\034\n\017ca" +
+      "mpaign_budget\030\002 \001(\tB\003\340A\002\"@\n\"GraduateCamp" +
+      "aignExperimentResponse\022\032\n\022graduated_camp" +
+      "aign\030\001 \001(\t\"D\n PromoteCampaignExperimentR" +
+      "equest\022 \n\023campaign_experiment\030\001 \001(\tB\003\340A\002" +
+      "\"@\n\034EndCampaignExperimentRequest\022 \n\023camp" +
+      "aign_experiment\030\001 \001(\tB\003\340A\002\"\235\001\n(ListCampa" +
+      "ignExperimentAsyncErrorsRequest\022J\n\rresou" +
+      "rce_name\030\001 \001(\tB3\340A\002\372A-\n+googleads.google" +
+      "apis.com/CampaignExperiment\022\022\n\npage_toke" +
+      "n\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\005\"h\n)ListCampai" +
+      "gnExperimentAsyncErrorsResponse\022\"\n\006error" +
+      "s\030\001 \003(\0132\022.google.rpc.Status\022\027\n\017next_page" +
+      "_token\030\002 \001(\t2\215\017\n\031CampaignExperimentServi" +
+      "ce\022\335\001\n\025GetCampaignExperiment\022>.google.ad" +
+      "s.googleads.v1.services.GetCampaignExper" +
+      "imentRequest\0325.google.ads.googleads.v1.r" +
+      "esources.CampaignExperiment\"M\202\323\344\223\0027\0225/v1" +
+      "/{resource_name=customers/*/campaignExpe" +
+      "riments/*}\332A\rresource_name\022\301\002\n\030CreateCam" +
+      "paignExperiment\022A.google.ads.googleads.v" +
+      "1.services.CreateCampaignExperimentReque" +
+      "st\032\035.google.longrunning.Operation\"\302\001\202\323\344\223" +
+      "\002=\"8/v1/customers/{customer_id=*}/campai" +
+      "gnExperiments:create:\001*\332A\037customer_id,ca" +
+      "mpaign_experiment\312AZ\n\025google.protobuf.Em" +
+      "pty\022Agoogle.ads.googleads.v1.services.Cr" +
+      "eateCampaignExperimentMetadata\022\202\002\n\031Mutat" +
+      "eCampaignExperiments\022B.google.ads.google" +
+      "ads.v1.services.MutateCampaignExperiment" +
+      "sRequest\032C.google.ads.googleads.v1.servi" +
+      "ces.MutateCampaignExperimentsResponse\"\\\202" +
+      "\323\344\223\002=\"8/v1/customers/{customer_id=*}/cam" +
+      "paignExperiments:mutate:\001*\332A\026customer_id" +
+      ",operations\022\236\002\n\032GraduateCampaignExperime" +
+      "nt\022C.google.ads.googleads.v1.services.Gr" +
+      "aduateCampaignExperimentRequest\032D.google" +
+      ".ads.googleads.v1.services.GraduateCampa" +
+      "ignExperimentResponse\"u\202\323\344\223\002I\"D/v1/{camp" +
+      "aign_experiment=customers/*/campaignExpe" +
+      "riments/*}:graduate:\001*\332A#campaign_experi" +
+      "ment,campaign_budget\022\226\002\n\031PromoteCampaign" +
+      "Experiment\022B.google.ads.googleads.v1.ser" +
+      "vices.PromoteCampaignExperimentRequest\032\035" +
+      ".google.longrunning.Operation\"\225\001\202\323\344\223\002H\"C" +
+      "/v1/{campaign_experiment=customers/*/cam" +
+      "paignExperiments/*}:promote:\001*\332A\023campaig" +
+      "n_experiment\312A.\n\025google.protobuf.Empty\022\025" +
+      "google.protobuf.Empty\022\321\001\n\025EndCampaignExp" +
+      "eriment\022>.google.ads.googleads.v1.servic" +
+      "es.EndCampaignExperimentRequest\032\026.google" +
+      ".protobuf.Empty\"`\202\323\344\223\002D\"?/v1/{campaign_e" +
+      "xperiment=customers/*/campaignExperiment" +
+      "s/*}:end:\001*\332A\023campaign_experiment\022\233\002\n!Li" +
+      "stCampaignExperimentAsyncErrors\022J.google" +
       ".ads.googleads.v1.services.ListCampaignE" +
-      "xperimentAsyncErrorsResponse\"M\202\323\344\223\002G\022E/v" +
-      "1/{resource_name=customers/*/campaignExp" +
-      "eriments/*}:listAsyncErrors\032\033\312A\030googlead" +
-      "s.googleapis.comB\205\002\n$com.google.ads.goog" +
-      "leads.v1.servicesB\036CampaignExperimentSer" +
-      "viceProtoP\001ZHgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v1/services;ser" +
-      "vices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Se" +
-      "rvices\312\002 Google\\Ads\\GoogleAds\\V1\\Service" +
-      "s\352\002$Google::Ads::GoogleAds::V1::Services" +
-      "b\006proto3"
+      "xperimentAsyncErrorsRequest\032K.google.ads" +
+      ".googleads.v1.services.ListCampaignExper" +
+      "imentAsyncErrorsResponse\"]\202\323\344\223\002G\022E/v1/{r" +
+      "esource_name=customers/*/campaignExperim" +
+      "ents/*}:listAsyncErrors\332A\rresource_name\032" +
+      "\033\312A\030googleads.googleapis.comB\205\002\n$com.goo" +
+      "gle.ads.googleads.v1.servicesB\036CampaignE" +
+      "xperimentServiceProtoP\001ZHgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v1/" +
+      "services;services\242\002\003GAA\252\002 Google.Ads.Goo" +
+      "gleAds.V1.Services\312\002 Google\\Ads\\GoogleAd" +
+      "s\\V1\\Services\352\002$Google::Ads::GoogleAds::" +
+      "V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.CampaignExperimentProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.longrunning.OperationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_services_GetCampaignExperimentRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetCampaignExperimentRequest_fieldAccessorTable = new
@@ -282,17 +287,22 @@ public final class CampaignExperimentServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    registry.add(com.google.longrunning.OperationsProto.operationInfo);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.CampaignExperimentProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.longrunning.OperationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.AgeRangeInfo}
  */
-public  final class AgeRangeInfo extends
+public final class AgeRangeInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.AgeRangeInfo)
     AgeRangeInfoOrBuilder {
@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType type = 1;</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType type = 1;</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType result = com.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType.UNRECOGNIZED : result;
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -445,6 +445,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -457,6 +458,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType type = 1;</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType result = com.google.ads.googleads.v4.enums.AgeRangeTypeEnum.AgeRangeType.valueOf(type_);

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.ListAccessibleCustomersRequest}
  */
-public  final class ListAccessibleCustomersRequest extends
+public final class ListAccessibleCustomersRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.ListAccessibleCustomersRequest)
     ListAccessibleCustomersRequestOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListAccessibleCustomersRequest() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListAccessibleCustomersRequest();
   }
 
   @java.lang.Override

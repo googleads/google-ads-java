@@ -14,6 +14,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal strategy_goal = 1;</code>
+   * @return The enum numeric value on the wire for strategyGoal.
    */
   int getStrategyGoalValue();
   /**
@@ -23,6 +24,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal strategy_goal = 1;</code>
+   * @return The strategyGoal.
    */
   com.google.ads.googleads.v1.enums.PageOnePromotedStrategyGoalEnum.PageOnePromotedStrategyGoal getStrategyGoal();
 
@@ -33,6 +35,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
   /**
@@ -42,6 +45,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return The cpcBidCeilingMicros.
    */
   com.google.protobuf.Int64Value getCpcBidCeilingMicros();
   /**
@@ -61,6 +65,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 3;</code>
+   * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
   /**
@@ -70,6 +75,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 3;</code>
+   * @return The bidModifier.
    */
   com.google.protobuf.DoubleValue getBidModifier();
   /**
@@ -92,6 +98,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+   * @return Whether the onlyRaiseCpcBids field is set.
    */
   boolean hasOnlyRaiseCpcBids();
   /**
@@ -104,6 +111,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+   * @return The onlyRaiseCpcBids.
    */
   com.google.protobuf.BoolValue getOnlyRaiseCpcBids();
   /**
@@ -126,6 +134,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_budget_constrained = 5;</code>
+   * @return Whether the raiseCpcBidWhenBudgetConstrained field is set.
    */
   boolean hasRaiseCpcBidWhenBudgetConstrained();
   /**
@@ -135,6 +144,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_budget_constrained = 5;</code>
+   * @return The raiseCpcBidWhenBudgetConstrained.
    */
   com.google.protobuf.BoolValue getRaiseCpcBidWhenBudgetConstrained();
   /**
@@ -154,6 +164,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 6;</code>
+   * @return Whether the raiseCpcBidWhenQualityScoreIsLow field is set.
    */
   boolean hasRaiseCpcBidWhenQualityScoreIsLow();
   /**
@@ -163,6 +174,7 @@ public interface PageOnePromotedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 6;</code>
+   * @return The raiseCpcBidWhenQualityScoreIsLow.
    */
   com.google.protobuf.BoolValue getRaiseCpcBidWhenQualityScoreIsLow();
   /**

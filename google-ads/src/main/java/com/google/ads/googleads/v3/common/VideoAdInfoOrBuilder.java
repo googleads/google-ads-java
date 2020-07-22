@@ -13,6 +13,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue media_file = 1;</code>
+   * @return Whether the mediaFile field is set.
    */
   boolean hasMediaFile();
   /**
@@ -21,6 +22,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue media_file = 1;</code>
+   * @return The mediaFile.
    */
   com.google.protobuf.StringValue getMediaFile();
   /**
@@ -38,6 +40,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoTrueViewInStreamAdInfo in_stream = 2;</code>
+   * @return Whether the inStream field is set.
    */
   boolean hasInStream();
   /**
@@ -46,6 +49,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoTrueViewInStreamAdInfo in_stream = 2;</code>
+   * @return The inStream.
    */
   com.google.ads.googleads.v3.common.VideoTrueViewInStreamAdInfo getInStream();
   /**
@@ -63,6 +67,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoBumperInStreamAdInfo bumper = 3;</code>
+   * @return Whether the bumper field is set.
    */
   boolean hasBumper();
   /**
@@ -71,6 +76,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoBumperInStreamAdInfo bumper = 3;</code>
+   * @return The bumper.
    */
   com.google.ads.googleads.v3.common.VideoBumperInStreamAdInfo getBumper();
   /**
@@ -88,6 +94,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoOutstreamAdInfo out_stream = 4;</code>
+   * @return Whether the outStream field is set.
    */
   boolean hasOutStream();
   /**
@@ -96,6 +103,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoOutstreamAdInfo out_stream = 4;</code>
+   * @return The outStream.
    */
   com.google.ads.googleads.v3.common.VideoOutstreamAdInfo getOutStream();
   /**
@@ -113,6 +121,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoNonSkippableInStreamAdInfo non_skippable = 5;</code>
+   * @return Whether the nonSkippable field is set.
    */
   boolean hasNonSkippable();
   /**
@@ -121,6 +130,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoNonSkippableInStreamAdInfo non_skippable = 5;</code>
+   * @return The nonSkippable.
    */
   com.google.ads.googleads.v3.common.VideoNonSkippableInStreamAdInfo getNonSkippable();
   /**
@@ -138,6 +148,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoTrueViewDiscoveryAdInfo discovery = 6;</code>
+   * @return Whether the discovery field is set.
    */
   boolean hasDiscovery();
   /**
@@ -146,6 +157,7 @@ public interface VideoAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoTrueViewDiscoveryAdInfo discovery = 6;</code>
+   * @return The discovery.
    */
   com.google.ads.googleads.v3.common.VideoTrueViewDiscoveryAdInfo getDiscovery();
   /**

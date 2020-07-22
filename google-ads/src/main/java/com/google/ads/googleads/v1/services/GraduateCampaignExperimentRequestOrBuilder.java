@@ -9,38 +9,42 @@ public interface GraduateCampaignExperimentRequestOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the campaign experiment to graduate.
+   * Required. The resource name of the campaign experiment to graduate.
    * </pre>
    *
-   * <code>string campaign_experiment = 1;</code>
+   * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignExperiment.
    */
   java.lang.String getCampaignExperiment();
   /**
    * <pre>
-   * The resource name of the campaign experiment to graduate.
+   * Required. The resource name of the campaign experiment to graduate.
    * </pre>
    *
-   * <code>string campaign_experiment = 1;</code>
+   * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for campaignExperiment.
    */
   com.google.protobuf.ByteString
       getCampaignExperimentBytes();
 
   /**
    * <pre>
-   * Resource name of the budget to attach to the campaign graduated from the
+   * Required. Resource name of the budget to attach to the campaign graduated from the
    * experiment.
    * </pre>
    *
-   * <code>string campaign_budget = 2;</code>
+   * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignBudget.
    */
   java.lang.String getCampaignBudget();
   /**
    * <pre>
-   * Resource name of the budget to attach to the campaign graduated from the
+   * Required. Resource name of the budget to attach to the campaign graduated from the
    * experiment.
    * </pre>
    *
-   * <code>string campaign_budget = 2;</code>
+   * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for campaignBudget.
    */
   com.google.protobuf.ByteString
       getCampaignBudgetBytes();

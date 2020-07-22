@@ -13,6 +13,7 @@ public interface ForecastMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue impressions = 1;</code>
+   * @return Whether the impressions field is set.
    */
   boolean hasImpressions();
   /**
@@ -21,6 +22,7 @@ public interface ForecastMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue impressions = 1;</code>
+   * @return The impressions.
    */
   com.google.protobuf.DoubleValue getImpressions();
   /**
@@ -38,6 +40,7 @@ public interface ForecastMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue ctr = 2;</code>
+   * @return Whether the ctr field is set.
    */
   boolean hasCtr();
   /**
@@ -46,6 +49,7 @@ public interface ForecastMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue ctr = 2;</code>
+   * @return The ctr.
    */
   com.google.protobuf.DoubleValue getCtr();
   /**
@@ -63,6 +67,7 @@ public interface ForecastMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value average_cpc = 3;</code>
+   * @return Whether the averageCpc field is set.
    */
   boolean hasAverageCpc();
   /**
@@ -71,6 +76,7 @@ public interface ForecastMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value average_cpc = 3;</code>
+   * @return The averageCpc.
    */
   com.google.protobuf.Int64Value getAverageCpc();
   /**
@@ -88,6 +94,7 @@ public interface ForecastMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue clicks = 5;</code>
+   * @return Whether the clicks field is set.
    */
   boolean hasClicks();
   /**
@@ -96,6 +103,7 @@ public interface ForecastMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue clicks = 5;</code>
+   * @return The clicks.
    */
   com.google.protobuf.DoubleValue getClicks();
   /**
@@ -113,6 +121,7 @@ public interface ForecastMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 6;</code>
+   * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
   /**
@@ -121,6 +130,7 @@ public interface ForecastMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 6;</code>
+   * @return The costMicros.
    */
   com.google.protobuf.Int64Value getCostMicros();
   /**

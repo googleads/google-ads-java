@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.RuleBasedUserListInfo}
  */
-public  final class RuleBasedUserListInfo extends
+public final class RuleBasedUserListInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.RuleBasedUserListInfo)
     RuleBasedUserListInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private RuleBasedUserListInfo() {
     prepopulationStatus_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new RuleBasedUserListInfo();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -130,7 +136,8 @@ private static final long serialVersionUID = 0L;
   private int ruleBasedUserListCase_ = 0;
   private java.lang.Object ruleBasedUserList_;
   public enum RuleBasedUserListCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     COMBINED_RULE_USER_LIST(2),
     DATE_SPECIFIC_RULE_USER_LIST(3),
     EXPRESSION_RULE_USER_LIST(4),
@@ -140,6 +147,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -182,8 +191,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus prepopulation_status = 1;</code>
+   * @return The enum numeric value on the wire for prepopulationStatus.
    */
-  public int getPrepopulationStatusValue() {
+  @java.lang.Override public int getPrepopulationStatusValue() {
     return prepopulationStatus_;
   }
   /**
@@ -199,8 +209,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus prepopulation_status = 1;</code>
+   * @return The prepopulationStatus.
    */
-  public com.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus getPrepopulationStatus() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus getPrepopulationStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus result = com.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.valueOf(prepopulationStatus_);
     return result == null ? com.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.UNRECOGNIZED : result;
@@ -215,7 +226,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.CombinedRuleUserListInfo combined_rule_user_list = 2;</code>
+   * @return Whether the combinedRuleUserList field is set.
    */
+  @java.lang.Override
   public boolean hasCombinedRuleUserList() {
     return ruleBasedUserListCase_ == 2;
   }
@@ -227,7 +240,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.CombinedRuleUserListInfo combined_rule_user_list = 2;</code>
+   * @return The combinedRuleUserList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.CombinedRuleUserListInfo getCombinedRuleUserList() {
     if (ruleBasedUserListCase_ == 2) {
        return (com.google.ads.googleads.v1.common.CombinedRuleUserListInfo) ruleBasedUserList_;
@@ -243,6 +258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.CombinedRuleUserListInfo combined_rule_user_list = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.CombinedRuleUserListInfoOrBuilder getCombinedRuleUserListOrBuilder() {
     if (ruleBasedUserListCase_ == 2) {
        return (com.google.ads.googleads.v1.common.CombinedRuleUserListInfo) ruleBasedUserList_;
@@ -261,7 +277,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo date_specific_rule_user_list = 3;</code>
+   * @return Whether the dateSpecificRuleUserList field is set.
    */
+  @java.lang.Override
   public boolean hasDateSpecificRuleUserList() {
     return ruleBasedUserListCase_ == 3;
   }
@@ -275,7 +293,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo date_specific_rule_user_list = 3;</code>
+   * @return The dateSpecificRuleUserList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo getDateSpecificRuleUserList() {
     if (ruleBasedUserListCase_ == 3) {
        return (com.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo) ruleBasedUserList_;
@@ -293,6 +313,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo date_specific_rule_user_list = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.DateSpecificRuleUserListInfoOrBuilder getDateSpecificRuleUserListOrBuilder() {
     if (ruleBasedUserListCase_ == 3) {
        return (com.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo) ruleBasedUserList_;
@@ -308,7 +329,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.ExpressionRuleUserListInfo expression_rule_user_list = 4;</code>
+   * @return Whether the expressionRuleUserList field is set.
    */
+  @java.lang.Override
   public boolean hasExpressionRuleUserList() {
     return ruleBasedUserListCase_ == 4;
   }
@@ -319,7 +342,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.ExpressionRuleUserListInfo expression_rule_user_list = 4;</code>
+   * @return The expressionRuleUserList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.ExpressionRuleUserListInfo getExpressionRuleUserList() {
     if (ruleBasedUserListCase_ == 4) {
        return (com.google.ads.googleads.v1.common.ExpressionRuleUserListInfo) ruleBasedUserList_;
@@ -334,6 +359,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.ExpressionRuleUserListInfo expression_rule_user_list = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.ExpressionRuleUserListInfoOrBuilder getExpressionRuleUserListOrBuilder() {
     if (ruleBasedUserListCase_ == 4) {
        return (com.google.ads.googleads.v1.common.ExpressionRuleUserListInfo) ruleBasedUserList_;
@@ -770,8 +796,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus prepopulation_status = 1;</code>
+     * @return The enum numeric value on the wire for prepopulationStatus.
      */
-    public int getPrepopulationStatusValue() {
+    @java.lang.Override public int getPrepopulationStatusValue() {
       return prepopulationStatus_;
     }
     /**
@@ -787,8 +814,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus prepopulation_status = 1;</code>
+     * @param value The enum numeric value on the wire for prepopulationStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setPrepopulationStatusValue(int value) {
+      
       prepopulationStatus_ = value;
       onChanged();
       return this;
@@ -806,7 +836,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus prepopulation_status = 1;</code>
+     * @return The prepopulationStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus getPrepopulationStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus result = com.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.valueOf(prepopulationStatus_);
@@ -825,6 +857,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus prepopulation_status = 1;</code>
+     * @param value The prepopulationStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setPrepopulationStatus(com.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus value) {
       if (value == null) {
@@ -848,6 +882,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus prepopulation_status = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPrepopulationStatus() {
       
@@ -866,7 +901,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.CombinedRuleUserListInfo combined_rule_user_list = 2;</code>
+     * @return Whether the combinedRuleUserList field is set.
      */
+    @java.lang.Override
     public boolean hasCombinedRuleUserList() {
       return ruleBasedUserListCase_ == 2;
     }
@@ -878,7 +915,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.CombinedRuleUserListInfo combined_rule_user_list = 2;</code>
+     * @return The combinedRuleUserList.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.CombinedRuleUserListInfo getCombinedRuleUserList() {
       if (combinedRuleUserListBuilder_ == null) {
         if (ruleBasedUserListCase_ == 2) {
@@ -1008,6 +1047,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v1.common.CombinedRuleUserListInfo combined_rule_user_list = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.CombinedRuleUserListInfoOrBuilder getCombinedRuleUserListOrBuilder() {
       if ((ruleBasedUserListCase_ == 2) && (combinedRuleUserListBuilder_ != null)) {
         return combinedRuleUserListBuilder_.getMessageOrBuilder();
@@ -1058,7 +1098,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo date_specific_rule_user_list = 3;</code>
+     * @return Whether the dateSpecificRuleUserList field is set.
      */
+    @java.lang.Override
     public boolean hasDateSpecificRuleUserList() {
       return ruleBasedUserListCase_ == 3;
     }
@@ -1072,7 +1114,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo date_specific_rule_user_list = 3;</code>
+     * @return The dateSpecificRuleUserList.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo getDateSpecificRuleUserList() {
       if (dateSpecificRuleUserListBuilder_ == null) {
         if (ruleBasedUserListCase_ == 3) {
@@ -1214,6 +1258,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v1.common.DateSpecificRuleUserListInfo date_specific_rule_user_list = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.DateSpecificRuleUserListInfoOrBuilder getDateSpecificRuleUserListOrBuilder() {
       if ((ruleBasedUserListCase_ == 3) && (dateSpecificRuleUserListBuilder_ != null)) {
         return dateSpecificRuleUserListBuilder_.getMessageOrBuilder();
@@ -1263,7 +1308,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.ExpressionRuleUserListInfo expression_rule_user_list = 4;</code>
+     * @return Whether the expressionRuleUserList field is set.
      */
+    @java.lang.Override
     public boolean hasExpressionRuleUserList() {
       return ruleBasedUserListCase_ == 4;
     }
@@ -1274,7 +1321,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.ExpressionRuleUserListInfo expression_rule_user_list = 4;</code>
+     * @return The expressionRuleUserList.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.ExpressionRuleUserListInfo getExpressionRuleUserList() {
       if (expressionRuleUserListBuilder_ == null) {
         if (ruleBasedUserListCase_ == 4) {
@@ -1398,6 +1447,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v1.common.ExpressionRuleUserListInfo expression_rule_user_list = 4;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.ExpressionRuleUserListInfoOrBuilder getExpressionRuleUserListOrBuilder() {
       if ((ruleBasedUserListCase_ == 4) && (expressionRuleUserListBuilder_ != null)) {
         return expressionRuleUserListBuilder_.getMessageOrBuilder();

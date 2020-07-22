@@ -13,6 +13,7 @@ public interface HotelLengthOfStayInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_nights = 1;</code>
+   * @return Whether the minNights field is set.
    */
   boolean hasMinNights();
   /**
@@ -21,6 +22,7 @@ public interface HotelLengthOfStayInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value min_nights = 1;</code>
+   * @return The minNights.
    */
   com.google.protobuf.Int64Value getMinNights();
   /**
@@ -38,6 +40,7 @@ public interface HotelLengthOfStayInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_nights = 2;</code>
+   * @return Whether the maxNights field is set.
    */
   boolean hasMaxNights();
   /**
@@ -46,6 +49,7 @@ public interface HotelLengthOfStayInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value max_nights = 2;</code>
+   * @return The maxNights.
    */
   com.google.protobuf.Int64Value getMaxNights();
   /**

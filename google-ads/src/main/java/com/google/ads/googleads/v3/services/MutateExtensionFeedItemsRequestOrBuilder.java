@@ -14,6 +14,7 @@ public interface MutateExtensionFeedItemsRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -23,6 +24,7 @@ public interface MutateExtensionFeedItemsRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -80,6 +82,7 @@ public interface MutateExtensionFeedItemsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool partial_failure = 3;</code>
+   * @return The partialFailure.
    */
   boolean getPartialFailure();
 
@@ -90,6 +93,7 @@ public interface MutateExtensionFeedItemsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 4;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 }

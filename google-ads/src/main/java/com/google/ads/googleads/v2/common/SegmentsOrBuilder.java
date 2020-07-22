@@ -13,6 +13,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 3;</code>
+   * @return The enum numeric value on the wire for adNetworkType.
    */
   int getAdNetworkTypeValue();
   /**
@@ -21,6 +22,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 3;</code>
+   * @return The adNetworkType.
    */
   com.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType getAdNetworkType();
 
@@ -30,6 +32,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType click_type = 26;</code>
+   * @return The enum numeric value on the wire for clickType.
    */
   int getClickTypeValue();
   /**
@@ -38,6 +41,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType click_type = 26;</code>
+   * @return The clickType.
    */
   com.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType getClickType();
 
@@ -47,6 +51,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 52;</code>
+   * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
   /**
@@ -55,6 +60,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 52;</code>
+   * @return The conversionAction.
    */
   com.google.protobuf.StringValue getConversionAction();
   /**
@@ -72,6 +78,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_category = 53;</code>
+   * @return The enum numeric value on the wire for conversionActionCategory.
    */
   int getConversionActionCategoryValue();
   /**
@@ -80,6 +87,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_category = 53;</code>
+   * @return The conversionActionCategory.
    */
   com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory getConversionActionCategory();
 
@@ -89,6 +97,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action_name = 54;</code>
+   * @return Whether the conversionActionName field is set.
    */
   boolean hasConversionActionName();
   /**
@@ -97,6 +106,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action_name = 54;</code>
+   * @return The conversionActionName.
    */
   com.google.protobuf.StringValue getConversionActionName();
   /**
@@ -118,6 +128,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue conversion_adjustment = 27;</code>
+   * @return Whether the conversionAdjustment field is set.
    */
   boolean hasConversionAdjustment();
   /**
@@ -130,6 +141,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue conversion_adjustment = 27;</code>
+   * @return The conversionAdjustment.
    */
   com.google.protobuf.BoolValue getConversionAdjustment();
   /**
@@ -151,6 +163,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType conversion_attribution_event_type = 2;</code>
+   * @return The enum numeric value on the wire for conversionAttributionEventType.
    */
   int getConversionAttributionEventTypeValue();
   /**
@@ -159,6 +172,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType conversion_attribution_event_type = 2;</code>
+   * @return The conversionAttributionEventType.
    */
   com.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType getConversionAttributionEventType();
 
@@ -169,6 +183,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket conversion_lag_bucket = 50;</code>
+   * @return The enum numeric value on the wire for conversionLagBucket.
    */
   int getConversionLagBucketValue();
   /**
@@ -178,6 +193,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket conversion_lag_bucket = 50;</code>
+   * @return The conversionLagBucket.
    */
   com.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket getConversionLagBucket();
 
@@ -188,6 +204,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket conversion_or_adjustment_lag_bucket = 51;</code>
+   * @return The enum numeric value on the wire for conversionOrAdjustmentLagBucket.
    */
   int getConversionOrAdjustmentLagBucketValue();
   /**
@@ -197,6 +214,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket conversion_or_adjustment_lag_bucket = 51;</code>
+   * @return The conversionOrAdjustmentLagBucket.
    */
   com.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket getConversionOrAdjustmentLagBucket();
 
@@ -207,6 +225,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue date = 4;</code>
+   * @return Whether the date field is set.
    */
   boolean hasDate();
   /**
@@ -216,6 +235,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue date = 4;</code>
+   * @return The date.
    */
   com.google.protobuf.StringValue getDate();
   /**
@@ -234,6 +254,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+   * @return The enum numeric value on the wire for dayOfWeek.
    */
   int getDayOfWeekValue();
   /**
@@ -242,6 +263,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+   * @return The dayOfWeek.
    */
   com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek();
 
@@ -251,6 +273,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device = 1;</code>
+   * @return The enum numeric value on the wire for device.
    */
   int getDeviceValue();
   /**
@@ -259,6 +282,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device = 1;</code>
+   * @return The device.
    */
   com.google.ads.googleads.v2.enums.DeviceEnum.Device getDevice();
 
@@ -268,6 +292,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource external_conversion_source = 55;</code>
+   * @return The enum numeric value on the wire for externalConversionSource.
    */
   int getExternalConversionSourceValue();
   /**
@@ -276,6 +301,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource external_conversion_source = 55;</code>
+   * @return The externalConversionSource.
    */
   com.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource getExternalConversionSource();
 
@@ -285,6 +311,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+   * @return Whether the geoTargetAirport field is set.
    */
   boolean hasGeoTargetAirport();
   /**
@@ -293,6 +320,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+   * @return The geoTargetAirport.
    */
   com.google.protobuf.StringValue getGeoTargetAirport();
   /**
@@ -310,6 +338,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_canton = 76;</code>
+   * @return Whether the geoTargetCanton field is set.
    */
   boolean hasGeoTargetCanton();
   /**
@@ -318,6 +347,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_canton = 76;</code>
+   * @return The geoTargetCanton.
    */
   com.google.protobuf.StringValue getGeoTargetCanton();
   /**
@@ -335,6 +365,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_city = 62;</code>
+   * @return Whether the geoTargetCity field is set.
    */
   boolean hasGeoTargetCity();
   /**
@@ -343,6 +374,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_city = 62;</code>
+   * @return The geoTargetCity.
    */
   com.google.protobuf.StringValue getGeoTargetCity();
   /**
@@ -360,6 +392,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_country = 77;</code>
+   * @return Whether the geoTargetCountry field is set.
    */
   boolean hasGeoTargetCountry();
   /**
@@ -368,6 +401,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_country = 77;</code>
+   * @return The geoTargetCountry.
    */
   com.google.protobuf.StringValue getGeoTargetCountry();
   /**
@@ -385,6 +419,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+   * @return Whether the geoTargetCounty field is set.
    */
   boolean hasGeoTargetCounty();
   /**
@@ -393,6 +428,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+   * @return The geoTargetCounty.
    */
   com.google.protobuf.StringValue getGeoTargetCounty();
   /**
@@ -410,6 +446,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+   * @return Whether the geoTargetDistrict field is set.
    */
   boolean hasGeoTargetDistrict();
   /**
@@ -418,6 +455,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+   * @return The geoTargetDistrict.
    */
   com.google.protobuf.StringValue getGeoTargetDistrict();
   /**
@@ -435,6 +473,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_metro = 63;</code>
+   * @return Whether the geoTargetMetro field is set.
    */
   boolean hasGeoTargetMetro();
   /**
@@ -443,6 +482,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_metro = 63;</code>
+   * @return The geoTargetMetro.
    */
   com.google.protobuf.StringValue getGeoTargetMetro();
   /**
@@ -461,6 +501,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+   * @return Whether the geoTargetMostSpecificLocation field is set.
    */
   boolean hasGeoTargetMostSpecificLocation();
   /**
@@ -470,6 +511,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+   * @return The geoTargetMostSpecificLocation.
    */
   com.google.protobuf.StringValue getGeoTargetMostSpecificLocation();
   /**
@@ -488,6 +530,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+   * @return Whether the geoTargetPostalCode field is set.
    */
   boolean hasGeoTargetPostalCode();
   /**
@@ -496,6 +539,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+   * @return The geoTargetPostalCode.
    */
   com.google.protobuf.StringValue getGeoTargetPostalCode();
   /**
@@ -513,6 +557,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+   * @return Whether the geoTargetProvince field is set.
    */
   boolean hasGeoTargetProvince();
   /**
@@ -521,6 +566,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+   * @return The geoTargetProvince.
    */
   com.google.protobuf.StringValue getGeoTargetProvince();
   /**
@@ -538,6 +584,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_region = 64;</code>
+   * @return Whether the geoTargetRegion field is set.
    */
   boolean hasGeoTargetRegion();
   /**
@@ -546,6 +593,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_region = 64;</code>
+   * @return The geoTargetRegion.
    */
   com.google.protobuf.StringValue getGeoTargetRegion();
   /**
@@ -563,6 +611,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+   * @return Whether the geoTargetState field is set.
    */
   boolean hasGeoTargetState();
   /**
@@ -571,6 +620,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+   * @return The geoTargetState.
    */
   com.google.protobuf.StringValue getGeoTargetState();
   /**
@@ -588,6 +638,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value hotel_booking_window_days = 6;</code>
+   * @return Whether the hotelBookingWindowDays field is set.
    */
   boolean hasHotelBookingWindowDays();
   /**
@@ -596,6 +647,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value hotel_booking_window_days = 6;</code>
+   * @return The hotelBookingWindowDays.
    */
   com.google.protobuf.Int64Value getHotelBookingWindowDays();
   /**
@@ -613,6 +665,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value hotel_center_id = 7;</code>
+   * @return Whether the hotelCenterId field is set.
    */
   boolean hasHotelCenterId();
   /**
@@ -621,6 +674,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value hotel_center_id = 7;</code>
+   * @return The hotelCenterId.
    */
   com.google.protobuf.Int64Value getHotelCenterId();
   /**
@@ -638,6 +692,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_check_in_date = 8;</code>
+   * @return Whether the hotelCheckInDate field is set.
    */
   boolean hasHotelCheckInDate();
   /**
@@ -646,6 +701,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_check_in_date = 8;</code>
+   * @return The hotelCheckInDate.
    */
   com.google.protobuf.StringValue getHotelCheckInDate();
   /**
@@ -663,6 +719,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 9;</code>
+   * @return The enum numeric value on the wire for hotelCheckInDayOfWeek.
    */
   int getHotelCheckInDayOfWeekValue();
   /**
@@ -671,6 +728,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 9;</code>
+   * @return The hotelCheckInDayOfWeek.
    */
   com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek getHotelCheckInDayOfWeek();
 
@@ -680,6 +738,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_city = 10;</code>
+   * @return Whether the hotelCity field is set.
    */
   boolean hasHotelCity();
   /**
@@ -688,6 +747,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_city = 10;</code>
+   * @return The hotelCity.
    */
   com.google.protobuf.StringValue getHotelCity();
   /**
@@ -705,6 +765,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hotel_class = 11;</code>
+   * @return Whether the hotelClass field is set.
    */
   boolean hasHotelClass();
   /**
@@ -713,6 +774,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hotel_class = 11;</code>
+   * @return The hotelClass.
    */
   com.google.protobuf.Int32Value getHotelClass();
   /**
@@ -730,6 +792,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_country = 12;</code>
+   * @return Whether the hotelCountry field is set.
    */
   boolean hasHotelCountry();
   /**
@@ -738,6 +801,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_country = 12;</code>
+   * @return The hotelCountry.
    */
   com.google.protobuf.StringValue getHotelCountry();
   /**
@@ -755,6 +819,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 13;</code>
+   * @return The enum numeric value on the wire for hotelDateSelectionType.
    */
   int getHotelDateSelectionTypeValue();
   /**
@@ -763,6 +828,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 13;</code>
+   * @return The hotelDateSelectionType.
    */
   com.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getHotelDateSelectionType();
 
@@ -772,6 +838,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hotel_length_of_stay = 14;</code>
+   * @return Whether the hotelLengthOfStay field is set.
    */
   boolean hasHotelLengthOfStay();
   /**
@@ -780,6 +847,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hotel_length_of_stay = 14;</code>
+   * @return The hotelLengthOfStay.
    */
   com.google.protobuf.Int32Value getHotelLengthOfStay();
   /**
@@ -797,6 +865,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+   * @return Whether the hotelRateRuleId field is set.
    */
   boolean hasHotelRateRuleId();
   /**
@@ -805,6 +874,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+   * @return The hotelRateRuleId.
    */
   com.google.protobuf.StringValue getHotelRateRuleId();
   /**
@@ -822,6 +892,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+   * @return The enum numeric value on the wire for hotelRateType.
    */
   int getHotelRateTypeValue();
   /**
@@ -830,6 +901,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+   * @return The hotelRateType.
    */
   com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType getHotelRateType();
 
@@ -839,6 +911,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+   * @return The enum numeric value on the wire for hotelPriceBucket.
    */
   int getHotelPriceBucketValue();
   /**
@@ -847,6 +920,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+   * @return The hotelPriceBucket.
    */
   com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket getHotelPriceBucket();
 
@@ -856,6 +930,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_state = 15;</code>
+   * @return Whether the hotelState field is set.
    */
   boolean hasHotelState();
   /**
@@ -864,6 +939,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_state = 15;</code>
+   * @return The hotelState.
    */
   com.google.protobuf.StringValue getHotelState();
   /**
@@ -881,6 +957,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hour = 16;</code>
+   * @return Whether the hour field is set.
    */
   boolean hasHour();
   /**
@@ -889,6 +966,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hour = 16;</code>
+   * @return The hour.
    */
   com.google.protobuf.Int32Value getHour();
   /**
@@ -908,6 +986,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue interaction_on_this_extension = 49;</code>
+   * @return Whether the interactionOnThisExtension field is set.
    */
   boolean hasInteractionOnThisExtension();
   /**
@@ -918,6 +997,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue interaction_on_this_extension = 49;</code>
+   * @return The interactionOnThisExtension.
    */
   com.google.protobuf.BoolValue getInteractionOnThisExtension();
   /**
@@ -937,6 +1017,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Keyword keyword = 61;</code>
+   * @return Whether the keyword field is set.
    */
   boolean hasKeyword();
   /**
@@ -945,6 +1026,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Keyword keyword = 61;</code>
+   * @return The keyword.
    */
   com.google.ads.googleads.v2.common.Keyword getKeyword();
   /**
@@ -963,6 +1045,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue month = 17;</code>
+   * @return Whether the month field is set.
    */
   boolean hasMonth();
   /**
@@ -972,6 +1055,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue month = 17;</code>
+   * @return The month.
    */
   com.google.protobuf.StringValue getMonth();
   /**
@@ -990,6 +1074,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
+   * @return The enum numeric value on the wire for monthOfYear.
    */
   int getMonthOfYearValue();
   /**
@@ -998,6 +1083,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
+   * @return The monthOfYear.
    */
   com.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear getMonthOfYear();
 
@@ -1007,6 +1093,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue partner_hotel_id = 19;</code>
+   * @return Whether the partnerHotelId field is set.
    */
   boolean hasPartnerHotelId();
   /**
@@ -1015,6 +1102,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue partner_hotel_id = 19;</code>
+   * @return The partnerHotelId.
    */
   com.google.protobuf.StringValue getPartnerHotelId();
   /**
@@ -1032,6 +1120,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 20;</code>
+   * @return The enum numeric value on the wire for placeholderType.
    */
   int getPlaceholderTypeValue();
   /**
@@ -1040,6 +1129,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 20;</code>
+   * @return The placeholderType.
    */
   com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType();
 
@@ -1049,6 +1139,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.UInt64Value product_aggregator_id = 28;</code>
+   * @return Whether the productAggregatorId field is set.
    */
   boolean hasProductAggregatorId();
   /**
@@ -1057,6 +1148,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.UInt64Value product_aggregator_id = 28;</code>
+   * @return The productAggregatorId.
    */
   com.google.protobuf.UInt64Value getProductAggregatorId();
   /**
@@ -1074,6 +1166,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level1 = 56;</code>
+   * @return Whether the productBiddingCategoryLevel1 field is set.
    */
   boolean hasProductBiddingCategoryLevel1();
   /**
@@ -1082,6 +1175,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level1 = 56;</code>
+   * @return The productBiddingCategoryLevel1.
    */
   com.google.protobuf.StringValue getProductBiddingCategoryLevel1();
   /**
@@ -1099,6 +1193,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level2 = 57;</code>
+   * @return Whether the productBiddingCategoryLevel2 field is set.
    */
   boolean hasProductBiddingCategoryLevel2();
   /**
@@ -1107,6 +1202,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level2 = 57;</code>
+   * @return The productBiddingCategoryLevel2.
    */
   com.google.protobuf.StringValue getProductBiddingCategoryLevel2();
   /**
@@ -1124,6 +1220,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level3 = 58;</code>
+   * @return Whether the productBiddingCategoryLevel3 field is set.
    */
   boolean hasProductBiddingCategoryLevel3();
   /**
@@ -1132,6 +1229,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level3 = 58;</code>
+   * @return The productBiddingCategoryLevel3.
    */
   com.google.protobuf.StringValue getProductBiddingCategoryLevel3();
   /**
@@ -1149,6 +1247,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level4 = 59;</code>
+   * @return Whether the productBiddingCategoryLevel4 field is set.
    */
   boolean hasProductBiddingCategoryLevel4();
   /**
@@ -1157,6 +1256,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level4 = 59;</code>
+   * @return The productBiddingCategoryLevel4.
    */
   com.google.protobuf.StringValue getProductBiddingCategoryLevel4();
   /**
@@ -1174,6 +1274,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level5 = 60;</code>
+   * @return Whether the productBiddingCategoryLevel5 field is set.
    */
   boolean hasProductBiddingCategoryLevel5();
   /**
@@ -1182,6 +1283,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level5 = 60;</code>
+   * @return The productBiddingCategoryLevel5.
    */
   com.google.protobuf.StringValue getProductBiddingCategoryLevel5();
   /**
@@ -1199,6 +1301,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_brand = 29;</code>
+   * @return Whether the productBrand field is set.
    */
   boolean hasProductBrand();
   /**
@@ -1207,6 +1310,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_brand = 29;</code>
+   * @return The productBrand.
    */
   com.google.protobuf.StringValue getProductBrand();
   /**
@@ -1224,6 +1328,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel product_channel = 30;</code>
+   * @return The enum numeric value on the wire for productChannel.
    */
   int getProductChannelValue();
   /**
@@ -1232,6 +1337,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel product_channel = 30;</code>
+   * @return The productChannel.
    */
   com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel getProductChannel();
 
@@ -1241,6 +1347,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity product_channel_exclusivity = 31;</code>
+   * @return The enum numeric value on the wire for productChannelExclusivity.
    */
   int getProductChannelExclusivityValue();
   /**
@@ -1249,6 +1356,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity product_channel_exclusivity = 31;</code>
+   * @return The productChannelExclusivity.
    */
   com.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity getProductChannelExclusivity();
 
@@ -1258,6 +1366,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition product_condition = 32;</code>
+   * @return The enum numeric value on the wire for productCondition.
    */
   int getProductConditionValue();
   /**
@@ -1266,6 +1375,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition product_condition = 32;</code>
+   * @return The productCondition.
    */
   com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition getProductCondition();
 
@@ -1276,6 +1386,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
+   * @return Whether the productCountry field is set.
    */
   boolean hasProductCountry();
   /**
@@ -1285,6 +1396,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
+   * @return The productCountry.
    */
   com.google.protobuf.StringValue getProductCountry();
   /**
@@ -1303,6 +1415,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute0 = 34;</code>
+   * @return Whether the productCustomAttribute0 field is set.
    */
   boolean hasProductCustomAttribute0();
   /**
@@ -1311,6 +1424,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute0 = 34;</code>
+   * @return The productCustomAttribute0.
    */
   com.google.protobuf.StringValue getProductCustomAttribute0();
   /**
@@ -1328,6 +1442,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute1 = 35;</code>
+   * @return Whether the productCustomAttribute1 field is set.
    */
   boolean hasProductCustomAttribute1();
   /**
@@ -1336,6 +1451,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute1 = 35;</code>
+   * @return The productCustomAttribute1.
    */
   com.google.protobuf.StringValue getProductCustomAttribute1();
   /**
@@ -1353,6 +1469,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute2 = 36;</code>
+   * @return Whether the productCustomAttribute2 field is set.
    */
   boolean hasProductCustomAttribute2();
   /**
@@ -1361,6 +1478,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute2 = 36;</code>
+   * @return The productCustomAttribute2.
    */
   com.google.protobuf.StringValue getProductCustomAttribute2();
   /**
@@ -1378,6 +1496,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute3 = 37;</code>
+   * @return Whether the productCustomAttribute3 field is set.
    */
   boolean hasProductCustomAttribute3();
   /**
@@ -1386,6 +1505,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute3 = 37;</code>
+   * @return The productCustomAttribute3.
    */
   com.google.protobuf.StringValue getProductCustomAttribute3();
   /**
@@ -1403,6 +1523,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute4 = 38;</code>
+   * @return Whether the productCustomAttribute4 field is set.
    */
   boolean hasProductCustomAttribute4();
   /**
@@ -1411,6 +1532,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute4 = 38;</code>
+   * @return The productCustomAttribute4.
    */
   com.google.protobuf.StringValue getProductCustomAttribute4();
   /**
@@ -1428,6 +1550,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_item_id = 39;</code>
+   * @return Whether the productItemId field is set.
    */
   boolean hasProductItemId();
   /**
@@ -1436,6 +1559,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_item_id = 39;</code>
+   * @return The productItemId.
    */
   com.google.protobuf.StringValue getProductItemId();
   /**
@@ -1453,6 +1577,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_language = 40;</code>
+   * @return Whether the productLanguage field is set.
    */
   boolean hasProductLanguage();
   /**
@@ -1461,6 +1586,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_language = 40;</code>
+   * @return The productLanguage.
    */
   com.google.protobuf.StringValue getProductLanguage();
   /**
@@ -1478,6 +1604,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.UInt64Value product_merchant_id = 41;</code>
+   * @return Whether the productMerchantId field is set.
    */
   boolean hasProductMerchantId();
   /**
@@ -1486,6 +1613,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.UInt64Value product_merchant_id = 41;</code>
+   * @return The productMerchantId.
    */
   com.google.protobuf.UInt64Value getProductMerchantId();
   /**
@@ -1503,6 +1631,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_store_id = 42;</code>
+   * @return Whether the productStoreId field is set.
    */
   boolean hasProductStoreId();
   /**
@@ -1511,6 +1640,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_store_id = 42;</code>
+   * @return The productStoreId.
    */
   com.google.protobuf.StringValue getProductStoreId();
   /**
@@ -1528,6 +1658,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_title = 43;</code>
+   * @return Whether the productTitle field is set.
    */
   boolean hasProductTitle();
   /**
@@ -1536,6 +1667,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_title = 43;</code>
+   * @return The productTitle.
    */
   com.google.protobuf.StringValue getProductTitle();
   /**
@@ -1553,6 +1685,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l1 = 44;</code>
+   * @return Whether the productTypeL1 field is set.
    */
   boolean hasProductTypeL1();
   /**
@@ -1561,6 +1694,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l1 = 44;</code>
+   * @return The productTypeL1.
    */
   com.google.protobuf.StringValue getProductTypeL1();
   /**
@@ -1578,6 +1712,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l2 = 45;</code>
+   * @return Whether the productTypeL2 field is set.
    */
   boolean hasProductTypeL2();
   /**
@@ -1586,6 +1721,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l2 = 45;</code>
+   * @return The productTypeL2.
    */
   com.google.protobuf.StringValue getProductTypeL2();
   /**
@@ -1603,6 +1739,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l3 = 46;</code>
+   * @return Whether the productTypeL3 field is set.
    */
   boolean hasProductTypeL3();
   /**
@@ -1611,6 +1748,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l3 = 46;</code>
+   * @return The productTypeL3.
    */
   com.google.protobuf.StringValue getProductTypeL3();
   /**
@@ -1628,6 +1766,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l4 = 47;</code>
+   * @return Whether the productTypeL4 field is set.
    */
   boolean hasProductTypeL4();
   /**
@@ -1636,6 +1775,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l4 = 47;</code>
+   * @return The productTypeL4.
    */
   com.google.protobuf.StringValue getProductTypeL4();
   /**
@@ -1653,6 +1793,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l5 = 48;</code>
+   * @return Whether the productTypeL5 field is set.
    */
   boolean hasProductTypeL5();
   /**
@@ -1661,6 +1802,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l5 = 48;</code>
+   * @return The productTypeL5.
    */
   com.google.protobuf.StringValue getProductTypeL5();
   /**
@@ -1680,6 +1822,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue quarter = 21;</code>
+   * @return Whether the quarter field is set.
    */
   boolean hasQuarter();
   /**
@@ -1690,6 +1833,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue quarter = 21;</code>
+   * @return The quarter.
    */
   com.google.protobuf.StringValue getQuarter();
   /**
@@ -1709,6 +1853,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+   * @return The enum numeric value on the wire for searchEngineResultsPageType.
    */
   int getSearchEngineResultsPageTypeValue();
   /**
@@ -1717,6 +1862,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+   * @return The searchEngineResultsPageType.
    */
   com.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType getSearchEngineResultsPageType();
 
@@ -1726,6 +1872,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 22;</code>
+   * @return The enum numeric value on the wire for searchTermMatchType.
    */
   int getSearchTermMatchTypeValue();
   /**
@@ -1734,6 +1881,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 22;</code>
+   * @return The searchTermMatchType.
    */
   com.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType getSearchTermMatchType();
 
@@ -1743,6 +1891,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SlotEnum.Slot slot = 23;</code>
+   * @return The enum numeric value on the wire for slot.
    */
   int getSlotValue();
   /**
@@ -1751,6 +1900,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SlotEnum.Slot slot = 23;</code>
+   * @return The slot.
    */
   com.google.ads.googleads.v2.enums.SlotEnum.Slot getSlot();
 
@@ -1760,6 +1910,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue webpage = 66;</code>
+   * @return Whether the webpage field is set.
    */
   boolean hasWebpage();
   /**
@@ -1768,6 +1919,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue webpage = 66;</code>
+   * @return The webpage.
    */
   com.google.protobuf.StringValue getWebpage();
   /**
@@ -1786,6 +1938,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue week = 24;</code>
+   * @return Whether the week field is set.
    */
   boolean hasWeek();
   /**
@@ -1795,6 +1948,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue week = 24;</code>
+   * @return The week.
    */
   com.google.protobuf.StringValue getWeek();
   /**
@@ -1813,6 +1967,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value year = 25;</code>
+   * @return Whether the year field is set.
    */
   boolean hasYear();
   /**
@@ -1821,6 +1976,7 @@ public interface SegmentsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value year = 25;</code>
+   * @return The year.
    */
   com.google.protobuf.Int32Value getYear();
   /**

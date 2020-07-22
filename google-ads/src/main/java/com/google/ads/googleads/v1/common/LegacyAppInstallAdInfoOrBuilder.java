@@ -13,6 +13,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 1;</code>
+   * @return Whether the appId field is set.
    */
   boolean hasAppId();
   /**
@@ -21,6 +22,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 1;</code>
+   * @return The appId.
    */
   com.google.protobuf.StringValue getAppId();
   /**
@@ -38,6 +40,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore app_store = 2;</code>
+   * @return The enum numeric value on the wire for appStore.
    */
   int getAppStoreValue();
   /**
@@ -46,6 +49,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore app_store = 2;</code>
+   * @return The appStore.
    */
   com.google.ads.googleads.v1.enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore getAppStore();
 
@@ -55,6 +59,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 3;</code>
+   * @return Whether the headline field is set.
    */
   boolean hasHeadline();
   /**
@@ -63,6 +68,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue headline = 3;</code>
+   * @return The headline.
    */
   com.google.protobuf.StringValue getHeadline();
   /**
@@ -80,6 +86,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description1 = 4;</code>
+   * @return Whether the description1 field is set.
    */
   boolean hasDescription1();
   /**
@@ -88,6 +95,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description1 = 4;</code>
+   * @return The description1.
    */
   com.google.protobuf.StringValue getDescription1();
   /**
@@ -105,6 +113,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description2 = 5;</code>
+   * @return Whether the description2 field is set.
    */
   boolean hasDescription2();
   /**
@@ -113,6 +122,7 @@ public interface LegacyAppInstallAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description2 = 5;</code>
+   * @return The description2.
    */
   com.google.protobuf.StringValue getDescription2();
   /**

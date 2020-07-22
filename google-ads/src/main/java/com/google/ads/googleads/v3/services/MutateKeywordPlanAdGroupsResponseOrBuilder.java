@@ -16,6 +16,7 @@ public interface MutateKeywordPlanAdGroupsResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   * @return Whether the partialFailureError field is set.
    */
   boolean hasPartialFailureError();
   /**
@@ -27,6 +28,7 @@ public interface MutateKeywordPlanAdGroupsResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   * @return The partialFailureError.
    */
   com.google.rpc.Status getPartialFailureError();
   /**
@@ -43,7 +45,8 @@ public interface MutateKeywordPlanAdGroupsResponseOrBuilder extends
 
   /**
    * <pre>
-   * All results for the mutate.
+   * All results for the mutate. The order of the results is determined by the
+   * order of the keywords in the original request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -52,7 +55,8 @@ public interface MutateKeywordPlanAdGroupsResponseOrBuilder extends
       getResultsList();
   /**
    * <pre>
-   * All results for the mutate.
+   * All results for the mutate. The order of the results is determined by the
+   * order of the keywords in the original request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -60,7 +64,8 @@ public interface MutateKeywordPlanAdGroupsResponseOrBuilder extends
   com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult getResults(int index);
   /**
    * <pre>
-   * All results for the mutate.
+   * All results for the mutate. The order of the results is determined by the
+   * order of the keywords in the original request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -68,7 +73,8 @@ public interface MutateKeywordPlanAdGroupsResponseOrBuilder extends
   int getResultsCount();
   /**
    * <pre>
-   * All results for the mutate.
+   * All results for the mutate. The order of the results is determined by the
+   * order of the keywords in the original request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -77,7 +83,8 @@ public interface MutateKeywordPlanAdGroupsResponseOrBuilder extends
       getResultsOrBuilderList();
   /**
    * <pre>
-   * All results for the mutate.
+   * All results for the mutate. The order of the results is determined by the
+   * order of the keywords in the original request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>

@@ -73,82 +73,88 @@ public final class MutateJobServiceProto {
       "s.v1.services\0322google/ads/googleads/v1/r" +
       "esources/mutate_job.proto\0329google/ads/go" +
       "ogleads/v1/services/google_ads_service.p" +
-      "roto\032\034google/api/annotations.proto\032#goog" +
-      "le/longrunning/operations.proto\032\027google/" +
-      "rpc/status.proto\032\027google/api/client.prot" +
-      "o\"-\n\026CreateMutateJobRequest\022\023\n\013customer_" +
-      "id\030\001 \001(\t\"0\n\027CreateMutateJobResponse\022\025\n\rr" +
-      "esource_name\030\001 \001(\t\",\n\023GetMutateJobReques" +
-      "t\022\025\n\rresource_name\030\001 \001(\t\",\n\023RunMutateJob" +
-      "Request\022\025\n\rresource_name\030\001 \001(\t\"\234\001\n\035AddMu" +
-      "tateJobOperationsRequest\022\025\n\rresource_nam" +
-      "e\030\001 \001(\t\022\026\n\016sequence_token\030\002 \001(\t\022L\n\021mutat" +
-      "e_operations\030\003 \003(\01321.google.ads.googlead" +
-      "s.v1.services.MutateOperation\"W\n\036AddMuta" +
-      "teJobOperationsResponse\022\030\n\020total_operati" +
-      "ons\030\001 \001(\003\022\033\n\023next_sequence_token\030\002 \001(\t\"[" +
-      "\n\033ListMutateJobResultsRequest\022\025\n\rresourc" +
-      "e_name\030\001 \001(\t\022\022\n\npage_token\030\002 \001(\t\022\021\n\tpage" +
-      "_size\030\003 \001(\005\"{\n\034ListMutateJobResultsRespo" +
-      "nse\022B\n\007results\030\001 \003(\01321.google.ads.google" +
-      "ads.v1.services.MutateJobResult\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"\254\001\n\017MutateJobResult\022\027\n\017" +
-      "operation_index\030\001 \001(\003\022\\\n\031mutate_operatio" +
-      "n_response\030\002 \001(\01329.google.ads.googleads." +
-      "v1.services.MutateOperationResponse\022\"\n\006s" +
-      "tatus\030\003 \001(\0132\022.google.rpc.Status2\203\010\n\020Muta" +
-      "teJobService\022\302\001\n\017CreateMutateJob\0228.googl" +
-      "e.ads.googleads.v1.services.CreateMutate" +
-      "JobRequest\0329.google.ads.googleads.v1.ser" +
-      "vices.CreateMutateJobResponse\":\202\323\344\223\0024\"//" +
-      "v1/customers/{customer_id=*}/mutateJobs:" +
-      "create:\001*\022\251\001\n\014GetMutateJob\0225.google.ads." +
-      "googleads.v1.services.GetMutateJobReques" +
-      "t\032,.google.ads.googleads.v1.resources.Mu" +
-      "tateJob\"4\202\323\344\223\002.\022,/v1/{resource_name=cust" +
-      "omers/*/mutateJobs/*}\022\327\001\n\024ListMutateJobR" +
-      "esults\022=.google.ads.googleads.v1.service" +
-      "s.ListMutateJobResultsRequest\032>.google.a" +
-      "ds.googleads.v1.services.ListMutateJobRe" +
-      "sultsResponse\"@\202\323\344\223\002:\0228/v1/{resource_nam" +
-      "e=customers/*/mutateJobs/*}:listResults\022" +
-      "\241\001\n\014RunMutateJob\0225.google.ads.googleads." +
-      "v1.services.RunMutateJobRequest\032\035.google" +
-      ".longrunning.Operation\";\202\323\344\223\0025\"0/v1/{res" +
-      "ource_name=customers/*/mutateJobs/*}:run" +
-      ":\001*\022\342\001\n\026AddMutateJobOperations\022?.google." +
-      "ads.googleads.v1.services.AddMutateJobOp" +
-      "erationsRequest\032@.google.ads.googleads.v" +
-      "1.services.AddMutateJobOperationsRespons" +
-      "e\"E\202\323\344\223\002?\":/v1/{resource_name=customers/" +
-      "*/mutateJobs/*}:addOperations:\001*\032\033\312A\030goo" +
-      "gleads.googleapis.comB\374\001\n$com.google.ads" +
-      ".googleads.v1.servicesB\025MutateJobService" +
-      "ProtoP\001ZHgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v1/services;service" +
-      "s\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Servic" +
-      "es\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$" +
-      "Google::Ads::GoogleAds::V1::Servicesb\006pr" +
-      "oto3"
+      "roto\032\034google/api/annotations.proto\032\027goog" +
+      "le/api/client.proto\032\037google/api/field_be" +
+      "havior.proto\032\031google/api/resource.proto\032" +
+      "#google/longrunning/operations.proto\032\027go" +
+      "ogle/rpc/status.proto\"2\n\026CreateMutateJob" +
+      "Request\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\"0\n\027Cre" +
+      "ateMutateJobResponse\022\025\n\rresource_name\030\001 " +
+      "\001(\t\"X\n\023GetMutateJobRequest\022A\n\rresource_n" +
+      "ame\030\001 \001(\tB*\340A\002\372A$\n\"googleads.googleapis." +
+      "com/MutateJob\"X\n\023RunMutateJobRequest\022A\n\r" +
+      "resource_name\030\001 \001(\tB*\340A\002\372A$\n\"googleads.g" +
+      "oogleapis.com/MutateJob\"\315\001\n\035AddMutateJob" +
+      "OperationsRequest\022A\n\rresource_name\030\001 \001(\t" +
+      "B*\340A\002\372A$\n\"googleads.googleapis.com/Mutat" +
+      "eJob\022\026\n\016sequence_token\030\002 \001(\t\022Q\n\021mutate_o" +
+      "perations\030\003 \003(\01321.google.ads.googleads.v" +
+      "1.services.MutateOperationB\003\340A\002\"W\n\036AddMu" +
+      "tateJobOperationsResponse\022\030\n\020total_opera" +
+      "tions\030\001 \001(\003\022\033\n\023next_sequence_token\030\002 \001(\t" +
+      "\"\207\001\n\033ListMutateJobResultsRequest\022A\n\rreso" +
+      "urce_name\030\001 \001(\tB*\340A\002\372A$\n\"googleads.googl" +
+      "eapis.com/MutateJob\022\022\n\npage_token\030\002 \001(\t\022" +
+      "\021\n\tpage_size\030\003 \001(\005\"{\n\034ListMutateJobResul" +
+      "tsResponse\022B\n\007results\030\001 \003(\01321.google.ads" +
+      ".googleads.v1.services.MutateJobResult\022\027" +
+      "\n\017next_page_token\030\002 \001(\t\"\254\001\n\017MutateJobRes" +
+      "ult\022\027\n\017operation_index\030\001 \001(\003\022\\\n\031mutate_o" +
+      "peration_response\030\002 \001(\01329.google.ads.goo" +
+      "gleads.v1.services.MutateOperationRespon" +
+      "se\022\"\n\006status\030\003 \001(\0132\022.google.rpc.Status2\357" +
+      "\t\n\020MutateJobService\022\320\001\n\017CreateMutateJob\022" +
+      "8.google.ads.googleads.v1.services.Creat" +
+      "eMutateJobRequest\0329.google.ads.googleads" +
+      ".v1.services.CreateMutateJobResponse\"H\202\323" +
+      "\344\223\0024\"//v1/customers/{customer_id=*}/muta" +
+      "teJobs:create:\001*\332A\013customer_id\022\271\001\n\014GetMu" +
+      "tateJob\0225.google.ads.googleads.v1.servic" +
+      "es.GetMutateJobRequest\032,.google.ads.goog" +
+      "leads.v1.resources.MutateJob\"D\202\323\344\223\002.\022,/v" +
+      "1/{resource_name=customers/*/mutateJobs/" +
+      "*}\332A\rresource_name\022\347\001\n\024ListMutateJobResu" +
+      "lts\022=.google.ads.googleads.v1.services.L" +
+      "istMutateJobResultsRequest\032>.google.ads." +
+      "googleads.v1.services.ListMutateJobResul" +
+      "tsResponse\"P\202\323\344\223\002:\0228/v1/{resource_name=c" +
+      "ustomers/*/mutateJobs/*}:listResults\332A\rr" +
+      "esource_name\022\213\002\n\014RunMutateJob\0225.google.a" +
+      "ds.googleads.v1.services.RunMutateJobReq" +
+      "uest\032\035.google.longrunning.Operation\"\244\001\202\323" +
+      "\344\223\0025\"0/v1/{resource_name=customers/*/mut" +
+      "ateJobs/*}:run:\001*\332A\rresource_name\312AV\n\025go" +
+      "ogle.protobuf.Empty\022=google.ads.googlead" +
+      "s.v1.resources.MutateJob.MutateJobMetada" +
+      "ta\022\266\002\n\026AddMutateJobOperations\022?.google.a" +
+      "ds.googleads.v1.services.AddMutateJobOpe" +
+      "rationsRequest\032@.google.ads.googleads.v1" +
+      ".services.AddMutateJobOperationsResponse" +
+      "\"\230\001\202\323\344\223\002?\":/v1/{resource_name=customers/" +
+      "*/mutateJobs/*}:addOperations:\001*\332A.resou" +
+      "rce_name,sequence_token,mutate_operation" +
+      "s\332A\037resource_name,mutate_operations\032\033\312A\030" +
+      "googleads.googleapis.comB\374\001\n$com.google." +
+      "ads.googleads.v1.servicesB\025MutateJobServ" +
+      "iceProtoP\001ZHgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v1/services;serv" +
+      "ices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Ser" +
+      "vices\312\002 Google\\Ads\\GoogleAds\\V1\\Services" +
+      "\352\002$Google::Ads::GoogleAds::V1::Servicesb" +
+      "\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.MutateJobProto.getDescriptor(),
           com.google.ads.googleads.v1.services.GoogleAdsServiceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.longrunning.OperationsProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_services_CreateMutateJobRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_CreateMutateJobRequest_fieldAccessorTable = new
@@ -206,15 +212,21 @@ public final class MutateJobServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    registry.add(com.google.longrunning.OperationsProto.operationInfo);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.MutateJobProto.getDescriptor();
     com.google.ads.googleads.v1.services.GoogleAdsServiceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.longrunning.OperationsProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -18,7 +18,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.ResponsiveSearchAdInfo}
  */
-public  final class ResponsiveSearchAdInfo extends
+public final class ResponsiveSearchAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.ResponsiveSearchAdInfo)
     ResponsiveSearchAdInfoOrBuilder {
@@ -30,6 +30,13 @@ private static final long serialVersionUID = 0L;
   private ResponsiveSearchAdInfo() {
     headlines_ = java.util.Collections.emptyList();
     descriptions_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ResponsiveSearchAdInfo();
   }
 
   @java.lang.Override
@@ -138,7 +145,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.common.ResponsiveSearchAdInfo.class, com.google.ads.googleads.v2.common.ResponsiveSearchAdInfo.Builder.class);
   }
 
-  private int bitField0_;
   public static final int HEADLINES_FIELD_NUMBER = 1;
   private java.util.List<com.google.ads.googleads.v2.common.AdTextAsset> headlines_;
   /**
@@ -149,6 +155,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.AdTextAsset> getHeadlinesList() {
     return headlines_;
   }
@@ -160,6 +167,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.AdTextAssetOrBuilder> 
       getHeadlinesOrBuilderList() {
     return headlines_;
@@ -172,6 +180,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public int getHeadlinesCount() {
     return headlines_.size();
   }
@@ -183,6 +192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdTextAsset getHeadlines(int index) {
     return headlines_.get(index);
   }
@@ -194,6 +204,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdTextAssetOrBuilder getHeadlinesOrBuilder(
       int index) {
     return headlines_.get(index);
@@ -209,6 +220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.AdTextAsset> getDescriptionsList() {
     return descriptions_;
   }
@@ -220,6 +232,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.AdTextAssetOrBuilder> 
       getDescriptionsOrBuilderList() {
     return descriptions_;
@@ -232,6 +245,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public int getDescriptionsCount() {
     return descriptions_.size();
   }
@@ -243,6 +257,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdTextAsset getDescriptions(int index) {
     return descriptions_.get(index);
   }
@@ -254,6 +269,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdTextAssetOrBuilder getDescriptionsOrBuilder(
       int index) {
     return descriptions_.get(index);
@@ -267,7 +283,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue path1 = 3;</code>
+   * @return Whether the path1 field is set.
    */
+  @java.lang.Override
   public boolean hasPath1() {
     return path1_ != null;
   }
@@ -277,7 +295,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue path1 = 3;</code>
+   * @return The path1.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPath1() {
     return path1_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : path1_;
   }
@@ -288,6 +308,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue path1 = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPath1OrBuilder() {
     return getPath1();
   }
@@ -301,7 +322,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue path2 = 4;</code>
+   * @return Whether the path2 field is set.
    */
+  @java.lang.Override
   public boolean hasPath2() {
     return path2_ != null;
   }
@@ -312,7 +335,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue path2 = 4;</code>
+   * @return The path2.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPath2() {
     return path2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : path2_;
   }
@@ -324,6 +349,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue path2 = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPath2OrBuilder() {
     return getPath2();
   }
@@ -633,7 +659,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.common.ResponsiveSearchAdInfo buildPartial() {
       com.google.ads.googleads.v2.common.ResponsiveSearchAdInfo result = new com.google.ads.googleads.v2.common.ResponsiveSearchAdInfo(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (headlinesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           headlines_ = java.util.Collections.unmodifiableList(headlines_);
@@ -662,7 +687,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.path2_ = path2Builder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -1468,6 +1492,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue path1 = 3;</code>
+     * @return Whether the path1 field is set.
      */
     public boolean hasPath1() {
       return path1Builder_ != null || path1_ != null;
@@ -1478,6 +1503,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue path1 = 3;</code>
+     * @return The path1.
      */
     public com.google.protobuf.StringValue getPath1() {
       if (path1Builder_ == null) {
@@ -1622,6 +1648,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue path2 = 4;</code>
+     * @return Whether the path2 field is set.
      */
     public boolean hasPath2() {
       return path2Builder_ != null || path2_ != null;
@@ -1633,6 +1660,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue path2 = 4;</code>
+     * @return The path2.
      */
     public com.google.protobuf.StringValue getPath2() {
       if (path2Builder_ == null) {

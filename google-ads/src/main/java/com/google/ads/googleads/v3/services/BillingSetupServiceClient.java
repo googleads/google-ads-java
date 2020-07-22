@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.BillingSetupServiceStubSettings
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -43,8 +42,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
- *   String formattedResourceName = BillingSetupServiceClient.formatBillingSetupName("[CUSTOMER]", "[BILLING_SETUP]");
- *   BillingSetup response = billingSetupServiceClient.getBillingSetup(formattedResourceName);
+ *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER]", "[BILLING_SETUP]");
+ *   BillingSetup response = billingSetupServiceClient.getBillingSetup(resourceName);
  * }
  * </code>
  * </pre>
@@ -106,43 +105,6 @@ public class BillingSetupServiceClient implements BackgroundResource {
   private final BillingSetupServiceSettings settings;
   private final BillingSetupServiceStub stub;
 
-  private static final PathTemplate BILLING_SETUP_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/billingSetups/{billing_setup}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a billing_setup resource.
-   *
-   * @deprecated Use the {@link BillingSetupName} class instead.
-   */
-  @Deprecated
-  public static final String formatBillingSetupName(String customer, String billingSetup) {
-    return BILLING_SETUP_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "billing_setup", billingSetup);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a billing_setup
-   * resource.
-   *
-   * @deprecated Use the {@link BillingSetupName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromBillingSetupName(String billingSetupName) {
-    return BILLING_SETUP_PATH_TEMPLATE.parse(billingSetupName).get("customer");
-  }
-
-  /**
-   * Parses the billing_setup from the given fully-qualified path which represents a billing_setup
-   * resource.
-   *
-   * @deprecated Use the {@link BillingSetupName} class instead.
-   */
-  @Deprecated
-  public static final String parseBillingSetupFromBillingSetupName(String billingSetupName) {
-    return BILLING_SETUP_PATH_TEMPLATE.parse(billingSetupName).get("billing_setup");
-  }
-
   /** Constructs an instance of BillingSetupServiceClient with default settings. */
   public static final BillingSetupServiceClient create() throws IOException {
     return create(BillingSetupServiceSettings.newBuilder().build());
@@ -199,8 +161,32 @@ public class BillingSetupServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
-   *   String formattedResourceName = BillingSetupServiceClient.formatBillingSetupName("[CUSTOMER]", "[BILLING_SETUP]");
-   *   BillingSetup response = billingSetupServiceClient.getBillingSetup(formattedResourceName);
+   *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER]", "[BILLING_SETUP]");
+   *   BillingSetup response = billingSetupServiceClient.getBillingSetup(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the billing setup to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final BillingSetup getBillingSetup(BillingSetupName resourceName) {
+    GetBillingSetupRequest request =
+        GetBillingSetupRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getBillingSetup(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns a billing setup.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
+   *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER]", "[BILLING_SETUP]");
+   *   BillingSetup response = billingSetupServiceClient.getBillingSetup(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -208,7 +194,6 @@ public class BillingSetupServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final BillingSetup getBillingSetup(String resourceName) {
-    BILLING_SETUP_PATH_TEMPLATE.validate(resourceName, "getBillingSetup");
     GetBillingSetupRequest request =
         GetBillingSetupRequest.newBuilder().setResourceName(resourceName).build();
     return getBillingSetup(request);
@@ -222,9 +207,9 @@ public class BillingSetupServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
-   *   String formattedResourceName = BillingSetupServiceClient.formatBillingSetupName("[CUSTOMER]", "[BILLING_SETUP]");
+   *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER]", "[BILLING_SETUP]");
    *   GetBillingSetupRequest request = GetBillingSetupRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   BillingSetup response = billingSetupServiceClient.getBillingSetup(request);
    * }
@@ -245,9 +230,9 @@ public class BillingSetupServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
-   *   String formattedResourceName = BillingSetupServiceClient.formatBillingSetupName("[CUSTOMER]", "[BILLING_SETUP]");
+   *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER]", "[BILLING_SETUP]");
    *   GetBillingSetupRequest request = GetBillingSetupRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;BillingSetup&gt; future = billingSetupServiceClient.getBillingSetupCallable().futureCall(request);
    *   // Do something
@@ -279,7 +264,6 @@ public class BillingSetupServiceClient implements BackgroundResource {
    */
   public final MutateBillingSetupResponse mutateBillingSetup(
       String customerId, BillingSetupOperation operation) {
-
     MutateBillingSetupRequest request =
         MutateBillingSetupRequest.newBuilder()
             .setCustomerId(customerId)

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.UserListNumberRuleItemInfo}
  */
-public  final class UserListNumberRuleItemInfo extends
+public final class UserListNumberRuleItemInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.UserListNumberRuleItemInfo)
     UserListNumberRuleItemInfoOrBuilder {
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator operator = 1;</code>
    * @return The enum numeric value on the wire for operator.
    */
-  public int getOperatorValue() {
+  @java.lang.Override public int getOperatorValue() {
     return operator_;
   }
   /**
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator operator = 1;</code>
    * @return The operator.
    */
-  public com.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator getOperator() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator getOperator() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator result = com.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.valueOf(operator_);
     return result == null ? com.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.UNRECOGNIZED : result;
@@ -147,6 +147,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue value = 2;</code>
    * @return Whether the value field is set.
    */
+  @java.lang.Override
   public boolean hasValue() {
     return value_ != null;
   }
@@ -160,6 +161,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue value = 2;</code>
    * @return The value.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getValue() {
     return value_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : value_;
   }
@@ -172,6 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue value = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getValueOrBuilder() {
     return getValue();
   }
@@ -522,7 +525,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator operator = 1;</code>
      * @return The enum numeric value on the wire for operator.
      */
-    public int getOperatorValue() {
+    @java.lang.Override public int getOperatorValue() {
       return operator_;
     }
     /**
@@ -537,6 +540,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
+      
       operator_ = value;
       onChanged();
       return this;
@@ -551,6 +555,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator operator = 1;</code>
      * @return The operator.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator getOperator() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator result = com.google.ads.googleads.v4.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.valueOf(operator_);

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.KeywordSeed}
  */
-public  final class KeywordSeed extends
+public final class KeywordSeed extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.KeywordSeed)
     KeywordSeedOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private KeywordSeed() {
     keywords_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new KeywordSeed();
   }
 
   @java.lang.Override
@@ -100,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getKeywordsList() {
     return keywords_;
   }
@@ -110,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getKeywordsOrBuilderList() {
     return keywords_;
@@ -121,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 1;</code>
    */
+  @java.lang.Override
   public int getKeywordsCount() {
     return keywords_.size();
   }
@@ -131,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywords(int index) {
     return keywords_.get(index);
   }
@@ -141,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordsOrBuilder(
       int index) {
     return keywords_.get(index);

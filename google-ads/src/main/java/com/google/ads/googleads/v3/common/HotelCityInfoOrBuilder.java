@@ -13,6 +13,7 @@ public interface HotelCityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue city_criterion = 1;</code>
+   * @return Whether the cityCriterion field is set.
    */
   boolean hasCityCriterion();
   /**
@@ -21,6 +22,7 @@ public interface HotelCityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue city_criterion = 1;</code>
+   * @return The cityCriterion.
    */
   com.google.protobuf.StringValue getCityCriterion();
   /**

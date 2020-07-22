@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GenerateForecastCurveResponse}
  */
-public  final class GenerateForecastCurveResponse extends
+public final class GenerateForecastCurveResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GenerateForecastCurveResponse)
     GenerateForecastCurveResponseOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurve campaign_forecast_curves = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurve> getCampaignForecastCurvesList() {
     return campaignForecastCurves_;
   }
@@ -119,6 +120,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurve campaign_forecast_curves = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurveOrBuilder> 
       getCampaignForecastCurvesOrBuilderList() {
     return campaignForecastCurves_;
@@ -131,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurve campaign_forecast_curves = 1;</code>
    */
+  @java.lang.Override
   public int getCampaignForecastCurvesCount() {
     return campaignForecastCurves_.size();
   }
@@ -142,6 +145,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurve campaign_forecast_curves = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurve getCampaignForecastCurves(int index) {
     return campaignForecastCurves_.get(index);
   }
@@ -153,6 +157,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurve campaign_forecast_curves = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurveOrBuilder getCampaignForecastCurvesOrBuilder(
       int index) {
     return campaignForecastCurves_.get(index);

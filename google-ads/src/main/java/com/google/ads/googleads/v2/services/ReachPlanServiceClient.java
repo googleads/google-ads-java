@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,8 +20,10 @@ import com.google.ads.googleads.v2.services.stub.ReachPlanServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.protobuf.Int64Value;
 import com.google.protobuf.StringValue;
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -203,13 +205,12 @@ public class ReachPlanServiceClient implements BackgroundResource {
    * }
    * </code></pre>
    *
-   * @param plannableLocationId The ID of the selected location for planning. To list the available
-   *     plannable location ids use ListPlannableLocations.
+   * @param plannableLocationId Required. The ID of the selected location for planning. To list the
+   *     available plannable location ids use ListPlannableLocations.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListPlannableProductsResponse listPlannableProducts(
       StringValue plannableLocationId) {
-
     ListPlannableProductsRequest request =
         ListPlannableProductsRequest.newBuilder()
             .setPlannableLocationId(plannableLocationId)
@@ -277,13 +278,51 @@ public class ReachPlanServiceClient implements BackgroundResource {
    *   StringValue plannableLocationId = StringValue.newBuilder().build();
    *   StringValue currencyCode = StringValue.newBuilder().build();
    *   Int64Value budgetMicros = Int64Value.newBuilder().build();
-   *   Preferences preferences = Preferences.newBuilder().build();
+   *   GenerateProductMixIdeasResponse response = reachPlanServiceClient.generateProductMixIdeas(customerId, plannableLocationId, currencyCode, budgetMicros);
+   * }
+   * </code></pre>
+   *
+   * @param customerId Required. The ID of the customer.
+   * @param plannableLocationId Required. The ID of the location, this is one of the ids returned by
+   *     ListPlannableLocations.
+   * @param currencyCode Required. Currency code. Three-character ISO 4217 currency code.
+   * @param budgetMicros Required. Total budget. Amount in micros. One million is equivalent to one
+   *     unit.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateProductMixIdeasResponse generateProductMixIdeas(
+      String customerId,
+      StringValue plannableLocationId,
+      StringValue currencyCode,
+      Int64Value budgetMicros) {
+    GenerateProductMixIdeasRequest request =
+        GenerateProductMixIdeasRequest.newBuilder()
+            .setCustomerId(customerId)
+            .setPlannableLocationId(plannableLocationId)
+            .setCurrencyCode(currencyCode)
+            .setBudgetMicros(budgetMicros)
+            .build();
+    return generateProductMixIdeas(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Generates a product mix ideas given a set of preferences. This method helps the advertiser to
+   * obtain a good mix of ad formats and budget allocations based on its preferences.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
+   *   String customerId = "";
+   *   StringValue plannableLocationId = StringValue.newBuilder().build();
+   *   StringValue currencyCode = StringValue.newBuilder().build();
+   *   Int64Value budgetMicros = Int64Value.newBuilder().build();
    *   GenerateProductMixIdeasRequest request = GenerateProductMixIdeasRequest.newBuilder()
    *     .setCustomerId(customerId)
    *     .setPlannableLocationId(plannableLocationId)
    *     .setCurrencyCode(currencyCode)
    *     .setBudgetMicros(budgetMicros)
-   *     .setPreferences(preferences)
    *     .build();
    *   GenerateProductMixIdeasResponse response = reachPlanServiceClient.generateProductMixIdeas(request);
    * }
@@ -310,13 +349,11 @@ public class ReachPlanServiceClient implements BackgroundResource {
    *   StringValue plannableLocationId = StringValue.newBuilder().build();
    *   StringValue currencyCode = StringValue.newBuilder().build();
    *   Int64Value budgetMicros = Int64Value.newBuilder().build();
-   *   Preferences preferences = Preferences.newBuilder().build();
    *   GenerateProductMixIdeasRequest request = GenerateProductMixIdeasRequest.newBuilder()
    *     .setCustomerId(customerId)
    *     .setPlannableLocationId(plannableLocationId)
    *     .setCurrencyCode(currencyCode)
    *     .setBudgetMicros(budgetMicros)
-   *     .setPreferences(preferences)
    *     .build();
    *   ApiFuture&lt;GenerateProductMixIdeasResponse&gt; future = reachPlanServiceClient.generateProductMixIdeasCallable().futureCall(request);
    *   // Do something
@@ -338,19 +375,43 @@ public class ReachPlanServiceClient implements BackgroundResource {
    * <pre><code>
    * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
    *   String customerId = "";
-   *   StringValue currencyCode = StringValue.newBuilder().build();
    *   CampaignDuration campaignDuration = CampaignDuration.newBuilder().build();
-   *   Int32Value cookieFrequencyCap = Int32Value.newBuilder().build();
-   *   Int32Value minEffectiveFrequency = Int32Value.newBuilder().build();
-   *   Targeting targeting = Targeting.newBuilder().build();
+   *   List&lt;PlannedProduct&gt; plannedProducts = new ArrayList&lt;&gt;();
+   *   GenerateReachForecastResponse response = reachPlanServiceClient.generateReachForecast(customerId, campaignDuration, plannedProducts);
+   * }
+   * </code></pre>
+   *
+   * @param customerId Required. The ID of the customer.
+   * @param campaignDuration Required. Campaign duration.
+   * @param plannedProducts Required. The products to be forecast. The max number of allowed planned
+   *     products is 15.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateReachForecastResponse generateReachForecast(
+      String customerId, CampaignDuration campaignDuration, List<PlannedProduct> plannedProducts) {
+    GenerateReachForecastRequest request =
+        GenerateReachForecastRequest.newBuilder()
+            .setCustomerId(customerId)
+            .setCampaignDuration(campaignDuration)
+            .addAllPlannedProducts(plannedProducts)
+            .build();
+    return generateReachForecast(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Generates a reach forecast for a given targeting / product mix.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
+   *   String customerId = "";
+   *   CampaignDuration campaignDuration = CampaignDuration.newBuilder().build();
    *   List&lt;PlannedProduct&gt; plannedProducts = new ArrayList&lt;&gt;();
    *   GenerateReachForecastRequest request = GenerateReachForecastRequest.newBuilder()
    *     .setCustomerId(customerId)
-   *     .setCurrencyCode(currencyCode)
    *     .setCampaignDuration(campaignDuration)
-   *     .setCookieFrequencyCap(cookieFrequencyCap)
-   *     .setMinEffectiveFrequency(minEffectiveFrequency)
-   *     .setTargeting(targeting)
    *     .addAllPlannedProducts(plannedProducts)
    *     .build();
    *   GenerateReachForecastResponse response = reachPlanServiceClient.generateReachForecast(request);
@@ -374,19 +435,11 @@ public class ReachPlanServiceClient implements BackgroundResource {
    * <pre><code>
    * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
    *   String customerId = "";
-   *   StringValue currencyCode = StringValue.newBuilder().build();
    *   CampaignDuration campaignDuration = CampaignDuration.newBuilder().build();
-   *   Int32Value cookieFrequencyCap = Int32Value.newBuilder().build();
-   *   Int32Value minEffectiveFrequency = Int32Value.newBuilder().build();
-   *   Targeting targeting = Targeting.newBuilder().build();
    *   List&lt;PlannedProduct&gt; plannedProducts = new ArrayList&lt;&gt;();
    *   GenerateReachForecastRequest request = GenerateReachForecastRequest.newBuilder()
    *     .setCustomerId(customerId)
-   *     .setCurrencyCode(currencyCode)
    *     .setCampaignDuration(campaignDuration)
-   *     .setCookieFrequencyCap(cookieFrequencyCap)
-   *     .setMinEffectiveFrequency(minEffectiveFrequency)
-   *     .setTargeting(targeting)
    *     .addAllPlannedProducts(plannedProducts)
    *     .build();
    *   ApiFuture&lt;GenerateReachForecastResponse&gt; future = reachPlanServiceClient.generateReachForecastCallable().futureCall(request);

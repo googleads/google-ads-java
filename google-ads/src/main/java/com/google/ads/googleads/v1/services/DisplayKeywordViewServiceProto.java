@@ -33,38 +33,35 @@ public final class DisplayKeywordViewServiceProto {
       "s.googleads.v1.services\032<google/ads/goog" +
       "leads/v1/resources/display_keyword_view." +
       "proto\032\034google/api/annotations.proto\032\027goo" +
-      "gle/api/client.proto\"5\n\034GetDisplayKeywor" +
-      "dViewRequest\022\025\n\rresource_name\030\001 \001(\t2\210\002\n\031" +
-      "DisplayKeywordViewService\022\315\001\n\025GetDisplay" +
-      "KeywordView\022>.google.ads.googleads.v1.se" +
-      "rvices.GetDisplayKeywordViewRequest\0325.go" +
-      "ogle.ads.googleads.v1.resources.DisplayK" +
-      "eywordView\"=\202\323\344\223\0027\0225/v1/{resource_name=c" +
-      "ustomers/*/displayKeywordViews/*}\032\033\312A\030go" +
-      "ogleads.googleapis.comB\205\002\n$com.google.ad" +
-      "s.googleads.v1.servicesB\036DisplayKeywordV" +
-      "iewServiceProtoP\001ZHgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v1/servic" +
-      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
-      ".V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\S" +
-      "ervices\352\002$Google::Ads::GoogleAds::V1::Se" +
-      "rvicesb\006proto3"
+      "gle/api/client.proto\032\037google/api/field_b" +
+      "ehavior.proto\032\031google/api/resource.proto" +
+      "\"j\n\034GetDisplayKeywordViewRequest\022J\n\rreso" +
+      "urce_name\030\001 \001(\tB3\340A\002\372A-\n+googleads.googl" +
+      "eapis.com/DisplayKeywordView2\230\002\n\031Display" +
+      "KeywordViewService\022\335\001\n\025GetDisplayKeyword" +
+      "View\022>.google.ads.googleads.v1.services." +
+      "GetDisplayKeywordViewRequest\0325.google.ad" +
+      "s.googleads.v1.resources.DisplayKeywordV" +
+      "iew\"M\202\323\344\223\0027\0225/v1/{resource_name=customer" +
+      "s/*/displayKeywordViews/*}\332A\rresource_na" +
+      "me\032\033\312A\030googleads.googleapis.comB\205\002\n$com." +
+      "google.ads.googleads.v1.servicesB\036Displa" +
+      "yKeywordViewServiceProtoP\001ZHgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v1/services;services\242\002\003GAA\252\002 Google.Ads." +
+      "GoogleAds.V1.Services\312\002 Google\\Ads\\Googl" +
+      "eAds\\V1\\Services\352\002$Google::Ads::GoogleAd" +
+      "s::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.DisplayKeywordViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetDisplayKeywordViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetDisplayKeywordViewRequest_fieldAccessorTable = new
@@ -74,12 +71,17 @@ public final class DisplayKeywordViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.DisplayKeywordViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

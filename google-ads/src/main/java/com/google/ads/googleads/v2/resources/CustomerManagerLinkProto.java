@@ -31,45 +31,54 @@ public final class CustomerManagerLinkProto {
       "\n=google/ads/googleads/v2/resources/cust" +
       "omer_manager_link.proto\022!google.ads.goog" +
       "leads.v2.resources\0327google/ads/googleads" +
-      "/v2/enums/manager_link_status.proto\032\036goo" +
-      "gle/protobuf/wrappers.proto\032\034google/api/" +
-      "annotations.proto\"\362\001\n\023CustomerManagerLin" +
-      "k\022\025\n\rresource_name\030\001 \001(\t\0226\n\020manager_cust" +
-      "omer\030\003 \001(\0132\034.google.protobuf.StringValue" +
-      "\0224\n\017manager_link_id\030\004 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022V\n\006status\030\005 \001(\0162F.google." +
-      "ads.googleads.v2.enums.ManagerLinkStatus" +
-      "Enum.ManagerLinkStatusB\205\002\n%com.google.ad" +
-      "s.googleads.v2.resourcesB\030CustomerManage" +
-      "rLinkProtoP\001ZJgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v2/resources;r" +
-      "esources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2" +
-      ".Resources\312\002!Google\\Ads\\GoogleAds\\V2\\Res" +
-      "ources\352\002%Google::Ads::GoogleAds::V2::Res" +
-      "ourcesb\006proto3"
+      "/v2/enums/manager_link_status.proto\032\037goo" +
+      "gle/api/field_behavior.proto\032\031google/api" +
+      "/resource.proto\032\036google/protobuf/wrapper" +
+      "s.proto\032\034google/api/annotations.proto\"\250\003" +
+      "\n\023CustomerManagerLink\022K\n\rresource_name\030\001" +
+      " \001(\tB4\340A\005\372A.\n,googleads.googleapis.com/C" +
+      "ustomerManagerLink\022;\n\020manager_customer\030\003" +
+      " \001(\0132\034.google.protobuf.StringValueB\003\340A\003\022" +
+      "9\n\017manager_link_id\030\004 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\003\340A\003\022V\n\006status\030\005 \001(\0162F.goo" +
+      "gle.ads.googleads.v2.enums.ManagerLinkSt" +
+      "atusEnum.ManagerLinkStatus:t\352Aq\n,googlea" +
+      "ds.googleapis.com/CustomerManagerLink\022Ac" +
+      "ustomers/{customer}/customerManagerLinks" +
+      "/{customer_manager_link}B\205\002\n%com.google." +
+      "ads.googleads.v2.resourcesB\030CustomerMana" +
+      "gerLinkProtoP\001ZJgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v2/resources" +
+      ";resources\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
+      "V2.Resources\312\002!Google\\Ads\\GoogleAds\\V2\\R" +
+      "esources\352\002%Google::Ads::GoogleAds::V2::R" +
+      "esourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.enums.ManagerLinkStatusProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_CustomerManagerLink_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_CustomerManagerLink_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_CustomerManagerLink_descriptor,
         new java.lang.String[] { "ResourceName", "ManagerCustomer", "ManagerLinkId", "Status", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.enums.ManagerLinkStatusProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

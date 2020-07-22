@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/invoice_service.proto")
 public final class InvoiceServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class InvoiceServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.InvoiceService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getListInvoicesMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ListInvoicesRequest,
-      com.google.ads.googleads.v4.services.ListInvoicesResponse> METHOD_LIST_INVOICES = getListInvoicesMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ListInvoicesRequest,
       com.google.ads.googleads.v4.services.ListInvoicesResponse> getListInvoicesMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListInvoices",
+      requestType = com.google.ads.googleads.v4.services.ListInvoicesRequest.class,
+      responseType = com.google.ads.googleads.v4.services.ListInvoicesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ListInvoicesRequest,
       com.google.ads.googleads.v4.services.ListInvoicesResponse> getListInvoicesMethod() {
-    return getListInvoicesMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ListInvoicesRequest,
-      com.google.ads.googleads.v4.services.ListInvoicesResponse> getListInvoicesMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ListInvoicesRequest, com.google.ads.googleads.v4.services.ListInvoicesResponse> getListInvoicesMethod;
     if ((getListInvoicesMethod = InvoiceServiceGrpc.getListInvoicesMethod) == null) {
       synchronized (InvoiceServiceGrpc.class) {
         if ((getListInvoicesMethod = InvoiceServiceGrpc.getListInvoicesMethod) == null) {
-          InvoiceServiceGrpc.getListInvoicesMethod = getListInvoicesMethod = 
+          InvoiceServiceGrpc.getListInvoicesMethod = getListInvoicesMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.ListInvoicesRequest, com.google.ads.googleads.v4.services.ListInvoicesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.InvoiceService", "ListInvoices"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInvoices"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.ListInvoicesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.ListInvoicesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new InvoiceServiceMethodDescriptorSupplier("ListInvoices"))
-                  .build();
-          }
+              .setSchemaDescriptor(new InvoiceServiceMethodDescriptorSupplier("ListInvoices"))
+              .build();
         }
-     }
-     return getListInvoicesMethod;
+      }
+    }
+    return getListInvoicesMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static InvoiceServiceStub newStub(io.grpc.Channel channel) {
-    return new InvoiceServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<InvoiceServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<InvoiceServiceStub>() {
+        @java.lang.Override
+        public InvoiceServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new InvoiceServiceStub(channel, callOptions);
+        }
+      };
+    return InvoiceServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class InvoiceServiceGrpc {
    */
   public static InvoiceServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new InvoiceServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<InvoiceServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<InvoiceServiceBlockingStub>() {
+        @java.lang.Override
+        public InvoiceServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new InvoiceServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return InvoiceServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class InvoiceServiceGrpc {
    */
   public static InvoiceServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new InvoiceServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<InvoiceServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<InvoiceServiceFutureStub>() {
+        @java.lang.Override
+        public InvoiceServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new InvoiceServiceFutureStub(channel, callOptions);
+        }
+      };
+    return InvoiceServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class InvoiceServiceGrpc {
      */
     public void listInvoices(com.google.ads.googleads.v4.services.ListInvoicesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.ListInvoicesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListInvoicesMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getListInvoicesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getListInvoicesMethodHelper(),
+            getListInvoicesMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.ListInvoicesRequest,
@@ -126,19 +140,15 @@ public final class InvoiceServiceGrpc {
    * A service to fetch invoices issued for a billing setup during a given month.
    * </pre>
    */
-  public static final class InvoiceServiceStub extends io.grpc.stub.AbstractStub<InvoiceServiceStub> {
-    private InvoiceServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private InvoiceServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class InvoiceServiceStub extends io.grpc.stub.AbstractAsyncStub<InvoiceServiceStub> {
+    private InvoiceServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected InvoiceServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected InvoiceServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new InvoiceServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class InvoiceServiceGrpc {
     public void listInvoices(com.google.ads.googleads.v4.services.ListInvoicesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.ListInvoicesResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListInvoicesMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListInvoicesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class InvoiceServiceGrpc {
    * A service to fetch invoices issued for a billing setup during a given month.
    * </pre>
    */
-  public static final class InvoiceServiceBlockingStub extends io.grpc.stub.AbstractStub<InvoiceServiceBlockingStub> {
-    private InvoiceServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private InvoiceServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class InvoiceServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<InvoiceServiceBlockingStub> {
+    private InvoiceServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected InvoiceServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected InvoiceServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new InvoiceServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class InvoiceServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.ListInvoicesResponse listInvoices(com.google.ads.googleads.v4.services.ListInvoicesRequest request) {
       return blockingUnaryCall(
-          getChannel(), getListInvoicesMethodHelper(), getCallOptions(), request);
+          getChannel(), getListInvoicesMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class InvoiceServiceGrpc {
    * A service to fetch invoices issued for a billing setup during a given month.
    * </pre>
    */
-  public static final class InvoiceServiceFutureStub extends io.grpc.stub.AbstractStub<InvoiceServiceFutureStub> {
-    private InvoiceServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private InvoiceServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class InvoiceServiceFutureStub extends io.grpc.stub.AbstractFutureStub<InvoiceServiceFutureStub> {
+    private InvoiceServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected InvoiceServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected InvoiceServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new InvoiceServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class InvoiceServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.ListInvoicesResponse> listInvoices(
         com.google.ads.googleads.v4.services.ListInvoicesRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListInvoicesMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getListInvoicesMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class InvoiceServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new InvoiceServiceFileDescriptorSupplier())
-              .addMethod(getListInvoicesMethodHelper())
+              .addMethod(getListInvoicesMethod())
               .build();
         }
       }

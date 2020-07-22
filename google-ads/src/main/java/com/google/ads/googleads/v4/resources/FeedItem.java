@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.FeedItem}
  */
-public  final class FeedItem extends
+public final class FeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.FeedItem)
     FeedItemOrBuilder {
@@ -209,6 +209,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -231,6 +232,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -255,6 +257,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feed field is set.
    */
+  @java.lang.Override
   public boolean hasFeed() {
     return feed_ != null;
   }
@@ -266,6 +269,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The feed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeed() {
     return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
   }
@@ -276,6 +280,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
     return getFeed();
   }
@@ -290,6 +295,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -301,6 +307,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -311,6 +318,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -328,6 +336,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue start_date_time = 4;</code>
    * @return Whether the startDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasStartDateTime() {
     return startDateTime_ != null;
   }
@@ -342,6 +351,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue start_date_time = 4;</code>
    * @return The startDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStartDateTime() {
     return startDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : startDateTime_;
   }
@@ -355,6 +365,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue start_date_time = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
     return getStartDateTime();
   }
@@ -372,6 +383,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue end_date_time = 5;</code>
    * @return Whether the endDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasEndDateTime() {
     return endDateTime_ != null;
   }
@@ -386,6 +398,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue end_date_time = 5;</code>
    * @return The endDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEndDateTime() {
     return endDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : endDateTime_;
   }
@@ -399,6 +412,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue end_date_time = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
     return getEndDateTime();
   }
@@ -412,6 +426,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemAttributeValue attribute_values = 6;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.resources.FeedItemAttributeValue> getAttributeValuesList() {
     return attributeValues_;
   }
@@ -422,6 +437,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemAttributeValue attribute_values = 6;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.resources.FeedItemAttributeValueOrBuilder> 
       getAttributeValuesOrBuilderList() {
     return attributeValues_;
@@ -433,6 +449,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemAttributeValue attribute_values = 6;</code>
    */
+  @java.lang.Override
   public int getAttributeValuesCount() {
     return attributeValues_.size();
   }
@@ -443,6 +460,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemAttributeValue attribute_values = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedItemAttributeValue getAttributeValues(int index) {
     return attributeValues_.get(index);
   }
@@ -453,6 +471,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemAttributeValue attribute_values = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedItemAttributeValueOrBuilder getAttributeValuesOrBuilder(
       int index) {
     return attributeValues_.get(index);
@@ -469,7 +488,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
    * @return The enum numeric value on the wire for geoTargetingRestriction.
    */
-  public int getGeoTargetingRestrictionValue() {
+  @java.lang.Override public int getGeoTargetingRestrictionValue() {
     return geoTargetingRestriction_;
   }
   /**
@@ -481,7 +500,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
    * @return The geoTargetingRestriction.
    */
-  public com.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction getGeoTargetingRestriction() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction getGeoTargetingRestriction() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction result = com.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.valueOf(geoTargetingRestriction_);
     return result == null ? com.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.UNRECOGNIZED : result;
@@ -497,6 +516,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.CustomParameter> getUrlCustomParametersList() {
     return urlCustomParameters_;
   }
@@ -508,6 +528,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.CustomParameterOrBuilder> 
       getUrlCustomParametersOrBuilderList() {
     return urlCustomParameters_;
@@ -520,6 +541,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 8;</code>
    */
+  @java.lang.Override
   public int getUrlCustomParametersCount() {
     return urlCustomParameters_.size();
   }
@@ -531,6 +553,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomParameter getUrlCustomParameters(int index) {
     return urlCustomParameters_.get(index);
   }
@@ -542,6 +565,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
       int index) {
     return urlCustomParameters_.get(index);
@@ -558,7 +582,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -570,7 +594,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus result = com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus.UNRECOGNIZED : result;
@@ -590,6 +614,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfo> getPolicyInfosList() {
     return policyInfos_;
   }
@@ -605,6 +630,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfoOrBuilder> 
       getPolicyInfosOrBuilderList() {
     return policyInfos_;
@@ -621,6 +647,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getPolicyInfosCount() {
     return policyInfos_.size();
   }
@@ -636,6 +663,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfo getPolicyInfos(int index) {
     return policyInfos_.get(index);
   }
@@ -651,6 +679,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedItemPlaceholderPolicyInfoOrBuilder getPolicyInfosOrBuilder(
       int index) {
     return policyInfos_.get(index);
@@ -2383,7 +2412,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
      * @return The enum numeric value on the wire for geoTargetingRestriction.
      */
-    public int getGeoTargetingRestrictionValue() {
+    @java.lang.Override public int getGeoTargetingRestrictionValue() {
       return geoTargetingRestriction_;
     }
     /**
@@ -2397,6 +2426,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGeoTargetingRestrictionValue(int value) {
+      
       geoTargetingRestriction_ = value;
       onChanged();
       return this;
@@ -2410,6 +2440,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
      * @return The geoTargetingRestriction.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction getGeoTargetingRestriction() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction result = com.google.ads.googleads.v4.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.valueOf(geoTargetingRestriction_);
@@ -2790,7 +2821,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -2804,6 +2835,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -2817,6 +2849,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus result = com.google.ads.googleads.v4.enums.FeedItemStatusEnum.FeedItemStatus.valueOf(status_);

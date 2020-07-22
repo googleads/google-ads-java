@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/domain_category_service.proto")
 public final class DomainCategoryServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class DomainCategoryServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.DomainCategoryService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetDomainCategoryMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDomainCategoryRequest,
-      com.google.ads.googleads.v1.resources.DomainCategory> METHOD_GET_DOMAIN_CATEGORY = getGetDomainCategoryMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDomainCategoryRequest,
       com.google.ads.googleads.v1.resources.DomainCategory> getGetDomainCategoryMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDomainCategory",
+      requestType = com.google.ads.googleads.v1.services.GetDomainCategoryRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.DomainCategory.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDomainCategoryRequest,
       com.google.ads.googleads.v1.resources.DomainCategory> getGetDomainCategoryMethod() {
-    return getGetDomainCategoryMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDomainCategoryRequest,
-      com.google.ads.googleads.v1.resources.DomainCategory> getGetDomainCategoryMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetDomainCategoryRequest, com.google.ads.googleads.v1.resources.DomainCategory> getGetDomainCategoryMethod;
     if ((getGetDomainCategoryMethod = DomainCategoryServiceGrpc.getGetDomainCategoryMethod) == null) {
       synchronized (DomainCategoryServiceGrpc.class) {
         if ((getGetDomainCategoryMethod = DomainCategoryServiceGrpc.getGetDomainCategoryMethod) == null) {
-          DomainCategoryServiceGrpc.getGetDomainCategoryMethod = getGetDomainCategoryMethod = 
+          DomainCategoryServiceGrpc.getGetDomainCategoryMethod = getGetDomainCategoryMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetDomainCategoryRequest, com.google.ads.googleads.v1.resources.DomainCategory>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.DomainCategoryService", "GetDomainCategory"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDomainCategory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetDomainCategoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.DomainCategory.getDefaultInstance()))
-                  .setSchemaDescriptor(new DomainCategoryServiceMethodDescriptorSupplier("GetDomainCategory"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DomainCategoryServiceMethodDescriptorSupplier("GetDomainCategory"))
+              .build();
         }
-     }
-     return getGetDomainCategoryMethod;
+      }
+    }
+    return getGetDomainCategoryMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DomainCategoryServiceStub newStub(io.grpc.Channel channel) {
-    return new DomainCategoryServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DomainCategoryServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DomainCategoryServiceStub>() {
+        @java.lang.Override
+        public DomainCategoryServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DomainCategoryServiceStub(channel, callOptions);
+        }
+      };
+    return DomainCategoryServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class DomainCategoryServiceGrpc {
    */
   public static DomainCategoryServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DomainCategoryServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DomainCategoryServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DomainCategoryServiceBlockingStub>() {
+        @java.lang.Override
+        public DomainCategoryServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DomainCategoryServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DomainCategoryServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class DomainCategoryServiceGrpc {
    */
   public static DomainCategoryServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DomainCategoryServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DomainCategoryServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DomainCategoryServiceFutureStub>() {
+        @java.lang.Override
+        public DomainCategoryServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DomainCategoryServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DomainCategoryServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class DomainCategoryServiceGrpc {
      */
     public void getDomainCategory(com.google.ads.googleads.v1.services.GetDomainCategoryRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.DomainCategory> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDomainCategoryMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetDomainCategoryMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetDomainCategoryMethodHelper(),
+            getGetDomainCategoryMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetDomainCategoryRequest,
@@ -126,19 +140,15 @@ public final class DomainCategoryServiceGrpc {
    * Service to fetch domain categories.
    * </pre>
    */
-  public static final class DomainCategoryServiceStub extends io.grpc.stub.AbstractStub<DomainCategoryServiceStub> {
-    private DomainCategoryServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DomainCategoryServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DomainCategoryServiceStub extends io.grpc.stub.AbstractAsyncStub<DomainCategoryServiceStub> {
+    private DomainCategoryServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DomainCategoryServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DomainCategoryServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DomainCategoryServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class DomainCategoryServiceGrpc {
     public void getDomainCategory(com.google.ads.googleads.v1.services.GetDomainCategoryRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.DomainCategory> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetDomainCategoryMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetDomainCategoryMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class DomainCategoryServiceGrpc {
    * Service to fetch domain categories.
    * </pre>
    */
-  public static final class DomainCategoryServiceBlockingStub extends io.grpc.stub.AbstractStub<DomainCategoryServiceBlockingStub> {
-    private DomainCategoryServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DomainCategoryServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DomainCategoryServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DomainCategoryServiceBlockingStub> {
+    private DomainCategoryServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DomainCategoryServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DomainCategoryServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DomainCategoryServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class DomainCategoryServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.DomainCategory getDomainCategory(com.google.ads.googleads.v1.services.GetDomainCategoryRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetDomainCategoryMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetDomainCategoryMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class DomainCategoryServiceGrpc {
    * Service to fetch domain categories.
    * </pre>
    */
-  public static final class DomainCategoryServiceFutureStub extends io.grpc.stub.AbstractStub<DomainCategoryServiceFutureStub> {
-    private DomainCategoryServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DomainCategoryServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DomainCategoryServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DomainCategoryServiceFutureStub> {
+    private DomainCategoryServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DomainCategoryServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DomainCategoryServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DomainCategoryServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class DomainCategoryServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.DomainCategory> getDomainCategory(
         com.google.ads.googleads.v1.services.GetDomainCategoryRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetDomainCategoryMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetDomainCategoryMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class DomainCategoryServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DomainCategoryServiceFileDescriptorSupplier())
-              .addMethod(getGetDomainCategoryMethodHelper())
+              .addMethod(getGetDomainCategoryMethod())
               .build();
         }
       }

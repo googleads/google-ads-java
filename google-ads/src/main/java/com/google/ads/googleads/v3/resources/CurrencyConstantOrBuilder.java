@@ -15,6 +15,7 @@ public interface CurrencyConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CurrencyConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CurrencyConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the code field is set.
    */
   boolean hasCode();
   /**
@@ -43,6 +46,7 @@ public interface CurrencyConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The code.
    */
   com.google.protobuf.StringValue getCode();
   /**
@@ -60,6 +64,7 @@ public interface CurrencyConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -68,6 +73,7 @@ public interface CurrencyConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -85,6 +91,7 @@ public interface CurrencyConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue symbol = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the symbol field is set.
    */
   boolean hasSymbol();
   /**
@@ -93,6 +100,7 @@ public interface CurrencyConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue symbol = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The symbol.
    */
   com.google.protobuf.StringValue getSymbol();
   /**
@@ -111,6 +119,7 @@ public interface CurrencyConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value billable_unit_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the billableUnitMicros field is set.
    */
   boolean hasBillableUnitMicros();
   /**
@@ -120,6 +129,7 @@ public interface CurrencyConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value billable_unit_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The billableUnitMicros.
    */
   com.google.protobuf.Int64Value getBillableUnitMicros();
   /**

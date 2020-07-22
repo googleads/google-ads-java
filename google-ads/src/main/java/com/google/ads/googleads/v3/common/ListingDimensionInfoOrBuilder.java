@@ -13,6 +13,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelIdInfo hotel_id = 2;</code>
+   * @return Whether the hotelId field is set.
    */
   boolean hasHotelId();
   /**
@@ -21,6 +22,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelIdInfo hotel_id = 2;</code>
+   * @return The hotelId.
    */
   com.google.ads.googleads.v3.common.HotelIdInfo getHotelId();
   /**
@@ -38,6 +40,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelClassInfo hotel_class = 3;</code>
+   * @return Whether the hotelClass field is set.
    */
   boolean hasHotelClass();
   /**
@@ -46,6 +49,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelClassInfo hotel_class = 3;</code>
+   * @return The hotelClass.
    */
   com.google.ads.googleads.v3.common.HotelClassInfo getHotelClass();
   /**
@@ -63,6 +67,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelCountryRegionInfo hotel_country_region = 4;</code>
+   * @return Whether the hotelCountryRegion field is set.
    */
   boolean hasHotelCountryRegion();
   /**
@@ -71,6 +76,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelCountryRegionInfo hotel_country_region = 4;</code>
+   * @return The hotelCountryRegion.
    */
   com.google.ads.googleads.v3.common.HotelCountryRegionInfo getHotelCountryRegion();
   /**
@@ -88,6 +94,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelStateInfo hotel_state = 5;</code>
+   * @return Whether the hotelState field is set.
    */
   boolean hasHotelState();
   /**
@@ -96,6 +103,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelStateInfo hotel_state = 5;</code>
+   * @return The hotelState.
    */
   com.google.ads.googleads.v3.common.HotelStateInfo getHotelState();
   /**
@@ -113,6 +121,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelCityInfo hotel_city = 6;</code>
+   * @return Whether the hotelCity field is set.
    */
   boolean hasHotelCity();
   /**
@@ -121,6 +130,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelCityInfo hotel_city = 6;</code>
+   * @return The hotelCity.
    */
   com.google.ads.googleads.v3.common.HotelCityInfo getHotelCity();
   /**
@@ -138,6 +148,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductBiddingCategoryInfo product_bidding_category = 13;</code>
+   * @return Whether the productBiddingCategory field is set.
    */
   boolean hasProductBiddingCategory();
   /**
@@ -146,6 +157,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductBiddingCategoryInfo product_bidding_category = 13;</code>
+   * @return The productBiddingCategory.
    */
   com.google.ads.googleads.v3.common.ProductBiddingCategoryInfo getProductBiddingCategory();
   /**
@@ -163,6 +175,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductBrandInfo product_brand = 15;</code>
+   * @return Whether the productBrand field is set.
    */
   boolean hasProductBrand();
   /**
@@ -171,6 +184,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductBrandInfo product_brand = 15;</code>
+   * @return The productBrand.
    */
   com.google.ads.googleads.v3.common.ProductBrandInfo getProductBrand();
   /**
@@ -188,6 +202,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductChannelInfo product_channel = 8;</code>
+   * @return Whether the productChannel field is set.
    */
   boolean hasProductChannel();
   /**
@@ -196,6 +211,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductChannelInfo product_channel = 8;</code>
+   * @return The productChannel.
    */
   com.google.ads.googleads.v3.common.ProductChannelInfo getProductChannel();
   /**
@@ -213,6 +229,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
+   * @return Whether the productChannelExclusivity field is set.
    */
   boolean hasProductChannelExclusivity();
   /**
@@ -221,6 +238,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
+   * @return The productChannelExclusivity.
    */
   com.google.ads.googleads.v3.common.ProductChannelExclusivityInfo getProductChannelExclusivity();
   /**
@@ -238,6 +256,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductConditionInfo product_condition = 10;</code>
+   * @return Whether the productCondition field is set.
    */
   boolean hasProductCondition();
   /**
@@ -246,6 +265,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductConditionInfo product_condition = 10;</code>
+   * @return The productCondition.
    */
   com.google.ads.googleads.v3.common.ProductConditionInfo getProductCondition();
   /**
@@ -263,6 +283,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductCustomAttributeInfo product_custom_attribute = 16;</code>
+   * @return Whether the productCustomAttribute field is set.
    */
   boolean hasProductCustomAttribute();
   /**
@@ -271,6 +292,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductCustomAttributeInfo product_custom_attribute = 16;</code>
+   * @return The productCustomAttribute.
    */
   com.google.ads.googleads.v3.common.ProductCustomAttributeInfo getProductCustomAttribute();
   /**
@@ -288,6 +310,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductItemIdInfo product_item_id = 11;</code>
+   * @return Whether the productItemId field is set.
    */
   boolean hasProductItemId();
   /**
@@ -296,6 +319,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductItemIdInfo product_item_id = 11;</code>
+   * @return The productItemId.
    */
   com.google.ads.googleads.v3.common.ProductItemIdInfo getProductItemId();
   /**
@@ -313,6 +337,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductTypeInfo product_type = 12;</code>
+   * @return Whether the productType field is set.
    */
   boolean hasProductType();
   /**
@@ -321,6 +346,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProductTypeInfo product_type = 12;</code>
+   * @return The productType.
    */
   com.google.ads.googleads.v3.common.ProductTypeInfo getProductType();
   /**
@@ -338,6 +364,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+   * @return Whether the unknownListingDimension field is set.
    */
   boolean hasUnknownListingDimension();
   /**
@@ -346,6 +373,7 @@ public interface ListingDimensionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
+   * @return The unknownListingDimension.
    */
   com.google.ads.googleads.v3.common.UnknownListingDimensionInfo getUnknownListingDimension();
   /**

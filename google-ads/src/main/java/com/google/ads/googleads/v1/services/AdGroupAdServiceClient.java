@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.AdGroupAdServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
- *   String formattedResourceName = AdGroupAdServiceClient.formatAdGroupAdName("[CUSTOMER]", "[AD_GROUP_AD]");
- *   AdGroupAd response = adGroupAdServiceClient.getAdGroupAd(formattedResourceName);
+ *   AdGroupAdName resourceName = AdGroupAdName.of("[CUSTOMER]", "[AD_GROUP_AD]");
+ *   AdGroupAd response = adGroupAdServiceClient.getAdGroupAd(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,43 +99,6 @@ public class AdGroupAdServiceClient implements BackgroundResource {
   private final AdGroupAdServiceSettings settings;
   private final AdGroupAdServiceStub stub;
 
-  private static final PathTemplate AD_GROUP_AD_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/adGroupAds/{ad_group_ad}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad_group_ad resource.
-   *
-   * @deprecated Use the {@link AdGroupAdName} class instead.
-   */
-  @Deprecated
-  public static final String formatAdGroupAdName(String customer, String adGroupAd) {
-    return AD_GROUP_AD_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "ad_group_ad", adGroupAd);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a ad_group_ad
-   * resource.
-   *
-   * @deprecated Use the {@link AdGroupAdName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAdGroupAdName(String adGroupAdName) {
-    return AD_GROUP_AD_PATH_TEMPLATE.parse(adGroupAdName).get("customer");
-  }
-
-  /**
-   * Parses the ad_group_ad from the given fully-qualified path which represents a ad_group_ad
-   * resource.
-   *
-   * @deprecated Use the {@link AdGroupAdName} class instead.
-   */
-  @Deprecated
-  public static final String parseAdGroupAdFromAdGroupAdName(String adGroupAdName) {
-    return AD_GROUP_AD_PATH_TEMPLATE.parse(adGroupAdName).get("ad_group_ad");
-  }
-
   /** Constructs an instance of AdGroupAdServiceClient with default settings. */
   public static final AdGroupAdServiceClient create() throws IOException {
     return create(AdGroupAdServiceSettings.newBuilder().build());
@@ -193,16 +155,39 @@ public class AdGroupAdServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
-   *   String formattedResourceName = AdGroupAdServiceClient.formatAdGroupAdName("[CUSTOMER]", "[AD_GROUP_AD]");
-   *   AdGroupAd response = adGroupAdServiceClient.getAdGroupAd(formattedResourceName);
+   *   AdGroupAdName resourceName = AdGroupAdName.of("[CUSTOMER]", "[AD_GROUP_AD]");
+   *   AdGroupAd response = adGroupAdServiceClient.getAdGroupAd(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the ad to fetch.
+   * @param resourceName Required. The resource name of the ad to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AdGroupAd getAdGroupAd(AdGroupAdName resourceName) {
+    GetAdGroupAdRequest request =
+        GetAdGroupAdRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAdGroupAd(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested ad in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
+   *   AdGroupAdName resourceName = AdGroupAdName.of("[CUSTOMER]", "[AD_GROUP_AD]");
+   *   AdGroupAd response = adGroupAdServiceClient.getAdGroupAd(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the ad to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupAd getAdGroupAd(String resourceName) {
-    AD_GROUP_AD_PATH_TEMPLATE.validate(resourceName, "getAdGroupAd");
     GetAdGroupAdRequest request =
         GetAdGroupAdRequest.newBuilder().setResourceName(resourceName).build();
     return getAdGroupAd(request);
@@ -216,9 +201,9 @@ public class AdGroupAdServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
-   *   String formattedResourceName = AdGroupAdServiceClient.formatAdGroupAdName("[CUSTOMER]", "[AD_GROUP_AD]");
+   *   AdGroupAdName resourceName = AdGroupAdName.of("[CUSTOMER]", "[AD_GROUP_AD]");
    *   GetAdGroupAdRequest request = GetAdGroupAdRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AdGroupAd response = adGroupAdServiceClient.getAdGroupAd(request);
    * }
@@ -239,9 +224,9 @@ public class AdGroupAdServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
-   *   String formattedResourceName = AdGroupAdServiceClient.formatAdGroupAdName("[CUSTOMER]", "[AD_GROUP_AD]");
+   *   AdGroupAdName resourceName = AdGroupAdName.of("[CUSTOMER]", "[AD_GROUP_AD]");
    *   GetAdGroupAdRequest request = GetAdGroupAdRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AdGroupAd&gt; future = adGroupAdServiceClient.getAdGroupAdCallable().futureCall(request);
    *   // Do something
@@ -263,58 +248,16 @@ public class AdGroupAdServiceClient implements BackgroundResource {
    * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;AdGroupAdOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateAdGroupAdsResponse response = adGroupAdServiceClient.mutateAdGroupAds(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose ads are being modified.
-   * @param operations The list of operations to perform on individual ads.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateAdGroupAdsResponse mutateAdGroupAds(
-      String customerId,
-      List<AdGroupAdOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateAdGroupAdsRequest request =
-        MutateAdGroupAdsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateAdGroupAds(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes ads. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupAdOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateAdGroupAdsResponse response = adGroupAdServiceClient.mutateAdGroupAds(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose ads are being modified.
-   * @param operations The list of operations to perform on individual ads.
+   * @param customerId Required. The ID of the customer whose ads are being modified.
+   * @param operations Required. The list of operations to perform on individual ads.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateAdGroupAdsResponse mutateAdGroupAds(
       String customerId, List<AdGroupAdOperation> operations) {
-
     MutateAdGroupAdsRequest request =
         MutateAdGroupAdsRequest.newBuilder()
             .setCustomerId(customerId)

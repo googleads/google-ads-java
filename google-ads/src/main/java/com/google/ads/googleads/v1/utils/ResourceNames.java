@@ -20,101 +20,101 @@ import com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType;
 import com.google.ads.googleads.v1.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel;
 import com.google.ads.googleads.v1.enums.SimulationModificationMethodEnum.SimulationModificationMethod;
 import com.google.ads.googleads.v1.enums.SimulationTypeEnum.SimulationType;
-import com.google.ads.googleads.v1.resources.AccountBudgetName;
-import com.google.ads.googleads.v1.resources.AccountBudgetProposalName;
-import com.google.ads.googleads.v1.resources.AdGroupAdLabelName;
-import com.google.ads.googleads.v1.resources.AdGroupAdName;
-import com.google.ads.googleads.v1.resources.AdGroupAudienceViewName;
-import com.google.ads.googleads.v1.resources.AdGroupBidModifierName;
-import com.google.ads.googleads.v1.resources.AdGroupCriteriaName;
-import com.google.ads.googleads.v1.resources.AdGroupCriterionLabelName;
-import com.google.ads.googleads.v1.resources.AdGroupCriterionSimulationName;
-import com.google.ads.googleads.v1.resources.AdGroupExtensionSettingName;
-import com.google.ads.googleads.v1.resources.AdGroupFeedName;
-import com.google.ads.googleads.v1.resources.AdGroupLabelName;
-import com.google.ads.googleads.v1.resources.AdGroupName;
-import com.google.ads.googleads.v1.resources.AdGroupSimulationName;
-import com.google.ads.googleads.v1.resources.AdParameterName;
-import com.google.ads.googleads.v1.resources.AdScheduleViewName;
-import com.google.ads.googleads.v1.resources.AgeRangeViewName;
-import com.google.ads.googleads.v1.resources.AssetName;
-import com.google.ads.googleads.v1.resources.BiddingStrategyName;
-import com.google.ads.googleads.v1.resources.BillingSetupName;
-import com.google.ads.googleads.v1.resources.CampaignAudienceViewName;
-import com.google.ads.googleads.v1.resources.CampaignBidModifierName;
-import com.google.ads.googleads.v1.resources.CampaignBudgetName;
-import com.google.ads.googleads.v1.resources.CampaignCriteriaName;
-import com.google.ads.googleads.v1.resources.CampaignCriterionSimulationName;
-import com.google.ads.googleads.v1.resources.CampaignDraftName;
-import com.google.ads.googleads.v1.resources.CampaignExperimentName;
-import com.google.ads.googleads.v1.resources.CampaignExtensionSettingName;
-import com.google.ads.googleads.v1.resources.CampaignFeedName;
-import com.google.ads.googleads.v1.resources.CampaignLabelName;
-import com.google.ads.googleads.v1.resources.CampaignName;
-import com.google.ads.googleads.v1.resources.CampaignSharedSetName;
-import com.google.ads.googleads.v1.resources.CarrierConstantName;
-import com.google.ads.googleads.v1.resources.ChangeStatusName;
-import com.google.ads.googleads.v1.resources.ClickViewName;
-import com.google.ads.googleads.v1.resources.ConversionActionName;
-import com.google.ads.googleads.v1.resources.CustomInterestName;
-import com.google.ads.googleads.v1.resources.CustomerClientLinkName;
-import com.google.ads.googleads.v1.resources.CustomerClientName;
-import com.google.ads.googleads.v1.resources.CustomerExtensionSettingName;
-import com.google.ads.googleads.v1.resources.CustomerFeedName;
-import com.google.ads.googleads.v1.resources.CustomerLabelName;
-import com.google.ads.googleads.v1.resources.CustomerManagerLinkName;
-import com.google.ads.googleads.v1.resources.CustomerName;
-import com.google.ads.googleads.v1.resources.CustomerNegativeCriteriaName;
-import com.google.ads.googleads.v1.resources.DetailPlacementViewName;
-import com.google.ads.googleads.v1.resources.DisplayKeywordViewName;
-import com.google.ads.googleads.v1.resources.DomainCategoryName;
-import com.google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermViewName;
-import com.google.ads.googleads.v1.resources.ExpandedLandingPageViewName;
-import com.google.ads.googleads.v1.resources.ExtensionFeedItemName;
-import com.google.ads.googleads.v1.resources.FeedItemName;
-import com.google.ads.googleads.v1.resources.FeedItemTargetName;
-import com.google.ads.googleads.v1.resources.FeedMappingName;
-import com.google.ads.googleads.v1.resources.FeedName;
-import com.google.ads.googleads.v1.resources.FeedPlaceholderViewName;
-import com.google.ads.googleads.v1.resources.GenderViewName;
-import com.google.ads.googleads.v1.resources.GeoTargetConstantName;
-import com.google.ads.googleads.v1.resources.GeographicViewName;
-import com.google.ads.googleads.v1.resources.GoogleAdsFieldName;
-import com.google.ads.googleads.v1.resources.GroupPlacementViewName;
-import com.google.ads.googleads.v1.resources.HotelGroupViewName;
-import com.google.ads.googleads.v1.resources.HotelPerformanceViewName;
-import com.google.ads.googleads.v1.resources.KeywordPlanAdGroupName;
-import com.google.ads.googleads.v1.resources.KeywordPlanCampaignName;
-import com.google.ads.googleads.v1.resources.KeywordPlanKeywordName;
-import com.google.ads.googleads.v1.resources.KeywordPlanName;
-import com.google.ads.googleads.v1.resources.KeywordPlanNegativeKeywordName;
-import com.google.ads.googleads.v1.resources.KeywordViewName;
-import com.google.ads.googleads.v1.resources.LabelName;
-import com.google.ads.googleads.v1.resources.LandingPageViewName;
-import com.google.ads.googleads.v1.resources.LanguageConstantName;
-import com.google.ads.googleads.v1.resources.LocationViewName;
-import com.google.ads.googleads.v1.resources.ManagedPlacementViewName;
-import com.google.ads.googleads.v1.resources.MediaFileName;
-import com.google.ads.googleads.v1.resources.MerchantCenterLinkName;
-import com.google.ads.googleads.v1.resources.MobileAppCategoryConstantName;
-import com.google.ads.googleads.v1.resources.MobileDeviceConstantName;
-import com.google.ads.googleads.v1.resources.MutateJobName;
-import com.google.ads.googleads.v1.resources.OperatingSystemVersionConstantName;
-import com.google.ads.googleads.v1.resources.PaidOrganicSearchTermViewName;
-import com.google.ads.googleads.v1.resources.ParentalStatusViewName;
-import com.google.ads.googleads.v1.resources.ProductBiddingCategoryConstantName;
-import com.google.ads.googleads.v1.resources.ProductGroupViewName;
-import com.google.ads.googleads.v1.resources.RecommendationName;
-import com.google.ads.googleads.v1.resources.RemarketingActionName;
-import com.google.ads.googleads.v1.resources.SearchTermViewName;
-import com.google.ads.googleads.v1.resources.SharedCriteriaName;
-import com.google.ads.googleads.v1.resources.SharedSetName;
-import com.google.ads.googleads.v1.resources.ShoppingPerformanceViewName;
-import com.google.ads.googleads.v1.resources.TopicConstantName;
-import com.google.ads.googleads.v1.resources.TopicViewName;
-import com.google.ads.googleads.v1.resources.UserInterestName;
-import com.google.ads.googleads.v1.resources.UserListName;
-import com.google.ads.googleads.v1.resources.VideoName;
+import com.google.ads.googleads.v1.services.AccountBudgetName;
+import com.google.ads.googleads.v1.services.AccountBudgetProposalName;
+import com.google.ads.googleads.v1.services.AdGroupAdLabelName;
+import com.google.ads.googleads.v1.services.AdGroupAdName;
+import com.google.ads.googleads.v1.services.AdGroupAudienceViewName;
+import com.google.ads.googleads.v1.services.AdGroupBidModifierName;
+import com.google.ads.googleads.v1.services.AdGroupCriterionName;
+import com.google.ads.googleads.v1.services.AdGroupCriterionLabelName;
+import com.google.ads.googleads.v1.services.AdGroupCriterionSimulationName;
+import com.google.ads.googleads.v1.services.AdGroupExtensionSettingName;
+import com.google.ads.googleads.v1.services.AdGroupFeedName;
+import com.google.ads.googleads.v1.services.AdGroupLabelName;
+import com.google.ads.googleads.v1.services.AdGroupName;
+import com.google.ads.googleads.v1.services.AdGroupSimulationName;
+import com.google.ads.googleads.v1.services.AdParameterName;
+import com.google.ads.googleads.v1.services.AdScheduleViewName;
+import com.google.ads.googleads.v1.services.AgeRangeViewName;
+import com.google.ads.googleads.v1.services.AssetName;
+import com.google.ads.googleads.v1.services.BiddingStrategyName;
+import com.google.ads.googleads.v1.services.BillingSetupName;
+import com.google.ads.googleads.v1.services.CampaignAudienceViewName;
+import com.google.ads.googleads.v1.services.CampaignBidModifierName;
+import com.google.ads.googleads.v1.services.CampaignBudgetName;
+import com.google.ads.googleads.v1.services.CampaignCriterionName;
+import com.google.ads.googleads.v1.services.CampaignCriterionSimulationName;
+import com.google.ads.googleads.v1.services.CampaignDraftName;
+import com.google.ads.googleads.v1.services.CampaignExperimentName;
+import com.google.ads.googleads.v1.services.CampaignExtensionSettingName;
+import com.google.ads.googleads.v1.services.CampaignFeedName;
+import com.google.ads.googleads.v1.services.CampaignLabelName;
+import com.google.ads.googleads.v1.services.CampaignName;
+import com.google.ads.googleads.v1.services.CampaignSharedSetName;
+import com.google.ads.googleads.v1.services.CarrierConstantName;
+import com.google.ads.googleads.v1.services.ChangeStatusName;
+import com.google.ads.googleads.v1.services.ClickViewName;
+import com.google.ads.googleads.v1.services.ConversionActionName;
+import com.google.ads.googleads.v1.services.CustomInterestName;
+import com.google.ads.googleads.v1.services.CustomerClientLinkName;
+import com.google.ads.googleads.v1.services.CustomerClientName;
+import com.google.ads.googleads.v1.services.CustomerExtensionSettingName;
+import com.google.ads.googleads.v1.services.CustomerFeedName;
+import com.google.ads.googleads.v1.services.CustomerLabelName;
+import com.google.ads.googleads.v1.services.CustomerManagerLinkName;
+import com.google.ads.googleads.v1.services.CustomerName;
+import com.google.ads.googleads.v1.services.CustomerNegativeCriterionName;
+import com.google.ads.googleads.v1.services.DetailPlacementViewName;
+import com.google.ads.googleads.v1.services.DisplayKeywordViewName;
+import com.google.ads.googleads.v1.services.DomainCategoryName;
+import com.google.ads.googleads.v1.services.DynamicSearchAdsSearchTermViewName;
+import com.google.ads.googleads.v1.services.ExpandedLandingPageViewName;
+import com.google.ads.googleads.v1.services.ExtensionFeedItemName;
+import com.google.ads.googleads.v1.services.FeedItemName;
+import com.google.ads.googleads.v1.services.FeedItemTargetName;
+import com.google.ads.googleads.v1.services.FeedMappingName;
+import com.google.ads.googleads.v1.services.FeedName;
+import com.google.ads.googleads.v1.services.FeedPlaceholderViewName;
+import com.google.ads.googleads.v1.services.GenderViewName;
+import com.google.ads.googleads.v1.services.GeoTargetConstantName;
+import com.google.ads.googleads.v1.services.GeographicViewName;
+import com.google.ads.googleads.v1.services.GoogleAdsFieldName;
+import com.google.ads.googleads.v1.services.GroupPlacementViewName;
+import com.google.ads.googleads.v1.services.HotelGroupViewName;
+import com.google.ads.googleads.v1.services.HotelPerformanceViewName;
+import com.google.ads.googleads.v1.services.KeywordPlanAdGroupName;
+import com.google.ads.googleads.v1.services.KeywordPlanCampaignName;
+import com.google.ads.googleads.v1.services.KeywordPlanKeywordName;
+import com.google.ads.googleads.v1.services.KeywordPlanName;
+import com.google.ads.googleads.v1.services.KeywordPlanNegativeKeywordName;
+import com.google.ads.googleads.v1.services.KeywordViewName;
+import com.google.ads.googleads.v1.services.LabelName;
+import com.google.ads.googleads.v1.services.LandingPageViewName;
+import com.google.ads.googleads.v1.services.LanguageConstantName;
+import com.google.ads.googleads.v1.services.LocationViewName;
+import com.google.ads.googleads.v1.services.ManagedPlacementViewName;
+import com.google.ads.googleads.v1.services.MediaFileName;
+import com.google.ads.googleads.v1.services.MerchantCenterLinkName;
+import com.google.ads.googleads.v1.services.MobileAppCategoryConstantName;
+import com.google.ads.googleads.v1.services.MobileDeviceConstantName;
+import com.google.ads.googleads.v1.services.MutateJobName;
+import com.google.ads.googleads.v1.services.OperatingSystemVersionConstantName;
+import com.google.ads.googleads.v1.services.PaidOrganicSearchTermViewName;
+import com.google.ads.googleads.v1.services.ParentalStatusViewName;
+import com.google.ads.googleads.v1.services.ProductBiddingCategoryConstantName;
+import com.google.ads.googleads.v1.services.ProductGroupViewName;
+import com.google.ads.googleads.v1.services.RecommendationName;
+import com.google.ads.googleads.v1.services.RemarketingActionName;
+import com.google.ads.googleads.v1.services.SearchTermViewName;
+import com.google.ads.googleads.v1.services.SharedCriterionName;
+import com.google.ads.googleads.v1.services.SharedSetName;
+import com.google.ads.googleads.v1.services.ShoppingPerformanceViewName;
+import com.google.ads.googleads.v1.services.TopicConstantName;
+import com.google.ads.googleads.v1.services.TopicViewName;
+import com.google.ads.googleads.v1.services.UserInterestName;
+import com.google.ads.googleads.v1.services.UserListName;
+import com.google.ads.googleads.v1.services.VideoName;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -129,7 +129,7 @@ import java.util.stream.Stream;
  *       of type {@code String}.
  *   <li>Method parameter lists contain each component identifier. For example, {@link
  *       #adGroupCriterion(long, long, long)} expects a customer ID, an ad group ID, and a criterion
- *       ID. In contrast, {@link AdGroupCriteriaName#format(String, String)} expects a customer ID
+ *       ID. In contrast, {@link AdGroupCriterionName#format(String, String)} expects a customer ID
  *       and an underscore-delimited combination of ad group ID and criterion ID.
  * </ul>
  */
@@ -175,7 +175,7 @@ public class ResourceNames {
 
   /** Returns the ad group criterion resource name for the specified components. */
   public static String adGroupCriterion(long customerId, long adGroupId, long criterionId) {
-    return AdGroupCriteriaName.format(
+    return AdGroupCriterionName.format(
         String.valueOf(customerId), concatIdentifiers(adGroupId, criterionId));
   }
 
@@ -289,7 +289,7 @@ public class ResourceNames {
 
   /** Returns the campaign criterion resource name for the specified components. */
   public static String campaignCriterion(long customerId, long campaignId, long criterionId) {
-    return CampaignCriteriaName.format(
+    return CampaignCriterionName.format(
         String.valueOf(customerId), concatIdentifiers(campaignId, criterionId));
   }
   /** Returns the Campaign Criterion Simulation resource name for the specified components. */
@@ -414,13 +414,13 @@ public class ResourceNames {
    */
   @Deprecated
   public static String customerNegativeCriteria(long customerId, long criterionId) {
-    return CustomerNegativeCriteriaName.format(
+    return CustomerNegativeCriterionName.format(
         String.valueOf(customerId), String.valueOf(criterionId));
   }
 
   /** Returns the customer negative criterion for the specified components. */
   public static String customerNegativeCriterion(long customerId, long criterionId) {
-    return CustomerNegativeCriteriaName.format(
+    return CustomerNegativeCriterionName.format(
         String.valueOf(customerId), String.valueOf(criterionId));
   }
 
@@ -681,7 +681,7 @@ public class ResourceNames {
 
   /** Returns the shared criterion resource name for the specified components. */
   public static String sharedCriterion(long customerId, long sharedSetId, long criterionId) {
-    return SharedCriteriaName.format(
+    return SharedCriterionName.format(
         String.valueOf(customerId), concatIdentifiers(sharedSetId, criterionId));
   }
 

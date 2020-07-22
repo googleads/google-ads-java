@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.HotelGroupViewServiceStubSettin
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (HotelGroupViewServiceClient hotelGroupViewServiceClient = HotelGroupViewServiceClient.create()) {
- *   String formattedResourceName = HotelGroupViewServiceClient.formatHotelGroupViewName("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
- *   HotelGroupView response = hotelGroupViewServiceClient.getHotelGroupView(formattedResourceName);
+ *   HotelGroupViewName resourceName = HotelGroupViewName.of("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
+ *   HotelGroupView response = hotelGroupViewServiceClient.getHotelGroupView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,44 +98,6 @@ public class HotelGroupViewServiceClient implements BackgroundResource {
   private final HotelGroupViewServiceSettings settings;
   private final HotelGroupViewServiceStub stub;
 
-  private static final PathTemplate HOTEL_GROUP_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/hotelGroupViews/{hotel_group_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a hotel_group_view resource.
-   *
-   * @deprecated Use the {@link HotelGroupViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatHotelGroupViewName(String customer, String hotelGroupView) {
-    return HOTEL_GROUP_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "hotel_group_view", hotelGroupView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a hotel_group_view
-   * resource.
-   *
-   * @deprecated Use the {@link HotelGroupViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromHotelGroupViewName(String hotelGroupViewName) {
-    return HOTEL_GROUP_VIEW_PATH_TEMPLATE.parse(hotelGroupViewName).get("customer");
-  }
-
-  /**
-   * Parses the hotel_group_view from the given fully-qualified path which represents a
-   * hotel_group_view resource.
-   *
-   * @deprecated Use the {@link HotelGroupViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseHotelGroupViewFromHotelGroupViewName(String hotelGroupViewName) {
-    return HOTEL_GROUP_VIEW_PATH_TEMPLATE.parse(hotelGroupViewName).get("hotel_group_view");
-  }
-
   /** Constructs an instance of HotelGroupViewServiceClient with default settings. */
   public static final HotelGroupViewServiceClient create() throws IOException {
     return create(HotelGroupViewServiceSettings.newBuilder().build());
@@ -193,8 +154,32 @@ public class HotelGroupViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (HotelGroupViewServiceClient hotelGroupViewServiceClient = HotelGroupViewServiceClient.create()) {
-   *   String formattedResourceName = HotelGroupViewServiceClient.formatHotelGroupViewName("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
-   *   HotelGroupView response = hotelGroupViewServiceClient.getHotelGroupView(formattedResourceName);
+   *   HotelGroupViewName resourceName = HotelGroupViewName.of("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
+   *   HotelGroupView response = hotelGroupViewServiceClient.getHotelGroupView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the Hotel Group View to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final HotelGroupView getHotelGroupView(HotelGroupViewName resourceName) {
+    GetHotelGroupViewRequest request =
+        GetHotelGroupViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getHotelGroupView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Hotel Group View in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (HotelGroupViewServiceClient hotelGroupViewServiceClient = HotelGroupViewServiceClient.create()) {
+   *   HotelGroupViewName resourceName = HotelGroupViewName.of("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
+   *   HotelGroupView response = hotelGroupViewServiceClient.getHotelGroupView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -202,7 +187,6 @@ public class HotelGroupViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final HotelGroupView getHotelGroupView(String resourceName) {
-    HOTEL_GROUP_VIEW_PATH_TEMPLATE.validate(resourceName, "getHotelGroupView");
     GetHotelGroupViewRequest request =
         GetHotelGroupViewRequest.newBuilder().setResourceName(resourceName).build();
     return getHotelGroupView(request);
@@ -216,9 +200,9 @@ public class HotelGroupViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (HotelGroupViewServiceClient hotelGroupViewServiceClient = HotelGroupViewServiceClient.create()) {
-   *   String formattedResourceName = HotelGroupViewServiceClient.formatHotelGroupViewName("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
+   *   HotelGroupViewName resourceName = HotelGroupViewName.of("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
    *   GetHotelGroupViewRequest request = GetHotelGroupViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   HotelGroupView response = hotelGroupViewServiceClient.getHotelGroupView(request);
    * }
@@ -239,9 +223,9 @@ public class HotelGroupViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (HotelGroupViewServiceClient hotelGroupViewServiceClient = HotelGroupViewServiceClient.create()) {
-   *   String formattedResourceName = HotelGroupViewServiceClient.formatHotelGroupViewName("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
+   *   HotelGroupViewName resourceName = HotelGroupViewName.of("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
    *   GetHotelGroupViewRequest request = GetHotelGroupViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;HotelGroupView&gt; future = hotelGroupViewServiceClient.getHotelGroupViewCallable().futureCall(request);
    *   // Do something

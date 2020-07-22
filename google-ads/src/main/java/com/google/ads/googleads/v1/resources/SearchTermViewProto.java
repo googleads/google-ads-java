@@ -32,44 +32,53 @@ public final class SearchTermViewProto {
       "ch_term_view.proto\022!google.ads.googleads" +
       ".v1.resources\032@google/ads/googleads/v1/e" +
       "nums/search_term_targeting_status.proto\032" +
-      "\036google/protobuf/wrappers.proto\032\034google/" +
-      "api/annotations.proto\"\362\001\n\016SearchTermView" +
-      "\022\025\n\rresource_name\030\001 \001(\t\0221\n\013search_term\030\002" +
-      " \001(\0132\034.google.protobuf.StringValue\022.\n\010ad" +
-      "_group\030\003 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022f\n\006status\030\004 \001(\0162V.google.ads.googlead" +
-      "s.v1.enums.SearchTermTargetingStatusEnum" +
-      ".SearchTermTargetingStatusB\200\002\n%com.googl" +
-      "e.ads.googleads.v1.resourcesB\023SearchTerm" +
-      "ViewProtoP\001ZJgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v1/resources;re" +
-      "sources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1." +
-      "Resources\312\002!Google\\Ads\\GoogleAds\\V1\\Reso" +
-      "urces\352\002%Google::Ads::GoogleAds::V1::Reso" +
-      "urcesb\006proto3"
+      "\037google/api/field_behavior.proto\032\031google" +
+      "/api/resource.proto\032\036google/protobuf/wra" +
+      "ppers.proto\032\034google/api/annotations.prot" +
+      "o\"\276\003\n\016SearchTermView\022F\n\rresource_name\030\001 " +
+      "\001(\tB/\340A\003\372A)\n\'googleads.googleapis.com/Se" +
+      "archTermView\0226\n\013search_term\030\002 \001(\0132\034.goog" +
+      "le.protobuf.StringValueB\003\340A\003\022X\n\010ad_group" +
+      "\030\003 \001(\0132\034.google.protobuf.StringValueB(\340A" +
+      "\003\372A\"\n googleads.googleapis.com/AdGroup\022k" +
+      "\n\006status\030\004 \001(\0162V.google.ads.googleads.v1" +
+      ".enums.SearchTermTargetingStatusEnum.Sea" +
+      "rchTermTargetingStatusB\003\340A\003:e\352Ab\n\'google" +
+      "ads.googleapis.com/SearchTermView\0227custo" +
+      "mers/{customer}/searchTermViews/{search_" +
+      "term_view}B\200\002\n%com.google.ads.googleads." +
+      "v1.resourcesB\023SearchTermViewProtoP\001ZJgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v1/resources;resources\242\002\003GAA\252\002!" +
+      "Google.Ads.GoogleAds.V1.Resources\312\002!Goog" +
+      "le\\Ads\\GoogleAds\\V1\\Resources\352\002%Google::" +
+      "Ads::GoogleAds::V1::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.enums.SearchTermTargetingStatusProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_SearchTermView_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_SearchTermView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_SearchTermView_descriptor,
         new java.lang.String[] { "ResourceName", "SearchTerm", "AdGroup", "Status", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.enums.SearchTermTargetingStatusProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

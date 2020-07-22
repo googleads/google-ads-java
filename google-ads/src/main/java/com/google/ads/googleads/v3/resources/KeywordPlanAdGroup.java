@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.KeywordPlanAdGroup}
  */
-public  final class KeywordPlanAdGroup extends
+public final class KeywordPlanAdGroup extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.KeywordPlanAdGroup)
     KeywordPlanAdGroupOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   }
   private KeywordPlanAdGroup() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new KeywordPlanAdGroup();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -148,7 +154,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -169,7 +177,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -192,7 +202,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the keywordPlanCampaign field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanCampaign() {
     return keywordPlanCampaign_ != null;
   }
@@ -202,7 +214,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return The keywordPlanCampaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywordPlanCampaign() {
     return keywordPlanCampaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlanCampaign_;
   }
@@ -213,6 +227,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanCampaignOrBuilder() {
     return getKeywordPlanCampaign();
   }
@@ -225,7 +240,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -235,7 +252,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -246,6 +265,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -260,7 +280,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -272,7 +294,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -285,6 +309,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -299,7 +324,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 5;</code>
+   * @return Whether the cpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidMicros() {
     return cpcBidMicros_ != null;
   }
@@ -311,7 +338,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 5;</code>
+   * @return The cpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidMicros() {
     return cpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidMicros_;
   }
@@ -324,6 +353,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidMicrosOrBuilder() {
     return getCpcBidMicros();
   }
@@ -764,6 +794,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -785,6 +816,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -807,6 +839,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -826,6 +860,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -841,6 +876,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -863,6 +900,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return Whether the keywordPlanCampaign field is set.
      */
     public boolean hasKeywordPlanCampaign() {
       return keywordPlanCampaignBuilder_ != null || keywordPlanCampaign_ != null;
@@ -873,6 +911,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_campaign = 2 [(.google.api.resource_reference) = { ... }</code>
+     * @return The keywordPlanCampaign.
      */
     public com.google.protobuf.StringValue getKeywordPlanCampaign() {
       if (keywordPlanCampaignBuilder_ == null) {
@@ -1016,6 +1055,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
@@ -1026,6 +1066,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1171,6 +1212,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1183,6 +1225,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1342,6 +1385,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 5;</code>
+     * @return Whether the cpcBidMicros field is set.
      */
     public boolean hasCpcBidMicros() {
       return cpcBidMicrosBuilder_ != null || cpcBidMicros_ != null;
@@ -1354,6 +1398,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 5;</code>
+     * @return The cpcBidMicros.
      */
     public com.google.protobuf.Int64Value getCpcBidMicros() {
       if (cpcBidMicrosBuilder_ == null) {

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.KeywordAndUrlSeed}
  */
-public  final class KeywordAndUrlSeed extends
+public final class KeywordAndUrlSeed extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.KeywordAndUrlSeed)
     KeywordAndUrlSeedOrBuilder {
@@ -121,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue url = 1;</code>
    * @return Whether the url field is set.
    */
+  @java.lang.Override
   public boolean hasUrl() {
     return url_ != null;
   }
@@ -132,6 +133,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue url = 1;</code>
    * @return The url.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUrl() {
     return url_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : url_;
   }
@@ -142,6 +144,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue url = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUrlOrBuilder() {
     return getUrl();
   }
@@ -155,6 +158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getKeywordsList() {
     return keywords_;
   }
@@ -165,6 +169,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getKeywordsOrBuilderList() {
     return keywords_;
@@ -176,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 2;</code>
    */
+  @java.lang.Override
   public int getKeywordsCount() {
     return keywords_.size();
   }
@@ -186,6 +192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywords(int index) {
     return keywords_.get(index);
   }
@@ -196,6 +203,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue keywords = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordsOrBuilder(
       int index) {
     return keywords_.get(index);

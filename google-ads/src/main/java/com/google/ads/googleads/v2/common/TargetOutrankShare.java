@@ -12,7 +12,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.TargetOutrankShare}
  */
-public  final class TargetOutrankShare extends
+public final class TargetOutrankShare extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.TargetOutrankShare)
     TargetOutrankShareOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TargetOutrankShare() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new TargetOutrankShare();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -158,7 +164,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value target_outrank_share_micros = 1;</code>
+   * @return Whether the targetOutrankShareMicros field is set.
    */
+  @java.lang.Override
   public boolean hasTargetOutrankShareMicros() {
     return targetOutrankShareMicros_ != null;
   }
@@ -173,7 +181,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value target_outrank_share_micros = 1;</code>
+   * @return The targetOutrankShareMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getTargetOutrankShareMicros() {
     return targetOutrankShareMicros_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : targetOutrankShareMicros_;
   }
@@ -189,6 +199,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value target_outrank_share_micros = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getTargetOutrankShareMicrosOrBuilder() {
     return getTargetOutrankShareMicros();
   }
@@ -201,7 +212,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue competitor_domain = 2;</code>
+   * @return Whether the competitorDomain field is set.
    */
+  @java.lang.Override
   public boolean hasCompetitorDomain() {
     return competitorDomain_ != null;
   }
@@ -211,7 +224,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue competitor_domain = 2;</code>
+   * @return The competitorDomain.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCompetitorDomain() {
     return competitorDomain_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : competitorDomain_;
   }
@@ -222,6 +237,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue competitor_domain = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCompetitorDomainOrBuilder() {
     return getCompetitorDomain();
   }
@@ -235,7 +251,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ != null;
   }
@@ -246,7 +264,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+   * @return The cpcBidCeilingMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidCeilingMicros_;
   }
@@ -258,6 +278,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidCeilingMicrosOrBuilder() {
     return getCpcBidCeilingMicros();
   }
@@ -274,7 +295,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+   * @return Whether the onlyRaiseCpcBids field is set.
    */
+  @java.lang.Override
   public boolean hasOnlyRaiseCpcBids() {
     return onlyRaiseCpcBids_ != null;
   }
@@ -288,7 +311,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+   * @return The onlyRaiseCpcBids.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getOnlyRaiseCpcBids() {
     return onlyRaiseCpcBids_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : onlyRaiseCpcBids_;
   }
@@ -303,6 +328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getOnlyRaiseCpcBidsOrBuilder() {
     return getOnlyRaiseCpcBids();
   }
@@ -316,7 +342,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 5;</code>
+   * @return Whether the raiseCpcBidWhenQualityScoreIsLow field is set.
    */
+  @java.lang.Override
   public boolean hasRaiseCpcBidWhenQualityScoreIsLow() {
     return raiseCpcBidWhenQualityScoreIsLow_ != null;
   }
@@ -327,7 +355,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 5;</code>
+   * @return The raiseCpcBidWhenQualityScoreIsLow.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getRaiseCpcBidWhenQualityScoreIsLow() {
     return raiseCpcBidWhenQualityScoreIsLow_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : raiseCpcBidWhenQualityScoreIsLow_;
   }
@@ -339,6 +369,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getRaiseCpcBidWhenQualityScoreIsLowOrBuilder() {
     return getRaiseCpcBidWhenQualityScoreIsLow();
   }
@@ -798,6 +829,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value target_outrank_share_micros = 1;</code>
+     * @return Whether the targetOutrankShareMicros field is set.
      */
     public boolean hasTargetOutrankShareMicros() {
       return targetOutrankShareMicrosBuilder_ != null || targetOutrankShareMicros_ != null;
@@ -813,6 +845,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value target_outrank_share_micros = 1;</code>
+     * @return The targetOutrankShareMicros.
      */
     public com.google.protobuf.Int32Value getTargetOutrankShareMicros() {
       if (targetOutrankShareMicrosBuilder_ == null) {
@@ -991,6 +1024,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue competitor_domain = 2;</code>
+     * @return Whether the competitorDomain field is set.
      */
     public boolean hasCompetitorDomain() {
       return competitorDomainBuilder_ != null || competitorDomain_ != null;
@@ -1001,6 +1035,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue competitor_domain = 2;</code>
+     * @return The competitorDomain.
      */
     public com.google.protobuf.StringValue getCompetitorDomain() {
       if (competitorDomainBuilder_ == null) {
@@ -1145,6 +1180,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+     * @return Whether the cpcBidCeilingMicros field is set.
      */
     public boolean hasCpcBidCeilingMicros() {
       return cpcBidCeilingMicrosBuilder_ != null || cpcBidCeilingMicros_ != null;
@@ -1156,6 +1192,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 3;</code>
+     * @return The cpcBidCeilingMicros.
      */
     public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
       if (cpcBidCeilingMicrosBuilder_ == null) {
@@ -1310,6 +1347,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+     * @return Whether the onlyRaiseCpcBids field is set.
      */
     public boolean hasOnlyRaiseCpcBids() {
       return onlyRaiseCpcBidsBuilder_ != null || onlyRaiseCpcBids_ != null;
@@ -1324,6 +1362,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue only_raise_cpc_bids = 4;</code>
+     * @return The onlyRaiseCpcBids.
      */
     public com.google.protobuf.BoolValue getOnlyRaiseCpcBids() {
       if (onlyRaiseCpcBidsBuilder_ == null) {
@@ -1496,6 +1535,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 5;</code>
+     * @return Whether the raiseCpcBidWhenQualityScoreIsLow field is set.
      */
     public boolean hasRaiseCpcBidWhenQualityScoreIsLow() {
       return raiseCpcBidWhenQualityScoreIsLowBuilder_ != null || raiseCpcBidWhenQualityScoreIsLow_ != null;
@@ -1507,6 +1547,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue raise_cpc_bid_when_quality_score_is_low = 5;</code>
+     * @return The raiseCpcBidWhenQualityScoreIsLow.
      */
     public com.google.protobuf.BoolValue getRaiseCpcBidWhenQualityScoreIsLow() {
       if (raiseCpcBidWhenQualityScoreIsLowBuilder_ == null) {

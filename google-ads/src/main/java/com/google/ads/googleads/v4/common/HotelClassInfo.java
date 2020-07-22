@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.HotelClassInfo}
  */
-public  final class HotelClassInfo extends
+public final class HotelClassInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.HotelClassInfo)
     HotelClassInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value value = 1;</code>
    * @return Whether the value field is set.
    */
+  @java.lang.Override
   public boolean hasValue() {
     return value_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value value = 1;</code>
    * @return The value.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getValue() {
     return value_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : value_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value value = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getValueOrBuilder() {
     return getValue();
   }

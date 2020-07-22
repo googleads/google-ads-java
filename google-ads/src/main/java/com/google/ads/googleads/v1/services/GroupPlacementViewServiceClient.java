@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.GroupPlacementViewServiceStubSe
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (GroupPlacementViewServiceClient groupPlacementViewServiceClient = GroupPlacementViewServiceClient.create()) {
- *   String formattedResourceName = GroupPlacementViewServiceClient.formatGroupPlacementViewName("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
- *   GroupPlacementView response = groupPlacementViewServiceClient.getGroupPlacementView(formattedResourceName);
+ *   GroupPlacementViewName resourceName = GroupPlacementViewName.of("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
+ *   GroupPlacementView response = groupPlacementViewServiceClient.getGroupPlacementView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,50 +98,6 @@ public class GroupPlacementViewServiceClient implements BackgroundResource {
   private final GroupPlacementViewServiceSettings settings;
   private final GroupPlacementViewServiceStub stub;
 
-  private static final PathTemplate GROUP_PLACEMENT_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/groupPlacementViews/{group_placement_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a group_placement_view
-   * resource.
-   *
-   * @deprecated Use the {@link GroupPlacementViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatGroupPlacementViewName(
-      String customer, String groupPlacementView) {
-    return GROUP_PLACEMENT_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "group_placement_view", groupPlacementView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a group_placement_view
-   * resource.
-   *
-   * @deprecated Use the {@link GroupPlacementViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromGroupPlacementViewName(
-      String groupPlacementViewName) {
-    return GROUP_PLACEMENT_VIEW_PATH_TEMPLATE.parse(groupPlacementViewName).get("customer");
-  }
-
-  /**
-   * Parses the group_placement_view from the given fully-qualified path which represents a
-   * group_placement_view resource.
-   *
-   * @deprecated Use the {@link GroupPlacementViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseGroupPlacementViewFromGroupPlacementViewName(
-      String groupPlacementViewName) {
-    return GROUP_PLACEMENT_VIEW_PATH_TEMPLATE
-        .parse(groupPlacementViewName)
-        .get("group_placement_view");
-  }
-
   /** Constructs an instance of GroupPlacementViewServiceClient with default settings. */
   public static final GroupPlacementViewServiceClient create() throws IOException {
     return create(GroupPlacementViewServiceSettings.newBuilder().build());
@@ -201,16 +156,39 @@ public class GroupPlacementViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GroupPlacementViewServiceClient groupPlacementViewServiceClient = GroupPlacementViewServiceClient.create()) {
-   *   String formattedResourceName = GroupPlacementViewServiceClient.formatGroupPlacementViewName("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
-   *   GroupPlacementView response = groupPlacementViewServiceClient.getGroupPlacementView(formattedResourceName);
+   *   GroupPlacementViewName resourceName = GroupPlacementViewName.of("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
+   *   GroupPlacementView response = groupPlacementViewServiceClient.getGroupPlacementView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the Group Placement view to fetch.
+   * @param resourceName Required. The resource name of the Group Placement view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GroupPlacementView getGroupPlacementView(GroupPlacementViewName resourceName) {
+    GetGroupPlacementViewRequest request =
+        GetGroupPlacementViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getGroupPlacementView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Group Placement view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GroupPlacementViewServiceClient groupPlacementViewServiceClient = GroupPlacementViewServiceClient.create()) {
+   *   GroupPlacementViewName resourceName = GroupPlacementViewName.of("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
+   *   GroupPlacementView response = groupPlacementViewServiceClient.getGroupPlacementView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the Group Placement view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GroupPlacementView getGroupPlacementView(String resourceName) {
-    GROUP_PLACEMENT_VIEW_PATH_TEMPLATE.validate(resourceName, "getGroupPlacementView");
     GetGroupPlacementViewRequest request =
         GetGroupPlacementViewRequest.newBuilder().setResourceName(resourceName).build();
     return getGroupPlacementView(request);
@@ -224,9 +202,9 @@ public class GroupPlacementViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GroupPlacementViewServiceClient groupPlacementViewServiceClient = GroupPlacementViewServiceClient.create()) {
-   *   String formattedResourceName = GroupPlacementViewServiceClient.formatGroupPlacementViewName("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
+   *   GroupPlacementViewName resourceName = GroupPlacementViewName.of("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
    *   GetGroupPlacementViewRequest request = GetGroupPlacementViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   GroupPlacementView response = groupPlacementViewServiceClient.getGroupPlacementView(request);
    * }
@@ -247,9 +225,9 @@ public class GroupPlacementViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GroupPlacementViewServiceClient groupPlacementViewServiceClient = GroupPlacementViewServiceClient.create()) {
-   *   String formattedResourceName = GroupPlacementViewServiceClient.formatGroupPlacementViewName("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
+   *   GroupPlacementViewName resourceName = GroupPlacementViewName.of("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
    *   GetGroupPlacementViewRequest request = GetGroupPlacementViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;GroupPlacementView&gt; future = groupPlacementViewServiceClient.getGroupPlacementViewCallable().futureCall(request);
    *   // Do something

@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CustomIntentInfo}
  */
-public  final class CustomIntentInfo extends
+public final class CustomIntentInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CustomIntentInfo)
     CustomIntentInfoOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue custom_intent = 1;</code>
    * @return Whether the customIntent field is set.
    */
+  @java.lang.Override
   public boolean hasCustomIntent() {
     return customIntent_ != null;
   }
@@ -119,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue custom_intent = 1;</code>
    * @return The customIntent.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCustomIntent() {
     return customIntent_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customIntent_;
   }
@@ -129,6 +131,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue custom_intent = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCustomIntentOrBuilder() {
     return getCustomIntent();
   }

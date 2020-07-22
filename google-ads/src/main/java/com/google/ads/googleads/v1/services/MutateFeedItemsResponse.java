@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.MutateFeedItemsResponse}
  */
-public  final class MutateFeedItemsResponse extends
+public final class MutateFeedItemsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.MutateFeedItemsResponse)
     MutateFeedItemsResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private MutateFeedItemsResponse() {
     results_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateFeedItemsResponse();
   }
 
   @java.lang.Override
@@ -48,9 +55,9 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               results_ = new java.util.ArrayList<com.google.ads.googleads.v1.services.MutateFeedItemResult>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             results_.add(
                 input.readMessage(com.google.ads.googleads.v1.services.MutateFeedItemResult.parser(), extensionRegistry));
@@ -84,7 +91,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         results_ = java.util.Collections.unmodifiableList(results_);
       }
       this.unknownFields = unknownFields.build();
@@ -104,7 +111,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v1.services.MutateFeedItemsResponse.class, com.google.ads.googleads.v1.services.MutateFeedItemsResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PARTIAL_FAILURE_ERROR_FIELD_NUMBER = 3;
   private com.google.rpc.Status partialFailureError_;
   /**
@@ -116,7 +122,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   * @return Whether the partialFailureError field is set.
    */
+  @java.lang.Override
   public boolean hasPartialFailureError() {
     return partialFailureError_ != null;
   }
@@ -129,7 +137,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   * @return The partialFailureError.
    */
+  @java.lang.Override
   public com.google.rpc.Status getPartialFailureError() {
     return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
   }
@@ -143,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
     return getPartialFailureError();
   }
@@ -156,6 +167,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.services.MutateFeedItemResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.services.MutateFeedItemResult> getResultsList() {
     return results_;
   }
@@ -166,6 +178,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.services.MutateFeedItemResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v1.services.MutateFeedItemResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -177,6 +190,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.services.MutateFeedItemResult results = 2;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -187,6 +201,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.services.MutateFeedItemResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.services.MutateFeedItemResult getResults(int index) {
     return results_.get(index);
   }
@@ -197,6 +212,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.services.MutateFeedItemResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.services.MutateFeedItemResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
@@ -426,7 +442,7 @@ private static final long serialVersionUID = 0L;
       }
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         resultsBuilder_.clear();
       }
@@ -457,22 +473,20 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v1.services.MutateFeedItemsResponse buildPartial() {
       com.google.ads.googleads.v1.services.MutateFeedItemsResponse result = new com.google.ads.googleads.v1.services.MutateFeedItemsResponse(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (partialFailureErrorBuilder_ == null) {
         result.partialFailureError_ = partialFailureError_;
       } else {
         result.partialFailureError_ = partialFailureErrorBuilder_.build();
       }
       if (resultsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.results_ = results_;
       } else {
         result.results_ = resultsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -528,7 +542,7 @@ private static final long serialVersionUID = 0L;
         if (!other.results_.isEmpty()) {
           if (results_.isEmpty()) {
             results_ = other.results_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureResultsIsMutable();
             results_.addAll(other.results_);
@@ -541,7 +555,7 @@ private static final long serialVersionUID = 0L;
             resultsBuilder_.dispose();
             resultsBuilder_ = null;
             results_ = other.results_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             resultsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getResultsFieldBuilder() : null;
@@ -592,6 +606,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     * @return Whether the partialFailureError field is set.
      */
     public boolean hasPartialFailureError() {
       return partialFailureErrorBuilder_ != null || partialFailureError_ != null;
@@ -605,6 +620,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     * @return The partialFailureError.
      */
     public com.google.rpc.Status getPartialFailureError() {
       if (partialFailureErrorBuilder_ == null) {
@@ -763,9 +779,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.services.MutateFeedItemResult> results_ =
       java.util.Collections.emptyList();
     private void ensureResultsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         results_ = new java.util.ArrayList<com.google.ads.googleads.v1.services.MutateFeedItemResult>(results_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -959,7 +975,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearResults() {
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         resultsBuilder_.clear();
@@ -1064,7 +1080,7 @@ private static final long serialVersionUID = 0L;
         resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.services.MutateFeedItemResult, com.google.ads.googleads.v1.services.MutateFeedItemResult.Builder, com.google.ads.googleads.v1.services.MutateFeedItemResultOrBuilder>(
                 results_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         results_ = null;

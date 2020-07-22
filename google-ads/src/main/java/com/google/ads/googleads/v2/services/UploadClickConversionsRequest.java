@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.UploadClickConversionsRequest}
  */
-public  final class UploadClickConversionsRequest extends
+public final class UploadClickConversionsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.UploadClickConversionsRequest)
     UploadClickConversionsRequestOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private UploadClickConversionsRequest() {
     customerId_ = "";
     conversions_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UploadClickConversionsRequest();
   }
 
   @java.lang.Override
@@ -55,9 +62,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               conversions_ = new java.util.ArrayList<com.google.ads.googleads.v2.services.ClickConversion>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             conversions_.add(
                 input.readMessage(com.google.ads.googleads.v2.services.ClickConversion.parser(), extensionRegistry));
@@ -88,7 +95,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         conversions_ = java.util.Collections.unmodifiableList(conversions_);
       }
       this.unknownFields = unknownFields.build();
@@ -108,16 +115,17 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.services.UploadClickConversionsRequest.class, com.google.ads.googleads.v2.services.UploadClickConversionsRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object customerId_;
   /**
    * <pre>
-   * The ID of the customer performing the upload.
+   * Required. The ID of the customer performing the upload.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -132,11 +140,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ID of the customer performing the upload.
+   * Required. The ID of the customer performing the upload.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -155,52 +165,57 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v2.services.ClickConversion> conversions_;
   /**
    * <pre>
-   * The conversions that are being uploaded.
+   * Required. The conversions that are being uploaded.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+   * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.services.ClickConversion> getConversionsList() {
     return conversions_;
   }
   /**
    * <pre>
-   * The conversions that are being uploaded.
+   * Required. The conversions that are being uploaded.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+   * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.services.ClickConversionOrBuilder> 
       getConversionsOrBuilderList() {
     return conversions_;
   }
   /**
    * <pre>
-   * The conversions that are being uploaded.
+   * Required. The conversions that are being uploaded.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+   * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getConversionsCount() {
     return conversions_.size();
   }
   /**
    * <pre>
-   * The conversions that are being uploaded.
+   * Required. The conversions that are being uploaded.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+   * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ClickConversion getConversions(int index) {
     return conversions_.get(index);
   }
   /**
    * <pre>
-   * The conversions that are being uploaded.
+   * Required. The conversions that are being uploaded.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+   * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ClickConversionOrBuilder getConversionsOrBuilder(
       int index) {
     return conversions_.get(index);
@@ -210,14 +225,19 @@ private static final long serialVersionUID = 0L;
   private boolean partialFailure_;
   /**
    * <pre>
-   * If true, successful operations will be carried out and invalid
+   * Required. If true, successful operations will be carried out and invalid
    * operations will return errors. If false, all operations will be carried
    * out in one transaction if and only if they are all valid.
    * This should always be set to true.
+   * See
+   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+   * for more information about partial failure.
    * </pre>
    *
-   * <code>bool partial_failure = 3;</code>
+   * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The partialFailure.
    */
+  @java.lang.Override
   public boolean getPartialFailure() {
     return partialFailure_;
   }
@@ -231,7 +251,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool validate_only = 4;</code>
+   * @return The validateOnly.
    */
+  @java.lang.Override
   public boolean getValidateOnly() {
     return validateOnly_;
   }
@@ -474,7 +496,7 @@ private static final long serialVersionUID = 0L;
 
       if (conversionsBuilder_ == null) {
         conversions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         conversionsBuilder_.clear();
       }
@@ -509,12 +531,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.services.UploadClickConversionsRequest buildPartial() {
       com.google.ads.googleads.v2.services.UploadClickConversionsRequest result = new com.google.ads.googleads.v2.services.UploadClickConversionsRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.customerId_ = customerId_;
       if (conversionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           conversions_ = java.util.Collections.unmodifiableList(conversions_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.conversions_ = conversions_;
       } else {
@@ -522,7 +543,6 @@ private static final long serialVersionUID = 0L;
       }
       result.partialFailure_ = partialFailure_;
       result.validateOnly_ = validateOnly_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -579,7 +599,7 @@ private static final long serialVersionUID = 0L;
         if (!other.conversions_.isEmpty()) {
           if (conversions_.isEmpty()) {
             conversions_ = other.conversions_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureConversionsIsMutable();
             conversions_.addAll(other.conversions_);
@@ -592,7 +612,7 @@ private static final long serialVersionUID = 0L;
             conversionsBuilder_.dispose();
             conversionsBuilder_ = null;
             conversions_ = other.conversions_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             conversionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getConversionsFieldBuilder() : null;
@@ -640,10 +660,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customerId_ = "";
     /**
      * <pre>
-     * The ID of the customer performing the upload.
+     * Required. The ID of the customer performing the upload.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -659,10 +680,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer performing the upload.
+     * Required. The ID of the customer performing the upload.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -679,10 +701,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer performing the upload.
+     * Required. The ID of the customer performing the upload.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -696,10 +720,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer performing the upload.
+     * Required. The ID of the customer performing the upload.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -709,10 +734,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the customer performing the upload.
+     * Required. The ID of the customer performing the upload.
      * </pre>
      *
-     * <code>string customer_id = 1;</code>
+     * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -729,9 +756,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.services.ClickConversion> conversions_ =
       java.util.Collections.emptyList();
     private void ensureConversionsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         conversions_ = new java.util.ArrayList<com.google.ads.googleads.v2.services.ClickConversion>(conversions_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -740,10 +767,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public java.util.List<com.google.ads.googleads.v2.services.ClickConversion> getConversionsList() {
       if (conversionsBuilder_ == null) {
@@ -754,10 +781,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public int getConversionsCount() {
       if (conversionsBuilder_ == null) {
@@ -768,10 +795,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v2.services.ClickConversion getConversions(int index) {
       if (conversionsBuilder_ == null) {
@@ -782,10 +809,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setConversions(
         int index, com.google.ads.googleads.v2.services.ClickConversion value) {
@@ -803,10 +830,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setConversions(
         int index, com.google.ads.googleads.v2.services.ClickConversion.Builder builderForValue) {
@@ -821,10 +848,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder addConversions(com.google.ads.googleads.v2.services.ClickConversion value) {
       if (conversionsBuilder_ == null) {
@@ -841,10 +868,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder addConversions(
         int index, com.google.ads.googleads.v2.services.ClickConversion value) {
@@ -862,10 +889,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder addConversions(
         com.google.ads.googleads.v2.services.ClickConversion.Builder builderForValue) {
@@ -880,10 +907,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder addConversions(
         int index, com.google.ads.googleads.v2.services.ClickConversion.Builder builderForValue) {
@@ -898,10 +925,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder addAllConversions(
         java.lang.Iterable<? extends com.google.ads.googleads.v2.services.ClickConversion> values) {
@@ -917,15 +944,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearConversions() {
       if (conversionsBuilder_ == null) {
         conversions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         conversionsBuilder_.clear();
@@ -934,10 +961,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder removeConversions(int index) {
       if (conversionsBuilder_ == null) {
@@ -951,10 +978,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v2.services.ClickConversion.Builder getConversionsBuilder(
         int index) {
@@ -962,10 +989,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v2.services.ClickConversionOrBuilder getConversionsOrBuilder(
         int index) {
@@ -976,10 +1003,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public java.util.List<? extends com.google.ads.googleads.v2.services.ClickConversionOrBuilder> 
          getConversionsOrBuilderList() {
@@ -991,10 +1018,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v2.services.ClickConversion.Builder addConversionsBuilder() {
       return getConversionsFieldBuilder().addBuilder(
@@ -1002,10 +1029,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v2.services.ClickConversion.Builder addConversionsBuilder(
         int index) {
@@ -1014,10 +1041,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The conversions that are being uploaded.
+     * Required. The conversions that are being uploaded.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2;</code>
+     * <code>repeated .google.ads.googleads.v2.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public java.util.List<com.google.ads.googleads.v2.services.ClickConversion.Builder> 
          getConversionsBuilderList() {
@@ -1030,7 +1057,7 @@ private static final long serialVersionUID = 0L;
         conversionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.services.ClickConversion, com.google.ads.googleads.v2.services.ClickConversion.Builder, com.google.ads.googleads.v2.services.ClickConversionOrBuilder>(
                 conversions_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         conversions_ = null;
@@ -1041,26 +1068,36 @@ private static final long serialVersionUID = 0L;
     private boolean partialFailure_ ;
     /**
      * <pre>
-     * If true, successful operations will be carried out and invalid
+     * Required. If true, successful operations will be carried out and invalid
      * operations will return errors. If false, all operations will be carried
      * out in one transaction if and only if they are all valid.
      * This should always be set to true.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
-     * <code>bool partial_failure = 3;</code>
+     * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The partialFailure.
      */
+    @java.lang.Override
     public boolean getPartialFailure() {
       return partialFailure_;
     }
     /**
      * <pre>
-     * If true, successful operations will be carried out and invalid
+     * Required. If true, successful operations will be carried out and invalid
      * operations will return errors. If false, all operations will be carried
      * out in one transaction if and only if they are all valid.
      * This should always be set to true.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
-     * <code>bool partial_failure = 3;</code>
+     * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The partialFailure to set.
+     * @return This builder for chaining.
      */
     public Builder setPartialFailure(boolean value) {
       
@@ -1070,13 +1107,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * If true, successful operations will be carried out and invalid
+     * Required. If true, successful operations will be carried out and invalid
      * operations will return errors. If false, all operations will be carried
      * out in one transaction if and only if they are all valid.
      * This should always be set to true.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
-     * <code>bool partial_failure = 3;</code>
+     * <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearPartialFailure() {
       
@@ -1093,7 +1134,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 4;</code>
+     * @return The validateOnly.
      */
+    @java.lang.Override
     public boolean getValidateOnly() {
       return validateOnly_;
     }
@@ -1104,6 +1147,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 4;</code>
+     * @param value The validateOnly to set.
+     * @return This builder for chaining.
      */
     public Builder setValidateOnly(boolean value) {
       
@@ -1118,6 +1163,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool validate_only = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
       

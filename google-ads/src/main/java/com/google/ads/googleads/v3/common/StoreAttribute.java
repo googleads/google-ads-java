@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.StoreAttribute}
  */
-public  final class StoreAttribute extends
+public final class StoreAttribute extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.StoreAttribute)
     StoreAttributeOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private StoreAttribute() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new StoreAttribute();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -100,7 +106,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue store_code = 1;</code>
+   * @return Whether the storeCode field is set.
    */
+  @java.lang.Override
   public boolean hasStoreCode() {
     return storeCode_ != null;
   }
@@ -111,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue store_code = 1;</code>
+   * @return The storeCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStoreCode() {
     return storeCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : storeCode_;
   }
@@ -123,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue store_code = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStoreCodeOrBuilder() {
     return getStoreCode();
   }
@@ -456,6 +467,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue store_code = 1;</code>
+     * @return Whether the storeCode field is set.
      */
     public boolean hasStoreCode() {
       return storeCodeBuilder_ != null || storeCode_ != null;
@@ -467,6 +479,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue store_code = 1;</code>
+     * @return The storeCode.
      */
     public com.google.protobuf.StringValue getStoreCode() {
       if (storeCodeBuilder_ == null) {

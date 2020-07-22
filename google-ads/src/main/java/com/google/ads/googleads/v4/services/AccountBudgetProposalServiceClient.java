@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.AccountBudgetProposalServiceStu
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -45,8 +44,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient = AccountBudgetProposalServiceClient.create()) {
- *   String formattedResourceName = AccountBudgetProposalServiceClient.formatAccountBudgetProposalName("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
- *   AccountBudgetProposal response = accountBudgetProposalServiceClient.getAccountBudgetProposal(formattedResourceName);
+ *   AccountBudgetProposalName resourceName = AccountBudgetProposalName.of("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
+ *   AccountBudgetProposal response = accountBudgetProposalServiceClient.getAccountBudgetProposal(resourceName);
  * }
  * </code>
  * </pre>
@@ -108,50 +107,6 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
   private final AccountBudgetProposalServiceSettings settings;
   private final AccountBudgetProposalServiceStub stub;
 
-  private static final PathTemplate ACCOUNT_BUDGET_PROPOSAL_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/accountBudgetProposals/{account_budget_proposal}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a account_budget_proposal
-   * resource.
-   *
-   * @deprecated Use the {@link AccountBudgetProposalName} class instead.
-   */
-  @Deprecated
-  public static final String formatAccountBudgetProposalName(
-      String customer, String accountBudgetProposal) {
-    return ACCOUNT_BUDGET_PROPOSAL_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "account_budget_proposal", accountBudgetProposal);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * account_budget_proposal resource.
-   *
-   * @deprecated Use the {@link AccountBudgetProposalName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAccountBudgetProposalName(
-      String accountBudgetProposalName) {
-    return ACCOUNT_BUDGET_PROPOSAL_PATH_TEMPLATE.parse(accountBudgetProposalName).get("customer");
-  }
-
-  /**
-   * Parses the account_budget_proposal from the given fully-qualified path which represents a
-   * account_budget_proposal resource.
-   *
-   * @deprecated Use the {@link AccountBudgetProposalName} class instead.
-   */
-  @Deprecated
-  public static final String parseAccountBudgetProposalFromAccountBudgetProposalName(
-      String accountBudgetProposalName) {
-    return ACCOUNT_BUDGET_PROPOSAL_PATH_TEMPLATE
-        .parse(accountBudgetProposalName)
-        .get("account_budget_proposal");
-  }
-
   /** Constructs an instance of AccountBudgetProposalServiceClient with default settings. */
   public static final AccountBudgetProposalServiceClient create() throws IOException {
     return create(AccountBudgetProposalServiceSettings.newBuilder().build());
@@ -212,8 +167,33 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient = AccountBudgetProposalServiceClient.create()) {
-   *   String formattedResourceName = AccountBudgetProposalServiceClient.formatAccountBudgetProposalName("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
-   *   AccountBudgetProposal response = accountBudgetProposalServiceClient.getAccountBudgetProposal(formattedResourceName);
+   *   AccountBudgetProposalName resourceName = AccountBudgetProposalName.of("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
+   *   AccountBudgetProposal response = accountBudgetProposalServiceClient.getAccountBudgetProposal(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the account-level budget proposal to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AccountBudgetProposal getAccountBudgetProposal(
+      AccountBudgetProposalName resourceName) {
+    GetAccountBudgetProposalRequest request =
+        GetAccountBudgetProposalRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAccountBudgetProposal(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns an account-level budget proposal in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient = AccountBudgetProposalServiceClient.create()) {
+   *   AccountBudgetProposalName resourceName = AccountBudgetProposalName.of("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
+   *   AccountBudgetProposal response = accountBudgetProposalServiceClient.getAccountBudgetProposal(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -221,7 +201,6 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountBudgetProposal getAccountBudgetProposal(String resourceName) {
-    ACCOUNT_BUDGET_PROPOSAL_PATH_TEMPLATE.validate(resourceName, "getAccountBudgetProposal");
     GetAccountBudgetProposalRequest request =
         GetAccountBudgetProposalRequest.newBuilder().setResourceName(resourceName).build();
     return getAccountBudgetProposal(request);
@@ -235,9 +214,9 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient = AccountBudgetProposalServiceClient.create()) {
-   *   String formattedResourceName = AccountBudgetProposalServiceClient.formatAccountBudgetProposalName("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
+   *   AccountBudgetProposalName resourceName = AccountBudgetProposalName.of("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
    *   GetAccountBudgetProposalRequest request = GetAccountBudgetProposalRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AccountBudgetProposal response = accountBudgetProposalServiceClient.getAccountBudgetProposal(request);
    * }
@@ -259,9 +238,9 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient = AccountBudgetProposalServiceClient.create()) {
-   *   String formattedResourceName = AccountBudgetProposalServiceClient.formatAccountBudgetProposalName("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
+   *   AccountBudgetProposalName resourceName = AccountBudgetProposalName.of("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
    *   GetAccountBudgetProposalRequest request = GetAccountBudgetProposalRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AccountBudgetProposal&gt; future = accountBudgetProposalServiceClient.getAccountBudgetProposalCallable().futureCall(request);
    *   // Do something
@@ -272,39 +251,6 @@ public class AccountBudgetProposalServiceClient implements BackgroundResource {
   public final UnaryCallable<GetAccountBudgetProposalRequest, AccountBudgetProposal>
       getAccountBudgetProposalCallable() {
     return stub.getAccountBudgetProposalCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes account budget proposals. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient = AccountBudgetProposalServiceClient.create()) {
-   *   String customerId = "";
-   *   AccountBudgetProposalOperation operation = AccountBudgetProposalOperation.newBuilder().build();
-   *   boolean validateOnly = false;
-   *   MutateAccountBudgetProposalResponse response = accountBudgetProposalServiceClient.mutateAccountBudgetProposal(customerId, operation, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer.
-   * @param operation Required. The operation to perform on an individual account-level budget
-   *     proposal.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateAccountBudgetProposalResponse mutateAccountBudgetProposal(
-      String customerId, AccountBudgetProposalOperation operation, boolean validateOnly) {
-    MutateAccountBudgetProposalRequest request =
-        MutateAccountBudgetProposalRequest.newBuilder()
-            .setCustomerId(customerId)
-            .setOperation(operation)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateAccountBudgetProposal(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

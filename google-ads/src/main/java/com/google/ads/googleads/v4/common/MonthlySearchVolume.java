@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.MonthlySearchVolume}
  */
-public  final class MonthlySearchVolume extends
+public final class MonthlySearchVolume extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.MonthlySearchVolume)
     MonthlySearchVolumeOrBuilder {
@@ -127,6 +127,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value year = 1;</code>
    * @return Whether the year field is set.
    */
+  @java.lang.Override
   public boolean hasYear() {
     return year_ != null;
   }
@@ -138,6 +139,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value year = 1;</code>
    * @return The year.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getYear() {
     return year_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : year_;
   }
@@ -148,6 +150,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value year = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getYearOrBuilder() {
     return getYear();
   }
@@ -162,7 +165,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
    * @return The enum numeric value on the wire for month.
    */
-  public int getMonthValue() {
+  @java.lang.Override public int getMonthValue() {
     return month_;
   }
   /**
@@ -173,7 +176,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
    * @return The month.
    */
-  public com.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear getMonth() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear getMonth() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear.valueOf(month_);
     return result == null ? com.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
@@ -191,6 +194,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value monthly_searches = 3;</code>
    * @return Whether the monthlySearches field is set.
    */
+  @java.lang.Override
   public boolean hasMonthlySearches() {
     return monthlySearches_ != null;
   }
@@ -204,6 +208,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value monthly_searches = 3;</code>
    * @return The monthlySearches.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getMonthlySearches() {
     return monthlySearches_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : monthlySearches_;
   }
@@ -216,6 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value monthly_searches = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getMonthlySearchesOrBuilder() {
     return getMonthlySearches();
   }
@@ -749,7 +755,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
      * @return The enum numeric value on the wire for month.
      */
-    public int getMonthValue() {
+    @java.lang.Override public int getMonthValue() {
       return month_;
     }
     /**
@@ -762,6 +768,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMonthValue(int value) {
+      
       month_ = value;
       onChanged();
       return this;
@@ -774,6 +781,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
      * @return The month.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear getMonth() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v4.enums.MonthOfYearEnum.MonthOfYear.valueOf(month_);

@@ -9,73 +9,79 @@ public interface MobileAppCategoryConstantOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the mobile app category constant.
+   * Output only. The resource name of the mobile app category constant.
    * Mobile app category constant resource names have the form:
    * `mobileAppCategoryConstants/{mobile_app_category_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the mobile app category constant.
+   * Output only. The resource name of the mobile app category constant.
    * Mobile app category constant resource names have the form:
    * `mobileAppCategoryConstants/{mobile_app_category_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the mobile app category constant.
+   * Output only. The ID of the mobile app category constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value id = 2;</code>
+   * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the mobile app category constant.
+   * Output only. The ID of the mobile app category constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value id = 2;</code>
+   * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int32Value getId();
   /**
    * <pre>
-   * The ID of the mobile app category constant.
+   * Output only. The ID of the mobile app category constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value id = 2;</code>
+   * <code>.google.protobuf.Int32Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int32ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * Mobile app category name.
+   * Output only. Mobile app category name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
    * <pre>
-   * Mobile app category name.
+   * Output only. Mobile app category name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * Mobile app category name.
+   * Output only. Mobile app category name.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.CallConversionResult}
  */
-public  final class CallConversionResult extends
+public final class CallConversionResult extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.CallConversionResult)
     CallConversionResultOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CallConversionResult() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CallConversionResult();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -139,7 +145,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue caller_id = 1;</code>
+   * @return Whether the callerId field is set.
    */
+  @java.lang.Override
   public boolean hasCallerId() {
     return callerId_ != null;
   }
@@ -150,7 +158,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue caller_id = 1;</code>
+   * @return The callerId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCallerId() {
     return callerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callerId_;
   }
@@ -162,6 +172,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue caller_id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCallerIdOrBuilder() {
     return getCallerId();
   }
@@ -175,7 +186,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_start_date_time = 2;</code>
+   * @return Whether the callStartDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasCallStartDateTime() {
     return callStartDateTime_ != null;
   }
@@ -186,7 +199,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_start_date_time = 2;</code>
+   * @return The callStartDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCallStartDateTime() {
     return callStartDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callStartDateTime_;
   }
@@ -198,6 +213,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue call_start_date_time = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCallStartDateTimeOrBuilder() {
     return getCallStartDateTime();
   }
@@ -210,7 +226,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
+   * @return Whether the conversionAction field is set.
    */
+  @java.lang.Override
   public boolean hasConversionAction() {
     return conversionAction_ != null;
   }
@@ -220,7 +238,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
+   * @return The conversionAction.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionAction() {
     return conversionAction_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionAction_;
   }
@@ -231,6 +251,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionActionOrBuilder() {
     return getConversionAction();
   }
@@ -244,7 +265,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 4;</code>
+   * @return Whether the conversionDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasConversionDateTime() {
     return conversionDateTime_ != null;
   }
@@ -255,7 +278,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 4;</code>
+   * @return The conversionDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionDateTime() {
     return conversionDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionDateTime_;
   }
@@ -267,6 +292,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_date_time = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionDateTimeOrBuilder() {
     return getConversionDateTime();
   }
@@ -690,6 +716,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue caller_id = 1;</code>
+     * @return Whether the callerId field is set.
      */
     public boolean hasCallerId() {
       return callerIdBuilder_ != null || callerId_ != null;
@@ -701,6 +728,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue caller_id = 1;</code>
+     * @return The callerId.
      */
     public com.google.protobuf.StringValue getCallerId() {
       if (callerIdBuilder_ == null) {
@@ -852,6 +880,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue call_start_date_time = 2;</code>
+     * @return Whether the callStartDateTime field is set.
      */
     public boolean hasCallStartDateTime() {
       return callStartDateTimeBuilder_ != null || callStartDateTime_ != null;
@@ -863,6 +892,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue call_start_date_time = 2;</code>
+     * @return The callStartDateTime.
      */
     public com.google.protobuf.StringValue getCallStartDateTime() {
       if (callStartDateTimeBuilder_ == null) {
@@ -1013,6 +1043,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_action = 3;</code>
+     * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
       return conversionActionBuilder_ != null || conversionAction_ != null;
@@ -1023,6 +1054,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_action = 3;</code>
+     * @return The conversionAction.
      */
     public com.google.protobuf.StringValue getConversionAction() {
       if (conversionActionBuilder_ == null) {
@@ -1167,6 +1199,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_date_time = 4;</code>
+     * @return Whether the conversionDateTime field is set.
      */
     public boolean hasConversionDateTime() {
       return conversionDateTimeBuilder_ != null || conversionDateTime_ != null;
@@ -1178,6 +1211,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_date_time = 4;</code>
+     * @return The conversionDateTime.
      */
     public com.google.protobuf.StringValue getConversionDateTime() {
       if (conversionDateTimeBuilder_ == null) {

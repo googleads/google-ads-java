@@ -36,9 +36,9 @@
     <auto-value.version>1.7.3</auto-value.version>
     <!-- Keep all versions below consistent with the io.netty version. -->
     <netty.version>2.0.26.Final</netty.version>
-    <gax.version>1.50.1</gax.version>
-    <grpc.version>1.25.0</grpc.version>
-    <protobuf.version>3.10.0</protobuf.version>
+    <gax.version>1.57.1</gax.version>
+    <grpc.version>1.30.0</grpc.version>
+    <protobuf.version>3.12.2</protobuf.version>
   </properties>
 
   <dependencies>

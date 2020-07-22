@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.CustomerOperation}
  */
-public  final class CustomerOperation extends
+public final class CustomerOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.CustomerOperation)
     CustomerOperationOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CustomerOperation() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CustomerOperation();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -112,7 +118,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Customer update = 1;</code>
+   * @return Whether the update field is set.
    */
+  @java.lang.Override
   public boolean hasUpdate() {
     return update_ != null;
   }
@@ -122,7 +130,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.Customer update = 1;</code>
+   * @return The update.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.Customer getUpdate() {
     return update_ == null ? com.google.ads.googleads.v1.resources.Customer.getDefaultInstance() : update_;
   }
@@ -133,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.resources.Customer update = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.CustomerOrBuilder getUpdateOrBuilder() {
     return getUpdate();
   }
@@ -145,7 +156,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+   * @return Whether the updateMask field is set.
    */
+  @java.lang.Override
   public boolean hasUpdateMask() {
     return updateMask_ != null;
   }
@@ -155,7 +168,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+   * @return The updateMask.
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMask getUpdateMask() {
     return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
   }
@@ -166,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
     return getUpdateMask();
   }
@@ -528,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Customer update = 1;</code>
+     * @return Whether the update field is set.
      */
     public boolean hasUpdate() {
       return updateBuilder_ != null || update_ != null;
@@ -538,6 +555,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.resources.Customer update = 1;</code>
+     * @return The update.
      */
     public com.google.ads.googleads.v1.resources.Customer getUpdate() {
       if (updateBuilder_ == null) {
@@ -681,6 +699,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     public boolean hasUpdateMask() {
       return updateMaskBuilder_ != null || updateMask_ != null;
@@ -691,6 +710,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       if (updateMaskBuilder_ == null) {

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.AdGroupBidModifier}
  */
-public  final class AdGroupBidModifier extends
+public final class AdGroupBidModifier extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.AdGroupBidModifier)
     AdGroupBidModifierOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private AdGroupBidModifier() {
     resourceName_ = "";
     bidModifierSource_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AdGroupBidModifier();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -231,7 +237,8 @@ private static final long serialVersionUID = 0L;
   private int criterionCase_ = 0;
   private java.lang.Object criterion_;
   public enum CriterionCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     HOTEL_DATE_SELECTION_TYPE(5),
     HOTEL_ADVANCE_BOOKING_WINDOW(6),
     HOTEL_LENGTH_OF_STAY(7),
@@ -244,6 +251,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -278,13 +287,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the ad group bid modifier.
+   * Immutable. The resource name of the ad group bid modifier.
    * Ad group bid modifier resource names have the form:
    * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -299,13 +310,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the ad group bid modifier.
+   * Immutable. The resource name of the ad group bid modifier.
    * Ad group bid modifier resource names have the form:
    * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -324,31 +337,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroup_;
   /**
    * <pre>
-   * The ad group to which this criterion belongs.
+   * Immutable. The ad group to which this criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroup() {
     return adGroup_ != null;
   }
   /**
    * <pre>
-   * The ad group to which this criterion belongs.
+   * Immutable. The ad group to which this criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroup() {
     return adGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroup_;
   }
   /**
    * <pre>
-   * The ad group to which this criterion belongs.
+   * Immutable. The ad group to which this criterion belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     return getAdGroup();
   }
@@ -357,34 +375,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value criterionId_;
   /**
    * <pre>
-   * The ID of the criterion to bid modify.
+   * Output only. The ID of the criterion to bid modify.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the criterionId field is set.
    */
+  @java.lang.Override
   public boolean hasCriterionId() {
     return criterionId_ != null;
   }
   /**
    * <pre>
-   * The ID of the criterion to bid modify.
+   * Output only. The ID of the criterion to bid modify.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The criterionId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCriterionId() {
     return criterionId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : criterionId_;
   }
   /**
    * <pre>
-   * The ID of the criterion to bid modify.
+   * Output only. The ID of the criterion to bid modify.
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+   * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder() {
     return getCriterionId();
   }
@@ -399,7 +422,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
+   * @return Whether the bidModifier field is set.
    */
+  @java.lang.Override
   public boolean hasBidModifier() {
     return bidModifier_ != null;
   }
@@ -411,7 +436,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
+   * @return The bidModifier.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getBidModifier() {
     return bidModifier_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : bidModifier_;
   }
@@ -424,6 +451,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getBidModifierOrBuilder() {
     return getBidModifier();
   }
@@ -432,43 +460,48 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue baseAdGroup_;
   /**
    * <pre>
-   * The base ad group from which this draft/trial adgroup bid modifier was
+   * Output only. The base ad group from which this draft/trial adgroup bid modifier was
    * created. If ad_group is a base ad group then this field will be equal to
    * ad_group. If the ad group was created in the draft or trial and has no
    * corresponding base ad group, then this field will be null.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the baseAdGroup field is set.
    */
+  @java.lang.Override
   public boolean hasBaseAdGroup() {
     return baseAdGroup_ != null;
   }
   /**
    * <pre>
-   * The base ad group from which this draft/trial adgroup bid modifier was
+   * Output only. The base ad group from which this draft/trial adgroup bid modifier was
    * created. If ad_group is a base ad group then this field will be equal to
    * ad_group. If the ad group was created in the draft or trial and has no
    * corresponding base ad group, then this field will be null.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The baseAdGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBaseAdGroup() {
     return baseAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : baseAdGroup_;
   }
   /**
    * <pre>
-   * The base ad group from which this draft/trial adgroup bid modifier was
+   * Output only. The base ad group from which this draft/trial adgroup bid modifier was
    * created. If ad_group is a base ad group then this field will be equal to
    * ad_group. If the ad group was created in the draft or trial and has no
    * corresponding base ad group, then this field will be null.
    * This field is readonly.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+   * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder() {
     return getBaseAdGroup();
   }
@@ -477,22 +510,24 @@ private static final long serialVersionUID = 0L;
   private int bidModifierSource_;
   /**
    * <pre>
-   * Bid modifier source.
+   * Output only. Bid modifier source.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+   * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for bidModifierSource.
    */
-  public int getBidModifierSourceValue() {
+  @java.lang.Override public int getBidModifierSourceValue() {
     return bidModifierSource_;
   }
   /**
    * <pre>
-   * Bid modifier source.
+   * Output only. Bid modifier source.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+   * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bidModifierSource.
    */
-  public com.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource getBidModifierSource() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource getBidModifierSource() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource result = com.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource.valueOf(bidModifierSource_);
     return result == null ? com.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource.UNRECOGNIZED : result;
@@ -501,21 +536,25 @@ private static final long serialVersionUID = 0L;
   public static final int HOTEL_DATE_SELECTION_TYPE_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+   * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the hotelDateSelectionType field is set.
    */
+  @java.lang.Override
   public boolean hasHotelDateSelectionType() {
     return criterionCase_ == 5;
   }
   /**
    * <pre>
-   * Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+   * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelDateSelectionType.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo getHotelDateSelectionType() {
     if (criterionCase_ == 5) {
        return (com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo) criterion_;
@@ -524,11 +563,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+   * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfoOrBuilder getHotelDateSelectionTypeOrBuilder() {
     if (criterionCase_ == 5) {
        return (com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo) criterion_;
@@ -539,21 +579,25 @@ private static final long serialVersionUID = 0L;
   public static final int HOTEL_ADVANCE_BOOKING_WINDOW_FIELD_NUMBER = 6;
   /**
    * <pre>
-   * Criterion for number of days prior to the stay the booking is being made.
+   * Immutable. Criterion for number of days prior to the stay the booking is being made.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+   * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the hotelAdvanceBookingWindow field is set.
    */
+  @java.lang.Override
   public boolean hasHotelAdvanceBookingWindow() {
     return criterionCase_ == 6;
   }
   /**
    * <pre>
-   * Criterion for number of days prior to the stay the booking is being made.
+   * Immutable. Criterion for number of days prior to the stay the booking is being made.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+   * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelAdvanceBookingWindow.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo getHotelAdvanceBookingWindow() {
     if (criterionCase_ == 6) {
        return (com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo) criterion_;
@@ -562,11 +606,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Criterion for number of days prior to the stay the booking is being made.
+   * Immutable. Criterion for number of days prior to the stay the booking is being made.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+   * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfoOrBuilder getHotelAdvanceBookingWindowOrBuilder() {
     if (criterionCase_ == 6) {
        return (com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo) criterion_;
@@ -577,21 +622,25 @@ private static final long serialVersionUID = 0L;
   public static final int HOTEL_LENGTH_OF_STAY_FIELD_NUMBER = 7;
   /**
    * <pre>
-   * Criterion for length of hotel stay in nights.
+   * Immutable. Criterion for length of hotel stay in nights.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+   * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the hotelLengthOfStay field is set.
    */
+  @java.lang.Override
   public boolean hasHotelLengthOfStay() {
     return criterionCase_ == 7;
   }
   /**
    * <pre>
-   * Criterion for length of hotel stay in nights.
+   * Immutable. Criterion for length of hotel stay in nights.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+   * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelLengthOfStay.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.HotelLengthOfStayInfo getHotelLengthOfStay() {
     if (criterionCase_ == 7) {
        return (com.google.ads.googleads.v1.common.HotelLengthOfStayInfo) criterion_;
@@ -600,11 +649,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Criterion for length of hotel stay in nights.
+   * Immutable. Criterion for length of hotel stay in nights.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+   * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.HotelLengthOfStayInfoOrBuilder getHotelLengthOfStayOrBuilder() {
     if (criterionCase_ == 7) {
        return (com.google.ads.googleads.v1.common.HotelLengthOfStayInfo) criterion_;
@@ -615,21 +665,25 @@ private static final long serialVersionUID = 0L;
   public static final int HOTEL_CHECK_IN_DAY_FIELD_NUMBER = 8;
   /**
    * <pre>
-   * Criterion for day of the week the booking is for.
+   * Immutable. Criterion for day of the week the booking is for.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+   * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the hotelCheckInDay field is set.
    */
+  @java.lang.Override
   public boolean hasHotelCheckInDay() {
     return criterionCase_ == 8;
   }
   /**
    * <pre>
-   * Criterion for day of the week the booking is for.
+   * Immutable. Criterion for day of the week the booking is for.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+   * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelCheckInDay.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.HotelCheckInDayInfo getHotelCheckInDay() {
     if (criterionCase_ == 8) {
        return (com.google.ads.googleads.v1.common.HotelCheckInDayInfo) criterion_;
@@ -638,11 +692,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Criterion for day of the week the booking is for.
+   * Immutable. Criterion for day of the week the booking is for.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+   * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.HotelCheckInDayInfoOrBuilder getHotelCheckInDayOrBuilder() {
     if (criterionCase_ == 8) {
        return (com.google.ads.googleads.v1.common.HotelCheckInDayInfo) criterion_;
@@ -653,21 +708,25 @@ private static final long serialVersionUID = 0L;
   public static final int DEVICE_FIELD_NUMBER = 11;
   /**
    * <pre>
-   * A device criterion.
+   * Immutable. A device criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+   * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the device field is set.
    */
+  @java.lang.Override
   public boolean hasDevice() {
     return criterionCase_ == 11;
   }
   /**
    * <pre>
-   * A device criterion.
+   * Immutable. A device criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+   * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The device.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.DeviceInfo getDevice() {
     if (criterionCase_ == 11) {
        return (com.google.ads.googleads.v1.common.DeviceInfo) criterion_;
@@ -676,11 +735,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A device criterion.
+   * Immutable. A device criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+   * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.DeviceInfoOrBuilder getDeviceOrBuilder() {
     if (criterionCase_ == 11) {
        return (com.google.ads.googleads.v1.common.DeviceInfo) criterion_;
@@ -691,21 +751,25 @@ private static final long serialVersionUID = 0L;
   public static final int PREFERRED_CONTENT_FIELD_NUMBER = 12;
   /**
    * <pre>
-   * A preferred content criterion.
+   * Immutable. A preferred content criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+   * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the preferredContent field is set.
    */
+  @java.lang.Override
   public boolean hasPreferredContent() {
     return criterionCase_ == 12;
   }
   /**
    * <pre>
-   * A preferred content criterion.
+   * Immutable. A preferred content criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+   * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The preferredContent.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.PreferredContentInfo getPreferredContent() {
     if (criterionCase_ == 12) {
        return (com.google.ads.googleads.v1.common.PreferredContentInfo) criterion_;
@@ -714,11 +778,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A preferred content criterion.
+   * Immutable. A preferred content criterion.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+   * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.PreferredContentInfoOrBuilder getPreferredContentOrBuilder() {
     if (criterionCase_ == 12) {
        return (com.google.ads.googleads.v1.common.PreferredContentInfo) criterion_;
@@ -1359,12 +1424,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the ad group bid modifier.
+     * Immutable. The resource name of the ad group bid modifier.
      * Ad group bid modifier resource names have the form:
      * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1380,12 +1446,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group bid modifier.
+     * Immutable. The resource name of the ad group bid modifier.
      * Ad group bid modifier resource names have the form:
      * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1402,12 +1469,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group bid modifier.
+     * Immutable. The resource name of the ad group bid modifier.
      * Ad group bid modifier resource names have the form:
      * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1421,12 +1490,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group bid modifier.
+     * Immutable. The resource name of the ad group bid modifier.
      * Ad group bid modifier resource names have the form:
      * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1436,12 +1506,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group bid modifier.
+     * Immutable. The resource name of the ad group bid modifier.
      * Ad group bid modifier resource names have the form:
      * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1460,20 +1532,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupBuilder_;
     /**
      * <pre>
-     * The ad group to which this criterion belongs.
+     * Immutable. The ad group to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
       return adGroupBuilder_ != null || adGroup_ != null;
     }
     /**
      * <pre>
-     * The ad group to which this criterion belongs.
+     * Immutable. The ad group to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroup.
      */
     public com.google.protobuf.StringValue getAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -1484,10 +1558,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which this criterion belongs.
+     * Immutable. The ad group to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -1504,10 +1578,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which this criterion belongs.
+     * Immutable. The ad group to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1522,10 +1596,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which this criterion belongs.
+     * Immutable. The ad group to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -1544,10 +1618,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which this criterion belongs.
+     * Immutable. The ad group to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -1562,10 +1636,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which this criterion belongs.
+     * Immutable. The ad group to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupBuilder() {
       
@@ -1574,10 +1648,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which this criterion belongs.
+     * Immutable. The ad group to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
       if (adGroupBuilder_ != null) {
@@ -1589,10 +1663,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group to which this criterion belongs.
+     * Immutable. The ad group to which this criterion belongs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 2;</code>
+     * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1613,22 +1687,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> criterionIdBuilder_;
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the criterionId field is set.
      */
     public boolean hasCriterionId() {
       return criterionIdBuilder_ != null || criterionId_ != null;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The criterionId.
      */
     public com.google.protobuf.Int64Value getCriterionId() {
       if (criterionIdBuilder_ == null) {
@@ -1639,11 +1715,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCriterionId(com.google.protobuf.Int64Value value) {
       if (criterionIdBuilder_ == null) {
@@ -1660,11 +1736,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCriterionId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1679,11 +1755,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCriterionId(com.google.protobuf.Int64Value value) {
       if (criterionIdBuilder_ == null) {
@@ -1702,11 +1778,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCriterionId() {
       if (criterionIdBuilder_ == null) {
@@ -1721,11 +1797,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getCriterionIdBuilder() {
       
@@ -1734,11 +1810,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder() {
       if (criterionIdBuilder_ != null) {
@@ -1750,11 +1826,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the criterion to bid modify.
+     * Output only. The ID of the criterion to bid modify.
      * This field is ignored for mutates.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value criterion_id = 3;</code>
+     * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1781,6 +1857,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
+     * @return Whether the bidModifier field is set.
      */
     public boolean hasBidModifier() {
       return bidModifierBuilder_ != null || bidModifier_ != null;
@@ -1793,6 +1870,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
+     * @return The bidModifier.
      */
     public com.google.protobuf.DoubleValue getBidModifier() {
       if (bidModifierBuilder_ == null) {
@@ -1946,28 +2024,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> baseAdGroupBuilder_;
     /**
      * <pre>
-     * The base ad group from which this draft/trial adgroup bid modifier was
+     * Output only. The base ad group from which this draft/trial adgroup bid modifier was
      * created. If ad_group is a base ad group then this field will be equal to
      * ad_group. If the ad group was created in the draft or trial and has no
      * corresponding base ad group, then this field will be null.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the baseAdGroup field is set.
      */
     public boolean hasBaseAdGroup() {
       return baseAdGroupBuilder_ != null || baseAdGroup_ != null;
     }
     /**
      * <pre>
-     * The base ad group from which this draft/trial adgroup bid modifier was
+     * Output only. The base ad group from which this draft/trial adgroup bid modifier was
      * created. If ad_group is a base ad group then this field will be equal to
      * ad_group. If the ad group was created in the draft or trial and has no
      * corresponding base ad group, then this field will be null.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The baseAdGroup.
      */
     public com.google.protobuf.StringValue getBaseAdGroup() {
       if (baseAdGroupBuilder_ == null) {
@@ -1978,14 +2058,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The base ad group from which this draft/trial adgroup bid modifier was
+     * Output only. The base ad group from which this draft/trial adgroup bid modifier was
      * created. If ad_group is a base ad group then this field will be equal to
      * ad_group. If the ad group was created in the draft or trial and has no
      * corresponding base ad group, then this field will be null.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setBaseAdGroup(com.google.protobuf.StringValue value) {
       if (baseAdGroupBuilder_ == null) {
@@ -2002,14 +2082,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The base ad group from which this draft/trial adgroup bid modifier was
+     * Output only. The base ad group from which this draft/trial adgroup bid modifier was
      * created. If ad_group is a base ad group then this field will be equal to
      * ad_group. If the ad group was created in the draft or trial and has no
      * corresponding base ad group, then this field will be null.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setBaseAdGroup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -2024,14 +2104,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The base ad group from which this draft/trial adgroup bid modifier was
+     * Output only. The base ad group from which this draft/trial adgroup bid modifier was
      * created. If ad_group is a base ad group then this field will be equal to
      * ad_group. If the ad group was created in the draft or trial and has no
      * corresponding base ad group, then this field will be null.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeBaseAdGroup(com.google.protobuf.StringValue value) {
       if (baseAdGroupBuilder_ == null) {
@@ -2050,14 +2130,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The base ad group from which this draft/trial adgroup bid modifier was
+     * Output only. The base ad group from which this draft/trial adgroup bid modifier was
      * created. If ad_group is a base ad group then this field will be equal to
      * ad_group. If the ad group was created in the draft or trial and has no
      * corresponding base ad group, then this field will be null.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearBaseAdGroup() {
       if (baseAdGroupBuilder_ == null) {
@@ -2072,14 +2152,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The base ad group from which this draft/trial adgroup bid modifier was
+     * Output only. The base ad group from which this draft/trial adgroup bid modifier was
      * created. If ad_group is a base ad group then this field will be equal to
      * ad_group. If the ad group was created in the draft or trial and has no
      * corresponding base ad group, then this field will be null.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getBaseAdGroupBuilder() {
       
@@ -2088,14 +2168,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The base ad group from which this draft/trial adgroup bid modifier was
+     * Output only. The base ad group from which this draft/trial adgroup bid modifier was
      * created. If ad_group is a base ad group then this field will be equal to
      * ad_group. If the ad group was created in the draft or trial and has no
      * corresponding base ad group, then this field will be null.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder() {
       if (baseAdGroupBuilder_ != null) {
@@ -2107,14 +2187,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The base ad group from which this draft/trial adgroup bid modifier was
+     * Output only. The base ad group from which this draft/trial adgroup bid modifier was
      * created. If ad_group is a base ad group then this field will be equal to
      * ad_group. If the ad group was created in the draft or trial and has no
      * corresponding base ad group, then this field will be null.
      * This field is readonly.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_ad_group = 9;</code>
+     * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -2133,33 +2213,39 @@ private static final long serialVersionUID = 0L;
     private int bidModifierSource_ = 0;
     /**
      * <pre>
-     * Bid modifier source.
+     * Output only. Bid modifier source.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+     * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for bidModifierSource.
      */
-    public int getBidModifierSourceValue() {
+    @java.lang.Override public int getBidModifierSourceValue() {
       return bidModifierSource_;
     }
     /**
      * <pre>
-     * Bid modifier source.
+     * Output only. Bid modifier source.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+     * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for bidModifierSource to set.
+     * @return This builder for chaining.
      */
     public Builder setBidModifierSourceValue(int value) {
+      
       bidModifierSource_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Bid modifier source.
+     * Output only. Bid modifier source.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+     * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bidModifierSource.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource getBidModifierSource() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource result = com.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource.valueOf(bidModifierSource_);
@@ -2167,10 +2253,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Bid modifier source.
+     * Output only. Bid modifier source.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+     * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The bidModifierSource to set.
+     * @return This builder for chaining.
      */
     public Builder setBidModifierSource(com.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource value) {
       if (value == null) {
@@ -2183,10 +2271,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Bid modifier source.
+     * Output only. Bid modifier source.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10;</code>
+     * <code>.google.ads.googleads.v1.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearBidModifierSource() {
       
@@ -2199,21 +2288,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo, com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo.Builder, com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfoOrBuilder> hotelDateSelectionTypeBuilder_;
     /**
      * <pre>
-     * Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the hotelDateSelectionType field is set.
      */
+    @java.lang.Override
     public boolean hasHotelDateSelectionType() {
       return criterionCase_ == 5;
     }
     /**
      * <pre>
-     * Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The hotelDateSelectionType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo getHotelDateSelectionType() {
       if (hotelDateSelectionTypeBuilder_ == null) {
         if (criterionCase_ == 5) {
@@ -2229,10 +2322,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelDateSelectionType(com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo value) {
       if (hotelDateSelectionTypeBuilder_ == null) {
@@ -2249,10 +2342,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelDateSelectionType(
         com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo.Builder builderForValue) {
@@ -2267,10 +2360,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeHotelDateSelectionType(com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo value) {
       if (hotelDateSelectionTypeBuilder_ == null) {
@@ -2293,10 +2386,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearHotelDateSelectionType() {
       if (hotelDateSelectionTypeBuilder_ == null) {
@@ -2316,21 +2409,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo.Builder getHotelDateSelectionTypeBuilder() {
       return getHotelDateSelectionTypeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfoOrBuilder getHotelDateSelectionTypeOrBuilder() {
       if ((criterionCase_ == 5) && (hotelDateSelectionTypeBuilder_ != null)) {
         return hotelDateSelectionTypeBuilder_.getMessageOrBuilder();
@@ -2343,10 +2437,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5;</code>
+     * <code>.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo, com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfo.Builder, com.google.ads.googleads.v1.common.HotelDateSelectionTypeInfoOrBuilder> 
@@ -2371,21 +2465,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo, com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo.Builder, com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfoOrBuilder> hotelAdvanceBookingWindowBuilder_;
     /**
      * <pre>
-     * Criterion for number of days prior to the stay the booking is being made.
+     * Immutable. Criterion for number of days prior to the stay the booking is being made.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the hotelAdvanceBookingWindow field is set.
      */
+    @java.lang.Override
     public boolean hasHotelAdvanceBookingWindow() {
       return criterionCase_ == 6;
     }
     /**
      * <pre>
-     * Criterion for number of days prior to the stay the booking is being made.
+     * Immutable. Criterion for number of days prior to the stay the booking is being made.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The hotelAdvanceBookingWindow.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo getHotelAdvanceBookingWindow() {
       if (hotelAdvanceBookingWindowBuilder_ == null) {
         if (criterionCase_ == 6) {
@@ -2401,10 +2499,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for number of days prior to the stay the booking is being made.
+     * Immutable. Criterion for number of days prior to the stay the booking is being made.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelAdvanceBookingWindow(com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo value) {
       if (hotelAdvanceBookingWindowBuilder_ == null) {
@@ -2421,10 +2519,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for number of days prior to the stay the booking is being made.
+     * Immutable. Criterion for number of days prior to the stay the booking is being made.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelAdvanceBookingWindow(
         com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo.Builder builderForValue) {
@@ -2439,10 +2537,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for number of days prior to the stay the booking is being made.
+     * Immutable. Criterion for number of days prior to the stay the booking is being made.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeHotelAdvanceBookingWindow(com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo value) {
       if (hotelAdvanceBookingWindowBuilder_ == null) {
@@ -2465,10 +2563,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for number of days prior to the stay the booking is being made.
+     * Immutable. Criterion for number of days prior to the stay the booking is being made.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearHotelAdvanceBookingWindow() {
       if (hotelAdvanceBookingWindowBuilder_ == null) {
@@ -2488,21 +2586,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for number of days prior to the stay the booking is being made.
+     * Immutable. Criterion for number of days prior to the stay the booking is being made.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo.Builder getHotelAdvanceBookingWindowBuilder() {
       return getHotelAdvanceBookingWindowFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Criterion for number of days prior to the stay the booking is being made.
+     * Immutable. Criterion for number of days prior to the stay the booking is being made.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfoOrBuilder getHotelAdvanceBookingWindowOrBuilder() {
       if ((criterionCase_ == 6) && (hotelAdvanceBookingWindowBuilder_ != null)) {
         return hotelAdvanceBookingWindowBuilder_.getMessageOrBuilder();
@@ -2515,10 +2614,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for number of days prior to the stay the booking is being made.
+     * Immutable. Criterion for number of days prior to the stay the booking is being made.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6;</code>
+     * <code>.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo, com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfo.Builder, com.google.ads.googleads.v1.common.HotelAdvanceBookingWindowInfoOrBuilder> 
@@ -2543,21 +2642,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.common.HotelLengthOfStayInfo, com.google.ads.googleads.v1.common.HotelLengthOfStayInfo.Builder, com.google.ads.googleads.v1.common.HotelLengthOfStayInfoOrBuilder> hotelLengthOfStayBuilder_;
     /**
      * <pre>
-     * Criterion for length of hotel stay in nights.
+     * Immutable. Criterion for length of hotel stay in nights.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the hotelLengthOfStay field is set.
      */
+    @java.lang.Override
     public boolean hasHotelLengthOfStay() {
       return criterionCase_ == 7;
     }
     /**
      * <pre>
-     * Criterion for length of hotel stay in nights.
+     * Immutable. Criterion for length of hotel stay in nights.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The hotelLengthOfStay.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.HotelLengthOfStayInfo getHotelLengthOfStay() {
       if (hotelLengthOfStayBuilder_ == null) {
         if (criterionCase_ == 7) {
@@ -2573,10 +2676,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for length of hotel stay in nights.
+     * Immutable. Criterion for length of hotel stay in nights.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelLengthOfStay(com.google.ads.googleads.v1.common.HotelLengthOfStayInfo value) {
       if (hotelLengthOfStayBuilder_ == null) {
@@ -2593,10 +2696,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for length of hotel stay in nights.
+     * Immutable. Criterion for length of hotel stay in nights.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelLengthOfStay(
         com.google.ads.googleads.v1.common.HotelLengthOfStayInfo.Builder builderForValue) {
@@ -2611,10 +2714,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for length of hotel stay in nights.
+     * Immutable. Criterion for length of hotel stay in nights.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeHotelLengthOfStay(com.google.ads.googleads.v1.common.HotelLengthOfStayInfo value) {
       if (hotelLengthOfStayBuilder_ == null) {
@@ -2637,10 +2740,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for length of hotel stay in nights.
+     * Immutable. Criterion for length of hotel stay in nights.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearHotelLengthOfStay() {
       if (hotelLengthOfStayBuilder_ == null) {
@@ -2660,21 +2763,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for length of hotel stay in nights.
+     * Immutable. Criterion for length of hotel stay in nights.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.common.HotelLengthOfStayInfo.Builder getHotelLengthOfStayBuilder() {
       return getHotelLengthOfStayFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Criterion for length of hotel stay in nights.
+     * Immutable. Criterion for length of hotel stay in nights.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.HotelLengthOfStayInfoOrBuilder getHotelLengthOfStayOrBuilder() {
       if ((criterionCase_ == 7) && (hotelLengthOfStayBuilder_ != null)) {
         return hotelLengthOfStayBuilder_.getMessageOrBuilder();
@@ -2687,10 +2791,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for length of hotel stay in nights.
+     * Immutable. Criterion for length of hotel stay in nights.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7;</code>
+     * <code>.google.ads.googleads.v1.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.HotelLengthOfStayInfo, com.google.ads.googleads.v1.common.HotelLengthOfStayInfo.Builder, com.google.ads.googleads.v1.common.HotelLengthOfStayInfoOrBuilder> 
@@ -2715,21 +2819,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.common.HotelCheckInDayInfo, com.google.ads.googleads.v1.common.HotelCheckInDayInfo.Builder, com.google.ads.googleads.v1.common.HotelCheckInDayInfoOrBuilder> hotelCheckInDayBuilder_;
     /**
      * <pre>
-     * Criterion for day of the week the booking is for.
+     * Immutable. Criterion for day of the week the booking is for.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the hotelCheckInDay field is set.
      */
+    @java.lang.Override
     public boolean hasHotelCheckInDay() {
       return criterionCase_ == 8;
     }
     /**
      * <pre>
-     * Criterion for day of the week the booking is for.
+     * Immutable. Criterion for day of the week the booking is for.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The hotelCheckInDay.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.HotelCheckInDayInfo getHotelCheckInDay() {
       if (hotelCheckInDayBuilder_ == null) {
         if (criterionCase_ == 8) {
@@ -2745,10 +2853,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for day of the week the booking is for.
+     * Immutable. Criterion for day of the week the booking is for.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelCheckInDay(com.google.ads.googleads.v1.common.HotelCheckInDayInfo value) {
       if (hotelCheckInDayBuilder_ == null) {
@@ -2765,10 +2873,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for day of the week the booking is for.
+     * Immutable. Criterion for day of the week the booking is for.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelCheckInDay(
         com.google.ads.googleads.v1.common.HotelCheckInDayInfo.Builder builderForValue) {
@@ -2783,10 +2891,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for day of the week the booking is for.
+     * Immutable. Criterion for day of the week the booking is for.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeHotelCheckInDay(com.google.ads.googleads.v1.common.HotelCheckInDayInfo value) {
       if (hotelCheckInDayBuilder_ == null) {
@@ -2809,10 +2917,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for day of the week the booking is for.
+     * Immutable. Criterion for day of the week the booking is for.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearHotelCheckInDay() {
       if (hotelCheckInDayBuilder_ == null) {
@@ -2832,21 +2940,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for day of the week the booking is for.
+     * Immutable. Criterion for day of the week the booking is for.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.common.HotelCheckInDayInfo.Builder getHotelCheckInDayBuilder() {
       return getHotelCheckInDayFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Criterion for day of the week the booking is for.
+     * Immutable. Criterion for day of the week the booking is for.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.HotelCheckInDayInfoOrBuilder getHotelCheckInDayOrBuilder() {
       if ((criterionCase_ == 8) && (hotelCheckInDayBuilder_ != null)) {
         return hotelCheckInDayBuilder_.getMessageOrBuilder();
@@ -2859,10 +2968,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Criterion for day of the week the booking is for.
+     * Immutable. Criterion for day of the week the booking is for.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8;</code>
+     * <code>.google.ads.googleads.v1.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.HotelCheckInDayInfo, com.google.ads.googleads.v1.common.HotelCheckInDayInfo.Builder, com.google.ads.googleads.v1.common.HotelCheckInDayInfoOrBuilder> 
@@ -2887,21 +2996,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.common.DeviceInfo, com.google.ads.googleads.v1.common.DeviceInfo.Builder, com.google.ads.googleads.v1.common.DeviceInfoOrBuilder> deviceBuilder_;
     /**
      * <pre>
-     * A device criterion.
+     * Immutable. A device criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the device field is set.
      */
+    @java.lang.Override
     public boolean hasDevice() {
       return criterionCase_ == 11;
     }
     /**
      * <pre>
-     * A device criterion.
+     * Immutable. A device criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The device.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.DeviceInfo getDevice() {
       if (deviceBuilder_ == null) {
         if (criterionCase_ == 11) {
@@ -2917,10 +3030,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A device criterion.
+     * Immutable. A device criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setDevice(com.google.ads.googleads.v1.common.DeviceInfo value) {
       if (deviceBuilder_ == null) {
@@ -2937,10 +3050,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A device criterion.
+     * Immutable. A device criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setDevice(
         com.google.ads.googleads.v1.common.DeviceInfo.Builder builderForValue) {
@@ -2955,10 +3068,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A device criterion.
+     * Immutable. A device criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeDevice(com.google.ads.googleads.v1.common.DeviceInfo value) {
       if (deviceBuilder_ == null) {
@@ -2981,10 +3094,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A device criterion.
+     * Immutable. A device criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearDevice() {
       if (deviceBuilder_ == null) {
@@ -3004,21 +3117,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A device criterion.
+     * Immutable. A device criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.common.DeviceInfo.Builder getDeviceBuilder() {
       return getDeviceFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * A device criterion.
+     * Immutable. A device criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.DeviceInfoOrBuilder getDeviceOrBuilder() {
       if ((criterionCase_ == 11) && (deviceBuilder_ != null)) {
         return deviceBuilder_.getMessageOrBuilder();
@@ -3031,10 +3145,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A device criterion.
+     * Immutable. A device criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11;</code>
+     * <code>.google.ads.googleads.v1.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.DeviceInfo, com.google.ads.googleads.v1.common.DeviceInfo.Builder, com.google.ads.googleads.v1.common.DeviceInfoOrBuilder> 
@@ -3059,21 +3173,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.common.PreferredContentInfo, com.google.ads.googleads.v1.common.PreferredContentInfo.Builder, com.google.ads.googleads.v1.common.PreferredContentInfoOrBuilder> preferredContentBuilder_;
     /**
      * <pre>
-     * A preferred content criterion.
+     * Immutable. A preferred content criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the preferredContent field is set.
      */
+    @java.lang.Override
     public boolean hasPreferredContent() {
       return criterionCase_ == 12;
     }
     /**
      * <pre>
-     * A preferred content criterion.
+     * Immutable. A preferred content criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The preferredContent.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.PreferredContentInfo getPreferredContent() {
       if (preferredContentBuilder_ == null) {
         if (criterionCase_ == 12) {
@@ -3089,10 +3207,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A preferred content criterion.
+     * Immutable. A preferred content criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setPreferredContent(com.google.ads.googleads.v1.common.PreferredContentInfo value) {
       if (preferredContentBuilder_ == null) {
@@ -3109,10 +3227,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A preferred content criterion.
+     * Immutable. A preferred content criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setPreferredContent(
         com.google.ads.googleads.v1.common.PreferredContentInfo.Builder builderForValue) {
@@ -3127,10 +3245,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A preferred content criterion.
+     * Immutable. A preferred content criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergePreferredContent(com.google.ads.googleads.v1.common.PreferredContentInfo value) {
       if (preferredContentBuilder_ == null) {
@@ -3153,10 +3271,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A preferred content criterion.
+     * Immutable. A preferred content criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearPreferredContent() {
       if (preferredContentBuilder_ == null) {
@@ -3176,21 +3294,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A preferred content criterion.
+     * Immutable. A preferred content criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.common.PreferredContentInfo.Builder getPreferredContentBuilder() {
       return getPreferredContentFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * A preferred content criterion.
+     * Immutable. A preferred content criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.common.PreferredContentInfoOrBuilder getPreferredContentOrBuilder() {
       if ((criterionCase_ == 12) && (preferredContentBuilder_ != null)) {
         return preferredContentBuilder_.getMessageOrBuilder();
@@ -3203,10 +3322,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A preferred content criterion.
+     * Immutable. A preferred content criterion.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12;</code>
+     * <code>.google.ads.googleads.v1.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.common.PreferredContentInfo, com.google.ads.googleads.v1.common.PreferredContentInfo.Builder, com.google.ads.googleads.v1.common.PreferredContentInfoOrBuilder> 

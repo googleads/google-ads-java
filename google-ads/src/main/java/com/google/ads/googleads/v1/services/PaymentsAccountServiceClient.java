@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ import javax.annotation.Generated;
 
 // AUTO-GENERATED DOCUMENTATION AND SERVICE
 /**
- * Service Description: Service to provide Payments accounts that can be used to set up consolidated
+ * Service Description: Service to provide payments accounts that can be used to set up consolidated
  * billing.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
@@ -149,7 +149,7 @@ public class PaymentsAccountServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns all Payments accounts associated with all managers between the login customer ID and
+   * Returns all payments accounts associated with all managers between the login customer ID and
    * specified serving customer in the hierarchy, inclusive.
    *
    * <p>Sample code:
@@ -161,11 +161,11 @@ public class PaymentsAccountServiceClient implements BackgroundResource {
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer to apply the PaymentsAccount list operation to.
+   * @param customerId Required. The ID of the customer to apply the PaymentsAccount list operation
+   *     to.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListPaymentsAccountsResponse listPaymentsAccounts(String customerId) {
-
     ListPaymentsAccountsRequest request =
         ListPaymentsAccountsRequest.newBuilder().setCustomerId(customerId).build();
     return listPaymentsAccounts(request);
@@ -173,7 +173,7 @@ public class PaymentsAccountServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns all Payments accounts associated with all managers between the login customer ID and
+   * Returns all payments accounts associated with all managers between the login customer ID and
    * specified serving customer in the hierarchy, inclusive.
    *
    * <p>Sample code:
@@ -198,7 +198,7 @@ public class PaymentsAccountServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
   /**
-   * Returns all Payments accounts associated with all managers between the login customer ID and
+   * Returns all payments accounts associated with all managers between the login customer ID and
    * specified serving customer in the hierarchy, inclusive.
    *
    * <p>Sample code:

@@ -13,6 +13,7 @@ public interface LocationInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   * @return Whether the geoTargetConstant field is set.
    */
   boolean hasGeoTargetConstant();
   /**
@@ -21,6 +22,7 @@ public interface LocationInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   * @return The geoTargetConstant.
    */
   com.google.protobuf.StringValue getGeoTargetConstant();
   /**

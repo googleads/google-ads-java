@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.AssetServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -38,8 +37,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
- *   String formattedResourceName = AssetServiceClient.formatAssetName("[CUSTOMER]", "[ASSET]");
- *   Asset response = assetServiceClient.getAsset(formattedResourceName);
+ *   AssetName resourceName = AssetName.of("[CUSTOMER]", "[ASSET]");
+ *   Asset response = assetServiceClient.getAsset(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,41 +99,6 @@ public class AssetServiceClient implements BackgroundResource {
   private final AssetServiceSettings settings;
   private final AssetServiceStub stub;
 
-  private static final PathTemplate ASSET_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/assets/{asset}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a asset resource.
-   *
-   * @deprecated Use the {@link AssetName} class instead.
-   */
-  @Deprecated
-  public static final String formatAssetName(String customer, String asset) {
-    return ASSET_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "asset", asset);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a asset resource.
-   *
-   * @deprecated Use the {@link AssetName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAssetName(String assetName) {
-    return ASSET_PATH_TEMPLATE.parse(assetName).get("customer");
-  }
-
-  /**
-   * Parses the asset from the given fully-qualified path which represents a asset resource.
-   *
-   * @deprecated Use the {@link AssetName} class instead.
-   */
-  @Deprecated
-  public static final String parseAssetFromAssetName(String assetName) {
-    return ASSET_PATH_TEMPLATE.parse(assetName).get("asset");
-  }
-
   /** Constructs an instance of AssetServiceClient with default settings. */
   public static final AssetServiceClient create() throws IOException {
     return create(AssetServiceSettings.newBuilder().build());
@@ -190,8 +154,32 @@ public class AssetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
-   *   String formattedResourceName = AssetServiceClient.formatAssetName("[CUSTOMER]", "[ASSET]");
-   *   Asset response = assetServiceClient.getAsset(formattedResourceName);
+   *   AssetName resourceName = AssetName.of("[CUSTOMER]", "[ASSET]");
+   *   Asset response = assetServiceClient.getAsset(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the asset to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final Asset getAsset(AssetName resourceName) {
+    GetAssetRequest request =
+        GetAssetRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAsset(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested asset in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
+   *   AssetName resourceName = AssetName.of("[CUSTOMER]", "[ASSET]");
+   *   Asset response = assetServiceClient.getAsset(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -199,7 +187,6 @@ public class AssetServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Asset getAsset(String resourceName) {
-    ASSET_PATH_TEMPLATE.validate(resourceName, "getAsset");
     GetAssetRequest request = GetAssetRequest.newBuilder().setResourceName(resourceName).build();
     return getAsset(request);
   }
@@ -212,9 +199,9 @@ public class AssetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
-   *   String formattedResourceName = AssetServiceClient.formatAssetName("[CUSTOMER]", "[ASSET]");
+   *   AssetName resourceName = AssetName.of("[CUSTOMER]", "[ASSET]");
    *   GetAssetRequest request = GetAssetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   Asset response = assetServiceClient.getAsset(request);
    * }
@@ -235,9 +222,9 @@ public class AssetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
-   *   String formattedResourceName = AssetServiceClient.formatAssetName("[CUSTOMER]", "[ASSET]");
+   *   AssetName resourceName = AssetName.of("[CUSTOMER]", "[ASSET]");
    *   GetAssetRequest request = GetAssetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;Asset&gt; future = assetServiceClient.getAssetCallable().futureCall(request);
    *   // Do something

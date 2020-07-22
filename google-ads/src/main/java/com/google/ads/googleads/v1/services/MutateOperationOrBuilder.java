@@ -13,6 +13,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupAdLabelOperation ad_group_ad_label_operation = 17;</code>
+   * @return Whether the adGroupAdLabelOperation field is set.
    */
   boolean hasAdGroupAdLabelOperation();
   /**
@@ -21,6 +22,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupAdLabelOperation ad_group_ad_label_operation = 17;</code>
+   * @return The adGroupAdLabelOperation.
    */
   com.google.ads.googleads.v1.services.AdGroupAdLabelOperation getAdGroupAdLabelOperation();
   /**
@@ -38,6 +40,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupAdOperation ad_group_ad_operation = 1;</code>
+   * @return Whether the adGroupAdOperation field is set.
    */
   boolean hasAdGroupAdOperation();
   /**
@@ -46,6 +49,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupAdOperation ad_group_ad_operation = 1;</code>
+   * @return The adGroupAdOperation.
    */
   com.google.ads.googleads.v1.services.AdGroupAdOperation getAdGroupAdOperation();
   /**
@@ -63,6 +67,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupBidModifierOperation ad_group_bid_modifier_operation = 2;</code>
+   * @return Whether the adGroupBidModifierOperation field is set.
    */
   boolean hasAdGroupBidModifierOperation();
   /**
@@ -71,6 +76,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupBidModifierOperation ad_group_bid_modifier_operation = 2;</code>
+   * @return The adGroupBidModifierOperation.
    */
   com.google.ads.googleads.v1.services.AdGroupBidModifierOperation getAdGroupBidModifierOperation();
   /**
@@ -88,6 +94,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupCriterionLabelOperation ad_group_criterion_label_operation = 18;</code>
+   * @return Whether the adGroupCriterionLabelOperation field is set.
    */
   boolean hasAdGroupCriterionLabelOperation();
   /**
@@ -96,6 +103,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupCriterionLabelOperation ad_group_criterion_label_operation = 18;</code>
+   * @return The adGroupCriterionLabelOperation.
    */
   com.google.ads.googleads.v1.services.AdGroupCriterionLabelOperation getAdGroupCriterionLabelOperation();
   /**
@@ -113,6 +121,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupCriterionOperation ad_group_criterion_operation = 3;</code>
+   * @return Whether the adGroupCriterionOperation field is set.
    */
   boolean hasAdGroupCriterionOperation();
   /**
@@ -121,6 +130,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupCriterionOperation ad_group_criterion_operation = 3;</code>
+   * @return The adGroupCriterionOperation.
    */
   com.google.ads.googleads.v1.services.AdGroupCriterionOperation getAdGroupCriterionOperation();
   /**
@@ -138,6 +148,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupExtensionSettingOperation ad_group_extension_setting_operation = 19;</code>
+   * @return Whether the adGroupExtensionSettingOperation field is set.
    */
   boolean hasAdGroupExtensionSettingOperation();
   /**
@@ -146,6 +157,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupExtensionSettingOperation ad_group_extension_setting_operation = 19;</code>
+   * @return The adGroupExtensionSettingOperation.
    */
   com.google.ads.googleads.v1.services.AdGroupExtensionSettingOperation getAdGroupExtensionSettingOperation();
   /**
@@ -163,6 +175,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupFeedOperation ad_group_feed_operation = 20;</code>
+   * @return Whether the adGroupFeedOperation field is set.
    */
   boolean hasAdGroupFeedOperation();
   /**
@@ -171,6 +184,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupFeedOperation ad_group_feed_operation = 20;</code>
+   * @return The adGroupFeedOperation.
    */
   com.google.ads.googleads.v1.services.AdGroupFeedOperation getAdGroupFeedOperation();
   /**
@@ -188,6 +202,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupLabelOperation ad_group_label_operation = 21;</code>
+   * @return Whether the adGroupLabelOperation field is set.
    */
   boolean hasAdGroupLabelOperation();
   /**
@@ -196,6 +211,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupLabelOperation ad_group_label_operation = 21;</code>
+   * @return The adGroupLabelOperation.
    */
   com.google.ads.googleads.v1.services.AdGroupLabelOperation getAdGroupLabelOperation();
   /**
@@ -213,6 +229,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupOperation ad_group_operation = 5;</code>
+   * @return Whether the adGroupOperation field is set.
    */
   boolean hasAdGroupOperation();
   /**
@@ -221,6 +238,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdGroupOperation ad_group_operation = 5;</code>
+   * @return The adGroupOperation.
    */
   com.google.ads.googleads.v1.services.AdGroupOperation getAdGroupOperation();
   /**
@@ -238,6 +256,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdParameterOperation ad_parameter_operation = 22;</code>
+   * @return Whether the adParameterOperation field is set.
    */
   boolean hasAdParameterOperation();
   /**
@@ -246,6 +265,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AdParameterOperation ad_parameter_operation = 22;</code>
+   * @return The adParameterOperation.
    */
   com.google.ads.googleads.v1.services.AdParameterOperation getAdParameterOperation();
   /**
@@ -263,6 +283,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+   * @return Whether the assetOperation field is set.
    */
   boolean hasAssetOperation();
   /**
@@ -271,6 +292,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.AssetOperation asset_operation = 23;</code>
+   * @return The assetOperation.
    */
   com.google.ads.googleads.v1.services.AssetOperation getAssetOperation();
   /**
@@ -288,6 +310,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.BiddingStrategyOperation bidding_strategy_operation = 6;</code>
+   * @return Whether the biddingStrategyOperation field is set.
    */
   boolean hasBiddingStrategyOperation();
   /**
@@ -296,6 +319,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.BiddingStrategyOperation bidding_strategy_operation = 6;</code>
+   * @return The biddingStrategyOperation.
    */
   com.google.ads.googleads.v1.services.BiddingStrategyOperation getBiddingStrategyOperation();
   /**
@@ -313,6 +337,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignBidModifierOperation campaign_bid_modifier_operation = 7;</code>
+   * @return Whether the campaignBidModifierOperation field is set.
    */
   boolean hasCampaignBidModifierOperation();
   /**
@@ -321,6 +346,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignBidModifierOperation campaign_bid_modifier_operation = 7;</code>
+   * @return The campaignBidModifierOperation.
    */
   com.google.ads.googleads.v1.services.CampaignBidModifierOperation getCampaignBidModifierOperation();
   /**
@@ -338,6 +364,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignBudgetOperation campaign_budget_operation = 8;</code>
+   * @return Whether the campaignBudgetOperation field is set.
    */
   boolean hasCampaignBudgetOperation();
   /**
@@ -346,6 +373,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignBudgetOperation campaign_budget_operation = 8;</code>
+   * @return The campaignBudgetOperation.
    */
   com.google.ads.googleads.v1.services.CampaignBudgetOperation getCampaignBudgetOperation();
   /**
@@ -363,6 +391,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignCriterionOperation campaign_criterion_operation = 13;</code>
+   * @return Whether the campaignCriterionOperation field is set.
    */
   boolean hasCampaignCriterionOperation();
   /**
@@ -371,6 +400,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignCriterionOperation campaign_criterion_operation = 13;</code>
+   * @return The campaignCriterionOperation.
    */
   com.google.ads.googleads.v1.services.CampaignCriterionOperation getCampaignCriterionOperation();
   /**
@@ -388,6 +418,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
+   * @return Whether the campaignDraftOperation field is set.
    */
   boolean hasCampaignDraftOperation();
   /**
@@ -396,6 +427,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignDraftOperation campaign_draft_operation = 24;</code>
+   * @return The campaignDraftOperation.
    */
   com.google.ads.googleads.v1.services.CampaignDraftOperation getCampaignDraftOperation();
   /**
@@ -413,6 +445,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
+   * @return Whether the campaignExperimentOperation field is set.
    */
   boolean hasCampaignExperimentOperation();
   /**
@@ -421,6 +454,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignExperimentOperation campaign_experiment_operation = 25;</code>
+   * @return The campaignExperimentOperation.
    */
   com.google.ads.googleads.v1.services.CampaignExperimentOperation getCampaignExperimentOperation();
   /**
@@ -438,6 +472,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignExtensionSettingOperation campaign_extension_setting_operation = 26;</code>
+   * @return Whether the campaignExtensionSettingOperation field is set.
    */
   boolean hasCampaignExtensionSettingOperation();
   /**
@@ -446,6 +481,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignExtensionSettingOperation campaign_extension_setting_operation = 26;</code>
+   * @return The campaignExtensionSettingOperation.
    */
   com.google.ads.googleads.v1.services.CampaignExtensionSettingOperation getCampaignExtensionSettingOperation();
   /**
@@ -463,6 +499,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignFeedOperation campaign_feed_operation = 27;</code>
+   * @return Whether the campaignFeedOperation field is set.
    */
   boolean hasCampaignFeedOperation();
   /**
@@ -471,6 +508,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignFeedOperation campaign_feed_operation = 27;</code>
+   * @return The campaignFeedOperation.
    */
   com.google.ads.googleads.v1.services.CampaignFeedOperation getCampaignFeedOperation();
   /**
@@ -488,6 +526,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignLabelOperation campaign_label_operation = 28;</code>
+   * @return Whether the campaignLabelOperation field is set.
    */
   boolean hasCampaignLabelOperation();
   /**
@@ -496,6 +535,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignLabelOperation campaign_label_operation = 28;</code>
+   * @return The campaignLabelOperation.
    */
   com.google.ads.googleads.v1.services.CampaignLabelOperation getCampaignLabelOperation();
   /**
@@ -513,6 +553,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignOperation campaign_operation = 10;</code>
+   * @return Whether the campaignOperation field is set.
    */
   boolean hasCampaignOperation();
   /**
@@ -521,6 +562,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignOperation campaign_operation = 10;</code>
+   * @return The campaignOperation.
    */
   com.google.ads.googleads.v1.services.CampaignOperation getCampaignOperation();
   /**
@@ -538,6 +580,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignSharedSetOperation campaign_shared_set_operation = 11;</code>
+   * @return Whether the campaignSharedSetOperation field is set.
    */
   boolean hasCampaignSharedSetOperation();
   /**
@@ -546,6 +589,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CampaignSharedSetOperation campaign_shared_set_operation = 11;</code>
+   * @return The campaignSharedSetOperation.
    */
   com.google.ads.googleads.v1.services.CampaignSharedSetOperation getCampaignSharedSetOperation();
   /**
@@ -563,6 +607,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ConversionActionOperation conversion_action_operation = 12;</code>
+   * @return Whether the conversionActionOperation field is set.
    */
   boolean hasConversionActionOperation();
   /**
@@ -571,6 +616,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ConversionActionOperation conversion_action_operation = 12;</code>
+   * @return The conversionActionOperation.
    */
   com.google.ads.googleads.v1.services.ConversionActionOperation getConversionActionOperation();
   /**
@@ -588,6 +634,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CustomerExtensionSettingOperation customer_extension_setting_operation = 30;</code>
+   * @return Whether the customerExtensionSettingOperation field is set.
    */
   boolean hasCustomerExtensionSettingOperation();
   /**
@@ -596,6 +643,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CustomerExtensionSettingOperation customer_extension_setting_operation = 30;</code>
+   * @return The customerExtensionSettingOperation.
    */
   com.google.ads.googleads.v1.services.CustomerExtensionSettingOperation getCustomerExtensionSettingOperation();
   /**
@@ -613,6 +661,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CustomerFeedOperation customer_feed_operation = 31;</code>
+   * @return Whether the customerFeedOperation field is set.
    */
   boolean hasCustomerFeedOperation();
   /**
@@ -621,6 +670,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CustomerFeedOperation customer_feed_operation = 31;</code>
+   * @return The customerFeedOperation.
    */
   com.google.ads.googleads.v1.services.CustomerFeedOperation getCustomerFeedOperation();
   /**
@@ -638,6 +688,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CustomerLabelOperation customer_label_operation = 32;</code>
+   * @return Whether the customerLabelOperation field is set.
    */
   boolean hasCustomerLabelOperation();
   /**
@@ -646,6 +697,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CustomerLabelOperation customer_label_operation = 32;</code>
+   * @return The customerLabelOperation.
    */
   com.google.ads.googleads.v1.services.CustomerLabelOperation getCustomerLabelOperation();
   /**
@@ -663,6 +715,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CustomerNegativeCriterionOperation customer_negative_criterion_operation = 34;</code>
+   * @return Whether the customerNegativeCriterionOperation field is set.
    */
   boolean hasCustomerNegativeCriterionOperation();
   /**
@@ -671,6 +724,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CustomerNegativeCriterionOperation customer_negative_criterion_operation = 34;</code>
+   * @return The customerNegativeCriterionOperation.
    */
   com.google.ads.googleads.v1.services.CustomerNegativeCriterionOperation getCustomerNegativeCriterionOperation();
   /**
@@ -688,6 +742,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CustomerOperation customer_operation = 35;</code>
+   * @return Whether the customerOperation field is set.
    */
   boolean hasCustomerOperation();
   /**
@@ -696,6 +751,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.CustomerOperation customer_operation = 35;</code>
+   * @return The customerOperation.
    */
   com.google.ads.googleads.v1.services.CustomerOperation getCustomerOperation();
   /**
@@ -713,6 +769,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ExtensionFeedItemOperation extension_feed_item_operation = 36;</code>
+   * @return Whether the extensionFeedItemOperation field is set.
    */
   boolean hasExtensionFeedItemOperation();
   /**
@@ -721,6 +778,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.ExtensionFeedItemOperation extension_feed_item_operation = 36;</code>
+   * @return The extensionFeedItemOperation.
    */
   com.google.ads.googleads.v1.services.ExtensionFeedItemOperation getExtensionFeedItemOperation();
   /**
@@ -738,6 +796,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.FeedItemOperation feed_item_operation = 37;</code>
+   * @return Whether the feedItemOperation field is set.
    */
   boolean hasFeedItemOperation();
   /**
@@ -746,6 +805,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.FeedItemOperation feed_item_operation = 37;</code>
+   * @return The feedItemOperation.
    */
   com.google.ads.googleads.v1.services.FeedItemOperation getFeedItemOperation();
   /**
@@ -763,6 +823,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.FeedItemTargetOperation feed_item_target_operation = 38;</code>
+   * @return Whether the feedItemTargetOperation field is set.
    */
   boolean hasFeedItemTargetOperation();
   /**
@@ -771,6 +832,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.FeedItemTargetOperation feed_item_target_operation = 38;</code>
+   * @return The feedItemTargetOperation.
    */
   com.google.ads.googleads.v1.services.FeedItemTargetOperation getFeedItemTargetOperation();
   /**
@@ -788,6 +850,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.FeedMappingOperation feed_mapping_operation = 39;</code>
+   * @return Whether the feedMappingOperation field is set.
    */
   boolean hasFeedMappingOperation();
   /**
@@ -796,6 +859,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.FeedMappingOperation feed_mapping_operation = 39;</code>
+   * @return The feedMappingOperation.
    */
   com.google.ads.googleads.v1.services.FeedMappingOperation getFeedMappingOperation();
   /**
@@ -813,6 +877,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.FeedOperation feed_operation = 40;</code>
+   * @return Whether the feedOperation field is set.
    */
   boolean hasFeedOperation();
   /**
@@ -821,6 +886,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.FeedOperation feed_operation = 40;</code>
+   * @return The feedOperation.
    */
   com.google.ads.googleads.v1.services.FeedOperation getFeedOperation();
   /**
@@ -838,6 +904,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.LabelOperation label_operation = 41;</code>
+   * @return Whether the labelOperation field is set.
    */
   boolean hasLabelOperation();
   /**
@@ -846,6 +913,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.LabelOperation label_operation = 41;</code>
+   * @return The labelOperation.
    */
   com.google.ads.googleads.v1.services.LabelOperation getLabelOperation();
   /**
@@ -863,6 +931,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.MediaFileOperation media_file_operation = 42;</code>
+   * @return Whether the mediaFileOperation field is set.
    */
   boolean hasMediaFileOperation();
   /**
@@ -871,6 +940,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.MediaFileOperation media_file_operation = 42;</code>
+   * @return The mediaFileOperation.
    */
   com.google.ads.googleads.v1.services.MediaFileOperation getMediaFileOperation();
   /**
@@ -888,6 +958,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.RemarketingActionOperation remarketing_action_operation = 43;</code>
+   * @return Whether the remarketingActionOperation field is set.
    */
   boolean hasRemarketingActionOperation();
   /**
@@ -896,6 +967,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.RemarketingActionOperation remarketing_action_operation = 43;</code>
+   * @return The remarketingActionOperation.
    */
   com.google.ads.googleads.v1.services.RemarketingActionOperation getRemarketingActionOperation();
   /**
@@ -913,6 +985,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.SharedCriterionOperation shared_criterion_operation = 14;</code>
+   * @return Whether the sharedCriterionOperation field is set.
    */
   boolean hasSharedCriterionOperation();
   /**
@@ -921,6 +994,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.SharedCriterionOperation shared_criterion_operation = 14;</code>
+   * @return The sharedCriterionOperation.
    */
   com.google.ads.googleads.v1.services.SharedCriterionOperation getSharedCriterionOperation();
   /**
@@ -938,6 +1012,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.SharedSetOperation shared_set_operation = 15;</code>
+   * @return Whether the sharedSetOperation field is set.
    */
   boolean hasSharedSetOperation();
   /**
@@ -946,6 +1021,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.SharedSetOperation shared_set_operation = 15;</code>
+   * @return The sharedSetOperation.
    */
   com.google.ads.googleads.v1.services.SharedSetOperation getSharedSetOperation();
   /**
@@ -963,6 +1039,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.UserListOperation user_list_operation = 16;</code>
+   * @return Whether the userListOperation field is set.
    */
   boolean hasUserListOperation();
   /**
@@ -971,6 +1048,7 @@ public interface MutateOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.UserListOperation user_list_operation = 16;</code>
+   * @return The userListOperation.
    */
   com.google.ads.googleads.v1.services.UserListOperation getUserListOperation();
   /**

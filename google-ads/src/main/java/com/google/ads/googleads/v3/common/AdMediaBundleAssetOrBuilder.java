@@ -13,6 +13,7 @@ public interface AdMediaBundleAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue asset = 1;</code>
+   * @return Whether the asset field is set.
    */
   boolean hasAsset();
   /**
@@ -21,6 +22,7 @@ public interface AdMediaBundleAssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue asset = 1;</code>
+   * @return The asset.
    */
   com.google.protobuf.StringValue getAsset();
   /**

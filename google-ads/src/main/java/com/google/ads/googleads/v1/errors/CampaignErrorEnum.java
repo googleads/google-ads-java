@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.errors;
  *
  * Protobuf type {@code google.ads.googleads.v1.errors.CampaignErrorEnum}
  */
-public  final class CampaignErrorEnum extends
+public final class CampaignErrorEnum extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.errors.CampaignErrorEnum)
     CampaignErrorEnumOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CampaignErrorEnum() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CampaignErrorEnum();
   }
 
   @java.lang.Override
@@ -211,7 +218,7 @@ private static final long serialVersionUID = 0L;
     INVALID_AD_SERVING_OPTIMIZATION_STATUS(15),
     /**
      * <pre>
-     * Error in the campaign level tracking url.
+     * Error in the campaign level tracking URL.
      * </pre>
      *
      * <code>INVALID_TRACKING_URL = 16;</code>
@@ -219,8 +226,8 @@ private static final long serialVersionUID = 0L;
     INVALID_TRACKING_URL(16),
     /**
      * <pre>
-     * Cannot set both tracking url template and tracking setting. An user has
-     * to clear legacy tracking setting in order to add tracking url template.
+     * Cannot set both tracking URL template and tracking setting. A user has
+     * to clear legacy tracking setting in order to add tracking URL template.
      * </pre>
      *
      * <code>CANNOT_SET_BOTH_TRACKING_URL_TEMPLATE_AND_TRACKING_SETTING = 17;</code>
@@ -556,7 +563,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_AD_SERVING_OPTIMIZATION_STATUS_VALUE = 15;
     /**
      * <pre>
-     * Error in the campaign level tracking url.
+     * Error in the campaign level tracking URL.
      * </pre>
      *
      * <code>INVALID_TRACKING_URL = 16;</code>
@@ -564,8 +571,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_TRACKING_URL_VALUE = 16;
     /**
      * <pre>
-     * Cannot set both tracking url template and tracking setting. An user has
-     * to clear legacy tracking setting in order to add tracking url template.
+     * Cannot set both tracking URL template and tracking setting. A user has
+     * to clear legacy tracking setting in order to add tracking URL template.
      * </pre>
      *
      * <code>CANNOT_SET_BOTH_TRACKING_URL_TEMPLATE_AND_TRACKING_SETTING = 17;</code>
@@ -784,6 +791,8 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -791,6 +800,10 @@ private static final long serialVersionUID = 0L;
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static CampaignError forNumber(int value) {
       switch (value) {
         case 0: return UNSPECIFIED;
@@ -852,6 +865,10 @@ private static final long serialVersionUID = 0L;
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor

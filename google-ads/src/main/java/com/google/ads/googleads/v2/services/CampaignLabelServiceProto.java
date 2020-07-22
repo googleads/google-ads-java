@@ -52,58 +52,56 @@ public final class CampaignLabelServiceProto {
       "ign_label_service.proto\022 google.ads.goog" +
       "leads.v2.services\0326google/ads/googleads/" +
       "v2/resources/campaign_label.proto\032\034googl" +
-      "e/api/annotations.proto\032\027google/rpc/stat" +
-      "us.proto\032\027google/api/client.proto\"0\n\027Get" +
-      "CampaignLabelRequest\022\025\n\rresource_name\030\001 " +
-      "\001(\t\"\260\001\n\033MutateCampaignLabelsRequest\022\023\n\013c" +
-      "ustomer_id\030\001 \001(\t\022L\n\noperations\030\002 \003(\01328.g" +
-      "oogle.ads.googleads.v2.services.Campaign" +
-      "LabelOperation\022\027\n\017partial_failure\030\003 \001(\010\022" +
-      "\025\n\rvalidate_only\030\004 \001(\010\"{\n\026CampaignLabelO" +
-      "peration\022B\n\006create\030\001 \001(\01320.google.ads.go" +
-      "ogleads.v2.resources.CampaignLabelH\000\022\020\n\006" +
-      "remove\030\002 \001(\tH\000B\013\n\toperation\"\237\001\n\034MutateCa" +
-      "mpaignLabelsResponse\0221\n\025partial_failure_" +
-      "error\030\003 \001(\0132\022.google.rpc.Status\022L\n\007resul" +
-      "ts\030\002 \003(\0132;.google.ads.googleads.v2.servi" +
-      "ces.MutateCampaignLabelResult\"2\n\031MutateC" +
-      "ampaignLabelResult\022\025\n\rresource_name\030\001 \001(" +
-      "\t2\307\003\n\024CampaignLabelService\022\271\001\n\020GetCampai" +
-      "gnLabel\0229.google.ads.googleads.v2.servic" +
-      "es.GetCampaignLabelRequest\0320.google.ads." +
-      "googleads.v2.resources.CampaignLabel\"8\202\323" +
-      "\344\223\0022\0220/v2/{resource_name=customers/*/cam" +
-      "paignLabels/*}\022\325\001\n\024MutateCampaignLabels\022" +
-      "=.google.ads.googleads.v2.services.Mutat" +
-      "eCampaignLabelsRequest\032>.google.ads.goog" +
-      "leads.v2.services.MutateCampaignLabelsRe" +
-      "sponse\">\202\323\344\223\0028\"3/v2/customers/{customer_" +
-      "id=*}/campaignLabels:mutate:\001*\032\033\312A\030googl" +
-      "eads.googleapis.comB\200\002\n$com.google.ads.g" +
-      "oogleads.v2.servicesB\031CampaignLabelServi" +
-      "ceProtoP\001ZHgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v2/services;servi" +
-      "ces\242\002\003GAA\252\002 Google.Ads.GoogleAds.V2.Serv" +
-      "ices\312\002 Google\\Ads\\GoogleAds\\V2\\Services\352" +
-      "\002$Google::Ads::GoogleAds::V2::Servicesb\006" +
-      "proto3"
+      "e/api/annotations.proto\032\027google/api/clie" +
+      "nt.proto\032\037google/api/field_behavior.prot" +
+      "o\032\031google/api/resource.proto\032\027google/rpc" +
+      "/status.proto\"`\n\027GetCampaignLabelRequest" +
+      "\022E\n\rresource_name\030\001 \001(\tB.\340A\002\372A(\n&googlea" +
+      "ds.googleapis.com/CampaignLabel\"\272\001\n\033Muta" +
+      "teCampaignLabelsRequest\022\030\n\013customer_id\030\001" +
+      " \001(\tB\003\340A\002\022Q\n\noperations\030\002 \003(\01328.google.a" +
+      "ds.googleads.v2.services.CampaignLabelOp" +
+      "erationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n" +
+      "\rvalidate_only\030\004 \001(\010\"{\n\026CampaignLabelOpe" +
+      "ration\022B\n\006create\030\001 \001(\01320.google.ads.goog" +
+      "leads.v2.resources.CampaignLabelH\000\022\020\n\006re" +
+      "move\030\002 \001(\tH\000B\013\n\toperation\"\237\001\n\034MutateCamp" +
+      "aignLabelsResponse\0221\n\025partial_failure_er" +
+      "ror\030\003 \001(\0132\022.google.rpc.Status\022L\n\007results" +
+      "\030\002 \003(\0132;.google.ads.googleads.v2.service" +
+      "s.MutateCampaignLabelResult\"2\n\031MutateCam" +
+      "paignLabelResult\022\025\n\rresource_name\030\001 \001(\t2" +
+      "\360\003\n\024CampaignLabelService\022\311\001\n\020GetCampaign" +
+      "Label\0229.google.ads.googleads.v2.services" +
+      ".GetCampaignLabelRequest\0320.google.ads.go" +
+      "ogleads.v2.resources.CampaignLabel\"H\202\323\344\223" +
+      "\0022\0220/v2/{resource_name=customers/*/campa" +
+      "ignLabels/*}\332A\rresource_name\022\356\001\n\024MutateC" +
+      "ampaignLabels\022=.google.ads.googleads.v2." +
+      "services.MutateCampaignLabelsRequest\032>.g" +
+      "oogle.ads.googleads.v2.services.MutateCa" +
+      "mpaignLabelsResponse\"W\202\323\344\223\0028\"3/v2/custom" +
+      "ers/{customer_id=*}/campaignLabels:mutat" +
+      "e:\001*\332A\026customer_id,operations\032\033\312A\030google" +
+      "ads.googleapis.comB\200\002\n$com.google.ads.go" +
+      "ogleads.v2.servicesB\031CampaignLabelServic" +
+      "eProtoP\001ZHgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v2/services;servic" +
+      "es\242\002\003GAA\252\002 Google.Ads.GoogleAds.V2.Servi" +
+      "ces\312\002 Google\\Ads\\GoogleAds\\V2\\Services\352\002" +
+      "$Google::Ads::GoogleAds::V2::Servicesb\006p" +
+      "roto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.CampaignLabelProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_GetCampaignLabelRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetCampaignLabelRequest_fieldAccessorTable = new
@@ -137,13 +135,18 @@ public final class CampaignLabelServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.CampaignLabelProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.rpc.StatusProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -52,64 +52,62 @@ public final class RemarketingActionServiceProto {
       "keting_action_service.proto\022 google.ads." +
       "googleads.v2.services\032:google/ads/google" +
       "ads/v2/resources/remarketing_action.prot" +
-      "o\032\034google/api/annotations.proto\032 google/" +
-      "protobuf/field_mask.proto\032\027google/rpc/st" +
-      "atus.proto\032\027google/api/client.proto\"4\n\033G" +
-      "etRemarketingActionRequest\022\025\n\rresource_n" +
-      "ame\030\001 \001(\t\"\270\001\n\037MutateRemarketingActionsRe" +
-      "quest\022\023\n\013customer_id\030\001 \001(\t\022P\n\noperations" +
-      "\030\002 \003(\0132<.google.ads.googleads.v2.service" +
-      "s.RemarketingActionOperation\022\027\n\017partial_" +
-      "failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\352\001\n" +
-      "\032RemarketingActionOperation\022/\n\013update_ma" +
-      "sk\030\004 \001(\0132\032.google.protobuf.FieldMask\022F\n\006" +
-      "create\030\001 \001(\01324.google.ads.googleads.v2.r" +
-      "esources.RemarketingActionH\000\022F\n\006update\030\002" +
-      " \001(\01324.google.ads.googleads.v2.resources" +
-      ".RemarketingActionH\000B\013\n\toperation\"\247\001\n Mu" +
-      "tateRemarketingActionsResponse\0221\n\025partia" +
-      "l_failure_error\030\003 \001(\0132\022.google.rpc.Statu" +
-      "s\022P\n\007results\030\002 \003(\0132?.google.ads.googlead" +
-      "s.v2.services.MutateRemarketingActionRes" +
-      "ult\"6\n\035MutateRemarketingActionResult\022\025\n\r" +
-      "resource_name\030\001 \001(\t2\353\003\n\030RemarketingActio" +
-      "nService\022\311\001\n\024GetRemarketingAction\022=.goog" +
-      "le.ads.googleads.v2.services.GetRemarket" +
-      "ingActionRequest\0324.google.ads.googleads." +
-      "v2.resources.RemarketingAction\"<\202\323\344\223\0026\0224" +
-      "/v2/{resource_name=customers/*/remarketi" +
-      "ngActions/*}\022\345\001\n\030MutateRemarketingAction" +
-      "s\022A.google.ads.googleads.v2.services.Mut" +
-      "ateRemarketingActionsRequest\032B.google.ad" +
-      "s.googleads.v2.services.MutateRemarketin" +
-      "gActionsResponse\"B\202\323\344\223\002<\"7/v2/customers/" +
-      "{customer_id=*}/remarketingActions:mutat" +
-      "e:\001*\032\033\312A\030googleads.googleapis.comB\204\002\n$co" +
-      "m.google.ads.googleads.v2.servicesB\035Rema" +
-      "rketingActionServiceProtoP\001ZHgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v2/services;services\242\002\003GAA\252\002 Google.Ads" +
-      ".GoogleAds.V2.Services\312\002 Google\\Ads\\Goog" +
-      "leAds\\V2\\Services\352\002$Google::Ads::GoogleA" +
-      "ds::V2::Servicesb\006proto3"
+      "o\032\034google/api/annotations.proto\032\027google/" +
+      "api/client.proto\032\037google/api/field_behav" +
+      "ior.proto\032\031google/api/resource.proto\032 go" +
+      "ogle/protobuf/field_mask.proto\032\027google/r" +
+      "pc/status.proto\"h\n\033GetRemarketingActionR" +
+      "equest\022I\n\rresource_name\030\001 \001(\tB2\340A\002\372A,\n*g" +
+      "oogleads.googleapis.com/RemarketingActio" +
+      "n\"\302\001\n\037MutateRemarketingActionsRequest\022\030\n" +
+      "\013customer_id\030\001 \001(\tB\003\340A\002\022U\n\noperations\030\002 " +
+      "\003(\0132<.google.ads.googleads.v2.services.R" +
+      "emarketingActionOperationB\003\340A\002\022\027\n\017partia" +
+      "l_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\352" +
+      "\001\n\032RemarketingActionOperation\022/\n\013update_" +
+      "mask\030\004 \001(\0132\032.google.protobuf.FieldMask\022F" +
+      "\n\006create\030\001 \001(\01324.google.ads.googleads.v2" +
+      ".resources.RemarketingActionH\000\022F\n\006update" +
+      "\030\002 \001(\01324.google.ads.googleads.v2.resourc" +
+      "es.RemarketingActionH\000B\013\n\toperation\"\247\001\n " +
+      "MutateRemarketingActionsResponse\0221\n\025part" +
+      "ial_failure_error\030\003 \001(\0132\022.google.rpc.Sta" +
+      "tus\022P\n\007results\030\002 \003(\0132?.google.ads.google" +
+      "ads.v2.services.MutateRemarketingActionR" +
+      "esult\"6\n\035MutateRemarketingActionResult\022\025" +
+      "\n\rresource_name\030\001 \001(\t2\224\004\n\030RemarketingAct" +
+      "ionService\022\331\001\n\024GetRemarketingAction\022=.go" +
+      "ogle.ads.googleads.v2.services.GetRemark" +
+      "etingActionRequest\0324.google.ads.googlead" +
+      "s.v2.resources.RemarketingAction\"L\202\323\344\223\0026" +
+      "\0224/v2/{resource_name=customers/*/remarke" +
+      "tingActions/*}\332A\rresource_name\022\376\001\n\030Mutat" +
+      "eRemarketingActions\022A.google.ads.googlea" +
+      "ds.v2.services.MutateRemarketingActionsR" +
+      "equest\032B.google.ads.googleads.v2.service" +
+      "s.MutateRemarketingActionsResponse\"[\202\323\344\223" +
+      "\002<\"7/v2/customers/{customer_id=*}/remark" +
+      "etingActions:mutate:\001*\332A\026customer_id,ope" +
+      "rations\032\033\312A\030googleads.googleapis.comB\204\002\n" +
+      "$com.google.ads.googleads.v2.servicesB\035R" +
+      "emarketingActionServiceProtoP\001ZHgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v2/services;services\242\002\003GAA\252\002 Google." +
+      "Ads.GoogleAds.V2.Services\312\002 Google\\Ads\\G" +
+      "oogleAds\\V2\\Services\352\002$Google::Ads::Goog" +
+      "leAds::V2::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.RemarketingActionProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_services_GetRemarketingActionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetRemarketingActionRequest_fieldAccessorTable = new
@@ -143,14 +141,19 @@ public final class RemarketingActionServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.RemarketingActionProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurve}
  */
-public  final class KeywordPlanCampaignForecastCurve extends
+public final class KeywordPlanCampaignForecastCurve extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.KeywordPlanCampaignForecastCurve)
     KeywordPlanCampaignForecastCurveOrBuilder {
@@ -121,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
    * @return Whether the keywordPlanCampaign field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanCampaign() {
     return keywordPlanCampaign_ != null;
   }
@@ -133,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
    * @return The keywordPlanCampaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywordPlanCampaign() {
     return keywordPlanCampaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlanCampaign_;
   }
@@ -144,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanCampaignOrBuilder() {
     return getKeywordPlanCampaign();
   }
@@ -158,6 +161,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecastCurve max_cpc_bid_forecast_curve = 2;</code>
    * @return Whether the maxCpcBidForecastCurve field is set.
    */
+  @java.lang.Override
   public boolean hasMaxCpcBidForecastCurve() {
     return maxCpcBidForecastCurve_ != null;
   }
@@ -169,6 +173,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecastCurve max_cpc_bid_forecast_curve = 2;</code>
    * @return The maxCpcBidForecastCurve.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecastCurve getMaxCpcBidForecastCurve() {
     return maxCpcBidForecastCurve_ == null ? com.google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecastCurve.getDefaultInstance() : maxCpcBidForecastCurve_;
   }
@@ -179,6 +184,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecastCurve max_cpc_bid_forecast_curve = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.KeywordPlanMaxCpcBidForecastCurveOrBuilder getMaxCpcBidForecastCurveOrBuilder() {
     return getMaxCpcBidForecastCurve();
   }

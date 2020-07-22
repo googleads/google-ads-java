@@ -15,6 +15,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue transaction_date_time = 1;</code>
+   * @return Whether the transactionDateTime field is set.
    */
   boolean hasTransactionDateTime();
   /**
@@ -25,6 +26,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue transaction_date_time = 1;</code>
+   * @return The transactionDateTime.
    */
   com.google.protobuf.StringValue getTransactionDateTime();
   /**
@@ -44,6 +46,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue transaction_amount_micros = 2;</code>
+   * @return Whether the transactionAmountMicros field is set.
    */
   boolean hasTransactionAmountMicros();
   /**
@@ -52,6 +55,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue transaction_amount_micros = 2;</code>
+   * @return The transactionAmountMicros.
    */
   com.google.protobuf.DoubleValue getTransactionAmountMicros();
   /**
@@ -69,6 +73,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 3;</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -77,6 +82,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 3;</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
@@ -95,6 +101,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 4;</code>
+   * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
   /**
@@ -104,6 +111,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 4;</code>
+   * @return The conversionAction.
    */
   com.google.protobuf.StringValue getConversionAction();
   /**
@@ -123,6 +131,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue order_id = 5;</code>
+   * @return Whether the orderId field is set.
    */
   boolean hasOrderId();
   /**
@@ -132,6 +141,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue order_id = 5;</code>
+   * @return The orderId.
    */
   com.google.protobuf.StringValue getOrderId();
   /**
@@ -151,6 +161,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.StoreAttribute store_attribute = 6;</code>
+   * @return Whether the storeAttribute field is set.
    */
   boolean hasStoreAttribute();
   /**
@@ -160,6 +171,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.StoreAttribute store_attribute = 6;</code>
+   * @return The storeAttribute.
    */
   com.google.ads.googleads.v3.common.StoreAttribute getStoreAttribute();
   /**
@@ -179,6 +191,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_value = 7;</code>
+   * @return Whether the customValue field is set.
    */
   boolean hasCustomValue();
   /**
@@ -188,6 +201,7 @@ public interface TransactionAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_value = 7;</code>
+   * @return The customValue.
    */
   com.google.protobuf.StringValue getCustomValue();
   /**

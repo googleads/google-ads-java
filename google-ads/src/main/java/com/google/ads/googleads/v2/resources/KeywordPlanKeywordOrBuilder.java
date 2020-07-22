@@ -9,22 +9,24 @@ public interface KeywordPlanKeywordOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the Keyword Plan ad group keyword.
+   * Immutable. The resource name of the Keyword Plan ad group keyword.
    * KeywordPlanKeyword resource names have the form:
    * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the Keyword Plan ad group keyword.
+   * Immutable. The resource name of the Keyword Plan ad group keyword.
    * KeywordPlanKeyword resource names have the form:
    * `customers/{customer_id}/keywordPlanKeywords/{kp_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -34,7 +36,8 @@ public interface KeywordPlanKeywordOrBuilder extends
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the keywordPlanAdGroup field is set.
    */
   boolean hasKeywordPlanAdGroup();
   /**
@@ -42,7 +45,8 @@ public interface KeywordPlanKeywordOrBuilder extends
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
+   * @return The keywordPlanAdGroup.
    */
   com.google.protobuf.StringValue getKeywordPlanAdGroup();
   /**
@@ -50,32 +54,34 @@ public interface KeywordPlanKeywordOrBuilder extends
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2;</code>
+   * <code>.google.protobuf.StringValue keyword_plan_ad_group = 2 [(.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getKeywordPlanAdGroupOrBuilder();
 
   /**
    * <pre>
-   * The ID of the Keyword Plan keyword.
+   * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the Keyword Plan keyword.
+   * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the Keyword Plan keyword.
+   * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
@@ -85,6 +91,7 @@ public interface KeywordPlanKeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 4;</code>
+   * @return Whether the text field is set.
    */
   boolean hasText();
   /**
@@ -93,6 +100,7 @@ public interface KeywordPlanKeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 4;</code>
+   * @return The text.
    */
   com.google.protobuf.StringValue getText();
   /**
@@ -110,6 +118,7 @@ public interface KeywordPlanKeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 5;</code>
+   * @return The enum numeric value on the wire for matchType.
    */
   int getMatchTypeValue();
   /**
@@ -118,6 +127,7 @@ public interface KeywordPlanKeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 5;</code>
+   * @return The matchType.
    */
   com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType();
 
@@ -128,6 +138,7 @@ public interface KeywordPlanKeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 6;</code>
+   * @return Whether the cpcBidMicros field is set.
    */
   boolean hasCpcBidMicros();
   /**
@@ -137,6 +148,7 @@ public interface KeywordPlanKeywordOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 6;</code>
+   * @return The cpcBidMicros.
    */
   com.google.protobuf.Int64Value getCpcBidMicros();
   /**

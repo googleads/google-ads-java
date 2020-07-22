@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.SharedCriterionServiceStubSetti
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
- *   String formattedResourceName = SharedCriterionServiceClient.formatSharedCriteriaName("[CUSTOMER]", "[SHARED_CRITERIA]");
- *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(formattedResourceName);
+ *   SharedCriterionName resourceName = SharedCriterionName.of("[CUSTOMER]", "[SHARED_CRITERION]");
+ *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,44 +99,6 @@ public class SharedCriterionServiceClient implements BackgroundResource {
   private final SharedCriterionServiceSettings settings;
   private final SharedCriterionServiceStub stub;
 
-  private static final PathTemplate SHARED_CRITERIA_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/sharedCriteria/{shared_criteria}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a shared_criteria resource.
-   *
-   * @deprecated Use the {@link SharedCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String formatSharedCriteriaName(String customer, String sharedCriteria) {
-    return SHARED_CRITERIA_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "shared_criteria", sharedCriteria);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a shared_criteria
-   * resource.
-   *
-   * @deprecated Use the {@link SharedCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromSharedCriteriaName(String sharedCriteriaName) {
-    return SHARED_CRITERIA_PATH_TEMPLATE.parse(sharedCriteriaName).get("customer");
-  }
-
-  /**
-   * Parses the shared_criteria from the given fully-qualified path which represents a
-   * shared_criteria resource.
-   *
-   * @deprecated Use the {@link SharedCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String parseSharedCriteriaFromSharedCriteriaName(String sharedCriteriaName) {
-    return SHARED_CRITERIA_PATH_TEMPLATE.parse(sharedCriteriaName).get("shared_criteria");
-  }
-
   /** Constructs an instance of SharedCriterionServiceClient with default settings. */
   public static final SharedCriterionServiceClient create() throws IOException {
     return create(SharedCriterionServiceSettings.newBuilder().build());
@@ -195,8 +156,32 @@ public class SharedCriterionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
-   *   String formattedResourceName = SharedCriterionServiceClient.formatSharedCriteriaName("[CUSTOMER]", "[SHARED_CRITERIA]");
-   *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(formattedResourceName);
+   *   SharedCriterionName resourceName = SharedCriterionName.of("[CUSTOMER]", "[SHARED_CRITERION]");
+   *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the shared criterion to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final SharedCriterion getSharedCriterion(SharedCriterionName resourceName) {
+    GetSharedCriterionRequest request =
+        GetSharedCriterionRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getSharedCriterion(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested shared criterion in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
+   *   SharedCriterionName resourceName = SharedCriterionName.of("[CUSTOMER]", "[SHARED_CRITERION]");
+   *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -204,7 +189,6 @@ public class SharedCriterionServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SharedCriterion getSharedCriterion(String resourceName) {
-    SHARED_CRITERIA_PATH_TEMPLATE.validate(resourceName, "getSharedCriterion");
     GetSharedCriterionRequest request =
         GetSharedCriterionRequest.newBuilder().setResourceName(resourceName).build();
     return getSharedCriterion(request);
@@ -218,9 +202,9 @@ public class SharedCriterionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
-   *   String formattedResourceName = SharedCriterionServiceClient.formatSharedCriteriaName("[CUSTOMER]", "[SHARED_CRITERIA]");
+   *   SharedCriterionName resourceName = SharedCriterionName.of("[CUSTOMER]", "[SHARED_CRITERION]");
    *   GetSharedCriterionRequest request = GetSharedCriterionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(request);
    * }
@@ -241,9 +225,9 @@ public class SharedCriterionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
-   *   String formattedResourceName = SharedCriterionServiceClient.formatSharedCriteriaName("[CUSTOMER]", "[SHARED_CRITERIA]");
+   *   SharedCriterionName resourceName = SharedCriterionName.of("[CUSTOMER]", "[SHARED_CRITERION]");
    *   GetSharedCriterionRequest request = GetSharedCriterionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;SharedCriterion&gt; future = sharedCriterionServiceClient.getSharedCriterionCallable().futureCall(request);
    *   // Do something
@@ -254,46 +238,6 @@ public class SharedCriterionServiceClient implements BackgroundResource {
   public final UnaryCallable<GetSharedCriterionRequest, SharedCriterion>
       getSharedCriterionCallable() {
     return stub.getSharedCriterionCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates or removes shared criteria. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;SharedCriterionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateSharedCriteriaResponse response = sharedCriterionServiceClient.mutateSharedCriteria(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose shared criteria are being modified.
-   * @param operations Required. The list of operations to perform on individual shared criteria.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateSharedCriteriaResponse mutateSharedCriteria(
-      String customerId,
-      List<SharedCriterionOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-    MutateSharedCriteriaRequest request =
-        MutateSharedCriteriaRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateSharedCriteria(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

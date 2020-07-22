@@ -13,6 +13,7 @@ public interface CriterionCategoryAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability channel = 1;</code>
+   * @return Whether the channel field is set.
    */
   boolean hasChannel();
   /**
@@ -21,6 +22,7 @@ public interface CriterionCategoryAvailabilityOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability channel = 1;</code>
+   * @return The channel.
    */
   com.google.ads.googleads.v2.common.CriterionCategoryChannelAvailability getChannel();
   /**

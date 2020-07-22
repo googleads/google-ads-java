@@ -33,36 +33,33 @@ public final class TopicConstantServiceProto {
       "leads.v1.services\0326google/ads/googleads/" +
       "v1/resources/topic_constant.proto\032\034googl" +
       "e/api/annotations.proto\032\027google/api/clie" +
-      "nt.proto\"0\n\027GetTopicConstantRequest\022\025\n\rr" +
-      "esource_name\030\001 \001(\t2\343\001\n\024TopicConstantServ" +
-      "ice\022\255\001\n\020GetTopicConstant\0229.google.ads.go" +
-      "ogleads.v1.services.GetTopicConstantRequ" +
-      "est\0320.google.ads.googleads.v1.resources." +
-      "TopicConstant\",\202\323\344\223\002&\022$/v1/{resource_nam" +
-      "e=topicConstants/*}\032\033\312A\030googleads.google" +
-      "apis.comB\200\002\n$com.google.ads.googleads.v1" +
-      ".servicesB\031TopicConstantServiceProtoP\001ZH" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v1/services;services\242\002\003GAA\252\002" +
-      " Google.Ads.GoogleAds.V1.Services\312\002 Goog" +
-      "le\\Ads\\GoogleAds\\V1\\Services\352\002$Google::A" +
-      "ds::GoogleAds::V1::Servicesb\006proto3"
+      "nt.proto\032\037google/api/field_behavior.prot" +
+      "o\032\031google/api/resource.proto\"`\n\027GetTopic" +
+      "ConstantRequest\022E\n\rresource_name\030\001 \001(\tB." +
+      "\340A\002\372A(\n&googleads.googleapis.com/TopicCo" +
+      "nstant2\363\001\n\024TopicConstantService\022\275\001\n\020GetT" +
+      "opicConstant\0229.google.ads.googleads.v1.s" +
+      "ervices.GetTopicConstantRequest\0320.google" +
+      ".ads.googleads.v1.resources.TopicConstan" +
+      "t\"<\202\323\344\223\002&\022$/v1/{resource_name=topicConst" +
+      "ants/*}\332A\rresource_name\032\033\312A\030googleads.go" +
+      "ogleapis.comB\200\002\n$com.google.ads.googlead" +
+      "s.v1.servicesB\031TopicConstantServiceProto" +
+      "P\001ZHgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v1/services;services\242\002\003G" +
+      "AA\252\002 Google.Ads.GoogleAds.V1.Services\312\002 " +
+      "Google\\Ads\\GoogleAds\\V1\\Services\352\002$Googl" +
+      "e::Ads::GoogleAds::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.TopicConstantProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetTopicConstantRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetTopicConstantRequest_fieldAccessorTable = new
@@ -72,12 +69,17 @@ public final class TopicConstantServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.TopicConstantProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

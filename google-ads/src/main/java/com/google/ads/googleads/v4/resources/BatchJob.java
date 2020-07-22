@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.BatchJob}
  */
-public  final class BatchJob extends
+public final class BatchJob extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.BatchJob)
     BatchJobOrBuilder {
@@ -311,7 +311,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.resources.BatchJob.BatchJobMetadata}
    */
-  public  static final class BatchJobMetadata extends
+  public static final class BatchJobMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.BatchJob.BatchJobMetadata)
       BatchJobMetadataOrBuilder {
@@ -461,6 +461,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the creationDateTime field is set.
      */
+    @java.lang.Override
     public boolean hasCreationDateTime() {
       return creationDateTime_ != null;
     }
@@ -473,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The creationDateTime.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCreationDateTime() {
       return creationDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creationDateTime_;
     }
@@ -484,6 +486,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue creation_date_time = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCreationDateTimeOrBuilder() {
       return getCreationDateTime();
     }
@@ -499,6 +502,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the completionDateTime field is set.
      */
+    @java.lang.Override
     public boolean hasCompletionDateTime() {
       return completionDateTime_ != null;
     }
@@ -511,6 +515,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The completionDateTime.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCompletionDateTime() {
       return completionDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : completionDateTime_;
     }
@@ -522,6 +527,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue completion_date_time = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCompletionDateTimeOrBuilder() {
       return getCompletionDateTime();
     }
@@ -537,6 +543,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the estimatedCompletionRatio field is set.
      */
+    @java.lang.Override
     public boolean hasEstimatedCompletionRatio() {
       return estimatedCompletionRatio_ != null;
     }
@@ -549,6 +556,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The estimatedCompletionRatio.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getEstimatedCompletionRatio() {
       return estimatedCompletionRatio_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : estimatedCompletionRatio_;
     }
@@ -560,6 +568,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.DoubleValue estimated_completion_ratio = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getEstimatedCompletionRatioOrBuilder() {
       return getEstimatedCompletionRatio();
     }
@@ -574,6 +583,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the operationCount field is set.
      */
+    @java.lang.Override
     public boolean hasOperationCount() {
       return operationCount_ != null;
     }
@@ -585,6 +595,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The operationCount.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getOperationCount() {
       return operationCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : operationCount_;
     }
@@ -595,6 +606,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value operation_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getOperationCountOrBuilder() {
       return getOperationCount();
     }
@@ -610,6 +622,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the executedOperationCount field is set.
      */
+    @java.lang.Override
     public boolean hasExecutedOperationCount() {
       return executedOperationCount_ != null;
     }
@@ -622,6 +635,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The executedOperationCount.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getExecutedOperationCount() {
       return executedOperationCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : executedOperationCount_;
     }
@@ -633,6 +647,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value executed_operation_count = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getExecutedOperationCountOrBuilder() {
       return getExecutedOperationCount();
     }
@@ -1952,6 +1967,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -1974,6 +1990,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -1998,6 +2015,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -2009,6 +2027,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -2019,6 +2038,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -2034,6 +2054,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the nextAddSequenceToken field is set.
    */
+  @java.lang.Override
   public boolean hasNextAddSequenceToken() {
     return nextAddSequenceToken_ != null;
   }
@@ -2046,6 +2067,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The nextAddSequenceToken.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getNextAddSequenceToken() {
     return nextAddSequenceToken_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : nextAddSequenceToken_;
   }
@@ -2057,6 +2079,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNextAddSequenceTokenOrBuilder() {
     return getNextAddSequenceToken();
   }
@@ -2071,6 +2094,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.BatchJob.BatchJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the metadata field is set.
    */
+  @java.lang.Override
   public boolean hasMetadata() {
     return metadata_ != null;
   }
@@ -2082,6 +2106,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.BatchJob.BatchJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The metadata.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.BatchJob.BatchJobMetadata getMetadata() {
     return metadata_ == null ? com.google.ads.googleads.v4.resources.BatchJob.BatchJobMetadata.getDefaultInstance() : metadata_;
   }
@@ -2092,6 +2117,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.BatchJob.BatchJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.BatchJob.BatchJobMetadataOrBuilder getMetadataOrBuilder() {
     return getMetadata();
   }
@@ -2106,7 +2132,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -2117,7 +2143,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus result = com.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus.UNRECOGNIZED : result;
@@ -2134,6 +2160,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the longRunningOperation field is set.
    */
+  @java.lang.Override
   public boolean hasLongRunningOperation() {
     return longRunningOperation_ != null;
   }
@@ -2146,6 +2173,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The longRunningOperation.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLongRunningOperation() {
     return longRunningOperation_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : longRunningOperation_;
   }
@@ -2157,6 +2185,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder() {
     return getLongRunningOperation();
   }
@@ -3194,7 +3223,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -3207,6 +3236,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -3219,6 +3249,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus result = com.google.ads.googleads.v4.enums.BatchJobStatusEnum.BatchJobStatus.valueOf(status_);

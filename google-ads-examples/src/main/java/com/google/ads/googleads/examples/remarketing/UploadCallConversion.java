@@ -23,6 +23,7 @@ import com.google.ads.googleads.v4.errors.GoogleAdsException;
 import com.google.ads.googleads.v4.services.CallConversion;
 import com.google.ads.googleads.v4.services.CallConversionResult;
 import com.google.ads.googleads.v4.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v4.services.UploadCallConversionsRequest;
 import com.google.ads.googleads.v4.services.UploadCallConversionsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.DoubleValue;
@@ -145,7 +146,11 @@ public class UploadCallConversion {
       // Partial failure MUST be enabled for this request.
       UploadCallConversionsResponse response =
           conversionUploadServiceClient.uploadCallConversions(
-              String.valueOf(customerId), ImmutableList.of(conversion), true, false);
+              UploadCallConversionsRequest.newBuilder()
+                  .setCustomerId(Long.toString(customerId))
+                  .addConversions(conversion)
+                  .setPartialFailure(true)
+                  .build());
 
       // Prints any partial failure errors returned.
       if (response.hasPartialFailureError()) {

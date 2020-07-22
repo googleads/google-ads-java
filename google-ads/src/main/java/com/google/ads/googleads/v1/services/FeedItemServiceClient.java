@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.FeedItemServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (FeedItemServiceClient feedItemServiceClient = FeedItemServiceClient.create()) {
- *   String formattedResourceName = FeedItemServiceClient.formatFeedItemName("[CUSTOMER]", "[FEED_ITEM]");
- *   FeedItem response = feedItemServiceClient.getFeedItem(formattedResourceName);
+ *   FeedItemName resourceName = FeedItemName.of("[CUSTOMER]", "[FEED_ITEM]");
+ *   FeedItem response = feedItemServiceClient.getFeedItem(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,41 +99,6 @@ public class FeedItemServiceClient implements BackgroundResource {
   private final FeedItemServiceSettings settings;
   private final FeedItemServiceStub stub;
 
-  private static final PathTemplate FEED_ITEM_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/feedItems/{feed_item}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a feed_item resource.
-   *
-   * @deprecated Use the {@link FeedItemName} class instead.
-   */
-  @Deprecated
-  public static final String formatFeedItemName(String customer, String feedItem) {
-    return FEED_ITEM_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "feed_item", feedItem);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a feed_item resource.
-   *
-   * @deprecated Use the {@link FeedItemName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromFeedItemName(String feedItemName) {
-    return FEED_ITEM_PATH_TEMPLATE.parse(feedItemName).get("customer");
-  }
-
-  /**
-   * Parses the feed_item from the given fully-qualified path which represents a feed_item resource.
-   *
-   * @deprecated Use the {@link FeedItemName} class instead.
-   */
-  @Deprecated
-  public static final String parseFeedItemFromFeedItemName(String feedItemName) {
-    return FEED_ITEM_PATH_TEMPLATE.parse(feedItemName).get("feed_item");
-  }
-
   /** Constructs an instance of FeedItemServiceClient with default settings. */
   public static final FeedItemServiceClient create() throws IOException {
     return create(FeedItemServiceSettings.newBuilder().build());
@@ -191,16 +155,39 @@ public class FeedItemServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedItemServiceClient feedItemServiceClient = FeedItemServiceClient.create()) {
-   *   String formattedResourceName = FeedItemServiceClient.formatFeedItemName("[CUSTOMER]", "[FEED_ITEM]");
-   *   FeedItem response = feedItemServiceClient.getFeedItem(formattedResourceName);
+   *   FeedItemName resourceName = FeedItemName.of("[CUSTOMER]", "[FEED_ITEM]");
+   *   FeedItem response = feedItemServiceClient.getFeedItem(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the feed item to fetch.
+   * @param resourceName Required. The resource name of the feed item to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final FeedItem getFeedItem(FeedItemName resourceName) {
+    GetFeedItemRequest request =
+        GetFeedItemRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getFeedItem(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested feed item in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (FeedItemServiceClient feedItemServiceClient = FeedItemServiceClient.create()) {
+   *   FeedItemName resourceName = FeedItemName.of("[CUSTOMER]", "[FEED_ITEM]");
+   *   FeedItem response = feedItemServiceClient.getFeedItem(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the feed item to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final FeedItem getFeedItem(String resourceName) {
-    FEED_ITEM_PATH_TEMPLATE.validate(resourceName, "getFeedItem");
     GetFeedItemRequest request =
         GetFeedItemRequest.newBuilder().setResourceName(resourceName).build();
     return getFeedItem(request);
@@ -214,9 +201,9 @@ public class FeedItemServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedItemServiceClient feedItemServiceClient = FeedItemServiceClient.create()) {
-   *   String formattedResourceName = FeedItemServiceClient.formatFeedItemName("[CUSTOMER]", "[FEED_ITEM]");
+   *   FeedItemName resourceName = FeedItemName.of("[CUSTOMER]", "[FEED_ITEM]");
    *   GetFeedItemRequest request = GetFeedItemRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   FeedItem response = feedItemServiceClient.getFeedItem(request);
    * }
@@ -237,9 +224,9 @@ public class FeedItemServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (FeedItemServiceClient feedItemServiceClient = FeedItemServiceClient.create()) {
-   *   String formattedResourceName = FeedItemServiceClient.formatFeedItemName("[CUSTOMER]", "[FEED_ITEM]");
+   *   FeedItemName resourceName = FeedItemName.of("[CUSTOMER]", "[FEED_ITEM]");
    *   GetFeedItemRequest request = GetFeedItemRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;FeedItem&gt; future = feedItemServiceClient.getFeedItemCallable().futureCall(request);
    *   // Do something
@@ -261,58 +248,16 @@ public class FeedItemServiceClient implements BackgroundResource {
    * try (FeedItemServiceClient feedItemServiceClient = FeedItemServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;FeedItemOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateFeedItemsResponse response = feedItemServiceClient.mutateFeedItems(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose feed items are being modified.
-   * @param operations The list of operations to perform on individual feed items.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateFeedItemsResponse mutateFeedItems(
-      String customerId,
-      List<FeedItemOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateFeedItemsRequest request =
-        MutateFeedItemsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateFeedItems(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes feed items. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (FeedItemServiceClient feedItemServiceClient = FeedItemServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;FeedItemOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateFeedItemsResponse response = feedItemServiceClient.mutateFeedItems(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose feed items are being modified.
-   * @param operations The list of operations to perform on individual feed items.
+   * @param customerId Required. The ID of the customer whose feed items are being modified.
+   * @param operations Required. The list of operations to perform on individual feed items.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateFeedItemsResponse mutateFeedItems(
       String customerId, List<FeedItemOperation> operations) {
-
     MutateFeedItemsRequest request =
         MutateFeedItemsRequest.newBuilder()
             .setCustomerId(customerId)

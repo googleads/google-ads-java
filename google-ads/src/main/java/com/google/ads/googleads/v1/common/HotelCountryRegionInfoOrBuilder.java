@@ -13,6 +13,7 @@ public interface HotelCountryRegionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_region_criterion = 1;</code>
+   * @return Whether the countryRegionCriterion field is set.
    */
   boolean hasCountryRegionCriterion();
   /**
@@ -21,6 +22,7 @@ public interface HotelCountryRegionInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_region_criterion = 1;</code>
+   * @return The countryRegionCriterion.
    */
   com.google.protobuf.StringValue getCountryRegionCriterion();
   /**

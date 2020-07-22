@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.RemarketingActionServiceStubSet
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
- *   String formattedResourceName = RemarketingActionServiceClient.formatRemarketingActionName("[CUSTOMER]", "[REMARKETING_ACTION]");
- *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(formattedResourceName);
+ *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER]", "[REMARKETING_ACTION]");
+ *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,47 +99,6 @@ public class RemarketingActionServiceClient implements BackgroundResource {
   private final RemarketingActionServiceSettings settings;
   private final RemarketingActionServiceStub stub;
 
-  private static final PathTemplate REMARKETING_ACTION_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/remarketingActions/{remarketing_action}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a remarketing_action
-   * resource.
-   *
-   * @deprecated Use the {@link RemarketingActionName} class instead.
-   */
-  @Deprecated
-  public static final String formatRemarketingActionName(
-      String customer, String remarketingAction) {
-    return REMARKETING_ACTION_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "remarketing_action", remarketingAction);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a remarketing_action
-   * resource.
-   *
-   * @deprecated Use the {@link RemarketingActionName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromRemarketingActionName(String remarketingActionName) {
-    return REMARKETING_ACTION_PATH_TEMPLATE.parse(remarketingActionName).get("customer");
-  }
-
-  /**
-   * Parses the remarketing_action from the given fully-qualified path which represents a
-   * remarketing_action resource.
-   *
-   * @deprecated Use the {@link RemarketingActionName} class instead.
-   */
-  @Deprecated
-  public static final String parseRemarketingActionFromRemarketingActionName(
-      String remarketingActionName) {
-    return REMARKETING_ACTION_PATH_TEMPLATE.parse(remarketingActionName).get("remarketing_action");
-  }
-
   /** Constructs an instance of RemarketingActionServiceClient with default settings. */
   public static final RemarketingActionServiceClient create() throws IOException {
     return create(RemarketingActionServiceSettings.newBuilder().build());
@@ -199,16 +157,39 @@ public class RemarketingActionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   String formattedResourceName = RemarketingActionServiceClient.formatRemarketingActionName("[CUSTOMER]", "[REMARKETING_ACTION]");
-   *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(formattedResourceName);
+   *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER]", "[REMARKETING_ACTION]");
+   *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the remarketing action to fetch.
+   * @param resourceName Required. The resource name of the remarketing action to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final RemarketingAction getRemarketingAction(RemarketingActionName resourceName) {
+    GetRemarketingActionRequest request =
+        GetRemarketingActionRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getRemarketingAction(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested remarketing action in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
+   *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER]", "[REMARKETING_ACTION]");
+   *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the remarketing action to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final RemarketingAction getRemarketingAction(String resourceName) {
-    REMARKETING_ACTION_PATH_TEMPLATE.validate(resourceName, "getRemarketingAction");
     GetRemarketingActionRequest request =
         GetRemarketingActionRequest.newBuilder().setResourceName(resourceName).build();
     return getRemarketingAction(request);
@@ -222,9 +203,9 @@ public class RemarketingActionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   String formattedResourceName = RemarketingActionServiceClient.formatRemarketingActionName("[CUSTOMER]", "[REMARKETING_ACTION]");
+   *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER]", "[REMARKETING_ACTION]");
    *   GetRemarketingActionRequest request = GetRemarketingActionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(request);
    * }
@@ -245,9 +226,9 @@ public class RemarketingActionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   String formattedResourceName = RemarketingActionServiceClient.formatRemarketingActionName("[CUSTOMER]", "[REMARKETING_ACTION]");
+   *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER]", "[REMARKETING_ACTION]");
    *   GetRemarketingActionRequest request = GetRemarketingActionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;RemarketingAction&gt; future = remarketingActionServiceClient.getRemarketingActionCallable().futureCall(request);
    *   // Do something
@@ -270,58 +251,18 @@ public class RemarketingActionServiceClient implements BackgroundResource {
    * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;RemarketingActionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateRemarketingActionsResponse response = remarketingActionServiceClient.mutateRemarketingActions(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose remarketing actions are being modified.
-   * @param operations The list of operations to perform on individual remarketing actions.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateRemarketingActionsResponse mutateRemarketingActions(
-      String customerId,
-      List<RemarketingActionOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateRemarketingActionsRequest request =
-        MutateRemarketingActionsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateRemarketingActions(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates or updates remarketing actions. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;RemarketingActionOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateRemarketingActionsResponse response = remarketingActionServiceClient.mutateRemarketingActions(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose remarketing actions are being modified.
-   * @param operations The list of operations to perform on individual remarketing actions.
+   * @param customerId Required. The ID of the customer whose remarketing actions are being
+   *     modified.
+   * @param operations Required. The list of operations to perform on individual remarketing
+   *     actions.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateRemarketingActionsResponse mutateRemarketingActions(
       String customerId, List<RemarketingActionOperation> operations) {
-
     MutateRemarketingActionsRequest request =
         MutateRemarketingActionsRequest.newBuilder()
             .setCustomerId(customerId)

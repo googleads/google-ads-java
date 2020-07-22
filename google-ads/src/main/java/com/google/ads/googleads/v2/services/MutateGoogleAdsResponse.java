@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.MutateGoogleAdsResponse}
  */
-public  final class MutateGoogleAdsResponse extends
+public final class MutateGoogleAdsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.MutateGoogleAdsResponse)
     MutateGoogleAdsResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private MutateGoogleAdsResponse() {
     mutateOperationResponses_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateGoogleAdsResponse();
   }
 
   @java.lang.Override
@@ -48,9 +55,9 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               mutateOperationResponses_ = new java.util.ArrayList<com.google.ads.googleads.v2.services.MutateOperationResponse>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             mutateOperationResponses_.add(
                 input.readMessage(com.google.ads.googleads.v2.services.MutateOperationResponse.parser(), extensionRegistry));
@@ -84,7 +91,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         mutateOperationResponses_ = java.util.Collections.unmodifiableList(mutateOperationResponses_);
       }
       this.unknownFields = unknownFields.build();
@@ -104,7 +111,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.services.MutateGoogleAdsResponse.class, com.google.ads.googleads.v2.services.MutateGoogleAdsResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PARTIAL_FAILURE_ERROR_FIELD_NUMBER = 3;
   private com.google.rpc.Status partialFailureError_;
   /**
@@ -116,7 +122,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   * @return Whether the partialFailureError field is set.
    */
+  @java.lang.Override
   public boolean hasPartialFailureError() {
     return partialFailureError_ != null;
   }
@@ -129,7 +137,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   * @return The partialFailureError.
    */
+  @java.lang.Override
   public com.google.rpc.Status getPartialFailureError() {
     return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
   }
@@ -143,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
     return getPartialFailureError();
   }
@@ -156,6 +167,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.MutateOperationResponse mutate_operation_responses = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.services.MutateOperationResponse> getMutateOperationResponsesList() {
     return mutateOperationResponses_;
   }
@@ -166,6 +178,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.MutateOperationResponse mutate_operation_responses = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.services.MutateOperationResponseOrBuilder> 
       getMutateOperationResponsesOrBuilderList() {
     return mutateOperationResponses_;
@@ -177,6 +190,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.MutateOperationResponse mutate_operation_responses = 1;</code>
    */
+  @java.lang.Override
   public int getMutateOperationResponsesCount() {
     return mutateOperationResponses_.size();
   }
@@ -187,6 +201,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.MutateOperationResponse mutate_operation_responses = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.MutateOperationResponse getMutateOperationResponses(int index) {
     return mutateOperationResponses_.get(index);
   }
@@ -197,6 +212,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.MutateOperationResponse mutate_operation_responses = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.MutateOperationResponseOrBuilder getMutateOperationResponsesOrBuilder(
       int index) {
     return mutateOperationResponses_.get(index);
@@ -426,7 +442,7 @@ private static final long serialVersionUID = 0L;
       }
       if (mutateOperationResponsesBuilder_ == null) {
         mutateOperationResponses_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         mutateOperationResponsesBuilder_.clear();
       }
@@ -457,22 +473,20 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.services.MutateGoogleAdsResponse buildPartial() {
       com.google.ads.googleads.v2.services.MutateGoogleAdsResponse result = new com.google.ads.googleads.v2.services.MutateGoogleAdsResponse(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (partialFailureErrorBuilder_ == null) {
         result.partialFailureError_ = partialFailureError_;
       } else {
         result.partialFailureError_ = partialFailureErrorBuilder_.build();
       }
       if (mutateOperationResponsesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           mutateOperationResponses_ = java.util.Collections.unmodifiableList(mutateOperationResponses_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.mutateOperationResponses_ = mutateOperationResponses_;
       } else {
         result.mutateOperationResponses_ = mutateOperationResponsesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -528,7 +542,7 @@ private static final long serialVersionUID = 0L;
         if (!other.mutateOperationResponses_.isEmpty()) {
           if (mutateOperationResponses_.isEmpty()) {
             mutateOperationResponses_ = other.mutateOperationResponses_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureMutateOperationResponsesIsMutable();
             mutateOperationResponses_.addAll(other.mutateOperationResponses_);
@@ -541,7 +555,7 @@ private static final long serialVersionUID = 0L;
             mutateOperationResponsesBuilder_.dispose();
             mutateOperationResponsesBuilder_ = null;
             mutateOperationResponses_ = other.mutateOperationResponses_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             mutateOperationResponsesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMutateOperationResponsesFieldBuilder() : null;
@@ -592,6 +606,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     * @return Whether the partialFailureError field is set.
      */
     public boolean hasPartialFailureError() {
       return partialFailureErrorBuilder_ != null || partialFailureError_ != null;
@@ -605,6 +620,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     * @return The partialFailureError.
      */
     public com.google.rpc.Status getPartialFailureError() {
       if (partialFailureErrorBuilder_ == null) {
@@ -763,9 +779,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.services.MutateOperationResponse> mutateOperationResponses_ =
       java.util.Collections.emptyList();
     private void ensureMutateOperationResponsesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         mutateOperationResponses_ = new java.util.ArrayList<com.google.ads.googleads.v2.services.MutateOperationResponse>(mutateOperationResponses_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -959,7 +975,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearMutateOperationResponses() {
       if (mutateOperationResponsesBuilder_ == null) {
         mutateOperationResponses_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         mutateOperationResponsesBuilder_.clear();
@@ -1064,7 +1080,7 @@ private static final long serialVersionUID = 0L;
         mutateOperationResponsesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.services.MutateOperationResponse, com.google.ads.googleads.v2.services.MutateOperationResponse.Builder, com.google.ads.googleads.v2.services.MutateOperationResponseOrBuilder>(
                 mutateOperationResponses_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         mutateOperationResponses_ = null;

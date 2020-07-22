@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.CampaignCriterionServiceStubSet
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
- *   String formattedResourceName = CampaignCriterionServiceClient.formatCampaignCriteriaName("[CUSTOMER]", "[CAMPAIGN_CRITERIA]");
- *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(formattedResourceName);
+ *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION]");
+ *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,45 +99,6 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
   private final CampaignCriterionServiceSettings settings;
   private final CampaignCriterionServiceStub stub;
 
-  private static final PathTemplate CAMPAIGN_CRITERIA_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/campaignCriteria/{campaign_criteria}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign_criteria resource.
-   *
-   * @deprecated Use the {@link CampaignCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String formatCampaignCriteriaName(String customer, String campaignCriteria) {
-    return CAMPAIGN_CRITERIA_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "campaign_criteria", campaignCriteria);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a campaign_criteria
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCampaignCriteriaName(String campaignCriteriaName) {
-    return CAMPAIGN_CRITERIA_PATH_TEMPLATE.parse(campaignCriteriaName).get("customer");
-  }
-
-  /**
-   * Parses the campaign_criteria from the given fully-qualified path which represents a
-   * campaign_criteria resource.
-   *
-   * @deprecated Use the {@link CampaignCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String parseCampaignCriteriaFromCampaignCriteriaName(
-      String campaignCriteriaName) {
-    return CAMPAIGN_CRITERIA_PATH_TEMPLATE.parse(campaignCriteriaName).get("campaign_criteria");
-  }
-
   /** Constructs an instance of CampaignCriterionServiceClient with default settings. */
   public static final CampaignCriterionServiceClient create() throws IOException {
     return create(CampaignCriterionServiceSettings.newBuilder().build());
@@ -197,8 +157,32 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   String formattedResourceName = CampaignCriterionServiceClient.formatCampaignCriteriaName("[CUSTOMER]", "[CAMPAIGN_CRITERIA]");
-   *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(formattedResourceName);
+   *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION]");
+   *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the criterion to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CampaignCriterion getCampaignCriterion(CampaignCriterionName resourceName) {
+    GetCampaignCriterionRequest request =
+        GetCampaignCriterionRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCampaignCriterion(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested criterion in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
+   *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION]");
+   *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -206,7 +190,6 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignCriterion getCampaignCriterion(String resourceName) {
-    CAMPAIGN_CRITERIA_PATH_TEMPLATE.validate(resourceName, "getCampaignCriterion");
     GetCampaignCriterionRequest request =
         GetCampaignCriterionRequest.newBuilder().setResourceName(resourceName).build();
     return getCampaignCriterion(request);
@@ -220,9 +203,9 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   String formattedResourceName = CampaignCriterionServiceClient.formatCampaignCriteriaName("[CUSTOMER]", "[CAMPAIGN_CRITERIA]");
+   *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION]");
    *   GetCampaignCriterionRequest request = GetCampaignCriterionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(request);
    * }
@@ -243,9 +226,9 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   String formattedResourceName = CampaignCriterionServiceClient.formatCampaignCriteriaName("[CUSTOMER]", "[CAMPAIGN_CRITERIA]");
+   *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION]");
    *   GetCampaignCriterionRequest request = GetCampaignCriterionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CampaignCriterion&gt; future = campaignCriterionServiceClient.getCampaignCriterionCallable().futureCall(request);
    *   // Do something
@@ -256,46 +239,6 @@ public class CampaignCriterionServiceClient implements BackgroundResource {
   public final UnaryCallable<GetCampaignCriterionRequest, CampaignCriterion>
       getCampaignCriterionCallable() {
     return stub.getCampaignCriterionCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes criteria. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignCriterionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCampaignCriteriaResponse response = campaignCriterionServiceClient.mutateCampaignCriteria(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose criteria are being modified.
-   * @param operations Required. The list of operations to perform on individual criteria.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCampaignCriteriaResponse mutateCampaignCriteria(
-      String customerId,
-      List<CampaignCriterionOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-    MutateCampaignCriteriaRequest request =
-        MutateCampaignCriteriaRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCampaignCriteria(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

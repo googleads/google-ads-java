@@ -31,47 +31,57 @@ public final class KeywordPlanKeywordProto {
       "\n<google/ads/googleads/v1/resources/keyw" +
       "ord_plan_keyword.proto\022!google.ads.googl" +
       "eads.v1.resources\0326google/ads/googleads/" +
-      "v1/enums/keyword_match_type.proto\032\036googl" +
-      "e/protobuf/wrappers.proto\032\034google/api/an" +
-      "notations.proto\"\314\002\n\022KeywordPlanKeyword\022\025" +
-      "\n\rresource_name\030\001 \001(\t\022;\n\025keyword_plan_ad" +
-      "_group\030\002 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022\'\n\002id\030\003 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022*\n\004text\030\004 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022X\n\nmatch_type\030\005 \001(\0162D.google.ads" +
-      ".googleads.v1.enums.KeywordMatchTypeEnum" +
-      ".KeywordMatchType\0223\n\016cpc_bid_micros\030\006 \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\204\002\n%com.g" +
-      "oogle.ads.googleads.v1.resourcesB\027Keywor" +
-      "dPlanKeywordProtoP\001ZJgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v1/reso" +
-      "urces;resources\242\002\003GAA\252\002!Google.Ads.Googl" +
-      "eAds.V1.Resources\312\002!Google\\Ads\\GoogleAds" +
-      "\\V1\\Resources\352\002%Google::Ads::GoogleAds::" +
-      "V1::Resourcesb\006proto3"
+      "v1/enums/keyword_match_type.proto\032\037googl" +
+      "e/api/field_behavior.proto\032\031google/api/r" +
+      "esource.proto\032\036google/protobuf/wrappers." +
+      "proto\032\034google/api/annotations.proto\"\253\004\n\022" +
+      "KeywordPlanKeyword\022J\n\rresource_name\030\001 \001(" +
+      "\tB3\340A\005\372A-\n+googleads.googleapis.com/Keyw" +
+      "ordPlanKeyword\022m\n\025keyword_plan_ad_group\030" +
+      "\002 \001(\0132\034.google.protobuf.StringValueB0\372A-" +
+      "\n+googleads.googleapis.com/KeywordPlanAd" +
+      "Group\022,\n\002id\030\003 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\003\340A\003\022*\n\004text\030\004 \001(\0132\034.google.proto" +
+      "buf.StringValue\022X\n\nmatch_type\030\005 \001(\0162D.go" +
+      "ogle.ads.googleads.v1.enums.KeywordMatch" +
+      "TypeEnum.KeywordMatchType\0223\n\016cpc_bid_mic" +
+      "ros\030\006 \001(\0132\033.google.protobuf.Int64Value:q" +
+      "\352An\n+googleads.googleapis.com/KeywordPla" +
+      "nKeyword\022?customers/{customer}/keywordPl" +
+      "anKeywords/{keyword_plan_keyword}B\204\002\n%co" +
+      "m.google.ads.googleads.v1.resourcesB\027Key" +
+      "wordPlanKeywordProtoP\001ZJgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v1/r" +
+      "esources;resources\242\002\003GAA\252\002!Google.Ads.Go" +
+      "ogleAds.V1.Resources\312\002!Google\\Ads\\Google" +
+      "Ads\\V1\\Resources\352\002%Google::Ads::GoogleAd" +
+      "s::V1::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.enums.KeywordMatchTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_KeywordPlanKeyword_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_KeywordPlanKeyword_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_KeywordPlanKeyword_descriptor,
         new java.lang.String[] { "ResourceName", "KeywordPlanAdGroup", "Id", "Text", "MatchType", "CpcBidMicros", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.enums.KeywordMatchTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

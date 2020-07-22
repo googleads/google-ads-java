@@ -17,6 +17,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+   * @return Whether the updateMask field is set.
    */
   boolean hasUpdateMask();
   /**
@@ -29,6 +30,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+   * @return The updateMask.
    */
   com.google.protobuf.FieldMask getUpdateMask();
   /**
@@ -53,6 +55,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AccountBudgetProposal create = 2;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -64,6 +67,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AccountBudgetProposal create = 2;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v1.resources.AccountBudgetProposal getCreate();
   /**
@@ -87,6 +91,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 1;</code>
+   * @return The remove.
    */
   java.lang.String getRemove();
   /**
@@ -98,6 +103,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 1;</code>
+   * @return The bytes for remove.
    */
   com.google.protobuf.ByteString
       getRemoveBytes();

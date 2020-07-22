@@ -13,6 +13,7 @@ public interface DisplayCallToActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
+   * @return Whether the text field is set.
    */
   boolean hasText();
   /**
@@ -21,6 +22,7 @@ public interface DisplayCallToActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
+   * @return The text.
    */
   com.google.protobuf.StringValue getText();
   /**
@@ -39,6 +41,7 @@ public interface DisplayCallToActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text_color = 2;</code>
+   * @return Whether the textColor field is set.
    */
   boolean hasTextColor();
   /**
@@ -48,6 +51,7 @@ public interface DisplayCallToActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text_color = 2;</code>
+   * @return The textColor.
    */
   com.google.protobuf.StringValue getTextColor();
   /**
@@ -67,6 +71,7 @@ public interface DisplayCallToActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue url_collection_id = 3;</code>
+   * @return Whether the urlCollectionId field is set.
    */
   boolean hasUrlCollectionId();
   /**
@@ -76,6 +81,7 @@ public interface DisplayCallToActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue url_collection_id = 3;</code>
+   * @return The urlCollectionId.
    */
   com.google.protobuf.StringValue getUrlCollectionId();
   /**

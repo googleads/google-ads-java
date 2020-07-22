@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CriterionCategoryChannelAvailability}
  */
-public  final class CriterionCategoryChannelAvailability extends
+public final class CriterionCategoryChannelAvailability extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CriterionCategoryChannelAvailability)
     CriterionCategoryChannelAvailabilityOrBuilder {
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode availability_mode = 1;</code>
    * @return The enum numeric value on the wire for availabilityMode.
    */
-  public int getAvailabilityModeValue() {
+  @java.lang.Override public int getAvailabilityModeValue() {
     return availabilityMode_;
   }
   /**
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode availability_mode = 1;</code>
    * @return The availabilityMode.
    */
-  public com.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode getAvailabilityMode() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode getAvailabilityMode() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode result = com.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode.valueOf(availabilityMode_);
     return result == null ? com.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode.UNRECOGNIZED : result;
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 2;</code>
    * @return The enum numeric value on the wire for advertisingChannelType.
    */
-  public int getAdvertisingChannelTypeValue() {
+  @java.lang.Override public int getAdvertisingChannelTypeValue() {
     return advertisingChannelType_;
   }
   /**
@@ -198,7 +198,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 2;</code>
    * @return The advertisingChannelType.
    */
-  public com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType getAdvertisingChannelType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType getAdvertisingChannelType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType result = com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.valueOf(advertisingChannelType_);
     return result == null ? com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.UNRECOGNIZED : result;
@@ -224,6 +224,7 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.ads.googleads.v4.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 3;</code>
    * @return A list containing the advertisingChannelSubType.
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType> getAdvertisingChannelSubTypeList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.google.ads.googleads.v4.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType>(advertisingChannelSubType_, advertisingChannelSubType_converter_);
@@ -236,6 +237,7 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.ads.googleads.v4.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 3;</code>
    * @return The count of advertisingChannelSubType.
    */
+  @java.lang.Override
   public int getAdvertisingChannelSubTypeCount() {
     return advertisingChannelSubType_.size();
   }
@@ -248,6 +250,7 @@ private static final long serialVersionUID = 0L;
    * @param index The index of the element to return.
    * @return The advertisingChannelSubType at the given index.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType getAdvertisingChannelSubType(int index) {
     return advertisingChannelSubType_converter_.convert(advertisingChannelSubType_.get(index));
   }
@@ -259,6 +262,7 @@ private static final long serialVersionUID = 0L;
    * <code>repeated .google.ads.googleads.v4.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 3;</code>
    * @return A list containing the enum numeric values on the wire for advertisingChannelSubType.
    */
+  @java.lang.Override
   public java.util.List<java.lang.Integer>
   getAdvertisingChannelSubTypeValueList() {
     return advertisingChannelSubType_;
@@ -272,6 +276,7 @@ private static final long serialVersionUID = 0L;
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of advertisingChannelSubType at the given index.
    */
+  @java.lang.Override
   public int getAdvertisingChannelSubTypeValue(int index) {
     return advertisingChannelSubType_.get(index);
   }
@@ -290,6 +295,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue include_default_channel_sub_type = 4;</code>
    * @return Whether the includeDefaultChannelSubType field is set.
    */
+  @java.lang.Override
   public boolean hasIncludeDefaultChannelSubType() {
     return includeDefaultChannelSubType_ != null;
   }
@@ -304,6 +310,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue include_default_channel_sub_type = 4;</code>
    * @return The includeDefaultChannelSubType.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getIncludeDefaultChannelSubType() {
     return includeDefaultChannelSubType_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : includeDefaultChannelSubType_;
   }
@@ -317,6 +324,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue include_default_channel_sub_type = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getIncludeDefaultChannelSubTypeOrBuilder() {
     return getIncludeDefaultChannelSubType();
   }
@@ -731,7 +739,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode availability_mode = 1;</code>
      * @return The enum numeric value on the wire for availabilityMode.
      */
-    public int getAvailabilityModeValue() {
+    @java.lang.Override public int getAvailabilityModeValue() {
       return availabilityMode_;
     }
     /**
@@ -749,6 +757,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAvailabilityModeValue(int value) {
+      
       availabilityMode_ = value;
       onChanged();
       return this;
@@ -766,6 +775,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode availability_mode = 1;</code>
      * @return The availabilityMode.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode getAvailabilityMode() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode result = com.google.ads.googleads.v4.enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode.valueOf(availabilityMode_);
@@ -823,7 +833,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 2;</code>
      * @return The enum numeric value on the wire for advertisingChannelType.
      */
-    public int getAdvertisingChannelTypeValue() {
+    @java.lang.Override public int getAdvertisingChannelTypeValue() {
       return advertisingChannelType_;
     }
     /**
@@ -836,6 +846,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdvertisingChannelTypeValue(int value) {
+      
       advertisingChannelType_ = value;
       onChanged();
       return this;
@@ -848,6 +859,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 2;</code>
      * @return The advertisingChannelType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType getAdvertisingChannelType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType result = com.google.ads.googleads.v4.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.valueOf(advertisingChannelType_);

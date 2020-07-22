@@ -9,142 +9,154 @@ public interface OperatingSystemVersionConstantOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the operating system version constant.
+   * Output only. The resource name of the operating system version constant.
    * Operating system version constant resource names have the form:
    * `operatingSystemVersionConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the operating system version constant.
+   * Output only. The resource name of the operating system version constant.
    * Operating system version constant resource names have the form:
    * `operatingSystemVersionConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the operating system version.
+   * Output only. The ID of the operating system version.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the operating system version.
+   * Output only. The ID of the operating system version.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the operating system version.
+   * Output only. The ID of the operating system version.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * Name of the operating system.
+   * Output only. Name of the operating system.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
    * <pre>
-   * Name of the operating system.
+   * Output only. Name of the operating system.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * Name of the operating system.
+   * Output only. Name of the operating system.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 
   /**
    * <pre>
-   * The OS Major Version number.
+   * Output only. The OS Major Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+   * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the osMajorVersion field is set.
    */
   boolean hasOsMajorVersion();
   /**
    * <pre>
-   * The OS Major Version number.
+   * Output only. The OS Major Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+   * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The osMajorVersion.
    */
   com.google.protobuf.Int32Value getOsMajorVersion();
   /**
    * <pre>
-   * The OS Major Version number.
+   * Output only. The OS Major Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_major_version = 4;</code>
+   * <code>.google.protobuf.Int32Value os_major_version = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int32ValueOrBuilder getOsMajorVersionOrBuilder();
 
   /**
    * <pre>
-   * The OS Minor Version number.
+   * Output only. The OS Minor Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+   * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the osMinorVersion field is set.
    */
   boolean hasOsMinorVersion();
   /**
    * <pre>
-   * The OS Minor Version number.
+   * Output only. The OS Minor Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+   * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The osMinorVersion.
    */
   com.google.protobuf.Int32Value getOsMinorVersion();
   /**
    * <pre>
-   * The OS Minor Version number.
+   * Output only. The OS Minor Version number.
    * </pre>
    *
-   * <code>.google.protobuf.Int32Value os_minor_version = 5;</code>
+   * <code>.google.protobuf.Int32Value os_minor_version = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int32ValueOrBuilder getOsMinorVersionOrBuilder();
 
   /**
    * <pre>
-   * Determines whether this constant represents a single version or a range of
+   * Output only. Determines whether this constant represents a single version or a range of
    * versions.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for operatorType.
    */
   int getOperatorTypeValue();
   /**
    * <pre>
-   * Determines whether this constant represents a single version or a range of
+   * Output only. Determines whether this constant represents a single version or a range of
    * versions.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The operatorType.
    */
   com.google.ads.googleads.v2.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType getOperatorType();
 }

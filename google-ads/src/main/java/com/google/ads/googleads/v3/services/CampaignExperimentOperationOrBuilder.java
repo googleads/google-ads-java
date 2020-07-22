@@ -13,6 +13,7 @@ public interface CampaignExperimentOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+   * @return Whether the updateMask field is set.
    */
   boolean hasUpdateMask();
   /**
@@ -21,6 +22,7 @@ public interface CampaignExperimentOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+   * @return The updateMask.
    */
   com.google.protobuf.FieldMask getUpdateMask();
   /**
@@ -39,6 +41,7 @@ public interface CampaignExperimentOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignExperiment update = 1;</code>
+   * @return Whether the update field is set.
    */
   boolean hasUpdate();
   /**
@@ -48,6 +51,7 @@ public interface CampaignExperimentOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.CampaignExperiment update = 1;</code>
+   * @return The update.
    */
   com.google.ads.googleads.v3.resources.CampaignExperiment getUpdate();
   /**
@@ -68,6 +72,7 @@ public interface CampaignExperimentOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 2;</code>
+   * @return The remove.
    */
   java.lang.String getRemove();
   /**
@@ -78,6 +83,7 @@ public interface CampaignExperimentOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 2;</code>
+   * @return The bytes for remove.
    */
   com.google.protobuf.ByteString
       getRemoveBytes();

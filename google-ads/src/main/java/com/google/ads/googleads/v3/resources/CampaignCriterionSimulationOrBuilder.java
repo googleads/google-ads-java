@@ -15,6 +15,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value campaign_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the campaignId field is set.
    */
   boolean hasCampaignId();
   /**
@@ -43,6 +46,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value campaign_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The campaignId.
    */
   com.google.protobuf.Int64Value getCampaignId();
   /**
@@ -60,6 +64,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
   /**
@@ -68,6 +73,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The criterionId.
    */
   com.google.protobuf.Int64Value getCriterionId();
   /**
@@ -85,6 +91,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -93,6 +100,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.SimulationTypeEnum.SimulationType getType();
 
@@ -102,6 +110,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for modificationMethod.
    */
   int getModificationMethodValue();
   /**
@@ -110,6 +119,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod modification_method = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The modificationMethod.
    */
   com.google.ads.googleads.v3.enums.SimulationModificationMethodEnum.SimulationModificationMethod getModificationMethod();
 
@@ -119,6 +129,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
   /**
@@ -127,6 +138,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The startDate.
    */
   com.google.protobuf.StringValue getStartDate();
   /**
@@ -144,6 +156,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
   /**
@@ -152,6 +165,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The endDate.
    */
   com.google.protobuf.StringValue getEndDate();
   /**
@@ -169,6 +183,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.BidModifierSimulationPointList bid_modifier_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the bidModifierPointList field is set.
    */
   boolean hasBidModifierPointList();
   /**
@@ -177,6 +192,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.BidModifierSimulationPointList bid_modifier_point_list = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bidModifierPointList.
    */
   com.google.ads.googleads.v3.common.BidModifierSimulationPointList getBidModifierPointList();
   /**

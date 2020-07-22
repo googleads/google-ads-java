@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GenerateReachForecastResponse}
  */
-public  final class GenerateReachForecastResponse extends
+public final class GenerateReachForecastResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GenerateReachForecastResponse)
     GenerateReachForecastResponseOrBuilder {
@@ -120,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
    * @return Whether the onTargetAudienceMetrics field is set.
    */
+  @java.lang.Override
   public boolean hasOnTargetAudienceMetrics() {
     return onTargetAudienceMetrics_ != null;
   }
@@ -131,6 +132,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
    * @return The onTargetAudienceMetrics.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.OnTargetAudienceMetrics getOnTargetAudienceMetrics() {
     return onTargetAudienceMetrics_ == null ? com.google.ads.googleads.v4.services.OnTargetAudienceMetrics.getDefaultInstance() : onTargetAudienceMetrics_;
   }
@@ -141,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.OnTargetAudienceMetricsOrBuilder getOnTargetAudienceMetricsOrBuilder() {
     return getOnTargetAudienceMetrics();
   }
@@ -155,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.ReachCurve reach_curve = 2;</code>
    * @return Whether the reachCurve field is set.
    */
+  @java.lang.Override
   public boolean hasReachCurve() {
     return reachCurve_ != null;
   }
@@ -166,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.ReachCurve reach_curve = 2;</code>
    * @return The reachCurve.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ReachCurve getReachCurve() {
     return reachCurve_ == null ? com.google.ads.googleads.v4.services.ReachCurve.getDefaultInstance() : reachCurve_;
   }
@@ -176,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.ReachCurve reach_curve = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ReachCurveOrBuilder getReachCurveOrBuilder() {
     return getReachCurve();
   }

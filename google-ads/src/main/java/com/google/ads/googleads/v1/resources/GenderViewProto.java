@@ -30,35 +30,43 @@ public final class GenderViewProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v1/resources/gend" +
       "er_view.proto\022!google.ads.googleads.v1.r" +
-      "esources\032\034google/api/annotations.proto\"#" +
-      "\n\nGenderView\022\025\n\rresource_name\030\001 \001(\tB\374\001\n%" +
-      "com.google.ads.googleads.v1.resourcesB\017G" +
-      "enderViewProtoP\001ZJgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v1/resourc" +
-      "es;resources\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
-      "s.V1.Resources\312\002!Google\\Ads\\GoogleAds\\V1" +
-      "\\Resources\352\002%Google::Ads::GoogleAds::V1:" +
-      ":Resourcesb\006proto3"
+      "esources\032\037google/api/field_behavior.prot" +
+      "o\032\031google/api/resource.proto\032\034google/api" +
+      "/annotations.proto\"\252\001\n\nGenderView\022B\n\rres" +
+      "ource_name\030\001 \001(\tB+\340A\003\372A%\n#googleads.goog" +
+      "leapis.com/GenderView:X\352AU\n#googleads.go" +
+      "ogleapis.com/GenderView\022.customers/{cust" +
+      "omer}/genderViews/{gender_view}B\374\001\n%com." +
+      "google.ads.googleads.v1.resourcesB\017Gende" +
+      "rViewProtoP\001ZJgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v1/resources;r" +
+      "esources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1" +
+      ".Resources\312\002!Google\\Ads\\GoogleAds\\V1\\Res" +
+      "ources\352\002%Google::Ads::GoogleAds::V1::Res" +
+      "ourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_GenderView_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_GenderView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_GenderView_descriptor,
         new java.lang.String[] { "ResourceName", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

@@ -14,6 +14,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
+   * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
   /**
@@ -23,6 +24,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
+   * @return The conversionAction.
    */
   com.google.protobuf.StringValue getConversionAction();
   /**
@@ -42,6 +44,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue adjustment_date_time = 4;</code>
+   * @return Whether the adjustmentDateTime field is set.
    */
   boolean hasAdjustmentDateTime();
   /**
@@ -51,6 +54,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue adjustment_date_time = 4;</code>
+   * @return The adjustmentDateTime.
    */
   com.google.protobuf.StringValue getAdjustmentDateTime();
   /**
@@ -69,6 +73,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType adjustment_type = 5;</code>
+   * @return The enum numeric value on the wire for adjustmentType.
    */
   int getAdjustmentTypeValue();
   /**
@@ -77,6 +82,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType adjustment_type = 5;</code>
+   * @return The adjustmentType.
    */
   com.google.ads.googleads.v3.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType getAdjustmentType();
 
@@ -87,6 +93,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.GclidDateTimePair gclid_date_time_pair = 1;</code>
+   * @return Whether the gclidDateTimePair field is set.
    */
   boolean hasGclidDateTimePair();
   /**
@@ -96,6 +103,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.GclidDateTimePair gclid_date_time_pair = 1;</code>
+   * @return The gclidDateTimePair.
    */
   com.google.ads.googleads.v3.services.GclidDateTimePair getGclidDateTimePair();
   /**
@@ -114,6 +122,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue order_id = 2;</code>
+   * @return Whether the orderId field is set.
    */
   boolean hasOrderId();
   /**
@@ -122,6 +131,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue order_id = 2;</code>
+   * @return The orderId.
    */
   com.google.protobuf.StringValue getOrderId();
   /**

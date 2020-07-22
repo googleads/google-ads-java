@@ -30,41 +30,50 @@ public final class TopicConstantProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v2/resources/topi" +
       "c_constant.proto\022!google.ads.googleads.v" +
-      "2.resources\032\036google/protobuf/wrappers.pr" +
-      "oto\032\034google/api/annotations.proto\"\270\001\n\rTo" +
-      "picConstant\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002id" +
-      "\030\002 \001(\0132\033.google.protobuf.Int64Value\022;\n\025t" +
-      "opic_constant_parent\030\003 \001(\0132\034.google.prot" +
-      "obuf.StringValue\022*\n\004path\030\004 \003(\0132\034.google." +
-      "protobuf.StringValueB\377\001\n%com.google.ads." +
-      "googleads.v2.resourcesB\022TopicConstantPro" +
-      "toP\001ZJgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v2/resources;resources" +
-      "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2.Resourc" +
-      "es\312\002!Google\\Ads\\GoogleAds\\V2\\Resources\352\002" +
-      "%Google::Ads::GoogleAds::V2::Resourcesb\006" +
-      "proto3"
+      "2.resources\032\037google/api/field_behavior.p" +
+      "roto\032\031google/api/resource.proto\032\036google/" +
+      "protobuf/wrappers.proto\032\034google/api/anno" +
+      "tations.proto\"\360\002\n\rTopicConstant\022E\n\rresou" +
+      "rce_name\030\001 \001(\tB.\340A\003\372A(\n&googleads.google" +
+      "apis.com/TopicConstant\022,\n\002id\030\002 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\003\340A\003\022k\n\025topic_co" +
+      "nstant_parent\030\003 \001(\0132\034.google.protobuf.St" +
+      "ringValueB.\340A\003\372A(\n&googleads.googleapis." +
+      "com/TopicConstant\022/\n\004path\030\004 \003(\0132\034.google" +
+      ".protobuf.StringValueB\003\340A\003:L\352AI\n&googlea" +
+      "ds.googleapis.com/TopicConstant\022\037topicCo" +
+      "nstants/{topic_constant}B\377\001\n%com.google." +
+      "ads.googleads.v2.resourcesB\022TopicConstan" +
+      "tProtoP\001ZJgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v2/resources;resou" +
+      "rces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2.Res" +
+      "ources\312\002!Google\\Ads\\GoogleAds\\V2\\Resourc" +
+      "es\352\002%Google::Ads::GoogleAds::V2::Resourc" +
+      "esb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_TopicConstant_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_TopicConstant_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_TopicConstant_descriptor,
         new java.lang.String[] { "ResourceName", "Id", "TopicConstantParent", "Path", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

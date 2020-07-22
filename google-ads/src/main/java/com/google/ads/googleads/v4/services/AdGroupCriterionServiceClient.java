@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.AdGroupCriterionServiceStubSett
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AdGroupCriterionServiceClient adGroupCriterionServiceClient = AdGroupCriterionServiceClient.create()) {
- *   String formattedResourceName = AdGroupCriterionServiceClient.formatAdGroupCriteriaName("[CUSTOMER]", "[AD_GROUP_CRITERIA]");
- *   AdGroupCriterion response = adGroupCriterionServiceClient.getAdGroupCriterion(formattedResourceName);
+ *   AdGroupCriterionName resourceName = AdGroupCriterionName.of("[CUSTOMER]", "[AD_GROUP_CRITERION]");
+ *   AdGroupCriterion response = adGroupCriterionServiceClient.getAdGroupCriterion(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,45 +99,6 @@ public class AdGroupCriterionServiceClient implements BackgroundResource {
   private final AdGroupCriterionServiceSettings settings;
   private final AdGroupCriterionServiceStub stub;
 
-  private static final PathTemplate AD_GROUP_CRITERIA_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/adGroupCriteria/{ad_group_criteria}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad_group_criteria resource.
-   *
-   * @deprecated Use the {@link AdGroupCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String formatAdGroupCriteriaName(String customer, String adGroupCriteria) {
-    return AD_GROUP_CRITERIA_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "ad_group_criteria", adGroupCriteria);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a ad_group_criteria
-   * resource.
-   *
-   * @deprecated Use the {@link AdGroupCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAdGroupCriteriaName(String adGroupCriteriaName) {
-    return AD_GROUP_CRITERIA_PATH_TEMPLATE.parse(adGroupCriteriaName).get("customer");
-  }
-
-  /**
-   * Parses the ad_group_criteria from the given fully-qualified path which represents a
-   * ad_group_criteria resource.
-   *
-   * @deprecated Use the {@link AdGroupCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String parseAdGroupCriteriaFromAdGroupCriteriaName(
-      String adGroupCriteriaName) {
-    return AD_GROUP_CRITERIA_PATH_TEMPLATE.parse(adGroupCriteriaName).get("ad_group_criteria");
-  }
-
   /** Constructs an instance of AdGroupCriterionServiceClient with default settings. */
   public static final AdGroupCriterionServiceClient create() throws IOException {
     return create(AdGroupCriterionServiceSettings.newBuilder().build());
@@ -196,8 +156,32 @@ public class AdGroupCriterionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupCriterionServiceClient adGroupCriterionServiceClient = AdGroupCriterionServiceClient.create()) {
-   *   String formattedResourceName = AdGroupCriterionServiceClient.formatAdGroupCriteriaName("[CUSTOMER]", "[AD_GROUP_CRITERIA]");
-   *   AdGroupCriterion response = adGroupCriterionServiceClient.getAdGroupCriterion(formattedResourceName);
+   *   AdGroupCriterionName resourceName = AdGroupCriterionName.of("[CUSTOMER]", "[AD_GROUP_CRITERION]");
+   *   AdGroupCriterion response = adGroupCriterionServiceClient.getAdGroupCriterion(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the criterion to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AdGroupCriterion getAdGroupCriterion(AdGroupCriterionName resourceName) {
+    GetAdGroupCriterionRequest request =
+        GetAdGroupCriterionRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAdGroupCriterion(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested criterion in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdGroupCriterionServiceClient adGroupCriterionServiceClient = AdGroupCriterionServiceClient.create()) {
+   *   AdGroupCriterionName resourceName = AdGroupCriterionName.of("[CUSTOMER]", "[AD_GROUP_CRITERION]");
+   *   AdGroupCriterion response = adGroupCriterionServiceClient.getAdGroupCriterion(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -205,7 +189,6 @@ public class AdGroupCriterionServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupCriterion getAdGroupCriterion(String resourceName) {
-    AD_GROUP_CRITERIA_PATH_TEMPLATE.validate(resourceName, "getAdGroupCriterion");
     GetAdGroupCriterionRequest request =
         GetAdGroupCriterionRequest.newBuilder().setResourceName(resourceName).build();
     return getAdGroupCriterion(request);
@@ -219,9 +202,9 @@ public class AdGroupCriterionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupCriterionServiceClient adGroupCriterionServiceClient = AdGroupCriterionServiceClient.create()) {
-   *   String formattedResourceName = AdGroupCriterionServiceClient.formatAdGroupCriteriaName("[CUSTOMER]", "[AD_GROUP_CRITERIA]");
+   *   AdGroupCriterionName resourceName = AdGroupCriterionName.of("[CUSTOMER]", "[AD_GROUP_CRITERION]");
    *   GetAdGroupCriterionRequest request = GetAdGroupCriterionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AdGroupCriterion response = adGroupCriterionServiceClient.getAdGroupCriterion(request);
    * }
@@ -242,9 +225,9 @@ public class AdGroupCriterionServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupCriterionServiceClient adGroupCriterionServiceClient = AdGroupCriterionServiceClient.create()) {
-   *   String formattedResourceName = AdGroupCriterionServiceClient.formatAdGroupCriteriaName("[CUSTOMER]", "[AD_GROUP_CRITERIA]");
+   *   AdGroupCriterionName resourceName = AdGroupCriterionName.of("[CUSTOMER]", "[AD_GROUP_CRITERION]");
    *   GetAdGroupCriterionRequest request = GetAdGroupCriterionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AdGroupCriterion&gt; future = adGroupCriterionServiceClient.getAdGroupCriterionCallable().futureCall(request);
    *   // Do something
@@ -255,46 +238,6 @@ public class AdGroupCriterionServiceClient implements BackgroundResource {
   public final UnaryCallable<GetAdGroupCriterionRequest, AdGroupCriterion>
       getAdGroupCriterionCallable() {
     return stub.getAdGroupCriterionCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes criteria. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (AdGroupCriterionServiceClient adGroupCriterionServiceClient = AdGroupCriterionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;AdGroupCriterionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateAdGroupCriteriaResponse response = adGroupCriterionServiceClient.mutateAdGroupCriteria(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. ID of the customer whose criteria are being modified.
-   * @param operations Required. The list of operations to perform on individual criteria.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateAdGroupCriteriaResponse mutateAdGroupCriteria(
-      String customerId,
-      List<AdGroupCriterionOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-    MutateAdGroupCriteriaRequest request =
-        MutateAdGroupCriteriaRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateAdGroupCriteria(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

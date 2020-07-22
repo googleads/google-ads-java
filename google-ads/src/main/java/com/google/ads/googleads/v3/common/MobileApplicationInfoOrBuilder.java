@@ -26,6 +26,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 2;</code>
+   * @return Whether the appId field is set.
    */
   boolean hasAppId();
   /**
@@ -47,6 +48,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 2;</code>
+   * @return The appId.
    */
   com.google.protobuf.StringValue getAppId();
   /**
@@ -77,6 +79,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -85,6 +88,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**

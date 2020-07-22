@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.TopicConstantServiceStubSetting
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (TopicConstantServiceClient topicConstantServiceClient = TopicConstantServiceClient.create()) {
- *   String formattedResourceName = TopicConstantServiceClient.formatTopicConstantName("[TOPIC_CONSTANT]");
- *   TopicConstant response = topicConstantServiceClient.getTopicConstant(formattedResourceName);
+ *   TopicConstantName resourceName = TopicConstantName.of("[TOPIC_CONSTANT]");
+ *   TopicConstant response = topicConstantServiceClient.getTopicConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,30 +98,6 @@ public class TopicConstantServiceClient implements BackgroundResource {
   private final TopicConstantServiceSettings settings;
   private final TopicConstantServiceStub stub;
 
-  private static final PathTemplate TOPIC_CONSTANT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("topicConstants/{topic_constant}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a topic_constant resource.
-   *
-   * @deprecated Use the {@link TopicConstantName} class instead.
-   */
-  @Deprecated
-  public static final String formatTopicConstantName(String topicConstant) {
-    return TOPIC_CONSTANT_PATH_TEMPLATE.instantiate("topic_constant", topicConstant);
-  }
-
-  /**
-   * Parses the topic_constant from the given fully-qualified path which represents a topic_constant
-   * resource.
-   *
-   * @deprecated Use the {@link TopicConstantName} class instead.
-   */
-  @Deprecated
-  public static final String parseTopicConstantFromTopicConstantName(String topicConstantName) {
-    return TOPIC_CONSTANT_PATH_TEMPLATE.parse(topicConstantName).get("topic_constant");
-  }
-
   /** Constructs an instance of TopicConstantServiceClient with default settings. */
   public static final TopicConstantServiceClient create() throws IOException {
     return create(TopicConstantServiceSettings.newBuilder().build());
@@ -179,16 +154,39 @@ public class TopicConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (TopicConstantServiceClient topicConstantServiceClient = TopicConstantServiceClient.create()) {
-   *   String formattedResourceName = TopicConstantServiceClient.formatTopicConstantName("[TOPIC_CONSTANT]");
-   *   TopicConstant response = topicConstantServiceClient.getTopicConstant(formattedResourceName);
+   *   TopicConstantName resourceName = TopicConstantName.of("[TOPIC_CONSTANT]");
+   *   TopicConstant response = topicConstantServiceClient.getTopicConstant(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName Resource name of the Topic to fetch.
+   * @param resourceName Required. Resource name of the Topic to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final TopicConstant getTopicConstant(TopicConstantName resourceName) {
+    GetTopicConstantRequest request =
+        GetTopicConstantRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getTopicConstant(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested topic constant in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (TopicConstantServiceClient topicConstantServiceClient = TopicConstantServiceClient.create()) {
+   *   TopicConstantName resourceName = TopicConstantName.of("[TOPIC_CONSTANT]");
+   *   TopicConstant response = topicConstantServiceClient.getTopicConstant(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the Topic to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final TopicConstant getTopicConstant(String resourceName) {
-    TOPIC_CONSTANT_PATH_TEMPLATE.validate(resourceName, "getTopicConstant");
     GetTopicConstantRequest request =
         GetTopicConstantRequest.newBuilder().setResourceName(resourceName).build();
     return getTopicConstant(request);
@@ -202,9 +200,9 @@ public class TopicConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (TopicConstantServiceClient topicConstantServiceClient = TopicConstantServiceClient.create()) {
-   *   String formattedResourceName = TopicConstantServiceClient.formatTopicConstantName("[TOPIC_CONSTANT]");
+   *   TopicConstantName resourceName = TopicConstantName.of("[TOPIC_CONSTANT]");
    *   GetTopicConstantRequest request = GetTopicConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   TopicConstant response = topicConstantServiceClient.getTopicConstant(request);
    * }
@@ -225,9 +223,9 @@ public class TopicConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (TopicConstantServiceClient topicConstantServiceClient = TopicConstantServiceClient.create()) {
-   *   String formattedResourceName = TopicConstantServiceClient.formatTopicConstantName("[TOPIC_CONSTANT]");
+   *   TopicConstantName resourceName = TopicConstantName.of("[TOPIC_CONSTANT]");
    *   GetTopicConstantRequest request = GetTopicConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;TopicConstant&gt; future = topicConstantServiceClient.getTopicConstantCallable().futureCall(request);
    *   // Do something

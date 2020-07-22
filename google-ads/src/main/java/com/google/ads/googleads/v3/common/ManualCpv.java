@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.ManualCpv}
  */
-public  final class ManualCpv extends
+public final class ManualCpv extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.ManualCpv)
     ManualCpvOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ManualCpv() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ManualCpv();
   }
 
   @java.lang.Override

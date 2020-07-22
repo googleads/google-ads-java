@@ -10,25 +10,27 @@ public interface KeywordPlanCampaignForecastOrBuilder extends
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
-   * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+   * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
+   * @return Whether the keywordPlanCampaign field is set.
    */
   boolean hasKeywordPlanCampaign();
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
-   * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+   * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
+   * @return The keywordPlanCampaign.
    */
   com.google.protobuf.StringValue getKeywordPlanCampaign();
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
-   * `customers/{customer_id}/keywordPlanCampaigns/{keyword+plan_campaign_id}`
+   * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_campaign = 1;</code>
@@ -41,6 +43,7 @@ public interface KeywordPlanCampaignForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ForecastMetrics campaign_forecast = 2;</code>
+   * @return Whether the campaignForecast field is set.
    */
   boolean hasCampaignForecast();
   /**
@@ -49,6 +52,7 @@ public interface KeywordPlanCampaignForecastOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ForecastMetrics campaign_forecast = 2;</code>
+   * @return The campaignForecast.
    */
   com.google.ads.googleads.v2.services.ForecastMetrics getCampaignForecast();
   /**

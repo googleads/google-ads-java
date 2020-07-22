@@ -13,6 +13,7 @@ public interface SearchGoogleAdsStreamRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
@@ -21,6 +22,7 @@ public interface SearchGoogleAdsStreamRequestOrBuilder extends
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
@@ -31,6 +33,7 @@ public interface SearchGoogleAdsStreamRequestOrBuilder extends
    * </pre>
    *
    * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The query.
    */
   java.lang.String getQuery();
   /**
@@ -39,6 +42,7 @@ public interface SearchGoogleAdsStreamRequestOrBuilder extends
    * </pre>
    *
    * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for query.
    */
   com.google.protobuf.ByteString
       getQueryBytes();
@@ -51,6 +55,7 @@ public interface SearchGoogleAdsStreamRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 3;</code>
+   * @return The enum numeric value on the wire for summaryRowSetting.
    */
   int getSummaryRowSettingValue();
   /**
@@ -61,6 +66,7 @@ public interface SearchGoogleAdsStreamRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 3;</code>
+   * @return The summaryRowSetting.
    */
   com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting();
 }

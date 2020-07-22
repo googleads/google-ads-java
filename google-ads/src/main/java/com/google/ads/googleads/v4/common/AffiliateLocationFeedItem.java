@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.AffiliateLocationFeedItem}
  */
-public  final class AffiliateLocationFeedItem extends
+public final class AffiliateLocationFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.AffiliateLocationFeedItem)
     AffiliateLocationFeedItemOrBuilder {
@@ -224,6 +224,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue business_name = 1;</code>
    * @return Whether the businessName field is set.
    */
+  @java.lang.Override
   public boolean hasBusinessName() {
     return businessName_ != null;
   }
@@ -235,6 +236,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue business_name = 1;</code>
    * @return The businessName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBusinessName() {
     return businessName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessName_;
   }
@@ -245,6 +247,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue business_name = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBusinessNameOrBuilder() {
     return getBusinessName();
   }
@@ -259,6 +262,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue address_line_1 = 2;</code>
    * @return Whether the addressLine1 field is set.
    */
+  @java.lang.Override
   public boolean hasAddressLine1() {
     return addressLine1_ != null;
   }
@@ -270,6 +274,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue address_line_1 = 2;</code>
    * @return The addressLine1.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAddressLine1() {
     return addressLine1_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : addressLine1_;
   }
@@ -280,6 +285,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue address_line_1 = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAddressLine1OrBuilder() {
     return getAddressLine1();
   }
@@ -294,6 +300,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue address_line_2 = 3;</code>
    * @return Whether the addressLine2 field is set.
    */
+  @java.lang.Override
   public boolean hasAddressLine2() {
     return addressLine2_ != null;
   }
@@ -305,6 +312,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue address_line_2 = 3;</code>
    * @return The addressLine2.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAddressLine2() {
     return addressLine2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : addressLine2_;
   }
@@ -315,6 +323,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue address_line_2 = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAddressLine2OrBuilder() {
     return getAddressLine2();
   }
@@ -329,6 +338,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue city = 4;</code>
    * @return Whether the city field is set.
    */
+  @java.lang.Override
   public boolean hasCity() {
     return city_ != null;
   }
@@ -340,6 +350,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue city = 4;</code>
    * @return The city.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCity() {
     return city_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : city_;
   }
@@ -350,6 +361,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue city = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCityOrBuilder() {
     return getCity();
   }
@@ -364,6 +376,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue province = 5;</code>
    * @return Whether the province field is set.
    */
+  @java.lang.Override
   public boolean hasProvince() {
     return province_ != null;
   }
@@ -375,6 +388,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue province = 5;</code>
    * @return The province.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProvince() {
     return province_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : province_;
   }
@@ -385,6 +399,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue province = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProvinceOrBuilder() {
     return getProvince();
   }
@@ -399,6 +414,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue postal_code = 6;</code>
    * @return Whether the postalCode field is set.
    */
+  @java.lang.Override
   public boolean hasPostalCode() {
     return postalCode_ != null;
   }
@@ -410,6 +426,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue postal_code = 6;</code>
    * @return The postalCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPostalCode() {
     return postalCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : postalCode_;
   }
@@ -420,6 +437,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue postal_code = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPostalCodeOrBuilder() {
     return getPostalCode();
   }
@@ -434,6 +452,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue country_code = 7;</code>
    * @return Whether the countryCode field is set.
    */
+  @java.lang.Override
   public boolean hasCountryCode() {
     return countryCode_ != null;
   }
@@ -445,6 +464,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue country_code = 7;</code>
    * @return The countryCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCountryCode() {
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
@@ -455,6 +475,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue country_code = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
     return getCountryCode();
   }
@@ -469,6 +490,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue phone_number = 8;</code>
    * @return Whether the phoneNumber field is set.
    */
+  @java.lang.Override
   public boolean hasPhoneNumber() {
     return phoneNumber_ != null;
   }
@@ -480,6 +502,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue phone_number = 8;</code>
    * @return The phoneNumber.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPhoneNumber() {
     return phoneNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : phoneNumber_;
   }
@@ -490,6 +513,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue phone_number = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPhoneNumberOrBuilder() {
     return getPhoneNumber();
   }
@@ -504,6 +528,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value chain_id = 9;</code>
    * @return Whether the chainId field is set.
    */
+  @java.lang.Override
   public boolean hasChainId() {
     return chainId_ != null;
   }
@@ -515,6 +540,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value chain_id = 9;</code>
    * @return The chainId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getChainId() {
     return chainId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : chainId_;
   }
@@ -525,6 +551,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value chain_id = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getChainIdOrBuilder() {
     return getChainId();
   }
@@ -539,6 +566,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue chain_name = 10;</code>
    * @return Whether the chainName field is set.
    */
+  @java.lang.Override
   public boolean hasChainName() {
     return chainName_ != null;
   }
@@ -550,6 +578,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue chain_name = 10;</code>
    * @return The chainName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getChainName() {
     return chainName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : chainName_;
   }
@@ -560,6 +589,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue chain_name = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getChainNameOrBuilder() {
     return getChainName();
   }

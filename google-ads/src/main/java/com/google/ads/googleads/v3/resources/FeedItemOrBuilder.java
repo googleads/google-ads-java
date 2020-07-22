@@ -15,6 +15,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
   boolean hasFeed();
   /**
@@ -43,6 +46,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
   com.google.protobuf.StringValue getFeed();
   /**
@@ -60,6 +64,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -68,6 +73,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -88,6 +94,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+   * @return Whether the startDateTime field is set.
    */
   boolean hasStartDateTime();
   /**
@@ -99,6 +106,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date_time = 4;</code>
+   * @return The startDateTime.
    */
   com.google.protobuf.StringValue getStartDateTime();
   /**
@@ -122,6 +130,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+   * @return Whether the endDateTime field is set.
    */
   boolean hasEndDateTime();
   /**
@@ -133,6 +142,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date_time = 5;</code>
+   * @return The endDateTime.
    */
   com.google.protobuf.StringValue getEndDateTime();
   /**
@@ -198,6 +208,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
+   * @return The enum numeric value on the wire for geoTargetingRestriction.
    */
   int getGeoTargetingRestrictionValue();
   /**
@@ -207,6 +218,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction geo_targeting_restriction = 7;</code>
+   * @return The geoTargetingRestriction.
    */
   com.google.ads.googleads.v3.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction getGeoTargetingRestriction();
 
@@ -266,6 +278,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -275,6 +288,7 @@ public interface FeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.FeedItemStatusEnum.FeedItemStatus getStatus();
 

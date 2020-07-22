@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.AdGroupAdLabelOperation}
  */
-public  final class AdGroupAdLabelOperation extends
+public final class AdGroupAdLabelOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.AdGroupAdLabelOperation)
     AdGroupAdLabelOperationOrBuilder {
@@ -155,6 +155,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.AdGroupAdLabel create = 1;</code>
    * @return Whether the create field is set.
    */
+  @java.lang.Override
   public boolean hasCreate() {
     return operationCase_ == 1;
   }
@@ -167,6 +168,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.AdGroupAdLabel create = 1;</code>
    * @return The create.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdGroupAdLabel getCreate() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.AdGroupAdLabel) operation_;
@@ -181,6 +183,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.AdGroupAdLabel create = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdGroupAdLabelOrBuilder getCreateOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.AdGroupAdLabel) operation_;
@@ -628,6 +631,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.AdGroupAdLabel create = 1;</code>
      * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return operationCase_ == 1;
     }
@@ -640,6 +644,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.AdGroupAdLabel create = 1;</code>
      * @return The create.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.AdGroupAdLabel getCreate() {
       if (createBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -763,6 +768,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.AdGroupAdLabel create = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.AdGroupAdLabelOrBuilder getCreateOrBuilder() {
       if ((operationCase_ == 1) && (createBuilder_ != null)) {
         return createBuilder_.getMessageOrBuilder();
@@ -811,6 +817,7 @@ private static final long serialVersionUID = 0L;
      * <code>string remove = 2;</code>
      * @return The remove.
      */
+    @java.lang.Override
     public java.lang.String getRemove() {
       java.lang.Object ref = "";
       if (operationCase_ == 2) {
@@ -839,6 +846,7 @@ private static final long serialVersionUID = 0L;
      * <code>string remove = 2;</code>
      * @return The bytes for remove.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRemoveBytes() {
       java.lang.Object ref = "";

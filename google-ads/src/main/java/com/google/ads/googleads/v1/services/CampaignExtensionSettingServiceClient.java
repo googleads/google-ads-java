@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.CampaignExtensionSettingService
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CampaignExtensionSettingServiceClient campaignExtensionSettingServiceClient = CampaignExtensionSettingServiceClient.create()) {
- *   String formattedResourceName = CampaignExtensionSettingServiceClient.formatCampaignExtensionSettingName("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
- *   CampaignExtensionSetting response = campaignExtensionSettingServiceClient.getCampaignExtensionSetting(formattedResourceName);
+ *   CampaignExtensionSettingName resourceName = CampaignExtensionSettingName.of("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
+ *   CampaignExtensionSetting response = campaignExtensionSettingServiceClient.getCampaignExtensionSetting(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,52 +98,6 @@ import javax.annotation.Generated;
 public class CampaignExtensionSettingServiceClient implements BackgroundResource {
   private final CampaignExtensionSettingServiceSettings settings;
   private final CampaignExtensionSettingServiceStub stub;
-
-  private static final PathTemplate CAMPAIGN_EXTENSION_SETTING_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/campaignExtensionSettings/{campaign_extension_setting}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign_extension_setting
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignExtensionSettingName} class instead.
-   */
-  @Deprecated
-  public static final String formatCampaignExtensionSettingName(
-      String customer, String campaignExtensionSetting) {
-    return CAMPAIGN_EXTENSION_SETTING_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "campaign_extension_setting", campaignExtensionSetting);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * campaign_extension_setting resource.
-   *
-   * @deprecated Use the {@link CampaignExtensionSettingName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCampaignExtensionSettingName(
-      String campaignExtensionSettingName) {
-    return CAMPAIGN_EXTENSION_SETTING_PATH_TEMPLATE
-        .parse(campaignExtensionSettingName)
-        .get("customer");
-  }
-
-  /**
-   * Parses the campaign_extension_setting from the given fully-qualified path which represents a
-   * campaign_extension_setting resource.
-   *
-   * @deprecated Use the {@link CampaignExtensionSettingName} class instead.
-   */
-  @Deprecated
-  public static final String parseCampaignExtensionSettingFromCampaignExtensionSettingName(
-      String campaignExtensionSettingName) {
-    return CAMPAIGN_EXTENSION_SETTING_PATH_TEMPLATE
-        .parse(campaignExtensionSettingName)
-        .get("campaign_extension_setting");
-  }
 
   /** Constructs an instance of CampaignExtensionSettingServiceClient with default settings. */
   public static final CampaignExtensionSettingServiceClient create() throws IOException {
@@ -207,16 +160,40 @@ public class CampaignExtensionSettingServiceClient implements BackgroundResource
    *
    * <pre><code>
    * try (CampaignExtensionSettingServiceClient campaignExtensionSettingServiceClient = CampaignExtensionSettingServiceClient.create()) {
-   *   String formattedResourceName = CampaignExtensionSettingServiceClient.formatCampaignExtensionSettingName("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
-   *   CampaignExtensionSetting response = campaignExtensionSettingServiceClient.getCampaignExtensionSetting(formattedResourceName);
+   *   CampaignExtensionSettingName resourceName = CampaignExtensionSettingName.of("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
+   *   CampaignExtensionSetting response = campaignExtensionSettingServiceClient.getCampaignExtensionSetting(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the campaign extension setting to fetch.
+   * @param resourceName Required. The resource name of the campaign extension setting to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CampaignExtensionSetting getCampaignExtensionSetting(
+      CampaignExtensionSettingName resourceName) {
+    GetCampaignExtensionSettingRequest request =
+        GetCampaignExtensionSettingRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCampaignExtensionSetting(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested campaign extension setting in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignExtensionSettingServiceClient campaignExtensionSettingServiceClient = CampaignExtensionSettingServiceClient.create()) {
+   *   CampaignExtensionSettingName resourceName = CampaignExtensionSettingName.of("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
+   *   CampaignExtensionSetting response = campaignExtensionSettingServiceClient.getCampaignExtensionSetting(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the campaign extension setting to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignExtensionSetting getCampaignExtensionSetting(String resourceName) {
-    CAMPAIGN_EXTENSION_SETTING_PATH_TEMPLATE.validate(resourceName, "getCampaignExtensionSetting");
     GetCampaignExtensionSettingRequest request =
         GetCampaignExtensionSettingRequest.newBuilder().setResourceName(resourceName).build();
     return getCampaignExtensionSetting(request);
@@ -230,9 +207,9 @@ public class CampaignExtensionSettingServiceClient implements BackgroundResource
    *
    * <pre><code>
    * try (CampaignExtensionSettingServiceClient campaignExtensionSettingServiceClient = CampaignExtensionSettingServiceClient.create()) {
-   *   String formattedResourceName = CampaignExtensionSettingServiceClient.formatCampaignExtensionSettingName("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
+   *   CampaignExtensionSettingName resourceName = CampaignExtensionSettingName.of("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
    *   GetCampaignExtensionSettingRequest request = GetCampaignExtensionSettingRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CampaignExtensionSetting response = campaignExtensionSettingServiceClient.getCampaignExtensionSetting(request);
    * }
@@ -254,9 +231,9 @@ public class CampaignExtensionSettingServiceClient implements BackgroundResource
    *
    * <pre><code>
    * try (CampaignExtensionSettingServiceClient campaignExtensionSettingServiceClient = CampaignExtensionSettingServiceClient.create()) {
-   *   String formattedResourceName = CampaignExtensionSettingServiceClient.formatCampaignExtensionSettingName("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
+   *   CampaignExtensionSettingName resourceName = CampaignExtensionSettingName.of("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
    *   GetCampaignExtensionSettingRequest request = GetCampaignExtensionSettingRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CampaignExtensionSetting&gt; future = campaignExtensionSettingServiceClient.getCampaignExtensionSettingCallable().futureCall(request);
    *   // Do something
@@ -279,58 +256,18 @@ public class CampaignExtensionSettingServiceClient implements BackgroundResource
    * try (CampaignExtensionSettingServiceClient campaignExtensionSettingServiceClient = CampaignExtensionSettingServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;CampaignExtensionSettingOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCampaignExtensionSettingsResponse response = campaignExtensionSettingServiceClient.mutateCampaignExtensionSettings(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose campaign extension settings are being modified.
-   * @param operations The list of operations to perform on individual campaign extension settings.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCampaignExtensionSettingsResponse mutateCampaignExtensionSettings(
-      String customerId,
-      List<CampaignExtensionSettingOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateCampaignExtensionSettingsRequest request =
-        MutateCampaignExtensionSettingsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCampaignExtensionSettings(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes campaign extension settings. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExtensionSettingServiceClient campaignExtensionSettingServiceClient = CampaignExtensionSettingServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignExtensionSettingOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateCampaignExtensionSettingsResponse response = campaignExtensionSettingServiceClient.mutateCampaignExtensionSettings(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose campaign extension settings are being modified.
-   * @param operations The list of operations to perform on individual campaign extension settings.
+   * @param customerId Required. The ID of the customer whose campaign extension settings are being
+   *     modified.
+   * @param operations Required. The list of operations to perform on individual campaign extension
+   *     settings.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateCampaignExtensionSettingsResponse mutateCampaignExtensionSettings(
       String customerId, List<CampaignExtensionSettingOperation> operations) {
-
     MutateCampaignExtensionSettingsRequest request =
         MutateCampaignExtensionSettingsRequest.newBuilder()
             .setCustomerId(customerId)

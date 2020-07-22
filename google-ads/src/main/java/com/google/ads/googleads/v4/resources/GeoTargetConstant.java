@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.GeoTargetConstant}
  */
-public  final class GeoTargetConstant extends
+public final class GeoTargetConstant extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.GeoTargetConstant)
     GeoTargetConstantOrBuilder {
@@ -175,6 +175,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -197,6 +198,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -221,6 +223,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -232,6 +235,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -242,6 +246,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -256,6 +261,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -267,6 +273,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -277,6 +284,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -291,6 +299,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the countryCode field is set.
    */
+  @java.lang.Override
   public boolean hasCountryCode() {
     return countryCode_ != null;
   }
@@ -302,6 +311,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The countryCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCountryCode() {
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
@@ -312,6 +322,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue country_code = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
     return getCountryCode();
   }
@@ -326,6 +337,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the targetType field is set.
    */
+  @java.lang.Override
   public boolean hasTargetType() {
     return targetType_ != null;
   }
@@ -337,6 +349,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The targetType.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTargetType() {
     return targetType_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : targetType_;
   }
@@ -347,6 +360,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue target_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTargetTypeOrBuilder() {
     return getTargetType();
   }
@@ -361,7 +375,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -372,7 +386,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus result = com.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNRECOGNIZED : result;
@@ -389,6 +403,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the canonicalName field is set.
    */
+  @java.lang.Override
   public boolean hasCanonicalName() {
     return canonicalName_ != null;
   }
@@ -401,6 +416,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The canonicalName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCanonicalName() {
     return canonicalName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : canonicalName_;
   }
@@ -412,6 +428,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue canonical_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCanonicalNameOrBuilder() {
     return getCanonicalName();
   }
@@ -1623,7 +1640,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1636,6 +1653,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1648,6 +1666,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus status = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus result = com.google.ads.googleads.v4.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.valueOf(status_);

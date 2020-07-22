@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.UserData}
  */
-public  final class UserData extends
+public final class UserData extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.UserData)
     UserDataOrBuilder {
@@ -120,6 +120,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserIdentifier user_identifiers = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.UserIdentifier> getUserIdentifiersList() {
     return userIdentifiers_;
   }
@@ -130,6 +131,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserIdentifier user_identifiers = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.UserIdentifierOrBuilder> 
       getUserIdentifiersOrBuilderList() {
     return userIdentifiers_;
@@ -141,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserIdentifier user_identifiers = 1;</code>
    */
+  @java.lang.Override
   public int getUserIdentifiersCount() {
     return userIdentifiers_.size();
   }
@@ -151,6 +154,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserIdentifier user_identifiers = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserIdentifier getUserIdentifiers(int index) {
     return userIdentifiers_.get(index);
   }
@@ -161,6 +165,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserIdentifier user_identifiers = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserIdentifierOrBuilder getUserIdentifiersOrBuilder(
       int index) {
     return userIdentifiers_.get(index);
@@ -177,6 +182,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.TransactionAttribute transaction_attribute = 2;</code>
    * @return Whether the transactionAttribute field is set.
    */
+  @java.lang.Override
   public boolean hasTransactionAttribute() {
     return transactionAttribute_ != null;
   }
@@ -189,6 +195,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.TransactionAttribute transaction_attribute = 2;</code>
    * @return The transactionAttribute.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TransactionAttribute getTransactionAttribute() {
     return transactionAttribute_ == null ? com.google.ads.googleads.v4.common.TransactionAttribute.getDefaultInstance() : transactionAttribute_;
   }
@@ -200,6 +207,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.TransactionAttribute transaction_attribute = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TransactionAttributeOrBuilder getTransactionAttributeOrBuilder() {
     return getTransactionAttribute();
   }

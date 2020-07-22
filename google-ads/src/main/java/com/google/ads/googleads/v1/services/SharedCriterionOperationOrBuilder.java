@@ -14,6 +14,7 @@ public interface SharedCriterionOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.SharedCriterion create = 1;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -23,6 +24,7 @@ public interface SharedCriterionOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.SharedCriterion create = 1;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v1.resources.SharedCriterion getCreate();
   /**
@@ -43,6 +45,7 @@ public interface SharedCriterionOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 3;</code>
+   * @return The remove.
    */
   java.lang.String getRemove();
   /**
@@ -53,6 +56,7 @@ public interface SharedCriterionOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 3;</code>
+   * @return The bytes for remove.
    */
   com.google.protobuf.ByteString
       getRemoveBytes();

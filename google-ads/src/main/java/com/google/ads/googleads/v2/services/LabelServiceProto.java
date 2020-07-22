@@ -52,58 +52,56 @@ public final class LabelServiceProto {
       "_service.proto\022 google.ads.googleads.v2." +
       "services\032-google/ads/googleads/v2/resour" +
       "ces/label.proto\032\034google/api/annotations." +
-      "proto\032 google/protobuf/field_mask.proto\032" +
-      "\027google/rpc/status.proto\032\027google/api/cli" +
-      "ent.proto\"(\n\017GetLabelRequest\022\025\n\rresource" +
-      "_name\030\001 \001(\t\"\240\001\n\023MutateLabelsRequest\022\023\n\013c" +
-      "ustomer_id\030\001 \001(\t\022D\n\noperations\030\002 \003(\01320.g" +
-      "oogle.ads.googleads.v2.services.LabelOpe" +
-      "ration\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalid" +
-      "ate_only\030\004 \001(\010\"\330\001\n\016LabelOperation\022/\n\013upd" +
-      "ate_mask\030\004 \001(\0132\032.google.protobuf.FieldMa" +
-      "sk\022:\n\006create\030\001 \001(\0132(.google.ads.googlead" +
-      "s.v2.resources.LabelH\000\022:\n\006update\030\002 \001(\0132(" +
-      ".google.ads.googleads.v2.resources.Label" +
-      "H\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"\217\001\n\024Mu" +
-      "tateLabelsResponse\0221\n\025partial_failure_er" +
-      "ror\030\003 \001(\0132\022.google.rpc.Status\022D\n\007results" +
-      "\030\002 \003(\01323.google.ads.googleads.v2.service" +
-      "s.MutateLabelResult\"*\n\021MutateLabelResult" +
-      "\022\025\n\rresource_name\030\001 \001(\t2\377\002\n\014LabelService" +
-      "\022\231\001\n\010GetLabel\0221.google.ads.googleads.v2." +
-      "services.GetLabelRequest\032(.google.ads.go" +
-      "ogleads.v2.resources.Label\"0\202\323\344\223\002*\022(/v2/" +
-      "{resource_name=customers/*/labels/*}\022\265\001\n" +
-      "\014MutateLabels\0225.google.ads.googleads.v2." +
-      "services.MutateLabelsRequest\0326.google.ad" +
-      "s.googleads.v2.services.MutateLabelsResp" +
-      "onse\"6\202\323\344\223\0020\"+/v2/customers/{customer_id" +
-      "=*}/labels:mutate:\001*\032\033\312A\030googleads.googl" +
-      "eapis.comB\370\001\n$com.google.ads.googleads.v" +
-      "2.servicesB\021LabelServiceProtoP\001ZHgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v2/services;services\242\002\003GAA\252\002 Google" +
-      ".Ads.GoogleAds.V2.Services\312\002 Google\\Ads\\" +
-      "GoogleAds\\V2\\Services\352\002$Google::Ads::Goo" +
-      "gleAds::V2::Servicesb\006proto3"
+      "proto\032\027google/api/client.proto\032\037google/a" +
+      "pi/field_behavior.proto\032\031google/api/reso" +
+      "urce.proto\032 google/protobuf/field_mask.p" +
+      "roto\032\027google/rpc/status.proto\"P\n\017GetLabe" +
+      "lRequest\022=\n\rresource_name\030\001 \001(\tB&\340A\002\372A \n" +
+      "\036googleads.googleapis.com/Label\"\252\001\n\023Muta" +
+      "teLabelsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A" +
+      "\002\022I\n\noperations\030\002 \003(\01320.google.ads.googl" +
+      "eads.v2.services.LabelOperationB\003\340A\002\022\027\n\017" +
+      "partial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004" +
+      " \001(\010\"\330\001\n\016LabelOperation\022/\n\013update_mask\030\004" +
+      " \001(\0132\032.google.protobuf.FieldMask\022:\n\006crea" +
+      "te\030\001 \001(\0132(.google.ads.googleads.v2.resou" +
+      "rces.LabelH\000\022:\n\006update\030\002 \001(\0132(.google.ad" +
+      "s.googleads.v2.resources.LabelH\000\022\020\n\006remo" +
+      "ve\030\003 \001(\tH\000B\013\n\toperation\"\217\001\n\024MutateLabels" +
+      "Response\0221\n\025partial_failure_error\030\003 \001(\0132" +
+      "\022.google.rpc.Status\022D\n\007results\030\002 \003(\01323.g" +
+      "oogle.ads.googleads.v2.services.MutateLa" +
+      "belResult\"*\n\021MutateLabelResult\022\025\n\rresour" +
+      "ce_name\030\001 \001(\t2\250\003\n\014LabelService\022\251\001\n\010GetLa" +
+      "bel\0221.google.ads.googleads.v2.services.G" +
+      "etLabelRequest\032(.google.ads.googleads.v2" +
+      ".resources.Label\"@\202\323\344\223\002*\022(/v2/{resource_" +
+      "name=customers/*/labels/*}\332A\rresource_na" +
+      "me\022\316\001\n\014MutateLabels\0225.google.ads.googlea" +
+      "ds.v2.services.MutateLabelsRequest\0326.goo" +
+      "gle.ads.googleads.v2.services.MutateLabe" +
+      "lsResponse\"O\202\323\344\223\0020\"+/v2/customers/{custo" +
+      "mer_id=*}/labels:mutate:\001*\332A\026customer_id" +
+      ",operations\032\033\312A\030googleads.googleapis.com" +
+      "B\370\001\n$com.google.ads.googleads.v2.service" +
+      "sB\021LabelServiceProtoP\001ZHgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v2/s" +
+      "ervices;services\242\002\003GAA\252\002 Google.Ads.Goog" +
+      "leAds.V2.Services\312\002 Google\\Ads\\GoogleAds" +
+      "\\V2\\Services\352\002$Google::Ads::GoogleAds::V" +
+      "2::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.LabelProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_services_GetLabelRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetLabelRequest_fieldAccessorTable = new
@@ -137,14 +135,19 @@ public final class LabelServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.LabelProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

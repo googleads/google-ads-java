@@ -18,7 +18,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ResponsiveSearchAdInfo}
  */
-public  final class ResponsiveSearchAdInfo extends
+public final class ResponsiveSearchAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ResponsiveSearchAdInfo)
     ResponsiveSearchAdInfoOrBuilder {
@@ -155,6 +155,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.AdTextAsset> getHeadlinesList() {
     return headlines_;
   }
@@ -166,6 +167,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.AdTextAssetOrBuilder> 
       getHeadlinesOrBuilderList() {
     return headlines_;
@@ -178,6 +180,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public int getHeadlinesCount() {
     return headlines_.size();
   }
@@ -189,6 +192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdTextAsset getHeadlines(int index) {
     return headlines_.get(index);
   }
@@ -200,6 +204,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdTextAssetOrBuilder getHeadlinesOrBuilder(
       int index) {
     return headlines_.get(index);
@@ -215,6 +220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.AdTextAsset> getDescriptionsList() {
     return descriptions_;
   }
@@ -226,6 +232,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.AdTextAssetOrBuilder> 
       getDescriptionsOrBuilderList() {
     return descriptions_;
@@ -238,6 +245,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public int getDescriptionsCount() {
     return descriptions_.size();
   }
@@ -249,6 +257,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdTextAsset getDescriptions(int index) {
     return descriptions_.get(index);
   }
@@ -260,6 +269,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdTextAssetOrBuilder getDescriptionsOrBuilder(
       int index) {
     return descriptions_.get(index);
@@ -275,6 +285,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue path1 = 3;</code>
    * @return Whether the path1 field is set.
    */
+  @java.lang.Override
   public boolean hasPath1() {
     return path1_ != null;
   }
@@ -286,6 +297,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue path1 = 3;</code>
    * @return The path1.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPath1() {
     return path1_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : path1_;
   }
@@ -296,6 +308,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue path1 = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPath1OrBuilder() {
     return getPath1();
   }
@@ -311,6 +324,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue path2 = 4;</code>
    * @return Whether the path2 field is set.
    */
+  @java.lang.Override
   public boolean hasPath2() {
     return path2_ != null;
   }
@@ -323,6 +337,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue path2 = 4;</code>
    * @return The path2.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPath2() {
     return path2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : path2_;
   }
@@ -334,6 +349,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue path2 = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPath2OrBuilder() {
     return getPath2();
   }

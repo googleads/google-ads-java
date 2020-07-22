@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.GeographicViewServiceStubSettin
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (GeographicViewServiceClient geographicViewServiceClient = GeographicViewServiceClient.create()) {
- *   String formattedResourceName = GeographicViewServiceClient.formatGeographicViewName("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
- *   GeographicView response = geographicViewServiceClient.getGeographicView(formattedResourceName);
+ *   GeographicViewName resourceName = GeographicViewName.of("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
+ *   GeographicView response = geographicViewServiceClient.getGeographicView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,44 +98,6 @@ public class GeographicViewServiceClient implements BackgroundResource {
   private final GeographicViewServiceSettings settings;
   private final GeographicViewServiceStub stub;
 
-  private static final PathTemplate GEOGRAPHIC_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/geographicViews/{geographic_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a geographic_view resource.
-   *
-   * @deprecated Use the {@link GeographicViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatGeographicViewName(String customer, String geographicView) {
-    return GEOGRAPHIC_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "geographic_view", geographicView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a geographic_view
-   * resource.
-   *
-   * @deprecated Use the {@link GeographicViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromGeographicViewName(String geographicViewName) {
-    return GEOGRAPHIC_VIEW_PATH_TEMPLATE.parse(geographicViewName).get("customer");
-  }
-
-  /**
-   * Parses the geographic_view from the given fully-qualified path which represents a
-   * geographic_view resource.
-   *
-   * @deprecated Use the {@link GeographicViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseGeographicViewFromGeographicViewName(String geographicViewName) {
-    return GEOGRAPHIC_VIEW_PATH_TEMPLATE.parse(geographicViewName).get("geographic_view");
-  }
-
   /** Constructs an instance of GeographicViewServiceClient with default settings. */
   public static final GeographicViewServiceClient create() throws IOException {
     return create(GeographicViewServiceSettings.newBuilder().build());
@@ -193,8 +154,32 @@ public class GeographicViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GeographicViewServiceClient geographicViewServiceClient = GeographicViewServiceClient.create()) {
-   *   String formattedResourceName = GeographicViewServiceClient.formatGeographicViewName("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
-   *   GeographicView response = geographicViewServiceClient.getGeographicView(formattedResourceName);
+   *   GeographicViewName resourceName = GeographicViewName.of("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
+   *   GeographicView response = geographicViewServiceClient.getGeographicView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the geographic view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GeographicView getGeographicView(GeographicViewName resourceName) {
+    GetGeographicViewRequest request =
+        GetGeographicViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getGeographicView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested geographic view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (GeographicViewServiceClient geographicViewServiceClient = GeographicViewServiceClient.create()) {
+   *   GeographicViewName resourceName = GeographicViewName.of("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
+   *   GeographicView response = geographicViewServiceClient.getGeographicView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -202,7 +187,6 @@ public class GeographicViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GeographicView getGeographicView(String resourceName) {
-    GEOGRAPHIC_VIEW_PATH_TEMPLATE.validate(resourceName, "getGeographicView");
     GetGeographicViewRequest request =
         GetGeographicViewRequest.newBuilder().setResourceName(resourceName).build();
     return getGeographicView(request);
@@ -216,9 +200,9 @@ public class GeographicViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GeographicViewServiceClient geographicViewServiceClient = GeographicViewServiceClient.create()) {
-   *   String formattedResourceName = GeographicViewServiceClient.formatGeographicViewName("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
+   *   GeographicViewName resourceName = GeographicViewName.of("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
    *   GetGeographicViewRequest request = GetGeographicViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   GeographicView response = geographicViewServiceClient.getGeographicView(request);
    * }
@@ -239,9 +223,9 @@ public class GeographicViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (GeographicViewServiceClient geographicViewServiceClient = GeographicViewServiceClient.create()) {
-   *   String formattedResourceName = GeographicViewServiceClient.formatGeographicViewName("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
+   *   GeographicViewName resourceName = GeographicViewName.of("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
    *   GetGeographicViewRequest request = GetGeographicViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;GeographicView&gt; future = geographicViewServiceClient.getGeographicViewCallable().futureCall(request);
    *   // Do something

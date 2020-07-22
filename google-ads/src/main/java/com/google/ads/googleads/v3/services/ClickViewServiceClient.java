@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.ClickViewServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
- *   String formattedResourceName = ClickViewServiceClient.formatClickViewName("[CUSTOMER]", "[CLICK_VIEW]");
- *   ClickView response = clickViewServiceClient.getClickView(formattedResourceName);
+ *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER]", "[CLICK_VIEW]");
+ *   ClickView response = clickViewServiceClient.getClickView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,42 +98,6 @@ public class ClickViewServiceClient implements BackgroundResource {
   private final ClickViewServiceSettings settings;
   private final ClickViewServiceStub stub;
 
-  private static final PathTemplate CLICK_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/clickViews/{click_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a click_view resource.
-   *
-   * @deprecated Use the {@link ClickViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatClickViewName(String customer, String clickView) {
-    return CLICK_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "click_view", clickView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a click_view resource.
-   *
-   * @deprecated Use the {@link ClickViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromClickViewName(String clickViewName) {
-    return CLICK_VIEW_PATH_TEMPLATE.parse(clickViewName).get("customer");
-  }
-
-  /**
-   * Parses the click_view from the given fully-qualified path which represents a click_view
-   * resource.
-   *
-   * @deprecated Use the {@link ClickViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseClickViewFromClickViewName(String clickViewName) {
-    return CLICK_VIEW_PATH_TEMPLATE.parse(clickViewName).get("click_view");
-  }
-
   /** Constructs an instance of ClickViewServiceClient with default settings. */
   public static final ClickViewServiceClient create() throws IOException {
     return create(ClickViewServiceSettings.newBuilder().build());
@@ -191,8 +154,32 @@ public class ClickViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
-   *   String formattedResourceName = ClickViewServiceClient.formatClickViewName("[CUSTOMER]", "[CLICK_VIEW]");
-   *   ClickView response = clickViewServiceClient.getClickView(formattedResourceName);
+   *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER]", "[CLICK_VIEW]");
+   *   ClickView response = clickViewServiceClient.getClickView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the click view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ClickView getClickView(ClickViewName resourceName) {
+    GetClickViewRequest request =
+        GetClickViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getClickView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested click view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
+   *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER]", "[CLICK_VIEW]");
+   *   ClickView response = clickViewServiceClient.getClickView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -200,7 +187,6 @@ public class ClickViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ClickView getClickView(String resourceName) {
-    CLICK_VIEW_PATH_TEMPLATE.validate(resourceName, "getClickView");
     GetClickViewRequest request =
         GetClickViewRequest.newBuilder().setResourceName(resourceName).build();
     return getClickView(request);
@@ -214,9 +200,9 @@ public class ClickViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
-   *   String formattedResourceName = ClickViewServiceClient.formatClickViewName("[CUSTOMER]", "[CLICK_VIEW]");
+   *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER]", "[CLICK_VIEW]");
    *   GetClickViewRequest request = GetClickViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ClickView response = clickViewServiceClient.getClickView(request);
    * }
@@ -237,9 +223,9 @@ public class ClickViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
-   *   String formattedResourceName = ClickViewServiceClient.formatClickViewName("[CUSTOMER]", "[CLICK_VIEW]");
+   *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER]", "[CLICK_VIEW]");
    *   GetClickViewRequest request = GetClickViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;ClickView&gt; future = clickViewServiceClient.getClickViewCallable().futureCall(request);
    *   // Do something

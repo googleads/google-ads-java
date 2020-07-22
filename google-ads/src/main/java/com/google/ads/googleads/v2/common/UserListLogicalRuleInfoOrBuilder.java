@@ -13,6 +13,7 @@ public interface UserListLogicalRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator operator = 1;</code>
+   * @return The enum numeric value on the wire for operator.
    */
   int getOperatorValue();
   /**
@@ -21,6 +22,7 @@ public interface UserListLogicalRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator operator = 1;</code>
+   * @return The operator.
    */
   com.google.ads.googleads.v2.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator getOperator();
 

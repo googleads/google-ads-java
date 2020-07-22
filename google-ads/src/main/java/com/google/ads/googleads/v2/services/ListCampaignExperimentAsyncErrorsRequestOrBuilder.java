@@ -9,20 +9,22 @@ public interface ListCampaignExperimentAsyncErrorsRequestOrBuilder extends
 
   /**
    * <pre>
-   * The name of the campaign experiment from which to retrieve the async
+   * Required. The name of the campaign experiment from which to retrieve the async
    * errors.
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The name of the campaign experiment from which to retrieve the async
+   * Required. The name of the campaign experiment from which to retrieve the async
    * errors.
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -36,6 +38,7 @@ public interface ListCampaignExperimentAsyncErrorsRequestOrBuilder extends
    * </pre>
    *
    * <code>string page_token = 2;</code>
+   * @return The pageToken.
    */
   java.lang.String getPageToken();
   /**
@@ -47,6 +50,7 @@ public interface ListCampaignExperimentAsyncErrorsRequestOrBuilder extends
    * </pre>
    *
    * <code>string page_token = 2;</code>
+   * @return The bytes for pageToken.
    */
   com.google.protobuf.ByteString
       getPageTokenBytes();
@@ -59,6 +63,7 @@ public interface ListCampaignExperimentAsyncErrorsRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 page_size = 3;</code>
+   * @return The pageSize.
    */
   int getPageSize();
 }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.AdGroupFeed}
  */
-public  final class AdGroupFeed extends
+public final class AdGroupFeed extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.AdGroupFeed)
     AdGroupFeedOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
     resourceName_ = "";
     placeholderTypes_ = java.util.Collections.emptyList();
     status_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AdGroupFeed();
   }
 
   @java.lang.Override
@@ -83,9 +90,9 @@ private static final long serialVersionUID = 0L;
           }
           case 32: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               placeholderTypes_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000001;
             }
             placeholderTypes_.add(rawValue);
             break;
@@ -95,9 +102,9 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 placeholderTypes_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               placeholderTypes_.add(rawValue);
             }
@@ -138,7 +145,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         placeholderTypes_ = java.util.Collections.unmodifiableList(placeholderTypes_);
       }
       this.unknownFields = unknownFields.build();
@@ -158,18 +165,19 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v1.resources.AdGroupFeed.class, com.google.ads.googleads.v1.resources.AdGroupFeed.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the ad group feed.
+   * Immutable. The resource name of the ad group feed.
    * Ad group feed resource names have the form:
    * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -184,13 +192,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the ad group feed.
+   * Immutable. The resource name of the ad group feed.
    * Ad group feed resource names have the form:
    * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -209,31 +219,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue feed_;
   /**
    * <pre>
-   * The feed being linked to the ad group.
+   * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
+  @java.lang.Override
   public boolean hasFeed() {
     return feed_ != null;
   }
   /**
    * <pre>
-   * The feed being linked to the ad group.
+   * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeed() {
     return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
   }
   /**
    * <pre>
-   * The feed being linked to the ad group.
+   * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
     return getFeed();
   }
@@ -242,31 +257,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue adGroup_;
   /**
    * <pre>
-   * The ad group being linked to the feed.
+   * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroup() {
     return adGroup_ != null;
   }
   /**
    * <pre>
-   * The ad group being linked to the feed.
+   * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroup() {
     return adGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroup_;
   }
   /**
    * <pre>
-   * The ad group being linked to the feed.
+   * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group = 3;</code>
+   * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     return getAdGroup();
   }
@@ -290,7 +310,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+   * @return A list containing the placeholderTypes.
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType> getPlaceholderTypesList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType>(placeholderTypes_, placeholderTypes_converter_);
@@ -302,7 +324,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+   * @return The count of placeholderTypes.
    */
+  @java.lang.Override
   public int getPlaceholderTypesCount() {
     return placeholderTypes_.size();
   }
@@ -313,7 +337,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+   * @param index The index of the element to return.
+   * @return The placeholderTypes at the given index.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypes(int index) {
     return placeholderTypes_converter_.convert(placeholderTypes_.get(index));
   }
@@ -324,7 +351,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+   * @return A list containing the enum numeric values on the wire for placeholderTypes.
    */
+  @java.lang.Override
   public java.util.List<java.lang.Integer>
   getPlaceholderTypesValueList() {
     return placeholderTypes_;
@@ -336,7 +365,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of placeholderTypes at the given index.
    */
+  @java.lang.Override
   public int getPlaceholderTypesValue(int index) {
     return placeholderTypes_.get(index);
   }
@@ -352,7 +384,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.MatchingFunction matching_function = 5;</code>
+   * @return Whether the matchingFunction field is set.
    */
+  @java.lang.Override
   public boolean hasMatchingFunction() {
     return matchingFunction_ != null;
   }
@@ -364,7 +398,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.MatchingFunction matching_function = 5;</code>
+   * @return The matchingFunction.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.MatchingFunction getMatchingFunction() {
     return matchingFunction_ == null ? com.google.ads.googleads.v1.common.MatchingFunction.getDefaultInstance() : matchingFunction_;
   }
@@ -377,6 +413,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.MatchingFunction matching_function = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.MatchingFunctionOrBuilder getMatchingFunctionOrBuilder() {
     return getMatchingFunction();
   }
@@ -385,24 +422,26 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Status of the ad group feed.
+   * Output only. Status of the ad group feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+   * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Status of the ad group feed.
+   * Output only. Status of the ad group feed.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+   * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus result = com.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus.UNRECOGNIZED : result;
@@ -702,7 +741,7 @@ private static final long serialVersionUID = 0L;
         adGroupBuilder_ = null;
       }
       placeholderTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (matchingFunctionBuilder_ == null) {
         matchingFunction_ = null;
       } else {
@@ -738,7 +777,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v1.resources.AdGroupFeed buildPartial() {
       com.google.ads.googleads.v1.resources.AdGroupFeed result = new com.google.ads.googleads.v1.resources.AdGroupFeed(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (feedBuilder_ == null) {
         result.feed_ = feed_;
@@ -750,9 +788,9 @@ private static final long serialVersionUID = 0L;
       } else {
         result.adGroup_ = adGroupBuilder_.build();
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         placeholderTypes_ = java.util.Collections.unmodifiableList(placeholderTypes_);
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.placeholderTypes_ = placeholderTypes_;
       if (matchingFunctionBuilder_ == null) {
@@ -761,7 +799,6 @@ private static final long serialVersionUID = 0L;
         result.matchingFunction_ = matchingFunctionBuilder_.build();
       }
       result.status_ = status_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -823,7 +860,7 @@ private static final long serialVersionUID = 0L;
       if (!other.placeholderTypes_.isEmpty()) {
         if (placeholderTypes_.isEmpty()) {
           placeholderTypes_ = other.placeholderTypes_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensurePlaceholderTypesIsMutable();
           placeholderTypes_.addAll(other.placeholderTypes_);
@@ -869,12 +906,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the ad group feed.
+     * Immutable. The resource name of the ad group feed.
      * Ad group feed resource names have the form:
      * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -890,12 +928,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group feed.
+     * Immutable. The resource name of the ad group feed.
      * Ad group feed resource names have the form:
      * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -912,12 +951,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group feed.
+     * Immutable. The resource name of the ad group feed.
      * Ad group feed resource names have the form:
      * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -931,12 +972,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group feed.
+     * Immutable. The resource name of the ad group feed.
      * Ad group feed resource names have the form:
      * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -946,12 +988,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the ad group feed.
+     * Immutable. The resource name of the ad group feed.
      * Ad group feed resource names have the form:
      * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -970,20 +1014,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedBuilder_;
     /**
      * <pre>
-     * The feed being linked to the ad group.
+     * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
       return feedBuilder_ != null || feed_ != null;
     }
     /**
      * <pre>
-     * The feed being linked to the ad group.
+     * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The feed.
      */
     public com.google.protobuf.StringValue getFeed() {
       if (feedBuilder_ == null) {
@@ -994,10 +1040,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed being linked to the ad group.
+     * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeed(com.google.protobuf.StringValue value) {
       if (feedBuilder_ == null) {
@@ -1014,10 +1060,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed being linked to the ad group.
+     * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeed(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1032,10 +1078,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed being linked to the ad group.
+     * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeFeed(com.google.protobuf.StringValue value) {
       if (feedBuilder_ == null) {
@@ -1054,10 +1100,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed being linked to the ad group.
+     * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearFeed() {
       if (feedBuilder_ == null) {
@@ -1072,10 +1118,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed being linked to the ad group.
+     * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getFeedBuilder() {
       
@@ -1084,10 +1130,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed being linked to the ad group.
+     * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
       if (feedBuilder_ != null) {
@@ -1099,10 +1145,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed being linked to the ad group.
+     * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1123,20 +1169,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> adGroupBuilder_;
     /**
      * <pre>
-     * The ad group being linked to the feed.
+     * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
       return adGroupBuilder_ != null || adGroup_ != null;
     }
     /**
      * <pre>
-     * The ad group being linked to the feed.
+     * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The adGroup.
      */
     public com.google.protobuf.StringValue getAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -1147,10 +1195,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group being linked to the feed.
+     * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -1167,10 +1215,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group being linked to the feed.
+     * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setAdGroup(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1185,10 +1233,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group being linked to the feed.
+     * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeAdGroup(com.google.protobuf.StringValue value) {
       if (adGroupBuilder_ == null) {
@@ -1207,10 +1255,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group being linked to the feed.
+     * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearAdGroup() {
       if (adGroupBuilder_ == null) {
@@ -1225,10 +1273,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group being linked to the feed.
+     * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getAdGroupBuilder() {
       
@@ -1237,10 +1285,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group being linked to the feed.
+     * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
       if (adGroupBuilder_ != null) {
@@ -1252,10 +1300,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad group being linked to the feed.
+     * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue ad_group = 3;</code>
+     * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1274,9 +1322,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> placeholderTypes_ =
       java.util.Collections.emptyList();
     private void ensurePlaceholderTypesIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         placeholderTypes_ = new java.util.ArrayList<java.lang.Integer>(placeholderTypes_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
@@ -1286,6 +1334,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @return A list containing the placeholderTypes.
      */
     public java.util.List<com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType> getPlaceholderTypesList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -1298,6 +1347,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @return The count of placeholderTypes.
      */
     public int getPlaceholderTypesCount() {
       return placeholderTypes_.size();
@@ -1309,6 +1359,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @param index The index of the element to return.
+     * @return The placeholderTypes at the given index.
      */
     public com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypes(int index) {
       return placeholderTypes_converter_.convert(placeholderTypes_.get(index));
@@ -1320,6 +1372,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @param index The index to set the value at.
+     * @param value The placeholderTypes to set.
+     * @return This builder for chaining.
      */
     public Builder setPlaceholderTypes(
         int index, com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType value) {
@@ -1338,6 +1393,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @param value The placeholderTypes to add.
+     * @return This builder for chaining.
      */
     public Builder addPlaceholderTypes(com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType value) {
       if (value == null) {
@@ -1355,6 +1412,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @param values The placeholderTypes to add.
+     * @return This builder for chaining.
      */
     public Builder addAllPlaceholderTypes(
         java.lang.Iterable<? extends com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType> values) {
@@ -1372,10 +1431,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPlaceholderTypes() {
       placeholderTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1386,6 +1446,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @return A list containing the enum numeric values on the wire for placeholderTypes.
      */
     public java.util.List<java.lang.Integer>
     getPlaceholderTypesValueList() {
@@ -1398,6 +1459,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of placeholderTypes at the given index.
      */
     public int getPlaceholderTypesValue(int index) {
       return placeholderTypes_.get(index);
@@ -1409,6 +1472,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of placeholderTypes at the given index.
+     * @return This builder for chaining.
      */
     public Builder setPlaceholderTypesValue(
         int index, int value) {
@@ -1424,6 +1490,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @param value The enum numeric value on the wire for placeholderTypes to add.
+     * @return This builder for chaining.
      */
     public Builder addPlaceholderTypesValue(int value) {
       ensurePlaceholderTypesIsMutable();
@@ -1438,6 +1506,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_types = 4;</code>
+     * @param values The enum numeric values on the wire for placeholderTypes to add.
+     * @return This builder for chaining.
      */
     public Builder addAllPlaceholderTypesValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -1460,6 +1530,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.MatchingFunction matching_function = 5;</code>
+     * @return Whether the matchingFunction field is set.
      */
     public boolean hasMatchingFunction() {
       return matchingFunctionBuilder_ != null || matchingFunction_ != null;
@@ -1472,6 +1543,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.MatchingFunction matching_function = 5;</code>
+     * @return The matchingFunction.
      */
     public com.google.ads.googleads.v1.common.MatchingFunction getMatchingFunction() {
       if (matchingFunctionBuilder_ == null) {
@@ -1623,36 +1695,42 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Status of the ad group feed.
+     * Output only. Status of the ad group feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Status of the ad group feed.
+     * Output only. Status of the ad group feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Status of the ad group feed.
+     * Output only. Status of the ad group feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus result = com.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus.valueOf(status_);
@@ -1660,11 +1738,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the ad group feed.
+     * Output only. Status of the ad group feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus value) {
       if (value == null) {
@@ -1677,11 +1757,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the ad group feed.
+     * Output only. Status of the ad group feed.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedLinkStatusEnum.FeedLinkStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       

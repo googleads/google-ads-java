@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.TargetSpend}
  */
-public  final class TargetSpend extends
+public final class TargetSpend extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.TargetSpend)
     TargetSpendOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TargetSpend() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new TargetSpend();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -116,7 +122,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_spend_micros = 1;</code>
+   * @return Whether the targetSpendMicros field is set.
    */
+  @java.lang.Override
   public boolean hasTargetSpendMicros() {
     return targetSpendMicros_ != null;
   }
@@ -129,7 +137,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_spend_micros = 1;</code>
+   * @return The targetSpendMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTargetSpendMicros() {
     return targetSpendMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : targetSpendMicros_;
   }
@@ -143,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value target_spend_micros = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTargetSpendMicrosOrBuilder() {
     return getTargetSpendMicros();
   }
@@ -156,7 +167,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ != null;
   }
@@ -167,7 +180,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return The cpcBidCeilingMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
     return cpcBidCeilingMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidCeilingMicros_;
   }
@@ -179,6 +194,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidCeilingMicrosOrBuilder() {
     return getCpcBidCeilingMicros();
   }
@@ -545,6 +561,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value target_spend_micros = 1;</code>
+     * @return Whether the targetSpendMicros field is set.
      */
     public boolean hasTargetSpendMicros() {
       return targetSpendMicrosBuilder_ != null || targetSpendMicros_ != null;
@@ -558,6 +575,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value target_spend_micros = 1;</code>
+     * @return The targetSpendMicros.
      */
     public com.google.protobuf.Int64Value getTargetSpendMicros() {
       if (targetSpendMicrosBuilder_ == null) {
@@ -723,6 +741,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+     * @return Whether the cpcBidCeilingMicros field is set.
      */
     public boolean hasCpcBidCeilingMicros() {
       return cpcBidCeilingMicrosBuilder_ != null || cpcBidCeilingMicros_ != null;
@@ -734,6 +753,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+     * @return The cpcBidCeilingMicros.
      */
     public com.google.protobuf.Int64Value getCpcBidCeilingMicros() {
       if (cpcBidCeilingMicrosBuilder_ == null) {

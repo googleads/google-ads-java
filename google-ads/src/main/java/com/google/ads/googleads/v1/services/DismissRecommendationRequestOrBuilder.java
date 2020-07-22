@@ -9,72 +9,74 @@ public interface DismissRecommendationRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer with the recommendation.
+   * Required. The ID of the customer with the recommendation.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer with the recommendation.
+   * Required. The ID of the customer with the recommendation.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * The list of operations to dismiss recommendations.
+   * Required. The list of operations to dismiss recommendations.
    * If partial_failure=false all recommendations should be of the same type
    * There is a limit of 100 operations per request.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3;</code>
+   * <code>repeated .google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<com.google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation> 
       getOperationsList();
   /**
    * <pre>
-   * The list of operations to dismiss recommendations.
+   * Required. The list of operations to dismiss recommendations.
    * If partial_failure=false all recommendations should be of the same type
    * There is a limit of 100 operations per request.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3;</code>
+   * <code>repeated .google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation getOperations(int index);
   /**
    * <pre>
-   * The list of operations to dismiss recommendations.
+   * Required. The list of operations to dismiss recommendations.
    * If partial_failure=false all recommendations should be of the same type
    * There is a limit of 100 operations per request.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3;</code>
+   * <code>repeated .google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   int getOperationsCount();
   /**
    * <pre>
-   * The list of operations to dismiss recommendations.
+   * Required. The list of operations to dismiss recommendations.
    * If partial_failure=false all recommendations should be of the same type
    * There is a limit of 100 operations per request.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3;</code>
+   * <code>repeated .google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<? extends com.google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperationOrBuilder> 
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * The list of operations to dismiss recommendations.
+   * Required. The list of operations to dismiss recommendations.
    * If partial_failure=false all recommendations should be of the same type
    * There is a limit of 100 operations per request.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3;</code>
+   * <code>repeated .google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperation operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.DismissRecommendationRequest.DismissRecommendationOperationOrBuilder getOperationsOrBuilder(
       int index);
@@ -88,6 +90,7 @@ public interface DismissRecommendationRequestOrBuilder extends
    * </pre>
    *
    * <code>bool partial_failure = 2;</code>
+   * @return The partialFailure.
    */
   boolean getPartialFailure();
 }

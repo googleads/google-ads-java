@@ -13,6 +13,7 @@ public interface ListingCustomAttributeInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 1;</code>
+   * @return Whether the value field is set.
    */
   boolean hasValue();
   /**
@@ -21,6 +22,7 @@ public interface ListingCustomAttributeInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 1;</code>
+   * @return The value.
    */
   com.google.protobuf.StringValue getValue();
   /**
@@ -38,6 +40,7 @@ public interface ListingCustomAttributeInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex index = 2;</code>
+   * @return The enum numeric value on the wire for index.
    */
   int getIndexValue();
   /**
@@ -46,6 +49,7 @@ public interface ListingCustomAttributeInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex index = 2;</code>
+   * @return The index.
    */
   com.google.ads.googleads.v2.enums.ListingCustomAttributeIndexEnum.ListingCustomAttributeIndex getIndex();
 }

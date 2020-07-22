@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.MediaBundleAsset}
  */
-public  final class MediaBundleAsset extends
+public final class MediaBundleAsset extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.MediaBundleAsset)
     MediaBundleAssetOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private MediaBundleAsset() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MediaBundleAsset();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -102,7 +108,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 1;</code>
+   * @return Whether the data field is set.
    */
+  @java.lang.Override
   public boolean hasData() {
     return data_ != null;
   }
@@ -115,7 +123,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BytesValue data = 1;</code>
+   * @return The data.
    */
+  @java.lang.Override
   public com.google.protobuf.BytesValue getData() {
     return data_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : data_;
   }
@@ -129,6 +139,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BytesValue data = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BytesValueOrBuilder getDataOrBuilder() {
     return getData();
   }
@@ -464,6 +475,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BytesValue data = 1;</code>
+     * @return Whether the data field is set.
      */
     public boolean hasData() {
       return dataBuilder_ != null || data_ != null;
@@ -477,6 +489,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BytesValue data = 1;</code>
+     * @return The data.
      */
     public com.google.protobuf.BytesValue getData() {
       if (dataBuilder_ == null) {

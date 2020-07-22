@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/ad_schedule_view_service.proto")
 public final class AdScheduleViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class AdScheduleViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.AdScheduleViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAdScheduleViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdScheduleViewRequest,
-      com.google.ads.googleads.v4.resources.AdScheduleView> METHOD_GET_AD_SCHEDULE_VIEW = getGetAdScheduleViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdScheduleViewRequest,
       com.google.ads.googleads.v4.resources.AdScheduleView> getGetAdScheduleViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAdScheduleView",
+      requestType = com.google.ads.googleads.v4.services.GetAdScheduleViewRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.AdScheduleView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdScheduleViewRequest,
       com.google.ads.googleads.v4.resources.AdScheduleView> getGetAdScheduleViewMethod() {
-    return getGetAdScheduleViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdScheduleViewRequest,
-      com.google.ads.googleads.v4.resources.AdScheduleView> getGetAdScheduleViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdScheduleViewRequest, com.google.ads.googleads.v4.resources.AdScheduleView> getGetAdScheduleViewMethod;
     if ((getGetAdScheduleViewMethod = AdScheduleViewServiceGrpc.getGetAdScheduleViewMethod) == null) {
       synchronized (AdScheduleViewServiceGrpc.class) {
         if ((getGetAdScheduleViewMethod = AdScheduleViewServiceGrpc.getGetAdScheduleViewMethod) == null) {
-          AdScheduleViewServiceGrpc.getGetAdScheduleViewMethod = getGetAdScheduleViewMethod = 
+          AdScheduleViewServiceGrpc.getGetAdScheduleViewMethod = getGetAdScheduleViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetAdScheduleViewRequest, com.google.ads.googleads.v4.resources.AdScheduleView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.AdScheduleViewService", "GetAdScheduleView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAdScheduleView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetAdScheduleViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.AdScheduleView.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdScheduleViewServiceMethodDescriptorSupplier("GetAdScheduleView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdScheduleViewServiceMethodDescriptorSupplier("GetAdScheduleView"))
+              .build();
         }
-     }
-     return getGetAdScheduleViewMethod;
+      }
+    }
+    return getGetAdScheduleViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AdScheduleViewServiceStub newStub(io.grpc.Channel channel) {
-    return new AdScheduleViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdScheduleViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdScheduleViewServiceStub>() {
+        @java.lang.Override
+        public AdScheduleViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdScheduleViewServiceStub(channel, callOptions);
+        }
+      };
+    return AdScheduleViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class AdScheduleViewServiceGrpc {
    */
   public static AdScheduleViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AdScheduleViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdScheduleViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdScheduleViewServiceBlockingStub>() {
+        @java.lang.Override
+        public AdScheduleViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdScheduleViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AdScheduleViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class AdScheduleViewServiceGrpc {
    */
   public static AdScheduleViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AdScheduleViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdScheduleViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdScheduleViewServiceFutureStub>() {
+        @java.lang.Override
+        public AdScheduleViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdScheduleViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AdScheduleViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class AdScheduleViewServiceGrpc {
      */
     public void getAdScheduleView(com.google.ads.googleads.v4.services.GetAdScheduleViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.AdScheduleView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAdScheduleViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAdScheduleViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAdScheduleViewMethodHelper(),
+            getGetAdScheduleViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetAdScheduleViewRequest,
@@ -126,19 +140,15 @@ public final class AdScheduleViewServiceGrpc {
    * Service to fetch ad schedule views.
    * </pre>
    */
-  public static final class AdScheduleViewServiceStub extends io.grpc.stub.AbstractStub<AdScheduleViewServiceStub> {
-    private AdScheduleViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdScheduleViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdScheduleViewServiceStub extends io.grpc.stub.AbstractAsyncStub<AdScheduleViewServiceStub> {
+    private AdScheduleViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdScheduleViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdScheduleViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdScheduleViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class AdScheduleViewServiceGrpc {
     public void getAdScheduleView(com.google.ads.googleads.v4.services.GetAdScheduleViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.AdScheduleView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAdScheduleViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAdScheduleViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class AdScheduleViewServiceGrpc {
    * Service to fetch ad schedule views.
    * </pre>
    */
-  public static final class AdScheduleViewServiceBlockingStub extends io.grpc.stub.AbstractStub<AdScheduleViewServiceBlockingStub> {
-    private AdScheduleViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdScheduleViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdScheduleViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdScheduleViewServiceBlockingStub> {
+    private AdScheduleViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdScheduleViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdScheduleViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdScheduleViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class AdScheduleViewServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.AdScheduleView getAdScheduleView(com.google.ads.googleads.v4.services.GetAdScheduleViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAdScheduleViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAdScheduleViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class AdScheduleViewServiceGrpc {
    * Service to fetch ad schedule views.
    * </pre>
    */
-  public static final class AdScheduleViewServiceFutureStub extends io.grpc.stub.AbstractStub<AdScheduleViewServiceFutureStub> {
-    private AdScheduleViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdScheduleViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdScheduleViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdScheduleViewServiceFutureStub> {
+    private AdScheduleViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdScheduleViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdScheduleViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdScheduleViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class AdScheduleViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.AdScheduleView> getAdScheduleView(
         com.google.ads.googleads.v4.services.GetAdScheduleViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAdScheduleViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAdScheduleViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class AdScheduleViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AdScheduleViewServiceFileDescriptorSupplier())
-              .addMethod(getGetAdScheduleViewMethodHelper())
+              .addMethod(getGetAdScheduleViewMethod())
               .build();
         }
       }

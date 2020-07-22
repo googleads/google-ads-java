@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/landing_page_view_service.proto")
 public final class LandingPageViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class LandingPageViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.LandingPageViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetLandingPageViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetLandingPageViewRequest,
-      com.google.ads.googleads.v2.resources.LandingPageView> METHOD_GET_LANDING_PAGE_VIEW = getGetLandingPageViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetLandingPageViewRequest,
       com.google.ads.googleads.v2.resources.LandingPageView> getGetLandingPageViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetLandingPageView",
+      requestType = com.google.ads.googleads.v2.services.GetLandingPageViewRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.LandingPageView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetLandingPageViewRequest,
       com.google.ads.googleads.v2.resources.LandingPageView> getGetLandingPageViewMethod() {
-    return getGetLandingPageViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetLandingPageViewRequest,
-      com.google.ads.googleads.v2.resources.LandingPageView> getGetLandingPageViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetLandingPageViewRequest, com.google.ads.googleads.v2.resources.LandingPageView> getGetLandingPageViewMethod;
     if ((getGetLandingPageViewMethod = LandingPageViewServiceGrpc.getGetLandingPageViewMethod) == null) {
       synchronized (LandingPageViewServiceGrpc.class) {
         if ((getGetLandingPageViewMethod = LandingPageViewServiceGrpc.getGetLandingPageViewMethod) == null) {
-          LandingPageViewServiceGrpc.getGetLandingPageViewMethod = getGetLandingPageViewMethod = 
+          LandingPageViewServiceGrpc.getGetLandingPageViewMethod = getGetLandingPageViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetLandingPageViewRequest, com.google.ads.googleads.v2.resources.LandingPageView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.LandingPageViewService", "GetLandingPageView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLandingPageView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetLandingPageViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.LandingPageView.getDefaultInstance()))
-                  .setSchemaDescriptor(new LandingPageViewServiceMethodDescriptorSupplier("GetLandingPageView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LandingPageViewServiceMethodDescriptorSupplier("GetLandingPageView"))
+              .build();
         }
-     }
-     return getGetLandingPageViewMethod;
+      }
+    }
+    return getGetLandingPageViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LandingPageViewServiceStub newStub(io.grpc.Channel channel) {
-    return new LandingPageViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LandingPageViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LandingPageViewServiceStub>() {
+        @java.lang.Override
+        public LandingPageViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LandingPageViewServiceStub(channel, callOptions);
+        }
+      };
+    return LandingPageViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class LandingPageViewServiceGrpc {
    */
   public static LandingPageViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new LandingPageViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LandingPageViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LandingPageViewServiceBlockingStub>() {
+        @java.lang.Override
+        public LandingPageViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LandingPageViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return LandingPageViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class LandingPageViewServiceGrpc {
    */
   public static LandingPageViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new LandingPageViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LandingPageViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LandingPageViewServiceFutureStub>() {
+        @java.lang.Override
+        public LandingPageViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LandingPageViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return LandingPageViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class LandingPageViewServiceGrpc {
      */
     public void getLandingPageView(com.google.ads.googleads.v2.services.GetLandingPageViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.LandingPageView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetLandingPageViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetLandingPageViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetLandingPageViewMethodHelper(),
+            getGetLandingPageViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetLandingPageViewRequest,
@@ -126,19 +140,15 @@ public final class LandingPageViewServiceGrpc {
    * Service to fetch landing page views.
    * </pre>
    */
-  public static final class LandingPageViewServiceStub extends io.grpc.stub.AbstractStub<LandingPageViewServiceStub> {
-    private LandingPageViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LandingPageViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LandingPageViewServiceStub extends io.grpc.stub.AbstractAsyncStub<LandingPageViewServiceStub> {
+    private LandingPageViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LandingPageViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LandingPageViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LandingPageViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class LandingPageViewServiceGrpc {
     public void getLandingPageView(com.google.ads.googleads.v2.services.GetLandingPageViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.LandingPageView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetLandingPageViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetLandingPageViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class LandingPageViewServiceGrpc {
    * Service to fetch landing page views.
    * </pre>
    */
-  public static final class LandingPageViewServiceBlockingStub extends io.grpc.stub.AbstractStub<LandingPageViewServiceBlockingStub> {
-    private LandingPageViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LandingPageViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LandingPageViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LandingPageViewServiceBlockingStub> {
+    private LandingPageViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LandingPageViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LandingPageViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LandingPageViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class LandingPageViewServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.LandingPageView getLandingPageView(com.google.ads.googleads.v2.services.GetLandingPageViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetLandingPageViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetLandingPageViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class LandingPageViewServiceGrpc {
    * Service to fetch landing page views.
    * </pre>
    */
-  public static final class LandingPageViewServiceFutureStub extends io.grpc.stub.AbstractStub<LandingPageViewServiceFutureStub> {
-    private LandingPageViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LandingPageViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LandingPageViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LandingPageViewServiceFutureStub> {
+    private LandingPageViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LandingPageViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LandingPageViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LandingPageViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class LandingPageViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.LandingPageView> getLandingPageView(
         com.google.ads.googleads.v2.services.GetLandingPageViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetLandingPageViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetLandingPageViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class LandingPageViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new LandingPageViewServiceFileDescriptorSupplier())
-              .addMethod(getGetLandingPageViewMethodHelper())
+              .addMethod(getGetLandingPageViewMethod())
               .build();
         }
       }

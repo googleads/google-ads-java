@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.VideoServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (VideoServiceClient videoServiceClient = VideoServiceClient.create()) {
- *   String formattedResourceName = VideoServiceClient.formatVideoName("[CUSTOMER]", "[VIDEO]");
- *   Video response = videoServiceClient.getVideo(formattedResourceName);
+ *   VideoName resourceName = VideoName.of("[CUSTOMER]", "[VIDEO]");
+ *   Video response = videoServiceClient.getVideo(resourceName);
  * }
  * </code>
  * </pre>
@@ -98,41 +97,6 @@ public class VideoServiceClient implements BackgroundResource {
   private final VideoServiceSettings settings;
   private final VideoServiceStub stub;
 
-  private static final PathTemplate VIDEO_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/videos/{video}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a video resource.
-   *
-   * @deprecated Use the {@link VideoName} class instead.
-   */
-  @Deprecated
-  public static final String formatVideoName(String customer, String video) {
-    return VIDEO_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "video", video);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a video resource.
-   *
-   * @deprecated Use the {@link VideoName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromVideoName(String videoName) {
-    return VIDEO_PATH_TEMPLATE.parse(videoName).get("customer");
-  }
-
-  /**
-   * Parses the video from the given fully-qualified path which represents a video resource.
-   *
-   * @deprecated Use the {@link VideoName} class instead.
-   */
-  @Deprecated
-  public static final String parseVideoFromVideoName(String videoName) {
-    return VIDEO_PATH_TEMPLATE.parse(videoName).get("video");
-  }
-
   /** Constructs an instance of VideoServiceClient with default settings. */
   public static final VideoServiceClient create() throws IOException {
     return create(VideoServiceSettings.newBuilder().build());
@@ -188,16 +152,39 @@ public class VideoServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (VideoServiceClient videoServiceClient = VideoServiceClient.create()) {
-   *   String formattedResourceName = VideoServiceClient.formatVideoName("[CUSTOMER]", "[VIDEO]");
-   *   Video response = videoServiceClient.getVideo(formattedResourceName);
+   *   VideoName resourceName = VideoName.of("[CUSTOMER]", "[VIDEO]");
+   *   Video response = videoServiceClient.getVideo(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the video to fetch.
+   * @param resourceName Required. The resource name of the video to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final Video getVideo(VideoName resourceName) {
+    GetVideoRequest request =
+        GetVideoRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getVideo(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested video in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (VideoServiceClient videoServiceClient = VideoServiceClient.create()) {
+   *   VideoName resourceName = VideoName.of("[CUSTOMER]", "[VIDEO]");
+   *   Video response = videoServiceClient.getVideo(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the video to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Video getVideo(String resourceName) {
-    VIDEO_PATH_TEMPLATE.validate(resourceName, "getVideo");
     GetVideoRequest request = GetVideoRequest.newBuilder().setResourceName(resourceName).build();
     return getVideo(request);
   }
@@ -210,9 +197,9 @@ public class VideoServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (VideoServiceClient videoServiceClient = VideoServiceClient.create()) {
-   *   String formattedResourceName = VideoServiceClient.formatVideoName("[CUSTOMER]", "[VIDEO]");
+   *   VideoName resourceName = VideoName.of("[CUSTOMER]", "[VIDEO]");
    *   GetVideoRequest request = GetVideoRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   Video response = videoServiceClient.getVideo(request);
    * }
@@ -233,9 +220,9 @@ public class VideoServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (VideoServiceClient videoServiceClient = VideoServiceClient.create()) {
-   *   String formattedResourceName = VideoServiceClient.formatVideoName("[CUSTOMER]", "[VIDEO]");
+   *   VideoName resourceName = VideoName.of("[CUSTOMER]", "[VIDEO]");
    *   GetVideoRequest request = GetVideoRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;Video&gt; future = videoServiceClient.getVideoCallable().futureCall(request);
    *   // Do something

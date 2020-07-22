@@ -13,6 +13,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+   * @return Whether the feedAttributeId field is set.
    */
   boolean hasFeedAttributeId();
   /**
@@ -21,6 +22,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+   * @return The feedAttributeId.
    */
   com.google.protobuf.Int64Value getFeedAttributeId();
   /**
@@ -39,6 +41,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value integer_value = 2;</code>
+   * @return Whether the integerValue field is set.
    */
   boolean hasIntegerValue();
   /**
@@ -48,6 +51,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value integer_value = 2;</code>
+   * @return The integerValue.
    */
   com.google.protobuf.Int64Value getIntegerValue();
   /**
@@ -67,6 +71,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+   * @return Whether the booleanValue field is set.
    */
   boolean hasBooleanValue();
   /**
@@ -76,6 +81,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+   * @return The booleanValue.
    */
   com.google.protobuf.BoolValue getBooleanValue();
   /**
@@ -93,11 +99,12 @@ public interface FeedItemAttributeValueOrBuilder extends
    * String value. Should be set if feed_attribute_id refers to a feed attribute
    * of type STRING, URL or DATE_TIME.
    * For STRING the maximum length is 1500 characters. For URL the maximum
-   * length is 2076 characters. For DATE_TIME the format of the string must
-   * be the same as start and end time for the feed item.
+   * length is 2076 characters. For DATE_TIME the string must be in the format
+   * "YYYYMMDD HHMMSS".
    * </pre>
    *
    * <code>.google.protobuf.StringValue string_value = 4;</code>
+   * @return Whether the stringValue field is set.
    */
   boolean hasStringValue();
   /**
@@ -105,11 +112,12 @@ public interface FeedItemAttributeValueOrBuilder extends
    * String value. Should be set if feed_attribute_id refers to a feed attribute
    * of type STRING, URL or DATE_TIME.
    * For STRING the maximum length is 1500 characters. For URL the maximum
-   * length is 2076 characters. For DATE_TIME the format of the string must
-   * be the same as start and end time for the feed item.
+   * length is 2076 characters. For DATE_TIME the string must be in the format
+   * "YYYYMMDD HHMMSS".
    * </pre>
    *
    * <code>.google.protobuf.StringValue string_value = 4;</code>
+   * @return The stringValue.
    */
   com.google.protobuf.StringValue getStringValue();
   /**
@@ -117,8 +125,8 @@ public interface FeedItemAttributeValueOrBuilder extends
    * String value. Should be set if feed_attribute_id refers to a feed attribute
    * of type STRING, URL or DATE_TIME.
    * For STRING the maximum length is 1500 characters. For URL the maximum
-   * length is 2076 characters. For DATE_TIME the format of the string must
-   * be the same as start and end time for the feed item.
+   * length is 2076 characters. For DATE_TIME the string must be in the format
+   * "YYYYMMDD HHMMSS".
    * </pre>
    *
    * <code>.google.protobuf.StringValue string_value = 4;</code>
@@ -132,6 +140,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue double_value = 5;</code>
+   * @return Whether the doubleValue field is set.
    */
   boolean hasDoubleValue();
   /**
@@ -141,6 +150,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue double_value = 5;</code>
+   * @return The doubleValue.
    */
   com.google.protobuf.DoubleValue getDoubleValue();
   /**
@@ -160,6 +170,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Money price_value = 6;</code>
+   * @return Whether the priceValue field is set.
    */
   boolean hasPriceValue();
   /**
@@ -169,6 +180,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Money price_value = 6;</code>
+   * @return The priceValue.
    */
   com.google.ads.googleads.v2.common.Money getPriceValue();
   /**

@@ -25,7 +25,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/keyword_plan_ad_group_keyword_service.proto")
 public final class KeywordPlanAdGroupKeywordServiceGrpc {
 
@@ -34,86 +34,80 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.KeywordPlanAdGroupKeywordService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetKeywordPlanAdGroupKeywordMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest,
-      com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword> METHOD_GET_KEYWORD_PLAN_AD_GROUP_KEYWORD = getGetKeywordPlanAdGroupKeywordMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest,
       com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword> getGetKeywordPlanAdGroupKeywordMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetKeywordPlanAdGroupKeyword",
+      requestType = com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest,
       com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword> getGetKeywordPlanAdGroupKeywordMethod() {
-    return getGetKeywordPlanAdGroupKeywordMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest,
-      com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword> getGetKeywordPlanAdGroupKeywordMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest, com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword> getGetKeywordPlanAdGroupKeywordMethod;
     if ((getGetKeywordPlanAdGroupKeywordMethod = KeywordPlanAdGroupKeywordServiceGrpc.getGetKeywordPlanAdGroupKeywordMethod) == null) {
       synchronized (KeywordPlanAdGroupKeywordServiceGrpc.class) {
         if ((getGetKeywordPlanAdGroupKeywordMethod = KeywordPlanAdGroupKeywordServiceGrpc.getGetKeywordPlanAdGroupKeywordMethod) == null) {
-          KeywordPlanAdGroupKeywordServiceGrpc.getGetKeywordPlanAdGroupKeywordMethod = getGetKeywordPlanAdGroupKeywordMethod = 
+          KeywordPlanAdGroupKeywordServiceGrpc.getGetKeywordPlanAdGroupKeywordMethod = getGetKeywordPlanAdGroupKeywordMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest, com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.KeywordPlanAdGroupKeywordService", "GetKeywordPlanAdGroupKeyword"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetKeywordPlanAdGroupKeyword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeywordPlanAdGroupKeywordServiceMethodDescriptorSupplier("GetKeywordPlanAdGroupKeyword"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeywordPlanAdGroupKeywordServiceMethodDescriptorSupplier("GetKeywordPlanAdGroupKeyword"))
+              .build();
         }
-     }
-     return getGetKeywordPlanAdGroupKeywordMethod;
+      }
+    }
+    return getGetKeywordPlanAdGroupKeywordMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateKeywordPlanAdGroupKeywordsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest,
-      com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse> METHOD_MUTATE_KEYWORD_PLAN_AD_GROUP_KEYWORDS = getMutateKeywordPlanAdGroupKeywordsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest,
       com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse> getMutateKeywordPlanAdGroupKeywordsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateKeywordPlanAdGroupKeywords",
+      requestType = com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest.class,
+      responseType = com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest,
       com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse> getMutateKeywordPlanAdGroupKeywordsMethod() {
-    return getMutateKeywordPlanAdGroupKeywordsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest,
-      com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse> getMutateKeywordPlanAdGroupKeywordsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest, com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse> getMutateKeywordPlanAdGroupKeywordsMethod;
     if ((getMutateKeywordPlanAdGroupKeywordsMethod = KeywordPlanAdGroupKeywordServiceGrpc.getMutateKeywordPlanAdGroupKeywordsMethod) == null) {
       synchronized (KeywordPlanAdGroupKeywordServiceGrpc.class) {
         if ((getMutateKeywordPlanAdGroupKeywordsMethod = KeywordPlanAdGroupKeywordServiceGrpc.getMutateKeywordPlanAdGroupKeywordsMethod) == null) {
-          KeywordPlanAdGroupKeywordServiceGrpc.getMutateKeywordPlanAdGroupKeywordsMethod = getMutateKeywordPlanAdGroupKeywordsMethod = 
+          KeywordPlanAdGroupKeywordServiceGrpc.getMutateKeywordPlanAdGroupKeywordsMethod = getMutateKeywordPlanAdGroupKeywordsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest, com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.KeywordPlanAdGroupKeywordService", "MutateKeywordPlanAdGroupKeywords"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateKeywordPlanAdGroupKeywords"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeywordPlanAdGroupKeywordServiceMethodDescriptorSupplier("MutateKeywordPlanAdGroupKeywords"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeywordPlanAdGroupKeywordServiceMethodDescriptorSupplier("MutateKeywordPlanAdGroupKeywords"))
+              .build();
         }
-     }
-     return getMutateKeywordPlanAdGroupKeywordsMethod;
+      }
+    }
+    return getMutateKeywordPlanAdGroupKeywordsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static KeywordPlanAdGroupKeywordServiceStub newStub(io.grpc.Channel channel) {
-    return new KeywordPlanAdGroupKeywordServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanAdGroupKeywordServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanAdGroupKeywordServiceStub>() {
+        @java.lang.Override
+        public KeywordPlanAdGroupKeywordServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanAdGroupKeywordServiceStub(channel, callOptions);
+        }
+      };
+    return KeywordPlanAdGroupKeywordServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -121,7 +115,14 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
    */
   public static KeywordPlanAdGroupKeywordServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new KeywordPlanAdGroupKeywordServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanAdGroupKeywordServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanAdGroupKeywordServiceBlockingStub>() {
+        @java.lang.Override
+        public KeywordPlanAdGroupKeywordServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanAdGroupKeywordServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return KeywordPlanAdGroupKeywordServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -129,7 +130,14 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
    */
   public static KeywordPlanAdGroupKeywordServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new KeywordPlanAdGroupKeywordServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanAdGroupKeywordServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanAdGroupKeywordServiceFutureStub>() {
+        @java.lang.Override
+        public KeywordPlanAdGroupKeywordServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanAdGroupKeywordServiceFutureStub(channel, callOptions);
+        }
+      };
+    return KeywordPlanAdGroupKeywordServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -150,7 +158,7 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
      */
     public void getKeywordPlanAdGroupKeyword(com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetKeywordPlanAdGroupKeywordMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetKeywordPlanAdGroupKeywordMethod(), responseObserver);
     }
 
     /**
@@ -161,20 +169,20 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
      */
     public void mutateKeywordPlanAdGroupKeywords(com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateKeywordPlanAdGroupKeywordsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateKeywordPlanAdGroupKeywordsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetKeywordPlanAdGroupKeywordMethodHelper(),
+            getGetKeywordPlanAdGroupKeywordMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest,
                 com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword>(
                   this, METHODID_GET_KEYWORD_PLAN_AD_GROUP_KEYWORD)))
           .addMethod(
-            getMutateKeywordPlanAdGroupKeywordsMethodHelper(),
+            getMutateKeywordPlanAdGroupKeywordsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest,
@@ -193,19 +201,15 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
    * includes campaign negative keywords and ad group negative keywords.
    * </pre>
    */
-  public static final class KeywordPlanAdGroupKeywordServiceStub extends io.grpc.stub.AbstractStub<KeywordPlanAdGroupKeywordServiceStub> {
-    private KeywordPlanAdGroupKeywordServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordPlanAdGroupKeywordServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordPlanAdGroupKeywordServiceStub extends io.grpc.stub.AbstractAsyncStub<KeywordPlanAdGroupKeywordServiceStub> {
+    private KeywordPlanAdGroupKeywordServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordPlanAdGroupKeywordServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordPlanAdGroupKeywordServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordPlanAdGroupKeywordServiceStub(channel, callOptions);
     }
 
@@ -217,7 +221,7 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
     public void getKeywordPlanAdGroupKeyword(com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetKeywordPlanAdGroupKeywordMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetKeywordPlanAdGroupKeywordMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -229,7 +233,7 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
     public void mutateKeywordPlanAdGroupKeywords(com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateKeywordPlanAdGroupKeywordsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateKeywordPlanAdGroupKeywordsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -242,19 +246,15 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
    * includes campaign negative keywords and ad group negative keywords.
    * </pre>
    */
-  public static final class KeywordPlanAdGroupKeywordServiceBlockingStub extends io.grpc.stub.AbstractStub<KeywordPlanAdGroupKeywordServiceBlockingStub> {
-    private KeywordPlanAdGroupKeywordServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordPlanAdGroupKeywordServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordPlanAdGroupKeywordServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<KeywordPlanAdGroupKeywordServiceBlockingStub> {
+    private KeywordPlanAdGroupKeywordServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordPlanAdGroupKeywordServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordPlanAdGroupKeywordServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordPlanAdGroupKeywordServiceBlockingStub(channel, callOptions);
     }
 
@@ -265,7 +265,7 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword getKeywordPlanAdGroupKeyword(com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetKeywordPlanAdGroupKeywordMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetKeywordPlanAdGroupKeywordMethod(), getCallOptions(), request);
     }
 
     /**
@@ -276,7 +276,7 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse mutateKeywordPlanAdGroupKeywords(com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateKeywordPlanAdGroupKeywordsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateKeywordPlanAdGroupKeywordsMethod(), getCallOptions(), request);
     }
   }
 
@@ -289,19 +289,15 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
    * includes campaign negative keywords and ad group negative keywords.
    * </pre>
    */
-  public static final class KeywordPlanAdGroupKeywordServiceFutureStub extends io.grpc.stub.AbstractStub<KeywordPlanAdGroupKeywordServiceFutureStub> {
-    private KeywordPlanAdGroupKeywordServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordPlanAdGroupKeywordServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordPlanAdGroupKeywordServiceFutureStub extends io.grpc.stub.AbstractFutureStub<KeywordPlanAdGroupKeywordServiceFutureStub> {
+    private KeywordPlanAdGroupKeywordServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordPlanAdGroupKeywordServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordPlanAdGroupKeywordServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordPlanAdGroupKeywordServiceFutureStub(channel, callOptions);
     }
 
@@ -313,7 +309,7 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.KeywordPlanAdGroupKeyword> getKeywordPlanAdGroupKeyword(
         com.google.ads.googleads.v4.services.GetKeywordPlanAdGroupKeywordRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetKeywordPlanAdGroupKeywordMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetKeywordPlanAdGroupKeywordMethod(), getCallOptions()), request);
     }
 
     /**
@@ -325,7 +321,7 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsResponse> mutateKeywordPlanAdGroupKeywords(
         com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateKeywordPlanAdGroupKeywordsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateKeywordPlanAdGroupKeywordsMethod(), getCallOptions()), request);
     }
   }
 
@@ -418,8 +414,8 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new KeywordPlanAdGroupKeywordServiceFileDescriptorSupplier())
-              .addMethod(getGetKeywordPlanAdGroupKeywordMethodHelper())
-              .addMethod(getMutateKeywordPlanAdGroupKeywordsMethodHelper())
+              .addMethod(getGetKeywordPlanAdGroupKeywordMethod())
+              .addMethod(getMutateKeywordPlanAdGroupKeywordsMethod())
               .build();
         }
       }

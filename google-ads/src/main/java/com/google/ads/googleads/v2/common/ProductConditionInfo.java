@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.ProductConditionInfo}
  */
-public  final class ProductConditionInfo extends
+public final class ProductConditionInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.ProductConditionInfo)
     ProductConditionInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private ProductConditionInfo() {
     condition_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ProductConditionInfo();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -93,8 +99,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
+   * @return The enum numeric value on the wire for condition.
    */
-  public int getConditionValue() {
+  @java.lang.Override public int getConditionValue() {
     return condition_;
   }
   /**
@@ -103,8 +110,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
+   * @return The condition.
    */
-  public com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition getCondition() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition getCondition() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition result = com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition.valueOf(condition_);
     return result == null ? com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition.UNRECOGNIZED : result;
@@ -422,8 +430,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
+     * @return The enum numeric value on the wire for condition.
      */
-    public int getConditionValue() {
+    @java.lang.Override public int getConditionValue() {
       return condition_;
     }
     /**
@@ -432,8 +441,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
+     * @param value The enum numeric value on the wire for condition to set.
+     * @return This builder for chaining.
      */
     public Builder setConditionValue(int value) {
+      
       condition_ = value;
       onChanged();
       return this;
@@ -444,7 +456,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
+     * @return The condition.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition getCondition() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition result = com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition.valueOf(condition_);
@@ -456,6 +470,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
+     * @param value The condition to set.
+     * @return This builder for chaining.
      */
     public Builder setCondition(com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition value) {
       if (value == null) {
@@ -472,6 +488,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition condition = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCondition() {
       

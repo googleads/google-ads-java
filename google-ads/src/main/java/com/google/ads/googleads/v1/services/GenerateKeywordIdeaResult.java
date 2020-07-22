@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.GenerateKeywordIdeaResult}
  */
-public  final class GenerateKeywordIdeaResult extends
+public final class GenerateKeywordIdeaResult extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.GenerateKeywordIdeaResult)
     GenerateKeywordIdeaResultOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GenerateKeywordIdeaResult() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GenerateKeywordIdeaResult();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -115,7 +121,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 2;</code>
+   * @return Whether the text field is set.
    */
+  @java.lang.Override
   public boolean hasText() {
     return text_ != null;
   }
@@ -128,7 +136,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 2;</code>
+   * @return The text.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getText() {
     return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
   }
@@ -142,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue text = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
     return getText();
   }
@@ -154,7 +165,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics keyword_idea_metrics = 3;</code>
+   * @return Whether the keywordIdeaMetrics field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordIdeaMetrics() {
     return keywordIdeaMetrics_ != null;
   }
@@ -164,7 +177,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics keyword_idea_metrics = 3;</code>
+   * @return The keywordIdeaMetrics.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics getKeywordIdeaMetrics() {
     return keywordIdeaMetrics_ == null ? com.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics.getDefaultInstance() : keywordIdeaMetrics_;
   }
@@ -175,6 +190,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics keyword_idea_metrics = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.KeywordPlanHistoricalMetricsOrBuilder getKeywordIdeaMetricsOrBuilder() {
     return getKeywordIdeaMetrics();
   }
@@ -540,6 +556,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue text = 2;</code>
+     * @return Whether the text field is set.
      */
     public boolean hasText() {
       return textBuilder_ != null || text_ != null;
@@ -553,6 +570,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue text = 2;</code>
+     * @return The text.
      */
     public com.google.protobuf.StringValue getText() {
       if (textBuilder_ == null) {
@@ -717,6 +735,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics keyword_idea_metrics = 3;</code>
+     * @return Whether the keywordIdeaMetrics field is set.
      */
     public boolean hasKeywordIdeaMetrics() {
       return keywordIdeaMetricsBuilder_ != null || keywordIdeaMetrics_ != null;
@@ -727,6 +746,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics keyword_idea_metrics = 3;</code>
+     * @return The keywordIdeaMetrics.
      */
     public com.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics getKeywordIdeaMetrics() {
       if (keywordIdeaMetricsBuilder_ == null) {

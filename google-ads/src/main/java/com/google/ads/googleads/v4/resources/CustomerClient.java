@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.CustomerClient}
  */
-public  final class CustomerClient extends
+public final class CustomerClient extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.CustomerClient)
     CustomerClientOrBuilder {
@@ -222,6 +222,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -244,6 +245,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -269,6 +271,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the clientCustomer field is set.
    */
+  @java.lang.Override
   public boolean hasClientCustomer() {
     return clientCustomer_ != null;
   }
@@ -281,6 +284,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The clientCustomer.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getClientCustomer() {
     return clientCustomer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : clientCustomer_;
   }
@@ -292,6 +296,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getClientCustomerOrBuilder() {
     return getClientCustomer();
   }
@@ -308,6 +313,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hidden field is set.
    */
+  @java.lang.Override
   public boolean hasHidden() {
     return hidden_ != null;
   }
@@ -321,6 +327,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hidden.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHidden() {
     return hidden_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hidden_;
   }
@@ -333,6 +340,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHiddenOrBuilder() {
     return getHidden();
   }
@@ -348,6 +356,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the level field is set.
    */
+  @java.lang.Override
   public boolean hasLevel() {
     return level_ != null;
   }
@@ -360,6 +369,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The level.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getLevel() {
     return level_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : level_;
   }
@@ -371,6 +381,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getLevelOrBuilder() {
     return getLevel();
   }
@@ -386,6 +397,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the timeZone field is set.
    */
+  @java.lang.Override
   public boolean hasTimeZone() {
     return timeZone_ != null;
   }
@@ -398,6 +410,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The timeZone.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTimeZone() {
     return timeZone_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : timeZone_;
   }
@@ -409,6 +422,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTimeZoneOrBuilder() {
     return getTimeZone();
   }
@@ -423,6 +437,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue test_account = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the testAccount field is set.
    */
+  @java.lang.Override
   public boolean hasTestAccount() {
     return testAccount_ != null;
   }
@@ -434,6 +449,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue test_account = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The testAccount.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getTestAccount() {
     return testAccount_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : testAccount_;
   }
@@ -444,6 +460,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue test_account = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getTestAccountOrBuilder() {
     return getTestAccount();
   }
@@ -458,6 +475,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue manager = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the manager field is set.
    */
+  @java.lang.Override
   public boolean hasManager() {
     return manager_ != null;
   }
@@ -469,6 +487,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue manager = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The manager.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getManager() {
     return manager_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : manager_;
   }
@@ -479,6 +498,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue manager = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getManagerOrBuilder() {
     return getManager();
   }
@@ -493,6 +513,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue descriptive_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the descriptiveName field is set.
    */
+  @java.lang.Override
   public boolean hasDescriptiveName() {
     return descriptiveName_ != null;
   }
@@ -504,6 +525,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue descriptive_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The descriptiveName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDescriptiveName() {
     return descriptiveName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : descriptiveName_;
   }
@@ -514,6 +536,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue descriptive_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDescriptiveNameOrBuilder() {
     return getDescriptiveName();
   }
@@ -528,6 +551,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -539,6 +563,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -549,6 +574,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -563,6 +589,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -574,6 +601,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -584,6 +612,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }

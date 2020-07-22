@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.TopicInfo}
  */
-public  final class TopicInfo extends
+public final class TopicInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.TopicInfo)
     TopicInfoOrBuilder {
@@ -123,6 +123,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue topic_constant = 1;</code>
    * @return Whether the topicConstant field is set.
    */
+  @java.lang.Override
   public boolean hasTopicConstant() {
     return topicConstant_ != null;
   }
@@ -134,6 +135,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue topic_constant = 1;</code>
    * @return The topicConstant.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTopicConstant() {
     return topicConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : topicConstant_;
   }
@@ -144,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue topic_constant = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTopicConstantOrBuilder() {
     return getTopicConstant();
   }
@@ -160,6 +163,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue path = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getPathList() {
     return path_;
   }
@@ -173,6 +177,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue path = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getPathOrBuilderList() {
     return path_;
@@ -187,6 +192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue path = 2;</code>
    */
+  @java.lang.Override
   public int getPathCount() {
     return path_.size();
   }
@@ -200,6 +206,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue path = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPath(int index) {
     return path_.get(index);
   }
@@ -213,6 +220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue path = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPathOrBuilder(
       int index) {
     return path_.get(index);

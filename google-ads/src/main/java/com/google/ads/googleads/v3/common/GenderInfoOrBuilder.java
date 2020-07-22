@@ -13,6 +13,7 @@ public interface GenderInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GenderTypeEnum.GenderType type = 1;</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -21,6 +22,7 @@ public interface GenderInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.GenderTypeEnum.GenderType type = 1;</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.GenderTypeEnum.GenderType getType();
 }

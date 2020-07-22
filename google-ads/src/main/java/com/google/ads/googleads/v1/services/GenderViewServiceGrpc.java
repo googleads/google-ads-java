@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/gender_view_service.proto")
 public final class GenderViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class GenderViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.GenderViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetGenderViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetGenderViewRequest,
-      com.google.ads.googleads.v1.resources.GenderView> METHOD_GET_GENDER_VIEW = getGetGenderViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetGenderViewRequest,
       com.google.ads.googleads.v1.resources.GenderView> getGetGenderViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGenderView",
+      requestType = com.google.ads.googleads.v1.services.GetGenderViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.GenderView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetGenderViewRequest,
       com.google.ads.googleads.v1.resources.GenderView> getGetGenderViewMethod() {
-    return getGetGenderViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetGenderViewRequest,
-      com.google.ads.googleads.v1.resources.GenderView> getGetGenderViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetGenderViewRequest, com.google.ads.googleads.v1.resources.GenderView> getGetGenderViewMethod;
     if ((getGetGenderViewMethod = GenderViewServiceGrpc.getGetGenderViewMethod) == null) {
       synchronized (GenderViewServiceGrpc.class) {
         if ((getGetGenderViewMethod = GenderViewServiceGrpc.getGetGenderViewMethod) == null) {
-          GenderViewServiceGrpc.getGetGenderViewMethod = getGetGenderViewMethod = 
+          GenderViewServiceGrpc.getGetGenderViewMethod = getGetGenderViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetGenderViewRequest, com.google.ads.googleads.v1.resources.GenderView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.GenderViewService", "GetGenderView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGenderView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetGenderViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.GenderView.getDefaultInstance()))
-                  .setSchemaDescriptor(new GenderViewServiceMethodDescriptorSupplier("GetGenderView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GenderViewServiceMethodDescriptorSupplier("GetGenderView"))
+              .build();
         }
-     }
-     return getGetGenderViewMethod;
+      }
+    }
+    return getGetGenderViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static GenderViewServiceStub newStub(io.grpc.Channel channel) {
-    return new GenderViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GenderViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GenderViewServiceStub>() {
+        @java.lang.Override
+        public GenderViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GenderViewServiceStub(channel, callOptions);
+        }
+      };
+    return GenderViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class GenderViewServiceGrpc {
    */
   public static GenderViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new GenderViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GenderViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GenderViewServiceBlockingStub>() {
+        @java.lang.Override
+        public GenderViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GenderViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return GenderViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class GenderViewServiceGrpc {
    */
   public static GenderViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new GenderViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GenderViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GenderViewServiceFutureStub>() {
+        @java.lang.Override
+        public GenderViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GenderViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return GenderViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class GenderViewServiceGrpc {
      */
     public void getGenderView(com.google.ads.googleads.v1.services.GetGenderViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.GenderView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetGenderViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetGenderViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetGenderViewMethodHelper(),
+            getGetGenderViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetGenderViewRequest,
@@ -126,19 +140,15 @@ public final class GenderViewServiceGrpc {
    * Service to manage gender views.
    * </pre>
    */
-  public static final class GenderViewServiceStub extends io.grpc.stub.AbstractStub<GenderViewServiceStub> {
-    private GenderViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GenderViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GenderViewServiceStub extends io.grpc.stub.AbstractAsyncStub<GenderViewServiceStub> {
+    private GenderViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GenderViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GenderViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GenderViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class GenderViewServiceGrpc {
     public void getGenderView(com.google.ads.googleads.v1.services.GetGenderViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.GenderView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetGenderViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetGenderViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class GenderViewServiceGrpc {
    * Service to manage gender views.
    * </pre>
    */
-  public static final class GenderViewServiceBlockingStub extends io.grpc.stub.AbstractStub<GenderViewServiceBlockingStub> {
-    private GenderViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GenderViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GenderViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GenderViewServiceBlockingStub> {
+    private GenderViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GenderViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GenderViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GenderViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class GenderViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.GenderView getGenderView(com.google.ads.googleads.v1.services.GetGenderViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetGenderViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetGenderViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class GenderViewServiceGrpc {
    * Service to manage gender views.
    * </pre>
    */
-  public static final class GenderViewServiceFutureStub extends io.grpc.stub.AbstractStub<GenderViewServiceFutureStub> {
-    private GenderViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GenderViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GenderViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GenderViewServiceFutureStub> {
+    private GenderViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GenderViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GenderViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GenderViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class GenderViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.GenderView> getGenderView(
         com.google.ads.googleads.v1.services.GetGenderViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetGenderViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetGenderViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class GenderViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GenderViewServiceFileDescriptorSupplier())
-              .addMethod(getGetGenderViewMethodHelper())
+              .addMethod(getGetGenderViewMethod())
               .build();
         }
       }

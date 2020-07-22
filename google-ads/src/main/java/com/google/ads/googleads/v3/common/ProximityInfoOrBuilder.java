@@ -13,6 +13,7 @@ public interface ProximityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.GeoPointInfo geo_point = 1;</code>
+   * @return Whether the geoPoint field is set.
    */
   boolean hasGeoPoint();
   /**
@@ -21,6 +22,7 @@ public interface ProximityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.GeoPointInfo geo_point = 1;</code>
+   * @return The geoPoint.
    */
   com.google.ads.googleads.v3.common.GeoPointInfo getGeoPoint();
   /**
@@ -38,6 +40,7 @@ public interface ProximityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue radius = 2;</code>
+   * @return Whether the radius field is set.
    */
   boolean hasRadius();
   /**
@@ -46,6 +49,7 @@ public interface ProximityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue radius = 2;</code>
+   * @return The radius.
    */
   com.google.protobuf.DoubleValue getRadius();
   /**
@@ -63,6 +67,7 @@ public interface ProximityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits radius_units = 3;</code>
+   * @return The enum numeric value on the wire for radiusUnits.
    */
   int getRadiusUnitsValue();
   /**
@@ -71,6 +76,7 @@ public interface ProximityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits radius_units = 3;</code>
+   * @return The radiusUnits.
    */
   com.google.ads.googleads.v3.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits getRadiusUnits();
 
@@ -80,6 +86,7 @@ public interface ProximityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AddressInfo address = 4;</code>
+   * @return Whether the address field is set.
    */
   boolean hasAddress();
   /**
@@ -88,6 +95,7 @@ public interface ProximityInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AddressInfo address = 4;</code>
+   * @return The address.
    */
   com.google.ads.googleads.v3.common.AddressInfo getAddress();
   /**

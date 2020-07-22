@@ -15,6 +15,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -36,6 +38,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the placement field is set.
    */
   boolean hasPlacement();
   /**
@@ -45,6 +48,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue placement = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The placement.
    */
   com.google.protobuf.StringValue getPlacement();
   /**
@@ -64,6 +68,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the displayName field is set.
    */
   boolean hasDisplayName();
   /**
@@ -73,6 +78,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue display_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The displayName.
    */
   com.google.protobuf.StringValue getDisplayName();
   /**
@@ -92,6 +98,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the groupPlacementTargetUrl field is set.
    */
   boolean hasGroupPlacementTargetUrl();
   /**
@@ -101,6 +108,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue group_placement_target_url = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The groupPlacementTargetUrl.
    */
   com.google.protobuf.StringValue getGroupPlacementTargetUrl();
   /**
@@ -120,6 +128,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the targetUrl field is set.
    */
   boolean hasTargetUrl();
   /**
@@ -129,6 +138,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue target_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The targetUrl.
    */
   com.google.protobuf.StringValue getTargetUrl();
   /**
@@ -147,6 +157,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for placementType.
    */
   int getPlacementTypeValue();
   /**
@@ -155,6 +166,7 @@ public interface DetailPlacementViewOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The placementType.
    */
   com.google.ads.googleads.v3.enums.PlacementTypeEnum.PlacementType getPlacementType();
 }

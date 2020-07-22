@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.DisplayUploadAdInfo}
  */
-public  final class DisplayUploadAdInfo extends
+public final class DisplayUploadAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.DisplayUploadAdInfo)
     DisplayUploadAdInfoOrBuilder {
@@ -156,7 +156,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType display_upload_product_type = 1;</code>
    * @return The enum numeric value on the wire for displayUploadProductType.
    */
-  public int getDisplayUploadProductTypeValue() {
+  @java.lang.Override public int getDisplayUploadProductTypeValue() {
     return displayUploadProductType_;
   }
   /**
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType display_upload_product_type = 1;</code>
    * @return The displayUploadProductType.
    */
-  public com.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType getDisplayUploadProductType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType getDisplayUploadProductType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType result = com.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType.valueOf(displayUploadProductType_);
     return result == null ? com.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType.UNRECOGNIZED : result;
@@ -188,6 +188,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AdMediaBundleAsset media_bundle = 2;</code>
    * @return Whether the mediaBundle field is set.
    */
+  @java.lang.Override
   public boolean hasMediaBundle() {
     return mediaAssetCase_ == 2;
   }
@@ -205,6 +206,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AdMediaBundleAsset media_bundle = 2;</code>
    * @return The mediaBundle.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdMediaBundleAsset getMediaBundle() {
     if (mediaAssetCase_ == 2) {
        return (com.google.ads.googleads.v4.common.AdMediaBundleAsset) mediaAsset_;
@@ -224,6 +226,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.AdMediaBundleAsset media_bundle = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdMediaBundleAssetOrBuilder getMediaBundleOrBuilder() {
     if (mediaAssetCase_ == 2) {
        return (com.google.ads.googleads.v4.common.AdMediaBundleAsset) mediaAsset_;
@@ -605,7 +608,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType display_upload_product_type = 1;</code>
      * @return The enum numeric value on the wire for displayUploadProductType.
      */
-    public int getDisplayUploadProductTypeValue() {
+    @java.lang.Override public int getDisplayUploadProductTypeValue() {
       return displayUploadProductType_;
     }
     /**
@@ -618,6 +621,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayUploadProductTypeValue(int value) {
+      
       displayUploadProductType_ = value;
       onChanged();
       return this;
@@ -630,6 +634,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType display_upload_product_type = 1;</code>
      * @return The displayUploadProductType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType getDisplayUploadProductType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType result = com.google.ads.googleads.v4.enums.DisplayUploadProductTypeEnum.DisplayUploadProductType.valueOf(displayUploadProductType_);
@@ -684,6 +689,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.AdMediaBundleAsset media_bundle = 2;</code>
      * @return Whether the mediaBundle field is set.
      */
+    @java.lang.Override
     public boolean hasMediaBundle() {
       return mediaAssetCase_ == 2;
     }
@@ -701,6 +707,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.AdMediaBundleAsset media_bundle = 2;</code>
      * @return The mediaBundle.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.AdMediaBundleAsset getMediaBundle() {
       if (mediaBundleBuilder_ == null) {
         if (mediaAssetCase_ == 2) {
@@ -854,6 +861,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.AdMediaBundleAsset media_bundle = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.AdMediaBundleAssetOrBuilder getMediaBundleOrBuilder() {
       if ((mediaAssetCase_ == 2) && (mediaBundleBuilder_ != null)) {
         return mediaBundleBuilder_.getMessageOrBuilder();

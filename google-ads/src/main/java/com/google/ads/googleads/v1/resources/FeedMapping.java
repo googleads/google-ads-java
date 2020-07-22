@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.FeedMapping}
  */
-public  final class FeedMapping extends
+public final class FeedMapping extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.FeedMapping)
     FeedMappingOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
     resourceName_ = "";
     attributeFieldMappings_ = java.util.Collections.emptyList();
     status_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new FeedMapping();
   }
 
   @java.lang.Override
@@ -81,9 +88,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               attributeFieldMappings_ = new java.util.ArrayList<com.google.ads.googleads.v1.resources.AttributeFieldMapping>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000001;
             }
             attributeFieldMappings_.add(
                 input.readMessage(com.google.ads.googleads.v1.resources.AttributeFieldMapping.parser(), extensionRegistry));
@@ -110,7 +117,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         attributeFieldMappings_ = java.util.Collections.unmodifiableList(attributeFieldMappings_);
       }
       this.unknownFields = unknownFields.build();
@@ -130,11 +137,11 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v1.resources.FeedMapping.class, com.google.ads.googleads.v1.resources.FeedMapping.Builder.class);
   }
 
-  private int bitField0_;
   private int targetCase_ = 0;
   private java.lang.Object target_;
   public enum TargetCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     PLACEHOLDER_TYPE(3),
     CRITERION_TYPE(4),
     TARGET_NOT_SET(0);
@@ -143,6 +150,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -173,13 +182,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the feed mapping.
+   * Immutable. The resource name of the feed mapping.
    * Feed mapping resource names have the form:
    * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -194,13 +205,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the feed mapping.
+   * Immutable. The resource name of the feed mapping.
    * Feed mapping resource names have the form:
    * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -219,31 +232,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue feed_;
   /**
    * <pre>
-   * The feed of this feed mapping.
+   * Immutable. The feed of this feed mapping.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
+  @java.lang.Override
   public boolean hasFeed() {
     return feed_ != null;
   }
   /**
    * <pre>
-   * The feed of this feed mapping.
+   * Immutable. The feed of this feed mapping.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeed() {
     return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
   }
   /**
    * <pre>
-   * The feed of this feed mapping.
+   * Immutable. The feed of this feed mapping.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue feed = 2;</code>
+   * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
     return getFeed();
   }
@@ -252,72 +270,77 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v1.resources.AttributeFieldMapping> attributeFieldMappings_;
   /**
    * <pre>
-   * Feed attributes to field mappings. These mappings are a one-to-many
+   * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
    * relationship meaning that 1 feed attribute can be used to populate
    * multiple placeholder fields, but 1 placeholder field can only draw
    * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
    * field can be mapped to multiple feed attributes. Required.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+   * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.resources.AttributeFieldMapping> getAttributeFieldMappingsList() {
     return attributeFieldMappings_;
   }
   /**
    * <pre>
-   * Feed attributes to field mappings. These mappings are a one-to-many
+   * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
    * relationship meaning that 1 feed attribute can be used to populate
    * multiple placeholder fields, but 1 placeholder field can only draw
    * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
    * field can be mapped to multiple feed attributes. Required.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+   * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v1.resources.AttributeFieldMappingOrBuilder> 
       getAttributeFieldMappingsOrBuilderList() {
     return attributeFieldMappings_;
   }
   /**
    * <pre>
-   * Feed attributes to field mappings. These mappings are a one-to-many
+   * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
    * relationship meaning that 1 feed attribute can be used to populate
    * multiple placeholder fields, but 1 placeholder field can only draw
    * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
    * field can be mapped to multiple feed attributes. Required.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+   * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public int getAttributeFieldMappingsCount() {
     return attributeFieldMappings_.size();
   }
   /**
    * <pre>
-   * Feed attributes to field mappings. These mappings are a one-to-many
+   * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
    * relationship meaning that 1 feed attribute can be used to populate
    * multiple placeholder fields, but 1 placeholder field can only draw
    * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
    * field can be mapped to multiple feed attributes. Required.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+   * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AttributeFieldMapping getAttributeFieldMappings(int index) {
     return attributeFieldMappings_.get(index);
   }
   /**
    * <pre>
-   * Feed attributes to field mappings. These mappings are a one-to-many
+   * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
    * relationship meaning that 1 feed attribute can be used to populate
    * multiple placeholder fields, but 1 placeholder field can only draw
    * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
    * field can be mapped to multiple feed attributes. Required.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+   * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.AttributeFieldMappingOrBuilder getAttributeFieldMappingsOrBuilder(
       int index) {
     return attributeFieldMappings_.get(index);
@@ -327,24 +350,26 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * Status of the feed mapping.
+   * Output only. Status of the feed mapping.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6;</code>
+   * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * Status of the feed mapping.
+   * Output only. Status of the feed mapping.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6;</code>
+   * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus result = com.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus.UNRECOGNIZED : result;
@@ -353,11 +378,12 @@ private static final long serialVersionUID = 0L;
   public static final int PLACEHOLDER_TYPE_FIELD_NUMBER = 3;
   /**
    * <pre>
-   * The placeholder type of this mapping (i.e., if the mapping maps feed
+   * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
    * attributes to placeholder fields).
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3;</code>
+   * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for placeholderType.
    */
   public int getPlaceholderTypeValue() {
     if (targetCase_ == 3) {
@@ -367,11 +393,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The placeholder type of this mapping (i.e., if the mapping maps feed
+   * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
    * attributes to placeholder fields).
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3;</code>
+   * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The placeholderType.
    */
   public com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType() {
     if (targetCase_ == 3) {
@@ -386,11 +413,12 @@ private static final long serialVersionUID = 0L;
   public static final int CRITERION_TYPE_FIELD_NUMBER = 4;
   /**
    * <pre>
-   * The criterion type of this mapping (i.e., if the mapping maps feed
+   * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
    * attributes to criterion fields).
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4;</code>
+   * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for criterionType.
    */
   public int getCriterionTypeValue() {
     if (targetCase_ == 4) {
@@ -400,11 +428,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The criterion type of this mapping (i.e., if the mapping maps feed
+   * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
    * attributes to criterion fields).
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4;</code>
+   * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The criterionType.
    */
   public com.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType getCriterionType() {
     if (targetCase_ == 4) {
@@ -701,7 +730,7 @@ private static final long serialVersionUID = 0L;
       }
       if (attributeFieldMappingsBuilder_ == null) {
         attributeFieldMappings_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         attributeFieldMappingsBuilder_.clear();
       }
@@ -736,7 +765,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v1.resources.FeedMapping buildPartial() {
       com.google.ads.googleads.v1.resources.FeedMapping result = new com.google.ads.googleads.v1.resources.FeedMapping(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (feedBuilder_ == null) {
         result.feed_ = feed_;
@@ -744,9 +772,9 @@ private static final long serialVersionUID = 0L;
         result.feed_ = feedBuilder_.build();
       }
       if (attributeFieldMappingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           attributeFieldMappings_ = java.util.Collections.unmodifiableList(attributeFieldMappings_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.attributeFieldMappings_ = attributeFieldMappings_;
       } else {
@@ -759,7 +787,6 @@ private static final long serialVersionUID = 0L;
       if (targetCase_ == 4) {
         result.target_ = target_;
       }
-      result.bitField0_ = to_bitField0_;
       result.targetCase_ = targetCase_;
       onBuilt();
       return result;
@@ -820,7 +847,7 @@ private static final long serialVersionUID = 0L;
         if (!other.attributeFieldMappings_.isEmpty()) {
           if (attributeFieldMappings_.isEmpty()) {
             attributeFieldMappings_ = other.attributeFieldMappings_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAttributeFieldMappingsIsMutable();
             attributeFieldMappings_.addAll(other.attributeFieldMappings_);
@@ -833,7 +860,7 @@ private static final long serialVersionUID = 0L;
             attributeFieldMappingsBuilder_.dispose();
             attributeFieldMappingsBuilder_ = null;
             attributeFieldMappings_ = other.attributeFieldMappings_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
             attributeFieldMappingsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAttributeFieldMappingsFieldBuilder() : null;
@@ -906,12 +933,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the feed mapping.
+     * Immutable. The resource name of the feed mapping.
      * Feed mapping resource names have the form:
      * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -927,12 +955,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed mapping.
+     * Immutable. The resource name of the feed mapping.
      * Feed mapping resource names have the form:
      * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -949,12 +978,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed mapping.
+     * Immutable. The resource name of the feed mapping.
      * Feed mapping resource names have the form:
      * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -968,12 +999,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed mapping.
+     * Immutable. The resource name of the feed mapping.
      * Feed mapping resource names have the form:
      * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -983,12 +1015,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the feed mapping.
+     * Immutable. The resource name of the feed mapping.
      * Feed mapping resource names have the form:
      * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1007,20 +1041,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> feedBuilder_;
     /**
      * <pre>
-     * The feed of this feed mapping.
+     * Immutable. The feed of this feed mapping.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
       return feedBuilder_ != null || feed_ != null;
     }
     /**
      * <pre>
-     * The feed of this feed mapping.
+     * Immutable. The feed of this feed mapping.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The feed.
      */
     public com.google.protobuf.StringValue getFeed() {
       if (feedBuilder_ == null) {
@@ -1031,10 +1067,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed of this feed mapping.
+     * Immutable. The feed of this feed mapping.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeed(com.google.protobuf.StringValue value) {
       if (feedBuilder_ == null) {
@@ -1051,10 +1087,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed of this feed mapping.
+     * Immutable. The feed of this feed mapping.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setFeed(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1069,10 +1105,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed of this feed mapping.
+     * Immutable. The feed of this feed mapping.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeFeed(com.google.protobuf.StringValue value) {
       if (feedBuilder_ == null) {
@@ -1091,10 +1127,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed of this feed mapping.
+     * Immutable. The feed of this feed mapping.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearFeed() {
       if (feedBuilder_ == null) {
@@ -1109,10 +1145,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed of this feed mapping.
+     * Immutable. The feed of this feed mapping.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getFeedBuilder() {
       
@@ -1121,10 +1157,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed of this feed mapping.
+     * Immutable. The feed of this feed mapping.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
       if (feedBuilder_ != null) {
@@ -1136,10 +1172,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The feed of this feed mapping.
+     * Immutable. The feed of this feed mapping.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue feed = 2;</code>
+     * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1158,9 +1194,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.resources.AttributeFieldMapping> attributeFieldMappings_ =
       java.util.Collections.emptyList();
     private void ensureAttributeFieldMappingsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         attributeFieldMappings_ = new java.util.ArrayList<com.google.ads.googleads.v1.resources.AttributeFieldMapping>(attributeFieldMappings_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1169,14 +1205,14 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public java.util.List<com.google.ads.googleads.v1.resources.AttributeFieldMapping> getAttributeFieldMappingsList() {
       if (attributeFieldMappingsBuilder_ == null) {
@@ -1187,14 +1223,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public int getAttributeFieldMappingsCount() {
       if (attributeFieldMappingsBuilder_ == null) {
@@ -1205,14 +1241,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.resources.AttributeFieldMapping getAttributeFieldMappings(int index) {
       if (attributeFieldMappingsBuilder_ == null) {
@@ -1223,14 +1259,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setAttributeFieldMappings(
         int index, com.google.ads.googleads.v1.resources.AttributeFieldMapping value) {
@@ -1248,14 +1284,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setAttributeFieldMappings(
         int index, com.google.ads.googleads.v1.resources.AttributeFieldMapping.Builder builderForValue) {
@@ -1270,14 +1306,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder addAttributeFieldMappings(com.google.ads.googleads.v1.resources.AttributeFieldMapping value) {
       if (attributeFieldMappingsBuilder_ == null) {
@@ -1294,14 +1330,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder addAttributeFieldMappings(
         int index, com.google.ads.googleads.v1.resources.AttributeFieldMapping value) {
@@ -1319,14 +1355,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder addAttributeFieldMappings(
         com.google.ads.googleads.v1.resources.AttributeFieldMapping.Builder builderForValue) {
@@ -1341,14 +1377,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder addAttributeFieldMappings(
         int index, com.google.ads.googleads.v1.resources.AttributeFieldMapping.Builder builderForValue) {
@@ -1363,14 +1399,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder addAllAttributeFieldMappings(
         java.lang.Iterable<? extends com.google.ads.googleads.v1.resources.AttributeFieldMapping> values) {
@@ -1386,19 +1422,19 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearAttributeFieldMappings() {
       if (attributeFieldMappingsBuilder_ == null) {
         attributeFieldMappings_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         attributeFieldMappingsBuilder_.clear();
@@ -1407,14 +1443,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder removeAttributeFieldMappings(int index) {
       if (attributeFieldMappingsBuilder_ == null) {
@@ -1428,14 +1464,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.resources.AttributeFieldMapping.Builder getAttributeFieldMappingsBuilder(
         int index) {
@@ -1443,14 +1479,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.resources.AttributeFieldMappingOrBuilder getAttributeFieldMappingsOrBuilder(
         int index) {
@@ -1461,14 +1497,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public java.util.List<? extends com.google.ads.googleads.v1.resources.AttributeFieldMappingOrBuilder> 
          getAttributeFieldMappingsOrBuilderList() {
@@ -1480,14 +1516,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.resources.AttributeFieldMapping.Builder addAttributeFieldMappingsBuilder() {
       return getAttributeFieldMappingsFieldBuilder().addBuilder(
@@ -1495,14 +1531,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.resources.AttributeFieldMapping.Builder addAttributeFieldMappingsBuilder(
         int index) {
@@ -1511,14 +1547,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Feed attributes to field mappings. These mappings are a one-to-many
+     * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
      * relationship meaning that 1 feed attribute can be used to populate
      * multiple placeholder fields, but 1 placeholder field can only draw
      * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
      * field can be mapped to multiple feed attributes. Required.
      * </pre>
      *
-     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5;</code>
+     * <code>repeated .google.ads.googleads.v1.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public java.util.List<com.google.ads.googleads.v1.resources.AttributeFieldMapping.Builder> 
          getAttributeFieldMappingsBuilderList() {
@@ -1531,7 +1567,7 @@ private static final long serialVersionUID = 0L;
         attributeFieldMappingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.resources.AttributeFieldMapping, com.google.ads.googleads.v1.resources.AttributeFieldMapping.Builder, com.google.ads.googleads.v1.resources.AttributeFieldMappingOrBuilder>(
                 attributeFieldMappings_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         attributeFieldMappings_ = null;
@@ -1542,36 +1578,42 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Status of the feed mapping.
+     * Output only. Status of the feed mapping.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * Status of the feed mapping.
+     * Output only. Status of the feed mapping.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Status of the feed mapping.
+     * Output only. Status of the feed mapping.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus result = com.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus.valueOf(status_);
@@ -1579,11 +1621,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed mapping.
+     * Output only. Status of the feed mapping.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus value) {
       if (value == null) {
@@ -1596,11 +1640,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Status of the feed mapping.
+     * Output only. Status of the feed mapping.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       
@@ -1611,12 +1656,14 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The placeholder type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
      * attributes to placeholder fields).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3;</code>
+     * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for placeholderType.
      */
+    @java.lang.Override
     public int getPlaceholderTypeValue() {
       if (targetCase_ == 3) {
         return ((java.lang.Integer) target_).intValue();
@@ -1625,11 +1672,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
      * attributes to placeholder fields).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3;</code>
+     * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for placeholderType to set.
+     * @return This builder for chaining.
      */
     public Builder setPlaceholderTypeValue(int value) {
       targetCase_ = 3;
@@ -1639,12 +1688,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
      * attributes to placeholder fields).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3;</code>
+     * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The placeholderType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType() {
       if (targetCase_ == 3) {
         @SuppressWarnings("deprecation")
@@ -1656,11 +1707,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
      * attributes to placeholder fields).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3;</code>
+     * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The placeholderType to set.
+     * @return This builder for chaining.
      */
     public Builder setPlaceholderType(com.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType value) {
       if (value == null) {
@@ -1673,11 +1726,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The placeholder type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
      * attributes to placeholder fields).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3;</code>
+     * <code>.google.ads.googleads.v1.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearPlaceholderType() {
       if (targetCase_ == 3) {
@@ -1690,12 +1744,14 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for criterionType.
      */
+    @java.lang.Override
     public int getCriterionTypeValue() {
       if (targetCase_ == 4) {
         return ((java.lang.Integer) target_).intValue();
@@ -1704,11 +1760,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for criterionType to set.
+     * @return This builder for chaining.
      */
     public Builder setCriterionTypeValue(int value) {
       targetCase_ = 4;
@@ -1718,12 +1776,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The criterionType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType getCriterionType() {
       if (targetCase_ == 4) {
         @SuppressWarnings("deprecation")
@@ -1735,11 +1795,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The criterionType to set.
+     * @return This builder for chaining.
      */
     public Builder setCriterionType(com.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType value) {
       if (value == null) {
@@ -1752,11 +1814,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4;</code>
+     * <code>.google.ads.googleads.v1.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCriterionType() {
       if (targetCase_ == 4) {

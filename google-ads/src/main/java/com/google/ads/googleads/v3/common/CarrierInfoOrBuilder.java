@@ -13,6 +13,7 @@ public interface CarrierInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue carrier_constant = 1;</code>
+   * @return Whether the carrierConstant field is set.
    */
   boolean hasCarrierConstant();
   /**
@@ -21,6 +22,7 @@ public interface CarrierInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue carrier_constant = 1;</code>
+   * @return The carrierConstant.
    */
   com.google.protobuf.StringValue getCarrierConstant();
   /**

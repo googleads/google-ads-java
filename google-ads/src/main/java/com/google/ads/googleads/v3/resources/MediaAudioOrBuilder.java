@@ -13,6 +13,7 @@ public interface MediaAudioOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the adDurationMillis field is set.
    */
   boolean hasAdDurationMillis();
   /**
@@ -21,6 +22,7 @@ public interface MediaAudioOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The adDurationMillis.
    */
   com.google.protobuf.Int64Value getAdDurationMillis();
   /**

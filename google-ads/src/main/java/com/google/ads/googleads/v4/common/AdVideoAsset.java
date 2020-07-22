@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.AdVideoAsset}
  */
-public  final class AdVideoAsset extends
+public final class AdVideoAsset extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.AdVideoAsset)
     AdVideoAssetOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue asset = 1;</code>
    * @return Whether the asset field is set.
    */
+  @java.lang.Override
   public boolean hasAsset() {
     return asset_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue asset = 1;</code>
    * @return The asset.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAsset() {
     return asset_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : asset_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue asset = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAssetOrBuilder() {
     return getAsset();
   }

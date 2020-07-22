@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.MobileDeviceInfo}
  */
-public  final class MobileDeviceInfo extends
+public final class MobileDeviceInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.MobileDeviceInfo)
     MobileDeviceInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue mobile_device_constant = 1;</code>
    * @return Whether the mobileDeviceConstant field is set.
    */
+  @java.lang.Override
   public boolean hasMobileDeviceConstant() {
     return mobileDeviceConstant_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue mobile_device_constant = 1;</code>
    * @return The mobileDeviceConstant.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMobileDeviceConstant() {
     return mobileDeviceConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : mobileDeviceConstant_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue mobile_device_constant = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMobileDeviceConstantOrBuilder() {
     return getMobileDeviceConstant();
   }

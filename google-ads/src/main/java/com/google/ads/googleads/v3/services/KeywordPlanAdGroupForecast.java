@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.KeywordPlanAdGroupForecast}
  */
-public  final class KeywordPlanAdGroupForecast extends
+public final class KeywordPlanAdGroupForecast extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.KeywordPlanAdGroupForecast)
     KeywordPlanAdGroupForecastOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private KeywordPlanAdGroupForecast() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new KeywordPlanAdGroupForecast();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -113,7 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_ad_group = 1;</code>
+   * @return Whether the keywordPlanAdGroup field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanAdGroup() {
     return keywordPlanAdGroup_ != null;
   }
@@ -124,7 +132,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue keyword_plan_ad_group = 1;</code>
+   * @return The keywordPlanAdGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywordPlanAdGroup() {
     return keywordPlanAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlanAdGroup_;
   }
@@ -136,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue keyword_plan_ad_group = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanAdGroupOrBuilder() {
     return getKeywordPlanAdGroup();
   }
@@ -148,7 +159,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.ForecastMetrics ad_group_forecast = 2;</code>
+   * @return Whether the adGroupForecast field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupForecast() {
     return adGroupForecast_ != null;
   }
@@ -158,7 +171,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.ForecastMetrics ad_group_forecast = 2;</code>
+   * @return The adGroupForecast.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.ForecastMetrics getAdGroupForecast() {
     return adGroupForecast_ == null ? com.google.ads.googleads.v3.services.ForecastMetrics.getDefaultInstance() : adGroupForecast_;
   }
@@ -169,6 +184,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.services.ForecastMetrics ad_group_forecast = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.ForecastMetricsOrBuilder getAdGroupForecastOrBuilder() {
     return getAdGroupForecast();
   }
@@ -532,6 +548,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_ad_group = 1;</code>
+     * @return Whether the keywordPlanAdGroup field is set.
      */
     public boolean hasKeywordPlanAdGroup() {
       return keywordPlanAdGroupBuilder_ != null || keywordPlanAdGroup_ != null;
@@ -543,6 +560,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue keyword_plan_ad_group = 1;</code>
+     * @return The keywordPlanAdGroup.
      */
     public com.google.protobuf.StringValue getKeywordPlanAdGroup() {
       if (keywordPlanAdGroupBuilder_ == null) {
@@ -693,6 +711,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.ForecastMetrics ad_group_forecast = 2;</code>
+     * @return Whether the adGroupForecast field is set.
      */
     public boolean hasAdGroupForecast() {
       return adGroupForecastBuilder_ != null || adGroupForecast_ != null;
@@ -703,6 +722,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.ForecastMetrics ad_group_forecast = 2;</code>
+     * @return The adGroupForecast.
      */
     public com.google.ads.googleads.v3.services.ForecastMetrics getAdGroupForecast() {
       if (adGroupForecastBuilder_ == null) {

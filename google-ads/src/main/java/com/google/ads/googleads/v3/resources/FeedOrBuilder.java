@@ -15,6 +15,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -36,6 +38,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -45,6 +48,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -63,6 +67,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -71,6 +76,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -196,6 +202,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for origin.
    */
   int getOriginValue();
   /**
@@ -204,6 +211,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The origin.
    */
   com.google.ads.googleads.v3.enums.FeedOriginEnum.FeedOrigin getOrigin();
 
@@ -214,6 +222,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -223,6 +232,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.FeedStatusEnum.FeedStatus getStatus();
 
@@ -233,6 +243,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
+   * @return Whether the placesLocationFeedData field is set.
    */
   boolean hasPlacesLocationFeedData();
   /**
@@ -242,6 +253,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
+   * @return The placesLocationFeedData.
    */
   com.google.ads.googleads.v3.resources.Feed.PlacesLocationFeedData getPlacesLocationFeedData();
   /**
@@ -261,6 +273,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Feed.AffiliateLocationFeedData affiliate_location_feed_data = 7;</code>
+   * @return Whether the affiliateLocationFeedData field is set.
    */
   boolean hasAffiliateLocationFeedData();
   /**
@@ -270,6 +283,7 @@ public interface FeedOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Feed.AffiliateLocationFeedData affiliate_location_feed_data = 7;</code>
+   * @return The affiliateLocationFeedData.
    */
   com.google.ads.googleads.v3.resources.Feed.AffiliateLocationFeedData getAffiliateLocationFeedData();
   /**

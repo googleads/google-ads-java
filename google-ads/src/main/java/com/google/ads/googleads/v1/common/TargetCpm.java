@@ -11,7 +11,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.TargetCpm}
  */
-public  final class TargetCpm extends
+public final class TargetCpm extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.TargetCpm)
     TargetCpmOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TargetCpm() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new TargetCpm();
   }
 
   @java.lang.Override

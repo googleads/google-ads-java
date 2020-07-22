@@ -15,6 +15,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -62,6 +66,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -72,6 +77,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -91,6 +97,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ConversionActionStatusEnum.ConversionActionStatus status = 4;</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -99,6 +106,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ConversionActionStatusEnum.ConversionActionStatus status = 4;</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.ConversionActionStatusEnum.ConversionActionStatus getStatus();
 
@@ -108,6 +116,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -116,6 +125,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.ConversionActionTypeEnum.ConversionActionType getType();
 
@@ -125,6 +135,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ConversionActionCategoryEnum.ConversionActionCategory category = 6;</code>
+   * @return The enum numeric value on the wire for category.
    */
   int getCategoryValue();
   /**
@@ -133,6 +144,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ConversionActionCategoryEnum.ConversionActionCategory category = 6;</code>
+   * @return The category.
    */
   com.google.ads.googleads.v3.enums.ConversionActionCategoryEnum.ConversionActionCategory getCategory();
 
@@ -143,6 +155,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the ownerCustomer field is set.
    */
   boolean hasOwnerCustomer();
   /**
@@ -152,6 +165,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The ownerCustomer.
    */
   com.google.protobuf.StringValue getOwnerCustomer();
   /**
@@ -171,6 +185,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue include_in_conversions_metric = 8;</code>
+   * @return Whether the includeInConversionsMetric field is set.
    */
   boolean hasIncludeInConversionsMetric();
   /**
@@ -180,6 +195,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue include_in_conversions_metric = 8;</code>
+   * @return The includeInConversionsMetric.
    */
   com.google.protobuf.BoolValue getIncludeInConversionsMetric();
   /**
@@ -199,6 +215,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value click_through_lookback_window_days = 9;</code>
+   * @return Whether the clickThroughLookbackWindowDays field is set.
    */
   boolean hasClickThroughLookbackWindowDays();
   /**
@@ -208,6 +225,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value click_through_lookback_window_days = 9;</code>
+   * @return The clickThroughLookbackWindowDays.
    */
   com.google.protobuf.Int64Value getClickThroughLookbackWindowDays();
   /**
@@ -227,6 +245,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value view_through_lookback_window_days = 10;</code>
+   * @return Whether the viewThroughLookbackWindowDays field is set.
    */
   boolean hasViewThroughLookbackWindowDays();
   /**
@@ -236,6 +255,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value view_through_lookback_window_days = 10;</code>
+   * @return The viewThroughLookbackWindowDays.
    */
   com.google.protobuf.Int64Value getViewThroughLookbackWindowDays();
   /**
@@ -255,6 +275,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ConversionAction.ValueSettings value_settings = 11;</code>
+   * @return Whether the valueSettings field is set.
    */
   boolean hasValueSettings();
   /**
@@ -264,6 +285,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ConversionAction.ValueSettings value_settings = 11;</code>
+   * @return The valueSettings.
    */
   com.google.ads.googleads.v3.resources.ConversionAction.ValueSettings getValueSettings();
   /**
@@ -282,6 +304,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType counting_type = 12;</code>
+   * @return The enum numeric value on the wire for countingType.
    */
   int getCountingTypeValue();
   /**
@@ -290,6 +313,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType counting_type = 12;</code>
+   * @return The countingType.
    */
   com.google.ads.googleads.v3.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType getCountingType();
 
@@ -299,6 +323,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ConversionAction.AttributionModelSettings attribution_model_settings = 13;</code>
+   * @return Whether the attributionModelSettings field is set.
    */
   boolean hasAttributionModelSettings();
   /**
@@ -307,6 +332,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.ConversionAction.AttributionModelSettings attribution_model_settings = 13;</code>
+   * @return The attributionModelSettings.
    */
   com.google.ads.googleads.v3.resources.ConversionAction.AttributionModelSettings getAttributionModelSettings();
   /**
@@ -370,6 +396,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value phone_call_duration_seconds = 15;</code>
+   * @return Whether the phoneCallDurationSeconds field is set.
    */
   boolean hasPhoneCallDurationSeconds();
   /**
@@ -380,6 +407,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value phone_call_duration_seconds = 15;</code>
+   * @return The phoneCallDurationSeconds.
    */
   com.google.protobuf.Int64Value getPhoneCallDurationSeconds();
   /**
@@ -399,6 +427,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 16;</code>
+   * @return Whether the appId field is set.
    */
   boolean hasAppId();
   /**
@@ -407,6 +436,7 @@ public interface ConversionActionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 16;</code>
+   * @return The appId.
    */
   com.google.protobuf.StringValue getAppId();
   /**

@@ -23,7 +23,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/asset_service.proto")
 public final class AssetServiceGrpc {
 
@@ -32,86 +32,80 @@ public final class AssetServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.AssetService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAssetMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAssetRequest,
-      com.google.ads.googleads.v3.resources.Asset> METHOD_GET_ASSET = getGetAssetMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAssetRequest,
       com.google.ads.googleads.v3.resources.Asset> getGetAssetMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAsset",
+      requestType = com.google.ads.googleads.v3.services.GetAssetRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.Asset.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAssetRequest,
       com.google.ads.googleads.v3.resources.Asset> getGetAssetMethod() {
-    return getGetAssetMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAssetRequest,
-      com.google.ads.googleads.v3.resources.Asset> getGetAssetMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAssetRequest, com.google.ads.googleads.v3.resources.Asset> getGetAssetMethod;
     if ((getGetAssetMethod = AssetServiceGrpc.getGetAssetMethod) == null) {
       synchronized (AssetServiceGrpc.class) {
         if ((getGetAssetMethod = AssetServiceGrpc.getGetAssetMethod) == null) {
-          AssetServiceGrpc.getGetAssetMethod = getGetAssetMethod = 
+          AssetServiceGrpc.getGetAssetMethod = getGetAssetMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetAssetRequest, com.google.ads.googleads.v3.resources.Asset>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.AssetService", "GetAsset"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAsset"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetAssetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.Asset.getDefaultInstance()))
-                  .setSchemaDescriptor(new AssetServiceMethodDescriptorSupplier("GetAsset"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AssetServiceMethodDescriptorSupplier("GetAsset"))
+              .build();
         }
-     }
-     return getGetAssetMethod;
+      }
+    }
+    return getGetAssetMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateAssetsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAssetsRequest,
-      com.google.ads.googleads.v3.services.MutateAssetsResponse> METHOD_MUTATE_ASSETS = getMutateAssetsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAssetsRequest,
       com.google.ads.googleads.v3.services.MutateAssetsResponse> getMutateAssetsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateAssets",
+      requestType = com.google.ads.googleads.v3.services.MutateAssetsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateAssetsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAssetsRequest,
       com.google.ads.googleads.v3.services.MutateAssetsResponse> getMutateAssetsMethod() {
-    return getMutateAssetsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAssetsRequest,
-      com.google.ads.googleads.v3.services.MutateAssetsResponse> getMutateAssetsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAssetsRequest, com.google.ads.googleads.v3.services.MutateAssetsResponse> getMutateAssetsMethod;
     if ((getMutateAssetsMethod = AssetServiceGrpc.getMutateAssetsMethod) == null) {
       synchronized (AssetServiceGrpc.class) {
         if ((getMutateAssetsMethod = AssetServiceGrpc.getMutateAssetsMethod) == null) {
-          AssetServiceGrpc.getMutateAssetsMethod = getMutateAssetsMethod = 
+          AssetServiceGrpc.getMutateAssetsMethod = getMutateAssetsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateAssetsRequest, com.google.ads.googleads.v3.services.MutateAssetsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.AssetService", "MutateAssets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateAssets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateAssetsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateAssetsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AssetServiceMethodDescriptorSupplier("MutateAssets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AssetServiceMethodDescriptorSupplier("MutateAssets"))
+              .build();
         }
-     }
-     return getMutateAssetsMethod;
+      }
+    }
+    return getMutateAssetsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AssetServiceStub newStub(io.grpc.Channel channel) {
-    return new AssetServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AssetServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AssetServiceStub>() {
+        @java.lang.Override
+        public AssetServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AssetServiceStub(channel, callOptions);
+        }
+      };
+    return AssetServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -119,7 +113,14 @@ public final class AssetServiceGrpc {
    */
   public static AssetServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AssetServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AssetServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AssetServiceBlockingStub>() {
+        @java.lang.Override
+        public AssetServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AssetServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AssetServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -127,7 +128,14 @@ public final class AssetServiceGrpc {
    */
   public static AssetServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AssetServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AssetServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AssetServiceFutureStub>() {
+        @java.lang.Override
+        public AssetServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AssetServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AssetServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -146,7 +154,7 @@ public final class AssetServiceGrpc {
      */
     public void getAsset(com.google.ads.googleads.v3.services.GetAssetRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.Asset> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAssetMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAssetMethod(), responseObserver);
     }
 
     /**
@@ -156,20 +164,20 @@ public final class AssetServiceGrpc {
      */
     public void mutateAssets(com.google.ads.googleads.v3.services.MutateAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateAssetsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateAssetsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateAssetsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAssetMethodHelper(),
+            getGetAssetMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetAssetRequest,
                 com.google.ads.googleads.v3.resources.Asset>(
                   this, METHODID_GET_ASSET)))
           .addMethod(
-            getMutateAssetsMethodHelper(),
+            getMutateAssetsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateAssetsRequest,
@@ -186,19 +194,15 @@ public final class AssetServiceGrpc {
    * created with Ad inline.
    * </pre>
    */
-  public static final class AssetServiceStub extends io.grpc.stub.AbstractStub<AssetServiceStub> {
-    private AssetServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AssetServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AssetServiceStub extends io.grpc.stub.AbstractAsyncStub<AssetServiceStub> {
+    private AssetServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AssetServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AssetServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AssetServiceStub(channel, callOptions);
     }
 
@@ -210,7 +214,7 @@ public final class AssetServiceGrpc {
     public void getAsset(com.google.ads.googleads.v3.services.GetAssetRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.Asset> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAssetMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAssetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -221,7 +225,7 @@ public final class AssetServiceGrpc {
     public void mutateAssets(com.google.ads.googleads.v3.services.MutateAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateAssetsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateAssetsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateAssetsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -232,19 +236,15 @@ public final class AssetServiceGrpc {
    * created with Ad inline.
    * </pre>
    */
-  public static final class AssetServiceBlockingStub extends io.grpc.stub.AbstractStub<AssetServiceBlockingStub> {
-    private AssetServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AssetServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AssetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AssetServiceBlockingStub> {
+    private AssetServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AssetServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AssetServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AssetServiceBlockingStub(channel, callOptions);
     }
 
@@ -255,7 +255,7 @@ public final class AssetServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.Asset getAsset(com.google.ads.googleads.v3.services.GetAssetRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAssetMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAssetMethod(), getCallOptions(), request);
     }
 
     /**
@@ -265,7 +265,7 @@ public final class AssetServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateAssetsResponse mutateAssets(com.google.ads.googleads.v3.services.MutateAssetsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateAssetsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateAssetsMethod(), getCallOptions(), request);
     }
   }
 
@@ -276,19 +276,15 @@ public final class AssetServiceGrpc {
    * created with Ad inline.
    * </pre>
    */
-  public static final class AssetServiceFutureStub extends io.grpc.stub.AbstractStub<AssetServiceFutureStub> {
-    private AssetServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AssetServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AssetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AssetServiceFutureStub> {
+    private AssetServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AssetServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AssetServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AssetServiceFutureStub(channel, callOptions);
     }
 
@@ -300,7 +296,7 @@ public final class AssetServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.Asset> getAsset(
         com.google.ads.googleads.v3.services.GetAssetRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAssetMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAssetMethod(), getCallOptions()), request);
     }
 
     /**
@@ -311,7 +307,7 @@ public final class AssetServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateAssetsResponse> mutateAssets(
         com.google.ads.googleads.v3.services.MutateAssetsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateAssetsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateAssetsMethod(), getCallOptions()), request);
     }
   }
 
@@ -404,8 +400,8 @@ public final class AssetServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AssetServiceFileDescriptorSupplier())
-              .addMethod(getGetAssetMethodHelper())
-              .addMethod(getMutateAssetsMethodHelper())
+              .addMethod(getGetAssetMethod())
+              .addMethod(getMutateAssetsMethod())
               .build();
         }
       }

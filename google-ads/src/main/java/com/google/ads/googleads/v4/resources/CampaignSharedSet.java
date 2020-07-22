@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.CampaignSharedSet}
  */
-public  final class CampaignSharedSet extends
+public final class CampaignSharedSet extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.CampaignSharedSet)
     CampaignSharedSetOrBuilder {
@@ -137,6 +137,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -159,6 +160,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -183,6 +185,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
+  @java.lang.Override
   public boolean hasCampaign() {
     return campaign_ != null;
   }
@@ -194,6 +197,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaign() {
     return campaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaign_;
   }
@@ -204,6 +208,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     return getCampaign();
   }
@@ -223,6 +228,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the sharedSet field is set.
    */
+  @java.lang.Override
   public boolean hasSharedSet() {
     return sharedSet_ != null;
   }
@@ -239,6 +245,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The sharedSet.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSharedSet() {
     return sharedSet_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : sharedSet_;
   }
@@ -254,6 +261,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSharedSetOrBuilder() {
     return getSharedSet();
   }
@@ -268,7 +276,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -279,7 +287,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus result = com.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.UNRECOGNIZED : result;
@@ -1138,7 +1146,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1151,6 +1159,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1163,6 +1172,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus result = com.google.ads.googleads.v4.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.valueOf(status_);

@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.DisplayKeywordViewServiceStubSe
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
- *   String formattedResourceName = DisplayKeywordViewServiceClient.formatDisplayKeywordViewName("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
- *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(formattedResourceName);
+ *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
+ *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,50 +98,6 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
   private final DisplayKeywordViewServiceSettings settings;
   private final DisplayKeywordViewServiceStub stub;
 
-  private static final PathTemplate DISPLAY_KEYWORD_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/displayKeywordViews/{display_keyword_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a display_keyword_view
-   * resource.
-   *
-   * @deprecated Use the {@link DisplayKeywordViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatDisplayKeywordViewName(
-      String customer, String displayKeywordView) {
-    return DISPLAY_KEYWORD_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "display_keyword_view", displayKeywordView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a display_keyword_view
-   * resource.
-   *
-   * @deprecated Use the {@link DisplayKeywordViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromDisplayKeywordViewName(
-      String displayKeywordViewName) {
-    return DISPLAY_KEYWORD_VIEW_PATH_TEMPLATE.parse(displayKeywordViewName).get("customer");
-  }
-
-  /**
-   * Parses the display_keyword_view from the given fully-qualified path which represents a
-   * display_keyword_view resource.
-   *
-   * @deprecated Use the {@link DisplayKeywordViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseDisplayKeywordViewFromDisplayKeywordViewName(
-      String displayKeywordViewName) {
-    return DISPLAY_KEYWORD_VIEW_PATH_TEMPLATE
-        .parse(displayKeywordViewName)
-        .get("display_keyword_view");
-  }
-
   /** Constructs an instance of DisplayKeywordViewServiceClient with default settings. */
   public static final DisplayKeywordViewServiceClient create() throws IOException {
     return create(DisplayKeywordViewServiceSettings.newBuilder().build());
@@ -201,16 +156,39 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
-   *   String formattedResourceName = DisplayKeywordViewServiceClient.formatDisplayKeywordViewName("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
-   *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(formattedResourceName);
+   *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
+   *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the display keyword view to fetch.
+   * @param resourceName Required. The resource name of the display keyword view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final DisplayKeywordView getDisplayKeywordView(DisplayKeywordViewName resourceName) {
+    GetDisplayKeywordViewRequest request =
+        GetDisplayKeywordViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getDisplayKeywordView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested display keyword view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
+   *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
+   *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the display keyword view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DisplayKeywordView getDisplayKeywordView(String resourceName) {
-    DISPLAY_KEYWORD_VIEW_PATH_TEMPLATE.validate(resourceName, "getDisplayKeywordView");
     GetDisplayKeywordViewRequest request =
         GetDisplayKeywordViewRequest.newBuilder().setResourceName(resourceName).build();
     return getDisplayKeywordView(request);
@@ -224,9 +202,9 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
-   *   String formattedResourceName = DisplayKeywordViewServiceClient.formatDisplayKeywordViewName("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
+   *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
    *   GetDisplayKeywordViewRequest request = GetDisplayKeywordViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(request);
    * }
@@ -247,9 +225,9 @@ public class DisplayKeywordViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
-   *   String formattedResourceName = DisplayKeywordViewServiceClient.formatDisplayKeywordViewName("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
+   *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
    *   GetDisplayKeywordViewRequest request = GetDisplayKeywordViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;DisplayKeywordView&gt; future = displayKeywordViewServiceClient.getDisplayKeywordViewCallable().futureCall(request);
    *   // Do something

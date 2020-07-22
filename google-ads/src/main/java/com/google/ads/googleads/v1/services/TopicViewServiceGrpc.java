@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/topic_view_service.proto")
 public final class TopicViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class TopicViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.TopicViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetTopicViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetTopicViewRequest,
-      com.google.ads.googleads.v1.resources.TopicView> METHOD_GET_TOPIC_VIEW = getGetTopicViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetTopicViewRequest,
       com.google.ads.googleads.v1.resources.TopicView> getGetTopicViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTopicView",
+      requestType = com.google.ads.googleads.v1.services.GetTopicViewRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.TopicView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetTopicViewRequest,
       com.google.ads.googleads.v1.resources.TopicView> getGetTopicViewMethod() {
-    return getGetTopicViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetTopicViewRequest,
-      com.google.ads.googleads.v1.resources.TopicView> getGetTopicViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetTopicViewRequest, com.google.ads.googleads.v1.resources.TopicView> getGetTopicViewMethod;
     if ((getGetTopicViewMethod = TopicViewServiceGrpc.getGetTopicViewMethod) == null) {
       synchronized (TopicViewServiceGrpc.class) {
         if ((getGetTopicViewMethod = TopicViewServiceGrpc.getGetTopicViewMethod) == null) {
-          TopicViewServiceGrpc.getGetTopicViewMethod = getGetTopicViewMethod = 
+          TopicViewServiceGrpc.getGetTopicViewMethod = getGetTopicViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetTopicViewRequest, com.google.ads.googleads.v1.resources.TopicView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.TopicViewService", "GetTopicView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTopicView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetTopicViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.TopicView.getDefaultInstance()))
-                  .setSchemaDescriptor(new TopicViewServiceMethodDescriptorSupplier("GetTopicView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TopicViewServiceMethodDescriptorSupplier("GetTopicView"))
+              .build();
         }
-     }
-     return getGetTopicViewMethod;
+      }
+    }
+    return getGetTopicViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static TopicViewServiceStub newStub(io.grpc.Channel channel) {
-    return new TopicViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TopicViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TopicViewServiceStub>() {
+        @java.lang.Override
+        public TopicViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TopicViewServiceStub(channel, callOptions);
+        }
+      };
+    return TopicViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class TopicViewServiceGrpc {
    */
   public static TopicViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new TopicViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TopicViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TopicViewServiceBlockingStub>() {
+        @java.lang.Override
+        public TopicViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TopicViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return TopicViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class TopicViewServiceGrpc {
    */
   public static TopicViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new TopicViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TopicViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TopicViewServiceFutureStub>() {
+        @java.lang.Override
+        public TopicViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TopicViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return TopicViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class TopicViewServiceGrpc {
      */
     public void getTopicView(com.google.ads.googleads.v1.services.GetTopicViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.TopicView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTopicViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetTopicViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetTopicViewMethodHelper(),
+            getGetTopicViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetTopicViewRequest,
@@ -126,19 +140,15 @@ public final class TopicViewServiceGrpc {
    * Service to manage topic views.
    * </pre>
    */
-  public static final class TopicViewServiceStub extends io.grpc.stub.AbstractStub<TopicViewServiceStub> {
-    private TopicViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TopicViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TopicViewServiceStub extends io.grpc.stub.AbstractAsyncStub<TopicViewServiceStub> {
+    private TopicViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TopicViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TopicViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TopicViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class TopicViewServiceGrpc {
     public void getTopicView(com.google.ads.googleads.v1.services.GetTopicViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.TopicView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetTopicViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetTopicViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class TopicViewServiceGrpc {
    * Service to manage topic views.
    * </pre>
    */
-  public static final class TopicViewServiceBlockingStub extends io.grpc.stub.AbstractStub<TopicViewServiceBlockingStub> {
-    private TopicViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TopicViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TopicViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TopicViewServiceBlockingStub> {
+    private TopicViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TopicViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TopicViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TopicViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class TopicViewServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.TopicView getTopicView(com.google.ads.googleads.v1.services.GetTopicViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetTopicViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetTopicViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class TopicViewServiceGrpc {
    * Service to manage topic views.
    * </pre>
    */
-  public static final class TopicViewServiceFutureStub extends io.grpc.stub.AbstractStub<TopicViewServiceFutureStub> {
-    private TopicViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TopicViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TopicViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TopicViewServiceFutureStub> {
+    private TopicViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TopicViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TopicViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TopicViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class TopicViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.TopicView> getTopicView(
         com.google.ads.googleads.v1.services.GetTopicViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetTopicViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetTopicViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class TopicViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new TopicViewServiceFileDescriptorSupplier())
-              .addMethod(getGetTopicViewMethodHelper())
+              .addMethod(getGetTopicViewMethod())
               .build();
         }
       }

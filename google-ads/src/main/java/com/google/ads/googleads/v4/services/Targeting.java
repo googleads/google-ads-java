@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.Targeting}
  */
-public  final class Targeting extends
+public final class Targeting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.Targeting)
     TargetingOrBuilder {
@@ -149,6 +149,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
    * @return Whether the plannableLocationId field is set.
    */
+  @java.lang.Override
   public boolean hasPlannableLocationId() {
     return plannableLocationId_ != null;
   }
@@ -161,6 +162,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
    * @return The plannableLocationId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPlannableLocationId() {
     return plannableLocationId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : plannableLocationId_;
   }
@@ -172,6 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPlannableLocationIdOrBuilder() {
     return getPlannableLocationId();
   }
@@ -187,7 +190,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_range = 2;</code>
    * @return The enum numeric value on the wire for ageRange.
    */
-  public int getAgeRangeValue() {
+  @java.lang.Override public int getAgeRangeValue() {
     return ageRange_;
   }
   /**
@@ -199,7 +202,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_range = 2;</code>
    * @return The ageRange.
    */
-  public com.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange getAgeRange() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange getAgeRange() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange result = com.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.valueOf(ageRange_);
     return result == null ? com.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.UNRECOGNIZED : result;
@@ -215,6 +218,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.GenderInfo genders = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.GenderInfo> getGendersList() {
     return genders_;
   }
@@ -226,6 +230,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.GenderInfo genders = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.GenderInfoOrBuilder> 
       getGendersOrBuilderList() {
     return genders_;
@@ -238,6 +243,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.GenderInfo genders = 3;</code>
    */
+  @java.lang.Override
   public int getGendersCount() {
     return genders_.size();
   }
@@ -249,6 +255,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.GenderInfo genders = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.GenderInfo getGenders(int index) {
     return genders_.get(index);
   }
@@ -260,6 +267,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.GenderInfo genders = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.GenderInfoOrBuilder getGendersOrBuilder(
       int index) {
     return genders_.get(index);
@@ -276,6 +284,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.DeviceInfo devices = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.DeviceInfo> getDevicesList() {
     return devices_;
   }
@@ -288,6 +297,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.DeviceInfo devices = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.DeviceInfoOrBuilder> 
       getDevicesOrBuilderList() {
     return devices_;
@@ -301,6 +311,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.DeviceInfo devices = 4;</code>
    */
+  @java.lang.Override
   public int getDevicesCount() {
     return devices_.size();
   }
@@ -313,6 +324,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.DeviceInfo devices = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.DeviceInfo getDevices(int index) {
     return devices_.get(index);
   }
@@ -325,6 +337,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.DeviceInfo devices = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.DeviceInfoOrBuilder getDevicesOrBuilder(
       int index) {
     return devices_.get(index);
@@ -342,7 +355,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork network = 5;</code>
    * @return The enum numeric value on the wire for network.
    */
-  public int getNetworkValue() {
+  @java.lang.Override public int getNetworkValue() {
     return network_;
   }
   /**
@@ -355,7 +368,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork network = 5;</code>
    * @return The network.
    */
-  public com.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork getNetwork() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork getNetwork() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork result = com.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork.valueOf(network_);
     return result == null ? com.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork.UNRECOGNIZED : result;
@@ -998,7 +1011,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_range = 2;</code>
      * @return The enum numeric value on the wire for ageRange.
      */
-    public int getAgeRangeValue() {
+    @java.lang.Override public int getAgeRangeValue() {
       return ageRange_;
     }
     /**
@@ -1012,6 +1025,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgeRangeValue(int value) {
+      
       ageRange_ = value;
       onChanged();
       return this;
@@ -1025,6 +1039,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_range = 2;</code>
      * @return The ageRange.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange getAgeRange() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange result = com.google.ads.googleads.v4.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.valueOf(ageRange_);
@@ -1754,7 +1769,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork network = 5;</code>
      * @return The enum numeric value on the wire for network.
      */
-    public int getNetworkValue() {
+    @java.lang.Override public int getNetworkValue() {
       return network_;
     }
     /**
@@ -1769,6 +1784,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNetworkValue(int value) {
+      
       network_ = value;
       onChanged();
       return this;
@@ -1783,6 +1799,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork network = 5;</code>
      * @return The network.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork getNetwork() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork result = com.google.ads.googleads.v4.enums.ReachPlanNetworkEnum.ReachPlanNetwork.valueOf(network_);

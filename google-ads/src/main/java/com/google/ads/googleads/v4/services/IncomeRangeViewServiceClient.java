@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.IncomeRangeViewServiceStubSetti
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (IncomeRangeViewServiceClient incomeRangeViewServiceClient = IncomeRangeViewServiceClient.create()) {
- *   String formattedResourceName = IncomeRangeViewServiceClient.formatIncomeRangeViewName("[CUSTOMER]", "[INCOME_RANGE_VIEW]");
- *   IncomeRangeView response = incomeRangeViewServiceClient.getIncomeRangeView(formattedResourceName);
+ *   IncomeRangeViewName resourceName = IncomeRangeViewName.of("[CUSTOMER]", "[INCOME_RANGE_VIEW]");
+ *   IncomeRangeView response = incomeRangeViewServiceClient.getIncomeRangeView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,45 +98,6 @@ public class IncomeRangeViewServiceClient implements BackgroundResource {
   private final IncomeRangeViewServiceSettings settings;
   private final IncomeRangeViewServiceStub stub;
 
-  private static final PathTemplate INCOME_RANGE_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/incomeRangeViews/{income_range_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a income_range_view resource.
-   *
-   * @deprecated Use the {@link IncomeRangeViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatIncomeRangeViewName(String customer, String incomeRangeView) {
-    return INCOME_RANGE_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "income_range_view", incomeRangeView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a income_range_view
-   * resource.
-   *
-   * @deprecated Use the {@link IncomeRangeViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromIncomeRangeViewName(String incomeRangeViewName) {
-    return INCOME_RANGE_VIEW_PATH_TEMPLATE.parse(incomeRangeViewName).get("customer");
-  }
-
-  /**
-   * Parses the income_range_view from the given fully-qualified path which represents a
-   * income_range_view resource.
-   *
-   * @deprecated Use the {@link IncomeRangeViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseIncomeRangeViewFromIncomeRangeViewName(
-      String incomeRangeViewName) {
-    return INCOME_RANGE_VIEW_PATH_TEMPLATE.parse(incomeRangeViewName).get("income_range_view");
-  }
-
   /** Constructs an instance of IncomeRangeViewServiceClient with default settings. */
   public static final IncomeRangeViewServiceClient create() throws IOException {
     return create(IncomeRangeViewServiceSettings.newBuilder().build());
@@ -195,8 +155,32 @@ public class IncomeRangeViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (IncomeRangeViewServiceClient incomeRangeViewServiceClient = IncomeRangeViewServiceClient.create()) {
-   *   String formattedResourceName = IncomeRangeViewServiceClient.formatIncomeRangeViewName("[CUSTOMER]", "[INCOME_RANGE_VIEW]");
-   *   IncomeRangeView response = incomeRangeViewServiceClient.getIncomeRangeView(formattedResourceName);
+   *   IncomeRangeViewName resourceName = IncomeRangeViewName.of("[CUSTOMER]", "[INCOME_RANGE_VIEW]");
+   *   IncomeRangeView response = incomeRangeViewServiceClient.getIncomeRangeView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the income range view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final IncomeRangeView getIncomeRangeView(IncomeRangeViewName resourceName) {
+    GetIncomeRangeViewRequest request =
+        GetIncomeRangeViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getIncomeRangeView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested income range view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (IncomeRangeViewServiceClient incomeRangeViewServiceClient = IncomeRangeViewServiceClient.create()) {
+   *   IncomeRangeViewName resourceName = IncomeRangeViewName.of("[CUSTOMER]", "[INCOME_RANGE_VIEW]");
+   *   IncomeRangeView response = incomeRangeViewServiceClient.getIncomeRangeView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -204,7 +188,6 @@ public class IncomeRangeViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final IncomeRangeView getIncomeRangeView(String resourceName) {
-    INCOME_RANGE_VIEW_PATH_TEMPLATE.validate(resourceName, "getIncomeRangeView");
     GetIncomeRangeViewRequest request =
         GetIncomeRangeViewRequest.newBuilder().setResourceName(resourceName).build();
     return getIncomeRangeView(request);
@@ -218,9 +201,9 @@ public class IncomeRangeViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (IncomeRangeViewServiceClient incomeRangeViewServiceClient = IncomeRangeViewServiceClient.create()) {
-   *   String formattedResourceName = IncomeRangeViewServiceClient.formatIncomeRangeViewName("[CUSTOMER]", "[INCOME_RANGE_VIEW]");
+   *   IncomeRangeViewName resourceName = IncomeRangeViewName.of("[CUSTOMER]", "[INCOME_RANGE_VIEW]");
    *   GetIncomeRangeViewRequest request = GetIncomeRangeViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   IncomeRangeView response = incomeRangeViewServiceClient.getIncomeRangeView(request);
    * }
@@ -241,9 +224,9 @@ public class IncomeRangeViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (IncomeRangeViewServiceClient incomeRangeViewServiceClient = IncomeRangeViewServiceClient.create()) {
-   *   String formattedResourceName = IncomeRangeViewServiceClient.formatIncomeRangeViewName("[CUSTOMER]", "[INCOME_RANGE_VIEW]");
+   *   IncomeRangeViewName resourceName = IncomeRangeViewName.of("[CUSTOMER]", "[INCOME_RANGE_VIEW]");
    *   GetIncomeRangeViewRequest request = GetIncomeRangeViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;IncomeRangeView&gt; future = incomeRangeViewServiceClient.getIncomeRangeViewCallable().futureCall(request);
    *   // Do something

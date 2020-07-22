@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.GmailAdInfo}
  */
-public  final class GmailAdInfo extends
+public final class GmailAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.GmailAdInfo)
     GmailAdInfoOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private GmailAdInfo() {
     productImages_ = java.util.Collections.emptyList();
     productVideos_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GmailAdInfo();
   }
 
   @java.lang.Override
@@ -127,18 +134,18 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               productImages_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.ProductImage>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000001;
             }
             productImages_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.ProductImage.parser(), extensionRegistry));
             break;
           }
           case 66: {
-            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               productVideos_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.ProductVideo>();
-              mutable_bitField0_ |= 0x00000080;
+              mutable_bitField0_ |= 0x00000002;
             }
             productVideos_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.ProductVideo.parser(), extensionRegistry));
@@ -159,10 +166,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         productImages_ = java.util.Collections.unmodifiableList(productImages_);
       }
-      if (((mutable_bitField0_ & 0x00000080) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         productVideos_ = java.util.Collections.unmodifiableList(productVideos_);
       }
       this.unknownFields = unknownFields.build();
@@ -182,7 +189,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.common.GmailAdInfo.class, com.google.ads.googleads.v2.common.GmailAdInfo.Builder.class);
   }
 
-  private int bitField0_;
   public static final int TEASER_FIELD_NUMBER = 1;
   private com.google.ads.googleads.v2.common.GmailTeaser teaser_;
   /**
@@ -191,7 +197,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.GmailTeaser teaser = 1;</code>
+   * @return Whether the teaser field is set.
    */
+  @java.lang.Override
   public boolean hasTeaser() {
     return teaser_ != null;
   }
@@ -201,7 +209,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.GmailTeaser teaser = 1;</code>
+   * @return The teaser.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.GmailTeaser getTeaser() {
     return teaser_ == null ? com.google.ads.googleads.v2.common.GmailTeaser.getDefaultInstance() : teaser_;
   }
@@ -212,6 +222,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.GmailTeaser teaser = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.GmailTeaserOrBuilder getTeaserOrBuilder() {
     return getTeaser();
   }
@@ -226,7 +237,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue header_image = 2;</code>
+   * @return Whether the headerImage field is set.
    */
+  @java.lang.Override
   public boolean hasHeaderImage() {
     return headerImage_ != null;
   }
@@ -238,7 +251,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue header_image = 2;</code>
+   * @return The headerImage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHeaderImage() {
     return headerImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : headerImage_;
   }
@@ -251,6 +266,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue header_image = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHeaderImageOrBuilder() {
     return getHeaderImage();
   }
@@ -266,7 +282,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image = 3;</code>
+   * @return Whether the marketingImage field is set.
    */
+  @java.lang.Override
   public boolean hasMarketingImage() {
     return marketingImage_ != null;
   }
@@ -279,7 +297,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image = 3;</code>
+   * @return The marketingImage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMarketingImage() {
     return marketingImage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : marketingImage_;
   }
@@ -293,6 +313,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue marketing_image = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMarketingImageOrBuilder() {
     return getMarketingImage();
   }
@@ -305,7 +326,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image_headline = 4;</code>
+   * @return Whether the marketingImageHeadline field is set.
    */
+  @java.lang.Override
   public boolean hasMarketingImageHeadline() {
     return marketingImageHeadline_ != null;
   }
@@ -315,7 +338,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image_headline = 4;</code>
+   * @return The marketingImageHeadline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMarketingImageHeadline() {
     return marketingImageHeadline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : marketingImageHeadline_;
   }
@@ -326,6 +351,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue marketing_image_headline = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMarketingImageHeadlineOrBuilder() {
     return getMarketingImageHeadline();
   }
@@ -338,7 +364,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image_description = 5;</code>
+   * @return Whether the marketingImageDescription field is set.
    */
+  @java.lang.Override
   public boolean hasMarketingImageDescription() {
     return marketingImageDescription_ != null;
   }
@@ -348,7 +376,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue marketing_image_description = 5;</code>
+   * @return The marketingImageDescription.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMarketingImageDescription() {
     return marketingImageDescription_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : marketingImageDescription_;
   }
@@ -359,6 +389,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue marketing_image_description = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMarketingImageDescriptionOrBuilder() {
     return getMarketingImageDescription();
   }
@@ -371,7 +402,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.DisplayCallToAction marketing_image_display_call_to_action = 6;</code>
+   * @return Whether the marketingImageDisplayCallToAction field is set.
    */
+  @java.lang.Override
   public boolean hasMarketingImageDisplayCallToAction() {
     return marketingImageDisplayCallToAction_ != null;
   }
@@ -381,7 +414,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.DisplayCallToAction marketing_image_display_call_to_action = 6;</code>
+   * @return The marketingImageDisplayCallToAction.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.DisplayCallToAction getMarketingImageDisplayCallToAction() {
     return marketingImageDisplayCallToAction_ == null ? com.google.ads.googleads.v2.common.DisplayCallToAction.getDefaultInstance() : marketingImageDisplayCallToAction_;
   }
@@ -392,6 +427,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.DisplayCallToAction marketing_image_display_call_to_action = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.DisplayCallToActionOrBuilder getMarketingImageDisplayCallToActionOrBuilder() {
     return getMarketingImageDisplayCallToAction();
   }
@@ -405,6 +441,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.ProductImage product_images = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.ProductImage> getProductImagesList() {
     return productImages_;
   }
@@ -415,6 +452,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.ProductImage product_images = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.ProductImageOrBuilder> 
       getProductImagesOrBuilderList() {
     return productImages_;
@@ -426,6 +464,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.ProductImage product_images = 7;</code>
    */
+  @java.lang.Override
   public int getProductImagesCount() {
     return productImages_.size();
   }
@@ -436,6 +475,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.ProductImage product_images = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ProductImage getProductImages(int index) {
     return productImages_.get(index);
   }
@@ -446,6 +486,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.ProductImage product_images = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ProductImageOrBuilder getProductImagesOrBuilder(
       int index) {
     return productImages_.get(index);
@@ -461,6 +502,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.ProductVideo product_videos = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.ProductVideo> getProductVideosList() {
     return productVideos_;
   }
@@ -472,6 +514,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.ProductVideo product_videos = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.ProductVideoOrBuilder> 
       getProductVideosOrBuilderList() {
     return productVideos_;
@@ -484,6 +527,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.ProductVideo product_videos = 8;</code>
    */
+  @java.lang.Override
   public int getProductVideosCount() {
     return productVideos_.size();
   }
@@ -495,6 +539,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.ProductVideo product_videos = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ProductVideo getProductVideos(int index) {
     return productVideos_.get(index);
   }
@@ -506,6 +551,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.ProductVideo product_videos = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ProductVideoOrBuilder getProductVideosOrBuilder(
       int index) {
     return productVideos_.get(index);
@@ -859,13 +905,13 @@ private static final long serialVersionUID = 0L;
       }
       if (productImagesBuilder_ == null) {
         productImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         productImagesBuilder_.clear();
       }
       if (productVideosBuilder_ == null) {
         productVideos_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         productVideosBuilder_.clear();
       }
@@ -896,7 +942,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.common.GmailAdInfo buildPartial() {
       com.google.ads.googleads.v2.common.GmailAdInfo result = new com.google.ads.googleads.v2.common.GmailAdInfo(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (teaserBuilder_ == null) {
         result.teaser_ = teaser_;
       } else {
@@ -928,24 +973,23 @@ private static final long serialVersionUID = 0L;
         result.marketingImageDisplayCallToAction_ = marketingImageDisplayCallToActionBuilder_.build();
       }
       if (productImagesBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           productImages_ = java.util.Collections.unmodifiableList(productImages_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.productImages_ = productImages_;
       } else {
         result.productImages_ = productImagesBuilder_.build();
       }
       if (productVideosBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           productVideos_ = java.util.Collections.unmodifiableList(productVideos_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.productVideos_ = productVideos_;
       } else {
         result.productVideos_ = productVideosBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -1016,7 +1060,7 @@ private static final long serialVersionUID = 0L;
         if (!other.productImages_.isEmpty()) {
           if (productImages_.isEmpty()) {
             productImages_ = other.productImages_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureProductImagesIsMutable();
             productImages_.addAll(other.productImages_);
@@ -1029,7 +1073,7 @@ private static final long serialVersionUID = 0L;
             productImagesBuilder_.dispose();
             productImagesBuilder_ = null;
             productImages_ = other.productImages_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
             productImagesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getProductImagesFieldBuilder() : null;
@@ -1042,7 +1086,7 @@ private static final long serialVersionUID = 0L;
         if (!other.productVideos_.isEmpty()) {
           if (productVideos_.isEmpty()) {
             productVideos_ = other.productVideos_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureProductVideosIsMutable();
             productVideos_.addAll(other.productVideos_);
@@ -1055,7 +1099,7 @@ private static final long serialVersionUID = 0L;
             productVideosBuilder_.dispose();
             productVideosBuilder_ = null;
             productVideos_ = other.productVideos_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
             productVideosBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getProductVideosFieldBuilder() : null;
@@ -1103,6 +1147,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.GmailTeaser teaser = 1;</code>
+     * @return Whether the teaser field is set.
      */
     public boolean hasTeaser() {
       return teaserBuilder_ != null || teaser_ != null;
@@ -1113,6 +1158,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.GmailTeaser teaser = 1;</code>
+     * @return The teaser.
      */
     public com.google.ads.googleads.v2.common.GmailTeaser getTeaser() {
       if (teaserBuilder_ == null) {
@@ -1258,6 +1304,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue header_image = 2;</code>
+     * @return Whether the headerImage field is set.
      */
     public boolean hasHeaderImage() {
       return headerImageBuilder_ != null || headerImage_ != null;
@@ -1270,6 +1317,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue header_image = 2;</code>
+     * @return The headerImage.
      */
     public com.google.protobuf.StringValue getHeaderImage() {
       if (headerImageBuilder_ == null) {
@@ -1430,6 +1478,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue marketing_image = 3;</code>
+     * @return Whether the marketingImage field is set.
      */
     public boolean hasMarketingImage() {
       return marketingImageBuilder_ != null || marketingImage_ != null;
@@ -1443,6 +1492,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue marketing_image = 3;</code>
+     * @return The marketingImage.
      */
     public com.google.protobuf.StringValue getMarketingImage() {
       if (marketingImageBuilder_ == null) {
@@ -1607,6 +1657,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue marketing_image_headline = 4;</code>
+     * @return Whether the marketingImageHeadline field is set.
      */
     public boolean hasMarketingImageHeadline() {
       return marketingImageHeadlineBuilder_ != null || marketingImageHeadline_ != null;
@@ -1617,6 +1668,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue marketing_image_headline = 4;</code>
+     * @return The marketingImageHeadline.
      */
     public com.google.protobuf.StringValue getMarketingImageHeadline() {
       if (marketingImageHeadlineBuilder_ == null) {
@@ -1760,6 +1812,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue marketing_image_description = 5;</code>
+     * @return Whether the marketingImageDescription field is set.
      */
     public boolean hasMarketingImageDescription() {
       return marketingImageDescriptionBuilder_ != null || marketingImageDescription_ != null;
@@ -1770,6 +1823,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue marketing_image_description = 5;</code>
+     * @return The marketingImageDescription.
      */
     public com.google.protobuf.StringValue getMarketingImageDescription() {
       if (marketingImageDescriptionBuilder_ == null) {
@@ -1913,6 +1967,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.DisplayCallToAction marketing_image_display_call_to_action = 6;</code>
+     * @return Whether the marketingImageDisplayCallToAction field is set.
      */
     public boolean hasMarketingImageDisplayCallToAction() {
       return marketingImageDisplayCallToActionBuilder_ != null || marketingImageDisplayCallToAction_ != null;
@@ -1923,6 +1978,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.DisplayCallToAction marketing_image_display_call_to_action = 6;</code>
+     * @return The marketingImageDisplayCallToAction.
      */
     public com.google.ads.googleads.v2.common.DisplayCallToAction getMarketingImageDisplayCallToAction() {
       if (marketingImageDisplayCallToActionBuilder_ == null) {
@@ -2060,9 +2116,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.ProductImage> productImages_ =
       java.util.Collections.emptyList();
     private void ensureProductImagesIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         productImages_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.ProductImage>(productImages_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -2256,7 +2312,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearProductImages() {
       if (productImagesBuilder_ == null) {
         productImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         productImagesBuilder_.clear();
@@ -2361,7 +2417,7 @@ private static final long serialVersionUID = 0L;
         productImagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.ProductImage, com.google.ads.googleads.v2.common.ProductImage.Builder, com.google.ads.googleads.v2.common.ProductImageOrBuilder>(
                 productImages_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         productImages_ = null;
@@ -2372,9 +2428,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.ProductVideo> productVideos_ =
       java.util.Collections.emptyList();
     private void ensureProductVideosIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         productVideos_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.ProductVideo>(productVideos_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -2579,7 +2635,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearProductVideos() {
       if (productVideosBuilder_ == null) {
         productVideos_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         productVideosBuilder_.clear();
@@ -2691,7 +2747,7 @@ private static final long serialVersionUID = 0L;
         productVideosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.ProductVideo, com.google.ads.googleads.v2.common.ProductVideo.Builder, com.google.ads.googleads.v2.common.ProductVideoOrBuilder>(
                 productVideos_,
-                ((bitField0_ & 0x00000080) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         productVideos_ = null;

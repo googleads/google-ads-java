@@ -9,62 +9,64 @@ public interface MutateMediaFilesRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer whose media files are being modified.
+   * Required. The ID of the customer whose media files are being modified.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer whose media files are being modified.
+   * Required. The ID of the customer whose media files are being modified.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * The list of operations to perform on individual media file.
+   * Required. The list of operations to perform on individual media file.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.MediaFileOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.MediaFileOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<com.google.ads.googleads.v1.services.MediaFileOperation> 
       getOperationsList();
   /**
    * <pre>
-   * The list of operations to perform on individual media file.
+   * Required. The list of operations to perform on individual media file.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.MediaFileOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.MediaFileOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.MediaFileOperation getOperations(int index);
   /**
    * <pre>
-   * The list of operations to perform on individual media file.
+   * Required. The list of operations to perform on individual media file.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.MediaFileOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.MediaFileOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   int getOperationsCount();
   /**
    * <pre>
-   * The list of operations to perform on individual media file.
+   * Required. The list of operations to perform on individual media file.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.MediaFileOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.MediaFileOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.util.List<? extends com.google.ads.googleads.v1.services.MediaFileOperationOrBuilder> 
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * The list of operations to perform on individual media file.
+   * Required. The list of operations to perform on individual media file.
    * </pre>
    *
-   * <code>repeated .google.ads.googleads.v1.services.MediaFileOperation operations = 2;</code>
+   * <code>repeated .google.ads.googleads.v1.services.MediaFileOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.services.MediaFileOperationOrBuilder getOperationsOrBuilder(
       int index);
@@ -78,6 +80,7 @@ public interface MutateMediaFilesRequestOrBuilder extends
    * </pre>
    *
    * <code>bool partial_failure = 3;</code>
+   * @return The partialFailure.
    */
   boolean getPartialFailure();
 
@@ -88,6 +91,7 @@ public interface MutateMediaFilesRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 4;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 }

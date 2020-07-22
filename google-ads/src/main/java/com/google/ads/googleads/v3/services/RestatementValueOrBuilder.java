@@ -15,6 +15,7 @@ public interface RestatementValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue adjusted_value = 1;</code>
+   * @return Whether the adjustedValue field is set.
    */
   boolean hasAdjustedValue();
   /**
@@ -25,6 +26,7 @@ public interface RestatementValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue adjusted_value = 1;</code>
+   * @return The adjustedValue.
    */
   com.google.protobuf.DoubleValue getAdjustedValue();
   /**
@@ -47,6 +49,7 @@ public interface RestatementValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -58,6 +61,7 @@ public interface RestatementValueOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 2;</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**

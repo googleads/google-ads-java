@@ -13,6 +13,7 @@ public interface MutateJobResultOrBuilder extends
    * </pre>
    *
    * <code>int64 operation_index = 1;</code>
+   * @return The operationIndex.
    */
   long getOperationIndex();
 
@@ -23,6 +24,7 @@ public interface MutateJobResultOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.MutateOperationResponse mutate_operation_response = 2;</code>
+   * @return Whether the mutateOperationResponse field is set.
    */
   boolean hasMutateOperationResponse();
   /**
@@ -32,6 +34,7 @@ public interface MutateJobResultOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.MutateOperationResponse mutate_operation_response = 2;</code>
+   * @return The mutateOperationResponse.
    */
   com.google.ads.googleads.v1.services.MutateOperationResponse getMutateOperationResponse();
   /**
@@ -50,6 +53,7 @@ public interface MutateJobResultOrBuilder extends
    * </pre>
    *
    * <code>.google.rpc.Status status = 3;</code>
+   * @return Whether the status field is set.
    */
   boolean hasStatus();
   /**
@@ -58,6 +62,7 @@ public interface MutateJobResultOrBuilder extends
    * </pre>
    *
    * <code>.google.rpc.Status status = 3;</code>
+   * @return The status.
    */
   com.google.rpc.Status getStatus();
   /**

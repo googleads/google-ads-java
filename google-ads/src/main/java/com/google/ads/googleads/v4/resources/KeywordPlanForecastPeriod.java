@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.KeywordPlanForecastPeriod}
  */
-public  final class KeywordPlanForecastPeriod extends
+public final class KeywordPlanForecastPeriod extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.KeywordPlanForecastPeriod)
     KeywordPlanForecastPeriodOrBuilder {
@@ -190,6 +190,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.DateRange date_range = 2;</code>
    * @return Whether the dateRange field is set.
    */
+  @java.lang.Override
   public boolean hasDateRange() {
     return intervalCase_ == 2;
   }
@@ -204,6 +205,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.DateRange date_range = 2;</code>
    * @return The dateRange.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.DateRange getDateRange() {
     if (intervalCase_ == 2) {
        return (com.google.ads.googleads.v4.common.DateRange) interval_;
@@ -220,6 +222,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.DateRange date_range = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.DateRangeOrBuilder getDateRangeOrBuilder() {
     if (intervalCase_ == 2) {
        return (com.google.ads.googleads.v4.common.DateRange) interval_;
@@ -604,6 +607,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval date_interval = 1;</code>
      * @return The enum numeric value on the wire for dateInterval.
      */
+    @java.lang.Override
     public int getDateIntervalValue() {
       if (intervalCase_ == 1) {
         return ((java.lang.Integer) interval_).intValue();
@@ -633,6 +637,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval date_interval = 1;</code>
      * @return The dateInterval.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval getDateInterval() {
       if (intervalCase_ == 1) {
         @SuppressWarnings("deprecation")
@@ -690,6 +695,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.DateRange date_range = 2;</code>
      * @return Whether the dateRange field is set.
      */
+    @java.lang.Override
     public boolean hasDateRange() {
       return intervalCase_ == 2;
     }
@@ -704,6 +710,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.DateRange date_range = 2;</code>
      * @return The dateRange.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.DateRange getDateRange() {
       if (dateRangeBuilder_ == null) {
         if (intervalCase_ == 2) {
@@ -839,6 +846,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.DateRange date_range = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.DateRangeOrBuilder getDateRangeOrBuilder() {
       if ((intervalCase_ == 2) && (dateRangeBuilder_ != null)) {
         return dateRangeBuilder_.getMessageOrBuilder();

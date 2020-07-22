@@ -33,37 +33,34 @@ public final class SearchTermViewServiceProto {
       "ogleads.v1.services\0328google/ads/googlead" +
       "s/v1/resources/search_term_view.proto\032\034g" +
       "oogle/api/annotations.proto\032\027google/api/" +
-      "client.proto\"1\n\030GetSearchTermViewRequest" +
-      "\022\025\n\rresource_name\030\001 \001(\t2\364\001\n\025SearchTermVi" +
-      "ewService\022\275\001\n\021GetSearchTermView\022:.google" +
-      ".ads.googleads.v1.services.GetSearchTerm" +
-      "ViewRequest\0321.google.ads.googleads.v1.re" +
-      "sources.SearchTermView\"9\202\323\344\223\0023\0221/v1/{res" +
-      "ource_name=customers/*/searchTermViews/*" +
-      "}\032\033\312A\030googleads.googleapis.comB\201\002\n$com.g" +
-      "oogle.ads.googleads.v1.servicesB\032SearchT" +
-      "ermViewServiceProtoP\001ZHgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v1/se" +
-      "rvices;services\242\002\003GAA\252\002 Google.Ads.Googl" +
-      "eAds.V1.Services\312\002 Google\\Ads\\GoogleAds\\" +
-      "V1\\Services\352\002$Google::Ads::GoogleAds::V1" +
-      "::Servicesb\006proto3"
+      "client.proto\032\037google/api/field_behavior." +
+      "proto\032\031google/api/resource.proto\"b\n\030GetS" +
+      "earchTermViewRequest\022F\n\rresource_name\030\001 " +
+      "\001(\tB/\340A\002\372A)\n\'googleads.googleapis.com/Se" +
+      "archTermView2\204\002\n\025SearchTermViewService\022\315" +
+      "\001\n\021GetSearchTermView\022:.google.ads.google" +
+      "ads.v1.services.GetSearchTermViewRequest" +
+      "\0321.google.ads.googleads.v1.resources.Sea" +
+      "rchTermView\"I\202\323\344\223\0023\0221/v1/{resource_name=" +
+      "customers/*/searchTermViews/*}\332A\rresourc" +
+      "e_name\032\033\312A\030googleads.googleapis.comB\201\002\n$" +
+      "com.google.ads.googleads.v1.servicesB\032Se" +
+      "archTermViewServiceProtoP\001ZHgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v1/services;services\242\002\003GAA\252\002 Google.Ads." +
+      "GoogleAds.V1.Services\312\002 Google\\Ads\\Googl" +
+      "eAds\\V1\\Services\352\002$Google::Ads::GoogleAd" +
+      "s::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.SearchTermViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetSearchTermViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetSearchTermViewRequest_fieldAccessorTable = new
@@ -73,12 +70,17 @@ public final class SearchTermViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.SearchTermViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

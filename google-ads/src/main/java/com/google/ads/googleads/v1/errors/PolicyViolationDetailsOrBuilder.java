@@ -13,6 +13,7 @@ public interface PolicyViolationDetailsOrBuilder extends
    * </pre>
    *
    * <code>string external_policy_description = 2;</code>
+   * @return The externalPolicyDescription.
    */
   java.lang.String getExternalPolicyDescription();
   /**
@@ -21,6 +22,7 @@ public interface PolicyViolationDetailsOrBuilder extends
    * </pre>
    *
    * <code>string external_policy_description = 2;</code>
+   * @return The bytes for externalPolicyDescription.
    */
   com.google.protobuf.ByteString
       getExternalPolicyDescriptionBytes();
@@ -32,6 +34,7 @@ public interface PolicyViolationDetailsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.PolicyViolationKey key = 4;</code>
+   * @return Whether the key field is set.
    */
   boolean hasKey();
   /**
@@ -41,6 +44,7 @@ public interface PolicyViolationDetailsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.PolicyViolationKey key = 4;</code>
+   * @return The key.
    */
   com.google.ads.googleads.v1.common.PolicyViolationKey getKey();
   /**
@@ -59,6 +63,7 @@ public interface PolicyViolationDetailsOrBuilder extends
    * </pre>
    *
    * <code>string external_policy_name = 5;</code>
+   * @return The externalPolicyName.
    */
   java.lang.String getExternalPolicyName();
   /**
@@ -67,6 +72,7 @@ public interface PolicyViolationDetailsOrBuilder extends
    * </pre>
    *
    * <code>string external_policy_name = 5;</code>
+   * @return The bytes for externalPolicyName.
    */
   com.google.protobuf.ByteString
       getExternalPolicyNameBytes();
@@ -77,6 +83,7 @@ public interface PolicyViolationDetailsOrBuilder extends
    * </pre>
    *
    * <code>bool is_exemptible = 6;</code>
+   * @return The isExemptible.
    */
   boolean getIsExemptible();
 }

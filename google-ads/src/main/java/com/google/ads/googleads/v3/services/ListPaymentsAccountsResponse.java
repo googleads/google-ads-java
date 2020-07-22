@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.ListPaymentsAccountsResponse}
  */
-public  final class ListPaymentsAccountsResponse extends
+public final class ListPaymentsAccountsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.ListPaymentsAccountsResponse)
     ListPaymentsAccountsResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private ListPaymentsAccountsResponse() {
     paymentsAccounts_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListPaymentsAccountsResponse();
   }
 
   @java.lang.Override
@@ -100,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.PaymentsAccount payments_accounts = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.resources.PaymentsAccount> getPaymentsAccountsList() {
     return paymentsAccounts_;
   }
@@ -110,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.PaymentsAccount payments_accounts = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.resources.PaymentsAccountOrBuilder> 
       getPaymentsAccountsOrBuilderList() {
     return paymentsAccounts_;
@@ -121,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.PaymentsAccount payments_accounts = 1;</code>
    */
+  @java.lang.Override
   public int getPaymentsAccountsCount() {
     return paymentsAccounts_.size();
   }
@@ -131,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.PaymentsAccount payments_accounts = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.PaymentsAccount getPaymentsAccounts(int index) {
     return paymentsAccounts_.get(index);
   }
@@ -141,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.resources.PaymentsAccount payments_accounts = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.resources.PaymentsAccountOrBuilder getPaymentsAccountsOrBuilder(
       int index) {
     return paymentsAccounts_.get(index);

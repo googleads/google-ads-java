@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/ad_group_ad_asset_view_service.proto")
 public final class AdGroupAdAssetViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class AdGroupAdAssetViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.AdGroupAdAssetViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAdGroupAdAssetViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest,
-      com.google.ads.googleads.v4.resources.AdGroupAdAssetView> METHOD_GET_AD_GROUP_AD_ASSET_VIEW = getGetAdGroupAdAssetViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest,
       com.google.ads.googleads.v4.resources.AdGroupAdAssetView> getGetAdGroupAdAssetViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAdGroupAdAssetView",
+      requestType = com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.AdGroupAdAssetView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest,
       com.google.ads.googleads.v4.resources.AdGroupAdAssetView> getGetAdGroupAdAssetViewMethod() {
-    return getGetAdGroupAdAssetViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest,
-      com.google.ads.googleads.v4.resources.AdGroupAdAssetView> getGetAdGroupAdAssetViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest, com.google.ads.googleads.v4.resources.AdGroupAdAssetView> getGetAdGroupAdAssetViewMethod;
     if ((getGetAdGroupAdAssetViewMethod = AdGroupAdAssetViewServiceGrpc.getGetAdGroupAdAssetViewMethod) == null) {
       synchronized (AdGroupAdAssetViewServiceGrpc.class) {
         if ((getGetAdGroupAdAssetViewMethod = AdGroupAdAssetViewServiceGrpc.getGetAdGroupAdAssetViewMethod) == null) {
-          AdGroupAdAssetViewServiceGrpc.getGetAdGroupAdAssetViewMethod = getGetAdGroupAdAssetViewMethod = 
+          AdGroupAdAssetViewServiceGrpc.getGetAdGroupAdAssetViewMethod = getGetAdGroupAdAssetViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest, com.google.ads.googleads.v4.resources.AdGroupAdAssetView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.AdGroupAdAssetViewService", "GetAdGroupAdAssetView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAdGroupAdAssetView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.AdGroupAdAssetView.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdGroupAdAssetViewServiceMethodDescriptorSupplier("GetAdGroupAdAssetView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdGroupAdAssetViewServiceMethodDescriptorSupplier("GetAdGroupAdAssetView"))
+              .build();
         }
-     }
-     return getGetAdGroupAdAssetViewMethod;
+      }
+    }
+    return getGetAdGroupAdAssetViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AdGroupAdAssetViewServiceStub newStub(io.grpc.Channel channel) {
-    return new AdGroupAdAssetViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupAdAssetViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupAdAssetViewServiceStub>() {
+        @java.lang.Override
+        public AdGroupAdAssetViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupAdAssetViewServiceStub(channel, callOptions);
+        }
+      };
+    return AdGroupAdAssetViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class AdGroupAdAssetViewServiceGrpc {
    */
   public static AdGroupAdAssetViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AdGroupAdAssetViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupAdAssetViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupAdAssetViewServiceBlockingStub>() {
+        @java.lang.Override
+        public AdGroupAdAssetViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupAdAssetViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AdGroupAdAssetViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class AdGroupAdAssetViewServiceGrpc {
    */
   public static AdGroupAdAssetViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AdGroupAdAssetViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdGroupAdAssetViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdGroupAdAssetViewServiceFutureStub>() {
+        @java.lang.Override
+        public AdGroupAdAssetViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdGroupAdAssetViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AdGroupAdAssetViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class AdGroupAdAssetViewServiceGrpc {
      */
     public void getAdGroupAdAssetView(com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.AdGroupAdAssetView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAdGroupAdAssetViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAdGroupAdAssetViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAdGroupAdAssetViewMethodHelper(),
+            getGetAdGroupAdAssetViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest,
@@ -126,19 +140,15 @@ public final class AdGroupAdAssetViewServiceGrpc {
    * Service to fetch ad group ad asset views.
    * </pre>
    */
-  public static final class AdGroupAdAssetViewServiceStub extends io.grpc.stub.AbstractStub<AdGroupAdAssetViewServiceStub> {
-    private AdGroupAdAssetViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupAdAssetViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupAdAssetViewServiceStub extends io.grpc.stub.AbstractAsyncStub<AdGroupAdAssetViewServiceStub> {
+    private AdGroupAdAssetViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupAdAssetViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupAdAssetViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupAdAssetViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class AdGroupAdAssetViewServiceGrpc {
     public void getAdGroupAdAssetView(com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.AdGroupAdAssetView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAdGroupAdAssetViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAdGroupAdAssetViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class AdGroupAdAssetViewServiceGrpc {
    * Service to fetch ad group ad asset views.
    * </pre>
    */
-  public static final class AdGroupAdAssetViewServiceBlockingStub extends io.grpc.stub.AbstractStub<AdGroupAdAssetViewServiceBlockingStub> {
-    private AdGroupAdAssetViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupAdAssetViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupAdAssetViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdGroupAdAssetViewServiceBlockingStub> {
+    private AdGroupAdAssetViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupAdAssetViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupAdAssetViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupAdAssetViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class AdGroupAdAssetViewServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.AdGroupAdAssetView getAdGroupAdAssetView(com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAdGroupAdAssetViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAdGroupAdAssetViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class AdGroupAdAssetViewServiceGrpc {
    * Service to fetch ad group ad asset views.
    * </pre>
    */
-  public static final class AdGroupAdAssetViewServiceFutureStub extends io.grpc.stub.AbstractStub<AdGroupAdAssetViewServiceFutureStub> {
-    private AdGroupAdAssetViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdGroupAdAssetViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdGroupAdAssetViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdGroupAdAssetViewServiceFutureStub> {
+    private AdGroupAdAssetViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdGroupAdAssetViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdGroupAdAssetViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdGroupAdAssetViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class AdGroupAdAssetViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.AdGroupAdAssetView> getAdGroupAdAssetView(
         com.google.ads.googleads.v4.services.GetAdGroupAdAssetViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAdGroupAdAssetViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAdGroupAdAssetViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class AdGroupAdAssetViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AdGroupAdAssetViewServiceFileDescriptorSupplier())
-              .addMethod(getGetAdGroupAdAssetViewMethodHelper())
+              .addMethod(getGetAdGroupAdAssetViewMethod())
               .build();
         }
       }

@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/shared_criterion_service.proto")
 public final class SharedCriterionServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class SharedCriterionServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.SharedCriterionService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetSharedCriterionMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetSharedCriterionRequest,
-      com.google.ads.googleads.v4.resources.SharedCriterion> METHOD_GET_SHARED_CRITERION = getGetSharedCriterionMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetSharedCriterionRequest,
       com.google.ads.googleads.v4.resources.SharedCriterion> getGetSharedCriterionMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSharedCriterion",
+      requestType = com.google.ads.googleads.v4.services.GetSharedCriterionRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.SharedCriterion.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetSharedCriterionRequest,
       com.google.ads.googleads.v4.resources.SharedCriterion> getGetSharedCriterionMethod() {
-    return getGetSharedCriterionMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetSharedCriterionRequest,
-      com.google.ads.googleads.v4.resources.SharedCriterion> getGetSharedCriterionMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetSharedCriterionRequest, com.google.ads.googleads.v4.resources.SharedCriterion> getGetSharedCriterionMethod;
     if ((getGetSharedCriterionMethod = SharedCriterionServiceGrpc.getGetSharedCriterionMethod) == null) {
       synchronized (SharedCriterionServiceGrpc.class) {
         if ((getGetSharedCriterionMethod = SharedCriterionServiceGrpc.getGetSharedCriterionMethod) == null) {
-          SharedCriterionServiceGrpc.getGetSharedCriterionMethod = getGetSharedCriterionMethod = 
+          SharedCriterionServiceGrpc.getGetSharedCriterionMethod = getGetSharedCriterionMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetSharedCriterionRequest, com.google.ads.googleads.v4.resources.SharedCriterion>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.SharedCriterionService", "GetSharedCriterion"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSharedCriterion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetSharedCriterionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.SharedCriterion.getDefaultInstance()))
-                  .setSchemaDescriptor(new SharedCriterionServiceMethodDescriptorSupplier("GetSharedCriterion"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SharedCriterionServiceMethodDescriptorSupplier("GetSharedCriterion"))
+              .build();
         }
-     }
-     return getGetSharedCriterionMethod;
+      }
+    }
+    return getGetSharedCriterionMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateSharedCriteriaMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest,
-      com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse> METHOD_MUTATE_SHARED_CRITERIA = getMutateSharedCriteriaMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest,
       com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse> getMutateSharedCriteriaMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateSharedCriteria",
+      requestType = com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest.class,
+      responseType = com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest,
       com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse> getMutateSharedCriteriaMethod() {
-    return getMutateSharedCriteriaMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest,
-      com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse> getMutateSharedCriteriaMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest, com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse> getMutateSharedCriteriaMethod;
     if ((getMutateSharedCriteriaMethod = SharedCriterionServiceGrpc.getMutateSharedCriteriaMethod) == null) {
       synchronized (SharedCriterionServiceGrpc.class) {
         if ((getMutateSharedCriteriaMethod = SharedCriterionServiceGrpc.getMutateSharedCriteriaMethod) == null) {
-          SharedCriterionServiceGrpc.getMutateSharedCriteriaMethod = getMutateSharedCriteriaMethod = 
+          SharedCriterionServiceGrpc.getMutateSharedCriteriaMethod = getMutateSharedCriteriaMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest, com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.SharedCriterionService", "MutateSharedCriteria"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateSharedCriteria"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SharedCriterionServiceMethodDescriptorSupplier("MutateSharedCriteria"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SharedCriterionServiceMethodDescriptorSupplier("MutateSharedCriteria"))
+              .build();
         }
-     }
-     return getMutateSharedCriteriaMethod;
+      }
+    }
+    return getMutateSharedCriteriaMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SharedCriterionServiceStub newStub(io.grpc.Channel channel) {
-    return new SharedCriterionServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SharedCriterionServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SharedCriterionServiceStub>() {
+        @java.lang.Override
+        public SharedCriterionServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SharedCriterionServiceStub(channel, callOptions);
+        }
+      };
+    return SharedCriterionServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class SharedCriterionServiceGrpc {
    */
   public static SharedCriterionServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SharedCriterionServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SharedCriterionServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SharedCriterionServiceBlockingStub>() {
+        @java.lang.Override
+        public SharedCriterionServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SharedCriterionServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return SharedCriterionServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class SharedCriterionServiceGrpc {
    */
   public static SharedCriterionServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SharedCriterionServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SharedCriterionServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SharedCriterionServiceFutureStub>() {
+        @java.lang.Override
+        public SharedCriterionServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SharedCriterionServiceFutureStub(channel, callOptions);
+        }
+      };
+    return SharedCriterionServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class SharedCriterionServiceGrpc {
      */
     public void getSharedCriterion(com.google.ads.googleads.v4.services.GetSharedCriterionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.SharedCriterion> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSharedCriterionMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetSharedCriterionMethod(), responseObserver);
     }
 
     /**
@@ -152,20 +160,20 @@ public final class SharedCriterionServiceGrpc {
      */
     public void mutateSharedCriteria(com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateSharedCriteriaMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateSharedCriteriaMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetSharedCriterionMethodHelper(),
+            getGetSharedCriterionMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetSharedCriterionRequest,
                 com.google.ads.googleads.v4.resources.SharedCriterion>(
                   this, METHODID_GET_SHARED_CRITERION)))
           .addMethod(
-            getMutateSharedCriteriaMethodHelper(),
+            getMutateSharedCriteriaMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest,
@@ -180,19 +188,15 @@ public final class SharedCriterionServiceGrpc {
    * Service to manage shared criteria.
    * </pre>
    */
-  public static final class SharedCriterionServiceStub extends io.grpc.stub.AbstractStub<SharedCriterionServiceStub> {
-    private SharedCriterionServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SharedCriterionServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SharedCriterionServiceStub extends io.grpc.stub.AbstractAsyncStub<SharedCriterionServiceStub> {
+    private SharedCriterionServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SharedCriterionServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SharedCriterionServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SharedCriterionServiceStub(channel, callOptions);
     }
 
@@ -204,7 +208,7 @@ public final class SharedCriterionServiceGrpc {
     public void getSharedCriterion(com.google.ads.googleads.v4.services.GetSharedCriterionRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.SharedCriterion> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetSharedCriterionMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetSharedCriterionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -215,7 +219,7 @@ public final class SharedCriterionServiceGrpc {
     public void mutateSharedCriteria(com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateSharedCriteriaMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateSharedCriteriaMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -224,19 +228,15 @@ public final class SharedCriterionServiceGrpc {
    * Service to manage shared criteria.
    * </pre>
    */
-  public static final class SharedCriterionServiceBlockingStub extends io.grpc.stub.AbstractStub<SharedCriterionServiceBlockingStub> {
-    private SharedCriterionServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SharedCriterionServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SharedCriterionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SharedCriterionServiceBlockingStub> {
+    private SharedCriterionServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SharedCriterionServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SharedCriterionServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SharedCriterionServiceBlockingStub(channel, callOptions);
     }
 
@@ -247,7 +247,7 @@ public final class SharedCriterionServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.SharedCriterion getSharedCriterion(com.google.ads.googleads.v4.services.GetSharedCriterionRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetSharedCriterionMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetSharedCriterionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -257,7 +257,7 @@ public final class SharedCriterionServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse mutateSharedCriteria(com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateSharedCriteriaMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateSharedCriteriaMethod(), getCallOptions(), request);
     }
   }
 
@@ -266,19 +266,15 @@ public final class SharedCriterionServiceGrpc {
    * Service to manage shared criteria.
    * </pre>
    */
-  public static final class SharedCriterionServiceFutureStub extends io.grpc.stub.AbstractStub<SharedCriterionServiceFutureStub> {
-    private SharedCriterionServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SharedCriterionServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SharedCriterionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SharedCriterionServiceFutureStub> {
+    private SharedCriterionServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SharedCriterionServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SharedCriterionServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SharedCriterionServiceFutureStub(channel, callOptions);
     }
 
@@ -290,7 +286,7 @@ public final class SharedCriterionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.SharedCriterion> getSharedCriterion(
         com.google.ads.googleads.v4.services.GetSharedCriterionRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetSharedCriterionMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetSharedCriterionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -301,7 +297,7 @@ public final class SharedCriterionServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.MutateSharedCriteriaResponse> mutateSharedCriteria(
         com.google.ads.googleads.v4.services.MutateSharedCriteriaRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateSharedCriteriaMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateSharedCriteriaMethod(), getCallOptions()), request);
     }
   }
 
@@ -394,8 +390,8 @@ public final class SharedCriterionServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SharedCriterionServiceFileDescriptorSupplier())
-              .addMethod(getGetSharedCriterionMethodHelper())
-              .addMethod(getMutateSharedCriteriaMethodHelper())
+              .addMethod(getGetSharedCriterionMethod())
+              .addMethod(getMutateSharedCriteriaMethod())
               .build();
         }
       }

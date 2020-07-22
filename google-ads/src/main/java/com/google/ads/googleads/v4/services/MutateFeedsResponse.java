@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.MutateFeedsResponse}
  */
-public  final class MutateFeedsResponse extends
+public final class MutateFeedsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.MutateFeedsResponse)
     MutateFeedsResponseOrBuilder {
@@ -124,6 +124,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
    * @return Whether the partialFailureError field is set.
    */
+  @java.lang.Override
   public boolean hasPartialFailureError() {
     return partialFailureError_ != null;
   }
@@ -138,6 +139,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
    * @return The partialFailureError.
    */
+  @java.lang.Override
   public com.google.rpc.Status getPartialFailureError() {
     return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
   }
@@ -151,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
     return getPartialFailureError();
   }
@@ -164,6 +167,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateFeedResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.MutateFeedResult> getResultsList() {
     return results_;
   }
@@ -174,6 +178,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateFeedResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.MutateFeedResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -185,6 +190,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateFeedResult results = 2;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -195,6 +201,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateFeedResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedResult getResults(int index) {
     return results_.get(index);
   }
@@ -205,6 +212,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateFeedResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);

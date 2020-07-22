@@ -18,8 +18,8 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  * <pre>
  * A service for designating the business entity responsible for accrued costs.
- * A billing setup is associated with a Payments account.  Billing-related
- * activity for all billing setups associated with a particular Payments account
+ * A billing setup is associated with a payments account.  Billing-related
+ * activity for all billing setups associated with a particular payments account
  * will appear on a single invoice generated monthly.
  * Mutates:
  * The REMOVE operation cancels a pending billing setup.
@@ -27,7 +27,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/billing_setup_service.proto")
 public final class BillingSetupServiceGrpc {
 
@@ -36,86 +36,80 @@ public final class BillingSetupServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.BillingSetupService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetBillingSetupMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetBillingSetupRequest,
-      com.google.ads.googleads.v1.resources.BillingSetup> METHOD_GET_BILLING_SETUP = getGetBillingSetupMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetBillingSetupRequest,
       com.google.ads.googleads.v1.resources.BillingSetup> getGetBillingSetupMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetBillingSetup",
+      requestType = com.google.ads.googleads.v1.services.GetBillingSetupRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.BillingSetup.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetBillingSetupRequest,
       com.google.ads.googleads.v1.resources.BillingSetup> getGetBillingSetupMethod() {
-    return getGetBillingSetupMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetBillingSetupRequest,
-      com.google.ads.googleads.v1.resources.BillingSetup> getGetBillingSetupMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetBillingSetupRequest, com.google.ads.googleads.v1.resources.BillingSetup> getGetBillingSetupMethod;
     if ((getGetBillingSetupMethod = BillingSetupServiceGrpc.getGetBillingSetupMethod) == null) {
       synchronized (BillingSetupServiceGrpc.class) {
         if ((getGetBillingSetupMethod = BillingSetupServiceGrpc.getGetBillingSetupMethod) == null) {
-          BillingSetupServiceGrpc.getGetBillingSetupMethod = getGetBillingSetupMethod = 
+          BillingSetupServiceGrpc.getGetBillingSetupMethod = getGetBillingSetupMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetBillingSetupRequest, com.google.ads.googleads.v1.resources.BillingSetup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.BillingSetupService", "GetBillingSetup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBillingSetup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetBillingSetupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.BillingSetup.getDefaultInstance()))
-                  .setSchemaDescriptor(new BillingSetupServiceMethodDescriptorSupplier("GetBillingSetup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BillingSetupServiceMethodDescriptorSupplier("GetBillingSetup"))
+              .build();
         }
-     }
-     return getGetBillingSetupMethod;
+      }
+    }
+    return getGetBillingSetupMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateBillingSetupMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateBillingSetupRequest,
-      com.google.ads.googleads.v1.services.MutateBillingSetupResponse> METHOD_MUTATE_BILLING_SETUP = getMutateBillingSetupMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateBillingSetupRequest,
       com.google.ads.googleads.v1.services.MutateBillingSetupResponse> getMutateBillingSetupMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateBillingSetup",
+      requestType = com.google.ads.googleads.v1.services.MutateBillingSetupRequest.class,
+      responseType = com.google.ads.googleads.v1.services.MutateBillingSetupResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateBillingSetupRequest,
       com.google.ads.googleads.v1.services.MutateBillingSetupResponse> getMutateBillingSetupMethod() {
-    return getMutateBillingSetupMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateBillingSetupRequest,
-      com.google.ads.googleads.v1.services.MutateBillingSetupResponse> getMutateBillingSetupMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateBillingSetupRequest, com.google.ads.googleads.v1.services.MutateBillingSetupResponse> getMutateBillingSetupMethod;
     if ((getMutateBillingSetupMethod = BillingSetupServiceGrpc.getMutateBillingSetupMethod) == null) {
       synchronized (BillingSetupServiceGrpc.class) {
         if ((getMutateBillingSetupMethod = BillingSetupServiceGrpc.getMutateBillingSetupMethod) == null) {
-          BillingSetupServiceGrpc.getMutateBillingSetupMethod = getMutateBillingSetupMethod = 
+          BillingSetupServiceGrpc.getMutateBillingSetupMethod = getMutateBillingSetupMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.MutateBillingSetupRequest, com.google.ads.googleads.v1.services.MutateBillingSetupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.BillingSetupService", "MutateBillingSetup"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateBillingSetup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateBillingSetupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateBillingSetupResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BillingSetupServiceMethodDescriptorSupplier("MutateBillingSetup"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BillingSetupServiceMethodDescriptorSupplier("MutateBillingSetup"))
+              .build();
         }
-     }
-     return getMutateBillingSetupMethod;
+      }
+    }
+    return getMutateBillingSetupMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static BillingSetupServiceStub newStub(io.grpc.Channel channel) {
-    return new BillingSetupServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BillingSetupServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BillingSetupServiceStub>() {
+        @java.lang.Override
+        public BillingSetupServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BillingSetupServiceStub(channel, callOptions);
+        }
+      };
+    return BillingSetupServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -123,7 +117,14 @@ public final class BillingSetupServiceGrpc {
    */
   public static BillingSetupServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new BillingSetupServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BillingSetupServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BillingSetupServiceBlockingStub>() {
+        @java.lang.Override
+        public BillingSetupServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BillingSetupServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return BillingSetupServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -131,14 +132,21 @@ public final class BillingSetupServiceGrpc {
    */
   public static BillingSetupServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new BillingSetupServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BillingSetupServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BillingSetupServiceFutureStub>() {
+        @java.lang.Override
+        public BillingSetupServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BillingSetupServiceFutureStub(channel, callOptions);
+        }
+      };
+    return BillingSetupServiceFutureStub.newStub(factory, channel);
   }
 
   /**
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
-   * A billing setup is associated with a Payments account.  Billing-related
-   * activity for all billing setups associated with a particular Payments account
+   * A billing setup is associated with a payments account.  Billing-related
+   * activity for all billing setups associated with a particular payments account
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
@@ -154,7 +162,7 @@ public final class BillingSetupServiceGrpc {
      */
     public void getBillingSetup(com.google.ads.googleads.v1.services.GetBillingSetupRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.BillingSetup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetBillingSetupMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetBillingSetupMethod(), responseObserver);
     }
 
     /**
@@ -164,20 +172,20 @@ public final class BillingSetupServiceGrpc {
      */
     public void mutateBillingSetup(com.google.ads.googleads.v1.services.MutateBillingSetupRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateBillingSetupResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateBillingSetupMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateBillingSetupMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetBillingSetupMethodHelper(),
+            getGetBillingSetupMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetBillingSetupRequest,
                 com.google.ads.googleads.v1.resources.BillingSetup>(
                   this, METHODID_GET_BILLING_SETUP)))
           .addMethod(
-            getMutateBillingSetupMethodHelper(),
+            getMutateBillingSetupMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.MutateBillingSetupRequest,
@@ -190,27 +198,23 @@ public final class BillingSetupServiceGrpc {
   /**
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
-   * A billing setup is associated with a Payments account.  Billing-related
-   * activity for all billing setups associated with a particular Payments account
+   * A billing setup is associated with a payments account.  Billing-related
+   * activity for all billing setups associated with a particular payments account
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
    * The CREATE operation creates a new billing setup.
    * </pre>
    */
-  public static final class BillingSetupServiceStub extends io.grpc.stub.AbstractStub<BillingSetupServiceStub> {
-    private BillingSetupServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BillingSetupServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BillingSetupServiceStub extends io.grpc.stub.AbstractAsyncStub<BillingSetupServiceStub> {
+    private BillingSetupServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BillingSetupServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BillingSetupServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BillingSetupServiceStub(channel, callOptions);
     }
 
@@ -222,7 +226,7 @@ public final class BillingSetupServiceGrpc {
     public void getBillingSetup(com.google.ads.googleads.v1.services.GetBillingSetupRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.BillingSetup> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetBillingSetupMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetBillingSetupMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -233,34 +237,30 @@ public final class BillingSetupServiceGrpc {
     public void mutateBillingSetup(com.google.ads.googleads.v1.services.MutateBillingSetupRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateBillingSetupResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateBillingSetupMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateBillingSetupMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
-   * A billing setup is associated with a Payments account.  Billing-related
-   * activity for all billing setups associated with a particular Payments account
+   * A billing setup is associated with a payments account.  Billing-related
+   * activity for all billing setups associated with a particular payments account
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
    * The CREATE operation creates a new billing setup.
    * </pre>
    */
-  public static final class BillingSetupServiceBlockingStub extends io.grpc.stub.AbstractStub<BillingSetupServiceBlockingStub> {
-    private BillingSetupServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BillingSetupServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BillingSetupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BillingSetupServiceBlockingStub> {
+    private BillingSetupServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BillingSetupServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BillingSetupServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BillingSetupServiceBlockingStub(channel, callOptions);
     }
 
@@ -271,7 +271,7 @@ public final class BillingSetupServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.BillingSetup getBillingSetup(com.google.ads.googleads.v1.services.GetBillingSetupRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetBillingSetupMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetBillingSetupMethod(), getCallOptions(), request);
     }
 
     /**
@@ -281,34 +281,30 @@ public final class BillingSetupServiceGrpc {
      */
     public com.google.ads.googleads.v1.services.MutateBillingSetupResponse mutateBillingSetup(com.google.ads.googleads.v1.services.MutateBillingSetupRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateBillingSetupMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateBillingSetupMethod(), getCallOptions(), request);
     }
   }
 
   /**
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
-   * A billing setup is associated with a Payments account.  Billing-related
-   * activity for all billing setups associated with a particular Payments account
+   * A billing setup is associated with a payments account.  Billing-related
+   * activity for all billing setups associated with a particular payments account
    * will appear on a single invoice generated monthly.
    * Mutates:
    * The REMOVE operation cancels a pending billing setup.
    * The CREATE operation creates a new billing setup.
    * </pre>
    */
-  public static final class BillingSetupServiceFutureStub extends io.grpc.stub.AbstractStub<BillingSetupServiceFutureStub> {
-    private BillingSetupServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BillingSetupServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BillingSetupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BillingSetupServiceFutureStub> {
+    private BillingSetupServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BillingSetupServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BillingSetupServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BillingSetupServiceFutureStub(channel, callOptions);
     }
 
@@ -320,7 +316,7 @@ public final class BillingSetupServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.BillingSetup> getBillingSetup(
         com.google.ads.googleads.v1.services.GetBillingSetupRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetBillingSetupMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetBillingSetupMethod(), getCallOptions()), request);
     }
 
     /**
@@ -331,7 +327,7 @@ public final class BillingSetupServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.services.MutateBillingSetupResponse> mutateBillingSetup(
         com.google.ads.googleads.v1.services.MutateBillingSetupRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateBillingSetupMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateBillingSetupMethod(), getCallOptions()), request);
     }
   }
 
@@ -424,8 +420,8 @@ public final class BillingSetupServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BillingSetupServiceFileDescriptorSupplier())
-              .addMethod(getGetBillingSetupMethodHelper())
-              .addMethod(getMutateBillingSetupMethodHelper())
+              .addMethod(getGetBillingSetupMethod())
+              .addMethod(getMutateBillingSetupMethod())
               .build();
         }
       }

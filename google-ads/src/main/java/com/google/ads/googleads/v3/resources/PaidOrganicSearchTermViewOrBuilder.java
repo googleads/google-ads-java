@@ -16,6 +16,7 @@ public interface PaidOrganicSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -27,6 +28,7 @@ public interface PaidOrganicSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -37,6 +39,7 @@ public interface PaidOrganicSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the searchTerm field is set.
    */
   boolean hasSearchTerm();
   /**
@@ -45,6 +48,7 @@ public interface PaidOrganicSearchTermViewOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The searchTerm.
    */
   com.google.protobuf.StringValue getSearchTerm();
   /**

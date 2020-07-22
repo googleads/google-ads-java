@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.UserDataOperation}
  */
-public  final class UserDataOperation extends
+public final class UserDataOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.UserDataOperation)
     UserDataOperationOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UserDataOperation() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UserDataOperation();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -95,7 +101,8 @@ private static final long serialVersionUID = 0L;
   private int operationCase_ = 0;
   private java.lang.Object operation_;
   public enum OperationCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CREATE(1),
     OPERATION_NOT_SET(0);
     private final int value;
@@ -103,6 +110,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -135,7 +144,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserData create = 1;</code>
+   * @return Whether the create field is set.
    */
+  @java.lang.Override
   public boolean hasCreate() {
     return operationCase_ == 1;
   }
@@ -145,7 +156,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserData create = 1;</code>
+   * @return The create.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.UserData getCreate() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v3.common.UserData) operation_;
@@ -159,6 +172,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.UserData create = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.UserDataOrBuilder getCreateOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v3.common.UserData) operation_;
@@ -521,7 +535,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserData create = 1;</code>
+     * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return operationCase_ == 1;
     }
@@ -531,7 +547,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.UserData create = 1;</code>
+     * @return The create.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.UserData getCreate() {
       if (createBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -649,6 +667,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.UserData create = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.UserDataOrBuilder getCreateOrBuilder() {
       if ((operationCase_ == 1) && (createBuilder_ != null)) {
         return createBuilder_.getMessageOrBuilder();

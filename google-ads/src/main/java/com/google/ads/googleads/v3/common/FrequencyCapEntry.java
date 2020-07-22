@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.FrequencyCapEntry}
  */
-public  final class FrequencyCapEntry extends
+public final class FrequencyCapEntry extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.FrequencyCapEntry)
     FrequencyCapEntryOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private FrequencyCapEntry() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new FrequencyCapEntry();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -114,7 +120,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.FrequencyCapKey key = 1;</code>
+   * @return Whether the key field is set.
    */
+  @java.lang.Override
   public boolean hasKey() {
     return key_ != null;
   }
@@ -125,7 +133,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.FrequencyCapKey key = 1;</code>
+   * @return The key.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.FrequencyCapKey getKey() {
     return key_ == null ? com.google.ads.googleads.v3.common.FrequencyCapKey.getDefaultInstance() : key_;
   }
@@ -137,6 +147,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.FrequencyCapKey key = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.FrequencyCapKeyOrBuilder getKeyOrBuilder() {
     return getKey();
   }
@@ -149,7 +160,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cap = 2;</code>
+   * @return Whether the cap field is set.
    */
+  @java.lang.Override
   public boolean hasCap() {
     return cap_ != null;
   }
@@ -159,7 +172,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value cap = 2;</code>
+   * @return The cap.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getCap() {
     return cap_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : cap_;
   }
@@ -170,6 +185,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value cap = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getCapOrBuilder() {
     return getCap();
   }
@@ -534,6 +550,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.FrequencyCapKey key = 1;</code>
+     * @return Whether the key field is set.
      */
     public boolean hasKey() {
       return keyBuilder_ != null || key_ != null;
@@ -545,6 +562,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.FrequencyCapKey key = 1;</code>
+     * @return The key.
      */
     public com.google.ads.googleads.v3.common.FrequencyCapKey getKey() {
       if (keyBuilder_ == null) {
@@ -695,6 +713,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cap = 2;</code>
+     * @return Whether the cap field is set.
      */
     public boolean hasCap() {
       return capBuilder_ != null || cap_ != null;
@@ -705,6 +724,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value cap = 2;</code>
+     * @return The cap.
      */
     public com.google.protobuf.Int32Value getCap() {
       if (capBuilder_ == null) {

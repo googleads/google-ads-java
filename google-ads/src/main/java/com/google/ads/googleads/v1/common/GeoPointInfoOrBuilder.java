@@ -13,6 +13,7 @@ public interface GeoPointInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value longitude_in_micro_degrees = 1;</code>
+   * @return Whether the longitudeInMicroDegrees field is set.
    */
   boolean hasLongitudeInMicroDegrees();
   /**
@@ -21,6 +22,7 @@ public interface GeoPointInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value longitude_in_micro_degrees = 1;</code>
+   * @return The longitudeInMicroDegrees.
    */
   com.google.protobuf.Int32Value getLongitudeInMicroDegrees();
   /**
@@ -38,6 +40,7 @@ public interface GeoPointInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value latitude_in_micro_degrees = 2;</code>
+   * @return Whether the latitudeInMicroDegrees field is set.
    */
   boolean hasLatitudeInMicroDegrees();
   /**
@@ -46,6 +49,7 @@ public interface GeoPointInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int32Value latitude_in_micro_degrees = 2;</code>
+   * @return The latitudeInMicroDegrees.
    */
   com.google.protobuf.Int32Value getLatitudeInMicroDegrees();
   /**

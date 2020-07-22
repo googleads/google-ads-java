@@ -13,6 +13,7 @@ public interface AdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+   * @return Whether the updateMask field is set.
    */
   boolean hasUpdateMask();
   /**
@@ -21,6 +22,7 @@ public interface AdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+   * @return The updateMask.
    */
   com.google.protobuf.FieldMask getUpdateMask();
   /**
@@ -40,6 +42,7 @@ public interface AdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Ad update = 1;</code>
+   * @return Whether the update field is set.
    */
   boolean hasUpdate();
   /**
@@ -50,6 +53,7 @@ public interface AdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Ad update = 1;</code>
+   * @return The update.
    */
   com.google.ads.googleads.v2.resources.Ad getUpdate();
   /**

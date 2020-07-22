@@ -34,66 +34,75 @@ public final class BiddingStrategyProto {
       "ommon/bidding.proto\032;google/ads/googlead" +
       "s/v2/enums/bidding_strategy_status.proto" +
       "\0329google/ads/googleads/v2/enums/bidding_" +
-      "strategy_type.proto\032\036google/protobuf/wra" +
-      "ppers.proto\032\034google/api/annotations.prot" +
-      "o\"\301\007\n\017BiddingStrategy\022\025\n\rresource_name\030\001" +
-      " \001(\t\022\'\n\002id\030\003 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022*\n\004name\030\004 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022^\n\006status\030\017 \001(\0162N.google.ads.g" +
-      "oogleads.v2.enums.BiddingStrategyStatusE" +
-      "num.BiddingStrategyStatus\022X\n\004type\030\005 \001(\0162" +
+      "strategy_type.proto\032\037google/api/field_be" +
+      "havior.proto\032\031google/api/resource.proto\032" +
+      "\036google/protobuf/wrappers.proto\032\034google/" +
+      "api/annotations.proto\"\366\010\n\017BiddingStrateg" +
+      "y\022G\n\rresource_name\030\001 \001(\tB0\340A\005\372A*\n(google" +
+      "ads.googleapis.com/BiddingStrategy\022,\n\002id" +
+      "\030\003 \001(\0132\033.google.protobuf.Int64ValueB\003\340A\003" +
+      "\022*\n\004name\030\004 \001(\0132\034.google.protobuf.StringV" +
+      "alue\022c\n\006status\030\017 \001(\0162N.google.ads.google" +
+      "ads.v2.enums.BiddingStrategyStatusEnum.B" +
+      "iddingStrategyStatusB\003\340A\003\022]\n\004type\030\005 \001(\0162" +
       "J.google.ads.googleads.v2.enums.BiddingS" +
-      "trategyTypeEnum.BiddingStrategyType\0223\n\016c" +
-      "ampaign_count\030\r \001(\0132\033.google.protobuf.In" +
-      "t64Value\022?\n\032non_removed_campaign_count\030\016" +
-      " \001(\0132\033.google.protobuf.Int64Value\022C\n\014enh" +
-      "anced_cpc\030\007 \001(\0132+.google.ads.googleads.v" +
-      "2.common.EnhancedCpcH\000\022L\n\021page_one_promo" +
-      "ted\030\010 \001(\0132/.google.ads.googleads.v2.comm" +
-      "on.PageOnePromotedH\000\022?\n\ntarget_cpa\030\t \001(\013" +
-      "2).google.ads.googleads.v2.common.Target" +
-      "CpaH\000\022X\n\027target_impression_share\0300 \001(\01325" +
-      ".google.ads.googleads.v2.common.TargetIm" +
-      "pressionShareH\000\022R\n\024target_outrank_share\030" +
-      "\n \001(\01322.google.ads.googleads.v2.common.T" +
-      "argetOutrankShareH\000\022A\n\013target_roas\030\013 \001(\013" +
-      "2*.google.ads.googleads.v2.common.Target" +
-      "RoasH\000\022C\n\014target_spend\030\014 \001(\0132+.google.ad" +
-      "s.googleads.v2.common.TargetSpendH\000B\010\n\006s" +
-      "chemeB\201\002\n%com.google.ads.googleads.v2.re" +
-      "sourcesB\024BiddingStrategyProtoP\001ZJgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v2/resources;resources\242\002\003GAA\252\002!Goog" +
-      "le.Ads.GoogleAds.V2.Resources\312\002!Google\\A" +
-      "ds\\GoogleAds\\V2\\Resources\352\002%Google::Ads:" +
-      ":GoogleAds::V2::Resourcesb\006proto3"
+      "trategyTypeEnum.BiddingStrategyTypeB\003\340A\003" +
+      "\0228\n\016campaign_count\030\r \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\003\340A\003\022D\n\032non_removed_campai" +
+      "gn_count\030\016 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\003\340A\003\022C\n\014enhanced_cpc\030\007 \001(\0132+.google." +
+      "ads.googleads.v2.common.EnhancedCpcH\000\022L\n" +
+      "\021page_one_promoted\030\010 \001(\0132/.google.ads.go" +
+      "ogleads.v2.common.PageOnePromotedH\000\022?\n\nt" +
+      "arget_cpa\030\t \001(\0132).google.ads.googleads.v" +
+      "2.common.TargetCpaH\000\022X\n\027target_impressio" +
+      "n_share\0300 \001(\01325.google.ads.googleads.v2." +
+      "common.TargetImpressionShareH\000\022R\n\024target" +
+      "_outrank_share\030\n \001(\01322.google.ads.google" +
+      "ads.v2.common.TargetOutrankShareH\000\022A\n\013ta" +
+      "rget_roas\030\013 \001(\0132*.google.ads.googleads.v" +
+      "2.common.TargetRoasH\000\022C\n\014target_spend\030\014 " +
+      "\001(\0132+.google.ads.googleads.v2.common.Tar" +
+      "getSpendH\000:h\352Ae\n(googleads.googleapis.co" +
+      "m/BiddingStrategy\0229customers/{customer}/" +
+      "biddingStrategies/{bidding_strategy}B\010\n\006" +
+      "schemeB\201\002\n%com.google.ads.googleads.v2.r" +
+      "esourcesB\024BiddingStrategyProtoP\001ZJgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v2/resources;resources\242\002\003GAA\252\002!Goo" +
+      "gle.Ads.GoogleAds.V2.Resources\312\002!Google\\" +
+      "Ads\\GoogleAds\\V2\\Resources\352\002%Google::Ads" +
+      "::GoogleAds::V2::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.common.BiddingProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.BiddingStrategyStatusProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.BiddingStrategyTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_BiddingStrategy_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_BiddingStrategy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_BiddingStrategy_descriptor,
         new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "Type", "CampaignCount", "NonRemovedCampaignCount", "EnhancedCpc", "PageOnePromoted", "TargetCpa", "TargetImpressionShare", "TargetOutrankShare", "TargetRoas", "TargetSpend", "Scheme", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.common.BiddingProto.getDescriptor();
     com.google.ads.googleads.v2.enums.BiddingStrategyStatusProto.getDescriptor();
     com.google.ads.googleads.v2.enums.BiddingStrategyTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

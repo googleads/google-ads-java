@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.AccountBudgetServiceStubSetting
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -38,8 +37,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AccountBudgetServiceClient accountBudgetServiceClient = AccountBudgetServiceClient.create()) {
- *   String formattedResourceName = AccountBudgetServiceClient.formatAccountBudgetName("[CUSTOMER]", "[ACCOUNT_BUDGET]");
- *   AccountBudget response = accountBudgetServiceClient.getAccountBudget(formattedResourceName);
+ *   AccountBudgetName resourceName = AccountBudgetName.of("[CUSTOMER]", "[ACCOUNT_BUDGET]");
+ *   AccountBudget response = accountBudgetServiceClient.getAccountBudget(resourceName);
  * }
  * </code>
  * </pre>
@@ -101,43 +100,6 @@ public class AccountBudgetServiceClient implements BackgroundResource {
   private final AccountBudgetServiceSettings settings;
   private final AccountBudgetServiceStub stub;
 
-  private static final PathTemplate ACCOUNT_BUDGET_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/accountBudgets/{account_budget}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a account_budget resource.
-   *
-   * @deprecated Use the {@link AccountBudgetName} class instead.
-   */
-  @Deprecated
-  public static final String formatAccountBudgetName(String customer, String accountBudget) {
-    return ACCOUNT_BUDGET_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "account_budget", accountBudget);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a account_budget
-   * resource.
-   *
-   * @deprecated Use the {@link AccountBudgetName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAccountBudgetName(String accountBudgetName) {
-    return ACCOUNT_BUDGET_PATH_TEMPLATE.parse(accountBudgetName).get("customer");
-  }
-
-  /**
-   * Parses the account_budget from the given fully-qualified path which represents a account_budget
-   * resource.
-   *
-   * @deprecated Use the {@link AccountBudgetName} class instead.
-   */
-  @Deprecated
-  public static final String parseAccountBudgetFromAccountBudgetName(String accountBudgetName) {
-    return ACCOUNT_BUDGET_PATH_TEMPLATE.parse(accountBudgetName).get("account_budget");
-  }
-
   /** Constructs an instance of AccountBudgetServiceClient with default settings. */
   public static final AccountBudgetServiceClient create() throws IOException {
     return create(AccountBudgetServiceSettings.newBuilder().build());
@@ -194,16 +156,39 @@ public class AccountBudgetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AccountBudgetServiceClient accountBudgetServiceClient = AccountBudgetServiceClient.create()) {
-   *   String formattedResourceName = AccountBudgetServiceClient.formatAccountBudgetName("[CUSTOMER]", "[ACCOUNT_BUDGET]");
-   *   AccountBudget response = accountBudgetServiceClient.getAccountBudget(formattedResourceName);
+   *   AccountBudgetName resourceName = AccountBudgetName.of("[CUSTOMER]", "[ACCOUNT_BUDGET]");
+   *   AccountBudget response = accountBudgetServiceClient.getAccountBudget(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the account-level budget to fetch.
+   * @param resourceName Required. The resource name of the account-level budget to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AccountBudget getAccountBudget(AccountBudgetName resourceName) {
+    GetAccountBudgetRequest request =
+        GetAccountBudgetRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAccountBudget(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns an account-level budget in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AccountBudgetServiceClient accountBudgetServiceClient = AccountBudgetServiceClient.create()) {
+   *   AccountBudgetName resourceName = AccountBudgetName.of("[CUSTOMER]", "[ACCOUNT_BUDGET]");
+   *   AccountBudget response = accountBudgetServiceClient.getAccountBudget(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the account-level budget to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AccountBudget getAccountBudget(String resourceName) {
-    ACCOUNT_BUDGET_PATH_TEMPLATE.validate(resourceName, "getAccountBudget");
     GetAccountBudgetRequest request =
         GetAccountBudgetRequest.newBuilder().setResourceName(resourceName).build();
     return getAccountBudget(request);
@@ -217,9 +202,9 @@ public class AccountBudgetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AccountBudgetServiceClient accountBudgetServiceClient = AccountBudgetServiceClient.create()) {
-   *   String formattedResourceName = AccountBudgetServiceClient.formatAccountBudgetName("[CUSTOMER]", "[ACCOUNT_BUDGET]");
+   *   AccountBudgetName resourceName = AccountBudgetName.of("[CUSTOMER]", "[ACCOUNT_BUDGET]");
    *   GetAccountBudgetRequest request = GetAccountBudgetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AccountBudget response = accountBudgetServiceClient.getAccountBudget(request);
    * }
@@ -240,9 +225,9 @@ public class AccountBudgetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AccountBudgetServiceClient accountBudgetServiceClient = AccountBudgetServiceClient.create()) {
-   *   String formattedResourceName = AccountBudgetServiceClient.formatAccountBudgetName("[CUSTOMER]", "[ACCOUNT_BUDGET]");
+   *   AccountBudgetName resourceName = AccountBudgetName.of("[CUSTOMER]", "[ACCOUNT_BUDGET]");
    *   GetAccountBudgetRequest request = GetAccountBudgetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AccountBudget&gt; future = accountBudgetServiceClient.getAccountBudgetCallable().futureCall(request);
    *   // Do something

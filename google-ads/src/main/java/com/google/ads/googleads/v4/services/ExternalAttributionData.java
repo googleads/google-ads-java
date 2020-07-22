@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ExternalAttributionData}
  */
-public  final class ExternalAttributionData extends
+public final class ExternalAttributionData extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ExternalAttributionData)
     ExternalAttributionDataOrBuilder {
@@ -121,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue external_attribution_credit = 1;</code>
    * @return Whether the externalAttributionCredit field is set.
    */
+  @java.lang.Override
   public boolean hasExternalAttributionCredit() {
     return externalAttributionCredit_ != null;
   }
@@ -133,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue external_attribution_credit = 1;</code>
    * @return The externalAttributionCredit.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getExternalAttributionCredit() {
     return externalAttributionCredit_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : externalAttributionCredit_;
   }
@@ -144,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue external_attribution_credit = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getExternalAttributionCreditOrBuilder() {
     return getExternalAttributionCredit();
   }
@@ -158,6 +161,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue external_attribution_model = 2;</code>
    * @return Whether the externalAttributionModel field is set.
    */
+  @java.lang.Override
   public boolean hasExternalAttributionModel() {
     return externalAttributionModel_ != null;
   }
@@ -169,6 +173,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue external_attribution_model = 2;</code>
    * @return The externalAttributionModel.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getExternalAttributionModel() {
     return externalAttributionModel_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : externalAttributionModel_;
   }
@@ -179,6 +184,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue external_attribution_model = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getExternalAttributionModelOrBuilder() {
     return getExternalAttributionModel();
   }

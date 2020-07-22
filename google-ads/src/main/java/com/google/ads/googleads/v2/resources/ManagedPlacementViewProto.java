@@ -30,36 +30,45 @@ public final class ManagedPlacementViewProto {
     java.lang.String[] descriptorData = {
       "\n>google/ads/googleads/v2/resources/mana" +
       "ged_placement_view.proto\022!google.ads.goo" +
-      "gleads.v2.resources\032\034google/api/annotati" +
-      "ons.proto\"-\n\024ManagedPlacementView\022\025\n\rres" +
-      "ource_name\030\001 \001(\tB\206\002\n%com.google.ads.goog" +
-      "leads.v2.resourcesB\031ManagedPlacementView" +
-      "ProtoP\001ZJgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v2/resources;resour" +
-      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2.Reso" +
-      "urces\312\002!Google\\Ads\\GoogleAds\\V2\\Resource" +
-      "s\352\002%Google::Ads::GoogleAds::V2::Resource" +
-      "sb\006proto3"
+      "gleads.v2.resources\032\037google/api/field_be" +
+      "havior.proto\032\031google/api/resource.proto\032" +
+      "\034google/api/annotations.proto\"\335\001\n\024Manage" +
+      "dPlacementView\022L\n\rresource_name\030\001 \001(\tB5\340" +
+      "A\003\372A/\n-googleads.googleapis.com/ManagedP" +
+      "lacementView:w\352At\n-googleads.googleapis." +
+      "com/ManagedPlacementView\022Ccustomers/{cus" +
+      "tomer}/managedPlacementViews/{managed_pl" +
+      "acement_view}B\206\002\n%com.google.ads.googlea" +
+      "ds.v2.resourcesB\031ManagedPlacementViewPro" +
+      "toP\001ZJgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v2/resources;resources" +
+      "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V2.Resourc" +
+      "es\312\002!Google\\Ads\\GoogleAds\\V2\\Resources\352\002" +
+      "%Google::Ads::GoogleAds::V2::Resourcesb\006" +
+      "proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_ManagedPlacementView_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_ManagedPlacementView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_ManagedPlacementView_descriptor,
         new java.lang.String[] { "ResourceName", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

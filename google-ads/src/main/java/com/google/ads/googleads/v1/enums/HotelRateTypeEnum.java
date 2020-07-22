@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.enums;
  *
  * Protobuf type {@code google.ads.googleads.v1.enums.HotelRateTypeEnum}
  */
-public  final class HotelRateTypeEnum extends
+public final class HotelRateTypeEnum extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.enums.HotelRateTypeEnum)
     HotelRateTypeEnumOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private HotelRateTypeEnum() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new HotelRateTypeEnum();
   }
 
   @java.lang.Override
@@ -122,9 +129,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A membership program rate is available and satisfies basic requirements
      * like having a public rate available. UI treatment will strikethrough the
-     * public rate and indicate that a discount is available to the user. See
+     * public rate and indicate that a discount is available to the user. For
+     * more on Qualified Rates, visit
      * https://developers.google.com/hotels/hotel-ads/dev-guide/qualified-rates
-     * for more information.
      * </pre>
      *
      * <code>QUALIFIED_RATE = 4;</code>
@@ -179,9 +186,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A membership program rate is available and satisfies basic requirements
      * like having a public rate available. UI treatment will strikethrough the
-     * public rate and indicate that a discount is available to the user. See
+     * public rate and indicate that a discount is available to the user. For
+     * more on Qualified Rates, visit
      * https://developers.google.com/hotels/hotel-ads/dev-guide/qualified-rates
-     * for more information.
      * </pre>
      *
      * <code>QUALIFIED_RATE = 4;</code>
@@ -208,6 +215,8 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -215,6 +224,10 @@ private static final long serialVersionUID = 0L;
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static HotelRateType forNumber(int value) {
       switch (value) {
         case 0: return UNSPECIFIED;
@@ -241,6 +254,10 @@ private static final long serialVersionUID = 0L;
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor

@@ -94,15 +94,7 @@ public final class AdGroupFeedServiceProto {
       "le\\Ads\\GoogleAds\\V3\\Services\352\002$Google::A" +
       "ds::GoogleAds::V3::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v3.resources.AdGroupFeedProto.getDescriptor(),
@@ -112,7 +104,7 @@ public final class AdGroupFeedServiceProto {
           com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v3_services_GetAdGroupFeedRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v3_services_GetAdGroupFeedRequest_fieldAccessorTable = new

@@ -11,7 +11,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.ApplyRecommendationOperation}
  */
-public  final class ApplyRecommendationOperation extends
+public final class ApplyRecommendationOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ApplyRecommendationOperation)
     ApplyRecommendationOperationOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   }
   private ApplyRecommendationOperation() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ApplyRecommendationOperation();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -209,6 +215,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value new_budget_amount_micros = 1;</code>
+     * @return Whether the newBudgetAmountMicros field is set.
      */
     boolean hasNewBudgetAmountMicros();
     /**
@@ -218,6 +225,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value new_budget_amount_micros = 1;</code>
+     * @return The newBudgetAmountMicros.
      */
     com.google.protobuf.Int64Value getNewBudgetAmountMicros();
     /**
@@ -237,7 +245,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters}
    */
-  public  static final class CampaignBudgetParameters extends
+  public static final class CampaignBudgetParameters extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters)
       CampaignBudgetParametersOrBuilder {
@@ -247,6 +255,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private CampaignBudgetParameters() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CampaignBudgetParameters();
     }
 
     @java.lang.Override
@@ -262,7 +277,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -327,7 +341,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value new_budget_amount_micros = 1;</code>
+     * @return Whether the newBudgetAmountMicros field is set.
      */
+    @java.lang.Override
     public boolean hasNewBudgetAmountMicros() {
       return newBudgetAmountMicros_ != null;
     }
@@ -338,7 +354,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value new_budget_amount_micros = 1;</code>
+     * @return The newBudgetAmountMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getNewBudgetAmountMicros() {
       return newBudgetAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : newBudgetAmountMicros_;
     }
@@ -350,6 +368,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value new_budget_amount_micros = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getNewBudgetAmountMicrosOrBuilder() {
       return getNewBudgetAmountMicros();
     }
@@ -683,6 +702,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value new_budget_amount_micros = 1;</code>
+       * @return Whether the newBudgetAmountMicros field is set.
        */
       public boolean hasNewBudgetAmountMicros() {
         return newBudgetAmountMicrosBuilder_ != null || newBudgetAmountMicros_ != null;
@@ -694,6 +714,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value new_budget_amount_micros = 1;</code>
+       * @return The newBudgetAmountMicros.
        */
       public com.google.protobuf.Int64Value getNewBudgetAmountMicros() {
         if (newBudgetAmountMicrosBuilder_ == null) {
@@ -898,6 +919,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Ad ad = 1;</code>
+     * @return Whether the ad field is set.
      */
     boolean hasAd();
     /**
@@ -907,6 +929,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Ad ad = 1;</code>
+     * @return The ad.
      */
     com.google.ads.googleads.v2.resources.Ad getAd();
     /**
@@ -926,7 +949,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters}
    */
-  public  static final class TextAdParameters extends
+  public static final class TextAdParameters extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters)
       TextAdParametersOrBuilder {
@@ -936,6 +959,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private TextAdParameters() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextAdParameters();
     }
 
     @java.lang.Override
@@ -951,7 +981,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1016,7 +1045,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Ad ad = 1;</code>
+     * @return Whether the ad field is set.
      */
+    @java.lang.Override
     public boolean hasAd() {
       return ad_ != null;
     }
@@ -1027,7 +1058,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Ad ad = 1;</code>
+     * @return The ad.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.resources.Ad getAd() {
       return ad_ == null ? com.google.ads.googleads.v2.resources.Ad.getDefaultInstance() : ad_;
     }
@@ -1039,6 +1072,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.resources.Ad ad = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.resources.AdOrBuilder getAdOrBuilder() {
       return getAd();
     }
@@ -1372,6 +1406,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.resources.Ad ad = 1;</code>
+       * @return Whether the ad field is set.
        */
       public boolean hasAd() {
         return adBuilder_ != null || ad_ != null;
@@ -1383,6 +1418,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.resources.Ad ad = 1;</code>
+       * @return The ad.
        */
       public com.google.ads.googleads.v2.resources.Ad getAd() {
         if (adBuilder_ == null) {
@@ -1586,6 +1622,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 1;</code>
+     * @return Whether the adGroup field is set.
      */
     boolean hasAdGroup();
     /**
@@ -1594,6 +1631,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 1;</code>
+     * @return The adGroup.
      */
     com.google.protobuf.StringValue getAdGroup();
     /**
@@ -1611,6 +1649,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+     * @return The enum numeric value on the wire for matchType.
      */
     int getMatchTypeValue();
     /**
@@ -1619,6 +1658,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+     * @return The matchType.
      */
     com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType();
 
@@ -1629,6 +1669,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 3;</code>
+     * @return Whether the cpcBidMicros field is set.
      */
     boolean hasCpcBidMicros();
     /**
@@ -1638,6 +1679,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 3;</code>
+     * @return The cpcBidMicros.
      */
     com.google.protobuf.Int64Value getCpcBidMicros();
     /**
@@ -1657,7 +1699,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters}
    */
-  public  static final class KeywordParameters extends
+  public static final class KeywordParameters extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters)
       KeywordParametersOrBuilder {
@@ -1668,6 +1710,13 @@ private static final long serialVersionUID = 0L;
     }
     private KeywordParameters() {
       matchType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeywordParameters();
     }
 
     @java.lang.Override
@@ -1683,7 +1732,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1766,7 +1814,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 1;</code>
+     * @return Whether the adGroup field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroup() {
       return adGroup_ != null;
     }
@@ -1776,7 +1826,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue ad_group = 1;</code>
+     * @return The adGroup.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getAdGroup() {
       return adGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroup_;
     }
@@ -1787,6 +1839,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue ad_group = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
       return getAdGroup();
     }
@@ -1799,8 +1852,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+     * @return The enum numeric value on the wire for matchType.
      */
-    public int getMatchTypeValue() {
+    @java.lang.Override public int getMatchTypeValue() {
       return matchType_;
     }
     /**
@@ -1809,8 +1863,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+     * @return The matchType.
      */
-    public com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
+    @java.lang.Override public com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);
       return result == null ? com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
@@ -1825,7 +1880,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 3;</code>
+     * @return Whether the cpcBidMicros field is set.
      */
+    @java.lang.Override
     public boolean hasCpcBidMicros() {
       return cpcBidMicros_ != null;
     }
@@ -1836,7 +1893,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 3;</code>
+     * @return The cpcBidMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getCpcBidMicros() {
       return cpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidMicros_;
     }
@@ -1848,6 +1907,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getCpcBidMicrosOrBuilder() {
       return getCpcBidMicros();
     }
@@ -2226,6 +2286,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue ad_group = 1;</code>
+       * @return Whether the adGroup field is set.
        */
       public boolean hasAdGroup() {
         return adGroupBuilder_ != null || adGroup_ != null;
@@ -2236,6 +2297,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue ad_group = 1;</code>
+       * @return The adGroup.
        */
       public com.google.protobuf.StringValue getAdGroup() {
         if (adGroupBuilder_ == null) {
@@ -2377,8 +2439,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+       * @return The enum numeric value on the wire for matchType.
        */
-      public int getMatchTypeValue() {
+      @java.lang.Override public int getMatchTypeValue() {
         return matchType_;
       }
       /**
@@ -2387,8 +2450,11 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+       * @param value The enum numeric value on the wire for matchType to set.
+       * @return This builder for chaining.
        */
       public Builder setMatchTypeValue(int value) {
+        
         matchType_ = value;
         onChanged();
         return this;
@@ -2399,7 +2465,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+       * @return The matchType.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);
@@ -2411,6 +2479,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+       * @param value The matchType to set.
+       * @return This builder for chaining.
        */
       public Builder setMatchType(com.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType value) {
         if (value == null) {
@@ -2427,6 +2497,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType match_type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMatchType() {
         
@@ -2445,6 +2516,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value cpc_bid_micros = 3;</code>
+       * @return Whether the cpcBidMicros field is set.
        */
       public boolean hasCpcBidMicros() {
         return cpcBidMicrosBuilder_ != null || cpcBidMicros_ != null;
@@ -2456,6 +2528,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value cpc_bid_micros = 3;</code>
+       * @return The cpcBidMicros.
        */
       public com.google.protobuf.Int64Value getCpcBidMicros() {
         if (cpcBidMicrosBuilder_ == null) {
@@ -2660,6 +2733,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
+     * @return Whether the targetCpaMicros field is set.
      */
     boolean hasTargetCpaMicros();
     /**
@@ -2669,6 +2743,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
+     * @return The targetCpaMicros.
      */
     com.google.protobuf.Int64Value getTargetCpaMicros();
     /**
@@ -2687,6 +2762,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value new_campaign_budget_amount_micros = 2;</code>
+     * @return Whether the newCampaignBudgetAmountMicros field is set.
      */
     boolean hasNewCampaignBudgetAmountMicros();
     /**
@@ -2695,6 +2771,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value new_campaign_budget_amount_micros = 2;</code>
+     * @return The newCampaignBudgetAmountMicros.
      */
     com.google.protobuf.Int64Value getNewCampaignBudgetAmountMicros();
     /**
@@ -2713,7 +2790,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters}
    */
-  public  static final class TargetCpaOptInParameters extends
+  public static final class TargetCpaOptInParameters extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters)
       TargetCpaOptInParametersOrBuilder {
@@ -2723,6 +2800,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private TargetCpaOptInParameters() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TargetCpaOptInParameters();
     }
 
     @java.lang.Override
@@ -2738,7 +2822,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2816,7 +2899,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
+     * @return Whether the targetCpaMicros field is set.
      */
+    @java.lang.Override
     public boolean hasTargetCpaMicros() {
       return targetCpaMicros_ != null;
     }
@@ -2827,7 +2912,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
+     * @return The targetCpaMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTargetCpaMicros() {
       return targetCpaMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : targetCpaMicros_;
     }
@@ -2839,6 +2926,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTargetCpaMicrosOrBuilder() {
       return getTargetCpaMicros();
     }
@@ -2851,7 +2939,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value new_campaign_budget_amount_micros = 2;</code>
+     * @return Whether the newCampaignBudgetAmountMicros field is set.
      */
+    @java.lang.Override
     public boolean hasNewCampaignBudgetAmountMicros() {
       return newCampaignBudgetAmountMicros_ != null;
     }
@@ -2861,7 +2951,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value new_campaign_budget_amount_micros = 2;</code>
+     * @return The newCampaignBudgetAmountMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getNewCampaignBudgetAmountMicros() {
       return newCampaignBudgetAmountMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : newCampaignBudgetAmountMicros_;
     }
@@ -2872,6 +2964,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value new_campaign_budget_amount_micros = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getNewCampaignBudgetAmountMicrosOrBuilder() {
       return getNewCampaignBudgetAmountMicros();
     }
@@ -3235,6 +3328,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
+       * @return Whether the targetCpaMicros field is set.
        */
       public boolean hasTargetCpaMicros() {
         return targetCpaMicrosBuilder_ != null || targetCpaMicros_ != null;
@@ -3246,6 +3340,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
+       * @return The targetCpaMicros.
        */
       public com.google.protobuf.Int64Value getTargetCpaMicros() {
         if (targetCpaMicrosBuilder_ == null) {
@@ -3396,6 +3491,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value new_campaign_budget_amount_micros = 2;</code>
+       * @return Whether the newCampaignBudgetAmountMicros field is set.
        */
       public boolean hasNewCampaignBudgetAmountMicros() {
         return newCampaignBudgetAmountMicrosBuilder_ != null || newCampaignBudgetAmountMicros_ != null;
@@ -3406,6 +3502,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value new_campaign_budget_amount_micros = 2;</code>
+       * @return The newCampaignBudgetAmountMicros.
        */
       public com.google.protobuf.Int64Value getNewCampaignBudgetAmountMicros() {
         if (newCampaignBudgetAmountMicrosBuilder_ == null) {
@@ -3647,7 +3744,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters}
    */
-  public  static final class CalloutExtensionParameters extends
+  public static final class CalloutExtensionParameters extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters)
       CalloutExtensionParametersOrBuilder {
@@ -3658,6 +3755,13 @@ private static final long serialVersionUID = 0L;
     }
     private CalloutExtensionParameters() {
       calloutExtensions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalloutExtensionParameters();
     }
 
     @java.lang.Override
@@ -3737,6 +3841,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.CalloutFeedItem callout_extensions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.ads.googleads.v2.common.CalloutFeedItem> getCalloutExtensionsList() {
       return calloutExtensions_;
     }
@@ -3747,6 +3852,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.CalloutFeedItem callout_extensions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.ads.googleads.v2.common.CalloutFeedItemOrBuilder> 
         getCalloutExtensionsOrBuilderList() {
       return calloutExtensions_;
@@ -3758,6 +3864,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.CalloutFeedItem callout_extensions = 1;</code>
      */
+    @java.lang.Override
     public int getCalloutExtensionsCount() {
       return calloutExtensions_.size();
     }
@@ -3768,6 +3875,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.CalloutFeedItem callout_extensions = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.CalloutFeedItem getCalloutExtensions(int index) {
       return calloutExtensions_.get(index);
     }
@@ -3778,6 +3886,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.CalloutFeedItem callout_extensions = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.CalloutFeedItemOrBuilder getCalloutExtensionsOrBuilder(
         int index) {
       return calloutExtensions_.get(index);
@@ -4548,7 +4657,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters}
    */
-  public  static final class CallExtensionParameters extends
+  public static final class CallExtensionParameters extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters)
       CallExtensionParametersOrBuilder {
@@ -4559,6 +4668,13 @@ private static final long serialVersionUID = 0L;
     }
     private CallExtensionParameters() {
       callExtensions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CallExtensionParameters();
     }
 
     @java.lang.Override
@@ -4638,6 +4754,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.CallFeedItem call_extensions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.ads.googleads.v2.common.CallFeedItem> getCallExtensionsList() {
       return callExtensions_;
     }
@@ -4648,6 +4765,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.CallFeedItem call_extensions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.ads.googleads.v2.common.CallFeedItemOrBuilder> 
         getCallExtensionsOrBuilderList() {
       return callExtensions_;
@@ -4659,6 +4777,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.CallFeedItem call_extensions = 1;</code>
      */
+    @java.lang.Override
     public int getCallExtensionsCount() {
       return callExtensions_.size();
     }
@@ -4669,6 +4788,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.CallFeedItem call_extensions = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.CallFeedItem getCallExtensions(int index) {
       return callExtensions_.get(index);
     }
@@ -4679,6 +4799,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.CallFeedItem call_extensions = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.CallFeedItemOrBuilder getCallExtensionsOrBuilder(
         int index) {
       return callExtensions_.get(index);
@@ -5449,7 +5570,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters}
    */
-  public  static final class SitelinkExtensionParameters extends
+  public static final class SitelinkExtensionParameters extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters)
       SitelinkExtensionParametersOrBuilder {
@@ -5460,6 +5581,13 @@ private static final long serialVersionUID = 0L;
     }
     private SitelinkExtensionParameters() {
       sitelinkExtensions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SitelinkExtensionParameters();
     }
 
     @java.lang.Override
@@ -5539,6 +5667,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.SitelinkFeedItem sitelink_extensions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.ads.googleads.v2.common.SitelinkFeedItem> getSitelinkExtensionsList() {
       return sitelinkExtensions_;
     }
@@ -5549,6 +5678,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.SitelinkFeedItem sitelink_extensions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.ads.googleads.v2.common.SitelinkFeedItemOrBuilder> 
         getSitelinkExtensionsOrBuilderList() {
       return sitelinkExtensions_;
@@ -5560,6 +5690,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.SitelinkFeedItem sitelink_extensions = 1;</code>
      */
+    @java.lang.Override
     public int getSitelinkExtensionsCount() {
       return sitelinkExtensions_.size();
     }
@@ -5570,6 +5701,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.SitelinkFeedItem sitelink_extensions = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.SitelinkFeedItem getSitelinkExtensions(int index) {
       return sitelinkExtensions_.get(index);
     }
@@ -5580,6 +5712,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v2.common.SitelinkFeedItem sitelink_extensions = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.SitelinkFeedItemOrBuilder getSitelinkExtensionsOrBuilder(
         int index) {
       return sitelinkExtensions_.get(index);
@@ -6306,6 +6439,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value budget_micros_to_move = 1;</code>
+     * @return Whether the budgetMicrosToMove field is set.
      */
     boolean hasBudgetMicrosToMove();
     /**
@@ -6315,6 +6449,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value budget_micros_to_move = 1;</code>
+     * @return The budgetMicrosToMove.
      */
     com.google.protobuf.Int64Value getBudgetMicrosToMove();
     /**
@@ -6334,7 +6469,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters}
    */
-  public  static final class MoveUnusedBudgetParameters extends
+  public static final class MoveUnusedBudgetParameters extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters)
       MoveUnusedBudgetParametersOrBuilder {
@@ -6344,6 +6479,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private MoveUnusedBudgetParameters() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MoveUnusedBudgetParameters();
     }
 
     @java.lang.Override
@@ -6359,7 +6501,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6424,7 +6565,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value budget_micros_to_move = 1;</code>
+     * @return Whether the budgetMicrosToMove field is set.
      */
+    @java.lang.Override
     public boolean hasBudgetMicrosToMove() {
       return budgetMicrosToMove_ != null;
     }
@@ -6435,7 +6578,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value budget_micros_to_move = 1;</code>
+     * @return The budgetMicrosToMove.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getBudgetMicrosToMove() {
       return budgetMicrosToMove_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : budgetMicrosToMove_;
     }
@@ -6447,6 +6592,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value budget_micros_to_move = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBudgetMicrosToMoveOrBuilder() {
       return getBudgetMicrosToMove();
     }
@@ -6780,6 +6926,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value budget_micros_to_move = 1;</code>
+       * @return Whether the budgetMicrosToMove field is set.
        */
       public boolean hasBudgetMicrosToMove() {
         return budgetMicrosToMoveBuilder_ != null || budgetMicrosToMove_ != null;
@@ -6791,6 +6938,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int64Value budget_micros_to_move = 1;</code>
+       * @return The budgetMicrosToMove.
        */
       public com.google.protobuf.Int64Value getBudgetMicrosToMove() {
         if (budgetMicrosToMoveBuilder_ == null) {
@@ -6987,7 +7135,8 @@ private static final long serialVersionUID = 0L;
   private int applyParametersCase_ = 0;
   private java.lang.Object applyParameters_;
   public enum ApplyParametersCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CAMPAIGN_BUDGET(2),
     TEXT_AD(3),
     KEYWORD(4),
@@ -7002,6 +7151,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -7042,7 +7193,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1;</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -7061,7 +7214,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1;</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -7084,7 +7239,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters campaign_budget = 2;</code>
+   * @return Whether the campaignBudget field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignBudget() {
     return applyParametersCase_ == 2;
   }
@@ -7095,7 +7252,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters campaign_budget = 2;</code>
+   * @return The campaignBudget.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters getCampaignBudget() {
     if (applyParametersCase_ == 2) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters) applyParameters_;
@@ -7110,6 +7269,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters campaign_budget = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParametersOrBuilder getCampaignBudgetOrBuilder() {
     if (applyParametersCase_ == 2) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters) applyParameters_;
@@ -7124,7 +7284,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters text_ad = 3;</code>
+   * @return Whether the textAd field is set.
    */
+  @java.lang.Override
   public boolean hasTextAd() {
     return applyParametersCase_ == 3;
   }
@@ -7134,7 +7296,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters text_ad = 3;</code>
+   * @return The textAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters getTextAd() {
     if (applyParametersCase_ == 3) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters) applyParameters_;
@@ -7148,6 +7312,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters text_ad = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParametersOrBuilder getTextAdOrBuilder() {
     if (applyParametersCase_ == 3) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters) applyParameters_;
@@ -7162,7 +7327,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters keyword = 4;</code>
+   * @return Whether the keyword field is set.
    */
+  @java.lang.Override
   public boolean hasKeyword() {
     return applyParametersCase_ == 4;
   }
@@ -7172,7 +7339,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters keyword = 4;</code>
+   * @return The keyword.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters getKeyword() {
     if (applyParametersCase_ == 4) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters) applyParameters_;
@@ -7186,6 +7355,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters keyword = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParametersOrBuilder getKeywordOrBuilder() {
     if (applyParametersCase_ == 4) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters) applyParameters_;
@@ -7201,7 +7371,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters target_cpa_opt_in = 5;</code>
+   * @return Whether the targetCpaOptIn field is set.
    */
+  @java.lang.Override
   public boolean hasTargetCpaOptIn() {
     return applyParametersCase_ == 5;
   }
@@ -7212,7 +7384,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters target_cpa_opt_in = 5;</code>
+   * @return The targetCpaOptIn.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters getTargetCpaOptIn() {
     if (applyParametersCase_ == 5) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters) applyParameters_;
@@ -7227,6 +7401,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters target_cpa_opt_in = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParametersOrBuilder getTargetCpaOptInOrBuilder() {
     if (applyParametersCase_ == 5) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters) applyParameters_;
@@ -7241,7 +7416,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
+   * @return Whether the calloutExtension field is set.
    */
+  @java.lang.Override
   public boolean hasCalloutExtension() {
     return applyParametersCase_ == 6;
   }
@@ -7251,7 +7428,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
+   * @return The calloutExtension.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters getCalloutExtension() {
     if (applyParametersCase_ == 6) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters) applyParameters_;
@@ -7265,6 +7444,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParametersOrBuilder getCalloutExtensionOrBuilder() {
     if (applyParametersCase_ == 6) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters) applyParameters_;
@@ -7279,7 +7459,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
+   * @return Whether the callExtension field is set.
    */
+  @java.lang.Override
   public boolean hasCallExtension() {
     return applyParametersCase_ == 7;
   }
@@ -7289,7 +7471,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
+   * @return The callExtension.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters getCallExtension() {
     if (applyParametersCase_ == 7) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters) applyParameters_;
@@ -7303,6 +7487,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParametersOrBuilder getCallExtensionOrBuilder() {
     if (applyParametersCase_ == 7) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters) applyParameters_;
@@ -7317,7 +7502,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
+   * @return Whether the sitelinkExtension field is set.
    */
+  @java.lang.Override
   public boolean hasSitelinkExtension() {
     return applyParametersCase_ == 8;
   }
@@ -7327,7 +7514,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
+   * @return The sitelinkExtension.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters getSitelinkExtension() {
     if (applyParametersCase_ == 8) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters) applyParameters_;
@@ -7341,6 +7530,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParametersOrBuilder getSitelinkExtensionOrBuilder() {
     if (applyParametersCase_ == 8) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters) applyParameters_;
@@ -7355,7 +7545,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
+   * @return Whether the moveUnusedBudget field is set.
    */
+  @java.lang.Override
   public boolean hasMoveUnusedBudget() {
     return applyParametersCase_ == 9;
   }
@@ -7365,7 +7557,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
+   * @return The moveUnusedBudget.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters getMoveUnusedBudget() {
     if (applyParametersCase_ == 9) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters) applyParameters_;
@@ -7379,6 +7573,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParametersOrBuilder getMoveUnusedBudgetOrBuilder() {
     if (applyParametersCase_ == 9) {
        return (com.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters) applyParameters_;
@@ -7940,6 +8135,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -7959,6 +8155,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -7979,6 +8176,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -7996,6 +8195,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -8009,6 +8209,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1;</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -8031,7 +8233,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters campaign_budget = 2;</code>
+     * @return Whether the campaignBudget field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignBudget() {
       return applyParametersCase_ == 2;
     }
@@ -8042,7 +8246,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters campaign_budget = 2;</code>
+     * @return The campaignBudget.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters getCampaignBudget() {
       if (campaignBudgetBuilder_ == null) {
         if (applyParametersCase_ == 2) {
@@ -8166,6 +8372,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParameters campaign_budget = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CampaignBudgetParametersOrBuilder getCampaignBudgetOrBuilder() {
       if ((applyParametersCase_ == 2) && (campaignBudgetBuilder_ != null)) {
         return campaignBudgetBuilder_.getMessageOrBuilder();
@@ -8211,7 +8418,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters text_ad = 3;</code>
+     * @return Whether the textAd field is set.
      */
+    @java.lang.Override
     public boolean hasTextAd() {
       return applyParametersCase_ == 3;
     }
@@ -8221,7 +8430,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters text_ad = 3;</code>
+     * @return The textAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters getTextAd() {
       if (textAdBuilder_ == null) {
         if (applyParametersCase_ == 3) {
@@ -8339,6 +8550,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParameters text_ad = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TextAdParametersOrBuilder getTextAdOrBuilder() {
       if ((applyParametersCase_ == 3) && (textAdBuilder_ != null)) {
         return textAdBuilder_.getMessageOrBuilder();
@@ -8383,7 +8595,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters keyword = 4;</code>
+     * @return Whether the keyword field is set.
      */
+    @java.lang.Override
     public boolean hasKeyword() {
       return applyParametersCase_ == 4;
     }
@@ -8393,7 +8607,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters keyword = 4;</code>
+     * @return The keyword.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters getKeyword() {
       if (keywordBuilder_ == null) {
         if (applyParametersCase_ == 4) {
@@ -8511,6 +8727,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParameters keyword = 4;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.KeywordParametersOrBuilder getKeywordOrBuilder() {
       if ((applyParametersCase_ == 4) && (keywordBuilder_ != null)) {
         return keywordBuilder_.getMessageOrBuilder();
@@ -8556,7 +8773,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters target_cpa_opt_in = 5;</code>
+     * @return Whether the targetCpaOptIn field is set.
      */
+    @java.lang.Override
     public boolean hasTargetCpaOptIn() {
       return applyParametersCase_ == 5;
     }
@@ -8567,7 +8786,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters target_cpa_opt_in = 5;</code>
+     * @return The targetCpaOptIn.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters getTargetCpaOptIn() {
       if (targetCpaOptInBuilder_ == null) {
         if (applyParametersCase_ == 5) {
@@ -8691,6 +8912,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParameters target_cpa_opt_in = 5;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.TargetCpaOptInParametersOrBuilder getTargetCpaOptInOrBuilder() {
       if ((applyParametersCase_ == 5) && (targetCpaOptInBuilder_ != null)) {
         return targetCpaOptInBuilder_.getMessageOrBuilder();
@@ -8736,7 +8958,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
+     * @return Whether the calloutExtension field is set.
      */
+    @java.lang.Override
     public boolean hasCalloutExtension() {
       return applyParametersCase_ == 6;
     }
@@ -8746,7 +8970,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
+     * @return The calloutExtension.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters getCalloutExtension() {
       if (calloutExtensionBuilder_ == null) {
         if (applyParametersCase_ == 6) {
@@ -8864,6 +9090,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParameters callout_extension = 6;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CalloutExtensionParametersOrBuilder getCalloutExtensionOrBuilder() {
       if ((applyParametersCase_ == 6) && (calloutExtensionBuilder_ != null)) {
         return calloutExtensionBuilder_.getMessageOrBuilder();
@@ -8908,7 +9135,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
+     * @return Whether the callExtension field is set.
      */
+    @java.lang.Override
     public boolean hasCallExtension() {
       return applyParametersCase_ == 7;
     }
@@ -8918,7 +9147,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
+     * @return The callExtension.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters getCallExtension() {
       if (callExtensionBuilder_ == null) {
         if (applyParametersCase_ == 7) {
@@ -9036,6 +9267,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParameters call_extension = 7;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.CallExtensionParametersOrBuilder getCallExtensionOrBuilder() {
       if ((applyParametersCase_ == 7) && (callExtensionBuilder_ != null)) {
         return callExtensionBuilder_.getMessageOrBuilder();
@@ -9080,7 +9312,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
+     * @return Whether the sitelinkExtension field is set.
      */
+    @java.lang.Override
     public boolean hasSitelinkExtension() {
       return applyParametersCase_ == 8;
     }
@@ -9090,7 +9324,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
+     * @return The sitelinkExtension.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters getSitelinkExtension() {
       if (sitelinkExtensionBuilder_ == null) {
         if (applyParametersCase_ == 8) {
@@ -9208,6 +9444,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.SitelinkExtensionParametersOrBuilder getSitelinkExtensionOrBuilder() {
       if ((applyParametersCase_ == 8) && (sitelinkExtensionBuilder_ != null)) {
         return sitelinkExtensionBuilder_.getMessageOrBuilder();
@@ -9252,7 +9489,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
+     * @return Whether the moveUnusedBudget field is set.
      */
+    @java.lang.Override
     public boolean hasMoveUnusedBudget() {
       return applyParametersCase_ == 9;
     }
@@ -9262,7 +9501,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
+     * @return The moveUnusedBudget.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters getMoveUnusedBudget() {
       if (moveUnusedBudgetBuilder_ == null) {
         if (applyParametersCase_ == 9) {
@@ -9380,6 +9621,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParameters move_unused_budget = 9;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.services.ApplyRecommendationOperation.MoveUnusedBudgetParametersOrBuilder getMoveUnusedBudgetOrBuilder() {
       if ((applyParametersCase_ == 9) && (moveUnusedBudgetBuilder_ != null)) {
         return moveUnusedBudgetBuilder_.getMessageOrBuilder();

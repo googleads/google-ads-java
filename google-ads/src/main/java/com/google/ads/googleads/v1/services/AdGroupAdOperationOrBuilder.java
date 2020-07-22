@@ -13,6 +13,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+   * @return Whether the updateMask field is set.
    */
   boolean hasUpdateMask();
   /**
@@ -21,6 +22,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+   * @return The updateMask.
    */
   com.google.protobuf.FieldMask getUpdateMask();
   /**
@@ -38,6 +40,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+   * @return Whether the policyValidationParameter field is set.
    */
   boolean hasPolicyValidationParameter();
   /**
@@ -46,6 +49,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
+   * @return The policyValidationParameter.
    */
   com.google.ads.googleads.v1.common.PolicyValidationParameter getPolicyValidationParameter();
   /**
@@ -63,6 +67,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAd create = 1;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -71,6 +76,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAd create = 1;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v1.resources.AdGroupAd getCreate();
   /**
@@ -88,6 +94,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAd update = 2;</code>
+   * @return Whether the update field is set.
    */
   boolean hasUpdate();
   /**
@@ -96,6 +103,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.resources.AdGroupAd update = 2;</code>
+   * @return The update.
    */
   com.google.ads.googleads.v1.resources.AdGroupAd getUpdate();
   /**
@@ -115,6 +123,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 3;</code>
+   * @return The remove.
    */
   java.lang.String getRemove();
   /**
@@ -125,6 +134,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 3;</code>
+   * @return The bytes for remove.
    */
   com.google.protobuf.ByteString
       getRemoveBytes();

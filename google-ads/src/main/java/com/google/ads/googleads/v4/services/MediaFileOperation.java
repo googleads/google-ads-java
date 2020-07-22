@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.MediaFileOperation}
  */
-public  final class MediaFileOperation extends
+public final class MediaFileOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.MediaFileOperation)
     MediaFileOperationOrBuilder {
@@ -146,6 +146,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.MediaFile create = 1;</code>
    * @return Whether the create field is set.
    */
+  @java.lang.Override
   public boolean hasCreate() {
     return operationCase_ == 1;
   }
@@ -157,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.MediaFile create = 1;</code>
    * @return The create.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.MediaFile getCreate() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.MediaFile) operation_;
@@ -170,6 +172,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.MediaFile create = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.MediaFileOrBuilder getCreateOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.MediaFile) operation_;
@@ -534,6 +537,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.MediaFile create = 1;</code>
      * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return operationCase_ == 1;
     }
@@ -545,6 +549,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.MediaFile create = 1;</code>
      * @return The create.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.MediaFile getCreate() {
       if (createBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -662,6 +667,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.MediaFile create = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.MediaFileOrBuilder getCreateOrBuilder() {
       if ((operationCase_ == 1) && (createBuilder_ != null)) {
         return createBuilder_.getMessageOrBuilder();

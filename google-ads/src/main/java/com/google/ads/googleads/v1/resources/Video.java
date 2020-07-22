@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.Video}
  */
-public  final class Video extends
+public final class Video extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.Video)
     VideoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private Video() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Video();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -141,13 +147,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the video.
+   * Output only. The resource name of the video.
    * Video resource names have the form:
    * `customers/{customer_id}/videos/{video_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -162,13 +170,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the video.
+   * Output only. The resource name of the video.
    * Video resource names have the form:
    * `customers/{customer_id}/videos/{video_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -187,31 +197,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue id_;
   /**
    * <pre>
-   * The ID of the video.
+   * Output only. The ID of the video.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue id = 2;</code>
+   * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the video.
+   * Output only. The ID of the video.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue id = 2;</code>
+   * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getId() {
     return id_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the video.
+   * Output only. The ID of the video.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue id = 2;</code>
+   * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -220,31 +235,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue channelId_;
   /**
    * <pre>
-   * The owner channel id of the video.
+   * Output only. The owner channel id of the video.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue channel_id = 3;</code>
+   * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the channelId field is set.
    */
+  @java.lang.Override
   public boolean hasChannelId() {
     return channelId_ != null;
   }
   /**
    * <pre>
-   * The owner channel id of the video.
+   * Output only. The owner channel id of the video.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue channel_id = 3;</code>
+   * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The channelId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getChannelId() {
     return channelId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : channelId_;
   }
   /**
    * <pre>
-   * The owner channel id of the video.
+   * Output only. The owner channel id of the video.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue channel_id = 3;</code>
+   * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getChannelIdOrBuilder() {
     return getChannelId();
   }
@@ -253,31 +273,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value durationMillis_;
   /**
    * <pre>
-   * The duration of the video in milliseconds.
+   * Output only. The duration of the video in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+   * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the durationMillis field is set.
    */
+  @java.lang.Override
   public boolean hasDurationMillis() {
     return durationMillis_ != null;
   }
   /**
    * <pre>
-   * The duration of the video in milliseconds.
+   * Output only. The duration of the video in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+   * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The durationMillis.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getDurationMillis() {
     return durationMillis_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : durationMillis_;
   }
   /**
    * <pre>
-   * The duration of the video in milliseconds.
+   * Output only. The duration of the video in milliseconds.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+   * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getDurationMillisOrBuilder() {
     return getDurationMillis();
   }
@@ -286,31 +311,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue title_;
   /**
    * <pre>
-   * The title of the video.
+   * Output only. The title of the video.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue title = 5;</code>
+   * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the title field is set.
    */
+  @java.lang.Override
   public boolean hasTitle() {
     return title_ != null;
   }
   /**
    * <pre>
-   * The title of the video.
+   * Output only. The title of the video.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue title = 5;</code>
+   * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The title.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTitle() {
     return title_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : title_;
   }
   /**
    * <pre>
-   * The title of the video.
+   * Output only. The title of the video.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue title = 5;</code>
+   * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTitleOrBuilder() {
     return getTitle();
   }
@@ -744,12 +774,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the video.
+     * Output only. The resource name of the video.
      * Video resource names have the form:
      * `customers/{customer_id}/videos/{video_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -765,12 +796,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the video.
+     * Output only. The resource name of the video.
      * Video resource names have the form:
      * `customers/{customer_id}/videos/{video_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -787,12 +819,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the video.
+     * Output only. The resource name of the video.
      * Video resource names have the form:
      * `customers/{customer_id}/videos/{video_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -806,12 +840,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the video.
+     * Output only. The resource name of the video.
      * Video resource names have the form:
      * `customers/{customer_id}/videos/{video_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -821,12 +856,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the video.
+     * Output only. The resource name of the video.
      * Video resource names have the form:
      * `customers/{customer_id}/videos/{video_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -845,20 +882,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the video.
+     * Output only. The ID of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the video.
+     * Output only. The ID of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.StringValue getId() {
       if (idBuilder_ == null) {
@@ -869,10 +908,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the video.
+     * Output only. The ID of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.StringValue value) {
       if (idBuilder_ == null) {
@@ -889,10 +928,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the video.
+     * Output only. The ID of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -907,10 +946,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the video.
+     * Output only. The ID of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.StringValue value) {
       if (idBuilder_ == null) {
@@ -929,10 +968,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the video.
+     * Output only. The ID of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -947,10 +986,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the video.
+     * Output only. The ID of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getIdBuilder() {
       
@@ -959,10 +998,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the video.
+     * Output only. The ID of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -974,10 +1013,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the video.
+     * Output only. The ID of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue id = 2;</code>
+     * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -998,20 +1037,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> channelIdBuilder_;
     /**
      * <pre>
-     * The owner channel id of the video.
+     * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue channel_id = 3;</code>
+     * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the channelId field is set.
      */
     public boolean hasChannelId() {
       return channelIdBuilder_ != null || channelId_ != null;
     }
     /**
      * <pre>
-     * The owner channel id of the video.
+     * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue channel_id = 3;</code>
+     * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The channelId.
      */
     public com.google.protobuf.StringValue getChannelId() {
       if (channelIdBuilder_ == null) {
@@ -1022,10 +1063,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The owner channel id of the video.
+     * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue channel_id = 3;</code>
+     * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setChannelId(com.google.protobuf.StringValue value) {
       if (channelIdBuilder_ == null) {
@@ -1042,10 +1083,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The owner channel id of the video.
+     * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue channel_id = 3;</code>
+     * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setChannelId(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1060,10 +1101,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The owner channel id of the video.
+     * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue channel_id = 3;</code>
+     * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeChannelId(com.google.protobuf.StringValue value) {
       if (channelIdBuilder_ == null) {
@@ -1082,10 +1123,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The owner channel id of the video.
+     * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue channel_id = 3;</code>
+     * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearChannelId() {
       if (channelIdBuilder_ == null) {
@@ -1100,10 +1141,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The owner channel id of the video.
+     * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue channel_id = 3;</code>
+     * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getChannelIdBuilder() {
       
@@ -1112,10 +1153,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The owner channel id of the video.
+     * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue channel_id = 3;</code>
+     * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getChannelIdOrBuilder() {
       if (channelIdBuilder_ != null) {
@@ -1127,10 +1168,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The owner channel id of the video.
+     * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue channel_id = 3;</code>
+     * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1151,20 +1192,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> durationMillisBuilder_;
     /**
      * <pre>
-     * The duration of the video in milliseconds.
+     * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+     * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the durationMillis field is set.
      */
     public boolean hasDurationMillis() {
       return durationMillisBuilder_ != null || durationMillis_ != null;
     }
     /**
      * <pre>
-     * The duration of the video in milliseconds.
+     * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+     * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The durationMillis.
      */
     public com.google.protobuf.Int64Value getDurationMillis() {
       if (durationMillisBuilder_ == null) {
@@ -1175,10 +1218,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the video in milliseconds.
+     * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+     * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setDurationMillis(com.google.protobuf.Int64Value value) {
       if (durationMillisBuilder_ == null) {
@@ -1195,10 +1238,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the video in milliseconds.
+     * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+     * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setDurationMillis(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1213,10 +1256,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the video in milliseconds.
+     * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+     * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeDurationMillis(com.google.protobuf.Int64Value value) {
       if (durationMillisBuilder_ == null) {
@@ -1235,10 +1278,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the video in milliseconds.
+     * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+     * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearDurationMillis() {
       if (durationMillisBuilder_ == null) {
@@ -1253,10 +1296,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the video in milliseconds.
+     * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+     * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getDurationMillisBuilder() {
       
@@ -1265,10 +1308,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the video in milliseconds.
+     * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+     * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getDurationMillisOrBuilder() {
       if (durationMillisBuilder_ != null) {
@@ -1280,10 +1323,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The duration of the video in milliseconds.
+     * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value duration_millis = 4;</code>
+     * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1304,20 +1347,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> titleBuilder_;
     /**
      * <pre>
-     * The title of the video.
+     * Output only. The title of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue title = 5;</code>
+     * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the title field is set.
      */
     public boolean hasTitle() {
       return titleBuilder_ != null || title_ != null;
     }
     /**
      * <pre>
-     * The title of the video.
+     * Output only. The title of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue title = 5;</code>
+     * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The title.
      */
     public com.google.protobuf.StringValue getTitle() {
       if (titleBuilder_ == null) {
@@ -1328,10 +1373,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The title of the video.
+     * Output only. The title of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue title = 5;</code>
+     * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTitle(com.google.protobuf.StringValue value) {
       if (titleBuilder_ == null) {
@@ -1348,10 +1393,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The title of the video.
+     * Output only. The title of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue title = 5;</code>
+     * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTitle(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1366,10 +1411,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The title of the video.
+     * Output only. The title of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue title = 5;</code>
+     * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTitle(com.google.protobuf.StringValue value) {
       if (titleBuilder_ == null) {
@@ -1388,10 +1433,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The title of the video.
+     * Output only. The title of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue title = 5;</code>
+     * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTitle() {
       if (titleBuilder_ == null) {
@@ -1406,10 +1451,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The title of the video.
+     * Output only. The title of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue title = 5;</code>
+     * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getTitleBuilder() {
       
@@ -1418,10 +1463,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The title of the video.
+     * Output only. The title of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue title = 5;</code>
+     * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getTitleOrBuilder() {
       if (titleBuilder_ != null) {
@@ -1433,10 +1478,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The title of the video.
+     * Output only. The title of the video.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue title = 5;</code>
+     * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

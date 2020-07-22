@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/campaign_audience_view_service.proto")
 public final class CampaignAudienceViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class CampaignAudienceViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.CampaignAudienceViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCampaignAudienceViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest,
-      com.google.ads.googleads.v4.resources.CampaignAudienceView> METHOD_GET_CAMPAIGN_AUDIENCE_VIEW = getGetCampaignAudienceViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest,
       com.google.ads.googleads.v4.resources.CampaignAudienceView> getGetCampaignAudienceViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCampaignAudienceView",
+      requestType = com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.CampaignAudienceView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest,
       com.google.ads.googleads.v4.resources.CampaignAudienceView> getGetCampaignAudienceViewMethod() {
-    return getGetCampaignAudienceViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest,
-      com.google.ads.googleads.v4.resources.CampaignAudienceView> getGetCampaignAudienceViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest, com.google.ads.googleads.v4.resources.CampaignAudienceView> getGetCampaignAudienceViewMethod;
     if ((getGetCampaignAudienceViewMethod = CampaignAudienceViewServiceGrpc.getGetCampaignAudienceViewMethod) == null) {
       synchronized (CampaignAudienceViewServiceGrpc.class) {
         if ((getGetCampaignAudienceViewMethod = CampaignAudienceViewServiceGrpc.getGetCampaignAudienceViewMethod) == null) {
-          CampaignAudienceViewServiceGrpc.getGetCampaignAudienceViewMethod = getGetCampaignAudienceViewMethod = 
+          CampaignAudienceViewServiceGrpc.getGetCampaignAudienceViewMethod = getGetCampaignAudienceViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest, com.google.ads.googleads.v4.resources.CampaignAudienceView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.CampaignAudienceViewService", "GetCampaignAudienceView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaignAudienceView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.CampaignAudienceView.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignAudienceViewServiceMethodDescriptorSupplier("GetCampaignAudienceView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignAudienceViewServiceMethodDescriptorSupplier("GetCampaignAudienceView"))
+              .build();
         }
-     }
-     return getGetCampaignAudienceViewMethod;
+      }
+    }
+    return getGetCampaignAudienceViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CampaignAudienceViewServiceStub newStub(io.grpc.Channel channel) {
-    return new CampaignAudienceViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignAudienceViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignAudienceViewServiceStub>() {
+        @java.lang.Override
+        public CampaignAudienceViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignAudienceViewServiceStub(channel, callOptions);
+        }
+      };
+    return CampaignAudienceViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class CampaignAudienceViewServiceGrpc {
    */
   public static CampaignAudienceViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CampaignAudienceViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignAudienceViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignAudienceViewServiceBlockingStub>() {
+        @java.lang.Override
+        public CampaignAudienceViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignAudienceViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CampaignAudienceViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class CampaignAudienceViewServiceGrpc {
    */
   public static CampaignAudienceViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CampaignAudienceViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignAudienceViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignAudienceViewServiceFutureStub>() {
+        @java.lang.Override
+        public CampaignAudienceViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignAudienceViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CampaignAudienceViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class CampaignAudienceViewServiceGrpc {
      */
     public void getCampaignAudienceView(com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.CampaignAudienceView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCampaignAudienceViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignAudienceViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCampaignAudienceViewMethodHelper(),
+            getGetCampaignAudienceViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest,
@@ -126,19 +140,15 @@ public final class CampaignAudienceViewServiceGrpc {
    * Service to manage campaign audience views.
    * </pre>
    */
-  public static final class CampaignAudienceViewServiceStub extends io.grpc.stub.AbstractStub<CampaignAudienceViewServiceStub> {
-    private CampaignAudienceViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignAudienceViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignAudienceViewServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignAudienceViewServiceStub> {
+    private CampaignAudienceViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignAudienceViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignAudienceViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignAudienceViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class CampaignAudienceViewServiceGrpc {
     public void getCampaignAudienceView(com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.CampaignAudienceView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCampaignAudienceViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignAudienceViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class CampaignAudienceViewServiceGrpc {
    * Service to manage campaign audience views.
    * </pre>
    */
-  public static final class CampaignAudienceViewServiceBlockingStub extends io.grpc.stub.AbstractStub<CampaignAudienceViewServiceBlockingStub> {
-    private CampaignAudienceViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignAudienceViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignAudienceViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignAudienceViewServiceBlockingStub> {
+    private CampaignAudienceViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignAudienceViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignAudienceViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignAudienceViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class CampaignAudienceViewServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.CampaignAudienceView getCampaignAudienceView(com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCampaignAudienceViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCampaignAudienceViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class CampaignAudienceViewServiceGrpc {
    * Service to manage campaign audience views.
    * </pre>
    */
-  public static final class CampaignAudienceViewServiceFutureStub extends io.grpc.stub.AbstractStub<CampaignAudienceViewServiceFutureStub> {
-    private CampaignAudienceViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignAudienceViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignAudienceViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignAudienceViewServiceFutureStub> {
+    private CampaignAudienceViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignAudienceViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignAudienceViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignAudienceViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class CampaignAudienceViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.CampaignAudienceView> getCampaignAudienceView(
         com.google.ads.googleads.v4.services.GetCampaignAudienceViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCampaignAudienceViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCampaignAudienceViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class CampaignAudienceViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CampaignAudienceViewServiceFileDescriptorSupplier())
-              .addMethod(getGetCampaignAudienceViewMethodHelper())
+              .addMethod(getGetCampaignAudienceViewMethod())
               .build();
         }
       }

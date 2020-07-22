@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/location_view_service.proto")
 public final class LocationViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class LocationViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.LocationViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetLocationViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetLocationViewRequest,
-      com.google.ads.googleads.v4.resources.LocationView> METHOD_GET_LOCATION_VIEW = getGetLocationViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetLocationViewRequest,
       com.google.ads.googleads.v4.resources.LocationView> getGetLocationViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetLocationView",
+      requestType = com.google.ads.googleads.v4.services.GetLocationViewRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.LocationView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetLocationViewRequest,
       com.google.ads.googleads.v4.resources.LocationView> getGetLocationViewMethod() {
-    return getGetLocationViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetLocationViewRequest,
-      com.google.ads.googleads.v4.resources.LocationView> getGetLocationViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetLocationViewRequest, com.google.ads.googleads.v4.resources.LocationView> getGetLocationViewMethod;
     if ((getGetLocationViewMethod = LocationViewServiceGrpc.getGetLocationViewMethod) == null) {
       synchronized (LocationViewServiceGrpc.class) {
         if ((getGetLocationViewMethod = LocationViewServiceGrpc.getGetLocationViewMethod) == null) {
-          LocationViewServiceGrpc.getGetLocationViewMethod = getGetLocationViewMethod = 
+          LocationViewServiceGrpc.getGetLocationViewMethod = getGetLocationViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetLocationViewRequest, com.google.ads.googleads.v4.resources.LocationView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.LocationViewService", "GetLocationView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLocationView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetLocationViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.LocationView.getDefaultInstance()))
-                  .setSchemaDescriptor(new LocationViewServiceMethodDescriptorSupplier("GetLocationView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new LocationViewServiceMethodDescriptorSupplier("GetLocationView"))
+              .build();
         }
-     }
-     return getGetLocationViewMethod;
+      }
+    }
+    return getGetLocationViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LocationViewServiceStub newStub(io.grpc.Channel channel) {
-    return new LocationViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LocationViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LocationViewServiceStub>() {
+        @java.lang.Override
+        public LocationViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LocationViewServiceStub(channel, callOptions);
+        }
+      };
+    return LocationViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class LocationViewServiceGrpc {
    */
   public static LocationViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new LocationViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LocationViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LocationViewServiceBlockingStub>() {
+        @java.lang.Override
+        public LocationViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LocationViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return LocationViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class LocationViewServiceGrpc {
    */
   public static LocationViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new LocationViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<LocationViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<LocationViewServiceFutureStub>() {
+        @java.lang.Override
+        public LocationViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new LocationViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return LocationViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class LocationViewServiceGrpc {
      */
     public void getLocationView(com.google.ads.googleads.v4.services.GetLocationViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.LocationView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetLocationViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetLocationViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetLocationViewMethodHelper(),
+            getGetLocationViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetLocationViewRequest,
@@ -126,19 +140,15 @@ public final class LocationViewServiceGrpc {
    * Service to fetch location views.
    * </pre>
    */
-  public static final class LocationViewServiceStub extends io.grpc.stub.AbstractStub<LocationViewServiceStub> {
-    private LocationViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LocationViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LocationViewServiceStub extends io.grpc.stub.AbstractAsyncStub<LocationViewServiceStub> {
+    private LocationViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LocationViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LocationViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LocationViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class LocationViewServiceGrpc {
     public void getLocationView(com.google.ads.googleads.v4.services.GetLocationViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.LocationView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetLocationViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetLocationViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class LocationViewServiceGrpc {
    * Service to fetch location views.
    * </pre>
    */
-  public static final class LocationViewServiceBlockingStub extends io.grpc.stub.AbstractStub<LocationViewServiceBlockingStub> {
-    private LocationViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LocationViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LocationViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LocationViewServiceBlockingStub> {
+    private LocationViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LocationViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LocationViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LocationViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class LocationViewServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.LocationView getLocationView(com.google.ads.googleads.v4.services.GetLocationViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetLocationViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetLocationViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class LocationViewServiceGrpc {
    * Service to fetch location views.
    * </pre>
    */
-  public static final class LocationViewServiceFutureStub extends io.grpc.stub.AbstractStub<LocationViewServiceFutureStub> {
-    private LocationViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private LocationViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class LocationViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LocationViewServiceFutureStub> {
+    private LocationViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LocationViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected LocationViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new LocationViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class LocationViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.LocationView> getLocationView(
         com.google.ads.googleads.v4.services.GetLocationViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetLocationViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetLocationViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class LocationViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new LocationViewServiceFileDescriptorSupplier())
-              .addMethod(getGetLocationViewMethodHelper())
+              .addMethod(getGetLocationViewMethod())
               .build();
         }
       }

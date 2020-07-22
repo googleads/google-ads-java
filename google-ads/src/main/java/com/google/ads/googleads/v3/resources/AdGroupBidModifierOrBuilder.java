@@ -15,6 +15,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
@@ -43,6 +46,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
@@ -61,6 +65,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
   /**
@@ -70,6 +75,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value criterion_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The criterionId.
    */
   com.google.protobuf.Int64Value getCriterionId();
   /**
@@ -90,6 +96,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
+   * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
   /**
@@ -100,6 +107,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 4;</code>
+   * @return The bidModifier.
    */
   com.google.protobuf.DoubleValue getBidModifier();
   /**
@@ -123,6 +131,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the baseAdGroup field is set.
    */
   boolean hasBaseAdGroup();
   /**
@@ -135,6 +144,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_ad_group = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The baseAdGroup.
    */
   com.google.protobuf.StringValue getBaseAdGroup();
   /**
@@ -156,6 +166,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for bidModifierSource.
    */
   int getBidModifierSourceValue();
   /**
@@ -164,6 +175,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BidModifierSourceEnum.BidModifierSource bid_modifier_source = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bidModifierSource.
    */
   com.google.ads.googleads.v3.enums.BidModifierSourceEnum.BidModifierSource getBidModifierSource();
 
@@ -173,6 +185,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the hotelDateSelectionType field is set.
    */
   boolean hasHotelDateSelectionType();
   /**
@@ -181,6 +194,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelDateSelectionType.
    */
   com.google.ads.googleads.v3.common.HotelDateSelectionTypeInfo getHotelDateSelectionType();
   /**
@@ -198,6 +212,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the hotelAdvanceBookingWindow field is set.
    */
   boolean hasHotelAdvanceBookingWindow();
   /**
@@ -206,6 +221,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelAdvanceBookingWindow.
    */
   com.google.ads.googleads.v3.common.HotelAdvanceBookingWindowInfo getHotelAdvanceBookingWindow();
   /**
@@ -223,6 +239,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the hotelLengthOfStay field is set.
    */
   boolean hasHotelLengthOfStay();
   /**
@@ -231,6 +248,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelLengthOfStayInfo hotel_length_of_stay = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelLengthOfStay.
    */
   com.google.ads.googleads.v3.common.HotelLengthOfStayInfo getHotelLengthOfStay();
   /**
@@ -248,6 +266,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the hotelCheckInDay field is set.
    */
   boolean hasHotelCheckInDay();
   /**
@@ -256,6 +275,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelCheckInDayInfo hotel_check_in_day = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelCheckInDay.
    */
   com.google.ads.googleads.v3.common.HotelCheckInDayInfo getHotelCheckInDay();
   /**
@@ -273,6 +293,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the device field is set.
    */
   boolean hasDevice();
   /**
@@ -281,6 +302,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DeviceInfo device = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The device.
    */
   com.google.ads.googleads.v3.common.DeviceInfo getDevice();
   /**
@@ -298,6 +320,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the preferredContent field is set.
    */
   boolean hasPreferredContent();
   /**
@@ -306,6 +329,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PreferredContentInfo preferred_content = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The preferredContent.
    */
   com.google.ads.googleads.v3.common.PreferredContentInfo getPreferredContent();
   /**

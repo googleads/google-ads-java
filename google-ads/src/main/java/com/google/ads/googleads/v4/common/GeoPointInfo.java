@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.GeoPointInfo}
  */
-public  final class GeoPointInfo extends
+public final class GeoPointInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.GeoPointInfo)
     GeoPointInfoOrBuilder {
@@ -120,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value longitude_in_micro_degrees = 1;</code>
    * @return Whether the longitudeInMicroDegrees field is set.
    */
+  @java.lang.Override
   public boolean hasLongitudeInMicroDegrees() {
     return longitudeInMicroDegrees_ != null;
   }
@@ -131,6 +132,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value longitude_in_micro_degrees = 1;</code>
    * @return The longitudeInMicroDegrees.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getLongitudeInMicroDegrees() {
     return longitudeInMicroDegrees_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : longitudeInMicroDegrees_;
   }
@@ -141,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value longitude_in_micro_degrees = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getLongitudeInMicroDegreesOrBuilder() {
     return getLongitudeInMicroDegrees();
   }
@@ -155,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value latitude_in_micro_degrees = 2;</code>
    * @return Whether the latitudeInMicroDegrees field is set.
    */
+  @java.lang.Override
   public boolean hasLatitudeInMicroDegrees() {
     return latitudeInMicroDegrees_ != null;
   }
@@ -166,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value latitude_in_micro_degrees = 2;</code>
    * @return The latitudeInMicroDegrees.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getLatitudeInMicroDegrees() {
     return latitudeInMicroDegrees_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : latitudeInMicroDegrees_;
   }
@@ -176,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value latitude_in_micro_degrees = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getLatitudeInMicroDegreesOrBuilder() {
     return getLatitudeInMicroDegrees();
   }

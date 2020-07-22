@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.SearchGoogleAdsStreamRequest}
  */
-public  final class SearchGoogleAdsStreamRequest extends
+public final class SearchGoogleAdsStreamRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.SearchGoogleAdsStreamRequest)
     SearchGoogleAdsStreamRequestOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new SearchGoogleAdsStreamRequest();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -107,7 +113,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -126,7 +134,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -149,7 +159,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The query.
    */
+  @java.lang.Override
   public java.lang.String getQuery() {
     java.lang.Object ref = query_;
     if (ref instanceof java.lang.String) {
@@ -168,7 +180,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for query.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getQueryBytes() {
     java.lang.Object ref = query_;
@@ -193,8 +207,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 3;</code>
+   * @return The enum numeric value on the wire for summaryRowSetting.
    */
-  public int getSummaryRowSettingValue() {
+  @java.lang.Override public int getSummaryRowSettingValue() {
     return summaryRowSetting_;
   }
   /**
@@ -205,8 +220,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 3;</code>
+   * @return The summaryRowSetting.
    */
-  public com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.valueOf(summaryRowSetting_);
     return result == null ? com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.UNRECOGNIZED : result;
@@ -558,6 +574,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -577,6 +594,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -597,6 +615,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -614,6 +634,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -627,6 +648,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -647,6 +670,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The query.
      */
     public java.lang.String getQuery() {
       java.lang.Object ref = query_;
@@ -666,6 +690,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for query.
      */
     public com.google.protobuf.ByteString
         getQueryBytes() {
@@ -686,6 +711,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The query to set.
+     * @return This builder for chaining.
      */
     public Builder setQuery(
         java.lang.String value) {
@@ -703,6 +730,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearQuery() {
       
@@ -716,6 +744,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string query = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for query to set.
+     * @return This builder for chaining.
      */
     public Builder setQueryBytes(
         com.google.protobuf.ByteString value) {
@@ -738,8 +768,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 3;</code>
+     * @return The enum numeric value on the wire for summaryRowSetting.
      */
-    public int getSummaryRowSettingValue() {
+    @java.lang.Override public int getSummaryRowSettingValue() {
       return summaryRowSetting_;
     }
     /**
@@ -750,8 +781,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 3;</code>
+     * @param value The enum numeric value on the wire for summaryRowSetting to set.
+     * @return This builder for chaining.
      */
     public Builder setSummaryRowSettingValue(int value) {
+      
       summaryRowSetting_ = value;
       onChanged();
       return this;
@@ -764,7 +798,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 3;</code>
+     * @return The summaryRowSetting.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting.valueOf(summaryRowSetting_);
@@ -778,6 +814,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 3;</code>
+     * @param value The summaryRowSetting to set.
+     * @return This builder for chaining.
      */
     public Builder setSummaryRowSetting(com.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting value) {
       if (value == null) {
@@ -796,6 +834,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.SummaryRowSettingEnum.SummaryRowSetting summary_row_setting = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSummaryRowSetting() {
       

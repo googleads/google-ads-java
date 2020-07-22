@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.Ad}
  */
-public  final class Ad extends
+public final class Ad extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.Ad)
     AdOrBuilder {
@@ -32,6 +32,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Ad();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -45,7 +52,6 @@ private static final long serialVersionUID = 0L;
       throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
-    int mutable_bitField1_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -70,9 +76,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000001;
             }
             finalUrls_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -126,9 +132,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00000080;
+              mutable_bitField0_ |= 0x00000008;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.CustomParameter.parser(), extensionRegistry));
@@ -190,9 +196,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 130: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000004;
             }
             finalMobileUrls_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -315,9 +321,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 210: {
-            if (!((mutable_bitField0_ & 0x00001000) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               urlCollections_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.UrlCollection>();
-              mutable_bitField0_ |= 0x00001000;
+              mutable_bitField0_ |= 0x00000010;
             }
             urlCollections_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.UrlCollection.parser(), extensionRegistry));
@@ -414,9 +420,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 282: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               finalAppUrls_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.FinalAppUrl>();
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000002;
             }
             finalAppUrls_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.FinalAppUrl.parser(), extensionRegistry));
@@ -470,19 +476,19 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000080) != 0)) {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
       }
-      if (((mutable_bitField0_ & 0x00001000) != 0)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         urlCollections_ = java.util.Collections.unmodifiableList(urlCollections_);
       }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         finalAppUrls_ = java.util.Collections.unmodifiableList(finalAppUrls_);
       }
       this.unknownFields = unknownFields.build();
@@ -502,11 +508,11 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.resources.Ad.class, com.google.ads.googleads.v3.resources.Ad.Builder.class);
   }
 
-  private int bitField0_;
   private int adDataCase_ = 0;
   private java.lang.Object adData_;
   public enum AdDataCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     TEXT_AD(6),
     EXPANDED_TEXT_AD(7),
     CALL_ONLY_AD(13),
@@ -531,6 +537,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -583,7 +591,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -604,7 +614,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -627,7 +639,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -637,7 +651,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -648,6 +664,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -662,6 +679,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalUrlsList() {
     return finalUrls_;
   }
@@ -673,6 +691,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalUrlsOrBuilderList() {
     return finalUrls_;
@@ -685,6 +704,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 2;</code>
    */
+  @java.lang.Override
   public int getFinalUrlsCount() {
     return finalUrls_.size();
   }
@@ -696,6 +716,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrls(int index) {
     return finalUrls_.get(index);
   }
@@ -707,6 +728,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlsOrBuilder(
       int index) {
     return finalUrls_.get(index);
@@ -722,6 +744,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.FinalAppUrl final_app_urls = 35;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.FinalAppUrl> getFinalAppUrlsList() {
     return finalAppUrls_;
   }
@@ -733,6 +756,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.FinalAppUrl final_app_urls = 35;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.FinalAppUrlOrBuilder> 
       getFinalAppUrlsOrBuilderList() {
     return finalAppUrls_;
@@ -745,6 +769,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.FinalAppUrl final_app_urls = 35;</code>
    */
+  @java.lang.Override
   public int getFinalAppUrlsCount() {
     return finalAppUrls_.size();
   }
@@ -756,6 +781,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.FinalAppUrl final_app_urls = 35;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.FinalAppUrl getFinalAppUrls(int index) {
     return finalAppUrls_.get(index);
   }
@@ -767,6 +793,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.FinalAppUrl final_app_urls = 35;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.FinalAppUrlOrBuilder getFinalAppUrlsOrBuilder(
       int index) {
     return finalAppUrls_.get(index);
@@ -782,6 +809,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 16;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalMobileUrlsList() {
     return finalMobileUrls_;
   }
@@ -793,6 +821,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 16;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalMobileUrlsOrBuilderList() {
     return finalMobileUrls_;
@@ -805,6 +834,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 16;</code>
    */
+  @java.lang.Override
   public int getFinalMobileUrlsCount() {
     return finalMobileUrls_.size();
   }
@@ -816,6 +846,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 16;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalMobileUrls(int index) {
     return finalMobileUrls_.get(index);
   }
@@ -827,6 +858,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 16;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalMobileUrlsOrBuilder(
       int index) {
     return finalMobileUrls_.get(index);
@@ -840,7 +872,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingUrlTemplate() {
     return trackingUrlTemplate_ != null;
   }
@@ -850,7 +884,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+   * @return The trackingUrlTemplate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTrackingUrlTemplate() {
     return trackingUrlTemplate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrlTemplate_;
   }
@@ -861,6 +897,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
   }
@@ -873,7 +910,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
+  @java.lang.Override
   public boolean hasFinalUrlSuffix() {
     return finalUrlSuffix_ != null;
   }
@@ -883,7 +922,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   * @return The finalUrlSuffix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrlSuffix() {
     return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
   }
@@ -894,6 +935,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
     return getFinalUrlSuffix();
   }
@@ -909,6 +951,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.CustomParameter> getUrlCustomParametersList() {
     return urlCustomParameters_;
   }
@@ -921,6 +964,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.CustomParameterOrBuilder> 
       getUrlCustomParametersOrBuilderList() {
     return urlCustomParameters_;
@@ -934,6 +978,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
    */
+  @java.lang.Override
   public int getUrlCustomParametersCount() {
     return urlCustomParameters_.size();
   }
@@ -946,6 +991,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CustomParameter getUrlCustomParameters(int index) {
     return urlCustomParameters_.get(index);
   }
@@ -958,6 +1004,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 10;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
       int index) {
     return urlCustomParameters_.get(index);
@@ -971,7 +1018,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue display_url = 4;</code>
+   * @return Whether the displayUrl field is set.
    */
+  @java.lang.Override
   public boolean hasDisplayUrl() {
     return displayUrl_ != null;
   }
@@ -981,7 +1030,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue display_url = 4;</code>
+   * @return The displayUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDisplayUrl() {
     return displayUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : displayUrl_;
   }
@@ -992,6 +1043,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue display_url = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDisplayUrlOrBuilder() {
     return getDisplayUrl();
   }
@@ -1004,8 +1056,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -1014,8 +1067,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v3.enums.AdTypeEnum.AdType getType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.AdTypeEnum.AdType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.AdTypeEnum.AdType result = com.google.ads.googleads.v3.enums.AdTypeEnum.AdType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v3.enums.AdTypeEnum.AdType.UNRECOGNIZED : result;
@@ -1032,7 +1086,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the addedByGoogleAds field is set.
    */
+  @java.lang.Override
   public boolean hasAddedByGoogleAds() {
     return addedByGoogleAds_ != null;
   }
@@ -1045,7 +1101,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The addedByGoogleAds.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getAddedByGoogleAds() {
     return addedByGoogleAds_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : addedByGoogleAds_;
   }
@@ -1059,6 +1117,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getAddedByGoogleAdsOrBuilder() {
     return getAddedByGoogleAds();
   }
@@ -1076,8 +1135,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.DeviceEnum.Device device_preference = 20;</code>
+   * @return The enum numeric value on the wire for devicePreference.
    */
-  public int getDevicePreferenceValue() {
+  @java.lang.Override public int getDevicePreferenceValue() {
     return devicePreference_;
   }
   /**
@@ -1091,8 +1151,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.DeviceEnum.Device device_preference = 20;</code>
+   * @return The devicePreference.
    */
-  public com.google.ads.googleads.v3.enums.DeviceEnum.Device getDevicePreference() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.DeviceEnum.Device getDevicePreference() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.DeviceEnum.Device result = com.google.ads.googleads.v3.enums.DeviceEnum.Device.valueOf(devicePreference_);
     return result == null ? com.google.ads.googleads.v3.enums.DeviceEnum.Device.UNRECOGNIZED : result;
@@ -1108,6 +1169,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.UrlCollection url_collections = 26;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.UrlCollection> getUrlCollectionsList() {
     return urlCollections_;
   }
@@ -1119,6 +1181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.UrlCollection url_collections = 26;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.UrlCollectionOrBuilder> 
       getUrlCollectionsOrBuilderList() {
     return urlCollections_;
@@ -1131,6 +1194,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.UrlCollection url_collections = 26;</code>
    */
+  @java.lang.Override
   public int getUrlCollectionsCount() {
     return urlCollections_.size();
   }
@@ -1142,6 +1206,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.UrlCollection url_collections = 26;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.UrlCollection getUrlCollections(int index) {
     return urlCollections_.get(index);
   }
@@ -1153,6 +1218,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.UrlCollection url_collections = 26;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.UrlCollectionOrBuilder getUrlCollectionsOrBuilder(
       int index) {
     return urlCollections_.get(index);
@@ -1167,7 +1233,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -1178,7 +1246,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -1190,6 +1260,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -1203,8 +1274,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for systemManagedResourceSource.
    */
-  public int getSystemManagedResourceSourceValue() {
+  @java.lang.Override public int getSystemManagedResourceSourceValue() {
     return systemManagedResourceSource_;
   }
   /**
@@ -1214,8 +1286,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The systemManagedResourceSource.
    */
-  public com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource getSystemManagedResourceSource() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource getSystemManagedResourceSource() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource result = com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.valueOf(systemManagedResourceSource_);
     return result == null ? com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.UNRECOGNIZED : result;
@@ -1224,21 +1297,25 @@ private static final long serialVersionUID = 0L;
   public static final int TEXT_AD_FIELD_NUMBER = 6;
   /**
    * <pre>
-   * Details pertaining to a text ad.
+   * Immutable. Details pertaining to a text ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+   * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the textAd field is set.
    */
+  @java.lang.Override
   public boolean hasTextAd() {
     return adDataCase_ == 6;
   }
   /**
    * <pre>
-   * Details pertaining to a text ad.
+   * Immutable. Details pertaining to a text ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+   * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The textAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.TextAdInfo getTextAd() {
     if (adDataCase_ == 6) {
        return (com.google.ads.googleads.v3.common.TextAdInfo) adData_;
@@ -1247,11 +1324,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Details pertaining to a text ad.
+   * Immutable. Details pertaining to a text ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+   * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.TextAdInfoOrBuilder getTextAdOrBuilder() {
     if (adDataCase_ == 6) {
        return (com.google.ads.googleads.v3.common.TextAdInfo) adData_;
@@ -1266,7 +1344,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
+   * @return Whether the expandedTextAd field is set.
    */
+  @java.lang.Override
   public boolean hasExpandedTextAd() {
     return adDataCase_ == 7;
   }
@@ -1276,7 +1356,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
+   * @return The expandedTextAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ExpandedTextAdInfo getExpandedTextAd() {
     if (adDataCase_ == 7) {
        return (com.google.ads.googleads.v3.common.ExpandedTextAdInfo) adData_;
@@ -1290,6 +1372,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ExpandedTextAdInfoOrBuilder getExpandedTextAdOrBuilder() {
     if (adDataCase_ == 7) {
        return (com.google.ads.googleads.v3.common.ExpandedTextAdInfo) adData_;
@@ -1304,7 +1387,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CallOnlyAdInfo call_only_ad = 13;</code>
+   * @return Whether the callOnlyAd field is set.
    */
+  @java.lang.Override
   public boolean hasCallOnlyAd() {
     return adDataCase_ == 13;
   }
@@ -1314,7 +1399,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CallOnlyAdInfo call_only_ad = 13;</code>
+   * @return The callOnlyAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CallOnlyAdInfo getCallOnlyAd() {
     if (adDataCase_ == 13) {
        return (com.google.ads.googleads.v3.common.CallOnlyAdInfo) adData_;
@@ -1328,6 +1415,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.CallOnlyAdInfo call_only_ad = 13;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CallOnlyAdInfoOrBuilder getCallOnlyAdOrBuilder() {
     if (adDataCase_ == 13) {
        return (com.google.ads.googleads.v3.common.CallOnlyAdInfo) adData_;
@@ -1338,29 +1426,33 @@ private static final long serialVersionUID = 0L;
   public static final int EXPANDED_DYNAMIC_SEARCH_AD_FIELD_NUMBER = 14;
   /**
    * <pre>
-   * Details pertaining to an Expanded Dynamic Search Ad.
+   * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
    * This type of ad has its headline, final URLs, and display URL
    * auto-generated at serving time according to domain name specific
    * information provided by `dynamic_search_ads_setting` linked at the
    * campaign level.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+   * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the expandedDynamicSearchAd field is set.
    */
+  @java.lang.Override
   public boolean hasExpandedDynamicSearchAd() {
     return adDataCase_ == 14;
   }
   /**
    * <pre>
-   * Details pertaining to an Expanded Dynamic Search Ad.
+   * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
    * This type of ad has its headline, final URLs, and display URL
    * auto-generated at serving time according to domain name specific
    * information provided by `dynamic_search_ads_setting` linked at the
    * campaign level.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+   * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The expandedDynamicSearchAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo getExpandedDynamicSearchAd() {
     if (adDataCase_ == 14) {
        return (com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo) adData_;
@@ -1369,15 +1461,16 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Details pertaining to an Expanded Dynamic Search Ad.
+   * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
    * This type of ad has its headline, final URLs, and display URL
    * auto-generated at serving time according to domain name specific
    * information provided by `dynamic_search_ads_setting` linked at the
    * campaign level.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+   * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfoOrBuilder getExpandedDynamicSearchAdOrBuilder() {
     if (adDataCase_ == 14) {
        return (com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo) adData_;
@@ -1392,7 +1485,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelAdInfo hotel_ad = 15;</code>
+   * @return Whether the hotelAd field is set.
    */
+  @java.lang.Override
   public boolean hasHotelAd() {
     return adDataCase_ == 15;
   }
@@ -1402,7 +1497,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.HotelAdInfo hotel_ad = 15;</code>
+   * @return The hotelAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.HotelAdInfo getHotelAd() {
     if (adDataCase_ == 15) {
        return (com.google.ads.googleads.v3.common.HotelAdInfo) adData_;
@@ -1416,6 +1513,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.HotelAdInfo hotel_ad = 15;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.HotelAdInfoOrBuilder getHotelAdOrBuilder() {
     if (adDataCase_ == 15) {
        return (com.google.ads.googleads.v3.common.HotelAdInfo) adData_;
@@ -1430,7 +1528,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ShoppingSmartAdInfo shopping_smart_ad = 17;</code>
+   * @return Whether the shoppingSmartAd field is set.
    */
+  @java.lang.Override
   public boolean hasShoppingSmartAd() {
     return adDataCase_ == 17;
   }
@@ -1440,7 +1540,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ShoppingSmartAdInfo shopping_smart_ad = 17;</code>
+   * @return The shoppingSmartAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ShoppingSmartAdInfo getShoppingSmartAd() {
     if (adDataCase_ == 17) {
        return (com.google.ads.googleads.v3.common.ShoppingSmartAdInfo) adData_;
@@ -1454,6 +1556,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.ShoppingSmartAdInfo shopping_smart_ad = 17;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ShoppingSmartAdInfoOrBuilder getShoppingSmartAdOrBuilder() {
     if (adDataCase_ == 17) {
        return (com.google.ads.googleads.v3.common.ShoppingSmartAdInfo) adData_;
@@ -1468,7 +1571,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+   * @return Whether the shoppingProductAd field is set.
    */
+  @java.lang.Override
   public boolean hasShoppingProductAd() {
     return adDataCase_ == 18;
   }
@@ -1478,7 +1583,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+   * @return The shoppingProductAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ShoppingProductAdInfo getShoppingProductAd() {
     if (adDataCase_ == 18) {
        return (com.google.ads.googleads.v3.common.ShoppingProductAdInfo) adData_;
@@ -1492,6 +1599,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ShoppingProductAdInfoOrBuilder getShoppingProductAdOrBuilder() {
     if (adDataCase_ == 18) {
        return (com.google.ads.googleads.v3.common.ShoppingProductAdInfo) adData_;
@@ -1502,21 +1610,25 @@ private static final long serialVersionUID = 0L;
   public static final int GMAIL_AD_FIELD_NUMBER = 21;
   /**
    * <pre>
-   * Details pertaining to a Gmail ad.
+   * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+   * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the gmailAd field is set.
    */
+  @java.lang.Override
   public boolean hasGmailAd() {
     return adDataCase_ == 21;
   }
   /**
    * <pre>
-   * Details pertaining to a Gmail ad.
+   * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+   * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The gmailAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.GmailAdInfo getGmailAd() {
     if (adDataCase_ == 21) {
        return (com.google.ads.googleads.v3.common.GmailAdInfo) adData_;
@@ -1525,11 +1637,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Details pertaining to a Gmail ad.
+   * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+   * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.GmailAdInfoOrBuilder getGmailAdOrBuilder() {
     if (adDataCase_ == 21) {
        return (com.google.ads.googleads.v3.common.GmailAdInfo) adData_;
@@ -1540,21 +1653,25 @@ private static final long serialVersionUID = 0L;
   public static final int IMAGE_AD_FIELD_NUMBER = 22;
   /**
    * <pre>
-   * Details pertaining to an Image ad.
+   * Immutable. Details pertaining to an Image ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+   * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the imageAd field is set.
    */
+  @java.lang.Override
   public boolean hasImageAd() {
     return adDataCase_ == 22;
   }
   /**
    * <pre>
-   * Details pertaining to an Image ad.
+   * Immutable. Details pertaining to an Image ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+   * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The imageAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ImageAdInfo getImageAd() {
     if (adDataCase_ == 22) {
        return (com.google.ads.googleads.v3.common.ImageAdInfo) adData_;
@@ -1563,11 +1680,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Details pertaining to an Image ad.
+   * Immutable. Details pertaining to an Image ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+   * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ImageAdInfoOrBuilder getImageAdOrBuilder() {
     if (adDataCase_ == 22) {
        return (com.google.ads.googleads.v3.common.ImageAdInfo) adData_;
@@ -1582,7 +1700,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoAdInfo video_ad = 24;</code>
+   * @return Whether the videoAd field is set.
    */
+  @java.lang.Override
   public boolean hasVideoAd() {
     return adDataCase_ == 24;
   }
@@ -1592,7 +1712,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.VideoAdInfo video_ad = 24;</code>
+   * @return The videoAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.VideoAdInfo getVideoAd() {
     if (adDataCase_ == 24) {
        return (com.google.ads.googleads.v3.common.VideoAdInfo) adData_;
@@ -1606,6 +1728,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.VideoAdInfo video_ad = 24;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.VideoAdInfoOrBuilder getVideoAdOrBuilder() {
     if (adDataCase_ == 24) {
        return (com.google.ads.googleads.v3.common.VideoAdInfo) adData_;
@@ -1620,7 +1743,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ResponsiveSearchAdInfo responsive_search_ad = 25;</code>
+   * @return Whether the responsiveSearchAd field is set.
    */
+  @java.lang.Override
   public boolean hasResponsiveSearchAd() {
     return adDataCase_ == 25;
   }
@@ -1630,7 +1755,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ResponsiveSearchAdInfo responsive_search_ad = 25;</code>
+   * @return The responsiveSearchAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ResponsiveSearchAdInfo getResponsiveSearchAd() {
     if (adDataCase_ == 25) {
        return (com.google.ads.googleads.v3.common.ResponsiveSearchAdInfo) adData_;
@@ -1644,6 +1771,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.ResponsiveSearchAdInfo responsive_search_ad = 25;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ResponsiveSearchAdInfoOrBuilder getResponsiveSearchAdOrBuilder() {
     if (adDataCase_ == 25) {
        return (com.google.ads.googleads.v3.common.ResponsiveSearchAdInfo) adData_;
@@ -1658,7 +1786,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfo legacy_responsive_display_ad = 28;</code>
+   * @return Whether the legacyResponsiveDisplayAd field is set.
    */
+  @java.lang.Override
   public boolean hasLegacyResponsiveDisplayAd() {
     return adDataCase_ == 28;
   }
@@ -1668,7 +1798,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfo legacy_responsive_display_ad = 28;</code>
+   * @return The legacyResponsiveDisplayAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfo getLegacyResponsiveDisplayAd() {
     if (adDataCase_ == 28) {
        return (com.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfo) adData_;
@@ -1682,6 +1814,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfo legacy_responsive_display_ad = 28;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfoOrBuilder getLegacyResponsiveDisplayAdOrBuilder() {
     if (adDataCase_ == 28) {
        return (com.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfo) adData_;
@@ -1696,7 +1829,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AppAdInfo app_ad = 29;</code>
+   * @return Whether the appAd field is set.
    */
+  @java.lang.Override
   public boolean hasAppAd() {
     return adDataCase_ == 29;
   }
@@ -1706,7 +1841,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AppAdInfo app_ad = 29;</code>
+   * @return The appAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.AppAdInfo getAppAd() {
     if (adDataCase_ == 29) {
        return (com.google.ads.googleads.v3.common.AppAdInfo) adData_;
@@ -1720,6 +1857,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.AppAdInfo app_ad = 29;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.AppAdInfoOrBuilder getAppAdOrBuilder() {
     if (adDataCase_ == 29) {
        return (com.google.ads.googleads.v3.common.AppAdInfo) adData_;
@@ -1734,7 +1872,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the legacyAppInstallAd field is set.
    */
+  @java.lang.Override
   public boolean hasLegacyAppInstallAd() {
     return adDataCase_ == 30;
   }
@@ -1744,7 +1884,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The legacyAppInstallAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo getLegacyAppInstallAd() {
     if (adDataCase_ == 30) {
        return (com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo) adData_;
@@ -1758,6 +1900,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.LegacyAppInstallAdInfoOrBuilder getLegacyAppInstallAdOrBuilder() {
     if (adDataCase_ == 30) {
        return (com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo) adData_;
@@ -1772,7 +1915,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+   * @return Whether the responsiveDisplayAd field is set.
    */
+  @java.lang.Override
   public boolean hasResponsiveDisplayAd() {
     return adDataCase_ == 31;
   }
@@ -1782,7 +1927,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+   * @return The responsiveDisplayAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo getResponsiveDisplayAd() {
     if (adDataCase_ == 31) {
        return (com.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo) adData_;
@@ -1796,6 +1943,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ResponsiveDisplayAdInfoOrBuilder getResponsiveDisplayAdOrBuilder() {
     if (adDataCase_ == 31) {
        return (com.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo) adData_;
@@ -1810,7 +1958,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+   * @return Whether the displayUploadAd field is set.
    */
+  @java.lang.Override
   public boolean hasDisplayUploadAd() {
     return adDataCase_ == 33;
   }
@@ -1820,7 +1970,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+   * @return The displayUploadAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.DisplayUploadAdInfo getDisplayUploadAd() {
     if (adDataCase_ == 33) {
        return (com.google.ads.googleads.v3.common.DisplayUploadAdInfo) adData_;
@@ -1834,6 +1986,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.DisplayUploadAdInfoOrBuilder getDisplayUploadAdOrBuilder() {
     if (adDataCase_ == 33) {
        return (com.google.ads.googleads.v3.common.DisplayUploadAdInfo) adData_;
@@ -1848,7 +2001,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+   * @return Whether the appEngagementAd field is set.
    */
+  @java.lang.Override
   public boolean hasAppEngagementAd() {
     return adDataCase_ == 34;
   }
@@ -1858,7 +2013,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+   * @return The appEngagementAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.AppEngagementAdInfo getAppEngagementAd() {
     if (adDataCase_ == 34) {
        return (com.google.ads.googleads.v3.common.AppEngagementAdInfo) adData_;
@@ -1872,6 +2029,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.AppEngagementAdInfoOrBuilder getAppEngagementAdOrBuilder() {
     if (adDataCase_ == 34) {
        return (com.google.ads.googleads.v3.common.AppEngagementAdInfo) adData_;
@@ -1886,7 +2044,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+   * @return Whether the shoppingComparisonListingAd field is set.
    */
+  @java.lang.Override
   public boolean hasShoppingComparisonListingAd() {
     return adDataCase_ == 36;
   }
@@ -1896,7 +2056,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+   * @return The shoppingComparisonListingAd.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfo getShoppingComparisonListingAd() {
     if (adDataCase_ == 36) {
        return (com.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfo) adData_;
@@ -1910,6 +2072,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfoOrBuilder getShoppingComparisonListingAdOrBuilder() {
     if (adDataCase_ == 36) {
        return (com.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfo) adData_;
@@ -2598,19 +2761,19 @@ private static final long serialVersionUID = 0L;
       }
       if (finalUrlsBuilder_ == null) {
         finalUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         finalUrlsBuilder_.clear();
       }
       if (finalAppUrlsBuilder_ == null) {
         finalAppUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         finalAppUrlsBuilder_.clear();
       }
       if (finalMobileUrlsBuilder_ == null) {
         finalMobileUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         finalMobileUrlsBuilder_.clear();
       }
@@ -2628,7 +2791,7 @@ private static final long serialVersionUID = 0L;
       }
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -2650,7 +2813,7 @@ private static final long serialVersionUID = 0L;
 
       if (urlCollectionsBuilder_ == null) {
         urlCollections_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
         urlCollectionsBuilder_.clear();
       }
@@ -2691,8 +2854,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.Ad buildPartial() {
       com.google.ads.googleads.v3.resources.Ad result = new com.google.ads.googleads.v3.resources.Ad(this);
       int from_bitField0_ = bitField0_;
-      int from_bitField1_ = bitField1_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (idBuilder_ == null) {
         result.id_ = id_;
@@ -2700,27 +2861,27 @@ private static final long serialVersionUID = 0L;
         result.id_ = idBuilder_.build();
       }
       if (finalUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.finalUrls_ = finalUrls_;
       } else {
         result.finalUrls_ = finalUrlsBuilder_.build();
       }
       if (finalAppUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           finalAppUrls_ = java.util.Collections.unmodifiableList(finalAppUrls_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.finalAppUrls_ = finalAppUrls_;
       } else {
         result.finalAppUrls_ = finalAppUrlsBuilder_.build();
       }
       if (finalMobileUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.finalMobileUrls_ = finalMobileUrls_;
       } else {
@@ -2737,9 +2898,9 @@ private static final long serialVersionUID = 0L;
         result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -2758,9 +2919,9 @@ private static final long serialVersionUID = 0L;
       }
       result.devicePreference_ = devicePreference_;
       if (urlCollectionsBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           urlCollections_ = java.util.Collections.unmodifiableList(urlCollections_);
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.urlCollections_ = urlCollections_;
       } else {
@@ -2898,7 +3059,6 @@ private static final long serialVersionUID = 0L;
           result.adData_ = shoppingComparisonListingAdBuilder_.build();
         }
       }
-      result.bitField0_ = to_bitField0_;
       result.adDataCase_ = adDataCase_;
       onBuilt();
       return result;
@@ -2959,7 +3119,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalUrls_.isEmpty()) {
           if (finalUrls_.isEmpty()) {
             finalUrls_ = other.finalUrls_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureFinalUrlsIsMutable();
             finalUrls_.addAll(other.finalUrls_);
@@ -2972,7 +3132,7 @@ private static final long serialVersionUID = 0L;
             finalUrlsBuilder_.dispose();
             finalUrlsBuilder_ = null;
             finalUrls_ = other.finalUrls_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
             finalUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalUrlsFieldBuilder() : null;
@@ -2985,7 +3145,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalAppUrls_.isEmpty()) {
           if (finalAppUrls_.isEmpty()) {
             finalAppUrls_ = other.finalAppUrls_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureFinalAppUrlsIsMutable();
             finalAppUrls_.addAll(other.finalAppUrls_);
@@ -2998,7 +3158,7 @@ private static final long serialVersionUID = 0L;
             finalAppUrlsBuilder_.dispose();
             finalAppUrlsBuilder_ = null;
             finalAppUrls_ = other.finalAppUrls_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
             finalAppUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalAppUrlsFieldBuilder() : null;
@@ -3011,7 +3171,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalMobileUrls_.isEmpty()) {
           if (finalMobileUrls_.isEmpty()) {
             finalMobileUrls_ = other.finalMobileUrls_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureFinalMobileUrlsIsMutable();
             finalMobileUrls_.addAll(other.finalMobileUrls_);
@@ -3024,7 +3184,7 @@ private static final long serialVersionUID = 0L;
             finalMobileUrlsBuilder_.dispose();
             finalMobileUrlsBuilder_ = null;
             finalMobileUrls_ = other.finalMobileUrls_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
             finalMobileUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalMobileUrlsFieldBuilder() : null;
@@ -3043,7 +3203,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -3056,7 +3216,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000008);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -3081,7 +3241,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCollections_.isEmpty()) {
           if (urlCollections_.isEmpty()) {
             urlCollections_ = other.urlCollections_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureUrlCollectionsIsMutable();
             urlCollections_.addAll(other.urlCollections_);
@@ -3094,7 +3254,7 @@ private static final long serialVersionUID = 0L;
             urlCollectionsBuilder_.dispose();
             urlCollectionsBuilder_ = null;
             urlCollections_ = other.urlCollections_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000010);
             urlCollectionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCollectionsFieldBuilder() : null;
@@ -3230,7 +3390,6 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
-    private int bitField1_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -3241,6 +3400,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -3262,6 +3422,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -3284,6 +3445,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -3303,6 +3466,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -3318,6 +3482,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -3340,6 +3506,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
@@ -3350,6 +3517,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -3487,9 +3655,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalUrls_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -3694,7 +3862,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalUrls() {
       if (finalUrlsBuilder_ == null) {
         finalUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         finalUrlsBuilder_.clear();
@@ -3806,7 +3974,7 @@ private static final long serialVersionUID = 0L;
         finalUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalUrls_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         finalUrls_ = null;
@@ -3817,9 +3985,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.FinalAppUrl> finalAppUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalAppUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         finalAppUrls_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.FinalAppUrl>(finalAppUrls_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -4024,7 +4192,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalAppUrls() {
       if (finalAppUrlsBuilder_ == null) {
         finalAppUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         finalAppUrlsBuilder_.clear();
@@ -4136,7 +4304,7 @@ private static final long serialVersionUID = 0L;
         finalAppUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.FinalAppUrl, com.google.ads.googleads.v3.common.FinalAppUrl.Builder, com.google.ads.googleads.v3.common.FinalAppUrlOrBuilder>(
                 finalAppUrls_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         finalAppUrls_ = null;
@@ -4147,9 +4315,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalMobileUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalMobileUrls_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -4354,7 +4522,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalMobileUrls() {
       if (finalMobileUrlsBuilder_ == null) {
         finalMobileUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         finalMobileUrlsBuilder_.clear();
@@ -4466,7 +4634,7 @@ private static final long serialVersionUID = 0L;
         finalMobileUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalMobileUrls_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         finalMobileUrls_ = null;
@@ -4483,6 +4651,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+     * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
       return trackingUrlTemplateBuilder_ != null || trackingUrlTemplate_ != null;
@@ -4493,6 +4662,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+     * @return The trackingUrlTemplate.
      */
     public com.google.protobuf.StringValue getTrackingUrlTemplate() {
       if (trackingUrlTemplateBuilder_ == null) {
@@ -4636,6 +4806,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
       return finalUrlSuffixBuilder_ != null || finalUrlSuffix_ != null;
@@ -4646,6 +4817,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     * @return The finalUrlSuffix.
      */
     public com.google.protobuf.StringValue getFinalUrlSuffix() {
       if (finalUrlSuffixBuilder_ == null) {
@@ -4783,9 +4955,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -5001,7 +5173,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -5120,7 +5292,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.CustomParameter, com.google.ads.googleads.v3.common.CustomParameter.Builder, com.google.ads.googleads.v3.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000080) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -5137,6 +5309,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue display_url = 4;</code>
+     * @return Whether the displayUrl field is set.
      */
     public boolean hasDisplayUrl() {
       return displayUrlBuilder_ != null || displayUrl_ != null;
@@ -5147,6 +5320,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue display_url = 4;</code>
+     * @return The displayUrl.
      */
     public com.google.protobuf.StringValue getDisplayUrl() {
       if (displayUrlBuilder_ == null) {
@@ -5288,8 +5462,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -5298,8 +5473,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -5310,7 +5488,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.AdTypeEnum.AdType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.AdTypeEnum.AdType result = com.google.ads.googleads.v3.enums.AdTypeEnum.AdType.valueOf(type_);
@@ -5322,6 +5502,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v3.enums.AdTypeEnum.AdType value) {
       if (value == null) {
@@ -5338,6 +5520,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdTypeEnum.AdType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -5358,6 +5541,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the addedByGoogleAds field is set.
      */
     public boolean hasAddedByGoogleAds() {
       return addedByGoogleAdsBuilder_ != null || addedByGoogleAds_ != null;
@@ -5371,6 +5555,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue added_by_google_ads = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The addedByGoogleAds.
      */
     public com.google.protobuf.BoolValue getAddedByGoogleAds() {
       if (addedByGoogleAdsBuilder_ == null) {
@@ -5538,8 +5723,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.DeviceEnum.Device device_preference = 20;</code>
+     * @return The enum numeric value on the wire for devicePreference.
      */
-    public int getDevicePreferenceValue() {
+    @java.lang.Override public int getDevicePreferenceValue() {
       return devicePreference_;
     }
     /**
@@ -5553,8 +5739,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.DeviceEnum.Device device_preference = 20;</code>
+     * @param value The enum numeric value on the wire for devicePreference to set.
+     * @return This builder for chaining.
      */
     public Builder setDevicePreferenceValue(int value) {
+      
       devicePreference_ = value;
       onChanged();
       return this;
@@ -5570,7 +5759,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.DeviceEnum.Device device_preference = 20;</code>
+     * @return The devicePreference.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.DeviceEnum.Device getDevicePreference() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.DeviceEnum.Device result = com.google.ads.googleads.v3.enums.DeviceEnum.Device.valueOf(devicePreference_);
@@ -5587,6 +5778,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.DeviceEnum.Device device_preference = 20;</code>
+     * @param value The devicePreference to set.
+     * @return This builder for chaining.
      */
     public Builder setDevicePreference(com.google.ads.googleads.v3.enums.DeviceEnum.Device value) {
       if (value == null) {
@@ -5608,6 +5801,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.DeviceEnum.Device device_preference = 20;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDevicePreference() {
       
@@ -5619,9 +5813,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.UrlCollection> urlCollections_ =
       java.util.Collections.emptyList();
     private void ensureUrlCollectionsIsMutable() {
-      if (!((bitField0_ & 0x00001000) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         urlCollections_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.UrlCollection>(urlCollections_);
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -5826,7 +6020,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCollections() {
       if (urlCollectionsBuilder_ == null) {
         urlCollections_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         urlCollectionsBuilder_.clear();
@@ -5938,7 +6132,7 @@ private static final long serialVersionUID = 0L;
         urlCollectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.UrlCollection, com.google.ads.googleads.v3.common.UrlCollection.Builder, com.google.ads.googleads.v3.common.UrlCollectionOrBuilder>(
                 urlCollections_,
-                ((bitField0_ & 0x00001000) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         urlCollections_ = null;
@@ -5956,6 +6150,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -5967,6 +6162,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -6116,8 +6312,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for systemManagedResourceSource.
      */
-    public int getSystemManagedResourceSourceValue() {
+    @java.lang.Override public int getSystemManagedResourceSourceValue() {
       return systemManagedResourceSource_;
     }
     /**
@@ -6127,8 +6324,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for systemManagedResourceSource to set.
+     * @return This builder for chaining.
      */
     public Builder setSystemManagedResourceSourceValue(int value) {
+      
       systemManagedResourceSource_ = value;
       onChanged();
       return this;
@@ -6140,7 +6340,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The systemManagedResourceSource.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource getSystemManagedResourceSource() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource result = com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.valueOf(systemManagedResourceSource_);
@@ -6153,6 +6355,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The systemManagedResourceSource to set.
+     * @return This builder for chaining.
      */
     public Builder setSystemManagedResourceSource(com.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource value) {
       if (value == null) {
@@ -6170,6 +6374,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearSystemManagedResourceSource() {
       
@@ -6182,21 +6387,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.TextAdInfo, com.google.ads.googleads.v3.common.TextAdInfo.Builder, com.google.ads.googleads.v3.common.TextAdInfoOrBuilder> textAdBuilder_;
     /**
      * <pre>
-     * Details pertaining to a text ad.
+     * Immutable. Details pertaining to a text ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the textAd field is set.
      */
+    @java.lang.Override
     public boolean hasTextAd() {
       return adDataCase_ == 6;
     }
     /**
      * <pre>
-     * Details pertaining to a text ad.
+     * Immutable. Details pertaining to a text ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The textAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.TextAdInfo getTextAd() {
       if (textAdBuilder_ == null) {
         if (adDataCase_ == 6) {
@@ -6212,10 +6421,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a text ad.
+     * Immutable. Details pertaining to a text ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTextAd(com.google.ads.googleads.v3.common.TextAdInfo value) {
       if (textAdBuilder_ == null) {
@@ -6232,10 +6441,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a text ad.
+     * Immutable. Details pertaining to a text ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setTextAd(
         com.google.ads.googleads.v3.common.TextAdInfo.Builder builderForValue) {
@@ -6250,10 +6459,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a text ad.
+     * Immutable. Details pertaining to a text ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeTextAd(com.google.ads.googleads.v3.common.TextAdInfo value) {
       if (textAdBuilder_ == null) {
@@ -6276,10 +6485,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a text ad.
+     * Immutable. Details pertaining to a text ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearTextAd() {
       if (textAdBuilder_ == null) {
@@ -6299,21 +6508,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a text ad.
+     * Immutable. Details pertaining to a text ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.TextAdInfo.Builder getTextAdBuilder() {
       return getTextAdFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Details pertaining to a text ad.
+     * Immutable. Details pertaining to a text ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.TextAdInfoOrBuilder getTextAdOrBuilder() {
       if ((adDataCase_ == 6) && (textAdBuilder_ != null)) {
         return textAdBuilder_.getMessageOrBuilder();
@@ -6326,10 +6536,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a text ad.
+     * Immutable. Details pertaining to a text ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6;</code>
+     * <code>.google.ads.googleads.v3.common.TextAdInfo text_ad = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.TextAdInfo, com.google.ads.googleads.v3.common.TextAdInfo.Builder, com.google.ads.googleads.v3.common.TextAdInfoOrBuilder> 
@@ -6358,7 +6568,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
+     * @return Whether the expandedTextAd field is set.
      */
+    @java.lang.Override
     public boolean hasExpandedTextAd() {
       return adDataCase_ == 7;
     }
@@ -6368,7 +6580,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
+     * @return The expandedTextAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ExpandedTextAdInfo getExpandedTextAd() {
       if (expandedTextAdBuilder_ == null) {
         if (adDataCase_ == 7) {
@@ -6486,6 +6700,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.ExpandedTextAdInfo expanded_text_ad = 7;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ExpandedTextAdInfoOrBuilder getExpandedTextAdOrBuilder() {
       if ((adDataCase_ == 7) && (expandedTextAdBuilder_ != null)) {
         return expandedTextAdBuilder_.getMessageOrBuilder();
@@ -6530,7 +6745,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.CallOnlyAdInfo call_only_ad = 13;</code>
+     * @return Whether the callOnlyAd field is set.
      */
+    @java.lang.Override
     public boolean hasCallOnlyAd() {
       return adDataCase_ == 13;
     }
@@ -6540,7 +6757,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.CallOnlyAdInfo call_only_ad = 13;</code>
+     * @return The callOnlyAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.CallOnlyAdInfo getCallOnlyAd() {
       if (callOnlyAdBuilder_ == null) {
         if (adDataCase_ == 13) {
@@ -6658,6 +6877,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.CallOnlyAdInfo call_only_ad = 13;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.CallOnlyAdInfoOrBuilder getCallOnlyAdOrBuilder() {
       if ((adDataCase_ == 13) && (callOnlyAdBuilder_ != null)) {
         return callOnlyAdBuilder_.getMessageOrBuilder();
@@ -6698,29 +6918,33 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo, com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo.Builder, com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfoOrBuilder> expandedDynamicSearchAdBuilder_;
     /**
      * <pre>
-     * Details pertaining to an Expanded Dynamic Search Ad.
+     * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
      * This type of ad has its headline, final URLs, and display URL
      * auto-generated at serving time according to domain name specific
      * information provided by `dynamic_search_ads_setting` linked at the
      * campaign level.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the expandedDynamicSearchAd field is set.
      */
+    @java.lang.Override
     public boolean hasExpandedDynamicSearchAd() {
       return adDataCase_ == 14;
     }
     /**
      * <pre>
-     * Details pertaining to an Expanded Dynamic Search Ad.
+     * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
      * This type of ad has its headline, final URLs, and display URL
      * auto-generated at serving time according to domain name specific
      * information provided by `dynamic_search_ads_setting` linked at the
      * campaign level.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The expandedDynamicSearchAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo getExpandedDynamicSearchAd() {
       if (expandedDynamicSearchAdBuilder_ == null) {
         if (adDataCase_ == 14) {
@@ -6736,14 +6960,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Expanded Dynamic Search Ad.
+     * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
      * This type of ad has its headline, final URLs, and display URL
      * auto-generated at serving time according to domain name specific
      * information provided by `dynamic_search_ads_setting` linked at the
      * campaign level.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setExpandedDynamicSearchAd(com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo value) {
       if (expandedDynamicSearchAdBuilder_ == null) {
@@ -6760,14 +6984,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Expanded Dynamic Search Ad.
+     * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
      * This type of ad has its headline, final URLs, and display URL
      * auto-generated at serving time according to domain name specific
      * information provided by `dynamic_search_ads_setting` linked at the
      * campaign level.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setExpandedDynamicSearchAd(
         com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo.Builder builderForValue) {
@@ -6782,14 +7006,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Expanded Dynamic Search Ad.
+     * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
      * This type of ad has its headline, final URLs, and display URL
      * auto-generated at serving time according to domain name specific
      * information provided by `dynamic_search_ads_setting` linked at the
      * campaign level.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeExpandedDynamicSearchAd(com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo value) {
       if (expandedDynamicSearchAdBuilder_ == null) {
@@ -6812,14 +7036,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Expanded Dynamic Search Ad.
+     * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
      * This type of ad has its headline, final URLs, and display URL
      * auto-generated at serving time according to domain name specific
      * information provided by `dynamic_search_ads_setting` linked at the
      * campaign level.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearExpandedDynamicSearchAd() {
       if (expandedDynamicSearchAdBuilder_ == null) {
@@ -6839,29 +7063,30 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Expanded Dynamic Search Ad.
+     * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
      * This type of ad has its headline, final URLs, and display URL
      * auto-generated at serving time according to domain name specific
      * information provided by `dynamic_search_ads_setting` linked at the
      * campaign level.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo.Builder getExpandedDynamicSearchAdBuilder() {
       return getExpandedDynamicSearchAdFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Details pertaining to an Expanded Dynamic Search Ad.
+     * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
      * This type of ad has its headline, final URLs, and display URL
      * auto-generated at serving time according to domain name specific
      * information provided by `dynamic_search_ads_setting` linked at the
      * campaign level.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfoOrBuilder getExpandedDynamicSearchAdOrBuilder() {
       if ((adDataCase_ == 14) && (expandedDynamicSearchAdBuilder_ != null)) {
         return expandedDynamicSearchAdBuilder_.getMessageOrBuilder();
@@ -6874,14 +7099,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Expanded Dynamic Search Ad.
+     * Immutable. Details pertaining to an Expanded Dynamic Search Ad.
      * This type of ad has its headline, final URLs, and display URL
      * auto-generated at serving time according to domain name specific
      * information provided by `dynamic_search_ads_setting` linked at the
      * campaign level.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14;</code>
+     * <code>.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo expanded_dynamic_search_ad = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo, com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfo.Builder, com.google.ads.googleads.v3.common.ExpandedDynamicSearchAdInfoOrBuilder> 
@@ -6910,7 +7135,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.HotelAdInfo hotel_ad = 15;</code>
+     * @return Whether the hotelAd field is set.
      */
+    @java.lang.Override
     public boolean hasHotelAd() {
       return adDataCase_ == 15;
     }
@@ -6920,7 +7147,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.HotelAdInfo hotel_ad = 15;</code>
+     * @return The hotelAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.HotelAdInfo getHotelAd() {
       if (hotelAdBuilder_ == null) {
         if (adDataCase_ == 15) {
@@ -7038,6 +7267,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.HotelAdInfo hotel_ad = 15;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.HotelAdInfoOrBuilder getHotelAdOrBuilder() {
       if ((adDataCase_ == 15) && (hotelAdBuilder_ != null)) {
         return hotelAdBuilder_.getMessageOrBuilder();
@@ -7082,7 +7312,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ShoppingSmartAdInfo shopping_smart_ad = 17;</code>
+     * @return Whether the shoppingSmartAd field is set.
      */
+    @java.lang.Override
     public boolean hasShoppingSmartAd() {
       return adDataCase_ == 17;
     }
@@ -7092,7 +7324,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ShoppingSmartAdInfo shopping_smart_ad = 17;</code>
+     * @return The shoppingSmartAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ShoppingSmartAdInfo getShoppingSmartAd() {
       if (shoppingSmartAdBuilder_ == null) {
         if (adDataCase_ == 17) {
@@ -7210,6 +7444,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.ShoppingSmartAdInfo shopping_smart_ad = 17;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ShoppingSmartAdInfoOrBuilder getShoppingSmartAdOrBuilder() {
       if ((adDataCase_ == 17) && (shoppingSmartAdBuilder_ != null)) {
         return shoppingSmartAdBuilder_.getMessageOrBuilder();
@@ -7254,7 +7489,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     * @return Whether the shoppingProductAd field is set.
      */
+    @java.lang.Override
     public boolean hasShoppingProductAd() {
       return adDataCase_ == 18;
     }
@@ -7264,7 +7501,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
+     * @return The shoppingProductAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ShoppingProductAdInfo getShoppingProductAd() {
       if (shoppingProductAdBuilder_ == null) {
         if (adDataCase_ == 18) {
@@ -7382,6 +7621,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.ShoppingProductAdInfo shopping_product_ad = 18;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ShoppingProductAdInfoOrBuilder getShoppingProductAdOrBuilder() {
       if ((adDataCase_ == 18) && (shoppingProductAdBuilder_ != null)) {
         return shoppingProductAdBuilder_.getMessageOrBuilder();
@@ -7422,21 +7662,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.GmailAdInfo, com.google.ads.googleads.v3.common.GmailAdInfo.Builder, com.google.ads.googleads.v3.common.GmailAdInfoOrBuilder> gmailAdBuilder_;
     /**
      * <pre>
-     * Details pertaining to a Gmail ad.
+     * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the gmailAd field is set.
      */
+    @java.lang.Override
     public boolean hasGmailAd() {
       return adDataCase_ == 21;
     }
     /**
      * <pre>
-     * Details pertaining to a Gmail ad.
+     * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The gmailAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.GmailAdInfo getGmailAd() {
       if (gmailAdBuilder_ == null) {
         if (adDataCase_ == 21) {
@@ -7452,10 +7696,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a Gmail ad.
+     * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setGmailAd(com.google.ads.googleads.v3.common.GmailAdInfo value) {
       if (gmailAdBuilder_ == null) {
@@ -7472,10 +7716,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a Gmail ad.
+     * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setGmailAd(
         com.google.ads.googleads.v3.common.GmailAdInfo.Builder builderForValue) {
@@ -7490,10 +7734,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a Gmail ad.
+     * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeGmailAd(com.google.ads.googleads.v3.common.GmailAdInfo value) {
       if (gmailAdBuilder_ == null) {
@@ -7516,10 +7760,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a Gmail ad.
+     * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearGmailAd() {
       if (gmailAdBuilder_ == null) {
@@ -7539,21 +7783,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a Gmail ad.
+     * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.GmailAdInfo.Builder getGmailAdBuilder() {
       return getGmailAdFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Details pertaining to a Gmail ad.
+     * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.GmailAdInfoOrBuilder getGmailAdOrBuilder() {
       if ((adDataCase_ == 21) && (gmailAdBuilder_ != null)) {
         return gmailAdBuilder_.getMessageOrBuilder();
@@ -7566,10 +7811,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to a Gmail ad.
+     * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21;</code>
+     * <code>.google.ads.googleads.v3.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.GmailAdInfo, com.google.ads.googleads.v3.common.GmailAdInfo.Builder, com.google.ads.googleads.v3.common.GmailAdInfoOrBuilder> 
@@ -7594,21 +7839,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v3.common.ImageAdInfo, com.google.ads.googleads.v3.common.ImageAdInfo.Builder, com.google.ads.googleads.v3.common.ImageAdInfoOrBuilder> imageAdBuilder_;
     /**
      * <pre>
-     * Details pertaining to an Image ad.
+     * Immutable. Details pertaining to an Image ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the imageAd field is set.
      */
+    @java.lang.Override
     public boolean hasImageAd() {
       return adDataCase_ == 22;
     }
     /**
      * <pre>
-     * Details pertaining to an Image ad.
+     * Immutable. Details pertaining to an Image ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The imageAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ImageAdInfo getImageAd() {
       if (imageAdBuilder_ == null) {
         if (adDataCase_ == 22) {
@@ -7624,10 +7873,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Image ad.
+     * Immutable. Details pertaining to an Image ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setImageAd(com.google.ads.googleads.v3.common.ImageAdInfo value) {
       if (imageAdBuilder_ == null) {
@@ -7644,10 +7893,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Image ad.
+     * Immutable. Details pertaining to an Image ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setImageAd(
         com.google.ads.googleads.v3.common.ImageAdInfo.Builder builderForValue) {
@@ -7662,10 +7911,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Image ad.
+     * Immutable. Details pertaining to an Image ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeImageAd(com.google.ads.googleads.v3.common.ImageAdInfo value) {
       if (imageAdBuilder_ == null) {
@@ -7688,10 +7937,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Image ad.
+     * Immutable. Details pertaining to an Image ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearImageAd() {
       if (imageAdBuilder_ == null) {
@@ -7711,21 +7960,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Image ad.
+     * Immutable. Details pertaining to an Image ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v3.common.ImageAdInfo.Builder getImageAdBuilder() {
       return getImageAdFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Details pertaining to an Image ad.
+     * Immutable. Details pertaining to an Image ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ImageAdInfoOrBuilder getImageAdOrBuilder() {
       if ((adDataCase_ == 22) && (imageAdBuilder_ != null)) {
         return imageAdBuilder_.getMessageOrBuilder();
@@ -7738,10 +7988,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details pertaining to an Image ad.
+     * Immutable. Details pertaining to an Image ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22;</code>
+     * <code>.google.ads.googleads.v3.common.ImageAdInfo image_ad = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v3.common.ImageAdInfo, com.google.ads.googleads.v3.common.ImageAdInfo.Builder, com.google.ads.googleads.v3.common.ImageAdInfoOrBuilder> 
@@ -7770,7 +8020,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.VideoAdInfo video_ad = 24;</code>
+     * @return Whether the videoAd field is set.
      */
+    @java.lang.Override
     public boolean hasVideoAd() {
       return adDataCase_ == 24;
     }
@@ -7780,7 +8032,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.VideoAdInfo video_ad = 24;</code>
+     * @return The videoAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.VideoAdInfo getVideoAd() {
       if (videoAdBuilder_ == null) {
         if (adDataCase_ == 24) {
@@ -7898,6 +8152,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.VideoAdInfo video_ad = 24;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.VideoAdInfoOrBuilder getVideoAdOrBuilder() {
       if ((adDataCase_ == 24) && (videoAdBuilder_ != null)) {
         return videoAdBuilder_.getMessageOrBuilder();
@@ -7942,7 +8197,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ResponsiveSearchAdInfo responsive_search_ad = 25;</code>
+     * @return Whether the responsiveSearchAd field is set.
      */
+    @java.lang.Override
     public boolean hasResponsiveSearchAd() {
       return adDataCase_ == 25;
     }
@@ -7952,7 +8209,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ResponsiveSearchAdInfo responsive_search_ad = 25;</code>
+     * @return The responsiveSearchAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ResponsiveSearchAdInfo getResponsiveSearchAd() {
       if (responsiveSearchAdBuilder_ == null) {
         if (adDataCase_ == 25) {
@@ -8070,6 +8329,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.ResponsiveSearchAdInfo responsive_search_ad = 25;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ResponsiveSearchAdInfoOrBuilder getResponsiveSearchAdOrBuilder() {
       if ((adDataCase_ == 25) && (responsiveSearchAdBuilder_ != null)) {
         return responsiveSearchAdBuilder_.getMessageOrBuilder();
@@ -8114,7 +8374,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfo legacy_responsive_display_ad = 28;</code>
+     * @return Whether the legacyResponsiveDisplayAd field is set.
      */
+    @java.lang.Override
     public boolean hasLegacyResponsiveDisplayAd() {
       return adDataCase_ == 28;
     }
@@ -8124,7 +8386,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfo legacy_responsive_display_ad = 28;</code>
+     * @return The legacyResponsiveDisplayAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfo getLegacyResponsiveDisplayAd() {
       if (legacyResponsiveDisplayAdBuilder_ == null) {
         if (adDataCase_ == 28) {
@@ -8242,6 +8506,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfo legacy_responsive_display_ad = 28;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.LegacyResponsiveDisplayAdInfoOrBuilder getLegacyResponsiveDisplayAdOrBuilder() {
       if ((adDataCase_ == 28) && (legacyResponsiveDisplayAdBuilder_ != null)) {
         return legacyResponsiveDisplayAdBuilder_.getMessageOrBuilder();
@@ -8286,7 +8551,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.AppAdInfo app_ad = 29;</code>
+     * @return Whether the appAd field is set.
      */
+    @java.lang.Override
     public boolean hasAppAd() {
       return adDataCase_ == 29;
     }
@@ -8296,7 +8563,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.AppAdInfo app_ad = 29;</code>
+     * @return The appAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.AppAdInfo getAppAd() {
       if (appAdBuilder_ == null) {
         if (adDataCase_ == 29) {
@@ -8414,6 +8683,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.AppAdInfo app_ad = 29;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.AppAdInfoOrBuilder getAppAdOrBuilder() {
       if ((adDataCase_ == 29) && (appAdBuilder_ != null)) {
         return appAdBuilder_.getMessageOrBuilder();
@@ -8458,7 +8728,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the legacyAppInstallAd field is set.
      */
+    @java.lang.Override
     public boolean hasLegacyAppInstallAd() {
       return adDataCase_ == 30;
     }
@@ -8468,7 +8740,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The legacyAppInstallAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.LegacyAppInstallAdInfo getLegacyAppInstallAd() {
       if (legacyAppInstallAdBuilder_ == null) {
         if (adDataCase_ == 30) {
@@ -8586,6 +8860,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.LegacyAppInstallAdInfo legacy_app_install_ad = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.LegacyAppInstallAdInfoOrBuilder getLegacyAppInstallAdOrBuilder() {
       if ((adDataCase_ == 30) && (legacyAppInstallAdBuilder_ != null)) {
         return legacyAppInstallAdBuilder_.getMessageOrBuilder();
@@ -8630,7 +8905,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     * @return Whether the responsiveDisplayAd field is set.
      */
+    @java.lang.Override
     public boolean hasResponsiveDisplayAd() {
       return adDataCase_ == 31;
     }
@@ -8640,7 +8917,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
+     * @return The responsiveDisplayAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo getResponsiveDisplayAd() {
       if (responsiveDisplayAdBuilder_ == null) {
         if (adDataCase_ == 31) {
@@ -8758,6 +9037,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.ResponsiveDisplayAdInfo responsive_display_ad = 31;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ResponsiveDisplayAdInfoOrBuilder getResponsiveDisplayAdOrBuilder() {
       if ((adDataCase_ == 31) && (responsiveDisplayAdBuilder_ != null)) {
         return responsiveDisplayAdBuilder_.getMessageOrBuilder();
@@ -8802,7 +9082,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     * @return Whether the displayUploadAd field is set.
      */
+    @java.lang.Override
     public boolean hasDisplayUploadAd() {
       return adDataCase_ == 33;
     }
@@ -8812,7 +9094,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
+     * @return The displayUploadAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.DisplayUploadAdInfo getDisplayUploadAd() {
       if (displayUploadAdBuilder_ == null) {
         if (adDataCase_ == 33) {
@@ -8930,6 +9214,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.DisplayUploadAdInfo display_upload_ad = 33;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.DisplayUploadAdInfoOrBuilder getDisplayUploadAdOrBuilder() {
       if ((adDataCase_ == 33) && (displayUploadAdBuilder_ != null)) {
         return displayUploadAdBuilder_.getMessageOrBuilder();
@@ -8974,7 +9259,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     * @return Whether the appEngagementAd field is set.
      */
+    @java.lang.Override
     public boolean hasAppEngagementAd() {
       return adDataCase_ == 34;
     }
@@ -8984,7 +9271,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
+     * @return The appEngagementAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.AppEngagementAdInfo getAppEngagementAd() {
       if (appEngagementAdBuilder_ == null) {
         if (adDataCase_ == 34) {
@@ -9102,6 +9391,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.AppEngagementAdInfo app_engagement_ad = 34;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.AppEngagementAdInfoOrBuilder getAppEngagementAdOrBuilder() {
       if ((adDataCase_ == 34) && (appEngagementAdBuilder_ != null)) {
         return appEngagementAdBuilder_.getMessageOrBuilder();
@@ -9146,7 +9436,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     * @return Whether the shoppingComparisonListingAd field is set.
      */
+    @java.lang.Override
     public boolean hasShoppingComparisonListingAd() {
       return adDataCase_ == 36;
     }
@@ -9156,7 +9448,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
+     * @return The shoppingComparisonListingAd.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfo getShoppingComparisonListingAd() {
       if (shoppingComparisonListingAdBuilder_ == null) {
         if (adDataCase_ == 36) {
@@ -9274,6 +9568,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfo shopping_comparison_listing_ad = 36;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.ShoppingComparisonListingAdInfoOrBuilder getShoppingComparisonListingAdOrBuilder() {
       if ((adDataCase_ == 36) && (shoppingComparisonListingAdBuilder_ != null)) {
         return shoppingComparisonListingAdBuilder_.getMessageOrBuilder();

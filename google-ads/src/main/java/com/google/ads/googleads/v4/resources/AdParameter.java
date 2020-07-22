@@ -15,7 +15,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.AdParameter}
  */
-public  final class AdParameter extends
+public final class AdParameter extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.AdParameter)
     AdParameterOrBuilder {
@@ -147,6 +147,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -169,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -193,6 +195,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupCriterion field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterion() {
     return adGroupCriterion_ != null;
   }
@@ -204,6 +207,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupCriterion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroupCriterion() {
     return adGroupCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroupCriterion_;
   }
@@ -214,6 +218,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupCriterionOrBuilder() {
     return getAdGroupCriterion();
   }
@@ -228,6 +233,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the parameterIndex field is set.
    */
+  @java.lang.Override
   public boolean hasParameterIndex() {
     return parameterIndex_ != null;
   }
@@ -239,6 +245,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The parameterIndex.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getParameterIndex() {
     return parameterIndex_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parameterIndex_;
   }
@@ -249,6 +256,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getParameterIndexOrBuilder() {
     return getParameterIndex();
   }
@@ -275,6 +283,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue insertion_text = 4;</code>
    * @return Whether the insertionText field is set.
    */
+  @java.lang.Override
   public boolean hasInsertionText() {
     return insertionText_ != null;
   }
@@ -298,6 +307,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue insertion_text = 4;</code>
    * @return The insertionText.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getInsertionText() {
     return insertionText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : insertionText_;
   }
@@ -320,6 +330,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue insertion_text = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getInsertionTextOrBuilder() {
     return getInsertionText();
   }

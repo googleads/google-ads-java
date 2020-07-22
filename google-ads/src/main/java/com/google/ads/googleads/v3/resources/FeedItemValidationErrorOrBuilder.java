@@ -14,6 +14,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for validationError.
    */
   int getValidationErrorValue();
   /**
@@ -23,6 +24,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The validationError.
    */
   com.google.ads.googleads.v3.errors.FeedItemValidationErrorEnum.FeedItemValidationError getValidationError();
 
@@ -32,6 +34,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -40,6 +43,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**
@@ -113,6 +117,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue extra_info = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the extraInfo field is set.
    */
   boolean hasExtraInfo();
   /**
@@ -123,6 +128,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue extra_info = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The extraInfo.
    */
   com.google.protobuf.StringValue getExtraInfo();
   /**

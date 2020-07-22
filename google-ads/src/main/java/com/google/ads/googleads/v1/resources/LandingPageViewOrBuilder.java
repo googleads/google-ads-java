@@ -9,48 +9,52 @@ public interface LandingPageViewOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the landing page view.
+   * Output only. The resource name of the landing page view.
    * Landing page view resource names have the form:
    * `customers/{customer_id}/landingPageViews/{unexpanded_final_url_fingerprint}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the landing page view.
+   * Output only. The resource name of the landing page view.
    * Landing page view resource names have the form:
    * `customers/{customer_id}/landingPageViews/{unexpanded_final_url_fingerprint}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The advertiser-specified final URL.
+   * Output only. The advertiser-specified final URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue unexpanded_final_url = 2;</code>
+   * <code>.google.protobuf.StringValue unexpanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the unexpandedFinalUrl field is set.
    */
   boolean hasUnexpandedFinalUrl();
   /**
    * <pre>
-   * The advertiser-specified final URL.
+   * Output only. The advertiser-specified final URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue unexpanded_final_url = 2;</code>
+   * <code>.google.protobuf.StringValue unexpanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The unexpandedFinalUrl.
    */
   com.google.protobuf.StringValue getUnexpandedFinalUrl();
   /**
    * <pre>
-   * The advertiser-specified final URL.
+   * Output only. The advertiser-specified final URL.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue unexpanded_final_url = 2;</code>
+   * <code>.google.protobuf.StringValue unexpanded_final_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getUnexpandedFinalUrlOrBuilder();
 }

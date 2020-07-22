@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.ListAccessibleCustomersResponse}
  */
-public  final class ListAccessibleCustomersResponse extends
+public final class ListAccessibleCustomersResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.ListAccessibleCustomersResponse)
     ListAccessibleCustomersResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private ListAccessibleCustomersResponse() {
     resourceNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListAccessibleCustomersResponse();
   }
 
   @java.lang.Override
@@ -100,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string resource_names = 1;</code>
+   * @return A list containing the resourceNames.
    */
   public com.google.protobuf.ProtocolStringList
       getResourceNamesList() {
@@ -112,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string resource_names = 1;</code>
+   * @return The count of resourceNames.
    */
   public int getResourceNamesCount() {
     return resourceNames_.size();
@@ -123,6 +132,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string resource_names = 1;</code>
+   * @param index The index of the element to return.
+   * @return The resourceNames at the given index.
    */
   public java.lang.String getResourceNames(int index) {
     return resourceNames_.get(index);
@@ -134,6 +145,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string resource_names = 1;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the resourceNames at the given index.
    */
   public com.google.protobuf.ByteString
       getResourceNamesBytes(int index) {
@@ -479,6 +492,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resource_names = 1;</code>
+     * @return A list containing the resourceNames.
      */
     public com.google.protobuf.ProtocolStringList
         getResourceNamesList() {
@@ -491,6 +505,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resource_names = 1;</code>
+     * @return The count of resourceNames.
      */
     public int getResourceNamesCount() {
       return resourceNames_.size();
@@ -502,6 +517,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resource_names = 1;</code>
+     * @param index The index of the element to return.
+     * @return The resourceNames at the given index.
      */
     public java.lang.String getResourceNames(int index) {
       return resourceNames_.get(index);
@@ -513,6 +530,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resource_names = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the resourceNames at the given index.
      */
     public com.google.protobuf.ByteString
         getResourceNamesBytes(int index) {
@@ -525,6 +544,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resource_names = 1;</code>
+     * @param index The index to set the value at.
+     * @param value The resourceNames to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNames(
         int index, java.lang.String value) {
@@ -543,6 +565,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resource_names = 1;</code>
+     * @param value The resourceNames to add.
+     * @return This builder for chaining.
      */
     public Builder addResourceNames(
         java.lang.String value) {
@@ -561,6 +585,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resource_names = 1;</code>
+     * @param values The resourceNames to add.
+     * @return This builder for chaining.
      */
     public Builder addAllResourceNames(
         java.lang.Iterable<java.lang.String> values) {
@@ -577,6 +603,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resource_names = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceNames() {
       resourceNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -591,6 +618,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resource_names = 1;</code>
+     * @param value The bytes of the resourceNames to add.
+     * @return This builder for chaining.
      */
     public Builder addResourceNamesBytes(
         com.google.protobuf.ByteString value) {

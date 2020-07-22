@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/age_range_view_service.proto")
 public final class AgeRangeViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class AgeRangeViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.AgeRangeViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAgeRangeViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetAgeRangeViewRequest,
-      com.google.ads.googleads.v2.resources.AgeRangeView> METHOD_GET_AGE_RANGE_VIEW = getGetAgeRangeViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetAgeRangeViewRequest,
       com.google.ads.googleads.v2.resources.AgeRangeView> getGetAgeRangeViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAgeRangeView",
+      requestType = com.google.ads.googleads.v2.services.GetAgeRangeViewRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.AgeRangeView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetAgeRangeViewRequest,
       com.google.ads.googleads.v2.resources.AgeRangeView> getGetAgeRangeViewMethod() {
-    return getGetAgeRangeViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetAgeRangeViewRequest,
-      com.google.ads.googleads.v2.resources.AgeRangeView> getGetAgeRangeViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetAgeRangeViewRequest, com.google.ads.googleads.v2.resources.AgeRangeView> getGetAgeRangeViewMethod;
     if ((getGetAgeRangeViewMethod = AgeRangeViewServiceGrpc.getGetAgeRangeViewMethod) == null) {
       synchronized (AgeRangeViewServiceGrpc.class) {
         if ((getGetAgeRangeViewMethod = AgeRangeViewServiceGrpc.getGetAgeRangeViewMethod) == null) {
-          AgeRangeViewServiceGrpc.getGetAgeRangeViewMethod = getGetAgeRangeViewMethod = 
+          AgeRangeViewServiceGrpc.getGetAgeRangeViewMethod = getGetAgeRangeViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetAgeRangeViewRequest, com.google.ads.googleads.v2.resources.AgeRangeView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.AgeRangeViewService", "GetAgeRangeView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgeRangeView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetAgeRangeViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.AgeRangeView.getDefaultInstance()))
-                  .setSchemaDescriptor(new AgeRangeViewServiceMethodDescriptorSupplier("GetAgeRangeView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AgeRangeViewServiceMethodDescriptorSupplier("GetAgeRangeView"))
+              .build();
         }
-     }
-     return getGetAgeRangeViewMethod;
+      }
+    }
+    return getGetAgeRangeViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AgeRangeViewServiceStub newStub(io.grpc.Channel channel) {
-    return new AgeRangeViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AgeRangeViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AgeRangeViewServiceStub>() {
+        @java.lang.Override
+        public AgeRangeViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AgeRangeViewServiceStub(channel, callOptions);
+        }
+      };
+    return AgeRangeViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class AgeRangeViewServiceGrpc {
    */
   public static AgeRangeViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AgeRangeViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AgeRangeViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AgeRangeViewServiceBlockingStub>() {
+        @java.lang.Override
+        public AgeRangeViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AgeRangeViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AgeRangeViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class AgeRangeViewServiceGrpc {
    */
   public static AgeRangeViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AgeRangeViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AgeRangeViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AgeRangeViewServiceFutureStub>() {
+        @java.lang.Override
+        public AgeRangeViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AgeRangeViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AgeRangeViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class AgeRangeViewServiceGrpc {
      */
     public void getAgeRangeView(com.google.ads.googleads.v2.services.GetAgeRangeViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.AgeRangeView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAgeRangeViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAgeRangeViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAgeRangeViewMethodHelper(),
+            getGetAgeRangeViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetAgeRangeViewRequest,
@@ -126,19 +140,15 @@ public final class AgeRangeViewServiceGrpc {
    * Service to manage age range views.
    * </pre>
    */
-  public static final class AgeRangeViewServiceStub extends io.grpc.stub.AbstractStub<AgeRangeViewServiceStub> {
-    private AgeRangeViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AgeRangeViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AgeRangeViewServiceStub extends io.grpc.stub.AbstractAsyncStub<AgeRangeViewServiceStub> {
+    private AgeRangeViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AgeRangeViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AgeRangeViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AgeRangeViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class AgeRangeViewServiceGrpc {
     public void getAgeRangeView(com.google.ads.googleads.v2.services.GetAgeRangeViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.AgeRangeView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAgeRangeViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAgeRangeViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class AgeRangeViewServiceGrpc {
    * Service to manage age range views.
    * </pre>
    */
-  public static final class AgeRangeViewServiceBlockingStub extends io.grpc.stub.AbstractStub<AgeRangeViewServiceBlockingStub> {
-    private AgeRangeViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AgeRangeViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AgeRangeViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AgeRangeViewServiceBlockingStub> {
+    private AgeRangeViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AgeRangeViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AgeRangeViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AgeRangeViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class AgeRangeViewServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.AgeRangeView getAgeRangeView(com.google.ads.googleads.v2.services.GetAgeRangeViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAgeRangeViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAgeRangeViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class AgeRangeViewServiceGrpc {
    * Service to manage age range views.
    * </pre>
    */
-  public static final class AgeRangeViewServiceFutureStub extends io.grpc.stub.AbstractStub<AgeRangeViewServiceFutureStub> {
-    private AgeRangeViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AgeRangeViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AgeRangeViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AgeRangeViewServiceFutureStub> {
+    private AgeRangeViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AgeRangeViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AgeRangeViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AgeRangeViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class AgeRangeViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.AgeRangeView> getAgeRangeView(
         com.google.ads.googleads.v2.services.GetAgeRangeViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAgeRangeViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAgeRangeViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class AgeRangeViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AgeRangeViewServiceFileDescriptorSupplier())
-              .addMethod(getGetAgeRangeViewMethodHelper())
+              .addMethod(getGetAgeRangeViewMethod())
               .build();
         }
       }

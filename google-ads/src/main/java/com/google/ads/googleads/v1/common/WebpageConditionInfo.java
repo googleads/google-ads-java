@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.WebpageConditionInfo}
  */
-public  final class WebpageConditionInfo extends
+public final class WebpageConditionInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.WebpageConditionInfo)
     WebpageConditionInfoOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private WebpageConditionInfo() {
     operand_ = 0;
     operator_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new WebpageConditionInfo();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -113,8 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand operand = 1;</code>
+   * @return The enum numeric value on the wire for operand.
    */
-  public int getOperandValue() {
+  @java.lang.Override public int getOperandValue() {
     return operand_;
   }
   /**
@@ -123,8 +130,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand operand = 1;</code>
+   * @return The operand.
    */
-  public com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand getOperand() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand getOperand() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand result = com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand.valueOf(operand_);
     return result == null ? com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand.UNRECOGNIZED : result;
@@ -138,8 +146,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator operator = 2;</code>
+   * @return The enum numeric value on the wire for operator.
    */
-  public int getOperatorValue() {
+  @java.lang.Override public int getOperatorValue() {
     return operator_;
   }
   /**
@@ -148,8 +157,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator operator = 2;</code>
+   * @return The operator.
    */
-  public com.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator getOperator() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator getOperator() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator result = com.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator.valueOf(operator_);
     return result == null ? com.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator.UNRECOGNIZED : result;
@@ -163,7 +173,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue argument = 3;</code>
+   * @return Whether the argument field is set.
    */
+  @java.lang.Override
   public boolean hasArgument() {
     return argument_ != null;
   }
@@ -173,7 +185,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue argument = 3;</code>
+   * @return The argument.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getArgument() {
     return argument_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : argument_;
   }
@@ -184,6 +198,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue argument = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getArgumentOrBuilder() {
     return getArgument();
   }
@@ -546,8 +561,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand operand = 1;</code>
+     * @return The enum numeric value on the wire for operand.
      */
-    public int getOperandValue() {
+    @java.lang.Override public int getOperandValue() {
       return operand_;
     }
     /**
@@ -556,8 +572,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand operand = 1;</code>
+     * @param value The enum numeric value on the wire for operand to set.
+     * @return This builder for chaining.
      */
     public Builder setOperandValue(int value) {
+      
       operand_ = value;
       onChanged();
       return this;
@@ -568,7 +587,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand operand = 1;</code>
+     * @return The operand.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand getOperand() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand result = com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand.valueOf(operand_);
@@ -580,6 +601,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand operand = 1;</code>
+     * @param value The operand to set.
+     * @return This builder for chaining.
      */
     public Builder setOperand(com.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand value) {
       if (value == null) {
@@ -596,6 +619,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.WebpageConditionOperandEnum.WebpageConditionOperand operand = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearOperand() {
       
@@ -611,8 +635,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator operator = 2;</code>
+     * @return The enum numeric value on the wire for operator.
      */
-    public int getOperatorValue() {
+    @java.lang.Override public int getOperatorValue() {
       return operator_;
     }
     /**
@@ -621,8 +646,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator operator = 2;</code>
+     * @param value The enum numeric value on the wire for operator to set.
+     * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
+      
       operator_ = value;
       onChanged();
       return this;
@@ -633,7 +661,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator operator = 2;</code>
+     * @return The operator.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator getOperator() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator result = com.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator.valueOf(operator_);
@@ -645,6 +675,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator operator = 2;</code>
+     * @param value The operator to set.
+     * @return This builder for chaining.
      */
     public Builder setOperator(com.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator value) {
       if (value == null) {
@@ -661,6 +693,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.WebpageConditionOperatorEnum.WebpageConditionOperator operator = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearOperator() {
       
@@ -678,6 +711,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue argument = 3;</code>
+     * @return Whether the argument field is set.
      */
     public boolean hasArgument() {
       return argumentBuilder_ != null || argument_ != null;
@@ -688,6 +722,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue argument = 3;</code>
+     * @return The argument.
      */
     public com.google.protobuf.StringValue getArgument() {
       if (argumentBuilder_ == null) {

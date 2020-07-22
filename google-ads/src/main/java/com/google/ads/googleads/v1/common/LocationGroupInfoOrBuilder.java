@@ -14,6 +14,7 @@ public interface LocationGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 1;</code>
+   * @return Whether the feed field is set.
    */
   boolean hasFeed();
   /**
@@ -23,6 +24,7 @@ public interface LocationGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 1;</code>
+   * @return The feed.
    */
   com.google.protobuf.StringValue getFeed();
   /**
@@ -91,6 +93,7 @@ public interface LocationGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value radius = 3;</code>
+   * @return Whether the radius field is set.
    */
   boolean hasRadius();
   /**
@@ -100,6 +103,7 @@ public interface LocationGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value radius = 3;</code>
+   * @return The radius.
    */
   com.google.protobuf.Int64Value getRadius();
   /**
@@ -119,6 +123,7 @@ public interface LocationGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits radius_units = 4;</code>
+   * @return The enum numeric value on the wire for radiusUnits.
    */
   int getRadiusUnitsValue();
   /**
@@ -128,6 +133,7 @@ public interface LocationGroupInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits radius_units = 4;</code>
+   * @return The radiusUnits.
    */
   com.google.ads.googleads.v1.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits getRadiusUnits();
 }

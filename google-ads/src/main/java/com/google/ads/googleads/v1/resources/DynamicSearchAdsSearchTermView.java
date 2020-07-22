@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView}
  */
-public  final class DynamicSearchAdsSearchTermView extends
+public final class DynamicSearchAdsSearchTermView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.DynamicSearchAdsSearchTermView)
     DynamicSearchAdsSearchTermViewOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private DynamicSearchAdsSearchTermView() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new DynamicSearchAdsSearchTermView();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -141,13 +147,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the dynamic search ads search term view.
+   * Output only. The resource name of the dynamic search ads search term view.
    * Dynamic search ads search term view resource names have the form:
    * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fp}~{headline_fp}~{landing_page_fp}~{page_url_fp}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -162,13 +170,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the dynamic search ads search term view.
+   * Output only. The resource name of the dynamic search ads search term view.
    * Dynamic search ads search term view resource names have the form:
    * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fp}~{headline_fp}~{landing_page_fp}~{page_url_fp}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -187,34 +197,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue searchTerm_;
   /**
    * <pre>
-   * Search term
+   * Output only. Search term
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the searchTerm field is set.
    */
+  @java.lang.Override
   public boolean hasSearchTerm() {
     return searchTerm_ != null;
   }
   /**
    * <pre>
-   * Search term
+   * Output only. Search term
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The searchTerm.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSearchTerm() {
     return searchTerm_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : searchTerm_;
   }
   /**
    * <pre>
-   * Search term
+   * Output only. Search term
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue search_term = 2;</code>
+   * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSearchTermOrBuilder() {
     return getSearchTerm();
   }
@@ -223,34 +238,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue headline_;
   /**
    * <pre>
-   * The dynamically generated headline of the Dynamic Search Ad.
+   * Output only. The dynamically generated headline of the Dynamic Search Ad.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue headline = 3;</code>
+   * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the headline field is set.
    */
+  @java.lang.Override
   public boolean hasHeadline() {
     return headline_ != null;
   }
   /**
    * <pre>
-   * The dynamically generated headline of the Dynamic Search Ad.
+   * Output only. The dynamically generated headline of the Dynamic Search Ad.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue headline = 3;</code>
+   * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The headline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHeadline() {
     return headline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : headline_;
   }
   /**
    * <pre>
-   * The dynamically generated headline of the Dynamic Search Ad.
+   * Output only. The dynamically generated headline of the Dynamic Search Ad.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue headline = 3;</code>
+   * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHeadlineOrBuilder() {
     return getHeadline();
   }
@@ -259,34 +279,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue landingPage_;
   /**
    * <pre>
-   * The dynamically selected landing page URL of the impression.
+   * Output only. The dynamically selected landing page URL of the impression.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue landing_page = 4;</code>
+   * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the landingPage field is set.
    */
+  @java.lang.Override
   public boolean hasLandingPage() {
     return landingPage_ != null;
   }
   /**
    * <pre>
-   * The dynamically selected landing page URL of the impression.
+   * Output only. The dynamically selected landing page URL of the impression.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue landing_page = 4;</code>
+   * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The landingPage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLandingPage() {
     return landingPage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : landingPage_;
   }
   /**
    * <pre>
-   * The dynamically selected landing page URL of the impression.
+   * Output only. The dynamically selected landing page URL of the impression.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue landing_page = 4;</code>
+   * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLandingPageOrBuilder() {
     return getLandingPage();
   }
@@ -295,34 +320,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue pageUrl_;
   /**
    * <pre>
-   * The URL of page feed item served for the impression.
+   * Output only. The URL of page feed item served for the impression.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue page_url = 5;</code>
+   * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the pageUrl field is set.
    */
+  @java.lang.Override
   public boolean hasPageUrl() {
     return pageUrl_ != null;
   }
   /**
    * <pre>
-   * The URL of page feed item served for the impression.
+   * Output only. The URL of page feed item served for the impression.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue page_url = 5;</code>
+   * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The pageUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPageUrl() {
     return pageUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : pageUrl_;
   }
   /**
    * <pre>
-   * The URL of page feed item served for the impression.
+   * Output only. The URL of page feed item served for the impression.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue page_url = 5;</code>
+   * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPageUrlOrBuilder() {
     return getPageUrl();
   }
@@ -756,12 +786,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the dynamic search ads search term view.
+     * Output only. The resource name of the dynamic search ads search term view.
      * Dynamic search ads search term view resource names have the form:
      * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fp}~{headline_fp}~{landing_page_fp}~{page_url_fp}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -777,12 +808,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the dynamic search ads search term view.
+     * Output only. The resource name of the dynamic search ads search term view.
      * Dynamic search ads search term view resource names have the form:
      * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fp}~{headline_fp}~{landing_page_fp}~{page_url_fp}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -799,12 +831,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the dynamic search ads search term view.
+     * Output only. The resource name of the dynamic search ads search term view.
      * Dynamic search ads search term view resource names have the form:
      * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fp}~{headline_fp}~{landing_page_fp}~{page_url_fp}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -818,12 +852,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the dynamic search ads search term view.
+     * Output only. The resource name of the dynamic search ads search term view.
      * Dynamic search ads search term view resource names have the form:
      * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fp}~{headline_fp}~{landing_page_fp}~{page_url_fp}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -833,12 +868,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the dynamic search ads search term view.
+     * Output only. The resource name of the dynamic search ads search term view.
      * Dynamic search ads search term view resource names have the form:
      * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fp}~{headline_fp}~{landing_page_fp}~{page_url_fp}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -857,22 +894,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> searchTermBuilder_;
     /**
      * <pre>
-     * Search term
+     * Output only. Search term
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the searchTerm field is set.
      */
     public boolean hasSearchTerm() {
       return searchTermBuilder_ != null || searchTerm_ != null;
     }
     /**
      * <pre>
-     * Search term
+     * Output only. Search term
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The searchTerm.
      */
     public com.google.protobuf.StringValue getSearchTerm() {
       if (searchTermBuilder_ == null) {
@@ -883,11 +922,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Search term
+     * Output only. Search term
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSearchTerm(com.google.protobuf.StringValue value) {
       if (searchTermBuilder_ == null) {
@@ -904,11 +943,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Search term
+     * Output only. Search term
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setSearchTerm(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -923,11 +962,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Search term
+     * Output only. Search term
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeSearchTerm(com.google.protobuf.StringValue value) {
       if (searchTermBuilder_ == null) {
@@ -946,11 +985,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Search term
+     * Output only. Search term
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearSearchTerm() {
       if (searchTermBuilder_ == null) {
@@ -965,11 +1004,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Search term
+     * Output only. Search term
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getSearchTermBuilder() {
       
@@ -978,11 +1017,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Search term
+     * Output only. Search term
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSearchTermOrBuilder() {
       if (searchTermBuilder_ != null) {
@@ -994,11 +1033,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Search term
+     * Output only. Search term
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue search_term = 2;</code>
+     * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1019,22 +1058,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> headlineBuilder_;
     /**
      * <pre>
-     * The dynamically generated headline of the Dynamic Search Ad.
+     * Output only. The dynamically generated headline of the Dynamic Search Ad.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue headline = 3;</code>
+     * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the headline field is set.
      */
     public boolean hasHeadline() {
       return headlineBuilder_ != null || headline_ != null;
     }
     /**
      * <pre>
-     * The dynamically generated headline of the Dynamic Search Ad.
+     * Output only. The dynamically generated headline of the Dynamic Search Ad.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue headline = 3;</code>
+     * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The headline.
      */
     public com.google.protobuf.StringValue getHeadline() {
       if (headlineBuilder_ == null) {
@@ -1045,11 +1086,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically generated headline of the Dynamic Search Ad.
+     * Output only. The dynamically generated headline of the Dynamic Search Ad.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue headline = 3;</code>
+     * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setHeadline(com.google.protobuf.StringValue value) {
       if (headlineBuilder_ == null) {
@@ -1066,11 +1107,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically generated headline of the Dynamic Search Ad.
+     * Output only. The dynamically generated headline of the Dynamic Search Ad.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue headline = 3;</code>
+     * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setHeadline(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1085,11 +1126,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically generated headline of the Dynamic Search Ad.
+     * Output only. The dynamically generated headline of the Dynamic Search Ad.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue headline = 3;</code>
+     * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeHeadline(com.google.protobuf.StringValue value) {
       if (headlineBuilder_ == null) {
@@ -1108,11 +1149,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically generated headline of the Dynamic Search Ad.
+     * Output only. The dynamically generated headline of the Dynamic Search Ad.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue headline = 3;</code>
+     * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearHeadline() {
       if (headlineBuilder_ == null) {
@@ -1127,11 +1168,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically generated headline of the Dynamic Search Ad.
+     * Output only. The dynamically generated headline of the Dynamic Search Ad.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue headline = 3;</code>
+     * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getHeadlineBuilder() {
       
@@ -1140,11 +1181,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically generated headline of the Dynamic Search Ad.
+     * Output only. The dynamically generated headline of the Dynamic Search Ad.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue headline = 3;</code>
+     * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getHeadlineOrBuilder() {
       if (headlineBuilder_ != null) {
@@ -1156,11 +1197,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically generated headline of the Dynamic Search Ad.
+     * Output only. The dynamically generated headline of the Dynamic Search Ad.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue headline = 3;</code>
+     * <code>.google.protobuf.StringValue headline = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1181,22 +1222,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> landingPageBuilder_;
     /**
      * <pre>
-     * The dynamically selected landing page URL of the impression.
+     * Output only. The dynamically selected landing page URL of the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue landing_page = 4;</code>
+     * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the landingPage field is set.
      */
     public boolean hasLandingPage() {
       return landingPageBuilder_ != null || landingPage_ != null;
     }
     /**
      * <pre>
-     * The dynamically selected landing page URL of the impression.
+     * Output only. The dynamically selected landing page URL of the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue landing_page = 4;</code>
+     * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The landingPage.
      */
     public com.google.protobuf.StringValue getLandingPage() {
       if (landingPageBuilder_ == null) {
@@ -1207,11 +1250,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically selected landing page URL of the impression.
+     * Output only. The dynamically selected landing page URL of the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue landing_page = 4;</code>
+     * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLandingPage(com.google.protobuf.StringValue value) {
       if (landingPageBuilder_ == null) {
@@ -1228,11 +1271,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically selected landing page URL of the impression.
+     * Output only. The dynamically selected landing page URL of the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue landing_page = 4;</code>
+     * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLandingPage(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1247,11 +1290,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically selected landing page URL of the impression.
+     * Output only. The dynamically selected landing page URL of the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue landing_page = 4;</code>
+     * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLandingPage(com.google.protobuf.StringValue value) {
       if (landingPageBuilder_ == null) {
@@ -1270,11 +1313,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically selected landing page URL of the impression.
+     * Output only. The dynamically selected landing page URL of the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue landing_page = 4;</code>
+     * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLandingPage() {
       if (landingPageBuilder_ == null) {
@@ -1289,11 +1332,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically selected landing page URL of the impression.
+     * Output only. The dynamically selected landing page URL of the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue landing_page = 4;</code>
+     * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getLandingPageBuilder() {
       
@@ -1302,11 +1345,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically selected landing page URL of the impression.
+     * Output only. The dynamically selected landing page URL of the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue landing_page = 4;</code>
+     * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLandingPageOrBuilder() {
       if (landingPageBuilder_ != null) {
@@ -1318,11 +1361,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The dynamically selected landing page URL of the impression.
+     * Output only. The dynamically selected landing page URL of the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue landing_page = 4;</code>
+     * <code>.google.protobuf.StringValue landing_page = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1343,22 +1386,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> pageUrlBuilder_;
     /**
      * <pre>
-     * The URL of page feed item served for the impression.
+     * Output only. The URL of page feed item served for the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue page_url = 5;</code>
+     * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the pageUrl field is set.
      */
     public boolean hasPageUrl() {
       return pageUrlBuilder_ != null || pageUrl_ != null;
     }
     /**
      * <pre>
-     * The URL of page feed item served for the impression.
+     * Output only. The URL of page feed item served for the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue page_url = 5;</code>
+     * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The pageUrl.
      */
     public com.google.protobuf.StringValue getPageUrl() {
       if (pageUrlBuilder_ == null) {
@@ -1369,11 +1414,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of page feed item served for the impression.
+     * Output only. The URL of page feed item served for the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue page_url = 5;</code>
+     * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPageUrl(com.google.protobuf.StringValue value) {
       if (pageUrlBuilder_ == null) {
@@ -1390,11 +1435,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of page feed item served for the impression.
+     * Output only. The URL of page feed item served for the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue page_url = 5;</code>
+     * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setPageUrl(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1409,11 +1454,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of page feed item served for the impression.
+     * Output only. The URL of page feed item served for the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue page_url = 5;</code>
+     * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergePageUrl(com.google.protobuf.StringValue value) {
       if (pageUrlBuilder_ == null) {
@@ -1432,11 +1477,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of page feed item served for the impression.
+     * Output only. The URL of page feed item served for the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue page_url = 5;</code>
+     * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPageUrl() {
       if (pageUrlBuilder_ == null) {
@@ -1451,11 +1496,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of page feed item served for the impression.
+     * Output only. The URL of page feed item served for the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue page_url = 5;</code>
+     * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getPageUrlBuilder() {
       
@@ -1464,11 +1509,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of page feed item served for the impression.
+     * Output only. The URL of page feed item served for the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue page_url = 5;</code>
+     * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getPageUrlOrBuilder() {
       if (pageUrlBuilder_ != null) {
@@ -1480,11 +1525,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of page feed item served for the impression.
+     * Output only. The URL of page feed item served for the impression.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue page_url = 5;</code>
+     * <code>.google.protobuf.StringValue page_url = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.AdGroupCriterionOperation}
  */
-public  final class AdGroupCriterionOperation extends
+public final class AdGroupCriterionOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.AdGroupCriterionOperation)
     AdGroupCriterionOperationOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private AdGroupCriterionOperation() {
     exemptPolicyViolationKeys_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AdGroupCriterionOperation();
   }
 
   @java.lang.Override
@@ -95,9 +102,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               exemptPolicyViolationKeys_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.PolicyViolationKey>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             exemptPolicyViolationKeys_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.PolicyViolationKey.parser(), extensionRegistry));
@@ -118,7 +125,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         exemptPolicyViolationKeys_ = java.util.Collections.unmodifiableList(exemptPolicyViolationKeys_);
       }
       this.unknownFields = unknownFields.build();
@@ -138,11 +145,11 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.services.AdGroupCriterionOperation.class, com.google.ads.googleads.v2.services.AdGroupCriterionOperation.Builder.class);
   }
 
-  private int bitField0_;
   private int operationCase_ = 0;
   private java.lang.Object operation_;
   public enum OperationCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CREATE(1),
     UPDATE(2),
     REMOVE(3),
@@ -152,6 +159,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -187,7 +196,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+   * @return Whether the updateMask field is set.
    */
+  @java.lang.Override
   public boolean hasUpdateMask() {
     return updateMask_ != null;
   }
@@ -197,7 +208,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+   * @return The updateMask.
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMask getUpdateMask() {
     return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
   }
@@ -208,6 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.FieldMask update_mask = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
     return getUpdateMask();
   }
@@ -228,6 +242,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.PolicyViolationKey> getExemptPolicyViolationKeysList() {
     return exemptPolicyViolationKeys_;
   }
@@ -245,6 +260,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.PolicyViolationKeyOrBuilder> 
       getExemptPolicyViolationKeysOrBuilderList() {
     return exemptPolicyViolationKeys_;
@@ -263,6 +279,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
    */
+  @java.lang.Override
   public int getExemptPolicyViolationKeysCount() {
     return exemptPolicyViolationKeys_.size();
   }
@@ -280,6 +297,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.PolicyViolationKey getExemptPolicyViolationKeys(int index) {
     return exemptPolicyViolationKeys_.get(index);
   }
@@ -297,6 +315,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.PolicyViolationKey exempt_policy_violation_keys = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.PolicyViolationKeyOrBuilder getExemptPolicyViolationKeysOrBuilder(
       int index) {
     return exemptPolicyViolationKeys_.get(index);
@@ -309,7 +328,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.AdGroupCriterion create = 1;</code>
+   * @return Whether the create field is set.
    */
+  @java.lang.Override
   public boolean hasCreate() {
     return operationCase_ == 1;
   }
@@ -319,7 +340,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.AdGroupCriterion create = 1;</code>
+   * @return The create.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.AdGroupCriterion getCreate() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v2.resources.AdGroupCriterion) operation_;
@@ -333,6 +356,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.resources.AdGroupCriterion create = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.AdGroupCriterionOrBuilder getCreateOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v2.resources.AdGroupCriterion) operation_;
@@ -348,7 +372,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.AdGroupCriterion update = 2;</code>
+   * @return Whether the update field is set.
    */
+  @java.lang.Override
   public boolean hasUpdate() {
     return operationCase_ == 2;
   }
@@ -359,7 +385,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.AdGroupCriterion update = 2;</code>
+   * @return The update.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.AdGroupCriterion getUpdate() {
     if (operationCase_ == 2) {
        return (com.google.ads.googleads.v2.resources.AdGroupCriterion) operation_;
@@ -374,6 +402,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.resources.AdGroupCriterion update = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.AdGroupCriterionOrBuilder getUpdateOrBuilder() {
     if (operationCase_ == 2) {
        return (com.google.ads.googleads.v2.resources.AdGroupCriterion) operation_;
@@ -390,6 +419,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string remove = 3;</code>
+   * @return The remove.
    */
   public java.lang.String getRemove() {
     java.lang.Object ref = "";
@@ -416,6 +446,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string remove = 3;</code>
+   * @return The bytes for remove.
    */
   public com.google.protobuf.ByteString
       getRemoveBytes() {
@@ -713,7 +744,7 @@ private static final long serialVersionUID = 0L;
       }
       if (exemptPolicyViolationKeysBuilder_ == null) {
         exemptPolicyViolationKeys_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         exemptPolicyViolationKeysBuilder_.clear();
       }
@@ -746,16 +777,15 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.services.AdGroupCriterionOperation buildPartial() {
       com.google.ads.googleads.v2.services.AdGroupCriterionOperation result = new com.google.ads.googleads.v2.services.AdGroupCriterionOperation(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (updateMaskBuilder_ == null) {
         result.updateMask_ = updateMask_;
       } else {
         result.updateMask_ = updateMaskBuilder_.build();
       }
       if (exemptPolicyViolationKeysBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           exemptPolicyViolationKeys_ = java.util.Collections.unmodifiableList(exemptPolicyViolationKeys_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.exemptPolicyViolationKeys_ = exemptPolicyViolationKeys_;
       } else {
@@ -778,7 +808,6 @@ private static final long serialVersionUID = 0L;
       if (operationCase_ == 3) {
         result.operation_ = operation_;
       }
-      result.bitField0_ = to_bitField0_;
       result.operationCase_ = operationCase_;
       onBuilt();
       return result;
@@ -835,7 +864,7 @@ private static final long serialVersionUID = 0L;
         if (!other.exemptPolicyViolationKeys_.isEmpty()) {
           if (exemptPolicyViolationKeys_.isEmpty()) {
             exemptPolicyViolationKeys_ = other.exemptPolicyViolationKeys_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureExemptPolicyViolationKeysIsMutable();
             exemptPolicyViolationKeys_.addAll(other.exemptPolicyViolationKeys_);
@@ -848,7 +877,7 @@ private static final long serialVersionUID = 0L;
             exemptPolicyViolationKeysBuilder_.dispose();
             exemptPolicyViolationKeysBuilder_ = null;
             exemptPolicyViolationKeys_ = other.exemptPolicyViolationKeys_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             exemptPolicyViolationKeysBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getExemptPolicyViolationKeysFieldBuilder() : null;
@@ -930,6 +959,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     * @return Whether the updateMask field is set.
      */
     public boolean hasUpdateMask() {
       return updateMaskBuilder_ != null || updateMask_ != null;
@@ -940,6 +970,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
+     * @return The updateMask.
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       if (updateMaskBuilder_ == null) {
@@ -1077,9 +1108,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.PolicyViolationKey> exemptPolicyViolationKeys_ =
       java.util.Collections.emptyList();
     private void ensureExemptPolicyViolationKeysIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         exemptPolicyViolationKeys_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.PolicyViolationKey>(exemptPolicyViolationKeys_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1350,7 +1381,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearExemptPolicyViolationKeys() {
       if (exemptPolicyViolationKeysBuilder_ == null) {
         exemptPolicyViolationKeys_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         exemptPolicyViolationKeysBuilder_.clear();
@@ -1504,7 +1535,7 @@ private static final long serialVersionUID = 0L;
         exemptPolicyViolationKeysBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.PolicyViolationKey, com.google.ads.googleads.v2.common.PolicyViolationKey.Builder, com.google.ads.googleads.v2.common.PolicyViolationKeyOrBuilder>(
                 exemptPolicyViolationKeys_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         exemptPolicyViolationKeys_ = null;
@@ -1520,7 +1551,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.AdGroupCriterion create = 1;</code>
+     * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return operationCase_ == 1;
     }
@@ -1530,7 +1563,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.AdGroupCriterion create = 1;</code>
+     * @return The create.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.resources.AdGroupCriterion getCreate() {
       if (createBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -1648,6 +1683,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.resources.AdGroupCriterion create = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.resources.AdGroupCriterionOrBuilder getCreateOrBuilder() {
       if ((operationCase_ == 1) && (createBuilder_ != null)) {
         return createBuilder_.getMessageOrBuilder();
@@ -1693,7 +1729,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.AdGroupCriterion update = 2;</code>
+     * @return Whether the update field is set.
      */
+    @java.lang.Override
     public boolean hasUpdate() {
       return operationCase_ == 2;
     }
@@ -1704,7 +1742,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.AdGroupCriterion update = 2;</code>
+     * @return The update.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.resources.AdGroupCriterion getUpdate() {
       if (updateBuilder_ == null) {
         if (operationCase_ == 2) {
@@ -1828,6 +1868,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.resources.AdGroupCriterion update = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.resources.AdGroupCriterionOrBuilder getUpdateOrBuilder() {
       if ((operationCase_ == 2) && (updateBuilder_ != null)) {
         return updateBuilder_.getMessageOrBuilder();
@@ -1873,7 +1914,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string remove = 3;</code>
+     * @return The remove.
      */
+    @java.lang.Override
     public java.lang.String getRemove() {
       java.lang.Object ref = "";
       if (operationCase_ == 3) {
@@ -1899,7 +1942,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string remove = 3;</code>
+     * @return The bytes for remove.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRemoveBytes() {
       java.lang.Object ref = "";
@@ -1926,6 +1971,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string remove = 3;</code>
+     * @param value The remove to set.
+     * @return This builder for chaining.
      */
     public Builder setRemove(
         java.lang.String value) {
@@ -1945,6 +1992,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string remove = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRemove() {
       if (operationCase_ == 3) {
@@ -1962,6 +2010,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string remove = 3;</code>
+     * @param value The bytes for remove to set.
+     * @return This builder for chaining.
      */
     public Builder setRemoveBytes(
         com.google.protobuf.ByteString value) {

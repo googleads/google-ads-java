@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/user_location_view_service.proto")
 public final class UserLocationViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class UserLocationViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.UserLocationViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetUserLocationViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetUserLocationViewRequest,
-      com.google.ads.googleads.v4.resources.UserLocationView> METHOD_GET_USER_LOCATION_VIEW = getGetUserLocationViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetUserLocationViewRequest,
       com.google.ads.googleads.v4.resources.UserLocationView> getGetUserLocationViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetUserLocationView",
+      requestType = com.google.ads.googleads.v4.services.GetUserLocationViewRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.UserLocationView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetUserLocationViewRequest,
       com.google.ads.googleads.v4.resources.UserLocationView> getGetUserLocationViewMethod() {
-    return getGetUserLocationViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetUserLocationViewRequest,
-      com.google.ads.googleads.v4.resources.UserLocationView> getGetUserLocationViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetUserLocationViewRequest, com.google.ads.googleads.v4.resources.UserLocationView> getGetUserLocationViewMethod;
     if ((getGetUserLocationViewMethod = UserLocationViewServiceGrpc.getGetUserLocationViewMethod) == null) {
       synchronized (UserLocationViewServiceGrpc.class) {
         if ((getGetUserLocationViewMethod = UserLocationViewServiceGrpc.getGetUserLocationViewMethod) == null) {
-          UserLocationViewServiceGrpc.getGetUserLocationViewMethod = getGetUserLocationViewMethod = 
+          UserLocationViewServiceGrpc.getGetUserLocationViewMethod = getGetUserLocationViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetUserLocationViewRequest, com.google.ads.googleads.v4.resources.UserLocationView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.UserLocationViewService", "GetUserLocationView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserLocationView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetUserLocationViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.UserLocationView.getDefaultInstance()))
-                  .setSchemaDescriptor(new UserLocationViewServiceMethodDescriptorSupplier("GetUserLocationView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UserLocationViewServiceMethodDescriptorSupplier("GetUserLocationView"))
+              .build();
         }
-     }
-     return getGetUserLocationViewMethod;
+      }
+    }
+    return getGetUserLocationViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static UserLocationViewServiceStub newStub(io.grpc.Channel channel) {
-    return new UserLocationViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserLocationViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserLocationViewServiceStub>() {
+        @java.lang.Override
+        public UserLocationViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserLocationViewServiceStub(channel, callOptions);
+        }
+      };
+    return UserLocationViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class UserLocationViewServiceGrpc {
    */
   public static UserLocationViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new UserLocationViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserLocationViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserLocationViewServiceBlockingStub>() {
+        @java.lang.Override
+        public UserLocationViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserLocationViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return UserLocationViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class UserLocationViewServiceGrpc {
    */
   public static UserLocationViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new UserLocationViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserLocationViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserLocationViewServiceFutureStub>() {
+        @java.lang.Override
+        public UserLocationViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserLocationViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return UserLocationViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class UserLocationViewServiceGrpc {
      */
     public void getUserLocationView(com.google.ads.googleads.v4.services.GetUserLocationViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.UserLocationView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetUserLocationViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserLocationViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetUserLocationViewMethodHelper(),
+            getGetUserLocationViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetUserLocationViewRequest,
@@ -126,19 +140,15 @@ public final class UserLocationViewServiceGrpc {
    * Service to manage user location views.
    * </pre>
    */
-  public static final class UserLocationViewServiceStub extends io.grpc.stub.AbstractStub<UserLocationViewServiceStub> {
-    private UserLocationViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserLocationViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserLocationViewServiceStub extends io.grpc.stub.AbstractAsyncStub<UserLocationViewServiceStub> {
+    private UserLocationViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserLocationViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserLocationViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserLocationViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class UserLocationViewServiceGrpc {
     public void getUserLocationView(com.google.ads.googleads.v4.services.GetUserLocationViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.UserLocationView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetUserLocationViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetUserLocationViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class UserLocationViewServiceGrpc {
    * Service to manage user location views.
    * </pre>
    */
-  public static final class UserLocationViewServiceBlockingStub extends io.grpc.stub.AbstractStub<UserLocationViewServiceBlockingStub> {
-    private UserLocationViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserLocationViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserLocationViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserLocationViewServiceBlockingStub> {
+    private UserLocationViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserLocationViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserLocationViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserLocationViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class UserLocationViewServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.UserLocationView getUserLocationView(com.google.ads.googleads.v4.services.GetUserLocationViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetUserLocationViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetUserLocationViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class UserLocationViewServiceGrpc {
    * Service to manage user location views.
    * </pre>
    */
-  public static final class UserLocationViewServiceFutureStub extends io.grpc.stub.AbstractStub<UserLocationViewServiceFutureStub> {
-    private UserLocationViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserLocationViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserLocationViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserLocationViewServiceFutureStub> {
+    private UserLocationViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserLocationViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserLocationViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserLocationViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class UserLocationViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.UserLocationView> getUserLocationView(
         com.google.ads.googleads.v4.services.GetUserLocationViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetUserLocationViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetUserLocationViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class UserLocationViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new UserLocationViewServiceFileDescriptorSupplier())
-              .addMethod(getGetUserLocationViewMethodHelper())
+              .addMethod(getGetUserLocationViewMethod())
               .build();
         }
       }

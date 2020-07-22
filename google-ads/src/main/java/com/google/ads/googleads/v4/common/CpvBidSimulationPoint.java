@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CpvBidSimulationPoint}
  */
-public  final class CpvBidSimulationPoint extends
+public final class CpvBidSimulationPoint extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CpvBidSimulationPoint)
     CpvBidSimulationPointOrBuilder {
@@ -146,6 +146,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 1;</code>
    * @return Whether the cpvBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpvBidMicros() {
     return cpvBidMicros_ != null;
   }
@@ -157,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 1;</code>
    * @return The cpvBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpvBidMicros() {
     return cpvBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpvBidMicros_;
   }
@@ -167,6 +169,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpvBidMicrosOrBuilder() {
     return getCpvBidMicros();
   }
@@ -181,6 +184,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cost_micros = 2;</code>
    * @return Whether the costMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCostMicros() {
     return costMicros_ != null;
   }
@@ -192,6 +196,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cost_micros = 2;</code>
    * @return The costMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCostMicros() {
     return costMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : costMicros_;
   }
@@ -202,6 +207,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cost_micros = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCostMicrosOrBuilder() {
     return getCostMicros();
   }
@@ -216,6 +222,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value impressions = 3;</code>
    * @return Whether the impressions field is set.
    */
+  @java.lang.Override
   public boolean hasImpressions() {
     return impressions_ != null;
   }
@@ -227,6 +234,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value impressions = 3;</code>
    * @return The impressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getImpressions() {
     return impressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : impressions_;
   }
@@ -237,6 +245,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value impressions = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getImpressionsOrBuilder() {
     return getImpressions();
   }
@@ -251,6 +260,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value views = 4;</code>
    * @return Whether the views field is set.
    */
+  @java.lang.Override
   public boolean hasViews() {
     return views_ != null;
   }
@@ -262,6 +272,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value views = 4;</code>
    * @return The views.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getViews() {
     return views_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : views_;
   }
@@ -272,6 +283,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value views = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getViewsOrBuilder() {
     return getViews();
   }

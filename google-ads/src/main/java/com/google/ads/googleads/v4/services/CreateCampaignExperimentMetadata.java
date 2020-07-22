@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.CreateCampaignExperimentMetadata}
  */
-public  final class CreateCampaignExperimentMetadata extends
+public final class CreateCampaignExperimentMetadata extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.CreateCampaignExperimentMetadata)
     CreateCampaignExperimentMetadataOrBuilder {
@@ -102,6 +102,7 @@ private static final long serialVersionUID = 0L;
    * <code>string campaign_experiment = 1;</code>
    * @return The campaignExperiment.
    */
+  @java.lang.Override
   public java.lang.String getCampaignExperiment() {
     java.lang.Object ref = campaignExperiment_;
     if (ref instanceof java.lang.String) {
@@ -122,6 +123,7 @@ private static final long serialVersionUID = 0L;
    * <code>string campaign_experiment = 1;</code>
    * @return The bytes for campaignExperiment.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCampaignExperimentBytes() {
     java.lang.Object ref = campaignExperiment_;

@@ -13,6 +13,7 @@ public interface TargetRestrictionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+   * @return The enum numeric value on the wire for targetingDimension.
    */
   int getTargetingDimensionValue();
   /**
@@ -21,6 +22,7 @@ public interface TargetRestrictionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+   * @return The targetingDimension.
    */
   com.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension getTargetingDimension();
 
@@ -29,13 +31,14 @@ public interface TargetRestrictionOrBuilder extends
    * Indicates whether to restrict your ads to show only for the criteria you
    * have selected for this targeting_dimension, or to target all values for
    * this targeting_dimension and show ads based on your targeting in other
-   * TargetingDimensions. A value of 'true' means that these criteria will only
-   * apply bid modifiers, and not affect targeting. A value of 'false' means
+   * TargetingDimensions. A value of `true` means that these criteria will only
+   * apply bid modifiers, and not affect targeting. A value of `false` means
    * that these criteria will restrict targeting as well as applying bid
    * modifiers.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue bid_only = 2;</code>
+   * @return Whether the bidOnly field is set.
    */
   boolean hasBidOnly();
   /**
@@ -43,13 +46,14 @@ public interface TargetRestrictionOrBuilder extends
    * Indicates whether to restrict your ads to show only for the criteria you
    * have selected for this targeting_dimension, or to target all values for
    * this targeting_dimension and show ads based on your targeting in other
-   * TargetingDimensions. A value of 'true' means that these criteria will only
-   * apply bid modifiers, and not affect targeting. A value of 'false' means
+   * TargetingDimensions. A value of `true` means that these criteria will only
+   * apply bid modifiers, and not affect targeting. A value of `false` means
    * that these criteria will restrict targeting as well as applying bid
    * modifiers.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue bid_only = 2;</code>
+   * @return The bidOnly.
    */
   com.google.protobuf.BoolValue getBidOnly();
   /**
@@ -57,8 +61,8 @@ public interface TargetRestrictionOrBuilder extends
    * Indicates whether to restrict your ads to show only for the criteria you
    * have selected for this targeting_dimension, or to target all values for
    * this targeting_dimension and show ads based on your targeting in other
-   * TargetingDimensions. A value of 'true' means that these criteria will only
-   * apply bid modifiers, and not affect targeting. A value of 'false' means
+   * TargetingDimensions. A value of `true` means that these criteria will only
+   * apply bid modifiers, and not affect targeting. A value of `false` means
    * that these criteria will restrict targeting as well as applying bid
    * modifiers.
    * </pre>

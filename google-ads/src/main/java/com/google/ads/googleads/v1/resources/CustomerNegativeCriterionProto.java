@@ -33,56 +33,67 @@ public final class CustomerNegativeCriterionProto {
       "s.googleads.v1.resources\032-google/ads/goo" +
       "gleads/v1/common/criteria.proto\0322google/" +
       "ads/googleads/v1/enums/criterion_type.pr" +
-      "oto\032\036google/protobuf/wrappers.proto\032\034goo" +
-      "gle/api/annotations.proto\"\212\005\n\031CustomerNe" +
-      "gativeCriterion\022\025\n\rresource_name\030\001 \001(\t\022\'" +
-      "\n\002id\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "L\n\004type\030\003 \001(\0162>.google.ads.googleads.v1." +
-      "enums.CriterionTypeEnum.CriterionType\022I\n" +
-      "\rcontent_label\030\004 \001(\01320.google.ads.google" +
-      "ads.v1.common.ContentLabelInfoH\000\022S\n\022mobi" +
-      "le_application\030\005 \001(\01325.google.ads.google" +
-      "ads.v1.common.MobileApplicationInfoH\000\022T\n" +
-      "\023mobile_app_category\030\006 \001(\01325.google.ads." +
-      "googleads.v1.common.MobileAppCategoryInf" +
-      "oH\000\022B\n\tplacement\030\007 \001(\0132-.google.ads.goog" +
-      "leads.v1.common.PlacementInfoH\000\022I\n\ryoutu" +
-      "be_video\030\010 \001(\01320.google.ads.googleads.v1" +
-      ".common.YouTubeVideoInfoH\000\022M\n\017youtube_ch" +
-      "annel\030\t \001(\01322.google.ads.googleads.v1.co" +
-      "mmon.YouTubeChannelInfoH\000B\013\n\tcriterionB\213" +
-      "\002\n%com.google.ads.googleads.v1.resources" +
-      "B\036CustomerNegativeCriterionProtoP\001ZJgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v1/resources;resources\242\002\003GAA\252\002!G" +
-      "oogle.Ads.GoogleAds.V1.Resources\312\002!Googl" +
-      "e\\Ads\\GoogleAds\\V1\\Resources\352\002%Google::A" +
-      "ds::GoogleAds::V1::Resourcesb\006proto3"
+      "oto\032\037google/api/field_behavior.proto\032\031go" +
+      "ogle/api/resource.proto\032\036google/protobuf" +
+      "/wrappers.proto\032\034google/api/annotations." +
+      "proto\"\366\006\n\031CustomerNegativeCriterion\022Q\n\rr" +
+      "esource_name\030\001 \001(\tB:\340A\005\372A4\n2googleads.go" +
+      "ogleapis.com/CustomerNegativeCriterion\022," +
+      "\n\002id\030\002 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\003\340A\003\022Q\n\004type\030\003 \001(\0162>.google.ads.googlead" +
+      "s.v1.enums.CriterionTypeEnum.CriterionTy" +
+      "peB\003\340A\003\022N\n\rcontent_label\030\004 \001(\01320.google." +
+      "ads.googleads.v1.common.ContentLabelInfo" +
+      "B\003\340A\005H\000\022X\n\022mobile_application\030\005 \001(\01325.go" +
+      "ogle.ads.googleads.v1.common.MobileAppli" +
+      "cationInfoB\003\340A\005H\000\022Y\n\023mobile_app_category" +
+      "\030\006 \001(\01325.google.ads.googleads.v1.common." +
+      "MobileAppCategoryInfoB\003\340A\005H\000\022G\n\tplacemen" +
+      "t\030\007 \001(\0132-.google.ads.googleads.v1.common" +
+      ".PlacementInfoB\003\340A\005H\000\022N\n\ryoutube_video\030\010" +
+      " \001(\01320.google.ads.googleads.v1.common.Yo" +
+      "uTubeVideoInfoB\003\340A\005H\000\022R\n\017youtube_channel" +
+      "\030\t \001(\01322.google.ads.googleads.v1.common." +
+      "YouTubeChannelInfoB\003\340A\005H\000:\205\001\352A\201\001\n2google" +
+      "ads.googleapis.com/CustomerNegativeCrite" +
+      "rion\022Kcustomers/{customer}/customerNegat" +
+      "iveCriteria/{customer_negative_criterion" +
+      "}B\013\n\tcriterionB\213\002\n%com.google.ads.google" +
+      "ads.v1.resourcesB\036CustomerNegativeCriter" +
+      "ionProtoP\001ZJgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v1/resources;res" +
+      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1.R" +
+      "esources\312\002!Google\\Ads\\GoogleAds\\V1\\Resou" +
+      "rces\352\002%Google::Ads::GoogleAds::V1::Resou" +
+      "rcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.common.CriteriaProto.getDescriptor(),
           com.google.ads.googleads.v1.enums.CriterionTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_CustomerNegativeCriterion_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_CustomerNegativeCriterion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_CustomerNegativeCriterion_descriptor,
         new java.lang.String[] { "ResourceName", "Id", "Type", "ContentLabel", "MobileApplication", "MobileAppCategory", "Placement", "YoutubeVideo", "YoutubeChannel", "Criterion", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.common.CriteriaProto.getDescriptor();
     com.google.ads.googleads.v1.enums.CriterionTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

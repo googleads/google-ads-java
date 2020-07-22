@@ -30,35 +30,44 @@ public final class ProductGroupViewProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v1/resources/prod" +
       "uct_group_view.proto\022!google.ads.googlea" +
-      "ds.v1.resources\032\034google/api/annotations." +
-      "proto\")\n\020ProductGroupView\022\025\n\rresource_na" +
-      "me\030\001 \001(\tB\202\002\n%com.google.ads.googleads.v1" +
-      ".resourcesB\025ProductGroupViewProtoP\001ZJgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v1/resources;resources\242\002\003GAA\252\002!" +
-      "Google.Ads.GoogleAds.V1.Resources\312\002!Goog" +
-      "le\\Ads\\GoogleAds\\V1\\Resources\352\002%Google::" +
-      "Ads::GoogleAds::V1::Resourcesb\006proto3"
+      "ds.v1.resources\032\037google/api/field_behavi" +
+      "or.proto\032\031google/api/resource.proto\032\034goo" +
+      "gle/api/annotations.proto\"\311\001\n\020ProductGro" +
+      "upView\022H\n\rresource_name\030\001 \001(\tB1\340A\003\372A+\n)g" +
+      "oogleads.googleapis.com/ProductGroupView" +
+      ":k\352Ah\n)googleads.googleapis.com/ProductG" +
+      "roupView\022;customers/{customer}/productGr" +
+      "oupViews/{product_group_view}B\202\002\n%com.go" +
+      "ogle.ads.googleads.v1.resourcesB\025Product" +
+      "GroupViewProtoP\001ZJgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v1/resourc" +
+      "es;resources\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
+      "s.V1.Resources\312\002!Google\\Ads\\GoogleAds\\V1" +
+      "\\Resources\352\002%Google::Ads::GoogleAds::V1:" +
+      ":Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_ProductGroupView_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_ProductGroupView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_ProductGroupView_descriptor,
         new java.lang.String[] { "ResourceName", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

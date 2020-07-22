@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ListPlannableLocationsRequest}
  */
-public  final class ListPlannableLocationsRequest extends
+public final class ListPlannableLocationsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ListPlannableLocationsRequest)
     ListPlannableLocationsRequestOrBuilder {

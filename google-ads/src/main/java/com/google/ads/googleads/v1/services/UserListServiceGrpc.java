@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/user_list_service.proto")
 public final class UserListServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class UserListServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.UserListService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetUserListMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetUserListRequest,
-      com.google.ads.googleads.v1.resources.UserList> METHOD_GET_USER_LIST = getGetUserListMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetUserListRequest,
       com.google.ads.googleads.v1.resources.UserList> getGetUserListMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetUserList",
+      requestType = com.google.ads.googleads.v1.services.GetUserListRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.UserList.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetUserListRequest,
       com.google.ads.googleads.v1.resources.UserList> getGetUserListMethod() {
-    return getGetUserListMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetUserListRequest,
-      com.google.ads.googleads.v1.resources.UserList> getGetUserListMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetUserListRequest, com.google.ads.googleads.v1.resources.UserList> getGetUserListMethod;
     if ((getGetUserListMethod = UserListServiceGrpc.getGetUserListMethod) == null) {
       synchronized (UserListServiceGrpc.class) {
         if ((getGetUserListMethod = UserListServiceGrpc.getGetUserListMethod) == null) {
-          UserListServiceGrpc.getGetUserListMethod = getGetUserListMethod = 
+          UserListServiceGrpc.getGetUserListMethod = getGetUserListMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetUserListRequest, com.google.ads.googleads.v1.resources.UserList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.UserListService", "GetUserList"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserList"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetUserListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.UserList.getDefaultInstance()))
-                  .setSchemaDescriptor(new UserListServiceMethodDescriptorSupplier("GetUserList"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UserListServiceMethodDescriptorSupplier("GetUserList"))
+              .build();
         }
-     }
-     return getGetUserListMethod;
+      }
+    }
+    return getGetUserListMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateUserListsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateUserListsRequest,
-      com.google.ads.googleads.v1.services.MutateUserListsResponse> METHOD_MUTATE_USER_LISTS = getMutateUserListsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateUserListsRequest,
       com.google.ads.googleads.v1.services.MutateUserListsResponse> getMutateUserListsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateUserLists",
+      requestType = com.google.ads.googleads.v1.services.MutateUserListsRequest.class,
+      responseType = com.google.ads.googleads.v1.services.MutateUserListsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateUserListsRequest,
       com.google.ads.googleads.v1.services.MutateUserListsResponse> getMutateUserListsMethod() {
-    return getMutateUserListsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateUserListsRequest,
-      com.google.ads.googleads.v1.services.MutateUserListsResponse> getMutateUserListsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateUserListsRequest, com.google.ads.googleads.v1.services.MutateUserListsResponse> getMutateUserListsMethod;
     if ((getMutateUserListsMethod = UserListServiceGrpc.getMutateUserListsMethod) == null) {
       synchronized (UserListServiceGrpc.class) {
         if ((getMutateUserListsMethod = UserListServiceGrpc.getMutateUserListsMethod) == null) {
-          UserListServiceGrpc.getMutateUserListsMethod = getMutateUserListsMethod = 
+          UserListServiceGrpc.getMutateUserListsMethod = getMutateUserListsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.MutateUserListsRequest, com.google.ads.googleads.v1.services.MutateUserListsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.UserListService", "MutateUserLists"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateUserLists"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateUserListsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateUserListsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new UserListServiceMethodDescriptorSupplier("MutateUserLists"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UserListServiceMethodDescriptorSupplier("MutateUserLists"))
+              .build();
         }
-     }
-     return getMutateUserListsMethod;
+      }
+    }
+    return getMutateUserListsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static UserListServiceStub newStub(io.grpc.Channel channel) {
-    return new UserListServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserListServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserListServiceStub>() {
+        @java.lang.Override
+        public UserListServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserListServiceStub(channel, callOptions);
+        }
+      };
+    return UserListServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class UserListServiceGrpc {
    */
   public static UserListServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new UserListServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserListServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserListServiceBlockingStub>() {
+        @java.lang.Override
+        public UserListServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserListServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return UserListServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class UserListServiceGrpc {
    */
   public static UserListServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new UserListServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UserListServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UserListServiceFutureStub>() {
+        @java.lang.Override
+        public UserListServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UserListServiceFutureStub(channel, callOptions);
+        }
+      };
+    return UserListServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class UserListServiceGrpc {
      */
     public void getUserList(com.google.ads.googleads.v1.services.GetUserListRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.UserList> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetUserListMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserListMethod(), responseObserver);
     }
 
     /**
@@ -152,20 +160,20 @@ public final class UserListServiceGrpc {
      */
     public void mutateUserLists(com.google.ads.googleads.v1.services.MutateUserListsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateUserListsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateUserListsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateUserListsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetUserListMethodHelper(),
+            getGetUserListMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetUserListRequest,
                 com.google.ads.googleads.v1.resources.UserList>(
                   this, METHODID_GET_USER_LIST)))
           .addMethod(
-            getMutateUserListsMethodHelper(),
+            getMutateUserListsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.MutateUserListsRequest,
@@ -180,19 +188,15 @@ public final class UserListServiceGrpc {
    * Service to manage user lists.
    * </pre>
    */
-  public static final class UserListServiceStub extends io.grpc.stub.AbstractStub<UserListServiceStub> {
-    private UserListServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserListServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserListServiceStub extends io.grpc.stub.AbstractAsyncStub<UserListServiceStub> {
+    private UserListServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserListServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserListServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserListServiceStub(channel, callOptions);
     }
 
@@ -204,7 +208,7 @@ public final class UserListServiceGrpc {
     public void getUserList(com.google.ads.googleads.v1.services.GetUserListRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.UserList> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetUserListMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetUserListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -215,7 +219,7 @@ public final class UserListServiceGrpc {
     public void mutateUserLists(com.google.ads.googleads.v1.services.MutateUserListsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateUserListsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateUserListsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateUserListsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -224,19 +228,15 @@ public final class UserListServiceGrpc {
    * Service to manage user lists.
    * </pre>
    */
-  public static final class UserListServiceBlockingStub extends io.grpc.stub.AbstractStub<UserListServiceBlockingStub> {
-    private UserListServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserListServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserListServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserListServiceBlockingStub> {
+    private UserListServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserListServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserListServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserListServiceBlockingStub(channel, callOptions);
     }
 
@@ -247,7 +247,7 @@ public final class UserListServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.UserList getUserList(com.google.ads.googleads.v1.services.GetUserListRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetUserListMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetUserListMethod(), getCallOptions(), request);
     }
 
     /**
@@ -257,7 +257,7 @@ public final class UserListServiceGrpc {
      */
     public com.google.ads.googleads.v1.services.MutateUserListsResponse mutateUserLists(com.google.ads.googleads.v1.services.MutateUserListsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateUserListsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateUserListsMethod(), getCallOptions(), request);
     }
   }
 
@@ -266,19 +266,15 @@ public final class UserListServiceGrpc {
    * Service to manage user lists.
    * </pre>
    */
-  public static final class UserListServiceFutureStub extends io.grpc.stub.AbstractStub<UserListServiceFutureStub> {
-    private UserListServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UserListServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UserListServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserListServiceFutureStub> {
+    private UserListServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UserListServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UserListServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UserListServiceFutureStub(channel, callOptions);
     }
 
@@ -290,7 +286,7 @@ public final class UserListServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.UserList> getUserList(
         com.google.ads.googleads.v1.services.GetUserListRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetUserListMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetUserListMethod(), getCallOptions()), request);
     }
 
     /**
@@ -301,7 +297,7 @@ public final class UserListServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.services.MutateUserListsResponse> mutateUserLists(
         com.google.ads.googleads.v1.services.MutateUserListsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateUserListsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateUserListsMethod(), getCallOptions()), request);
     }
   }
 
@@ -394,8 +390,8 @@ public final class UserListServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new UserListServiceFileDescriptorSupplier())
-              .addMethod(getGetUserListMethodHelper())
-              .addMethod(getMutateUserListsMethodHelper())
+              .addMethod(getGetUserListMethod())
+              .addMethod(getMutateUserListsMethod())
               .build();
         }
       }

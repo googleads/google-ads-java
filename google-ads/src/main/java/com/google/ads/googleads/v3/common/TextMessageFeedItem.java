@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.TextMessageFeedItem}
  */
-public  final class TextMessageFeedItem extends
+public final class TextMessageFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.TextMessageFeedItem)
     TextMessageFeedItemOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TextMessageFeedItem() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new TextMessageFeedItem();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -153,7 +159,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 1;</code>
+   * @return Whether the businessName field is set.
    */
+  @java.lang.Override
   public boolean hasBusinessName() {
     return businessName_ != null;
   }
@@ -164,7 +172,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue business_name = 1;</code>
+   * @return The businessName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBusinessName() {
     return businessName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessName_;
   }
@@ -176,6 +186,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue business_name = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBusinessNameOrBuilder() {
     return getBusinessName();
   }
@@ -189,7 +200,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return Whether the countryCode field is set.
    */
+  @java.lang.Override
   public boolean hasCountryCode() {
     return countryCode_ != null;
   }
@@ -200,7 +213,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return The countryCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCountryCode() {
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
@@ -212,6 +227,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
     return getCountryCode();
   }
@@ -224,7 +240,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 3;</code>
+   * @return Whether the phoneNumber field is set.
    */
+  @java.lang.Override
   public boolean hasPhoneNumber() {
     return phoneNumber_ != null;
   }
@@ -234,7 +252,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 3;</code>
+   * @return The phoneNumber.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPhoneNumber() {
     return phoneNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : phoneNumber_;
   }
@@ -245,6 +265,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue phone_number = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPhoneNumberOrBuilder() {
     return getPhoneNumber();
   }
@@ -258,7 +279,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 4;</code>
+   * @return Whether the text field is set.
    */
+  @java.lang.Override
   public boolean hasText() {
     return text_ != null;
   }
@@ -269,7 +292,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 4;</code>
+   * @return The text.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getText() {
     return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
   }
@@ -281,6 +306,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue text = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
     return getText();
   }
@@ -293,7 +319,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue extension_text = 5;</code>
+   * @return Whether the extensionText field is set.
    */
+  @java.lang.Override
   public boolean hasExtensionText() {
     return extensionText_ != null;
   }
@@ -303,7 +331,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue extension_text = 5;</code>
+   * @return The extensionText.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getExtensionText() {
     return extensionText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : extensionText_;
   }
@@ -314,6 +344,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue extension_text = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getExtensionTextOrBuilder() {
     return getExtensionText();
   }
@@ -768,6 +799,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue business_name = 1;</code>
+     * @return Whether the businessName field is set.
      */
     public boolean hasBusinessName() {
       return businessNameBuilder_ != null || businessName_ != null;
@@ -779,6 +811,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue business_name = 1;</code>
+     * @return The businessName.
      */
     public com.google.protobuf.StringValue getBusinessName() {
       if (businessNameBuilder_ == null) {
@@ -930,6 +963,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue country_code = 2;</code>
+     * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
       return countryCodeBuilder_ != null || countryCode_ != null;
@@ -941,6 +975,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue country_code = 2;</code>
+     * @return The countryCode.
      */
     public com.google.protobuf.StringValue getCountryCode() {
       if (countryCodeBuilder_ == null) {
@@ -1091,6 +1126,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue phone_number = 3;</code>
+     * @return Whether the phoneNumber field is set.
      */
     public boolean hasPhoneNumber() {
       return phoneNumberBuilder_ != null || phoneNumber_ != null;
@@ -1101,6 +1137,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue phone_number = 3;</code>
+     * @return The phoneNumber.
      */
     public com.google.protobuf.StringValue getPhoneNumber() {
       if (phoneNumberBuilder_ == null) {
@@ -1245,6 +1282,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue text = 4;</code>
+     * @return Whether the text field is set.
      */
     public boolean hasText() {
       return textBuilder_ != null || text_ != null;
@@ -1256,6 +1294,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue text = 4;</code>
+     * @return The text.
      */
     public com.google.protobuf.StringValue getText() {
       if (textBuilder_ == null) {
@@ -1406,6 +1445,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue extension_text = 5;</code>
+     * @return Whether the extensionText field is set.
      */
     public boolean hasExtensionText() {
       return extensionTextBuilder_ != null || extensionText_ != null;
@@ -1416,6 +1456,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue extension_text = 5;</code>
+     * @return The extensionText.
      */
     public com.google.protobuf.StringValue getExtensionText() {
       if (extensionTextBuilder_ == null) {

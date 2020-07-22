@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GeoTargetConstantSuggestion}
  */
-public  final class GeoTargetConstantSuggestion extends
+public final class GeoTargetConstantSuggestion extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GeoTargetConstantSuggestion)
     GeoTargetConstantSuggestionOrBuilder {
@@ -163,6 +163,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue locale = 1;</code>
    * @return Whether the locale field is set.
    */
+  @java.lang.Override
   public boolean hasLocale() {
     return locale_ != null;
   }
@@ -177,6 +178,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue locale = 1;</code>
    * @return The locale.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLocale() {
     return locale_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : locale_;
   }
@@ -190,6 +192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue locale = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLocaleOrBuilder() {
     return getLocale();
   }
@@ -205,6 +208,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value reach = 2;</code>
    * @return Whether the reach field is set.
    */
+  @java.lang.Override
   public boolean hasReach() {
     return reach_ != null;
   }
@@ -217,6 +221,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value reach = 2;</code>
    * @return The reach.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getReach() {
     return reach_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : reach_;
   }
@@ -228,6 +233,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value reach = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getReachOrBuilder() {
     return getReach();
   }
@@ -243,6 +249,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue search_term = 3;</code>
    * @return Whether the searchTerm field is set.
    */
+  @java.lang.Override
   public boolean hasSearchTerm() {
     return searchTerm_ != null;
   }
@@ -255,6 +262,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue search_term = 3;</code>
    * @return The searchTerm.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSearchTerm() {
     return searchTerm_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : searchTerm_;
   }
@@ -266,6 +274,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue search_term = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSearchTermOrBuilder() {
     return getSearchTerm();
   }
@@ -280,6 +289,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.GeoTargetConstant geo_target_constant = 4;</code>
    * @return Whether the geoTargetConstant field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetConstant() {
     return geoTargetConstant_ != null;
   }
@@ -291,6 +301,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.GeoTargetConstant geo_target_constant = 4;</code>
    * @return The geoTargetConstant.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.GeoTargetConstant getGeoTargetConstant() {
     return geoTargetConstant_ == null ? com.google.ads.googleads.v4.resources.GeoTargetConstant.getDefaultInstance() : geoTargetConstant_;
   }
@@ -301,6 +312,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.GeoTargetConstant geo_target_constant = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.GeoTargetConstantOrBuilder getGeoTargetConstantOrBuilder() {
     return getGeoTargetConstant();
   }
@@ -314,6 +326,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.GeoTargetConstant geo_target_constant_parents = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.resources.GeoTargetConstant> getGeoTargetConstantParentsList() {
     return geoTargetConstantParents_;
   }
@@ -324,6 +337,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.GeoTargetConstant geo_target_constant_parents = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.resources.GeoTargetConstantOrBuilder> 
       getGeoTargetConstantParentsOrBuilderList() {
     return geoTargetConstantParents_;
@@ -335,6 +349,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.GeoTargetConstant geo_target_constant_parents = 5;</code>
    */
+  @java.lang.Override
   public int getGeoTargetConstantParentsCount() {
     return geoTargetConstantParents_.size();
   }
@@ -345,6 +360,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.GeoTargetConstant geo_target_constant_parents = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.GeoTargetConstant getGeoTargetConstantParents(int index) {
     return geoTargetConstantParents_.get(index);
   }
@@ -355,6 +371,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.GeoTargetConstant geo_target_constant_parents = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.GeoTargetConstantOrBuilder getGeoTargetConstantParentsOrBuilder(
       int index) {
     return geoTargetConstantParents_.get(index);

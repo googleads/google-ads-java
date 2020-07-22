@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.MutateOperationResponse}
  */
-public  final class MutateOperationResponse extends
+public final class MutateOperationResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.MutateOperationResponse)
     MutateOperationResponseOrBuilder {
@@ -850,6 +850,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupAdLabelResult ad_group_ad_label_result = 17;</code>
    * @return Whether the adGroupAdLabelResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAdLabelResult() {
     return responseCase_ == 17;
   }
@@ -861,6 +862,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupAdLabelResult ad_group_ad_label_result = 17;</code>
    * @return The adGroupAdLabelResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupAdLabelResult getAdGroupAdLabelResult() {
     if (responseCase_ == 17) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupAdLabelResult) response_;
@@ -874,6 +876,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdGroupAdLabelResult ad_group_ad_label_result = 17;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupAdLabelResultOrBuilder getAdGroupAdLabelResultOrBuilder() {
     if (responseCase_ == 17) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupAdLabelResult) response_;
@@ -890,6 +893,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupAdResult ad_group_ad_result = 1;</code>
    * @return Whether the adGroupAdResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupAdResult() {
     return responseCase_ == 1;
   }
@@ -901,6 +905,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupAdResult ad_group_ad_result = 1;</code>
    * @return The adGroupAdResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupAdResult getAdGroupAdResult() {
     if (responseCase_ == 1) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupAdResult) response_;
@@ -914,6 +919,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdGroupAdResult ad_group_ad_result = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupAdResultOrBuilder getAdGroupAdResultOrBuilder() {
     if (responseCase_ == 1) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupAdResult) response_;
@@ -930,6 +936,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult ad_group_bid_modifier_result = 2;</code>
    * @return Whether the adGroupBidModifierResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupBidModifierResult() {
     return responseCase_ == 2;
   }
@@ -941,6 +948,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult ad_group_bid_modifier_result = 2;</code>
    * @return The adGroupBidModifierResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult getAdGroupBidModifierResult() {
     if (responseCase_ == 2) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult) response_;
@@ -954,6 +962,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult ad_group_bid_modifier_result = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupBidModifierResultOrBuilder getAdGroupBidModifierResultOrBuilder() {
     if (responseCase_ == 2) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult) response_;
@@ -970,6 +979,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResult ad_group_criterion_label_result = 18;</code>
    * @return Whether the adGroupCriterionLabelResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterionLabelResult() {
     return responseCase_ == 18;
   }
@@ -981,6 +991,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResult ad_group_criterion_label_result = 18;</code>
    * @return The adGroupCriterionLabelResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResult getAdGroupCriterionLabelResult() {
     if (responseCase_ == 18) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResult) response_;
@@ -994,6 +1005,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResult ad_group_criterion_label_result = 18;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResultOrBuilder getAdGroupCriterionLabelResultOrBuilder() {
     if (responseCase_ == 18) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResult) response_;
@@ -1010,6 +1022,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionResult ad_group_criterion_result = 3;</code>
    * @return Whether the adGroupCriterionResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupCriterionResult() {
     return responseCase_ == 3;
   }
@@ -1021,6 +1034,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionResult ad_group_criterion_result = 3;</code>
    * @return The adGroupCriterionResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupCriterionResult getAdGroupCriterionResult() {
     if (responseCase_ == 3) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupCriterionResult) response_;
@@ -1034,6 +1048,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionResult ad_group_criterion_result = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupCriterionResultOrBuilder getAdGroupCriterionResultOrBuilder() {
     if (responseCase_ == 3) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupCriterionResult) response_;
@@ -1050,6 +1065,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResult ad_group_extension_setting_result = 19;</code>
    * @return Whether the adGroupExtensionSettingResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupExtensionSettingResult() {
     return responseCase_ == 19;
   }
@@ -1061,6 +1077,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResult ad_group_extension_setting_result = 19;</code>
    * @return The adGroupExtensionSettingResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResult getAdGroupExtensionSettingResult() {
     if (responseCase_ == 19) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResult) response_;
@@ -1074,6 +1091,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResult ad_group_extension_setting_result = 19;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResultOrBuilder getAdGroupExtensionSettingResultOrBuilder() {
     if (responseCase_ == 19) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResult) response_;
@@ -1090,6 +1108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupFeedResult ad_group_feed_result = 20;</code>
    * @return Whether the adGroupFeedResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupFeedResult() {
     return responseCase_ == 20;
   }
@@ -1101,6 +1120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupFeedResult ad_group_feed_result = 20;</code>
    * @return The adGroupFeedResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupFeedResult getAdGroupFeedResult() {
     if (responseCase_ == 20) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupFeedResult) response_;
@@ -1114,6 +1134,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdGroupFeedResult ad_group_feed_result = 20;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupFeedResultOrBuilder getAdGroupFeedResultOrBuilder() {
     if (responseCase_ == 20) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupFeedResult) response_;
@@ -1130,6 +1151,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupLabelResult ad_group_label_result = 21;</code>
    * @return Whether the adGroupLabelResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupLabelResult() {
     return responseCase_ == 21;
   }
@@ -1141,6 +1163,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupLabelResult ad_group_label_result = 21;</code>
    * @return The adGroupLabelResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupLabelResult getAdGroupLabelResult() {
     if (responseCase_ == 21) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupLabelResult) response_;
@@ -1154,6 +1177,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdGroupLabelResult ad_group_label_result = 21;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupLabelResultOrBuilder getAdGroupLabelResultOrBuilder() {
     if (responseCase_ == 21) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupLabelResult) response_;
@@ -1170,6 +1194,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupResult ad_group_result = 5;</code>
    * @return Whether the adGroupResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroupResult() {
     return responseCase_ == 5;
   }
@@ -1181,6 +1206,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdGroupResult ad_group_result = 5;</code>
    * @return The adGroupResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupResult getAdGroupResult() {
     if (responseCase_ == 5) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupResult) response_;
@@ -1194,6 +1220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdGroupResult ad_group_result = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdGroupResultOrBuilder getAdGroupResultOrBuilder() {
     if (responseCase_ == 5) {
        return (com.google.ads.googleads.v4.services.MutateAdGroupResult) response_;
@@ -1210,6 +1237,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdParameterResult ad_parameter_result = 22;</code>
    * @return Whether the adParameterResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdParameterResult() {
     return responseCase_ == 22;
   }
@@ -1221,6 +1249,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdParameterResult ad_parameter_result = 22;</code>
    * @return The adParameterResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdParameterResult getAdParameterResult() {
     if (responseCase_ == 22) {
        return (com.google.ads.googleads.v4.services.MutateAdParameterResult) response_;
@@ -1234,6 +1263,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdParameterResult ad_parameter_result = 22;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdParameterResultOrBuilder getAdParameterResultOrBuilder() {
     if (responseCase_ == 22) {
        return (com.google.ads.googleads.v4.services.MutateAdParameterResult) response_;
@@ -1250,6 +1280,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdResult ad_result = 49;</code>
    * @return Whether the adResult field is set.
    */
+  @java.lang.Override
   public boolean hasAdResult() {
     return responseCase_ == 49;
   }
@@ -1261,6 +1292,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAdResult ad_result = 49;</code>
    * @return The adResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdResult getAdResult() {
     if (responseCase_ == 49) {
        return (com.google.ads.googleads.v4.services.MutateAdResult) response_;
@@ -1274,6 +1306,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAdResult ad_result = 49;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAdResultOrBuilder getAdResultOrBuilder() {
     if (responseCase_ == 49) {
        return (com.google.ads.googleads.v4.services.MutateAdResult) response_;
@@ -1290,6 +1323,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAssetResult asset_result = 23;</code>
    * @return Whether the assetResult field is set.
    */
+  @java.lang.Override
   public boolean hasAssetResult() {
     return responseCase_ == 23;
   }
@@ -1301,6 +1335,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateAssetResult asset_result = 23;</code>
    * @return The assetResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAssetResult getAssetResult() {
     if (responseCase_ == 23) {
        return (com.google.ads.googleads.v4.services.MutateAssetResult) response_;
@@ -1314,6 +1349,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateAssetResult asset_result = 23;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateAssetResultOrBuilder getAssetResultOrBuilder() {
     if (responseCase_ == 23) {
        return (com.google.ads.googleads.v4.services.MutateAssetResult) response_;
@@ -1330,6 +1366,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateBiddingStrategyResult bidding_strategy_result = 6;</code>
    * @return Whether the biddingStrategyResult field is set.
    */
+  @java.lang.Override
   public boolean hasBiddingStrategyResult() {
     return responseCase_ == 6;
   }
@@ -1341,6 +1378,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateBiddingStrategyResult bidding_strategy_result = 6;</code>
    * @return The biddingStrategyResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateBiddingStrategyResult getBiddingStrategyResult() {
     if (responseCase_ == 6) {
        return (com.google.ads.googleads.v4.services.MutateBiddingStrategyResult) response_;
@@ -1354,6 +1392,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateBiddingStrategyResult bidding_strategy_result = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateBiddingStrategyResultOrBuilder getBiddingStrategyResultOrBuilder() {
     if (responseCase_ == 6) {
        return (com.google.ads.googleads.v4.services.MutateBiddingStrategyResult) response_;
@@ -1370,6 +1409,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignBidModifierResult campaign_bid_modifier_result = 7;</code>
    * @return Whether the campaignBidModifierResult field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignBidModifierResult() {
     return responseCase_ == 7;
   }
@@ -1381,6 +1421,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignBidModifierResult campaign_bid_modifier_result = 7;</code>
    * @return The campaignBidModifierResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignBidModifierResult getCampaignBidModifierResult() {
     if (responseCase_ == 7) {
        return (com.google.ads.googleads.v4.services.MutateCampaignBidModifierResult) response_;
@@ -1394,6 +1435,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCampaignBidModifierResult campaign_bid_modifier_result = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignBidModifierResultOrBuilder getCampaignBidModifierResultOrBuilder() {
     if (responseCase_ == 7) {
        return (com.google.ads.googleads.v4.services.MutateCampaignBidModifierResult) response_;
@@ -1410,6 +1452,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignBudgetResult campaign_budget_result = 8;</code>
    * @return Whether the campaignBudgetResult field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignBudgetResult() {
     return responseCase_ == 8;
   }
@@ -1421,6 +1464,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignBudgetResult campaign_budget_result = 8;</code>
    * @return The campaignBudgetResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignBudgetResult getCampaignBudgetResult() {
     if (responseCase_ == 8) {
        return (com.google.ads.googleads.v4.services.MutateCampaignBudgetResult) response_;
@@ -1434,6 +1478,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCampaignBudgetResult campaign_budget_result = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignBudgetResultOrBuilder getCampaignBudgetResultOrBuilder() {
     if (responseCase_ == 8) {
        return (com.google.ads.googleads.v4.services.MutateCampaignBudgetResult) response_;
@@ -1450,6 +1495,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignCriterionResult campaign_criterion_result = 13;</code>
    * @return Whether the campaignCriterionResult field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignCriterionResult() {
     return responseCase_ == 13;
   }
@@ -1461,6 +1507,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignCriterionResult campaign_criterion_result = 13;</code>
    * @return The campaignCriterionResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignCriterionResult getCampaignCriterionResult() {
     if (responseCase_ == 13) {
        return (com.google.ads.googleads.v4.services.MutateCampaignCriterionResult) response_;
@@ -1474,6 +1521,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCampaignCriterionResult campaign_criterion_result = 13;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignCriterionResultOrBuilder getCampaignCriterionResultOrBuilder() {
     if (responseCase_ == 13) {
        return (com.google.ads.googleads.v4.services.MutateCampaignCriterionResult) response_;
@@ -1490,6 +1538,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
    * @return Whether the campaignDraftResult field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignDraftResult() {
     return responseCase_ == 24;
   }
@@ -1501,6 +1550,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
    * @return The campaignDraftResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignDraftResult getCampaignDraftResult() {
     if (responseCase_ == 24) {
        return (com.google.ads.googleads.v4.services.MutateCampaignDraftResult) response_;
@@ -1514,6 +1564,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignDraftResultOrBuilder getCampaignDraftResultOrBuilder() {
     if (responseCase_ == 24) {
        return (com.google.ads.googleads.v4.services.MutateCampaignDraftResult) response_;
@@ -1530,6 +1581,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
    * @return Whether the campaignExperimentResult field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignExperimentResult() {
     return responseCase_ == 25;
   }
@@ -1541,6 +1593,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
    * @return The campaignExperimentResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignExperimentResult getCampaignExperimentResult() {
     if (responseCase_ == 25) {
        return (com.google.ads.googleads.v4.services.MutateCampaignExperimentResult) response_;
@@ -1554,6 +1607,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignExperimentResultOrBuilder getCampaignExperimentResultOrBuilder() {
     if (responseCase_ == 25) {
        return (com.google.ads.googleads.v4.services.MutateCampaignExperimentResult) response_;
@@ -1570,6 +1624,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult campaign_extension_setting_result = 26;</code>
    * @return Whether the campaignExtensionSettingResult field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignExtensionSettingResult() {
     return responseCase_ == 26;
   }
@@ -1581,6 +1636,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult campaign_extension_setting_result = 26;</code>
    * @return The campaignExtensionSettingResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult getCampaignExtensionSettingResult() {
     if (responseCase_ == 26) {
        return (com.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult) response_;
@@ -1594,6 +1650,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult campaign_extension_setting_result = 26;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResultOrBuilder getCampaignExtensionSettingResultOrBuilder() {
     if (responseCase_ == 26) {
        return (com.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult) response_;
@@ -1610,6 +1667,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignFeedResult campaign_feed_result = 27;</code>
    * @return Whether the campaignFeedResult field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignFeedResult() {
     return responseCase_ == 27;
   }
@@ -1621,6 +1679,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignFeedResult campaign_feed_result = 27;</code>
    * @return The campaignFeedResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignFeedResult getCampaignFeedResult() {
     if (responseCase_ == 27) {
        return (com.google.ads.googleads.v4.services.MutateCampaignFeedResult) response_;
@@ -1634,6 +1693,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCampaignFeedResult campaign_feed_result = 27;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignFeedResultOrBuilder getCampaignFeedResultOrBuilder() {
     if (responseCase_ == 27) {
        return (com.google.ads.googleads.v4.services.MutateCampaignFeedResult) response_;
@@ -1650,6 +1710,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignLabelResult campaign_label_result = 28;</code>
    * @return Whether the campaignLabelResult field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignLabelResult() {
     return responseCase_ == 28;
   }
@@ -1661,6 +1722,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignLabelResult campaign_label_result = 28;</code>
    * @return The campaignLabelResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignLabelResult getCampaignLabelResult() {
     if (responseCase_ == 28) {
        return (com.google.ads.googleads.v4.services.MutateCampaignLabelResult) response_;
@@ -1674,6 +1736,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCampaignLabelResult campaign_label_result = 28;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignLabelResultOrBuilder getCampaignLabelResultOrBuilder() {
     if (responseCase_ == 28) {
        return (com.google.ads.googleads.v4.services.MutateCampaignLabelResult) response_;
@@ -1690,6 +1753,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignResult campaign_result = 10;</code>
    * @return Whether the campaignResult field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignResult() {
     return responseCase_ == 10;
   }
@@ -1701,6 +1765,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignResult campaign_result = 10;</code>
    * @return The campaignResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignResult getCampaignResult() {
     if (responseCase_ == 10) {
        return (com.google.ads.googleads.v4.services.MutateCampaignResult) response_;
@@ -1714,6 +1779,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCampaignResult campaign_result = 10;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignResultOrBuilder getCampaignResultOrBuilder() {
     if (responseCase_ == 10) {
        return (com.google.ads.googleads.v4.services.MutateCampaignResult) response_;
@@ -1730,6 +1796,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignSharedSetResult campaign_shared_set_result = 11;</code>
    * @return Whether the campaignSharedSetResult field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignSharedSetResult() {
     return responseCase_ == 11;
   }
@@ -1741,6 +1808,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCampaignSharedSetResult campaign_shared_set_result = 11;</code>
    * @return The campaignSharedSetResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignSharedSetResult getCampaignSharedSetResult() {
     if (responseCase_ == 11) {
        return (com.google.ads.googleads.v4.services.MutateCampaignSharedSetResult) response_;
@@ -1754,6 +1822,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCampaignSharedSetResult campaign_shared_set_result = 11;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCampaignSharedSetResultOrBuilder getCampaignSharedSetResultOrBuilder() {
     if (responseCase_ == 11) {
        return (com.google.ads.googleads.v4.services.MutateCampaignSharedSetResult) response_;
@@ -1770,6 +1839,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateConversionActionResult conversion_action_result = 12;</code>
    * @return Whether the conversionActionResult field is set.
    */
+  @java.lang.Override
   public boolean hasConversionActionResult() {
     return responseCase_ == 12;
   }
@@ -1781,6 +1851,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateConversionActionResult conversion_action_result = 12;</code>
    * @return The conversionActionResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateConversionActionResult getConversionActionResult() {
     if (responseCase_ == 12) {
        return (com.google.ads.googleads.v4.services.MutateConversionActionResult) response_;
@@ -1794,6 +1865,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateConversionActionResult conversion_action_result = 12;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateConversionActionResultOrBuilder getConversionActionResultOrBuilder() {
     if (responseCase_ == 12) {
        return (com.google.ads.googleads.v4.services.MutateConversionActionResult) response_;
@@ -1810,6 +1882,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResult customer_extension_setting_result = 30;</code>
    * @return Whether the customerExtensionSettingResult field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerExtensionSettingResult() {
     return responseCase_ == 30;
   }
@@ -1821,6 +1894,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResult customer_extension_setting_result = 30;</code>
    * @return The customerExtensionSettingResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResult getCustomerExtensionSettingResult() {
     if (responseCase_ == 30) {
        return (com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResult) response_;
@@ -1834,6 +1908,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResult customer_extension_setting_result = 30;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResultOrBuilder getCustomerExtensionSettingResultOrBuilder() {
     if (responseCase_ == 30) {
        return (com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResult) response_;
@@ -1850,6 +1925,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCustomerFeedResult customer_feed_result = 31;</code>
    * @return Whether the customerFeedResult field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerFeedResult() {
     return responseCase_ == 31;
   }
@@ -1861,6 +1937,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCustomerFeedResult customer_feed_result = 31;</code>
    * @return The customerFeedResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCustomerFeedResult getCustomerFeedResult() {
     if (responseCase_ == 31) {
        return (com.google.ads.googleads.v4.services.MutateCustomerFeedResult) response_;
@@ -1874,6 +1951,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCustomerFeedResult customer_feed_result = 31;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCustomerFeedResultOrBuilder getCustomerFeedResultOrBuilder() {
     if (responseCase_ == 31) {
        return (com.google.ads.googleads.v4.services.MutateCustomerFeedResult) response_;
@@ -1890,6 +1968,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCustomerLabelResult customer_label_result = 32;</code>
    * @return Whether the customerLabelResult field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerLabelResult() {
     return responseCase_ == 32;
   }
@@ -1901,6 +1980,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCustomerLabelResult customer_label_result = 32;</code>
    * @return The customerLabelResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCustomerLabelResult getCustomerLabelResult() {
     if (responseCase_ == 32) {
        return (com.google.ads.googleads.v4.services.MutateCustomerLabelResult) response_;
@@ -1914,6 +1994,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCustomerLabelResult customer_label_result = 32;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCustomerLabelResultOrBuilder getCustomerLabelResultOrBuilder() {
     if (responseCase_ == 32) {
        return (com.google.ads.googleads.v4.services.MutateCustomerLabelResult) response_;
@@ -1930,6 +2011,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult customer_negative_criterion_result = 34;</code>
    * @return Whether the customerNegativeCriterionResult field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerNegativeCriterionResult() {
     return responseCase_ == 34;
   }
@@ -1941,6 +2023,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult customer_negative_criterion_result = 34;</code>
    * @return The customerNegativeCriterionResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult getCustomerNegativeCriterionResult() {
     if (responseCase_ == 34) {
        return (com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult) response_;
@@ -1954,6 +2037,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult customer_negative_criterion_result = 34;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResultOrBuilder getCustomerNegativeCriterionResultOrBuilder() {
     if (responseCase_ == 34) {
        return (com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult) response_;
@@ -1970,6 +2054,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCustomerResult customer_result = 35;</code>
    * @return Whether the customerResult field is set.
    */
+  @java.lang.Override
   public boolean hasCustomerResult() {
     return responseCase_ == 35;
   }
@@ -1981,6 +2066,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateCustomerResult customer_result = 35;</code>
    * @return The customerResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCustomerResult getCustomerResult() {
     if (responseCase_ == 35) {
        return (com.google.ads.googleads.v4.services.MutateCustomerResult) response_;
@@ -1994,6 +2080,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateCustomerResult customer_result = 35;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateCustomerResultOrBuilder getCustomerResultOrBuilder() {
     if (responseCase_ == 35) {
        return (com.google.ads.googleads.v4.services.MutateCustomerResult) response_;
@@ -2010,6 +2097,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateExtensionFeedItemResult extension_feed_item_result = 36;</code>
    * @return Whether the extensionFeedItemResult field is set.
    */
+  @java.lang.Override
   public boolean hasExtensionFeedItemResult() {
     return responseCase_ == 36;
   }
@@ -2021,6 +2109,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateExtensionFeedItemResult extension_feed_item_result = 36;</code>
    * @return The extensionFeedItemResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateExtensionFeedItemResult getExtensionFeedItemResult() {
     if (responseCase_ == 36) {
        return (com.google.ads.googleads.v4.services.MutateExtensionFeedItemResult) response_;
@@ -2034,6 +2123,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateExtensionFeedItemResult extension_feed_item_result = 36;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateExtensionFeedItemResultOrBuilder getExtensionFeedItemResultOrBuilder() {
     if (responseCase_ == 36) {
        return (com.google.ads.googleads.v4.services.MutateExtensionFeedItemResult) response_;
@@ -2050,6 +2140,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateFeedItemResult feed_item_result = 37;</code>
    * @return Whether the feedItemResult field is set.
    */
+  @java.lang.Override
   public boolean hasFeedItemResult() {
     return responseCase_ == 37;
   }
@@ -2061,6 +2152,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateFeedItemResult feed_item_result = 37;</code>
    * @return The feedItemResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedItemResult getFeedItemResult() {
     if (responseCase_ == 37) {
        return (com.google.ads.googleads.v4.services.MutateFeedItemResult) response_;
@@ -2074,6 +2166,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateFeedItemResult feed_item_result = 37;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedItemResultOrBuilder getFeedItemResultOrBuilder() {
     if (responseCase_ == 37) {
        return (com.google.ads.googleads.v4.services.MutateFeedItemResult) response_;
@@ -2090,6 +2183,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateFeedItemTargetResult feed_item_target_result = 38;</code>
    * @return Whether the feedItemTargetResult field is set.
    */
+  @java.lang.Override
   public boolean hasFeedItemTargetResult() {
     return responseCase_ == 38;
   }
@@ -2101,6 +2195,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateFeedItemTargetResult feed_item_target_result = 38;</code>
    * @return The feedItemTargetResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedItemTargetResult getFeedItemTargetResult() {
     if (responseCase_ == 38) {
        return (com.google.ads.googleads.v4.services.MutateFeedItemTargetResult) response_;
@@ -2114,6 +2209,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateFeedItemTargetResult feed_item_target_result = 38;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedItemTargetResultOrBuilder getFeedItemTargetResultOrBuilder() {
     if (responseCase_ == 38) {
        return (com.google.ads.googleads.v4.services.MutateFeedItemTargetResult) response_;
@@ -2130,6 +2226,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateFeedMappingResult feed_mapping_result = 39;</code>
    * @return Whether the feedMappingResult field is set.
    */
+  @java.lang.Override
   public boolean hasFeedMappingResult() {
     return responseCase_ == 39;
   }
@@ -2141,6 +2238,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateFeedMappingResult feed_mapping_result = 39;</code>
    * @return The feedMappingResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedMappingResult getFeedMappingResult() {
     if (responseCase_ == 39) {
        return (com.google.ads.googleads.v4.services.MutateFeedMappingResult) response_;
@@ -2154,6 +2252,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateFeedMappingResult feed_mapping_result = 39;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedMappingResultOrBuilder getFeedMappingResultOrBuilder() {
     if (responseCase_ == 39) {
        return (com.google.ads.googleads.v4.services.MutateFeedMappingResult) response_;
@@ -2170,6 +2269,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateFeedResult feed_result = 40;</code>
    * @return Whether the feedResult field is set.
    */
+  @java.lang.Override
   public boolean hasFeedResult() {
     return responseCase_ == 40;
   }
@@ -2181,6 +2281,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateFeedResult feed_result = 40;</code>
    * @return The feedResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedResult getFeedResult() {
     if (responseCase_ == 40) {
        return (com.google.ads.googleads.v4.services.MutateFeedResult) response_;
@@ -2194,6 +2295,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateFeedResult feed_result = 40;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedResultOrBuilder getFeedResultOrBuilder() {
     if (responseCase_ == 40) {
        return (com.google.ads.googleads.v4.services.MutateFeedResult) response_;
@@ -2210,6 +2312,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResult keyword_plan_ad_group_result = 44;</code>
    * @return Whether the keywordPlanAdGroupResult field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanAdGroupResult() {
     return responseCase_ == 44;
   }
@@ -2221,6 +2324,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResult keyword_plan_ad_group_result = 44;</code>
    * @return The keywordPlanAdGroupResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResult getKeywordPlanAdGroupResult() {
     if (responseCase_ == 44) {
        return (com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResult) response_;
@@ -2234,6 +2338,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResult keyword_plan_ad_group_result = 44;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResultOrBuilder getKeywordPlanAdGroupResultOrBuilder() {
     if (responseCase_ == 44) {
        return (com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResult) response_;
@@ -2250,6 +2355,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult keyword_plan_campaign_result = 45;</code>
    * @return Whether the keywordPlanCampaignResult field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanCampaignResult() {
     return responseCase_ == 45;
   }
@@ -2261,6 +2367,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult keyword_plan_campaign_result = 45;</code>
    * @return The keywordPlanCampaignResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult getKeywordPlanCampaignResult() {
     if (responseCase_ == 45) {
        return (com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult) response_;
@@ -2274,6 +2381,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult keyword_plan_campaign_result = 45;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResultOrBuilder getKeywordPlanCampaignResultOrBuilder() {
     if (responseCase_ == 45) {
        return (com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult) response_;
@@ -2290,6 +2398,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult keyword_plan_ad_group_keyword_result = 50;</code>
    * @return Whether the keywordPlanAdGroupKeywordResult field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanAdGroupKeywordResult() {
     return responseCase_ == 50;
   }
@@ -2301,6 +2410,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult keyword_plan_ad_group_keyword_result = 50;</code>
    * @return The keywordPlanAdGroupKeywordResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult getKeywordPlanAdGroupKeywordResult() {
     if (responseCase_ == 50) {
        return (com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult) response_;
@@ -2314,6 +2424,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult keyword_plan_ad_group_keyword_result = 50;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResultOrBuilder getKeywordPlanAdGroupKeywordResultOrBuilder() {
     if (responseCase_ == 50) {
        return (com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult) response_;
@@ -2330,6 +2441,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResult keyword_plan_campaign_keyword_result = 51;</code>
    * @return Whether the keywordPlanCampaignKeywordResult field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanCampaignKeywordResult() {
     return responseCase_ == 51;
   }
@@ -2341,6 +2453,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResult keyword_plan_campaign_keyword_result = 51;</code>
    * @return The keywordPlanCampaignKeywordResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResult getKeywordPlanCampaignKeywordResult() {
     if (responseCase_ == 51) {
        return (com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResult) response_;
@@ -2354,6 +2467,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResult keyword_plan_campaign_keyword_result = 51;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResultOrBuilder getKeywordPlanCampaignKeywordResultOrBuilder() {
     if (responseCase_ == 51) {
        return (com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResult) response_;
@@ -2370,6 +2484,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlansResult keyword_plan_result = 48;</code>
    * @return Whether the keywordPlanResult field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanResult() {
     return responseCase_ == 48;
   }
@@ -2381,6 +2496,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlansResult keyword_plan_result = 48;</code>
    * @return The keywordPlanResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateKeywordPlansResult getKeywordPlanResult() {
     if (responseCase_ == 48) {
        return (com.google.ads.googleads.v4.services.MutateKeywordPlansResult) response_;
@@ -2394,6 +2510,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateKeywordPlansResult keyword_plan_result = 48;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateKeywordPlansResultOrBuilder getKeywordPlanResultOrBuilder() {
     if (responseCase_ == 48) {
        return (com.google.ads.googleads.v4.services.MutateKeywordPlansResult) response_;
@@ -2410,6 +2527,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateLabelResult label_result = 41;</code>
    * @return Whether the labelResult field is set.
    */
+  @java.lang.Override
   public boolean hasLabelResult() {
     return responseCase_ == 41;
   }
@@ -2421,6 +2539,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateLabelResult label_result = 41;</code>
    * @return The labelResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateLabelResult getLabelResult() {
     if (responseCase_ == 41) {
        return (com.google.ads.googleads.v4.services.MutateLabelResult) response_;
@@ -2434,6 +2553,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateLabelResult label_result = 41;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateLabelResultOrBuilder getLabelResultOrBuilder() {
     if (responseCase_ == 41) {
        return (com.google.ads.googleads.v4.services.MutateLabelResult) response_;
@@ -2450,6 +2570,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateMediaFileResult media_file_result = 42;</code>
    * @return Whether the mediaFileResult field is set.
    */
+  @java.lang.Override
   public boolean hasMediaFileResult() {
     return responseCase_ == 42;
   }
@@ -2461,6 +2582,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateMediaFileResult media_file_result = 42;</code>
    * @return The mediaFileResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateMediaFileResult getMediaFileResult() {
     if (responseCase_ == 42) {
        return (com.google.ads.googleads.v4.services.MutateMediaFileResult) response_;
@@ -2474,6 +2596,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateMediaFileResult media_file_result = 42;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateMediaFileResultOrBuilder getMediaFileResultOrBuilder() {
     if (responseCase_ == 42) {
        return (com.google.ads.googleads.v4.services.MutateMediaFileResult) response_;
@@ -2490,6 +2613,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateRemarketingActionResult remarketing_action_result = 43;</code>
    * @return Whether the remarketingActionResult field is set.
    */
+  @java.lang.Override
   public boolean hasRemarketingActionResult() {
     return responseCase_ == 43;
   }
@@ -2501,6 +2625,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateRemarketingActionResult remarketing_action_result = 43;</code>
    * @return The remarketingActionResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateRemarketingActionResult getRemarketingActionResult() {
     if (responseCase_ == 43) {
        return (com.google.ads.googleads.v4.services.MutateRemarketingActionResult) response_;
@@ -2514,6 +2639,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateRemarketingActionResult remarketing_action_result = 43;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateRemarketingActionResultOrBuilder getRemarketingActionResultOrBuilder() {
     if (responseCase_ == 43) {
        return (com.google.ads.googleads.v4.services.MutateRemarketingActionResult) response_;
@@ -2530,6 +2656,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateSharedCriterionResult shared_criterion_result = 14;</code>
    * @return Whether the sharedCriterionResult field is set.
    */
+  @java.lang.Override
   public boolean hasSharedCriterionResult() {
     return responseCase_ == 14;
   }
@@ -2541,6 +2668,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateSharedCriterionResult shared_criterion_result = 14;</code>
    * @return The sharedCriterionResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateSharedCriterionResult getSharedCriterionResult() {
     if (responseCase_ == 14) {
        return (com.google.ads.googleads.v4.services.MutateSharedCriterionResult) response_;
@@ -2554,6 +2682,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateSharedCriterionResult shared_criterion_result = 14;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateSharedCriterionResultOrBuilder getSharedCriterionResultOrBuilder() {
     if (responseCase_ == 14) {
        return (com.google.ads.googleads.v4.services.MutateSharedCriterionResult) response_;
@@ -2570,6 +2699,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateSharedSetResult shared_set_result = 15;</code>
    * @return Whether the sharedSetResult field is set.
    */
+  @java.lang.Override
   public boolean hasSharedSetResult() {
     return responseCase_ == 15;
   }
@@ -2581,6 +2711,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateSharedSetResult shared_set_result = 15;</code>
    * @return The sharedSetResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateSharedSetResult getSharedSetResult() {
     if (responseCase_ == 15) {
        return (com.google.ads.googleads.v4.services.MutateSharedSetResult) response_;
@@ -2594,6 +2725,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateSharedSetResult shared_set_result = 15;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateSharedSetResultOrBuilder getSharedSetResultOrBuilder() {
     if (responseCase_ == 15) {
        return (com.google.ads.googleads.v4.services.MutateSharedSetResult) response_;
@@ -2610,6 +2742,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateUserListResult user_list_result = 16;</code>
    * @return Whether the userListResult field is set.
    */
+  @java.lang.Override
   public boolean hasUserListResult() {
     return responseCase_ == 16;
   }
@@ -2621,6 +2754,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateUserListResult user_list_result = 16;</code>
    * @return The userListResult.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateUserListResult getUserListResult() {
     if (responseCase_ == 16) {
        return (com.google.ads.googleads.v4.services.MutateUserListResult) response_;
@@ -2634,6 +2768,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateUserListResult user_list_result = 16;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateUserListResultOrBuilder getUserListResultOrBuilder() {
     if (responseCase_ == 16) {
        return (com.google.ads.googleads.v4.services.MutateUserListResult) response_;
@@ -4142,6 +4277,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupAdLabelResult ad_group_ad_label_result = 17;</code>
      * @return Whether the adGroupAdLabelResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupAdLabelResult() {
       return responseCase_ == 17;
     }
@@ -4153,6 +4289,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupAdLabelResult ad_group_ad_label_result = 17;</code>
      * @return The adGroupAdLabelResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupAdLabelResult getAdGroupAdLabelResult() {
       if (adGroupAdLabelResultBuilder_ == null) {
         if (responseCase_ == 17) {
@@ -4270,6 +4407,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdGroupAdLabelResult ad_group_ad_label_result = 17;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupAdLabelResultOrBuilder getAdGroupAdLabelResultOrBuilder() {
       if ((responseCase_ == 17) && (adGroupAdLabelResultBuilder_ != null)) {
         return adGroupAdLabelResultBuilder_.getMessageOrBuilder();
@@ -4316,6 +4454,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupAdResult ad_group_ad_result = 1;</code>
      * @return Whether the adGroupAdResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupAdResult() {
       return responseCase_ == 1;
     }
@@ -4327,6 +4466,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupAdResult ad_group_ad_result = 1;</code>
      * @return The adGroupAdResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupAdResult getAdGroupAdResult() {
       if (adGroupAdResultBuilder_ == null) {
         if (responseCase_ == 1) {
@@ -4444,6 +4584,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdGroupAdResult ad_group_ad_result = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupAdResultOrBuilder getAdGroupAdResultOrBuilder() {
       if ((responseCase_ == 1) && (adGroupAdResultBuilder_ != null)) {
         return adGroupAdResultBuilder_.getMessageOrBuilder();
@@ -4490,6 +4631,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult ad_group_bid_modifier_result = 2;</code>
      * @return Whether the adGroupBidModifierResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupBidModifierResult() {
       return responseCase_ == 2;
     }
@@ -4501,6 +4643,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult ad_group_bid_modifier_result = 2;</code>
      * @return The adGroupBidModifierResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult getAdGroupBidModifierResult() {
       if (adGroupBidModifierResultBuilder_ == null) {
         if (responseCase_ == 2) {
@@ -4618,6 +4761,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdGroupBidModifierResult ad_group_bid_modifier_result = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupBidModifierResultOrBuilder getAdGroupBidModifierResultOrBuilder() {
       if ((responseCase_ == 2) && (adGroupBidModifierResultBuilder_ != null)) {
         return adGroupBidModifierResultBuilder_.getMessageOrBuilder();
@@ -4664,6 +4808,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResult ad_group_criterion_label_result = 18;</code>
      * @return Whether the adGroupCriterionLabelResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupCriterionLabelResult() {
       return responseCase_ == 18;
     }
@@ -4675,6 +4820,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResult ad_group_criterion_label_result = 18;</code>
      * @return The adGroupCriterionLabelResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResult getAdGroupCriterionLabelResult() {
       if (adGroupCriterionLabelResultBuilder_ == null) {
         if (responseCase_ == 18) {
@@ -4792,6 +4938,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResult ad_group_criterion_label_result = 18;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupCriterionLabelResultOrBuilder getAdGroupCriterionLabelResultOrBuilder() {
       if ((responseCase_ == 18) && (adGroupCriterionLabelResultBuilder_ != null)) {
         return adGroupCriterionLabelResultBuilder_.getMessageOrBuilder();
@@ -4838,6 +4985,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionResult ad_group_criterion_result = 3;</code>
      * @return Whether the adGroupCriterionResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupCriterionResult() {
       return responseCase_ == 3;
     }
@@ -4849,6 +4997,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionResult ad_group_criterion_result = 3;</code>
      * @return The adGroupCriterionResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupCriterionResult getAdGroupCriterionResult() {
       if (adGroupCriterionResultBuilder_ == null) {
         if (responseCase_ == 3) {
@@ -4966,6 +5115,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdGroupCriterionResult ad_group_criterion_result = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupCriterionResultOrBuilder getAdGroupCriterionResultOrBuilder() {
       if ((responseCase_ == 3) && (adGroupCriterionResultBuilder_ != null)) {
         return adGroupCriterionResultBuilder_.getMessageOrBuilder();
@@ -5012,6 +5162,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResult ad_group_extension_setting_result = 19;</code>
      * @return Whether the adGroupExtensionSettingResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupExtensionSettingResult() {
       return responseCase_ == 19;
     }
@@ -5023,6 +5174,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResult ad_group_extension_setting_result = 19;</code>
      * @return The adGroupExtensionSettingResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResult getAdGroupExtensionSettingResult() {
       if (adGroupExtensionSettingResultBuilder_ == null) {
         if (responseCase_ == 19) {
@@ -5140,6 +5292,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResult ad_group_extension_setting_result = 19;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupExtensionSettingResultOrBuilder getAdGroupExtensionSettingResultOrBuilder() {
       if ((responseCase_ == 19) && (adGroupExtensionSettingResultBuilder_ != null)) {
         return adGroupExtensionSettingResultBuilder_.getMessageOrBuilder();
@@ -5186,6 +5339,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupFeedResult ad_group_feed_result = 20;</code>
      * @return Whether the adGroupFeedResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupFeedResult() {
       return responseCase_ == 20;
     }
@@ -5197,6 +5351,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupFeedResult ad_group_feed_result = 20;</code>
      * @return The adGroupFeedResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupFeedResult getAdGroupFeedResult() {
       if (adGroupFeedResultBuilder_ == null) {
         if (responseCase_ == 20) {
@@ -5314,6 +5469,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdGroupFeedResult ad_group_feed_result = 20;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupFeedResultOrBuilder getAdGroupFeedResultOrBuilder() {
       if ((responseCase_ == 20) && (adGroupFeedResultBuilder_ != null)) {
         return adGroupFeedResultBuilder_.getMessageOrBuilder();
@@ -5360,6 +5516,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupLabelResult ad_group_label_result = 21;</code>
      * @return Whether the adGroupLabelResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupLabelResult() {
       return responseCase_ == 21;
     }
@@ -5371,6 +5528,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupLabelResult ad_group_label_result = 21;</code>
      * @return The adGroupLabelResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupLabelResult getAdGroupLabelResult() {
       if (adGroupLabelResultBuilder_ == null) {
         if (responseCase_ == 21) {
@@ -5488,6 +5646,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdGroupLabelResult ad_group_label_result = 21;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupLabelResultOrBuilder getAdGroupLabelResultOrBuilder() {
       if ((responseCase_ == 21) && (adGroupLabelResultBuilder_ != null)) {
         return adGroupLabelResultBuilder_.getMessageOrBuilder();
@@ -5534,6 +5693,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupResult ad_group_result = 5;</code>
      * @return Whether the adGroupResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdGroupResult() {
       return responseCase_ == 5;
     }
@@ -5545,6 +5705,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdGroupResult ad_group_result = 5;</code>
      * @return The adGroupResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupResult getAdGroupResult() {
       if (adGroupResultBuilder_ == null) {
         if (responseCase_ == 5) {
@@ -5662,6 +5823,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdGroupResult ad_group_result = 5;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdGroupResultOrBuilder getAdGroupResultOrBuilder() {
       if ((responseCase_ == 5) && (adGroupResultBuilder_ != null)) {
         return adGroupResultBuilder_.getMessageOrBuilder();
@@ -5708,6 +5870,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdParameterResult ad_parameter_result = 22;</code>
      * @return Whether the adParameterResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdParameterResult() {
       return responseCase_ == 22;
     }
@@ -5719,6 +5882,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdParameterResult ad_parameter_result = 22;</code>
      * @return The adParameterResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdParameterResult getAdParameterResult() {
       if (adParameterResultBuilder_ == null) {
         if (responseCase_ == 22) {
@@ -5836,6 +6000,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdParameterResult ad_parameter_result = 22;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdParameterResultOrBuilder getAdParameterResultOrBuilder() {
       if ((responseCase_ == 22) && (adParameterResultBuilder_ != null)) {
         return adParameterResultBuilder_.getMessageOrBuilder();
@@ -5882,6 +6047,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdResult ad_result = 49;</code>
      * @return Whether the adResult field is set.
      */
+    @java.lang.Override
     public boolean hasAdResult() {
       return responseCase_ == 49;
     }
@@ -5893,6 +6059,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAdResult ad_result = 49;</code>
      * @return The adResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdResult getAdResult() {
       if (adResultBuilder_ == null) {
         if (responseCase_ == 49) {
@@ -6010,6 +6177,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAdResult ad_result = 49;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAdResultOrBuilder getAdResultOrBuilder() {
       if ((responseCase_ == 49) && (adResultBuilder_ != null)) {
         return adResultBuilder_.getMessageOrBuilder();
@@ -6056,6 +6224,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAssetResult asset_result = 23;</code>
      * @return Whether the assetResult field is set.
      */
+    @java.lang.Override
     public boolean hasAssetResult() {
       return responseCase_ == 23;
     }
@@ -6067,6 +6236,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateAssetResult asset_result = 23;</code>
      * @return The assetResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAssetResult getAssetResult() {
       if (assetResultBuilder_ == null) {
         if (responseCase_ == 23) {
@@ -6184,6 +6354,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateAssetResult asset_result = 23;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateAssetResultOrBuilder getAssetResultOrBuilder() {
       if ((responseCase_ == 23) && (assetResultBuilder_ != null)) {
         return assetResultBuilder_.getMessageOrBuilder();
@@ -6230,6 +6401,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateBiddingStrategyResult bidding_strategy_result = 6;</code>
      * @return Whether the biddingStrategyResult field is set.
      */
+    @java.lang.Override
     public boolean hasBiddingStrategyResult() {
       return responseCase_ == 6;
     }
@@ -6241,6 +6413,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateBiddingStrategyResult bidding_strategy_result = 6;</code>
      * @return The biddingStrategyResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateBiddingStrategyResult getBiddingStrategyResult() {
       if (biddingStrategyResultBuilder_ == null) {
         if (responseCase_ == 6) {
@@ -6358,6 +6531,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateBiddingStrategyResult bidding_strategy_result = 6;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateBiddingStrategyResultOrBuilder getBiddingStrategyResultOrBuilder() {
       if ((responseCase_ == 6) && (biddingStrategyResultBuilder_ != null)) {
         return biddingStrategyResultBuilder_.getMessageOrBuilder();
@@ -6404,6 +6578,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignBidModifierResult campaign_bid_modifier_result = 7;</code>
      * @return Whether the campaignBidModifierResult field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignBidModifierResult() {
       return responseCase_ == 7;
     }
@@ -6415,6 +6590,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignBidModifierResult campaign_bid_modifier_result = 7;</code>
      * @return The campaignBidModifierResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignBidModifierResult getCampaignBidModifierResult() {
       if (campaignBidModifierResultBuilder_ == null) {
         if (responseCase_ == 7) {
@@ -6532,6 +6708,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCampaignBidModifierResult campaign_bid_modifier_result = 7;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignBidModifierResultOrBuilder getCampaignBidModifierResultOrBuilder() {
       if ((responseCase_ == 7) && (campaignBidModifierResultBuilder_ != null)) {
         return campaignBidModifierResultBuilder_.getMessageOrBuilder();
@@ -6578,6 +6755,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignBudgetResult campaign_budget_result = 8;</code>
      * @return Whether the campaignBudgetResult field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignBudgetResult() {
       return responseCase_ == 8;
     }
@@ -6589,6 +6767,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignBudgetResult campaign_budget_result = 8;</code>
      * @return The campaignBudgetResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignBudgetResult getCampaignBudgetResult() {
       if (campaignBudgetResultBuilder_ == null) {
         if (responseCase_ == 8) {
@@ -6706,6 +6885,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCampaignBudgetResult campaign_budget_result = 8;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignBudgetResultOrBuilder getCampaignBudgetResultOrBuilder() {
       if ((responseCase_ == 8) && (campaignBudgetResultBuilder_ != null)) {
         return campaignBudgetResultBuilder_.getMessageOrBuilder();
@@ -6752,6 +6932,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignCriterionResult campaign_criterion_result = 13;</code>
      * @return Whether the campaignCriterionResult field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignCriterionResult() {
       return responseCase_ == 13;
     }
@@ -6763,6 +6944,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignCriterionResult campaign_criterion_result = 13;</code>
      * @return The campaignCriterionResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignCriterionResult getCampaignCriterionResult() {
       if (campaignCriterionResultBuilder_ == null) {
         if (responseCase_ == 13) {
@@ -6880,6 +7062,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCampaignCriterionResult campaign_criterion_result = 13;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignCriterionResultOrBuilder getCampaignCriterionResultOrBuilder() {
       if ((responseCase_ == 13) && (campaignCriterionResultBuilder_ != null)) {
         return campaignCriterionResultBuilder_.getMessageOrBuilder();
@@ -6926,6 +7109,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
      * @return Whether the campaignDraftResult field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignDraftResult() {
       return responseCase_ == 24;
     }
@@ -6937,6 +7121,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
      * @return The campaignDraftResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignDraftResult getCampaignDraftResult() {
       if (campaignDraftResultBuilder_ == null) {
         if (responseCase_ == 24) {
@@ -7054,6 +7239,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCampaignDraftResult campaign_draft_result = 24;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignDraftResultOrBuilder getCampaignDraftResultOrBuilder() {
       if ((responseCase_ == 24) && (campaignDraftResultBuilder_ != null)) {
         return campaignDraftResultBuilder_.getMessageOrBuilder();
@@ -7100,6 +7286,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
      * @return Whether the campaignExperimentResult field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignExperimentResult() {
       return responseCase_ == 25;
     }
@@ -7111,6 +7298,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
      * @return The campaignExperimentResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignExperimentResult getCampaignExperimentResult() {
       if (campaignExperimentResultBuilder_ == null) {
         if (responseCase_ == 25) {
@@ -7228,6 +7416,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCampaignExperimentResult campaign_experiment_result = 25;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignExperimentResultOrBuilder getCampaignExperimentResultOrBuilder() {
       if ((responseCase_ == 25) && (campaignExperimentResultBuilder_ != null)) {
         return campaignExperimentResultBuilder_.getMessageOrBuilder();
@@ -7274,6 +7463,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult campaign_extension_setting_result = 26;</code>
      * @return Whether the campaignExtensionSettingResult field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignExtensionSettingResult() {
       return responseCase_ == 26;
     }
@@ -7285,6 +7475,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult campaign_extension_setting_result = 26;</code>
      * @return The campaignExtensionSettingResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult getCampaignExtensionSettingResult() {
       if (campaignExtensionSettingResultBuilder_ == null) {
         if (responseCase_ == 26) {
@@ -7402,6 +7593,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResult campaign_extension_setting_result = 26;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignExtensionSettingResultOrBuilder getCampaignExtensionSettingResultOrBuilder() {
       if ((responseCase_ == 26) && (campaignExtensionSettingResultBuilder_ != null)) {
         return campaignExtensionSettingResultBuilder_.getMessageOrBuilder();
@@ -7448,6 +7640,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignFeedResult campaign_feed_result = 27;</code>
      * @return Whether the campaignFeedResult field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignFeedResult() {
       return responseCase_ == 27;
     }
@@ -7459,6 +7652,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignFeedResult campaign_feed_result = 27;</code>
      * @return The campaignFeedResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignFeedResult getCampaignFeedResult() {
       if (campaignFeedResultBuilder_ == null) {
         if (responseCase_ == 27) {
@@ -7576,6 +7770,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCampaignFeedResult campaign_feed_result = 27;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignFeedResultOrBuilder getCampaignFeedResultOrBuilder() {
       if ((responseCase_ == 27) && (campaignFeedResultBuilder_ != null)) {
         return campaignFeedResultBuilder_.getMessageOrBuilder();
@@ -7622,6 +7817,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignLabelResult campaign_label_result = 28;</code>
      * @return Whether the campaignLabelResult field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignLabelResult() {
       return responseCase_ == 28;
     }
@@ -7633,6 +7829,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignLabelResult campaign_label_result = 28;</code>
      * @return The campaignLabelResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignLabelResult getCampaignLabelResult() {
       if (campaignLabelResultBuilder_ == null) {
         if (responseCase_ == 28) {
@@ -7750,6 +7947,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCampaignLabelResult campaign_label_result = 28;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignLabelResultOrBuilder getCampaignLabelResultOrBuilder() {
       if ((responseCase_ == 28) && (campaignLabelResultBuilder_ != null)) {
         return campaignLabelResultBuilder_.getMessageOrBuilder();
@@ -7796,6 +7994,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignResult campaign_result = 10;</code>
      * @return Whether the campaignResult field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignResult() {
       return responseCase_ == 10;
     }
@@ -7807,6 +8006,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignResult campaign_result = 10;</code>
      * @return The campaignResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignResult getCampaignResult() {
       if (campaignResultBuilder_ == null) {
         if (responseCase_ == 10) {
@@ -7924,6 +8124,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCampaignResult campaign_result = 10;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignResultOrBuilder getCampaignResultOrBuilder() {
       if ((responseCase_ == 10) && (campaignResultBuilder_ != null)) {
         return campaignResultBuilder_.getMessageOrBuilder();
@@ -7970,6 +8171,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignSharedSetResult campaign_shared_set_result = 11;</code>
      * @return Whether the campaignSharedSetResult field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignSharedSetResult() {
       return responseCase_ == 11;
     }
@@ -7981,6 +8183,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCampaignSharedSetResult campaign_shared_set_result = 11;</code>
      * @return The campaignSharedSetResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignSharedSetResult getCampaignSharedSetResult() {
       if (campaignSharedSetResultBuilder_ == null) {
         if (responseCase_ == 11) {
@@ -8098,6 +8301,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCampaignSharedSetResult campaign_shared_set_result = 11;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCampaignSharedSetResultOrBuilder getCampaignSharedSetResultOrBuilder() {
       if ((responseCase_ == 11) && (campaignSharedSetResultBuilder_ != null)) {
         return campaignSharedSetResultBuilder_.getMessageOrBuilder();
@@ -8144,6 +8348,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateConversionActionResult conversion_action_result = 12;</code>
      * @return Whether the conversionActionResult field is set.
      */
+    @java.lang.Override
     public boolean hasConversionActionResult() {
       return responseCase_ == 12;
     }
@@ -8155,6 +8360,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateConversionActionResult conversion_action_result = 12;</code>
      * @return The conversionActionResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateConversionActionResult getConversionActionResult() {
       if (conversionActionResultBuilder_ == null) {
         if (responseCase_ == 12) {
@@ -8272,6 +8478,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateConversionActionResult conversion_action_result = 12;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateConversionActionResultOrBuilder getConversionActionResultOrBuilder() {
       if ((responseCase_ == 12) && (conversionActionResultBuilder_ != null)) {
         return conversionActionResultBuilder_.getMessageOrBuilder();
@@ -8318,6 +8525,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResult customer_extension_setting_result = 30;</code>
      * @return Whether the customerExtensionSettingResult field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerExtensionSettingResult() {
       return responseCase_ == 30;
     }
@@ -8329,6 +8537,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResult customer_extension_setting_result = 30;</code>
      * @return The customerExtensionSettingResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResult getCustomerExtensionSettingResult() {
       if (customerExtensionSettingResultBuilder_ == null) {
         if (responseCase_ == 30) {
@@ -8446,6 +8655,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResult customer_extension_setting_result = 30;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCustomerExtensionSettingResultOrBuilder getCustomerExtensionSettingResultOrBuilder() {
       if ((responseCase_ == 30) && (customerExtensionSettingResultBuilder_ != null)) {
         return customerExtensionSettingResultBuilder_.getMessageOrBuilder();
@@ -8492,6 +8702,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCustomerFeedResult customer_feed_result = 31;</code>
      * @return Whether the customerFeedResult field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerFeedResult() {
       return responseCase_ == 31;
     }
@@ -8503,6 +8714,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCustomerFeedResult customer_feed_result = 31;</code>
      * @return The customerFeedResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCustomerFeedResult getCustomerFeedResult() {
       if (customerFeedResultBuilder_ == null) {
         if (responseCase_ == 31) {
@@ -8620,6 +8832,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCustomerFeedResult customer_feed_result = 31;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCustomerFeedResultOrBuilder getCustomerFeedResultOrBuilder() {
       if ((responseCase_ == 31) && (customerFeedResultBuilder_ != null)) {
         return customerFeedResultBuilder_.getMessageOrBuilder();
@@ -8666,6 +8879,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCustomerLabelResult customer_label_result = 32;</code>
      * @return Whether the customerLabelResult field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerLabelResult() {
       return responseCase_ == 32;
     }
@@ -8677,6 +8891,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCustomerLabelResult customer_label_result = 32;</code>
      * @return The customerLabelResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCustomerLabelResult getCustomerLabelResult() {
       if (customerLabelResultBuilder_ == null) {
         if (responseCase_ == 32) {
@@ -8794,6 +9009,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCustomerLabelResult customer_label_result = 32;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCustomerLabelResultOrBuilder getCustomerLabelResultOrBuilder() {
       if ((responseCase_ == 32) && (customerLabelResultBuilder_ != null)) {
         return customerLabelResultBuilder_.getMessageOrBuilder();
@@ -8840,6 +9056,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult customer_negative_criterion_result = 34;</code>
      * @return Whether the customerNegativeCriterionResult field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerNegativeCriterionResult() {
       return responseCase_ == 34;
     }
@@ -8851,6 +9068,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult customer_negative_criterion_result = 34;</code>
      * @return The customerNegativeCriterionResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult getCustomerNegativeCriterionResult() {
       if (customerNegativeCriterionResultBuilder_ == null) {
         if (responseCase_ == 34) {
@@ -8968,6 +9186,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResult customer_negative_criterion_result = 34;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCustomerNegativeCriteriaResultOrBuilder getCustomerNegativeCriterionResultOrBuilder() {
       if ((responseCase_ == 34) && (customerNegativeCriterionResultBuilder_ != null)) {
         return customerNegativeCriterionResultBuilder_.getMessageOrBuilder();
@@ -9014,6 +9233,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCustomerResult customer_result = 35;</code>
      * @return Whether the customerResult field is set.
      */
+    @java.lang.Override
     public boolean hasCustomerResult() {
       return responseCase_ == 35;
     }
@@ -9025,6 +9245,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateCustomerResult customer_result = 35;</code>
      * @return The customerResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCustomerResult getCustomerResult() {
       if (customerResultBuilder_ == null) {
         if (responseCase_ == 35) {
@@ -9142,6 +9363,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateCustomerResult customer_result = 35;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateCustomerResultOrBuilder getCustomerResultOrBuilder() {
       if ((responseCase_ == 35) && (customerResultBuilder_ != null)) {
         return customerResultBuilder_.getMessageOrBuilder();
@@ -9188,6 +9410,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateExtensionFeedItemResult extension_feed_item_result = 36;</code>
      * @return Whether the extensionFeedItemResult field is set.
      */
+    @java.lang.Override
     public boolean hasExtensionFeedItemResult() {
       return responseCase_ == 36;
     }
@@ -9199,6 +9422,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateExtensionFeedItemResult extension_feed_item_result = 36;</code>
      * @return The extensionFeedItemResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateExtensionFeedItemResult getExtensionFeedItemResult() {
       if (extensionFeedItemResultBuilder_ == null) {
         if (responseCase_ == 36) {
@@ -9316,6 +9540,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateExtensionFeedItemResult extension_feed_item_result = 36;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateExtensionFeedItemResultOrBuilder getExtensionFeedItemResultOrBuilder() {
       if ((responseCase_ == 36) && (extensionFeedItemResultBuilder_ != null)) {
         return extensionFeedItemResultBuilder_.getMessageOrBuilder();
@@ -9362,6 +9587,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateFeedItemResult feed_item_result = 37;</code>
      * @return Whether the feedItemResult field is set.
      */
+    @java.lang.Override
     public boolean hasFeedItemResult() {
       return responseCase_ == 37;
     }
@@ -9373,6 +9599,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateFeedItemResult feed_item_result = 37;</code>
      * @return The feedItemResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateFeedItemResult getFeedItemResult() {
       if (feedItemResultBuilder_ == null) {
         if (responseCase_ == 37) {
@@ -9490,6 +9717,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateFeedItemResult feed_item_result = 37;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateFeedItemResultOrBuilder getFeedItemResultOrBuilder() {
       if ((responseCase_ == 37) && (feedItemResultBuilder_ != null)) {
         return feedItemResultBuilder_.getMessageOrBuilder();
@@ -9536,6 +9764,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateFeedItemTargetResult feed_item_target_result = 38;</code>
      * @return Whether the feedItemTargetResult field is set.
      */
+    @java.lang.Override
     public boolean hasFeedItemTargetResult() {
       return responseCase_ == 38;
     }
@@ -9547,6 +9776,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateFeedItemTargetResult feed_item_target_result = 38;</code>
      * @return The feedItemTargetResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateFeedItemTargetResult getFeedItemTargetResult() {
       if (feedItemTargetResultBuilder_ == null) {
         if (responseCase_ == 38) {
@@ -9664,6 +9894,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateFeedItemTargetResult feed_item_target_result = 38;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateFeedItemTargetResultOrBuilder getFeedItemTargetResultOrBuilder() {
       if ((responseCase_ == 38) && (feedItemTargetResultBuilder_ != null)) {
         return feedItemTargetResultBuilder_.getMessageOrBuilder();
@@ -9710,6 +9941,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateFeedMappingResult feed_mapping_result = 39;</code>
      * @return Whether the feedMappingResult field is set.
      */
+    @java.lang.Override
     public boolean hasFeedMappingResult() {
       return responseCase_ == 39;
     }
@@ -9721,6 +9953,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateFeedMappingResult feed_mapping_result = 39;</code>
      * @return The feedMappingResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateFeedMappingResult getFeedMappingResult() {
       if (feedMappingResultBuilder_ == null) {
         if (responseCase_ == 39) {
@@ -9838,6 +10071,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateFeedMappingResult feed_mapping_result = 39;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateFeedMappingResultOrBuilder getFeedMappingResultOrBuilder() {
       if ((responseCase_ == 39) && (feedMappingResultBuilder_ != null)) {
         return feedMappingResultBuilder_.getMessageOrBuilder();
@@ -9884,6 +10118,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateFeedResult feed_result = 40;</code>
      * @return Whether the feedResult field is set.
      */
+    @java.lang.Override
     public boolean hasFeedResult() {
       return responseCase_ == 40;
     }
@@ -9895,6 +10130,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateFeedResult feed_result = 40;</code>
      * @return The feedResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateFeedResult getFeedResult() {
       if (feedResultBuilder_ == null) {
         if (responseCase_ == 40) {
@@ -10012,6 +10248,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateFeedResult feed_result = 40;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateFeedResultOrBuilder getFeedResultOrBuilder() {
       if ((responseCase_ == 40) && (feedResultBuilder_ != null)) {
         return feedResultBuilder_.getMessageOrBuilder();
@@ -10058,6 +10295,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResult keyword_plan_ad_group_result = 44;</code>
      * @return Whether the keywordPlanAdGroupResult field is set.
      */
+    @java.lang.Override
     public boolean hasKeywordPlanAdGroupResult() {
       return responseCase_ == 44;
     }
@@ -10069,6 +10307,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResult keyword_plan_ad_group_result = 44;</code>
      * @return The keywordPlanAdGroupResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResult getKeywordPlanAdGroupResult() {
       if (keywordPlanAdGroupResultBuilder_ == null) {
         if (responseCase_ == 44) {
@@ -10186,6 +10425,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResult keyword_plan_ad_group_result = 44;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupResultOrBuilder getKeywordPlanAdGroupResultOrBuilder() {
       if ((responseCase_ == 44) && (keywordPlanAdGroupResultBuilder_ != null)) {
         return keywordPlanAdGroupResultBuilder_.getMessageOrBuilder();
@@ -10232,6 +10472,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult keyword_plan_campaign_result = 45;</code>
      * @return Whether the keywordPlanCampaignResult field is set.
      */
+    @java.lang.Override
     public boolean hasKeywordPlanCampaignResult() {
       return responseCase_ == 45;
     }
@@ -10243,6 +10484,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult keyword_plan_campaign_result = 45;</code>
      * @return The keywordPlanCampaignResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult getKeywordPlanCampaignResult() {
       if (keywordPlanCampaignResultBuilder_ == null) {
         if (responseCase_ == 45) {
@@ -10360,6 +10602,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResult keyword_plan_campaign_result = 45;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignResultOrBuilder getKeywordPlanCampaignResultOrBuilder() {
       if ((responseCase_ == 45) && (keywordPlanCampaignResultBuilder_ != null)) {
         return keywordPlanCampaignResultBuilder_.getMessageOrBuilder();
@@ -10406,6 +10649,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult keyword_plan_ad_group_keyword_result = 50;</code>
      * @return Whether the keywordPlanAdGroupKeywordResult field is set.
      */
+    @java.lang.Override
     public boolean hasKeywordPlanAdGroupKeywordResult() {
       return responseCase_ == 50;
     }
@@ -10417,6 +10661,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult keyword_plan_ad_group_keyword_result = 50;</code>
      * @return The keywordPlanAdGroupKeywordResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult getKeywordPlanAdGroupKeywordResult() {
       if (keywordPlanAdGroupKeywordResultBuilder_ == null) {
         if (responseCase_ == 50) {
@@ -10534,6 +10779,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResult keyword_plan_ad_group_keyword_result = 50;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateKeywordPlanAdGroupKeywordResultOrBuilder getKeywordPlanAdGroupKeywordResultOrBuilder() {
       if ((responseCase_ == 50) && (keywordPlanAdGroupKeywordResultBuilder_ != null)) {
         return keywordPlanAdGroupKeywordResultBuilder_.getMessageOrBuilder();
@@ -10580,6 +10826,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResult keyword_plan_campaign_keyword_result = 51;</code>
      * @return Whether the keywordPlanCampaignKeywordResult field is set.
      */
+    @java.lang.Override
     public boolean hasKeywordPlanCampaignKeywordResult() {
       return responseCase_ == 51;
     }
@@ -10591,6 +10838,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResult keyword_plan_campaign_keyword_result = 51;</code>
      * @return The keywordPlanCampaignKeywordResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResult getKeywordPlanCampaignKeywordResult() {
       if (keywordPlanCampaignKeywordResultBuilder_ == null) {
         if (responseCase_ == 51) {
@@ -10708,6 +10956,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResult keyword_plan_campaign_keyword_result = 51;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateKeywordPlanCampaignKeywordResultOrBuilder getKeywordPlanCampaignKeywordResultOrBuilder() {
       if ((responseCase_ == 51) && (keywordPlanCampaignKeywordResultBuilder_ != null)) {
         return keywordPlanCampaignKeywordResultBuilder_.getMessageOrBuilder();
@@ -10754,6 +11003,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlansResult keyword_plan_result = 48;</code>
      * @return Whether the keywordPlanResult field is set.
      */
+    @java.lang.Override
     public boolean hasKeywordPlanResult() {
       return responseCase_ == 48;
     }
@@ -10765,6 +11015,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlansResult keyword_plan_result = 48;</code>
      * @return The keywordPlanResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateKeywordPlansResult getKeywordPlanResult() {
       if (keywordPlanResultBuilder_ == null) {
         if (responseCase_ == 48) {
@@ -10882,6 +11133,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateKeywordPlansResult keyword_plan_result = 48;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateKeywordPlansResultOrBuilder getKeywordPlanResultOrBuilder() {
       if ((responseCase_ == 48) && (keywordPlanResultBuilder_ != null)) {
         return keywordPlanResultBuilder_.getMessageOrBuilder();
@@ -10928,6 +11180,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateLabelResult label_result = 41;</code>
      * @return Whether the labelResult field is set.
      */
+    @java.lang.Override
     public boolean hasLabelResult() {
       return responseCase_ == 41;
     }
@@ -10939,6 +11192,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateLabelResult label_result = 41;</code>
      * @return The labelResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateLabelResult getLabelResult() {
       if (labelResultBuilder_ == null) {
         if (responseCase_ == 41) {
@@ -11056,6 +11310,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateLabelResult label_result = 41;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateLabelResultOrBuilder getLabelResultOrBuilder() {
       if ((responseCase_ == 41) && (labelResultBuilder_ != null)) {
         return labelResultBuilder_.getMessageOrBuilder();
@@ -11102,6 +11357,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateMediaFileResult media_file_result = 42;</code>
      * @return Whether the mediaFileResult field is set.
      */
+    @java.lang.Override
     public boolean hasMediaFileResult() {
       return responseCase_ == 42;
     }
@@ -11113,6 +11369,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateMediaFileResult media_file_result = 42;</code>
      * @return The mediaFileResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateMediaFileResult getMediaFileResult() {
       if (mediaFileResultBuilder_ == null) {
         if (responseCase_ == 42) {
@@ -11230,6 +11487,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateMediaFileResult media_file_result = 42;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateMediaFileResultOrBuilder getMediaFileResultOrBuilder() {
       if ((responseCase_ == 42) && (mediaFileResultBuilder_ != null)) {
         return mediaFileResultBuilder_.getMessageOrBuilder();
@@ -11276,6 +11534,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateRemarketingActionResult remarketing_action_result = 43;</code>
      * @return Whether the remarketingActionResult field is set.
      */
+    @java.lang.Override
     public boolean hasRemarketingActionResult() {
       return responseCase_ == 43;
     }
@@ -11287,6 +11546,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateRemarketingActionResult remarketing_action_result = 43;</code>
      * @return The remarketingActionResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateRemarketingActionResult getRemarketingActionResult() {
       if (remarketingActionResultBuilder_ == null) {
         if (responseCase_ == 43) {
@@ -11404,6 +11664,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateRemarketingActionResult remarketing_action_result = 43;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateRemarketingActionResultOrBuilder getRemarketingActionResultOrBuilder() {
       if ((responseCase_ == 43) && (remarketingActionResultBuilder_ != null)) {
         return remarketingActionResultBuilder_.getMessageOrBuilder();
@@ -11450,6 +11711,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateSharedCriterionResult shared_criterion_result = 14;</code>
      * @return Whether the sharedCriterionResult field is set.
      */
+    @java.lang.Override
     public boolean hasSharedCriterionResult() {
       return responseCase_ == 14;
     }
@@ -11461,6 +11723,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateSharedCriterionResult shared_criterion_result = 14;</code>
      * @return The sharedCriterionResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateSharedCriterionResult getSharedCriterionResult() {
       if (sharedCriterionResultBuilder_ == null) {
         if (responseCase_ == 14) {
@@ -11578,6 +11841,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateSharedCriterionResult shared_criterion_result = 14;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateSharedCriterionResultOrBuilder getSharedCriterionResultOrBuilder() {
       if ((responseCase_ == 14) && (sharedCriterionResultBuilder_ != null)) {
         return sharedCriterionResultBuilder_.getMessageOrBuilder();
@@ -11624,6 +11888,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateSharedSetResult shared_set_result = 15;</code>
      * @return Whether the sharedSetResult field is set.
      */
+    @java.lang.Override
     public boolean hasSharedSetResult() {
       return responseCase_ == 15;
     }
@@ -11635,6 +11900,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateSharedSetResult shared_set_result = 15;</code>
      * @return The sharedSetResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateSharedSetResult getSharedSetResult() {
       if (sharedSetResultBuilder_ == null) {
         if (responseCase_ == 15) {
@@ -11752,6 +12018,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateSharedSetResult shared_set_result = 15;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateSharedSetResultOrBuilder getSharedSetResultOrBuilder() {
       if ((responseCase_ == 15) && (sharedSetResultBuilder_ != null)) {
         return sharedSetResultBuilder_.getMessageOrBuilder();
@@ -11798,6 +12065,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateUserListResult user_list_result = 16;</code>
      * @return Whether the userListResult field is set.
      */
+    @java.lang.Override
     public boolean hasUserListResult() {
       return responseCase_ == 16;
     }
@@ -11809,6 +12077,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.MutateUserListResult user_list_result = 16;</code>
      * @return The userListResult.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateUserListResult getUserListResult() {
       if (userListResultBuilder_ == null) {
         if (responseCase_ == 16) {
@@ -11926,6 +12195,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.MutateUserListResult user_list_result = 16;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.MutateUserListResultOrBuilder getUserListResultOrBuilder() {
       if ((responseCase_ == 16) && (userListResultBuilder_ != null)) {
         return userListResultBuilder_.getMessageOrBuilder();

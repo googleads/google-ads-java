@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,6 +46,17 @@ public abstract class OfflineUserDataJobServiceStub implements BackgroundResourc
     throw new UnsupportedOperationException("Not implemented: getOperationsStub()");
   }
 
+  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
+  public OperationCallable<RunOfflineUserDataJobRequest, Empty, Empty>
+      runOfflineUserDataJobOperationCallable() {
+    throw new UnsupportedOperationException(
+        "Not implemented: runOfflineUserDataJobOperationCallable()");
+  }
+
+  public UnaryCallable<RunOfflineUserDataJobRequest, Operation> runOfflineUserDataJobCallable() {
+    throw new UnsupportedOperationException("Not implemented: runOfflineUserDataJobCallable()");
+  }
+
   public UnaryCallable<CreateOfflineUserDataJobRequest, CreateOfflineUserDataJobResponse>
       createOfflineUserDataJobCallable() {
     throw new UnsupportedOperationException("Not implemented: createOfflineUserDataJobCallable()");
@@ -61,17 +72,6 @@ public abstract class OfflineUserDataJobServiceStub implements BackgroundResourc
       addOfflineUserDataJobOperationsCallable() {
     throw new UnsupportedOperationException(
         "Not implemented: addOfflineUserDataJobOperationsCallable()");
-  }
-
-  @BetaApi("The surface for use by generated code is not stable yet and may change in the future.")
-  public OperationCallable<RunOfflineUserDataJobRequest, Empty, Empty>
-      runOfflineUserDataJobOperationCallable() {
-    throw new UnsupportedOperationException(
-        "Not implemented: runOfflineUserDataJobOperationCallable()");
-  }
-
-  public UnaryCallable<RunOfflineUserDataJobRequest, Operation> runOfflineUserDataJobCallable() {
-    throw new UnsupportedOperationException("Not implemented: runOfflineUserDataJobCallable()");
   }
 
   @Override

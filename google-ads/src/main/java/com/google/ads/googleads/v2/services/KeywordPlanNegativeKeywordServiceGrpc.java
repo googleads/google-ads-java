@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/keyword_plan_negative_keyword_service.proto")
 public final class KeywordPlanNegativeKeywordServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.KeywordPlanNegativeKeywordService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetKeywordPlanNegativeKeywordMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest,
-      com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword> METHOD_GET_KEYWORD_PLAN_NEGATIVE_KEYWORD = getGetKeywordPlanNegativeKeywordMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest,
       com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword> getGetKeywordPlanNegativeKeywordMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetKeywordPlanNegativeKeyword",
+      requestType = com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest,
       com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword> getGetKeywordPlanNegativeKeywordMethod() {
-    return getGetKeywordPlanNegativeKeywordMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest,
-      com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword> getGetKeywordPlanNegativeKeywordMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest, com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword> getGetKeywordPlanNegativeKeywordMethod;
     if ((getGetKeywordPlanNegativeKeywordMethod = KeywordPlanNegativeKeywordServiceGrpc.getGetKeywordPlanNegativeKeywordMethod) == null) {
       synchronized (KeywordPlanNegativeKeywordServiceGrpc.class) {
         if ((getGetKeywordPlanNegativeKeywordMethod = KeywordPlanNegativeKeywordServiceGrpc.getGetKeywordPlanNegativeKeywordMethod) == null) {
-          KeywordPlanNegativeKeywordServiceGrpc.getGetKeywordPlanNegativeKeywordMethod = getGetKeywordPlanNegativeKeywordMethod = 
+          KeywordPlanNegativeKeywordServiceGrpc.getGetKeywordPlanNegativeKeywordMethod = getGetKeywordPlanNegativeKeywordMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest, com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.KeywordPlanNegativeKeywordService", "GetKeywordPlanNegativeKeyword"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetKeywordPlanNegativeKeyword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeywordPlanNegativeKeywordServiceMethodDescriptorSupplier("GetKeywordPlanNegativeKeyword"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeywordPlanNegativeKeywordServiceMethodDescriptorSupplier("GetKeywordPlanNegativeKeyword"))
+              .build();
         }
-     }
-     return getGetKeywordPlanNegativeKeywordMethod;
+      }
+    }
+    return getGetKeywordPlanNegativeKeywordMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateKeywordPlanNegativeKeywordsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest,
-      com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse> METHOD_MUTATE_KEYWORD_PLAN_NEGATIVE_KEYWORDS = getMutateKeywordPlanNegativeKeywordsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest,
       com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse> getMutateKeywordPlanNegativeKeywordsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateKeywordPlanNegativeKeywords",
+      requestType = com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest.class,
+      responseType = com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest,
       com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse> getMutateKeywordPlanNegativeKeywordsMethod() {
-    return getMutateKeywordPlanNegativeKeywordsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest,
-      com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse> getMutateKeywordPlanNegativeKeywordsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest, com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse> getMutateKeywordPlanNegativeKeywordsMethod;
     if ((getMutateKeywordPlanNegativeKeywordsMethod = KeywordPlanNegativeKeywordServiceGrpc.getMutateKeywordPlanNegativeKeywordsMethod) == null) {
       synchronized (KeywordPlanNegativeKeywordServiceGrpc.class) {
         if ((getMutateKeywordPlanNegativeKeywordsMethod = KeywordPlanNegativeKeywordServiceGrpc.getMutateKeywordPlanNegativeKeywordsMethod) == null) {
-          KeywordPlanNegativeKeywordServiceGrpc.getMutateKeywordPlanNegativeKeywordsMethod = getMutateKeywordPlanNegativeKeywordsMethod = 
+          KeywordPlanNegativeKeywordServiceGrpc.getMutateKeywordPlanNegativeKeywordsMethod = getMutateKeywordPlanNegativeKeywordsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest, com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.KeywordPlanNegativeKeywordService", "MutateKeywordPlanNegativeKeywords"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateKeywordPlanNegativeKeywords"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeywordPlanNegativeKeywordServiceMethodDescriptorSupplier("MutateKeywordPlanNegativeKeywords"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeywordPlanNegativeKeywordServiceMethodDescriptorSupplier("MutateKeywordPlanNegativeKeywords"))
+              .build();
         }
-     }
-     return getMutateKeywordPlanNegativeKeywordsMethod;
+      }
+    }
+    return getMutateKeywordPlanNegativeKeywordsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static KeywordPlanNegativeKeywordServiceStub newStub(io.grpc.Channel channel) {
-    return new KeywordPlanNegativeKeywordServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanNegativeKeywordServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanNegativeKeywordServiceStub>() {
+        @java.lang.Override
+        public KeywordPlanNegativeKeywordServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanNegativeKeywordServiceStub(channel, callOptions);
+        }
+      };
+    return KeywordPlanNegativeKeywordServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
    */
   public static KeywordPlanNegativeKeywordServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new KeywordPlanNegativeKeywordServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanNegativeKeywordServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanNegativeKeywordServiceBlockingStub>() {
+        @java.lang.Override
+        public KeywordPlanNegativeKeywordServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanNegativeKeywordServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return KeywordPlanNegativeKeywordServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
    */
   public static KeywordPlanNegativeKeywordServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new KeywordPlanNegativeKeywordServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanNegativeKeywordServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanNegativeKeywordServiceFutureStub>() {
+        @java.lang.Override
+        public KeywordPlanNegativeKeywordServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanNegativeKeywordServiceFutureStub(channel, callOptions);
+        }
+      };
+    return KeywordPlanNegativeKeywordServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
      */
     public void getKeywordPlanNegativeKeyword(com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetKeywordPlanNegativeKeywordMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetKeywordPlanNegativeKeywordMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
      */
     public void mutateKeywordPlanNegativeKeywords(com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateKeywordPlanNegativeKeywordsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateKeywordPlanNegativeKeywordsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetKeywordPlanNegativeKeywordMethodHelper(),
+            getGetKeywordPlanNegativeKeywordMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest,
                 com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword>(
                   this, METHODID_GET_KEYWORD_PLAN_NEGATIVE_KEYWORD)))
           .addMethod(
-            getMutateKeywordPlanNegativeKeywordsMethodHelper(),
+            getMutateKeywordPlanNegativeKeywordsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest,
@@ -181,19 +189,15 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
    * Service to manage Keyword Plan negative keywords.
    * </pre>
    */
-  public static final class KeywordPlanNegativeKeywordServiceStub extends io.grpc.stub.AbstractStub<KeywordPlanNegativeKeywordServiceStub> {
-    private KeywordPlanNegativeKeywordServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordPlanNegativeKeywordServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordPlanNegativeKeywordServiceStub extends io.grpc.stub.AbstractAsyncStub<KeywordPlanNegativeKeywordServiceStub> {
+    private KeywordPlanNegativeKeywordServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordPlanNegativeKeywordServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordPlanNegativeKeywordServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordPlanNegativeKeywordServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
     public void getKeywordPlanNegativeKeyword(com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetKeywordPlanNegativeKeywordMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetKeywordPlanNegativeKeywordMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
     public void mutateKeywordPlanNegativeKeywords(com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateKeywordPlanNegativeKeywordsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateKeywordPlanNegativeKeywordsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
    * Service to manage Keyword Plan negative keywords.
    * </pre>
    */
-  public static final class KeywordPlanNegativeKeywordServiceBlockingStub extends io.grpc.stub.AbstractStub<KeywordPlanNegativeKeywordServiceBlockingStub> {
-    private KeywordPlanNegativeKeywordServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordPlanNegativeKeywordServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordPlanNegativeKeywordServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<KeywordPlanNegativeKeywordServiceBlockingStub> {
+    private KeywordPlanNegativeKeywordServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordPlanNegativeKeywordServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordPlanNegativeKeywordServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordPlanNegativeKeywordServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword getKeywordPlanNegativeKeyword(com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetKeywordPlanNegativeKeywordMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetKeywordPlanNegativeKeywordMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse mutateKeywordPlanNegativeKeywords(com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateKeywordPlanNegativeKeywordsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateKeywordPlanNegativeKeywordsMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
    * Service to manage Keyword Plan negative keywords.
    * </pre>
    */
-  public static final class KeywordPlanNegativeKeywordServiceFutureStub extends io.grpc.stub.AbstractStub<KeywordPlanNegativeKeywordServiceFutureStub> {
-    private KeywordPlanNegativeKeywordServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordPlanNegativeKeywordServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordPlanNegativeKeywordServiceFutureStub extends io.grpc.stub.AbstractFutureStub<KeywordPlanNegativeKeywordServiceFutureStub> {
+    private KeywordPlanNegativeKeywordServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordPlanNegativeKeywordServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordPlanNegativeKeywordServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordPlanNegativeKeywordServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.KeywordPlanNegativeKeyword> getKeywordPlanNegativeKeyword(
         com.google.ads.googleads.v2.services.GetKeywordPlanNegativeKeywordRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetKeywordPlanNegativeKeywordMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetKeywordPlanNegativeKeywordMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsResponse> mutateKeywordPlanNegativeKeywords(
         com.google.ads.googleads.v2.services.MutateKeywordPlanNegativeKeywordsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateKeywordPlanNegativeKeywordsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateKeywordPlanNegativeKeywordsMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class KeywordPlanNegativeKeywordServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new KeywordPlanNegativeKeywordServiceFileDescriptorSupplier())
-              .addMethod(getGetKeywordPlanNegativeKeywordMethodHelper())
-              .addMethod(getMutateKeywordPlanNegativeKeywordsMethodHelper())
+              .addMethod(getGetKeywordPlanNegativeKeywordMethod())
+              .addMethod(getMutateKeywordPlanNegativeKeywordsMethod())
               .build();
         }
       }

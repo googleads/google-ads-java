@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.ListInvoicesRequest}
  */
-public  final class ListInvoicesRequest extends
+public final class ListInvoicesRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.ListInvoicesRequest)
     ListInvoicesRequestOrBuilder {
@@ -28,6 +28,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListInvoicesRequest();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -40,7 +47,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -115,7 +121,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -134,7 +142,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -158,7 +168,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string billing_setup = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The billingSetup.
    */
+  @java.lang.Override
   public java.lang.String getBillingSetup() {
     java.lang.Object ref = billingSetup_;
     if (ref instanceof java.lang.String) {
@@ -178,7 +190,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string billing_setup = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for billingSetup.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getBillingSetupBytes() {
     java.lang.Object ref = billingSetup_;
@@ -202,7 +216,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string issue_year = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The issueYear.
    */
+  @java.lang.Override
   public java.lang.String getIssueYear() {
     java.lang.Object ref = issueYear_;
     if (ref instanceof java.lang.String) {
@@ -222,7 +238,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string issue_year = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for issueYear.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getIssueYearBytes() {
     java.lang.Object ref = issueYear_;
@@ -245,8 +263,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear issue_month = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The enum numeric value on the wire for issueMonth.
    */
-  public int getIssueMonthValue() {
+  @java.lang.Override public int getIssueMonthValue() {
     return issueMonth_;
   }
   /**
@@ -255,8 +274,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear issue_month = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The issueMonth.
    */
-  public com.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear getIssueMonth() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear getIssueMonth() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear.valueOf(issueMonth_);
     return result == null ? com.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
@@ -626,6 +646,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -645,6 +666,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -665,6 +687,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -682,6 +706,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -695,6 +720,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -716,6 +743,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string billing_setup = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The billingSetup.
      */
     public java.lang.String getBillingSetup() {
       java.lang.Object ref = billingSetup_;
@@ -736,6 +764,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string billing_setup = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for billingSetup.
      */
     public com.google.protobuf.ByteString
         getBillingSetupBytes() {
@@ -757,6 +786,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string billing_setup = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The billingSetup to set.
+     * @return This builder for chaining.
      */
     public Builder setBillingSetup(
         java.lang.String value) {
@@ -775,6 +806,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string billing_setup = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearBillingSetup() {
       
@@ -789,6 +821,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string billing_setup = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for billingSetup to set.
+     * @return This builder for chaining.
      */
     public Builder setBillingSetupBytes(
         com.google.protobuf.ByteString value) {
@@ -810,6 +844,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string issue_year = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The issueYear.
      */
     public java.lang.String getIssueYear() {
       java.lang.Object ref = issueYear_;
@@ -830,6 +865,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string issue_year = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for issueYear.
      */
     public com.google.protobuf.ByteString
         getIssueYearBytes() {
@@ -851,6 +887,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string issue_year = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The issueYear to set.
+     * @return This builder for chaining.
      */
     public Builder setIssueYear(
         java.lang.String value) {
@@ -869,6 +907,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string issue_year = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearIssueYear() {
       
@@ -883,6 +922,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string issue_year = 3 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for issueYear to set.
+     * @return This builder for chaining.
      */
     public Builder setIssueYearBytes(
         com.google.protobuf.ByteString value) {
@@ -903,8 +944,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear issue_month = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The enum numeric value on the wire for issueMonth.
      */
-    public int getIssueMonthValue() {
+    @java.lang.Override public int getIssueMonthValue() {
       return issueMonth_;
     }
     /**
@@ -913,8 +955,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear issue_month = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The enum numeric value on the wire for issueMonth to set.
+     * @return This builder for chaining.
      */
     public Builder setIssueMonthValue(int value) {
+      
       issueMonth_ = value;
       onChanged();
       return this;
@@ -925,7 +970,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear issue_month = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The issueMonth.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear getIssueMonth() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear.valueOf(issueMonth_);
@@ -937,6 +984,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear issue_month = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The issueMonth to set.
+     * @return This builder for chaining.
      */
     public Builder setIssueMonth(com.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear value) {
       if (value == null) {
@@ -953,6 +1002,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.MonthOfYearEnum.MonthOfYear issue_month = 4 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearIssueMonth() {
       

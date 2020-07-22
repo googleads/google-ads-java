@@ -14,6 +14,7 @@ public interface PreferencesOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue is_skippable = 1;</code>
+   * @return Whether the isSkippable field is set.
    */
   boolean hasIsSkippable();
   /**
@@ -23,6 +24,7 @@ public interface PreferencesOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue is_skippable = 1;</code>
+   * @return The isSkippable.
    */
   com.google.protobuf.BoolValue getIsSkippable();
   /**
@@ -42,6 +44,7 @@ public interface PreferencesOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue starts_with_sound = 2;</code>
+   * @return Whether the startsWithSound field is set.
    */
   boolean hasStartsWithSound();
   /**
@@ -51,6 +54,7 @@ public interface PreferencesOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue starts_with_sound = 2;</code>
+   * @return The startsWithSound.
    */
   com.google.protobuf.BoolValue getStartsWithSound();
   /**
@@ -70,6 +74,7 @@ public interface PreferencesOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ReachPlanAdLengthEnum.ReachPlanAdLength ad_length = 3;</code>
+   * @return The enum numeric value on the wire for adLength.
    */
   int getAdLengthValue();
   /**
@@ -79,6 +84,7 @@ public interface PreferencesOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ReachPlanAdLengthEnum.ReachPlanAdLength ad_length = 3;</code>
+   * @return The adLength.
    */
   com.google.ads.googleads.v3.enums.ReachPlanAdLengthEnum.ReachPlanAdLength getAdLength();
 
@@ -89,6 +95,7 @@ public interface PreferencesOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue top_content_only = 4;</code>
+   * @return Whether the topContentOnly field is set.
    */
   boolean hasTopContentOnly();
   /**
@@ -98,6 +105,7 @@ public interface PreferencesOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue top_content_only = 4;</code>
+   * @return The topContentOnly.
    */
   com.google.protobuf.BoolValue getTopContentOnly();
   /**
@@ -118,6 +126,7 @@ public interface PreferencesOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_guaranteed_price = 5;</code>
+   * @return Whether the hasGuaranteedPrice field is set.
    */
   boolean hasHasGuaranteedPrice();
   /**
@@ -128,6 +137,7 @@ public interface PreferencesOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_guaranteed_price = 5;</code>
+   * @return The hasGuaranteedPrice.
    */
   com.google.protobuf.BoolValue getHasGuaranteedPrice();
   /**

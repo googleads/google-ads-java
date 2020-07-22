@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.ProductChannelInfo}
  */
-public  final class ProductChannelInfo extends
+public final class ProductChannelInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.ProductChannelInfo)
     ProductChannelInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private ProductChannelInfo() {
     channel_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ProductChannelInfo();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -93,8 +99,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
+   * @return The enum numeric value on the wire for channel.
    */
-  public int getChannelValue() {
+  @java.lang.Override public int getChannelValue() {
     return channel_;
   }
   /**
@@ -103,8 +110,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
+   * @return The channel.
    */
-  public com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel getChannel() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel getChannel() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel result = com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel.valueOf(channel_);
     return result == null ? com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel.UNRECOGNIZED : result;
@@ -422,8 +430,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
+     * @return The enum numeric value on the wire for channel.
      */
-    public int getChannelValue() {
+    @java.lang.Override public int getChannelValue() {
       return channel_;
     }
     /**
@@ -432,8 +441,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
+     * @param value The enum numeric value on the wire for channel to set.
+     * @return This builder for chaining.
      */
     public Builder setChannelValue(int value) {
+      
       channel_ = value;
       onChanged();
       return this;
@@ -444,7 +456,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
+     * @return The channel.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel getChannel() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel result = com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel.valueOf(channel_);
@@ -456,6 +470,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
+     * @param value The channel to set.
+     * @return This builder for chaining.
      */
     public Builder setChannel(com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel value) {
       if (value == null) {
@@ -472,6 +488,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearChannel() {
       

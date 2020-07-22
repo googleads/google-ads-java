@@ -13,6 +13,7 @@ public interface FeedAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 1;</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -21,6 +22,7 @@ public interface FeedAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 1;</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -38,6 +40,7 @@ public interface FeedAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 2;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -46,6 +49,7 @@ public interface FeedAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 2;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -63,6 +67,7 @@ public interface FeedAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.FeedAttributeTypeEnum.FeedAttributeType type = 3;</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -71,6 +76,7 @@ public interface FeedAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.FeedAttributeTypeEnum.FeedAttributeType type = 3;</code>
+   * @return The type.
    */
   com.google.ads.googleads.v1.enums.FeedAttributeTypeEnum.FeedAttributeType getType();
 
@@ -83,6 +89,7 @@ public interface FeedAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue is_part_of_key = 4;</code>
+   * @return Whether the isPartOfKey field is set.
    */
   boolean hasIsPartOfKey();
   /**
@@ -94,6 +101,7 @@ public interface FeedAttributeOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue is_part_of_key = 4;</code>
+   * @return The isPartOfKey.
    */
   com.google.protobuf.BoolValue getIsPartOfKey();
   /**

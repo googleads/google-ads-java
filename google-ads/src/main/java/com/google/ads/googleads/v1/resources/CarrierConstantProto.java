@@ -30,41 +30,49 @@ public final class CarrierConstantProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v1/resources/carr" +
       "ier_constant.proto\022!google.ads.googleads" +
-      ".v1.resources\032\036google/protobuf/wrappers." +
-      "proto\032\034google/api/annotations.proto\"\261\001\n\017" +
-      "CarrierConstant\022\025\n\rresource_name\030\001 \001(\t\022\'" +
-      "\n\002id\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "*\n\004name\030\003 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\0222\n\014country_code\030\004 \001(\0132\034.google.proto" +
-      "buf.StringValueB\201\002\n%com.google.ads.googl" +
-      "eads.v1.resourcesB\024CarrierConstantProtoP" +
-      "\001ZJgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v1/resources;resources\242\002\003" +
-      "GAA\252\002!Google.Ads.GoogleAds.V1.Resources\312" +
-      "\002!Google\\Ads\\GoogleAds\\V1\\Resources\352\002%Go" +
-      "ogle::Ads::GoogleAds::V1::Resourcesb\006pro" +
-      "to3"
+      ".v1.resources\032\037google/api/field_behavior" +
+      ".proto\032\031google/api/resource.proto\032\036googl" +
+      "e/protobuf/wrappers.proto\032\034google/api/an" +
+      "notations.proto\"\306\002\n\017CarrierConstant\022G\n\rr" +
+      "esource_name\030\001 \001(\tB0\340A\003\372A*\n(googleads.go" +
+      "ogleapis.com/CarrierConstant\022,\n\002id\030\002 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\003\340A\003\022/\n\004na" +
+      "me\030\003 \001(\0132\034.google.protobuf.StringValueB\003" +
+      "\340A\003\0227\n\014country_code\030\004 \001(\0132\034.google.proto" +
+      "buf.StringValueB\003\340A\003:R\352AO\n(googleads.goo" +
+      "gleapis.com/CarrierConstant\022#carrierCons" +
+      "tants/{carrier_constant}B\201\002\n%com.google." +
+      "ads.googleads.v1.resourcesB\024CarrierConst" +
+      "antProtoP\001ZJgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v1/resources;res" +
+      "ources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1.R" +
+      "esources\312\002!Google\\Ads\\GoogleAds\\V1\\Resou" +
+      "rces\352\002%Google::Ads::GoogleAds::V1::Resou" +
+      "rcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_CarrierConstant_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_CarrierConstant_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_CarrierConstant_descriptor,
         new java.lang.String[] { "ResourceName", "Id", "Name", "CountryCode", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

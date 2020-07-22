@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ConversionAdjustment}
  */
-public  final class ConversionAdjustment extends
+public final class ConversionAdjustment extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ConversionAdjustment)
     ConversionAdjustmentOrBuilder {
@@ -212,6 +212,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
    * @return Whether the conversionAction field is set.
    */
+  @java.lang.Override
   public boolean hasConversionAction() {
     return conversionAction_ != null;
   }
@@ -226,6 +227,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
    * @return The conversionAction.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionAction() {
     return conversionAction_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionAction_;
   }
@@ -239,6 +241,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_action = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionActionOrBuilder() {
     return getConversionAction();
   }
@@ -255,6 +258,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue adjustment_date_time = 4;</code>
    * @return Whether the adjustmentDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasAdjustmentDateTime() {
     return adjustmentDateTime_ != null;
   }
@@ -268,6 +272,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue adjustment_date_time = 4;</code>
    * @return The adjustmentDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdjustmentDateTime() {
     return adjustmentDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adjustmentDateTime_;
   }
@@ -280,6 +285,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue adjustment_date_time = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdjustmentDateTimeOrBuilder() {
     return getAdjustmentDateTime();
   }
@@ -294,7 +300,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType adjustment_type = 5;</code>
    * @return The enum numeric value on the wire for adjustmentType.
    */
-  public int getAdjustmentTypeValue() {
+  @java.lang.Override public int getAdjustmentTypeValue() {
     return adjustmentType_;
   }
   /**
@@ -305,7 +311,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType adjustment_type = 5;</code>
    * @return The adjustmentType.
    */
-  public com.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType getAdjustmentType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType getAdjustmentType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType result = com.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.valueOf(adjustmentType_);
     return result == null ? com.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.UNRECOGNIZED : result;
@@ -323,6 +329,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.RestatementValue restatement_value = 6;</code>
    * @return Whether the restatementValue field is set.
    */
+  @java.lang.Override
   public boolean hasRestatementValue() {
     return restatementValue_ != null;
   }
@@ -336,6 +343,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.RestatementValue restatement_value = 6;</code>
    * @return The restatementValue.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.RestatementValue getRestatementValue() {
     return restatementValue_ == null ? com.google.ads.googleads.v4.services.RestatementValue.getDefaultInstance() : restatementValue_;
   }
@@ -348,6 +356,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.RestatementValue restatement_value = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.RestatementValueOrBuilder getRestatementValueOrBuilder() {
     return getRestatementValue();
   }
@@ -362,6 +371,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.GclidDateTimePair gclid_date_time_pair = 1;</code>
    * @return Whether the gclidDateTimePair field is set.
    */
+  @java.lang.Override
   public boolean hasGclidDateTimePair() {
     return conversionIdentifierCase_ == 1;
   }
@@ -374,6 +384,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.GclidDateTimePair gclid_date_time_pair = 1;</code>
    * @return The gclidDateTimePair.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.GclidDateTimePair getGclidDateTimePair() {
     if (conversionIdentifierCase_ == 1) {
        return (com.google.ads.googleads.v4.services.GclidDateTimePair) conversionIdentifier_;
@@ -388,6 +399,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.GclidDateTimePair gclid_date_time_pair = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.GclidDateTimePairOrBuilder getGclidDateTimePairOrBuilder() {
     if (conversionIdentifierCase_ == 1) {
        return (com.google.ads.googleads.v4.services.GclidDateTimePair) conversionIdentifier_;
@@ -406,6 +418,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue order_id = 2;</code>
    * @return Whether the orderId field is set.
    */
+  @java.lang.Override
   public boolean hasOrderId() {
     return conversionIdentifierCase_ == 2;
   }
@@ -419,6 +432,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue order_id = 2;</code>
    * @return The orderId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getOrderId() {
     if (conversionIdentifierCase_ == 2) {
        return (com.google.protobuf.StringValue) conversionIdentifier_;
@@ -434,6 +448,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue order_id = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getOrderIdOrBuilder() {
     if (conversionIdentifierCase_ == 2) {
        return (com.google.protobuf.StringValue) conversionIdentifier_;
@@ -1284,7 +1299,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType adjustment_type = 5;</code>
      * @return The enum numeric value on the wire for adjustmentType.
      */
-    public int getAdjustmentTypeValue() {
+    @java.lang.Override public int getAdjustmentTypeValue() {
       return adjustmentType_;
     }
     /**
@@ -1297,6 +1312,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdjustmentTypeValue(int value) {
+      
       adjustmentType_ = value;
       onChanged();
       return this;
@@ -1309,6 +1325,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType adjustment_type = 5;</code>
      * @return The adjustmentType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType getAdjustmentType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType result = com.google.ads.googleads.v4.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.valueOf(adjustmentType_);
@@ -1531,6 +1548,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.GclidDateTimePair gclid_date_time_pair = 1;</code>
      * @return Whether the gclidDateTimePair field is set.
      */
+    @java.lang.Override
     public boolean hasGclidDateTimePair() {
       return conversionIdentifierCase_ == 1;
     }
@@ -1543,6 +1561,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.services.GclidDateTimePair gclid_date_time_pair = 1;</code>
      * @return The gclidDateTimePair.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.GclidDateTimePair getGclidDateTimePair() {
       if (gclidDateTimePairBuilder_ == null) {
         if (conversionIdentifierCase_ == 1) {
@@ -1666,6 +1685,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.services.GclidDateTimePair gclid_date_time_pair = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.services.GclidDateTimePairOrBuilder getGclidDateTimePairOrBuilder() {
       if ((conversionIdentifierCase_ == 1) && (gclidDateTimePairBuilder_ != null)) {
         return gclidDateTimePairBuilder_.getMessageOrBuilder();
@@ -1715,6 +1735,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue order_id = 2;</code>
      * @return Whether the orderId field is set.
      */
+    @java.lang.Override
     public boolean hasOrderId() {
       return conversionIdentifierCase_ == 2;
     }
@@ -1728,6 +1749,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue order_id = 2;</code>
      * @return The orderId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getOrderId() {
       if (orderIdBuilder_ == null) {
         if (conversionIdentifierCase_ == 2) {
@@ -1857,6 +1879,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue order_id = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOrderIdOrBuilder() {
       if ((conversionIdentifierCase_ == 2) && (orderIdBuilder_ != null)) {
         return orderIdBuilder_.getMessageOrBuilder();

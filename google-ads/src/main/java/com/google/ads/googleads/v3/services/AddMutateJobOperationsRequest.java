@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.AddMutateJobOperationsRequest}
  */
-public  final class AddMutateJobOperationsRequest extends
+public final class AddMutateJobOperationsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.AddMutateJobOperationsRequest)
     AddMutateJobOperationsRequestOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
     resourceName_ = "";
     sequenceToken_ = "";
     mutateOperations_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AddMutateJobOperationsRequest();
   }
 
   @java.lang.Override
@@ -62,9 +69,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               mutateOperations_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.MutateOperation>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000001;
             }
             mutateOperations_.add(
                 input.readMessage(com.google.ads.googleads.v3.services.MutateOperation.parser(), extensionRegistry));
@@ -85,7 +92,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         mutateOperations_ = java.util.Collections.unmodifiableList(mutateOperations_);
       }
       this.unknownFields = unknownFields.build();
@@ -105,7 +112,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.services.AddMutateJobOperationsRequest.class, com.google.ads.googleads.v3.services.AddMutateJobOperationsRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -114,7 +120,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -133,7 +141,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -160,7 +170,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string sequence_token = 2;</code>
+   * @return The sequenceToken.
    */
+  @java.lang.Override
   public java.lang.String getSequenceToken() {
     java.lang.Object ref = sequenceToken_;
     if (ref instanceof java.lang.String) {
@@ -183,7 +195,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string sequence_token = 2;</code>
+   * @return The bytes for sequenceToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getSequenceTokenBytes() {
     java.lang.Object ref = sequenceToken_;
@@ -214,6 +228,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.MutateOperation> getMutateOperationsList() {
     return mutateOperations_;
   }
@@ -231,6 +246,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.MutateOperationOrBuilder> 
       getMutateOperationsOrBuilderList() {
     return mutateOperations_;
@@ -249,6 +265,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getMutateOperationsCount() {
     return mutateOperations_.size();
   }
@@ -266,6 +283,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MutateOperation getMutateOperations(int index) {
     return mutateOperations_.get(index);
   }
@@ -283,6 +301,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateOperation mutate_operations = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MutateOperationOrBuilder getMutateOperationsOrBuilder(
       int index) {
     return mutateOperations_.get(index);
@@ -514,7 +533,7 @@ private static final long serialVersionUID = 0L;
 
       if (mutateOperationsBuilder_ == null) {
         mutateOperations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         mutateOperationsBuilder_.clear();
       }
@@ -545,19 +564,17 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.services.AddMutateJobOperationsRequest buildPartial() {
       com.google.ads.googleads.v3.services.AddMutateJobOperationsRequest result = new com.google.ads.googleads.v3.services.AddMutateJobOperationsRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       result.sequenceToken_ = sequenceToken_;
       if (mutateOperationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           mutateOperations_ = java.util.Collections.unmodifiableList(mutateOperations_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.mutateOperations_ = mutateOperations_;
       } else {
         result.mutateOperations_ = mutateOperationsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -618,7 +635,7 @@ private static final long serialVersionUID = 0L;
         if (!other.mutateOperations_.isEmpty()) {
           if (mutateOperations_.isEmpty()) {
             mutateOperations_ = other.mutateOperations_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureMutateOperationsIsMutable();
             mutateOperations_.addAll(other.mutateOperations_);
@@ -631,7 +648,7 @@ private static final long serialVersionUID = 0L;
             mutateOperationsBuilder_.dispose();
             mutateOperationsBuilder_ = null;
             mutateOperations_ = other.mutateOperations_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
             mutateOperationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMutateOperationsFieldBuilder() : null;
@@ -677,6 +694,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -696,6 +714,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -716,6 +735,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -733,6 +754,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -746,6 +768,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -770,6 +794,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string sequence_token = 2;</code>
+     * @return The sequenceToken.
      */
     public java.lang.String getSequenceToken() {
       java.lang.Object ref = sequenceToken_;
@@ -793,6 +818,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string sequence_token = 2;</code>
+     * @return The bytes for sequenceToken.
      */
     public com.google.protobuf.ByteString
         getSequenceTokenBytes() {
@@ -817,6 +843,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string sequence_token = 2;</code>
+     * @param value The sequenceToken to set.
+     * @return This builder for chaining.
      */
     public Builder setSequenceToken(
         java.lang.String value) {
@@ -838,6 +866,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string sequence_token = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSequenceToken() {
       
@@ -855,6 +884,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string sequence_token = 2;</code>
+     * @param value The bytes for sequenceToken to set.
+     * @return This builder for chaining.
      */
     public Builder setSequenceTokenBytes(
         com.google.protobuf.ByteString value) {
@@ -871,9 +902,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.services.MutateOperation> mutateOperations_ =
       java.util.Collections.emptyList();
     private void ensureMutateOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         mutateOperations_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.MutateOperation>(mutateOperations_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1144,7 +1175,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearMutateOperations() {
       if (mutateOperationsBuilder_ == null) {
         mutateOperations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         mutateOperationsBuilder_.clear();
@@ -1298,7 +1329,7 @@ private static final long serialVersionUID = 0L;
         mutateOperationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.services.MutateOperation, com.google.ads.googleads.v3.services.MutateOperation.Builder, com.google.ads.googleads.v3.services.MutateOperationOrBuilder>(
                 mutateOperations_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         mutateOperations_ = null;

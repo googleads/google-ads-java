@@ -53,30 +53,34 @@ public final class FeedItemTargetServiceProto {
       "ogleads.v1.services\0328google/ads/googlead" +
       "s/v1/resources/feed_item_target.proto\032\034g" +
       "oogle/api/annotations.proto\032\027google/api/" +
-      "client.proto\"1\n\030GetFeedItemTargetRequest" +
-      "\022\025\n\rresource_name\030\001 \001(\t\"\202\001\n\034MutateFeedIt" +
-      "emTargetsRequest\022\023\n\013customer_id\030\001 \001(\t\022M\n" +
-      "\noperations\030\002 \003(\01329.google.ads.googleads" +
-      ".v1.services.FeedItemTargetOperation\"}\n\027" +
-      "FeedItemTargetOperation\022C\n\006create\030\001 \001(\0132" +
-      "1.google.ads.googleads.v1.resources.Feed" +
-      "ItemTargetH\000\022\020\n\006remove\030\002 \001(\tH\000B\013\n\toperat" +
-      "ion\"n\n\035MutateFeedItemTargetsResponse\022M\n\007" +
-      "results\030\002 \003(\0132<.google.ads.googleads.v1." +
-      "services.MutateFeedItemTargetResult\"3\n\032M" +
-      "utateFeedItemTargetResult\022\025\n\rresource_na" +
-      "me\030\001 \001(\t2\320\003\n\025FeedItemTargetService\022\275\001\n\021G" +
-      "etFeedItemTarget\022:.google.ads.googleads." +
-      "v1.services.GetFeedItemTargetRequest\0321.g" +
-      "oogle.ads.googleads.v1.resources.FeedIte" +
-      "mTarget\"9\202\323\344\223\0023\0221/v1/{resource_name=cust" +
-      "omers/*/feedItemTargets/*}\022\331\001\n\025MutateFee" +
-      "dItemTargets\022>.google.ads.googleads.v1.s" +
-      "ervices.MutateFeedItemTargetsRequest\032?.g" +
-      "oogle.ads.googleads.v1.services.MutateFe" +
-      "edItemTargetsResponse\"?\202\323\344\223\0029\"4/v1/custo" +
-      "mers/{customer_id=*}/feedItemTargets:mut" +
-      "ate:\001*\032\033\312A\030googleads.googleapis.comB\201\002\n$" +
+      "client.proto\032\037google/api/field_behavior." +
+      "proto\032\031google/api/resource.proto\"b\n\030GetF" +
+      "eedItemTargetRequest\022F\n\rresource_name\030\001 " +
+      "\001(\tB/\340A\002\372A)\n\'googleads.googleapis.com/Fe" +
+      "edItemTarget\"\214\001\n\034MutateFeedItemTargetsRe" +
+      "quest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022R\n\nopera" +
+      "tions\030\002 \003(\01329.google.ads.googleads.v1.se" +
+      "rvices.FeedItemTargetOperationB\003\340A\002\"}\n\027F" +
+      "eedItemTargetOperation\022C\n\006create\030\001 \001(\01321" +
+      ".google.ads.googleads.v1.resources.FeedI" +
+      "temTargetH\000\022\020\n\006remove\030\002 \001(\tH\000B\013\n\toperati" +
+      "on\"n\n\035MutateFeedItemTargetsResponse\022M\n\007r" +
+      "esults\030\002 \003(\0132<.google.ads.googleads.v1.s" +
+      "ervices.MutateFeedItemTargetResult\"3\n\032Mu" +
+      "tateFeedItemTargetResult\022\025\n\rresource_nam" +
+      "e\030\001 \001(\t2\371\003\n\025FeedItemTargetService\022\315\001\n\021Ge" +
+      "tFeedItemTarget\022:.google.ads.googleads.v" +
+      "1.services.GetFeedItemTargetRequest\0321.go" +
+      "ogle.ads.googleads.v1.resources.FeedItem" +
+      "Target\"I\202\323\344\223\0023\0221/v1/{resource_name=custo" +
+      "mers/*/feedItemTargets/*}\332A\rresource_nam" +
+      "e\022\362\001\n\025MutateFeedItemTargets\022>.google.ads" +
+      ".googleads.v1.services.MutateFeedItemTar" +
+      "getsRequest\032?.google.ads.googleads.v1.se" +
+      "rvices.MutateFeedItemTargetsResponse\"X\202\323" +
+      "\344\223\0029\"4/v1/customers/{customer_id=*}/feed" +
+      "ItemTargets:mutate:\001*\332A\026customer_id,oper" +
+      "ations\032\033\312A\030googleads.googleapis.comB\201\002\n$" +
       "com.google.ads.googleads.v1.servicesB\032Fe" +
       "edItemTargetServiceProtoP\001ZHgoogle.golan" +
       "g.org/genproto/googleapis/ads/googleads/" +
@@ -85,21 +89,15 @@ public final class FeedItemTargetServiceProto {
       "eAds\\V1\\Services\352\002$Google::Ads::GoogleAd" +
       "s::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.FeedItemTargetProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetFeedItemTargetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetFeedItemTargetRequest_fieldAccessorTable = new
@@ -133,12 +131,17 @@ public final class FeedItemTargetServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.FeedItemTargetProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

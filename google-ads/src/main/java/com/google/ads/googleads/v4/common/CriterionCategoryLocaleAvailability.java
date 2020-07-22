@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CriterionCategoryLocaleAvailability}
  */
-public  final class CriterionCategoryLocaleAvailability extends
+public final class CriterionCategoryLocaleAvailability extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CriterionCategoryLocaleAvailability)
     CriterionCategoryLocaleAvailabilityOrBuilder {
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
    * @return The enum numeric value on the wire for availabilityMode.
    */
-  public int getAvailabilityModeValue() {
+  @java.lang.Override public int getAvailabilityModeValue() {
     return availabilityMode_;
   }
   /**
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
    * @return The availabilityMode.
    */
-  public com.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode getAvailabilityMode() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode getAvailabilityMode() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode result = com.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode.valueOf(availabilityMode_);
     return result == null ? com.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode.UNRECOGNIZED : result;
@@ -160,6 +160,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue country_code = 2;</code>
    * @return Whether the countryCode field is set.
    */
+  @java.lang.Override
   public boolean hasCountryCode() {
     return countryCode_ != null;
   }
@@ -171,6 +172,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue country_code = 2;</code>
    * @return The countryCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCountryCode() {
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
@@ -181,6 +183,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
     return getCountryCode();
   }
@@ -195,6 +198,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue language_code = 3;</code>
    * @return Whether the languageCode field is set.
    */
+  @java.lang.Override
   public boolean hasLanguageCode() {
     return languageCode_ != null;
   }
@@ -206,6 +210,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue language_code = 3;</code>
    * @return The languageCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLanguageCode() {
     return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
   }
@@ -216,6 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue language_code = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
     return getLanguageCode();
   }
@@ -597,7 +603,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
      * @return The enum numeric value on the wire for availabilityMode.
      */
-    public int getAvailabilityModeValue() {
+    @java.lang.Override public int getAvailabilityModeValue() {
       return availabilityMode_;
     }
     /**
@@ -613,6 +619,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAvailabilityModeValue(int value) {
+      
       availabilityMode_ = value;
       onChanged();
       return this;
@@ -628,6 +635,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode availability_mode = 1;</code>
      * @return The availabilityMode.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode getAvailabilityMode() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode result = com.google.ads.googleads.v4.enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode.valueOf(availabilityMode_);

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.CallReportingSetting}
  */
-public  final class CallReportingSetting extends
+public final class CallReportingSetting extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.CallReportingSetting)
     CallReportingSettingOrBuilder {
@@ -134,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue call_reporting_enabled = 1;</code>
    * @return Whether the callReportingEnabled field is set.
    */
+  @java.lang.Override
   public boolean hasCallReportingEnabled() {
     return callReportingEnabled_ != null;
   }
@@ -146,6 +147,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue call_reporting_enabled = 1;</code>
    * @return The callReportingEnabled.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getCallReportingEnabled() {
     return callReportingEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : callReportingEnabled_;
   }
@@ -157,6 +159,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue call_reporting_enabled = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getCallReportingEnabledOrBuilder() {
     return getCallReportingEnabled();
   }
@@ -171,6 +174,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue call_conversion_reporting_enabled = 2;</code>
    * @return Whether the callConversionReportingEnabled field is set.
    */
+  @java.lang.Override
   public boolean hasCallConversionReportingEnabled() {
     return callConversionReportingEnabled_ != null;
   }
@@ -182,6 +186,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue call_conversion_reporting_enabled = 2;</code>
    * @return The callConversionReportingEnabled.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getCallConversionReportingEnabled() {
     return callConversionReportingEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : callConversionReportingEnabled_;
   }
@@ -192,6 +197,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue call_conversion_reporting_enabled = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getCallConversionReportingEnabledOrBuilder() {
     return getCallConversionReportingEnabled();
   }
@@ -208,6 +214,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue call_conversion_action = 9 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the callConversionAction field is set.
    */
+  @java.lang.Override
   public boolean hasCallConversionAction() {
     return callConversionAction_ != null;
   }
@@ -221,6 +228,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue call_conversion_action = 9 [(.google.api.resource_reference) = { ... }</code>
    * @return The callConversionAction.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCallConversionAction() {
     return callConversionAction_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callConversionAction_;
   }
@@ -233,6 +241,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue call_conversion_action = 9 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCallConversionActionOrBuilder() {
     return getCallConversionAction();
   }

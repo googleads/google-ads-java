@@ -15,6 +15,7 @@ public interface LanguageConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface LanguageConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface LanguageConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface LanguageConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -60,6 +64,7 @@ public interface LanguageConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the code field is set.
    */
   boolean hasCode();
   /**
@@ -68,6 +73,7 @@ public interface LanguageConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The code.
    */
   com.google.protobuf.StringValue getCode();
   /**
@@ -86,6 +92,7 @@ public interface LanguageConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -95,6 +102,7 @@ public interface LanguageConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -113,6 +121,7 @@ public interface LanguageConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the targetable field is set.
    */
   boolean hasTargetable();
   /**
@@ -121,6 +130,7 @@ public interface LanguageConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue targetable = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The targetable.
    */
   com.google.protobuf.BoolValue getTargetable();
   /**

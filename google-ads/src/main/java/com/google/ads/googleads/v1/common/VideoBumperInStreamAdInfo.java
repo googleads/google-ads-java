@@ -11,7 +11,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.VideoBumperInStreamAdInfo}
  */
-public  final class VideoBumperInStreamAdInfo extends
+public final class VideoBumperInStreamAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.VideoBumperInStreamAdInfo)
     VideoBumperInStreamAdInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private VideoBumperInStreamAdInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new VideoBumperInStreamAdInfo();
   }
 
   @java.lang.Override

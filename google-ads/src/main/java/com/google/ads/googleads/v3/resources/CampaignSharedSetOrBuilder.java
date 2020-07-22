@@ -15,6 +15,7 @@ public interface CampaignSharedSetOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CampaignSharedSetOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CampaignSharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
@@ -43,6 +46,7 @@ public interface CampaignSharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
   com.google.protobuf.StringValue getCampaign();
   /**
@@ -65,6 +69,7 @@ public interface CampaignSharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the sharedSet field is set.
    */
   boolean hasSharedSet();
   /**
@@ -78,6 +83,7 @@ public interface CampaignSharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue shared_set = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The sharedSet.
    */
   com.google.protobuf.StringValue getSharedSet();
   /**
@@ -100,6 +106,7 @@ public interface CampaignSharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -108,6 +115,7 @@ public interface CampaignSharedSetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus getStatus();
 }

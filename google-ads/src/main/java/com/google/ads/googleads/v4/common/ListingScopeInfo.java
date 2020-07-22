@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ListingScopeInfo}
  */
-public  final class ListingScopeInfo extends
+public final class ListingScopeInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ListingScopeInfo)
     ListingScopeInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ListingDimensionInfo dimensions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.ListingDimensionInfo> getDimensionsList() {
     return dimensions_;
   }
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ListingDimensionInfo dimensions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.ListingDimensionInfoOrBuilder> 
       getDimensionsOrBuilderList() {
     return dimensions_;
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ListingDimensionInfo dimensions = 2;</code>
    */
+  @java.lang.Override
   public int getDimensionsCount() {
     return dimensions_.size();
   }
@@ -138,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ListingDimensionInfo dimensions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ListingDimensionInfo getDimensions(int index) {
     return dimensions_.get(index);
   }
@@ -148,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.ListingDimensionInfo dimensions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ListingDimensionInfoOrBuilder getDimensionsOrBuilder(
       int index) {
     return dimensions_.get(index);

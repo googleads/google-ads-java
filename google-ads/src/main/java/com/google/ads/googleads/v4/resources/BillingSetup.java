@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.BillingSetup}
  */
-public  final class BillingSetup extends
+public final class BillingSetup extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.BillingSetup)
     BillingSetupOrBuilder {
@@ -348,7 +348,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.resources.BillingSetup.PaymentsAccountInfo}
    */
-  public  static final class PaymentsAccountInfo extends
+  public static final class PaymentsAccountInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.BillingSetup.PaymentsAccountInfo)
       PaymentsAccountInfoOrBuilder {
@@ -499,6 +499,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsAccountId field is set.
      */
+    @java.lang.Override
     public boolean hasPaymentsAccountId() {
       return paymentsAccountId_ != null;
     }
@@ -512,6 +513,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The paymentsAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getPaymentsAccountId() {
       return paymentsAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountId_;
     }
@@ -524,6 +526,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue payments_account_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPaymentsAccountIdOrBuilder() {
       return getPaymentsAccountId();
     }
@@ -541,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the paymentsAccountName field is set.
      */
+    @java.lang.Override
     public boolean hasPaymentsAccountName() {
       return paymentsAccountName_ != null;
     }
@@ -555,6 +559,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The paymentsAccountName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getPaymentsAccountName() {
       return paymentsAccountName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccountName_;
     }
@@ -568,6 +573,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue payments_account_name = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPaymentsAccountNameOrBuilder() {
       return getPaymentsAccountName();
     }
@@ -584,6 +590,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the paymentsProfileId field is set.
      */
+    @java.lang.Override
     public boolean hasPaymentsProfileId() {
       return paymentsProfileId_ != null;
     }
@@ -597,6 +604,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The paymentsProfileId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getPaymentsProfileId() {
       return paymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileId_;
     }
@@ -609,6 +617,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue payments_profile_id = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPaymentsProfileIdOrBuilder() {
       return getPaymentsProfileId();
     }
@@ -623,6 +632,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsProfileName field is set.
      */
+    @java.lang.Override
     public boolean hasPaymentsProfileName() {
       return paymentsProfileName_ != null;
     }
@@ -634,6 +644,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The paymentsProfileName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getPaymentsProfileName() {
       return paymentsProfileName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsProfileName_;
     }
@@ -644,6 +655,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue payments_profile_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPaymentsProfileNameOrBuilder() {
       return getPaymentsProfileName();
     }
@@ -659,6 +671,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the secondaryPaymentsProfileId field is set.
      */
+    @java.lang.Override
     public boolean hasSecondaryPaymentsProfileId() {
       return secondaryPaymentsProfileId_ != null;
     }
@@ -671,6 +684,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The secondaryPaymentsProfileId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getSecondaryPaymentsProfileId() {
       return secondaryPaymentsProfileId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : secondaryPaymentsProfileId_;
     }
@@ -682,6 +696,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue secondary_payments_profile_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSecondaryPaymentsProfileIdOrBuilder() {
       return getSecondaryPaymentsProfileId();
     }
@@ -2118,6 +2133,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -2140,6 +2156,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -2164,6 +2181,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -2175,6 +2193,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -2185,6 +2204,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -2199,7 +2219,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -2210,7 +2230,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus result = com.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus.UNRECOGNIZED : result;
@@ -2232,6 +2252,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the paymentsAccount field is set.
    */
+  @java.lang.Override
   public boolean hasPaymentsAccount() {
     return paymentsAccount_ != null;
   }
@@ -2249,6 +2270,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The paymentsAccount.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPaymentsAccount() {
     return paymentsAccount_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentsAccount_;
   }
@@ -2265,6 +2287,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue payments_account = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPaymentsAccountOrBuilder() {
     return getPaymentsAccount();
   }
@@ -2283,6 +2306,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the paymentsAccountInfo field is set.
    */
+  @java.lang.Override
   public boolean hasPaymentsAccountInfo() {
     return paymentsAccountInfo_ != null;
   }
@@ -2298,6 +2322,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The paymentsAccountInfo.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.BillingSetup.PaymentsAccountInfo getPaymentsAccountInfo() {
     return paymentsAccountInfo_ == null ? com.google.ads.googleads.v4.resources.BillingSetup.PaymentsAccountInfo.getDefaultInstance() : paymentsAccountInfo_;
   }
@@ -2312,6 +2337,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.BillingSetup.PaymentsAccountInfoOrBuilder getPaymentsAccountInfoOrBuilder() {
     return getPaymentsAccountInfo();
   }
@@ -2326,6 +2352,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the startDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasStartDateTime() {
     return startTimeCase_ == 9;
   }
@@ -2338,6 +2365,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The startDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStartDateTime() {
     if (startTimeCase_ == 9) {
        return (com.google.protobuf.StringValue) startTime_;
@@ -2352,6 +2380,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
     if (startTimeCase_ == 9) {
        return (com.google.protobuf.StringValue) startTime_;
@@ -2401,6 +2430,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the endDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasEndDateTime() {
     return endTimeCase_ == 13;
   }
@@ -2412,6 +2442,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The endDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEndDateTime() {
     if (endTimeCase_ == 13) {
        return (com.google.protobuf.StringValue) endTime_;
@@ -2425,6 +2456,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
     if (endTimeCase_ == 13) {
        return (com.google.protobuf.StringValue) endTime_;
@@ -3308,7 +3340,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -3321,6 +3353,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -3333,6 +3366,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus result = com.google.ads.googleads.v4.enums.BillingSetupStatusEnum.BillingSetupStatus.valueOf(status_);
@@ -3782,6 +3816,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the startDateTime field is set.
      */
+    @java.lang.Override
     public boolean hasStartDateTime() {
       return startTimeCase_ == 9;
     }
@@ -3794,6 +3829,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The startDateTime.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getStartDateTime() {
       if (startDateTimeBuilder_ == null) {
         if (startTimeCase_ == 9) {
@@ -3917,6 +3953,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue start_date_time = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getStartDateTimeOrBuilder() {
       if ((startTimeCase_ == 9) && (startDateTimeBuilder_ != null)) {
         return startDateTimeBuilder_.getMessageOrBuilder();
@@ -3962,6 +3999,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for startTimeType.
      */
+    @java.lang.Override
     public int getStartTimeTypeValue() {
       if (startTimeCase_ == 10) {
         return ((java.lang.Integer) startTime_).intValue();
@@ -3991,6 +4029,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType start_time_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The startTimeType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType getStartTimeType() {
       if (startTimeCase_ == 10) {
         @SuppressWarnings("deprecation")
@@ -4045,6 +4084,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the endDateTime field is set.
      */
+    @java.lang.Override
     public boolean hasEndDateTime() {
       return endTimeCase_ == 13;
     }
@@ -4056,6 +4096,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The endDateTime.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getEndDateTime() {
       if (endDateTimeBuilder_ == null) {
         if (endTimeCase_ == 13) {
@@ -4173,6 +4214,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue end_date_time = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getEndDateTimeOrBuilder() {
       if ((endTimeCase_ == 13) && (endDateTimeBuilder_ != null)) {
         return endDateTimeBuilder_.getMessageOrBuilder();
@@ -4217,6 +4259,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for endTimeType.
      */
+    @java.lang.Override
     public int getEndTimeTypeValue() {
       if (endTimeCase_ == 14) {
         return ((java.lang.Integer) endTime_).intValue();
@@ -4246,6 +4289,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType end_time_type = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The endTimeType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.TimeTypeEnum.TimeType getEndTimeType() {
       if (endTimeCase_ == 14) {
         @SuppressWarnings("deprecation")

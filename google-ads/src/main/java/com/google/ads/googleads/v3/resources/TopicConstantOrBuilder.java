@@ -15,6 +15,7 @@ public interface TopicConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface TopicConstantOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface TopicConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface TopicConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -60,6 +64,7 @@ public interface TopicConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the topicConstantParent field is set.
    */
   boolean hasTopicConstantParent();
   /**
@@ -68,6 +73,7 @@ public interface TopicConstantOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The topicConstantParent.
    */
   com.google.protobuf.StringValue getTopicConstantParent();
   /**

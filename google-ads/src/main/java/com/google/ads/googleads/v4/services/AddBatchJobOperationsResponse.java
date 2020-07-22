@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.AddBatchJobOperationsResponse}
  */
-public  final class AddBatchJobOperationsResponse extends
+public final class AddBatchJobOperationsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.AddBatchJobOperationsResponse)
     AddBatchJobOperationsResponseOrBuilder {
@@ -106,6 +106,7 @@ private static final long serialVersionUID = 0L;
    * <code>int64 total_operations = 1;</code>
    * @return The totalOperations.
    */
+  @java.lang.Override
   public long getTotalOperations() {
     return totalOperations_;
   }
@@ -122,6 +123,7 @@ private static final long serialVersionUID = 0L;
    * <code>string next_sequence_token = 2;</code>
    * @return The nextSequenceToken.
    */
+  @java.lang.Override
   public java.lang.String getNextSequenceToken() {
     java.lang.Object ref = nextSequenceToken_;
     if (ref instanceof java.lang.String) {
@@ -144,6 +146,7 @@ private static final long serialVersionUID = 0L;
    * <code>string next_sequence_token = 2;</code>
    * @return The bytes for nextSequenceToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNextSequenceTokenBytes() {
     java.lang.Object ref = nextSequenceToken_;
@@ -491,6 +494,7 @@ private static final long serialVersionUID = 0L;
      * <code>int64 total_operations = 1;</code>
      * @return The totalOperations.
      */
+    @java.lang.Override
     public long getTotalOperations() {
       return totalOperations_;
     }

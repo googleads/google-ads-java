@@ -33,38 +33,35 @@ public final class MobileDeviceConstantServiceProto {
       "ads.googleads.v2.services\032>google/ads/go" +
       "ogleads/v2/resources/mobile_device_const" +
       "ant.proto\032\034google/api/annotations.proto\032" +
-      "\027google/api/client.proto\"7\n\036GetMobileDev" +
-      "iceConstantRequest\022\025\n\rresource_name\030\001 \001(" +
-      "\t2\206\002\n\033MobileDeviceConstantService\022\311\001\n\027Ge" +
-      "tMobileDeviceConstant\022@.google.ads.googl" +
-      "eads.v2.services.GetMobileDeviceConstant" +
-      "Request\0327.google.ads.googleads.v2.resour" +
-      "ces.MobileDeviceConstant\"3\202\323\344\223\002-\022+/v2/{r" +
-      "esource_name=mobileDeviceConstants/*}\032\033\312" +
-      "A\030googleads.googleapis.comB\207\002\n$com.googl" +
-      "e.ads.googleads.v2.servicesB MobileDevic" +
-      "eConstantServiceProtoP\001ZHgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v2/" +
-      "services;services\242\002\003GAA\252\002 Google.Ads.Goo" +
-      "gleAds.V2.Services\312\002 Google\\Ads\\GoogleAd" +
-      "s\\V2\\Services\352\002$Google::Ads::GoogleAds::" +
-      "V2::Servicesb\006proto3"
+      "\027google/api/client.proto\032\037google/api/fie" +
+      "ld_behavior.proto\032\031google/api/resource.p" +
+      "roto\"n\n\036GetMobileDeviceConstantRequest\022L" +
+      "\n\rresource_name\030\001 \001(\tB5\340A\002\372A/\n-googleads" +
+      ".googleapis.com/MobileDeviceConstant2\226\002\n" +
+      "\033MobileDeviceConstantService\022\331\001\n\027GetMobi" +
+      "leDeviceConstant\022@.google.ads.googleads." +
+      "v2.services.GetMobileDeviceConstantReque" +
+      "st\0327.google.ads.googleads.v2.resources.M" +
+      "obileDeviceConstant\"C\202\323\344\223\002-\022+/v2/{resour" +
+      "ce_name=mobileDeviceConstants/*}\332A\rresou" +
+      "rce_name\032\033\312A\030googleads.googleapis.comB\207\002" +
+      "\n$com.google.ads.googleads.v2.servicesB " +
+      "MobileDeviceConstantServiceProtoP\001ZHgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v2/services;services\242\002\003GAA\252\002 Goo" +
+      "gle.Ads.GoogleAds.V2.Services\312\002 Google\\A" +
+      "ds\\GoogleAds\\V2\\Services\352\002$Google::Ads::" +
+      "GoogleAds::V2::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.MobileDeviceConstantProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_GetMobileDeviceConstantRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetMobileDeviceConstantRequest_fieldAccessorTable = new
@@ -74,12 +71,17 @@ public final class MobileDeviceConstantServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.MobileDeviceConstantProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

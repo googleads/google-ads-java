@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.UserInterestInfo}
  */
-public  final class UserInterestInfo extends
+public final class UserInterestInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.UserInterestInfo)
     UserInterestInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UserInterestInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UserInterestInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_interest_category = 1;</code>
+   * @return Whether the userInterestCategory field is set.
    */
+  @java.lang.Override
   public boolean hasUserInterestCategory() {
     return userInterestCategory_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue user_interest_category = 1;</code>
+   * @return The userInterestCategory.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUserInterestCategory() {
     return userInterestCategory_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : userInterestCategory_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue user_interest_category = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUserInterestCategoryOrBuilder() {
     return getUserInterestCategory();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue user_interest_category = 1;</code>
+     * @return Whether the userInterestCategory field is set.
      */
     public boolean hasUserInterestCategory() {
       return userInterestCategoryBuilder_ != null || userInterestCategory_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue user_interest_category = 1;</code>
+     * @return The userInterestCategory.
      */
     public com.google.protobuf.StringValue getUserInterestCategory() {
       if (userInterestCategoryBuilder_ == null) {

@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/video_service.proto")
 public final class VideoServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class VideoServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.VideoService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetVideoMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetVideoRequest,
-      com.google.ads.googleads.v2.resources.Video> METHOD_GET_VIDEO = getGetVideoMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetVideoRequest,
       com.google.ads.googleads.v2.resources.Video> getGetVideoMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetVideo",
+      requestType = com.google.ads.googleads.v2.services.GetVideoRequest.class,
+      responseType = com.google.ads.googleads.v2.resources.Video.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetVideoRequest,
       com.google.ads.googleads.v2.resources.Video> getGetVideoMethod() {
-    return getGetVideoMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetVideoRequest,
-      com.google.ads.googleads.v2.resources.Video> getGetVideoMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GetVideoRequest, com.google.ads.googleads.v2.resources.Video> getGetVideoMethod;
     if ((getGetVideoMethod = VideoServiceGrpc.getGetVideoMethod) == null) {
       synchronized (VideoServiceGrpc.class) {
         if ((getGetVideoMethod = VideoServiceGrpc.getGetVideoMethod) == null) {
-          VideoServiceGrpc.getGetVideoMethod = getGetVideoMethod = 
+          VideoServiceGrpc.getGetVideoMethod = getGetVideoMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GetVideoRequest, com.google.ads.googleads.v2.resources.Video>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.VideoService", "GetVideo"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVideo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GetVideoRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.resources.Video.getDefaultInstance()))
-                  .setSchemaDescriptor(new VideoServiceMethodDescriptorSupplier("GetVideo"))
-                  .build();
-          }
+              .setSchemaDescriptor(new VideoServiceMethodDescriptorSupplier("GetVideo"))
+              .build();
         }
-     }
-     return getGetVideoMethod;
+      }
+    }
+    return getGetVideoMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static VideoServiceStub newStub(io.grpc.Channel channel) {
-    return new VideoServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VideoServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VideoServiceStub>() {
+        @java.lang.Override
+        public VideoServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VideoServiceStub(channel, callOptions);
+        }
+      };
+    return VideoServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class VideoServiceGrpc {
    */
   public static VideoServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new VideoServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VideoServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VideoServiceBlockingStub>() {
+        @java.lang.Override
+        public VideoServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VideoServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return VideoServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class VideoServiceGrpc {
    */
   public static VideoServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new VideoServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<VideoServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VideoServiceFutureStub>() {
+        @java.lang.Override
+        public VideoServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VideoServiceFutureStub(channel, callOptions);
+        }
+      };
+    return VideoServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class VideoServiceGrpc {
      */
     public void getVideo(com.google.ads.googleads.v2.services.GetVideoRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.Video> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetVideoMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetVideoMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetVideoMethodHelper(),
+            getGetVideoMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GetVideoRequest,
@@ -126,19 +140,15 @@ public final class VideoServiceGrpc {
    * Service to manage videos.
    * </pre>
    */
-  public static final class VideoServiceStub extends io.grpc.stub.AbstractStub<VideoServiceStub> {
-    private VideoServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VideoServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VideoServiceStub extends io.grpc.stub.AbstractAsyncStub<VideoServiceStub> {
+    private VideoServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VideoServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VideoServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VideoServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class VideoServiceGrpc {
     public void getVideo(com.google.ads.googleads.v2.services.GetVideoRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.resources.Video> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetVideoMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetVideoMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class VideoServiceGrpc {
    * Service to manage videos.
    * </pre>
    */
-  public static final class VideoServiceBlockingStub extends io.grpc.stub.AbstractStub<VideoServiceBlockingStub> {
-    private VideoServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VideoServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VideoServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<VideoServiceBlockingStub> {
+    private VideoServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VideoServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VideoServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VideoServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class VideoServiceGrpc {
      */
     public com.google.ads.googleads.v2.resources.Video getVideo(com.google.ads.googleads.v2.services.GetVideoRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetVideoMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetVideoMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class VideoServiceGrpc {
    * Service to manage videos.
    * </pre>
    */
-  public static final class VideoServiceFutureStub extends io.grpc.stub.AbstractStub<VideoServiceFutureStub> {
-    private VideoServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private VideoServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class VideoServiceFutureStub extends io.grpc.stub.AbstractFutureStub<VideoServiceFutureStub> {
+    private VideoServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VideoServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected VideoServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VideoServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class VideoServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.resources.Video> getVideo(
         com.google.ads.googleads.v2.services.GetVideoRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetVideoMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetVideoMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class VideoServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new VideoServiceFileDescriptorSupplier())
-              .addMethod(getGetVideoMethodHelper())
+              .addMethod(getGetVideoMethod())
               .build();
         }
       }

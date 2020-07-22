@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.TopicConstant}
  */
-public  final class TopicConstant extends
+public final class TopicConstant extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.TopicConstant)
     TopicConstantOrBuilder {
@@ -145,6 +145,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -167,6 +168,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -191,6 +193,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -202,6 +205,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -212,6 +216,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -226,6 +231,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the topicConstantParent field is set.
    */
+  @java.lang.Override
   public boolean hasTopicConstantParent() {
     return topicConstantParent_ != null;
   }
@@ -237,6 +243,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The topicConstantParent.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTopicConstantParent() {
     return topicConstantParent_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : topicConstantParent_;
   }
@@ -247,6 +254,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue topic_constant_parent = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTopicConstantParentOrBuilder() {
     return getTopicConstantParent();
   }
@@ -264,6 +272,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getPathList() {
     return path_;
   }
@@ -278,6 +287,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getPathOrBuilderList() {
     return path_;
@@ -293,6 +303,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getPathCount() {
     return path_.size();
   }
@@ -307,6 +318,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPath(int index) {
     return path_.get(index);
   }
@@ -321,6 +333,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue path = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPathOrBuilder(
       int index) {
     return path_.get(index);

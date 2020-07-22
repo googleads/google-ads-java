@@ -25,6 +25,7 @@ public interface MatchingFunctionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue function_string = 1;</code>
+   * @return Whether the functionString field is set.
    */
   boolean hasFunctionString();
   /**
@@ -45,6 +46,7 @@ public interface MatchingFunctionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue function_string = 1;</code>
+   * @return The functionString.
    */
   com.google.protobuf.StringValue getFunctionString();
   /**
@@ -74,6 +76,7 @@ public interface MatchingFunctionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator operator = 4;</code>
+   * @return The enum numeric value on the wire for operator.
    */
   int getOperatorValue();
   /**
@@ -82,6 +85,7 @@ public interface MatchingFunctionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator operator = 4;</code>
+   * @return The operator.
    */
   com.google.ads.googleads.v3.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator getOperator();
 

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.EndCampaignExperimentRequest}
  */
-public  final class EndCampaignExperimentRequest extends
+public final class EndCampaignExperimentRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.EndCampaignExperimentRequest)
     EndCampaignExperimentRequestOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private EndCampaignExperimentRequest() {
     campaignExperiment_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new EndCampaignExperimentRequest();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -93,7 +99,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignExperiment.
    */
+  @java.lang.Override
   public java.lang.String getCampaignExperiment() {
     java.lang.Object ref = campaignExperiment_;
     if (ref instanceof java.lang.String) {
@@ -112,7 +120,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for campaignExperiment.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCampaignExperimentBytes() {
     java.lang.Object ref = campaignExperiment_;
@@ -440,6 +450,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The campaignExperiment.
      */
     public java.lang.String getCampaignExperiment() {
       java.lang.Object ref = campaignExperiment_;
@@ -459,6 +470,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for campaignExperiment.
      */
     public com.google.protobuf.ByteString
         getCampaignExperimentBytes() {
@@ -479,6 +491,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The campaignExperiment to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignExperiment(
         java.lang.String value) {
@@ -496,6 +510,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCampaignExperiment() {
       
@@ -509,6 +524,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string campaign_experiment = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for campaignExperiment to set.
+     * @return This builder for chaining.
      */
     public Builder setCampaignExperimentBytes(
         com.google.protobuf.ByteString value) {

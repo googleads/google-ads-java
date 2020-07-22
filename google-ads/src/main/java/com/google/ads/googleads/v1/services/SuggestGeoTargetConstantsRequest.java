@@ -11,7 +11,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest}
  */
-public  final class SuggestGeoTargetConstantsRequest extends
+public final class SuggestGeoTargetConstantsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest)
     SuggestGeoTargetConstantsRequestOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SuggestGeoTargetConstantsRequest() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new SuggestGeoTargetConstantsRequest();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -188,7 +194,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames}
    */
-  public  static final class LocationNames extends
+  public static final class LocationNames extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames)
       LocationNamesOrBuilder {
@@ -199,6 +205,13 @@ private static final long serialVersionUID = 0L;
     }
     private LocationNames() {
       names_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LocationNames();
     }
 
     @java.lang.Override
@@ -278,6 +291,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue names = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getNamesList() {
       return names_;
     }
@@ -288,6 +302,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue names = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getNamesOrBuilderList() {
       return names_;
@@ -299,6 +314,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue names = 1;</code>
      */
+    @java.lang.Override
     public int getNamesCount() {
       return names_.size();
     }
@@ -309,6 +325,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue names = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getNames(int index) {
       return names_.get(index);
     }
@@ -319,6 +336,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue names = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getNamesOrBuilder(
         int index) {
       return names_.get(index);
@@ -1089,7 +1107,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets}
    */
-  public  static final class GeoTargets extends
+  public static final class GeoTargets extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets)
       GeoTargetsOrBuilder {
@@ -1100,6 +1118,13 @@ private static final long serialVersionUID = 0L;
     }
     private GeoTargets() {
       geoTargetConstants_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GeoTargets();
     }
 
     @java.lang.Override
@@ -1179,6 +1204,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue geo_target_constants = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getGeoTargetConstantsList() {
       return geoTargetConstants_;
     }
@@ -1189,6 +1215,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue geo_target_constants = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getGeoTargetConstantsOrBuilderList() {
       return geoTargetConstants_;
@@ -1200,6 +1227,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue geo_target_constants = 1;</code>
      */
+    @java.lang.Override
     public int getGeoTargetConstantsCount() {
       return geoTargetConstants_.size();
     }
@@ -1210,6 +1238,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue geo_target_constants = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getGeoTargetConstants(int index) {
       return geoTargetConstants_.get(index);
     }
@@ -1220,6 +1249,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue geo_target_constants = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantsOrBuilder(
         int index) {
       return geoTargetConstants_.get(index);
@@ -1938,7 +1968,8 @@ private static final long serialVersionUID = 0L;
   private int queryCase_ = 0;
   private java.lang.Object query_;
   public enum QueryCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     LOCATION_NAMES(1),
     GEO_TARGETS(2),
     QUERY_NOT_SET(0);
@@ -1947,6 +1978,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -1983,7 +2016,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue locale = 3;</code>
+   * @return Whether the locale field is set.
    */
+  @java.lang.Override
   public boolean hasLocale() {
     return locale_ != null;
   }
@@ -1995,7 +2030,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue locale = 3;</code>
+   * @return The locale.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLocale() {
     return locale_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : locale_;
   }
@@ -2008,6 +2045,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue locale = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLocaleOrBuilder() {
     return getLocale();
   }
@@ -2020,7 +2058,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 5;</code>
+   * @return Whether the countryCode field is set.
    */
+  @java.lang.Override
   public boolean hasCountryCode() {
     return countryCode_ != null;
   }
@@ -2030,7 +2070,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 5;</code>
+   * @return The countryCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCountryCode() {
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
@@ -2041,6 +2083,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue country_code = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
     return getCountryCode();
   }
@@ -2052,7 +2095,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames location_names = 1;</code>
+   * @return Whether the locationNames field is set.
    */
+  @java.lang.Override
   public boolean hasLocationNames() {
     return queryCase_ == 1;
   }
@@ -2062,7 +2107,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames location_names = 1;</code>
+   * @return The locationNames.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames getLocationNames() {
     if (queryCase_ == 1) {
        return (com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames) query_;
@@ -2076,6 +2123,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames location_names = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNamesOrBuilder getLocationNamesOrBuilder() {
     if (queryCase_ == 1) {
        return (com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames) query_;
@@ -2090,7 +2138,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets geo_targets = 2;</code>
+   * @return Whether the geoTargets field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargets() {
     return queryCase_ == 2;
   }
@@ -2100,7 +2150,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets geo_targets = 2;</code>
+   * @return The geoTargets.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets getGeoTargets() {
     if (queryCase_ == 2) {
        return (com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets) query_;
@@ -2114,6 +2166,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets geo_targets = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargetsOrBuilder getGeoTargetsOrBuilder() {
     if (queryCase_ == 2) {
        return (com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets) query_;
@@ -2566,6 +2619,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue locale = 3;</code>
+     * @return Whether the locale field is set.
      */
     public boolean hasLocale() {
       return localeBuilder_ != null || locale_ != null;
@@ -2578,6 +2632,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue locale = 3;</code>
+     * @return The locale.
      */
     public com.google.protobuf.StringValue getLocale() {
       if (localeBuilder_ == null) {
@@ -2735,6 +2790,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
       return countryCodeBuilder_ != null || countryCode_ != null;
@@ -2745,6 +2801,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue country_code = 5;</code>
+     * @return The countryCode.
      */
     public com.google.protobuf.StringValue getCountryCode() {
       if (countryCodeBuilder_ == null) {
@@ -2887,7 +2944,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames location_names = 1;</code>
+     * @return Whether the locationNames field is set.
      */
+    @java.lang.Override
     public boolean hasLocationNames() {
       return queryCase_ == 1;
     }
@@ -2897,7 +2956,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames location_names = 1;</code>
+     * @return The locationNames.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames getLocationNames() {
       if (locationNamesBuilder_ == null) {
         if (queryCase_ == 1) {
@@ -3015,6 +3076,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNames location_names = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.LocationNamesOrBuilder getLocationNamesOrBuilder() {
       if ((queryCase_ == 1) && (locationNamesBuilder_ != null)) {
         return locationNamesBuilder_.getMessageOrBuilder();
@@ -3059,7 +3121,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets geo_targets = 2;</code>
+     * @return Whether the geoTargets field is set.
      */
+    @java.lang.Override
     public boolean hasGeoTargets() {
       return queryCase_ == 2;
     }
@@ -3069,7 +3133,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets geo_targets = 2;</code>
+     * @return The geoTargets.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets getGeoTargets() {
       if (geoTargetsBuilder_ == null) {
         if (queryCase_ == 2) {
@@ -3187,6 +3253,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargets geo_targets = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.services.SuggestGeoTargetConstantsRequest.GeoTargetsOrBuilder getGeoTargetsOrBuilder() {
       if ((queryCase_ == 2) && (geoTargetsBuilder_ != null)) {
         return geoTargetsBuilder_.getMessageOrBuilder();

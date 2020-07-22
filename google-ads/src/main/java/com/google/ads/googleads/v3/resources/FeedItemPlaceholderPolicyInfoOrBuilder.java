@@ -13,6 +13,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for placeholderTypeEnum.
    */
   int getPlaceholderTypeEnumValue();
   /**
@@ -21,6 +22,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type_enum = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The placeholderTypeEnum.
    */
   com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypeEnum();
 
@@ -30,6 +32,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_mapping_resource_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the feedMappingResourceName field is set.
    */
   boolean hasFeedMappingResourceName();
   /**
@@ -38,6 +41,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed_mapping_resource_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The feedMappingResourceName.
    */
   com.google.protobuf.StringValue getFeedMappingResourceName();
   /**
@@ -55,6 +59,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for reviewStatus.
    */
   int getReviewStatusValue();
   /**
@@ -63,6 +68,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The reviewStatus.
    */
   com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus();
 
@@ -73,6 +79,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for approvalStatus.
    */
   int getApprovalStatusValue();
   /**
@@ -82,6 +89,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The approvalStatus.
    */
   com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus();
 
@@ -135,6 +143,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for validationStatus.
    */
   int getValidationStatusValue();
   /**
@@ -143,6 +152,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus validation_status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The validationStatus.
    */
   com.google.ads.googleads.v3.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus getValidationStatus();
 
@@ -196,6 +206,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for qualityApprovalStatus.
    */
   int getQualityApprovalStatusValue();
   /**
@@ -204,6 +215,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus quality_approval_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The qualityApprovalStatus.
    */
   com.google.ads.googleads.v3.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus getQualityApprovalStatus();
 
@@ -213,6 +225,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the qualityDisapprovalReasons.
    */
   java.util.List<com.google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason> getQualityDisapprovalReasonsList();
   /**
@@ -221,6 +234,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of qualityDisapprovalReasons.
    */
   int getQualityDisapprovalReasonsCount();
   /**
@@ -229,6 +243,8 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The qualityDisapprovalReasons at the given index.
    */
   com.google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason getQualityDisapprovalReasons(int index);
   /**
@@ -237,6 +253,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the enum numeric values on the wire for qualityDisapprovalReasons.
    */
   java.util.List<java.lang.Integer>
   getQualityDisapprovalReasonsValueList();
@@ -246,6 +263,8 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of qualityDisapprovalReasons at the given index.
    */
   int getQualityDisapprovalReasonsValue(int index);
 }

@@ -14,6 +14,7 @@ public interface TargetingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+   * @return Whether the plannableLocationId field is set.
    */
   boolean hasPlannableLocationId();
   /**
@@ -23,6 +24,7 @@ public interface TargetingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 1;</code>
+   * @return The plannableLocationId.
    */
   com.google.protobuf.StringValue getPlannableLocationId();
   /**
@@ -37,26 +39,29 @@ public interface TargetingOrBuilder extends
 
   /**
    * <pre>
-   * Required
-   * Selected age range to be planned on.
+   * Targeted age range.
+   * If not specified, targets all age ranges.
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_range = 2;</code>
+   * @return The enum numeric value on the wire for ageRange.
    */
   int getAgeRangeValue();
   /**
    * <pre>
-   * Required
-   * Selected age range to be planned on.
+   * Targeted age range.
+   * If not specified, targets all age ranges.
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_range = 2;</code>
+   * @return The ageRange.
    */
   com.google.ads.googleads.v2.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange getAgeRange();
 
   /**
    * <pre>
-   * Targetable genders for the ad product.
+   * Targeted genders.
+   * If not specified, targets all genders.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.GenderInfo genders = 3;</code>
@@ -65,7 +70,8 @@ public interface TargetingOrBuilder extends
       getGendersList();
   /**
    * <pre>
-   * Targetable genders for the ad product.
+   * Targeted genders.
+   * If not specified, targets all genders.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.GenderInfo genders = 3;</code>
@@ -73,7 +79,8 @@ public interface TargetingOrBuilder extends
   com.google.ads.googleads.v2.common.GenderInfo getGenders(int index);
   /**
    * <pre>
-   * Targetable genders for the ad product.
+   * Targeted genders.
+   * If not specified, targets all genders.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.GenderInfo genders = 3;</code>
@@ -81,7 +88,8 @@ public interface TargetingOrBuilder extends
   int getGendersCount();
   /**
    * <pre>
-   * Targetable genders for the ad product.
+   * Targeted genders.
+   * If not specified, targets all genders.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.GenderInfo genders = 3;</code>
@@ -90,7 +98,8 @@ public interface TargetingOrBuilder extends
       getGendersOrBuilderList();
   /**
    * <pre>
-   * Targetable genders for the ad product.
+   * Targeted genders.
+   * If not specified, targets all genders.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.GenderInfo genders = 3;</code>
@@ -100,7 +109,9 @@ public interface TargetingOrBuilder extends
 
   /**
    * <pre>
-   * Targetable devices for the ad product.
+   * Targeted devices.
+   * If not specified, targets all applicable devices. Applicable devices vary
+   * by product and region and can be obtained from ListPlannableProducts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.DeviceInfo devices = 4;</code>
@@ -109,7 +120,9 @@ public interface TargetingOrBuilder extends
       getDevicesList();
   /**
    * <pre>
-   * Targetable devices for the ad product.
+   * Targeted devices.
+   * If not specified, targets all applicable devices. Applicable devices vary
+   * by product and region and can be obtained from ListPlannableProducts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.DeviceInfo devices = 4;</code>
@@ -117,7 +130,9 @@ public interface TargetingOrBuilder extends
   com.google.ads.googleads.v2.common.DeviceInfo getDevices(int index);
   /**
    * <pre>
-   * Targetable devices for the ad product.
+   * Targeted devices.
+   * If not specified, targets all applicable devices. Applicable devices vary
+   * by product and region and can be obtained from ListPlannableProducts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.DeviceInfo devices = 4;</code>
@@ -125,7 +140,9 @@ public interface TargetingOrBuilder extends
   int getDevicesCount();
   /**
    * <pre>
-   * Targetable devices for the ad product.
+   * Targeted devices.
+   * If not specified, targets all applicable devices. Applicable devices vary
+   * by product and region and can be obtained from ListPlannableProducts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.DeviceInfo devices = 4;</code>
@@ -134,7 +151,9 @@ public interface TargetingOrBuilder extends
       getDevicesOrBuilderList();
   /**
    * <pre>
-   * Targetable devices for the ad product.
+   * Targeted devices.
+   * If not specified, targets all applicable devices. Applicable devices vary
+   * by product and region and can be obtained from ListPlannableProducts.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.common.DeviceInfo devices = 4;</code>

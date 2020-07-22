@@ -15,6 +15,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for extensionType.
    */
   int getExtensionTypeValue();
   /**
@@ -43,6 +46,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType extension_type = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The extensionType.
    */
   com.google.ads.googleads.v3.enums.ExtensionTypeEnum.ExtensionType getExtensionType();
 
@@ -106,6 +110,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
+   * @return The enum numeric value on the wire for device.
    */
   int getDeviceValue();
   /**
@@ -114,6 +119,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice device = 4;</code>
+   * @return The device.
    */
   com.google.ads.googleads.v3.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice getDevice();
 }

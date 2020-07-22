@@ -18,6 +18,7 @@ public interface KeywordPlanKeywordHistoricalMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_query = 1;</code>
+   * @return Whether the searchQuery field is set.
    */
   boolean hasSearchQuery();
   /**
@@ -31,6 +32,7 @@ public interface KeywordPlanKeywordHistoricalMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_query = 1;</code>
+   * @return The searchQuery.
    */
   com.google.protobuf.StringValue getSearchQuery();
   /**
@@ -54,6 +56,7 @@ public interface KeywordPlanKeywordHistoricalMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.KeywordPlanHistoricalMetrics keyword_metrics = 2;</code>
+   * @return Whether the keywordMetrics field is set.
    */
   boolean hasKeywordMetrics();
   /**
@@ -63,6 +66,7 @@ public interface KeywordPlanKeywordHistoricalMetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.KeywordPlanHistoricalMetrics keyword_metrics = 2;</code>
+   * @return The keywordMetrics.
    */
   com.google.ads.googleads.v2.common.KeywordPlanHistoricalMetrics getKeywordMetrics();
   /**

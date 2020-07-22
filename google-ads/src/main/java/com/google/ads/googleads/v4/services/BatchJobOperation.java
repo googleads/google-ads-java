@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.BatchJobOperation}
  */
-public  final class BatchJobOperation extends
+public final class BatchJobOperation extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.BatchJobOperation)
     BatchJobOperationOrBuilder {
@@ -154,6 +154,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.BatchJob create = 1;</code>
    * @return Whether the create field is set.
    */
+  @java.lang.Override
   public boolean hasCreate() {
     return operationCase_ == 1;
   }
@@ -165,6 +166,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.BatchJob create = 1;</code>
    * @return The create.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.BatchJob getCreate() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.BatchJob) operation_;
@@ -178,6 +180,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.BatchJob create = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.BatchJobOrBuilder getCreateOrBuilder() {
     if (operationCase_ == 1) {
        return (com.google.ads.googleads.v4.resources.BatchJob) operation_;
@@ -622,6 +625,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.BatchJob create = 1;</code>
      * @return Whether the create field is set.
      */
+    @java.lang.Override
     public boolean hasCreate() {
       return operationCase_ == 1;
     }
@@ -633,6 +637,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.BatchJob create = 1;</code>
      * @return The create.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.BatchJob getCreate() {
       if (createBuilder_ == null) {
         if (operationCase_ == 1) {
@@ -750,6 +755,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.BatchJob create = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.BatchJobOrBuilder getCreateOrBuilder() {
       if ((operationCase_ == 1) && (createBuilder_ != null)) {
         return createBuilder_.getMessageOrBuilder();
@@ -796,6 +802,7 @@ private static final long serialVersionUID = 0L;
      * <code>string remove = 3;</code>
      * @return The remove.
      */
+    @java.lang.Override
     public java.lang.String getRemove() {
       java.lang.Object ref = "";
       if (operationCase_ == 3) {
@@ -823,6 +830,7 @@ private static final long serialVersionUID = 0L;
      * <code>string remove = 3;</code>
      * @return The bytes for remove.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRemoveBytes() {
       java.lang.Object ref = "";

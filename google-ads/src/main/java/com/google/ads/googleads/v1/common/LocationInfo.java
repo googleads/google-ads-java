@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.LocationInfo}
  */
-public  final class LocationInfo extends
+public final class LocationInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.LocationInfo)
     LocationInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private LocationInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new LocationInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   * @return Whether the geoTargetConstant field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetConstant() {
     return geoTargetConstant_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+   * @return The geoTargetConstant.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetConstant() {
     return geoTargetConstant_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetConstant_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetConstantOrBuilder() {
     return getGeoTargetConstant();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * @return Whether the geoTargetConstant field is set.
      */
     public boolean hasGeoTargetConstant() {
       return geoTargetConstantBuilder_ != null || geoTargetConstant_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_constant = 1;</code>
+     * @return The geoTargetConstant.
      */
     public com.google.protobuf.StringValue getGeoTargetConstant() {
       if (geoTargetConstantBuilder_ == null) {

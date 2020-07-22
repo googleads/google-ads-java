@@ -13,7 +13,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.KeywordPlanHistoricalMetrics}
  */
-public  final class KeywordPlanHistoricalMetrics extends
+public final class KeywordPlanHistoricalMetrics extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.KeywordPlanHistoricalMetrics)
     KeywordPlanHistoricalMetricsOrBuilder {
@@ -171,6 +171,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
    * @return Whether the avgMonthlySearches field is set.
    */
+  @java.lang.Override
   public boolean hasAvgMonthlySearches() {
     return avgMonthlySearches_ != null;
   }
@@ -183,6 +184,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
    * @return The avgMonthlySearches.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAvgMonthlySearches() {
     return avgMonthlySearches_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : avgMonthlySearches_;
   }
@@ -194,6 +196,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value avg_monthly_searches = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAvgMonthlySearchesOrBuilder() {
     return getAvgMonthlySearches();
   }
@@ -207,6 +210,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.MonthlySearchVolume monthly_search_volumes = 6;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.MonthlySearchVolume> getMonthlySearchVolumesList() {
     return monthlySearchVolumes_;
   }
@@ -217,6 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.MonthlySearchVolume monthly_search_volumes = 6;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.MonthlySearchVolumeOrBuilder> 
       getMonthlySearchVolumesOrBuilderList() {
     return monthlySearchVolumes_;
@@ -228,6 +233,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.MonthlySearchVolume monthly_search_volumes = 6;</code>
    */
+  @java.lang.Override
   public int getMonthlySearchVolumesCount() {
     return monthlySearchVolumes_.size();
   }
@@ -238,6 +244,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.MonthlySearchVolume monthly_search_volumes = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.MonthlySearchVolume getMonthlySearchVolumes(int index) {
     return monthlySearchVolumes_.get(index);
   }
@@ -248,6 +255,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.MonthlySearchVolume monthly_search_volumes = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.MonthlySearchVolumeOrBuilder getMonthlySearchVolumesOrBuilder(
       int index) {
     return monthlySearchVolumes_.get(index);
@@ -263,7 +271,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
    * @return The enum numeric value on the wire for competition.
    */
-  public int getCompetitionValue() {
+  @java.lang.Override public int getCompetitionValue() {
     return competition_;
   }
   /**
@@ -274,7 +282,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
    * @return The competition.
    */
-  public com.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel getCompetition() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel getCompetition() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel result = com.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.valueOf(competition_);
     return result == null ? com.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.UNRECOGNIZED : result;
@@ -294,6 +302,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value competition_index = 3;</code>
    * @return Whether the competitionIndex field is set.
    */
+  @java.lang.Override
   public boolean hasCompetitionIndex() {
     return competitionIndex_ != null;
   }
@@ -309,6 +318,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value competition_index = 3;</code>
    * @return The competitionIndex.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCompetitionIndex() {
     return competitionIndex_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : competitionIndex_;
   }
@@ -323,6 +333,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value competition_index = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCompetitionIndexOrBuilder() {
     return getCompetitionIndex();
   }
@@ -337,6 +348,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value low_top_of_page_bid_micros = 4;</code>
    * @return Whether the lowTopOfPageBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasLowTopOfPageBidMicros() {
     return lowTopOfPageBidMicros_ != null;
   }
@@ -348,6 +360,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value low_top_of_page_bid_micros = 4;</code>
    * @return The lowTopOfPageBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getLowTopOfPageBidMicros() {
     return lowTopOfPageBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : lowTopOfPageBidMicros_;
   }
@@ -358,6 +371,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value low_top_of_page_bid_micros = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getLowTopOfPageBidMicrosOrBuilder() {
     return getLowTopOfPageBidMicros();
   }
@@ -372,6 +386,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value high_top_of_page_bid_micros = 5;</code>
    * @return Whether the highTopOfPageBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasHighTopOfPageBidMicros() {
     return highTopOfPageBidMicros_ != null;
   }
@@ -383,6 +398,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value high_top_of_page_bid_micros = 5;</code>
    * @return The highTopOfPageBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getHighTopOfPageBidMicros() {
     return highTopOfPageBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : highTopOfPageBidMicros_;
   }
@@ -393,6 +409,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value high_top_of_page_bid_micros = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getHighTopOfPageBidMicrosOrBuilder() {
     return getHighTopOfPageBidMicros();
   }
@@ -1367,7 +1384,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
      * @return The enum numeric value on the wire for competition.
      */
-    public int getCompetitionValue() {
+    @java.lang.Override public int getCompetitionValue() {
       return competition_;
     }
     /**
@@ -1380,6 +1397,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCompetitionValue(int value) {
+      
       competition_ = value;
       onChanged();
       return this;
@@ -1392,6 +1410,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel competition = 2;</code>
      * @return The competition.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel getCompetition() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel result = com.google.ads.googleads.v4.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.valueOf(competition_);

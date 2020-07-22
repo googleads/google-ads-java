@@ -15,6 +15,7 @@ public interface AppFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue link_text = 1;</code>
+   * @return Whether the linkText field is set.
    */
   boolean hasLinkText();
   /**
@@ -25,6 +26,7 @@ public interface AppFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue link_text = 1;</code>
+   * @return The linkText.
    */
   com.google.protobuf.StringValue getLinkText();
   /**
@@ -45,6 +47,7 @@ public interface AppFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 2;</code>
+   * @return Whether the appId field is set.
    */
   boolean hasAppId();
   /**
@@ -54,6 +57,7 @@ public interface AppFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue app_id = 2;</code>
+   * @return The appId.
    */
   com.google.protobuf.StringValue getAppId();
   /**
@@ -73,6 +77,7 @@ public interface AppFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AppStoreEnum.AppStore app_store = 3;</code>
+   * @return The enum numeric value on the wire for appStore.
    */
   int getAppStoreValue();
   /**
@@ -82,6 +87,7 @@ public interface AppFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AppStoreEnum.AppStore app_store = 3;</code>
+   * @return The appStore.
    */
   com.google.ads.googleads.v3.enums.AppStoreEnum.AppStore getAppStore();
 
@@ -184,6 +190,7 @@ public interface AppFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 6;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
   /**
@@ -192,6 +199,7 @@ public interface AppFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 6;</code>
+   * @return The trackingUrlTemplate.
    */
   com.google.protobuf.StringValue getTrackingUrlTemplate();
   /**
@@ -259,6 +267,7 @@ public interface AppFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 8;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
   /**
@@ -268,6 +277,7 @@ public interface AppFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 8;</code>
+   * @return The finalUrlSuffix.
    */
   com.google.protobuf.StringValue getFinalUrlSuffix();
   /**

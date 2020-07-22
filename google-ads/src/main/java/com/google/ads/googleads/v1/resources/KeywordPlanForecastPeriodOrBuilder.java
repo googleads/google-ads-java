@@ -13,6 +13,7 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval date_interval = 1;</code>
+   * @return The enum numeric value on the wire for dateInterval.
    */
   int getDateIntervalValue();
   /**
@@ -21,6 +22,7 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval date_interval = 1;</code>
+   * @return The dateInterval.
    */
   com.google.ads.googleads.v1.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval getDateInterval();
 
@@ -29,9 +31,11 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
    * The custom date range used for forecasting.
    * The start and end dates must be in the future. Otherwise, an error will
    * be returned when the forecasting action is performed.
+   * The start and end dates are inclusive.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.DateRange date_range = 2;</code>
+   * @return Whether the dateRange field is set.
    */
   boolean hasDateRange();
   /**
@@ -39,9 +43,11 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
    * The custom date range used for forecasting.
    * The start and end dates must be in the future. Otherwise, an error will
    * be returned when the forecasting action is performed.
+   * The start and end dates are inclusive.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.DateRange date_range = 2;</code>
+   * @return The dateRange.
    */
   com.google.ads.googleads.v1.common.DateRange getDateRange();
   /**
@@ -49,6 +55,7 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
    * The custom date range used for forecasting.
    * The start and end dates must be in the future. Otherwise, an error will
    * be returned when the forecasting action is performed.
+   * The start and end dates are inclusive.
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.DateRange date_range = 2;</code>

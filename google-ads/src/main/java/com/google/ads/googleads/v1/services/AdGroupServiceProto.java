@@ -52,14 +52,16 @@ public final class AdGroupServiceProto {
       "oup_service.proto\022 google.ads.googleads." +
       "v1.services\0320google/ads/googleads/v1/res" +
       "ources/ad_group.proto\032\034google/api/annota" +
-      "tions.proto\032 google/protobuf/field_mask." +
-      "proto\032\036google/protobuf/wrappers.proto\032\027g" +
-      "oogle/rpc/status.proto\032\027google/api/clien" +
-      "t.proto\"*\n\021GetAdGroupRequest\022\025\n\rresource" +
-      "_name\030\001 \001(\t\"\244\001\n\025MutateAdGroupsRequest\022\023\n" +
-      "\013customer_id\030\001 \001(\t\022F\n\noperations\030\002 \003(\01322" +
-      ".google.ads.googleads.v1.services.AdGrou" +
-      "pOperation\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rv" +
+      "tions.proto\032\027google/api/client.proto\032\037go" +
+      "ogle/api/field_behavior.proto\032\031google/ap" +
+      "i/resource.proto\032 google/protobuf/field_" +
+      "mask.proto\032\027google/rpc/status.proto\"T\n\021G" +
+      "etAdGroupRequest\022?\n\rresource_name\030\001 \001(\tB" +
+      "(\340A\002\372A\"\n googleads.googleapis.com/AdGrou" +
+      "p\"\256\001\n\025MutateAdGroupsRequest\022\030\n\013customer_" +
+      "id\030\001 \001(\tB\003\340A\002\022K\n\noperations\030\002 \003(\01322.goog" +
+      "le.ads.googleads.v1.services.AdGroupOper" +
+      "ationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rv" +
       "alidate_only\030\004 \001(\010\"\336\001\n\020AdGroupOperation\022" +
       "/\n\013update_mask\030\004 \001(\0132\032.google.protobuf.F" +
       "ieldMask\022<\n\006create\030\001 \001(\0132*.google.ads.go" +
@@ -71,42 +73,36 @@ public final class AdGroupServiceProto {
       "s\022F\n\007results\030\002 \003(\01325.google.ads.googlead" +
       "s.v1.services.MutateAdGroupResult\",\n\023Mut" +
       "ateAdGroupResult\022\025\n\rresource_name\030\001 \001(\t2" +
-      "\221\003\n\016AdGroupService\022\241\001\n\nGetAdGroup\0223.goog" +
+      "\272\003\n\016AdGroupService\022\261\001\n\nGetAdGroup\0223.goog" +
       "le.ads.googleads.v1.services.GetAdGroupR" +
       "equest\032*.google.ads.googleads.v1.resourc" +
-      "es.AdGroup\"2\202\323\344\223\002,\022*/v1/{resource_name=c" +
-      "ustomers/*/adGroups/*}\022\275\001\n\016MutateAdGroup" +
-      "s\0227.google.ads.googleads.v1.services.Mut" +
-      "ateAdGroupsRequest\0328.google.ads.googlead" +
-      "s.v1.services.MutateAdGroupsResponse\"8\202\323" +
-      "\344\223\0022\"-/v1/customers/{customer_id=*}/adGr" +
-      "oups:mutate:\001*\032\033\312A\030googleads.googleapis." +
-      "comB\372\001\n$com.google.ads.googleads.v1.serv" +
-      "icesB\023AdGroupServiceProtoP\001ZHgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v1/services;services\242\002\003GAA\252\002 Google.Ads" +
-      ".GoogleAds.V1.Services\312\002 Google\\Ads\\Goog" +
-      "leAds\\V1\\Services\352\002$Google::Ads::GoogleA" +
-      "ds::V1::Servicesb\006proto3"
+      "es.AdGroup\"B\202\323\344\223\002,\022*/v1/{resource_name=c" +
+      "ustomers/*/adGroups/*}\332A\rresource_name\022\326" +
+      "\001\n\016MutateAdGroups\0227.google.ads.googleads" +
+      ".v1.services.MutateAdGroupsRequest\0328.goo" +
+      "gle.ads.googleads.v1.services.MutateAdGr" +
+      "oupsResponse\"Q\202\323\344\223\0022\"-/v1/customers/{cus" +
+      "tomer_id=*}/adGroups:mutate:\001*\332A\026custome" +
+      "r_id,operations\032\033\312A\030googleads.googleapis" +
+      ".comB\372\001\n$com.google.ads.googleads.v1.ser" +
+      "vicesB\023AdGroupServiceProtoP\001ZHgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v1/services;services\242\002\003GAA\252\002 Google.Ad" +
+      "s.GoogleAds.V1.Services\312\002 Google\\Ads\\Goo" +
+      "gleAds\\V1\\Services\352\002$Google::Ads::Google" +
+      "Ads::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.AdGroupProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetAdGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetAdGroupRequest_fieldAccessorTable = new
@@ -140,15 +136,19 @@ public final class AdGroupServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.AdGroupProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.FieldMaskProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
-    com.google.rpc.StatusProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

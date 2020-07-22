@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.MutateKeywordPlanAdGroupsResponse}
  */
-public  final class MutateKeywordPlanAdGroupsResponse extends
+public final class MutateKeywordPlanAdGroupsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.MutateKeywordPlanAdGroupsResponse)
     MutateKeywordPlanAdGroupsResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private MutateKeywordPlanAdGroupsResponse() {
     results_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateKeywordPlanAdGroupsResponse();
   }
 
   @java.lang.Override
@@ -48,9 +55,9 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               results_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             results_.add(
                 input.readMessage(com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult.parser(), extensionRegistry));
@@ -84,7 +91,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         results_ = java.util.Collections.unmodifiableList(results_);
       }
       this.unknownFields = unknownFields.build();
@@ -104,7 +111,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupsResponse.class, com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupsResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PARTIAL_FAILURE_ERROR_FIELD_NUMBER = 3;
   private com.google.rpc.Status partialFailureError_;
   /**
@@ -116,7 +122,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   * @return Whether the partialFailureError field is set.
    */
+  @java.lang.Override
   public boolean hasPartialFailureError() {
     return partialFailureError_ != null;
   }
@@ -129,7 +137,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
+   * @return The partialFailureError.
    */
+  @java.lang.Override
   public com.google.rpc.Status getPartialFailureError() {
     return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
   }
@@ -143,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.rpc.Status partial_failure_error = 3;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
     return getPartialFailureError();
   }
@@ -151,52 +162,62 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult> results_;
   /**
    * <pre>
-   * All results for the mutate.
+   * All results for the mutate. The order of the results is determined by the
+   * order of the keywords in the original request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult> getResultsList() {
     return results_;
   }
   /**
    * <pre>
-   * All results for the mutate.
+   * All results for the mutate. The order of the results is determined by the
+   * order of the keywords in the original request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
   }
   /**
    * <pre>
-   * All results for the mutate.
+   * All results for the mutate. The order of the results is determined by the
+   * order of the keywords in the original request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
   /**
    * <pre>
-   * All results for the mutate.
+   * All results for the mutate. The order of the results is determined by the
+   * order of the keywords in the original request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult getResults(int index) {
     return results_.get(index);
   }
   /**
    * <pre>
-   * All results for the mutate.
+   * All results for the mutate. The order of the results is determined by the
+   * order of the keywords in the original request.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
@@ -426,7 +447,7 @@ private static final long serialVersionUID = 0L;
       }
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         resultsBuilder_.clear();
       }
@@ -457,22 +478,20 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupsResponse buildPartial() {
       com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupsResponse result = new com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupsResponse(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (partialFailureErrorBuilder_ == null) {
         result.partialFailureError_ = partialFailureError_;
       } else {
         result.partialFailureError_ = partialFailureErrorBuilder_.build();
       }
       if (resultsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.results_ = results_;
       } else {
         result.results_ = resultsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -528,7 +547,7 @@ private static final long serialVersionUID = 0L;
         if (!other.results_.isEmpty()) {
           if (results_.isEmpty()) {
             results_ = other.results_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureResultsIsMutable();
             results_.addAll(other.results_);
@@ -541,7 +560,7 @@ private static final long serialVersionUID = 0L;
             resultsBuilder_.dispose();
             resultsBuilder_ = null;
             results_ = other.results_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             resultsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getResultsFieldBuilder() : null;
@@ -592,6 +611,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     * @return Whether the partialFailureError field is set.
      */
     public boolean hasPartialFailureError() {
       return partialFailureErrorBuilder_ != null || partialFailureError_ != null;
@@ -605,6 +625,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 3;</code>
+     * @return The partialFailureError.
      */
     public com.google.rpc.Status getPartialFailureError() {
       if (partialFailureErrorBuilder_ == null) {
@@ -763,9 +784,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult> results_ =
       java.util.Collections.emptyList();
     private void ensureResultsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         results_ = new java.util.ArrayList<com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult>(results_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -774,7 +795,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -788,7 +810,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -802,7 +825,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -816,7 +840,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -837,7 +862,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -855,7 +881,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -875,7 +902,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -896,7 +924,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -914,7 +943,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -932,7 +962,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -951,7 +982,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -959,7 +991,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearResults() {
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         resultsBuilder_.clear();
@@ -968,7 +1000,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -985,7 +1018,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -996,7 +1030,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -1010,7 +1045,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -1025,7 +1061,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -1036,7 +1073,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -1048,7 +1086,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * All results for the mutate.
+     * All results for the mutate. The order of the results is determined by the
+     * order of the keywords in the original request.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult results = 2;</code>
@@ -1064,7 +1103,7 @@ private static final long serialVersionUID = 0L;
         resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult, com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResult.Builder, com.google.ads.googleads.v3.services.MutateKeywordPlanAdGroupResultOrBuilder>(
                 results_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         results_ = null;

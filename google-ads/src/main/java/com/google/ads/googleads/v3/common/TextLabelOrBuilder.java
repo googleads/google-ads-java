@@ -15,6 +15,7 @@ public interface TextLabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue background_color = 1;</code>
+   * @return Whether the backgroundColor field is set.
    */
   boolean hasBackgroundColor();
   /**
@@ -25,6 +26,7 @@ public interface TextLabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue background_color = 1;</code>
+   * @return The backgroundColor.
    */
   com.google.protobuf.StringValue getBackgroundColor();
   /**
@@ -45,6 +47,7 @@ public interface TextLabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -54,6 +57,7 @@ public interface TextLabelOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 2;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.SitelinkFeedItem}
  */
-public  final class SitelinkFeedItem extends
+public final class SitelinkFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.SitelinkFeedItem)
     SitelinkFeedItemOrBuilder {
@@ -200,6 +200,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue link_text = 1;</code>
    * @return Whether the linkText field is set.
    */
+  @java.lang.Override
   public boolean hasLinkText() {
     return linkText_ != null;
   }
@@ -212,6 +213,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue link_text = 1;</code>
    * @return The linkText.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLinkText() {
     return linkText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : linkText_;
   }
@@ -223,6 +225,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue link_text = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLinkTextOrBuilder() {
     return getLinkText();
   }
@@ -239,6 +242,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue line1 = 2;</code>
    * @return Whether the line1 field is set.
    */
+  @java.lang.Override
   public boolean hasLine1() {
     return line1_ != null;
   }
@@ -252,6 +256,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue line1 = 2;</code>
    * @return The line1.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLine1() {
     return line1_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : line1_;
   }
@@ -264,6 +269,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue line1 = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLine1OrBuilder() {
     return getLine1();
   }
@@ -280,6 +286,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue line2 = 3;</code>
    * @return Whether the line2 field is set.
    */
+  @java.lang.Override
   public boolean hasLine2() {
     return line2_ != null;
   }
@@ -293,6 +300,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue line2 = 3;</code>
    * @return The line2.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLine2() {
     return line2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : line2_;
   }
@@ -305,6 +313,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue line2 = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLine2OrBuilder() {
     return getLine2();
   }
@@ -318,6 +327,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalUrlsList() {
     return finalUrls_;
   }
@@ -328,6 +338,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalUrlsOrBuilderList() {
     return finalUrls_;
@@ -339,6 +350,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
    */
+  @java.lang.Override
   public int getFinalUrlsCount() {
     return finalUrls_.size();
   }
@@ -349,6 +361,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrls(int index) {
     return finalUrls_.get(index);
   }
@@ -359,6 +372,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlsOrBuilder(
       int index) {
     return finalUrls_.get(index);
@@ -373,6 +387,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalMobileUrlsList() {
     return finalMobileUrls_;
   }
@@ -383,6 +398,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalMobileUrlsOrBuilderList() {
     return finalMobileUrls_;
@@ -394,6 +410,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 5;</code>
    */
+  @java.lang.Override
   public int getFinalMobileUrlsCount() {
     return finalMobileUrls_.size();
   }
@@ -404,6 +421,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalMobileUrls(int index) {
     return finalMobileUrls_.get(index);
   }
@@ -414,6 +432,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalMobileUrlsOrBuilder(
       int index) {
     return finalMobileUrls_.get(index);
@@ -429,6 +448,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue tracking_url_template = 6;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingUrlTemplate() {
     return trackingUrlTemplate_ != null;
   }
@@ -440,6 +460,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue tracking_url_template = 6;</code>
    * @return The trackingUrlTemplate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTrackingUrlTemplate() {
     return trackingUrlTemplate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrlTemplate_;
   }
@@ -450,6 +471,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
   }
@@ -464,6 +486,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.CustomParameter> getUrlCustomParametersList() {
     return urlCustomParameters_;
   }
@@ -475,6 +498,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.CustomParameterOrBuilder> 
       getUrlCustomParametersOrBuilderList() {
     return urlCustomParameters_;
@@ -487,6 +511,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 7;</code>
    */
+  @java.lang.Override
   public int getUrlCustomParametersCount() {
     return urlCustomParameters_.size();
   }
@@ -498,6 +523,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomParameter getUrlCustomParameters(int index) {
     return urlCustomParameters_.get(index);
   }
@@ -509,6 +535,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
       int index) {
     return urlCustomParameters_.get(index);
@@ -525,6 +552,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue final_url_suffix = 8;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
+  @java.lang.Override
   public boolean hasFinalUrlSuffix() {
     return finalUrlSuffix_ != null;
   }
@@ -537,6 +565,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue final_url_suffix = 8;</code>
    * @return The finalUrlSuffix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrlSuffix() {
     return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
   }
@@ -548,6 +577,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
     return getFinalUrlSuffix();
   }

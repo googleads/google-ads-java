@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.ManualCpc}
  */
-public  final class ManualCpc extends
+public final class ManualCpc extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.ManualCpc)
     ManualCpcOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ManualCpc() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ManualCpc();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 1;</code>
+   * @return Whether the enhancedCpcEnabled field is set.
    */
+  @java.lang.Override
   public boolean hasEnhancedCpcEnabled() {
     return enhancedCpcEnabled_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 1;</code>
+   * @return The enhancedCpcEnabled.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getEnhancedCpcEnabled() {
     return enhancedCpcEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enhancedCpcEnabled_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getEnhancedCpcEnabledOrBuilder() {
     return getEnhancedCpcEnabled();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 1;</code>
+     * @return Whether the enhancedCpcEnabled field is set.
      */
     public boolean hasEnhancedCpcEnabled() {
       return enhancedCpcEnabledBuilder_ != null || enhancedCpcEnabled_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enhanced_cpc_enabled = 1;</code>
+     * @return The enhancedCpcEnabled.
      */
     public com.google.protobuf.BoolValue getEnhancedCpcEnabled() {
       if (enhancedCpcEnabledBuilder_ == null) {

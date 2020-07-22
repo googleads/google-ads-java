@@ -53,52 +53,50 @@ public final class BillingSetupServiceProto {
       "eads.v2.services\0325google/ads/googleads/v" +
       "2/resources/billing_setup.proto\032\034google/" +
       "api/annotations.proto\032\027google/api/client" +
-      ".proto\"/\n\026GetBillingSetupRequest\022\025\n\rreso" +
-      "urce_name\030\001 \001(\t\"|\n\031MutateBillingSetupReq" +
-      "uest\022\023\n\013customer_id\030\001 \001(\t\022J\n\toperation\030\002" +
-      " \001(\01327.google.ads.googleads.v2.services." +
-      "BillingSetupOperation\"y\n\025BillingSetupOpe" +
-      "ration\022A\n\006create\030\002 \001(\0132/.google.ads.goog" +
-      "leads.v2.resources.BillingSetupH\000\022\020\n\006rem" +
-      "ove\030\001 \001(\tH\000B\013\n\toperation\"h\n\032MutateBillin" +
-      "gSetupResponse\022J\n\006result\030\001 \001(\0132:.google." +
-      "ads.googleads.v2.services.MutateBillingS" +
-      "etupResult\"1\n\030MutateBillingSetupResult\022\025" +
-      "\n\rresource_name\030\001 \001(\t2\273\003\n\023BillingSetupSe" +
-      "rvice\022\265\001\n\017GetBillingSetup\0228.google.ads.g" +
-      "oogleads.v2.services.GetBillingSetupRequ" +
-      "est\032/.google.ads.googleads.v2.resources." +
-      "BillingSetup\"7\202\323\344\223\0021\022//v2/{resource_name" +
-      "=customers/*/billingSetups/*}\022\316\001\n\022Mutate" +
-      "BillingSetup\022;.google.ads.googleads.v2.s" +
-      "ervices.MutateBillingSetupRequest\032<.goog" +
-      "le.ads.googleads.v2.services.MutateBilli" +
-      "ngSetupResponse\"=\202\323\344\223\0027\"2/v2/customers/{" +
-      "customer_id=*}/billingSetups:mutate:\001*\032\033" +
-      "\312A\030googleads.googleapis.comB\377\001\n$com.goog" +
-      "le.ads.googleads.v2.servicesB\030BillingSet" +
-      "upServiceProtoP\001ZHgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v2/service" +
-      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
-      "V2.Services\312\002 Google\\Ads\\GoogleAds\\V2\\Se" +
-      "rvices\352\002$Google::Ads::GoogleAds::V2::Ser" +
-      "vicesb\006proto3"
+      ".proto\032\037google/api/field_behavior.proto\032" +
+      "\031google/api/resource.proto\"^\n\026GetBilling" +
+      "SetupRequest\022D\n\rresource_name\030\001 \001(\tB-\340A\002" +
+      "\372A\'\n%googleads.googleapis.com/BillingSet" +
+      "up\"\206\001\n\031MutateBillingSetupRequest\022\030\n\013cust" +
+      "omer_id\030\001 \001(\tB\003\340A\002\022O\n\toperation\030\002 \001(\01327." +
+      "google.ads.googleads.v2.services.Billing" +
+      "SetupOperationB\003\340A\002\"y\n\025BillingSetupOpera" +
+      "tion\022A\n\006create\030\002 \001(\0132/.google.ads.google" +
+      "ads.v2.resources.BillingSetupH\000\022\020\n\006remov" +
+      "e\030\001 \001(\tH\000B\013\n\toperation\"h\n\032MutateBillingS" +
+      "etupResponse\022J\n\006result\030\001 \001(\0132:.google.ad" +
+      "s.googleads.v2.services.MutateBillingSet" +
+      "upResult\"1\n\030MutateBillingSetupResult\022\025\n\r" +
+      "resource_name\030\001 \001(\t2\343\003\n\023BillingSetupServ" +
+      "ice\022\305\001\n\017GetBillingSetup\0228.google.ads.goo" +
+      "gleads.v2.services.GetBillingSetupReques" +
+      "t\032/.google.ads.googleads.v2.resources.Bi" +
+      "llingSetup\"G\202\323\344\223\0021\022//v2/{resource_name=c" +
+      "ustomers/*/billingSetups/*}\332A\rresource_n" +
+      "ame\022\346\001\n\022MutateBillingSetup\022;.google.ads." +
+      "googleads.v2.services.MutateBillingSetup" +
+      "Request\032<.google.ads.googleads.v2.servic" +
+      "es.MutateBillingSetupResponse\"U\202\323\344\223\0027\"2/" +
+      "v2/customers/{customer_id=*}/billingSetu" +
+      "ps:mutate:\001*\332A\025customer_id,operation\032\033\312A" +
+      "\030googleads.googleapis.comB\377\001\n$com.google" +
+      ".ads.googleads.v2.servicesB\030BillingSetup" +
+      "ServiceProtoP\001ZHgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v2/services;" +
+      "services\242\002\003GAA\252\002 Google.Ads.GoogleAds.V2" +
+      ".Services\312\002 Google\\Ads\\GoogleAds\\V2\\Serv" +
+      "ices\352\002$Google::Ads::GoogleAds::V2::Servi" +
+      "cesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.BillingSetupProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_GetBillingSetupRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetBillingSetupRequest_fieldAccessorTable = new
@@ -132,12 +130,17 @@ public final class BillingSetupServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.BillingSetupProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

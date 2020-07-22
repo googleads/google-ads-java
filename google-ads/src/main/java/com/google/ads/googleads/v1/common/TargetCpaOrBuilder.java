@@ -15,6 +15,7 @@ public interface TargetCpaOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
+   * @return Whether the targetCpaMicros field is set.
    */
   boolean hasTargetCpaMicros();
   /**
@@ -25,6 +26,7 @@ public interface TargetCpaOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 1;</code>
+   * @return The targetCpaMicros.
    */
   com.google.protobuf.Int64Value getTargetCpaMicros();
   /**
@@ -45,6 +47,7 @@ public interface TargetCpaOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
   /**
@@ -54,6 +57,7 @@ public interface TargetCpaOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_ceiling_micros = 2;</code>
+   * @return The cpcBidCeilingMicros.
    */
   com.google.protobuf.Int64Value getCpcBidCeilingMicros();
   /**
@@ -73,6 +77,7 @@ public interface TargetCpaOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_floor_micros = 3;</code>
+   * @return Whether the cpcBidFloorMicros field is set.
    */
   boolean hasCpcBidFloorMicros();
   /**
@@ -82,6 +87,7 @@ public interface TargetCpaOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_floor_micros = 3;</code>
+   * @return The cpcBidFloorMicros.
    */
   com.google.protobuf.Int64Value getCpcBidFloorMicros();
   /**

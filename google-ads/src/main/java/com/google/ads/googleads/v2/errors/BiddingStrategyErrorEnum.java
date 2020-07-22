@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.errors;
  *
  * Protobuf type {@code google.ads.googleads.v2.errors.BiddingStrategyErrorEnum}
  */
-public  final class BiddingStrategyErrorEnum extends
+public final class BiddingStrategyErrorEnum extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.errors.BiddingStrategyErrorEnum)
     BiddingStrategyErrorEnumOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BiddingStrategyErrorEnum() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new BiddingStrategyErrorEnum();
   }
 
   @java.lang.Override
@@ -216,6 +223,8 @@ private static final long serialVersionUID = 0L;
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -223,6 +232,10 @@ private static final long serialVersionUID = 0L;
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static BiddingStrategyError forNumber(int value) {
       switch (value) {
         case 0: return UNSPECIFIED;
@@ -250,6 +263,10 @@ private static final long serialVersionUID = 0L;
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor

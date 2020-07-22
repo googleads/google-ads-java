@@ -11,7 +11,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.PlacementInfo}
  */
-public  final class PlacementInfo extends
+public final class PlacementInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PlacementInfo)
     PlacementInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PlacementInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PlacementInfo();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -101,7 +107,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue url = 1;</code>
+   * @return Whether the url field is set.
    */
+  @java.lang.Override
   public boolean hasUrl() {
     return url_ != null;
   }
@@ -112,7 +120,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue url = 1;</code>
+   * @return The url.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUrl() {
     return url_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : url_;
   }
@@ -124,6 +134,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue url = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUrlOrBuilder() {
     return getUrl();
   }
@@ -458,6 +469,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue url = 1;</code>
+     * @return Whether the url field is set.
      */
     public boolean hasUrl() {
       return urlBuilder_ != null || url_ != null;
@@ -469,6 +481,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue url = 1;</code>
+     * @return The url.
      */
     public com.google.protobuf.StringValue getUrl() {
       if (urlBuilder_ == null) {

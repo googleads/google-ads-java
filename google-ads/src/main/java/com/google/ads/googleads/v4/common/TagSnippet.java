@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.TagSnippet}
  */
-public  final class TagSnippet extends
+public final class TagSnippet extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.TagSnippet)
     TagSnippetOrBuilder {
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType type = 1;</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType type = 1;</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType result = com.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType.UNRECOGNIZED : result;
@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
    * @return The enum numeric value on the wire for pageFormat.
    */
-  public int getPageFormatValue() {
+  @java.lang.Override public int getPageFormatValue() {
     return pageFormat_;
   }
   /**
@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
    * @return The pageFormat.
    */
-  public com.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat getPageFormat() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat getPageFormat() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat result = com.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.valueOf(pageFormat_);
     return result == null ? com.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.UNRECOGNIZED : result;
@@ -191,6 +191,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue global_site_tag = 3;</code>
    * @return Whether the globalSiteTag field is set.
    */
+  @java.lang.Override
   public boolean hasGlobalSiteTag() {
     return globalSiteTag_ != null;
   }
@@ -203,6 +204,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue global_site_tag = 3;</code>
    * @return The globalSiteTag.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGlobalSiteTag() {
     return globalSiteTag_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : globalSiteTag_;
   }
@@ -214,6 +216,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue global_site_tag = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGlobalSiteTagOrBuilder() {
     return getGlobalSiteTag();
   }
@@ -229,6 +232,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue event_snippet = 4;</code>
    * @return Whether the eventSnippet field is set.
    */
+  @java.lang.Override
   public boolean hasEventSnippet() {
     return eventSnippet_ != null;
   }
@@ -241,6 +245,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue event_snippet = 4;</code>
    * @return The eventSnippet.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEventSnippet() {
     return eventSnippet_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : eventSnippet_;
   }
@@ -252,6 +257,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue event_snippet = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEventSnippetOrBuilder() {
     return getEventSnippet();
   }
@@ -646,7 +652,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -659,6 +665,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -671,6 +678,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType type = 1;</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType result = com.google.ads.googleads.v4.enums.TrackingCodeTypeEnum.TrackingCodeType.valueOf(type_);
@@ -719,7 +727,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
      * @return The enum numeric value on the wire for pageFormat.
      */
-    public int getPageFormatValue() {
+    @java.lang.Override public int getPageFormatValue() {
       return pageFormat_;
     }
     /**
@@ -733,6 +741,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPageFormatValue(int value) {
+      
       pageFormat_ = value;
       onChanged();
       return this;
@@ -746,6 +755,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
      * @return The pageFormat.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat getPageFormat() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat result = com.google.ads.googleads.v4.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.valueOf(pageFormat_);

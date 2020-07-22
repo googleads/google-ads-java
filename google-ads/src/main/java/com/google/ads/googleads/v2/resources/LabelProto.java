@@ -32,46 +32,54 @@ public final class LabelProto {
       "l.proto\022!google.ads.googleads.v2.resourc" +
       "es\032/google/ads/googleads/v2/common/text_" +
       "label.proto\0320google/ads/googleads/v2/enu" +
-      "ms/label_status.proto\032\036google/protobuf/w" +
-      "rappers.proto\032\034google/api/annotations.pr" +
-      "oto\"\376\001\n\005Label\022\025\n\rresource_name\030\001 \001(\t\022\'\n\002" +
-      "id\030\002 \001(\0132\033.google.protobuf.Int64Value\022*\n" +
-      "\004name\030\003 \001(\0132\034.google.protobuf.StringValu" +
-      "e\022J\n\006status\030\004 \001(\0162:.google.ads.googleads" +
-      ".v2.enums.LabelStatusEnum.LabelStatus\022=\n" +
-      "\ntext_label\030\005 \001(\0132).google.ads.googleads" +
-      ".v2.common.TextLabelB\367\001\n%com.google.ads." +
-      "googleads.v2.resourcesB\nLabelProtoP\001ZJgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v2/resources;resources\242\002\003GAA\252\002" +
-      "!Google.Ads.GoogleAds.V2.Resources\312\002!Goo" +
-      "gle\\Ads\\GoogleAds\\V2\\Resources\352\002%Google:" +
-      ":Ads::GoogleAds::V2::Resourcesb\006proto3"
+      "ms/label_status.proto\032\037google/api/field_" +
+      "behavior.proto\032\031google/api/resource.prot" +
+      "o\032\036google/protobuf/wrappers.proto\032\034googl" +
+      "e/api/annotations.proto\"\372\002\n\005Label\022=\n\rres" +
+      "ource_name\030\001 \001(\tB&\340A\005\372A \n\036googleads.goog" +
+      "leapis.com/Label\022,\n\002id\030\002 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\003\340A\003\022*\n\004name\030\003 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\022O\n\006status\030\004 \001" +
+      "(\0162:.google.ads.googleads.v2.enums.Label" +
+      "StatusEnum.LabelStatusB\003\340A\003\022=\n\ntext_labe" +
+      "l\030\005 \001(\0132).google.ads.googleads.v2.common" +
+      ".TextLabel:H\352AE\n\036googleads.googleapis.co" +
+      "m/Label\022#customers/{customer}/labels/{la" +
+      "bel}B\367\001\n%com.google.ads.googleads.v2.res" +
+      "ourcesB\nLabelProtoP\001ZJgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v2/res" +
+      "ources;resources\242\002\003GAA\252\002!Google.Ads.Goog" +
+      "leAds.V2.Resources\312\002!Google\\Ads\\GoogleAd" +
+      "s\\V2\\Resources\352\002%Google::Ads::GoogleAds:" +
+      ":V2::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.common.TextLabelProto.getDescriptor(),
           com.google.ads.googleads.v2.enums.LabelStatusProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_Label_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_Label_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_Label_descriptor,
         new java.lang.String[] { "ResourceName", "Id", "Name", "Status", "TextLabel", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.common.TextLabelProto.getDescriptor();
     com.google.ads.googleads.v2.enums.LabelStatusProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

@@ -14,6 +14,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+   * @return Whether the absoluteTopImpressionPercentage field is set.
    */
   boolean hasAbsoluteTopImpressionPercentage();
   /**
@@ -23,6 +24,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+   * @return The absoluteTopImpressionPercentage.
    */
   com.google.protobuf.DoubleValue getAbsoluteTopImpressionPercentage();
   /**
@@ -41,6 +43,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+   * @return Whether the activeViewCpm field is set.
    */
   boolean hasActiveViewCpm();
   /**
@@ -49,6 +52,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+   * @return The activeViewCpm.
    */
   com.google.protobuf.DoubleValue getActiveViewCpm();
   /**
@@ -67,6 +71,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+   * @return Whether the activeViewCtr field is set.
    */
   boolean hasActiveViewCtr();
   /**
@@ -76,6 +81,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+   * @return The activeViewCtr.
    */
   com.google.protobuf.DoubleValue getActiveViewCtr();
   /**
@@ -95,6 +101,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+   * @return Whether the activeViewImpressions field is set.
    */
   boolean hasActiveViewImpressions();
   /**
@@ -104,6 +111,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+   * @return The activeViewImpressions.
    */
   com.google.protobuf.Int64Value getActiveViewImpressions();
   /**
@@ -123,6 +131,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+   * @return Whether the activeViewMeasurability field is set.
    */
   boolean hasActiveViewMeasurability();
   /**
@@ -132,6 +141,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+   * @return The activeViewMeasurability.
    */
   com.google.protobuf.DoubleValue getActiveViewMeasurability();
   /**
@@ -151,6 +161,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+   * @return Whether the activeViewMeasurableCostMicros field is set.
    */
   boolean hasActiveViewMeasurableCostMicros();
   /**
@@ -160,6 +171,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+   * @return The activeViewMeasurableCostMicros.
    */
   com.google.protobuf.Int64Value getActiveViewMeasurableCostMicros();
   /**
@@ -179,6 +191,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+   * @return Whether the activeViewMeasurableImpressions field is set.
    */
   boolean hasActiveViewMeasurableImpressions();
   /**
@@ -188,6 +201,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+   * @return The activeViewMeasurableImpressions.
    */
   com.google.protobuf.Int64Value getActiveViewMeasurableImpressions();
   /**
@@ -207,6 +221,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+   * @return Whether the activeViewViewability field is set.
    */
   boolean hasActiveViewViewability();
   /**
@@ -216,6 +231,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+   * @return The activeViewViewability.
    */
   com.google.protobuf.DoubleValue getActiveViewViewability();
   /**
@@ -235,6 +251,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
+   * @return Whether the allConversionsFromInteractionsRate field is set.
    */
   boolean hasAllConversionsFromInteractionsRate();
   /**
@@ -244,6 +261,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
+   * @return The allConversionsFromInteractionsRate.
    */
   com.google.protobuf.DoubleValue getAllConversionsFromInteractionsRate();
   /**
@@ -258,23 +276,25 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The total value of all conversions.
+   * The value of all conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
+   * @return Whether the allConversionsValue field is set.
    */
   boolean hasAllConversionsValue();
   /**
    * <pre>
-   * The total value of all conversions.
+   * The value of all conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
+   * @return The allConversionsValue.
    */
   com.google.protobuf.DoubleValue getAllConversionsValue();
   /**
    * <pre>
-   * The total value of all conversions.
+   * The value of all conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
@@ -283,26 +303,28 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The total number of conversions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * The total number of conversions. This includes all conversions regardless
+   * of the value of include_in_conversions_metric.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
+   * @return Whether the allConversions field is set.
    */
   boolean hasAllConversions();
   /**
    * <pre>
-   * The total number of conversions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * The total number of conversions. This includes all conversions regardless
+   * of the value of include_in_conversions_metric.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
+   * @return The allConversions.
    */
   com.google.protobuf.DoubleValue getAllConversions();
   /**
    * <pre>
-   * The total number of conversions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * The total number of conversions. This includes all conversions regardless
+   * of the value of include_in_conversions_metric.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -316,6 +338,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value_per_cost = 62;</code>
+   * @return Whether the allConversionsValuePerCost field is set.
    */
   boolean hasAllConversionsValuePerCost();
   /**
@@ -325,6 +348,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value_per_cost = 62;</code>
+   * @return The allConversionsValuePerCost.
    */
   com.google.protobuf.DoubleValue getAllConversionsValuePerCost();
   /**
@@ -346,6 +370,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+   * @return Whether the allConversionsFromClickToCall field is set.
    */
   boolean hasAllConversionsFromClickToCall();
   /**
@@ -357,6 +382,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+   * @return The allConversionsFromClickToCall.
    */
   com.google.protobuf.DoubleValue getAllConversionsFromClickToCall();
   /**
@@ -379,6 +405,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+   * @return Whether the allConversionsFromDirections field is set.
    */
   boolean hasAllConversionsFromDirections();
   /**
@@ -389,6 +416,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+   * @return The allConversionsFromDirections.
    */
   com.google.protobuf.DoubleValue getAllConversionsFromDirections();
   /**
@@ -409,6 +437,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
+   * @return Whether the allConversionsFromInteractionsValuePerInteraction field is set.
    */
   boolean hasAllConversionsFromInteractionsValuePerInteraction();
   /**
@@ -418,6 +447,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
+   * @return The allConversionsFromInteractionsValuePerInteraction.
    */
   com.google.protobuf.DoubleValue getAllConversionsFromInteractionsValuePerInteraction();
   /**
@@ -438,6 +468,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+   * @return Whether the allConversionsFromMenu field is set.
    */
   boolean hasAllConversionsFromMenu();
   /**
@@ -448,6 +479,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+   * @return The allConversionsFromMenu.
    */
   com.google.protobuf.DoubleValue getAllConversionsFromMenu();
   /**
@@ -468,6 +500,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+   * @return Whether the allConversionsFromOrder field is set.
    */
   boolean hasAllConversionsFromOrder();
   /**
@@ -477,6 +510,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+   * @return The allConversionsFromOrder.
    */
   com.google.protobuf.DoubleValue getAllConversionsFromOrder();
   /**
@@ -497,6 +531,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+   * @return Whether the allConversionsFromOtherEngagement field is set.
    */
   boolean hasAllConversionsFromOtherEngagement();
   /**
@@ -507,6 +542,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+   * @return The allConversionsFromOtherEngagement.
    */
   com.google.protobuf.DoubleValue getAllConversionsFromOtherEngagement();
   /**
@@ -527,6 +563,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+   * @return Whether the allConversionsFromStoreVisit field is set.
    */
   boolean hasAllConversionsFromStoreVisit();
   /**
@@ -536,6 +573,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+   * @return The allConversionsFromStoreVisit.
    */
   com.google.protobuf.DoubleValue getAllConversionsFromStoreVisit();
   /**
@@ -556,6 +594,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+   * @return Whether the allConversionsFromStoreWebsite field is set.
    */
   boolean hasAllConversionsFromStoreWebsite();
   /**
@@ -566,6 +605,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+   * @return The allConversionsFromStoreWebsite.
    */
   com.google.protobuf.DoubleValue getAllConversionsFromStoreWebsite();
   /**
@@ -586,6 +626,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cost = 8;</code>
+   * @return Whether the averageCost field is set.
    */
   boolean hasAverageCost();
   /**
@@ -595,6 +636,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cost = 8;</code>
+   * @return The averageCost.
    */
   com.google.protobuf.DoubleValue getAverageCost();
   /**
@@ -614,6 +656,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpc = 9;</code>
+   * @return Whether the averageCpc field is set.
    */
   boolean hasAverageCpc();
   /**
@@ -623,6 +666,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpc = 9;</code>
+   * @return The averageCpc.
    */
   com.google.protobuf.DoubleValue getAverageCpc();
   /**
@@ -643,6 +687,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+   * @return Whether the averageCpe field is set.
    */
   boolean hasAverageCpe();
   /**
@@ -653,6 +698,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+   * @return The averageCpe.
    */
   com.google.protobuf.DoubleValue getAverageCpe();
   /**
@@ -672,6 +718,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpm = 10;</code>
+   * @return Whether the averageCpm field is set.
    */
   boolean hasAverageCpm();
   /**
@@ -680,6 +727,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpm = 10;</code>
+   * @return The averageCpm.
    */
   com.google.protobuf.DoubleValue getAverageCpm();
   /**
@@ -699,6 +747,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+   * @return Whether the averageCpv field is set.
    */
   boolean hasAverageCpv();
   /**
@@ -709,6 +758,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+   * @return The averageCpv.
    */
   com.google.protobuf.DoubleValue getAverageCpv();
   /**
@@ -728,6 +778,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+   * @return Whether the averagePageViews field is set.
    */
   boolean hasAveragePageViews();
   /**
@@ -736,6 +787,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+   * @return The averagePageViews.
    */
   com.google.protobuf.DoubleValue getAveragePageViews();
   /**
@@ -754,6 +806,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+   * @return Whether the averageTimeOnSite field is set.
    */
   boolean hasAverageTimeOnSite();
   /**
@@ -763,6 +816,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+   * @return The averageTimeOnSite.
    */
   com.google.protobuf.DoubleValue getAverageTimeOnSite();
   /**
@@ -781,6 +835,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+   * @return Whether the benchmarkAverageMaxCpc field is set.
    */
   boolean hasBenchmarkAverageMaxCpc();
   /**
@@ -789,6 +844,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+   * @return The benchmarkAverageMaxCpc.
    */
   com.google.protobuf.DoubleValue getBenchmarkAverageMaxCpc();
   /**
@@ -807,6 +863,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+   * @return Whether the benchmarkCtr field is set.
    */
   boolean hasBenchmarkCtr();
   /**
@@ -816,6 +873,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+   * @return The benchmarkCtr.
    */
   com.google.protobuf.DoubleValue getBenchmarkCtr();
   /**
@@ -835,6 +893,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bounce_rate = 15;</code>
+   * @return Whether the bounceRate field is set.
    */
   boolean hasBounceRate();
   /**
@@ -844,6 +903,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bounce_rate = 15;</code>
+   * @return The bounceRate.
    */
   com.google.protobuf.DoubleValue getBounceRate();
   /**
@@ -862,6 +922,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value clicks = 19;</code>
+   * @return Whether the clicks field is set.
    */
   boolean hasClicks();
   /**
@@ -870,6 +931,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value clicks = 19;</code>
+   * @return The clicks.
    */
   com.google.protobuf.Int64Value getClicks();
   /**
@@ -889,6 +951,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+   * @return Whether the combinedClicks field is set.
    */
   boolean hasCombinedClicks();
   /**
@@ -899,6 +962,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+   * @return The combinedClicks.
    */
   com.google.protobuf.Int64Value getCombinedClicks();
   /**
@@ -921,6 +985,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+   * @return Whether the combinedClicksPerQuery field is set.
    */
   boolean hasCombinedClicksPerQuery();
   /**
@@ -932,6 +997,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+   * @return The combinedClicksPerQuery.
    */
   com.google.protobuf.DoubleValue getCombinedClicksPerQuery();
   /**
@@ -954,6 +1020,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+   * @return Whether the combinedQueries field is set.
    */
   boolean hasCombinedQueries();
   /**
@@ -964,6 +1031,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+   * @return The combinedQueries.
    */
   com.google.protobuf.Int64Value getCombinedQueries();
   /**
@@ -986,6 +1054,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_budget_lost_impression_share = 20;</code>
+   * @return Whether the contentBudgetLostImpressionShare field is set.
    */
   boolean hasContentBudgetLostImpressionShare();
   /**
@@ -997,6 +1066,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_budget_lost_impression_share = 20;</code>
+   * @return The contentBudgetLostImpressionShare.
    */
   com.google.protobuf.DoubleValue getContentBudgetLostImpressionShare();
   /**
@@ -1020,6 +1090,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_impression_share = 21;</code>
+   * @return Whether the contentImpressionShare field is set.
    */
   boolean hasContentImpressionShare();
   /**
@@ -1031,6 +1102,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_impression_share = 21;</code>
+   * @return The contentImpressionShare.
    */
   com.google.protobuf.DoubleValue getContentImpressionShare();
   /**
@@ -1055,6 +1127,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+   * @return Whether the conversionLastReceivedRequestDateTime field is set.
    */
   boolean hasConversionLastReceivedRequestDateTime();
   /**
@@ -1067,6 +1140,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+   * @return The conversionLastReceivedRequestDateTime.
    */
   com.google.protobuf.StringValue getConversionLastReceivedRequestDateTime();
   /**
@@ -1089,6 +1163,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+   * @return Whether the conversionLastConversionDate field is set.
    */
   boolean hasConversionLastConversionDate();
   /**
@@ -1098,6 +1173,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+   * @return The conversionLastConversionDate.
    */
   com.google.protobuf.StringValue getConversionLastConversionDate();
   /**
@@ -1119,6 +1195,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_rank_lost_impression_share = 22;</code>
+   * @return Whether the contentRankLostImpressionShare field is set.
    */
   boolean hasContentRankLostImpressionShare();
   /**
@@ -1130,6 +1207,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_rank_lost_impression_share = 22;</code>
+   * @return The contentRankLostImpressionShare.
    */
   com.google.protobuf.DoubleValue getContentRankLostImpressionShare();
   /**
@@ -1149,10 +1227,12 @@ public interface MetricsOrBuilder extends
    * Conversions from interactions divided by the number of ad interactions
    * (such as clicks for text ads or views for video ads). This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
+   * @return Whether the conversionsFromInteractionsRate field is set.
    */
   boolean hasConversionsFromInteractionsRate();
   /**
@@ -1160,10 +1240,12 @@ public interface MetricsOrBuilder extends
    * Conversions from interactions divided by the number of ad interactions
    * (such as clicks for text ads or views for video ads). This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
+   * @return The conversionsFromInteractionsRate.
    */
   com.google.protobuf.DoubleValue getConversionsFromInteractionsRate();
   /**
@@ -1171,7 +1253,8 @@ public interface MetricsOrBuilder extends
    * Conversions from interactions divided by the number of ad interactions
    * (such as clicks for text ads or views for video ads). This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -1180,26 +1263,34 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The total value of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * The value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
+   * @return Whether the conversionsValue field is set.
    */
   boolean hasConversionsValue();
   /**
    * <pre>
-   * The total value of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * The value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
+   * @return The conversionsValue.
    */
   com.google.protobuf.DoubleValue getConversionsValue();
   /**
    * <pre>
-   * The total value of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * The value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -1210,27 +1301,32 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The value of conversions divided by the cost of ad interactions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
+   * @return Whether the conversionsValuePerCost field is set.
    */
   boolean hasConversionsValuePerCost();
   /**
    * <pre>
    * The value of conversions divided by the cost of ad interactions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
+   * @return The conversionsValuePerCost.
    */
   com.google.protobuf.DoubleValue getConversionsValuePerCost();
   /**
    * <pre>
    * The value of conversions divided by the cost of ad interactions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -1241,27 +1337,35 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The value of conversions from interactions divided by the number of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
+   * @return Whether the conversionsFromInteractionsValuePerInteraction field is set.
    */
   boolean hasConversionsFromInteractionsValuePerInteraction();
   /**
    * <pre>
    * The value of conversions from interactions divided by the number of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
+   * @return The conversionsFromInteractionsValuePerInteraction.
    */
   com.google.protobuf.DoubleValue getConversionsFromInteractionsValuePerInteraction();
   /**
    * <pre>
    * The value of conversions from interactions divided by the number of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -1271,25 +1375,33 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The number of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
+   * @return Whether the conversions field is set.
    */
   boolean hasConversions();
   /**
    * <pre>
    * The number of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
+   * @return The conversions.
    */
   com.google.protobuf.DoubleValue getConversions();
   /**
    * <pre>
    * The number of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -1303,6 +1415,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 26;</code>
+   * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
   /**
@@ -1312,6 +1425,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 26;</code>
+   * @return The costMicros.
    */
   com.google.protobuf.Int64Value getCostMicros();
   /**
@@ -1330,6 +1444,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
+   * @return Whether the costPerAllConversions field is set.
    */
   boolean hasCostPerAllConversions();
   /**
@@ -1338,6 +1453,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
+   * @return The costPerAllConversions.
    */
   com.google.protobuf.DoubleValue getCostPerAllConversions();
   /**
@@ -1353,27 +1469,32 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The cost of ad interactions divided by conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
+   * @return Whether the costPerConversion field is set.
    */
   boolean hasCostPerConversion();
   /**
    * <pre>
    * The cost of ad interactions divided by conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
+   * @return The costPerConversion.
    */
   com.google.protobuf.DoubleValue getCostPerConversion();
   /**
    * <pre>
    * The cost of ad interactions divided by conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -1384,27 +1505,35 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The cost of ad interactions divided by current model attributed
    * conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+   * @return Whether the costPerCurrentModelAttributedConversion field is set.
    */
   boolean hasCostPerCurrentModelAttributedConversion();
   /**
    * <pre>
    * The cost of ad interactions divided by current model attributed
    * conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+   * @return The costPerCurrentModelAttributedConversion.
    */
   com.google.protobuf.DoubleValue getCostPerCurrentModelAttributedConversion();
   /**
    * <pre>
    * The cost of ad interactions divided by current model attributed
    * conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
@@ -1419,6 +1548,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cross_device_conversions = 29;</code>
+   * @return Whether the crossDeviceConversions field is set.
    */
   boolean hasCrossDeviceConversions();
   /**
@@ -1429,6 +1559,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cross_device_conversions = 29;</code>
+   * @return The crossDeviceConversions.
    */
   com.google.protobuf.DoubleValue getCrossDeviceConversions();
   /**
@@ -1449,6 +1580,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue ctr = 30;</code>
+   * @return Whether the ctr field is set.
    */
   boolean hasCtr();
   /**
@@ -1458,6 +1590,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue ctr = 30;</code>
+   * @return The ctr.
    */
   com.google.protobuf.DoubleValue getCtr();
   /**
@@ -1474,27 +1607,35 @@ public interface MetricsOrBuilder extends
    * <pre>
    * Shows how your historic conversions data would look under the attribution
    * model you've currently selected. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+   * @return Whether the currentModelAttributedConversions field is set.
    */
   boolean hasCurrentModelAttributedConversions();
   /**
    * <pre>
    * Shows how your historic conversions data would look under the attribution
    * model you've currently selected. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+   * @return The currentModelAttributedConversions.
    */
   com.google.protobuf.DoubleValue getCurrentModelAttributedConversions();
   /**
    * <pre>
    * Shows how your historic conversions data would look under the attribution
    * model you've currently selected. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
@@ -1506,10 +1647,13 @@ public interface MetricsOrBuilder extends
    * Current model attributed conversions from interactions divided by the
    * number of ad interactions (such as clicks for text ads or views for video
    * ads). This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+   * @return Whether the currentModelAttributedConversionsFromInteractionsRate field is set.
    */
   boolean hasCurrentModelAttributedConversionsFromInteractionsRate();
   /**
@@ -1517,10 +1661,13 @@ public interface MetricsOrBuilder extends
    * Current model attributed conversions from interactions divided by the
    * number of ad interactions (such as clicks for text ads or views for video
    * ads). This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+   * @return The currentModelAttributedConversionsFromInteractionsRate.
    */
   com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsRate();
   /**
@@ -1528,7 +1675,9 @@ public interface MetricsOrBuilder extends
    * Current model attributed conversions from interactions divided by the
    * number of ad interactions (such as clicks for text ads or views for video
    * ads). This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
@@ -1539,27 +1688,35 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The value of current model attributed conversions from interactions divided
    * by the number of ad interactions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+   * @return Whether the currentModelAttributedConversionsFromInteractionsValuePerInteraction field is set.
    */
   boolean hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction();
   /**
    * <pre>
    * The value of current model attributed conversions from interactions divided
    * by the number of ad interactions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+   * @return The currentModelAttributedConversionsFromInteractionsValuePerInteraction.
    */
   com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction();
   /**
    * <pre>
    * The value of current model attributed conversions from interactions divided
    * by the number of ad interactions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
@@ -1568,29 +1725,34 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * The total value of current model attributed conversions. This only includes
+   * The value of current model attributed conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+   * @return Whether the currentModelAttributedConversionsValue field is set.
    */
   boolean hasCurrentModelAttributedConversionsValue();
   /**
    * <pre>
-   * The total value of current model attributed conversions. This only includes
+   * The value of current model attributed conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+   * @return The currentModelAttributedConversionsValue.
    */
   com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValue();
   /**
    * <pre>
-   * The total value of current model attributed conversions. This only includes
+   * The value of current model attributed conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
@@ -1601,27 +1763,35 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The value of current model attributed conversions divided by the cost of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+   * @return Whether the currentModelAttributedConversionsValuePerCost field is set.
    */
   boolean hasCurrentModelAttributedConversionsValuePerCost();
   /**
    * <pre>
    * The value of current model attributed conversions divided by the cost of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+   * @return The currentModelAttributedConversionsValuePerCost.
    */
   com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValuePerCost();
   /**
    * <pre>
    * The value of current model attributed conversions divided by the cost of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
@@ -1635,6 +1805,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue engagement_rate = 31;</code>
+   * @return Whether the engagementRate field is set.
    */
   boolean hasEngagementRate();
   /**
@@ -1644,6 +1815,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue engagement_rate = 31;</code>
+   * @return The engagementRate.
    */
   com.google.protobuf.DoubleValue getEngagementRate();
   /**
@@ -1664,6 +1836,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value engagements = 32;</code>
+   * @return Whether the engagements field is set.
    */
   boolean hasEngagements();
   /**
@@ -1674,6 +1847,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value engagements = 32;</code>
+   * @return The engagements.
    */
   com.google.protobuf.Int64Value getEngagements();
   /**
@@ -1689,23 +1863,25 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+   * @return Whether the hotelAverageLeadValueMicros field is set.
    */
   boolean hasHotelAverageLeadValueMicros();
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+   * @return The hotelAverageLeadValueMicros.
    */
   com.google.protobuf.DoubleValue getHotelAverageLeadValueMicros();
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -1719,6 +1895,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+   * @return Whether the hotelPriceDifferencePercentage field is set.
    */
   boolean hasHotelPriceDifferencePercentage();
   /**
@@ -1728,6 +1905,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+   * @return The hotelPriceDifferencePercentage.
    */
   com.google.protobuf.DoubleValue getHotelPriceDifferencePercentage();
   /**
@@ -1746,6 +1924,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+   * @return The enum numeric value on the wire for historicalCreativeQualityScore.
    */
   int getHistoricalCreativeQualityScoreValue();
   /**
@@ -1754,6 +1933,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+   * @return The historicalCreativeQualityScore.
    */
   com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalCreativeQualityScore();
 
@@ -1763,6 +1943,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+   * @return The enum numeric value on the wire for historicalLandingPageQualityScore.
    */
   int getHistoricalLandingPageQualityScoreValue();
   /**
@@ -1771,6 +1952,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+   * @return The historicalLandingPageQualityScore.
    */
   com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalLandingPageQualityScore();
 
@@ -1780,6 +1962,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+   * @return Whether the historicalQualityScore field is set.
    */
   boolean hasHistoricalQualityScore();
   /**
@@ -1788,6 +1971,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+   * @return The historicalQualityScore.
    */
   com.google.protobuf.Int64Value getHistoricalQualityScore();
   /**
@@ -1805,6 +1989,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+   * @return The enum numeric value on the wire for historicalSearchPredictedCtr.
    */
   int getHistoricalSearchPredictedCtrValue();
   /**
@@ -1813,6 +1998,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+   * @return The historicalSearchPredictedCtr.
    */
   com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalSearchPredictedCtr();
 
@@ -1822,6 +2008,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+   * @return Whether the gmailForwards field is set.
    */
   boolean hasGmailForwards();
   /**
@@ -1830,6 +2017,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+   * @return The gmailForwards.
    */
   com.google.protobuf.Int64Value getGmailForwards();
   /**
@@ -1848,6 +2036,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+   * @return Whether the gmailSaves field is set.
    */
   boolean hasGmailSaves();
   /**
@@ -1857,6 +2046,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+   * @return The gmailSaves.
    */
   com.google.protobuf.Int64Value getGmailSaves();
   /**
@@ -1876,6 +2066,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+   * @return Whether the gmailSecondaryClicks field is set.
    */
   boolean hasGmailSecondaryClicks();
   /**
@@ -1885,6 +2076,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+   * @return The gmailSecondaryClicks.
    */
   com.google.protobuf.Int64Value getGmailSecondaryClicks();
   /**
@@ -1904,6 +2096,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+   * @return Whether the impressionsFromStoreReach field is set.
    */
   boolean hasImpressionsFromStoreReach();
   /**
@@ -1913,6 +2106,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+   * @return The impressionsFromStoreReach.
    */
   com.google.protobuf.Int64Value getImpressionsFromStoreReach();
   /**
@@ -1932,6 +2126,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 37;</code>
+   * @return Whether the impressions field is set.
    */
   boolean hasImpressions();
   /**
@@ -1941,6 +2136,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 37;</code>
+   * @return The impressions.
    */
   com.google.protobuf.Int64Value getImpressions();
   /**
@@ -1961,6 +2157,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue interaction_rate = 38;</code>
+   * @return Whether the interactionRate field is set.
    */
   boolean hasInteractionRate();
   /**
@@ -1971,6 +2168,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue interaction_rate = 38;</code>
+   * @return The interactionRate.
    */
   com.google.protobuf.DoubleValue getInteractionRate();
   /**
@@ -1992,6 +2190,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value interactions = 39;</code>
+   * @return Whether the interactions field is set.
    */
   boolean hasInteractions();
   /**
@@ -2002,6 +2201,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value interactions = 39;</code>
+   * @return The interactions.
    */
   com.google.protobuf.Int64Value getInteractions();
   /**
@@ -2021,6 +2221,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   * @return A list containing the interactionEventTypes.
    */
   java.util.List<com.google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType> getInteractionEventTypesList();
   /**
@@ -2029,6 +2230,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   * @return The count of interactionEventTypes.
    */
   int getInteractionEventTypesCount();
   /**
@@ -2037,6 +2239,8 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   * @param index The index of the element to return.
+   * @return The interactionEventTypes at the given index.
    */
   com.google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType getInteractionEventTypes(int index);
   /**
@@ -2045,6 +2249,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   * @return A list containing the enum numeric values on the wire for interactionEventTypes.
    */
   java.util.List<java.lang.Integer>
   getInteractionEventTypesValueList();
@@ -2054,6 +2259,8 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of interactionEventTypes at the given index.
    */
   int getInteractionEventTypesValue(int index);
 
@@ -2064,6 +2271,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue invalid_click_rate = 40;</code>
+   * @return Whether the invalidClickRate field is set.
    */
   boolean hasInvalidClickRate();
   /**
@@ -2073,6 +2281,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue invalid_click_rate = 40;</code>
+   * @return The invalidClickRate.
    */
   com.google.protobuf.DoubleValue getInvalidClickRate();
   /**
@@ -2091,6 +2300,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value invalid_clicks = 41;</code>
+   * @return Whether the invalidClicks field is set.
    */
   boolean hasInvalidClicks();
   /**
@@ -2099,6 +2309,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value invalid_clicks = 41;</code>
+   * @return The invalidClicks.
    */
   com.google.protobuf.Int64Value getInvalidClicks();
   /**
@@ -2117,6 +2328,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value message_chats = 126;</code>
+   * @return Whether the messageChats field is set.
    */
   boolean hasMessageChats();
   /**
@@ -2126,6 +2338,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value message_chats = 126;</code>
+   * @return The messageChats.
    */
   com.google.protobuf.Int64Value getMessageChats();
   /**
@@ -2144,6 +2357,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value message_impressions = 127;</code>
+   * @return Whether the messageImpressions field is set.
    */
   boolean hasMessageImpressions();
   /**
@@ -2152,6 +2366,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value message_impressions = 127;</code>
+   * @return The messageImpressions.
    */
   com.google.protobuf.Int64Value getMessageImpressions();
   /**
@@ -2173,6 +2388,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue message_chat_rate = 128;</code>
+   * @return Whether the messageChatRate field is set.
    */
   boolean hasMessageChatRate();
   /**
@@ -2185,6 +2401,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue message_chat_rate = 128;</code>
+   * @return The messageChatRate.
    */
   com.google.protobuf.DoubleValue getMessageChatRate();
   /**
@@ -2206,6 +2423,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+   * @return Whether the mobileFriendlyClicksPercentage field is set.
    */
   boolean hasMobileFriendlyClicksPercentage();
   /**
@@ -2214,6 +2432,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+   * @return The mobileFriendlyClicksPercentage.
    */
   com.google.protobuf.DoubleValue getMobileFriendlyClicksPercentage();
   /**
@@ -2233,6 +2452,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+   * @return Whether the organicClicks field is set.
    */
   boolean hasOrganicClicks();
   /**
@@ -2243,6 +2463,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+   * @return The organicClicks.
    */
   com.google.protobuf.Int64Value getOrganicClicks();
   /**
@@ -2265,6 +2486,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+   * @return Whether the organicClicksPerQuery field is set.
    */
   boolean hasOrganicClicksPerQuery();
   /**
@@ -2276,6 +2498,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+   * @return The organicClicksPerQuery.
    */
   com.google.protobuf.DoubleValue getOrganicClicksPerQuery();
   /**
@@ -2298,6 +2521,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+   * @return Whether the organicImpressions field is set.
    */
   boolean hasOrganicImpressions();
   /**
@@ -2308,6 +2532,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+   * @return The organicImpressions.
    */
   com.google.protobuf.Int64Value getOrganicImpressions();
   /**
@@ -2330,6 +2555,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+   * @return Whether the organicImpressionsPerQuery field is set.
    */
   boolean hasOrganicImpressionsPerQuery();
   /**
@@ -2341,6 +2567,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+   * @return The organicImpressionsPerQuery.
    */
   com.google.protobuf.DoubleValue getOrganicImpressionsPerQuery();
   /**
@@ -2363,6 +2590,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+   * @return Whether the organicQueries field is set.
    */
   boolean hasOrganicQueries();
   /**
@@ -2373,6 +2601,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+   * @return The organicQueries.
    */
   com.google.protobuf.Int64Value getOrganicQueries();
   /**
@@ -2393,6 +2622,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue percent_new_visitors = 42;</code>
+   * @return Whether the percentNewVisitors field is set.
    */
   boolean hasPercentNewVisitors();
   /**
@@ -2402,6 +2632,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue percent_new_visitors = 42;</code>
+   * @return The percentNewVisitors.
    */
   com.google.protobuf.DoubleValue getPercentNewVisitors();
   /**
@@ -2420,6 +2651,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value phone_calls = 43;</code>
+   * @return Whether the phoneCalls field is set.
    */
   boolean hasPhoneCalls();
   /**
@@ -2428,6 +2660,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value phone_calls = 43;</code>
+   * @return The phoneCalls.
    */
   com.google.protobuf.Int64Value getPhoneCalls();
   /**
@@ -2445,6 +2678,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value phone_impressions = 44;</code>
+   * @return Whether the phoneImpressions field is set.
    */
   boolean hasPhoneImpressions();
   /**
@@ -2453,6 +2687,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value phone_impressions = 44;</code>
+   * @return The phoneImpressions.
    */
   com.google.protobuf.Int64Value getPhoneImpressions();
   /**
@@ -2471,6 +2706,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue phone_through_rate = 45;</code>
+   * @return Whether the phoneThroughRate field is set.
    */
   boolean hasPhoneThroughRate();
   /**
@@ -2480,6 +2716,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue phone_through_rate = 45;</code>
+   * @return The phoneThroughRate.
    */
   com.google.protobuf.DoubleValue getPhoneThroughRate();
   /**
@@ -2500,6 +2737,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue relative_ctr = 46;</code>
+   * @return Whether the relativeCtr field is set.
    */
   boolean hasRelativeCtr();
   /**
@@ -2510,6 +2748,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue relative_ctr = 46;</code>
+   * @return The relativeCtr.
    */
   com.google.protobuf.DoubleValue getRelativeCtr();
   /**
@@ -2527,29 +2766,31 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The percentage of the customer's Shopping or Search ad impressions that are
    * shown in the most prominent Shopping position. See
-   * [this article](https://support.google.com/google-ads/answer/7501826)
+   * https://support.google.com/google-ads/answer/7501826
    * for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+   * @return Whether the searchAbsoluteTopImpressionShare field is set.
    */
   boolean hasSearchAbsoluteTopImpressionShare();
   /**
    * <pre>
    * The percentage of the customer's Shopping or Search ad impressions that are
    * shown in the most prominent Shopping position. See
-   * [this article](https://support.google.com/google-ads/answer/7501826)
+   * https://support.google.com/google-ads/answer/7501826
    * for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+   * @return The searchAbsoluteTopImpressionShare.
    */
   com.google.protobuf.DoubleValue getSearchAbsoluteTopImpressionShare();
   /**
    * <pre>
    * The percentage of the customer's Shopping or Search ad impressions that are
    * shown in the most prominent Shopping position. See
-   * [this article](https://support.google.com/google-ads/answer/7501826)
+   * https://support.google.com/google-ads/answer/7501826
    * for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
    *
@@ -2566,6 +2807,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+   * @return Whether the searchBudgetLostAbsoluteTopImpressionShare field is set.
    */
   boolean hasSearchBudgetLostAbsoluteTopImpressionShare();
   /**
@@ -2577,6 +2819,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+   * @return The searchBudgetLostAbsoluteTopImpressionShare.
    */
   com.google.protobuf.DoubleValue getSearchBudgetLostAbsoluteTopImpressionShare();
   /**
@@ -2600,6 +2843,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_impression_share = 47;</code>
+   * @return Whether the searchBudgetLostImpressionShare field is set.
    */
   boolean hasSearchBudgetLostImpressionShare();
   /**
@@ -2611,6 +2855,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_impression_share = 47;</code>
+   * @return The searchBudgetLostImpressionShare.
    */
   com.google.protobuf.DoubleValue getSearchBudgetLostImpressionShare();
   /**
@@ -2634,6 +2879,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+   * @return Whether the searchBudgetLostTopImpressionShare field is set.
    */
   boolean hasSearchBudgetLostTopImpressionShare();
   /**
@@ -2645,6 +2891,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+   * @return The searchBudgetLostTopImpressionShare.
    */
   com.google.protobuf.DoubleValue getSearchBudgetLostTopImpressionShare();
   /**
@@ -2668,6 +2915,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+   * @return Whether the searchClickShare field is set.
    */
   boolean hasSearchClickShare();
   /**
@@ -2679,6 +2927,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+   * @return The searchClickShare.
    */
   com.google.protobuf.DoubleValue getSearchClickShare();
   /**
@@ -2704,6 +2953,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_exact_match_impression_share = 49;</code>
+   * @return Whether the searchExactMatchImpressionShare field is set.
    */
   boolean hasSearchExactMatchImpressionShare();
   /**
@@ -2717,6 +2967,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_exact_match_impression_share = 49;</code>
+   * @return The searchExactMatchImpressionShare.
    */
   com.google.protobuf.DoubleValue getSearchExactMatchImpressionShare();
   /**
@@ -2742,6 +2993,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_impression_share = 50;</code>
+   * @return Whether the searchImpressionShare field is set.
    */
   boolean hasSearchImpressionShare();
   /**
@@ -2753,6 +3005,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_impression_share = 50;</code>
+   * @return The searchImpressionShare.
    */
   com.google.protobuf.DoubleValue getSearchImpressionShare();
   /**
@@ -2776,6 +3029,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+   * @return Whether the searchRankLostAbsoluteTopImpressionShare field is set.
    */
   boolean hasSearchRankLostAbsoluteTopImpressionShare();
   /**
@@ -2787,6 +3041,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+   * @return The searchRankLostAbsoluteTopImpressionShare.
    */
   com.google.protobuf.DoubleValue getSearchRankLostAbsoluteTopImpressionShare();
   /**
@@ -2810,6 +3065,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_impression_share = 51;</code>
+   * @return Whether the searchRankLostImpressionShare field is set.
    */
   boolean hasSearchRankLostImpressionShare();
   /**
@@ -2821,6 +3077,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_impression_share = 51;</code>
+   * @return The searchRankLostImpressionShare.
    */
   com.google.protobuf.DoubleValue getSearchRankLostImpressionShare();
   /**
@@ -2844,6 +3101,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+   * @return Whether the searchRankLostTopImpressionShare field is set.
    */
   boolean hasSearchRankLostTopImpressionShare();
   /**
@@ -2855,6 +3113,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+   * @return The searchRankLostTopImpressionShare.
    */
   com.google.protobuf.DoubleValue getSearchRankLostTopImpressionShare();
   /**
@@ -2879,6 +3138,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+   * @return Whether the searchTopImpressionShare field is set.
    */
   boolean hasSearchTopImpressionShare();
   /**
@@ -2891,6 +3151,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+   * @return The searchTopImpressionShare.
    */
   com.google.protobuf.DoubleValue getSearchTopImpressionShare();
   /**
@@ -2913,6 +3174,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+   * @return Whether the speedScore field is set.
    */
   boolean hasSpeedScore();
   /**
@@ -2922,6 +3184,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+   * @return The speedScore.
    */
   com.google.protobuf.Int64Value getSpeedScore();
   /**
@@ -2941,6 +3204,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+   * @return Whether the topImpressionPercentage field is set.
    */
   boolean hasTopImpressionPercentage();
   /**
@@ -2950,6 +3214,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+   * @return The topImpressionPercentage.
    */
   com.google.protobuf.DoubleValue getTopImpressionPercentage();
   /**
@@ -2969,6 +3234,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+   * @return Whether the validAcceleratedMobilePagesClicksPercentage field is set.
    */
   boolean hasValidAcceleratedMobilePagesClicksPercentage();
   /**
@@ -2978,6 +3244,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+   * @return The validAcceleratedMobilePagesClicksPercentage.
    */
   com.google.protobuf.DoubleValue getValidAcceleratedMobilePagesClicksPercentage();
   /**
@@ -2996,6 +3263,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_all_conversions = 52;</code>
+   * @return Whether the valuePerAllConversions field is set.
    */
   boolean hasValuePerAllConversions();
   /**
@@ -3004,6 +3272,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_all_conversions = 52;</code>
+   * @return The valuePerAllConversions.
    */
   com.google.protobuf.DoubleValue getValuePerAllConversions();
   /**
@@ -3019,27 +3288,32 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The value of conversions divided by the number of conversions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
+   * @return Whether the valuePerConversion field is set.
    */
   boolean hasValuePerConversion();
   /**
    * <pre>
    * The value of conversions divided by the number of conversions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
+   * @return The valuePerConversion.
    */
   com.google.protobuf.DoubleValue getValuePerConversion();
   /**
    * <pre>
    * The value of conversions divided by the number of conversions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -3050,27 +3324,35 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The value of current model attributed conversions divided by the number of
    * the conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+   * @return Whether the valuePerCurrentModelAttributedConversion field is set.
    */
   boolean hasValuePerCurrentModelAttributedConversion();
   /**
    * <pre>
    * The value of current model attributed conversions divided by the number of
    * the conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+   * @return The valuePerCurrentModelAttributedConversion.
    */
   com.google.protobuf.DoubleValue getValuePerCurrentModelAttributedConversion();
   /**
    * <pre>
    * The value of current model attributed conversions divided by the number of
    * the conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
@@ -3083,6 +3365,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+   * @return Whether the videoQuartile100Rate field is set.
    */
   boolean hasVideoQuartile100Rate();
   /**
@@ -3091,6 +3374,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+   * @return The videoQuartile100Rate.
    */
   com.google.protobuf.DoubleValue getVideoQuartile100Rate();
   /**
@@ -3108,6 +3392,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+   * @return Whether the videoQuartile25Rate field is set.
    */
   boolean hasVideoQuartile25Rate();
   /**
@@ -3116,6 +3401,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+   * @return The videoQuartile25Rate.
    */
   com.google.protobuf.DoubleValue getVideoQuartile25Rate();
   /**
@@ -3133,6 +3419,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+   * @return Whether the videoQuartile50Rate field is set.
    */
   boolean hasVideoQuartile50Rate();
   /**
@@ -3141,6 +3428,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+   * @return The videoQuartile50Rate.
    */
   com.google.protobuf.DoubleValue getVideoQuartile50Rate();
   /**
@@ -3158,6 +3446,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+   * @return Whether the videoQuartile75Rate field is set.
    */
   boolean hasVideoQuartile75Rate();
   /**
@@ -3166,6 +3455,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+   * @return The videoQuartile75Rate.
    */
   com.google.protobuf.DoubleValue getVideoQuartile75Rate();
   /**
@@ -3185,6 +3475,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+   * @return Whether the videoViewRate field is set.
    */
   boolean hasVideoViewRate();
   /**
@@ -3195,6 +3486,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+   * @return The videoViewRate.
    */
   com.google.protobuf.DoubleValue getVideoViewRate();
   /**
@@ -3214,6 +3506,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value video_views = 59;</code>
+   * @return Whether the videoViews field is set.
    */
   boolean hasVideoViews();
   /**
@@ -3222,6 +3515,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value video_views = 59;</code>
+   * @return The videoViews.
    */
   com.google.protobuf.Int64Value getVideoViews();
   /**
@@ -3242,6 +3536,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value view_through_conversions = 60;</code>
+   * @return Whether the viewThroughConversions field is set.
    */
   boolean hasViewThroughConversions();
   /**
@@ -3253,6 +3548,7 @@ public interface MetricsOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value view_through_conversions = 60;</code>
+   * @return The viewThroughConversions.
    */
   com.google.protobuf.Int64Value getViewThroughConversions();
   /**

@@ -31,43 +31,52 @@ public final class RemarketingActionProto {
       "\n:google/ads/googleads/v1/resources/rema" +
       "rketing_action.proto\022!google.ads.googlea" +
       "ds.v1.resources\0320google/ads/googleads/v1" +
-      "/common/tag_snippet.proto\032\036google/protob" +
-      "uf/wrappers.proto\032\034google/api/annotation" +
-      "s.proto\"\301\001\n\021RemarketingAction\022\025\n\rresourc" +
-      "e_name\030\001 \001(\t\022\'\n\002id\030\002 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022*\n\004name\030\003 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\022@\n\014tag_snippets\030\004 \003(\0132" +
-      "*.google.ads.googleads.v1.common.TagSnip" +
-      "petB\203\002\n%com.google.ads.googleads.v1.reso" +
-      "urcesB\026RemarketingActionProtoP\001ZJgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v1/resources;resources\242\002\003GAA\252\002!Goog" +
-      "le.Ads.GoogleAds.V1.Resources\312\002!Google\\A" +
-      "ds\\GoogleAds\\V1\\Resources\352\002%Google::Ads:" +
-      ":GoogleAds::V1::Resourcesb\006proto3"
+      "/common/tag_snippet.proto\032\037google/api/fi" +
+      "eld_behavior.proto\032\031google/api/resource." +
+      "proto\032\036google/protobuf/wrappers.proto\032\034g" +
+      "oogle/api/annotations.proto\"\356\002\n\021Remarket" +
+      "ingAction\022I\n\rresource_name\030\001 \001(\tB2\340A\005\372A," +
+      "\n*googleads.googleapis.com/RemarketingAc" +
+      "tion\022,\n\002id\030\002 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\003\340A\003\022*\n\004name\030\003 \001(\0132\034.google.protob" +
+      "uf.StringValue\022E\n\014tag_snippets\030\004 \003(\0132*.g" +
+      "oogle.ads.googleads.v1.common.TagSnippet" +
+      "B\003\340A\003:m\352Aj\n*googleads.googleapis.com/Rem" +
+      "arketingAction\022<customers/{customer}/rem" +
+      "arketingActions/{remarketing_action}B\203\002\n" +
+      "%com.google.ads.googleads.v1.resourcesB\026" +
+      "RemarketingActionProtoP\001ZJgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "/resources;resources\242\002\003GAA\252\002!Google.Ads." +
+      "GoogleAds.V1.Resources\312\002!Google\\Ads\\Goog" +
+      "leAds\\V1\\Resources\352\002%Google::Ads::Google" +
+      "Ads::V1::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.common.TagSnippetProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_RemarketingAction_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_RemarketingAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_RemarketingAction_descriptor,
         new java.lang.String[] { "ResourceName", "Id", "Name", "TagSnippets", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.common.TagSnippetProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }

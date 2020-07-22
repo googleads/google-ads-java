@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/distance_view_service.proto")
 public final class DistanceViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class DistanceViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.DistanceViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetDistanceViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetDistanceViewRequest,
-      com.google.ads.googleads.v3.resources.DistanceView> METHOD_GET_DISTANCE_VIEW = getGetDistanceViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetDistanceViewRequest,
       com.google.ads.googleads.v3.resources.DistanceView> getGetDistanceViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDistanceView",
+      requestType = com.google.ads.googleads.v3.services.GetDistanceViewRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.DistanceView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetDistanceViewRequest,
       com.google.ads.googleads.v3.resources.DistanceView> getGetDistanceViewMethod() {
-    return getGetDistanceViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetDistanceViewRequest,
-      com.google.ads.googleads.v3.resources.DistanceView> getGetDistanceViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetDistanceViewRequest, com.google.ads.googleads.v3.resources.DistanceView> getGetDistanceViewMethod;
     if ((getGetDistanceViewMethod = DistanceViewServiceGrpc.getGetDistanceViewMethod) == null) {
       synchronized (DistanceViewServiceGrpc.class) {
         if ((getGetDistanceViewMethod = DistanceViewServiceGrpc.getGetDistanceViewMethod) == null) {
-          DistanceViewServiceGrpc.getGetDistanceViewMethod = getGetDistanceViewMethod = 
+          DistanceViewServiceGrpc.getGetDistanceViewMethod = getGetDistanceViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetDistanceViewRequest, com.google.ads.googleads.v3.resources.DistanceView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.DistanceViewService", "GetDistanceView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDistanceView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetDistanceViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.DistanceView.getDefaultInstance()))
-                  .setSchemaDescriptor(new DistanceViewServiceMethodDescriptorSupplier("GetDistanceView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DistanceViewServiceMethodDescriptorSupplier("GetDistanceView"))
+              .build();
         }
-     }
-     return getGetDistanceViewMethod;
+      }
+    }
+    return getGetDistanceViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DistanceViewServiceStub newStub(io.grpc.Channel channel) {
-    return new DistanceViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DistanceViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DistanceViewServiceStub>() {
+        @java.lang.Override
+        public DistanceViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DistanceViewServiceStub(channel, callOptions);
+        }
+      };
+    return DistanceViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class DistanceViewServiceGrpc {
    */
   public static DistanceViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DistanceViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DistanceViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DistanceViewServiceBlockingStub>() {
+        @java.lang.Override
+        public DistanceViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DistanceViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return DistanceViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class DistanceViewServiceGrpc {
    */
   public static DistanceViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DistanceViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DistanceViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DistanceViewServiceFutureStub>() {
+        @java.lang.Override
+        public DistanceViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DistanceViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return DistanceViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class DistanceViewServiceGrpc {
      */
     public void getDistanceView(com.google.ads.googleads.v3.services.GetDistanceViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.DistanceView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDistanceViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetDistanceViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetDistanceViewMethodHelper(),
+            getGetDistanceViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetDistanceViewRequest,
@@ -126,19 +140,15 @@ public final class DistanceViewServiceGrpc {
    * Service to fetch distance views.
    * </pre>
    */
-  public static final class DistanceViewServiceStub extends io.grpc.stub.AbstractStub<DistanceViewServiceStub> {
-    private DistanceViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DistanceViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DistanceViewServiceStub extends io.grpc.stub.AbstractAsyncStub<DistanceViewServiceStub> {
+    private DistanceViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DistanceViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DistanceViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DistanceViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class DistanceViewServiceGrpc {
     public void getDistanceView(com.google.ads.googleads.v3.services.GetDistanceViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.DistanceView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetDistanceViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetDistanceViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class DistanceViewServiceGrpc {
    * Service to fetch distance views.
    * </pre>
    */
-  public static final class DistanceViewServiceBlockingStub extends io.grpc.stub.AbstractStub<DistanceViewServiceBlockingStub> {
-    private DistanceViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DistanceViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DistanceViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DistanceViewServiceBlockingStub> {
+    private DistanceViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DistanceViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DistanceViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DistanceViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class DistanceViewServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.DistanceView getDistanceView(com.google.ads.googleads.v3.services.GetDistanceViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetDistanceViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetDistanceViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class DistanceViewServiceGrpc {
    * Service to fetch distance views.
    * </pre>
    */
-  public static final class DistanceViewServiceFutureStub extends io.grpc.stub.AbstractStub<DistanceViewServiceFutureStub> {
-    private DistanceViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DistanceViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DistanceViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DistanceViewServiceFutureStub> {
+    private DistanceViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DistanceViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DistanceViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DistanceViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class DistanceViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.DistanceView> getDistanceView(
         com.google.ads.googleads.v3.services.GetDistanceViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetDistanceViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetDistanceViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class DistanceViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DistanceViewServiceFileDescriptorSupplier())
-              .addMethod(getGetDistanceViewMethodHelper())
+              .addMethod(getGetDistanceViewMethod())
               .build();
         }
       }

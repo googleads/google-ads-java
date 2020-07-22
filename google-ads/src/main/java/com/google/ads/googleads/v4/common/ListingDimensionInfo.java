@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ListingDimensionInfo}
  */
-public  final class ListingDimensionInfo extends
+public final class ListingDimensionInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ListingDimensionInfo)
     ListingDimensionInfoOrBuilder {
@@ -354,6 +354,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelIdInfo hotel_id = 2;</code>
    * @return Whether the hotelId field is set.
    */
+  @java.lang.Override
   public boolean hasHotelId() {
     return dimensionCase_ == 2;
   }
@@ -365,6 +366,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelIdInfo hotel_id = 2;</code>
    * @return The hotelId.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelIdInfo getHotelId() {
     if (dimensionCase_ == 2) {
        return (com.google.ads.googleads.v4.common.HotelIdInfo) dimension_;
@@ -378,6 +380,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.HotelIdInfo hotel_id = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelIdInfoOrBuilder getHotelIdOrBuilder() {
     if (dimensionCase_ == 2) {
        return (com.google.ads.googleads.v4.common.HotelIdInfo) dimension_;
@@ -394,6 +397,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelClassInfo hotel_class = 3;</code>
    * @return Whether the hotelClass field is set.
    */
+  @java.lang.Override
   public boolean hasHotelClass() {
     return dimensionCase_ == 3;
   }
@@ -405,6 +409,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelClassInfo hotel_class = 3;</code>
    * @return The hotelClass.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelClassInfo getHotelClass() {
     if (dimensionCase_ == 3) {
        return (com.google.ads.googleads.v4.common.HotelClassInfo) dimension_;
@@ -418,6 +423,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.HotelClassInfo hotel_class = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelClassInfoOrBuilder getHotelClassOrBuilder() {
     if (dimensionCase_ == 3) {
        return (com.google.ads.googleads.v4.common.HotelClassInfo) dimension_;
@@ -434,6 +440,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelCountryRegionInfo hotel_country_region = 4;</code>
    * @return Whether the hotelCountryRegion field is set.
    */
+  @java.lang.Override
   public boolean hasHotelCountryRegion() {
     return dimensionCase_ == 4;
   }
@@ -445,6 +452,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelCountryRegionInfo hotel_country_region = 4;</code>
    * @return The hotelCountryRegion.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelCountryRegionInfo getHotelCountryRegion() {
     if (dimensionCase_ == 4) {
        return (com.google.ads.googleads.v4.common.HotelCountryRegionInfo) dimension_;
@@ -458,6 +466,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.HotelCountryRegionInfo hotel_country_region = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelCountryRegionInfoOrBuilder getHotelCountryRegionOrBuilder() {
     if (dimensionCase_ == 4) {
        return (com.google.ads.googleads.v4.common.HotelCountryRegionInfo) dimension_;
@@ -474,6 +483,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelStateInfo hotel_state = 5;</code>
    * @return Whether the hotelState field is set.
    */
+  @java.lang.Override
   public boolean hasHotelState() {
     return dimensionCase_ == 5;
   }
@@ -485,6 +495,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelStateInfo hotel_state = 5;</code>
    * @return The hotelState.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelStateInfo getHotelState() {
     if (dimensionCase_ == 5) {
        return (com.google.ads.googleads.v4.common.HotelStateInfo) dimension_;
@@ -498,6 +509,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.HotelStateInfo hotel_state = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelStateInfoOrBuilder getHotelStateOrBuilder() {
     if (dimensionCase_ == 5) {
        return (com.google.ads.googleads.v4.common.HotelStateInfo) dimension_;
@@ -514,6 +526,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelCityInfo hotel_city = 6;</code>
    * @return Whether the hotelCity field is set.
    */
+  @java.lang.Override
   public boolean hasHotelCity() {
     return dimensionCase_ == 6;
   }
@@ -525,6 +538,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.HotelCityInfo hotel_city = 6;</code>
    * @return The hotelCity.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelCityInfo getHotelCity() {
     if (dimensionCase_ == 6) {
        return (com.google.ads.googleads.v4.common.HotelCityInfo) dimension_;
@@ -538,6 +552,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.HotelCityInfo hotel_city = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.HotelCityInfoOrBuilder getHotelCityOrBuilder() {
     if (dimensionCase_ == 6) {
        return (com.google.ads.googleads.v4.common.HotelCityInfo) dimension_;
@@ -554,6 +569,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductBiddingCategoryInfo product_bidding_category = 13;</code>
    * @return Whether the productBiddingCategory field is set.
    */
+  @java.lang.Override
   public boolean hasProductBiddingCategory() {
     return dimensionCase_ == 13;
   }
@@ -565,6 +581,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductBiddingCategoryInfo product_bidding_category = 13;</code>
    * @return The productBiddingCategory.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductBiddingCategoryInfo getProductBiddingCategory() {
     if (dimensionCase_ == 13) {
        return (com.google.ads.googleads.v4.common.ProductBiddingCategoryInfo) dimension_;
@@ -578,6 +595,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ProductBiddingCategoryInfo product_bidding_category = 13;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductBiddingCategoryInfoOrBuilder getProductBiddingCategoryOrBuilder() {
     if (dimensionCase_ == 13) {
        return (com.google.ads.googleads.v4.common.ProductBiddingCategoryInfo) dimension_;
@@ -594,6 +612,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductBrandInfo product_brand = 15;</code>
    * @return Whether the productBrand field is set.
    */
+  @java.lang.Override
   public boolean hasProductBrand() {
     return dimensionCase_ == 15;
   }
@@ -605,6 +624,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductBrandInfo product_brand = 15;</code>
    * @return The productBrand.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductBrandInfo getProductBrand() {
     if (dimensionCase_ == 15) {
        return (com.google.ads.googleads.v4.common.ProductBrandInfo) dimension_;
@@ -618,6 +638,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ProductBrandInfo product_brand = 15;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductBrandInfoOrBuilder getProductBrandOrBuilder() {
     if (dimensionCase_ == 15) {
        return (com.google.ads.googleads.v4.common.ProductBrandInfo) dimension_;
@@ -634,6 +655,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductChannelInfo product_channel = 8;</code>
    * @return Whether the productChannel field is set.
    */
+  @java.lang.Override
   public boolean hasProductChannel() {
     return dimensionCase_ == 8;
   }
@@ -645,6 +667,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductChannelInfo product_channel = 8;</code>
    * @return The productChannel.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductChannelInfo getProductChannel() {
     if (dimensionCase_ == 8) {
        return (com.google.ads.googleads.v4.common.ProductChannelInfo) dimension_;
@@ -658,6 +681,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ProductChannelInfo product_channel = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductChannelInfoOrBuilder getProductChannelOrBuilder() {
     if (dimensionCase_ == 8) {
        return (com.google.ads.googleads.v4.common.ProductChannelInfo) dimension_;
@@ -674,6 +698,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
    * @return Whether the productChannelExclusivity field is set.
    */
+  @java.lang.Override
   public boolean hasProductChannelExclusivity() {
     return dimensionCase_ == 9;
   }
@@ -685,6 +710,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
    * @return The productChannelExclusivity.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductChannelExclusivityInfo getProductChannelExclusivity() {
     if (dimensionCase_ == 9) {
        return (com.google.ads.googleads.v4.common.ProductChannelExclusivityInfo) dimension_;
@@ -698,6 +724,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductChannelExclusivityInfoOrBuilder getProductChannelExclusivityOrBuilder() {
     if (dimensionCase_ == 9) {
        return (com.google.ads.googleads.v4.common.ProductChannelExclusivityInfo) dimension_;
@@ -714,6 +741,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductConditionInfo product_condition = 10;</code>
    * @return Whether the productCondition field is set.
    */
+  @java.lang.Override
   public boolean hasProductCondition() {
     return dimensionCase_ == 10;
   }
@@ -725,6 +753,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductConditionInfo product_condition = 10;</code>
    * @return The productCondition.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductConditionInfo getProductCondition() {
     if (dimensionCase_ == 10) {
        return (com.google.ads.googleads.v4.common.ProductConditionInfo) dimension_;
@@ -738,6 +767,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ProductConditionInfo product_condition = 10;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductConditionInfoOrBuilder getProductConditionOrBuilder() {
     if (dimensionCase_ == 10) {
        return (com.google.ads.googleads.v4.common.ProductConditionInfo) dimension_;
@@ -754,6 +784,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductCustomAttributeInfo product_custom_attribute = 16;</code>
    * @return Whether the productCustomAttribute field is set.
    */
+  @java.lang.Override
   public boolean hasProductCustomAttribute() {
     return dimensionCase_ == 16;
   }
@@ -765,6 +796,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductCustomAttributeInfo product_custom_attribute = 16;</code>
    * @return The productCustomAttribute.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductCustomAttributeInfo getProductCustomAttribute() {
     if (dimensionCase_ == 16) {
        return (com.google.ads.googleads.v4.common.ProductCustomAttributeInfo) dimension_;
@@ -778,6 +810,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ProductCustomAttributeInfo product_custom_attribute = 16;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductCustomAttributeInfoOrBuilder getProductCustomAttributeOrBuilder() {
     if (dimensionCase_ == 16) {
        return (com.google.ads.googleads.v4.common.ProductCustomAttributeInfo) dimension_;
@@ -794,6 +827,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductItemIdInfo product_item_id = 11;</code>
    * @return Whether the productItemId field is set.
    */
+  @java.lang.Override
   public boolean hasProductItemId() {
     return dimensionCase_ == 11;
   }
@@ -805,6 +839,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductItemIdInfo product_item_id = 11;</code>
    * @return The productItemId.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductItemIdInfo getProductItemId() {
     if (dimensionCase_ == 11) {
        return (com.google.ads.googleads.v4.common.ProductItemIdInfo) dimension_;
@@ -818,6 +853,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ProductItemIdInfo product_item_id = 11;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductItemIdInfoOrBuilder getProductItemIdOrBuilder() {
     if (dimensionCase_ == 11) {
        return (com.google.ads.googleads.v4.common.ProductItemIdInfo) dimension_;
@@ -834,6 +870,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductTypeInfo product_type = 12;</code>
    * @return Whether the productType field is set.
    */
+  @java.lang.Override
   public boolean hasProductType() {
     return dimensionCase_ == 12;
   }
@@ -845,6 +882,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ProductTypeInfo product_type = 12;</code>
    * @return The productType.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductTypeInfo getProductType() {
     if (dimensionCase_ == 12) {
        return (com.google.ads.googleads.v4.common.ProductTypeInfo) dimension_;
@@ -858,6 +896,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ProductTypeInfo product_type = 12;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ProductTypeInfoOrBuilder getProductTypeOrBuilder() {
     if (dimensionCase_ == 12) {
        return (com.google.ads.googleads.v4.common.ProductTypeInfo) dimension_;
@@ -874,6 +913,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
    * @return Whether the unknownListingDimension field is set.
    */
+  @java.lang.Override
   public boolean hasUnknownListingDimension() {
     return dimensionCase_ == 14;
   }
@@ -885,6 +925,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
    * @return The unknownListingDimension.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UnknownListingDimensionInfo getUnknownListingDimension() {
     if (dimensionCase_ == 14) {
        return (com.google.ads.googleads.v4.common.UnknownListingDimensionInfo) dimension_;
@@ -898,6 +939,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UnknownListingDimensionInfoOrBuilder getUnknownListingDimensionOrBuilder() {
     if (dimensionCase_ == 14) {
        return (com.google.ads.googleads.v4.common.UnknownListingDimensionInfo) dimension_;
@@ -1600,6 +1642,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelIdInfo hotel_id = 2;</code>
      * @return Whether the hotelId field is set.
      */
+    @java.lang.Override
     public boolean hasHotelId() {
       return dimensionCase_ == 2;
     }
@@ -1611,6 +1654,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelIdInfo hotel_id = 2;</code>
      * @return The hotelId.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelIdInfo getHotelId() {
       if (hotelIdBuilder_ == null) {
         if (dimensionCase_ == 2) {
@@ -1728,6 +1772,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.HotelIdInfo hotel_id = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelIdInfoOrBuilder getHotelIdOrBuilder() {
       if ((dimensionCase_ == 2) && (hotelIdBuilder_ != null)) {
         return hotelIdBuilder_.getMessageOrBuilder();
@@ -1774,6 +1819,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelClassInfo hotel_class = 3;</code>
      * @return Whether the hotelClass field is set.
      */
+    @java.lang.Override
     public boolean hasHotelClass() {
       return dimensionCase_ == 3;
     }
@@ -1785,6 +1831,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelClassInfo hotel_class = 3;</code>
      * @return The hotelClass.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelClassInfo getHotelClass() {
       if (hotelClassBuilder_ == null) {
         if (dimensionCase_ == 3) {
@@ -1902,6 +1949,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.HotelClassInfo hotel_class = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelClassInfoOrBuilder getHotelClassOrBuilder() {
       if ((dimensionCase_ == 3) && (hotelClassBuilder_ != null)) {
         return hotelClassBuilder_.getMessageOrBuilder();
@@ -1948,6 +1996,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelCountryRegionInfo hotel_country_region = 4;</code>
      * @return Whether the hotelCountryRegion field is set.
      */
+    @java.lang.Override
     public boolean hasHotelCountryRegion() {
       return dimensionCase_ == 4;
     }
@@ -1959,6 +2008,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelCountryRegionInfo hotel_country_region = 4;</code>
      * @return The hotelCountryRegion.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelCountryRegionInfo getHotelCountryRegion() {
       if (hotelCountryRegionBuilder_ == null) {
         if (dimensionCase_ == 4) {
@@ -2076,6 +2126,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.HotelCountryRegionInfo hotel_country_region = 4;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelCountryRegionInfoOrBuilder getHotelCountryRegionOrBuilder() {
       if ((dimensionCase_ == 4) && (hotelCountryRegionBuilder_ != null)) {
         return hotelCountryRegionBuilder_.getMessageOrBuilder();
@@ -2122,6 +2173,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelStateInfo hotel_state = 5;</code>
      * @return Whether the hotelState field is set.
      */
+    @java.lang.Override
     public boolean hasHotelState() {
       return dimensionCase_ == 5;
     }
@@ -2133,6 +2185,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelStateInfo hotel_state = 5;</code>
      * @return The hotelState.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelStateInfo getHotelState() {
       if (hotelStateBuilder_ == null) {
         if (dimensionCase_ == 5) {
@@ -2250,6 +2303,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.HotelStateInfo hotel_state = 5;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelStateInfoOrBuilder getHotelStateOrBuilder() {
       if ((dimensionCase_ == 5) && (hotelStateBuilder_ != null)) {
         return hotelStateBuilder_.getMessageOrBuilder();
@@ -2296,6 +2350,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelCityInfo hotel_city = 6;</code>
      * @return Whether the hotelCity field is set.
      */
+    @java.lang.Override
     public boolean hasHotelCity() {
       return dimensionCase_ == 6;
     }
@@ -2307,6 +2362,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.HotelCityInfo hotel_city = 6;</code>
      * @return The hotelCity.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelCityInfo getHotelCity() {
       if (hotelCityBuilder_ == null) {
         if (dimensionCase_ == 6) {
@@ -2424,6 +2480,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.HotelCityInfo hotel_city = 6;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.HotelCityInfoOrBuilder getHotelCityOrBuilder() {
       if ((dimensionCase_ == 6) && (hotelCityBuilder_ != null)) {
         return hotelCityBuilder_.getMessageOrBuilder();
@@ -2470,6 +2527,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductBiddingCategoryInfo product_bidding_category = 13;</code>
      * @return Whether the productBiddingCategory field is set.
      */
+    @java.lang.Override
     public boolean hasProductBiddingCategory() {
       return dimensionCase_ == 13;
     }
@@ -2481,6 +2539,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductBiddingCategoryInfo product_bidding_category = 13;</code>
      * @return The productBiddingCategory.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductBiddingCategoryInfo getProductBiddingCategory() {
       if (productBiddingCategoryBuilder_ == null) {
         if (dimensionCase_ == 13) {
@@ -2598,6 +2657,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.ProductBiddingCategoryInfo product_bidding_category = 13;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductBiddingCategoryInfoOrBuilder getProductBiddingCategoryOrBuilder() {
       if ((dimensionCase_ == 13) && (productBiddingCategoryBuilder_ != null)) {
         return productBiddingCategoryBuilder_.getMessageOrBuilder();
@@ -2644,6 +2704,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductBrandInfo product_brand = 15;</code>
      * @return Whether the productBrand field is set.
      */
+    @java.lang.Override
     public boolean hasProductBrand() {
       return dimensionCase_ == 15;
     }
@@ -2655,6 +2716,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductBrandInfo product_brand = 15;</code>
      * @return The productBrand.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductBrandInfo getProductBrand() {
       if (productBrandBuilder_ == null) {
         if (dimensionCase_ == 15) {
@@ -2772,6 +2834,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.ProductBrandInfo product_brand = 15;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductBrandInfoOrBuilder getProductBrandOrBuilder() {
       if ((dimensionCase_ == 15) && (productBrandBuilder_ != null)) {
         return productBrandBuilder_.getMessageOrBuilder();
@@ -2818,6 +2881,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductChannelInfo product_channel = 8;</code>
      * @return Whether the productChannel field is set.
      */
+    @java.lang.Override
     public boolean hasProductChannel() {
       return dimensionCase_ == 8;
     }
@@ -2829,6 +2893,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductChannelInfo product_channel = 8;</code>
      * @return The productChannel.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductChannelInfo getProductChannel() {
       if (productChannelBuilder_ == null) {
         if (dimensionCase_ == 8) {
@@ -2946,6 +3011,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.ProductChannelInfo product_channel = 8;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductChannelInfoOrBuilder getProductChannelOrBuilder() {
       if ((dimensionCase_ == 8) && (productChannelBuilder_ != null)) {
         return productChannelBuilder_.getMessageOrBuilder();
@@ -2992,6 +3058,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
      * @return Whether the productChannelExclusivity field is set.
      */
+    @java.lang.Override
     public boolean hasProductChannelExclusivity() {
       return dimensionCase_ == 9;
     }
@@ -3003,6 +3070,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
      * @return The productChannelExclusivity.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductChannelExclusivityInfo getProductChannelExclusivity() {
       if (productChannelExclusivityBuilder_ == null) {
         if (dimensionCase_ == 9) {
@@ -3120,6 +3188,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.ProductChannelExclusivityInfo product_channel_exclusivity = 9;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductChannelExclusivityInfoOrBuilder getProductChannelExclusivityOrBuilder() {
       if ((dimensionCase_ == 9) && (productChannelExclusivityBuilder_ != null)) {
         return productChannelExclusivityBuilder_.getMessageOrBuilder();
@@ -3166,6 +3235,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductConditionInfo product_condition = 10;</code>
      * @return Whether the productCondition field is set.
      */
+    @java.lang.Override
     public boolean hasProductCondition() {
       return dimensionCase_ == 10;
     }
@@ -3177,6 +3247,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductConditionInfo product_condition = 10;</code>
      * @return The productCondition.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductConditionInfo getProductCondition() {
       if (productConditionBuilder_ == null) {
         if (dimensionCase_ == 10) {
@@ -3294,6 +3365,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.ProductConditionInfo product_condition = 10;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductConditionInfoOrBuilder getProductConditionOrBuilder() {
       if ((dimensionCase_ == 10) && (productConditionBuilder_ != null)) {
         return productConditionBuilder_.getMessageOrBuilder();
@@ -3340,6 +3412,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductCustomAttributeInfo product_custom_attribute = 16;</code>
      * @return Whether the productCustomAttribute field is set.
      */
+    @java.lang.Override
     public boolean hasProductCustomAttribute() {
       return dimensionCase_ == 16;
     }
@@ -3351,6 +3424,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductCustomAttributeInfo product_custom_attribute = 16;</code>
      * @return The productCustomAttribute.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductCustomAttributeInfo getProductCustomAttribute() {
       if (productCustomAttributeBuilder_ == null) {
         if (dimensionCase_ == 16) {
@@ -3468,6 +3542,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.ProductCustomAttributeInfo product_custom_attribute = 16;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductCustomAttributeInfoOrBuilder getProductCustomAttributeOrBuilder() {
       if ((dimensionCase_ == 16) && (productCustomAttributeBuilder_ != null)) {
         return productCustomAttributeBuilder_.getMessageOrBuilder();
@@ -3514,6 +3589,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductItemIdInfo product_item_id = 11;</code>
      * @return Whether the productItemId field is set.
      */
+    @java.lang.Override
     public boolean hasProductItemId() {
       return dimensionCase_ == 11;
     }
@@ -3525,6 +3601,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductItemIdInfo product_item_id = 11;</code>
      * @return The productItemId.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductItemIdInfo getProductItemId() {
       if (productItemIdBuilder_ == null) {
         if (dimensionCase_ == 11) {
@@ -3642,6 +3719,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.ProductItemIdInfo product_item_id = 11;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductItemIdInfoOrBuilder getProductItemIdOrBuilder() {
       if ((dimensionCase_ == 11) && (productItemIdBuilder_ != null)) {
         return productItemIdBuilder_.getMessageOrBuilder();
@@ -3688,6 +3766,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductTypeInfo product_type = 12;</code>
      * @return Whether the productType field is set.
      */
+    @java.lang.Override
     public boolean hasProductType() {
       return dimensionCase_ == 12;
     }
@@ -3699,6 +3778,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ProductTypeInfo product_type = 12;</code>
      * @return The productType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductTypeInfo getProductType() {
       if (productTypeBuilder_ == null) {
         if (dimensionCase_ == 12) {
@@ -3816,6 +3896,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.ProductTypeInfo product_type = 12;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ProductTypeInfoOrBuilder getProductTypeOrBuilder() {
       if ((dimensionCase_ == 12) && (productTypeBuilder_ != null)) {
         return productTypeBuilder_.getMessageOrBuilder();
@@ -3862,6 +3943,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
      * @return Whether the unknownListingDimension field is set.
      */
+    @java.lang.Override
     public boolean hasUnknownListingDimension() {
       return dimensionCase_ == 14;
     }
@@ -3873,6 +3955,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
      * @return The unknownListingDimension.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UnknownListingDimensionInfo getUnknownListingDimension() {
       if (unknownListingDimensionBuilder_ == null) {
         if (dimensionCase_ == 14) {
@@ -3990,6 +4073,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.UnknownListingDimensionInfo unknown_listing_dimension = 14;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UnknownListingDimensionInfoOrBuilder getUnknownListingDimensionOrBuilder() {
       if ((dimensionCase_ == 14) && (unknownListingDimensionBuilder_ != null)) {
         return unknownListingDimensionBuilder_.getMessageOrBuilder();

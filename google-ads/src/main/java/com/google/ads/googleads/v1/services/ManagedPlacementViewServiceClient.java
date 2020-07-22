@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.ManagedPlacementViewServiceStub
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (ManagedPlacementViewServiceClient managedPlacementViewServiceClient = ManagedPlacementViewServiceClient.create()) {
- *   String formattedResourceName = ManagedPlacementViewServiceClient.formatManagedPlacementViewName("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
- *   ManagedPlacementView response = managedPlacementViewServiceClient.getManagedPlacementView(formattedResourceName);
+ *   ManagedPlacementViewName resourceName = ManagedPlacementViewName.of("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
+ *   ManagedPlacementView response = managedPlacementViewServiceClient.getManagedPlacementView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,50 +98,6 @@ public class ManagedPlacementViewServiceClient implements BackgroundResource {
   private final ManagedPlacementViewServiceSettings settings;
   private final ManagedPlacementViewServiceStub stub;
 
-  private static final PathTemplate MANAGED_PLACEMENT_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/managedPlacementViews/{managed_placement_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a managed_placement_view
-   * resource.
-   *
-   * @deprecated Use the {@link ManagedPlacementViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatManagedPlacementViewName(
-      String customer, String managedPlacementView) {
-    return MANAGED_PLACEMENT_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "managed_placement_view", managedPlacementView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * managed_placement_view resource.
-   *
-   * @deprecated Use the {@link ManagedPlacementViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromManagedPlacementViewName(
-      String managedPlacementViewName) {
-    return MANAGED_PLACEMENT_VIEW_PATH_TEMPLATE.parse(managedPlacementViewName).get("customer");
-  }
-
-  /**
-   * Parses the managed_placement_view from the given fully-qualified path which represents a
-   * managed_placement_view resource.
-   *
-   * @deprecated Use the {@link ManagedPlacementViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseManagedPlacementViewFromManagedPlacementViewName(
-      String managedPlacementViewName) {
-    return MANAGED_PLACEMENT_VIEW_PATH_TEMPLATE
-        .parse(managedPlacementViewName)
-        .get("managed_placement_view");
-  }
-
   /** Constructs an instance of ManagedPlacementViewServiceClient with default settings. */
   public static final ManagedPlacementViewServiceClient create() throws IOException {
     return create(ManagedPlacementViewServiceSettings.newBuilder().build());
@@ -202,16 +157,39 @@ public class ManagedPlacementViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ManagedPlacementViewServiceClient managedPlacementViewServiceClient = ManagedPlacementViewServiceClient.create()) {
-   *   String formattedResourceName = ManagedPlacementViewServiceClient.formatManagedPlacementViewName("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
-   *   ManagedPlacementView response = managedPlacementViewServiceClient.getManagedPlacementView(formattedResourceName);
+   *   ManagedPlacementViewName resourceName = ManagedPlacementViewName.of("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
+   *   ManagedPlacementView response = managedPlacementViewServiceClient.getManagedPlacementView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the Managed Placement View to fetch.
+   * @param resourceName Required. The resource name of the Managed Placement View to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ManagedPlacementView getManagedPlacementView(ManagedPlacementViewName resourceName) {
+    GetManagedPlacementViewRequest request =
+        GetManagedPlacementViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getManagedPlacementView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Managed Placement view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ManagedPlacementViewServiceClient managedPlacementViewServiceClient = ManagedPlacementViewServiceClient.create()) {
+   *   ManagedPlacementViewName resourceName = ManagedPlacementViewName.of("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
+   *   ManagedPlacementView response = managedPlacementViewServiceClient.getManagedPlacementView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the Managed Placement View to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ManagedPlacementView getManagedPlacementView(String resourceName) {
-    MANAGED_PLACEMENT_VIEW_PATH_TEMPLATE.validate(resourceName, "getManagedPlacementView");
     GetManagedPlacementViewRequest request =
         GetManagedPlacementViewRequest.newBuilder().setResourceName(resourceName).build();
     return getManagedPlacementView(request);
@@ -225,9 +203,9 @@ public class ManagedPlacementViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ManagedPlacementViewServiceClient managedPlacementViewServiceClient = ManagedPlacementViewServiceClient.create()) {
-   *   String formattedResourceName = ManagedPlacementViewServiceClient.formatManagedPlacementViewName("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
+   *   ManagedPlacementViewName resourceName = ManagedPlacementViewName.of("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
    *   GetManagedPlacementViewRequest request = GetManagedPlacementViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ManagedPlacementView response = managedPlacementViewServiceClient.getManagedPlacementView(request);
    * }
@@ -249,9 +227,9 @@ public class ManagedPlacementViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (ManagedPlacementViewServiceClient managedPlacementViewServiceClient = ManagedPlacementViewServiceClient.create()) {
-   *   String formattedResourceName = ManagedPlacementViewServiceClient.formatManagedPlacementViewName("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
+   *   ManagedPlacementViewName resourceName = ManagedPlacementViewName.of("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
    *   GetManagedPlacementViewRequest request = GetManagedPlacementViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;ManagedPlacementView&gt; future = managedPlacementViewServiceClient.getManagedPlacementViewCallable().futureCall(request);
    *   // Do something

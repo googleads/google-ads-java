@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.PolicyTopicConstraint}
  */
-public  final class PolicyTopicConstraint extends
+public final class PolicyTopicConstraint extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.PolicyTopicConstraint)
     PolicyTopicConstraintOrBuilder {
@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList}
    */
-  public  static final class CountryConstraintList extends
+  public static final class CountryConstraintList extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList)
       CountryConstraintListOrBuilder {
@@ -333,6 +333,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int32Value total_targeted_countries = 1;</code>
      * @return Whether the totalTargetedCountries field is set.
      */
+    @java.lang.Override
     public boolean hasTotalTargetedCountries() {
       return totalTargetedCountries_ != null;
     }
@@ -344,6 +345,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int32Value total_targeted_countries = 1;</code>
      * @return The totalTargetedCountries.
      */
+    @java.lang.Override
     public com.google.protobuf.Int32Value getTotalTargetedCountries() {
       return totalTargetedCountries_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : totalTargetedCountries_;
     }
@@ -354,6 +356,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int32Value total_targeted_countries = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int32ValueOrBuilder getTotalTargetedCountriesOrBuilder() {
       return getTotalTargetedCountries();
     }
@@ -367,6 +370,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraint countries = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraint> getCountriesList() {
       return countries_;
     }
@@ -377,6 +381,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraint countries = 2;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintOrBuilder> 
         getCountriesOrBuilderList() {
       return countries_;
@@ -388,6 +393,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraint countries = 2;</code>
      */
+    @java.lang.Override
     public int getCountriesCount() {
       return countries_.size();
     }
@@ -398,6 +404,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraint countries = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraint getCountries(int index) {
       return countries_.get(index);
     }
@@ -408,6 +415,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraint countries = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintOrBuilder getCountriesOrBuilder(
         int index) {
       return countries_.get(index);
@@ -1320,7 +1328,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint}
    */
-  public  static final class ResellerConstraint extends
+  public static final class ResellerConstraint extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint)
       ResellerConstraintOrBuilder {
@@ -1778,7 +1786,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraint}
    */
-  public  static final class CountryConstraint extends
+  public static final class CountryConstraint extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraint)
       CountryConstraintOrBuilder {
@@ -1876,6 +1884,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue country_criterion = 1;</code>
      * @return Whether the countryCriterion field is set.
      */
+    @java.lang.Override
     public boolean hasCountryCriterion() {
       return countryCriterion_ != null;
     }
@@ -1888,6 +1897,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue country_criterion = 1;</code>
      * @return The countryCriterion.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCountryCriterion() {
       return countryCriterion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCriterion_;
     }
@@ -1899,6 +1909,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue country_criterion = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCountryCriterionOrBuilder() {
       return getCountryCriterion();
     }
@@ -2493,6 +2504,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList country_constraint_list = 1;</code>
    * @return Whether the countryConstraintList field is set.
    */
+  @java.lang.Override
   public boolean hasCountryConstraintList() {
     return valueCase_ == 1;
   }
@@ -2504,6 +2516,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList country_constraint_list = 1;</code>
    * @return The countryConstraintList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList getCountryConstraintList() {
     if (valueCase_ == 1) {
        return (com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList) value_;
@@ -2517,6 +2530,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList country_constraint_list = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintListOrBuilder getCountryConstraintListOrBuilder() {
     if (valueCase_ == 1) {
        return (com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList) value_;
@@ -2533,6 +2547,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint reseller_constraint = 2;</code>
    * @return Whether the resellerConstraint field is set.
    */
+  @java.lang.Override
   public boolean hasResellerConstraint() {
     return valueCase_ == 2;
   }
@@ -2544,6 +2559,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint reseller_constraint = 2;</code>
    * @return The resellerConstraint.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint getResellerConstraint() {
     if (valueCase_ == 2) {
        return (com.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint) value_;
@@ -2557,6 +2573,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint reseller_constraint = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraintOrBuilder getResellerConstraintOrBuilder() {
     if (valueCase_ == 2) {
        return (com.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint) value_;
@@ -2573,6 +2590,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_missing_in_country_list = 3;</code>
    * @return Whether the certificateMissingInCountryList field is set.
    */
+  @java.lang.Override
   public boolean hasCertificateMissingInCountryList() {
     return valueCase_ == 3;
   }
@@ -2584,6 +2602,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_missing_in_country_list = 3;</code>
    * @return The certificateMissingInCountryList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList getCertificateMissingInCountryList() {
     if (valueCase_ == 3) {
        return (com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList) value_;
@@ -2597,6 +2616,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_missing_in_country_list = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintListOrBuilder getCertificateMissingInCountryListOrBuilder() {
     if (valueCase_ == 3) {
        return (com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList) value_;
@@ -2614,6 +2634,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_domain_mismatch_in_country_list = 4;</code>
    * @return Whether the certificateDomainMismatchInCountryList field is set.
    */
+  @java.lang.Override
   public boolean hasCertificateDomainMismatchInCountryList() {
     return valueCase_ == 4;
   }
@@ -2626,6 +2647,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_domain_mismatch_in_country_list = 4;</code>
    * @return The certificateDomainMismatchInCountryList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList getCertificateDomainMismatchInCountryList() {
     if (valueCase_ == 4) {
        return (com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList) value_;
@@ -2640,6 +2662,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_domain_mismatch_in_country_list = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintListOrBuilder getCertificateDomainMismatchInCountryListOrBuilder() {
     if (valueCase_ == 4) {
        return (com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList) value_;
@@ -3082,6 +3105,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList country_constraint_list = 1;</code>
      * @return Whether the countryConstraintList field is set.
      */
+    @java.lang.Override
     public boolean hasCountryConstraintList() {
       return valueCase_ == 1;
     }
@@ -3093,6 +3117,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList country_constraint_list = 1;</code>
      * @return The countryConstraintList.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList getCountryConstraintList() {
       if (countryConstraintListBuilder_ == null) {
         if (valueCase_ == 1) {
@@ -3210,6 +3235,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList country_constraint_list = 1;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintListOrBuilder getCountryConstraintListOrBuilder() {
       if ((valueCase_ == 1) && (countryConstraintListBuilder_ != null)) {
         return countryConstraintListBuilder_.getMessageOrBuilder();
@@ -3256,6 +3282,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint reseller_constraint = 2;</code>
      * @return Whether the resellerConstraint field is set.
      */
+    @java.lang.Override
     public boolean hasResellerConstraint() {
       return valueCase_ == 2;
     }
@@ -3267,6 +3294,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint reseller_constraint = 2;</code>
      * @return The resellerConstraint.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint getResellerConstraint() {
       if (resellerConstraintBuilder_ == null) {
         if (valueCase_ == 2) {
@@ -3384,6 +3412,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraint reseller_constraint = 2;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PolicyTopicConstraint.ResellerConstraintOrBuilder getResellerConstraintOrBuilder() {
       if ((valueCase_ == 2) && (resellerConstraintBuilder_ != null)) {
         return resellerConstraintBuilder_.getMessageOrBuilder();
@@ -3430,6 +3459,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_missing_in_country_list = 3;</code>
      * @return Whether the certificateMissingInCountryList field is set.
      */
+    @java.lang.Override
     public boolean hasCertificateMissingInCountryList() {
       return valueCase_ == 3;
     }
@@ -3441,6 +3471,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_missing_in_country_list = 3;</code>
      * @return The certificateMissingInCountryList.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList getCertificateMissingInCountryList() {
       if (certificateMissingInCountryListBuilder_ == null) {
         if (valueCase_ == 3) {
@@ -3558,6 +3589,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_missing_in_country_list = 3;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintListOrBuilder getCertificateMissingInCountryListOrBuilder() {
       if ((valueCase_ == 3) && (certificateMissingInCountryListBuilder_ != null)) {
         return certificateMissingInCountryListBuilder_.getMessageOrBuilder();
@@ -3605,6 +3637,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_domain_mismatch_in_country_list = 4;</code>
      * @return Whether the certificateDomainMismatchInCountryList field is set.
      */
+    @java.lang.Override
     public boolean hasCertificateDomainMismatchInCountryList() {
       return valueCase_ == 4;
     }
@@ -3617,6 +3650,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_domain_mismatch_in_country_list = 4;</code>
      * @return The certificateDomainMismatchInCountryList.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList getCertificateDomainMismatchInCountryList() {
       if (certificateDomainMismatchInCountryListBuilder_ == null) {
         if (valueCase_ == 4) {
@@ -3740,6 +3774,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintList certificate_domain_mismatch_in_country_list = 4;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PolicyTopicConstraint.CountryConstraintListOrBuilder getCertificateDomainMismatchInCountryListOrBuilder() {
       if ((valueCase_ == 4) && (certificateDomainMismatchInCountryListBuilder_ != null)) {
         return certificateDomainMismatchInCountryListBuilder_.getMessageOrBuilder();

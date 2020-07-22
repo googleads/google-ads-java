@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.MobileDeviceConstantServiceStub
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (MobileDeviceConstantServiceClient mobileDeviceConstantServiceClient = MobileDeviceConstantServiceClient.create()) {
- *   String formattedResourceName = MobileDeviceConstantServiceClient.formatMobileDeviceConstantName("[MOBILE_DEVICE_CONSTANT]");
- *   MobileDeviceConstant response = mobileDeviceConstantServiceClient.getMobileDeviceConstant(formattedResourceName);
+ *   MobileDeviceConstantName resourceName = MobileDeviceConstantName.of("[MOBILE_DEVICE_CONSTANT]");
+ *   MobileDeviceConstant response = mobileDeviceConstantServiceClient.getMobileDeviceConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,35 +98,6 @@ public class MobileDeviceConstantServiceClient implements BackgroundResource {
   private final MobileDeviceConstantServiceSettings settings;
   private final MobileDeviceConstantServiceStub stub;
 
-  private static final PathTemplate MOBILE_DEVICE_CONSTANT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("mobileDeviceConstants/{mobile_device_constant}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a mobile_device_constant
-   * resource.
-   *
-   * @deprecated Use the {@link MobileDeviceConstantName} class instead.
-   */
-  @Deprecated
-  public static final String formatMobileDeviceConstantName(String mobileDeviceConstant) {
-    return MOBILE_DEVICE_CONSTANT_PATH_TEMPLATE.instantiate(
-        "mobile_device_constant", mobileDeviceConstant);
-  }
-
-  /**
-   * Parses the mobile_device_constant from the given fully-qualified path which represents a
-   * mobile_device_constant resource.
-   *
-   * @deprecated Use the {@link MobileDeviceConstantName} class instead.
-   */
-  @Deprecated
-  public static final String parseMobileDeviceConstantFromMobileDeviceConstantName(
-      String mobileDeviceConstantName) {
-    return MOBILE_DEVICE_CONSTANT_PATH_TEMPLATE
-        .parse(mobileDeviceConstantName)
-        .get("mobile_device_constant");
-  }
-
   /** Constructs an instance of MobileDeviceConstantServiceClient with default settings. */
   public static final MobileDeviceConstantServiceClient create() throws IOException {
     return create(MobileDeviceConstantServiceSettings.newBuilder().build());
@@ -187,16 +157,39 @@ public class MobileDeviceConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (MobileDeviceConstantServiceClient mobileDeviceConstantServiceClient = MobileDeviceConstantServiceClient.create()) {
-   *   String formattedResourceName = MobileDeviceConstantServiceClient.formatMobileDeviceConstantName("[MOBILE_DEVICE_CONSTANT]");
-   *   MobileDeviceConstant response = mobileDeviceConstantServiceClient.getMobileDeviceConstant(formattedResourceName);
+   *   MobileDeviceConstantName resourceName = MobileDeviceConstantName.of("[MOBILE_DEVICE_CONSTANT]");
+   *   MobileDeviceConstant response = mobileDeviceConstantServiceClient.getMobileDeviceConstant(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName Resource name of the mobile device to fetch.
+   * @param resourceName Required. Resource name of the mobile device to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MobileDeviceConstant getMobileDeviceConstant(MobileDeviceConstantName resourceName) {
+    GetMobileDeviceConstantRequest request =
+        GetMobileDeviceConstantRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getMobileDeviceConstant(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested mobile device constant in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (MobileDeviceConstantServiceClient mobileDeviceConstantServiceClient = MobileDeviceConstantServiceClient.create()) {
+   *   MobileDeviceConstantName resourceName = MobileDeviceConstantName.of("[MOBILE_DEVICE_CONSTANT]");
+   *   MobileDeviceConstant response = mobileDeviceConstantServiceClient.getMobileDeviceConstant(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the mobile device to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MobileDeviceConstant getMobileDeviceConstant(String resourceName) {
-    MOBILE_DEVICE_CONSTANT_PATH_TEMPLATE.validate(resourceName, "getMobileDeviceConstant");
     GetMobileDeviceConstantRequest request =
         GetMobileDeviceConstantRequest.newBuilder().setResourceName(resourceName).build();
     return getMobileDeviceConstant(request);
@@ -210,9 +203,9 @@ public class MobileDeviceConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (MobileDeviceConstantServiceClient mobileDeviceConstantServiceClient = MobileDeviceConstantServiceClient.create()) {
-   *   String formattedResourceName = MobileDeviceConstantServiceClient.formatMobileDeviceConstantName("[MOBILE_DEVICE_CONSTANT]");
+   *   MobileDeviceConstantName resourceName = MobileDeviceConstantName.of("[MOBILE_DEVICE_CONSTANT]");
    *   GetMobileDeviceConstantRequest request = GetMobileDeviceConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   MobileDeviceConstant response = mobileDeviceConstantServiceClient.getMobileDeviceConstant(request);
    * }
@@ -234,9 +227,9 @@ public class MobileDeviceConstantServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (MobileDeviceConstantServiceClient mobileDeviceConstantServiceClient = MobileDeviceConstantServiceClient.create()) {
-   *   String formattedResourceName = MobileDeviceConstantServiceClient.formatMobileDeviceConstantName("[MOBILE_DEVICE_CONSTANT]");
+   *   MobileDeviceConstantName resourceName = MobileDeviceConstantName.of("[MOBILE_DEVICE_CONSTANT]");
    *   GetMobileDeviceConstantRequest request = GetMobileDeviceConstantRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;MobileDeviceConstant&gt; future = mobileDeviceConstantServiceClient.getMobileDeviceConstantCallable().futureCall(request);
    *   // Do something

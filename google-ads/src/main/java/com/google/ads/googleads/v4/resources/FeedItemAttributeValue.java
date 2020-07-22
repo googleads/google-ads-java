@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.FeedItemAttributeValue}
  */
-public  final class FeedItemAttributeValue extends
+public final class FeedItemAttributeValue extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.FeedItemAttributeValue)
     FeedItemAttributeValueOrBuilder {
@@ -225,6 +225,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
    * @return Whether the feedAttributeId field is set.
    */
+  @java.lang.Override
   public boolean hasFeedAttributeId() {
     return feedAttributeId_ != null;
   }
@@ -236,6 +237,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
    * @return The feedAttributeId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getFeedAttributeId() {
     return feedAttributeId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : feedAttributeId_;
   }
@@ -246,6 +248,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getFeedAttributeIdOrBuilder() {
     return getFeedAttributeId();
   }
@@ -261,6 +264,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value integer_value = 2;</code>
    * @return Whether the integerValue field is set.
    */
+  @java.lang.Override
   public boolean hasIntegerValue() {
     return integerValue_ != null;
   }
@@ -273,6 +277,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value integer_value = 2;</code>
    * @return The integerValue.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getIntegerValue() {
     return integerValue_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : integerValue_;
   }
@@ -284,6 +289,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value integer_value = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIntegerValueOrBuilder() {
     return getIntegerValue();
   }
@@ -299,6 +305,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
    * @return Whether the booleanValue field is set.
    */
+  @java.lang.Override
   public boolean hasBooleanValue() {
     return booleanValue_ != null;
   }
@@ -311,6 +318,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
    * @return The booleanValue.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getBooleanValue() {
     return booleanValue_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : booleanValue_;
   }
@@ -322,6 +330,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getBooleanValueOrBuilder() {
     return getBooleanValue();
   }
@@ -340,6 +349,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue string_value = 4;</code>
    * @return Whether the stringValue field is set.
    */
+  @java.lang.Override
   public boolean hasStringValue() {
     return stringValue_ != null;
   }
@@ -355,6 +365,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue string_value = 4;</code>
    * @return The stringValue.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStringValue() {
     return stringValue_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : stringValue_;
   }
@@ -369,6 +380,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue string_value = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStringValueOrBuilder() {
     return getStringValue();
   }
@@ -384,6 +396,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue double_value = 5;</code>
    * @return Whether the doubleValue field is set.
    */
+  @java.lang.Override
   public boolean hasDoubleValue() {
     return doubleValue_ != null;
   }
@@ -396,6 +409,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue double_value = 5;</code>
    * @return The doubleValue.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getDoubleValue() {
     return doubleValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : doubleValue_;
   }
@@ -407,6 +421,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue double_value = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getDoubleValueOrBuilder() {
     return getDoubleValue();
   }
@@ -422,6 +437,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.Money price_value = 6;</code>
    * @return Whether the priceValue field is set.
    */
+  @java.lang.Override
   public boolean hasPriceValue() {
     return priceValue_ != null;
   }
@@ -434,6 +450,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.Money price_value = 6;</code>
    * @return The priceValue.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.Money getPriceValue() {
     return priceValue_ == null ? com.google.ads.googleads.v4.common.Money.getDefaultInstance() : priceValue_;
   }
@@ -445,6 +462,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.Money price_value = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.MoneyOrBuilder getPriceValueOrBuilder() {
     return getPriceValue();
   }
@@ -459,6 +477,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value integer_values = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.Int64Value> getIntegerValuesList() {
     return integerValues_;
   }
@@ -470,6 +489,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value integer_values = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.Int64ValueOrBuilder> 
       getIntegerValuesOrBuilderList() {
     return integerValues_;
@@ -482,6 +502,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value integer_values = 7;</code>
    */
+  @java.lang.Override
   public int getIntegerValuesCount() {
     return integerValues_.size();
   }
@@ -493,6 +514,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value integer_values = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getIntegerValues(int index) {
     return integerValues_.get(index);
   }
@@ -504,6 +526,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value integer_values = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIntegerValuesOrBuilder(
       int index) {
     return integerValues_.get(index);
@@ -519,6 +542,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.BoolValue boolean_values = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.BoolValue> getBooleanValuesList() {
     return booleanValues_;
   }
@@ -530,6 +554,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.BoolValue boolean_values = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.BoolValueOrBuilder> 
       getBooleanValuesOrBuilderList() {
     return booleanValues_;
@@ -542,6 +567,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.BoolValue boolean_values = 8;</code>
    */
+  @java.lang.Override
   public int getBooleanValuesCount() {
     return booleanValues_.size();
   }
@@ -553,6 +579,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.BoolValue boolean_values = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getBooleanValues(int index) {
     return booleanValues_.get(index);
   }
@@ -564,6 +591,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.BoolValue boolean_values = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getBooleanValuesOrBuilder(
       int index) {
     return booleanValues_.get(index);
@@ -585,6 +613,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue string_values = 9;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getStringValuesList() {
     return stringValues_;
   }
@@ -602,6 +631,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue string_values = 9;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getStringValuesOrBuilderList() {
     return stringValues_;
@@ -620,6 +650,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue string_values = 9;</code>
    */
+  @java.lang.Override
   public int getStringValuesCount() {
     return stringValues_.size();
   }
@@ -637,6 +668,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue string_values = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStringValues(int index) {
     return stringValues_.get(index);
   }
@@ -654,6 +686,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue string_values = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStringValuesOrBuilder(
       int index) {
     return stringValues_.get(index);
@@ -669,6 +702,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.DoubleValue double_values = 10;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.DoubleValue> getDoubleValuesList() {
     return doubleValues_;
   }
@@ -680,6 +714,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.DoubleValue double_values = 10;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
       getDoubleValuesOrBuilderList() {
     return doubleValues_;
@@ -692,6 +727,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.DoubleValue double_values = 10;</code>
    */
+  @java.lang.Override
   public int getDoubleValuesCount() {
     return doubleValues_.size();
   }
@@ -703,6 +739,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.DoubleValue double_values = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getDoubleValues(int index) {
     return doubleValues_.get(index);
   }
@@ -714,6 +751,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.DoubleValue double_values = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getDoubleValuesOrBuilder(
       int index) {
     return doubleValues_.get(index);

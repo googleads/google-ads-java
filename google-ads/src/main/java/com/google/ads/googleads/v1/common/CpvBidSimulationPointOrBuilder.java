@@ -13,6 +13,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 1;</code>
+   * @return Whether the cpvBidMicros field is set.
    */
   boolean hasCpvBidMicros();
   /**
@@ -21,6 +22,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 1;</code>
+   * @return The cpvBidMicros.
    */
   com.google.protobuf.Int64Value getCpvBidMicros();
   /**
@@ -38,6 +40,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 2;</code>
+   * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
   /**
@@ -46,6 +49,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 2;</code>
+   * @return The costMicros.
    */
   com.google.protobuf.Int64Value getCostMicros();
   /**
@@ -63,6 +67,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 3;</code>
+   * @return Whether the impressions field is set.
    */
   boolean hasImpressions();
   /**
@@ -71,6 +76,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 3;</code>
+   * @return The impressions.
    */
   com.google.protobuf.Int64Value getImpressions();
   /**

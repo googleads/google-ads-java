@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ProductChannelInfo}
  */
-public  final class ProductChannelInfo extends
+public final class ProductChannelInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ProductChannelInfo)
     ProductChannelInfoOrBuilder {
@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
    * @return The enum numeric value on the wire for channel.
    */
-  public int getChannelValue() {
+  @java.lang.Override public int getChannelValue() {
     return channel_;
   }
   /**
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
    * @return The channel.
    */
-  public com.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel getChannel() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel getChannel() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel result = com.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel.valueOf(channel_);
     return result == null ? com.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel.UNRECOGNIZED : result;
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
      * @return The enum numeric value on the wire for channel.
      */
-    public int getChannelValue() {
+    @java.lang.Override public int getChannelValue() {
       return channel_;
     }
     /**
@@ -445,6 +445,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChannelValue(int value) {
+      
       channel_ = value;
       onChanged();
       return this;
@@ -457,6 +458,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel channel = 1;</code>
      * @return The channel.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel getChannel() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel result = com.google.ads.googleads.v4.enums.ProductChannelEnum.ProductChannel.valueOf(channel_);

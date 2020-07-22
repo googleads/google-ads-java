@@ -13,6 +13,7 @@ public interface PolicyViolationKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue policy_name = 1;</code>
+   * @return Whether the policyName field is set.
    */
   boolean hasPolicyName();
   /**
@@ -21,6 +22,7 @@ public interface PolicyViolationKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue policy_name = 1;</code>
+   * @return The policyName.
    */
   com.google.protobuf.StringValue getPolicyName();
   /**
@@ -42,6 +44,7 @@ public interface PolicyViolationKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue violating_text = 2;</code>
+   * @return Whether the violatingText field is set.
    */
   boolean hasViolatingText();
   /**
@@ -54,6 +57,7 @@ public interface PolicyViolationKeyOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue violating_text = 2;</code>
+   * @return The violatingText.
    */
   com.google.protobuf.StringValue getViolatingText();
   /**

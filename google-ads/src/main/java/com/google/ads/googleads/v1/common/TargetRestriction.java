@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.TargetRestriction}
  */
-public  final class TargetRestriction extends
+public final class TargetRestriction extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.TargetRestriction)
     TargetRestrictionOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private TargetRestriction() {
     targetingDimension_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new TargetRestriction();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -106,8 +112,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+   * @return The enum numeric value on the wire for targetingDimension.
    */
-  public int getTargetingDimensionValue() {
+  @java.lang.Override public int getTargetingDimensionValue() {
     return targetingDimension_;
   }
   /**
@@ -116,8 +123,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+   * @return The targetingDimension.
    */
-  public com.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension getTargetingDimension() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension getTargetingDimension() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension.valueOf(targetingDimension_);
     return result == null ? com.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension.UNRECOGNIZED : result;
@@ -130,14 +138,16 @@ private static final long serialVersionUID = 0L;
    * Indicates whether to restrict your ads to show only for the criteria you
    * have selected for this targeting_dimension, or to target all values for
    * this targeting_dimension and show ads based on your targeting in other
-   * TargetingDimensions. A value of 'true' means that these criteria will only
-   * apply bid modifiers, and not affect targeting. A value of 'false' means
+   * TargetingDimensions. A value of `true` means that these criteria will only
+   * apply bid modifiers, and not affect targeting. A value of `false` means
    * that these criteria will restrict targeting as well as applying bid
    * modifiers.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue bid_only = 2;</code>
+   * @return Whether the bidOnly field is set.
    */
+  @java.lang.Override
   public boolean hasBidOnly() {
     return bidOnly_ != null;
   }
@@ -146,14 +156,16 @@ private static final long serialVersionUID = 0L;
    * Indicates whether to restrict your ads to show only for the criteria you
    * have selected for this targeting_dimension, or to target all values for
    * this targeting_dimension and show ads based on your targeting in other
-   * TargetingDimensions. A value of 'true' means that these criteria will only
-   * apply bid modifiers, and not affect targeting. A value of 'false' means
+   * TargetingDimensions. A value of `true` means that these criteria will only
+   * apply bid modifiers, and not affect targeting. A value of `false` means
    * that these criteria will restrict targeting as well as applying bid
    * modifiers.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue bid_only = 2;</code>
+   * @return The bidOnly.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getBidOnly() {
     return bidOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : bidOnly_;
   }
@@ -162,14 +174,15 @@ private static final long serialVersionUID = 0L;
    * Indicates whether to restrict your ads to show only for the criteria you
    * have selected for this targeting_dimension, or to target all values for
    * this targeting_dimension and show ads based on your targeting in other
-   * TargetingDimensions. A value of 'true' means that these criteria will only
-   * apply bid modifiers, and not affect targeting. A value of 'false' means
+   * TargetingDimensions. A value of `true` means that these criteria will only
+   * apply bid modifiers, and not affect targeting. A value of `false` means
    * that these criteria will restrict targeting as well as applying bid
    * modifiers.
    * </pre>
    *
    * <code>.google.protobuf.BoolValue bid_only = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getBidOnlyOrBuilder() {
     return getBidOnly();
   }
@@ -516,8 +529,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+     * @return The enum numeric value on the wire for targetingDimension.
      */
-    public int getTargetingDimensionValue() {
+    @java.lang.Override public int getTargetingDimensionValue() {
       return targetingDimension_;
     }
     /**
@@ -526,8 +540,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+     * @param value The enum numeric value on the wire for targetingDimension to set.
+     * @return This builder for chaining.
      */
     public Builder setTargetingDimensionValue(int value) {
+      
       targetingDimension_ = value;
       onChanged();
       return this;
@@ -538,7 +555,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+     * @return The targetingDimension.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension getTargetingDimension() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension.valueOf(targetingDimension_);
@@ -550,6 +569,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+     * @param value The targetingDimension to set.
+     * @return This builder for chaining.
      */
     public Builder setTargetingDimension(com.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension value) {
       if (value == null) {
@@ -566,6 +587,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearTargetingDimension() {
       
@@ -582,13 +604,14 @@ private static final long serialVersionUID = 0L;
      * Indicates whether to restrict your ads to show only for the criteria you
      * have selected for this targeting_dimension, or to target all values for
      * this targeting_dimension and show ads based on your targeting in other
-     * TargetingDimensions. A value of 'true' means that these criteria will only
-     * apply bid modifiers, and not affect targeting. A value of 'false' means
+     * TargetingDimensions. A value of `true` means that these criteria will only
+     * apply bid modifiers, and not affect targeting. A value of `false` means
      * that these criteria will restrict targeting as well as applying bid
      * modifiers.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue bid_only = 2;</code>
+     * @return Whether the bidOnly field is set.
      */
     public boolean hasBidOnly() {
       return bidOnlyBuilder_ != null || bidOnly_ != null;
@@ -598,13 +621,14 @@ private static final long serialVersionUID = 0L;
      * Indicates whether to restrict your ads to show only for the criteria you
      * have selected for this targeting_dimension, or to target all values for
      * this targeting_dimension and show ads based on your targeting in other
-     * TargetingDimensions. A value of 'true' means that these criteria will only
-     * apply bid modifiers, and not affect targeting. A value of 'false' means
+     * TargetingDimensions. A value of `true` means that these criteria will only
+     * apply bid modifiers, and not affect targeting. A value of `false` means
      * that these criteria will restrict targeting as well as applying bid
      * modifiers.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue bid_only = 2;</code>
+     * @return The bidOnly.
      */
     public com.google.protobuf.BoolValue getBidOnly() {
       if (bidOnlyBuilder_ == null) {
@@ -618,8 +642,8 @@ private static final long serialVersionUID = 0L;
      * Indicates whether to restrict your ads to show only for the criteria you
      * have selected for this targeting_dimension, or to target all values for
      * this targeting_dimension and show ads based on your targeting in other
-     * TargetingDimensions. A value of 'true' means that these criteria will only
-     * apply bid modifiers, and not affect targeting. A value of 'false' means
+     * TargetingDimensions. A value of `true` means that these criteria will only
+     * apply bid modifiers, and not affect targeting. A value of `false` means
      * that these criteria will restrict targeting as well as applying bid
      * modifiers.
      * </pre>
@@ -644,8 +668,8 @@ private static final long serialVersionUID = 0L;
      * Indicates whether to restrict your ads to show only for the criteria you
      * have selected for this targeting_dimension, or to target all values for
      * this targeting_dimension and show ads based on your targeting in other
-     * TargetingDimensions. A value of 'true' means that these criteria will only
-     * apply bid modifiers, and not affect targeting. A value of 'false' means
+     * TargetingDimensions. A value of `true` means that these criteria will only
+     * apply bid modifiers, and not affect targeting. A value of `false` means
      * that these criteria will restrict targeting as well as applying bid
      * modifiers.
      * </pre>
@@ -668,8 +692,8 @@ private static final long serialVersionUID = 0L;
      * Indicates whether to restrict your ads to show only for the criteria you
      * have selected for this targeting_dimension, or to target all values for
      * this targeting_dimension and show ads based on your targeting in other
-     * TargetingDimensions. A value of 'true' means that these criteria will only
-     * apply bid modifiers, and not affect targeting. A value of 'false' means
+     * TargetingDimensions. A value of `true` means that these criteria will only
+     * apply bid modifiers, and not affect targeting. A value of `false` means
      * that these criteria will restrict targeting as well as applying bid
      * modifiers.
      * </pre>
@@ -696,8 +720,8 @@ private static final long serialVersionUID = 0L;
      * Indicates whether to restrict your ads to show only for the criteria you
      * have selected for this targeting_dimension, or to target all values for
      * this targeting_dimension and show ads based on your targeting in other
-     * TargetingDimensions. A value of 'true' means that these criteria will only
-     * apply bid modifiers, and not affect targeting. A value of 'false' means
+     * TargetingDimensions. A value of `true` means that these criteria will only
+     * apply bid modifiers, and not affect targeting. A value of `false` means
      * that these criteria will restrict targeting as well as applying bid
      * modifiers.
      * </pre>
@@ -720,8 +744,8 @@ private static final long serialVersionUID = 0L;
      * Indicates whether to restrict your ads to show only for the criteria you
      * have selected for this targeting_dimension, or to target all values for
      * this targeting_dimension and show ads based on your targeting in other
-     * TargetingDimensions. A value of 'true' means that these criteria will only
-     * apply bid modifiers, and not affect targeting. A value of 'false' means
+     * TargetingDimensions. A value of `true` means that these criteria will only
+     * apply bid modifiers, and not affect targeting. A value of `false` means
      * that these criteria will restrict targeting as well as applying bid
      * modifiers.
      * </pre>
@@ -738,8 +762,8 @@ private static final long serialVersionUID = 0L;
      * Indicates whether to restrict your ads to show only for the criteria you
      * have selected for this targeting_dimension, or to target all values for
      * this targeting_dimension and show ads based on your targeting in other
-     * TargetingDimensions. A value of 'true' means that these criteria will only
-     * apply bid modifiers, and not affect targeting. A value of 'false' means
+     * TargetingDimensions. A value of `true` means that these criteria will only
+     * apply bid modifiers, and not affect targeting. A value of `false` means
      * that these criteria will restrict targeting as well as applying bid
      * modifiers.
      * </pre>
@@ -759,8 +783,8 @@ private static final long serialVersionUID = 0L;
      * Indicates whether to restrict your ads to show only for the criteria you
      * have selected for this targeting_dimension, or to target all values for
      * this targeting_dimension and show ads based on your targeting in other
-     * TargetingDimensions. A value of 'true' means that these criteria will only
-     * apply bid modifiers, and not affect targeting. A value of 'false' means
+     * TargetingDimensions. A value of `true` means that these criteria will only
+     * apply bid modifiers, and not affect targeting. A value of `false` means
      * that these criteria will restrict targeting as well as applying bid
      * modifiers.
      * </pre>

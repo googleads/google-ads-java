@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/product_bidding_category_constant_service.proto")
 public final class ProductBiddingCategoryConstantServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.ProductBiddingCategoryConstantService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetProductBiddingCategoryConstantMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest,
-      com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant> METHOD_GET_PRODUCT_BIDDING_CATEGORY_CONSTANT = getGetProductBiddingCategoryConstantMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest,
       com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant> getGetProductBiddingCategoryConstantMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetProductBiddingCategoryConstant",
+      requestType = com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest,
       com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant> getGetProductBiddingCategoryConstantMethod() {
-    return getGetProductBiddingCategoryConstantMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest,
-      com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant> getGetProductBiddingCategoryConstantMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest, com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant> getGetProductBiddingCategoryConstantMethod;
     if ((getGetProductBiddingCategoryConstantMethod = ProductBiddingCategoryConstantServiceGrpc.getGetProductBiddingCategoryConstantMethod) == null) {
       synchronized (ProductBiddingCategoryConstantServiceGrpc.class) {
         if ((getGetProductBiddingCategoryConstantMethod = ProductBiddingCategoryConstantServiceGrpc.getGetProductBiddingCategoryConstantMethod) == null) {
-          ProductBiddingCategoryConstantServiceGrpc.getGetProductBiddingCategoryConstantMethod = getGetProductBiddingCategoryConstantMethod = 
+          ProductBiddingCategoryConstantServiceGrpc.getGetProductBiddingCategoryConstantMethod = getGetProductBiddingCategoryConstantMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest, com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.ProductBiddingCategoryConstantService", "GetProductBiddingCategoryConstant"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProductBiddingCategoryConstant"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant.getDefaultInstance()))
-                  .setSchemaDescriptor(new ProductBiddingCategoryConstantServiceMethodDescriptorSupplier("GetProductBiddingCategoryConstant"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ProductBiddingCategoryConstantServiceMethodDescriptorSupplier("GetProductBiddingCategoryConstant"))
+              .build();
         }
-     }
-     return getGetProductBiddingCategoryConstantMethod;
+      }
+    }
+    return getGetProductBiddingCategoryConstantMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ProductBiddingCategoryConstantServiceStub newStub(io.grpc.Channel channel) {
-    return new ProductBiddingCategoryConstantServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProductBiddingCategoryConstantServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProductBiddingCategoryConstantServiceStub>() {
+        @java.lang.Override
+        public ProductBiddingCategoryConstantServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProductBiddingCategoryConstantServiceStub(channel, callOptions);
+        }
+      };
+    return ProductBiddingCategoryConstantServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
    */
   public static ProductBiddingCategoryConstantServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ProductBiddingCategoryConstantServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProductBiddingCategoryConstantServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProductBiddingCategoryConstantServiceBlockingStub>() {
+        @java.lang.Override
+        public ProductBiddingCategoryConstantServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProductBiddingCategoryConstantServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return ProductBiddingCategoryConstantServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
    */
   public static ProductBiddingCategoryConstantServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ProductBiddingCategoryConstantServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ProductBiddingCategoryConstantServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ProductBiddingCategoryConstantServiceFutureStub>() {
+        @java.lang.Override
+        public ProductBiddingCategoryConstantServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ProductBiddingCategoryConstantServiceFutureStub(channel, callOptions);
+        }
+      };
+    return ProductBiddingCategoryConstantServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
      */
     public void getProductBiddingCategoryConstant(com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetProductBiddingCategoryConstantMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetProductBiddingCategoryConstantMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetProductBiddingCategoryConstantMethodHelper(),
+            getGetProductBiddingCategoryConstantMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest,
@@ -126,19 +140,15 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
    * Service to fetch Product Bidding Categories.
    * </pre>
    */
-  public static final class ProductBiddingCategoryConstantServiceStub extends io.grpc.stub.AbstractStub<ProductBiddingCategoryConstantServiceStub> {
-    private ProductBiddingCategoryConstantServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProductBiddingCategoryConstantServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProductBiddingCategoryConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<ProductBiddingCategoryConstantServiceStub> {
+    private ProductBiddingCategoryConstantServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProductBiddingCategoryConstantServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProductBiddingCategoryConstantServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProductBiddingCategoryConstantServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
     public void getProductBiddingCategoryConstant(com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetProductBiddingCategoryConstantMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetProductBiddingCategoryConstantMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
    * Service to fetch Product Bidding Categories.
    * </pre>
    */
-  public static final class ProductBiddingCategoryConstantServiceBlockingStub extends io.grpc.stub.AbstractStub<ProductBiddingCategoryConstantServiceBlockingStub> {
-    private ProductBiddingCategoryConstantServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProductBiddingCategoryConstantServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProductBiddingCategoryConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProductBiddingCategoryConstantServiceBlockingStub> {
+    private ProductBiddingCategoryConstantServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProductBiddingCategoryConstantServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProductBiddingCategoryConstantServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProductBiddingCategoryConstantServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant getProductBiddingCategoryConstant(com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetProductBiddingCategoryConstantMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetProductBiddingCategoryConstantMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
    * Service to fetch Product Bidding Categories.
    * </pre>
    */
-  public static final class ProductBiddingCategoryConstantServiceFutureStub extends io.grpc.stub.AbstractStub<ProductBiddingCategoryConstantServiceFutureStub> {
-    private ProductBiddingCategoryConstantServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ProductBiddingCategoryConstantServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ProductBiddingCategoryConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProductBiddingCategoryConstantServiceFutureStub> {
+    private ProductBiddingCategoryConstantServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ProductBiddingCategoryConstantServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ProductBiddingCategoryConstantServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ProductBiddingCategoryConstantServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.ProductBiddingCategoryConstant> getProductBiddingCategoryConstant(
         com.google.ads.googleads.v4.services.GetProductBiddingCategoryConstantRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetProductBiddingCategoryConstantMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetProductBiddingCategoryConstantMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class ProductBiddingCategoryConstantServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ProductBiddingCategoryConstantServiceFileDescriptorSupplier())
-              .addMethod(getGetProductBiddingCategoryConstantMethodHelper())
+              .addMethod(getGetProductBiddingCategoryConstantMethod())
               .build();
         }
       }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.AppAdInfo}
  */
-public  final class AppAdInfo extends
+public final class AppAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.AppAdInfo)
     AppAdInfoOrBuilder {
@@ -25,6 +25,13 @@ private static final long serialVersionUID = 0L;
     images_ = java.util.Collections.emptyList();
     youtubeVideos_ = java.util.Collections.emptyList();
     html5MediaBundles_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AppAdInfo();
   }
 
   @java.lang.Override
@@ -65,45 +72,45 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               headlines_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdTextAsset>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             headlines_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.AdTextAsset.parser(), extensionRegistry));
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               descriptions_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdTextAsset>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000002;
             }
             descriptions_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.AdTextAsset.parser(), extensionRegistry));
             break;
           }
           case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               images_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdImageAsset>();
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000004;
             }
             images_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.AdImageAsset.parser(), extensionRegistry));
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               youtubeVideos_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdVideoAsset>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000008;
             }
             youtubeVideos_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.AdVideoAsset.parser(), extensionRegistry));
             break;
           }
           case 50: {
-            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               html5MediaBundles_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdMediaBundleAsset>();
-              mutable_bitField0_ |= 0x00000020;
+              mutable_bitField0_ |= 0x00000010;
             }
             html5MediaBundles_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.AdMediaBundleAsset.parser(), extensionRegistry));
@@ -124,19 +131,19 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         headlines_ = java.util.Collections.unmodifiableList(headlines_);
       }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         descriptions_ = java.util.Collections.unmodifiableList(descriptions_);
       }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         images_ = java.util.Collections.unmodifiableList(images_);
       }
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
         youtubeVideos_ = java.util.Collections.unmodifiableList(youtubeVideos_);
       }
-      if (((mutable_bitField0_ & 0x00000020) != 0)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         html5MediaBundles_ = java.util.Collections.unmodifiableList(html5MediaBundles_);
       }
       this.unknownFields = unknownFields.build();
@@ -156,7 +163,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.common.AppAdInfo.class, com.google.ads.googleads.v2.common.AppAdInfo.Builder.class);
   }
 
-  private int bitField0_;
   public static final int MANDATORY_AD_TEXT_FIELD_NUMBER = 1;
   private com.google.ads.googleads.v2.common.AdTextAsset mandatoryAdText_;
   /**
@@ -166,7 +172,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.AdTextAsset mandatory_ad_text = 1;</code>
+   * @return Whether the mandatoryAdText field is set.
    */
+  @java.lang.Override
   public boolean hasMandatoryAdText() {
     return mandatoryAdText_ != null;
   }
@@ -177,7 +185,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.AdTextAsset mandatory_ad_text = 1;</code>
+   * @return The mandatoryAdText.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdTextAsset getMandatoryAdText() {
     return mandatoryAdText_ == null ? com.google.ads.googleads.v2.common.AdTextAsset.getDefaultInstance() : mandatoryAdText_;
   }
@@ -189,6 +199,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.AdTextAsset mandatory_ad_text = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdTextAssetOrBuilder getMandatoryAdTextOrBuilder() {
     return getMandatoryAdText();
   }
@@ -203,6 +214,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset headlines = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.AdTextAsset> getHeadlinesList() {
     return headlines_;
   }
@@ -214,6 +226,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset headlines = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.AdTextAssetOrBuilder> 
       getHeadlinesOrBuilderList() {
     return headlines_;
@@ -226,6 +239,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset headlines = 2;</code>
    */
+  @java.lang.Override
   public int getHeadlinesCount() {
     return headlines_.size();
   }
@@ -237,6 +251,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset headlines = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdTextAsset getHeadlines(int index) {
     return headlines_.get(index);
   }
@@ -248,6 +263,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset headlines = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdTextAssetOrBuilder getHeadlinesOrBuilder(
       int index) {
     return headlines_.get(index);
@@ -263,6 +279,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset descriptions = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.AdTextAsset> getDescriptionsList() {
     return descriptions_;
   }
@@ -274,6 +291,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset descriptions = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.AdTextAssetOrBuilder> 
       getDescriptionsOrBuilderList() {
     return descriptions_;
@@ -286,6 +304,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset descriptions = 3;</code>
    */
+  @java.lang.Override
   public int getDescriptionsCount() {
     return descriptions_.size();
   }
@@ -297,6 +316,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset descriptions = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdTextAsset getDescriptions(int index) {
     return descriptions_.get(index);
   }
@@ -308,6 +328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdTextAsset descriptions = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdTextAssetOrBuilder getDescriptionsOrBuilder(
       int index) {
     return descriptions_.get(index);
@@ -322,6 +343,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdImageAsset images = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.AdImageAsset> getImagesList() {
     return images_;
   }
@@ -332,6 +354,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdImageAsset images = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.AdImageAssetOrBuilder> 
       getImagesOrBuilderList() {
     return images_;
@@ -343,6 +366,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdImageAsset images = 4;</code>
    */
+  @java.lang.Override
   public int getImagesCount() {
     return images_.size();
   }
@@ -353,6 +377,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdImageAsset images = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdImageAsset getImages(int index) {
     return images_.get(index);
   }
@@ -363,6 +388,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdImageAsset images = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdImageAssetOrBuilder getImagesOrBuilder(
       int index) {
     return images_.get(index);
@@ -377,6 +403,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdVideoAsset youtube_videos = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.AdVideoAsset> getYoutubeVideosList() {
     return youtubeVideos_;
   }
@@ -387,6 +414,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdVideoAsset youtube_videos = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.AdVideoAssetOrBuilder> 
       getYoutubeVideosOrBuilderList() {
     return youtubeVideos_;
@@ -398,6 +426,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdVideoAsset youtube_videos = 5;</code>
    */
+  @java.lang.Override
   public int getYoutubeVideosCount() {
     return youtubeVideos_.size();
   }
@@ -408,6 +437,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdVideoAsset youtube_videos = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdVideoAsset getYoutubeVideos(int index) {
     return youtubeVideos_.get(index);
   }
@@ -418,6 +448,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdVideoAsset youtube_videos = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdVideoAssetOrBuilder getYoutubeVideosOrBuilder(
       int index) {
     return youtubeVideos_.get(index);
@@ -432,6 +463,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdMediaBundleAsset html5_media_bundles = 6;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.AdMediaBundleAsset> getHtml5MediaBundlesList() {
     return html5MediaBundles_;
   }
@@ -442,6 +474,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdMediaBundleAsset html5_media_bundles = 6;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.AdMediaBundleAssetOrBuilder> 
       getHtml5MediaBundlesOrBuilderList() {
     return html5MediaBundles_;
@@ -453,6 +486,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdMediaBundleAsset html5_media_bundles = 6;</code>
    */
+  @java.lang.Override
   public int getHtml5MediaBundlesCount() {
     return html5MediaBundles_.size();
   }
@@ -463,6 +497,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdMediaBundleAsset html5_media_bundles = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdMediaBundleAsset getHtml5MediaBundles(int index) {
     return html5MediaBundles_.get(index);
   }
@@ -473,6 +508,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.AdMediaBundleAsset html5_media_bundles = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.AdMediaBundleAssetOrBuilder getHtml5MediaBundlesOrBuilder(
       int index) {
     return html5MediaBundles_.get(index);
@@ -758,31 +794,31 @@ private static final long serialVersionUID = 0L;
       }
       if (headlinesBuilder_ == null) {
         headlines_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         headlinesBuilder_.clear();
       }
       if (descriptionsBuilder_ == null) {
         descriptions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         descriptionsBuilder_.clear();
       }
       if (imagesBuilder_ == null) {
         images_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         imagesBuilder_.clear();
       }
       if (youtubeVideosBuilder_ == null) {
         youtubeVideos_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
         youtubeVideosBuilder_.clear();
       }
       if (html5MediaBundlesBuilder_ == null) {
         html5MediaBundles_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
         html5MediaBundlesBuilder_.clear();
       }
@@ -813,58 +849,56 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.common.AppAdInfo buildPartial() {
       com.google.ads.googleads.v2.common.AppAdInfo result = new com.google.ads.googleads.v2.common.AppAdInfo(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (mandatoryAdTextBuilder_ == null) {
         result.mandatoryAdText_ = mandatoryAdText_;
       } else {
         result.mandatoryAdText_ = mandatoryAdTextBuilder_.build();
       }
       if (headlinesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           headlines_ = java.util.Collections.unmodifiableList(headlines_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.headlines_ = headlines_;
       } else {
         result.headlines_ = headlinesBuilder_.build();
       }
       if (descriptionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           descriptions_ = java.util.Collections.unmodifiableList(descriptions_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.descriptions_ = descriptions_;
       } else {
         result.descriptions_ = descriptionsBuilder_.build();
       }
       if (imagesBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           images_ = java.util.Collections.unmodifiableList(images_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.images_ = images_;
       } else {
         result.images_ = imagesBuilder_.build();
       }
       if (youtubeVideosBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           youtubeVideos_ = java.util.Collections.unmodifiableList(youtubeVideos_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.youtubeVideos_ = youtubeVideos_;
       } else {
         result.youtubeVideos_ = youtubeVideosBuilder_.build();
       }
       if (html5MediaBundlesBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           html5MediaBundles_ = java.util.Collections.unmodifiableList(html5MediaBundles_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.html5MediaBundles_ = html5MediaBundles_;
       } else {
         result.html5MediaBundles_ = html5MediaBundlesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -920,7 +954,7 @@ private static final long serialVersionUID = 0L;
         if (!other.headlines_.isEmpty()) {
           if (headlines_.isEmpty()) {
             headlines_ = other.headlines_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureHeadlinesIsMutable();
             headlines_.addAll(other.headlines_);
@@ -933,7 +967,7 @@ private static final long serialVersionUID = 0L;
             headlinesBuilder_.dispose();
             headlinesBuilder_ = null;
             headlines_ = other.headlines_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             headlinesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getHeadlinesFieldBuilder() : null;
@@ -946,7 +980,7 @@ private static final long serialVersionUID = 0L;
         if (!other.descriptions_.isEmpty()) {
           if (descriptions_.isEmpty()) {
             descriptions_ = other.descriptions_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureDescriptionsIsMutable();
             descriptions_.addAll(other.descriptions_);
@@ -959,7 +993,7 @@ private static final long serialVersionUID = 0L;
             descriptionsBuilder_.dispose();
             descriptionsBuilder_ = null;
             descriptions_ = other.descriptions_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
             descriptionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDescriptionsFieldBuilder() : null;
@@ -972,7 +1006,7 @@ private static final long serialVersionUID = 0L;
         if (!other.images_.isEmpty()) {
           if (images_.isEmpty()) {
             images_ = other.images_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureImagesIsMutable();
             images_.addAll(other.images_);
@@ -985,7 +1019,7 @@ private static final long serialVersionUID = 0L;
             imagesBuilder_.dispose();
             imagesBuilder_ = null;
             images_ = other.images_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
             imagesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getImagesFieldBuilder() : null;
@@ -998,7 +1032,7 @@ private static final long serialVersionUID = 0L;
         if (!other.youtubeVideos_.isEmpty()) {
           if (youtubeVideos_.isEmpty()) {
             youtubeVideos_ = other.youtubeVideos_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureYoutubeVideosIsMutable();
             youtubeVideos_.addAll(other.youtubeVideos_);
@@ -1011,7 +1045,7 @@ private static final long serialVersionUID = 0L;
             youtubeVideosBuilder_.dispose();
             youtubeVideosBuilder_ = null;
             youtubeVideos_ = other.youtubeVideos_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
             youtubeVideosBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getYoutubeVideosFieldBuilder() : null;
@@ -1024,7 +1058,7 @@ private static final long serialVersionUID = 0L;
         if (!other.html5MediaBundles_.isEmpty()) {
           if (html5MediaBundles_.isEmpty()) {
             html5MediaBundles_ = other.html5MediaBundles_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureHtml5MediaBundlesIsMutable();
             html5MediaBundles_.addAll(other.html5MediaBundles_);
@@ -1037,7 +1071,7 @@ private static final long serialVersionUID = 0L;
             html5MediaBundlesBuilder_.dispose();
             html5MediaBundlesBuilder_ = null;
             html5MediaBundles_ = other.html5MediaBundles_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000010);
             html5MediaBundlesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getHtml5MediaBundlesFieldBuilder() : null;
@@ -1086,6 +1120,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.AdTextAsset mandatory_ad_text = 1;</code>
+     * @return Whether the mandatoryAdText field is set.
      */
     public boolean hasMandatoryAdText() {
       return mandatoryAdTextBuilder_ != null || mandatoryAdText_ != null;
@@ -1097,6 +1132,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.AdTextAsset mandatory_ad_text = 1;</code>
+     * @return The mandatoryAdText.
      */
     public com.google.ads.googleads.v2.common.AdTextAsset getMandatoryAdText() {
       if (mandatoryAdTextBuilder_ == null) {
@@ -1241,9 +1277,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.AdTextAsset> headlines_ =
       java.util.Collections.emptyList();
     private void ensureHeadlinesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         headlines_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdTextAsset>(headlines_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1448,7 +1484,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearHeadlines() {
       if (headlinesBuilder_ == null) {
         headlines_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         headlinesBuilder_.clear();
@@ -1560,7 +1596,7 @@ private static final long serialVersionUID = 0L;
         headlinesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.AdTextAsset, com.google.ads.googleads.v2.common.AdTextAsset.Builder, com.google.ads.googleads.v2.common.AdTextAssetOrBuilder>(
                 headlines_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         headlines_ = null;
@@ -1571,9 +1607,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.AdTextAsset> descriptions_ =
       java.util.Collections.emptyList();
     private void ensureDescriptionsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         descriptions_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdTextAsset>(descriptions_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1778,7 +1814,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDescriptions() {
       if (descriptionsBuilder_ == null) {
         descriptions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         descriptionsBuilder_.clear();
@@ -1890,7 +1926,7 @@ private static final long serialVersionUID = 0L;
         descriptionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.AdTextAsset, com.google.ads.googleads.v2.common.AdTextAsset.Builder, com.google.ads.googleads.v2.common.AdTextAssetOrBuilder>(
                 descriptions_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         descriptions_ = null;
@@ -1901,9 +1937,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.AdImageAsset> images_ =
       java.util.Collections.emptyList();
     private void ensureImagesIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         images_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdImageAsset>(images_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -2097,7 +2133,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearImages() {
       if (imagesBuilder_ == null) {
         images_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         imagesBuilder_.clear();
@@ -2202,7 +2238,7 @@ private static final long serialVersionUID = 0L;
         imagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.AdImageAsset, com.google.ads.googleads.v2.common.AdImageAsset.Builder, com.google.ads.googleads.v2.common.AdImageAssetOrBuilder>(
                 images_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         images_ = null;
@@ -2213,9 +2249,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.AdVideoAsset> youtubeVideos_ =
       java.util.Collections.emptyList();
     private void ensureYoutubeVideosIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         youtubeVideos_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdVideoAsset>(youtubeVideos_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -2409,7 +2445,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearYoutubeVideos() {
       if (youtubeVideosBuilder_ == null) {
         youtubeVideos_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         youtubeVideosBuilder_.clear();
@@ -2514,7 +2550,7 @@ private static final long serialVersionUID = 0L;
         youtubeVideosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.AdVideoAsset, com.google.ads.googleads.v2.common.AdVideoAsset.Builder, com.google.ads.googleads.v2.common.AdVideoAssetOrBuilder>(
                 youtubeVideos_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         youtubeVideos_ = null;
@@ -2525,9 +2561,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.AdMediaBundleAsset> html5MediaBundles_ =
       java.util.Collections.emptyList();
     private void ensureHtml5MediaBundlesIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         html5MediaBundles_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.AdMediaBundleAsset>(html5MediaBundles_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -2721,7 +2757,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearHtml5MediaBundles() {
       if (html5MediaBundlesBuilder_ == null) {
         html5MediaBundles_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         html5MediaBundlesBuilder_.clear();
@@ -2826,7 +2862,7 @@ private static final long serialVersionUID = 0L;
         html5MediaBundlesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.AdMediaBundleAsset, com.google.ads.googleads.v2.common.AdMediaBundleAsset.Builder, com.google.ads.googleads.v2.common.AdMediaBundleAssetOrBuilder>(
                 html5MediaBundles_,
-                ((bitField0_ & 0x00000020) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         html5MediaBundles_ = null;

@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/custom_interest_service.proto")
 public final class CustomInterestServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class CustomInterestServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.CustomInterestService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCustomInterestMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCustomInterestRequest,
-      com.google.ads.googleads.v3.resources.CustomInterest> METHOD_GET_CUSTOM_INTEREST = getGetCustomInterestMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCustomInterestRequest,
       com.google.ads.googleads.v3.resources.CustomInterest> getGetCustomInterestMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCustomInterest",
+      requestType = com.google.ads.googleads.v3.services.GetCustomInterestRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.CustomInterest.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCustomInterestRequest,
       com.google.ads.googleads.v3.resources.CustomInterest> getGetCustomInterestMethod() {
-    return getGetCustomInterestMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCustomInterestRequest,
-      com.google.ads.googleads.v3.resources.CustomInterest> getGetCustomInterestMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetCustomInterestRequest, com.google.ads.googleads.v3.resources.CustomInterest> getGetCustomInterestMethod;
     if ((getGetCustomInterestMethod = CustomInterestServiceGrpc.getGetCustomInterestMethod) == null) {
       synchronized (CustomInterestServiceGrpc.class) {
         if ((getGetCustomInterestMethod = CustomInterestServiceGrpc.getGetCustomInterestMethod) == null) {
-          CustomInterestServiceGrpc.getGetCustomInterestMethod = getGetCustomInterestMethod = 
+          CustomInterestServiceGrpc.getGetCustomInterestMethod = getGetCustomInterestMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetCustomInterestRequest, com.google.ads.googleads.v3.resources.CustomInterest>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CustomInterestService", "GetCustomInterest"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCustomInterest"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetCustomInterestRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.CustomInterest.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomInterestServiceMethodDescriptorSupplier("GetCustomInterest"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomInterestServiceMethodDescriptorSupplier("GetCustomInterest"))
+              .build();
         }
-     }
-     return getGetCustomInterestMethod;
+      }
+    }
+    return getGetCustomInterestMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCustomInterestsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCustomInterestsRequest,
-      com.google.ads.googleads.v3.services.MutateCustomInterestsResponse> METHOD_MUTATE_CUSTOM_INTERESTS = getMutateCustomInterestsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCustomInterestsRequest,
       com.google.ads.googleads.v3.services.MutateCustomInterestsResponse> getMutateCustomInterestsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCustomInterests",
+      requestType = com.google.ads.googleads.v3.services.MutateCustomInterestsRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateCustomInterestsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCustomInterestsRequest,
       com.google.ads.googleads.v3.services.MutateCustomInterestsResponse> getMutateCustomInterestsMethod() {
-    return getMutateCustomInterestsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCustomInterestsRequest,
-      com.google.ads.googleads.v3.services.MutateCustomInterestsResponse> getMutateCustomInterestsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateCustomInterestsRequest, com.google.ads.googleads.v3.services.MutateCustomInterestsResponse> getMutateCustomInterestsMethod;
     if ((getMutateCustomInterestsMethod = CustomInterestServiceGrpc.getMutateCustomInterestsMethod) == null) {
       synchronized (CustomInterestServiceGrpc.class) {
         if ((getMutateCustomInterestsMethod = CustomInterestServiceGrpc.getMutateCustomInterestsMethod) == null) {
-          CustomInterestServiceGrpc.getMutateCustomInterestsMethod = getMutateCustomInterestsMethod = 
+          CustomInterestServiceGrpc.getMutateCustomInterestsMethod = getMutateCustomInterestsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateCustomInterestsRequest, com.google.ads.googleads.v3.services.MutateCustomInterestsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.CustomInterestService", "MutateCustomInterests"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCustomInterests"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCustomInterestsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateCustomInterestsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CustomInterestServiceMethodDescriptorSupplier("MutateCustomInterests"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CustomInterestServiceMethodDescriptorSupplier("MutateCustomInterests"))
+              .build();
         }
-     }
-     return getMutateCustomInterestsMethod;
+      }
+    }
+    return getMutateCustomInterestsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CustomInterestServiceStub newStub(io.grpc.Channel channel) {
-    return new CustomInterestServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomInterestServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomInterestServiceStub>() {
+        @java.lang.Override
+        public CustomInterestServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomInterestServiceStub(channel, callOptions);
+        }
+      };
+    return CustomInterestServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class CustomInterestServiceGrpc {
    */
   public static CustomInterestServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CustomInterestServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomInterestServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomInterestServiceBlockingStub>() {
+        @java.lang.Override
+        public CustomInterestServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomInterestServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CustomInterestServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class CustomInterestServiceGrpc {
    */
   public static CustomInterestServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CustomInterestServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CustomInterestServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CustomInterestServiceFutureStub>() {
+        @java.lang.Override
+        public CustomInterestServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CustomInterestServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CustomInterestServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class CustomInterestServiceGrpc {
      */
     public void getCustomInterest(com.google.ads.googleads.v3.services.GetCustomInterestRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CustomInterest> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCustomInterestMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCustomInterestMethod(), responseObserver);
     }
 
     /**
@@ -152,20 +160,20 @@ public final class CustomInterestServiceGrpc {
      */
     public void mutateCustomInterests(com.google.ads.googleads.v3.services.MutateCustomInterestsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCustomInterestsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCustomInterestsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCustomInterestsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCustomInterestMethodHelper(),
+            getGetCustomInterestMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetCustomInterestRequest,
                 com.google.ads.googleads.v3.resources.CustomInterest>(
                   this, METHODID_GET_CUSTOM_INTEREST)))
           .addMethod(
-            getMutateCustomInterestsMethodHelper(),
+            getMutateCustomInterestsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateCustomInterestsRequest,
@@ -180,19 +188,15 @@ public final class CustomInterestServiceGrpc {
    * Service to manage custom interests.
    * </pre>
    */
-  public static final class CustomInterestServiceStub extends io.grpc.stub.AbstractStub<CustomInterestServiceStub> {
-    private CustomInterestServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomInterestServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomInterestServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomInterestServiceStub> {
+    private CustomInterestServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomInterestServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomInterestServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomInterestServiceStub(channel, callOptions);
     }
 
@@ -204,7 +208,7 @@ public final class CustomInterestServiceGrpc {
     public void getCustomInterest(com.google.ads.googleads.v3.services.GetCustomInterestRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.CustomInterest> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCustomInterestMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCustomInterestMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -215,7 +219,7 @@ public final class CustomInterestServiceGrpc {
     public void mutateCustomInterests(com.google.ads.googleads.v3.services.MutateCustomInterestsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateCustomInterestsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCustomInterestsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCustomInterestsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -224,19 +228,15 @@ public final class CustomInterestServiceGrpc {
    * Service to manage custom interests.
    * </pre>
    */
-  public static final class CustomInterestServiceBlockingStub extends io.grpc.stub.AbstractStub<CustomInterestServiceBlockingStub> {
-    private CustomInterestServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomInterestServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomInterestServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomInterestServiceBlockingStub> {
+    private CustomInterestServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomInterestServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomInterestServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomInterestServiceBlockingStub(channel, callOptions);
     }
 
@@ -247,7 +247,7 @@ public final class CustomInterestServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.CustomInterest getCustomInterest(com.google.ads.googleads.v3.services.GetCustomInterestRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCustomInterestMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCustomInterestMethod(), getCallOptions(), request);
     }
 
     /**
@@ -257,7 +257,7 @@ public final class CustomInterestServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateCustomInterestsResponse mutateCustomInterests(com.google.ads.googleads.v3.services.MutateCustomInterestsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCustomInterestsMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCustomInterestsMethod(), getCallOptions(), request);
     }
   }
 
@@ -266,19 +266,15 @@ public final class CustomInterestServiceGrpc {
    * Service to manage custom interests.
    * </pre>
    */
-  public static final class CustomInterestServiceFutureStub extends io.grpc.stub.AbstractStub<CustomInterestServiceFutureStub> {
-    private CustomInterestServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CustomInterestServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CustomInterestServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomInterestServiceFutureStub> {
+    private CustomInterestServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CustomInterestServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CustomInterestServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CustomInterestServiceFutureStub(channel, callOptions);
     }
 
@@ -290,7 +286,7 @@ public final class CustomInterestServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.CustomInterest> getCustomInterest(
         com.google.ads.googleads.v3.services.GetCustomInterestRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCustomInterestMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCustomInterestMethod(), getCallOptions()), request);
     }
 
     /**
@@ -301,7 +297,7 @@ public final class CustomInterestServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateCustomInterestsResponse> mutateCustomInterests(
         com.google.ads.googleads.v3.services.MutateCustomInterestsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCustomInterestsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCustomInterestsMethod(), getCallOptions()), request);
     }
   }
 
@@ -394,8 +390,8 @@ public final class CustomInterestServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CustomInterestServiceFileDescriptorSupplier())
-              .addMethod(getGetCustomInterestMethodHelper())
-              .addMethod(getMutateCustomInterestsMethodHelper())
+              .addMethod(getGetCustomInterestMethod())
+              .addMethod(getMutateCustomInterestsMethod())
               .build();
         }
       }

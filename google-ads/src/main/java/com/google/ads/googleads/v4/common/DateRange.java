@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.DateRange}
  */
-public  final class DateRange extends
+public final class DateRange extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.DateRange)
     DateRangeOrBuilder {
@@ -120,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue start_date = 1;</code>
    * @return Whether the startDate field is set.
    */
+  @java.lang.Override
   public boolean hasStartDate() {
     return startDate_ != null;
   }
@@ -131,6 +132,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue start_date = 1;</code>
    * @return The startDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStartDate() {
     return startDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : startDate_;
   }
@@ -141,6 +143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue start_date = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStartDateOrBuilder() {
     return getStartDate();
   }
@@ -155,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue end_date = 2;</code>
    * @return Whether the endDate field is set.
    */
+  @java.lang.Override
   public boolean hasEndDate() {
     return endDate_ != null;
   }
@@ -166,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue end_date = 2;</code>
    * @return The endDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEndDate() {
     return endDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : endDate_;
   }
@@ -176,6 +181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue end_date = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEndDateOrBuilder() {
     return getEndDate();
   }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.Feed}
  */
-public  final class Feed extends
+public final class Feed extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.Feed)
     FeedOrBuilder {
@@ -448,7 +448,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData}
    */
-  public  static final class PlacesLocationFeedData extends
+  public static final class PlacesLocationFeedData extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData)
       PlacesLocationFeedDataOrBuilder {
@@ -693,7 +693,7 @@ private static final long serialVersionUID = 0L;
      *
      * Protobuf type {@code google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData.OAuthInfo}
      */
-    public  static final class OAuthInfo extends
+    public static final class OAuthInfo extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData.OAuthInfo)
         OAuthInfoOrBuilder {
@@ -816,6 +816,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.StringValue http_method = 1;</code>
        * @return Whether the httpMethod field is set.
        */
+      @java.lang.Override
       public boolean hasHttpMethod() {
         return httpMethod_ != null;
       }
@@ -827,6 +828,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.StringValue http_method = 1;</code>
        * @return The httpMethod.
        */
+      @java.lang.Override
       public com.google.protobuf.StringValue getHttpMethod() {
         return httpMethod_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : httpMethod_;
       }
@@ -837,6 +839,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.StringValue http_method = 1;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getHttpMethodOrBuilder() {
         return getHttpMethod();
       }
@@ -851,6 +854,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.StringValue http_request_url = 2;</code>
        * @return Whether the httpRequestUrl field is set.
        */
+      @java.lang.Override
       public boolean hasHttpRequestUrl() {
         return httpRequestUrl_ != null;
       }
@@ -862,6 +866,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.StringValue http_request_url = 2;</code>
        * @return The httpRequestUrl.
        */
+      @java.lang.Override
       public com.google.protobuf.StringValue getHttpRequestUrl() {
         return httpRequestUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : httpRequestUrl_;
       }
@@ -872,6 +877,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.StringValue http_request_url = 2;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getHttpRequestUrlOrBuilder() {
         return getHttpRequestUrl();
       }
@@ -886,6 +892,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.StringValue http_authorization_header = 3;</code>
        * @return Whether the httpAuthorizationHeader field is set.
        */
+      @java.lang.Override
       public boolean hasHttpAuthorizationHeader() {
         return httpAuthorizationHeader_ != null;
       }
@@ -897,6 +904,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.protobuf.StringValue http_authorization_header = 3;</code>
        * @return The httpAuthorizationHeader.
        */
+      @java.lang.Override
       public com.google.protobuf.StringValue getHttpAuthorizationHeader() {
         return httpAuthorizationHeader_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : httpAuthorizationHeader_;
       }
@@ -907,6 +915,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>.google.protobuf.StringValue http_authorization_header = 3;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.StringValueOrBuilder getHttpAuthorizationHeaderOrBuilder() {
         return getHttpAuthorizationHeader();
       }
@@ -1819,6 +1828,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the oauthInfo field is set.
      */
+    @java.lang.Override
     public boolean hasOauthInfo() {
       return oauthInfo_ != null;
     }
@@ -1832,6 +1842,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The oauthInfo.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData.OAuthInfo getOauthInfo() {
       return oauthInfo_ == null ? com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData.OAuthInfo.getDefaultInstance() : oauthInfo_;
     }
@@ -1844,6 +1855,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData.OAuthInfo oauth_info = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData.OAuthInfoOrBuilder getOauthInfoOrBuilder() {
       return getOauthInfo();
     }
@@ -1859,6 +1871,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue email_address = 2;</code>
      * @return Whether the emailAddress field is set.
      */
+    @java.lang.Override
     public boolean hasEmailAddress() {
       return emailAddress_ != null;
     }
@@ -1871,6 +1884,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue email_address = 2;</code>
      * @return The emailAddress.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getEmailAddress() {
       return emailAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : emailAddress_;
     }
@@ -1882,6 +1896,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue email_address = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getEmailAddressOrBuilder() {
       return getEmailAddress();
     }
@@ -1899,6 +1914,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue business_account_id = 10;</code>
      * @return Whether the businessAccountId field is set.
      */
+    @java.lang.Override
     public boolean hasBusinessAccountId() {
       return businessAccountId_ != null;
     }
@@ -1913,6 +1929,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue business_account_id = 10;</code>
      * @return The businessAccountId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getBusinessAccountId() {
       return businessAccountId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessAccountId_;
     }
@@ -1926,6 +1943,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue business_account_id = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getBusinessAccountIdOrBuilder() {
       return getBusinessAccountId();
     }
@@ -1942,6 +1960,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue business_name_filter = 4;</code>
      * @return Whether the businessNameFilter field is set.
      */
+    @java.lang.Override
     public boolean hasBusinessNameFilter() {
       return businessNameFilter_ != null;
     }
@@ -1955,6 +1974,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue business_name_filter = 4;</code>
      * @return The businessNameFilter.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getBusinessNameFilter() {
       return businessNameFilter_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessNameFilter_;
     }
@@ -1967,6 +1987,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue business_name_filter = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getBusinessNameFilterOrBuilder() {
       return getBusinessNameFilter();
     }
@@ -1983,6 +2004,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue category_filters = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getCategoryFiltersList() {
       return categoryFilters_;
     }
@@ -1996,6 +2018,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue category_filters = 5;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getCategoryFiltersOrBuilderList() {
       return categoryFilters_;
@@ -2010,6 +2033,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue category_filters = 5;</code>
      */
+    @java.lang.Override
     public int getCategoryFiltersCount() {
       return categoryFilters_.size();
     }
@@ -2023,6 +2047,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue category_filters = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getCategoryFilters(int index) {
       return categoryFilters_.get(index);
     }
@@ -2036,6 +2061,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue category_filters = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCategoryFiltersOrBuilder(
         int index) {
       return categoryFilters_.get(index);
@@ -2053,6 +2079,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue label_filters = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getLabelFiltersList() {
       return labelFilters_;
     }
@@ -2066,6 +2093,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue label_filters = 6;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getLabelFiltersOrBuilderList() {
       return labelFilters_;
@@ -2080,6 +2108,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue label_filters = 6;</code>
      */
+    @java.lang.Override
     public int getLabelFiltersCount() {
       return labelFilters_.size();
     }
@@ -2093,6 +2122,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue label_filters = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getLabelFilters(int index) {
       return labelFilters_.get(index);
     }
@@ -2106,6 +2136,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.StringValue label_filters = 6;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getLabelFiltersOrBuilder(
         int index) {
       return labelFilters_.get(index);
@@ -4189,7 +4220,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData}
    */
-  public  static final class AffiliateLocationFeedData extends
+  public static final class AffiliateLocationFeedData extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData)
       AffiliateLocationFeedDataOrBuilder {
@@ -4294,6 +4325,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Int64Value chain_ids = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.Int64Value> getChainIdsList() {
       return chainIds_;
     }
@@ -4305,6 +4337,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Int64Value chain_ids = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.Int64ValueOrBuilder> 
         getChainIdsOrBuilderList() {
       return chainIds_;
@@ -4317,6 +4350,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Int64Value chain_ids = 1;</code>
      */
+    @java.lang.Override
     public int getChainIdsCount() {
       return chainIds_.size();
     }
@@ -4328,6 +4362,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Int64Value chain_ids = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getChainIds(int index) {
       return chainIds_.get(index);
     }
@@ -4339,6 +4374,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>repeated .google.protobuf.Int64Value chain_ids = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getChainIdsOrBuilder(
         int index) {
       return chainIds_.get(index);
@@ -4354,7 +4390,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType relationship_type = 2;</code>
      * @return The enum numeric value on the wire for relationshipType.
      */
-    public int getRelationshipTypeValue() {
+    @java.lang.Override public int getRelationshipTypeValue() {
       return relationshipType_;
     }
     /**
@@ -4365,7 +4401,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType relationship_type = 2;</code>
      * @return The relationshipType.
      */
-    public com.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType getRelationshipType() {
+    @java.lang.Override public com.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType getRelationshipType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType result = com.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType.valueOf(relationshipType_);
       return result == null ? com.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType.UNRECOGNIZED : result;
@@ -5073,7 +5109,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType relationship_type = 2;</code>
        * @return The enum numeric value on the wire for relationshipType.
        */
-      public int getRelationshipTypeValue() {
+      @java.lang.Override public int getRelationshipTypeValue() {
         return relationshipType_;
       }
       /**
@@ -5086,6 +5122,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRelationshipTypeValue(int value) {
+        
         relationshipType_ = value;
         onChanged();
         return this;
@@ -5098,6 +5135,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType relationship_type = 2;</code>
        * @return The relationshipType.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType getRelationshipType() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType result = com.google.ads.googleads.v4.enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType.valueOf(relationshipType_);
@@ -5241,6 +5279,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -5263,6 +5302,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -5288,6 +5328,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -5300,6 +5341,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -5311,6 +5353,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -5325,6 +5368,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -5336,6 +5380,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -5346,6 +5391,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -5362,6 +5408,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedAttribute attributes = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.resources.FeedAttribute> getAttributesList() {
     return attributes_;
   }
@@ -5375,6 +5422,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedAttribute attributes = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.resources.FeedAttributeOrBuilder> 
       getAttributesOrBuilderList() {
     return attributes_;
@@ -5389,6 +5437,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedAttribute attributes = 4;</code>
    */
+  @java.lang.Override
   public int getAttributesCount() {
     return attributes_.size();
   }
@@ -5402,6 +5451,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedAttribute attributes = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedAttribute getAttributes(int index) {
     return attributes_.get(index);
   }
@@ -5415,6 +5465,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedAttribute attributes = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedAttributeOrBuilder getAttributesOrBuilder(
       int index) {
     return attributes_.get(index);
@@ -5430,6 +5481,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedAttributeOperation attribute_operations = 9;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.resources.FeedAttributeOperation> getAttributeOperationsList() {
     return attributeOperations_;
   }
@@ -5441,6 +5493,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedAttributeOperation attribute_operations = 9;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.resources.FeedAttributeOperationOrBuilder> 
       getAttributeOperationsOrBuilderList() {
     return attributeOperations_;
@@ -5453,6 +5506,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedAttributeOperation attribute_operations = 9;</code>
    */
+  @java.lang.Override
   public int getAttributeOperationsCount() {
     return attributeOperations_.size();
   }
@@ -5464,6 +5518,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedAttributeOperation attribute_operations = 9;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedAttributeOperation getAttributeOperations(int index) {
     return attributeOperations_.get(index);
   }
@@ -5475,6 +5530,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.FeedAttributeOperation attribute_operations = 9;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.FeedAttributeOperationOrBuilder getAttributeOperationsOrBuilder(
       int index) {
     return attributeOperations_.get(index);
@@ -5490,7 +5546,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The enum numeric value on the wire for origin.
    */
-  public int getOriginValue() {
+  @java.lang.Override public int getOriginValue() {
     return origin_;
   }
   /**
@@ -5501,7 +5557,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The origin.
    */
-  public com.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin getOrigin() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin getOrigin() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin result = com.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin.valueOf(origin_);
     return result == null ? com.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin.UNRECOGNIZED : result;
@@ -5518,7 +5574,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -5530,7 +5586,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus result = com.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus.UNRECOGNIZED : result;
@@ -5546,6 +5602,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
    * @return Whether the placesLocationFeedData field is set.
    */
+  @java.lang.Override
   public boolean hasPlacesLocationFeedData() {
     return systemFeedGenerationDataCase_ == 6;
   }
@@ -5558,6 +5615,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
    * @return The placesLocationFeedData.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData getPlacesLocationFeedData() {
     if (systemFeedGenerationDataCase_ == 6) {
        return (com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData) systemFeedGenerationData_;
@@ -5572,6 +5630,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedDataOrBuilder getPlacesLocationFeedDataOrBuilder() {
     if (systemFeedGenerationDataCase_ == 6) {
        return (com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData) systemFeedGenerationData_;
@@ -5589,6 +5648,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData affiliate_location_feed_data = 7;</code>
    * @return Whether the affiliateLocationFeedData field is set.
    */
+  @java.lang.Override
   public boolean hasAffiliateLocationFeedData() {
     return systemFeedGenerationDataCase_ == 7;
   }
@@ -5601,6 +5661,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData affiliate_location_feed_data = 7;</code>
    * @return The affiliateLocationFeedData.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData getAffiliateLocationFeedData() {
     if (systemFeedGenerationDataCase_ == 7) {
        return (com.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData) systemFeedGenerationData_;
@@ -5615,6 +5676,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData affiliate_location_feed_data = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedDataOrBuilder getAffiliateLocationFeedDataOrBuilder() {
     if (systemFeedGenerationDataCase_ == 7) {
        return (com.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData) systemFeedGenerationData_;
@@ -7346,7 +7408,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for origin.
      */
-    public int getOriginValue() {
+    @java.lang.Override public int getOriginValue() {
       return origin_;
     }
     /**
@@ -7359,6 +7421,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOriginValue(int value) {
+      
       origin_ = value;
       onChanged();
       return this;
@@ -7371,6 +7434,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin origin = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The origin.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin getOrigin() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin result = com.google.ads.googleads.v4.enums.FeedOriginEnum.FeedOrigin.valueOf(origin_);
@@ -7419,7 +7483,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -7433,6 +7497,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -7446,6 +7511,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus result = com.google.ads.googleads.v4.enums.FeedStatusEnum.FeedStatus.valueOf(status_);
@@ -7497,6 +7563,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
      * @return Whether the placesLocationFeedData field is set.
      */
+    @java.lang.Override
     public boolean hasPlacesLocationFeedData() {
       return systemFeedGenerationDataCase_ == 6;
     }
@@ -7509,6 +7576,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
      * @return The placesLocationFeedData.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData getPlacesLocationFeedData() {
       if (placesLocationFeedDataBuilder_ == null) {
         if (systemFeedGenerationDataCase_ == 6) {
@@ -7632,6 +7700,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.Feed.PlacesLocationFeedDataOrBuilder getPlacesLocationFeedDataOrBuilder() {
       if ((systemFeedGenerationDataCase_ == 6) && (placesLocationFeedDataBuilder_ != null)) {
         return placesLocationFeedDataBuilder_.getMessageOrBuilder();
@@ -7680,6 +7749,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData affiliate_location_feed_data = 7;</code>
      * @return Whether the affiliateLocationFeedData field is set.
      */
+    @java.lang.Override
     public boolean hasAffiliateLocationFeedData() {
       return systemFeedGenerationDataCase_ == 7;
     }
@@ -7692,6 +7762,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData affiliate_location_feed_data = 7;</code>
      * @return The affiliateLocationFeedData.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData getAffiliateLocationFeedData() {
       if (affiliateLocationFeedDataBuilder_ == null) {
         if (systemFeedGenerationDataCase_ == 7) {
@@ -7815,6 +7886,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedData affiliate_location_feed_data = 7;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.resources.Feed.AffiliateLocationFeedDataOrBuilder getAffiliateLocationFeedDataOrBuilder() {
       if ((systemFeedGenerationDataCase_ == 7) && (affiliateLocationFeedDataBuilder_ != null)) {
         return affiliateLocationFeedDataBuilder_.getMessageOrBuilder();

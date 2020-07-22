@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.FinalAppUrl}
  */
-public  final class FinalAppUrl extends
+public final class FinalAppUrl extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.FinalAppUrl)
     FinalAppUrlOrBuilder {
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType os_type = 1;</code>
    * @return The enum numeric value on the wire for osType.
    */
-  public int getOsTypeValue() {
+  @java.lang.Override public int getOsTypeValue() {
     return osType_;
   }
   /**
@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType os_type = 1;</code>
    * @return The osType.
    */
-  public com.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType getOsType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType getOsType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType result = com.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.valueOf(osType_);
     return result == null ? com.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.UNRECOGNIZED : result;
@@ -147,6 +147,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue url = 2;</code>
    * @return Whether the url field is set.
    */
+  @java.lang.Override
   public boolean hasUrl() {
     return url_ != null;
   }
@@ -164,6 +165,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue url = 2;</code>
    * @return The url.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getUrl() {
     return url_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : url_;
   }
@@ -180,6 +182,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue url = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getUrlOrBuilder() {
     return getUrl();
   }
@@ -528,7 +531,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType os_type = 1;</code>
      * @return The enum numeric value on the wire for osType.
      */
-    public int getOsTypeValue() {
+    @java.lang.Override public int getOsTypeValue() {
       return osType_;
     }
     /**
@@ -541,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOsTypeValue(int value) {
+      
       osType_ = value;
       onChanged();
       return this;
@@ -553,6 +557,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType os_type = 1;</code>
      * @return The osType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType getOsType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType result = com.google.ads.googleads.v4.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.valueOf(osType_);

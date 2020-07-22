@@ -9,73 +9,79 @@ public interface AdParameterOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the ad parameter.
+   * Immutable. The resource name of the ad parameter.
    * Ad parameter resource names have the form:
    * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the ad parameter.
+   * Immutable. The resource name of the ad parameter.
    * Ad parameter resource names have the form:
    * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ad group criterion that this ad parameter belongs to.
+   * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroupCriterion field is set.
    */
   boolean hasAdGroupCriterion();
   /**
    * <pre>
-   * The ad group criterion that this ad parameter belongs to.
+   * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroupCriterion.
    */
   com.google.protobuf.StringValue getAdGroupCriterion();
   /**
    * <pre>
-   * The ad group criterion that this ad parameter belongs to.
+   * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue ad_group_criterion = 2;</code>
+   * <code>.google.protobuf.StringValue ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getAdGroupCriterionOrBuilder();
 
   /**
    * <pre>
-   * The unique index of this ad parameter. Must be either 1 or 2.
+   * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+   * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the parameterIndex field is set.
    */
   boolean hasParameterIndex();
   /**
    * <pre>
-   * The unique index of this ad parameter. Must be either 1 or 2.
+   * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+   * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The parameterIndex.
    */
   com.google.protobuf.Int64Value getParameterIndex();
   /**
    * <pre>
-   * The unique index of this ad parameter. Must be either 1 or 2.
+   * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value parameter_index = 3;</code>
+   * <code>.google.protobuf.Int64Value parameter_index = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getParameterIndexOrBuilder();
 
@@ -97,6 +103,7 @@ public interface AdParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue insertion_text = 4;</code>
+   * @return Whether the insertionText field is set.
    */
   boolean hasInsertionText();
   /**
@@ -117,6 +124,7 @@ public interface AdParameterOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue insertion_text = 4;</code>
+   * @return The insertionText.
    */
   com.google.protobuf.StringValue getInsertionText();
   /**

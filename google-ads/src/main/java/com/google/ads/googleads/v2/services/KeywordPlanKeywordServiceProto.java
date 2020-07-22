@@ -52,65 +52,63 @@ public final class KeywordPlanKeywordServiceProto {
       "rd_plan_keyword_service.proto\022 google.ad" +
       "s.googleads.v2.services\032<google/ads/goog" +
       "leads/v2/resources/keyword_plan_keyword." +
-      "proto\032\034google/api/annotations.proto\032 goo" +
-      "gle/protobuf/field_mask.proto\032\027google/rp" +
-      "c/status.proto\032\027google/api/client.proto\"" +
-      "5\n\034GetKeywordPlanKeywordRequest\022\025\n\rresou" +
-      "rce_name\030\001 \001(\t\"\272\001\n MutateKeywordPlanKeyw" +
-      "ordsRequest\022\023\n\013customer_id\030\001 \001(\t\022Q\n\noper" +
-      "ations\030\002 \003(\0132=.google.ads.googleads.v2.s" +
-      "ervices.KeywordPlanKeywordOperation\022\027\n\017p" +
-      "artial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 " +
-      "\001(\010\"\377\001\n\033KeywordPlanKeywordOperation\022/\n\013u" +
-      "pdate_mask\030\004 \001(\0132\032.google.protobuf.Field" +
-      "Mask\022G\n\006create\030\001 \001(\01325.google.ads.google" +
-      "ads.v2.resources.KeywordPlanKeywordH\000\022G\n" +
-      "\006update\030\002 \001(\01325.google.ads.googleads.v2." +
-      "resources.KeywordPlanKeywordH\000\022\020\n\006remove" +
-      "\030\003 \001(\tH\000B\013\n\toperation\"\251\001\n!MutateKeywordP" +
-      "lanKeywordsResponse\0221\n\025partial_failure_e" +
-      "rror\030\003 \001(\0132\022.google.rpc.Status\022Q\n\007result" +
-      "s\030\002 \003(\0132@.google.ads.googleads.v2.servic" +
-      "es.MutateKeywordPlanKeywordResult\"7\n\036Mut" +
-      "ateKeywordPlanKeywordResult\022\025\n\rresource_" +
-      "name\030\001 \001(\t2\364\003\n\031KeywordPlanKeywordService" +
-      "\022\315\001\n\025GetKeywordPlanKeyword\022>.google.ads." +
-      "googleads.v2.services.GetKeywordPlanKeyw" +
-      "ordRequest\0325.google.ads.googleads.v2.res" +
-      "ources.KeywordPlanKeyword\"=\202\323\344\223\0027\0225/v2/{" +
-      "resource_name=customers/*/keywordPlanKey" +
-      "words/*}\022\351\001\n\031MutateKeywordPlanKeywords\022B" +
-      ".google.ads.googleads.v2.services.Mutate" +
-      "KeywordPlanKeywordsRequest\032C.google.ads." +
-      "googleads.v2.services.MutateKeywordPlanK" +
-      "eywordsResponse\"C\202\323\344\223\002=\"8/v2/customers/{" +
-      "customer_id=*}/keywordPlanKeywords:mutat" +
-      "e:\001*\032\033\312A\030googleads.googleapis.comB\205\002\n$co" +
-      "m.google.ads.googleads.v2.servicesB\036Keyw" +
-      "ordPlanKeywordServiceProtoP\001ZHgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v2/services;services\242\002\003GAA\252\002 Google.Ad" +
-      "s.GoogleAds.V2.Services\312\002 Google\\Ads\\Goo" +
-      "gleAds\\V2\\Services\352\002$Google::Ads::Google" +
-      "Ads::V2::Servicesb\006proto3"
+      "proto\032\034google/api/annotations.proto\032\027goo" +
+      "gle/api/client.proto\032\037google/api/field_b" +
+      "ehavior.proto\032\031google/api/resource.proto" +
+      "\032 google/protobuf/field_mask.proto\032\027goog" +
+      "le/rpc/status.proto\"j\n\034GetKeywordPlanKey" +
+      "wordRequest\022J\n\rresource_name\030\001 \001(\tB3\340A\002\372" +
+      "A-\n+googleads.googleapis.com/KeywordPlan" +
+      "Keyword\"\304\001\n MutateKeywordPlanKeywordsReq" +
+      "uest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022V\n\noperat" +
+      "ions\030\002 \003(\0132=.google.ads.googleads.v2.ser" +
+      "vices.KeywordPlanKeywordOperationB\003\340A\002\022\027" +
+      "\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_only" +
+      "\030\004 \001(\010\"\377\001\n\033KeywordPlanKeywordOperation\022/" +
+      "\n\013update_mask\030\004 \001(\0132\032.google.protobuf.Fi" +
+      "eldMask\022G\n\006create\030\001 \001(\01325.google.ads.goo" +
+      "gleads.v2.resources.KeywordPlanKeywordH\000" +
+      "\022G\n\006update\030\002 \001(\01325.google.ads.googleads." +
+      "v2.resources.KeywordPlanKeywordH\000\022\020\n\006rem" +
+      "ove\030\003 \001(\tH\000B\013\n\toperation\"\251\001\n!MutateKeywo" +
+      "rdPlanKeywordsResponse\0221\n\025partial_failur" +
+      "e_error\030\003 \001(\0132\022.google.rpc.Status\022Q\n\007res" +
+      "ults\030\002 \003(\0132@.google.ads.googleads.v2.ser" +
+      "vices.MutateKeywordPlanKeywordResult\"7\n\036" +
+      "MutateKeywordPlanKeywordResult\022\025\n\rresour" +
+      "ce_name\030\001 \001(\t2\235\004\n\031KeywordPlanKeywordServ" +
+      "ice\022\335\001\n\025GetKeywordPlanKeyword\022>.google.a" +
+      "ds.googleads.v2.services.GetKeywordPlanK" +
+      "eywordRequest\0325.google.ads.googleads.v2." +
+      "resources.KeywordPlanKeyword\"M\202\323\344\223\0027\0225/v" +
+      "2/{resource_name=customers/*/keywordPlan" +
+      "Keywords/*}\332A\rresource_name\022\202\002\n\031MutateKe" +
+      "ywordPlanKeywords\022B.google.ads.googleads" +
+      ".v2.services.MutateKeywordPlanKeywordsRe" +
+      "quest\032C.google.ads.googleads.v2.services" +
+      ".MutateKeywordPlanKeywordsResponse\"\\\202\323\344\223" +
+      "\002=\"8/v2/customers/{customer_id=*}/keywor" +
+      "dPlanKeywords:mutate:\001*\332A\026customer_id,op" +
+      "erations\032\033\312A\030googleads.googleapis.comB\205\002" +
+      "\n$com.google.ads.googleads.v2.servicesB\036" +
+      "KeywordPlanKeywordServiceProtoP\001ZHgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v2/services;services\242\002\003GAA\252\002 Googl" +
+      "e.Ads.GoogleAds.V2.Services\312\002 Google\\Ads" +
+      "\\GoogleAds\\V2\\Services\352\002$Google::Ads::Go" +
+      "ogleAds::V2::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.KeywordPlanKeywordProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_services_GetKeywordPlanKeywordRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetKeywordPlanKeywordRequest_fieldAccessorTable = new
@@ -144,14 +142,19 @@ public final class KeywordPlanKeywordServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.KeywordPlanKeywordProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

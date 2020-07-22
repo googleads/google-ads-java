@@ -30,35 +30,43 @@ public final class AgeRangeViewProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v1/resources/age_" +
       "range_view.proto\022!google.ads.googleads.v" +
-      "1.resources\032\034google/api/annotations.prot" +
-      "o\"%\n\014AgeRangeView\022\025\n\rresource_name\030\001 \001(\t" +
-      "B\376\001\n%com.google.ads.googleads.v1.resourc" +
-      "esB\021AgeRangeViewProtoP\001ZJgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v1/" +
-      "resources;resources\242\002\003GAA\252\002!Google.Ads.G" +
-      "oogleAds.V1.Resources\312\002!Google\\Ads\\Googl" +
-      "eAds\\V1\\Resources\352\002%Google::Ads::GoogleA" +
-      "ds::V1::Resourcesb\006proto3"
+      "1.resources\032\037google/api/field_behavior.p" +
+      "roto\032\031google/api/resource.proto\032\034google/" +
+      "api/annotations.proto\"\265\001\n\014AgeRangeView\022D" +
+      "\n\rresource_name\030\001 \001(\tB-\340A\003\372A\'\n%googleads" +
+      ".googleapis.com/AgeRangeView:_\352A\\\n%googl" +
+      "eads.googleapis.com/AgeRangeView\0223custom" +
+      "ers/{customer}/ageRangeViews/{age_range_" +
+      "view}B\376\001\n%com.google.ads.googleads.v1.re" +
+      "sourcesB\021AgeRangeViewProtoP\001ZJgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v1/resources;resources\242\002\003GAA\252\002!Google." +
+      "Ads.GoogleAds.V1.Resources\312\002!Google\\Ads\\" +
+      "GoogleAds\\V1\\Resources\352\002%Google::Ads::Go" +
+      "ogleAds::V1::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_AgeRangeView_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_AgeRangeView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_AgeRangeView_descriptor,
         new java.lang.String[] { "ResourceName", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

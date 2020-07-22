@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.Segments}
  */
-public  final class Segments extends
+public final class Segments extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.Segments)
     SegmentsOrBuilder {
@@ -44,6 +44,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Segments();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -56,9 +63,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
-    int mutable_bitField1_ = 0;
-    int mutable_bitField2_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -976,8 +980,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 3;</code>
+   * @return The enum numeric value on the wire for adNetworkType.
    */
-  public int getAdNetworkTypeValue() {
+  @java.lang.Override public int getAdNetworkTypeValue() {
     return adNetworkType_;
   }
   /**
@@ -986,8 +991,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 3;</code>
+   * @return The adNetworkType.
    */
-  public com.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType getAdNetworkType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType getAdNetworkType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType result = com.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType.valueOf(adNetworkType_);
     return result == null ? com.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType.UNRECOGNIZED : result;
@@ -1001,8 +1007,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType click_type = 26;</code>
+   * @return The enum numeric value on the wire for clickType.
    */
-  public int getClickTypeValue() {
+  @java.lang.Override public int getClickTypeValue() {
     return clickType_;
   }
   /**
@@ -1011,8 +1018,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType click_type = 26;</code>
+   * @return The clickType.
    */
-  public com.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType getClickType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType getClickType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType result = com.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType.valueOf(clickType_);
     return result == null ? com.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType.UNRECOGNIZED : result;
@@ -1026,7 +1034,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 52;</code>
+   * @return Whether the conversionAction field is set.
    */
+  @java.lang.Override
   public boolean hasConversionAction() {
     return conversionAction_ != null;
   }
@@ -1036,7 +1046,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action = 52;</code>
+   * @return The conversionAction.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionAction() {
     return conversionAction_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionAction_;
   }
@@ -1047,6 +1059,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_action = 52;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionActionOrBuilder() {
     return getConversionAction();
   }
@@ -1059,8 +1072,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_category = 53;</code>
+   * @return The enum numeric value on the wire for conversionActionCategory.
    */
-  public int getConversionActionCategoryValue() {
+  @java.lang.Override public int getConversionActionCategoryValue() {
     return conversionActionCategory_;
   }
   /**
@@ -1069,8 +1083,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_category = 53;</code>
+   * @return The conversionActionCategory.
    */
-  public com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory getConversionActionCategory() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory getConversionActionCategory() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory result = com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory.valueOf(conversionActionCategory_);
     return result == null ? com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory.UNRECOGNIZED : result;
@@ -1084,7 +1099,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action_name = 54;</code>
+   * @return Whether the conversionActionName field is set.
    */
+  @java.lang.Override
   public boolean hasConversionActionName() {
     return conversionActionName_ != null;
   }
@@ -1094,7 +1111,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_action_name = 54;</code>
+   * @return The conversionActionName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionActionName() {
     return conversionActionName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionActionName_;
   }
@@ -1105,6 +1124,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_action_name = 54;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionActionNameOrBuilder() {
     return getConversionActionName();
   }
@@ -1121,7 +1141,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue conversion_adjustment = 27;</code>
+   * @return Whether the conversionAdjustment field is set.
    */
+  @java.lang.Override
   public boolean hasConversionAdjustment() {
     return conversionAdjustment_ != null;
   }
@@ -1135,7 +1157,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue conversion_adjustment = 27;</code>
+   * @return The conversionAdjustment.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getConversionAdjustment() {
     return conversionAdjustment_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : conversionAdjustment_;
   }
@@ -1150,6 +1174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue conversion_adjustment = 27;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getConversionAdjustmentOrBuilder() {
     return getConversionAdjustment();
   }
@@ -1162,8 +1187,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType conversion_attribution_event_type = 2;</code>
+   * @return The enum numeric value on the wire for conversionAttributionEventType.
    */
-  public int getConversionAttributionEventTypeValue() {
+  @java.lang.Override public int getConversionAttributionEventTypeValue() {
     return conversionAttributionEventType_;
   }
   /**
@@ -1172,8 +1198,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType conversion_attribution_event_type = 2;</code>
+   * @return The conversionAttributionEventType.
    */
-  public com.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType getConversionAttributionEventType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType getConversionAttributionEventType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType result = com.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType.valueOf(conversionAttributionEventType_);
     return result == null ? com.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType.UNRECOGNIZED : result;
@@ -1188,8 +1215,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket conversion_lag_bucket = 50;</code>
+   * @return The enum numeric value on the wire for conversionLagBucket.
    */
-  public int getConversionLagBucketValue() {
+  @java.lang.Override public int getConversionLagBucketValue() {
     return conversionLagBucket_;
   }
   /**
@@ -1199,8 +1227,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket conversion_lag_bucket = 50;</code>
+   * @return The conversionLagBucket.
    */
-  public com.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket getConversionLagBucket() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket getConversionLagBucket() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket result = com.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket.valueOf(conversionLagBucket_);
     return result == null ? com.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket.UNRECOGNIZED : result;
@@ -1215,8 +1244,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket conversion_or_adjustment_lag_bucket = 51;</code>
+   * @return The enum numeric value on the wire for conversionOrAdjustmentLagBucket.
    */
-  public int getConversionOrAdjustmentLagBucketValue() {
+  @java.lang.Override public int getConversionOrAdjustmentLagBucketValue() {
     return conversionOrAdjustmentLagBucket_;
   }
   /**
@@ -1226,8 +1256,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket conversion_or_adjustment_lag_bucket = 51;</code>
+   * @return The conversionOrAdjustmentLagBucket.
    */
-  public com.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket getConversionOrAdjustmentLagBucket() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket getConversionOrAdjustmentLagBucket() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket result = com.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket.valueOf(conversionOrAdjustmentLagBucket_);
     return result == null ? com.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket.UNRECOGNIZED : result;
@@ -1242,7 +1273,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue date = 4;</code>
+   * @return Whether the date field is set.
    */
+  @java.lang.Override
   public boolean hasDate() {
     return date_ != null;
   }
@@ -1253,7 +1286,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue date = 4;</code>
+   * @return The date.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDate() {
     return date_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : date_;
   }
@@ -1265,6 +1300,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue date = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDateOrBuilder() {
     return getDate();
   }
@@ -1277,8 +1313,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+   * @return The enum numeric value on the wire for dayOfWeek.
    */
-  public int getDayOfWeekValue() {
+  @java.lang.Override public int getDayOfWeekValue() {
     return dayOfWeek_;
   }
   /**
@@ -1287,8 +1324,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+   * @return The dayOfWeek.
    */
-  public com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
     return result == null ? com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
@@ -1302,8 +1340,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device = 1;</code>
+   * @return The enum numeric value on the wire for device.
    */
-  public int getDeviceValue() {
+  @java.lang.Override public int getDeviceValue() {
     return device_;
   }
   /**
@@ -1312,8 +1351,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device = 1;</code>
+   * @return The device.
    */
-  public com.google.ads.googleads.v2.enums.DeviceEnum.Device getDevice() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.DeviceEnum.Device getDevice() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.DeviceEnum.Device result = com.google.ads.googleads.v2.enums.DeviceEnum.Device.valueOf(device_);
     return result == null ? com.google.ads.googleads.v2.enums.DeviceEnum.Device.UNRECOGNIZED : result;
@@ -1327,8 +1367,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource external_conversion_source = 55;</code>
+   * @return The enum numeric value on the wire for externalConversionSource.
    */
-  public int getExternalConversionSourceValue() {
+  @java.lang.Override public int getExternalConversionSourceValue() {
     return externalConversionSource_;
   }
   /**
@@ -1337,8 +1378,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource external_conversion_source = 55;</code>
+   * @return The externalConversionSource.
    */
-  public com.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource getExternalConversionSource() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource getExternalConversionSource() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource result = com.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource.valueOf(externalConversionSource_);
     return result == null ? com.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource.UNRECOGNIZED : result;
@@ -1352,7 +1394,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+   * @return Whether the geoTargetAirport field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetAirport() {
     return geoTargetAirport_ != null;
   }
@@ -1362,7 +1406,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+   * @return The geoTargetAirport.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetAirport() {
     return geoTargetAirport_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetAirport_;
   }
@@ -1373,6 +1419,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetAirportOrBuilder() {
     return getGeoTargetAirport();
   }
@@ -1385,7 +1432,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_canton = 76;</code>
+   * @return Whether the geoTargetCanton field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetCanton() {
     return geoTargetCanton_ != null;
   }
@@ -1395,7 +1444,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_canton = 76;</code>
+   * @return The geoTargetCanton.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetCanton() {
     return geoTargetCanton_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetCanton_;
   }
@@ -1406,6 +1457,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_canton = 76;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetCantonOrBuilder() {
     return getGeoTargetCanton();
   }
@@ -1418,7 +1470,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_city = 62;</code>
+   * @return Whether the geoTargetCity field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetCity() {
     return geoTargetCity_ != null;
   }
@@ -1428,7 +1482,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_city = 62;</code>
+   * @return The geoTargetCity.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetCity() {
     return geoTargetCity_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetCity_;
   }
@@ -1439,6 +1495,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_city = 62;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetCityOrBuilder() {
     return getGeoTargetCity();
   }
@@ -1451,7 +1508,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_country = 77;</code>
+   * @return Whether the geoTargetCountry field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetCountry() {
     return geoTargetCountry_ != null;
   }
@@ -1461,7 +1520,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_country = 77;</code>
+   * @return The geoTargetCountry.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetCountry() {
     return geoTargetCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetCountry_;
   }
@@ -1472,6 +1533,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_country = 77;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetCountryOrBuilder() {
     return getGeoTargetCountry();
   }
@@ -1484,7 +1546,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+   * @return Whether the geoTargetCounty field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetCounty() {
     return geoTargetCounty_ != null;
   }
@@ -1494,7 +1558,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+   * @return The geoTargetCounty.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetCounty() {
     return geoTargetCounty_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetCounty_;
   }
@@ -1505,6 +1571,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetCountyOrBuilder() {
     return getGeoTargetCounty();
   }
@@ -1517,7 +1584,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+   * @return Whether the geoTargetDistrict field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetDistrict() {
     return geoTargetDistrict_ != null;
   }
@@ -1527,7 +1596,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+   * @return The geoTargetDistrict.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetDistrict() {
     return geoTargetDistrict_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetDistrict_;
   }
@@ -1538,6 +1609,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetDistrictOrBuilder() {
     return getGeoTargetDistrict();
   }
@@ -1550,7 +1622,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_metro = 63;</code>
+   * @return Whether the geoTargetMetro field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetMetro() {
     return geoTargetMetro_ != null;
   }
@@ -1560,7 +1634,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_metro = 63;</code>
+   * @return The geoTargetMetro.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetMetro() {
     return geoTargetMetro_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetMetro_;
   }
@@ -1571,6 +1647,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_metro = 63;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetMetroOrBuilder() {
     return getGeoTargetMetro();
   }
@@ -1584,7 +1661,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+   * @return Whether the geoTargetMostSpecificLocation field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetMostSpecificLocation() {
     return geoTargetMostSpecificLocation_ != null;
   }
@@ -1595,7 +1674,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+   * @return The geoTargetMostSpecificLocation.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetMostSpecificLocation() {
     return geoTargetMostSpecificLocation_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetMostSpecificLocation_;
   }
@@ -1607,6 +1688,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetMostSpecificLocationOrBuilder() {
     return getGeoTargetMostSpecificLocation();
   }
@@ -1619,7 +1701,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+   * @return Whether the geoTargetPostalCode field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetPostalCode() {
     return geoTargetPostalCode_ != null;
   }
@@ -1629,7 +1713,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+   * @return The geoTargetPostalCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetPostalCode() {
     return geoTargetPostalCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetPostalCode_;
   }
@@ -1640,6 +1726,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetPostalCodeOrBuilder() {
     return getGeoTargetPostalCode();
   }
@@ -1652,7 +1739,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+   * @return Whether the geoTargetProvince field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetProvince() {
     return geoTargetProvince_ != null;
   }
@@ -1662,7 +1751,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+   * @return The geoTargetProvince.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetProvince() {
     return geoTargetProvince_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetProvince_;
   }
@@ -1673,6 +1764,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetProvinceOrBuilder() {
     return getGeoTargetProvince();
   }
@@ -1685,7 +1777,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_region = 64;</code>
+   * @return Whether the geoTargetRegion field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetRegion() {
     return geoTargetRegion_ != null;
   }
@@ -1695,7 +1789,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_region = 64;</code>
+   * @return The geoTargetRegion.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetRegion() {
     return geoTargetRegion_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetRegion_;
   }
@@ -1706,6 +1802,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_region = 64;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetRegionOrBuilder() {
     return getGeoTargetRegion();
   }
@@ -1718,7 +1815,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+   * @return Whether the geoTargetState field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetState() {
     return geoTargetState_ != null;
   }
@@ -1728,7 +1827,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+   * @return The geoTargetState.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getGeoTargetState() {
     return geoTargetState_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : geoTargetState_;
   }
@@ -1739,6 +1840,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getGeoTargetStateOrBuilder() {
     return getGeoTargetState();
   }
@@ -1751,7 +1853,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value hotel_booking_window_days = 6;</code>
+   * @return Whether the hotelBookingWindowDays field is set.
    */
+  @java.lang.Override
   public boolean hasHotelBookingWindowDays() {
     return hotelBookingWindowDays_ != null;
   }
@@ -1761,7 +1865,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value hotel_booking_window_days = 6;</code>
+   * @return The hotelBookingWindowDays.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getHotelBookingWindowDays() {
     return hotelBookingWindowDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelBookingWindowDays_;
   }
@@ -1772,6 +1878,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value hotel_booking_window_days = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getHotelBookingWindowDaysOrBuilder() {
     return getHotelBookingWindowDays();
   }
@@ -1784,7 +1891,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value hotel_center_id = 7;</code>
+   * @return Whether the hotelCenterId field is set.
    */
+  @java.lang.Override
   public boolean hasHotelCenterId() {
     return hotelCenterId_ != null;
   }
@@ -1794,7 +1903,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value hotel_center_id = 7;</code>
+   * @return The hotelCenterId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getHotelCenterId() {
     return hotelCenterId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
   }
@@ -1805,6 +1916,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value hotel_center_id = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder() {
     return getHotelCenterId();
   }
@@ -1817,7 +1929,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_check_in_date = 8;</code>
+   * @return Whether the hotelCheckInDate field is set.
    */
+  @java.lang.Override
   public boolean hasHotelCheckInDate() {
     return hotelCheckInDate_ != null;
   }
@@ -1827,7 +1941,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_check_in_date = 8;</code>
+   * @return The hotelCheckInDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHotelCheckInDate() {
     return hotelCheckInDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCheckInDate_;
   }
@@ -1838,6 +1954,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue hotel_check_in_date = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHotelCheckInDateOrBuilder() {
     return getHotelCheckInDate();
   }
@@ -1850,8 +1967,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 9;</code>
+   * @return The enum numeric value on the wire for hotelCheckInDayOfWeek.
    */
-  public int getHotelCheckInDayOfWeekValue() {
+  @java.lang.Override public int getHotelCheckInDayOfWeekValue() {
     return hotelCheckInDayOfWeek_;
   }
   /**
@@ -1860,8 +1978,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 9;</code>
+   * @return The hotelCheckInDayOfWeek.
    */
-  public com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek getHotelCheckInDayOfWeek() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek getHotelCheckInDayOfWeek() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek.valueOf(hotelCheckInDayOfWeek_);
     return result == null ? com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
@@ -1875,7 +1994,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_city = 10;</code>
+   * @return Whether the hotelCity field is set.
    */
+  @java.lang.Override
   public boolean hasHotelCity() {
     return hotelCity_ != null;
   }
@@ -1885,7 +2006,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_city = 10;</code>
+   * @return The hotelCity.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHotelCity() {
     return hotelCity_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCity_;
   }
@@ -1896,6 +2019,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue hotel_city = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHotelCityOrBuilder() {
     return getHotelCity();
   }
@@ -1908,7 +2032,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hotel_class = 11;</code>
+   * @return Whether the hotelClass field is set.
    */
+  @java.lang.Override
   public boolean hasHotelClass() {
     return hotelClass_ != null;
   }
@@ -1918,7 +2044,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hotel_class = 11;</code>
+   * @return The hotelClass.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getHotelClass() {
     return hotelClass_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hotelClass_;
   }
@@ -1929,6 +2057,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value hotel_class = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getHotelClassOrBuilder() {
     return getHotelClass();
   }
@@ -1941,7 +2070,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_country = 12;</code>
+   * @return Whether the hotelCountry field is set.
    */
+  @java.lang.Override
   public boolean hasHotelCountry() {
     return hotelCountry_ != null;
   }
@@ -1951,7 +2082,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_country = 12;</code>
+   * @return The hotelCountry.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHotelCountry() {
     return hotelCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelCountry_;
   }
@@ -1962,6 +2095,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue hotel_country = 12;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHotelCountryOrBuilder() {
     return getHotelCountry();
   }
@@ -1974,8 +2108,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 13;</code>
+   * @return The enum numeric value on the wire for hotelDateSelectionType.
    */
-  public int getHotelDateSelectionTypeValue() {
+  @java.lang.Override public int getHotelDateSelectionTypeValue() {
     return hotelDateSelectionType_;
   }
   /**
@@ -1984,8 +2119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 13;</code>
+   * @return The hotelDateSelectionType.
    */
-  public com.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getHotelDateSelectionType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getHotelDateSelectionType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType result = com.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.valueOf(hotelDateSelectionType_);
     return result == null ? com.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.UNRECOGNIZED : result;
@@ -1999,7 +2135,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hotel_length_of_stay = 14;</code>
+   * @return Whether the hotelLengthOfStay field is set.
    */
+  @java.lang.Override
   public boolean hasHotelLengthOfStay() {
     return hotelLengthOfStay_ != null;
   }
@@ -2009,7 +2147,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hotel_length_of_stay = 14;</code>
+   * @return The hotelLengthOfStay.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getHotelLengthOfStay() {
     return hotelLengthOfStay_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hotelLengthOfStay_;
   }
@@ -2020,6 +2160,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value hotel_length_of_stay = 14;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getHotelLengthOfStayOrBuilder() {
     return getHotelLengthOfStay();
   }
@@ -2032,7 +2173,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+   * @return Whether the hotelRateRuleId field is set.
    */
+  @java.lang.Override
   public boolean hasHotelRateRuleId() {
     return hotelRateRuleId_ != null;
   }
@@ -2042,7 +2185,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+   * @return The hotelRateRuleId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHotelRateRuleId() {
     return hotelRateRuleId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelRateRuleId_;
   }
@@ -2053,6 +2198,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHotelRateRuleIdOrBuilder() {
     return getHotelRateRuleId();
   }
@@ -2065,8 +2211,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+   * @return The enum numeric value on the wire for hotelRateType.
    */
-  public int getHotelRateTypeValue() {
+  @java.lang.Override public int getHotelRateTypeValue() {
     return hotelRateType_;
   }
   /**
@@ -2075,8 +2222,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+   * @return The hotelRateType.
    */
-  public com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType getHotelRateType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType getHotelRateType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType result = com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType.valueOf(hotelRateType_);
     return result == null ? com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType.UNRECOGNIZED : result;
@@ -2090,8 +2238,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+   * @return The enum numeric value on the wire for hotelPriceBucket.
    */
-  public int getHotelPriceBucketValue() {
+  @java.lang.Override public int getHotelPriceBucketValue() {
     return hotelPriceBucket_;
   }
   /**
@@ -2100,8 +2249,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+   * @return The hotelPriceBucket.
    */
-  public com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket getHotelPriceBucket() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket getHotelPriceBucket() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket result = com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket.valueOf(hotelPriceBucket_);
     return result == null ? com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket.UNRECOGNIZED : result;
@@ -2115,7 +2265,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_state = 15;</code>
+   * @return Whether the hotelState field is set.
    */
+  @java.lang.Override
   public boolean hasHotelState() {
     return hotelState_ != null;
   }
@@ -2125,7 +2277,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue hotel_state = 15;</code>
+   * @return The hotelState.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHotelState() {
     return hotelState_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : hotelState_;
   }
@@ -2136,6 +2290,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue hotel_state = 15;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHotelStateOrBuilder() {
     return getHotelState();
   }
@@ -2148,7 +2303,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hour = 16;</code>
+   * @return Whether the hour field is set.
    */
+  @java.lang.Override
   public boolean hasHour() {
     return hour_ != null;
   }
@@ -2158,7 +2315,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value hour = 16;</code>
+   * @return The hour.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getHour() {
     return hour_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : hour_;
   }
@@ -2169,6 +2328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value hour = 16;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getHourOrBuilder() {
     return getHour();
   }
@@ -2183,7 +2343,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue interaction_on_this_extension = 49;</code>
+   * @return Whether the interactionOnThisExtension field is set.
    */
+  @java.lang.Override
   public boolean hasInteractionOnThisExtension() {
     return interactionOnThisExtension_ != null;
   }
@@ -2195,7 +2357,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue interaction_on_this_extension = 49;</code>
+   * @return The interactionOnThisExtension.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getInteractionOnThisExtension() {
     return interactionOnThisExtension_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : interactionOnThisExtension_;
   }
@@ -2208,6 +2372,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue interaction_on_this_extension = 49;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getInteractionOnThisExtensionOrBuilder() {
     return getInteractionOnThisExtension();
   }
@@ -2220,7 +2385,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Keyword keyword = 61;</code>
+   * @return Whether the keyword field is set.
    */
+  @java.lang.Override
   public boolean hasKeyword() {
     return keyword_ != null;
   }
@@ -2230,7 +2397,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Keyword keyword = 61;</code>
+   * @return The keyword.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.Keyword getKeyword() {
     return keyword_ == null ? com.google.ads.googleads.v2.common.Keyword.getDefaultInstance() : keyword_;
   }
@@ -2241,6 +2410,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.Keyword keyword = 61;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.KeywordOrBuilder getKeywordOrBuilder() {
     return getKeyword();
   }
@@ -2254,7 +2424,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue month = 17;</code>
+   * @return Whether the month field is set.
    */
+  @java.lang.Override
   public boolean hasMonth() {
     return month_ != null;
   }
@@ -2265,7 +2437,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue month = 17;</code>
+   * @return The month.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMonth() {
     return month_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : month_;
   }
@@ -2277,6 +2451,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue month = 17;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMonthOrBuilder() {
     return getMonth();
   }
@@ -2289,8 +2464,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
+   * @return The enum numeric value on the wire for monthOfYear.
    */
-  public int getMonthOfYearValue() {
+  @java.lang.Override public int getMonthOfYearValue() {
     return monthOfYear_;
   }
   /**
@@ -2299,8 +2475,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
+   * @return The monthOfYear.
    */
-  public com.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear getMonthOfYear() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear getMonthOfYear() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear.valueOf(monthOfYear_);
     return result == null ? com.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
@@ -2314,7 +2491,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue partner_hotel_id = 19;</code>
+   * @return Whether the partnerHotelId field is set.
    */
+  @java.lang.Override
   public boolean hasPartnerHotelId() {
     return partnerHotelId_ != null;
   }
@@ -2324,7 +2503,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue partner_hotel_id = 19;</code>
+   * @return The partnerHotelId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPartnerHotelId() {
     return partnerHotelId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : partnerHotelId_;
   }
@@ -2335,6 +2516,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue partner_hotel_id = 19;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPartnerHotelIdOrBuilder() {
     return getPartnerHotelId();
   }
@@ -2347,8 +2529,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 20;</code>
+   * @return The enum numeric value on the wire for placeholderType.
    */
-  public int getPlaceholderTypeValue() {
+  @java.lang.Override public int getPlaceholderTypeValue() {
     return placeholderType_;
   }
   /**
@@ -2357,8 +2540,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 20;</code>
+   * @return The placeholderType.
    */
-  public com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderType_);
     return result == null ? com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType.UNRECOGNIZED : result;
@@ -2372,7 +2556,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.UInt64Value product_aggregator_id = 28;</code>
+   * @return Whether the productAggregatorId field is set.
    */
+  @java.lang.Override
   public boolean hasProductAggregatorId() {
     return productAggregatorId_ != null;
   }
@@ -2382,7 +2568,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.UInt64Value product_aggregator_id = 28;</code>
+   * @return The productAggregatorId.
    */
+  @java.lang.Override
   public com.google.protobuf.UInt64Value getProductAggregatorId() {
     return productAggregatorId_ == null ? com.google.protobuf.UInt64Value.getDefaultInstance() : productAggregatorId_;
   }
@@ -2393,6 +2581,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.UInt64Value product_aggregator_id = 28;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.UInt64ValueOrBuilder getProductAggregatorIdOrBuilder() {
     return getProductAggregatorId();
   }
@@ -2405,7 +2594,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level1 = 56;</code>
+   * @return Whether the productBiddingCategoryLevel1 field is set.
    */
+  @java.lang.Override
   public boolean hasProductBiddingCategoryLevel1() {
     return productBiddingCategoryLevel1_ != null;
   }
@@ -2415,7 +2606,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level1 = 56;</code>
+   * @return The productBiddingCategoryLevel1.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductBiddingCategoryLevel1() {
     return productBiddingCategoryLevel1_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productBiddingCategoryLevel1_;
   }
@@ -2426,6 +2619,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level1 = 56;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductBiddingCategoryLevel1OrBuilder() {
     return getProductBiddingCategoryLevel1();
   }
@@ -2438,7 +2632,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level2 = 57;</code>
+   * @return Whether the productBiddingCategoryLevel2 field is set.
    */
+  @java.lang.Override
   public boolean hasProductBiddingCategoryLevel2() {
     return productBiddingCategoryLevel2_ != null;
   }
@@ -2448,7 +2644,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level2 = 57;</code>
+   * @return The productBiddingCategoryLevel2.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductBiddingCategoryLevel2() {
     return productBiddingCategoryLevel2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productBiddingCategoryLevel2_;
   }
@@ -2459,6 +2657,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level2 = 57;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductBiddingCategoryLevel2OrBuilder() {
     return getProductBiddingCategoryLevel2();
   }
@@ -2471,7 +2670,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level3 = 58;</code>
+   * @return Whether the productBiddingCategoryLevel3 field is set.
    */
+  @java.lang.Override
   public boolean hasProductBiddingCategoryLevel3() {
     return productBiddingCategoryLevel3_ != null;
   }
@@ -2481,7 +2682,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level3 = 58;</code>
+   * @return The productBiddingCategoryLevel3.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductBiddingCategoryLevel3() {
     return productBiddingCategoryLevel3_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productBiddingCategoryLevel3_;
   }
@@ -2492,6 +2695,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level3 = 58;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductBiddingCategoryLevel3OrBuilder() {
     return getProductBiddingCategoryLevel3();
   }
@@ -2504,7 +2708,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level4 = 59;</code>
+   * @return Whether the productBiddingCategoryLevel4 field is set.
    */
+  @java.lang.Override
   public boolean hasProductBiddingCategoryLevel4() {
     return productBiddingCategoryLevel4_ != null;
   }
@@ -2514,7 +2720,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level4 = 59;</code>
+   * @return The productBiddingCategoryLevel4.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductBiddingCategoryLevel4() {
     return productBiddingCategoryLevel4_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productBiddingCategoryLevel4_;
   }
@@ -2525,6 +2733,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level4 = 59;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductBiddingCategoryLevel4OrBuilder() {
     return getProductBiddingCategoryLevel4();
   }
@@ -2537,7 +2746,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level5 = 60;</code>
+   * @return Whether the productBiddingCategoryLevel5 field is set.
    */
+  @java.lang.Override
   public boolean hasProductBiddingCategoryLevel5() {
     return productBiddingCategoryLevel5_ != null;
   }
@@ -2547,7 +2758,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level5 = 60;</code>
+   * @return The productBiddingCategoryLevel5.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductBiddingCategoryLevel5() {
     return productBiddingCategoryLevel5_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productBiddingCategoryLevel5_;
   }
@@ -2558,6 +2771,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_bidding_category_level5 = 60;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductBiddingCategoryLevel5OrBuilder() {
     return getProductBiddingCategoryLevel5();
   }
@@ -2570,7 +2784,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_brand = 29;</code>
+   * @return Whether the productBrand field is set.
    */
+  @java.lang.Override
   public boolean hasProductBrand() {
     return productBrand_ != null;
   }
@@ -2580,7 +2796,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_brand = 29;</code>
+   * @return The productBrand.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductBrand() {
     return productBrand_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productBrand_;
   }
@@ -2591,6 +2809,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_brand = 29;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductBrandOrBuilder() {
     return getProductBrand();
   }
@@ -2603,8 +2822,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel product_channel = 30;</code>
+   * @return The enum numeric value on the wire for productChannel.
    */
-  public int getProductChannelValue() {
+  @java.lang.Override public int getProductChannelValue() {
     return productChannel_;
   }
   /**
@@ -2613,8 +2833,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel product_channel = 30;</code>
+   * @return The productChannel.
    */
-  public com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel getProductChannel() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel getProductChannel() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel result = com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel.valueOf(productChannel_);
     return result == null ? com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel.UNRECOGNIZED : result;
@@ -2628,8 +2849,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity product_channel_exclusivity = 31;</code>
+   * @return The enum numeric value on the wire for productChannelExclusivity.
    */
-  public int getProductChannelExclusivityValue() {
+  @java.lang.Override public int getProductChannelExclusivityValue() {
     return productChannelExclusivity_;
   }
   /**
@@ -2638,8 +2860,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity product_channel_exclusivity = 31;</code>
+   * @return The productChannelExclusivity.
    */
-  public com.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity getProductChannelExclusivity() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity getProductChannelExclusivity() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity result = com.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.valueOf(productChannelExclusivity_);
     return result == null ? com.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.UNRECOGNIZED : result;
@@ -2653,8 +2876,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition product_condition = 32;</code>
+   * @return The enum numeric value on the wire for productCondition.
    */
-  public int getProductConditionValue() {
+  @java.lang.Override public int getProductConditionValue() {
     return productCondition_;
   }
   /**
@@ -2663,8 +2887,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition product_condition = 32;</code>
+   * @return The productCondition.
    */
-  public com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition getProductCondition() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition getProductCondition() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition result = com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition.valueOf(productCondition_);
     return result == null ? com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition.UNRECOGNIZED : result;
@@ -2679,7 +2904,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
+   * @return Whether the productCountry field is set.
    */
+  @java.lang.Override
   public boolean hasProductCountry() {
     return productCountry_ != null;
   }
@@ -2690,7 +2917,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
+   * @return The productCountry.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductCountry() {
     return productCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productCountry_;
   }
@@ -2702,6 +2931,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_country = 33;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductCountryOrBuilder() {
     return getProductCountry();
   }
@@ -2714,7 +2944,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute0 = 34;</code>
+   * @return Whether the productCustomAttribute0 field is set.
    */
+  @java.lang.Override
   public boolean hasProductCustomAttribute0() {
     return productCustomAttribute0_ != null;
   }
@@ -2724,7 +2956,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute0 = 34;</code>
+   * @return The productCustomAttribute0.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductCustomAttribute0() {
     return productCustomAttribute0_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productCustomAttribute0_;
   }
@@ -2735,6 +2969,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_custom_attribute0 = 34;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductCustomAttribute0OrBuilder() {
     return getProductCustomAttribute0();
   }
@@ -2747,7 +2982,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute1 = 35;</code>
+   * @return Whether the productCustomAttribute1 field is set.
    */
+  @java.lang.Override
   public boolean hasProductCustomAttribute1() {
     return productCustomAttribute1_ != null;
   }
@@ -2757,7 +2994,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute1 = 35;</code>
+   * @return The productCustomAttribute1.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductCustomAttribute1() {
     return productCustomAttribute1_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productCustomAttribute1_;
   }
@@ -2768,6 +3007,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_custom_attribute1 = 35;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductCustomAttribute1OrBuilder() {
     return getProductCustomAttribute1();
   }
@@ -2780,7 +3020,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute2 = 36;</code>
+   * @return Whether the productCustomAttribute2 field is set.
    */
+  @java.lang.Override
   public boolean hasProductCustomAttribute2() {
     return productCustomAttribute2_ != null;
   }
@@ -2790,7 +3032,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute2 = 36;</code>
+   * @return The productCustomAttribute2.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductCustomAttribute2() {
     return productCustomAttribute2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productCustomAttribute2_;
   }
@@ -2801,6 +3045,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_custom_attribute2 = 36;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductCustomAttribute2OrBuilder() {
     return getProductCustomAttribute2();
   }
@@ -2813,7 +3058,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute3 = 37;</code>
+   * @return Whether the productCustomAttribute3 field is set.
    */
+  @java.lang.Override
   public boolean hasProductCustomAttribute3() {
     return productCustomAttribute3_ != null;
   }
@@ -2823,7 +3070,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute3 = 37;</code>
+   * @return The productCustomAttribute3.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductCustomAttribute3() {
     return productCustomAttribute3_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productCustomAttribute3_;
   }
@@ -2834,6 +3083,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_custom_attribute3 = 37;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductCustomAttribute3OrBuilder() {
     return getProductCustomAttribute3();
   }
@@ -2846,7 +3096,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute4 = 38;</code>
+   * @return Whether the productCustomAttribute4 field is set.
    */
+  @java.lang.Override
   public boolean hasProductCustomAttribute4() {
     return productCustomAttribute4_ != null;
   }
@@ -2856,7 +3108,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_custom_attribute4 = 38;</code>
+   * @return The productCustomAttribute4.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductCustomAttribute4() {
     return productCustomAttribute4_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productCustomAttribute4_;
   }
@@ -2867,6 +3121,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_custom_attribute4 = 38;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductCustomAttribute4OrBuilder() {
     return getProductCustomAttribute4();
   }
@@ -2879,7 +3134,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_item_id = 39;</code>
+   * @return Whether the productItemId field is set.
    */
+  @java.lang.Override
   public boolean hasProductItemId() {
     return productItemId_ != null;
   }
@@ -2889,7 +3146,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_item_id = 39;</code>
+   * @return The productItemId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductItemId() {
     return productItemId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productItemId_;
   }
@@ -2900,6 +3159,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_item_id = 39;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductItemIdOrBuilder() {
     return getProductItemId();
   }
@@ -2912,7 +3172,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_language = 40;</code>
+   * @return Whether the productLanguage field is set.
    */
+  @java.lang.Override
   public boolean hasProductLanguage() {
     return productLanguage_ != null;
   }
@@ -2922,7 +3184,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_language = 40;</code>
+   * @return The productLanguage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductLanguage() {
     return productLanguage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productLanguage_;
   }
@@ -2933,6 +3197,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_language = 40;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductLanguageOrBuilder() {
     return getProductLanguage();
   }
@@ -2945,7 +3210,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.UInt64Value product_merchant_id = 41;</code>
+   * @return Whether the productMerchantId field is set.
    */
+  @java.lang.Override
   public boolean hasProductMerchantId() {
     return productMerchantId_ != null;
   }
@@ -2955,7 +3222,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.UInt64Value product_merchant_id = 41;</code>
+   * @return The productMerchantId.
    */
+  @java.lang.Override
   public com.google.protobuf.UInt64Value getProductMerchantId() {
     return productMerchantId_ == null ? com.google.protobuf.UInt64Value.getDefaultInstance() : productMerchantId_;
   }
@@ -2966,6 +3235,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.UInt64Value product_merchant_id = 41;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.UInt64ValueOrBuilder getProductMerchantIdOrBuilder() {
     return getProductMerchantId();
   }
@@ -2978,7 +3248,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_store_id = 42;</code>
+   * @return Whether the productStoreId field is set.
    */
+  @java.lang.Override
   public boolean hasProductStoreId() {
     return productStoreId_ != null;
   }
@@ -2988,7 +3260,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_store_id = 42;</code>
+   * @return The productStoreId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductStoreId() {
     return productStoreId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productStoreId_;
   }
@@ -2999,6 +3273,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_store_id = 42;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductStoreIdOrBuilder() {
     return getProductStoreId();
   }
@@ -3011,7 +3286,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_title = 43;</code>
+   * @return Whether the productTitle field is set.
    */
+  @java.lang.Override
   public boolean hasProductTitle() {
     return productTitle_ != null;
   }
@@ -3021,7 +3298,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_title = 43;</code>
+   * @return The productTitle.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductTitle() {
     return productTitle_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productTitle_;
   }
@@ -3032,6 +3311,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_title = 43;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductTitleOrBuilder() {
     return getProductTitle();
   }
@@ -3044,7 +3324,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l1 = 44;</code>
+   * @return Whether the productTypeL1 field is set.
    */
+  @java.lang.Override
   public boolean hasProductTypeL1() {
     return productTypeL1_ != null;
   }
@@ -3054,7 +3336,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l1 = 44;</code>
+   * @return The productTypeL1.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductTypeL1() {
     return productTypeL1_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productTypeL1_;
   }
@@ -3065,6 +3349,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_type_l1 = 44;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductTypeL1OrBuilder() {
     return getProductTypeL1();
   }
@@ -3077,7 +3362,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l2 = 45;</code>
+   * @return Whether the productTypeL2 field is set.
    */
+  @java.lang.Override
   public boolean hasProductTypeL2() {
     return productTypeL2_ != null;
   }
@@ -3087,7 +3374,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l2 = 45;</code>
+   * @return The productTypeL2.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductTypeL2() {
     return productTypeL2_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productTypeL2_;
   }
@@ -3098,6 +3387,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_type_l2 = 45;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductTypeL2OrBuilder() {
     return getProductTypeL2();
   }
@@ -3110,7 +3400,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l3 = 46;</code>
+   * @return Whether the productTypeL3 field is set.
    */
+  @java.lang.Override
   public boolean hasProductTypeL3() {
     return productTypeL3_ != null;
   }
@@ -3120,7 +3412,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l3 = 46;</code>
+   * @return The productTypeL3.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductTypeL3() {
     return productTypeL3_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productTypeL3_;
   }
@@ -3131,6 +3425,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_type_l3 = 46;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductTypeL3OrBuilder() {
     return getProductTypeL3();
   }
@@ -3143,7 +3438,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l4 = 47;</code>
+   * @return Whether the productTypeL4 field is set.
    */
+  @java.lang.Override
   public boolean hasProductTypeL4() {
     return productTypeL4_ != null;
   }
@@ -3153,7 +3450,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l4 = 47;</code>
+   * @return The productTypeL4.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductTypeL4() {
     return productTypeL4_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productTypeL4_;
   }
@@ -3164,6 +3463,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_type_l4 = 47;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductTypeL4OrBuilder() {
     return getProductTypeL4();
   }
@@ -3176,7 +3476,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l5 = 48;</code>
+   * @return Whether the productTypeL5 field is set.
    */
+  @java.lang.Override
   public boolean hasProductTypeL5() {
     return productTypeL5_ != null;
   }
@@ -3186,7 +3488,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_type_l5 = 48;</code>
+   * @return The productTypeL5.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getProductTypeL5() {
     return productTypeL5_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : productTypeL5_;
   }
@@ -3197,6 +3501,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue product_type_l5 = 48;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getProductTypeL5OrBuilder() {
     return getProductTypeL5();
   }
@@ -3211,7 +3516,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue quarter = 21;</code>
+   * @return Whether the quarter field is set.
    */
+  @java.lang.Override
   public boolean hasQuarter() {
     return quarter_ != null;
   }
@@ -3223,7 +3530,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue quarter = 21;</code>
+   * @return The quarter.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getQuarter() {
     return quarter_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : quarter_;
   }
@@ -3236,6 +3545,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue quarter = 21;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getQuarterOrBuilder() {
     return getQuarter();
   }
@@ -3248,8 +3558,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+   * @return The enum numeric value on the wire for searchEngineResultsPageType.
    */
-  public int getSearchEngineResultsPageTypeValue() {
+  @java.lang.Override public int getSearchEngineResultsPageTypeValue() {
     return searchEngineResultsPageType_;
   }
   /**
@@ -3258,8 +3569,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+   * @return The searchEngineResultsPageType.
    */
-  public com.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType getSearchEngineResultsPageType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType getSearchEngineResultsPageType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType result = com.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.valueOf(searchEngineResultsPageType_);
     return result == null ? com.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.UNRECOGNIZED : result;
@@ -3273,8 +3585,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 22;</code>
+   * @return The enum numeric value on the wire for searchTermMatchType.
    */
-  public int getSearchTermMatchTypeValue() {
+  @java.lang.Override public int getSearchTermMatchTypeValue() {
     return searchTermMatchType_;
   }
   /**
@@ -3283,8 +3596,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 22;</code>
+   * @return The searchTermMatchType.
    */
-  public com.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType getSearchTermMatchType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType getSearchTermMatchType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType result = com.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType.valueOf(searchTermMatchType_);
     return result == null ? com.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType.UNRECOGNIZED : result;
@@ -3298,8 +3612,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SlotEnum.Slot slot = 23;</code>
+   * @return The enum numeric value on the wire for slot.
    */
-  public int getSlotValue() {
+  @java.lang.Override public int getSlotValue() {
     return slot_;
   }
   /**
@@ -3308,8 +3623,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.SlotEnum.Slot slot = 23;</code>
+   * @return The slot.
    */
-  public com.google.ads.googleads.v2.enums.SlotEnum.Slot getSlot() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.SlotEnum.Slot getSlot() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.SlotEnum.Slot result = com.google.ads.googleads.v2.enums.SlotEnum.Slot.valueOf(slot_);
     return result == null ? com.google.ads.googleads.v2.enums.SlotEnum.Slot.UNRECOGNIZED : result;
@@ -3323,7 +3639,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue webpage = 66;</code>
+   * @return Whether the webpage field is set.
    */
+  @java.lang.Override
   public boolean hasWebpage() {
     return webpage_ != null;
   }
@@ -3333,7 +3651,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue webpage = 66;</code>
+   * @return The webpage.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getWebpage() {
     return webpage_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : webpage_;
   }
@@ -3344,6 +3664,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue webpage = 66;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getWebpageOrBuilder() {
     return getWebpage();
   }
@@ -3357,7 +3678,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue week = 24;</code>
+   * @return Whether the week field is set.
    */
+  @java.lang.Override
   public boolean hasWeek() {
     return week_ != null;
   }
@@ -3368,7 +3691,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue week = 24;</code>
+   * @return The week.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getWeek() {
     return week_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : week_;
   }
@@ -3380,6 +3705,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue week = 24;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getWeekOrBuilder() {
     return getWeek();
   }
@@ -3392,7 +3718,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value year = 25;</code>
+   * @return Whether the year field is set.
    */
+  @java.lang.Override
   public boolean hasYear() {
     return year_ != null;
   }
@@ -3402,7 +3730,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int32Value year = 25;</code>
+   * @return The year.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getYear() {
     return year_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : year_;
   }
@@ -3413,6 +3743,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value year = 25;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getYearOrBuilder() {
     return getYear();
   }
@@ -5759,8 +6090,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 3;</code>
+     * @return The enum numeric value on the wire for adNetworkType.
      */
-    public int getAdNetworkTypeValue() {
+    @java.lang.Override public int getAdNetworkTypeValue() {
       return adNetworkType_;
     }
     /**
@@ -5769,8 +6101,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 3;</code>
+     * @param value The enum numeric value on the wire for adNetworkType to set.
+     * @return This builder for chaining.
      */
     public Builder setAdNetworkTypeValue(int value) {
+      
       adNetworkType_ = value;
       onChanged();
       return this;
@@ -5781,7 +6116,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 3;</code>
+     * @return The adNetworkType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType getAdNetworkType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType result = com.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType.valueOf(adNetworkType_);
@@ -5793,6 +6130,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 3;</code>
+     * @param value The adNetworkType to set.
+     * @return This builder for chaining.
      */
     public Builder setAdNetworkType(com.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType value) {
       if (value == null) {
@@ -5809,6 +6148,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.AdNetworkTypeEnum.AdNetworkType ad_network_type = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdNetworkType() {
       
@@ -5824,8 +6164,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType click_type = 26;</code>
+     * @return The enum numeric value on the wire for clickType.
      */
-    public int getClickTypeValue() {
+    @java.lang.Override public int getClickTypeValue() {
       return clickType_;
     }
     /**
@@ -5834,8 +6175,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType click_type = 26;</code>
+     * @param value The enum numeric value on the wire for clickType to set.
+     * @return This builder for chaining.
      */
     public Builder setClickTypeValue(int value) {
+      
       clickType_ = value;
       onChanged();
       return this;
@@ -5846,7 +6190,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType click_type = 26;</code>
+     * @return The clickType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType getClickType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType result = com.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType.valueOf(clickType_);
@@ -5858,6 +6204,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType click_type = 26;</code>
+     * @param value The clickType to set.
+     * @return This builder for chaining.
      */
     public Builder setClickType(com.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType value) {
       if (value == null) {
@@ -5874,6 +6222,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ClickTypeEnum.ClickType click_type = 26;</code>
+     * @return This builder for chaining.
      */
     public Builder clearClickType() {
       
@@ -5891,6 +6240,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_action = 52;</code>
+     * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
       return conversionActionBuilder_ != null || conversionAction_ != null;
@@ -5901,6 +6251,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_action = 52;</code>
+     * @return The conversionAction.
      */
     public com.google.protobuf.StringValue getConversionAction() {
       if (conversionActionBuilder_ == null) {
@@ -6042,8 +6393,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_category = 53;</code>
+     * @return The enum numeric value on the wire for conversionActionCategory.
      */
-    public int getConversionActionCategoryValue() {
+    @java.lang.Override public int getConversionActionCategoryValue() {
       return conversionActionCategory_;
     }
     /**
@@ -6052,8 +6404,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_category = 53;</code>
+     * @param value The enum numeric value on the wire for conversionActionCategory to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionActionCategoryValue(int value) {
+      
       conversionActionCategory_ = value;
       onChanged();
       return this;
@@ -6064,7 +6419,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_category = 53;</code>
+     * @return The conversionActionCategory.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory getConversionActionCategory() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory result = com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory.valueOf(conversionActionCategory_);
@@ -6076,6 +6433,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_category = 53;</code>
+     * @param value The conversionActionCategory to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionActionCategory(com.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory value) {
       if (value == null) {
@@ -6092,6 +6451,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_category = 53;</code>
+     * @return This builder for chaining.
      */
     public Builder clearConversionActionCategory() {
       
@@ -6109,6 +6469,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_action_name = 54;</code>
+     * @return Whether the conversionActionName field is set.
      */
     public boolean hasConversionActionName() {
       return conversionActionNameBuilder_ != null || conversionActionName_ != null;
@@ -6119,6 +6480,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_action_name = 54;</code>
+     * @return The conversionActionName.
      */
     public com.google.protobuf.StringValue getConversionActionName() {
       if (conversionActionNameBuilder_ == null) {
@@ -6266,6 +6628,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue conversion_adjustment = 27;</code>
+     * @return Whether the conversionAdjustment field is set.
      */
     public boolean hasConversionAdjustment() {
       return conversionAdjustmentBuilder_ != null || conversionAdjustment_ != null;
@@ -6280,6 +6643,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue conversion_adjustment = 27;</code>
+     * @return The conversionAdjustment.
      */
     public com.google.protobuf.BoolValue getConversionAdjustment() {
       if (conversionAdjustmentBuilder_ == null) {
@@ -6449,8 +6813,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType conversion_attribution_event_type = 2;</code>
+     * @return The enum numeric value on the wire for conversionAttributionEventType.
      */
-    public int getConversionAttributionEventTypeValue() {
+    @java.lang.Override public int getConversionAttributionEventTypeValue() {
       return conversionAttributionEventType_;
     }
     /**
@@ -6459,8 +6824,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType conversion_attribution_event_type = 2;</code>
+     * @param value The enum numeric value on the wire for conversionAttributionEventType to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionAttributionEventTypeValue(int value) {
+      
       conversionAttributionEventType_ = value;
       onChanged();
       return this;
@@ -6471,7 +6839,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType conversion_attribution_event_type = 2;</code>
+     * @return The conversionAttributionEventType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType getConversionAttributionEventType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType result = com.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType.valueOf(conversionAttributionEventType_);
@@ -6483,6 +6853,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType conversion_attribution_event_type = 2;</code>
+     * @param value The conversionAttributionEventType to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionAttributionEventType(com.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType value) {
       if (value == null) {
@@ -6499,6 +6871,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType conversion_attribution_event_type = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearConversionAttributionEventType() {
       
@@ -6515,8 +6888,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket conversion_lag_bucket = 50;</code>
+     * @return The enum numeric value on the wire for conversionLagBucket.
      */
-    public int getConversionLagBucketValue() {
+    @java.lang.Override public int getConversionLagBucketValue() {
       return conversionLagBucket_;
     }
     /**
@@ -6526,8 +6900,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket conversion_lag_bucket = 50;</code>
+     * @param value The enum numeric value on the wire for conversionLagBucket to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionLagBucketValue(int value) {
+      
       conversionLagBucket_ = value;
       onChanged();
       return this;
@@ -6539,7 +6916,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket conversion_lag_bucket = 50;</code>
+     * @return The conversionLagBucket.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket getConversionLagBucket() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket result = com.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket.valueOf(conversionLagBucket_);
@@ -6552,6 +6931,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket conversion_lag_bucket = 50;</code>
+     * @param value The conversionLagBucket to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionLagBucket(com.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket value) {
       if (value == null) {
@@ -6569,6 +6950,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionLagBucketEnum.ConversionLagBucket conversion_lag_bucket = 50;</code>
+     * @return This builder for chaining.
      */
     public Builder clearConversionLagBucket() {
       
@@ -6585,8 +6967,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket conversion_or_adjustment_lag_bucket = 51;</code>
+     * @return The enum numeric value on the wire for conversionOrAdjustmentLagBucket.
      */
-    public int getConversionOrAdjustmentLagBucketValue() {
+    @java.lang.Override public int getConversionOrAdjustmentLagBucketValue() {
       return conversionOrAdjustmentLagBucket_;
     }
     /**
@@ -6596,8 +6979,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket conversion_or_adjustment_lag_bucket = 51;</code>
+     * @param value The enum numeric value on the wire for conversionOrAdjustmentLagBucket to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionOrAdjustmentLagBucketValue(int value) {
+      
       conversionOrAdjustmentLagBucket_ = value;
       onChanged();
       return this;
@@ -6609,7 +6995,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket conversion_or_adjustment_lag_bucket = 51;</code>
+     * @return The conversionOrAdjustmentLagBucket.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket getConversionOrAdjustmentLagBucket() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket result = com.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket.valueOf(conversionOrAdjustmentLagBucket_);
@@ -6622,6 +7010,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket conversion_or_adjustment_lag_bucket = 51;</code>
+     * @param value The conversionOrAdjustmentLagBucket to set.
+     * @return This builder for chaining.
      */
     public Builder setConversionOrAdjustmentLagBucket(com.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket value) {
       if (value == null) {
@@ -6639,6 +7029,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket conversion_or_adjustment_lag_bucket = 51;</code>
+     * @return This builder for chaining.
      */
     public Builder clearConversionOrAdjustmentLagBucket() {
       
@@ -6657,6 +7048,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue date = 4;</code>
+     * @return Whether the date field is set.
      */
     public boolean hasDate() {
       return dateBuilder_ != null || date_ != null;
@@ -6668,6 +7060,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue date = 4;</code>
+     * @return The date.
      */
     public com.google.protobuf.StringValue getDate() {
       if (dateBuilder_ == null) {
@@ -6816,8 +7209,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+     * @return The enum numeric value on the wire for dayOfWeek.
      */
-    public int getDayOfWeekValue() {
+    @java.lang.Override public int getDayOfWeekValue() {
       return dayOfWeek_;
     }
     /**
@@ -6826,8 +7220,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+     * @param value The enum numeric value on the wire for dayOfWeek to set.
+     * @return This builder for chaining.
      */
     public Builder setDayOfWeekValue(int value) {
+      
       dayOfWeek_ = value;
       onChanged();
       return this;
@@ -6838,7 +7235,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+     * @return The dayOfWeek.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
@@ -6850,6 +7249,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+     * @param value The dayOfWeek to set.
+     * @return This builder for chaining.
      */
     public Builder setDayOfWeek(com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek value) {
       if (value == null) {
@@ -6866,6 +7267,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDayOfWeek() {
       
@@ -6881,8 +7283,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device = 1;</code>
+     * @return The enum numeric value on the wire for device.
      */
-    public int getDeviceValue() {
+    @java.lang.Override public int getDeviceValue() {
       return device_;
     }
     /**
@@ -6891,8 +7294,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device = 1;</code>
+     * @param value The enum numeric value on the wire for device to set.
+     * @return This builder for chaining.
      */
     public Builder setDeviceValue(int value) {
+      
       device_ = value;
       onChanged();
       return this;
@@ -6903,7 +7309,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device = 1;</code>
+     * @return The device.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.DeviceEnum.Device getDevice() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.DeviceEnum.Device result = com.google.ads.googleads.v2.enums.DeviceEnum.Device.valueOf(device_);
@@ -6915,6 +7323,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device = 1;</code>
+     * @param value The device to set.
+     * @return This builder for chaining.
      */
     public Builder setDevice(com.google.ads.googleads.v2.enums.DeviceEnum.Device value) {
       if (value == null) {
@@ -6931,6 +7341,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DeviceEnum.Device device = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDevice() {
       
@@ -6946,8 +7357,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource external_conversion_source = 55;</code>
+     * @return The enum numeric value on the wire for externalConversionSource.
      */
-    public int getExternalConversionSourceValue() {
+    @java.lang.Override public int getExternalConversionSourceValue() {
       return externalConversionSource_;
     }
     /**
@@ -6956,8 +7368,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource external_conversion_source = 55;</code>
+     * @param value The enum numeric value on the wire for externalConversionSource to set.
+     * @return This builder for chaining.
      */
     public Builder setExternalConversionSourceValue(int value) {
+      
       externalConversionSource_ = value;
       onChanged();
       return this;
@@ -6968,7 +7383,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource external_conversion_source = 55;</code>
+     * @return The externalConversionSource.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource getExternalConversionSource() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource result = com.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource.valueOf(externalConversionSource_);
@@ -6980,6 +7397,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource external_conversion_source = 55;</code>
+     * @param value The externalConversionSource to set.
+     * @return This builder for chaining.
      */
     public Builder setExternalConversionSource(com.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource value) {
       if (value == null) {
@@ -6996,6 +7415,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ExternalConversionSourceEnum.ExternalConversionSource external_conversion_source = 55;</code>
+     * @return This builder for chaining.
      */
     public Builder clearExternalConversionSource() {
       
@@ -7013,6 +7433,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     * @return Whether the geoTargetAirport field is set.
      */
     public boolean hasGeoTargetAirport() {
       return geoTargetAirportBuilder_ != null || geoTargetAirport_ != null;
@@ -7023,6 +7444,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_airport = 65;</code>
+     * @return The geoTargetAirport.
      */
     public com.google.protobuf.StringValue getGeoTargetAirport() {
       if (geoTargetAirportBuilder_ == null) {
@@ -7166,6 +7588,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_canton = 76;</code>
+     * @return Whether the geoTargetCanton field is set.
      */
     public boolean hasGeoTargetCanton() {
       return geoTargetCantonBuilder_ != null || geoTargetCanton_ != null;
@@ -7176,6 +7599,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_canton = 76;</code>
+     * @return The geoTargetCanton.
      */
     public com.google.protobuf.StringValue getGeoTargetCanton() {
       if (geoTargetCantonBuilder_ == null) {
@@ -7319,6 +7743,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_city = 62;</code>
+     * @return Whether the geoTargetCity field is set.
      */
     public boolean hasGeoTargetCity() {
       return geoTargetCityBuilder_ != null || geoTargetCity_ != null;
@@ -7329,6 +7754,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_city = 62;</code>
+     * @return The geoTargetCity.
      */
     public com.google.protobuf.StringValue getGeoTargetCity() {
       if (geoTargetCityBuilder_ == null) {
@@ -7472,6 +7898,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_country = 77;</code>
+     * @return Whether the geoTargetCountry field is set.
      */
     public boolean hasGeoTargetCountry() {
       return geoTargetCountryBuilder_ != null || geoTargetCountry_ != null;
@@ -7482,6 +7909,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_country = 77;</code>
+     * @return The geoTargetCountry.
      */
     public com.google.protobuf.StringValue getGeoTargetCountry() {
       if (geoTargetCountryBuilder_ == null) {
@@ -7625,6 +8053,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     * @return Whether the geoTargetCounty field is set.
      */
     public boolean hasGeoTargetCounty() {
       return geoTargetCountyBuilder_ != null || geoTargetCounty_ != null;
@@ -7635,6 +8064,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_county = 68;</code>
+     * @return The geoTargetCounty.
      */
     public com.google.protobuf.StringValue getGeoTargetCounty() {
       if (geoTargetCountyBuilder_ == null) {
@@ -7778,6 +8208,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     * @return Whether the geoTargetDistrict field is set.
      */
     public boolean hasGeoTargetDistrict() {
       return geoTargetDistrictBuilder_ != null || geoTargetDistrict_ != null;
@@ -7788,6 +8219,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_district = 69;</code>
+     * @return The geoTargetDistrict.
      */
     public com.google.protobuf.StringValue getGeoTargetDistrict() {
       if (geoTargetDistrictBuilder_ == null) {
@@ -7931,6 +8363,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_metro = 63;</code>
+     * @return Whether the geoTargetMetro field is set.
      */
     public boolean hasGeoTargetMetro() {
       return geoTargetMetroBuilder_ != null || geoTargetMetro_ != null;
@@ -7941,6 +8374,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_metro = 63;</code>
+     * @return The geoTargetMetro.
      */
     public com.google.protobuf.StringValue getGeoTargetMetro() {
       if (geoTargetMetroBuilder_ == null) {
@@ -8085,6 +8519,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     * @return Whether the geoTargetMostSpecificLocation field is set.
      */
     public boolean hasGeoTargetMostSpecificLocation() {
       return geoTargetMostSpecificLocationBuilder_ != null || geoTargetMostSpecificLocation_ != null;
@@ -8096,6 +8531,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_most_specific_location = 72;</code>
+     * @return The geoTargetMostSpecificLocation.
      */
     public com.google.protobuf.StringValue getGeoTargetMostSpecificLocation() {
       if (geoTargetMostSpecificLocationBuilder_ == null) {
@@ -8246,6 +8682,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     * @return Whether the geoTargetPostalCode field is set.
      */
     public boolean hasGeoTargetPostalCode() {
       return geoTargetPostalCodeBuilder_ != null || geoTargetPostalCode_ != null;
@@ -8256,6 +8693,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_postal_code = 71;</code>
+     * @return The geoTargetPostalCode.
      */
     public com.google.protobuf.StringValue getGeoTargetPostalCode() {
       if (geoTargetPostalCodeBuilder_ == null) {
@@ -8399,6 +8837,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     * @return Whether the geoTargetProvince field is set.
      */
     public boolean hasGeoTargetProvince() {
       return geoTargetProvinceBuilder_ != null || geoTargetProvince_ != null;
@@ -8409,6 +8848,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_province = 75;</code>
+     * @return The geoTargetProvince.
      */
     public com.google.protobuf.StringValue getGeoTargetProvince() {
       if (geoTargetProvinceBuilder_ == null) {
@@ -8552,6 +8992,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_region = 64;</code>
+     * @return Whether the geoTargetRegion field is set.
      */
     public boolean hasGeoTargetRegion() {
       return geoTargetRegionBuilder_ != null || geoTargetRegion_ != null;
@@ -8562,6 +9003,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_region = 64;</code>
+     * @return The geoTargetRegion.
      */
     public com.google.protobuf.StringValue getGeoTargetRegion() {
       if (geoTargetRegionBuilder_ == null) {
@@ -8705,6 +9147,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     * @return Whether the geoTargetState field is set.
      */
     public boolean hasGeoTargetState() {
       return geoTargetStateBuilder_ != null || geoTargetState_ != null;
@@ -8715,6 +9158,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue geo_target_state = 67;</code>
+     * @return The geoTargetState.
      */
     public com.google.protobuf.StringValue getGeoTargetState() {
       if (geoTargetStateBuilder_ == null) {
@@ -8858,6 +9302,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value hotel_booking_window_days = 6;</code>
+     * @return Whether the hotelBookingWindowDays field is set.
      */
     public boolean hasHotelBookingWindowDays() {
       return hotelBookingWindowDaysBuilder_ != null || hotelBookingWindowDays_ != null;
@@ -8868,6 +9313,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value hotel_booking_window_days = 6;</code>
+     * @return The hotelBookingWindowDays.
      */
     public com.google.protobuf.Int64Value getHotelBookingWindowDays() {
       if (hotelBookingWindowDaysBuilder_ == null) {
@@ -9011,6 +9457,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value hotel_center_id = 7;</code>
+     * @return Whether the hotelCenterId field is set.
      */
     public boolean hasHotelCenterId() {
       return hotelCenterIdBuilder_ != null || hotelCenterId_ != null;
@@ -9021,6 +9468,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value hotel_center_id = 7;</code>
+     * @return The hotelCenterId.
      */
     public com.google.protobuf.Int64Value getHotelCenterId() {
       if (hotelCenterIdBuilder_ == null) {
@@ -9164,6 +9612,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue hotel_check_in_date = 8;</code>
+     * @return Whether the hotelCheckInDate field is set.
      */
     public boolean hasHotelCheckInDate() {
       return hotelCheckInDateBuilder_ != null || hotelCheckInDate_ != null;
@@ -9174,6 +9623,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue hotel_check_in_date = 8;</code>
+     * @return The hotelCheckInDate.
      */
     public com.google.protobuf.StringValue getHotelCheckInDate() {
       if (hotelCheckInDateBuilder_ == null) {
@@ -9315,8 +9765,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 9;</code>
+     * @return The enum numeric value on the wire for hotelCheckInDayOfWeek.
      */
-    public int getHotelCheckInDayOfWeekValue() {
+    @java.lang.Override public int getHotelCheckInDayOfWeekValue() {
       return hotelCheckInDayOfWeek_;
     }
     /**
@@ -9325,8 +9776,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 9;</code>
+     * @param value The enum numeric value on the wire for hotelCheckInDayOfWeek to set.
+     * @return This builder for chaining.
      */
     public Builder setHotelCheckInDayOfWeekValue(int value) {
+      
       hotelCheckInDayOfWeek_ = value;
       onChanged();
       return this;
@@ -9337,7 +9791,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 9;</code>
+     * @return The hotelCheckInDayOfWeek.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek getHotelCheckInDayOfWeek() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek.valueOf(hotelCheckInDayOfWeek_);
@@ -9349,6 +9805,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 9;</code>
+     * @param value The hotelCheckInDayOfWeek to set.
+     * @return This builder for chaining.
      */
     public Builder setHotelCheckInDayOfWeek(com.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek value) {
       if (value == null) {
@@ -9365,6 +9823,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.DayOfWeekEnum.DayOfWeek hotel_check_in_day_of_week = 9;</code>
+     * @return This builder for chaining.
      */
     public Builder clearHotelCheckInDayOfWeek() {
       
@@ -9382,6 +9841,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue hotel_city = 10;</code>
+     * @return Whether the hotelCity field is set.
      */
     public boolean hasHotelCity() {
       return hotelCityBuilder_ != null || hotelCity_ != null;
@@ -9392,6 +9852,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue hotel_city = 10;</code>
+     * @return The hotelCity.
      */
     public com.google.protobuf.StringValue getHotelCity() {
       if (hotelCityBuilder_ == null) {
@@ -9535,6 +9996,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value hotel_class = 11;</code>
+     * @return Whether the hotelClass field is set.
      */
     public boolean hasHotelClass() {
       return hotelClassBuilder_ != null || hotelClass_ != null;
@@ -9545,6 +10007,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value hotel_class = 11;</code>
+     * @return The hotelClass.
      */
     public com.google.protobuf.Int32Value getHotelClass() {
       if (hotelClassBuilder_ == null) {
@@ -9688,6 +10151,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue hotel_country = 12;</code>
+     * @return Whether the hotelCountry field is set.
      */
     public boolean hasHotelCountry() {
       return hotelCountryBuilder_ != null || hotelCountry_ != null;
@@ -9698,6 +10162,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue hotel_country = 12;</code>
+     * @return The hotelCountry.
      */
     public com.google.protobuf.StringValue getHotelCountry() {
       if (hotelCountryBuilder_ == null) {
@@ -9839,8 +10304,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 13;</code>
+     * @return The enum numeric value on the wire for hotelDateSelectionType.
      */
-    public int getHotelDateSelectionTypeValue() {
+    @java.lang.Override public int getHotelDateSelectionTypeValue() {
       return hotelDateSelectionType_;
     }
     /**
@@ -9849,8 +10315,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 13;</code>
+     * @param value The enum numeric value on the wire for hotelDateSelectionType to set.
+     * @return This builder for chaining.
      */
     public Builder setHotelDateSelectionTypeValue(int value) {
+      
       hotelDateSelectionType_ = value;
       onChanged();
       return this;
@@ -9861,7 +10330,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 13;</code>
+     * @return The hotelDateSelectionType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType getHotelDateSelectionType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType result = com.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.valueOf(hotelDateSelectionType_);
@@ -9873,6 +10344,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 13;</code>
+     * @param value The hotelDateSelectionType to set.
+     * @return This builder for chaining.
      */
     public Builder setHotelDateSelectionType(com.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType value) {
       if (value == null) {
@@ -9889,6 +10362,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelDateSelectionTypeEnum.HotelDateSelectionType hotel_date_selection_type = 13;</code>
+     * @return This builder for chaining.
      */
     public Builder clearHotelDateSelectionType() {
       
@@ -9906,6 +10380,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value hotel_length_of_stay = 14;</code>
+     * @return Whether the hotelLengthOfStay field is set.
      */
     public boolean hasHotelLengthOfStay() {
       return hotelLengthOfStayBuilder_ != null || hotelLengthOfStay_ != null;
@@ -9916,6 +10391,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value hotel_length_of_stay = 14;</code>
+     * @return The hotelLengthOfStay.
      */
     public com.google.protobuf.Int32Value getHotelLengthOfStay() {
       if (hotelLengthOfStayBuilder_ == null) {
@@ -10059,6 +10535,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     * @return Whether the hotelRateRuleId field is set.
      */
     public boolean hasHotelRateRuleId() {
       return hotelRateRuleIdBuilder_ != null || hotelRateRuleId_ != null;
@@ -10069,6 +10546,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue hotel_rate_rule_id = 73;</code>
+     * @return The hotelRateRuleId.
      */
     public com.google.protobuf.StringValue getHotelRateRuleId() {
       if (hotelRateRuleIdBuilder_ == null) {
@@ -10210,8 +10688,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+     * @return The enum numeric value on the wire for hotelRateType.
      */
-    public int getHotelRateTypeValue() {
+    @java.lang.Override public int getHotelRateTypeValue() {
       return hotelRateType_;
     }
     /**
@@ -10220,8 +10699,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+     * @param value The enum numeric value on the wire for hotelRateType to set.
+     * @return This builder for chaining.
      */
     public Builder setHotelRateTypeValue(int value) {
+      
       hotelRateType_ = value;
       onChanged();
       return this;
@@ -10232,7 +10714,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+     * @return The hotelRateType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType getHotelRateType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType result = com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType.valueOf(hotelRateType_);
@@ -10244,6 +10728,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+     * @param value The hotelRateType to set.
+     * @return This builder for chaining.
      */
     public Builder setHotelRateType(com.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType value) {
       if (value == null) {
@@ -10260,6 +10746,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;</code>
+     * @return This builder for chaining.
      */
     public Builder clearHotelRateType() {
       
@@ -10275,8 +10762,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+     * @return The enum numeric value on the wire for hotelPriceBucket.
      */
-    public int getHotelPriceBucketValue() {
+    @java.lang.Override public int getHotelPriceBucketValue() {
       return hotelPriceBucket_;
     }
     /**
@@ -10285,8 +10773,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+     * @param value The enum numeric value on the wire for hotelPriceBucket to set.
+     * @return This builder for chaining.
      */
     public Builder setHotelPriceBucketValue(int value) {
+      
       hotelPriceBucket_ = value;
       onChanged();
       return this;
@@ -10297,7 +10788,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+     * @return The hotelPriceBucket.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket getHotelPriceBucket() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket result = com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket.valueOf(hotelPriceBucket_);
@@ -10309,6 +10802,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+     * @param value The hotelPriceBucket to set.
+     * @return This builder for chaining.
      */
     public Builder setHotelPriceBucket(com.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket value) {
       if (value == null) {
@@ -10325,6 +10820,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;</code>
+     * @return This builder for chaining.
      */
     public Builder clearHotelPriceBucket() {
       
@@ -10342,6 +10838,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue hotel_state = 15;</code>
+     * @return Whether the hotelState field is set.
      */
     public boolean hasHotelState() {
       return hotelStateBuilder_ != null || hotelState_ != null;
@@ -10352,6 +10849,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue hotel_state = 15;</code>
+     * @return The hotelState.
      */
     public com.google.protobuf.StringValue getHotelState() {
       if (hotelStateBuilder_ == null) {
@@ -10495,6 +10993,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value hour = 16;</code>
+     * @return Whether the hour field is set.
      */
     public boolean hasHour() {
       return hourBuilder_ != null || hour_ != null;
@@ -10505,6 +11004,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value hour = 16;</code>
+     * @return The hour.
      */
     public com.google.protobuf.Int32Value getHour() {
       if (hourBuilder_ == null) {
@@ -10650,6 +11150,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue interaction_on_this_extension = 49;</code>
+     * @return Whether the interactionOnThisExtension field is set.
      */
     public boolean hasInteractionOnThisExtension() {
       return interactionOnThisExtensionBuilder_ != null || interactionOnThisExtension_ != null;
@@ -10662,6 +11163,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue interaction_on_this_extension = 49;</code>
+     * @return The interactionOnThisExtension.
      */
     public com.google.protobuf.BoolValue getInteractionOnThisExtension() {
       if (interactionOnThisExtensionBuilder_ == null) {
@@ -10819,6 +11321,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.Keyword keyword = 61;</code>
+     * @return Whether the keyword field is set.
      */
     public boolean hasKeyword() {
       return keywordBuilder_ != null || keyword_ != null;
@@ -10829,6 +11332,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.Keyword keyword = 61;</code>
+     * @return The keyword.
      */
     public com.google.ads.googleads.v2.common.Keyword getKeyword() {
       if (keywordBuilder_ == null) {
@@ -10973,6 +11477,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue month = 17;</code>
+     * @return Whether the month field is set.
      */
     public boolean hasMonth() {
       return monthBuilder_ != null || month_ != null;
@@ -10984,6 +11489,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue month = 17;</code>
+     * @return The month.
      */
     public com.google.protobuf.StringValue getMonth() {
       if (monthBuilder_ == null) {
@@ -11132,8 +11638,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
+     * @return The enum numeric value on the wire for monthOfYear.
      */
-    public int getMonthOfYearValue() {
+    @java.lang.Override public int getMonthOfYearValue() {
       return monthOfYear_;
     }
     /**
@@ -11142,8 +11649,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
+     * @param value The enum numeric value on the wire for monthOfYear to set.
+     * @return This builder for chaining.
      */
     public Builder setMonthOfYearValue(int value) {
+      
       monthOfYear_ = value;
       onChanged();
       return this;
@@ -11154,7 +11664,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
+     * @return The monthOfYear.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear getMonthOfYear() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear.valueOf(monthOfYear_);
@@ -11166,6 +11678,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
+     * @param value The monthOfYear to set.
+     * @return This builder for chaining.
      */
     public Builder setMonthOfYear(com.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear value) {
       if (value == null) {
@@ -11182,6 +11696,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMonthOfYear() {
       
@@ -11199,6 +11714,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue partner_hotel_id = 19;</code>
+     * @return Whether the partnerHotelId field is set.
      */
     public boolean hasPartnerHotelId() {
       return partnerHotelIdBuilder_ != null || partnerHotelId_ != null;
@@ -11209,6 +11725,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue partner_hotel_id = 19;</code>
+     * @return The partnerHotelId.
      */
     public com.google.protobuf.StringValue getPartnerHotelId() {
       if (partnerHotelIdBuilder_ == null) {
@@ -11350,8 +11867,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 20;</code>
+     * @return The enum numeric value on the wire for placeholderType.
      */
-    public int getPlaceholderTypeValue() {
+    @java.lang.Override public int getPlaceholderTypeValue() {
       return placeholderType_;
     }
     /**
@@ -11360,8 +11878,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 20;</code>
+     * @param value The enum numeric value on the wire for placeholderType to set.
+     * @return This builder for chaining.
      */
     public Builder setPlaceholderTypeValue(int value) {
+      
       placeholderType_ = value;
       onChanged();
       return this;
@@ -11372,7 +11893,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 20;</code>
+     * @return The placeholderType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderType_);
@@ -11384,6 +11907,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 20;</code>
+     * @param value The placeholderType to set.
+     * @return This builder for chaining.
      */
     public Builder setPlaceholderType(com.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType value) {
       if (value == null) {
@@ -11400,6 +11925,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 20;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPlaceholderType() {
       
@@ -11417,6 +11943,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.UInt64Value product_aggregator_id = 28;</code>
+     * @return Whether the productAggregatorId field is set.
      */
     public boolean hasProductAggregatorId() {
       return productAggregatorIdBuilder_ != null || productAggregatorId_ != null;
@@ -11427,6 +11954,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.UInt64Value product_aggregator_id = 28;</code>
+     * @return The productAggregatorId.
      */
     public com.google.protobuf.UInt64Value getProductAggregatorId() {
       if (productAggregatorIdBuilder_ == null) {
@@ -11570,6 +12098,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_bidding_category_level1 = 56;</code>
+     * @return Whether the productBiddingCategoryLevel1 field is set.
      */
     public boolean hasProductBiddingCategoryLevel1() {
       return productBiddingCategoryLevel1Builder_ != null || productBiddingCategoryLevel1_ != null;
@@ -11580,6 +12109,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_bidding_category_level1 = 56;</code>
+     * @return The productBiddingCategoryLevel1.
      */
     public com.google.protobuf.StringValue getProductBiddingCategoryLevel1() {
       if (productBiddingCategoryLevel1Builder_ == null) {
@@ -11723,6 +12253,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_bidding_category_level2 = 57;</code>
+     * @return Whether the productBiddingCategoryLevel2 field is set.
      */
     public boolean hasProductBiddingCategoryLevel2() {
       return productBiddingCategoryLevel2Builder_ != null || productBiddingCategoryLevel2_ != null;
@@ -11733,6 +12264,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_bidding_category_level2 = 57;</code>
+     * @return The productBiddingCategoryLevel2.
      */
     public com.google.protobuf.StringValue getProductBiddingCategoryLevel2() {
       if (productBiddingCategoryLevel2Builder_ == null) {
@@ -11876,6 +12408,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_bidding_category_level3 = 58;</code>
+     * @return Whether the productBiddingCategoryLevel3 field is set.
      */
     public boolean hasProductBiddingCategoryLevel3() {
       return productBiddingCategoryLevel3Builder_ != null || productBiddingCategoryLevel3_ != null;
@@ -11886,6 +12419,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_bidding_category_level3 = 58;</code>
+     * @return The productBiddingCategoryLevel3.
      */
     public com.google.protobuf.StringValue getProductBiddingCategoryLevel3() {
       if (productBiddingCategoryLevel3Builder_ == null) {
@@ -12029,6 +12563,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_bidding_category_level4 = 59;</code>
+     * @return Whether the productBiddingCategoryLevel4 field is set.
      */
     public boolean hasProductBiddingCategoryLevel4() {
       return productBiddingCategoryLevel4Builder_ != null || productBiddingCategoryLevel4_ != null;
@@ -12039,6 +12574,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_bidding_category_level4 = 59;</code>
+     * @return The productBiddingCategoryLevel4.
      */
     public com.google.protobuf.StringValue getProductBiddingCategoryLevel4() {
       if (productBiddingCategoryLevel4Builder_ == null) {
@@ -12182,6 +12718,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_bidding_category_level5 = 60;</code>
+     * @return Whether the productBiddingCategoryLevel5 field is set.
      */
     public boolean hasProductBiddingCategoryLevel5() {
       return productBiddingCategoryLevel5Builder_ != null || productBiddingCategoryLevel5_ != null;
@@ -12192,6 +12729,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_bidding_category_level5 = 60;</code>
+     * @return The productBiddingCategoryLevel5.
      */
     public com.google.protobuf.StringValue getProductBiddingCategoryLevel5() {
       if (productBiddingCategoryLevel5Builder_ == null) {
@@ -12335,6 +12873,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_brand = 29;</code>
+     * @return Whether the productBrand field is set.
      */
     public boolean hasProductBrand() {
       return productBrandBuilder_ != null || productBrand_ != null;
@@ -12345,6 +12884,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_brand = 29;</code>
+     * @return The productBrand.
      */
     public com.google.protobuf.StringValue getProductBrand() {
       if (productBrandBuilder_ == null) {
@@ -12486,8 +13026,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel product_channel = 30;</code>
+     * @return The enum numeric value on the wire for productChannel.
      */
-    public int getProductChannelValue() {
+    @java.lang.Override public int getProductChannelValue() {
       return productChannel_;
     }
     /**
@@ -12496,8 +13037,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel product_channel = 30;</code>
+     * @param value The enum numeric value on the wire for productChannel to set.
+     * @return This builder for chaining.
      */
     public Builder setProductChannelValue(int value) {
+      
       productChannel_ = value;
       onChanged();
       return this;
@@ -12508,7 +13052,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel product_channel = 30;</code>
+     * @return The productChannel.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel getProductChannel() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel result = com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel.valueOf(productChannel_);
@@ -12520,6 +13066,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel product_channel = 30;</code>
+     * @param value The productChannel to set.
+     * @return This builder for chaining.
      */
     public Builder setProductChannel(com.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel value) {
       if (value == null) {
@@ -12536,6 +13084,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelEnum.ProductChannel product_channel = 30;</code>
+     * @return This builder for chaining.
      */
     public Builder clearProductChannel() {
       
@@ -12551,8 +13100,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity product_channel_exclusivity = 31;</code>
+     * @return The enum numeric value on the wire for productChannelExclusivity.
      */
-    public int getProductChannelExclusivityValue() {
+    @java.lang.Override public int getProductChannelExclusivityValue() {
       return productChannelExclusivity_;
     }
     /**
@@ -12561,8 +13111,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity product_channel_exclusivity = 31;</code>
+     * @param value The enum numeric value on the wire for productChannelExclusivity to set.
+     * @return This builder for chaining.
      */
     public Builder setProductChannelExclusivityValue(int value) {
+      
       productChannelExclusivity_ = value;
       onChanged();
       return this;
@@ -12573,7 +13126,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity product_channel_exclusivity = 31;</code>
+     * @return The productChannelExclusivity.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity getProductChannelExclusivity() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity result = com.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.valueOf(productChannelExclusivity_);
@@ -12585,6 +13140,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity product_channel_exclusivity = 31;</code>
+     * @param value The productChannelExclusivity to set.
+     * @return This builder for chaining.
      */
     public Builder setProductChannelExclusivity(com.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity value) {
       if (value == null) {
@@ -12601,6 +13158,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity product_channel_exclusivity = 31;</code>
+     * @return This builder for chaining.
      */
     public Builder clearProductChannelExclusivity() {
       
@@ -12616,8 +13174,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition product_condition = 32;</code>
+     * @return The enum numeric value on the wire for productCondition.
      */
-    public int getProductConditionValue() {
+    @java.lang.Override public int getProductConditionValue() {
       return productCondition_;
     }
     /**
@@ -12626,8 +13185,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition product_condition = 32;</code>
+     * @param value The enum numeric value on the wire for productCondition to set.
+     * @return This builder for chaining.
      */
     public Builder setProductConditionValue(int value) {
+      
       productCondition_ = value;
       onChanged();
       return this;
@@ -12638,7 +13200,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition product_condition = 32;</code>
+     * @return The productCondition.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition getProductCondition() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition result = com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition.valueOf(productCondition_);
@@ -12650,6 +13214,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition product_condition = 32;</code>
+     * @param value The productCondition to set.
+     * @return This builder for chaining.
      */
     public Builder setProductCondition(com.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition value) {
       if (value == null) {
@@ -12666,6 +13232,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.ProductConditionEnum.ProductCondition product_condition = 32;</code>
+     * @return This builder for chaining.
      */
     public Builder clearProductCondition() {
       
@@ -12684,6 +13251,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
+     * @return Whether the productCountry field is set.
      */
     public boolean hasProductCountry() {
       return productCountryBuilder_ != null || productCountry_ != null;
@@ -12695,6 +13263,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_country = 33;</code>
+     * @return The productCountry.
      */
     public com.google.protobuf.StringValue getProductCountry() {
       if (productCountryBuilder_ == null) {
@@ -12845,6 +13414,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_custom_attribute0 = 34;</code>
+     * @return Whether the productCustomAttribute0 field is set.
      */
     public boolean hasProductCustomAttribute0() {
       return productCustomAttribute0Builder_ != null || productCustomAttribute0_ != null;
@@ -12855,6 +13425,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_custom_attribute0 = 34;</code>
+     * @return The productCustomAttribute0.
      */
     public com.google.protobuf.StringValue getProductCustomAttribute0() {
       if (productCustomAttribute0Builder_ == null) {
@@ -12998,6 +13569,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_custom_attribute1 = 35;</code>
+     * @return Whether the productCustomAttribute1 field is set.
      */
     public boolean hasProductCustomAttribute1() {
       return productCustomAttribute1Builder_ != null || productCustomAttribute1_ != null;
@@ -13008,6 +13580,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_custom_attribute1 = 35;</code>
+     * @return The productCustomAttribute1.
      */
     public com.google.protobuf.StringValue getProductCustomAttribute1() {
       if (productCustomAttribute1Builder_ == null) {
@@ -13151,6 +13724,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_custom_attribute2 = 36;</code>
+     * @return Whether the productCustomAttribute2 field is set.
      */
     public boolean hasProductCustomAttribute2() {
       return productCustomAttribute2Builder_ != null || productCustomAttribute2_ != null;
@@ -13161,6 +13735,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_custom_attribute2 = 36;</code>
+     * @return The productCustomAttribute2.
      */
     public com.google.protobuf.StringValue getProductCustomAttribute2() {
       if (productCustomAttribute2Builder_ == null) {
@@ -13304,6 +13879,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_custom_attribute3 = 37;</code>
+     * @return Whether the productCustomAttribute3 field is set.
      */
     public boolean hasProductCustomAttribute3() {
       return productCustomAttribute3Builder_ != null || productCustomAttribute3_ != null;
@@ -13314,6 +13890,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_custom_attribute3 = 37;</code>
+     * @return The productCustomAttribute3.
      */
     public com.google.protobuf.StringValue getProductCustomAttribute3() {
       if (productCustomAttribute3Builder_ == null) {
@@ -13457,6 +14034,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_custom_attribute4 = 38;</code>
+     * @return Whether the productCustomAttribute4 field is set.
      */
     public boolean hasProductCustomAttribute4() {
       return productCustomAttribute4Builder_ != null || productCustomAttribute4_ != null;
@@ -13467,6 +14045,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_custom_attribute4 = 38;</code>
+     * @return The productCustomAttribute4.
      */
     public com.google.protobuf.StringValue getProductCustomAttribute4() {
       if (productCustomAttribute4Builder_ == null) {
@@ -13610,6 +14189,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_item_id = 39;</code>
+     * @return Whether the productItemId field is set.
      */
     public boolean hasProductItemId() {
       return productItemIdBuilder_ != null || productItemId_ != null;
@@ -13620,6 +14200,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_item_id = 39;</code>
+     * @return The productItemId.
      */
     public com.google.protobuf.StringValue getProductItemId() {
       if (productItemIdBuilder_ == null) {
@@ -13763,6 +14344,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_language = 40;</code>
+     * @return Whether the productLanguage field is set.
      */
     public boolean hasProductLanguage() {
       return productLanguageBuilder_ != null || productLanguage_ != null;
@@ -13773,6 +14355,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_language = 40;</code>
+     * @return The productLanguage.
      */
     public com.google.protobuf.StringValue getProductLanguage() {
       if (productLanguageBuilder_ == null) {
@@ -13916,6 +14499,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.UInt64Value product_merchant_id = 41;</code>
+     * @return Whether the productMerchantId field is set.
      */
     public boolean hasProductMerchantId() {
       return productMerchantIdBuilder_ != null || productMerchantId_ != null;
@@ -13926,6 +14510,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.UInt64Value product_merchant_id = 41;</code>
+     * @return The productMerchantId.
      */
     public com.google.protobuf.UInt64Value getProductMerchantId() {
       if (productMerchantIdBuilder_ == null) {
@@ -14069,6 +14654,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_store_id = 42;</code>
+     * @return Whether the productStoreId field is set.
      */
     public boolean hasProductStoreId() {
       return productStoreIdBuilder_ != null || productStoreId_ != null;
@@ -14079,6 +14665,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_store_id = 42;</code>
+     * @return The productStoreId.
      */
     public com.google.protobuf.StringValue getProductStoreId() {
       if (productStoreIdBuilder_ == null) {
@@ -14222,6 +14809,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_title = 43;</code>
+     * @return Whether the productTitle field is set.
      */
     public boolean hasProductTitle() {
       return productTitleBuilder_ != null || productTitle_ != null;
@@ -14232,6 +14820,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_title = 43;</code>
+     * @return The productTitle.
      */
     public com.google.protobuf.StringValue getProductTitle() {
       if (productTitleBuilder_ == null) {
@@ -14375,6 +14964,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_type_l1 = 44;</code>
+     * @return Whether the productTypeL1 field is set.
      */
     public boolean hasProductTypeL1() {
       return productTypeL1Builder_ != null || productTypeL1_ != null;
@@ -14385,6 +14975,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_type_l1 = 44;</code>
+     * @return The productTypeL1.
      */
     public com.google.protobuf.StringValue getProductTypeL1() {
       if (productTypeL1Builder_ == null) {
@@ -14528,6 +15119,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_type_l2 = 45;</code>
+     * @return Whether the productTypeL2 field is set.
      */
     public boolean hasProductTypeL2() {
       return productTypeL2Builder_ != null || productTypeL2_ != null;
@@ -14538,6 +15130,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_type_l2 = 45;</code>
+     * @return The productTypeL2.
      */
     public com.google.protobuf.StringValue getProductTypeL2() {
       if (productTypeL2Builder_ == null) {
@@ -14681,6 +15274,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_type_l3 = 46;</code>
+     * @return Whether the productTypeL3 field is set.
      */
     public boolean hasProductTypeL3() {
       return productTypeL3Builder_ != null || productTypeL3_ != null;
@@ -14691,6 +15285,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_type_l3 = 46;</code>
+     * @return The productTypeL3.
      */
     public com.google.protobuf.StringValue getProductTypeL3() {
       if (productTypeL3Builder_ == null) {
@@ -14834,6 +15429,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_type_l4 = 47;</code>
+     * @return Whether the productTypeL4 field is set.
      */
     public boolean hasProductTypeL4() {
       return productTypeL4Builder_ != null || productTypeL4_ != null;
@@ -14844,6 +15440,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_type_l4 = 47;</code>
+     * @return The productTypeL4.
      */
     public com.google.protobuf.StringValue getProductTypeL4() {
       if (productTypeL4Builder_ == null) {
@@ -14987,6 +15584,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_type_l5 = 48;</code>
+     * @return Whether the productTypeL5 field is set.
      */
     public boolean hasProductTypeL5() {
       return productTypeL5Builder_ != null || productTypeL5_ != null;
@@ -14997,6 +15595,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue product_type_l5 = 48;</code>
+     * @return The productTypeL5.
      */
     public com.google.protobuf.StringValue getProductTypeL5() {
       if (productTypeL5Builder_ == null) {
@@ -15142,6 +15741,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue quarter = 21;</code>
+     * @return Whether the quarter field is set.
      */
     public boolean hasQuarter() {
       return quarterBuilder_ != null || quarter_ != null;
@@ -15154,6 +15754,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue quarter = 21;</code>
+     * @return The quarter.
      */
     public com.google.protobuf.StringValue getQuarter() {
       if (quarterBuilder_ == null) {
@@ -15309,8 +15910,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+     * @return The enum numeric value on the wire for searchEngineResultsPageType.
      */
-    public int getSearchEngineResultsPageTypeValue() {
+    @java.lang.Override public int getSearchEngineResultsPageTypeValue() {
       return searchEngineResultsPageType_;
     }
     /**
@@ -15319,8 +15921,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+     * @param value The enum numeric value on the wire for searchEngineResultsPageType to set.
+     * @return This builder for chaining.
      */
     public Builder setSearchEngineResultsPageTypeValue(int value) {
+      
       searchEngineResultsPageType_ = value;
       onChanged();
       return this;
@@ -15331,7 +15936,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+     * @return The searchEngineResultsPageType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType getSearchEngineResultsPageType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType result = com.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType.valueOf(searchEngineResultsPageType_);
@@ -15343,6 +15950,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+     * @param value The searchEngineResultsPageType to set.
+     * @return This builder for chaining.
      */
     public Builder setSearchEngineResultsPageType(com.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType value) {
       if (value == null) {
@@ -15359,6 +15968,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SearchEngineResultsPageTypeEnum.SearchEngineResultsPageType search_engine_results_page_type = 70;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSearchEngineResultsPageType() {
       
@@ -15374,8 +15984,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 22;</code>
+     * @return The enum numeric value on the wire for searchTermMatchType.
      */
-    public int getSearchTermMatchTypeValue() {
+    @java.lang.Override public int getSearchTermMatchTypeValue() {
       return searchTermMatchType_;
     }
     /**
@@ -15384,8 +15995,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 22;</code>
+     * @param value The enum numeric value on the wire for searchTermMatchType to set.
+     * @return This builder for chaining.
      */
     public Builder setSearchTermMatchTypeValue(int value) {
+      
       searchTermMatchType_ = value;
       onChanged();
       return this;
@@ -15396,7 +16010,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 22;</code>
+     * @return The searchTermMatchType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType getSearchTermMatchType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType result = com.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType.valueOf(searchTermMatchType_);
@@ -15408,6 +16024,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 22;</code>
+     * @param value The searchTermMatchType to set.
+     * @return This builder for chaining.
      */
     public Builder setSearchTermMatchType(com.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType value) {
       if (value == null) {
@@ -15424,6 +16042,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SearchTermMatchTypeEnum.SearchTermMatchType search_term_match_type = 22;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSearchTermMatchType() {
       
@@ -15439,8 +16058,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SlotEnum.Slot slot = 23;</code>
+     * @return The enum numeric value on the wire for slot.
      */
-    public int getSlotValue() {
+    @java.lang.Override public int getSlotValue() {
       return slot_;
     }
     /**
@@ -15449,8 +16069,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SlotEnum.Slot slot = 23;</code>
+     * @param value The enum numeric value on the wire for slot to set.
+     * @return This builder for chaining.
      */
     public Builder setSlotValue(int value) {
+      
       slot_ = value;
       onChanged();
       return this;
@@ -15461,7 +16084,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SlotEnum.Slot slot = 23;</code>
+     * @return The slot.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.SlotEnum.Slot getSlot() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.SlotEnum.Slot result = com.google.ads.googleads.v2.enums.SlotEnum.Slot.valueOf(slot_);
@@ -15473,6 +16098,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SlotEnum.Slot slot = 23;</code>
+     * @param value The slot to set.
+     * @return This builder for chaining.
      */
     public Builder setSlot(com.google.ads.googleads.v2.enums.SlotEnum.Slot value) {
       if (value == null) {
@@ -15489,6 +16116,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.SlotEnum.Slot slot = 23;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSlot() {
       
@@ -15506,6 +16134,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue webpage = 66;</code>
+     * @return Whether the webpage field is set.
      */
     public boolean hasWebpage() {
       return webpageBuilder_ != null || webpage_ != null;
@@ -15516,6 +16145,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue webpage = 66;</code>
+     * @return The webpage.
      */
     public com.google.protobuf.StringValue getWebpage() {
       if (webpageBuilder_ == null) {
@@ -15660,6 +16290,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue week = 24;</code>
+     * @return Whether the week field is set.
      */
     public boolean hasWeek() {
       return weekBuilder_ != null || week_ != null;
@@ -15671,6 +16302,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue week = 24;</code>
+     * @return The week.
      */
     public com.google.protobuf.StringValue getWeek() {
       if (weekBuilder_ == null) {
@@ -15821,6 +16453,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value year = 25;</code>
+     * @return Whether the year field is set.
      */
     public boolean hasYear() {
       return yearBuilder_ != null || year_ != null;
@@ -15831,6 +16464,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value year = 25;</code>
+     * @return The year.
      */
     public com.google.protobuf.Int32Value getYear() {
       if (yearBuilder_ == null) {

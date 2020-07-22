@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.CustomInterestMember}
  */
-public  final class CustomInterestMember extends
+public final class CustomInterestMember extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.CustomInterestMember)
     CustomInterestMemberOrBuilder {
@@ -115,7 +115,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType member_type = 1;</code>
    * @return The enum numeric value on the wire for memberType.
    */
-  public int getMemberTypeValue() {
+  @java.lang.Override public int getMemberTypeValue() {
     return memberType_;
   }
   /**
@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType member_type = 1;</code>
    * @return The memberType.
    */
-  public com.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType getMemberType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType getMemberType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType result = com.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.valueOf(memberType_);
     return result == null ? com.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.UNRECOGNIZED : result;
@@ -143,6 +143,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue parameter = 2;</code>
    * @return Whether the parameter field is set.
    */
+  @java.lang.Override
   public boolean hasParameter() {
     return parameter_ != null;
   }
@@ -155,6 +156,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue parameter = 2;</code>
    * @return The parameter.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getParameter() {
     return parameter_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : parameter_;
   }
@@ -166,6 +168,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue parameter = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getParameterOrBuilder() {
     return getParameter();
   }
@@ -515,7 +518,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType member_type = 1;</code>
      * @return The enum numeric value on the wire for memberType.
      */
-    public int getMemberTypeValue() {
+    @java.lang.Override public int getMemberTypeValue() {
       return memberType_;
     }
     /**
@@ -528,6 +531,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMemberTypeValue(int value) {
+      
       memberType_ = value;
       onChanged();
       return this;
@@ -540,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType member_type = 1;</code>
      * @return The memberType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType getMemberType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType result = com.google.ads.googleads.v4.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.valueOf(memberType_);

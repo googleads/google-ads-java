@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.MediaFile}
  */
-public  final class MediaFile extends
+public final class MediaFile extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.MediaFile)
     MediaFileOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MediaFile();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -210,7 +216,8 @@ private static final long serialVersionUID = 0L;
   private int mediatypeCase_ = 0;
   private java.lang.Object mediatype_;
   public enum MediatypeCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     IMAGE(3),
     MEDIA_BUNDLE(4),
     AUDIO(10),
@@ -221,6 +228,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -253,13 +262,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the media file.
+   * Immutable. The resource name of the media file.
    * Media file resource names have the form:
    * `customers/{customer_id}/mediaFiles/{media_file_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -274,13 +285,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the media file.
+   * Immutable. The resource name of the media file.
    * Media file resource names have the form:
    * `customers/{customer_id}/mediaFiles/{media_file_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -299,31 +312,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the media file.
+   * Output only. The ID of the media file.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the media file.
+   * Output only. The ID of the media file.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the media file.
+   * Output only. The ID of the media file.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -332,22 +350,24 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * Type of the media file.
+   * Immutable. Type of the media file.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5;</code>
+   * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * Type of the media file.
+   * Immutable. Type of the media file.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5;</code>
+   * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType getType() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType result = com.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType.UNRECOGNIZED : result;
@@ -357,22 +377,24 @@ private static final long serialVersionUID = 0L;
   private int mimeType_;
   /**
    * <pre>
-   * The mime type of the media file.
+   * Output only. The mime type of the media file.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6;</code>
+   * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for mimeType.
    */
-  public int getMimeTypeValue() {
+  @java.lang.Override public int getMimeTypeValue() {
     return mimeType_;
   }
   /**
    * <pre>
-   * The mime type of the media file.
+   * Output only. The mime type of the media file.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6;</code>
+   * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The mimeType.
    */
-  public com.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType getMimeType() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType getMimeType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
     return result == null ? com.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType.UNRECOGNIZED : result;
@@ -382,34 +404,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue sourceUrl_;
   /**
    * <pre>
-   * The URL of where the original media file was downloaded from (or a file
-   * name).
+   * Immutable. The URL of where the original media file was downloaded from (or a file
+   * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue source_url = 7;</code>
+   * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the sourceUrl field is set.
    */
+  @java.lang.Override
   public boolean hasSourceUrl() {
     return sourceUrl_ != null;
   }
   /**
    * <pre>
-   * The URL of where the original media file was downloaded from (or a file
-   * name).
+   * Immutable. The URL of where the original media file was downloaded from (or a file
+   * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue source_url = 7;</code>
+   * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The sourceUrl.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSourceUrl() {
     return sourceUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : sourceUrl_;
   }
   /**
    * <pre>
-   * The URL of where the original media file was downloaded from (or a file
-   * name).
+   * Immutable. The URL of where the original media file was downloaded from (or a file
+   * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue source_url = 7;</code>
+   * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSourceUrlOrBuilder() {
     return getSourceUrl();
   }
@@ -418,34 +445,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue name_;
   /**
    * <pre>
-   * The name of the media file. The name can be used by clients to help
+   * Immutable. The name of the media file. The name can be used by clients to help
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 8;</code>
+   * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
   /**
    * <pre>
-   * The name of the media file. The name can be used by clients to help
+   * Immutable. The name of the media file. The name can be used by clients to help
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 8;</code>
+   * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
   /**
    * <pre>
-   * The name of the media file. The name can be used by clients to help
+   * Immutable. The name of the media file. The name can be used by clients to help
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 8;</code>
+   * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -454,31 +486,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value fileSize_;
   /**
    * <pre>
-   * The size of the media file in bytes.
+   * Output only. The size of the media file in bytes.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value file_size = 9;</code>
+   * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the fileSize field is set.
    */
+  @java.lang.Override
   public boolean hasFileSize() {
     return fileSize_ != null;
   }
   /**
    * <pre>
-   * The size of the media file in bytes.
+   * Output only. The size of the media file in bytes.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value file_size = 9;</code>
+   * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The fileSize.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getFileSize() {
     return fileSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : fileSize_;
   }
   /**
    * <pre>
-   * The size of the media file in bytes.
+   * Output only. The size of the media file in bytes.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value file_size = 9;</code>
+   * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getFileSizeOrBuilder() {
     return getFileSize();
   }
@@ -486,21 +523,25 @@ private static final long serialVersionUID = 0L;
   public static final int IMAGE_FIELD_NUMBER = 3;
   /**
    * <pre>
-   * Encapsulates an Image.
+   * Immutable. Encapsulates an Image.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the image field is set.
    */
+  @java.lang.Override
   public boolean hasImage() {
     return mediatypeCase_ == 3;
   }
   /**
    * <pre>
-   * Encapsulates an Image.
+   * Immutable. Encapsulates an Image.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The image.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MediaImage getImage() {
     if (mediatypeCase_ == 3) {
        return (com.google.ads.googleads.v1.resources.MediaImage) mediatype_;
@@ -509,11 +550,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Encapsulates an Image.
+   * Immutable. Encapsulates an Image.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MediaImageOrBuilder getImageOrBuilder() {
     if (mediatypeCase_ == 3) {
        return (com.google.ads.googleads.v1.resources.MediaImage) mediatype_;
@@ -524,21 +566,25 @@ private static final long serialVersionUID = 0L;
   public static final int MEDIA_BUNDLE_FIELD_NUMBER = 4;
   /**
    * <pre>
-   * A ZIP archive media the content of which contains HTML5 assets.
+   * Immutable. A ZIP archive media the content of which contains HTML5 assets.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mediaBundle field is set.
    */
+  @java.lang.Override
   public boolean hasMediaBundle() {
     return mediatypeCase_ == 4;
   }
   /**
    * <pre>
-   * A ZIP archive media the content of which contains HTML5 assets.
+   * Immutable. A ZIP archive media the content of which contains HTML5 assets.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mediaBundle.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MediaBundle getMediaBundle() {
     if (mediatypeCase_ == 4) {
        return (com.google.ads.googleads.v1.resources.MediaBundle) mediatype_;
@@ -547,11 +593,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A ZIP archive media the content of which contains HTML5 assets.
+   * Immutable. A ZIP archive media the content of which contains HTML5 assets.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MediaBundleOrBuilder getMediaBundleOrBuilder() {
     if (mediatypeCase_ == 4) {
        return (com.google.ads.googleads.v1.resources.MediaBundle) mediatype_;
@@ -562,21 +609,25 @@ private static final long serialVersionUID = 0L;
   public static final int AUDIO_FIELD_NUMBER = 10;
   /**
    * <pre>
-   * Encapsulates an Audio.
+   * Output only. Encapsulates an Audio.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the audio field is set.
    */
+  @java.lang.Override
   public boolean hasAudio() {
     return mediatypeCase_ == 10;
   }
   /**
    * <pre>
-   * Encapsulates an Audio.
+   * Output only. Encapsulates an Audio.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The audio.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MediaAudio getAudio() {
     if (mediatypeCase_ == 10) {
        return (com.google.ads.googleads.v1.resources.MediaAudio) mediatype_;
@@ -585,11 +636,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Encapsulates an Audio.
+   * Output only. Encapsulates an Audio.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MediaAudioOrBuilder getAudioOrBuilder() {
     if (mediatypeCase_ == 10) {
        return (com.google.ads.googleads.v1.resources.MediaAudio) mediatype_;
@@ -600,21 +652,25 @@ private static final long serialVersionUID = 0L;
   public static final int VIDEO_FIELD_NUMBER = 11;
   /**
    * <pre>
-   * Encapsulates a Video.
+   * Immutable. Encapsulates a Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the video field is set.
    */
+  @java.lang.Override
   public boolean hasVideo() {
     return mediatypeCase_ == 11;
   }
   /**
    * <pre>
-   * Encapsulates a Video.
+   * Immutable. Encapsulates a Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The video.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MediaVideo getVideo() {
     if (mediatypeCase_ == 11) {
        return (com.google.ads.googleads.v1.resources.MediaVideo) mediatype_;
@@ -623,11 +679,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Encapsulates a Video.
+   * Immutable. Encapsulates a Video.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+   * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.resources.MediaVideoOrBuilder getVideoOrBuilder() {
     if (mediatypeCase_ == 11) {
        return (com.google.ads.googleads.v1.resources.MediaVideo) mediatype_;
@@ -1232,12 +1289,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the media file.
+     * Immutable. The resource name of the media file.
      * Media file resource names have the form:
      * `customers/{customer_id}/mediaFiles/{media_file_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1253,12 +1311,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the media file.
+     * Immutable. The resource name of the media file.
      * Media file resource names have the form:
      * `customers/{customer_id}/mediaFiles/{media_file_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1275,12 +1334,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the media file.
+     * Immutable. The resource name of the media file.
      * Media file resource names have the form:
      * `customers/{customer_id}/mediaFiles/{media_file_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1294,12 +1355,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the media file.
+     * Immutable. The resource name of the media file.
      * Media file resource names have the form:
      * `customers/{customer_id}/mediaFiles/{media_file_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1309,12 +1371,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the media file.
+     * Immutable. The resource name of the media file.
      * Media file resource names have the form:
      * `customers/{customer_id}/mediaFiles/{media_file_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1333,20 +1397,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the media file.
+     * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the media file.
+     * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1357,10 +1423,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the media file.
+     * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1377,10 +1443,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the media file.
+     * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1395,10 +1461,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the media file.
+     * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1417,10 +1483,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the media file.
+     * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1435,10 +1501,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the media file.
+     * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1447,10 +1513,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the media file.
+     * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1462,10 +1528,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the media file.
+     * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 2;</code>
+     * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1484,33 +1550,39 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * Type of the media file.
+     * Immutable. Type of the media file.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5;</code>
+     * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * Type of the media file.
+     * Immutable. Type of the media file.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5;</code>
+     * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Type of the media file.
+     * Immutable. Type of the media file.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5;</code>
+     * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType result = com.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType.valueOf(type_);
@@ -1518,10 +1590,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of the media file.
+     * Immutable. Type of the media file.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5;</code>
+     * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType value) {
       if (value == null) {
@@ -1534,10 +1608,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Type of the media file.
+     * Immutable. Type of the media file.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5;</code>
+     * <code>.google.ads.googleads.v1.enums.MediaTypeEnum.MediaType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -1549,33 +1624,39 @@ private static final long serialVersionUID = 0L;
     private int mimeType_ = 0;
     /**
      * <pre>
-     * The mime type of the media file.
+     * Output only. The mime type of the media file.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for mimeType.
      */
-    public int getMimeTypeValue() {
+    @java.lang.Override public int getMimeTypeValue() {
       return mimeType_;
     }
     /**
      * <pre>
-     * The mime type of the media file.
+     * Output only. The mime type of the media file.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for mimeType to set.
+     * @return This builder for chaining.
      */
     public Builder setMimeTypeValue(int value) {
+      
       mimeType_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The mime type of the media file.
+     * Output only. The mime type of the media file.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The mimeType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType getMimeType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
@@ -1583,10 +1664,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The mime type of the media file.
+     * Output only. The mime type of the media file.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The mimeType to set.
+     * @return This builder for chaining.
      */
     public Builder setMimeType(com.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType value) {
       if (value == null) {
@@ -1599,10 +1682,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The mime type of the media file.
+     * Output only. The mime type of the media file.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6;</code>
+     * <code>.google.ads.googleads.v1.enums.MimeTypeEnum.MimeType mime_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearMimeType() {
       
@@ -1616,22 +1700,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> sourceUrlBuilder_;
     /**
      * <pre>
-     * The URL of where the original media file was downloaded from (or a file
-     * name).
+     * Immutable. The URL of where the original media file was downloaded from (or a file
+     * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue source_url = 7;</code>
+     * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the sourceUrl field is set.
      */
     public boolean hasSourceUrl() {
       return sourceUrlBuilder_ != null || sourceUrl_ != null;
     }
     /**
      * <pre>
-     * The URL of where the original media file was downloaded from (or a file
-     * name).
+     * Immutable. The URL of where the original media file was downloaded from (or a file
+     * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue source_url = 7;</code>
+     * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The sourceUrl.
      */
     public com.google.protobuf.StringValue getSourceUrl() {
       if (sourceUrlBuilder_ == null) {
@@ -1642,11 +1728,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of where the original media file was downloaded from (or a file
-     * name).
+     * Immutable. The URL of where the original media file was downloaded from (or a file
+     * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue source_url = 7;</code>
+     * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setSourceUrl(com.google.protobuf.StringValue value) {
       if (sourceUrlBuilder_ == null) {
@@ -1663,11 +1749,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of where the original media file was downloaded from (or a file
-     * name).
+     * Immutable. The URL of where the original media file was downloaded from (or a file
+     * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue source_url = 7;</code>
+     * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setSourceUrl(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1682,11 +1768,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of where the original media file was downloaded from (or a file
-     * name).
+     * Immutable. The URL of where the original media file was downloaded from (or a file
+     * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue source_url = 7;</code>
+     * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeSourceUrl(com.google.protobuf.StringValue value) {
       if (sourceUrlBuilder_ == null) {
@@ -1705,11 +1791,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of where the original media file was downloaded from (or a file
-     * name).
+     * Immutable. The URL of where the original media file was downloaded from (or a file
+     * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue source_url = 7;</code>
+     * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearSourceUrl() {
       if (sourceUrlBuilder_ == null) {
@@ -1724,11 +1810,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of where the original media file was downloaded from (or a file
-     * name).
+     * Immutable. The URL of where the original media file was downloaded from (or a file
+     * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue source_url = 7;</code>
+     * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue.Builder getSourceUrlBuilder() {
       
@@ -1737,11 +1823,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of where the original media file was downloaded from (or a file
-     * name).
+     * Immutable. The URL of where the original media file was downloaded from (or a file
+     * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue source_url = 7;</code>
+     * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getSourceUrlOrBuilder() {
       if (sourceUrlBuilder_ != null) {
@@ -1753,11 +1839,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL of where the original media file was downloaded from (or a file
-     * name).
+     * Immutable. The URL of where the original media file was downloaded from (or a file
+     * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue source_url = 7;</code>
+     * <code>.google.protobuf.StringValue source_url = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1778,22 +1864,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
     /**
      * <pre>
-     * The name of the media file. The name can be used by clients to help
+     * Immutable. The name of the media file. The name can be used by clients to help
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 8;</code>
+     * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
-     * The name of the media file. The name can be used by clients to help
+     * Immutable. The name of the media file. The name can be used by clients to help
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 8;</code>
+     * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1804,11 +1892,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the media file. The name can be used by clients to help
+     * Immutable. The name of the media file. The name can be used by clients to help
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 8;</code>
+     * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1825,11 +1913,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the media file. The name can be used by clients to help
+     * Immutable. The name of the media file. The name can be used by clients to help
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 8;</code>
+     * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setName(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -1844,11 +1932,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the media file. The name can be used by clients to help
+     * Immutable. The name of the media file. The name can be used by clients to help
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 8;</code>
+     * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
@@ -1867,11 +1955,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the media file. The name can be used by clients to help
+     * Immutable. The name of the media file. The name can be used by clients to help
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 8;</code>
+     * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearName() {
       if (nameBuilder_ == null) {
@@ -1886,11 +1974,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the media file. The name can be used by clients to help
+     * Immutable. The name of the media file. The name can be used by clients to help
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 8;</code>
+     * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
       
@@ -1899,11 +1987,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the media file. The name can be used by clients to help
+     * Immutable. The name of the media file. The name can be used by clients to help
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 8;</code>
+     * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
       if (nameBuilder_ != null) {
@@ -1915,11 +2003,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name of the media file. The name can be used by clients to help
+     * Immutable. The name of the media file. The name can be used by clients to help
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 8;</code>
+     * <code>.google.protobuf.StringValue name = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -1940,20 +2028,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> fileSizeBuilder_;
     /**
      * <pre>
-     * The size of the media file in bytes.
+     * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value file_size = 9;</code>
+     * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the fileSize field is set.
      */
     public boolean hasFileSize() {
       return fileSizeBuilder_ != null || fileSize_ != null;
     }
     /**
      * <pre>
-     * The size of the media file in bytes.
+     * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value file_size = 9;</code>
+     * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The fileSize.
      */
     public com.google.protobuf.Int64Value getFileSize() {
       if (fileSizeBuilder_ == null) {
@@ -1964,10 +2054,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The size of the media file in bytes.
+     * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value file_size = 9;</code>
+     * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFileSize(com.google.protobuf.Int64Value value) {
       if (fileSizeBuilder_ == null) {
@@ -1984,10 +2074,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The size of the media file in bytes.
+     * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value file_size = 9;</code>
+     * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setFileSize(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2002,10 +2092,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The size of the media file in bytes.
+     * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value file_size = 9;</code>
+     * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeFileSize(com.google.protobuf.Int64Value value) {
       if (fileSizeBuilder_ == null) {
@@ -2024,10 +2114,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The size of the media file in bytes.
+     * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value file_size = 9;</code>
+     * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearFileSize() {
       if (fileSizeBuilder_ == null) {
@@ -2042,10 +2132,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The size of the media file in bytes.
+     * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value file_size = 9;</code>
+     * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getFileSizeBuilder() {
       
@@ -2054,10 +2144,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The size of the media file in bytes.
+     * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value file_size = 9;</code>
+     * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getFileSizeOrBuilder() {
       if (fileSizeBuilder_ != null) {
@@ -2069,10 +2159,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The size of the media file in bytes.
+     * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value file_size = 9;</code>
+     * <code>.google.protobuf.Int64Value file_size = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2092,21 +2182,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.resources.MediaImage, com.google.ads.googleads.v1.resources.MediaImage.Builder, com.google.ads.googleads.v1.resources.MediaImageOrBuilder> imageBuilder_;
     /**
      * <pre>
-     * Encapsulates an Image.
+     * Immutable. Encapsulates an Image.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the image field is set.
      */
+    @java.lang.Override
     public boolean hasImage() {
       return mediatypeCase_ == 3;
     }
     /**
      * <pre>
-     * Encapsulates an Image.
+     * Immutable. Encapsulates an Image.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The image.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.resources.MediaImage getImage() {
       if (imageBuilder_ == null) {
         if (mediatypeCase_ == 3) {
@@ -2122,10 +2216,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Image.
+     * Immutable. Encapsulates an Image.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setImage(com.google.ads.googleads.v1.resources.MediaImage value) {
       if (imageBuilder_ == null) {
@@ -2142,10 +2236,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Image.
+     * Immutable. Encapsulates an Image.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setImage(
         com.google.ads.googleads.v1.resources.MediaImage.Builder builderForValue) {
@@ -2160,10 +2254,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Image.
+     * Immutable. Encapsulates an Image.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeImage(com.google.ads.googleads.v1.resources.MediaImage value) {
       if (imageBuilder_ == null) {
@@ -2186,10 +2280,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Image.
+     * Immutable. Encapsulates an Image.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearImage() {
       if (imageBuilder_ == null) {
@@ -2209,21 +2303,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Image.
+     * Immutable. Encapsulates an Image.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.resources.MediaImage.Builder getImageBuilder() {
       return getImageFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Encapsulates an Image.
+     * Immutable. Encapsulates an Image.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.resources.MediaImageOrBuilder getImageOrBuilder() {
       if ((mediatypeCase_ == 3) && (imageBuilder_ != null)) {
         return imageBuilder_.getMessageOrBuilder();
@@ -2236,10 +2331,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Image.
+     * Immutable. Encapsulates an Image.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaImage image = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.MediaImage, com.google.ads.googleads.v1.resources.MediaImage.Builder, com.google.ads.googleads.v1.resources.MediaImageOrBuilder> 
@@ -2264,21 +2359,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.resources.MediaBundle, com.google.ads.googleads.v1.resources.MediaBundle.Builder, com.google.ads.googleads.v1.resources.MediaBundleOrBuilder> mediaBundleBuilder_;
     /**
      * <pre>
-     * A ZIP archive media the content of which contains HTML5 assets.
+     * Immutable. A ZIP archive media the content of which contains HTML5 assets.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the mediaBundle field is set.
      */
+    @java.lang.Override
     public boolean hasMediaBundle() {
       return mediatypeCase_ == 4;
     }
     /**
      * <pre>
-     * A ZIP archive media the content of which contains HTML5 assets.
+     * Immutable. A ZIP archive media the content of which contains HTML5 assets.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The mediaBundle.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.resources.MediaBundle getMediaBundle() {
       if (mediaBundleBuilder_ == null) {
         if (mediatypeCase_ == 4) {
@@ -2294,10 +2393,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A ZIP archive media the content of which contains HTML5 assets.
+     * Immutable. A ZIP archive media the content of which contains HTML5 assets.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setMediaBundle(com.google.ads.googleads.v1.resources.MediaBundle value) {
       if (mediaBundleBuilder_ == null) {
@@ -2314,10 +2413,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A ZIP archive media the content of which contains HTML5 assets.
+     * Immutable. A ZIP archive media the content of which contains HTML5 assets.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setMediaBundle(
         com.google.ads.googleads.v1.resources.MediaBundle.Builder builderForValue) {
@@ -2332,10 +2431,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A ZIP archive media the content of which contains HTML5 assets.
+     * Immutable. A ZIP archive media the content of which contains HTML5 assets.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeMediaBundle(com.google.ads.googleads.v1.resources.MediaBundle value) {
       if (mediaBundleBuilder_ == null) {
@@ -2358,10 +2457,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A ZIP archive media the content of which contains HTML5 assets.
+     * Immutable. A ZIP archive media the content of which contains HTML5 assets.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearMediaBundle() {
       if (mediaBundleBuilder_ == null) {
@@ -2381,21 +2480,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A ZIP archive media the content of which contains HTML5 assets.
+     * Immutable. A ZIP archive media the content of which contains HTML5 assets.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.resources.MediaBundle.Builder getMediaBundleBuilder() {
       return getMediaBundleFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * A ZIP archive media the content of which contains HTML5 assets.
+     * Immutable. A ZIP archive media the content of which contains HTML5 assets.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.resources.MediaBundleOrBuilder getMediaBundleOrBuilder() {
       if ((mediatypeCase_ == 4) && (mediaBundleBuilder_ != null)) {
         return mediaBundleBuilder_.getMessageOrBuilder();
@@ -2408,10 +2508,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A ZIP archive media the content of which contains HTML5 assets.
+     * Immutable. A ZIP archive media the content of which contains HTML5 assets.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.MediaBundle, com.google.ads.googleads.v1.resources.MediaBundle.Builder, com.google.ads.googleads.v1.resources.MediaBundleOrBuilder> 
@@ -2436,21 +2536,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.resources.MediaAudio, com.google.ads.googleads.v1.resources.MediaAudio.Builder, com.google.ads.googleads.v1.resources.MediaAudioOrBuilder> audioBuilder_;
     /**
      * <pre>
-     * Encapsulates an Audio.
+     * Output only. Encapsulates an Audio.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the audio field is set.
      */
+    @java.lang.Override
     public boolean hasAudio() {
       return mediatypeCase_ == 10;
     }
     /**
      * <pre>
-     * Encapsulates an Audio.
+     * Output only. Encapsulates an Audio.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The audio.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.resources.MediaAudio getAudio() {
       if (audioBuilder_ == null) {
         if (mediatypeCase_ == 10) {
@@ -2466,10 +2570,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Audio.
+     * Output only. Encapsulates an Audio.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAudio(com.google.ads.googleads.v1.resources.MediaAudio value) {
       if (audioBuilder_ == null) {
@@ -2486,10 +2590,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Audio.
+     * Output only. Encapsulates an Audio.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setAudio(
         com.google.ads.googleads.v1.resources.MediaAudio.Builder builderForValue) {
@@ -2504,10 +2608,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Audio.
+     * Output only. Encapsulates an Audio.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAudio(com.google.ads.googleads.v1.resources.MediaAudio value) {
       if (audioBuilder_ == null) {
@@ -2530,10 +2634,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Audio.
+     * Output only. Encapsulates an Audio.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAudio() {
       if (audioBuilder_ == null) {
@@ -2553,21 +2657,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Audio.
+     * Output only. Encapsulates an Audio.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v1.resources.MediaAudio.Builder getAudioBuilder() {
       return getAudioFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Encapsulates an Audio.
+     * Output only. Encapsulates an Audio.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.resources.MediaAudioOrBuilder getAudioOrBuilder() {
       if ((mediatypeCase_ == 10) && (audioBuilder_ != null)) {
         return audioBuilder_.getMessageOrBuilder();
@@ -2580,10 +2685,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates an Audio.
+     * Output only. Encapsulates an Audio.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaAudio audio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.MediaAudio, com.google.ads.googleads.v1.resources.MediaAudio.Builder, com.google.ads.googleads.v1.resources.MediaAudioOrBuilder> 
@@ -2608,21 +2713,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v1.resources.MediaVideo, com.google.ads.googleads.v1.resources.MediaVideo.Builder, com.google.ads.googleads.v1.resources.MediaVideoOrBuilder> videoBuilder_;
     /**
      * <pre>
-     * Encapsulates a Video.
+     * Immutable. Encapsulates a Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the video field is set.
      */
+    @java.lang.Override
     public boolean hasVideo() {
       return mediatypeCase_ == 11;
     }
     /**
      * <pre>
-     * Encapsulates a Video.
+     * Immutable. Encapsulates a Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The video.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.resources.MediaVideo getVideo() {
       if (videoBuilder_ == null) {
         if (mediatypeCase_ == 11) {
@@ -2638,10 +2747,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates a Video.
+     * Immutable. Encapsulates a Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setVideo(com.google.ads.googleads.v1.resources.MediaVideo value) {
       if (videoBuilder_ == null) {
@@ -2658,10 +2767,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates a Video.
+     * Immutable. Encapsulates a Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setVideo(
         com.google.ads.googleads.v1.resources.MediaVideo.Builder builderForValue) {
@@ -2676,10 +2785,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates a Video.
+     * Immutable. Encapsulates a Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeVideo(com.google.ads.googleads.v1.resources.MediaVideo value) {
       if (videoBuilder_ == null) {
@@ -2702,10 +2811,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates a Video.
+     * Immutable. Encapsulates a Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearVideo() {
       if (videoBuilder_ == null) {
@@ -2725,21 +2834,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates a Video.
+     * Immutable. Encapsulates a Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v1.resources.MediaVideo.Builder getVideoBuilder() {
       return getVideoFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Encapsulates a Video.
+     * Immutable. Encapsulates a Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.resources.MediaVideoOrBuilder getVideoOrBuilder() {
       if ((mediatypeCase_ == 11) && (videoBuilder_ != null)) {
         return videoBuilder_.getMessageOrBuilder();
@@ -2752,10 +2862,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Encapsulates a Video.
+     * Immutable. Encapsulates a Video.
      * </pre>
      *
-     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11;</code>
+     * <code>.google.ads.googleads.v1.resources.MediaVideo video = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v1.resources.MediaVideo, com.google.ads.googleads.v1.resources.MediaVideo.Builder, com.google.ads.googleads.v1.resources.MediaVideoOrBuilder> 

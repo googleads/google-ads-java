@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.ListPlannableLocationsRequest}
  */
-public  final class ListPlannableLocationsRequest extends
+public final class ListPlannableLocationsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.ListPlannableLocationsRequest)
     ListPlannableLocationsRequestOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListPlannableLocationsRequest() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListPlannableLocationsRequest();
   }
 
   @java.lang.Override

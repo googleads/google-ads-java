@@ -116,114 +116,111 @@ public final class RecommendationServiceProto {
       "to\032*google/ads/googleads/v2/resources/ad" +
       ".proto\0326google/ads/googleads/v2/resource" +
       "s/recommendation.proto\032\034google/api/annot" +
-      "ations.proto\032\036google/protobuf/wrappers.p" +
-      "roto\032\027google/rpc/status.proto\032\027google/ap" +
-      "i/client.proto\"1\n\030GetRecommendationReque" +
-      "st\022\025\n\rresource_name\030\001 \001(\t\"\236\001\n\032ApplyRecom" +
-      "mendationRequest\022\023\n\013customer_id\030\001 \001(\t\022R\n" +
-      "\noperations\030\002 \003(\0132>.google.ads.googleads" +
-      ".v2.services.ApplyRecommendationOperatio" +
-      "n\022\027\n\017partial_failure\030\003 \001(\010\"\202\017\n\034ApplyReco" +
-      "mmendationOperation\022\025\n\rresource_name\030\001 \001" +
-      "(\t\022r\n\017campaign_budget\030\002 \001(\0132W.google.ads" +
-      ".googleads.v2.services.ApplyRecommendati" +
-      "onOperation.CampaignBudgetParametersH\000\022b" +
-      "\n\007text_ad\030\003 \001(\0132O.google.ads.googleads.v" +
-      "2.services.ApplyRecommendationOperation." +
-      "TextAdParametersH\000\022c\n\007keyword\030\004 \001(\0132P.go" +
-      "ogle.ads.googleads.v2.services.ApplyReco" +
-      "mmendationOperation.KeywordParametersH\000\022" +
-      "t\n\021target_cpa_opt_in\030\005 \001(\0132W.google.ads." +
+      "ations.proto\032\027google/api/client.proto\032\037g" +
+      "oogle/api/field_behavior.proto\032\031google/a" +
+      "pi/resource.proto\032\036google/protobuf/wrapp" +
+      "ers.proto\032\027google/rpc/status.proto\"b\n\030Ge" +
+      "tRecommendationRequest\022F\n\rresource_name\030" +
+      "\001 \001(\tB/\340A\002\372A)\n\'googleads.googleapis.com/" +
+      "Recommendation\"\250\001\n\032ApplyRecommendationRe" +
+      "quest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022W\n\nopera" +
+      "tions\030\002 \003(\0132>.google.ads.googleads.v2.se" +
+      "rvices.ApplyRecommendationOperationB\003\340A\002" +
+      "\022\027\n\017partial_failure\030\003 \001(\010\"\202\017\n\034ApplyRecom" +
+      "mendationOperation\022\025\n\rresource_name\030\001 \001(" +
+      "\t\022r\n\017campaign_budget\030\002 \001(\0132W.google.ads." +
       "googleads.v2.services.ApplyRecommendatio" +
-      "nOperation.TargetCpaOptInParametersH\000\022v\n" +
-      "\021callout_extension\030\006 \001(\0132Y.google.ads.go" +
-      "ogleads.v2.services.ApplyRecommendationO" +
-      "peration.CalloutExtensionParametersH\000\022p\n" +
-      "\016call_extension\030\007 \001(\0132V.google.ads.googl" +
-      "eads.v2.services.ApplyRecommendationOper" +
-      "ation.CallExtensionParametersH\000\022x\n\022sitel" +
-      "ink_extension\030\010 \001(\0132Z.google.ads.googlea" +
-      "ds.v2.services.ApplyRecommendationOperat" +
-      "ion.SitelinkExtensionParametersH\000\022w\n\022mov" +
-      "e_unused_budget\030\t \001(\0132Y.google.ads.googl" +
-      "eads.v2.services.ApplyRecommendationOper" +
-      "ation.MoveUnusedBudgetParametersH\000\032Y\n\030Ca" +
-      "mpaignBudgetParameters\022=\n\030new_budget_amo" +
-      "unt_micros\030\001 \001(\0132\033.google.protobuf.Int64" +
-      "Value\032E\n\020TextAdParameters\0221\n\002ad\030\001 \001(\0132%." +
-      "google.ads.googleads.v2.resources.Ad\032\322\001\n" +
-      "\021KeywordParameters\022.\n\010ad_group\030\001 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\022X\n\nmatch_type" +
-      "\030\002 \001(\0162D.google.ads.googleads.v2.enums.K" +
-      "eywordMatchTypeEnum.KeywordMatchType\0223\n\016" +
-      "cpc_bid_micros\030\003 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\032\232\001\n\030TargetCpaOptInParameters\0226" +
-      "\n\021target_cpa_micros\030\001 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022F\n!new_campaign_budget_am" +
-      "ount_micros\030\002 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\032i\n\032CalloutExtensionParameters\022K\n\022" +
-      "callout_extensions\030\001 \003(\0132/.google.ads.go" +
-      "ogleads.v2.common.CalloutFeedItem\032`\n\027Cal" +
-      "lExtensionParameters\022E\n\017call_extensions\030" +
-      "\001 \003(\0132,.google.ads.googleads.v2.common.C" +
-      "allFeedItem\032l\n\033SitelinkExtensionParamete" +
-      "rs\022M\n\023sitelink_extensions\030\001 \003(\01320.google" +
-      ".ads.googleads.v2.common.SitelinkFeedIte" +
-      "m\032X\n\032MoveUnusedBudgetParameters\022:\n\025budge" +
-      "t_micros_to_move\030\001 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\022\n\020apply_parameters\"\236\001\n\033Appl" +
-      "yRecommendationResponse\022L\n\007results\030\001 \003(\013" +
-      "2;.google.ads.googleads.v2.services.Appl" +
-      "yRecommendationResult\0221\n\025partial_failure" +
-      "_error\030\002 \001(\0132\022.google.rpc.Status\"2\n\031Appl" +
-      "yRecommendationResult\022\025\n\rresource_name\030\001" +
-      " \001(\t\"\370\001\n\034DismissRecommendationRequest\022\023\n" +
-      "\013customer_id\030\001 \001(\t\022q\n\noperations\030\003 \003(\0132]" +
-      ".google.ads.googleads.v2.services.Dismis" +
-      "sRecommendationRequest.DismissRecommenda" +
-      "tionOperation\022\027\n\017partial_failure\030\002 \001(\010\0327" +
-      "\n\036DismissRecommendationOperation\022\025\n\rreso" +
-      "urce_name\030\001 \001(\t\"\366\001\n\035DismissRecommendatio" +
-      "nResponse\022l\n\007results\030\001 \003(\0132[.google.ads." +
-      "googleads.v2.services.DismissRecommendat" +
-      "ionResponse.DismissRecommendationResult\022" +
-      "1\n\025partial_failure_error\030\002 \001(\0132\022.google." +
-      "rpc.Status\0324\n\033DismissRecommendationResul" +
-      "t\022\025\n\rresource_name\030\001 \001(\t2\246\005\n\025Recommendat" +
-      "ionService\022\275\001\n\021GetRecommendation\022:.googl" +
-      "e.ads.googleads.v2.services.GetRecommend" +
-      "ationRequest\0321.google.ads.googleads.v2.r" +
-      "esources.Recommendation\"9\202\323\344\223\0023\0221/v2/{re" +
-      "source_name=customers/*/recommendations/" +
-      "*}\022\322\001\n\023ApplyRecommendation\022<.google.ads." +
-      "googleads.v2.services.ApplyRecommendatio" +
-      "nRequest\032=.google.ads.googleads.v2.servi" +
-      "ces.ApplyRecommendationResponse\">\202\323\344\223\0028\"" +
-      "3/v2/customers/{customer_id=*}/recommend" +
-      "ations:apply:\001*\022\332\001\n\025DismissRecommendatio" +
-      "n\022>.google.ads.googleads.v2.services.Dis" +
-      "missRecommendationRequest\032?.google.ads.g" +
-      "oogleads.v2.services.DismissRecommendati" +
-      "onResponse\"@\202\323\344\223\002:\"5/v2/customers/{custo" +
-      "mer_id=*}/recommendations:dismiss:\001*\032\033\312A" +
-      "\030googleads.googleapis.comB\201\002\n$com.google" +
-      ".ads.googleads.v2.servicesB\032Recommendati" +
-      "onServiceProtoP\001ZHgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v2/service" +
-      "s;services\242\002\003GAA\252\002 Google.Ads.GoogleAds." +
-      "V2.Services\312\002 Google\\Ads\\GoogleAds\\V2\\Se" +
-      "rvices\352\002$Google::Ads::GoogleAds::V2::Ser" +
-      "vicesb\006proto3"
+      "nOperation.CampaignBudgetParametersH\000\022b\n" +
+      "\007text_ad\030\003 \001(\0132O.google.ads.googleads.v2" +
+      ".services.ApplyRecommendationOperation.T" +
+      "extAdParametersH\000\022c\n\007keyword\030\004 \001(\0132P.goo" +
+      "gle.ads.googleads.v2.services.ApplyRecom" +
+      "mendationOperation.KeywordParametersH\000\022t" +
+      "\n\021target_cpa_opt_in\030\005 \001(\0132W.google.ads.g" +
+      "oogleads.v2.services.ApplyRecommendation" +
+      "Operation.TargetCpaOptInParametersH\000\022v\n\021" +
+      "callout_extension\030\006 \001(\0132Y.google.ads.goo" +
+      "gleads.v2.services.ApplyRecommendationOp" +
+      "eration.CalloutExtensionParametersH\000\022p\n\016" +
+      "call_extension\030\007 \001(\0132V.google.ads.google" +
+      "ads.v2.services.ApplyRecommendationOpera" +
+      "tion.CallExtensionParametersH\000\022x\n\022siteli" +
+      "nk_extension\030\010 \001(\0132Z.google.ads.googlead" +
+      "s.v2.services.ApplyRecommendationOperati" +
+      "on.SitelinkExtensionParametersH\000\022w\n\022move" +
+      "_unused_budget\030\t \001(\0132Y.google.ads.google" +
+      "ads.v2.services.ApplyRecommendationOpera" +
+      "tion.MoveUnusedBudgetParametersH\000\032Y\n\030Cam" +
+      "paignBudgetParameters\022=\n\030new_budget_amou" +
+      "nt_micros\030\001 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\032E\n\020TextAdParameters\0221\n\002ad\030\001 \001(\0132%.g" +
+      "oogle.ads.googleads.v2.resources.Ad\032\322\001\n\021" +
+      "KeywordParameters\022.\n\010ad_group\030\001 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\022X\n\nmatch_type\030" +
+      "\002 \001(\0162D.google.ads.googleads.v2.enums.Ke" +
+      "ywordMatchTypeEnum.KeywordMatchType\0223\n\016c" +
+      "pc_bid_micros\030\003 \001(\0132\033.google.protobuf.In" +
+      "t64Value\032\232\001\n\030TargetCpaOptInParameters\0226\n" +
+      "\021target_cpa_micros\030\001 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022F\n!new_campaign_budget_amo" +
+      "unt_micros\030\002 \001(\0132\033.google.protobuf.Int64" +
+      "Value\032i\n\032CalloutExtensionParameters\022K\n\022c" +
+      "allout_extensions\030\001 \003(\0132/.google.ads.goo" +
+      "gleads.v2.common.CalloutFeedItem\032`\n\027Call" +
+      "ExtensionParameters\022E\n\017call_extensions\030\001" +
+      " \003(\0132,.google.ads.googleads.v2.common.Ca" +
+      "llFeedItem\032l\n\033SitelinkExtensionParameter" +
+      "s\022M\n\023sitelink_extensions\030\001 \003(\01320.google." +
+      "ads.googleads.v2.common.SitelinkFeedItem" +
+      "\032X\n\032MoveUnusedBudgetParameters\022:\n\025budget" +
+      "_micros_to_move\030\001 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\022\n\020apply_parameters\"\236\001\n\033Apply" +
+      "RecommendationResponse\022L\n\007results\030\001 \003(\0132" +
+      ";.google.ads.googleads.v2.services.Apply" +
+      "RecommendationResult\0221\n\025partial_failure_" +
+      "error\030\002 \001(\0132\022.google.rpc.Status\"2\n\031Apply" +
+      "RecommendationResult\022\025\n\rresource_name\030\001 " +
+      "\001(\t\"\202\002\n\034DismissRecommendationRequest\022\030\n\013" +
+      "customer_id\030\001 \001(\tB\003\340A\002\022v\n\noperations\030\003 \003" +
+      "(\0132].google.ads.googleads.v2.services.Di" +
+      "smissRecommendationRequest.DismissRecomm" +
+      "endationOperationB\003\340A\002\022\027\n\017partial_failur" +
+      "e\030\002 \001(\010\0327\n\036DismissRecommendationOperatio" +
+      "n\022\025\n\rresource_name\030\001 \001(\t\"\366\001\n\035DismissReco" +
+      "mmendationResponse\022l\n\007results\030\001 \003(\0132[.go" +
+      "ogle.ads.googleads.v2.services.DismissRe" +
+      "commendationResponse.DismissRecommendati" +
+      "onResult\0221\n\025partial_failure_error\030\002 \001(\0132" +
+      "\022.google.rpc.Status\0324\n\033DismissRecommenda" +
+      "tionResult\022\025\n\rresource_name\030\001 \001(\t2\350\005\n\025Re" +
+      "commendationService\022\315\001\n\021GetRecommendatio" +
+      "n\022:.google.ads.googleads.v2.services.Get" +
+      "RecommendationRequest\0321.google.ads.googl" +
+      "eads.v2.resources.Recommendation\"I\202\323\344\223\0023" +
+      "\0221/v2/{resource_name=customers/*/recomme" +
+      "ndations/*}\332A\rresource_name\022\353\001\n\023ApplyRec" +
+      "ommendation\022<.google.ads.googleads.v2.se" +
+      "rvices.ApplyRecommendationRequest\032=.goog" +
+      "le.ads.googleads.v2.services.ApplyRecomm" +
+      "endationResponse\"W\202\323\344\223\0028\"3/v2/customers/" +
+      "{customer_id=*}/recommendations:apply:\001*" +
+      "\332A\026customer_id,operations\022\363\001\n\025DismissRec" +
+      "ommendation\022>.google.ads.googleads.v2.se" +
+      "rvices.DismissRecommendationRequest\032?.go" +
+      "ogle.ads.googleads.v2.services.DismissRe" +
+      "commendationResponse\"Y\202\323\344\223\002:\"5/v2/custom" +
+      "ers/{customer_id=*}/recommendations:dism" +
+      "iss:\001*\332A\026customer_id,operations\032\033\312A\030goog" +
+      "leads.googleapis.comB\201\002\n$com.google.ads." +
+      "googleads.v2.servicesB\032RecommendationSer" +
+      "viceProtoP\001ZHgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v2/services;ser" +
+      "vices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V2.Se" +
+      "rvices\312\002 Google\\Ads\\GoogleAds\\V2\\Service" +
+      "s\352\002$Google::Ads::GoogleAds::V2::Services" +
+      "b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.common.ExtensionsProto.getDescriptor(),
@@ -231,10 +228,12 @@ public final class RecommendationServiceProto {
           com.google.ads.googleads.v2.resources.AdProto.getDescriptor(),
           com.google.ads.googleads.v2.resources.RecommendationProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.api.ClientProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_services_GetRecommendationRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetRecommendationRequest_fieldAccessorTable = new
@@ -340,7 +339,10 @@ public final class RecommendationServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.common.ExtensionsProto.getDescriptor();
@@ -348,9 +350,11 @@ public final class RecommendationServiceProto {
     com.google.ads.googleads.v2.resources.AdProto.getDescriptor();
     com.google.ads.googleads.v2.resources.RecommendationProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

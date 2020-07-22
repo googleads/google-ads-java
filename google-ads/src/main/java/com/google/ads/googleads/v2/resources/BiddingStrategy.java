@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.BiddingStrategy}
  */
-public  final class BiddingStrategy extends
+public final class BiddingStrategy extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.BiddingStrategy)
     BiddingStrategyOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new BiddingStrategy();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -252,7 +258,8 @@ private static final long serialVersionUID = 0L;
   private int schemeCase_ = 0;
   private java.lang.Object scheme_;
   public enum SchemeCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     ENHANCED_CPC(7),
     PAGE_ONE_PROMOTED(8),
     TARGET_CPA(9),
@@ -266,6 +273,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -301,13 +310,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the bidding strategy.
+   * Immutable. The resource name of the bidding strategy.
    * Bidding strategy resource names have the form:
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -322,13 +333,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the bidding strategy.
+   * Immutable. The resource name of the bidding strategy.
    * Bidding strategy resource names have the form:
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -347,31 +360,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the bidding strategy.
+   * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the bidding strategy.
+   * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the bidding strategy.
+   * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -387,7 +405,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -400,7 +420,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -414,6 +436,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -422,24 +445,26 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * The status of the bidding strategy.
+   * Output only. The status of the bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+   * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
    * <pre>
-   * The status of the bidding strategy.
+   * Output only. The status of the bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+   * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus result = com.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus.UNRECOGNIZED : result;
@@ -449,26 +474,28 @@ private static final long serialVersionUID = 0L;
   private int type_;
   /**
    * <pre>
-   * The type of the bidding strategy.
+   * Output only. The type of the bidding strategy.
    * Create a bidding strategy by setting the bidding scheme.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
    * <pre>
-   * The type of the bidding strategy.
+   * Output only. The type of the bidding strategy.
    * Create a bidding strategy by setting the bidding scheme.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType getType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType result = com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNRECOGNIZED : result;
@@ -478,34 +505,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value campaignCount_;
   /**
    * <pre>
-   * The number of campaigns attached to this bidding strategy.
+   * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+   * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the campaignCount field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignCount() {
     return campaignCount_ != null;
   }
   /**
    * <pre>
-   * The number of campaigns attached to this bidding strategy.
+   * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+   * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The campaignCount.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCampaignCount() {
     return campaignCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : campaignCount_;
   }
   /**
    * <pre>
-   * The number of campaigns attached to this bidding strategy.
+   * Output only. The number of campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+   * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCampaignCountOrBuilder() {
     return getCampaignCount();
   }
@@ -514,34 +546,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value nonRemovedCampaignCount_;
   /**
    * <pre>
-   * The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the nonRemovedCampaignCount field is set.
    */
+  @java.lang.Override
   public boolean hasNonRemovedCampaignCount() {
     return nonRemovedCampaignCount_ != null;
   }
   /**
    * <pre>
-   * The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The nonRemovedCampaignCount.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getNonRemovedCampaignCount() {
     return nonRemovedCampaignCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : nonRemovedCampaignCount_;
   }
   /**
    * <pre>
-   * The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+   * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getNonRemovedCampaignCountOrBuilder() {
     return getNonRemovedCampaignCount();
   }
@@ -555,7 +592,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.EnhancedCpc enhanced_cpc = 7;</code>
+   * @return Whether the enhancedCpc field is set.
    */
+  @java.lang.Override
   public boolean hasEnhancedCpc() {
     return schemeCase_ == 7;
   }
@@ -567,7 +606,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.EnhancedCpc enhanced_cpc = 7;</code>
+   * @return The enhancedCpc.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.EnhancedCpc getEnhancedCpc() {
     if (schemeCase_ == 7) {
        return (com.google.ads.googleads.v2.common.EnhancedCpc) scheme_;
@@ -583,6 +624,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.EnhancedCpc enhanced_cpc = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.EnhancedCpcOrBuilder getEnhancedCpcOrBuilder() {
     if (schemeCase_ == 7) {
        return (com.google.ads.googleads.v2.common.EnhancedCpc) scheme_;
@@ -602,7 +644,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PageOnePromoted page_one_promoted = 8;</code>
+   * @return Whether the pageOnePromoted field is set.
    */
+  @java.lang.Override
   public boolean hasPageOnePromoted() {
     return schemeCase_ == 8;
   }
@@ -617,7 +661,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PageOnePromoted page_one_promoted = 8;</code>
+   * @return The pageOnePromoted.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.PageOnePromoted getPageOnePromoted() {
     if (schemeCase_ == 8) {
        return (com.google.ads.googleads.v2.common.PageOnePromoted) scheme_;
@@ -636,6 +682,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.PageOnePromoted page_one_promoted = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.PageOnePromotedOrBuilder getPageOnePromotedOrBuilder() {
     if (schemeCase_ == 8) {
        return (com.google.ads.googleads.v2.common.PageOnePromoted) scheme_;
@@ -651,7 +698,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 9;</code>
+   * @return Whether the targetCpa field is set.
    */
+  @java.lang.Override
   public boolean hasTargetCpa() {
     return schemeCase_ == 9;
   }
@@ -662,7 +711,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 9;</code>
+   * @return The targetCpa.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetCpa getTargetCpa() {
     if (schemeCase_ == 9) {
        return (com.google.ads.googleads.v2.common.TargetCpa) scheme_;
@@ -677,6 +728,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 9;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetCpaOrBuilder getTargetCpaOrBuilder() {
     if (schemeCase_ == 9) {
        return (com.google.ads.googleads.v2.common.TargetCpa) scheme_;
@@ -692,7 +744,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
+   * @return Whether the targetImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasTargetImpressionShare() {
     return schemeCase_ == 48;
   }
@@ -703,7 +757,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
+   * @return The targetImpressionShare.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetImpressionShare getTargetImpressionShare() {
     if (schemeCase_ == 48) {
        return (com.google.ads.googleads.v2.common.TargetImpressionShare) scheme_;
@@ -718,6 +774,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetImpressionShareOrBuilder getTargetImpressionShareOrBuilder() {
     if (schemeCase_ == 48) {
        return (com.google.ads.googleads.v2.common.TargetImpressionShare) scheme_;
@@ -737,7 +794,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetOutrankShare target_outrank_share = 10;</code>
+   * @return Whether the targetOutrankShare field is set.
    */
+  @java.lang.Override
   public boolean hasTargetOutrankShare() {
     return schemeCase_ == 10;
   }
@@ -752,7 +811,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetOutrankShare target_outrank_share = 10;</code>
+   * @return The targetOutrankShare.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetOutrankShare getTargetOutrankShare() {
     if (schemeCase_ == 10) {
        return (com.google.ads.googleads.v2.common.TargetOutrankShare) scheme_;
@@ -771,6 +832,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetOutrankShare target_outrank_share = 10;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetOutrankShareOrBuilder getTargetOutrankShareOrBuilder() {
     if (schemeCase_ == 10) {
        return (com.google.ads.googleads.v2.common.TargetOutrankShare) scheme_;
@@ -786,7 +848,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 11;</code>
+   * @return Whether the targetRoas field is set.
    */
+  @java.lang.Override
   public boolean hasTargetRoas() {
     return schemeCase_ == 11;
   }
@@ -797,7 +861,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 11;</code>
+   * @return The targetRoas.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetRoas getTargetRoas() {
     if (schemeCase_ == 11) {
        return (com.google.ads.googleads.v2.common.TargetRoas) scheme_;
@@ -812,6 +878,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 11;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetRoasOrBuilder getTargetRoasOrBuilder() {
     if (schemeCase_ == 11) {
        return (com.google.ads.googleads.v2.common.TargetRoas) scheme_;
@@ -827,7 +894,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 12;</code>
+   * @return Whether the targetSpend field is set.
    */
+  @java.lang.Override
   public boolean hasTargetSpend() {
     return schemeCase_ == 12;
   }
@@ -838,7 +907,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 12;</code>
+   * @return The targetSpend.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetSpend getTargetSpend() {
     if (schemeCase_ == 12) {
        return (com.google.ads.googleads.v2.common.TargetSpend) scheme_;
@@ -853,6 +924,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 12;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetSpendOrBuilder getTargetSpendOrBuilder() {
     if (schemeCase_ == 12) {
        return (com.google.ads.googleads.v2.common.TargetSpend) scheme_;
@@ -1535,12 +1607,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the bidding strategy.
+     * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1556,12 +1629,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the bidding strategy.
+     * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1578,12 +1652,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the bidding strategy.
+     * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1597,12 +1673,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the bidding strategy.
+     * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1612,12 +1689,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the bidding strategy.
+     * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1636,20 +1715,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -1660,10 +1741,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1680,10 +1761,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -1698,10 +1779,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -1720,10 +1801,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -1738,10 +1819,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -1750,10 +1831,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -1765,10 +1846,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the bidding strategy.
+     * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -1796,6 +1877,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1809,6 +1891,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1967,36 +2050,42 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * The status of the bidding strategy.
+     * Output only. The status of the bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
      * <pre>
-     * The status of the bidding strategy.
+     * Output only. The status of the bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The status of the bidding strategy.
+     * Output only. The status of the bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus result = com.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus.valueOf(status_);
@@ -2004,11 +2093,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the bidding strategy.
+     * Output only. The status of the bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus value) {
       if (value == null) {
@@ -2021,11 +2112,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The status of the bidding strategy.
+     * Output only. The status of the bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyStatusEnum.BiddingStrategyStatus status = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       
@@ -2037,39 +2129,45 @@ private static final long serialVersionUID = 0L;
     private int type_ = 0;
     /**
      * <pre>
-     * The type of the bidding strategy.
+     * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
      * <pre>
-     * The type of the bidding strategy.
+     * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The type of the bidding strategy.
+     * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType result = com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType.valueOf(type_);
@@ -2077,12 +2175,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the bidding strategy.
+     * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType value) {
       if (value == null) {
@@ -2095,12 +2195,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of the bidding strategy.
+     * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -2114,22 +2215,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> campaignCountBuilder_;
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the campaignCount field is set.
      */
     public boolean hasCampaignCount() {
       return campaignCountBuilder_ != null || campaignCount_ != null;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The campaignCount.
      */
     public com.google.protobuf.Int64Value getCampaignCount() {
       if (campaignCountBuilder_ == null) {
@@ -2140,11 +2243,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCampaignCount(com.google.protobuf.Int64Value value) {
       if (campaignCountBuilder_ == null) {
@@ -2161,11 +2264,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCampaignCount(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2180,11 +2283,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCampaignCount(com.google.protobuf.Int64Value value) {
       if (campaignCountBuilder_ == null) {
@@ -2203,11 +2306,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCampaignCount() {
       if (campaignCountBuilder_ == null) {
@@ -2222,11 +2325,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getCampaignCountBuilder() {
       
@@ -2235,11 +2338,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getCampaignCountOrBuilder() {
       if (campaignCountBuilder_ != null) {
@@ -2251,11 +2354,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of campaigns attached to this bidding strategy.
+     * Output only. The number of campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value campaign_count = 13;</code>
+     * <code>.google.protobuf.Int64Value campaign_count = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2276,22 +2379,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> nonRemovedCampaignCountBuilder_;
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the nonRemovedCampaignCount field is set.
      */
     public boolean hasNonRemovedCampaignCount() {
       return nonRemovedCampaignCountBuilder_ != null || nonRemovedCampaignCount_ != null;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The nonRemovedCampaignCount.
      */
     public com.google.protobuf.Int64Value getNonRemovedCampaignCount() {
       if (nonRemovedCampaignCountBuilder_ == null) {
@@ -2302,11 +2407,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setNonRemovedCampaignCount(com.google.protobuf.Int64Value value) {
       if (nonRemovedCampaignCountBuilder_ == null) {
@@ -2323,11 +2428,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setNonRemovedCampaignCount(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2342,11 +2447,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeNonRemovedCampaignCount(com.google.protobuf.Int64Value value) {
       if (nonRemovedCampaignCountBuilder_ == null) {
@@ -2365,11 +2470,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearNonRemovedCampaignCount() {
       if (nonRemovedCampaignCountBuilder_ == null) {
@@ -2384,11 +2489,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getNonRemovedCampaignCountBuilder() {
       
@@ -2397,11 +2502,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getNonRemovedCampaignCountOrBuilder() {
       if (nonRemovedCampaignCountBuilder_ != null) {
@@ -2413,11 +2518,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The number of non-removed campaigns attached to this bidding strategy.
+     * Output only. The number of non-removed campaigns attached to this bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14;</code>
+     * <code>.google.protobuf.Int64Value non_removed_campaign_count = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2443,7 +2548,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.EnhancedCpc enhanced_cpc = 7;</code>
+     * @return Whether the enhancedCpc field is set.
      */
+    @java.lang.Override
     public boolean hasEnhancedCpc() {
       return schemeCase_ == 7;
     }
@@ -2455,7 +2562,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.EnhancedCpc enhanced_cpc = 7;</code>
+     * @return The enhancedCpc.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.EnhancedCpc getEnhancedCpc() {
       if (enhancedCpcBuilder_ == null) {
         if (schemeCase_ == 7) {
@@ -2585,6 +2694,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.EnhancedCpc enhanced_cpc = 7;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.EnhancedCpcOrBuilder getEnhancedCpcOrBuilder() {
       if ((schemeCase_ == 7) && (enhancedCpcBuilder_ != null)) {
         return enhancedCpcBuilder_.getMessageOrBuilder();
@@ -2636,7 +2746,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.PageOnePromoted page_one_promoted = 8;</code>
+     * @return Whether the pageOnePromoted field is set.
      */
+    @java.lang.Override
     public boolean hasPageOnePromoted() {
       return schemeCase_ == 8;
     }
@@ -2651,7 +2763,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.PageOnePromoted page_one_promoted = 8;</code>
+     * @return The pageOnePromoted.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.PageOnePromoted getPageOnePromoted() {
       if (pageOnePromotedBuilder_ == null) {
         if (schemeCase_ == 8) {
@@ -2799,6 +2913,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.PageOnePromoted page_one_promoted = 8;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.PageOnePromotedOrBuilder getPageOnePromotedOrBuilder() {
       if ((schemeCase_ == 8) && (pageOnePromotedBuilder_ != null)) {
         return pageOnePromotedBuilder_.getMessageOrBuilder();
@@ -2849,7 +2964,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 9;</code>
+     * @return Whether the targetCpa field is set.
      */
+    @java.lang.Override
     public boolean hasTargetCpa() {
       return schemeCase_ == 9;
     }
@@ -2860,7 +2977,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 9;</code>
+     * @return The targetCpa.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetCpa getTargetCpa() {
       if (targetCpaBuilder_ == null) {
         if (schemeCase_ == 9) {
@@ -2984,6 +3103,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 9;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetCpaOrBuilder getTargetCpaOrBuilder() {
       if ((schemeCase_ == 9) && (targetCpaBuilder_ != null)) {
         return targetCpaBuilder_.getMessageOrBuilder();
@@ -3030,7 +3150,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
+     * @return Whether the targetImpressionShare field is set.
      */
+    @java.lang.Override
     public boolean hasTargetImpressionShare() {
       return schemeCase_ == 48;
     }
@@ -3041,7 +3163,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
+     * @return The targetImpressionShare.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetImpressionShare getTargetImpressionShare() {
       if (targetImpressionShareBuilder_ == null) {
         if (schemeCase_ == 48) {
@@ -3165,6 +3289,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetImpressionShareOrBuilder getTargetImpressionShareOrBuilder() {
       if ((schemeCase_ == 48) && (targetImpressionShareBuilder_ != null)) {
         return targetImpressionShareBuilder_.getMessageOrBuilder();
@@ -3215,7 +3340,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetOutrankShare target_outrank_share = 10;</code>
+     * @return Whether the targetOutrankShare field is set.
      */
+    @java.lang.Override
     public boolean hasTargetOutrankShare() {
       return schemeCase_ == 10;
     }
@@ -3230,7 +3357,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetOutrankShare target_outrank_share = 10;</code>
+     * @return The targetOutrankShare.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetOutrankShare getTargetOutrankShare() {
       if (targetOutrankShareBuilder_ == null) {
         if (schemeCase_ == 10) {
@@ -3378,6 +3507,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.TargetOutrankShare target_outrank_share = 10;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetOutrankShareOrBuilder getTargetOutrankShareOrBuilder() {
       if ((schemeCase_ == 10) && (targetOutrankShareBuilder_ != null)) {
         return targetOutrankShareBuilder_.getMessageOrBuilder();
@@ -3428,7 +3558,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 11;</code>
+     * @return Whether the targetRoas field is set.
      */
+    @java.lang.Override
     public boolean hasTargetRoas() {
       return schemeCase_ == 11;
     }
@@ -3439,7 +3571,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 11;</code>
+     * @return The targetRoas.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetRoas getTargetRoas() {
       if (targetRoasBuilder_ == null) {
         if (schemeCase_ == 11) {
@@ -3563,6 +3697,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 11;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetRoasOrBuilder getTargetRoasOrBuilder() {
       if ((schemeCase_ == 11) && (targetRoasBuilder_ != null)) {
         return targetRoasBuilder_.getMessageOrBuilder();
@@ -3609,7 +3744,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 12;</code>
+     * @return Whether the targetSpend field is set.
      */
+    @java.lang.Override
     public boolean hasTargetSpend() {
       return schemeCase_ == 12;
     }
@@ -3620,7 +3757,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 12;</code>
+     * @return The targetSpend.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetSpend getTargetSpend() {
       if (targetSpendBuilder_ == null) {
         if (schemeCase_ == 12) {
@@ -3744,6 +3883,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 12;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetSpendOrBuilder getTargetSpendOrBuilder() {
       if ((schemeCase_ == 12) && (targetSpendBuilder_ != null)) {
         return targetSpendBuilder_.getMessageOrBuilder();

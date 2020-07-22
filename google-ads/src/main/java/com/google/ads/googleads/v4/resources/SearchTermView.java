@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.SearchTermView}
  */
-public  final class SearchTermView extends
+public final class SearchTermView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.SearchTermView)
     SearchTermViewOrBuilder {
@@ -137,6 +137,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -159,6 +160,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -183,6 +185,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the searchTerm field is set.
    */
+  @java.lang.Override
   public boolean hasSearchTerm() {
     return searchTerm_ != null;
   }
@@ -194,6 +197,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The searchTerm.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSearchTerm() {
     return searchTerm_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : searchTerm_;
   }
@@ -204,6 +208,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue search_term = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSearchTermOrBuilder() {
     return getSearchTerm();
   }
@@ -218,6 +223,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroup() {
     return adGroup_ != null;
   }
@@ -229,6 +235,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroup() {
     return adGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroup_;
   }
@@ -239,6 +246,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group = 3 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     return getAdGroup();
   }
@@ -254,7 +262,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -266,7 +274,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus result = com.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus.UNRECOGNIZED : result;
@@ -1081,7 +1089,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1095,6 +1103,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1108,6 +1117,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus result = com.google.ads.googleads.v4.enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus.valueOf(status_);

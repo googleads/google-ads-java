@@ -15,6 +15,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -36,6 +38,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the clientCustomer field is set.
    */
   boolean hasClientCustomer();
   /**
@@ -45,6 +48,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The clientCustomer.
    */
   com.google.protobuf.StringValue getClientCustomer();
   /**
@@ -65,6 +69,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hidden field is set.
    */
   boolean hasHidden();
   /**
@@ -75,6 +80,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue hidden = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hidden.
    */
   com.google.protobuf.BoolValue getHidden();
   /**
@@ -95,6 +101,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the level field is set.
    */
   boolean hasLevel();
   /**
@@ -104,6 +111,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value level = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The level.
    */
   com.google.protobuf.Int64Value getLevel();
   /**
@@ -123,6 +131,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the timeZone field is set.
    */
   boolean hasTimeZone();
   /**
@@ -132,6 +141,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue time_zone = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The timeZone.
    */
   com.google.protobuf.StringValue getTimeZone();
   /**
@@ -150,6 +160,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue test_account = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the testAccount field is set.
    */
   boolean hasTestAccount();
   /**
@@ -158,6 +169,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue test_account = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The testAccount.
    */
   com.google.protobuf.BoolValue getTestAccount();
   /**
@@ -175,6 +187,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue manager = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the manager field is set.
    */
   boolean hasManager();
   /**
@@ -183,6 +196,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue manager = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The manager.
    */
   com.google.protobuf.BoolValue getManager();
   /**
@@ -200,6 +214,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue descriptive_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the descriptiveName field is set.
    */
   boolean hasDescriptiveName();
   /**
@@ -208,6 +223,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue descriptive_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The descriptiveName.
    */
   com.google.protobuf.StringValue getDescriptiveName();
   /**
@@ -225,6 +241,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
   /**
@@ -233,6 +250,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The currencyCode.
    */
   com.google.protobuf.StringValue getCurrencyCode();
   /**
@@ -250,6 +268,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -258,6 +277,7 @@ public interface CustomerClientOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**

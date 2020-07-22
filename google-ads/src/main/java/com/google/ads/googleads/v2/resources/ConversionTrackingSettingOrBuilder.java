@@ -9,66 +9,70 @@ public interface ConversionTrackingSettingOrBuilder extends
 
   /**
    * <pre>
-   * The conversion tracking id used for this account. This id is automatically
+   * Output only. The conversion tracking id used for this account. This id is automatically
    * assigned after any conversion tracking feature is used. If the customer
    * doesn't use conversion tracking, this is 0. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the conversionTrackingId field is set.
    */
   boolean hasConversionTrackingId();
   /**
    * <pre>
-   * The conversion tracking id used for this account. This id is automatically
+   * Output only. The conversion tracking id used for this account. This id is automatically
    * assigned after any conversion tracking feature is used. If the customer
    * doesn't use conversion tracking, this is 0. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The conversionTrackingId.
    */
   com.google.protobuf.Int64Value getConversionTrackingId();
   /**
    * <pre>
-   * The conversion tracking id used for this account. This id is automatically
+   * Output only. The conversion tracking id used for this account. This id is automatically
    * assigned after any conversion tracking feature is used. If the customer
    * doesn't use conversion tracking, this is 0. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1;</code>
+   * <code>.google.protobuf.Int64Value conversion_tracking_id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getConversionTrackingIdOrBuilder();
 
   /**
    * <pre>
-   * The conversion tracking id of the customer's manager. This is set when the
+   * Output only. The conversion tracking id of the customer's manager. This is set when the
    * customer is opted into cross account conversion tracking, and it overrides
    * conversion_tracking_id. This field can only be managed through the Google
    * Ads UI. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the crossAccountConversionTrackingId field is set.
    */
   boolean hasCrossAccountConversionTrackingId();
   /**
    * <pre>
-   * The conversion tracking id of the customer's manager. This is set when the
+   * Output only. The conversion tracking id of the customer's manager. This is set when the
    * customer is opted into cross account conversion tracking, and it overrides
    * conversion_tracking_id. This field can only be managed through the Google
    * Ads UI. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The crossAccountConversionTrackingId.
    */
   com.google.protobuf.Int64Value getCrossAccountConversionTrackingId();
   /**
    * <pre>
-   * The conversion tracking id of the customer's manager. This is set when the
+   * Output only. The conversion tracking id of the customer's manager. This is set when the
    * customer is opted into cross account conversion tracking, and it overrides
    * conversion_tracking_id. This field can only be managed through the Google
    * Ads UI. This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2;</code>
+   * <code>.google.protobuf.Int64Value cross_account_conversion_tracking_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getCrossAccountConversionTrackingIdOrBuilder();
 }

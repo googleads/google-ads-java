@@ -11,7 +11,7 @@ package com.google.ads.googleads.v2.services;
  *
  * Protobuf type {@code google.ads.googleads.v2.services.UploadConversionAdjustmentsResponse}
  */
-public  final class UploadConversionAdjustmentsResponse extends
+public final class UploadConversionAdjustmentsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.services.UploadConversionAdjustmentsResponse)
     UploadConversionAdjustmentsResponseOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   }
   private UploadConversionAdjustmentsResponse() {
     results_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UploadConversionAdjustmentsResponse();
   }
 
   @java.lang.Override
@@ -62,9 +69,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               results_ = new java.util.ArrayList<com.google.ads.googleads.v2.services.ConversionAdjustmentResult>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             results_.add(
                 input.readMessage(com.google.ads.googleads.v2.services.ConversionAdjustmentResult.parser(), extensionRegistry));
@@ -85,7 +92,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         results_ = java.util.Collections.unmodifiableList(results_);
       }
       this.unknownFields = unknownFields.build();
@@ -105,7 +112,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.services.UploadConversionAdjustmentsResponse.class, com.google.ads.googleads.v2.services.UploadConversionAdjustmentsResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int PARTIAL_FAILURE_ERROR_FIELD_NUMBER = 1;
   private com.google.rpc.Status partialFailureError_;
   /**
@@ -114,10 +120,15 @@ private static final long serialVersionUID = 0L;
    * failure mode. Returned when all errors occur inside the adjustments. If any
    * errors occur outside the adjustments (e.g. auth errors), we return an RPC
    * level error.
+   * See
+   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+   * for more information about partial failure.
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
+   * @return Whether the partialFailureError field is set.
    */
+  @java.lang.Override
   public boolean hasPartialFailureError() {
     return partialFailureError_ != null;
   }
@@ -127,10 +138,15 @@ private static final long serialVersionUID = 0L;
    * failure mode. Returned when all errors occur inside the adjustments. If any
    * errors occur outside the adjustments (e.g. auth errors), we return an RPC
    * level error.
+   * See
+   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+   * for more information about partial failure.
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
+   * @return The partialFailureError.
    */
+  @java.lang.Override
   public com.google.rpc.Status getPartialFailureError() {
     return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
   }
@@ -140,10 +156,14 @@ private static final long serialVersionUID = 0L;
    * failure mode. Returned when all errors occur inside the adjustments. If any
    * errors occur outside the adjustments (e.g. auth errors), we return an RPC
    * level error.
+   * See
+   * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+   * for more information about partial failure.
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
     return getPartialFailureError();
   }
@@ -159,6 +179,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.ConversionAdjustmentResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.services.ConversionAdjustmentResult> getResultsList() {
     return results_;
   }
@@ -171,6 +192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.ConversionAdjustmentResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.services.ConversionAdjustmentResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -184,6 +206,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.ConversionAdjustmentResult results = 2;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -196,6 +219,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.ConversionAdjustmentResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ConversionAdjustmentResult getResults(int index) {
     return results_.get(index);
   }
@@ -208,6 +232,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.services.ConversionAdjustmentResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.services.ConversionAdjustmentResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
@@ -438,7 +463,7 @@ private static final long serialVersionUID = 0L;
       }
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         resultsBuilder_.clear();
       }
@@ -469,22 +494,20 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.services.UploadConversionAdjustmentsResponse buildPartial() {
       com.google.ads.googleads.v2.services.UploadConversionAdjustmentsResponse result = new com.google.ads.googleads.v2.services.UploadConversionAdjustmentsResponse(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (partialFailureErrorBuilder_ == null) {
         result.partialFailureError_ = partialFailureError_;
       } else {
         result.partialFailureError_ = partialFailureErrorBuilder_.build();
       }
       if (resultsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.results_ = results_;
       } else {
         result.results_ = resultsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -540,7 +563,7 @@ private static final long serialVersionUID = 0L;
         if (!other.results_.isEmpty()) {
           if (results_.isEmpty()) {
             results_ = other.results_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureResultsIsMutable();
             results_.addAll(other.results_);
@@ -553,7 +576,7 @@ private static final long serialVersionUID = 0L;
             resultsBuilder_.dispose();
             resultsBuilder_ = null;
             results_ = other.results_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             resultsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getResultsFieldBuilder() : null;
@@ -601,9 +624,13 @@ private static final long serialVersionUID = 0L;
      * failure mode. Returned when all errors occur inside the adjustments. If any
      * errors occur outside the adjustments (e.g. auth errors), we return an RPC
      * level error.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
+     * @return Whether the partialFailureError field is set.
      */
     public boolean hasPartialFailureError() {
       return partialFailureErrorBuilder_ != null || partialFailureError_ != null;
@@ -614,9 +641,13 @@ private static final long serialVersionUID = 0L;
      * failure mode. Returned when all errors occur inside the adjustments. If any
      * errors occur outside the adjustments (e.g. auth errors), we return an RPC
      * level error.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
+     * @return The partialFailureError.
      */
     public com.google.rpc.Status getPartialFailureError() {
       if (partialFailureErrorBuilder_ == null) {
@@ -631,6 +662,9 @@ private static final long serialVersionUID = 0L;
      * failure mode. Returned when all errors occur inside the adjustments. If any
      * errors occur outside the adjustments (e.g. auth errors), we return an RPC
      * level error.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -654,6 +688,9 @@ private static final long serialVersionUID = 0L;
      * failure mode. Returned when all errors occur inside the adjustments. If any
      * errors occur outside the adjustments (e.g. auth errors), we return an RPC
      * level error.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -675,6 +712,9 @@ private static final long serialVersionUID = 0L;
      * failure mode. Returned when all errors occur inside the adjustments. If any
      * errors occur outside the adjustments (e.g. auth errors), we return an RPC
      * level error.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -700,6 +740,9 @@ private static final long serialVersionUID = 0L;
      * failure mode. Returned when all errors occur inside the adjustments. If any
      * errors occur outside the adjustments (e.g. auth errors), we return an RPC
      * level error.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -721,6 +764,9 @@ private static final long serialVersionUID = 0L;
      * failure mode. Returned when all errors occur inside the adjustments. If any
      * errors occur outside the adjustments (e.g. auth errors), we return an RPC
      * level error.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -736,6 +782,9 @@ private static final long serialVersionUID = 0L;
      * failure mode. Returned when all errors occur inside the adjustments. If any
      * errors occur outside the adjustments (e.g. auth errors), we return an RPC
      * level error.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -754,6 +803,9 @@ private static final long serialVersionUID = 0L;
      * failure mode. Returned when all errors occur inside the adjustments. If any
      * errors occur outside the adjustments (e.g. auth errors), we return an RPC
      * level error.
+     * See
+     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+     * for more information about partial failure.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -775,9 +827,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.services.ConversionAdjustmentResult> results_ =
       java.util.Collections.emptyList();
     private void ensureResultsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         results_ = new java.util.ArrayList<com.google.ads.googleads.v2.services.ConversionAdjustmentResult>(results_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -993,7 +1045,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearResults() {
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         resultsBuilder_.clear();
@@ -1112,7 +1164,7 @@ private static final long serialVersionUID = 0L;
         resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.services.ConversionAdjustmentResult, com.google.ads.googleads.v2.services.ConversionAdjustmentResult.Builder, com.google.ads.googleads.v2.services.ConversionAdjustmentResultOrBuilder>(
                 results_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         results_ = null;

@@ -16,7 +16,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.PolicyTopicEntry}
  */
-public  final class PolicyTopicEntry extends
+public final class PolicyTopicEntry extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.PolicyTopicEntry)
     PolicyTopicEntryOrBuilder {
@@ -150,6 +150,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue topic = 1;</code>
    * @return Whether the topic field is set.
    */
+  @java.lang.Override
   public boolean hasTopic() {
     return topic_ != null;
   }
@@ -164,6 +165,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue topic = 1;</code>
    * @return The topic.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTopic() {
     return topic_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : topic_;
   }
@@ -177,6 +179,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue topic = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTopicOrBuilder() {
     return getTopic();
   }
@@ -191,7 +194,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -202,7 +205,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType result = com.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType.UNRECOGNIZED : result;
@@ -218,6 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEvidence evidences = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.PolicyTopicEvidence> getEvidencesList() {
     return evidences_;
   }
@@ -229,6 +233,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEvidence evidences = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.PolicyTopicEvidenceOrBuilder> 
       getEvidencesOrBuilderList() {
     return evidences_;
@@ -241,6 +246,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEvidence evidences = 3;</code>
    */
+  @java.lang.Override
   public int getEvidencesCount() {
     return evidences_.size();
   }
@@ -252,6 +258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEvidence evidences = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicEvidence getEvidences(int index) {
     return evidences_.get(index);
   }
@@ -263,6 +270,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicEvidence evidences = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicEvidenceOrBuilder getEvidencesOrBuilder(
       int index) {
     return evidences_.get(index);
@@ -278,6 +286,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicConstraint constraints = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.PolicyTopicConstraint> getConstraintsList() {
     return constraints_;
   }
@@ -289,6 +298,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicConstraint constraints = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.PolicyTopicConstraintOrBuilder> 
       getConstraintsOrBuilderList() {
     return constraints_;
@@ -301,6 +311,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicConstraint constraints = 4;</code>
    */
+  @java.lang.Override
   public int getConstraintsCount() {
     return constraints_.size();
   }
@@ -312,6 +323,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicConstraint constraints = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicConstraint getConstraints(int index) {
     return constraints_.get(index);
   }
@@ -323,6 +335,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.PolicyTopicConstraint constraints = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PolicyTopicConstraintOrBuilder getConstraintsOrBuilder(
       int index) {
     return constraints_.get(index);
@@ -972,7 +985,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -985,6 +998,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -997,6 +1011,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType result = com.google.ads.googleads.v4.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType.valueOf(type_);

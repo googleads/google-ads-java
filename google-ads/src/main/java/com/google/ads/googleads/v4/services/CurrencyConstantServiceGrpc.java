@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/currency_constant_service.proto")
 public final class CurrencyConstantServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class CurrencyConstantServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.CurrencyConstantService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCurrencyConstantMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCurrencyConstantRequest,
-      com.google.ads.googleads.v4.resources.CurrencyConstant> METHOD_GET_CURRENCY_CONSTANT = getGetCurrencyConstantMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCurrencyConstantRequest,
       com.google.ads.googleads.v4.resources.CurrencyConstant> getGetCurrencyConstantMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCurrencyConstant",
+      requestType = com.google.ads.googleads.v4.services.GetCurrencyConstantRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.CurrencyConstant.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCurrencyConstantRequest,
       com.google.ads.googleads.v4.resources.CurrencyConstant> getGetCurrencyConstantMethod() {
-    return getGetCurrencyConstantMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCurrencyConstantRequest,
-      com.google.ads.googleads.v4.resources.CurrencyConstant> getGetCurrencyConstantMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetCurrencyConstantRequest, com.google.ads.googleads.v4.resources.CurrencyConstant> getGetCurrencyConstantMethod;
     if ((getGetCurrencyConstantMethod = CurrencyConstantServiceGrpc.getGetCurrencyConstantMethod) == null) {
       synchronized (CurrencyConstantServiceGrpc.class) {
         if ((getGetCurrencyConstantMethod = CurrencyConstantServiceGrpc.getGetCurrencyConstantMethod) == null) {
-          CurrencyConstantServiceGrpc.getGetCurrencyConstantMethod = getGetCurrencyConstantMethod = 
+          CurrencyConstantServiceGrpc.getGetCurrencyConstantMethod = getGetCurrencyConstantMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetCurrencyConstantRequest, com.google.ads.googleads.v4.resources.CurrencyConstant>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.CurrencyConstantService", "GetCurrencyConstant"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCurrencyConstant"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetCurrencyConstantRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.CurrencyConstant.getDefaultInstance()))
-                  .setSchemaDescriptor(new CurrencyConstantServiceMethodDescriptorSupplier("GetCurrencyConstant"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CurrencyConstantServiceMethodDescriptorSupplier("GetCurrencyConstant"))
+              .build();
         }
-     }
-     return getGetCurrencyConstantMethod;
+      }
+    }
+    return getGetCurrencyConstantMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CurrencyConstantServiceStub newStub(io.grpc.Channel channel) {
-    return new CurrencyConstantServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CurrencyConstantServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CurrencyConstantServiceStub>() {
+        @java.lang.Override
+        public CurrencyConstantServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CurrencyConstantServiceStub(channel, callOptions);
+        }
+      };
+    return CurrencyConstantServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class CurrencyConstantServiceGrpc {
    */
   public static CurrencyConstantServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CurrencyConstantServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CurrencyConstantServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CurrencyConstantServiceBlockingStub>() {
+        @java.lang.Override
+        public CurrencyConstantServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CurrencyConstantServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CurrencyConstantServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class CurrencyConstantServiceGrpc {
    */
   public static CurrencyConstantServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CurrencyConstantServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CurrencyConstantServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CurrencyConstantServiceFutureStub>() {
+        @java.lang.Override
+        public CurrencyConstantServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CurrencyConstantServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CurrencyConstantServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class CurrencyConstantServiceGrpc {
      */
     public void getCurrencyConstant(com.google.ads.googleads.v4.services.GetCurrencyConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.CurrencyConstant> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCurrencyConstantMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCurrencyConstantMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCurrencyConstantMethodHelper(),
+            getGetCurrencyConstantMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetCurrencyConstantRequest,
@@ -126,19 +140,15 @@ public final class CurrencyConstantServiceGrpc {
    * Service to fetch currency constants.
    * </pre>
    */
-  public static final class CurrencyConstantServiceStub extends io.grpc.stub.AbstractStub<CurrencyConstantServiceStub> {
-    private CurrencyConstantServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CurrencyConstantServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CurrencyConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<CurrencyConstantServiceStub> {
+    private CurrencyConstantServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CurrencyConstantServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CurrencyConstantServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CurrencyConstantServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class CurrencyConstantServiceGrpc {
     public void getCurrencyConstant(com.google.ads.googleads.v4.services.GetCurrencyConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.CurrencyConstant> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCurrencyConstantMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCurrencyConstantMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class CurrencyConstantServiceGrpc {
    * Service to fetch currency constants.
    * </pre>
    */
-  public static final class CurrencyConstantServiceBlockingStub extends io.grpc.stub.AbstractStub<CurrencyConstantServiceBlockingStub> {
-    private CurrencyConstantServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CurrencyConstantServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CurrencyConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CurrencyConstantServiceBlockingStub> {
+    private CurrencyConstantServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CurrencyConstantServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CurrencyConstantServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CurrencyConstantServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class CurrencyConstantServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.CurrencyConstant getCurrencyConstant(com.google.ads.googleads.v4.services.GetCurrencyConstantRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCurrencyConstantMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCurrencyConstantMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class CurrencyConstantServiceGrpc {
    * Service to fetch currency constants.
    * </pre>
    */
-  public static final class CurrencyConstantServiceFutureStub extends io.grpc.stub.AbstractStub<CurrencyConstantServiceFutureStub> {
-    private CurrencyConstantServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CurrencyConstantServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CurrencyConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CurrencyConstantServiceFutureStub> {
+    private CurrencyConstantServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CurrencyConstantServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CurrencyConstantServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CurrencyConstantServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class CurrencyConstantServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.CurrencyConstant> getCurrencyConstant(
         com.google.ads.googleads.v4.services.GetCurrencyConstantRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCurrencyConstantMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCurrencyConstantMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class CurrencyConstantServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CurrencyConstantServiceFileDescriptorSupplier())
-              .addMethod(getGetCurrencyConstantMethodHelper())
+              .addMethod(getGetCurrencyConstantMethod())
               .build();
         }
       }

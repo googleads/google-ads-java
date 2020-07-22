@@ -15,6 +15,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupAdStatusEnum.AdGroupAdStatus status = 3;</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -43,6 +46,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupAdStatusEnum.AdGroupAdStatus status = 3;</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.AdGroupAdStatusEnum.AdGroupAdStatus getStatus();
 
@@ -52,6 +56,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
   /**
@@ -60,6 +65,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The adGroup.
    */
   com.google.protobuf.StringValue getAdGroup();
   /**
@@ -77,6 +83,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the ad field is set.
    */
   boolean hasAd();
   /**
@@ -85,6 +92,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The ad.
    */
   com.google.ads.googleads.v3.resources.Ad getAd();
   /**
@@ -102,6 +110,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the policySummary field is set.
    */
   boolean hasPolicySummary();
   /**
@@ -110,6 +119,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The policySummary.
    */
   com.google.ads.googleads.v3.resources.AdGroupAdPolicySummary getPolicySummary();
   /**
@@ -127,6 +137,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for adStrength.
    */
   int getAdStrengthValue();
   /**
@@ -135,6 +146,7 @@ public interface AdGroupAdOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength ad_strength = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The adStrength.
    */
   com.google.ads.googleads.v3.enums.AdStrengthEnum.AdStrength getAdStrength();
 }

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.MutateFeedItemTargetsResponse}
  */
-public  final class MutateFeedItemTargetsResponse extends
+public final class MutateFeedItemTargetsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.MutateFeedItemTargetsResponse)
     MutateFeedItemTargetsResponseOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateFeedItemTargetResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.MutateFeedItemTargetResult> getResultsList() {
     return results_;
   }
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateFeedItemTargetResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.MutateFeedItemTargetResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateFeedItemTargetResult results = 2;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -138,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateFeedItemTargetResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedItemTargetResult getResults(int index) {
     return results_.get(index);
   }
@@ -148,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.MutateFeedItemTargetResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateFeedItemTargetResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);

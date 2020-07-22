@@ -9,73 +9,79 @@ public interface CampaignLabelOrBuilder extends
 
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * Campaign label resource names have the form:
    * `customers/{customer_id}/campaignLabels/{campaign_id}~{label_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * Campaign label resource names have the form:
    * `customers/{customer_id}/campaignLabels/{campaign_id}~{label_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The campaign to which the label is attached.
+   * Immutable. The campaign to which the label is attached.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 2;</code>
+   * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
    * <pre>
-   * The campaign to which the label is attached.
+   * Immutable. The campaign to which the label is attached.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 2;</code>
+   * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
   com.google.protobuf.StringValue getCampaign();
   /**
    * <pre>
-   * The campaign to which the label is attached.
+   * Immutable. The campaign to which the label is attached.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign = 2;</code>
+   * <code>.google.protobuf.StringValue campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder();
 
   /**
    * <pre>
-   * The label assigned to the campaign.
+   * Immutable. The label assigned to the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the label field is set.
    */
   boolean hasLabel();
   /**
    * <pre>
-   * The label assigned to the campaign.
+   * Immutable. The label assigned to the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The label.
    */
   com.google.protobuf.StringValue getLabel();
   /**
    * <pre>
-   * The label assigned to the campaign.
+   * Immutable. The label assigned to the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
   com.google.protobuf.StringValueOrBuilder getLabelOrBuilder();
 }

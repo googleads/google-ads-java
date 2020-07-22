@@ -13,6 +13,7 @@ public interface HotelClassInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value value = 1;</code>
+   * @return Whether the value field is set.
    */
   boolean hasValue();
   /**
@@ -21,6 +22,7 @@ public interface HotelClassInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value value = 1;</code>
+   * @return The value.
    */
   com.google.protobuf.Int64Value getValue();
   /**

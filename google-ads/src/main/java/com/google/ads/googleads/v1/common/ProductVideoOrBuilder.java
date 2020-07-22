@@ -13,6 +13,7 @@ public interface ProductVideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_video = 1;</code>
+   * @return Whether the productVideo field is set.
    */
   boolean hasProductVideo();
   /**
@@ -21,6 +22,7 @@ public interface ProductVideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue product_video = 1;</code>
+   * @return The productVideo.
    */
   com.google.protobuf.StringValue getProductVideo();
   /**

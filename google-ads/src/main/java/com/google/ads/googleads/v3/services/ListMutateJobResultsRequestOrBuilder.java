@@ -13,6 +13,7 @@ public interface ListMutateJobResultsRequestOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -21,6 +22,7 @@ public interface ListMutateJobResultsRequestOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -34,6 +36,7 @@ public interface ListMutateJobResultsRequestOrBuilder extends
    * </pre>
    *
    * <code>string page_token = 2;</code>
+   * @return The pageToken.
    */
   java.lang.String getPageToken();
   /**
@@ -45,6 +48,7 @@ public interface ListMutateJobResultsRequestOrBuilder extends
    * </pre>
    *
    * <code>string page_token = 2;</code>
+   * @return The bytes for pageToken.
    */
   com.google.protobuf.ByteString
       getPageTokenBytes();
@@ -57,6 +61,7 @@ public interface ListMutateJobResultsRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 page_size = 3;</code>
+   * @return The pageSize.
    */
   int getPageSize();
 }

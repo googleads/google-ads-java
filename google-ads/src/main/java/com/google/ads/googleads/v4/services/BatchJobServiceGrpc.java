@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/batch_job_service.proto")
 public final class BatchJobServiceGrpc {
 
@@ -30,197 +30,173 @@ public final class BatchJobServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.BatchJobService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateBatchJobMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateBatchJobRequest,
-      com.google.ads.googleads.v4.services.MutateBatchJobResponse> METHOD_MUTATE_BATCH_JOB = getMutateBatchJobMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateBatchJobRequest,
       com.google.ads.googleads.v4.services.MutateBatchJobResponse> getMutateBatchJobMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateBatchJob",
+      requestType = com.google.ads.googleads.v4.services.MutateBatchJobRequest.class,
+      responseType = com.google.ads.googleads.v4.services.MutateBatchJobResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateBatchJobRequest,
       com.google.ads.googleads.v4.services.MutateBatchJobResponse> getMutateBatchJobMethod() {
-    return getMutateBatchJobMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateBatchJobRequest,
-      com.google.ads.googleads.v4.services.MutateBatchJobResponse> getMutateBatchJobMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.MutateBatchJobRequest, com.google.ads.googleads.v4.services.MutateBatchJobResponse> getMutateBatchJobMethod;
     if ((getMutateBatchJobMethod = BatchJobServiceGrpc.getMutateBatchJobMethod) == null) {
       synchronized (BatchJobServiceGrpc.class) {
         if ((getMutateBatchJobMethod = BatchJobServiceGrpc.getMutateBatchJobMethod) == null) {
-          BatchJobServiceGrpc.getMutateBatchJobMethod = getMutateBatchJobMethod = 
+          BatchJobServiceGrpc.getMutateBatchJobMethod = getMutateBatchJobMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.MutateBatchJobRequest, com.google.ads.googleads.v4.services.MutateBatchJobResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.BatchJobService", "MutateBatchJob"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateBatchJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateBatchJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.MutateBatchJobResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BatchJobServiceMethodDescriptorSupplier("MutateBatchJob"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BatchJobServiceMethodDescriptorSupplier("MutateBatchJob"))
+              .build();
         }
-     }
-     return getMutateBatchJobMethod;
+      }
+    }
+    return getMutateBatchJobMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetBatchJobMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetBatchJobRequest,
-      com.google.ads.googleads.v4.resources.BatchJob> METHOD_GET_BATCH_JOB = getGetBatchJobMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetBatchJobRequest,
       com.google.ads.googleads.v4.resources.BatchJob> getGetBatchJobMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetBatchJob",
+      requestType = com.google.ads.googleads.v4.services.GetBatchJobRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.BatchJob.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetBatchJobRequest,
       com.google.ads.googleads.v4.resources.BatchJob> getGetBatchJobMethod() {
-    return getGetBatchJobMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetBatchJobRequest,
-      com.google.ads.googleads.v4.resources.BatchJob> getGetBatchJobMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetBatchJobRequest, com.google.ads.googleads.v4.resources.BatchJob> getGetBatchJobMethod;
     if ((getGetBatchJobMethod = BatchJobServiceGrpc.getGetBatchJobMethod) == null) {
       synchronized (BatchJobServiceGrpc.class) {
         if ((getGetBatchJobMethod = BatchJobServiceGrpc.getGetBatchJobMethod) == null) {
-          BatchJobServiceGrpc.getGetBatchJobMethod = getGetBatchJobMethod = 
+          BatchJobServiceGrpc.getGetBatchJobMethod = getGetBatchJobMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetBatchJobRequest, com.google.ads.googleads.v4.resources.BatchJob>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.BatchJobService", "GetBatchJob"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBatchJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetBatchJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.BatchJob.getDefaultInstance()))
-                  .setSchemaDescriptor(new BatchJobServiceMethodDescriptorSupplier("GetBatchJob"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BatchJobServiceMethodDescriptorSupplier("GetBatchJob"))
+              .build();
         }
-     }
-     return getGetBatchJobMethod;
+      }
+    }
+    return getGetBatchJobMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getListBatchJobResultsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ListBatchJobResultsRequest,
-      com.google.ads.googleads.v4.services.ListBatchJobResultsResponse> METHOD_LIST_BATCH_JOB_RESULTS = getListBatchJobResultsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ListBatchJobResultsRequest,
       com.google.ads.googleads.v4.services.ListBatchJobResultsResponse> getListBatchJobResultsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListBatchJobResults",
+      requestType = com.google.ads.googleads.v4.services.ListBatchJobResultsRequest.class,
+      responseType = com.google.ads.googleads.v4.services.ListBatchJobResultsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ListBatchJobResultsRequest,
       com.google.ads.googleads.v4.services.ListBatchJobResultsResponse> getListBatchJobResultsMethod() {
-    return getListBatchJobResultsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ListBatchJobResultsRequest,
-      com.google.ads.googleads.v4.services.ListBatchJobResultsResponse> getListBatchJobResultsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.ListBatchJobResultsRequest, com.google.ads.googleads.v4.services.ListBatchJobResultsResponse> getListBatchJobResultsMethod;
     if ((getListBatchJobResultsMethod = BatchJobServiceGrpc.getListBatchJobResultsMethod) == null) {
       synchronized (BatchJobServiceGrpc.class) {
         if ((getListBatchJobResultsMethod = BatchJobServiceGrpc.getListBatchJobResultsMethod) == null) {
-          BatchJobServiceGrpc.getListBatchJobResultsMethod = getListBatchJobResultsMethod = 
+          BatchJobServiceGrpc.getListBatchJobResultsMethod = getListBatchJobResultsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.ListBatchJobResultsRequest, com.google.ads.googleads.v4.services.ListBatchJobResultsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.BatchJobService", "ListBatchJobResults"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListBatchJobResults"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.ListBatchJobResultsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.ListBatchJobResultsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BatchJobServiceMethodDescriptorSupplier("ListBatchJobResults"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BatchJobServiceMethodDescriptorSupplier("ListBatchJobResults"))
+              .build();
         }
-     }
-     return getListBatchJobResultsMethod;
+      }
+    }
+    return getListBatchJobResultsMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getRunBatchJobMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.RunBatchJobRequest,
-      com.google.longrunning.Operation> METHOD_RUN_BATCH_JOB = getRunBatchJobMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.RunBatchJobRequest,
       com.google.longrunning.Operation> getRunBatchJobMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RunBatchJob",
+      requestType = com.google.ads.googleads.v4.services.RunBatchJobRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.RunBatchJobRequest,
       com.google.longrunning.Operation> getRunBatchJobMethod() {
-    return getRunBatchJobMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.RunBatchJobRequest,
-      com.google.longrunning.Operation> getRunBatchJobMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.RunBatchJobRequest, com.google.longrunning.Operation> getRunBatchJobMethod;
     if ((getRunBatchJobMethod = BatchJobServiceGrpc.getRunBatchJobMethod) == null) {
       synchronized (BatchJobServiceGrpc.class) {
         if ((getRunBatchJobMethod = BatchJobServiceGrpc.getRunBatchJobMethod) == null) {
-          BatchJobServiceGrpc.getRunBatchJobMethod = getRunBatchJobMethod = 
+          BatchJobServiceGrpc.getRunBatchJobMethod = getRunBatchJobMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.RunBatchJobRequest, com.google.longrunning.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.BatchJobService", "RunBatchJob"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RunBatchJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.RunBatchJobRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.longrunning.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new BatchJobServiceMethodDescriptorSupplier("RunBatchJob"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BatchJobServiceMethodDescriptorSupplier("RunBatchJob"))
+              .build();
         }
-     }
-     return getRunBatchJobMethod;
+      }
+    }
+    return getRunBatchJobMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getAddBatchJobOperationsMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest,
-      com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse> METHOD_ADD_BATCH_JOB_OPERATIONS = getAddBatchJobOperationsMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest,
       com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse> getAddBatchJobOperationsMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddBatchJobOperations",
+      requestType = com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest.class,
+      responseType = com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest,
       com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse> getAddBatchJobOperationsMethod() {
-    return getAddBatchJobOperationsMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest,
-      com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse> getAddBatchJobOperationsMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest, com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse> getAddBatchJobOperationsMethod;
     if ((getAddBatchJobOperationsMethod = BatchJobServiceGrpc.getAddBatchJobOperationsMethod) == null) {
       synchronized (BatchJobServiceGrpc.class) {
         if ((getAddBatchJobOperationsMethod = BatchJobServiceGrpc.getAddBatchJobOperationsMethod) == null) {
-          BatchJobServiceGrpc.getAddBatchJobOperationsMethod = getAddBatchJobOperationsMethod = 
+          BatchJobServiceGrpc.getAddBatchJobOperationsMethod = getAddBatchJobOperationsMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest, com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.BatchJobService", "AddBatchJobOperations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddBatchJobOperations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new BatchJobServiceMethodDescriptorSupplier("AddBatchJobOperations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new BatchJobServiceMethodDescriptorSupplier("AddBatchJobOperations"))
+              .build();
         }
-     }
-     return getAddBatchJobOperationsMethod;
+      }
+    }
+    return getAddBatchJobOperationsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static BatchJobServiceStub newStub(io.grpc.Channel channel) {
-    return new BatchJobServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BatchJobServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BatchJobServiceStub>() {
+        @java.lang.Override
+        public BatchJobServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BatchJobServiceStub(channel, callOptions);
+        }
+      };
+    return BatchJobServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -228,7 +204,14 @@ public final class BatchJobServiceGrpc {
    */
   public static BatchJobServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new BatchJobServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BatchJobServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BatchJobServiceBlockingStub>() {
+        @java.lang.Override
+        public BatchJobServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BatchJobServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return BatchJobServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -236,7 +219,14 @@ public final class BatchJobServiceGrpc {
    */
   public static BatchJobServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new BatchJobServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<BatchJobServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<BatchJobServiceFutureStub>() {
+        @java.lang.Override
+        public BatchJobServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new BatchJobServiceFutureStub(channel, callOptions);
+        }
+      };
+    return BatchJobServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -253,7 +243,7 @@ public final class BatchJobServiceGrpc {
      */
     public void mutateBatchJob(com.google.ads.googleads.v4.services.MutateBatchJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateBatchJobResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateBatchJobMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateBatchJobMethod(), responseObserver);
     }
 
     /**
@@ -263,7 +253,7 @@ public final class BatchJobServiceGrpc {
      */
     public void getBatchJob(com.google.ads.googleads.v4.services.GetBatchJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.BatchJob> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetBatchJobMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetBatchJobMethod(), responseObserver);
     }
 
     /**
@@ -274,7 +264,7 @@ public final class BatchJobServiceGrpc {
      */
     public void listBatchJobResults(com.google.ads.googleads.v4.services.ListBatchJobResultsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.ListBatchJobResultsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListBatchJobResultsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getListBatchJobResultsMethod(), responseObserver);
     }
 
     /**
@@ -287,7 +277,7 @@ public final class BatchJobServiceGrpc {
      */
     public void runBatchJob(com.google.ads.googleads.v4.services.RunBatchJobRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRunBatchJobMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getRunBatchJobMethod(), responseObserver);
     }
 
     /**
@@ -297,41 +287,41 @@ public final class BatchJobServiceGrpc {
      */
     public void addBatchJobOperations(com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddBatchJobOperationsMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddBatchJobOperationsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getMutateBatchJobMethodHelper(),
+            getMutateBatchJobMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.MutateBatchJobRequest,
                 com.google.ads.googleads.v4.services.MutateBatchJobResponse>(
                   this, METHODID_MUTATE_BATCH_JOB)))
           .addMethod(
-            getGetBatchJobMethodHelper(),
+            getGetBatchJobMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetBatchJobRequest,
                 com.google.ads.googleads.v4.resources.BatchJob>(
                   this, METHODID_GET_BATCH_JOB)))
           .addMethod(
-            getListBatchJobResultsMethodHelper(),
+            getListBatchJobResultsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.ListBatchJobResultsRequest,
                 com.google.ads.googleads.v4.services.ListBatchJobResultsResponse>(
                   this, METHODID_LIST_BATCH_JOB_RESULTS)))
           .addMethod(
-            getRunBatchJobMethodHelper(),
+            getRunBatchJobMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.RunBatchJobRequest,
                 com.google.longrunning.Operation>(
                   this, METHODID_RUN_BATCH_JOB)))
           .addMethod(
-            getAddBatchJobOperationsMethodHelper(),
+            getAddBatchJobOperationsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest,
@@ -346,19 +336,15 @@ public final class BatchJobServiceGrpc {
    * Service to manage batch jobs.
    * </pre>
    */
-  public static final class BatchJobServiceStub extends io.grpc.stub.AbstractStub<BatchJobServiceStub> {
-    private BatchJobServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BatchJobServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BatchJobServiceStub extends io.grpc.stub.AbstractAsyncStub<BatchJobServiceStub> {
+    private BatchJobServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BatchJobServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BatchJobServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BatchJobServiceStub(channel, callOptions);
     }
 
@@ -370,7 +356,7 @@ public final class BatchJobServiceGrpc {
     public void mutateBatchJob(com.google.ads.googleads.v4.services.MutateBatchJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.MutateBatchJobResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateBatchJobMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateBatchJobMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -381,7 +367,7 @@ public final class BatchJobServiceGrpc {
     public void getBatchJob(com.google.ads.googleads.v4.services.GetBatchJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.BatchJob> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetBatchJobMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetBatchJobMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -393,7 +379,7 @@ public final class BatchJobServiceGrpc {
     public void listBatchJobResults(com.google.ads.googleads.v4.services.ListBatchJobResultsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.ListBatchJobResultsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListBatchJobResultsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListBatchJobResultsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -407,7 +393,7 @@ public final class BatchJobServiceGrpc {
     public void runBatchJob(com.google.ads.googleads.v4.services.RunBatchJobRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getRunBatchJobMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRunBatchJobMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -418,7 +404,7 @@ public final class BatchJobServiceGrpc {
     public void addBatchJobOperations(com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getAddBatchJobOperationsMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddBatchJobOperationsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -427,19 +413,15 @@ public final class BatchJobServiceGrpc {
    * Service to manage batch jobs.
    * </pre>
    */
-  public static final class BatchJobServiceBlockingStub extends io.grpc.stub.AbstractStub<BatchJobServiceBlockingStub> {
-    private BatchJobServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BatchJobServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BatchJobServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BatchJobServiceBlockingStub> {
+    private BatchJobServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BatchJobServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BatchJobServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BatchJobServiceBlockingStub(channel, callOptions);
     }
 
@@ -450,7 +432,7 @@ public final class BatchJobServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.MutateBatchJobResponse mutateBatchJob(com.google.ads.googleads.v4.services.MutateBatchJobRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateBatchJobMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateBatchJobMethod(), getCallOptions(), request);
     }
 
     /**
@@ -460,7 +442,7 @@ public final class BatchJobServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.BatchJob getBatchJob(com.google.ads.googleads.v4.services.GetBatchJobRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetBatchJobMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetBatchJobMethod(), getCallOptions(), request);
     }
 
     /**
@@ -471,7 +453,7 @@ public final class BatchJobServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.ListBatchJobResultsResponse listBatchJobResults(com.google.ads.googleads.v4.services.ListBatchJobResultsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getListBatchJobResultsMethodHelper(), getCallOptions(), request);
+          getChannel(), getListBatchJobResultsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -484,7 +466,7 @@ public final class BatchJobServiceGrpc {
      */
     public com.google.longrunning.Operation runBatchJob(com.google.ads.googleads.v4.services.RunBatchJobRequest request) {
       return blockingUnaryCall(
-          getChannel(), getRunBatchJobMethodHelper(), getCallOptions(), request);
+          getChannel(), getRunBatchJobMethod(), getCallOptions(), request);
     }
 
     /**
@@ -494,7 +476,7 @@ public final class BatchJobServiceGrpc {
      */
     public com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse addBatchJobOperations(com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getAddBatchJobOperationsMethodHelper(), getCallOptions(), request);
+          getChannel(), getAddBatchJobOperationsMethod(), getCallOptions(), request);
     }
   }
 
@@ -503,19 +485,15 @@ public final class BatchJobServiceGrpc {
    * Service to manage batch jobs.
    * </pre>
    */
-  public static final class BatchJobServiceFutureStub extends io.grpc.stub.AbstractStub<BatchJobServiceFutureStub> {
-    private BatchJobServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private BatchJobServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class BatchJobServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BatchJobServiceFutureStub> {
+    private BatchJobServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected BatchJobServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected BatchJobServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new BatchJobServiceFutureStub(channel, callOptions);
     }
 
@@ -527,7 +505,7 @@ public final class BatchJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.MutateBatchJobResponse> mutateBatchJob(
         com.google.ads.googleads.v4.services.MutateBatchJobRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateBatchJobMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateBatchJobMethod(), getCallOptions()), request);
     }
 
     /**
@@ -538,7 +516,7 @@ public final class BatchJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.BatchJob> getBatchJob(
         com.google.ads.googleads.v4.services.GetBatchJobRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetBatchJobMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetBatchJobMethod(), getCallOptions()), request);
     }
 
     /**
@@ -550,7 +528,7 @@ public final class BatchJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.ListBatchJobResultsResponse> listBatchJobResults(
         com.google.ads.googleads.v4.services.ListBatchJobResultsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListBatchJobResultsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getListBatchJobResultsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -564,7 +542,7 @@ public final class BatchJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> runBatchJob(
         com.google.ads.googleads.v4.services.RunBatchJobRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getRunBatchJobMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getRunBatchJobMethod(), getCallOptions()), request);
     }
 
     /**
@@ -575,7 +553,7 @@ public final class BatchJobServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.services.AddBatchJobOperationsResponse> addBatchJobOperations(
         com.google.ads.googleads.v4.services.AddBatchJobOperationsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getAddBatchJobOperationsMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getAddBatchJobOperationsMethod(), getCallOptions()), request);
     }
   }
 
@@ -683,11 +661,11 @@ public final class BatchJobServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new BatchJobServiceFileDescriptorSupplier())
-              .addMethod(getMutateBatchJobMethodHelper())
-              .addMethod(getGetBatchJobMethodHelper())
-              .addMethod(getListBatchJobResultsMethodHelper())
-              .addMethod(getRunBatchJobMethodHelper())
-              .addMethod(getAddBatchJobOperationsMethodHelper())
+              .addMethod(getMutateBatchJobMethod())
+              .addMethod(getGetBatchJobMethod())
+              .addMethod(getListBatchJobResultsMethod())
+              .addMethod(getRunBatchJobMethod())
+              .addMethod(getAddBatchJobOperationsMethod())
               .build();
         }
       }

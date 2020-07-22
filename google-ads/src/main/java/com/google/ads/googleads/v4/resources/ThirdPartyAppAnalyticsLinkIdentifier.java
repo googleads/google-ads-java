@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier}
  */
-public  final class ThirdPartyAppAnalyticsLinkIdentifier extends
+public final class ThirdPartyAppAnalyticsLinkIdentifier extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.ThirdPartyAppAnalyticsLinkIdentifier)
     ThirdPartyAppAnalyticsLinkIdentifierOrBuilder {
@@ -130,6 +130,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value app_analytics_provider_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the appAnalyticsProviderId field is set.
    */
+  @java.lang.Override
   public boolean hasAppAnalyticsProviderId() {
     return appAnalyticsProviderId_ != null;
   }
@@ -144,6 +145,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value app_analytics_provider_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The appAnalyticsProviderId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAppAnalyticsProviderId() {
     return appAnalyticsProviderId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : appAnalyticsProviderId_;
   }
@@ -157,6 +159,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value app_analytics_provider_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAppAnalyticsProviderIdOrBuilder() {
     return getAppAnalyticsProviderId();
   }
@@ -181,6 +184,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the appId field is set.
    */
+  @java.lang.Override
   public boolean hasAppId() {
     return appId_ != null;
   }
@@ -202,6 +206,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The appId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAppId() {
     return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
   }
@@ -222,6 +227,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
     return getAppId();
   }
@@ -239,7 +245,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor app_vendor = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The enum numeric value on the wire for appVendor.
    */
-  public int getAppVendorValue() {
+  @java.lang.Override public int getAppVendorValue() {
     return appVendor_;
   }
   /**
@@ -253,7 +259,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor app_vendor = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The appVendor.
    */
-  public com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor getAppVendor() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor getAppVendor() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor.valueOf(appVendor_);
     return result == null ? com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor.UNRECOGNIZED : result;
@@ -1063,7 +1069,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor app_vendor = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for appVendor.
      */
-    public int getAppVendorValue() {
+    @java.lang.Override public int getAppVendorValue() {
       return appVendor_;
     }
     /**
@@ -1079,6 +1085,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAppVendorValue(int value) {
+      
       appVendor_ = value;
       onChanged();
       return this;
@@ -1094,6 +1101,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor app_vendor = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The appVendor.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor getAppVendor() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor.valueOf(appVendor_);

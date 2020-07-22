@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.AdGroup}
  */
-public  final class AdGroup extends
+public final class AdGroup extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.AdGroup)
     AdGroupOrBuilder {
@@ -29,6 +29,13 @@ private static final long serialVersionUID = 0L;
     effectiveTargetCpaSource_ = 0;
     effectiveTargetRoasSource_ = 0;
     labels_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AdGroup();
   }
 
   @java.lang.Override
@@ -94,9 +101,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 50: {
-            if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00000100;
+              mutable_bitField0_ |= 0x00000001;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.CustomParameter.parser(), extensionRegistry));
@@ -328,9 +335,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 266: {
-            if (!((mutable_bitField0_ & 0x02000000) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               labels_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x02000000;
+              mutable_bitField0_ |= 0x00000002;
             }
             labels_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -351,10 +358,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000100) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
-      if (((mutable_bitField0_ & 0x02000000) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         labels_ = java.util.Collections.unmodifiableList(labels_);
       }
       this.unknownFields = unknownFields.build();
@@ -374,7 +381,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.resources.AdGroup.class, com.google.ads.googleads.v3.resources.AdGroup.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -385,7 +391,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -406,7 +414,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -429,7 +439,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -439,7 +451,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -450,6 +464,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -467,7 +482,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -482,7 +499,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -498,6 +517,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -510,8 +530,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus status = 5;</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -520,8 +541,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus status = 5;</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus result = com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus.UNRECOGNIZED : result;
@@ -535,8 +557,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -545,8 +568,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType getType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType result = com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType.UNRECOGNIZED : result;
@@ -560,8 +584,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+   * @return The enum numeric value on the wire for adRotationMode.
    */
-  public int getAdRotationModeValue() {
+  @java.lang.Override public int getAdRotationModeValue() {
     return adRotationMode_;
   }
   /**
@@ -570,8 +595,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+   * @return The adRotationMode.
    */
-  public com.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode getAdRotationMode() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode getAdRotationMode() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode result = com.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.valueOf(adRotationMode_);
     return result == null ? com.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.UNRECOGNIZED : result;
@@ -589,7 +615,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the baseAdGroup field is set.
    */
+  @java.lang.Override
   public boolean hasBaseAdGroup() {
     return baseAdGroup_ != null;
   }
@@ -603,7 +631,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The baseAdGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBaseAdGroup() {
     return baseAdGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : baseAdGroup_;
   }
@@ -618,6 +648,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBaseAdGroupOrBuilder() {
     return getBaseAdGroup();
   }
@@ -630,7 +661,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingUrlTemplate() {
     return trackingUrlTemplate_ != null;
   }
@@ -640,7 +673,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
+   * @return The trackingUrlTemplate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTrackingUrlTemplate() {
     return trackingUrlTemplate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrlTemplate_;
   }
@@ -651,6 +686,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
   }
@@ -665,6 +701,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 6;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.CustomParameter> getUrlCustomParametersList() {
     return urlCustomParameters_;
   }
@@ -676,6 +713,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 6;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.CustomParameterOrBuilder> 
       getUrlCustomParametersOrBuilderList() {
     return urlCustomParameters_;
@@ -688,6 +726,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 6;</code>
    */
+  @java.lang.Override
   public int getUrlCustomParametersCount() {
     return urlCustomParameters_.size();
   }
@@ -699,6 +738,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CustomParameter getUrlCustomParameters(int index) {
     return urlCustomParameters_.get(index);
   }
@@ -710,6 +750,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
       int index) {
     return urlCustomParameters_.get(index);
@@ -723,7 +764,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
+  @java.lang.Override
   public boolean hasCampaign() {
     return campaign_ != null;
   }
@@ -733,7 +776,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaign() {
     return campaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaign_;
   }
@@ -744,6 +789,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignOrBuilder() {
     return getCampaign();
   }
@@ -756,7 +802,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 14;</code>
+   * @return Whether the cpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidMicros() {
     return cpcBidMicros_ != null;
   }
@@ -766,7 +814,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 14;</code>
+   * @return The cpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidMicros() {
     return cpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidMicros_;
   }
@@ -777,6 +827,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 14;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidMicrosOrBuilder() {
     return getCpcBidMicros();
   }
@@ -789,7 +840,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpm_bid_micros = 15;</code>
+   * @return Whether the cpmBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpmBidMicros() {
     return cpmBidMicros_ != null;
   }
@@ -799,7 +852,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpm_bid_micros = 15;</code>
+   * @return The cpmBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpmBidMicros() {
     return cpmBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpmBidMicros_;
   }
@@ -810,6 +865,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpm_bid_micros = 15;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpmBidMicrosOrBuilder() {
     return getCpmBidMicros();
   }
@@ -822,7 +878,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
+   * @return Whether the targetCpaMicros field is set.
    */
+  @java.lang.Override
   public boolean hasTargetCpaMicros() {
     return targetCpaMicros_ != null;
   }
@@ -832,7 +890,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
+   * @return The targetCpaMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTargetCpaMicros() {
     return targetCpaMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : targetCpaMicros_;
   }
@@ -843,6 +903,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTargetCpaMicrosOrBuilder() {
     return getTargetCpaMicros();
   }
@@ -855,7 +916,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the cpvBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpvBidMicros() {
     return cpvBidMicros_ != null;
   }
@@ -865,7 +928,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The cpvBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpvBidMicros() {
     return cpvBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpvBidMicros_;
   }
@@ -876,6 +941,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpvBidMicrosOrBuilder() {
     return getCpvBidMicros();
   }
@@ -889,7 +955,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
+   * @return Whether the targetCpmMicros field is set.
    */
+  @java.lang.Override
   public boolean hasTargetCpmMicros() {
     return targetCpmMicros_ != null;
   }
@@ -900,7 +968,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
+   * @return The targetCpmMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTargetCpmMicros() {
     return targetCpmMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : targetCpmMicros_;
   }
@@ -912,6 +982,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTargetCpmMicrosOrBuilder() {
     return getTargetCpmMicros();
   }
@@ -927,7 +998,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+   * @return Whether the targetRoas field is set.
    */
+  @java.lang.Override
   public boolean hasTargetRoas() {
     return targetRoas_ != null;
   }
@@ -940,7 +1013,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+   * @return The targetRoas.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getTargetRoas() {
     return targetRoas_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : targetRoas_;
   }
@@ -954,6 +1029,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getTargetRoasOrBuilder() {
     return getTargetRoas();
   }
@@ -968,7 +1044,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+   * @return Whether the percentCpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasPercentCpcBidMicros() {
     return percentCpcBidMicros_ != null;
   }
@@ -980,7 +1058,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+   * @return The percentCpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPercentCpcBidMicros() {
     return percentCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : percentCpcBidMicros_;
   }
@@ -993,6 +1073,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPercentCpcBidMicrosOrBuilder() {
     return getPercentCpcBidMicros();
   }
@@ -1005,7 +1086,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+   * @return Whether the explorerAutoOptimizerSetting field is set.
    */
+  @java.lang.Override
   public boolean hasExplorerAutoOptimizerSetting() {
     return explorerAutoOptimizerSetting_ != null;
   }
@@ -1015,7 +1098,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+   * @return The explorerAutoOptimizerSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting getExplorerAutoOptimizerSetting() {
     return explorerAutoOptimizerSetting_ == null ? com.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting.getDefaultInstance() : explorerAutoOptimizerSetting_;
   }
@@ -1026,6 +1111,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.ExplorerAutoOptimizerSettingOrBuilder getExplorerAutoOptimizerSettingOrBuilder() {
     return getExplorerAutoOptimizerSetting();
   }
@@ -1040,8 +1126,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+   * @return The enum numeric value on the wire for displayCustomBidDimension.
    */
-  public int getDisplayCustomBidDimensionValue() {
+  @java.lang.Override public int getDisplayCustomBidDimensionValue() {
     return displayCustomBidDimension_;
   }
   /**
@@ -1052,8 +1139,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+   * @return The displayCustomBidDimension.
    */
-  public com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension getDisplayCustomBidDimension() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension getDisplayCustomBidDimension() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension.valueOf(displayCustomBidDimension_);
     return result == null ? com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension.UNRECOGNIZED : result;
@@ -1067,7 +1155,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
+  @java.lang.Override
   public boolean hasFinalUrlSuffix() {
     return finalUrlSuffix_ != null;
   }
@@ -1077,7 +1167,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+   * @return The finalUrlSuffix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrlSuffix() {
     return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
   }
@@ -1088,6 +1180,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
     return getFinalUrlSuffix();
   }
@@ -1100,7 +1193,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetingSetting targeting_setting = 25;</code>
+   * @return Whether the targetingSetting field is set.
    */
+  @java.lang.Override
   public boolean hasTargetingSetting() {
     return targetingSetting_ != null;
   }
@@ -1110,7 +1205,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TargetingSetting targeting_setting = 25;</code>
+   * @return The targetingSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.TargetingSetting getTargetingSetting() {
     return targetingSetting_ == null ? com.google.ads.googleads.v3.common.TargetingSetting.getDefaultInstance() : targetingSetting_;
   }
@@ -1121,6 +1218,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.TargetingSetting targeting_setting = 25;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.TargetingSettingOrBuilder getTargetingSettingOrBuilder() {
     return getTargetingSetting();
   }
@@ -1134,7 +1232,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the effectiveTargetCpaMicros field is set.
    */
+  @java.lang.Override
   public boolean hasEffectiveTargetCpaMicros() {
     return effectiveTargetCpaMicros_ != null;
   }
@@ -1145,7 +1245,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveTargetCpaMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getEffectiveTargetCpaMicros() {
     return effectiveTargetCpaMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveTargetCpaMicros_;
   }
@@ -1157,6 +1259,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getEffectiveTargetCpaMicrosOrBuilder() {
     return getEffectiveTargetCpaMicros();
   }
@@ -1170,8 +1273,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for effectiveTargetCpaSource.
    */
-  public int getEffectiveTargetCpaSourceValue() {
+  @java.lang.Override public int getEffectiveTargetCpaSourceValue() {
     return effectiveTargetCpaSource_;
   }
   /**
@@ -1181,8 +1285,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveTargetCpaSource.
    */
-  public com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetCpaSource() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetCpaSource() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveTargetCpaSource_);
     return result == null ? com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
@@ -1197,7 +1302,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the effectiveTargetRoas field is set.
    */
+  @java.lang.Override
   public boolean hasEffectiveTargetRoas() {
     return effectiveTargetRoas_ != null;
   }
@@ -1208,7 +1315,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveTargetRoas.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getEffectiveTargetRoas() {
     return effectiveTargetRoas_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : effectiveTargetRoas_;
   }
@@ -1220,6 +1329,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getEffectiveTargetRoasOrBuilder() {
     return getEffectiveTargetRoas();
   }
@@ -1233,8 +1343,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for effectiveTargetRoasSource.
    */
-  public int getEffectiveTargetRoasSourceValue() {
+  @java.lang.Override public int getEffectiveTargetRoasSourceValue() {
     return effectiveTargetRoasSource_;
   }
   /**
@@ -1244,8 +1355,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The effectiveTargetRoasSource.
    */
-  public com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetRoasSource() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetRoasSource() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveTargetRoasSource_);
     return result == null ? com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
@@ -1260,6 +1372,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getLabelsList() {
     return labels_;
   }
@@ -1270,6 +1383,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getLabelsOrBuilderList() {
     return labels_;
@@ -1281,6 +1395,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public int getLabelsCount() {
     return labels_.size();
   }
@@ -1291,6 +1406,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLabels(int index) {
     return labels_.get(index);
   }
@@ -1301,6 +1417,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue labels = 33 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLabelsOrBuilder(
       int index) {
     return labels_.get(index);
@@ -1896,7 +2013,7 @@ private static final long serialVersionUID = 0L;
       }
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -1986,7 +2103,7 @@ private static final long serialVersionUID = 0L;
 
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         labelsBuilder_.clear();
       }
@@ -2017,7 +2134,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.resources.AdGroup buildPartial() {
       com.google.ads.googleads.v3.resources.AdGroup result = new com.google.ads.googleads.v3.resources.AdGroup(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (idBuilder_ == null) {
         result.id_ = id_;
@@ -2043,9 +2159,9 @@ private static final long serialVersionUID = 0L;
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -2120,15 +2236,14 @@ private static final long serialVersionUID = 0L;
       }
       result.effectiveTargetRoasSource_ = effectiveTargetRoasSource_;
       if (labelsBuilder_ == null) {
-        if (((bitField0_ & 0x02000000) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           labels_ = java.util.Collections.unmodifiableList(labels_);
-          bitField0_ = (bitField0_ & ~0x02000000);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.labels_ = labels_;
       } else {
         result.labels_ = labelsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -2206,7 +2321,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -2219,7 +2334,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000001);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -2280,7 +2395,7 @@ private static final long serialVersionUID = 0L;
         if (!other.labels_.isEmpty()) {
           if (labels_.isEmpty()) {
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x02000000);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureLabelsIsMutable();
             labels_.addAll(other.labels_);
@@ -2293,7 +2408,7 @@ private static final long serialVersionUID = 0L;
             labelsBuilder_.dispose();
             labelsBuilder_ = null;
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x02000000);
+            bitField0_ = (bitField0_ & ~0x00000002);
             labelsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLabelsFieldBuilder() : null;
@@ -2341,6 +2456,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -2362,6 +2478,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -2384,6 +2501,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -2403,6 +2522,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -2418,6 +2538,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -2440,6 +2562,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
@@ -2450,6 +2573,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -2598,6 +2722,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -2613,6 +2738,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -2789,8 +2915,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -2799,8 +2926,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus status = 5;</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -2811,7 +2941,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus status = 5;</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus result = com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus.valueOf(status_);
@@ -2823,6 +2955,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus status = 5;</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus value) {
       if (value == null) {
@@ -2839,6 +2973,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupStatusEnum.AdGroupStatus status = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       
@@ -2854,8 +2989,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -2864,8 +3000,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -2876,7 +3015,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType result = com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType.valueOf(type_);
@@ -2888,6 +3029,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType value) {
       if (value == null) {
@@ -2904,6 +3047,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupTypeEnum.AdGroupType type = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -2919,8 +3063,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+     * @return The enum numeric value on the wire for adRotationMode.
      */
-    public int getAdRotationModeValue() {
+    @java.lang.Override public int getAdRotationModeValue() {
       return adRotationMode_;
     }
     /**
@@ -2929,8 +3074,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+     * @param value The enum numeric value on the wire for adRotationMode to set.
+     * @return This builder for chaining.
      */
     public Builder setAdRotationModeValue(int value) {
+      
       adRotationMode_ = value;
       onChanged();
       return this;
@@ -2941,7 +3089,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+     * @return The adRotationMode.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode getAdRotationMode() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode result = com.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.valueOf(adRotationMode_);
@@ -2953,6 +3103,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+     * @param value The adRotationMode to set.
+     * @return This builder for chaining.
      */
     public Builder setAdRotationMode(com.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode value) {
       if (value == null) {
@@ -2969,6 +3121,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode ad_rotation_mode = 22;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdRotationMode() {
       
@@ -2990,6 +3143,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the baseAdGroup field is set.
      */
     public boolean hasBaseAdGroup() {
       return baseAdGroupBuilder_ != null || baseAdGroup_ != null;
@@ -3004,6 +3158,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue base_ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The baseAdGroup.
      */
     public com.google.protobuf.StringValue getBaseAdGroup() {
       if (baseAdGroupBuilder_ == null) {
@@ -3175,6 +3330,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
+     * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
       return trackingUrlTemplateBuilder_ != null || trackingUrlTemplate_ != null;
@@ -3185,6 +3341,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
+     * @return The trackingUrlTemplate.
      */
     public com.google.protobuf.StringValue getTrackingUrlTemplate() {
       if (trackingUrlTemplateBuilder_ == null) {
@@ -3322,9 +3479,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -3529,7 +3686,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -3641,7 +3798,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.CustomParameter, com.google.ads.googleads.v3.common.CustomParameter.Builder, com.google.ads.googleads.v3.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -3658,6 +3815,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
       return campaignBuilder_ != null || campaign_ != null;
@@ -3668,6 +3826,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The campaign.
      */
     public com.google.protobuf.StringValue getCampaign() {
       if (campaignBuilder_ == null) {
@@ -3811,6 +3970,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 14;</code>
+     * @return Whether the cpcBidMicros field is set.
      */
     public boolean hasCpcBidMicros() {
       return cpcBidMicrosBuilder_ != null || cpcBidMicros_ != null;
@@ -3821,6 +3981,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpc_bid_micros = 14;</code>
+     * @return The cpcBidMicros.
      */
     public com.google.protobuf.Int64Value getCpcBidMicros() {
       if (cpcBidMicrosBuilder_ == null) {
@@ -3964,6 +4125,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpm_bid_micros = 15;</code>
+     * @return Whether the cpmBidMicros field is set.
      */
     public boolean hasCpmBidMicros() {
       return cpmBidMicrosBuilder_ != null || cpmBidMicros_ != null;
@@ -3974,6 +4136,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpm_bid_micros = 15;</code>
+     * @return The cpmBidMicros.
      */
     public com.google.protobuf.Int64Value getCpmBidMicros() {
       if (cpmBidMicrosBuilder_ == null) {
@@ -4117,6 +4280,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
+     * @return Whether the targetCpaMicros field is set.
      */
     public boolean hasTargetCpaMicros() {
       return targetCpaMicrosBuilder_ != null || targetCpaMicros_ != null;
@@ -4127,6 +4291,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value target_cpa_micros = 27;</code>
+     * @return The targetCpaMicros.
      */
     public com.google.protobuf.Int64Value getTargetCpaMicros() {
       if (targetCpaMicrosBuilder_ == null) {
@@ -4270,6 +4435,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the cpvBidMicros field is set.
      */
     public boolean hasCpvBidMicros() {
       return cpvBidMicrosBuilder_ != null || cpvBidMicros_ != null;
@@ -4280,6 +4446,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cpv_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The cpvBidMicros.
      */
     public com.google.protobuf.Int64Value getCpvBidMicros() {
       if (cpvBidMicrosBuilder_ == null) {
@@ -4424,6 +4591,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
+     * @return Whether the targetCpmMicros field is set.
      */
     public boolean hasTargetCpmMicros() {
       return targetCpmMicrosBuilder_ != null || targetCpmMicros_ != null;
@@ -4435,6 +4603,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value target_cpm_micros = 26;</code>
+     * @return The targetCpmMicros.
      */
     public com.google.protobuf.Int64Value getTargetCpmMicros() {
       if (targetCpmMicrosBuilder_ == null) {
@@ -4588,6 +4757,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+     * @return Whether the targetRoas field is set.
      */
     public boolean hasTargetRoas() {
       return targetRoasBuilder_ != null || targetRoas_ != null;
@@ -4601,6 +4771,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue target_roas = 30;</code>
+     * @return The targetRoas.
      */
     public com.google.protobuf.DoubleValue getTargetRoas() {
       if (targetRoasBuilder_ == null) {
@@ -4767,6 +4938,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     * @return Whether the percentCpcBidMicros field is set.
      */
     public boolean hasPercentCpcBidMicros() {
       return percentCpcBidMicrosBuilder_ != null || percentCpcBidMicros_ != null;
@@ -4779,6 +4951,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 20;</code>
+     * @return The percentCpcBidMicros.
      */
     public com.google.protobuf.Int64Value getPercentCpcBidMicros() {
       if (percentCpcBidMicrosBuilder_ == null) {
@@ -4936,6 +5109,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     * @return Whether the explorerAutoOptimizerSetting field is set.
      */
     public boolean hasExplorerAutoOptimizerSetting() {
       return explorerAutoOptimizerSettingBuilder_ != null || explorerAutoOptimizerSetting_ != null;
@@ -4946,6 +5120,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting explorer_auto_optimizer_setting = 21;</code>
+     * @return The explorerAutoOptimizerSetting.
      */
     public com.google.ads.googleads.v3.common.ExplorerAutoOptimizerSetting getExplorerAutoOptimizerSetting() {
       if (explorerAutoOptimizerSettingBuilder_ == null) {
@@ -5089,8 +5264,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+     * @return The enum numeric value on the wire for displayCustomBidDimension.
      */
-    public int getDisplayCustomBidDimensionValue() {
+    @java.lang.Override public int getDisplayCustomBidDimensionValue() {
       return displayCustomBidDimension_;
     }
     /**
@@ -5101,8 +5277,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+     * @param value The enum numeric value on the wire for displayCustomBidDimension to set.
+     * @return This builder for chaining.
      */
     public Builder setDisplayCustomBidDimensionValue(int value) {
+      
       displayCustomBidDimension_ = value;
       onChanged();
       return this;
@@ -5115,7 +5294,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+     * @return The displayCustomBidDimension.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension getDisplayCustomBidDimension() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension.valueOf(displayCustomBidDimension_);
@@ -5129,6 +5310,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+     * @param value The displayCustomBidDimension to set.
+     * @return This builder for chaining.
      */
     public Builder setDisplayCustomBidDimension(com.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension value) {
       if (value == null) {
@@ -5147,6 +5330,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.TargetingDimensionEnum.TargetingDimension display_custom_bid_dimension = 23;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDisplayCustomBidDimension() {
       
@@ -5164,6 +5348,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
       return finalUrlSuffixBuilder_ != null || finalUrlSuffix_ != null;
@@ -5174,6 +5359,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 24;</code>
+     * @return The finalUrlSuffix.
      */
     public com.google.protobuf.StringValue getFinalUrlSuffix() {
       if (finalUrlSuffixBuilder_ == null) {
@@ -5317,6 +5503,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.TargetingSetting targeting_setting = 25;</code>
+     * @return Whether the targetingSetting field is set.
      */
     public boolean hasTargetingSetting() {
       return targetingSettingBuilder_ != null || targetingSetting_ != null;
@@ -5327,6 +5514,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.TargetingSetting targeting_setting = 25;</code>
+     * @return The targetingSetting.
      */
     public com.google.ads.googleads.v3.common.TargetingSetting getTargetingSetting() {
       if (targetingSettingBuilder_ == null) {
@@ -5471,6 +5659,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the effectiveTargetCpaMicros field is set.
      */
     public boolean hasEffectiveTargetCpaMicros() {
       return effectiveTargetCpaMicrosBuilder_ != null || effectiveTargetCpaMicros_ != null;
@@ -5482,6 +5671,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value effective_target_cpa_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The effectiveTargetCpaMicros.
      */
     public com.google.protobuf.Int64Value getEffectiveTargetCpaMicros() {
       if (effectiveTargetCpaMicrosBuilder_ == null) {
@@ -5631,8 +5821,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for effectiveTargetCpaSource.
      */
-    public int getEffectiveTargetCpaSourceValue() {
+    @java.lang.Override public int getEffectiveTargetCpaSourceValue() {
       return effectiveTargetCpaSource_;
     }
     /**
@@ -5642,8 +5833,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for effectiveTargetCpaSource to set.
+     * @return This builder for chaining.
      */
     public Builder setEffectiveTargetCpaSourceValue(int value) {
+      
       effectiveTargetCpaSource_ = value;
       onChanged();
       return this;
@@ -5655,7 +5849,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The effectiveTargetCpaSource.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetCpaSource() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveTargetCpaSource_);
@@ -5668,6 +5864,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The effectiveTargetCpaSource to set.
+     * @return This builder for chaining.
      */
     public Builder setEffectiveTargetCpaSource(com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource value) {
       if (value == null) {
@@ -5685,6 +5883,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_cpa_source = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearEffectiveTargetCpaSource() {
       
@@ -5703,6 +5902,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the effectiveTargetRoas field is set.
      */
     public boolean hasEffectiveTargetRoas() {
       return effectiveTargetRoasBuilder_ != null || effectiveTargetRoas_ != null;
@@ -5714,6 +5914,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue effective_target_roas = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The effectiveTargetRoas.
      */
     public com.google.protobuf.DoubleValue getEffectiveTargetRoas() {
       if (effectiveTargetRoasBuilder_ == null) {
@@ -5863,8 +6064,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for effectiveTargetRoasSource.
      */
-    public int getEffectiveTargetRoasSourceValue() {
+    @java.lang.Override public int getEffectiveTargetRoasSourceValue() {
       return effectiveTargetRoasSource_;
     }
     /**
@@ -5874,8 +6076,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for effectiveTargetRoasSource to set.
+     * @return This builder for chaining.
      */
     public Builder setEffectiveTargetRoasSourceValue(int value) {
+      
       effectiveTargetRoasSource_ = value;
       onChanged();
       return this;
@@ -5887,7 +6092,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The effectiveTargetRoasSource.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource getEffectiveTargetRoasSource() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveTargetRoasSource_);
@@ -5900,6 +6107,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The effectiveTargetRoasSource to set.
+     * @return This builder for chaining.
      */
     public Builder setEffectiveTargetRoasSource(com.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource value) {
       if (value == null) {
@@ -5917,6 +6126,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.BiddingSourceEnum.BiddingSource effective_target_roas_source = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearEffectiveTargetRoasSource() {
       
@@ -5928,9 +6138,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> labels_ =
       java.util.Collections.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x02000000) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         labels_ = new java.util.ArrayList<com.google.protobuf.StringValue>(labels_);
-        bitField0_ |= 0x02000000;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -6124,7 +6334,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLabels() {
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         labelsBuilder_.clear();
@@ -6229,7 +6439,7 @@ private static final long serialVersionUID = 0L;
         labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 labels_,
-                ((bitField0_ & 0x02000000) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         labels_ = null;

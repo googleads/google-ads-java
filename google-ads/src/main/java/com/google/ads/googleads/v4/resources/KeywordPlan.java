@@ -12,7 +12,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.KeywordPlan}
  */
-public  final class KeywordPlan extends
+public final class KeywordPlan extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.KeywordPlan)
     KeywordPlanOrBuilder {
@@ -144,6 +144,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -166,6 +167,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -190,6 +192,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -201,6 +204,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -211,6 +215,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -227,6 +232,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 3;</code>
    * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -240,6 +246,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 3;</code>
    * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -252,6 +259,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -266,6 +274,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.KeywordPlanForecastPeriod forecast_period = 4;</code>
    * @return Whether the forecastPeriod field is set.
    */
+  @java.lang.Override
   public boolean hasForecastPeriod() {
     return forecastPeriod_ != null;
   }
@@ -277,6 +286,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.KeywordPlanForecastPeriod forecast_period = 4;</code>
    * @return The forecastPeriod.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.KeywordPlanForecastPeriod getForecastPeriod() {
     return forecastPeriod_ == null ? com.google.ads.googleads.v4.resources.KeywordPlanForecastPeriod.getDefaultInstance() : forecastPeriod_;
   }
@@ -287,6 +297,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.KeywordPlanForecastPeriod forecast_period = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.KeywordPlanForecastPeriodOrBuilder getForecastPeriodOrBuilder() {
     return getForecastPeriod();
   }

@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/keyword_view_service.proto")
 public final class KeywordViewServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class KeywordViewServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.KeywordViewService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetKeywordViewMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetKeywordViewRequest,
-      com.google.ads.googleads.v4.resources.KeywordView> METHOD_GET_KEYWORD_VIEW = getGetKeywordViewMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetKeywordViewRequest,
       com.google.ads.googleads.v4.resources.KeywordView> getGetKeywordViewMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetKeywordView",
+      requestType = com.google.ads.googleads.v4.services.GetKeywordViewRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.KeywordView.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetKeywordViewRequest,
       com.google.ads.googleads.v4.resources.KeywordView> getGetKeywordViewMethod() {
-    return getGetKeywordViewMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetKeywordViewRequest,
-      com.google.ads.googleads.v4.resources.KeywordView> getGetKeywordViewMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetKeywordViewRequest, com.google.ads.googleads.v4.resources.KeywordView> getGetKeywordViewMethod;
     if ((getGetKeywordViewMethod = KeywordViewServiceGrpc.getGetKeywordViewMethod) == null) {
       synchronized (KeywordViewServiceGrpc.class) {
         if ((getGetKeywordViewMethod = KeywordViewServiceGrpc.getGetKeywordViewMethod) == null) {
-          KeywordViewServiceGrpc.getGetKeywordViewMethod = getGetKeywordViewMethod = 
+          KeywordViewServiceGrpc.getGetKeywordViewMethod = getGetKeywordViewMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetKeywordViewRequest, com.google.ads.googleads.v4.resources.KeywordView>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.KeywordViewService", "GetKeywordView"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetKeywordView"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetKeywordViewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.KeywordView.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeywordViewServiceMethodDescriptorSupplier("GetKeywordView"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeywordViewServiceMethodDescriptorSupplier("GetKeywordView"))
+              .build();
         }
-     }
-     return getGetKeywordViewMethod;
+      }
+    }
+    return getGetKeywordViewMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static KeywordViewServiceStub newStub(io.grpc.Channel channel) {
-    return new KeywordViewServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordViewServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordViewServiceStub>() {
+        @java.lang.Override
+        public KeywordViewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordViewServiceStub(channel, callOptions);
+        }
+      };
+    return KeywordViewServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class KeywordViewServiceGrpc {
    */
   public static KeywordViewServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new KeywordViewServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordViewServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordViewServiceBlockingStub>() {
+        @java.lang.Override
+        public KeywordViewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordViewServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return KeywordViewServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class KeywordViewServiceGrpc {
    */
   public static KeywordViewServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new KeywordViewServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordViewServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordViewServiceFutureStub>() {
+        @java.lang.Override
+        public KeywordViewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordViewServiceFutureStub(channel, callOptions);
+        }
+      };
+    return KeywordViewServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class KeywordViewServiceGrpc {
      */
     public void getKeywordView(com.google.ads.googleads.v4.services.GetKeywordViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.KeywordView> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetKeywordViewMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetKeywordViewMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetKeywordViewMethodHelper(),
+            getGetKeywordViewMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetKeywordViewRequest,
@@ -126,19 +140,15 @@ public final class KeywordViewServiceGrpc {
    * Service to manage keyword views.
    * </pre>
    */
-  public static final class KeywordViewServiceStub extends io.grpc.stub.AbstractStub<KeywordViewServiceStub> {
-    private KeywordViewServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordViewServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordViewServiceStub extends io.grpc.stub.AbstractAsyncStub<KeywordViewServiceStub> {
+    private KeywordViewServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordViewServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordViewServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordViewServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class KeywordViewServiceGrpc {
     public void getKeywordView(com.google.ads.googleads.v4.services.GetKeywordViewRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.KeywordView> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetKeywordViewMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetKeywordViewMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class KeywordViewServiceGrpc {
    * Service to manage keyword views.
    * </pre>
    */
-  public static final class KeywordViewServiceBlockingStub extends io.grpc.stub.AbstractStub<KeywordViewServiceBlockingStub> {
-    private KeywordViewServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordViewServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordViewServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<KeywordViewServiceBlockingStub> {
+    private KeywordViewServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordViewServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordViewServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordViewServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class KeywordViewServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.KeywordView getKeywordView(com.google.ads.googleads.v4.services.GetKeywordViewRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetKeywordViewMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetKeywordViewMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class KeywordViewServiceGrpc {
    * Service to manage keyword views.
    * </pre>
    */
-  public static final class KeywordViewServiceFutureStub extends io.grpc.stub.AbstractStub<KeywordViewServiceFutureStub> {
-    private KeywordViewServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordViewServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordViewServiceFutureStub extends io.grpc.stub.AbstractFutureStub<KeywordViewServiceFutureStub> {
+    private KeywordViewServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordViewServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordViewServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordViewServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class KeywordViewServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.KeywordView> getKeywordView(
         com.google.ads.googleads.v4.services.GetKeywordViewRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetKeywordViewMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetKeywordViewMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class KeywordViewServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new KeywordViewServiceFileDescriptorSupplier())
-              .addMethod(getGetKeywordViewMethodHelper())
+              .addMethod(getGetKeywordViewMethod())
               .build();
         }
       }

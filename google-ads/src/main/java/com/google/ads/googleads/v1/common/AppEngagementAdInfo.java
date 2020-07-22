@@ -13,7 +13,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.AppEngagementAdInfo}
  */
-public  final class AppEngagementAdInfo extends
+public final class AppEngagementAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.AppEngagementAdInfo)
     AppEngagementAdInfoOrBuilder {
@@ -27,6 +27,13 @@ private static final long serialVersionUID = 0L;
     descriptions_ = java.util.Collections.emptyList();
     images_ = java.util.Collections.emptyList();
     videos_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AppEngagementAdInfo();
   }
 
   @java.lang.Override
@@ -143,6 +150,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.common.AdTextAsset> getHeadlinesList() {
     return headlines_;
   }
@@ -154,6 +162,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v1.common.AdTextAssetOrBuilder> 
       getHeadlinesOrBuilderList() {
     return headlines_;
@@ -166,6 +175,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public int getHeadlinesCount() {
     return headlines_.size();
   }
@@ -177,6 +187,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.AdTextAsset getHeadlines(int index) {
     return headlines_.get(index);
   }
@@ -188,6 +199,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdTextAsset headlines = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.AdTextAssetOrBuilder getHeadlinesOrBuilder(
       int index) {
     return headlines_.get(index);
@@ -203,6 +215,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.common.AdTextAsset> getDescriptionsList() {
     return descriptions_;
   }
@@ -214,6 +227,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v1.common.AdTextAssetOrBuilder> 
       getDescriptionsOrBuilderList() {
     return descriptions_;
@@ -226,6 +240,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public int getDescriptionsCount() {
     return descriptions_.size();
   }
@@ -237,6 +252,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.AdTextAsset getDescriptions(int index) {
     return descriptions_.get(index);
   }
@@ -248,6 +264,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdTextAsset descriptions = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.AdTextAssetOrBuilder getDescriptionsOrBuilder(
       int index) {
     return descriptions_.get(index);
@@ -262,6 +279,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdImageAsset images = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.common.AdImageAsset> getImagesList() {
     return images_;
   }
@@ -272,6 +290,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdImageAsset images = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v1.common.AdImageAssetOrBuilder> 
       getImagesOrBuilderList() {
     return images_;
@@ -283,6 +302,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdImageAsset images = 3;</code>
    */
+  @java.lang.Override
   public int getImagesCount() {
     return images_.size();
   }
@@ -293,6 +313,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdImageAsset images = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.AdImageAsset getImages(int index) {
     return images_.get(index);
   }
@@ -303,6 +324,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdImageAsset images = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.AdImageAssetOrBuilder getImagesOrBuilder(
       int index) {
     return images_.get(index);
@@ -317,6 +339,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdVideoAsset videos = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.common.AdVideoAsset> getVideosList() {
     return videos_;
   }
@@ -327,6 +350,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdVideoAsset videos = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v1.common.AdVideoAssetOrBuilder> 
       getVideosOrBuilderList() {
     return videos_;
@@ -338,6 +362,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdVideoAsset videos = 4;</code>
    */
+  @java.lang.Override
   public int getVideosCount() {
     return videos_.size();
   }
@@ -348,6 +373,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdVideoAsset videos = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.AdVideoAsset getVideos(int index) {
     return videos_.get(index);
   }
@@ -358,6 +384,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.AdVideoAsset videos = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.AdVideoAssetOrBuilder getVideosOrBuilder(
       int index) {
     return videos_.get(index);

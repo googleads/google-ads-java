@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.TargetCpaSimulationPointList}
  */
-public  final class TargetCpaSimulationPointList extends
+public final class TargetCpaSimulationPointList extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.TargetCpaSimulationPointList)
     TargetCpaSimulationPointListOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetCpaSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.TargetCpaSimulationPoint> getPointsList() {
     return points_;
   }
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetCpaSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.TargetCpaSimulationPointOrBuilder> 
       getPointsOrBuilderList() {
     return points_;
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetCpaSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public int getPointsCount() {
     return points_.size();
   }
@@ -138,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetCpaSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TargetCpaSimulationPoint getPoints(int index) {
     return points_.get(index);
   }
@@ -148,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TargetCpaSimulationPoint points = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TargetCpaSimulationPointOrBuilder getPointsOrBuilder(
       int index) {
     return points_.get(index);

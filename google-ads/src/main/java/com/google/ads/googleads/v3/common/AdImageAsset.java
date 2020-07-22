@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.AdImageAsset}
  */
-public  final class AdImageAsset extends
+public final class AdImageAsset extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.AdImageAsset)
     AdImageAssetOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AdImageAsset() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AdImageAsset();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue asset = 1;</code>
+   * @return Whether the asset field is set.
    */
+  @java.lang.Override
   public boolean hasAsset() {
     return asset_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue asset = 1;</code>
+   * @return The asset.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAsset() {
     return asset_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : asset_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue asset = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAssetOrBuilder() {
     return getAsset();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue asset = 1;</code>
+     * @return Whether the asset field is set.
      */
     public boolean hasAsset() {
       return assetBuilder_ != null || asset_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue asset = 1;</code>
+     * @return The asset.
      */
     public com.google.protobuf.StringValue getAsset() {
       if (assetBuilder_ == null) {

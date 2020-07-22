@@ -13,6 +13,7 @@ public interface UserIdentifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hashed_email = 1;</code>
+   * @return Whether the hashedEmail field is set.
    */
   boolean hasHashedEmail();
   /**
@@ -21,6 +22,7 @@ public interface UserIdentifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hashed_email = 1;</code>
+   * @return The hashedEmail.
    */
   com.google.protobuf.StringValue getHashedEmail();
   /**
@@ -39,6 +41,7 @@ public interface UserIdentifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hashed_phone_number = 2;</code>
+   * @return Whether the hashedPhoneNumber field is set.
    */
   boolean hasHashedPhoneNumber();
   /**
@@ -48,6 +51,7 @@ public interface UserIdentifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue hashed_phone_number = 2;</code>
+   * @return The hashedPhoneNumber.
    */
   com.google.protobuf.StringValue getHashedPhoneNumber();
   /**
@@ -66,6 +70,7 @@ public interface UserIdentifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue mobile_id = 3;</code>
+   * @return Whether the mobileId field is set.
    */
   boolean hasMobileId();
   /**
@@ -74,6 +79,7 @@ public interface UserIdentifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue mobile_id = 3;</code>
+   * @return The mobileId.
    */
   com.google.protobuf.StringValue getMobileId();
   /**
@@ -92,6 +98,7 @@ public interface UserIdentifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue third_party_user_id = 4;</code>
+   * @return Whether the thirdPartyUserId field is set.
    */
   boolean hasThirdPartyUserId();
   /**
@@ -101,6 +108,7 @@ public interface UserIdentifierOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue third_party_user_id = 4;</code>
+   * @return The thirdPartyUserId.
    */
   com.google.protobuf.StringValue getThirdPartyUserId();
   /**
@@ -119,6 +127,7 @@ public interface UserIdentifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.OfflineUserAddressInfo address_info = 5;</code>
+   * @return Whether the addressInfo field is set.
    */
   boolean hasAddressInfo();
   /**
@@ -127,6 +136,7 @@ public interface UserIdentifierOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.OfflineUserAddressInfo address_info = 5;</code>
+   * @return The addressInfo.
    */
   com.google.ads.googleads.v3.common.OfflineUserAddressInfo getAddressInfo();
   /**

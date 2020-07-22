@@ -13,6 +13,7 @@ public interface MutateMerchantCenterLinkResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.MutateMerchantCenterLinkResult result = 2;</code>
+   * @return Whether the result field is set.
    */
   boolean hasResult();
   /**
@@ -21,6 +22,7 @@ public interface MutateMerchantCenterLinkResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.services.MutateMerchantCenterLinkResult result = 2;</code>
+   * @return The result.
    */
   com.google.ads.googleads.v1.services.MutateMerchantCenterLinkResult getResult();
   /**

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.resources;
  *
  * Protobuf type {@code google.ads.googleads.v3.resources.CampaignDraft}
  */
-public  final class CampaignDraft extends
+public final class CampaignDraft extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.resources.CampaignDraft)
     CampaignDraftOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private CampaignDraft() {
     resourceName_ = "";
     status_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CampaignDraft();
   }
 
   @java.lang.Override
@@ -37,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -180,7 +186,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -201,7 +209,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -225,7 +235,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value draft_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the draftId field is set.
    */
+  @java.lang.Override
   public boolean hasDraftId() {
     return draftId_ != null;
   }
@@ -236,7 +248,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value draft_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The draftId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getDraftId() {
     return draftId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : draftId_;
   }
@@ -248,6 +262,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value draft_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getDraftIdOrBuilder() {
     return getDraftId();
   }
@@ -260,7 +275,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the baseCampaign field is set.
    */
+  @java.lang.Override
   public boolean hasBaseCampaign() {
     return baseCampaign_ != null;
   }
@@ -270,7 +287,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue base_campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The baseCampaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBaseCampaign() {
     return baseCampaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : baseCampaign_;
   }
@@ -281,6 +300,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue base_campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBaseCampaignOrBuilder() {
     return getBaseCampaign();
   }
@@ -297,7 +317,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -311,7 +333,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -326,6 +350,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -340,7 +365,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue draft_campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the draftCampaign field is set.
    */
+  @java.lang.Override
   public boolean hasDraftCampaign() {
     return draftCampaign_ != null;
   }
@@ -352,7 +379,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue draft_campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The draftCampaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDraftCampaign() {
     return draftCampaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : draftCampaign_;
   }
@@ -365,6 +394,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue draft_campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDraftCampaignOrBuilder() {
     return getDraftCampaign();
   }
@@ -378,8 +408,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -389,8 +420,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus result = com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus.UNRECOGNIZED : result;
@@ -404,7 +436,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_experiment_running = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hasExperimentRunning field is set.
    */
+  @java.lang.Override
   public boolean hasHasExperimentRunning() {
     return hasExperimentRunning_ != null;
   }
@@ -414,7 +448,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue has_experiment_running = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hasExperimentRunning.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHasExperimentRunning() {
     return hasExperimentRunning_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hasExperimentRunning_;
   }
@@ -425,6 +461,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue has_experiment_running = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHasExperimentRunningOrBuilder() {
     return getHasExperimentRunning();
   }
@@ -439,7 +476,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_running_operation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the longRunningOperation field is set.
    */
+  @java.lang.Override
   public boolean hasLongRunningOperation() {
     return longRunningOperation_ != null;
   }
@@ -451,7 +490,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue long_running_operation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The longRunningOperation.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLongRunningOperation() {
     return longRunningOperation_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : longRunningOperation_;
   }
@@ -464,6 +505,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue long_running_operation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder() {
     return getLongRunningOperation();
   }
@@ -979,6 +1021,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -1000,6 +1043,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -1022,6 +1066,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -1041,6 +1087,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -1056,6 +1103,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1079,6 +1128,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value draft_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the draftId field is set.
      */
     public boolean hasDraftId() {
       return draftIdBuilder_ != null || draftId_ != null;
@@ -1090,6 +1140,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value draft_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The draftId.
      */
     public com.google.protobuf.Int64Value getDraftId() {
       if (draftIdBuilder_ == null) {
@@ -1240,6 +1291,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue base_campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the baseCampaign field is set.
      */
     public boolean hasBaseCampaign() {
       return baseCampaignBuilder_ != null || baseCampaign_ != null;
@@ -1250,6 +1302,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue base_campaign = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The baseCampaign.
      */
     public com.google.protobuf.StringValue getBaseCampaign() {
       if (baseCampaignBuilder_ == null) {
@@ -1397,6 +1450,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -1411,6 +1465,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -1584,6 +1639,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue draft_campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the draftCampaign field is set.
      */
     public boolean hasDraftCampaign() {
       return draftCampaignBuilder_ != null || draftCampaign_ != null;
@@ -1596,6 +1652,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue draft_campaign = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The draftCampaign.
      */
     public com.google.protobuf.StringValue getDraftCampaign() {
       if (draftCampaignBuilder_ == null) {
@@ -1752,8 +1809,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1763,8 +1821,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1776,7 +1837,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus result = com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus.valueOf(status_);
@@ -1789,6 +1852,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus value) {
       if (value == null) {
@@ -1806,6 +1871,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.CampaignDraftStatusEnum.CampaignDraftStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       
@@ -1823,6 +1889,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_experiment_running = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the hasExperimentRunning field is set.
      */
     public boolean hasHasExperimentRunning() {
       return hasExperimentRunningBuilder_ != null || hasExperimentRunning_ != null;
@@ -1833,6 +1900,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue has_experiment_running = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The hasExperimentRunning.
      */
     public com.google.protobuf.BoolValue getHasExperimentRunning() {
       if (hasExperimentRunningBuilder_ == null) {
@@ -1978,6 +2046,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue long_running_operation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the longRunningOperation field is set.
      */
     public boolean hasLongRunningOperation() {
       return longRunningOperationBuilder_ != null || longRunningOperation_ != null;
@@ -1990,6 +2059,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue long_running_operation = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The longRunningOperation.
      */
     public com.google.protobuf.StringValue getLongRunningOperation() {
       if (longRunningOperationBuilder_ == null) {

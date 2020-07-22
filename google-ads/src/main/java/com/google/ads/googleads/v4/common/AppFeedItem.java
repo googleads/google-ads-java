@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.AppFeedItem}
  */
-public  final class AppFeedItem extends
+public final class AppFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.AppFeedItem)
     AppFeedItemOrBuilder {
@@ -195,6 +195,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue link_text = 1;</code>
    * @return Whether the linkText field is set.
    */
+  @java.lang.Override
   public boolean hasLinkText() {
     return linkText_ != null;
   }
@@ -208,6 +209,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue link_text = 1;</code>
    * @return The linkText.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLinkText() {
     return linkText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : linkText_;
   }
@@ -220,6 +222,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue link_text = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLinkTextOrBuilder() {
     return getLinkText();
   }
@@ -235,6 +238,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue app_id = 2;</code>
    * @return Whether the appId field is set.
    */
+  @java.lang.Override
   public boolean hasAppId() {
     return appId_ != null;
   }
@@ -247,6 +251,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue app_id = 2;</code>
    * @return The appId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAppId() {
     return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
   }
@@ -258,6 +263,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue app_id = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
     return getAppId();
   }
@@ -273,7 +279,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AppStoreEnum.AppStore app_store = 3;</code>
    * @return The enum numeric value on the wire for appStore.
    */
-  public int getAppStoreValue() {
+  @java.lang.Override public int getAppStoreValue() {
     return appStore_;
   }
   /**
@@ -285,7 +291,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AppStoreEnum.AppStore app_store = 3;</code>
    * @return The appStore.
    */
-  public com.google.ads.googleads.v4.enums.AppStoreEnum.AppStore getAppStore() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AppStoreEnum.AppStore getAppStore() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AppStoreEnum.AppStore result = com.google.ads.googleads.v4.enums.AppStoreEnum.AppStore.valueOf(appStore_);
     return result == null ? com.google.ads.googleads.v4.enums.AppStoreEnum.AppStore.UNRECOGNIZED : result;
@@ -301,6 +307,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalUrlsList() {
     return finalUrls_;
   }
@@ -312,6 +319,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalUrlsOrBuilderList() {
     return finalUrls_;
@@ -324,6 +332,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
    */
+  @java.lang.Override
   public int getFinalUrlsCount() {
     return finalUrls_.size();
   }
@@ -335,6 +344,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrls(int index) {
     return finalUrls_.get(index);
   }
@@ -346,6 +356,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlsOrBuilder(
       int index) {
     return finalUrls_.get(index);
@@ -360,6 +371,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalMobileUrlsList() {
     return finalMobileUrls_;
   }
@@ -370,6 +382,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalMobileUrlsOrBuilderList() {
     return finalMobileUrls_;
@@ -381,6 +394,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 5;</code>
    */
+  @java.lang.Override
   public int getFinalMobileUrlsCount() {
     return finalMobileUrls_.size();
   }
@@ -391,6 +405,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalMobileUrls(int index) {
     return finalMobileUrls_.get(index);
   }
@@ -401,6 +416,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalMobileUrlsOrBuilder(
       int index) {
     return finalMobileUrls_.get(index);
@@ -416,6 +432,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue tracking_url_template = 6;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingUrlTemplate() {
     return trackingUrlTemplate_ != null;
   }
@@ -427,6 +444,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue tracking_url_template = 6;</code>
    * @return The trackingUrlTemplate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTrackingUrlTemplate() {
     return trackingUrlTemplate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrlTemplate_;
   }
@@ -437,6 +455,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
   }
@@ -451,6 +470,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.CustomParameter> getUrlCustomParametersList() {
     return urlCustomParameters_;
   }
@@ -462,6 +482,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.CustomParameterOrBuilder> 
       getUrlCustomParametersOrBuilderList() {
     return urlCustomParameters_;
@@ -474,6 +495,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 7;</code>
    */
+  @java.lang.Override
   public int getUrlCustomParametersCount() {
     return urlCustomParameters_.size();
   }
@@ -485,6 +507,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomParameter getUrlCustomParameters(int index) {
     return urlCustomParameters_.get(index);
   }
@@ -496,6 +519,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
       int index) {
     return urlCustomParameters_.get(index);
@@ -512,6 +536,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue final_url_suffix = 8;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
+  @java.lang.Override
   public boolean hasFinalUrlSuffix() {
     return finalUrlSuffix_ != null;
   }
@@ -524,6 +549,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue final_url_suffix = 8;</code>
    * @return The finalUrlSuffix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrlSuffix() {
     return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
   }
@@ -535,6 +561,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
     return getFinalUrlSuffix();
   }
@@ -1478,7 +1505,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AppStoreEnum.AppStore app_store = 3;</code>
      * @return The enum numeric value on the wire for appStore.
      */
-    public int getAppStoreValue() {
+    @java.lang.Override public int getAppStoreValue() {
       return appStore_;
     }
     /**
@@ -1492,6 +1519,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAppStoreValue(int value) {
+      
       appStore_ = value;
       onChanged();
       return this;
@@ -1505,6 +1533,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AppStoreEnum.AppStore app_store = 3;</code>
      * @return The appStore.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AppStoreEnum.AppStore getAppStore() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AppStoreEnum.AppStore result = com.google.ads.googleads.v4.enums.AppStoreEnum.AppStore.valueOf(appStore_);

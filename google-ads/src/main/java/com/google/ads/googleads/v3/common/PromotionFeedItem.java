@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.PromotionFeedItem}
  */
-public  final class PromotionFeedItem extends
+public final class PromotionFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PromotionFeedItem)
     PromotionFeedItemOrBuilder {
@@ -25,6 +25,13 @@ private static final long serialVersionUID = 0L;
     finalUrls_ = java.util.Collections.emptyList();
     finalMobileUrls_ = java.util.Collections.emptyList();
     urlCustomParameters_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PromotionFeedItem();
   }
 
   @java.lang.Override
@@ -159,18 +166,18 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000020;
+              mutable_bitField0_ |= 0x00000001;
             }
             finalUrls_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
             break;
           }
           case 90: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000002;
             }
             finalMobileUrls_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -190,9 +197,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 106: {
-            if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00000100;
+              mutable_bitField0_ |= 0x00000004;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.CustomParameter.parser(), extensionRegistry));
@@ -239,13 +246,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000020) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
       }
-      if (((mutable_bitField0_ & 0x00000100) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
       this.unknownFields = unknownFields.build();
@@ -265,11 +272,11 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.common.PromotionFeedItem.class, com.google.ads.googleads.v3.common.PromotionFeedItem.Builder.class);
   }
 
-  private int bitField0_;
   private int discountTypeCase_ = 0;
   private java.lang.Object discountType_;
   public enum DiscountTypeCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     PERCENT_OFF(3),
     MONEY_AMOUNT_OFF(4),
     DISCOUNTTYPE_NOT_SET(0);
@@ -278,6 +285,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -307,7 +316,8 @@ private static final long serialVersionUID = 0L;
   private int promotionTriggerCase_ = 0;
   private java.lang.Object promotionTrigger_;
   public enum PromotionTriggerCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     PROMOTION_CODE(5),
     ORDERS_OVER_AMOUNT(6),
     PROMOTIONTRIGGER_NOT_SET(0);
@@ -316,6 +326,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -351,7 +363,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_target = 1;</code>
+   * @return Whether the promotionTarget field is set.
    */
+  @java.lang.Override
   public boolean hasPromotionTarget() {
     return promotionTarget_ != null;
   }
@@ -362,7 +376,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_target = 1;</code>
+   * @return The promotionTarget.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPromotionTarget() {
     return promotionTarget_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : promotionTarget_;
   }
@@ -374,6 +390,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue promotion_target = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPromotionTargetOrBuilder() {
     return getPromotionTarget();
   }
@@ -386,8 +403,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier discount_modifier = 2;</code>
+   * @return The enum numeric value on the wire for discountModifier.
    */
-  public int getDiscountModifierValue() {
+  @java.lang.Override public int getDiscountModifierValue() {
     return discountModifier_;
   }
   /**
@@ -396,8 +414,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier discount_modifier = 2;</code>
+   * @return The discountModifier.
    */
-  public com.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier getDiscountModifier() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier getDiscountModifier() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier result = com.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.valueOf(discountModifier_);
     return result == null ? com.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.UNRECOGNIZED : result;
@@ -411,7 +430,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
+   * @return Whether the promotionStartDate field is set.
    */
+  @java.lang.Override
   public boolean hasPromotionStartDate() {
     return promotionStartDate_ != null;
   }
@@ -421,7 +442,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
+   * @return The promotionStartDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPromotionStartDate() {
     return promotionStartDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : promotionStartDate_;
   }
@@ -432,6 +455,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPromotionStartDateOrBuilder() {
     return getPromotionStartDate();
   }
@@ -444,7 +468,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
+   * @return Whether the promotionEndDate field is set.
    */
+  @java.lang.Override
   public boolean hasPromotionEndDate() {
     return promotionEndDate_ != null;
   }
@@ -454,7 +480,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
+   * @return The promotionEndDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPromotionEndDate() {
     return promotionEndDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : promotionEndDate_;
   }
@@ -465,6 +493,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPromotionEndDateOrBuilder() {
     return getPromotionEndDate();
   }
@@ -479,8 +508,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion occasion = 9;</code>
+   * @return The enum numeric value on the wire for occasion.
    */
-  public int getOccasionValue() {
+  @java.lang.Override public int getOccasionValue() {
     return occasion_;
   }
   /**
@@ -491,8 +521,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion occasion = 9;</code>
+   * @return The occasion.
    */
-  public com.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion getOccasion() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion getOccasion() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion result = com.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.valueOf(occasion_);
     return result == null ? com.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.UNRECOGNIZED : result;
@@ -508,6 +539,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 10;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalUrlsList() {
     return finalUrls_;
   }
@@ -519,6 +551,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 10;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalUrlsOrBuilderList() {
     return finalUrls_;
@@ -531,6 +564,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 10;</code>
    */
+  @java.lang.Override
   public int getFinalUrlsCount() {
     return finalUrls_.size();
   }
@@ -542,6 +576,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrls(int index) {
     return finalUrls_.get(index);
   }
@@ -553,6 +588,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlsOrBuilder(
       int index) {
     return finalUrls_.get(index);
@@ -567,6 +603,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 11;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalMobileUrlsList() {
     return finalMobileUrls_;
   }
@@ -577,6 +614,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 11;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalMobileUrlsOrBuilderList() {
     return finalMobileUrls_;
@@ -588,6 +626,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 11;</code>
    */
+  @java.lang.Override
   public int getFinalMobileUrlsCount() {
     return finalMobileUrls_.size();
   }
@@ -598,6 +637,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalMobileUrls(int index) {
     return finalMobileUrls_.get(index);
   }
@@ -608,6 +648,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalMobileUrlsOrBuilder(
       int index) {
     return finalMobileUrls_.get(index);
@@ -621,7 +662,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingUrlTemplate() {
     return trackingUrlTemplate_ != null;
   }
@@ -631,7 +674,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+   * @return The trackingUrlTemplate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTrackingUrlTemplate() {
     return trackingUrlTemplate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrlTemplate_;
   }
@@ -642,6 +687,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
   }
@@ -656,6 +702,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 13;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.CustomParameter> getUrlCustomParametersList() {
     return urlCustomParameters_;
   }
@@ -667,6 +714,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 13;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.CustomParameterOrBuilder> 
       getUrlCustomParametersOrBuilderList() {
     return urlCustomParameters_;
@@ -679,6 +727,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 13;</code>
    */
+  @java.lang.Override
   public int getUrlCustomParametersCount() {
     return urlCustomParameters_.size();
   }
@@ -690,6 +739,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 13;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CustomParameter getUrlCustomParameters(int index) {
     return urlCustomParameters_.get(index);
   }
@@ -701,6 +751,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.CustomParameter url_custom_parameters = 13;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
       int index) {
     return urlCustomParameters_.get(index);
@@ -715,7 +766,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 14;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
+  @java.lang.Override
   public boolean hasFinalUrlSuffix() {
     return finalUrlSuffix_ != null;
   }
@@ -726,7 +779,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 14;</code>
+   * @return The finalUrlSuffix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrlSuffix() {
     return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
   }
@@ -738,6 +793,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 14;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
     return getFinalUrlSuffix();
   }
@@ -751,7 +807,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 15;</code>
+   * @return Whether the languageCode field is set.
    */
+  @java.lang.Override
   public boolean hasLanguageCode() {
     return languageCode_ != null;
   }
@@ -762,7 +820,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 15;</code>
+   * @return The languageCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLanguageCode() {
     return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
   }
@@ -774,6 +834,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue language_code = 15;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
     return getLanguageCode();
   }
@@ -787,7 +848,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value percent_off = 3;</code>
+   * @return Whether the percentOff field is set.
    */
+  @java.lang.Override
   public boolean hasPercentOff() {
     return discountTypeCase_ == 3;
   }
@@ -799,7 +862,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value percent_off = 3;</code>
+   * @return The percentOff.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPercentOff() {
     if (discountTypeCase_ == 3) {
        return (com.google.protobuf.Int64Value) discountType_;
@@ -815,6 +880,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value percent_off = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPercentOffOrBuilder() {
     if (discountTypeCase_ == 3) {
        return (com.google.protobuf.Int64Value) discountType_;
@@ -830,7 +896,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Money money_amount_off = 4;</code>
+   * @return Whether the moneyAmountOff field is set.
    */
+  @java.lang.Override
   public boolean hasMoneyAmountOff() {
     return discountTypeCase_ == 4;
   }
@@ -841,7 +909,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Money money_amount_off = 4;</code>
+   * @return The moneyAmountOff.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Money getMoneyAmountOff() {
     if (discountTypeCase_ == 4) {
        return (com.google.ads.googleads.v3.common.Money) discountType_;
@@ -856,6 +926,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.Money money_amount_off = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.MoneyOrBuilder getMoneyAmountOffOrBuilder() {
     if (discountTypeCase_ == 4) {
        return (com.google.ads.googleads.v3.common.Money) discountType_;
@@ -870,7 +941,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_code = 5;</code>
+   * @return Whether the promotionCode field is set.
    */
+  @java.lang.Override
   public boolean hasPromotionCode() {
     return promotionTriggerCase_ == 5;
   }
@@ -880,7 +953,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_code = 5;</code>
+   * @return The promotionCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPromotionCode() {
     if (promotionTriggerCase_ == 5) {
        return (com.google.protobuf.StringValue) promotionTrigger_;
@@ -894,6 +969,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue promotion_code = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPromotionCodeOrBuilder() {
     if (promotionTriggerCase_ == 5) {
        return (com.google.protobuf.StringValue) promotionTrigger_;
@@ -909,7 +985,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Money orders_over_amount = 6;</code>
+   * @return Whether the ordersOverAmount field is set.
    */
+  @java.lang.Override
   public boolean hasOrdersOverAmount() {
     return promotionTriggerCase_ == 6;
   }
@@ -920,7 +998,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.Money orders_over_amount = 6;</code>
+   * @return The ordersOverAmount.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.Money getOrdersOverAmount() {
     if (promotionTriggerCase_ == 6) {
        return (com.google.ads.googleads.v3.common.Money) promotionTrigger_;
@@ -935,6 +1015,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.common.Money orders_over_amount = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.MoneyOrBuilder getOrdersOverAmountOrBuilder() {
     if (promotionTriggerCase_ == 6) {
        return (com.google.ads.googleads.v3.common.Money) promotionTrigger_;
@@ -1388,13 +1469,13 @@ private static final long serialVersionUID = 0L;
 
       if (finalUrlsBuilder_ == null) {
         finalUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         finalUrlsBuilder_.clear();
       }
       if (finalMobileUrlsBuilder_ == null) {
         finalMobileUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         finalMobileUrlsBuilder_.clear();
       }
@@ -1406,7 +1487,7 @@ private static final long serialVersionUID = 0L;
       }
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -1453,7 +1534,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.common.PromotionFeedItem buildPartial() {
       com.google.ads.googleads.v3.common.PromotionFeedItem result = new com.google.ads.googleads.v3.common.PromotionFeedItem(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (promotionTargetBuilder_ == null) {
         result.promotionTarget_ = promotionTarget_;
       } else {
@@ -1472,18 +1552,18 @@ private static final long serialVersionUID = 0L;
       }
       result.occasion_ = occasion_;
       if (finalUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           finalUrls_ = java.util.Collections.unmodifiableList(finalUrls_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.finalUrls_ = finalUrls_;
       } else {
         result.finalUrls_ = finalUrlsBuilder_.build();
       }
       if (finalMobileUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           finalMobileUrls_ = java.util.Collections.unmodifiableList(finalMobileUrls_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.finalMobileUrls_ = finalMobileUrls_;
       } else {
@@ -1495,9 +1575,9 @@ private static final long serialVersionUID = 0L;
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -1541,7 +1621,6 @@ private static final long serialVersionUID = 0L;
           result.promotionTrigger_ = ordersOverAmountBuilder_.build();
         }
       }
-      result.bitField0_ = to_bitField0_;
       result.discountTypeCase_ = discountTypeCase_;
       result.promotionTriggerCase_ = promotionTriggerCase_;
       onBuilt();
@@ -1611,7 +1690,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalUrls_.isEmpty()) {
           if (finalUrls_.isEmpty()) {
             finalUrls_ = other.finalUrls_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureFinalUrlsIsMutable();
             finalUrls_.addAll(other.finalUrls_);
@@ -1624,7 +1703,7 @@ private static final long serialVersionUID = 0L;
             finalUrlsBuilder_.dispose();
             finalUrlsBuilder_ = null;
             finalUrls_ = other.finalUrls_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000001);
             finalUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalUrlsFieldBuilder() : null;
@@ -1637,7 +1716,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalMobileUrls_.isEmpty()) {
           if (finalMobileUrls_.isEmpty()) {
             finalMobileUrls_ = other.finalMobileUrls_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureFinalMobileUrlsIsMutable();
             finalMobileUrls_.addAll(other.finalMobileUrls_);
@@ -1650,7 +1729,7 @@ private static final long serialVersionUID = 0L;
             finalMobileUrlsBuilder_.dispose();
             finalMobileUrlsBuilder_ = null;
             finalMobileUrls_ = other.finalMobileUrls_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000002);
             finalMobileUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalMobileUrlsFieldBuilder() : null;
@@ -1666,7 +1745,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -1679,7 +1758,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000004);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -1790,6 +1869,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_target = 1;</code>
+     * @return Whether the promotionTarget field is set.
      */
     public boolean hasPromotionTarget() {
       return promotionTargetBuilder_ != null || promotionTarget_ != null;
@@ -1801,6 +1881,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_target = 1;</code>
+     * @return The promotionTarget.
      */
     public com.google.protobuf.StringValue getPromotionTarget() {
       if (promotionTargetBuilder_ == null) {
@@ -1949,8 +2030,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier discount_modifier = 2;</code>
+     * @return The enum numeric value on the wire for discountModifier.
      */
-    public int getDiscountModifierValue() {
+    @java.lang.Override public int getDiscountModifierValue() {
       return discountModifier_;
     }
     /**
@@ -1959,8 +2041,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier discount_modifier = 2;</code>
+     * @param value The enum numeric value on the wire for discountModifier to set.
+     * @return This builder for chaining.
      */
     public Builder setDiscountModifierValue(int value) {
+      
       discountModifier_ = value;
       onChanged();
       return this;
@@ -1971,7 +2056,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier discount_modifier = 2;</code>
+     * @return The discountModifier.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier getDiscountModifier() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier result = com.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.valueOf(discountModifier_);
@@ -1983,6 +2070,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier discount_modifier = 2;</code>
+     * @param value The discountModifier to set.
+     * @return This builder for chaining.
      */
     public Builder setDiscountModifier(com.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier value) {
       if (value == null) {
@@ -1999,6 +2088,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier discount_modifier = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDiscountModifier() {
       
@@ -2016,6 +2106,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
+     * @return Whether the promotionStartDate field is set.
      */
     public boolean hasPromotionStartDate() {
       return promotionStartDateBuilder_ != null || promotionStartDate_ != null;
@@ -2026,6 +2117,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
+     * @return The promotionStartDate.
      */
     public com.google.protobuf.StringValue getPromotionStartDate() {
       if (promotionStartDateBuilder_ == null) {
@@ -2169,6 +2261,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
+     * @return Whether the promotionEndDate field is set.
      */
     public boolean hasPromotionEndDate() {
       return promotionEndDateBuilder_ != null || promotionEndDate_ != null;
@@ -2179,6 +2272,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
+     * @return The promotionEndDate.
      */
     public com.google.protobuf.StringValue getPromotionEndDate() {
       if (promotionEndDateBuilder_ == null) {
@@ -2322,8 +2416,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion occasion = 9;</code>
+     * @return The enum numeric value on the wire for occasion.
      */
-    public int getOccasionValue() {
+    @java.lang.Override public int getOccasionValue() {
       return occasion_;
     }
     /**
@@ -2334,8 +2429,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion occasion = 9;</code>
+     * @param value The enum numeric value on the wire for occasion to set.
+     * @return This builder for chaining.
      */
     public Builder setOccasionValue(int value) {
+      
       occasion_ = value;
       onChanged();
       return this;
@@ -2348,7 +2446,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion occasion = 9;</code>
+     * @return The occasion.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion getOccasion() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion result = com.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.valueOf(occasion_);
@@ -2362,6 +2462,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion occasion = 9;</code>
+     * @param value The occasion to set.
+     * @return This builder for chaining.
      */
     public Builder setOccasion(com.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion value) {
       if (value == null) {
@@ -2380,6 +2482,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion occasion = 9;</code>
+     * @return This builder for chaining.
      */
     public Builder clearOccasion() {
       
@@ -2391,9 +2494,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         finalUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalUrls_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -2598,7 +2701,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalUrls() {
       if (finalUrlsBuilder_ == null) {
         finalUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         finalUrlsBuilder_.clear();
@@ -2710,7 +2813,7 @@ private static final long serialVersionUID = 0L;
         finalUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalUrls_,
-                ((bitField0_ & 0x00000020) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         finalUrls_ = null;
@@ -2721,9 +2824,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> finalMobileUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         finalMobileUrls_ = new java.util.ArrayList<com.google.protobuf.StringValue>(finalMobileUrls_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -2917,7 +3020,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalMobileUrls() {
       if (finalMobileUrlsBuilder_ == null) {
         finalMobileUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         finalMobileUrlsBuilder_.clear();
@@ -3022,7 +3125,7 @@ private static final long serialVersionUID = 0L;
         finalMobileUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 finalMobileUrls_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         finalMobileUrls_ = null;
@@ -3039,6 +3142,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+     * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
       return trackingUrlTemplateBuilder_ != null || trackingUrlTemplate_ != null;
@@ -3049,6 +3153,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+     * @return The trackingUrlTemplate.
      */
     public com.google.protobuf.StringValue getTrackingUrlTemplate() {
       if (trackingUrlTemplateBuilder_ == null) {
@@ -3186,9 +3291,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -3393,7 +3498,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -3505,7 +3610,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.CustomParameter, com.google.ads.googleads.v3.common.CustomParameter.Builder, com.google.ads.googleads.v3.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -3523,6 +3628,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 14;</code>
+     * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
       return finalUrlSuffixBuilder_ != null || finalUrlSuffix_ != null;
@@ -3534,6 +3640,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 14;</code>
+     * @return The finalUrlSuffix.
      */
     public com.google.protobuf.StringValue getFinalUrlSuffix() {
       if (finalUrlSuffixBuilder_ == null) {
@@ -3685,6 +3792,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 15;</code>
+     * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
       return languageCodeBuilder_ != null || languageCode_ != null;
@@ -3696,6 +3804,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 15;</code>
+     * @return The languageCode.
      */
     public com.google.protobuf.StringValue getLanguageCode() {
       if (languageCodeBuilder_ == null) {
@@ -3847,7 +3956,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value percent_off = 3;</code>
+     * @return Whether the percentOff field is set.
      */
+    @java.lang.Override
     public boolean hasPercentOff() {
       return discountTypeCase_ == 3;
     }
@@ -3859,7 +3970,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value percent_off = 3;</code>
+     * @return The percentOff.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getPercentOff() {
       if (percentOffBuilder_ == null) {
         if (discountTypeCase_ == 3) {
@@ -3989,6 +4102,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value percent_off = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getPercentOffOrBuilder() {
       if ((discountTypeCase_ == 3) && (percentOffBuilder_ != null)) {
         return percentOffBuilder_.getMessageOrBuilder();
@@ -4036,7 +4150,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Money money_amount_off = 4;</code>
+     * @return Whether the moneyAmountOff field is set.
      */
+    @java.lang.Override
     public boolean hasMoneyAmountOff() {
       return discountTypeCase_ == 4;
     }
@@ -4047,7 +4163,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Money money_amount_off = 4;</code>
+     * @return The moneyAmountOff.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.Money getMoneyAmountOff() {
       if (moneyAmountOffBuilder_ == null) {
         if (discountTypeCase_ == 4) {
@@ -4171,6 +4289,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.Money money_amount_off = 4;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.MoneyOrBuilder getMoneyAmountOffOrBuilder() {
       if ((discountTypeCase_ == 4) && (moneyAmountOffBuilder_ != null)) {
         return moneyAmountOffBuilder_.getMessageOrBuilder();
@@ -4216,7 +4335,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_code = 5;</code>
+     * @return Whether the promotionCode field is set.
      */
+    @java.lang.Override
     public boolean hasPromotionCode() {
       return promotionTriggerCase_ == 5;
     }
@@ -4226,7 +4347,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue promotion_code = 5;</code>
+     * @return The promotionCode.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getPromotionCode() {
       if (promotionCodeBuilder_ == null) {
         if (promotionTriggerCase_ == 5) {
@@ -4344,6 +4467,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue promotion_code = 5;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPromotionCodeOrBuilder() {
       if ((promotionTriggerCase_ == 5) && (promotionCodeBuilder_ != null)) {
         return promotionCodeBuilder_.getMessageOrBuilder();
@@ -4389,7 +4513,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Money orders_over_amount = 6;</code>
+     * @return Whether the ordersOverAmount field is set.
      */
+    @java.lang.Override
     public boolean hasOrdersOverAmount() {
       return promotionTriggerCase_ == 6;
     }
@@ -4400,7 +4526,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.common.Money orders_over_amount = 6;</code>
+     * @return The ordersOverAmount.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.Money getOrdersOverAmount() {
       if (ordersOverAmountBuilder_ == null) {
         if (promotionTriggerCase_ == 6) {
@@ -4524,6 +4652,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v3.common.Money orders_over_amount = 6;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.common.MoneyOrBuilder getOrdersOverAmountOrBuilder() {
       if ((promotionTriggerCase_ == 6) && (ordersOverAmountBuilder_ != null)) {
         return ordersOverAmountBuilder_.getMessageOrBuilder();

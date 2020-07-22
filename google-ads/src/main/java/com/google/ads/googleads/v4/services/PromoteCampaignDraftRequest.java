@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.PromoteCampaignDraftRequest}
  */
-public  final class PromoteCampaignDraftRequest extends
+public final class PromoteCampaignDraftRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.PromoteCampaignDraftRequest)
     PromoteCampaignDraftRequestOrBuilder {
@@ -101,6 +101,7 @@ private static final long serialVersionUID = 0L;
    * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The campaignDraft.
    */
+  @java.lang.Override
   public java.lang.String getCampaignDraft() {
     java.lang.Object ref = campaignDraft_;
     if (ref instanceof java.lang.String) {
@@ -121,6 +122,7 @@ private static final long serialVersionUID = 0L;
    * <code>string campaign_draft = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for campaignDraft.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCampaignDraftBytes() {
     java.lang.Object ref = campaignDraft_;

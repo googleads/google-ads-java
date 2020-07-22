@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.AdGroupSimulationServiceStubSet
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
- *   String formattedResourceName = AdGroupSimulationServiceClient.formatAdGroupSimulationName("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
- *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(formattedResourceName);
+ *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
+ *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,49 +98,6 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
   private final AdGroupSimulationServiceSettings settings;
   private final AdGroupSimulationServiceStub stub;
 
-  private static final PathTemplate AD_GROUP_SIMULATION_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/adGroupSimulations/{ad_group_simulation}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a ad_group_simulation
-   * resource.
-   *
-   * @deprecated Use the {@link AdGroupSimulationName} class instead.
-   */
-  @Deprecated
-  public static final String formatAdGroupSimulationName(
-      String customer, String adGroupSimulation) {
-    return AD_GROUP_SIMULATION_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "ad_group_simulation", adGroupSimulation);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a ad_group_simulation
-   * resource.
-   *
-   * @deprecated Use the {@link AdGroupSimulationName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAdGroupSimulationName(String adGroupSimulationName) {
-    return AD_GROUP_SIMULATION_PATH_TEMPLATE.parse(adGroupSimulationName).get("customer");
-  }
-
-  /**
-   * Parses the ad_group_simulation from the given fully-qualified path which represents a
-   * ad_group_simulation resource.
-   *
-   * @deprecated Use the {@link AdGroupSimulationName} class instead.
-   */
-  @Deprecated
-  public static final String parseAdGroupSimulationFromAdGroupSimulationName(
-      String adGroupSimulationName) {
-    return AD_GROUP_SIMULATION_PATH_TEMPLATE
-        .parse(adGroupSimulationName)
-        .get("ad_group_simulation");
-  }
-
   /** Constructs an instance of AdGroupSimulationServiceClient with default settings. */
   public static final AdGroupSimulationServiceClient create() throws IOException {
     return create(AdGroupSimulationServiceSettings.newBuilder().build());
@@ -200,8 +156,32 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
-   *   String formattedResourceName = AdGroupSimulationServiceClient.formatAdGroupSimulationName("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
-   *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(formattedResourceName);
+   *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
+   *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the ad group simulation to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AdGroupSimulation getAdGroupSimulation(AdGroupSimulationName resourceName) {
+    GetAdGroupSimulationRequest request =
+        GetAdGroupSimulationRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAdGroupSimulation(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested ad group simulation in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
+   *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
+   *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -209,7 +189,6 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupSimulation getAdGroupSimulation(String resourceName) {
-    AD_GROUP_SIMULATION_PATH_TEMPLATE.validate(resourceName, "getAdGroupSimulation");
     GetAdGroupSimulationRequest request =
         GetAdGroupSimulationRequest.newBuilder().setResourceName(resourceName).build();
     return getAdGroupSimulation(request);
@@ -223,9 +202,9 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
-   *   String formattedResourceName = AdGroupSimulationServiceClient.formatAdGroupSimulationName("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
+   *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
    *   GetAdGroupSimulationRequest request = GetAdGroupSimulationRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(request);
    * }
@@ -246,9 +225,9 @@ public class AdGroupSimulationServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
-   *   String formattedResourceName = AdGroupSimulationServiceClient.formatAdGroupSimulationName("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
+   *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
    *   GetAdGroupSimulationRequest request = GetAdGroupSimulationRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AdGroupSimulation&gt; future = adGroupSimulationServiceClient.getAdGroupSimulationCallable().futureCall(request);
    *   // Do something

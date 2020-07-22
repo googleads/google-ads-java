@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.CampaignCriterionSimulationServ
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CampaignCriterionSimulationServiceClient campaignCriterionSimulationServiceClient = CampaignCriterionSimulationServiceClient.create()) {
- *   String formattedResourceName = CampaignCriterionSimulationServiceClient.formatCampaignCriterionSimulationName("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
- *   CampaignCriterionSimulation response = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulation(formattedResourceName);
+ *   CampaignCriterionSimulationName resourceName = CampaignCriterionSimulationName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
+ *   CampaignCriterionSimulation response = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulation(resourceName);
  * }
  * </code>
  * </pre>
@@ -98,52 +97,6 @@ import javax.annotation.Generated;
 public class CampaignCriterionSimulationServiceClient implements BackgroundResource {
   private final CampaignCriterionSimulationServiceSettings settings;
   private final CampaignCriterionSimulationServiceStub stub;
-
-  private static final PathTemplate CAMPAIGN_CRITERION_SIMULATION_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/campaignCriterionSimulations/{campaign_criterion_simulation}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a
-   * campaign_criterion_simulation resource.
-   *
-   * @deprecated Use the {@link CampaignCriterionSimulationName} class instead.
-   */
-  @Deprecated
-  public static final String formatCampaignCriterionSimulationName(
-      String customer, String campaignCriterionSimulation) {
-    return CAMPAIGN_CRITERION_SIMULATION_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "campaign_criterion_simulation", campaignCriterionSimulation);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * campaign_criterion_simulation resource.
-   *
-   * @deprecated Use the {@link CampaignCriterionSimulationName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCampaignCriterionSimulationName(
-      String campaignCriterionSimulationName) {
-    return CAMPAIGN_CRITERION_SIMULATION_PATH_TEMPLATE
-        .parse(campaignCriterionSimulationName)
-        .get("customer");
-  }
-
-  /**
-   * Parses the campaign_criterion_simulation from the given fully-qualified path which represents a
-   * campaign_criterion_simulation resource.
-   *
-   * @deprecated Use the {@link CampaignCriterionSimulationName} class instead.
-   */
-  @Deprecated
-  public static final String parseCampaignCriterionSimulationFromCampaignCriterionSimulationName(
-      String campaignCriterionSimulationName) {
-    return CAMPAIGN_CRITERION_SIMULATION_PATH_TEMPLATE
-        .parse(campaignCriterionSimulationName)
-        .get("campaign_criterion_simulation");
-  }
 
   /** Constructs an instance of CampaignCriterionSimulationServiceClient with default settings. */
   public static final CampaignCriterionSimulationServiceClient create() throws IOException {
@@ -206,8 +159,33 @@ public class CampaignCriterionSimulationServiceClient implements BackgroundResou
    *
    * <pre><code>
    * try (CampaignCriterionSimulationServiceClient campaignCriterionSimulationServiceClient = CampaignCriterionSimulationServiceClient.create()) {
-   *   String formattedResourceName = CampaignCriterionSimulationServiceClient.formatCampaignCriterionSimulationName("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
-   *   CampaignCriterionSimulation response = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulation(formattedResourceName);
+   *   CampaignCriterionSimulationName resourceName = CampaignCriterionSimulationName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
+   *   CampaignCriterionSimulation response = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulation(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the campaign criterion simulation to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CampaignCriterionSimulation getCampaignCriterionSimulation(
+      CampaignCriterionSimulationName resourceName) {
+    GetCampaignCriterionSimulationRequest request =
+        GetCampaignCriterionSimulationRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCampaignCriterionSimulation(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested campaign criterion simulation in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignCriterionSimulationServiceClient campaignCriterionSimulationServiceClient = CampaignCriterionSimulationServiceClient.create()) {
+   *   CampaignCriterionSimulationName resourceName = CampaignCriterionSimulationName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
+   *   CampaignCriterionSimulation response = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulation(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -215,8 +193,6 @@ public class CampaignCriterionSimulationServiceClient implements BackgroundResou
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignCriterionSimulation getCampaignCriterionSimulation(String resourceName) {
-    CAMPAIGN_CRITERION_SIMULATION_PATH_TEMPLATE.validate(
-        resourceName, "getCampaignCriterionSimulation");
     GetCampaignCriterionSimulationRequest request =
         GetCampaignCriterionSimulationRequest.newBuilder().setResourceName(resourceName).build();
     return getCampaignCriterionSimulation(request);
@@ -230,9 +206,9 @@ public class CampaignCriterionSimulationServiceClient implements BackgroundResou
    *
    * <pre><code>
    * try (CampaignCriterionSimulationServiceClient campaignCriterionSimulationServiceClient = CampaignCriterionSimulationServiceClient.create()) {
-   *   String formattedResourceName = CampaignCriterionSimulationServiceClient.formatCampaignCriterionSimulationName("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
+   *   CampaignCriterionSimulationName resourceName = CampaignCriterionSimulationName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
    *   GetCampaignCriterionSimulationRequest request = GetCampaignCriterionSimulationRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CampaignCriterionSimulation response = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulation(request);
    * }
@@ -254,9 +230,9 @@ public class CampaignCriterionSimulationServiceClient implements BackgroundResou
    *
    * <pre><code>
    * try (CampaignCriterionSimulationServiceClient campaignCriterionSimulationServiceClient = CampaignCriterionSimulationServiceClient.create()) {
-   *   String formattedResourceName = CampaignCriterionSimulationServiceClient.formatCampaignCriterionSimulationName("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
+   *   CampaignCriterionSimulationName resourceName = CampaignCriterionSimulationName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
    *   GetCampaignCriterionSimulationRequest request = GetCampaignCriterionSimulationRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CampaignCriterionSimulation&gt; future = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulationCallable().futureCall(request);
    *   // Do something

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.HotelCheckInDayInfo}
  */
-public  final class HotelCheckInDayInfo extends
+public final class HotelCheckInDayInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.HotelCheckInDayInfo)
     HotelCheckInDayInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private HotelCheckInDayInfo() {
     dayOfWeek_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new HotelCheckInDayInfo();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -93,8 +99,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+   * @return The enum numeric value on the wire for dayOfWeek.
    */
-  public int getDayOfWeekValue() {
+  @java.lang.Override public int getDayOfWeekValue() {
     return dayOfWeek_;
   }
   /**
@@ -103,8 +110,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+   * @return The dayOfWeek.
    */
-  public com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
     return result == null ? com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
@@ -422,8 +430,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+     * @return The enum numeric value on the wire for dayOfWeek.
      */
-    public int getDayOfWeekValue() {
+    @java.lang.Override public int getDayOfWeekValue() {
       return dayOfWeek_;
     }
     /**
@@ -432,8 +441,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+     * @param value The enum numeric value on the wire for dayOfWeek to set.
+     * @return This builder for chaining.
      */
     public Builder setDayOfWeekValue(int value) {
+      
       dayOfWeek_ = value;
       onChanged();
       return this;
@@ -444,7 +456,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+     * @return The dayOfWeek.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
@@ -456,6 +470,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+     * @param value The dayOfWeek to set.
+     * @return This builder for chaining.
      */
     public Builder setDayOfWeek(com.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek value) {
       if (value == null) {
@@ -472,6 +488,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.DayOfWeekEnum.DayOfWeek day_of_week = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDayOfWeek() {
       

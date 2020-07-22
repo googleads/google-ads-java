@@ -13,6 +13,7 @@ public interface FeedMappingOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.FeedMapping create = 1;</code>
+   * @return Whether the create field is set.
    */
   boolean hasCreate();
   /**
@@ -21,6 +22,7 @@ public interface FeedMappingOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.FeedMapping create = 1;</code>
+   * @return The create.
    */
   com.google.ads.googleads.v2.resources.FeedMapping getCreate();
   /**
@@ -40,6 +42,7 @@ public interface FeedMappingOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 3;</code>
+   * @return The remove.
    */
   java.lang.String getRemove();
   /**
@@ -50,6 +53,7 @@ public interface FeedMappingOperationOrBuilder extends
    * </pre>
    *
    * <code>string remove = 3;</code>
+   * @return The bytes for remove.
    */
   com.google.protobuf.ByteString
       getRemoveBytes();

@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,8 +38,8 @@
  * <pre>
  * <code>
  * try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient = AccountBudgetProposalServiceClient.create()) {
- *   String formattedResourceName = AccountBudgetProposalServiceClient.formatAccountBudgetProposalName("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
- *   AccountBudgetProposal response = accountBudgetProposalServiceClient.getAccountBudgetProposal(formattedResourceName);
+ *   AccountBudgetProposalName resourceName = AccountBudgetProposalName.of("[CUSTOMER]", "[ACCOUNT_BUDGET_PROPOSAL]");
+ *   AccountBudgetProposal response = accountBudgetProposalServiceClient.getAccountBudgetProposal(resourceName);
  * }
  * </code>
  * </pre>
@@ -55,8 +55,8 @@
  * <pre>
  * <code>
  * try (AccountBudgetServiceClient accountBudgetServiceClient = AccountBudgetServiceClient.create()) {
- *   String formattedResourceName = AccountBudgetServiceClient.formatAccountBudgetName("[CUSTOMER]", "[ACCOUNT_BUDGET]");
- *   AccountBudget response = accountBudgetServiceClient.getAccountBudget(formattedResourceName);
+ *   AccountBudgetName resourceName = AccountBudgetName.of("[CUSTOMER]", "[ACCOUNT_BUDGET]");
+ *   AccountBudget response = accountBudgetServiceClient.getAccountBudget(resourceName);
  * }
  * </code>
  * </pre>
@@ -70,8 +70,8 @@
  * <pre>
  * <code>
  * try (AdGroupAdAssetViewServiceClient adGroupAdAssetViewServiceClient = AdGroupAdAssetViewServiceClient.create()) {
- *   String formattedResourceName = AdGroupAdAssetViewServiceClient.formatAdGroupAdAssetViewName("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
- *   AdGroupAdAssetView response = adGroupAdAssetViewServiceClient.getAdGroupAdAssetView(formattedResourceName);
+ *   AdGroupAdAssetViewName resourceName = AdGroupAdAssetViewName.of("[CUSTOMER]", "[AD_GROUP_AD_ASSET_VIEW]");
+ *   AdGroupAdAssetView response = adGroupAdAssetViewServiceClient.getAdGroupAdAssetView(resourceName);
  * }
  * </code>
  * </pre>
@@ -85,8 +85,8 @@
  * <pre>
  * <code>
  * try (AdGroupAdLabelServiceClient adGroupAdLabelServiceClient = AdGroupAdLabelServiceClient.create()) {
- *   String formattedResourceName = AdGroupAdLabelServiceClient.formatAdGroupAdLabelName("[CUSTOMER]", "[AD_GROUP_AD_LABEL]");
- *   AdGroupAdLabel response = adGroupAdLabelServiceClient.getAdGroupAdLabel(formattedResourceName);
+ *   AdGroupAdLabelName resourceName = AdGroupAdLabelName.of("[CUSTOMER]", "[AD_GROUP_AD_LABEL]");
+ *   AdGroupAdLabel response = adGroupAdLabelServiceClient.getAdGroupAdLabel(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,8 +100,8 @@
  * <pre>
  * <code>
  * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
- *   String formattedResourceName = AdGroupAdServiceClient.formatAdGroupAdName("[CUSTOMER]", "[AD_GROUP_AD]");
- *   AdGroupAd response = adGroupAdServiceClient.getAdGroupAd(formattedResourceName);
+ *   AdGroupAdName resourceName = AdGroupAdName.of("[CUSTOMER]", "[AD_GROUP_AD]");
+ *   AdGroupAd response = adGroupAdServiceClient.getAdGroupAd(resourceName);
  * }
  * </code>
  * </pre>
@@ -116,8 +116,8 @@
  * <pre>
  * <code>
  * try (AdGroupAudienceViewServiceClient adGroupAudienceViewServiceClient = AdGroupAudienceViewServiceClient.create()) {
- *   String formattedResourceName = AdGroupAudienceViewServiceClient.formatAdGroupAudienceViewName("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
- *   AdGroupAudienceView response = adGroupAudienceViewServiceClient.getAdGroupAudienceView(formattedResourceName);
+ *   AdGroupAudienceViewName resourceName = AdGroupAudienceViewName.of("[CUSTOMER]", "[AD_GROUP_AUDIENCE_VIEW]");
+ *   AdGroupAudienceView response = adGroupAudienceViewServiceClient.getAdGroupAudienceView(resourceName);
  * }
  * </code>
  * </pre>
@@ -131,8 +131,8 @@
  * <pre>
  * <code>
  * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient = AdGroupBidModifierServiceClient.create()) {
- *   String formattedResourceName = AdGroupBidModifierServiceClient.formatAdGroupBidModifierName("[CUSTOMER]", "[AD_GROUP_BID_MODIFIER]");
- *   AdGroupBidModifier response = adGroupBidModifierServiceClient.getAdGroupBidModifier(formattedResourceName);
+ *   AdGroupBidModifierName resourceName = AdGroupBidModifierName.of("[CUSTOMER]", "[AD_GROUP_BID_MODIFIER]");
+ *   AdGroupBidModifier response = adGroupBidModifierServiceClient.getAdGroupBidModifier(resourceName);
  * }
  * </code>
  * </pre>
@@ -147,8 +147,8 @@
  * <pre>
  * <code>
  * try (AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient = AdGroupCriterionLabelServiceClient.create()) {
- *   String formattedResourceName = AdGroupCriterionLabelServiceClient.formatAdGroupCriterionLabelName("[CUSTOMER]", "[AD_GROUP_CRITERION_LABEL]");
- *   AdGroupCriterionLabel response = adGroupCriterionLabelServiceClient.getAdGroupCriterionLabel(formattedResourceName);
+ *   AdGroupCriterionLabelName resourceName = AdGroupCriterionLabelName.of("[CUSTOMER]", "[AD_GROUP_CRITERION_LABEL]");
+ *   AdGroupCriterionLabel response = adGroupCriterionLabelServiceClient.getAdGroupCriterionLabel(resourceName);
  * }
  * </code>
  * </pre>
@@ -162,8 +162,8 @@
  * <pre>
  * <code>
  * try (AdGroupCriterionServiceClient adGroupCriterionServiceClient = AdGroupCriterionServiceClient.create()) {
- *   String formattedResourceName = AdGroupCriterionServiceClient.formatAdGroupCriteriaName("[CUSTOMER]", "[AD_GROUP_CRITERIA]");
- *   AdGroupCriterion response = adGroupCriterionServiceClient.getAdGroupCriterion(formattedResourceName);
+ *   AdGroupCriterionName resourceName = AdGroupCriterionName.of("[CUSTOMER]", "[AD_GROUP_CRITERION]");
+ *   AdGroupCriterion response = adGroupCriterionServiceClient.getAdGroupCriterion(resourceName);
  * }
  * </code>
  * </pre>
@@ -178,8 +178,8 @@
  * <pre>
  * <code>
  * try (AdGroupCriterionSimulationServiceClient adGroupCriterionSimulationServiceClient = AdGroupCriterionSimulationServiceClient.create()) {
- *   String formattedResourceName = AdGroupCriterionSimulationServiceClient.formatAdGroupCriterionSimulationName("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
- *   AdGroupCriterionSimulation response = adGroupCriterionSimulationServiceClient.getAdGroupCriterionSimulation(formattedResourceName);
+ *   AdGroupCriterionSimulationName resourceName = AdGroupCriterionSimulationName.of("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
+ *   AdGroupCriterionSimulation response = adGroupCriterionSimulationServiceClient.getAdGroupCriterionSimulation(resourceName);
  * }
  * </code>
  * </pre>
@@ -194,8 +194,8 @@
  * <pre>
  * <code>
  * try (AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient = AdGroupExtensionSettingServiceClient.create()) {
- *   String formattedResourceName = AdGroupExtensionSettingServiceClient.formatAdGroupExtensionSettingName("[CUSTOMER]", "[AD_GROUP_EXTENSION_SETTING]");
- *   AdGroupExtensionSetting response = adGroupExtensionSettingServiceClient.getAdGroupExtensionSetting(formattedResourceName);
+ *   AdGroupExtensionSettingName resourceName = AdGroupExtensionSettingName.of("[CUSTOMER]", "[AD_GROUP_EXTENSION_SETTING]");
+ *   AdGroupExtensionSetting response = adGroupExtensionSettingServiceClient.getAdGroupExtensionSetting(resourceName);
  * }
  * </code>
  * </pre>
@@ -209,8 +209,8 @@
  * <pre>
  * <code>
  * try (AdGroupFeedServiceClient adGroupFeedServiceClient = AdGroupFeedServiceClient.create()) {
- *   String formattedResourceName = AdGroupFeedServiceClient.formatAdGroupFeedName("[CUSTOMER]", "[AD_GROUP_FEED]");
- *   AdGroupFeed response = adGroupFeedServiceClient.getAdGroupFeed(formattedResourceName);
+ *   AdGroupFeedName resourceName = AdGroupFeedName.of("[CUSTOMER]", "[AD_GROUP_FEED]");
+ *   AdGroupFeed response = adGroupFeedServiceClient.getAdGroupFeed(resourceName);
  * }
  * </code>
  * </pre>
@@ -224,8 +224,8 @@
  * <pre>
  * <code>
  * try (AdGroupLabelServiceClient adGroupLabelServiceClient = AdGroupLabelServiceClient.create()) {
- *   String formattedResourceName = AdGroupLabelServiceClient.formatAdGroupLabelName("[CUSTOMER]", "[AD_GROUP_LABEL]");
- *   AdGroupLabel response = adGroupLabelServiceClient.getAdGroupLabel(formattedResourceName);
+ *   AdGroupLabelName resourceName = AdGroupLabelName.of("[CUSTOMER]", "[AD_GROUP_LABEL]");
+ *   AdGroupLabel response = adGroupLabelServiceClient.getAdGroupLabel(resourceName);
  * }
  * </code>
  * </pre>
@@ -239,8 +239,8 @@
  * <pre>
  * <code>
  * try (AdGroupServiceClient adGroupServiceClient = AdGroupServiceClient.create()) {
- *   String formattedResourceName = AdGroupServiceClient.formatAdGroupName("[CUSTOMER]", "[AD_GROUP]");
- *   AdGroup response = adGroupServiceClient.getAdGroup(formattedResourceName);
+ *   AdGroupName resourceName = AdGroupName.of("[CUSTOMER]", "[AD_GROUP]");
+ *   AdGroup response = adGroupServiceClient.getAdGroup(resourceName);
  * }
  * </code>
  * </pre>
@@ -254,8 +254,8 @@
  * <pre>
  * <code>
  * try (AdGroupSimulationServiceClient adGroupSimulationServiceClient = AdGroupSimulationServiceClient.create()) {
- *   String formattedResourceName = AdGroupSimulationServiceClient.formatAdGroupSimulationName("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
- *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(formattedResourceName);
+ *   AdGroupSimulationName resourceName = AdGroupSimulationName.of("[CUSTOMER]", "[AD_GROUP_SIMULATION]");
+ *   AdGroupSimulation response = adGroupSimulationServiceClient.getAdGroupSimulation(resourceName);
  * }
  * </code>
  * </pre>
@@ -269,8 +269,8 @@
  * <pre>
  * <code>
  * try (AdParameterServiceClient adParameterServiceClient = AdParameterServiceClient.create()) {
- *   String formattedResourceName = AdParameterServiceClient.formatAdParameterName("[CUSTOMER]", "[AD_PARAMETER]");
- *   AdParameter response = adParameterServiceClient.getAdParameter(formattedResourceName);
+ *   AdParameterName resourceName = AdParameterName.of("[CUSTOMER]", "[AD_PARAMETER]");
+ *   AdParameter response = adParameterServiceClient.getAdParameter(resourceName);
  * }
  * </code>
  * </pre>
@@ -284,8 +284,8 @@
  * <pre>
  * <code>
  * try (AdScheduleViewServiceClient adScheduleViewServiceClient = AdScheduleViewServiceClient.create()) {
- *   String formattedResourceName = AdScheduleViewServiceClient.formatAdScheduleViewName("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
- *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(formattedResourceName);
+ *   AdScheduleViewName resourceName = AdScheduleViewName.of("[CUSTOMER]", "[AD_SCHEDULE_VIEW]");
+ *   AdScheduleView response = adScheduleViewServiceClient.getAdScheduleView(resourceName);
  * }
  * </code>
  * </pre>
@@ -299,8 +299,8 @@
  * <pre>
  * <code>
  * try (AdServiceClient adServiceClient = AdServiceClient.create()) {
- *   String formattedResourceName = AdServiceClient.formatAdName("[CUSTOMER]", "[AD]");
- *   Ad response = adServiceClient.getAd(formattedResourceName);
+ *   AdName resourceName = AdName.of("[CUSTOMER]", "[AD]");
+ *   Ad response = adServiceClient.getAd(resourceName);
  * }
  * </code>
  * </pre>
@@ -314,8 +314,8 @@
  * <pre>
  * <code>
  * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
- *   String formattedResourceName = AgeRangeViewServiceClient.formatAgeRangeViewName("[CUSTOMER]", "[AGE_RANGE_VIEW]");
- *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(formattedResourceName);
+ *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER]", "[AGE_RANGE_VIEW]");
+ *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(resourceName);
  * }
  * </code>
  * </pre>
@@ -331,8 +331,8 @@
  * <pre>
  * <code>
  * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
- *   String formattedResourceName = AssetServiceClient.formatAssetName("[CUSTOMER]", "[ASSET]");
- *   Asset response = assetServiceClient.getAsset(formattedResourceName);
+ *   AssetName resourceName = AssetName.of("[CUSTOMER]", "[ASSET]");
+ *   Asset response = assetServiceClient.getAsset(resourceName);
  * }
  * </code>
  * </pre>
@@ -346,8 +346,8 @@
  * <pre>
  * <code>
  * try (BiddingStrategyServiceClient biddingStrategyServiceClient = BiddingStrategyServiceClient.create()) {
- *   String formattedResourceName = BiddingStrategyServiceClient.formatBiddingStrategyName("[CUSTOMER]", "[BIDDING_STRATEGY]");
- *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(formattedResourceName);
+ *   BiddingStrategyName resourceName = BiddingStrategyName.of("[CUSTOMER]", "[BIDDING_STRATEGY]");
+ *   BiddingStrategy response = biddingStrategyServiceClient.getBiddingStrategy(resourceName);
  * }
  * </code>
  * </pre>
@@ -369,8 +369,8 @@
  * <pre>
  * <code>
  * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
- *   String formattedResourceName = BillingSetupServiceClient.formatBillingSetupName("[CUSTOMER]", "[BILLING_SETUP]");
- *   BillingSetup response = billingSetupServiceClient.getBillingSetup(formattedResourceName);
+ *   BillingSetupName resourceName = BillingSetupName.of("[CUSTOMER]", "[BILLING_SETUP]");
+ *   BillingSetup response = billingSetupServiceClient.getBillingSetup(resourceName);
  * }
  * </code>
  * </pre>
@@ -385,8 +385,8 @@
  * <pre>
  * <code>
  * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
- *   String formattedResourceName = CampaignAudienceViewServiceClient.formatCampaignAudienceViewName("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
- *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(formattedResourceName);
+ *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
+ *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(resourceName);
  * }
  * </code>
  * </pre>
@@ -401,8 +401,8 @@
  * <pre>
  * <code>
  * try (CampaignBidModifierServiceClient campaignBidModifierServiceClient = CampaignBidModifierServiceClient.create()) {
- *   String formattedResourceName = CampaignBidModifierServiceClient.formatCampaignBidModifierName("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
- *   CampaignBidModifier response = campaignBidModifierServiceClient.getCampaignBidModifier(formattedResourceName);
+ *   CampaignBidModifierName resourceName = CampaignBidModifierName.of("[CUSTOMER]", "[CAMPAIGN_BID_MODIFIER]");
+ *   CampaignBidModifier response = campaignBidModifierServiceClient.getCampaignBidModifier(resourceName);
  * }
  * </code>
  * </pre>
@@ -416,8 +416,8 @@
  * <pre>
  * <code>
  * try (CampaignBudgetServiceClient campaignBudgetServiceClient = CampaignBudgetServiceClient.create()) {
- *   String formattedResourceName = CampaignBudgetServiceClient.formatCampaignBudgetName("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
- *   CampaignBudget response = campaignBudgetServiceClient.getCampaignBudget(formattedResourceName);
+ *   CampaignBudgetName resourceName = CampaignBudgetName.of("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
+ *   CampaignBudget response = campaignBudgetServiceClient.getCampaignBudget(resourceName);
  * }
  * </code>
  * </pre>
@@ -431,8 +431,8 @@
  * <pre>
  * <code>
  * try (CampaignCriterionServiceClient campaignCriterionServiceClient = CampaignCriterionServiceClient.create()) {
- *   String formattedResourceName = CampaignCriterionServiceClient.formatCampaignCriteriaName("[CUSTOMER]", "[CAMPAIGN_CRITERIA]");
- *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(formattedResourceName);
+ *   CampaignCriterionName resourceName = CampaignCriterionName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION]");
+ *   CampaignCriterion response = campaignCriterionServiceClient.getCampaignCriterion(resourceName);
  * }
  * </code>
  * </pre>
@@ -447,8 +447,8 @@
  * <pre>
  * <code>
  * try (CampaignCriterionSimulationServiceClient campaignCriterionSimulationServiceClient = CampaignCriterionSimulationServiceClient.create()) {
- *   String formattedResourceName = CampaignCriterionSimulationServiceClient.formatCampaignCriterionSimulationName("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
- *   CampaignCriterionSimulation response = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulation(formattedResourceName);
+ *   CampaignCriterionSimulationName resourceName = CampaignCriterionSimulationName.of("[CUSTOMER]", "[CAMPAIGN_CRITERION_SIMULATION]");
+ *   CampaignCriterionSimulation response = campaignCriterionSimulationServiceClient.getCampaignCriterionSimulation(resourceName);
  * }
  * </code>
  * </pre>
@@ -462,8 +462,8 @@
  * <pre>
  * <code>
  * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
- *   String formattedResourceName = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
- *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(formattedResourceName);
+ *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+ *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(resourceName);
  * }
  * </code>
  * </pre>
@@ -485,8 +485,8 @@
  * <pre>
  * <code>
  * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
- *   String formattedResourceName = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
- *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(formattedResourceName);
+ *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+ *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(resourceName);
  * }
  * </code>
  * </pre>
@@ -501,8 +501,8 @@
  * <pre>
  * <code>
  * try (CampaignExtensionSettingServiceClient campaignExtensionSettingServiceClient = CampaignExtensionSettingServiceClient.create()) {
- *   String formattedResourceName = CampaignExtensionSettingServiceClient.formatCampaignExtensionSettingName("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
- *   CampaignExtensionSetting response = campaignExtensionSettingServiceClient.getCampaignExtensionSetting(formattedResourceName);
+ *   CampaignExtensionSettingName resourceName = CampaignExtensionSettingName.of("[CUSTOMER]", "[CAMPAIGN_EXTENSION_SETTING]");
+ *   CampaignExtensionSetting response = campaignExtensionSettingServiceClient.getCampaignExtensionSetting(resourceName);
  * }
  * </code>
  * </pre>
@@ -516,8 +516,8 @@
  * <pre>
  * <code>
  * try (CampaignFeedServiceClient campaignFeedServiceClient = CampaignFeedServiceClient.create()) {
- *   String formattedResourceName = CampaignFeedServiceClient.formatCampaignFeedName("[CUSTOMER]", "[CAMPAIGN_FEED]");
- *   CampaignFeed response = campaignFeedServiceClient.getCampaignFeed(formattedResourceName);
+ *   CampaignFeedName resourceName = CampaignFeedName.of("[CUSTOMER]", "[CAMPAIGN_FEED]");
+ *   CampaignFeed response = campaignFeedServiceClient.getCampaignFeed(resourceName);
  * }
  * </code>
  * </pre>
@@ -531,8 +531,8 @@
  * <pre>
  * <code>
  * try (CampaignLabelServiceClient campaignLabelServiceClient = CampaignLabelServiceClient.create()) {
- *   String formattedResourceName = CampaignLabelServiceClient.formatCampaignLabelName("[CUSTOMER]", "[CAMPAIGN_LABEL]");
- *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(formattedResourceName);
+ *   CampaignLabelName resourceName = CampaignLabelName.of("[CUSTOMER]", "[CAMPAIGN_LABEL]");
+ *   CampaignLabel response = campaignLabelServiceClient.getCampaignLabel(resourceName);
  * }
  * </code>
  * </pre>
@@ -546,8 +546,8 @@
  * <pre>
  * <code>
  * try (CampaignServiceClient campaignServiceClient = CampaignServiceClient.create()) {
- *   String formattedResourceName = CampaignServiceClient.formatCampaignName("[CUSTOMER]", "[CAMPAIGN]");
- *   Campaign response = campaignServiceClient.getCampaign(formattedResourceName);
+ *   CampaignName resourceName = CampaignName.of("[CUSTOMER]", "[CAMPAIGN]");
+ *   Campaign response = campaignServiceClient.getCampaign(resourceName);
  * }
  * </code>
  * </pre>
@@ -561,8 +561,8 @@
  * <pre>
  * <code>
  * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient = CampaignSharedSetServiceClient.create()) {
- *   String formattedResourceName = CampaignSharedSetServiceClient.formatCampaignSharedSetName("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
- *   CampaignSharedSet response = campaignSharedSetServiceClient.getCampaignSharedSet(formattedResourceName);
+ *   CampaignSharedSetName resourceName = CampaignSharedSetName.of("[CUSTOMER]", "[CAMPAIGN_SHARED_SET]");
+ *   CampaignSharedSet response = campaignSharedSetServiceClient.getCampaignSharedSet(resourceName);
  * }
  * </code>
  * </pre>
@@ -576,8 +576,8 @@
  * <pre>
  * <code>
  * try (CarrierConstantServiceClient carrierConstantServiceClient = CarrierConstantServiceClient.create()) {
- *   String formattedResourceName = CarrierConstantServiceClient.formatCarrierConstantName("[CARRIER_CONSTANT]");
- *   CarrierConstant response = carrierConstantServiceClient.getCarrierConstant(formattedResourceName);
+ *   CarrierConstantName resourceName = CarrierConstantName.of("[CARRIER_CONSTANT]");
+ *   CarrierConstant response = carrierConstantServiceClient.getCarrierConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -591,8 +591,8 @@
  * <pre>
  * <code>
  * try (ChangeStatusServiceClient changeStatusServiceClient = ChangeStatusServiceClient.create()) {
- *   String formattedResourceName = ChangeStatusServiceClient.formatChangeStatusName("[CUSTOMER]", "[CHANGE_STATUS]");
- *   ChangeStatus response = changeStatusServiceClient.getChangeStatus(formattedResourceName);
+ *   ChangeStatusName resourceName = ChangeStatusName.of("[CUSTOMER]", "[CHANGE_STATUS]");
+ *   ChangeStatus response = changeStatusServiceClient.getChangeStatus(resourceName);
  * }
  * </code>
  * </pre>
@@ -606,8 +606,8 @@
  * <pre>
  * <code>
  * try (ClickViewServiceClient clickViewServiceClient = ClickViewServiceClient.create()) {
- *   String formattedResourceName = ClickViewServiceClient.formatClickViewName("[CUSTOMER]", "[CLICK_VIEW]");
- *   ClickView response = clickViewServiceClient.getClickView(formattedResourceName);
+ *   ClickViewName resourceName = ClickViewName.of("[CUSTOMER]", "[CLICK_VIEW]");
+ *   ClickView response = clickViewServiceClient.getClickView(resourceName);
  * }
  * </code>
  * </pre>
@@ -621,8 +621,8 @@
  * <pre>
  * <code>
  * try (ConversionActionServiceClient conversionActionServiceClient = ConversionActionServiceClient.create()) {
- *   String formattedResourceName = ConversionActionServiceClient.formatConversionActionName("[CUSTOMER]", "[CONVERSION_ACTION]");
- *   ConversionAction response = conversionActionServiceClient.getConversionAction(formattedResourceName);
+ *   ConversionActionName resourceName = ConversionActionName.of("[CUSTOMER]", "[CONVERSION_ACTION]");
+ *   ConversionAction response = conversionActionServiceClient.getConversionAction(resourceName);
  * }
  * </code>
  * </pre>
@@ -640,8 +640,7 @@
  *   String customerId = "";
  *   List&lt;ConversionAdjustment&gt; conversionAdjustments = new ArrayList&lt;&gt;();
  *   boolean partialFailure = false;
- *   boolean validateOnly = false;
- *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure, validateOnly);
+ *   UploadConversionAdjustmentsResponse response = conversionAdjustmentUploadServiceClient.uploadConversionAdjustments(customerId, conversionAdjustments, partialFailure);
  * }
  * </code>
  * </pre>
@@ -658,8 +657,7 @@
  *   String customerId = "";
  *   List&lt;ClickConversion&gt; conversions = new ArrayList&lt;&gt;();
  *   boolean partialFailure = false;
- *   boolean validateOnly = false;
- *   UploadClickConversionsResponse response = conversionUploadServiceClient.uploadClickConversions(customerId, conversions, partialFailure, validateOnly);
+ *   UploadClickConversionsResponse response = conversionUploadServiceClient.uploadClickConversions(customerId, conversions, partialFailure);
  * }
  * </code>
  * </pre>
@@ -673,8 +671,8 @@
  * <pre>
  * <code>
  * try (CurrencyConstantServiceClient currencyConstantServiceClient = CurrencyConstantServiceClient.create()) {
- *   String formattedResourceName = CurrencyConstantServiceClient.formatCurrencyConstantName("[CURRENCY_CONSTANT]");
- *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(formattedResourceName);
+ *   CurrencyConstantName resourceName = CurrencyConstantName.of("[CURRENCY_CONSTANT]");
+ *   CurrencyConstant response = currencyConstantServiceClient.getCurrencyConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -688,8 +686,8 @@
  * <pre>
  * <code>
  * try (CustomInterestServiceClient customInterestServiceClient = CustomInterestServiceClient.create()) {
- *   String formattedResourceName = CustomInterestServiceClient.formatCustomInterestName("[CUSTOMER]", "[CUSTOM_INTEREST]");
- *   CustomInterest response = customInterestServiceClient.getCustomInterest(formattedResourceName);
+ *   CustomInterestName resourceName = CustomInterestName.of("[CUSTOMER]", "[CUSTOM_INTEREST]");
+ *   CustomInterest response = customInterestServiceClient.getCustomInterest(resourceName);
  * }
  * </code>
  * </pre>
@@ -703,8 +701,8 @@
  * <pre>
  * <code>
  * try (CustomerClientLinkServiceClient customerClientLinkServiceClient = CustomerClientLinkServiceClient.create()) {
- *   String formattedResourceName = CustomerClientLinkServiceClient.formatCustomerClientLinkName("[CUSTOMER]", "[CUSTOMER_CLIENT_LINK]");
- *   CustomerClientLink response = customerClientLinkServiceClient.getCustomerClientLink(formattedResourceName);
+ *   CustomerClientLinkName resourceName = CustomerClientLinkName.of("[CUSTOMER]", "[CUSTOMER_CLIENT_LINK]");
+ *   CustomerClientLink response = customerClientLinkServiceClient.getCustomerClientLink(resourceName);
  * }
  * </code>
  * </pre>
@@ -718,8 +716,8 @@
  * <pre>
  * <code>
  * try (CustomerClientServiceClient customerClientServiceClient = CustomerClientServiceClient.create()) {
- *   String formattedResourceName = CustomerClientServiceClient.formatCustomerClientName("[CUSTOMER]", "[CUSTOMER_CLIENT]");
- *   CustomerClient response = customerClientServiceClient.getCustomerClient(formattedResourceName);
+ *   CustomerClientName resourceName = CustomerClientName.of("[CUSTOMER]", "[CUSTOMER_CLIENT]");
+ *   CustomerClient response = customerClientServiceClient.getCustomerClient(resourceName);
  * }
  * </code>
  * </pre>
@@ -734,8 +732,8 @@
  * <pre>
  * <code>
  * try (CustomerExtensionSettingServiceClient customerExtensionSettingServiceClient = CustomerExtensionSettingServiceClient.create()) {
- *   String formattedResourceName = CustomerExtensionSettingServiceClient.formatCustomerExtensionSettingName("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
- *   CustomerExtensionSetting response = customerExtensionSettingServiceClient.getCustomerExtensionSetting(formattedResourceName);
+ *   CustomerExtensionSettingName resourceName = CustomerExtensionSettingName.of("[CUSTOMER]", "[CUSTOMER_EXTENSION_SETTING]");
+ *   CustomerExtensionSetting response = customerExtensionSettingServiceClient.getCustomerExtensionSetting(resourceName);
  * }
  * </code>
  * </pre>
@@ -749,8 +747,8 @@
  * <pre>
  * <code>
  * try (CustomerFeedServiceClient customerFeedServiceClient = CustomerFeedServiceClient.create()) {
- *   String formattedResourceName = CustomerFeedServiceClient.formatCustomerFeedName("[CUSTOMER]", "[CUSTOMER_FEED]");
- *   CustomerFeed response = customerFeedServiceClient.getCustomerFeed(formattedResourceName);
+ *   CustomerFeedName resourceName = CustomerFeedName.of("[CUSTOMER]", "[CUSTOMER_FEED]");
+ *   CustomerFeed response = customerFeedServiceClient.getCustomerFeed(resourceName);
  * }
  * </code>
  * </pre>
@@ -764,8 +762,8 @@
  * <pre>
  * <code>
  * try (CustomerLabelServiceClient customerLabelServiceClient = CustomerLabelServiceClient.create()) {
- *   String formattedResourceName = CustomerLabelServiceClient.formatCustomerLabelName("[CUSTOMER]", "[CUSTOMER_LABEL]");
- *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(formattedResourceName);
+ *   CustomerLabelName resourceName = CustomerLabelName.of("[CUSTOMER]", "[CUSTOMER_LABEL]");
+ *   CustomerLabel response = customerLabelServiceClient.getCustomerLabel(resourceName);
  * }
  * </code>
  * </pre>
@@ -780,8 +778,8 @@
  * <pre>
  * <code>
  * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient = CustomerManagerLinkServiceClient.create()) {
- *   String formattedResourceName = CustomerManagerLinkServiceClient.formatCustomerManagerLinkName("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
- *   CustomerManagerLink response = customerManagerLinkServiceClient.getCustomerManagerLink(formattedResourceName);
+ *   CustomerManagerLinkName resourceName = CustomerManagerLinkName.of("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
+ *   CustomerManagerLink response = customerManagerLinkServiceClient.getCustomerManagerLink(resourceName);
  * }
  * </code>
  * </pre>
@@ -796,8 +794,8 @@
  * <pre>
  * <code>
  * try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient = CustomerNegativeCriterionServiceClient.create()) {
- *   String formattedResourceName = CustomerNegativeCriterionServiceClient.formatCustomerNegativeCriteriaName("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERIA]");
- *   CustomerNegativeCriterion response = customerNegativeCriterionServiceClient.getCustomerNegativeCriterion(formattedResourceName);
+ *   CustomerNegativeCriterionName resourceName = CustomerNegativeCriterionName.of("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERION]");
+ *   CustomerNegativeCriterion response = customerNegativeCriterionServiceClient.getCustomerNegativeCriterion(resourceName);
  * }
  * </code>
  * </pre>
@@ -811,8 +809,8 @@
  * <pre>
  * <code>
  * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
- *   String formattedResourceName = CustomerServiceClient.formatCustomerName("[CUSTOMER]");
- *   Customer response = customerServiceClient.getCustomer(formattedResourceName);
+ *   CustomerName resourceName = CustomerName.of("[CUSTOMER]");
+ *   Customer response = customerServiceClient.getCustomer(resourceName);
  * }
  * </code>
  * </pre>
@@ -827,8 +825,8 @@
  * <pre>
  * <code>
  * try (DetailPlacementViewServiceClient detailPlacementViewServiceClient = DetailPlacementViewServiceClient.create()) {
- *   String formattedResourceName = DetailPlacementViewServiceClient.formatDetailPlacementViewName("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
- *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(formattedResourceName);
+ *   DetailPlacementViewName resourceName = DetailPlacementViewName.of("[CUSTOMER]", "[DETAIL_PLACEMENT_VIEW]");
+ *   DetailPlacementView response = detailPlacementViewServiceClient.getDetailPlacementView(resourceName);
  * }
  * </code>
  * </pre>
@@ -842,8 +840,8 @@
  * <pre>
  * <code>
  * try (DisplayKeywordViewServiceClient displayKeywordViewServiceClient = DisplayKeywordViewServiceClient.create()) {
- *   String formattedResourceName = DisplayKeywordViewServiceClient.formatDisplayKeywordViewName("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
- *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(formattedResourceName);
+ *   DisplayKeywordViewName resourceName = DisplayKeywordViewName.of("[CUSTOMER]", "[DISPLAY_KEYWORD_VIEW]");
+ *   DisplayKeywordView response = displayKeywordViewServiceClient.getDisplayKeywordView(resourceName);
  * }
  * </code>
  * </pre>
@@ -857,8 +855,8 @@
  * <pre>
  * <code>
  * try (DistanceViewServiceClient distanceViewServiceClient = DistanceViewServiceClient.create()) {
- *   String formattedResourceName = DistanceViewServiceClient.formatDistanceViewName("[CUSTOMER]", "[DISTANCE_VIEW]");
- *   DistanceView response = distanceViewServiceClient.getDistanceView(formattedResourceName);
+ *   DistanceViewName resourceName = DistanceViewName.of("[CUSTOMER]", "[DISTANCE_VIEW]");
+ *   DistanceView response = distanceViewServiceClient.getDistanceView(resourceName);
  * }
  * </code>
  * </pre>
@@ -872,8 +870,8 @@
  * <pre>
  * <code>
  * try (DomainCategoryServiceClient domainCategoryServiceClient = DomainCategoryServiceClient.create()) {
- *   String formattedResourceName = DomainCategoryServiceClient.formatDomainCategoryName("[CUSTOMER]", "[DOMAIN_CATEGORY]");
- *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(formattedResourceName);
+ *   DomainCategoryName resourceName = DomainCategoryName.of("[CUSTOMER]", "[DOMAIN_CATEGORY]");
+ *   DomainCategory response = domainCategoryServiceClient.getDomainCategory(resourceName);
  * }
  * </code>
  * </pre>
@@ -888,8 +886,8 @@
  * <pre>
  * <code>
  * try (DynamicSearchAdsSearchTermViewServiceClient dynamicSearchAdsSearchTermViewServiceClient = DynamicSearchAdsSearchTermViewServiceClient.create()) {
- *   String formattedResourceName = DynamicSearchAdsSearchTermViewServiceClient.formatDynamicSearchAdsSearchTermViewName("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
- *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(formattedResourceName);
+ *   DynamicSearchAdsSearchTermViewName resourceName = DynamicSearchAdsSearchTermViewName.of("[CUSTOMER]", "[DYNAMIC_SEARCH_ADS_SEARCH_TERM_VIEW]");
+ *   DynamicSearchAdsSearchTermView response = dynamicSearchAdsSearchTermViewServiceClient.getDynamicSearchAdsSearchTermView(resourceName);
  * }
  * </code>
  * </pre>
@@ -904,8 +902,8 @@
  * <pre>
  * <code>
  * try (ExpandedLandingPageViewServiceClient expandedLandingPageViewServiceClient = ExpandedLandingPageViewServiceClient.create()) {
- *   String formattedResourceName = ExpandedLandingPageViewServiceClient.formatExpandedLandingPageViewName("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
- *   ExpandedLandingPageView response = expandedLandingPageViewServiceClient.getExpandedLandingPageView(formattedResourceName);
+ *   ExpandedLandingPageViewName resourceName = ExpandedLandingPageViewName.of("[CUSTOMER]", "[EXPANDED_LANDING_PAGE_VIEW]");
+ *   ExpandedLandingPageView response = expandedLandingPageViewServiceClient.getExpandedLandingPageView(resourceName);
  * }
  * </code>
  * </pre>
@@ -919,8 +917,8 @@
  * <pre>
  * <code>
  * try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient = ExtensionFeedItemServiceClient.create()) {
- *   String formattedResourceName = ExtensionFeedItemServiceClient.formatExtensionFeedItemName("[CUSTOMER]", "[EXTENSION_FEED_ITEM]");
- *   ExtensionFeedItem response = extensionFeedItemServiceClient.getExtensionFeedItem(formattedResourceName);
+ *   ExtensionFeedItemName resourceName = ExtensionFeedItemName.of("[CUSTOMER]", "[EXTENSION_FEED_ITEM]");
+ *   ExtensionFeedItem response = extensionFeedItemServiceClient.getExtensionFeedItem(resourceName);
  * }
  * </code>
  * </pre>
@@ -934,8 +932,8 @@
  * <pre>
  * <code>
  * try (FeedItemServiceClient feedItemServiceClient = FeedItemServiceClient.create()) {
- *   String formattedResourceName = FeedItemServiceClient.formatFeedItemName("[CUSTOMER]", "[FEED_ITEM]");
- *   FeedItem response = feedItemServiceClient.getFeedItem(formattedResourceName);
+ *   FeedItemName resourceName = FeedItemName.of("[CUSTOMER]", "[FEED_ITEM]");
+ *   FeedItem response = feedItemServiceClient.getFeedItem(resourceName);
  * }
  * </code>
  * </pre>
@@ -949,8 +947,8 @@
  * <pre>
  * <code>
  * try (FeedItemTargetServiceClient feedItemTargetServiceClient = FeedItemTargetServiceClient.create()) {
- *   String formattedResourceName = FeedItemTargetServiceClient.formatFeedItemTargetName("[CUSTOMER]", "[FEED_ITEM_TARGET]");
- *   FeedItemTarget response = feedItemTargetServiceClient.getFeedItemTarget(formattedResourceName);
+ *   FeedItemTargetName resourceName = FeedItemTargetName.of("[CUSTOMER]", "[FEED_ITEM_TARGET]");
+ *   FeedItemTarget response = feedItemTargetServiceClient.getFeedItemTarget(resourceName);
  * }
  * </code>
  * </pre>
@@ -964,8 +962,8 @@
  * <pre>
  * <code>
  * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
- *   String formattedResourceName = FeedMappingServiceClient.formatFeedMappingName("[CUSTOMER]", "[FEED_MAPPING]");
- *   FeedMapping response = feedMappingServiceClient.getFeedMapping(formattedResourceName);
+ *   FeedMappingName resourceName = FeedMappingName.of("[CUSTOMER]", "[FEED_MAPPING]");
+ *   FeedMapping response = feedMappingServiceClient.getFeedMapping(resourceName);
  * }
  * </code>
  * </pre>
@@ -980,8 +978,8 @@
  * <pre>
  * <code>
  * try (FeedPlaceholderViewServiceClient feedPlaceholderViewServiceClient = FeedPlaceholderViewServiceClient.create()) {
- *   String formattedResourceName = FeedPlaceholderViewServiceClient.formatFeedPlaceholderViewName("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
- *   FeedPlaceholderView response = feedPlaceholderViewServiceClient.getFeedPlaceholderView(formattedResourceName);
+ *   FeedPlaceholderViewName resourceName = FeedPlaceholderViewName.of("[CUSTOMER]", "[FEED_PLACEHOLDER_VIEW]");
+ *   FeedPlaceholderView response = feedPlaceholderViewServiceClient.getFeedPlaceholderView(resourceName);
  * }
  * </code>
  * </pre>
@@ -995,8 +993,8 @@
  * <pre>
  * <code>
  * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
- *   String formattedResourceName = FeedServiceClient.formatFeedName("[CUSTOMER]", "[FEED]");
- *   Feed response = feedServiceClient.getFeed(formattedResourceName);
+ *   FeedName resourceName = FeedName.of("[CUSTOMER]", "[FEED]");
+ *   Feed response = feedServiceClient.getFeed(resourceName);
  * }
  * </code>
  * </pre>
@@ -1010,8 +1008,8 @@
  * <pre>
  * <code>
  * try (GenderViewServiceClient genderViewServiceClient = GenderViewServiceClient.create()) {
- *   String formattedResourceName = GenderViewServiceClient.formatGenderViewName("[CUSTOMER]", "[GENDER_VIEW]");
- *   GenderView response = genderViewServiceClient.getGenderView(formattedResourceName);
+ *   GenderViewName resourceName = GenderViewName.of("[CUSTOMER]", "[GENDER_VIEW]");
+ *   GenderView response = genderViewServiceClient.getGenderView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1025,8 +1023,8 @@
  * <pre>
  * <code>
  * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient = GeoTargetConstantServiceClient.create()) {
- *   String formattedResourceName = GeoTargetConstantServiceClient.formatGeoTargetConstantName("[GEO_TARGET_CONSTANT]");
- *   GeoTargetConstant response = geoTargetConstantServiceClient.getGeoTargetConstant(formattedResourceName);
+ *   GeoTargetConstantName resourceName = GeoTargetConstantName.of("[GEO_TARGET_CONSTANT]");
+ *   GeoTargetConstant response = geoTargetConstantServiceClient.getGeoTargetConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -1040,8 +1038,8 @@
  * <pre>
  * <code>
  * try (GeographicViewServiceClient geographicViewServiceClient = GeographicViewServiceClient.create()) {
- *   String formattedResourceName = GeographicViewServiceClient.formatGeographicViewName("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
- *   GeographicView response = geographicViewServiceClient.getGeographicView(formattedResourceName);
+ *   GeographicViewName resourceName = GeographicViewName.of("[CUSTOMER]", "[GEOGRAPHIC_VIEW]");
+ *   GeographicView response = geographicViewServiceClient.getGeographicView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1055,8 +1053,98 @@
  * <pre>
  * <code>
  * try (GoogleAdsFieldServiceClient googleAdsFieldServiceClient = GoogleAdsFieldServiceClient.create()) {
- *   String formattedResourceName = GoogleAdsFieldServiceClient.formatGoogleAdsFieldName("[GOOGLE_ADS_FIELD]");
- *   GoogleAdsField response = googleAdsFieldServiceClient.getGoogleAdsField(formattedResourceName);
+ *   GoogleAdsFieldName resourceName = GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]");
+ *   GoogleAdsField response = googleAdsFieldServiceClient.getGoogleAdsField(resourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ================== LabelServiceClient ==================
+ *
+ * <p>Service Description: Service to manage labels.
+ *
+ * <p>Sample for LabelServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
+ *   LabelName resourceName = LabelName.of("[CUSTOMER]", "[LABEL]");
+ *   Label response = labelServiceClient.getLabel(resourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ====================== MediaFileServiceClient ======================
+ *
+ * <p>Service Description: Service to manage media files.
+ *
+ * <p>Sample for MediaFileServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
+ *   MediaFileName resourceName = MediaFileName.of("[CUSTOMER]", "[MEDIA_FILE]");
+ *   MediaFile response = mediaFileServiceClient.getMediaFile(resourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ============================== RemarketingActionServiceClient ==============================
+ *
+ * <p>Service Description: Service to manage remarketing actions.
+ *
+ * <p>Sample for RemarketingActionServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
+ *   RemarketingActionName resourceName = RemarketingActionName.of("[CUSTOMER]", "[REMARKETING_ACTION]");
+ *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(resourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ============================ SharedCriterionServiceClient ============================
+ *
+ * <p>Service Description: Service to manage shared criteria.
+ *
+ * <p>Sample for SharedCriterionServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
+ *   SharedCriterionName resourceName = SharedCriterionName.of("[CUSTOMER]", "[SHARED_CRITERION]");
+ *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(resourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ====================== SharedSetServiceClient ======================
+ *
+ * <p>Service Description: Service to manage shared sets.
+ *
+ * <p>Sample for SharedSetServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
+ *   SharedSetName resourceName = SharedSetName.of("[CUSTOMER]", "[SHARED_SET]");
+ *   SharedSet response = sharedSetServiceClient.getSharedSet(resourceName);
+ * }
+ * </code>
+ * </pre>
+ *
+ * ===================== UserListServiceClient =====================
+ *
+ * <p>Service Description: Service to manage user lists.
+ *
+ * <p>Sample for UserListServiceClient:
+ *
+ * <pre>
+ * <code>
+ * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
+ *   UserListName resourceName = UserListName.of("[CUSTOMER]", "[USER_LIST]");
+ *   UserList response = userListServiceClient.getUserList(resourceName);
  * }
  * </code>
  * </pre>
@@ -1072,9 +1160,7 @@
  * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
  *   String customerId = "";
  *   List&lt;MutateOperation&gt; mutateOperations = new ArrayList&lt;&gt;();
- *   boolean partialFailure = false;
- *   boolean validateOnly = false;
- *   MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(customerId, mutateOperations, partialFailure, validateOnly);
+ *   MutateGoogleAdsResponse response = googleAdsServiceClient.mutate(customerId, mutateOperations);
  * }
  * </code>
  * </pre>
@@ -1088,8 +1174,8 @@
  * <pre>
  * <code>
  * try (GroupPlacementViewServiceClient groupPlacementViewServiceClient = GroupPlacementViewServiceClient.create()) {
- *   String formattedResourceName = GroupPlacementViewServiceClient.formatGroupPlacementViewName("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
- *   GroupPlacementView response = groupPlacementViewServiceClient.getGroupPlacementView(formattedResourceName);
+ *   GroupPlacementViewName resourceName = GroupPlacementViewName.of("[CUSTOMER]", "[GROUP_PLACEMENT_VIEW]");
+ *   GroupPlacementView response = groupPlacementViewServiceClient.getGroupPlacementView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1103,8 +1189,8 @@
  * <pre>
  * <code>
  * try (HotelGroupViewServiceClient hotelGroupViewServiceClient = HotelGroupViewServiceClient.create()) {
- *   String formattedResourceName = HotelGroupViewServiceClient.formatHotelGroupViewName("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
- *   HotelGroupView response = hotelGroupViewServiceClient.getHotelGroupView(formattedResourceName);
+ *   HotelGroupViewName resourceName = HotelGroupViewName.of("[CUSTOMER]", "[HOTEL_GROUP_VIEW]");
+ *   HotelGroupView response = hotelGroupViewServiceClient.getHotelGroupView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1119,8 +1205,8 @@
  * <pre>
  * <code>
  * try (HotelPerformanceViewServiceClient hotelPerformanceViewServiceClient = HotelPerformanceViewServiceClient.create()) {
- *   String formattedResourceName = HotelPerformanceViewServiceClient.formatHotelPerformanceViewName("[CUSTOMER]");
- *   HotelPerformanceView response = hotelPerformanceViewServiceClient.getHotelPerformanceView(formattedResourceName);
+ *   HotelPerformanceViewName resourceName = HotelPerformanceViewName.of("[CUSTOMER]");
+ *   HotelPerformanceView response = hotelPerformanceViewServiceClient.getHotelPerformanceView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1153,8 +1239,8 @@
  * <pre>
  * <code>
  * try (KeywordPlanAdGroupServiceClient keywordPlanAdGroupServiceClient = KeywordPlanAdGroupServiceClient.create()) {
- *   String formattedResourceName = KeywordPlanAdGroupServiceClient.formatKeywordPlanAdGroupName("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
- *   KeywordPlanAdGroup response = keywordPlanAdGroupServiceClient.getKeywordPlanAdGroup(formattedResourceName);
+ *   KeywordPlanAdGroupName resourceName = KeywordPlanAdGroupName.of("[CUSTOMER]", "[KEYWORD_PLAN_AD_GROUP]");
+ *   KeywordPlanAdGroup response = keywordPlanAdGroupServiceClient.getKeywordPlanAdGroup(resourceName);
  * }
  * </code>
  * </pre>
@@ -1169,8 +1255,8 @@
  * <pre>
  * <code>
  * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
- *   String formattedResourceName = KeywordPlanCampaignServiceClient.formatKeywordPlanCampaignName("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
- *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(formattedResourceName);
+ *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
+ *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(resourceName);
  * }
  * </code>
  * </pre>
@@ -1184,11 +1270,11 @@
  * <pre>
  * <code>
  * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient = KeywordPlanIdeaServiceClient.create()) {
- *   String customerId = "";
  *   StringValue language = StringValue.newBuilder().build();
- *   List&lt;StringValue&gt; geoTargetConstants = new ArrayList&lt;&gt;();
- *   KeywordPlanNetworkEnum.KeywordPlanNetwork keywordPlanNetwork = KeywordPlanNetworkEnum.KeywordPlanNetwork.UNSPECIFIED;
- *   GenerateKeywordIdeaResponse response = keywordPlanIdeaServiceClient.generateKeywordIdeas(customerId, language, geoTargetConstants, keywordPlanNetwork);
+ *   GenerateKeywordIdeasRequest request = GenerateKeywordIdeasRequest.newBuilder()
+ *     .setLanguage(language)
+ *     .build();
+ *   GenerateKeywordIdeaResponse response = keywordPlanIdeaServiceClient.generateKeywordIdeas(request);
  * }
  * </code>
  * </pre>
@@ -1202,8 +1288,8 @@
  * <pre>
  * <code>
  * try (KeywordPlanKeywordServiceClient keywordPlanKeywordServiceClient = KeywordPlanKeywordServiceClient.create()) {
- *   String formattedResourceName = KeywordPlanKeywordServiceClient.formatKeywordPlanKeywordName("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
- *   KeywordPlanKeyword response = keywordPlanKeywordServiceClient.getKeywordPlanKeyword(formattedResourceName);
+ *   KeywordPlanKeywordName resourceName = KeywordPlanKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_KEYWORD]");
+ *   KeywordPlanKeyword response = keywordPlanKeywordServiceClient.getKeywordPlanKeyword(resourceName);
  * }
  * </code>
  * </pre>
@@ -1218,8 +1304,8 @@
  * <pre>
  * <code>
  * try (KeywordPlanNegativeKeywordServiceClient keywordPlanNegativeKeywordServiceClient = KeywordPlanNegativeKeywordServiceClient.create()) {
- *   String formattedResourceName = KeywordPlanNegativeKeywordServiceClient.formatKeywordPlanNegativeKeywordName("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
- *   KeywordPlanNegativeKeyword response = keywordPlanNegativeKeywordServiceClient.getKeywordPlanNegativeKeyword(formattedResourceName);
+ *   KeywordPlanNegativeKeywordName resourceName = KeywordPlanNegativeKeywordName.of("[CUSTOMER]", "[KEYWORD_PLAN_NEGATIVE_KEYWORD]");
+ *   KeywordPlanNegativeKeyword response = keywordPlanNegativeKeywordServiceClient.getKeywordPlanNegativeKeyword(resourceName);
  * }
  * </code>
  * </pre>
@@ -1233,8 +1319,8 @@
  * <pre>
  * <code>
  * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
- *   String formattedResourceName = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
- *   KeywordPlan response = keywordPlanServiceClient.getKeywordPlan(formattedResourceName);
+ *   KeywordPlanName resourceName = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
+ *   KeywordPlan response = keywordPlanServiceClient.getKeywordPlan(resourceName);
  * }
  * </code>
  * </pre>
@@ -1248,23 +1334,8 @@
  * <pre>
  * <code>
  * try (KeywordViewServiceClient keywordViewServiceClient = KeywordViewServiceClient.create()) {
- *   String formattedResourceName = KeywordViewServiceClient.formatKeywordViewName("[CUSTOMER]", "[KEYWORD_VIEW]");
- *   KeywordView response = keywordViewServiceClient.getKeywordView(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ================== LabelServiceClient ==================
- *
- * <p>Service Description: Service to manage labels.
- *
- * <p>Sample for LabelServiceClient:
- *
- * <pre>
- * <code>
- * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
- *   String formattedResourceName = LabelServiceClient.formatLabelName("[CUSTOMER]", "[LABEL]");
- *   Label response = labelServiceClient.getLabel(formattedResourceName);
+ *   KeywordViewName resourceName = KeywordViewName.of("[CUSTOMER]", "[KEYWORD_VIEW]");
+ *   KeywordView response = keywordViewServiceClient.getKeywordView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1278,8 +1349,8 @@
  * <pre>
  * <code>
  * try (LandingPageViewServiceClient landingPageViewServiceClient = LandingPageViewServiceClient.create()) {
- *   String formattedResourceName = LandingPageViewServiceClient.formatLandingPageViewName("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
- *   LandingPageView response = landingPageViewServiceClient.getLandingPageView(formattedResourceName);
+ *   LandingPageViewName resourceName = LandingPageViewName.of("[CUSTOMER]", "[LANDING_PAGE_VIEW]");
+ *   LandingPageView response = landingPageViewServiceClient.getLandingPageView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1293,8 +1364,8 @@
  * <pre>
  * <code>
  * try (LanguageConstantServiceClient languageConstantServiceClient = LanguageConstantServiceClient.create()) {
- *   String formattedResourceName = LanguageConstantServiceClient.formatLanguageConstantName("[LANGUAGE_CONSTANT]");
- *   LanguageConstant response = languageConstantServiceClient.getLanguageConstant(formattedResourceName);
+ *   LanguageConstantName resourceName = LanguageConstantName.of("[LANGUAGE_CONSTANT]");
+ *   LanguageConstant response = languageConstantServiceClient.getLanguageConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -1308,8 +1379,8 @@
  * <pre>
  * <code>
  * try (LocationViewServiceClient locationViewServiceClient = LocationViewServiceClient.create()) {
- *   String formattedResourceName = LocationViewServiceClient.formatLocationViewName("[CUSTOMER]", "[LOCATION_VIEW]");
- *   LocationView response = locationViewServiceClient.getLocationView(formattedResourceName);
+ *   LocationViewName resourceName = LocationViewName.of("[CUSTOMER]", "[LOCATION_VIEW]");
+ *   LocationView response = locationViewServiceClient.getLocationView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1324,23 +1395,8 @@
  * <pre>
  * <code>
  * try (ManagedPlacementViewServiceClient managedPlacementViewServiceClient = ManagedPlacementViewServiceClient.create()) {
- *   String formattedResourceName = ManagedPlacementViewServiceClient.formatManagedPlacementViewName("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
- *   ManagedPlacementView response = managedPlacementViewServiceClient.getManagedPlacementView(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ====================== MediaFileServiceClient ======================
- *
- * <p>Service Description: Service to manage media files.
- *
- * <p>Sample for MediaFileServiceClient:
- *
- * <pre>
- * <code>
- * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
- *   String formattedResourceName = MediaFileServiceClient.formatMediaFileName("[CUSTOMER]", "[MEDIA_FILE]");
- *   MediaFile response = mediaFileServiceClient.getMediaFile(formattedResourceName);
+ *   ManagedPlacementViewName resourceName = ManagedPlacementViewName.of("[CUSTOMER]", "[MANAGED_PLACEMENT_VIEW]");
+ *   ManagedPlacementView response = managedPlacementViewServiceClient.getManagedPlacementView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1371,8 +1427,8 @@
  * <pre>
  * <code>
  * try (MobileAppCategoryConstantServiceClient mobileAppCategoryConstantServiceClient = MobileAppCategoryConstantServiceClient.create()) {
- *   String formattedResourceName = MobileAppCategoryConstantServiceClient.formatMobileAppCategoryConstantName("[MOBILE_APP_CATEGORY_CONSTANT]");
- *   MobileAppCategoryConstant response = mobileAppCategoryConstantServiceClient.getMobileAppCategoryConstant(formattedResourceName);
+ *   MobileAppCategoryConstantName resourceName = MobileAppCategoryConstantName.of("[MOBILE_APP_CATEGORY_CONSTANT]");
+ *   MobileAppCategoryConstant response = mobileAppCategoryConstantServiceClient.getMobileAppCategoryConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -1387,8 +1443,8 @@
  * <pre>
  * <code>
  * try (MobileDeviceConstantServiceClient mobileDeviceConstantServiceClient = MobileDeviceConstantServiceClient.create()) {
- *   String formattedResourceName = MobileDeviceConstantServiceClient.formatMobileDeviceConstantName("[MOBILE_DEVICE_CONSTANT]");
- *   MobileDeviceConstant response = mobileDeviceConstantServiceClient.getMobileDeviceConstant(formattedResourceName);
+ *   MobileDeviceConstantName resourceName = MobileDeviceConstantName.of("[MOBILE_DEVICE_CONSTANT]");
+ *   MobileDeviceConstant response = mobileDeviceConstantServiceClient.getMobileDeviceConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -1434,8 +1490,8 @@
  * <pre>
  * <code>
  * try (OperatingSystemVersionConstantServiceClient operatingSystemVersionConstantServiceClient = OperatingSystemVersionConstantServiceClient.create()) {
- *   String formattedResourceName = OperatingSystemVersionConstantServiceClient.formatOperatingSystemVersionConstantName("[OPERATING_SYSTEM_VERSION_CONSTANT]");
- *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(formattedResourceName);
+ *   OperatingSystemVersionConstantName resourceName = OperatingSystemVersionConstantName.of("[OPERATING_SYSTEM_VERSION_CONSTANT]");
+ *   OperatingSystemVersionConstant response = operatingSystemVersionConstantServiceClient.getOperatingSystemVersionConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -1450,8 +1506,8 @@
  * <pre>
  * <code>
  * try (PaidOrganicSearchTermViewServiceClient paidOrganicSearchTermViewServiceClient = PaidOrganicSearchTermViewServiceClient.create()) {
- *   String formattedResourceName = PaidOrganicSearchTermViewServiceClient.formatPaidOrganicSearchTermViewName("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
- *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(formattedResourceName);
+ *   PaidOrganicSearchTermViewName resourceName = PaidOrganicSearchTermViewName.of("[CUSTOMER]", "[PAID_ORGANIC_SEARCH_TERM_VIEW]");
+ *   PaidOrganicSearchTermView response = paidOrganicSearchTermViewServiceClient.getPaidOrganicSearchTermView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1465,8 +1521,8 @@
  * <pre>
  * <code>
  * try (ParentalStatusViewServiceClient parentalStatusViewServiceClient = ParentalStatusViewServiceClient.create()) {
- *   String formattedResourceName = ParentalStatusViewServiceClient.formatParentalStatusViewName("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
- *   ParentalStatusView response = parentalStatusViewServiceClient.getParentalStatusView(formattedResourceName);
+ *   ParentalStatusViewName resourceName = ParentalStatusViewName.of("[CUSTOMER]", "[PARENTAL_STATUS_VIEW]");
+ *   ParentalStatusView response = parentalStatusViewServiceClient.getParentalStatusView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1497,8 +1553,8 @@
  * <pre>
  * <code>
  * try (ProductBiddingCategoryConstantServiceClient productBiddingCategoryConstantServiceClient = ProductBiddingCategoryConstantServiceClient.create()) {
- *   String formattedResourceName = ProductBiddingCategoryConstantServiceClient.formatProductBiddingCategoryConstantName("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
- *   ProductBiddingCategoryConstant response = productBiddingCategoryConstantServiceClient.getProductBiddingCategoryConstant(formattedResourceName);
+ *   ProductBiddingCategoryConstantName resourceName = ProductBiddingCategoryConstantName.of("[PRODUCT_BIDDING_CATEGORY_CONSTANT]");
+ *   ProductBiddingCategoryConstant response = productBiddingCategoryConstantServiceClient.getProductBiddingCategoryConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -1512,8 +1568,8 @@
  * <pre>
  * <code>
  * try (ProductGroupViewServiceClient productGroupViewServiceClient = ProductGroupViewServiceClient.create()) {
- *   String formattedResourceName = ProductGroupViewServiceClient.formatProductGroupViewName("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
- *   ProductGroupView response = productGroupViewServiceClient.getProductGroupView(formattedResourceName);
+ *   ProductGroupViewName resourceName = ProductGroupViewName.of("[CUSTOMER]", "[PRODUCT_GROUP_VIEW]");
+ *   ProductGroupView response = productGroupViewServiceClient.getProductGroupView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1545,23 +1601,8 @@
  * <pre>
  * <code>
  * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
- *   String formattedResourceName = RecommendationServiceClient.formatRecommendationName("[CUSTOMER]", "[RECOMMENDATION]");
- *   Recommendation response = recommendationServiceClient.getRecommendation(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ============================== RemarketingActionServiceClient ==============================
- *
- * <p>Service Description: Service to manage remarketing actions.
- *
- * <p>Sample for RemarketingActionServiceClient:
- *
- * <pre>
- * <code>
- * try (RemarketingActionServiceClient remarketingActionServiceClient = RemarketingActionServiceClient.create()) {
- *   String formattedResourceName = RemarketingActionServiceClient.formatRemarketingActionName("[CUSTOMER]", "[REMARKETING_ACTION]");
- *   RemarketingAction response = remarketingActionServiceClient.getRemarketingAction(formattedResourceName);
+ *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER]", "[RECOMMENDATION]");
+ *   Recommendation response = recommendationServiceClient.getRecommendation(resourceName);
  * }
  * </code>
  * </pre>
@@ -1575,38 +1616,8 @@
  * <pre>
  * <code>
  * try (SearchTermViewServiceClient searchTermViewServiceClient = SearchTermViewServiceClient.create()) {
- *   String formattedResourceName = SearchTermViewServiceClient.formatSearchTermViewName("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
- *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ============================ SharedCriterionServiceClient ============================
- *
- * <p>Service Description: Service to manage shared criteria.
- *
- * <p>Sample for SharedCriterionServiceClient:
- *
- * <pre>
- * <code>
- * try (SharedCriterionServiceClient sharedCriterionServiceClient = SharedCriterionServiceClient.create()) {
- *   String formattedResourceName = SharedCriterionServiceClient.formatSharedCriteriaName("[CUSTOMER]", "[SHARED_CRITERIA]");
- *   SharedCriterion response = sharedCriterionServiceClient.getSharedCriterion(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ====================== SharedSetServiceClient ======================
- *
- * <p>Service Description: Service to manage shared sets.
- *
- * <p>Sample for SharedSetServiceClient:
- *
- * <pre>
- * <code>
- * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
- *   String formattedResourceName = SharedSetServiceClient.formatSharedSetName("[CUSTOMER]", "[SHARED_SET]");
- *   SharedSet response = sharedSetServiceClient.getSharedSet(formattedResourceName);
+ *   SearchTermViewName resourceName = SearchTermViewName.of("[CUSTOMER]", "[SEARCH_TERM_VIEW]");
+ *   SearchTermView response = searchTermViewServiceClient.getSearchTermView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1621,8 +1632,8 @@
  * <pre>
  * <code>
  * try (ShoppingPerformanceViewServiceClient shoppingPerformanceViewServiceClient = ShoppingPerformanceViewServiceClient.create()) {
- *   String formattedResourceName = ShoppingPerformanceViewServiceClient.formatShoppingPerformanceViewName("[CUSTOMER]");
- *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(formattedResourceName);
+ *   ShoppingPerformanceViewName resourceName = ShoppingPerformanceViewName.of("[CUSTOMER]");
+ *   ShoppingPerformanceView response = shoppingPerformanceViewServiceClient.getShoppingPerformanceView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1636,8 +1647,8 @@
  * <pre>
  * <code>
  * try (TopicConstantServiceClient topicConstantServiceClient = TopicConstantServiceClient.create()) {
- *   String formattedResourceName = TopicConstantServiceClient.formatTopicConstantName("[TOPIC_CONSTANT]");
- *   TopicConstant response = topicConstantServiceClient.getTopicConstant(formattedResourceName);
+ *   TopicConstantName resourceName = TopicConstantName.of("[TOPIC_CONSTANT]");
+ *   TopicConstant response = topicConstantServiceClient.getTopicConstant(resourceName);
  * }
  * </code>
  * </pre>
@@ -1651,8 +1662,8 @@
  * <pre>
  * <code>
  * try (TopicViewServiceClient topicViewServiceClient = TopicViewServiceClient.create()) {
- *   String formattedResourceName = TopicViewServiceClient.formatTopicViewName("[CUSTOMER]", "[TOPIC_VIEW]");
- *   TopicView response = topicViewServiceClient.getTopicView(formattedResourceName);
+ *   TopicViewName resourceName = TopicViewName.of("[CUSTOMER]", "[TOPIC_VIEW]");
+ *   TopicView response = topicViewServiceClient.getTopicView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1669,7 +1680,11 @@
  * try (UserDataServiceClient userDataServiceClient = UserDataServiceClient.create()) {
  *   String customerId = "";
  *   List&lt;UserDataOperation&gt; operations = new ArrayList&lt;&gt;();
- *   UploadUserDataResponse response = userDataServiceClient.uploadUserData(customerId, operations);
+ *   UploadUserDataRequest request = UploadUserDataRequest.newBuilder()
+ *     .setCustomerId(customerId)
+ *     .addAllOperations(operations)
+ *     .build();
+ *   UploadUserDataResponse response = userDataServiceClient.uploadUserData(request);
  * }
  * </code>
  * </pre>
@@ -1683,23 +1698,8 @@
  * <pre>
  * <code>
  * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
- *   String formattedResourceName = UserInterestServiceClient.formatUserInterestName("[CUSTOMER]", "[USER_INTEREST]");
- *   UserInterest response = userInterestServiceClient.getUserInterest(formattedResourceName);
- * }
- * </code>
- * </pre>
- *
- * ===================== UserListServiceClient =====================
- *
- * <p>Service Description: Service to manage user lists.
- *
- * <p>Sample for UserListServiceClient:
- *
- * <pre>
- * <code>
- * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
- *   String formattedResourceName = UserListServiceClient.formatUserListName("[CUSTOMER]", "[USER_LIST]");
- *   UserList response = userListServiceClient.getUserList(formattedResourceName);
+ *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER]", "[USER_INTEREST]");
+ *   UserInterest response = userInterestServiceClient.getUserInterest(resourceName);
  * }
  * </code>
  * </pre>
@@ -1713,8 +1713,8 @@
  * <pre>
  * <code>
  * try (UserLocationViewServiceClient userLocationViewServiceClient = UserLocationViewServiceClient.create()) {
- *   String formattedResourceName = UserLocationViewServiceClient.formatUserLocationViewName("[CUSTOMER]", "[USER_LOCATION_VIEW]");
- *   UserLocationView response = userLocationViewServiceClient.getUserLocationView(formattedResourceName);
+ *   UserLocationViewName resourceName = UserLocationViewName.of("[CUSTOMER]", "[USER_LOCATION_VIEW]");
+ *   UserLocationView response = userLocationViewServiceClient.getUserLocationView(resourceName);
  * }
  * </code>
  * </pre>
@@ -1728,10 +1728,13 @@
  * <pre>
  * <code>
  * try (VideoServiceClient videoServiceClient = VideoServiceClient.create()) {
- *   String formattedResourceName = VideoServiceClient.formatVideoName("[CUSTOMER]", "[VIDEO]");
- *   Video response = videoServiceClient.getVideo(formattedResourceName);
+ *   VideoName resourceName = VideoName.of("[CUSTOMER]", "[VIDEO]");
+ *   Video response = videoServiceClient.getVideo(resourceName);
  * }
  * </code>
  * </pre>
  */
+@Generated("by gapic-generator")
 package com.google.ads.googleads.v3.services;
+
+import javax.annotation.Generated;

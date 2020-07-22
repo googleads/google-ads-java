@@ -58,6 +58,7 @@ public interface UserDataOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TransactionAttribute transaction_attribute = 2;</code>
+   * @return Whether the transactionAttribute field is set.
    */
   boolean hasTransactionAttribute();
   /**
@@ -67,6 +68,7 @@ public interface UserDataOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TransactionAttribute transaction_attribute = 2;</code>
+   * @return The transactionAttribute.
    */
   com.google.ads.googleads.v3.common.TransactionAttribute getTransactionAttribute();
   /**

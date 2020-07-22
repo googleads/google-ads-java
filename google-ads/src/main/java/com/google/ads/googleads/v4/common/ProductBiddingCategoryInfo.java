@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ProductBiddingCategoryInfo}
  */
-public  final class ProductBiddingCategoryInfo extends
+public final class ProductBiddingCategoryInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ProductBiddingCategoryInfo)
     ProductBiddingCategoryInfoOrBuilder {
@@ -129,6 +129,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 1;</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -142,6 +143,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 1;</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -154,6 +156,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -169,6 +172,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue country_code = 2;</code>
    * @return Whether the countryCode field is set.
    */
+  @java.lang.Override
   public boolean hasCountryCode() {
     return countryCode_ != null;
   }
@@ -181,6 +185,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue country_code = 2;</code>
    * @return The countryCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCountryCode() {
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
@@ -192,6 +197,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
     return getCountryCode();
   }
@@ -206,7 +212,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 3;</code>
    * @return The enum numeric value on the wire for level.
    */
-  public int getLevelValue() {
+  @java.lang.Override public int getLevelValue() {
     return level_;
   }
   /**
@@ -217,7 +223,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 3;</code>
    * @return The level.
    */
-  public com.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel result = com.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.valueOf(level_);
     return result == null ? com.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.UNRECOGNIZED : result;
@@ -934,7 +940,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 3;</code>
      * @return The enum numeric value on the wire for level.
      */
-    public int getLevelValue() {
+    @java.lang.Override public int getLevelValue() {
       return level_;
     }
     /**
@@ -947,6 +953,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLevelValue(int value) {
+      
       level_ = value;
       onChanged();
       return this;
@@ -959,6 +966,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel level = 3;</code>
      * @return The level.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel result = com.google.ads.googleads.v4.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.valueOf(level_);

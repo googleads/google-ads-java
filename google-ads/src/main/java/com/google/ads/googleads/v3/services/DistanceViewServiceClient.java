@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v3.services.stub.DistanceViewServiceStubSettings
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (DistanceViewServiceClient distanceViewServiceClient = DistanceViewServiceClient.create()) {
- *   String formattedResourceName = DistanceViewServiceClient.formatDistanceViewName("[CUSTOMER]", "[DISTANCE_VIEW]");
- *   DistanceView response = distanceViewServiceClient.getDistanceView(formattedResourceName);
+ *   DistanceViewName resourceName = DistanceViewName.of("[CUSTOMER]", "[DISTANCE_VIEW]");
+ *   DistanceView response = distanceViewServiceClient.getDistanceView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,43 +98,6 @@ public class DistanceViewServiceClient implements BackgroundResource {
   private final DistanceViewServiceSettings settings;
   private final DistanceViewServiceStub stub;
 
-  private static final PathTemplate DISTANCE_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/distanceViews/{distance_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a distance_view resource.
-   *
-   * @deprecated Use the {@link DistanceViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatDistanceViewName(String customer, String distanceView) {
-    return DISTANCE_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "distance_view", distanceView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a distance_view
-   * resource.
-   *
-   * @deprecated Use the {@link DistanceViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromDistanceViewName(String distanceViewName) {
-    return DISTANCE_VIEW_PATH_TEMPLATE.parse(distanceViewName).get("customer");
-  }
-
-  /**
-   * Parses the distance_view from the given fully-qualified path which represents a distance_view
-   * resource.
-   *
-   * @deprecated Use the {@link DistanceViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseDistanceViewFromDistanceViewName(String distanceViewName) {
-    return DISTANCE_VIEW_PATH_TEMPLATE.parse(distanceViewName).get("distance_view");
-  }
-
   /** Constructs an instance of DistanceViewServiceClient with default settings. */
   public static final DistanceViewServiceClient create() throws IOException {
     return create(DistanceViewServiceSettings.newBuilder().build());
@@ -192,8 +154,32 @@ public class DistanceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DistanceViewServiceClient distanceViewServiceClient = DistanceViewServiceClient.create()) {
-   *   String formattedResourceName = DistanceViewServiceClient.formatDistanceViewName("[CUSTOMER]", "[DISTANCE_VIEW]");
-   *   DistanceView response = distanceViewServiceClient.getDistanceView(formattedResourceName);
+   *   DistanceViewName resourceName = DistanceViewName.of("[CUSTOMER]", "[DISTANCE_VIEW]");
+   *   DistanceView response = distanceViewServiceClient.getDistanceView(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the distance view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final DistanceView getDistanceView(DistanceViewName resourceName) {
+    GetDistanceViewRequest request =
+        GetDistanceViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getDistanceView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the attributes of the requested distance view.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (DistanceViewServiceClient distanceViewServiceClient = DistanceViewServiceClient.create()) {
+   *   DistanceViewName resourceName = DistanceViewName.of("[CUSTOMER]", "[DISTANCE_VIEW]");
+   *   DistanceView response = distanceViewServiceClient.getDistanceView(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -201,7 +187,6 @@ public class DistanceViewServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DistanceView getDistanceView(String resourceName) {
-    DISTANCE_VIEW_PATH_TEMPLATE.validate(resourceName, "getDistanceView");
     GetDistanceViewRequest request =
         GetDistanceViewRequest.newBuilder().setResourceName(resourceName).build();
     return getDistanceView(request);
@@ -215,9 +200,9 @@ public class DistanceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DistanceViewServiceClient distanceViewServiceClient = DistanceViewServiceClient.create()) {
-   *   String formattedResourceName = DistanceViewServiceClient.formatDistanceViewName("[CUSTOMER]", "[DISTANCE_VIEW]");
+   *   DistanceViewName resourceName = DistanceViewName.of("[CUSTOMER]", "[DISTANCE_VIEW]");
    *   GetDistanceViewRequest request = GetDistanceViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   DistanceView response = distanceViewServiceClient.getDistanceView(request);
    * }
@@ -238,9 +223,9 @@ public class DistanceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (DistanceViewServiceClient distanceViewServiceClient = DistanceViewServiceClient.create()) {
-   *   String formattedResourceName = DistanceViewServiceClient.formatDistanceViewName("[CUSTOMER]", "[DISTANCE_VIEW]");
+   *   DistanceViewName resourceName = DistanceViewName.of("[CUSTOMER]", "[DISTANCE_VIEW]");
    *   GetDistanceViewRequest request = GetDistanceViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;DistanceView&gt; future = distanceViewServiceClient.getDistanceViewCallable().futureCall(request);
    *   // Do something

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.CrmBasedUserListInfo}
  */
-public  final class CrmBasedUserListInfo extends
+public final class CrmBasedUserListInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.CrmBasedUserListInfo)
     CrmBasedUserListInfoOrBuilder {
@@ -130,6 +130,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue app_id = 1;</code>
    * @return Whether the appId field is set.
    */
+  @java.lang.Override
   public boolean hasAppId() {
     return appId_ != null;
   }
@@ -150,6 +151,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue app_id = 1;</code>
    * @return The appId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAppId() {
     return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
   }
@@ -169,6 +171,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue app_id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
     return getAppId();
   }
@@ -185,7 +188,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType upload_key_type = 2;</code>
    * @return The enum numeric value on the wire for uploadKeyType.
    */
-  public int getUploadKeyTypeValue() {
+  @java.lang.Override public int getUploadKeyTypeValue() {
     return uploadKeyType_;
   }
   /**
@@ -198,7 +201,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType upload_key_type = 2;</code>
    * @return The uploadKeyType.
    */
-  public com.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType getUploadKeyType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType getUploadKeyType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType result = com.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.valueOf(uploadKeyType_);
     return result == null ? com.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.UNRECOGNIZED : result;
@@ -215,7 +218,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
    * @return The enum numeric value on the wire for dataSourceType.
    */
-  public int getDataSourceTypeValue() {
+  @java.lang.Override public int getDataSourceTypeValue() {
     return dataSourceType_;
   }
   /**
@@ -227,7 +230,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
    * @return The dataSourceType.
    */
-  public com.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType getDataSourceType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType getDataSourceType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType result = com.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.valueOf(dataSourceType_);
     return result == null ? com.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.UNRECOGNIZED : result;
@@ -831,7 +834,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType upload_key_type = 2;</code>
      * @return The enum numeric value on the wire for uploadKeyType.
      */
-    public int getUploadKeyTypeValue() {
+    @java.lang.Override public int getUploadKeyTypeValue() {
       return uploadKeyType_;
     }
     /**
@@ -846,6 +849,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUploadKeyTypeValue(int value) {
+      
       uploadKeyType_ = value;
       onChanged();
       return this;
@@ -860,6 +864,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType upload_key_type = 2;</code>
      * @return The uploadKeyType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType getUploadKeyType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType result = com.google.ads.googleads.v4.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.valueOf(uploadKeyType_);
@@ -912,7 +917,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
      * @return The enum numeric value on the wire for dataSourceType.
      */
-    public int getDataSourceTypeValue() {
+    @java.lang.Override public int getDataSourceTypeValue() {
       return dataSourceType_;
     }
     /**
@@ -926,6 +931,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDataSourceTypeValue(int value) {
+      
       dataSourceType_ = value;
       onChanged();
       return this;
@@ -939,6 +945,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType data_source_type = 3;</code>
      * @return The dataSourceType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType getDataSourceType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType result = com.google.ads.googleads.v4.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.valueOf(dataSourceType_);

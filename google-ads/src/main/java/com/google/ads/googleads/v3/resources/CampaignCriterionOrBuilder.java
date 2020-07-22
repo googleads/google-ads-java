@@ -15,6 +15,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
   /**
@@ -43,6 +46,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The campaign.
    */
   com.google.protobuf.StringValue getCampaign();
   /**
@@ -61,6 +65,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
   /**
@@ -70,6 +75,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The criterionId.
    */
   com.google.protobuf.Int64Value getCriterionId();
   /**
@@ -90,6 +96,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+   * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
   /**
@@ -100,6 +107,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FloatValue bid_modifier = 14;</code>
+   * @return The bidModifier.
    */
   com.google.protobuf.FloatValue getBidModifier();
   /**
@@ -119,6 +127,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue negative = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the negative field is set.
    */
   boolean hasNegative();
   /**
@@ -127,6 +136,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue negative = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The negative.
    */
   com.google.protobuf.BoolValue getNegative();
   /**
@@ -144,6 +154,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -152,6 +163,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.CriterionTypeEnum.CriterionType getType();
 
@@ -161,6 +173,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -169,6 +182,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus status = 35;</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus getStatus();
 
@@ -178,6 +192,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the keyword field is set.
    */
   boolean hasKeyword();
   /**
@@ -186,6 +201,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.KeywordInfo keyword = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The keyword.
    */
   com.google.ads.googleads.v3.common.KeywordInfo getKeyword();
   /**
@@ -203,6 +219,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the placement field is set.
    */
   boolean hasPlacement();
   /**
@@ -211,6 +228,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PlacementInfo placement = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The placement.
    */
   com.google.ads.googleads.v3.common.PlacementInfo getPlacement();
   /**
@@ -228,6 +246,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mobileAppCategory field is set.
    */
   boolean hasMobileAppCategory();
   /**
@@ -236,6 +255,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileAppCategoryInfo mobile_app_category = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mobileAppCategory.
    */
   com.google.ads.googleads.v3.common.MobileAppCategoryInfo getMobileAppCategory();
   /**
@@ -253,6 +273,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mobileApplication field is set.
    */
   boolean hasMobileApplication();
   /**
@@ -261,6 +282,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileApplicationInfo mobile_application = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mobileApplication.
    */
   com.google.ads.googleads.v3.common.MobileApplicationInfo getMobileApplication();
   /**
@@ -278,6 +300,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LocationInfo location = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the location field is set.
    */
   boolean hasLocation();
   /**
@@ -286,6 +309,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LocationInfo location = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The location.
    */
   com.google.ads.googleads.v3.common.LocationInfo getLocation();
   /**
@@ -303,6 +327,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DeviceInfo device = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the device field is set.
    */
   boolean hasDevice();
   /**
@@ -311,6 +336,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DeviceInfo device = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The device.
    */
   com.google.ads.googleads.v3.common.DeviceInfo getDevice();
   /**
@@ -328,6 +354,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the adSchedule field is set.
    */
   boolean hasAdSchedule();
   /**
@@ -336,6 +363,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AdScheduleInfo ad_schedule = 15 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The adSchedule.
    */
   com.google.ads.googleads.v3.common.AdScheduleInfo getAdSchedule();
   /**
@@ -353,6 +381,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AgeRangeInfo age_range = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the ageRange field is set.
    */
   boolean hasAgeRange();
   /**
@@ -361,6 +390,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.AgeRangeInfo age_range = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The ageRange.
    */
   com.google.ads.googleads.v3.common.AgeRangeInfo getAgeRange();
   /**
@@ -378,6 +408,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.GenderInfo gender = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the gender field is set.
    */
   boolean hasGender();
   /**
@@ -386,6 +417,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.GenderInfo gender = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The gender.
    */
   com.google.ads.googleads.v3.common.GenderInfo getGender();
   /**
@@ -403,6 +435,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.IncomeRangeInfo income_range = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the incomeRange field is set.
    */
   boolean hasIncomeRange();
   /**
@@ -411,6 +444,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.IncomeRangeInfo income_range = 18 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The incomeRange.
    */
   com.google.ads.googleads.v3.common.IncomeRangeInfo getIncomeRange();
   /**
@@ -428,6 +462,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ParentalStatusInfo parental_status = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the parentalStatus field is set.
    */
   boolean hasParentalStatus();
   /**
@@ -436,6 +471,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ParentalStatusInfo parental_status = 19 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The parentalStatus.
    */
   com.google.ads.googleads.v3.common.ParentalStatusInfo getParentalStatus();
   /**
@@ -453,6 +489,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the userList field is set.
    */
   boolean hasUserList();
   /**
@@ -461,6 +498,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The userList.
    */
   com.google.ads.googleads.v3.common.UserListInfo getUserList();
   /**
@@ -478,6 +516,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeVideo field is set.
    */
   boolean hasYoutubeVideo();
   /**
@@ -486,6 +525,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeVideoInfo youtube_video = 20 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeVideo.
    */
   com.google.ads.googleads.v3.common.YouTubeVideoInfo getYoutubeVideo();
   /**
@@ -503,6 +543,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeChannel field is set.
    */
   boolean hasYoutubeChannel();
   /**
@@ -511,6 +552,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YouTubeChannelInfo youtube_channel = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeChannel.
    */
   com.google.ads.googleads.v3.common.YouTubeChannelInfo getYoutubeChannel();
   /**
@@ -528,6 +570,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProximityInfo proximity = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the proximity field is set.
    */
   boolean hasProximity();
   /**
@@ -536,6 +579,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ProximityInfo proximity = 23 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The proximity.
    */
   com.google.ads.googleads.v3.common.ProximityInfo getProximity();
   /**
@@ -553,6 +597,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TopicInfo topic = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the topic field is set.
    */
   boolean hasTopic();
   /**
@@ -561,6 +606,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TopicInfo topic = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The topic.
    */
   com.google.ads.googleads.v3.common.TopicInfo getTopic();
   /**
@@ -578,6 +624,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ListingScopeInfo listing_scope = 25 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the listingScope field is set.
    */
   boolean hasListingScope();
   /**
@@ -586,6 +633,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ListingScopeInfo listing_scope = 25 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The listingScope.
    */
   com.google.ads.googleads.v3.common.ListingScopeInfo getListingScope();
   /**
@@ -603,6 +651,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LanguageInfo language = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the language field is set.
    */
   boolean hasLanguage();
   /**
@@ -611,6 +660,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LanguageInfo language = 26 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The language.
    */
   com.google.ads.googleads.v3.common.LanguageInfo getLanguage();
   /**
@@ -628,6 +678,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the ipBlock field is set.
    */
   boolean hasIpBlock();
   /**
@@ -636,6 +687,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.IpBlockInfo ip_block = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The ipBlock.
    */
   com.google.ads.googleads.v3.common.IpBlockInfo getIpBlock();
   /**
@@ -653,6 +705,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ContentLabelInfo content_label = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the contentLabel field is set.
    */
   boolean hasContentLabel();
   /**
@@ -661,6 +714,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ContentLabelInfo content_label = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The contentLabel.
    */
   com.google.ads.googleads.v3.common.ContentLabelInfo getContentLabel();
   /**
@@ -678,6 +732,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CarrierInfo carrier = 29 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the carrier field is set.
    */
   boolean hasCarrier();
   /**
@@ -686,6 +741,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CarrierInfo carrier = 29 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The carrier.
    */
   com.google.ads.googleads.v3.common.CarrierInfo getCarrier();
   /**
@@ -703,6 +759,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserInterestInfo user_interest = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the userInterest field is set.
    */
   boolean hasUserInterest();
   /**
@@ -711,6 +768,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.UserInterestInfo user_interest = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The userInterest.
    */
   com.google.ads.googleads.v3.common.UserInterestInfo getUserInterest();
   /**
@@ -728,6 +786,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.WebpageInfo webpage = 31 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the webpage field is set.
    */
   boolean hasWebpage();
   /**
@@ -736,6 +795,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.WebpageInfo webpage = 31 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The webpage.
    */
   com.google.ads.googleads.v3.common.WebpageInfo getWebpage();
   /**
@@ -753,6 +813,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.OperatingSystemVersionInfo operating_system_version = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the operatingSystemVersion field is set.
    */
   boolean hasOperatingSystemVersion();
   /**
@@ -761,6 +822,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.OperatingSystemVersionInfo operating_system_version = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The operatingSystemVersion.
    */
   com.google.ads.googleads.v3.common.OperatingSystemVersionInfo getOperatingSystemVersion();
   /**
@@ -778,6 +840,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileDeviceInfo mobile_device = 33 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mobileDevice field is set.
    */
   boolean hasMobileDevice();
   /**
@@ -786,6 +849,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MobileDeviceInfo mobile_device = 33 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mobileDevice.
    */
   com.google.ads.googleads.v3.common.MobileDeviceInfo getMobileDevice();
   /**
@@ -803,6 +867,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LocationGroupInfo location_group = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the locationGroup field is set.
    */
   boolean hasLocationGroup();
   /**
@@ -811,6 +876,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LocationGroupInfo location_group = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The locationGroup.
    */
   com.google.ads.googleads.v3.common.LocationGroupInfo getLocationGroup();
   /**
@@ -828,6 +894,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomAffinityInfo custom_affinity = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the customAffinity field is set.
    */
   boolean hasCustomAffinity();
   /**
@@ -836,6 +903,7 @@ public interface CampaignCriterionOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CustomAffinityInfo custom_affinity = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The customAffinity.
    */
   com.google.ads.googleads.v3.common.CustomAffinityInfo getCustomAffinity();
   /**

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.Metrics}
  */
-public  final class Metrics extends
+public final class Metrics extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.Metrics)
     MetricsOrBuilder {
@@ -27,6 +27,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Metrics();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -40,9 +47,6 @@ private static final long serialVersionUID = 0L;
       throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
-    int mutable_bitField1_ = 0;
-    int mutable_bitField2_ = 0;
-    int mutable_bitField3_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -1087,9 +1091,9 @@ private static final long serialVersionUID = 0L;
           }
           case 800: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField2_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField2_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000001;
             }
             interactionEventTypes_.add(rawValue);
             break;
@@ -1099,9 +1103,9 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField2_ & 0x00000040) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField2_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000001;
               }
               interactionEventTypes_.add(rawValue);
             }
@@ -1500,7 +1504,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField2_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
       }
       this.unknownFields = unknownFields.build();
@@ -1520,10 +1524,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v2.common.Metrics.class, com.google.ads.googleads.v2.common.Metrics.Builder.class);
   }
 
-  private int bitField0_;
-  private int bitField1_;
-  private int bitField2_;
-  private int bitField3_;
   public static final int ABSOLUTE_TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER = 95;
   private com.google.protobuf.DoubleValue absoluteTopImpressionPercentage_;
   /**
@@ -1533,7 +1533,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+   * @return Whether the absoluteTopImpressionPercentage field is set.
    */
+  @java.lang.Override
   public boolean hasAbsoluteTopImpressionPercentage() {
     return absoluteTopImpressionPercentage_ != null;
   }
@@ -1544,7 +1546,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+   * @return The absoluteTopImpressionPercentage.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAbsoluteTopImpressionPercentage() {
     return absoluteTopImpressionPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : absoluteTopImpressionPercentage_;
   }
@@ -1556,6 +1560,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAbsoluteTopImpressionPercentageOrBuilder() {
     return getAbsoluteTopImpressionPercentage();
   }
@@ -1568,7 +1573,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+   * @return Whether the activeViewCpm field is set.
    */
+  @java.lang.Override
   public boolean hasActiveViewCpm() {
     return activeViewCpm_ != null;
   }
@@ -1578,7 +1585,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+   * @return The activeViewCpm.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getActiveViewCpm() {
     return activeViewCpm_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewCpm_;
   }
@@ -1589,6 +1598,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getActiveViewCpmOrBuilder() {
     return getActiveViewCpm();
   }
@@ -1602,7 +1612,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+   * @return Whether the activeViewCtr field is set.
    */
+  @java.lang.Override
   public boolean hasActiveViewCtr() {
     return activeViewCtr_ != null;
   }
@@ -1613,7 +1625,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+   * @return The activeViewCtr.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getActiveViewCtr() {
     return activeViewCtr_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewCtr_;
   }
@@ -1625,6 +1639,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getActiveViewCtrOrBuilder() {
     return getActiveViewCtr();
   }
@@ -1638,7 +1653,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+   * @return Whether the activeViewImpressions field is set.
    */
+  @java.lang.Override
   public boolean hasActiveViewImpressions() {
     return activeViewImpressions_ != null;
   }
@@ -1649,7 +1666,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+   * @return The activeViewImpressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getActiveViewImpressions() {
     return activeViewImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : activeViewImpressions_;
   }
@@ -1661,6 +1680,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getActiveViewImpressionsOrBuilder() {
     return getActiveViewImpressions();
   }
@@ -1674,7 +1694,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+   * @return Whether the activeViewMeasurability field is set.
    */
+  @java.lang.Override
   public boolean hasActiveViewMeasurability() {
     return activeViewMeasurability_ != null;
   }
@@ -1685,7 +1707,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+   * @return The activeViewMeasurability.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getActiveViewMeasurability() {
     return activeViewMeasurability_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewMeasurability_;
   }
@@ -1697,6 +1721,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getActiveViewMeasurabilityOrBuilder() {
     return getActiveViewMeasurability();
   }
@@ -1710,7 +1735,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+   * @return Whether the activeViewMeasurableCostMicros field is set.
    */
+  @java.lang.Override
   public boolean hasActiveViewMeasurableCostMicros() {
     return activeViewMeasurableCostMicros_ != null;
   }
@@ -1721,7 +1748,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+   * @return The activeViewMeasurableCostMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getActiveViewMeasurableCostMicros() {
     return activeViewMeasurableCostMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : activeViewMeasurableCostMicros_;
   }
@@ -1733,6 +1762,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getActiveViewMeasurableCostMicrosOrBuilder() {
     return getActiveViewMeasurableCostMicros();
   }
@@ -1746,7 +1776,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+   * @return Whether the activeViewMeasurableImpressions field is set.
    */
+  @java.lang.Override
   public boolean hasActiveViewMeasurableImpressions() {
     return activeViewMeasurableImpressions_ != null;
   }
@@ -1757,7 +1789,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+   * @return The activeViewMeasurableImpressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getActiveViewMeasurableImpressions() {
     return activeViewMeasurableImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : activeViewMeasurableImpressions_;
   }
@@ -1769,6 +1803,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getActiveViewMeasurableImpressionsOrBuilder() {
     return getActiveViewMeasurableImpressions();
   }
@@ -1782,7 +1817,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+   * @return Whether the activeViewViewability field is set.
    */
+  @java.lang.Override
   public boolean hasActiveViewViewability() {
     return activeViewViewability_ != null;
   }
@@ -1793,7 +1830,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+   * @return The activeViewViewability.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getActiveViewViewability() {
     return activeViewViewability_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : activeViewViewability_;
   }
@@ -1805,6 +1844,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getActiveViewViewabilityOrBuilder() {
     return getActiveViewViewability();
   }
@@ -1818,7 +1858,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
+   * @return Whether the allConversionsFromInteractionsRate field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsFromInteractionsRate() {
     return allConversionsFromInteractionsRate_ != null;
   }
@@ -1829,7 +1871,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
+   * @return The allConversionsFromInteractionsRate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsFromInteractionsRate() {
     return allConversionsFromInteractionsRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromInteractionsRate_;
   }
@@ -1841,6 +1885,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromInteractionsRateOrBuilder() {
     return getAllConversionsFromInteractionsRate();
   }
@@ -1849,31 +1894,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue allConversionsValue_;
   /**
    * <pre>
-   * The total value of all conversions.
+   * The value of all conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
+   * @return Whether the allConversionsValue field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsValue() {
     return allConversionsValue_ != null;
   }
   /**
    * <pre>
-   * The total value of all conversions.
+   * The value of all conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
+   * @return The allConversionsValue.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsValue() {
     return allConversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsValue_;
   }
   /**
    * <pre>
-   * The total value of all conversions.
+   * The value of all conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsValueOrBuilder() {
     return getAllConversionsValue();
   }
@@ -1882,34 +1932,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue allConversions_;
   /**
    * <pre>
-   * The total number of conversions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * The total number of conversions. This includes all conversions regardless
+   * of the value of include_in_conversions_metric.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
+   * @return Whether the allConversions field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversions() {
     return allConversions_ != null;
   }
   /**
    * <pre>
-   * The total number of conversions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * The total number of conversions. This includes all conversions regardless
+   * of the value of include_in_conversions_metric.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
+   * @return The allConversions.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversions() {
     return allConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversions_;
   }
   /**
    * <pre>
-   * The total number of conversions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * The total number of conversions. This includes all conversions regardless
+   * of the value of include_in_conversions_metric.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsOrBuilder() {
     return getAllConversions();
   }
@@ -1923,7 +1978,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value_per_cost = 62;</code>
+   * @return Whether the allConversionsValuePerCost field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsValuePerCost() {
     return allConversionsValuePerCost_ != null;
   }
@@ -1934,7 +1991,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value_per_cost = 62;</code>
+   * @return The allConversionsValuePerCost.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsValuePerCost() {
     return allConversionsValuePerCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsValuePerCost_;
   }
@@ -1946,6 +2005,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue all_conversions_value_per_cost = 62;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsValuePerCostOrBuilder() {
     return getAllConversionsValuePerCost();
   }
@@ -1961,7 +2021,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+   * @return Whether the allConversionsFromClickToCall field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsFromClickToCall() {
     return allConversionsFromClickToCall_ != null;
   }
@@ -1974,7 +2036,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+   * @return The allConversionsFromClickToCall.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsFromClickToCall() {
     return allConversionsFromClickToCall_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromClickToCall_;
   }
@@ -1988,6 +2052,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromClickToCallOrBuilder() {
     return getAllConversionsFromClickToCall();
   }
@@ -2002,7 +2067,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+   * @return Whether the allConversionsFromDirections field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsFromDirections() {
     return allConversionsFromDirections_ != null;
   }
@@ -2014,7 +2081,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+   * @return The allConversionsFromDirections.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsFromDirections() {
     return allConversionsFromDirections_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromDirections_;
   }
@@ -2027,6 +2096,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromDirectionsOrBuilder() {
     return getAllConversionsFromDirections();
   }
@@ -2040,7 +2110,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
+   * @return Whether the allConversionsFromInteractionsValuePerInteraction field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsFromInteractionsValuePerInteraction() {
     return allConversionsFromInteractionsValuePerInteraction_ != null;
   }
@@ -2051,7 +2123,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
+   * @return The allConversionsFromInteractionsValuePerInteraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsFromInteractionsValuePerInteraction() {
     return allConversionsFromInteractionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromInteractionsValuePerInteraction_;
   }
@@ -2063,6 +2137,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromInteractionsValuePerInteractionOrBuilder() {
     return getAllConversionsFromInteractionsValuePerInteraction();
   }
@@ -2077,7 +2152,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+   * @return Whether the allConversionsFromMenu field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsFromMenu() {
     return allConversionsFromMenu_ != null;
   }
@@ -2089,7 +2166,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+   * @return The allConversionsFromMenu.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsFromMenu() {
     return allConversionsFromMenu_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromMenu_;
   }
@@ -2102,6 +2181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromMenuOrBuilder() {
     return getAllConversionsFromMenu();
   }
@@ -2115,7 +2195,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+   * @return Whether the allConversionsFromOrder field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsFromOrder() {
     return allConversionsFromOrder_ != null;
   }
@@ -2126,7 +2208,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+   * @return The allConversionsFromOrder.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsFromOrder() {
     return allConversionsFromOrder_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromOrder_;
   }
@@ -2138,6 +2222,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromOrderOrBuilder() {
     return getAllConversionsFromOrder();
   }
@@ -2152,7 +2237,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+   * @return Whether the allConversionsFromOtherEngagement field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsFromOtherEngagement() {
     return allConversionsFromOtherEngagement_ != null;
   }
@@ -2164,7 +2251,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+   * @return The allConversionsFromOtherEngagement.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsFromOtherEngagement() {
     return allConversionsFromOtherEngagement_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromOtherEngagement_;
   }
@@ -2177,6 +2266,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromOtherEngagementOrBuilder() {
     return getAllConversionsFromOtherEngagement();
   }
@@ -2190,7 +2280,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+   * @return Whether the allConversionsFromStoreVisit field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsFromStoreVisit() {
     return allConversionsFromStoreVisit_ != null;
   }
@@ -2201,7 +2293,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+   * @return The allConversionsFromStoreVisit.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsFromStoreVisit() {
     return allConversionsFromStoreVisit_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromStoreVisit_;
   }
@@ -2213,6 +2307,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromStoreVisitOrBuilder() {
     return getAllConversionsFromStoreVisit();
   }
@@ -2227,7 +2322,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+   * @return Whether the allConversionsFromStoreWebsite field is set.
    */
+  @java.lang.Override
   public boolean hasAllConversionsFromStoreWebsite() {
     return allConversionsFromStoreWebsite_ != null;
   }
@@ -2239,7 +2336,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+   * @return The allConversionsFromStoreWebsite.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAllConversionsFromStoreWebsite() {
     return allConversionsFromStoreWebsite_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : allConversionsFromStoreWebsite_;
   }
@@ -2252,6 +2351,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAllConversionsFromStoreWebsiteOrBuilder() {
     return getAllConversionsFromStoreWebsite();
   }
@@ -2265,7 +2365,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cost = 8;</code>
+   * @return Whether the averageCost field is set.
    */
+  @java.lang.Override
   public boolean hasAverageCost() {
     return averageCost_ != null;
   }
@@ -2276,7 +2378,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cost = 8;</code>
+   * @return The averageCost.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAverageCost() {
     return averageCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageCost_;
   }
@@ -2288,6 +2392,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue average_cost = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAverageCostOrBuilder() {
     return getAverageCost();
   }
@@ -2301,7 +2406,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpc = 9;</code>
+   * @return Whether the averageCpc field is set.
    */
+  @java.lang.Override
   public boolean hasAverageCpc() {
     return averageCpc_ != null;
   }
@@ -2312,7 +2419,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpc = 9;</code>
+   * @return The averageCpc.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAverageCpc() {
     return averageCpc_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageCpc_;
   }
@@ -2324,6 +2433,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue average_cpc = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAverageCpcOrBuilder() {
     return getAverageCpc();
   }
@@ -2338,7 +2448,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+   * @return Whether the averageCpe field is set.
    */
+  @java.lang.Override
   public boolean hasAverageCpe() {
     return averageCpe_ != null;
   }
@@ -2350,7 +2462,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+   * @return The averageCpe.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAverageCpe() {
     return averageCpe_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageCpe_;
   }
@@ -2363,6 +2477,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAverageCpeOrBuilder() {
     return getAverageCpe();
   }
@@ -2375,7 +2490,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpm = 10;</code>
+   * @return Whether the averageCpm field is set.
    */
+  @java.lang.Override
   public boolean hasAverageCpm() {
     return averageCpm_ != null;
   }
@@ -2385,7 +2502,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpm = 10;</code>
+   * @return The averageCpm.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAverageCpm() {
     return averageCpm_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageCpm_;
   }
@@ -2396,6 +2515,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue average_cpm = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAverageCpmOrBuilder() {
     return getAverageCpm();
   }
@@ -2410,7 +2530,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+   * @return Whether the averageCpv field is set.
    */
+  @java.lang.Override
   public boolean hasAverageCpv() {
     return averageCpv_ != null;
   }
@@ -2422,7 +2544,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+   * @return The averageCpv.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAverageCpv() {
     return averageCpv_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageCpv_;
   }
@@ -2435,6 +2559,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAverageCpvOrBuilder() {
     return getAverageCpv();
   }
@@ -2447,7 +2572,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+   * @return Whether the averagePageViews field is set.
    */
+  @java.lang.Override
   public boolean hasAveragePageViews() {
     return averagePageViews_ != null;
   }
@@ -2457,7 +2584,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+   * @return The averagePageViews.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAveragePageViews() {
     return averagePageViews_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averagePageViews_;
   }
@@ -2468,6 +2597,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAveragePageViewsOrBuilder() {
     return getAveragePageViews();
   }
@@ -2481,7 +2611,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+   * @return Whether the averageTimeOnSite field is set.
    */
+  @java.lang.Override
   public boolean hasAverageTimeOnSite() {
     return averageTimeOnSite_ != null;
   }
@@ -2492,7 +2624,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+   * @return The averageTimeOnSite.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getAverageTimeOnSite() {
     return averageTimeOnSite_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : averageTimeOnSite_;
   }
@@ -2504,6 +2638,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getAverageTimeOnSiteOrBuilder() {
     return getAverageTimeOnSite();
   }
@@ -2516,7 +2651,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+   * @return Whether the benchmarkAverageMaxCpc field is set.
    */
+  @java.lang.Override
   public boolean hasBenchmarkAverageMaxCpc() {
     return benchmarkAverageMaxCpc_ != null;
   }
@@ -2526,7 +2663,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+   * @return The benchmarkAverageMaxCpc.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getBenchmarkAverageMaxCpc() {
     return benchmarkAverageMaxCpc_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : benchmarkAverageMaxCpc_;
   }
@@ -2537,6 +2676,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getBenchmarkAverageMaxCpcOrBuilder() {
     return getBenchmarkAverageMaxCpc();
   }
@@ -2550,7 +2690,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+   * @return Whether the benchmarkCtr field is set.
    */
+  @java.lang.Override
   public boolean hasBenchmarkCtr() {
     return benchmarkCtr_ != null;
   }
@@ -2561,7 +2703,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+   * @return The benchmarkCtr.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getBenchmarkCtr() {
     return benchmarkCtr_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : benchmarkCtr_;
   }
@@ -2573,6 +2717,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getBenchmarkCtrOrBuilder() {
     return getBenchmarkCtr();
   }
@@ -2586,7 +2731,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bounce_rate = 15;</code>
+   * @return Whether the bounceRate field is set.
    */
+  @java.lang.Override
   public boolean hasBounceRate() {
     return bounceRate_ != null;
   }
@@ -2597,7 +2744,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bounce_rate = 15;</code>
+   * @return The bounceRate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getBounceRate() {
     return bounceRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : bounceRate_;
   }
@@ -2609,6 +2758,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue bounce_rate = 15;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getBounceRateOrBuilder() {
     return getBounceRate();
   }
@@ -2621,7 +2771,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value clicks = 19;</code>
+   * @return Whether the clicks field is set.
    */
+  @java.lang.Override
   public boolean hasClicks() {
     return clicks_ != null;
   }
@@ -2631,7 +2783,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value clicks = 19;</code>
+   * @return The clicks.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getClicks() {
     return clicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : clicks_;
   }
@@ -2642,6 +2796,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value clicks = 19;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getClicksOrBuilder() {
     return getClicks();
   }
@@ -2656,7 +2811,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+   * @return Whether the combinedClicks field is set.
    */
+  @java.lang.Override
   public boolean hasCombinedClicks() {
     return combinedClicks_ != null;
   }
@@ -2668,7 +2825,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+   * @return The combinedClicks.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCombinedClicks() {
     return combinedClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : combinedClicks_;
   }
@@ -2681,6 +2840,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCombinedClicksOrBuilder() {
     return getCombinedClicks();
   }
@@ -2696,7 +2856,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+   * @return Whether the combinedClicksPerQuery field is set.
    */
+  @java.lang.Override
   public boolean hasCombinedClicksPerQuery() {
     return combinedClicksPerQuery_ != null;
   }
@@ -2709,7 +2871,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+   * @return The combinedClicksPerQuery.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCombinedClicksPerQuery() {
     return combinedClicksPerQuery_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : combinedClicksPerQuery_;
   }
@@ -2723,6 +2887,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCombinedClicksPerQueryOrBuilder() {
     return getCombinedClicksPerQuery();
   }
@@ -2737,7 +2902,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+   * @return Whether the combinedQueries field is set.
    */
+  @java.lang.Override
   public boolean hasCombinedQueries() {
     return combinedQueries_ != null;
   }
@@ -2749,7 +2916,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+   * @return The combinedQueries.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCombinedQueries() {
     return combinedQueries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : combinedQueries_;
   }
@@ -2762,6 +2931,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCombinedQueriesOrBuilder() {
     return getCombinedQueries();
   }
@@ -2777,7 +2947,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_budget_lost_impression_share = 20;</code>
+   * @return Whether the contentBudgetLostImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasContentBudgetLostImpressionShare() {
     return contentBudgetLostImpressionShare_ != null;
   }
@@ -2790,7 +2962,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_budget_lost_impression_share = 20;</code>
+   * @return The contentBudgetLostImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getContentBudgetLostImpressionShare() {
     return contentBudgetLostImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : contentBudgetLostImpressionShare_;
   }
@@ -2804,6 +2978,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue content_budget_lost_impression_share = 20;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getContentBudgetLostImpressionShareOrBuilder() {
     return getContentBudgetLostImpressionShare();
   }
@@ -2819,7 +2994,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_impression_share = 21;</code>
+   * @return Whether the contentImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasContentImpressionShare() {
     return contentImpressionShare_ != null;
   }
@@ -2832,7 +3009,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_impression_share = 21;</code>
+   * @return The contentImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getContentImpressionShare() {
     return contentImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : contentImpressionShare_;
   }
@@ -2846,6 +3025,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue content_impression_share = 21;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getContentImpressionShareOrBuilder() {
     return getContentImpressionShare();
   }
@@ -2862,7 +3042,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+   * @return Whether the conversionLastReceivedRequestDateTime field is set.
    */
+  @java.lang.Override
   public boolean hasConversionLastReceivedRequestDateTime() {
     return conversionLastReceivedRequestDateTime_ != null;
   }
@@ -2876,7 +3058,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+   * @return The conversionLastReceivedRequestDateTime.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionLastReceivedRequestDateTime() {
     return conversionLastReceivedRequestDateTime_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionLastReceivedRequestDateTime_;
   }
@@ -2891,6 +3075,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionLastReceivedRequestDateTimeOrBuilder() {
     return getConversionLastReceivedRequestDateTime();
   }
@@ -2904,7 +3089,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+   * @return Whether the conversionLastConversionDate field is set.
    */
+  @java.lang.Override
   public boolean hasConversionLastConversionDate() {
     return conversionLastConversionDate_ != null;
   }
@@ -2915,7 +3102,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+   * @return The conversionLastConversionDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getConversionLastConversionDate() {
     return conversionLastConversionDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : conversionLastConversionDate_;
   }
@@ -2927,6 +3116,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConversionLastConversionDateOrBuilder() {
     return getConversionLastConversionDate();
   }
@@ -2942,7 +3132,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_rank_lost_impression_share = 22;</code>
+   * @return Whether the contentRankLostImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasContentRankLostImpressionShare() {
     return contentRankLostImpressionShare_ != null;
   }
@@ -2955,7 +3147,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue content_rank_lost_impression_share = 22;</code>
+   * @return The contentRankLostImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getContentRankLostImpressionShare() {
     return contentRankLostImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : contentRankLostImpressionShare_;
   }
@@ -2969,6 +3163,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue content_rank_lost_impression_share = 22;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getContentRankLostImpressionShareOrBuilder() {
     return getContentRankLostImpressionShare();
   }
@@ -2980,11 +3175,14 @@ private static final long serialVersionUID = 0L;
    * Conversions from interactions divided by the number of ad interactions
    * (such as clicks for text ads or views for video ads). This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
+   * @return Whether the conversionsFromInteractionsRate field is set.
    */
+  @java.lang.Override
   public boolean hasConversionsFromInteractionsRate() {
     return conversionsFromInteractionsRate_ != null;
   }
@@ -2993,11 +3191,14 @@ private static final long serialVersionUID = 0L;
    * Conversions from interactions divided by the number of ad interactions
    * (such as clicks for text ads or views for video ads). This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
+   * @return The conversionsFromInteractionsRate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getConversionsFromInteractionsRate() {
     return conversionsFromInteractionsRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsFromInteractionsRate_;
   }
@@ -3006,11 +3207,13 @@ private static final long serialVersionUID = 0L;
    * Conversions from interactions divided by the number of ad interactions
    * (such as clicks for text ads or views for video ads). This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getConversionsFromInteractionsRateOrBuilder() {
     return getConversionsFromInteractionsRate();
   }
@@ -3019,34 +3222,45 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue conversionsValue_;
   /**
    * <pre>
-   * The total value of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * The value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
+   * @return Whether the conversionsValue field is set.
    */
+  @java.lang.Override
   public boolean hasConversionsValue() {
     return conversionsValue_ != null;
   }
   /**
    * <pre>
-   * The total value of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * The value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
+   * @return The conversionsValue.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getConversionsValue() {
     return conversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsValue_;
   }
   /**
    * <pre>
-   * The total value of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * The value of conversions. This only includes conversion actions which
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getConversionsValueOrBuilder() {
     return getConversionsValue();
   }
@@ -3057,11 +3271,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of conversions divided by the cost of ad interactions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
+   * @return Whether the conversionsValuePerCost field is set.
    */
+  @java.lang.Override
   public boolean hasConversionsValuePerCost() {
     return conversionsValuePerCost_ != null;
   }
@@ -3069,11 +3286,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of conversions divided by the cost of ad interactions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
+   * @return The conversionsValuePerCost.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getConversionsValuePerCost() {
     return conversionsValuePerCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsValuePerCost_;
   }
@@ -3081,11 +3301,13 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of conversions divided by the cost of ad interactions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getConversionsValuePerCostOrBuilder() {
     return getConversionsValuePerCost();
   }
@@ -3096,11 +3318,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of conversions from interactions divided by the number of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
+   * @return Whether the conversionsFromInteractionsValuePerInteraction field is set.
    */
+  @java.lang.Override
   public boolean hasConversionsFromInteractionsValuePerInteraction() {
     return conversionsFromInteractionsValuePerInteraction_ != null;
   }
@@ -3108,11 +3334,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of conversions from interactions divided by the number of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
+   * @return The conversionsFromInteractionsValuePerInteraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getConversionsFromInteractionsValuePerInteraction() {
     return conversionsFromInteractionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversionsFromInteractionsValuePerInteraction_;
   }
@@ -3120,11 +3350,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of conversions from interactions divided by the number of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getConversionsFromInteractionsValuePerInteractionOrBuilder() {
     return getConversionsFromInteractionsValuePerInteraction();
   }
@@ -3134,33 +3367,44 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The number of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
+   * @return Whether the conversions field is set.
    */
+  @java.lang.Override
   public boolean hasConversions() {
     return conversions_ != null;
   }
   /**
    * <pre>
    * The number of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
+   * @return The conversions.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getConversions() {
     return conversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : conversions_;
   }
   /**
    * <pre>
    * The number of conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue conversions = 25;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getConversionsOrBuilder() {
     return getConversions();
   }
@@ -3174,7 +3418,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 26;</code>
+   * @return Whether the costMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCostMicros() {
     return costMicros_ != null;
   }
@@ -3185,7 +3431,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 26;</code>
+   * @return The costMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCostMicros() {
     return costMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : costMicros_;
   }
@@ -3197,6 +3445,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cost_micros = 26;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCostMicrosOrBuilder() {
     return getCostMicros();
   }
@@ -3209,7 +3458,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
+   * @return Whether the costPerAllConversions field is set.
    */
+  @java.lang.Override
   public boolean hasCostPerAllConversions() {
     return costPerAllConversions_ != null;
   }
@@ -3219,7 +3470,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
+   * @return The costPerAllConversions.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCostPerAllConversions() {
     return costPerAllConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : costPerAllConversions_;
   }
@@ -3230,6 +3483,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCostPerAllConversionsOrBuilder() {
     return getCostPerAllConversions();
   }
@@ -3240,11 +3494,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The cost of ad interactions divided by conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
+   * @return Whether the costPerConversion field is set.
    */
+  @java.lang.Override
   public boolean hasCostPerConversion() {
     return costPerConversion_ != null;
   }
@@ -3252,11 +3509,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The cost of ad interactions divided by conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
+   * @return The costPerConversion.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCostPerConversion() {
     return costPerConversion_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : costPerConversion_;
   }
@@ -3264,11 +3524,13 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The cost of ad interactions divided by conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCostPerConversionOrBuilder() {
     return getCostPerConversion();
   }
@@ -3279,11 +3541,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The cost of ad interactions divided by current model attributed
    * conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+   * @return Whether the costPerCurrentModelAttributedConversion field is set.
    */
+  @java.lang.Override
   public boolean hasCostPerCurrentModelAttributedConversion() {
     return costPerCurrentModelAttributedConversion_ != null;
   }
@@ -3291,11 +3557,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The cost of ad interactions divided by current model attributed
    * conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+   * @return The costPerCurrentModelAttributedConversion.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCostPerCurrentModelAttributedConversion() {
     return costPerCurrentModelAttributedConversion_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : costPerCurrentModelAttributedConversion_;
   }
@@ -3303,11 +3573,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The cost of ad interactions divided by current model attributed
    * conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCostPerCurrentModelAttributedConversionOrBuilder() {
     return getCostPerCurrentModelAttributedConversion();
   }
@@ -3322,7 +3595,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cross_device_conversions = 29;</code>
+   * @return Whether the crossDeviceConversions field is set.
    */
+  @java.lang.Override
   public boolean hasCrossDeviceConversions() {
     return crossDeviceConversions_ != null;
   }
@@ -3334,7 +3609,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue cross_device_conversions = 29;</code>
+   * @return The crossDeviceConversions.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCrossDeviceConversions() {
     return crossDeviceConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : crossDeviceConversions_;
   }
@@ -3347,6 +3624,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue cross_device_conversions = 29;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCrossDeviceConversionsOrBuilder() {
     return getCrossDeviceConversions();
   }
@@ -3360,7 +3638,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue ctr = 30;</code>
+   * @return Whether the ctr field is set.
    */
+  @java.lang.Override
   public boolean hasCtr() {
     return ctr_ != null;
   }
@@ -3371,7 +3651,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue ctr = 30;</code>
+   * @return The ctr.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCtr() {
     return ctr_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : ctr_;
   }
@@ -3383,6 +3665,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue ctr = 30;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCtrOrBuilder() {
     return getCtr();
   }
@@ -3393,11 +3676,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Shows how your historic conversions data would look under the attribution
    * model you've currently selected. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+   * @return Whether the currentModelAttributedConversions field is set.
    */
+  @java.lang.Override
   public boolean hasCurrentModelAttributedConversions() {
     return currentModelAttributedConversions_ != null;
   }
@@ -3405,11 +3692,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Shows how your historic conversions data would look under the attribution
    * model you've currently selected. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+   * @return The currentModelAttributedConversions.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCurrentModelAttributedConversions() {
     return currentModelAttributedConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversions_;
   }
@@ -3417,11 +3708,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Shows how your historic conversions data would look under the attribution
    * model you've currently selected. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsOrBuilder() {
     return getCurrentModelAttributedConversions();
   }
@@ -3433,11 +3727,15 @@ private static final long serialVersionUID = 0L;
    * Current model attributed conversions from interactions divided by the
    * number of ad interactions (such as clicks for text ads or views for video
    * ads). This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+   * @return Whether the currentModelAttributedConversionsFromInteractionsRate field is set.
    */
+  @java.lang.Override
   public boolean hasCurrentModelAttributedConversionsFromInteractionsRate() {
     return currentModelAttributedConversionsFromInteractionsRate_ != null;
   }
@@ -3446,11 +3744,15 @@ private static final long serialVersionUID = 0L;
    * Current model attributed conversions from interactions divided by the
    * number of ad interactions (such as clicks for text ads or views for video
    * ads). This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+   * @return The currentModelAttributedConversionsFromInteractionsRate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsRate() {
     return currentModelAttributedConversionsFromInteractionsRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsFromInteractionsRate_;
   }
@@ -3459,11 +3761,14 @@ private static final long serialVersionUID = 0L;
    * Current model attributed conversions from interactions divided by the
    * number of ad interactions (such as clicks for text ads or views for video
    * ads). This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsFromInteractionsRateOrBuilder() {
     return getCurrentModelAttributedConversionsFromInteractionsRate();
   }
@@ -3474,11 +3779,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of current model attributed conversions from interactions divided
    * by the number of ad interactions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+   * @return Whether the currentModelAttributedConversionsFromInteractionsValuePerInteraction field is set.
    */
+  @java.lang.Override
   public boolean hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
     return currentModelAttributedConversionsFromInteractionsValuePerInteraction_ != null;
   }
@@ -3486,11 +3795,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of current model attributed conversions from interactions divided
    * by the number of ad interactions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+   * @return The currentModelAttributedConversionsFromInteractionsValuePerInteraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
     return currentModelAttributedConversionsFromInteractionsValuePerInteraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsFromInteractionsValuePerInteraction_;
   }
@@ -3498,11 +3811,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of current model attributed conversions from interactions divided
    * by the number of ad interactions. This only includes conversion actions
-   * which include_in_conversions_metric attribute is set to true.
+   * which include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsFromInteractionsValuePerInteractionOrBuilder() {
     return getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction();
   }
@@ -3511,37 +3827,45 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue currentModelAttributedConversionsValue_;
   /**
    * <pre>
-   * The total value of current model attributed conversions. This only includes
+   * The value of current model attributed conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+   * @return Whether the currentModelAttributedConversionsValue field is set.
    */
+  @java.lang.Override
   public boolean hasCurrentModelAttributedConversionsValue() {
     return currentModelAttributedConversionsValue_ != null;
   }
   /**
    * <pre>
-   * The total value of current model attributed conversions. This only includes
+   * The value of current model attributed conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+   * @return The currentModelAttributedConversionsValue.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValue() {
     return currentModelAttributedConversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsValue_;
   }
   /**
    * <pre>
-   * The total value of current model attributed conversions. This only includes
+   * The value of current model attributed conversions. This only includes
    * conversion actions which include_in_conversions_metric attribute is set to
-   * true.
+   * true. If you use conversion-based bidding, your bid strategies will
+   * optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsValueOrBuilder() {
     return getCurrentModelAttributedConversionsValue();
   }
@@ -3552,11 +3876,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of current model attributed conversions divided by the cost of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+   * @return Whether the currentModelAttributedConversionsValuePerCost field is set.
    */
+  @java.lang.Override
   public boolean hasCurrentModelAttributedConversionsValuePerCost() {
     return currentModelAttributedConversionsValuePerCost_ != null;
   }
@@ -3564,11 +3892,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of current model attributed conversions divided by the cost of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+   * @return The currentModelAttributedConversionsValuePerCost.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValuePerCost() {
     return currentModelAttributedConversionsValuePerCost_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : currentModelAttributedConversionsValuePerCost_;
   }
@@ -3576,11 +3908,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of current model attributed conversions divided by the cost of ad
    * interactions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getCurrentModelAttributedConversionsValuePerCostOrBuilder() {
     return getCurrentModelAttributedConversionsValuePerCost();
   }
@@ -3594,7 +3929,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue engagement_rate = 31;</code>
+   * @return Whether the engagementRate field is set.
    */
+  @java.lang.Override
   public boolean hasEngagementRate() {
     return engagementRate_ != null;
   }
@@ -3605,7 +3942,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue engagement_rate = 31;</code>
+   * @return The engagementRate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getEngagementRate() {
     return engagementRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : engagementRate_;
   }
@@ -3617,6 +3956,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue engagement_rate = 31;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getEngagementRateOrBuilder() {
     return getEngagementRate();
   }
@@ -3631,7 +3971,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value engagements = 32;</code>
+   * @return Whether the engagements field is set.
    */
+  @java.lang.Override
   public boolean hasEngagements() {
     return engagements_ != null;
   }
@@ -3643,7 +3985,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value engagements = 32;</code>
+   * @return The engagements.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getEngagements() {
     return engagements_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : engagements_;
   }
@@ -3656,6 +4000,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value engagements = 32;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getEngagementsOrBuilder() {
     return getEngagements();
   }
@@ -3664,31 +4009,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.DoubleValue hotelAverageLeadValueMicros_;
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+   * @return Whether the hotelAverageLeadValueMicros field is set.
    */
+  @java.lang.Override
   public boolean hasHotelAverageLeadValueMicros() {
     return hotelAverageLeadValueMicros_ != null;
   }
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+   * @return The hotelAverageLeadValueMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getHotelAverageLeadValueMicros() {
     return hotelAverageLeadValueMicros_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : hotelAverageLeadValueMicros_;
   }
   /**
    * <pre>
-   * Average lead value of hotel.
+   * Average lead value based on clicks.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getHotelAverageLeadValueMicrosOrBuilder() {
     return getHotelAverageLeadValueMicros();
   }
@@ -3702,7 +4052,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+   * @return Whether the hotelPriceDifferencePercentage field is set.
    */
+  @java.lang.Override
   public boolean hasHotelPriceDifferencePercentage() {
     return hotelPriceDifferencePercentage_ != null;
   }
@@ -3713,7 +4065,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+   * @return The hotelPriceDifferencePercentage.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getHotelPriceDifferencePercentage() {
     return hotelPriceDifferencePercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : hotelPriceDifferencePercentage_;
   }
@@ -3725,6 +4079,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getHotelPriceDifferencePercentageOrBuilder() {
     return getHotelPriceDifferencePercentage();
   }
@@ -3737,8 +4092,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+   * @return The enum numeric value on the wire for historicalCreativeQualityScore.
    */
-  public int getHistoricalCreativeQualityScoreValue() {
+  @java.lang.Override public int getHistoricalCreativeQualityScoreValue() {
     return historicalCreativeQualityScore_;
   }
   /**
@@ -3747,8 +4103,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+   * @return The historicalCreativeQualityScore.
    */
-  public com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalCreativeQualityScore() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalCreativeQualityScore() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalCreativeQualityScore_);
     return result == null ? com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
@@ -3762,8 +4119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+   * @return The enum numeric value on the wire for historicalLandingPageQualityScore.
    */
-  public int getHistoricalLandingPageQualityScoreValue() {
+  @java.lang.Override public int getHistoricalLandingPageQualityScoreValue() {
     return historicalLandingPageQualityScore_;
   }
   /**
@@ -3772,8 +4130,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+   * @return The historicalLandingPageQualityScore.
    */
-  public com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalLandingPageQualityScore() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalLandingPageQualityScore() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalLandingPageQualityScore_);
     return result == null ? com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
@@ -3787,7 +4146,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+   * @return Whether the historicalQualityScore field is set.
    */
+  @java.lang.Override
   public boolean hasHistoricalQualityScore() {
     return historicalQualityScore_ != null;
   }
@@ -3797,7 +4158,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+   * @return The historicalQualityScore.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getHistoricalQualityScore() {
     return historicalQualityScore_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : historicalQualityScore_;
   }
@@ -3808,6 +4171,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getHistoricalQualityScoreOrBuilder() {
     return getHistoricalQualityScore();
   }
@@ -3820,8 +4184,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+   * @return The enum numeric value on the wire for historicalSearchPredictedCtr.
    */
-  public int getHistoricalSearchPredictedCtrValue() {
+  @java.lang.Override public int getHistoricalSearchPredictedCtrValue() {
     return historicalSearchPredictedCtr_;
   }
   /**
@@ -3830,8 +4195,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+   * @return The historicalSearchPredictedCtr.
    */
-  public com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalSearchPredictedCtr() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalSearchPredictedCtr() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalSearchPredictedCtr_);
     return result == null ? com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
@@ -3845,7 +4211,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+   * @return Whether the gmailForwards field is set.
    */
+  @java.lang.Override
   public boolean hasGmailForwards() {
     return gmailForwards_ != null;
   }
@@ -3855,7 +4223,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+   * @return The gmailForwards.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getGmailForwards() {
     return gmailForwards_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gmailForwards_;
   }
@@ -3866,6 +4236,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getGmailForwardsOrBuilder() {
     return getGmailForwards();
   }
@@ -3879,7 +4250,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+   * @return Whether the gmailSaves field is set.
    */
+  @java.lang.Override
   public boolean hasGmailSaves() {
     return gmailSaves_ != null;
   }
@@ -3890,7 +4263,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+   * @return The gmailSaves.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getGmailSaves() {
     return gmailSaves_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gmailSaves_;
   }
@@ -3902,6 +4277,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getGmailSavesOrBuilder() {
     return getGmailSaves();
   }
@@ -3915,7 +4291,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+   * @return Whether the gmailSecondaryClicks field is set.
    */
+  @java.lang.Override
   public boolean hasGmailSecondaryClicks() {
     return gmailSecondaryClicks_ != null;
   }
@@ -3926,7 +4304,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+   * @return The gmailSecondaryClicks.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getGmailSecondaryClicks() {
     return gmailSecondaryClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gmailSecondaryClicks_;
   }
@@ -3938,6 +4318,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getGmailSecondaryClicksOrBuilder() {
     return getGmailSecondaryClicks();
   }
@@ -3951,7 +4332,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+   * @return Whether the impressionsFromStoreReach field is set.
    */
+  @java.lang.Override
   public boolean hasImpressionsFromStoreReach() {
     return impressionsFromStoreReach_ != null;
   }
@@ -3962,7 +4345,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+   * @return The impressionsFromStoreReach.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getImpressionsFromStoreReach() {
     return impressionsFromStoreReach_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : impressionsFromStoreReach_;
   }
@@ -3974,6 +4359,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getImpressionsFromStoreReachOrBuilder() {
     return getImpressionsFromStoreReach();
   }
@@ -3987,7 +4373,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 37;</code>
+   * @return Whether the impressions field is set.
    */
+  @java.lang.Override
   public boolean hasImpressions() {
     return impressions_ != null;
   }
@@ -3998,7 +4386,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 37;</code>
+   * @return The impressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getImpressions() {
     return impressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : impressions_;
   }
@@ -4010,6 +4400,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value impressions = 37;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getImpressionsOrBuilder() {
     return getImpressions();
   }
@@ -4024,7 +4415,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue interaction_rate = 38;</code>
+   * @return Whether the interactionRate field is set.
    */
+  @java.lang.Override
   public boolean hasInteractionRate() {
     return interactionRate_ != null;
   }
@@ -4036,7 +4429,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue interaction_rate = 38;</code>
+   * @return The interactionRate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getInteractionRate() {
     return interactionRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : interactionRate_;
   }
@@ -4049,6 +4444,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue interaction_rate = 38;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getInteractionRateOrBuilder() {
     return getInteractionRate();
   }
@@ -4063,7 +4459,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value interactions = 39;</code>
+   * @return Whether the interactions field is set.
    */
+  @java.lang.Override
   public boolean hasInteractions() {
     return interactions_ != null;
   }
@@ -4075,7 +4473,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value interactions = 39;</code>
+   * @return The interactions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getInteractions() {
     return interactions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : interactions_;
   }
@@ -4088,6 +4488,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value interactions = 39;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getInteractionsOrBuilder() {
     return getInteractions();
   }
@@ -4110,7 +4511,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   * @return A list containing the interactionEventTypes.
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType> getInteractionEventTypesList() {
     return new com.google.protobuf.Internal.ListAdapter<
         java.lang.Integer, com.google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType>(interactionEventTypes_, interactionEventTypes_converter_);
@@ -4121,7 +4524,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   * @return The count of interactionEventTypes.
    */
+  @java.lang.Override
   public int getInteractionEventTypesCount() {
     return interactionEventTypes_.size();
   }
@@ -4131,7 +4536,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   * @param index The index of the element to return.
+   * @return The interactionEventTypes at the given index.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType getInteractionEventTypes(int index) {
     return interactionEventTypes_converter_.convert(interactionEventTypes_.get(index));
   }
@@ -4141,7 +4549,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   * @return A list containing the enum numeric values on the wire for interactionEventTypes.
    */
+  @java.lang.Override
   public java.util.List<java.lang.Integer>
   getInteractionEventTypesValueList() {
     return interactionEventTypes_;
@@ -4152,7 +4562,10 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of interactionEventTypes at the given index.
    */
+  @java.lang.Override
   public int getInteractionEventTypesValue(int index) {
     return interactionEventTypes_.get(index);
   }
@@ -4167,7 +4580,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue invalid_click_rate = 40;</code>
+   * @return Whether the invalidClickRate field is set.
    */
+  @java.lang.Override
   public boolean hasInvalidClickRate() {
     return invalidClickRate_ != null;
   }
@@ -4178,7 +4593,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue invalid_click_rate = 40;</code>
+   * @return The invalidClickRate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getInvalidClickRate() {
     return invalidClickRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : invalidClickRate_;
   }
@@ -4190,6 +4607,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue invalid_click_rate = 40;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getInvalidClickRateOrBuilder() {
     return getInvalidClickRate();
   }
@@ -4202,7 +4620,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value invalid_clicks = 41;</code>
+   * @return Whether the invalidClicks field is set.
    */
+  @java.lang.Override
   public boolean hasInvalidClicks() {
     return invalidClicks_ != null;
   }
@@ -4212,7 +4632,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value invalid_clicks = 41;</code>
+   * @return The invalidClicks.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getInvalidClicks() {
     return invalidClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : invalidClicks_;
   }
@@ -4223,6 +4645,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value invalid_clicks = 41;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getInvalidClicksOrBuilder() {
     return getInvalidClicks();
   }
@@ -4236,7 +4659,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value message_chats = 126;</code>
+   * @return Whether the messageChats field is set.
    */
+  @java.lang.Override
   public boolean hasMessageChats() {
     return messageChats_ != null;
   }
@@ -4247,7 +4672,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value message_chats = 126;</code>
+   * @return The messageChats.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getMessageChats() {
     return messageChats_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageChats_;
   }
@@ -4259,6 +4686,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value message_chats = 126;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getMessageChatsOrBuilder() {
     return getMessageChats();
   }
@@ -4271,7 +4699,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value message_impressions = 127;</code>
+   * @return Whether the messageImpressions field is set.
    */
+  @java.lang.Override
   public boolean hasMessageImpressions() {
     return messageImpressions_ != null;
   }
@@ -4281,7 +4711,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value message_impressions = 127;</code>
+   * @return The messageImpressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getMessageImpressions() {
     return messageImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : messageImpressions_;
   }
@@ -4292,6 +4724,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value message_impressions = 127;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getMessageImpressionsOrBuilder() {
     return getMessageImpressions();
   }
@@ -4308,7 +4741,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue message_chat_rate = 128;</code>
+   * @return Whether the messageChatRate field is set.
    */
+  @java.lang.Override
   public boolean hasMessageChatRate() {
     return messageChatRate_ != null;
   }
@@ -4322,7 +4757,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue message_chat_rate = 128;</code>
+   * @return The messageChatRate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getMessageChatRate() {
     return messageChatRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : messageChatRate_;
   }
@@ -4337,6 +4774,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue message_chat_rate = 128;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getMessageChatRateOrBuilder() {
     return getMessageChatRate();
   }
@@ -4349,7 +4787,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+   * @return Whether the mobileFriendlyClicksPercentage field is set.
    */
+  @java.lang.Override
   public boolean hasMobileFriendlyClicksPercentage() {
     return mobileFriendlyClicksPercentage_ != null;
   }
@@ -4359,7 +4799,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+   * @return The mobileFriendlyClicksPercentage.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getMobileFriendlyClicksPercentage() {
     return mobileFriendlyClicksPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : mobileFriendlyClicksPercentage_;
   }
@@ -4370,6 +4812,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getMobileFriendlyClicksPercentageOrBuilder() {
     return getMobileFriendlyClicksPercentage();
   }
@@ -4384,7 +4827,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+   * @return Whether the organicClicks field is set.
    */
+  @java.lang.Override
   public boolean hasOrganicClicks() {
     return organicClicks_ != null;
   }
@@ -4396,7 +4841,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+   * @return The organicClicks.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getOrganicClicks() {
     return organicClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : organicClicks_;
   }
@@ -4409,6 +4856,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getOrganicClicksOrBuilder() {
     return getOrganicClicks();
   }
@@ -4424,7 +4872,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+   * @return Whether the organicClicksPerQuery field is set.
    */
+  @java.lang.Override
   public boolean hasOrganicClicksPerQuery() {
     return organicClicksPerQuery_ != null;
   }
@@ -4437,7 +4887,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+   * @return The organicClicksPerQuery.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getOrganicClicksPerQuery() {
     return organicClicksPerQuery_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : organicClicksPerQuery_;
   }
@@ -4451,6 +4903,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getOrganicClicksPerQueryOrBuilder() {
     return getOrganicClicksPerQuery();
   }
@@ -4465,7 +4918,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+   * @return Whether the organicImpressions field is set.
    */
+  @java.lang.Override
   public boolean hasOrganicImpressions() {
     return organicImpressions_ != null;
   }
@@ -4477,7 +4932,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+   * @return The organicImpressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getOrganicImpressions() {
     return organicImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : organicImpressions_;
   }
@@ -4490,6 +4947,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getOrganicImpressionsOrBuilder() {
     return getOrganicImpressions();
   }
@@ -4505,7 +4963,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+   * @return Whether the organicImpressionsPerQuery field is set.
    */
+  @java.lang.Override
   public boolean hasOrganicImpressionsPerQuery() {
     return organicImpressionsPerQuery_ != null;
   }
@@ -4518,7 +4978,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+   * @return The organicImpressionsPerQuery.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getOrganicImpressionsPerQuery() {
     return organicImpressionsPerQuery_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : organicImpressionsPerQuery_;
   }
@@ -4532,6 +4994,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getOrganicImpressionsPerQueryOrBuilder() {
     return getOrganicImpressionsPerQuery();
   }
@@ -4546,7 +5009,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+   * @return Whether the organicQueries field is set.
    */
+  @java.lang.Override
   public boolean hasOrganicQueries() {
     return organicQueries_ != null;
   }
@@ -4558,7 +5023,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+   * @return The organicQueries.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getOrganicQueries() {
     return organicQueries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : organicQueries_;
   }
@@ -4571,6 +5038,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getOrganicQueriesOrBuilder() {
     return getOrganicQueries();
   }
@@ -4584,7 +5052,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue percent_new_visitors = 42;</code>
+   * @return Whether the percentNewVisitors field is set.
    */
+  @java.lang.Override
   public boolean hasPercentNewVisitors() {
     return percentNewVisitors_ != null;
   }
@@ -4595,7 +5065,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue percent_new_visitors = 42;</code>
+   * @return The percentNewVisitors.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getPercentNewVisitors() {
     return percentNewVisitors_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : percentNewVisitors_;
   }
@@ -4607,6 +5079,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue percent_new_visitors = 42;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getPercentNewVisitorsOrBuilder() {
     return getPercentNewVisitors();
   }
@@ -4619,7 +5092,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value phone_calls = 43;</code>
+   * @return Whether the phoneCalls field is set.
    */
+  @java.lang.Override
   public boolean hasPhoneCalls() {
     return phoneCalls_ != null;
   }
@@ -4629,7 +5104,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value phone_calls = 43;</code>
+   * @return The phoneCalls.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPhoneCalls() {
     return phoneCalls_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : phoneCalls_;
   }
@@ -4640,6 +5117,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value phone_calls = 43;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPhoneCallsOrBuilder() {
     return getPhoneCalls();
   }
@@ -4652,7 +5130,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value phone_impressions = 44;</code>
+   * @return Whether the phoneImpressions field is set.
    */
+  @java.lang.Override
   public boolean hasPhoneImpressions() {
     return phoneImpressions_ != null;
   }
@@ -4662,7 +5142,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value phone_impressions = 44;</code>
+   * @return The phoneImpressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPhoneImpressions() {
     return phoneImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : phoneImpressions_;
   }
@@ -4673,6 +5155,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value phone_impressions = 44;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPhoneImpressionsOrBuilder() {
     return getPhoneImpressions();
   }
@@ -4686,7 +5169,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue phone_through_rate = 45;</code>
+   * @return Whether the phoneThroughRate field is set.
    */
+  @java.lang.Override
   public boolean hasPhoneThroughRate() {
     return phoneThroughRate_ != null;
   }
@@ -4697,7 +5182,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue phone_through_rate = 45;</code>
+   * @return The phoneThroughRate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getPhoneThroughRate() {
     return phoneThroughRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : phoneThroughRate_;
   }
@@ -4709,6 +5196,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue phone_through_rate = 45;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getPhoneThroughRateOrBuilder() {
     return getPhoneThroughRate();
   }
@@ -4723,7 +5211,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue relative_ctr = 46;</code>
+   * @return Whether the relativeCtr field is set.
    */
+  @java.lang.Override
   public boolean hasRelativeCtr() {
     return relativeCtr_ != null;
   }
@@ -4735,7 +5225,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue relative_ctr = 46;</code>
+   * @return The relativeCtr.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getRelativeCtr() {
     return relativeCtr_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : relativeCtr_;
   }
@@ -4748,6 +5240,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue relative_ctr = 46;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getRelativeCtrOrBuilder() {
     return getRelativeCtr();
   }
@@ -4758,12 +5251,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The percentage of the customer's Shopping or Search ad impressions that are
    * shown in the most prominent Shopping position. See
-   * [this article](https://support.google.com/google-ads/answer/7501826)
+   * https://support.google.com/google-ads/answer/7501826
    * for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+   * @return Whether the searchAbsoluteTopImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchAbsoluteTopImpressionShare() {
     return searchAbsoluteTopImpressionShare_ != null;
   }
@@ -4771,12 +5266,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The percentage of the customer's Shopping or Search ad impressions that are
    * shown in the most prominent Shopping position. See
-   * [this article](https://support.google.com/google-ads/answer/7501826)
+   * https://support.google.com/google-ads/answer/7501826
    * for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+   * @return The searchAbsoluteTopImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchAbsoluteTopImpressionShare() {
     return searchAbsoluteTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchAbsoluteTopImpressionShare_;
   }
@@ -4784,12 +5281,13 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The percentage of the customer's Shopping or Search ad impressions that are
    * shown in the most prominent Shopping position. See
-   * [this article](https://support.google.com/google-ads/answer/7501826)
+   * https://support.google.com/google-ads/answer/7501826
    * for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchAbsoluteTopImpressionShareOrBuilder() {
     return getSearchAbsoluteTopImpressionShare();
   }
@@ -4805,7 +5303,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+   * @return Whether the searchBudgetLostAbsoluteTopImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchBudgetLostAbsoluteTopImpressionShare() {
     return searchBudgetLostAbsoluteTopImpressionShare_ != null;
   }
@@ -4818,7 +5318,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+   * @return The searchBudgetLostAbsoluteTopImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchBudgetLostAbsoluteTopImpressionShare() {
     return searchBudgetLostAbsoluteTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchBudgetLostAbsoluteTopImpressionShare_;
   }
@@ -4832,6 +5334,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostAbsoluteTopImpressionShareOrBuilder() {
     return getSearchBudgetLostAbsoluteTopImpressionShare();
   }
@@ -4847,7 +5350,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_impression_share = 47;</code>
+   * @return Whether the searchBudgetLostImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchBudgetLostImpressionShare() {
     return searchBudgetLostImpressionShare_ != null;
   }
@@ -4860,7 +5365,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_impression_share = 47;</code>
+   * @return The searchBudgetLostImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchBudgetLostImpressionShare() {
     return searchBudgetLostImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchBudgetLostImpressionShare_;
   }
@@ -4874,6 +5381,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_impression_share = 47;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostImpressionShareOrBuilder() {
     return getSearchBudgetLostImpressionShare();
   }
@@ -4889,7 +5397,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+   * @return Whether the searchBudgetLostTopImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchBudgetLostTopImpressionShare() {
     return searchBudgetLostTopImpressionShare_ != null;
   }
@@ -4902,7 +5412,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+   * @return The searchBudgetLostTopImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchBudgetLostTopImpressionShare() {
     return searchBudgetLostTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchBudgetLostTopImpressionShare_;
   }
@@ -4916,6 +5428,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchBudgetLostTopImpressionShareOrBuilder() {
     return getSearchBudgetLostTopImpressionShare();
   }
@@ -4931,7 +5444,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+   * @return Whether the searchClickShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchClickShare() {
     return searchClickShare_ != null;
   }
@@ -4944,7 +5459,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+   * @return The searchClickShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchClickShare() {
     return searchClickShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchClickShare_;
   }
@@ -4958,6 +5475,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchClickShareOrBuilder() {
     return getSearchClickShare();
   }
@@ -4975,7 +5493,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_exact_match_impression_share = 49;</code>
+   * @return Whether the searchExactMatchImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchExactMatchImpressionShare() {
     return searchExactMatchImpressionShare_ != null;
   }
@@ -4990,7 +5510,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_exact_match_impression_share = 49;</code>
+   * @return The searchExactMatchImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchExactMatchImpressionShare() {
     return searchExactMatchImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchExactMatchImpressionShare_;
   }
@@ -5006,6 +5528,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue search_exact_match_impression_share = 49;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchExactMatchImpressionShareOrBuilder() {
     return getSearchExactMatchImpressionShare();
   }
@@ -5021,7 +5544,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_impression_share = 50;</code>
+   * @return Whether the searchImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchImpressionShare() {
     return searchImpressionShare_ != null;
   }
@@ -5034,7 +5559,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_impression_share = 50;</code>
+   * @return The searchImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchImpressionShare() {
     return searchImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchImpressionShare_;
   }
@@ -5048,6 +5575,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue search_impression_share = 50;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchImpressionShareOrBuilder() {
     return getSearchImpressionShare();
   }
@@ -5063,7 +5591,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+   * @return Whether the searchRankLostAbsoluteTopImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchRankLostAbsoluteTopImpressionShare() {
     return searchRankLostAbsoluteTopImpressionShare_ != null;
   }
@@ -5076,7 +5606,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+   * @return The searchRankLostAbsoluteTopImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchRankLostAbsoluteTopImpressionShare() {
     return searchRankLostAbsoluteTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchRankLostAbsoluteTopImpressionShare_;
   }
@@ -5090,6 +5622,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchRankLostAbsoluteTopImpressionShareOrBuilder() {
     return getSearchRankLostAbsoluteTopImpressionShare();
   }
@@ -5105,7 +5638,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_impression_share = 51;</code>
+   * @return Whether the searchRankLostImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchRankLostImpressionShare() {
     return searchRankLostImpressionShare_ != null;
   }
@@ -5118,7 +5653,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_impression_share = 51;</code>
+   * @return The searchRankLostImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchRankLostImpressionShare() {
     return searchRankLostImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchRankLostImpressionShare_;
   }
@@ -5132,6 +5669,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_impression_share = 51;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchRankLostImpressionShareOrBuilder() {
     return getSearchRankLostImpressionShare();
   }
@@ -5147,7 +5685,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+   * @return Whether the searchRankLostTopImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchRankLostTopImpressionShare() {
     return searchRankLostTopImpressionShare_ != null;
   }
@@ -5160,7 +5700,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+   * @return The searchRankLostTopImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchRankLostTopImpressionShare() {
     return searchRankLostTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchRankLostTopImpressionShare_;
   }
@@ -5174,6 +5716,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchRankLostTopImpressionShareOrBuilder() {
     return getSearchRankLostTopImpressionShare();
   }
@@ -5190,7 +5733,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+   * @return Whether the searchTopImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasSearchTopImpressionShare() {
     return searchTopImpressionShare_ != null;
   }
@@ -5204,7 +5749,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+   * @return The searchTopImpressionShare.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getSearchTopImpressionShare() {
     return searchTopImpressionShare_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : searchTopImpressionShare_;
   }
@@ -5219,6 +5766,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getSearchTopImpressionShareOrBuilder() {
     return getSearchTopImpressionShare();
   }
@@ -5232,7 +5780,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+   * @return Whether the speedScore field is set.
    */
+  @java.lang.Override
   public boolean hasSpeedScore() {
     return speedScore_ != null;
   }
@@ -5243,7 +5793,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+   * @return The speedScore.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getSpeedScore() {
     return speedScore_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : speedScore_;
   }
@@ -5255,6 +5807,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value speed_score = 107;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getSpeedScoreOrBuilder() {
     return getSpeedScore();
   }
@@ -5268,7 +5821,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+   * @return Whether the topImpressionPercentage field is set.
    */
+  @java.lang.Override
   public boolean hasTopImpressionPercentage() {
     return topImpressionPercentage_ != null;
   }
@@ -5279,7 +5834,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+   * @return The topImpressionPercentage.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getTopImpressionPercentage() {
     return topImpressionPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : topImpressionPercentage_;
   }
@@ -5291,6 +5848,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getTopImpressionPercentageOrBuilder() {
     return getTopImpressionPercentage();
   }
@@ -5304,7 +5862,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+   * @return Whether the validAcceleratedMobilePagesClicksPercentage field is set.
    */
+  @java.lang.Override
   public boolean hasValidAcceleratedMobilePagesClicksPercentage() {
     return validAcceleratedMobilePagesClicksPercentage_ != null;
   }
@@ -5315,7 +5875,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+   * @return The validAcceleratedMobilePagesClicksPercentage.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getValidAcceleratedMobilePagesClicksPercentage() {
     return validAcceleratedMobilePagesClicksPercentage_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : validAcceleratedMobilePagesClicksPercentage_;
   }
@@ -5327,6 +5889,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getValidAcceleratedMobilePagesClicksPercentageOrBuilder() {
     return getValidAcceleratedMobilePagesClicksPercentage();
   }
@@ -5339,7 +5902,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_all_conversions = 52;</code>
+   * @return Whether the valuePerAllConversions field is set.
    */
+  @java.lang.Override
   public boolean hasValuePerAllConversions() {
     return valuePerAllConversions_ != null;
   }
@@ -5349,7 +5914,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_all_conversions = 52;</code>
+   * @return The valuePerAllConversions.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getValuePerAllConversions() {
     return valuePerAllConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : valuePerAllConversions_;
   }
@@ -5360,6 +5927,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue value_per_all_conversions = 52;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getValuePerAllConversionsOrBuilder() {
     return getValuePerAllConversions();
   }
@@ -5370,11 +5938,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of conversions divided by the number of conversions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
+   * @return Whether the valuePerConversion field is set.
    */
+  @java.lang.Override
   public boolean hasValuePerConversion() {
     return valuePerConversion_ != null;
   }
@@ -5382,11 +5953,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of conversions divided by the number of conversions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
+   * @return The valuePerConversion.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getValuePerConversion() {
     return valuePerConversion_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : valuePerConversion_;
   }
@@ -5394,11 +5968,13 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of conversions divided by the number of conversions. This only
    * includes conversion actions which include_in_conversions_metric attribute
-   * is set to true.
+   * is set to true. If you use conversion-based bidding, your bid strategies
+   * will optimize for these conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getValuePerConversionOrBuilder() {
     return getValuePerConversion();
   }
@@ -5409,11 +5985,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of current model attributed conversions divided by the number of
    * the conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+   * @return Whether the valuePerCurrentModelAttributedConversion field is set.
    */
+  @java.lang.Override
   public boolean hasValuePerCurrentModelAttributedConversion() {
     return valuePerCurrentModelAttributedConversion_ != null;
   }
@@ -5421,11 +6001,15 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of current model attributed conversions divided by the number of
    * the conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+   * @return The valuePerCurrentModelAttributedConversion.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getValuePerCurrentModelAttributedConversion() {
     return valuePerCurrentModelAttributedConversion_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : valuePerCurrentModelAttributedConversion_;
   }
@@ -5433,11 +6017,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The value of current model attributed conversions divided by the number of
    * the conversions. This only includes conversion actions which
-   * include_in_conversions_metric attribute is set to true.
+   * include_in_conversions_metric attribute is set to true. If you use
+   * conversion-based bidding, your bid strategies will optimize for these
+   * conversions.
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getValuePerCurrentModelAttributedConversionOrBuilder() {
     return getValuePerCurrentModelAttributedConversion();
   }
@@ -5450,7 +6037,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+   * @return Whether the videoQuartile100Rate field is set.
    */
+  @java.lang.Override
   public boolean hasVideoQuartile100Rate() {
     return videoQuartile100Rate_ != null;
   }
@@ -5460,7 +6049,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+   * @return The videoQuartile100Rate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getVideoQuartile100Rate() {
     return videoQuartile100Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile100Rate_;
   }
@@ -5471,6 +6062,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile100RateOrBuilder() {
     return getVideoQuartile100Rate();
   }
@@ -5483,7 +6075,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+   * @return Whether the videoQuartile25Rate field is set.
    */
+  @java.lang.Override
   public boolean hasVideoQuartile25Rate() {
     return videoQuartile25Rate_ != null;
   }
@@ -5493,7 +6087,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+   * @return The videoQuartile25Rate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getVideoQuartile25Rate() {
     return videoQuartile25Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile25Rate_;
   }
@@ -5504,6 +6100,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile25RateOrBuilder() {
     return getVideoQuartile25Rate();
   }
@@ -5516,7 +6113,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+   * @return Whether the videoQuartile50Rate field is set.
    */
+  @java.lang.Override
   public boolean hasVideoQuartile50Rate() {
     return videoQuartile50Rate_ != null;
   }
@@ -5526,7 +6125,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+   * @return The videoQuartile50Rate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getVideoQuartile50Rate() {
     return videoQuartile50Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile50Rate_;
   }
@@ -5537,6 +6138,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile50RateOrBuilder() {
     return getVideoQuartile50Rate();
   }
@@ -5549,7 +6151,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+   * @return Whether the videoQuartile75Rate field is set.
    */
+  @java.lang.Override
   public boolean hasVideoQuartile75Rate() {
     return videoQuartile75Rate_ != null;
   }
@@ -5559,7 +6163,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+   * @return The videoQuartile75Rate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getVideoQuartile75Rate() {
     return videoQuartile75Rate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoQuartile75Rate_;
   }
@@ -5570,6 +6176,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getVideoQuartile75RateOrBuilder() {
     return getVideoQuartile75Rate();
   }
@@ -5584,7 +6191,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+   * @return Whether the videoViewRate field is set.
    */
+  @java.lang.Override
   public boolean hasVideoViewRate() {
     return videoViewRate_ != null;
   }
@@ -5596,7 +6205,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+   * @return The videoViewRate.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getVideoViewRate() {
     return videoViewRate_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : videoViewRate_;
   }
@@ -5609,6 +6220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getVideoViewRateOrBuilder() {
     return getVideoViewRate();
   }
@@ -5621,7 +6233,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value video_views = 59;</code>
+   * @return Whether the videoViews field is set.
    */
+  @java.lang.Override
   public boolean hasVideoViews() {
     return videoViews_ != null;
   }
@@ -5631,7 +6245,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value video_views = 59;</code>
+   * @return The videoViews.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getVideoViews() {
     return videoViews_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : videoViews_;
   }
@@ -5642,6 +6258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value video_views = 59;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getVideoViewsOrBuilder() {
     return getVideoViews();
   }
@@ -5657,7 +6274,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value view_through_conversions = 60;</code>
+   * @return Whether the viewThroughConversions field is set.
    */
+  @java.lang.Override
   public boolean hasViewThroughConversions() {
     return viewThroughConversions_ != null;
   }
@@ -5670,7 +6289,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value view_through_conversions = 60;</code>
+   * @return The viewThroughConversions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getViewThroughConversions() {
     return viewThroughConversions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : viewThroughConversions_;
   }
@@ -5684,6 +6305,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value view_through_conversions = 60;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getViewThroughConversionsOrBuilder() {
     return getViewThroughConversions();
   }
@@ -8050,7 +8672,7 @@ private static final long serialVersionUID = 0L;
         interactionsBuilder_ = null;
       }
       interactionEventTypes_ = java.util.Collections.emptyList();
-      bitField2_ = (bitField2_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (invalidClickRateBuilder_ == null) {
         invalidClickRate_ = null;
       } else {
@@ -8318,13 +8940,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.common.Metrics buildPartial() {
       com.google.ads.googleads.v2.common.Metrics result = new com.google.ads.googleads.v2.common.Metrics(this);
       int from_bitField0_ = bitField0_;
-      int from_bitField1_ = bitField1_;
-      int from_bitField2_ = bitField2_;
-      int from_bitField3_ = bitField3_;
-      int to_bitField0_ = 0;
-      int to_bitField1_ = 0;
-      int to_bitField2_ = 0;
-      int to_bitField3_ = 0;
       if (absoluteTopImpressionPercentageBuilder_ == null) {
         result.absoluteTopImpressionPercentage_ = absoluteTopImpressionPercentage_;
       } else {
@@ -8663,9 +9278,9 @@ private static final long serialVersionUID = 0L;
       } else {
         result.interactions_ = interactionsBuilder_.build();
       }
-      if (((bitField2_ & 0x00000040) != 0)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
-        bitField2_ = (bitField2_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.interactionEventTypes_ = interactionEventTypes_;
       if (invalidClickRateBuilder_ == null) {
@@ -8868,10 +9483,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.viewThroughConversions_ = viewThroughConversionsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      result.bitField1_ = to_bitField1_;
-      result.bitField2_ = to_bitField2_;
-      result.bitField3_ = to_bitField3_;
       onBuilt();
       return result;
     }
@@ -9133,7 +9744,7 @@ private static final long serialVersionUID = 0L;
       if (!other.interactionEventTypes_.isEmpty()) {
         if (interactionEventTypes_.isEmpty()) {
           interactionEventTypes_ = other.interactionEventTypes_;
-          bitField2_ = (bitField2_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureInteractionEventTypesIsMutable();
           interactionEventTypes_.addAll(other.interactionEventTypes_);
@@ -9289,9 +9900,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
-    private int bitField1_;
-    private int bitField2_;
-    private int bitField3_;
 
     private com.google.protobuf.DoubleValue absoluteTopImpressionPercentage_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -9303,6 +9911,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     * @return Whether the absoluteTopImpressionPercentage field is set.
      */
     public boolean hasAbsoluteTopImpressionPercentage() {
       return absoluteTopImpressionPercentageBuilder_ != null || absoluteTopImpressionPercentage_ != null;
@@ -9314,6 +9923,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue absolute_top_impression_percentage = 95;</code>
+     * @return The absoluteTopImpressionPercentage.
      */
     public com.google.protobuf.DoubleValue getAbsoluteTopImpressionPercentage() {
       if (absoluteTopImpressionPercentageBuilder_ == null) {
@@ -9464,6 +10074,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     * @return Whether the activeViewCpm field is set.
      */
     public boolean hasActiveViewCpm() {
       return activeViewCpmBuilder_ != null || activeViewCpm_ != null;
@@ -9474,6 +10085,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue active_view_cpm = 1;</code>
+     * @return The activeViewCpm.
      */
     public com.google.protobuf.DoubleValue getActiveViewCpm() {
       if (activeViewCpmBuilder_ == null) {
@@ -9618,6 +10230,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     * @return Whether the activeViewCtr field is set.
      */
     public boolean hasActiveViewCtr() {
       return activeViewCtrBuilder_ != null || activeViewCtr_ != null;
@@ -9629,6 +10242,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue active_view_ctr = 79;</code>
+     * @return The activeViewCtr.
      */
     public com.google.protobuf.DoubleValue getActiveViewCtr() {
       if (activeViewCtrBuilder_ == null) {
@@ -9780,6 +10394,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     * @return Whether the activeViewImpressions field is set.
      */
     public boolean hasActiveViewImpressions() {
       return activeViewImpressionsBuilder_ != null || activeViewImpressions_ != null;
@@ -9791,6 +10406,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value active_view_impressions = 2;</code>
+     * @return The activeViewImpressions.
      */
     public com.google.protobuf.Int64Value getActiveViewImpressions() {
       if (activeViewImpressionsBuilder_ == null) {
@@ -9942,6 +10558,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     * @return Whether the activeViewMeasurability field is set.
      */
     public boolean hasActiveViewMeasurability() {
       return activeViewMeasurabilityBuilder_ != null || activeViewMeasurability_ != null;
@@ -9953,6 +10570,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue active_view_measurability = 96;</code>
+     * @return The activeViewMeasurability.
      */
     public com.google.protobuf.DoubleValue getActiveViewMeasurability() {
       if (activeViewMeasurabilityBuilder_ == null) {
@@ -10104,6 +10722,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     * @return Whether the activeViewMeasurableCostMicros field is set.
      */
     public boolean hasActiveViewMeasurableCostMicros() {
       return activeViewMeasurableCostMicrosBuilder_ != null || activeViewMeasurableCostMicros_ != null;
@@ -10115,6 +10734,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value active_view_measurable_cost_micros = 3;</code>
+     * @return The activeViewMeasurableCostMicros.
      */
     public com.google.protobuf.Int64Value getActiveViewMeasurableCostMicros() {
       if (activeViewMeasurableCostMicrosBuilder_ == null) {
@@ -10266,6 +10886,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     * @return Whether the activeViewMeasurableImpressions field is set.
      */
     public boolean hasActiveViewMeasurableImpressions() {
       return activeViewMeasurableImpressionsBuilder_ != null || activeViewMeasurableImpressions_ != null;
@@ -10277,6 +10898,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value active_view_measurable_impressions = 4;</code>
+     * @return The activeViewMeasurableImpressions.
      */
     public com.google.protobuf.Int64Value getActiveViewMeasurableImpressions() {
       if (activeViewMeasurableImpressionsBuilder_ == null) {
@@ -10428,6 +11050,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     * @return Whether the activeViewViewability field is set.
      */
     public boolean hasActiveViewViewability() {
       return activeViewViewabilityBuilder_ != null || activeViewViewability_ != null;
@@ -10439,6 +11062,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue active_view_viewability = 97;</code>
+     * @return The activeViewViewability.
      */
     public com.google.protobuf.DoubleValue getActiveViewViewability() {
       if (activeViewViewabilityBuilder_ == null) {
@@ -10590,6 +11214,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
+     * @return Whether the allConversionsFromInteractionsRate field is set.
      */
     public boolean hasAllConversionsFromInteractionsRate() {
       return allConversionsFromInteractionsRateBuilder_ != null || allConversionsFromInteractionsRate_ != null;
@@ -10601,6 +11226,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_rate = 65;</code>
+     * @return The allConversionsFromInteractionsRate.
      */
     public com.google.protobuf.DoubleValue getAllConversionsFromInteractionsRate() {
       if (allConversionsFromInteractionsRateBuilder_ == null) {
@@ -10747,20 +11373,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsValueBuilder_;
     /**
      * <pre>
-     * The total value of all conversions.
+     * The value of all conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
+     * @return Whether the allConversionsValue field is set.
      */
     public boolean hasAllConversionsValue() {
       return allConversionsValueBuilder_ != null || allConversionsValue_ != null;
     }
     /**
      * <pre>
-     * The total value of all conversions.
+     * The value of all conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
+     * @return The allConversionsValue.
      */
     public com.google.protobuf.DoubleValue getAllConversionsValue() {
       if (allConversionsValueBuilder_ == null) {
@@ -10771,7 +11399,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of all conversions.
+     * The value of all conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
@@ -10791,7 +11419,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of all conversions.
+     * The value of all conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
@@ -10809,7 +11437,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of all conversions.
+     * The value of all conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
@@ -10831,7 +11459,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of all conversions.
+     * The value of all conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
@@ -10849,7 +11477,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of all conversions.
+     * The value of all conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
@@ -10861,7 +11489,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of all conversions.
+     * The value of all conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
@@ -10876,7 +11504,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of all conversions.
+     * The value of all conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value = 66;</code>
@@ -10900,22 +11528,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> allConversionsBuilder_;
     /**
      * <pre>
-     * The total number of conversions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
+     * @return Whether the allConversions field is set.
      */
     public boolean hasAllConversions() {
       return allConversionsBuilder_ != null || allConversions_ != null;
     }
     /**
      * <pre>
-     * The total number of conversions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
+     * @return The allConversions.
      */
     public com.google.protobuf.DoubleValue getAllConversions() {
       if (allConversionsBuilder_ == null) {
@@ -10926,8 +11556,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -10947,8 +11577,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -10966,8 +11596,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -10989,8 +11619,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -11008,8 +11638,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -11021,8 +11651,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -11037,8 +11667,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total number of conversions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * The total number of conversions. This includes all conversions regardless
+     * of the value of include_in_conversions_metric.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions = 7;</code>
@@ -11067,6 +11697,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value_per_cost = 62;</code>
+     * @return Whether the allConversionsValuePerCost field is set.
      */
     public boolean hasAllConversionsValuePerCost() {
       return allConversionsValuePerCostBuilder_ != null || allConversionsValuePerCost_ != null;
@@ -11078,6 +11709,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_value_per_cost = 62;</code>
+     * @return The allConversionsValuePerCost.
      */
     public com.google.protobuf.DoubleValue getAllConversionsValuePerCost() {
       if (allConversionsValuePerCostBuilder_ == null) {
@@ -11231,6 +11863,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     * @return Whether the allConversionsFromClickToCall field is set.
      */
     public boolean hasAllConversionsFromClickToCall() {
       return allConversionsFromClickToCallBuilder_ != null || allConversionsFromClickToCall_ != null;
@@ -11244,6 +11877,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_click_to_call = 118;</code>
+     * @return The allConversionsFromClickToCall.
      */
     public com.google.protobuf.DoubleValue getAllConversionsFromClickToCall() {
       if (allConversionsFromClickToCallBuilder_ == null) {
@@ -11410,6 +12044,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     * @return Whether the allConversionsFromDirections field is set.
      */
     public boolean hasAllConversionsFromDirections() {
       return allConversionsFromDirectionsBuilder_ != null || allConversionsFromDirections_ != null;
@@ -11422,6 +12057,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_directions = 119;</code>
+     * @return The allConversionsFromDirections.
      */
     public com.google.protobuf.DoubleValue getAllConversionsFromDirections() {
       if (allConversionsFromDirectionsBuilder_ == null) {
@@ -11580,6 +12216,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
+     * @return Whether the allConversionsFromInteractionsValuePerInteraction field is set.
      */
     public boolean hasAllConversionsFromInteractionsValuePerInteraction() {
       return allConversionsFromInteractionsValuePerInteractionBuilder_ != null || allConversionsFromInteractionsValuePerInteraction_ != null;
@@ -11591,6 +12228,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_interactions_value_per_interaction = 67;</code>
+     * @return The allConversionsFromInteractionsValuePerInteraction.
      */
     public com.google.protobuf.DoubleValue getAllConversionsFromInteractionsValuePerInteraction() {
       if (allConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
@@ -11743,6 +12381,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     * @return Whether the allConversionsFromMenu field is set.
      */
     public boolean hasAllConversionsFromMenu() {
       return allConversionsFromMenuBuilder_ != null || allConversionsFromMenu_ != null;
@@ -11755,6 +12394,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_menu = 120;</code>
+     * @return The allConversionsFromMenu.
      */
     public com.google.protobuf.DoubleValue getAllConversionsFromMenu() {
       if (allConversionsFromMenuBuilder_ == null) {
@@ -11913,6 +12553,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     * @return Whether the allConversionsFromOrder field is set.
      */
     public boolean hasAllConversionsFromOrder() {
       return allConversionsFromOrderBuilder_ != null || allConversionsFromOrder_ != null;
@@ -11924,6 +12565,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_order = 121;</code>
+     * @return The allConversionsFromOrder.
      */
     public com.google.protobuf.DoubleValue getAllConversionsFromOrder() {
       if (allConversionsFromOrderBuilder_ == null) {
@@ -12076,6 +12718,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     * @return Whether the allConversionsFromOtherEngagement field is set.
      */
     public boolean hasAllConversionsFromOtherEngagement() {
       return allConversionsFromOtherEngagementBuilder_ != null || allConversionsFromOtherEngagement_ != null;
@@ -12088,6 +12731,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_other_engagement = 122;</code>
+     * @return The allConversionsFromOtherEngagement.
      */
     public com.google.protobuf.DoubleValue getAllConversionsFromOtherEngagement() {
       if (allConversionsFromOtherEngagementBuilder_ == null) {
@@ -12246,6 +12890,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     * @return Whether the allConversionsFromStoreVisit field is set.
      */
     public boolean hasAllConversionsFromStoreVisit() {
       return allConversionsFromStoreVisitBuilder_ != null || allConversionsFromStoreVisit_ != null;
@@ -12257,6 +12902,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_store_visit = 123;</code>
+     * @return The allConversionsFromStoreVisit.
      */
     public com.google.protobuf.DoubleValue getAllConversionsFromStoreVisit() {
       if (allConversionsFromStoreVisitBuilder_ == null) {
@@ -12409,6 +13055,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     * @return Whether the allConversionsFromStoreWebsite field is set.
      */
     public boolean hasAllConversionsFromStoreWebsite() {
       return allConversionsFromStoreWebsiteBuilder_ != null || allConversionsFromStoreWebsite_ != null;
@@ -12421,6 +13068,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue all_conversions_from_store_website = 124;</code>
+     * @return The allConversionsFromStoreWebsite.
      */
     public com.google.protobuf.DoubleValue getAllConversionsFromStoreWebsite() {
       if (allConversionsFromStoreWebsiteBuilder_ == null) {
@@ -12579,6 +13227,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_cost = 8;</code>
+     * @return Whether the averageCost field is set.
      */
     public boolean hasAverageCost() {
       return averageCostBuilder_ != null || averageCost_ != null;
@@ -12590,6 +13239,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_cost = 8;</code>
+     * @return The averageCost.
      */
     public com.google.protobuf.DoubleValue getAverageCost() {
       if (averageCostBuilder_ == null) {
@@ -12741,6 +13391,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_cpc = 9;</code>
+     * @return Whether the averageCpc field is set.
      */
     public boolean hasAverageCpc() {
       return averageCpcBuilder_ != null || averageCpc_ != null;
@@ -12752,6 +13403,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_cpc = 9;</code>
+     * @return The averageCpc.
      */
     public com.google.protobuf.DoubleValue getAverageCpc() {
       if (averageCpcBuilder_ == null) {
@@ -12904,6 +13556,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     * @return Whether the averageCpe field is set.
      */
     public boolean hasAverageCpe() {
       return averageCpeBuilder_ != null || averageCpe_ != null;
@@ -12916,6 +13569,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_cpe = 98;</code>
+     * @return The averageCpe.
      */
     public com.google.protobuf.DoubleValue getAverageCpe() {
       if (averageCpeBuilder_ == null) {
@@ -13073,6 +13727,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_cpm = 10;</code>
+     * @return Whether the averageCpm field is set.
      */
     public boolean hasAverageCpm() {
       return averageCpmBuilder_ != null || averageCpm_ != null;
@@ -13083,6 +13738,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_cpm = 10;</code>
+     * @return The averageCpm.
      */
     public com.google.protobuf.DoubleValue getAverageCpm() {
       if (averageCpmBuilder_ == null) {
@@ -13228,6 +13884,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     * @return Whether the averageCpv field is set.
      */
     public boolean hasAverageCpv() {
       return averageCpvBuilder_ != null || averageCpv_ != null;
@@ -13240,6 +13897,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_cpv = 11;</code>
+     * @return The averageCpv.
      */
     public com.google.protobuf.DoubleValue getAverageCpv() {
       if (averageCpvBuilder_ == null) {
@@ -13397,6 +14055,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     * @return Whether the averagePageViews field is set.
      */
     public boolean hasAveragePageViews() {
       return averagePageViewsBuilder_ != null || averagePageViews_ != null;
@@ -13407,6 +14066,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_page_views = 99;</code>
+     * @return The averagePageViews.
      */
     public com.google.protobuf.DoubleValue getAveragePageViews() {
       if (averagePageViewsBuilder_ == null) {
@@ -13551,6 +14211,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     * @return Whether the averageTimeOnSite field is set.
      */
     public boolean hasAverageTimeOnSite() {
       return averageTimeOnSiteBuilder_ != null || averageTimeOnSite_ != null;
@@ -13562,6 +14223,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue average_time_on_site = 84;</code>
+     * @return The averageTimeOnSite.
      */
     public com.google.protobuf.DoubleValue getAverageTimeOnSite() {
       if (averageTimeOnSiteBuilder_ == null) {
@@ -13712,6 +14374,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     * @return Whether the benchmarkAverageMaxCpc field is set.
      */
     public boolean hasBenchmarkAverageMaxCpc() {
       return benchmarkAverageMaxCpcBuilder_ != null || benchmarkAverageMaxCpc_ != null;
@@ -13722,6 +14385,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue benchmark_average_max_cpc = 14;</code>
+     * @return The benchmarkAverageMaxCpc.
      */
     public com.google.protobuf.DoubleValue getBenchmarkAverageMaxCpc() {
       if (benchmarkAverageMaxCpcBuilder_ == null) {
@@ -13866,6 +14530,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     * @return Whether the benchmarkCtr field is set.
      */
     public boolean hasBenchmarkCtr() {
       return benchmarkCtrBuilder_ != null || benchmarkCtr_ != null;
@@ -13877,6 +14542,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue benchmark_ctr = 77;</code>
+     * @return The benchmarkCtr.
      */
     public com.google.protobuf.DoubleValue getBenchmarkCtr() {
       if (benchmarkCtrBuilder_ == null) {
@@ -14028,6 +14694,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bounce_rate = 15;</code>
+     * @return Whether the bounceRate field is set.
      */
     public boolean hasBounceRate() {
       return bounceRateBuilder_ != null || bounceRate_ != null;
@@ -14039,6 +14706,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bounce_rate = 15;</code>
+     * @return The bounceRate.
      */
     public com.google.protobuf.DoubleValue getBounceRate() {
       if (bounceRateBuilder_ == null) {
@@ -14189,6 +14857,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value clicks = 19;</code>
+     * @return Whether the clicks field is set.
      */
     public boolean hasClicks() {
       return clicksBuilder_ != null || clicks_ != null;
@@ -14199,6 +14868,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value clicks = 19;</code>
+     * @return The clicks.
      */
     public com.google.protobuf.Int64Value getClicks() {
       if (clicksBuilder_ == null) {
@@ -14344,6 +15014,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     * @return Whether the combinedClicks field is set.
      */
     public boolean hasCombinedClicks() {
       return combinedClicksBuilder_ != null || combinedClicks_ != null;
@@ -14356,6 +15027,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value combined_clicks = 115;</code>
+     * @return The combinedClicks.
      */
     public com.google.protobuf.Int64Value getCombinedClicks() {
       if (combinedClicksBuilder_ == null) {
@@ -14516,6 +15188,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     * @return Whether the combinedClicksPerQuery field is set.
      */
     public boolean hasCombinedClicksPerQuery() {
       return combinedClicksPerQueryBuilder_ != null || combinedClicksPerQuery_ != null;
@@ -14529,6 +15202,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue combined_clicks_per_query = 116;</code>
+     * @return The combinedClicksPerQuery.
      */
     public com.google.protobuf.DoubleValue getCombinedClicksPerQuery() {
       if (combinedClicksPerQueryBuilder_ == null) {
@@ -14695,6 +15369,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     * @return Whether the combinedQueries field is set.
      */
     public boolean hasCombinedQueries() {
       return combinedQueriesBuilder_ != null || combinedQueries_ != null;
@@ -14707,6 +15382,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value combined_queries = 117;</code>
+     * @return The combinedQueries.
      */
     public com.google.protobuf.Int64Value getCombinedQueries() {
       if (combinedQueriesBuilder_ == null) {
@@ -14867,6 +15543,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue content_budget_lost_impression_share = 20;</code>
+     * @return Whether the contentBudgetLostImpressionShare field is set.
      */
     public boolean hasContentBudgetLostImpressionShare() {
       return contentBudgetLostImpressionShareBuilder_ != null || contentBudgetLostImpressionShare_ != null;
@@ -14880,6 +15557,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue content_budget_lost_impression_share = 20;</code>
+     * @return The contentBudgetLostImpressionShare.
      */
     public com.google.protobuf.DoubleValue getContentBudgetLostImpressionShare() {
       if (contentBudgetLostImpressionShareBuilder_ == null) {
@@ -15047,6 +15725,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue content_impression_share = 21;</code>
+     * @return Whether the contentImpressionShare field is set.
      */
     public boolean hasContentImpressionShare() {
       return contentImpressionShareBuilder_ != null || contentImpressionShare_ != null;
@@ -15060,6 +15739,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue content_impression_share = 21;</code>
+     * @return The contentImpressionShare.
      */
     public com.google.protobuf.DoubleValue getContentImpressionShare() {
       if (contentImpressionShareBuilder_ == null) {
@@ -15228,6 +15908,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     * @return Whether the conversionLastReceivedRequestDateTime field is set.
      */
     public boolean hasConversionLastReceivedRequestDateTime() {
       return conversionLastReceivedRequestDateTimeBuilder_ != null || conversionLastReceivedRequestDateTime_ != null;
@@ -15242,6 +15923,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_last_received_request_date_time = 73;</code>
+     * @return The conversionLastReceivedRequestDateTime.
      */
     public com.google.protobuf.StringValue getConversionLastReceivedRequestDateTime() {
       if (conversionLastReceivedRequestDateTimeBuilder_ == null) {
@@ -15414,6 +16096,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     * @return Whether the conversionLastConversionDate field is set.
      */
     public boolean hasConversionLastConversionDate() {
       return conversionLastConversionDateBuilder_ != null || conversionLastConversionDate_ != null;
@@ -15425,6 +16108,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue conversion_last_conversion_date = 74;</code>
+     * @return The conversionLastConversionDate.
      */
     public com.google.protobuf.StringValue getConversionLastConversionDate() {
       if (conversionLastConversionDateBuilder_ == null) {
@@ -15578,6 +16262,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue content_rank_lost_impression_share = 22;</code>
+     * @return Whether the contentRankLostImpressionShare field is set.
      */
     public boolean hasContentRankLostImpressionShare() {
       return contentRankLostImpressionShareBuilder_ != null || contentRankLostImpressionShare_ != null;
@@ -15591,6 +16276,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue content_rank_lost_impression_share = 22;</code>
+     * @return The contentRankLostImpressionShare.
      */
     public com.google.protobuf.DoubleValue getContentRankLostImpressionShare() {
       if (contentRankLostImpressionShareBuilder_ == null) {
@@ -15754,10 +16440,12 @@ private static final long serialVersionUID = 0L;
      * Conversions from interactions divided by the number of ad interactions
      * (such as clicks for text ads or views for video ads). This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
+     * @return Whether the conversionsFromInteractionsRate field is set.
      */
     public boolean hasConversionsFromInteractionsRate() {
       return conversionsFromInteractionsRateBuilder_ != null || conversionsFromInteractionsRate_ != null;
@@ -15767,10 +16455,12 @@ private static final long serialVersionUID = 0L;
      * Conversions from interactions divided by the number of ad interactions
      * (such as clicks for text ads or views for video ads). This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
+     * @return The conversionsFromInteractionsRate.
      */
     public com.google.protobuf.DoubleValue getConversionsFromInteractionsRate() {
       if (conversionsFromInteractionsRateBuilder_ == null) {
@@ -15784,7 +16474,8 @@ private static final long serialVersionUID = 0L;
      * Conversions from interactions divided by the number of ad interactions
      * (such as clicks for text ads or views for video ads). This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -15807,7 +16498,8 @@ private static final long serialVersionUID = 0L;
      * Conversions from interactions divided by the number of ad interactions
      * (such as clicks for text ads or views for video ads). This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -15828,7 +16520,8 @@ private static final long serialVersionUID = 0L;
      * Conversions from interactions divided by the number of ad interactions
      * (such as clicks for text ads or views for video ads). This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -15853,7 +16546,8 @@ private static final long serialVersionUID = 0L;
      * Conversions from interactions divided by the number of ad interactions
      * (such as clicks for text ads or views for video ads). This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -15874,7 +16568,8 @@ private static final long serialVersionUID = 0L;
      * Conversions from interactions divided by the number of ad interactions
      * (such as clicks for text ads or views for video ads). This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -15889,7 +16584,8 @@ private static final long serialVersionUID = 0L;
      * Conversions from interactions divided by the number of ad interactions
      * (such as clicks for text ads or views for video ads). This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -15907,7 +16603,8 @@ private static final long serialVersionUID = 0L;
      * Conversions from interactions divided by the number of ad interactions
      * (such as clicks for text ads or views for video ads). This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_rate = 69;</code>
@@ -15931,22 +16628,28 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> conversionsValueBuilder_;
     /**
      * <pre>
-     * The total value of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
+     * @return Whether the conversionsValue field is set.
      */
     public boolean hasConversionsValue() {
       return conversionsValueBuilder_ != null || conversionsValue_ != null;
     }
     /**
      * <pre>
-     * The total value of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
+     * @return The conversionsValue.
      */
     public com.google.protobuf.DoubleValue getConversionsValue() {
       if (conversionsValueBuilder_ == null) {
@@ -15957,8 +16660,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -15978,8 +16683,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -15997,8 +16704,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -16020,8 +16729,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -16039,8 +16750,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -16052,8 +16765,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -16068,8 +16783,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * The value of conversions. This only includes conversion actions which
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value = 70;</code>
@@ -16095,10 +16812,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the cost of ad interactions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
+     * @return Whether the conversionsValuePerCost field is set.
      */
     public boolean hasConversionsValuePerCost() {
       return conversionsValuePerCostBuilder_ != null || conversionsValuePerCost_ != null;
@@ -16107,10 +16826,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the cost of ad interactions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
+     * @return The conversionsValuePerCost.
      */
     public com.google.protobuf.DoubleValue getConversionsValuePerCost() {
       if (conversionsValuePerCostBuilder_ == null) {
@@ -16123,7 +16844,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the cost of ad interactions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -16145,7 +16867,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the cost of ad interactions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -16165,7 +16888,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the cost of ad interactions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -16189,7 +16913,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the cost of ad interactions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -16209,7 +16934,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the cost of ad interactions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -16223,7 +16949,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the cost of ad interactions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -16240,7 +16967,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the cost of ad interactions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_value_per_cost = 71;</code>
@@ -16266,10 +16994,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions from interactions divided by the number of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
+     * @return Whether the conversionsFromInteractionsValuePerInteraction field is set.
      */
     public boolean hasConversionsFromInteractionsValuePerInteraction() {
       return conversionsFromInteractionsValuePerInteractionBuilder_ != null || conversionsFromInteractionsValuePerInteraction_ != null;
@@ -16278,10 +17009,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions from interactions divided by the number of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
+     * @return The conversionsFromInteractionsValuePerInteraction.
      */
     public com.google.protobuf.DoubleValue getConversionsFromInteractionsValuePerInteraction() {
       if (conversionsFromInteractionsValuePerInteractionBuilder_ == null) {
@@ -16294,7 +17028,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions from interactions divided by the number of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -16316,7 +17052,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions from interactions divided by the number of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -16336,7 +17074,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions from interactions divided by the number of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -16360,7 +17100,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions from interactions divided by the number of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -16380,7 +17122,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions from interactions divided by the number of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -16394,7 +17138,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions from interactions divided by the number of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -16411,7 +17157,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions from interactions divided by the number of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions_from_interactions_value_per_interaction = 72;</code>
@@ -16436,10 +17184,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
+     * @return Whether the conversions field is set.
      */
     public boolean hasConversions() {
       return conversionsBuilder_ != null || conversions_ != null;
@@ -16447,10 +17198,13 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
+     * @return The conversions.
      */
     public com.google.protobuf.DoubleValue getConversions() {
       if (conversionsBuilder_ == null) {
@@ -16462,7 +17216,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -16483,7 +17239,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -16502,7 +17260,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -16525,7 +17285,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -16544,7 +17306,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -16557,7 +17321,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -16573,7 +17339,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue conversions = 25;</code>
@@ -16602,6 +17370,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_micros = 26;</code>
+     * @return Whether the costMicros field is set.
      */
     public boolean hasCostMicros() {
       return costMicrosBuilder_ != null || costMicros_ != null;
@@ -16613,6 +17382,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_micros = 26;</code>
+     * @return The costMicros.
      */
     public com.google.protobuf.Int64Value getCostMicros() {
       if (costMicrosBuilder_ == null) {
@@ -16763,6 +17533,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
+     * @return Whether the costPerAllConversions field is set.
      */
     public boolean hasCostPerAllConversions() {
       return costPerAllConversionsBuilder_ != null || costPerAllConversions_ != null;
@@ -16773,6 +17544,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_all_conversions = 68;</code>
+     * @return The costPerAllConversions.
      */
     public com.google.protobuf.DoubleValue getCostPerAllConversions() {
       if (costPerAllConversionsBuilder_ == null) {
@@ -16914,10 +17686,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
+     * @return Whether the costPerConversion field is set.
      */
     public boolean hasCostPerConversion() {
       return costPerConversionBuilder_ != null || costPerConversion_ != null;
@@ -16926,10 +17700,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
+     * @return The costPerConversion.
      */
     public com.google.protobuf.DoubleValue getCostPerConversion() {
       if (costPerConversionBuilder_ == null) {
@@ -16942,7 +17718,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -16964,7 +17741,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -16984,7 +17762,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -17008,7 +17787,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -17028,7 +17808,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -17042,7 +17823,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -17059,7 +17841,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_conversion = 28;</code>
@@ -17085,10 +17868,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by current model attributed
      * conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     * @return Whether the costPerCurrentModelAttributedConversion field is set.
      */
     public boolean hasCostPerCurrentModelAttributedConversion() {
       return costPerCurrentModelAttributedConversionBuilder_ != null || costPerCurrentModelAttributedConversion_ != null;
@@ -17097,10 +17883,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by current model attributed
      * conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
+     * @return The costPerCurrentModelAttributedConversion.
      */
     public com.google.protobuf.DoubleValue getCostPerCurrentModelAttributedConversion() {
       if (costPerCurrentModelAttributedConversionBuilder_ == null) {
@@ -17113,7 +17902,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by current model attributed
      * conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
@@ -17135,7 +17926,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by current model attributed
      * conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
@@ -17155,7 +17948,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by current model attributed
      * conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
@@ -17179,7 +17974,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by current model attributed
      * conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
@@ -17199,7 +17996,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by current model attributed
      * conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
@@ -17213,7 +18012,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by current model attributed
      * conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
@@ -17230,7 +18031,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The cost of ad interactions divided by current model attributed
      * conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cost_per_current_model_attributed_conversion = 106;</code>
@@ -17260,6 +18063,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cross_device_conversions = 29;</code>
+     * @return Whether the crossDeviceConversions field is set.
      */
     public boolean hasCrossDeviceConversions() {
       return crossDeviceConversionsBuilder_ != null || crossDeviceConversions_ != null;
@@ -17272,6 +18076,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue cross_device_conversions = 29;</code>
+     * @return The crossDeviceConversions.
      */
     public com.google.protobuf.DoubleValue getCrossDeviceConversions() {
       if (crossDeviceConversionsBuilder_ == null) {
@@ -17430,6 +18235,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue ctr = 30;</code>
+     * @return Whether the ctr field is set.
      */
     public boolean hasCtr() {
       return ctrBuilder_ != null || ctr_ != null;
@@ -17441,6 +18247,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue ctr = 30;</code>
+     * @return The ctr.
      */
     public com.google.protobuf.DoubleValue getCtr() {
       if (ctrBuilder_ == null) {
@@ -17589,10 +18396,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Shows how your historic conversions data would look under the attribution
      * model you've currently selected. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     * @return Whether the currentModelAttributedConversions field is set.
      */
     public boolean hasCurrentModelAttributedConversions() {
       return currentModelAttributedConversionsBuilder_ != null || currentModelAttributedConversions_ != null;
@@ -17601,10 +18411,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Shows how your historic conversions data would look under the attribution
      * model you've currently selected. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
+     * @return The currentModelAttributedConversions.
      */
     public com.google.protobuf.DoubleValue getCurrentModelAttributedConversions() {
       if (currentModelAttributedConversionsBuilder_ == null) {
@@ -17617,7 +18430,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Shows how your historic conversions data would look under the attribution
      * model you've currently selected. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
@@ -17639,7 +18454,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Shows how your historic conversions data would look under the attribution
      * model you've currently selected. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
@@ -17659,7 +18476,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Shows how your historic conversions data would look under the attribution
      * model you've currently selected. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
@@ -17683,7 +18502,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Shows how your historic conversions data would look under the attribution
      * model you've currently selected. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
@@ -17703,7 +18524,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Shows how your historic conversions data would look under the attribution
      * model you've currently selected. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
@@ -17717,7 +18540,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Shows how your historic conversions data would look under the attribution
      * model you've currently selected. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
@@ -17734,7 +18559,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Shows how your historic conversions data would look under the attribution
      * model you've currently selected. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions = 101;</code>
@@ -17761,10 +18588,13 @@ private static final long serialVersionUID = 0L;
      * Current model attributed conversions from interactions divided by the
      * number of ad interactions (such as clicks for text ads or views for video
      * ads). This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     * @return Whether the currentModelAttributedConversionsFromInteractionsRate field is set.
      */
     public boolean hasCurrentModelAttributedConversionsFromInteractionsRate() {
       return currentModelAttributedConversionsFromInteractionsRateBuilder_ != null || currentModelAttributedConversionsFromInteractionsRate_ != null;
@@ -17774,10 +18604,13 @@ private static final long serialVersionUID = 0L;
      * Current model attributed conversions from interactions divided by the
      * number of ad interactions (such as clicks for text ads or views for video
      * ads). This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
+     * @return The currentModelAttributedConversionsFromInteractionsRate.
      */
     public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsRate() {
       if (currentModelAttributedConversionsFromInteractionsRateBuilder_ == null) {
@@ -17791,7 +18624,9 @@ private static final long serialVersionUID = 0L;
      * Current model attributed conversions from interactions divided by the
      * number of ad interactions (such as clicks for text ads or views for video
      * ads). This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
@@ -17814,7 +18649,9 @@ private static final long serialVersionUID = 0L;
      * Current model attributed conversions from interactions divided by the
      * number of ad interactions (such as clicks for text ads or views for video
      * ads). This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
@@ -17835,7 +18672,9 @@ private static final long serialVersionUID = 0L;
      * Current model attributed conversions from interactions divided by the
      * number of ad interactions (such as clicks for text ads or views for video
      * ads). This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
@@ -17860,7 +18699,9 @@ private static final long serialVersionUID = 0L;
      * Current model attributed conversions from interactions divided by the
      * number of ad interactions (such as clicks for text ads or views for video
      * ads). This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
@@ -17881,7 +18722,9 @@ private static final long serialVersionUID = 0L;
      * Current model attributed conversions from interactions divided by the
      * number of ad interactions (such as clicks for text ads or views for video
      * ads). This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
@@ -17896,7 +18739,9 @@ private static final long serialVersionUID = 0L;
      * Current model attributed conversions from interactions divided by the
      * number of ad interactions (such as clicks for text ads or views for video
      * ads). This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
@@ -17914,7 +18759,9 @@ private static final long serialVersionUID = 0L;
      * Current model attributed conversions from interactions divided by the
      * number of ad interactions (such as clicks for text ads or views for video
      * ads). This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_rate = 102;</code>
@@ -17940,10 +18787,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions from interactions divided
      * by the number of ad interactions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     * @return Whether the currentModelAttributedConversionsFromInteractionsValuePerInteraction field is set.
      */
     public boolean hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
       return currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ != null || currentModelAttributedConversionsFromInteractionsValuePerInteraction_ != null;
@@ -17952,10 +18802,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions from interactions divided
      * by the number of ad interactions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
+     * @return The currentModelAttributedConversionsFromInteractionsValuePerInteraction.
      */
     public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
       if (currentModelAttributedConversionsFromInteractionsValuePerInteractionBuilder_ == null) {
@@ -17968,7 +18821,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions from interactions divided
      * by the number of ad interactions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
@@ -17990,7 +18845,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions from interactions divided
      * by the number of ad interactions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
@@ -18010,7 +18867,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions from interactions divided
      * by the number of ad interactions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
@@ -18034,7 +18893,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions from interactions divided
      * by the number of ad interactions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
@@ -18054,7 +18915,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions from interactions divided
      * by the number of ad interactions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
@@ -18068,7 +18931,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions from interactions divided
      * by the number of ad interactions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
@@ -18085,7 +18950,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions from interactions divided
      * by the number of ad interactions. This only includes conversion actions
-     * which include_in_conversions_metric attribute is set to true.
+     * which include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_from_interactions_value_per_interaction = 103;</code>
@@ -18109,24 +18976,28 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currentModelAttributedConversionsValueBuilder_;
     /**
      * <pre>
-     * The total value of current model attributed conversions. This only includes
+     * The value of current model attributed conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     * @return Whether the currentModelAttributedConversionsValue field is set.
      */
     public boolean hasCurrentModelAttributedConversionsValue() {
       return currentModelAttributedConversionsValueBuilder_ != null || currentModelAttributedConversionsValue_ != null;
     }
     /**
      * <pre>
-     * The total value of current model attributed conversions. This only includes
+     * The value of current model attributed conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
+     * @return The currentModelAttributedConversionsValue.
      */
     public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValue() {
       if (currentModelAttributedConversionsValueBuilder_ == null) {
@@ -18137,9 +19008,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of current model attributed conversions. This only includes
+     * The value of current model attributed conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
@@ -18159,9 +19031,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of current model attributed conversions. This only includes
+     * The value of current model attributed conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
@@ -18179,9 +19052,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of current model attributed conversions. This only includes
+     * The value of current model attributed conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
@@ -18203,9 +19077,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of current model attributed conversions. This only includes
+     * The value of current model attributed conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
@@ -18223,9 +19098,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of current model attributed conversions. This only includes
+     * The value of current model attributed conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
@@ -18237,9 +19113,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of current model attributed conversions. This only includes
+     * The value of current model attributed conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
@@ -18254,9 +19131,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The total value of current model attributed conversions. This only includes
+     * The value of current model attributed conversions. This only includes
      * conversion actions which include_in_conversions_metric attribute is set to
-     * true.
+     * true. If you use conversion-based bidding, your bid strategies will
+     * optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value = 104;</code>
@@ -18282,10 +19160,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the cost of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     * @return Whether the currentModelAttributedConversionsValuePerCost field is set.
      */
     public boolean hasCurrentModelAttributedConversionsValuePerCost() {
       return currentModelAttributedConversionsValuePerCostBuilder_ != null || currentModelAttributedConversionsValuePerCost_ != null;
@@ -18294,10 +19175,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the cost of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
+     * @return The currentModelAttributedConversionsValuePerCost.
      */
     public com.google.protobuf.DoubleValue getCurrentModelAttributedConversionsValuePerCost() {
       if (currentModelAttributedConversionsValuePerCostBuilder_ == null) {
@@ -18310,7 +19194,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the cost of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
@@ -18332,7 +19218,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the cost of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
@@ -18352,7 +19240,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the cost of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
@@ -18376,7 +19266,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the cost of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
@@ -18396,7 +19288,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the cost of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
@@ -18410,7 +19304,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the cost of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
@@ -18427,7 +19323,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the cost of ad
      * interactions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue current_model_attributed_conversions_value_per_cost = 105;</code>
@@ -18456,6 +19354,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue engagement_rate = 31;</code>
+     * @return Whether the engagementRate field is set.
      */
     public boolean hasEngagementRate() {
       return engagementRateBuilder_ != null || engagementRate_ != null;
@@ -18467,6 +19366,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue engagement_rate = 31;</code>
+     * @return The engagementRate.
      */
     public com.google.protobuf.DoubleValue getEngagementRate() {
       if (engagementRateBuilder_ == null) {
@@ -18619,6 +19519,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value engagements = 32;</code>
+     * @return Whether the engagements field is set.
      */
     public boolean hasEngagements() {
       return engagementsBuilder_ != null || engagements_ != null;
@@ -18631,6 +19532,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value engagements = 32;</code>
+     * @return The engagements.
      */
     public com.google.protobuf.Int64Value getEngagements() {
       if (engagementsBuilder_ == null) {
@@ -18784,20 +19686,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> hotelAverageLeadValueMicrosBuilder_;
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     * @return Whether the hotelAverageLeadValueMicros field is set.
      */
     public boolean hasHotelAverageLeadValueMicros() {
       return hotelAverageLeadValueMicrosBuilder_ != null || hotelAverageLeadValueMicros_ != null;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
+     * @return The hotelAverageLeadValueMicros.
      */
     public com.google.protobuf.DoubleValue getHotelAverageLeadValueMicros() {
       if (hotelAverageLeadValueMicrosBuilder_ == null) {
@@ -18808,7 +19712,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18828,7 +19732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18846,7 +19750,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18868,7 +19772,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18886,7 +19790,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18898,7 +19802,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18913,7 +19817,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Average lead value of hotel.
+     * Average lead value based on clicks.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_average_lead_value_micros = 75;</code>
@@ -18942,6 +19846,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     * @return Whether the hotelPriceDifferencePercentage field is set.
      */
     public boolean hasHotelPriceDifferencePercentage() {
       return hotelPriceDifferencePercentageBuilder_ != null || hotelPriceDifferencePercentage_ != null;
@@ -18953,6 +19858,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue hotel_price_difference_percentage = 129;</code>
+     * @return The hotelPriceDifferencePercentage.
      */
     public com.google.protobuf.DoubleValue getHotelPriceDifferencePercentage() {
       if (hotelPriceDifferencePercentageBuilder_ == null) {
@@ -19101,8 +20007,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+     * @return The enum numeric value on the wire for historicalCreativeQualityScore.
      */
-    public int getHistoricalCreativeQualityScoreValue() {
+    @java.lang.Override public int getHistoricalCreativeQualityScoreValue() {
       return historicalCreativeQualityScore_;
     }
     /**
@@ -19111,8 +20018,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+     * @param value The enum numeric value on the wire for historicalCreativeQualityScore to set.
+     * @return This builder for chaining.
      */
     public Builder setHistoricalCreativeQualityScoreValue(int value) {
+      
       historicalCreativeQualityScore_ = value;
       onChanged();
       return this;
@@ -19123,7 +20033,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+     * @return The historicalCreativeQualityScore.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalCreativeQualityScore() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalCreativeQualityScore_);
@@ -19135,6 +20047,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+     * @param value The historicalCreativeQualityScore to set.
+     * @return This builder for chaining.
      */
     public Builder setHistoricalCreativeQualityScore(com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket value) {
       if (value == null) {
@@ -19151,6 +20065,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_creative_quality_score = 80;</code>
+     * @return This builder for chaining.
      */
     public Builder clearHistoricalCreativeQualityScore() {
       
@@ -19166,8 +20081,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+     * @return The enum numeric value on the wire for historicalLandingPageQualityScore.
      */
-    public int getHistoricalLandingPageQualityScoreValue() {
+    @java.lang.Override public int getHistoricalLandingPageQualityScoreValue() {
       return historicalLandingPageQualityScore_;
     }
     /**
@@ -19176,8 +20092,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+     * @param value The enum numeric value on the wire for historicalLandingPageQualityScore to set.
+     * @return This builder for chaining.
      */
     public Builder setHistoricalLandingPageQualityScoreValue(int value) {
+      
       historicalLandingPageQualityScore_ = value;
       onChanged();
       return this;
@@ -19188,7 +20107,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+     * @return The historicalLandingPageQualityScore.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalLandingPageQualityScore() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalLandingPageQualityScore_);
@@ -19200,6 +20121,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+     * @param value The historicalLandingPageQualityScore to set.
+     * @return This builder for chaining.
      */
     public Builder setHistoricalLandingPageQualityScore(com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket value) {
       if (value == null) {
@@ -19216,6 +20139,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_landing_page_quality_score = 81;</code>
+     * @return This builder for chaining.
      */
     public Builder clearHistoricalLandingPageQualityScore() {
       
@@ -19233,6 +20157,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     * @return Whether the historicalQualityScore field is set.
      */
     public boolean hasHistoricalQualityScore() {
       return historicalQualityScoreBuilder_ != null || historicalQualityScore_ != null;
@@ -19243,6 +20168,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value historical_quality_score = 82;</code>
+     * @return The historicalQualityScore.
      */
     public com.google.protobuf.Int64Value getHistoricalQualityScore() {
       if (historicalQualityScoreBuilder_ == null) {
@@ -19384,8 +20310,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+     * @return The enum numeric value on the wire for historicalSearchPredictedCtr.
      */
-    public int getHistoricalSearchPredictedCtrValue() {
+    @java.lang.Override public int getHistoricalSearchPredictedCtrValue() {
       return historicalSearchPredictedCtr_;
     }
     /**
@@ -19394,8 +20321,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+     * @param value The enum numeric value on the wire for historicalSearchPredictedCtr to set.
+     * @return This builder for chaining.
      */
     public Builder setHistoricalSearchPredictedCtrValue(int value) {
+      
       historicalSearchPredictedCtr_ = value;
       onChanged();
       return this;
@@ -19406,7 +20336,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+     * @return The historicalSearchPredictedCtr.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket getHistoricalSearchPredictedCtr() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(historicalSearchPredictedCtr_);
@@ -19418,6 +20350,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+     * @param value The historicalSearchPredictedCtr to set.
+     * @return This builder for chaining.
      */
     public Builder setHistoricalSearchPredictedCtr(com.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket value) {
       if (value == null) {
@@ -19434,6 +20368,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.QualityScoreBucketEnum.QualityScoreBucket historical_search_predicted_ctr = 83;</code>
+     * @return This builder for chaining.
      */
     public Builder clearHistoricalSearchPredictedCtr() {
       
@@ -19451,6 +20386,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     * @return Whether the gmailForwards field is set.
      */
     public boolean hasGmailForwards() {
       return gmailForwardsBuilder_ != null || gmailForwards_ != null;
@@ -19461,6 +20397,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gmail_forwards = 85;</code>
+     * @return The gmailForwards.
      */
     public com.google.protobuf.Int64Value getGmailForwards() {
       if (gmailForwardsBuilder_ == null) {
@@ -19605,6 +20542,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     * @return Whether the gmailSaves field is set.
      */
     public boolean hasGmailSaves() {
       return gmailSavesBuilder_ != null || gmailSaves_ != null;
@@ -19616,6 +20554,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gmail_saves = 86;</code>
+     * @return The gmailSaves.
      */
     public com.google.protobuf.Int64Value getGmailSaves() {
       if (gmailSavesBuilder_ == null) {
@@ -19767,6 +20706,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     * @return Whether the gmailSecondaryClicks field is set.
      */
     public boolean hasGmailSecondaryClicks() {
       return gmailSecondaryClicksBuilder_ != null || gmailSecondaryClicks_ != null;
@@ -19778,6 +20718,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gmail_secondary_clicks = 87;</code>
+     * @return The gmailSecondaryClicks.
      */
     public com.google.protobuf.Int64Value getGmailSecondaryClicks() {
       if (gmailSecondaryClicksBuilder_ == null) {
@@ -19929,6 +20870,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     * @return Whether the impressionsFromStoreReach field is set.
      */
     public boolean hasImpressionsFromStoreReach() {
       return impressionsFromStoreReachBuilder_ != null || impressionsFromStoreReach_ != null;
@@ -19940,6 +20882,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value impressions_from_store_reach = 125;</code>
+     * @return The impressionsFromStoreReach.
      */
     public com.google.protobuf.Int64Value getImpressionsFromStoreReach() {
       if (impressionsFromStoreReachBuilder_ == null) {
@@ -20091,6 +21034,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value impressions = 37;</code>
+     * @return Whether the impressions field is set.
      */
     public boolean hasImpressions() {
       return impressionsBuilder_ != null || impressions_ != null;
@@ -20102,6 +21046,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value impressions = 37;</code>
+     * @return The impressions.
      */
     public com.google.protobuf.Int64Value getImpressions() {
       if (impressionsBuilder_ == null) {
@@ -20254,6 +21199,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue interaction_rate = 38;</code>
+     * @return Whether the interactionRate field is set.
      */
     public boolean hasInteractionRate() {
       return interactionRateBuilder_ != null || interactionRate_ != null;
@@ -20266,6 +21212,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue interaction_rate = 38;</code>
+     * @return The interactionRate.
      */
     public com.google.protobuf.DoubleValue getInteractionRate() {
       if (interactionRateBuilder_ == null) {
@@ -20425,6 +21372,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value interactions = 39;</code>
+     * @return Whether the interactions field is set.
      */
     public boolean hasInteractions() {
       return interactionsBuilder_ != null || interactions_ != null;
@@ -20437,6 +21385,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value interactions = 39;</code>
+     * @return The interactions.
      */
     public com.google.protobuf.Int64Value getInteractions() {
       if (interactionsBuilder_ == null) {
@@ -20588,9 +21537,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> interactionEventTypes_ =
       java.util.Collections.emptyList();
     private void ensureInteractionEventTypesIsMutable() {
-      if (!((bitField2_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>(interactionEventTypes_);
-        bitField2_ |= 0x00000040;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
@@ -20599,6 +21548,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @return A list containing the interactionEventTypes.
      */
     public java.util.List<com.google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType> getInteractionEventTypesList() {
       return new com.google.protobuf.Internal.ListAdapter<
@@ -20610,6 +21560,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @return The count of interactionEventTypes.
      */
     public int getInteractionEventTypesCount() {
       return interactionEventTypes_.size();
@@ -20620,6 +21571,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @param index The index of the element to return.
+     * @return The interactionEventTypes at the given index.
      */
     public com.google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType getInteractionEventTypes(int index) {
       return interactionEventTypes_converter_.convert(interactionEventTypes_.get(index));
@@ -20630,6 +21583,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @param index The index to set the value at.
+     * @param value The interactionEventTypes to set.
+     * @return This builder for chaining.
      */
     public Builder setInteractionEventTypes(
         int index, com.google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType value) {
@@ -20647,6 +21603,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @param value The interactionEventTypes to add.
+     * @return This builder for chaining.
      */
     public Builder addInteractionEventTypes(com.google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType value) {
       if (value == null) {
@@ -20663,6 +21621,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @param values The interactionEventTypes to add.
+     * @return This builder for chaining.
      */
     public Builder addAllInteractionEventTypes(
         java.lang.Iterable<? extends com.google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType> values) {
@@ -20679,10 +21639,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @return This builder for chaining.
      */
     public Builder clearInteractionEventTypes() {
       interactionEventTypes_ = java.util.Collections.emptyList();
-      bitField2_ = (bitField2_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -20692,6 +21653,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @return A list containing the enum numeric values on the wire for interactionEventTypes.
      */
     public java.util.List<java.lang.Integer>
     getInteractionEventTypesValueList() {
@@ -20703,6 +21665,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of interactionEventTypes at the given index.
      */
     public int getInteractionEventTypesValue(int index) {
       return interactionEventTypes_.get(index);
@@ -20713,6 +21677,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of interactionEventTypes at the given index.
+     * @return This builder for chaining.
      */
     public Builder setInteractionEventTypesValue(
         int index, int value) {
@@ -20727,6 +21694,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @param value The enum numeric value on the wire for interactionEventTypes to add.
+     * @return This builder for chaining.
      */
     public Builder addInteractionEventTypesValue(int value) {
       ensureInteractionEventTypesIsMutable();
@@ -20740,6 +21709,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v2.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
+     * @param values The enum numeric values on the wire for interactionEventTypes to add.
+     * @return This builder for chaining.
      */
     public Builder addAllInteractionEventTypesValue(
         java.lang.Iterable<java.lang.Integer> values) {
@@ -20761,6 +21732,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue invalid_click_rate = 40;</code>
+     * @return Whether the invalidClickRate field is set.
      */
     public boolean hasInvalidClickRate() {
       return invalidClickRateBuilder_ != null || invalidClickRate_ != null;
@@ -20772,6 +21744,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue invalid_click_rate = 40;</code>
+     * @return The invalidClickRate.
      */
     public com.google.protobuf.DoubleValue getInvalidClickRate() {
       if (invalidClickRateBuilder_ == null) {
@@ -20922,6 +21895,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value invalid_clicks = 41;</code>
+     * @return Whether the invalidClicks field is set.
      */
     public boolean hasInvalidClicks() {
       return invalidClicksBuilder_ != null || invalidClicks_ != null;
@@ -20932,6 +21906,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value invalid_clicks = 41;</code>
+     * @return The invalidClicks.
      */
     public com.google.protobuf.Int64Value getInvalidClicks() {
       if (invalidClicksBuilder_ == null) {
@@ -21076,6 +22051,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value message_chats = 126;</code>
+     * @return Whether the messageChats field is set.
      */
     public boolean hasMessageChats() {
       return messageChatsBuilder_ != null || messageChats_ != null;
@@ -21087,6 +22063,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value message_chats = 126;</code>
+     * @return The messageChats.
      */
     public com.google.protobuf.Int64Value getMessageChats() {
       if (messageChatsBuilder_ == null) {
@@ -21237,6 +22214,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value message_impressions = 127;</code>
+     * @return Whether the messageImpressions field is set.
      */
     public boolean hasMessageImpressions() {
       return messageImpressionsBuilder_ != null || messageImpressions_ != null;
@@ -21247,6 +22225,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value message_impressions = 127;</code>
+     * @return The messageImpressions.
      */
     public com.google.protobuf.Int64Value getMessageImpressions() {
       if (messageImpressionsBuilder_ == null) {
@@ -21394,6 +22373,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue message_chat_rate = 128;</code>
+     * @return Whether the messageChatRate field is set.
      */
     public boolean hasMessageChatRate() {
       return messageChatRateBuilder_ != null || messageChatRate_ != null;
@@ -21408,6 +22388,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue message_chat_rate = 128;</code>
+     * @return The messageChatRate.
      */
     public com.google.protobuf.DoubleValue getMessageChatRate() {
       if (messageChatRateBuilder_ == null) {
@@ -21579,6 +22560,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     * @return Whether the mobileFriendlyClicksPercentage field is set.
      */
     public boolean hasMobileFriendlyClicksPercentage() {
       return mobileFriendlyClicksPercentageBuilder_ != null || mobileFriendlyClicksPercentage_ != null;
@@ -21589,6 +22571,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue mobile_friendly_clicks_percentage = 109;</code>
+     * @return The mobileFriendlyClicksPercentage.
      */
     public com.google.protobuf.DoubleValue getMobileFriendlyClicksPercentage() {
       if (mobileFriendlyClicksPercentageBuilder_ == null) {
@@ -21734,6 +22717,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     * @return Whether the organicClicks field is set.
      */
     public boolean hasOrganicClicks() {
       return organicClicksBuilder_ != null || organicClicks_ != null;
@@ -21746,6 +22730,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value organic_clicks = 110;</code>
+     * @return The organicClicks.
      */
     public com.google.protobuf.Int64Value getOrganicClicks() {
       if (organicClicksBuilder_ == null) {
@@ -21906,6 +22891,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     * @return Whether the organicClicksPerQuery field is set.
      */
     public boolean hasOrganicClicksPerQuery() {
       return organicClicksPerQueryBuilder_ != null || organicClicksPerQuery_ != null;
@@ -21919,6 +22905,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue organic_clicks_per_query = 111;</code>
+     * @return The organicClicksPerQuery.
      */
     public com.google.protobuf.DoubleValue getOrganicClicksPerQuery() {
       if (organicClicksPerQueryBuilder_ == null) {
@@ -22085,6 +23072,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     * @return Whether the organicImpressions field is set.
      */
     public boolean hasOrganicImpressions() {
       return organicImpressionsBuilder_ != null || organicImpressions_ != null;
@@ -22097,6 +23085,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value organic_impressions = 112;</code>
+     * @return The organicImpressions.
      */
     public com.google.protobuf.Int64Value getOrganicImpressions() {
       if (organicImpressionsBuilder_ == null) {
@@ -22257,6 +23246,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     * @return Whether the organicImpressionsPerQuery field is set.
      */
     public boolean hasOrganicImpressionsPerQuery() {
       return organicImpressionsPerQueryBuilder_ != null || organicImpressionsPerQuery_ != null;
@@ -22270,6 +23260,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue organic_impressions_per_query = 113;</code>
+     * @return The organicImpressionsPerQuery.
      */
     public com.google.protobuf.DoubleValue getOrganicImpressionsPerQuery() {
       if (organicImpressionsPerQueryBuilder_ == null) {
@@ -22436,6 +23427,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     * @return Whether the organicQueries field is set.
      */
     public boolean hasOrganicQueries() {
       return organicQueriesBuilder_ != null || organicQueries_ != null;
@@ -22448,6 +23440,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value organic_queries = 114;</code>
+     * @return The organicQueries.
      */
     public com.google.protobuf.Int64Value getOrganicQueries() {
       if (organicQueriesBuilder_ == null) {
@@ -22606,6 +23599,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue percent_new_visitors = 42;</code>
+     * @return Whether the percentNewVisitors field is set.
      */
     public boolean hasPercentNewVisitors() {
       return percentNewVisitorsBuilder_ != null || percentNewVisitors_ != null;
@@ -22617,6 +23611,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue percent_new_visitors = 42;</code>
+     * @return The percentNewVisitors.
      */
     public com.google.protobuf.DoubleValue getPercentNewVisitors() {
       if (percentNewVisitorsBuilder_ == null) {
@@ -22767,6 +23762,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value phone_calls = 43;</code>
+     * @return Whether the phoneCalls field is set.
      */
     public boolean hasPhoneCalls() {
       return phoneCallsBuilder_ != null || phoneCalls_ != null;
@@ -22777,6 +23773,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value phone_calls = 43;</code>
+     * @return The phoneCalls.
      */
     public com.google.protobuf.Int64Value getPhoneCalls() {
       if (phoneCallsBuilder_ == null) {
@@ -22920,6 +23917,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value phone_impressions = 44;</code>
+     * @return Whether the phoneImpressions field is set.
      */
     public boolean hasPhoneImpressions() {
       return phoneImpressionsBuilder_ != null || phoneImpressions_ != null;
@@ -22930,6 +23928,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value phone_impressions = 44;</code>
+     * @return The phoneImpressions.
      */
     public com.google.protobuf.Int64Value getPhoneImpressions() {
       if (phoneImpressionsBuilder_ == null) {
@@ -23074,6 +24073,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue phone_through_rate = 45;</code>
+     * @return Whether the phoneThroughRate field is set.
      */
     public boolean hasPhoneThroughRate() {
       return phoneThroughRateBuilder_ != null || phoneThroughRate_ != null;
@@ -23085,6 +24085,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue phone_through_rate = 45;</code>
+     * @return The phoneThroughRate.
      */
     public com.google.protobuf.DoubleValue getPhoneThroughRate() {
       if (phoneThroughRateBuilder_ == null) {
@@ -23237,6 +24238,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue relative_ctr = 46;</code>
+     * @return Whether the relativeCtr field is set.
      */
     public boolean hasRelativeCtr() {
       return relativeCtrBuilder_ != null || relativeCtr_ != null;
@@ -23249,6 +24251,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue relative_ctr = 46;</code>
+     * @return The relativeCtr.
      */
     public com.google.protobuf.DoubleValue getRelativeCtr() {
       if (relativeCtrBuilder_ == null) {
@@ -23404,11 +24407,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
      * shown in the most prominent Shopping position. See
-     * [this article](https://support.google.com/google-ads/answer/7501826)
+     * https://support.google.com/google-ads/answer/7501826
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     * @return Whether the searchAbsoluteTopImpressionShare field is set.
      */
     public boolean hasSearchAbsoluteTopImpressionShare() {
       return searchAbsoluteTopImpressionShareBuilder_ != null || searchAbsoluteTopImpressionShare_ != null;
@@ -23417,11 +24421,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
      * shown in the most prominent Shopping position. See
-     * [this article](https://support.google.com/google-ads/answer/7501826)
+     * https://support.google.com/google-ads/answer/7501826
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_absolute_top_impression_share = 78;</code>
+     * @return The searchAbsoluteTopImpressionShare.
      */
     public com.google.protobuf.DoubleValue getSearchAbsoluteTopImpressionShare() {
       if (searchAbsoluteTopImpressionShareBuilder_ == null) {
@@ -23434,7 +24439,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
      * shown in the most prominent Shopping position. See
-     * [this article](https://support.google.com/google-ads/answer/7501826)
+     * https://support.google.com/google-ads/answer/7501826
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
@@ -23457,7 +24462,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
      * shown in the most prominent Shopping position. See
-     * [this article](https://support.google.com/google-ads/answer/7501826)
+     * https://support.google.com/google-ads/answer/7501826
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
@@ -23478,7 +24483,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
      * shown in the most prominent Shopping position. See
-     * [this article](https://support.google.com/google-ads/answer/7501826)
+     * https://support.google.com/google-ads/answer/7501826
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
@@ -23503,7 +24508,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
      * shown in the most prominent Shopping position. See
-     * [this article](https://support.google.com/google-ads/answer/7501826)
+     * https://support.google.com/google-ads/answer/7501826
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
@@ -23524,7 +24529,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
      * shown in the most prominent Shopping position. See
-     * [this article](https://support.google.com/google-ads/answer/7501826)
+     * https://support.google.com/google-ads/answer/7501826
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
@@ -23539,7 +24544,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
      * shown in the most prominent Shopping position. See
-     * [this article](https://support.google.com/google-ads/answer/7501826)
+     * https://support.google.com/google-ads/answer/7501826
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
@@ -23557,7 +24562,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The percentage of the customer's Shopping or Search ad impressions that are
      * shown in the most prominent Shopping position. See
-     * [this article](https://support.google.com/google-ads/answer/7501826)
+     * https://support.google.com/google-ads/answer/7501826
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
@@ -23589,6 +24594,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     * @return Whether the searchBudgetLostAbsoluteTopImpressionShare field is set.
      */
     public boolean hasSearchBudgetLostAbsoluteTopImpressionShare() {
       return searchBudgetLostAbsoluteTopImpressionShareBuilder_ != null || searchBudgetLostAbsoluteTopImpressionShare_ != null;
@@ -23602,6 +24608,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_budget_lost_absolute_top_impression_share = 88;</code>
+     * @return The searchBudgetLostAbsoluteTopImpressionShare.
      */
     public com.google.protobuf.DoubleValue getSearchBudgetLostAbsoluteTopImpressionShare() {
       if (searchBudgetLostAbsoluteTopImpressionShareBuilder_ == null) {
@@ -23769,6 +24776,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_budget_lost_impression_share = 47;</code>
+     * @return Whether the searchBudgetLostImpressionShare field is set.
      */
     public boolean hasSearchBudgetLostImpressionShare() {
       return searchBudgetLostImpressionShareBuilder_ != null || searchBudgetLostImpressionShare_ != null;
@@ -23782,6 +24790,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_budget_lost_impression_share = 47;</code>
+     * @return The searchBudgetLostImpressionShare.
      */
     public com.google.protobuf.DoubleValue getSearchBudgetLostImpressionShare() {
       if (searchBudgetLostImpressionShareBuilder_ == null) {
@@ -23949,6 +24958,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     * @return Whether the searchBudgetLostTopImpressionShare field is set.
      */
     public boolean hasSearchBudgetLostTopImpressionShare() {
       return searchBudgetLostTopImpressionShareBuilder_ != null || searchBudgetLostTopImpressionShare_ != null;
@@ -23962,6 +24972,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_budget_lost_top_impression_share = 89;</code>
+     * @return The searchBudgetLostTopImpressionShare.
      */
     public com.google.protobuf.DoubleValue getSearchBudgetLostTopImpressionShare() {
       if (searchBudgetLostTopImpressionShareBuilder_ == null) {
@@ -24129,6 +25140,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     * @return Whether the searchClickShare field is set.
      */
     public boolean hasSearchClickShare() {
       return searchClickShareBuilder_ != null || searchClickShare_ != null;
@@ -24142,6 +25154,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_click_share = 48;</code>
+     * @return The searchClickShare.
      */
     public com.google.protobuf.DoubleValue getSearchClickShare() {
       if (searchClickShareBuilder_ == null) {
@@ -24311,6 +25324,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_exact_match_impression_share = 49;</code>
+     * @return Whether the searchExactMatchImpressionShare field is set.
      */
     public boolean hasSearchExactMatchImpressionShare() {
       return searchExactMatchImpressionShareBuilder_ != null || searchExactMatchImpressionShare_ != null;
@@ -24326,6 +25340,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_exact_match_impression_share = 49;</code>
+     * @return The searchExactMatchImpressionShare.
      */
     public com.google.protobuf.DoubleValue getSearchExactMatchImpressionShare() {
       if (searchExactMatchImpressionShareBuilder_ == null) {
@@ -24507,6 +25522,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_impression_share = 50;</code>
+     * @return Whether the searchImpressionShare field is set.
      */
     public boolean hasSearchImpressionShare() {
       return searchImpressionShareBuilder_ != null || searchImpressionShare_ != null;
@@ -24520,6 +25536,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_impression_share = 50;</code>
+     * @return The searchImpressionShare.
      */
     public com.google.protobuf.DoubleValue getSearchImpressionShare() {
       if (searchImpressionShareBuilder_ == null) {
@@ -24687,6 +25704,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     * @return Whether the searchRankLostAbsoluteTopImpressionShare field is set.
      */
     public boolean hasSearchRankLostAbsoluteTopImpressionShare() {
       return searchRankLostAbsoluteTopImpressionShareBuilder_ != null || searchRankLostAbsoluteTopImpressionShare_ != null;
@@ -24700,6 +25718,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_rank_lost_absolute_top_impression_share = 90;</code>
+     * @return The searchRankLostAbsoluteTopImpressionShare.
      */
     public com.google.protobuf.DoubleValue getSearchRankLostAbsoluteTopImpressionShare() {
       if (searchRankLostAbsoluteTopImpressionShareBuilder_ == null) {
@@ -24867,6 +25886,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_rank_lost_impression_share = 51;</code>
+     * @return Whether the searchRankLostImpressionShare field is set.
      */
     public boolean hasSearchRankLostImpressionShare() {
       return searchRankLostImpressionShareBuilder_ != null || searchRankLostImpressionShare_ != null;
@@ -24880,6 +25900,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_rank_lost_impression_share = 51;</code>
+     * @return The searchRankLostImpressionShare.
      */
     public com.google.protobuf.DoubleValue getSearchRankLostImpressionShare() {
       if (searchRankLostImpressionShareBuilder_ == null) {
@@ -25047,6 +26068,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     * @return Whether the searchRankLostTopImpressionShare field is set.
      */
     public boolean hasSearchRankLostTopImpressionShare() {
       return searchRankLostTopImpressionShareBuilder_ != null || searchRankLostTopImpressionShare_ != null;
@@ -25060,6 +26082,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_rank_lost_top_impression_share = 91;</code>
+     * @return The searchRankLostTopImpressionShare.
      */
     public com.google.protobuf.DoubleValue getSearchRankLostTopImpressionShare() {
       if (searchRankLostTopImpressionShareBuilder_ == null) {
@@ -25228,6 +26251,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     * @return Whether the searchTopImpressionShare field is set.
      */
     public boolean hasSearchTopImpressionShare() {
       return searchTopImpressionShareBuilder_ != null || searchTopImpressionShare_ != null;
@@ -25242,6 +26266,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue search_top_impression_share = 92;</code>
+     * @return The searchTopImpressionShare.
      */
     public com.google.protobuf.DoubleValue getSearchTopImpressionShare() {
       if (searchTopImpressionShareBuilder_ == null) {
@@ -25414,6 +26439,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     * @return Whether the speedScore field is set.
      */
     public boolean hasSpeedScore() {
       return speedScoreBuilder_ != null || speedScore_ != null;
@@ -25425,6 +26451,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value speed_score = 107;</code>
+     * @return The speedScore.
      */
     public com.google.protobuf.Int64Value getSpeedScore() {
       if (speedScoreBuilder_ == null) {
@@ -25576,6 +26603,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     * @return Whether the topImpressionPercentage field is set.
      */
     public boolean hasTopImpressionPercentage() {
       return topImpressionPercentageBuilder_ != null || topImpressionPercentage_ != null;
@@ -25587,6 +26615,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue top_impression_percentage = 93;</code>
+     * @return The topImpressionPercentage.
      */
     public com.google.protobuf.DoubleValue getTopImpressionPercentage() {
       if (topImpressionPercentageBuilder_ == null) {
@@ -25738,6 +26767,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     * @return Whether the validAcceleratedMobilePagesClicksPercentage field is set.
      */
     public boolean hasValidAcceleratedMobilePagesClicksPercentage() {
       return validAcceleratedMobilePagesClicksPercentageBuilder_ != null || validAcceleratedMobilePagesClicksPercentage_ != null;
@@ -25749,6 +26779,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue valid_accelerated_mobile_pages_clicks_percentage = 108;</code>
+     * @return The validAcceleratedMobilePagesClicksPercentage.
      */
     public com.google.protobuf.DoubleValue getValidAcceleratedMobilePagesClicksPercentage() {
       if (validAcceleratedMobilePagesClicksPercentageBuilder_ == null) {
@@ -25899,6 +26930,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_all_conversions = 52;</code>
+     * @return Whether the valuePerAllConversions field is set.
      */
     public boolean hasValuePerAllConversions() {
       return valuePerAllConversionsBuilder_ != null || valuePerAllConversions_ != null;
@@ -25909,6 +26941,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_all_conversions = 52;</code>
+     * @return The valuePerAllConversions.
      */
     public com.google.protobuf.DoubleValue getValuePerAllConversions() {
       if (valuePerAllConversionsBuilder_ == null) {
@@ -26050,10 +27083,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the number of conversions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
+     * @return Whether the valuePerConversion field is set.
      */
     public boolean hasValuePerConversion() {
       return valuePerConversionBuilder_ != null || valuePerConversion_ != null;
@@ -26062,10 +27097,12 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the number of conversions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
+     * @return The valuePerConversion.
      */
     public com.google.protobuf.DoubleValue getValuePerConversion() {
       if (valuePerConversionBuilder_ == null) {
@@ -26078,7 +27115,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the number of conversions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -26100,7 +27138,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the number of conversions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -26120,7 +27159,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the number of conversions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -26144,7 +27184,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the number of conversions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -26164,7 +27205,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the number of conversions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -26178,7 +27220,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the number of conversions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -26195,7 +27238,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of conversions divided by the number of conversions. This only
      * includes conversion actions which include_in_conversions_metric attribute
-     * is set to true.
+     * is set to true. If you use conversion-based bidding, your bid strategies
+     * will optimize for these conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_conversion = 53;</code>
@@ -26221,10 +27265,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the number of
      * the conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     * @return Whether the valuePerCurrentModelAttributedConversion field is set.
      */
     public boolean hasValuePerCurrentModelAttributedConversion() {
       return valuePerCurrentModelAttributedConversionBuilder_ != null || valuePerCurrentModelAttributedConversion_ != null;
@@ -26233,10 +27280,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the number of
      * the conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
+     * @return The valuePerCurrentModelAttributedConversion.
      */
     public com.google.protobuf.DoubleValue getValuePerCurrentModelAttributedConversion() {
       if (valuePerCurrentModelAttributedConversionBuilder_ == null) {
@@ -26249,7 +27299,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the number of
      * the conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
@@ -26271,7 +27323,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the number of
      * the conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
@@ -26291,7 +27345,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the number of
      * the conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
@@ -26315,7 +27371,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the number of
      * the conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
@@ -26335,7 +27393,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the number of
      * the conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
@@ -26349,7 +27409,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the number of
      * the conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
@@ -26366,7 +27428,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The value of current model attributed conversions divided by the number of
      * the conversions. This only includes conversion actions which
-     * include_in_conversions_metric attribute is set to true.
+     * include_in_conversions_metric attribute is set to true. If you use
+     * conversion-based bidding, your bid strategies will optimize for these
+     * conversions.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue value_per_current_model_attributed_conversion = 94;</code>
@@ -26394,6 +27458,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     * @return Whether the videoQuartile100Rate field is set.
      */
     public boolean hasVideoQuartile100Rate() {
       return videoQuartile100RateBuilder_ != null || videoQuartile100Rate_ != null;
@@ -26404,6 +27469,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue video_quartile_100_rate = 54;</code>
+     * @return The videoQuartile100Rate.
      */
     public com.google.protobuf.DoubleValue getVideoQuartile100Rate() {
       if (videoQuartile100RateBuilder_ == null) {
@@ -26547,6 +27613,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     * @return Whether the videoQuartile25Rate field is set.
      */
     public boolean hasVideoQuartile25Rate() {
       return videoQuartile25RateBuilder_ != null || videoQuartile25Rate_ != null;
@@ -26557,6 +27624,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue video_quartile_25_rate = 55;</code>
+     * @return The videoQuartile25Rate.
      */
     public com.google.protobuf.DoubleValue getVideoQuartile25Rate() {
       if (videoQuartile25RateBuilder_ == null) {
@@ -26700,6 +27768,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     * @return Whether the videoQuartile50Rate field is set.
      */
     public boolean hasVideoQuartile50Rate() {
       return videoQuartile50RateBuilder_ != null || videoQuartile50Rate_ != null;
@@ -26710,6 +27779,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue video_quartile_50_rate = 56;</code>
+     * @return The videoQuartile50Rate.
      */
     public com.google.protobuf.DoubleValue getVideoQuartile50Rate() {
       if (videoQuartile50RateBuilder_ == null) {
@@ -26853,6 +27923,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     * @return Whether the videoQuartile75Rate field is set.
      */
     public boolean hasVideoQuartile75Rate() {
       return videoQuartile75RateBuilder_ != null || videoQuartile75Rate_ != null;
@@ -26863,6 +27934,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue video_quartile_75_rate = 57;</code>
+     * @return The videoQuartile75Rate.
      */
     public com.google.protobuf.DoubleValue getVideoQuartile75Rate() {
       if (videoQuartile75RateBuilder_ == null) {
@@ -27008,6 +28080,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     * @return Whether the videoViewRate field is set.
      */
     public boolean hasVideoViewRate() {
       return videoViewRateBuilder_ != null || videoViewRate_ != null;
@@ -27020,6 +28093,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue video_view_rate = 58;</code>
+     * @return The videoViewRate.
      */
     public com.google.protobuf.DoubleValue getVideoViewRate() {
       if (videoViewRateBuilder_ == null) {
@@ -27177,6 +28251,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     * @return Whether the videoViews field is set.
      */
     public boolean hasVideoViews() {
       return videoViewsBuilder_ != null || videoViews_ != null;
@@ -27187,6 +28262,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value video_views = 59;</code>
+     * @return The videoViews.
      */
     public com.google.protobuf.Int64Value getVideoViews() {
       if (videoViewsBuilder_ == null) {
@@ -27333,6 +28409,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value view_through_conversions = 60;</code>
+     * @return Whether the viewThroughConversions field is set.
      */
     public boolean hasViewThroughConversions() {
       return viewThroughConversionsBuilder_ != null || viewThroughConversions_ != null;
@@ -27346,6 +28423,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value view_through_conversions = 60;</code>
+     * @return The viewThroughConversions.
      */
     public com.google.protobuf.Int64Value getViewThroughConversions() {
       if (viewThroughConversionsBuilder_ == null) {

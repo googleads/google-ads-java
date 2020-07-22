@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/campaign_bid_modifier_service.proto")
 public final class CampaignBidModifierServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class CampaignBidModifierServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.CampaignBidModifierService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetCampaignBidModifierMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest,
-      com.google.ads.googleads.v1.resources.CampaignBidModifier> METHOD_GET_CAMPAIGN_BID_MODIFIER = getGetCampaignBidModifierMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest,
       com.google.ads.googleads.v1.resources.CampaignBidModifier> getGetCampaignBidModifierMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCampaignBidModifier",
+      requestType = com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest.class,
+      responseType = com.google.ads.googleads.v1.resources.CampaignBidModifier.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest,
       com.google.ads.googleads.v1.resources.CampaignBidModifier> getGetCampaignBidModifierMethod() {
-    return getGetCampaignBidModifierMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest,
-      com.google.ads.googleads.v1.resources.CampaignBidModifier> getGetCampaignBidModifierMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest, com.google.ads.googleads.v1.resources.CampaignBidModifier> getGetCampaignBidModifierMethod;
     if ((getGetCampaignBidModifierMethod = CampaignBidModifierServiceGrpc.getGetCampaignBidModifierMethod) == null) {
       synchronized (CampaignBidModifierServiceGrpc.class) {
         if ((getGetCampaignBidModifierMethod = CampaignBidModifierServiceGrpc.getGetCampaignBidModifierMethod) == null) {
-          CampaignBidModifierServiceGrpc.getGetCampaignBidModifierMethod = getGetCampaignBidModifierMethod = 
+          CampaignBidModifierServiceGrpc.getGetCampaignBidModifierMethod = getGetCampaignBidModifierMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest, com.google.ads.googleads.v1.resources.CampaignBidModifier>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.CampaignBidModifierService", "GetCampaignBidModifier"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaignBidModifier"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.resources.CampaignBidModifier.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignBidModifierServiceMethodDescriptorSupplier("GetCampaignBidModifier"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignBidModifierServiceMethodDescriptorSupplier("GetCampaignBidModifier"))
+              .build();
         }
-     }
-     return getGetCampaignBidModifierMethod;
+      }
+    }
+    return getGetCampaignBidModifierMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateCampaignBidModifiersMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest,
-      com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse> METHOD_MUTATE_CAMPAIGN_BID_MODIFIERS = getMutateCampaignBidModifiersMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest,
       com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse> getMutateCampaignBidModifiersMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateCampaignBidModifiers",
+      requestType = com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest.class,
+      responseType = com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest,
       com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse> getMutateCampaignBidModifiersMethod() {
-    return getMutateCampaignBidModifiersMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest,
-      com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse> getMutateCampaignBidModifiersMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest, com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse> getMutateCampaignBidModifiersMethod;
     if ((getMutateCampaignBidModifiersMethod = CampaignBidModifierServiceGrpc.getMutateCampaignBidModifiersMethod) == null) {
       synchronized (CampaignBidModifierServiceGrpc.class) {
         if ((getMutateCampaignBidModifiersMethod = CampaignBidModifierServiceGrpc.getMutateCampaignBidModifiersMethod) == null) {
-          CampaignBidModifierServiceGrpc.getMutateCampaignBidModifiersMethod = getMutateCampaignBidModifiersMethod = 
+          CampaignBidModifierServiceGrpc.getMutateCampaignBidModifiersMethod = getMutateCampaignBidModifiersMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest, com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.CampaignBidModifierService", "MutateCampaignBidModifiers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateCampaignBidModifiers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new CampaignBidModifierServiceMethodDescriptorSupplier("MutateCampaignBidModifiers"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CampaignBidModifierServiceMethodDescriptorSupplier("MutateCampaignBidModifiers"))
+              .build();
         }
-     }
-     return getMutateCampaignBidModifiersMethod;
+      }
+    }
+    return getMutateCampaignBidModifiersMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CampaignBidModifierServiceStub newStub(io.grpc.Channel channel) {
-    return new CampaignBidModifierServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignBidModifierServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignBidModifierServiceStub>() {
+        @java.lang.Override
+        public CampaignBidModifierServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignBidModifierServiceStub(channel, callOptions);
+        }
+      };
+    return CampaignBidModifierServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class CampaignBidModifierServiceGrpc {
    */
   public static CampaignBidModifierServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CampaignBidModifierServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignBidModifierServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignBidModifierServiceBlockingStub>() {
+        @java.lang.Override
+        public CampaignBidModifierServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignBidModifierServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return CampaignBidModifierServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class CampaignBidModifierServiceGrpc {
    */
   public static CampaignBidModifierServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CampaignBidModifierServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CampaignBidModifierServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CampaignBidModifierServiceFutureStub>() {
+        @java.lang.Override
+        public CampaignBidModifierServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CampaignBidModifierServiceFutureStub(channel, callOptions);
+        }
+      };
+    return CampaignBidModifierServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class CampaignBidModifierServiceGrpc {
      */
     public void getCampaignBidModifier(com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.CampaignBidModifier> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCampaignBidModifierMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignBidModifierMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class CampaignBidModifierServiceGrpc {
      */
     public void mutateCampaignBidModifiers(com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateCampaignBidModifiersMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateCampaignBidModifiersMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetCampaignBidModifierMethodHelper(),
+            getGetCampaignBidModifierMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest,
                 com.google.ads.googleads.v1.resources.CampaignBidModifier>(
                   this, METHODID_GET_CAMPAIGN_BID_MODIFIER)))
           .addMethod(
-            getMutateCampaignBidModifiersMethodHelper(),
+            getMutateCampaignBidModifiersMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest,
@@ -181,19 +189,15 @@ public final class CampaignBidModifierServiceGrpc {
    * Service to manage campaign bid modifiers.
    * </pre>
    */
-  public static final class CampaignBidModifierServiceStub extends io.grpc.stub.AbstractStub<CampaignBidModifierServiceStub> {
-    private CampaignBidModifierServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignBidModifierServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignBidModifierServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignBidModifierServiceStub> {
+    private CampaignBidModifierServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignBidModifierServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignBidModifierServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignBidModifierServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class CampaignBidModifierServiceGrpc {
     public void getCampaignBidModifier(com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.resources.CampaignBidModifier> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetCampaignBidModifierMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetCampaignBidModifierMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class CampaignBidModifierServiceGrpc {
     public void mutateCampaignBidModifiers(com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateCampaignBidModifiersMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateCampaignBidModifiersMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class CampaignBidModifierServiceGrpc {
    * Service to manage campaign bid modifiers.
    * </pre>
    */
-  public static final class CampaignBidModifierServiceBlockingStub extends io.grpc.stub.AbstractStub<CampaignBidModifierServiceBlockingStub> {
-    private CampaignBidModifierServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignBidModifierServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignBidModifierServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignBidModifierServiceBlockingStub> {
+    private CampaignBidModifierServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignBidModifierServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignBidModifierServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignBidModifierServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class CampaignBidModifierServiceGrpc {
      */
     public com.google.ads.googleads.v1.resources.CampaignBidModifier getCampaignBidModifier(com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetCampaignBidModifierMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetCampaignBidModifierMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class CampaignBidModifierServiceGrpc {
      */
     public com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse mutateCampaignBidModifiers(com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateCampaignBidModifiersMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateCampaignBidModifiersMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class CampaignBidModifierServiceGrpc {
    * Service to manage campaign bid modifiers.
    * </pre>
    */
-  public static final class CampaignBidModifierServiceFutureStub extends io.grpc.stub.AbstractStub<CampaignBidModifierServiceFutureStub> {
-    private CampaignBidModifierServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CampaignBidModifierServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CampaignBidModifierServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignBidModifierServiceFutureStub> {
+    private CampaignBidModifierServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CampaignBidModifierServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CampaignBidModifierServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CampaignBidModifierServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class CampaignBidModifierServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.resources.CampaignBidModifier> getCampaignBidModifier(
         com.google.ads.googleads.v1.services.GetCampaignBidModifierRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetCampaignBidModifierMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetCampaignBidModifierMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class CampaignBidModifierServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.services.MutateCampaignBidModifiersResponse> mutateCampaignBidModifiers(
         com.google.ads.googleads.v1.services.MutateCampaignBidModifiersRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateCampaignBidModifiersMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateCampaignBidModifiersMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class CampaignBidModifierServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CampaignBidModifierServiceFileDescriptorSupplier())
-              .addMethod(getGetCampaignBidModifierMethodHelper())
-              .addMethod(getMutateCampaignBidModifiersMethodHelper())
+              .addMethod(getGetCampaignBidModifierMethod())
+              .addMethod(getMutateCampaignBidModifiersMethod())
               .build();
         }
       }

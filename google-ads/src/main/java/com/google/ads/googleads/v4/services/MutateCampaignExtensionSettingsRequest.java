@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.MutateCampaignExtensionSettingsRequest}
  */
-public  final class MutateCampaignExtensionSettingsRequest extends
+public final class MutateCampaignExtensionSettingsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.MutateCampaignExtensionSettingsRequest)
     MutateCampaignExtensionSettingsRequestOrBuilder {
@@ -127,6 +127,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -148,6 +149,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -172,6 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.CampaignExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.CampaignExtensionSettingOperation> getOperationsList() {
     return operations_;
   }
@@ -183,6 +186,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.CampaignExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.CampaignExtensionSettingOperationOrBuilder> 
       getOperationsOrBuilderList() {
     return operations_;
@@ -195,6 +199,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.CampaignExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public int getOperationsCount() {
     return operations_.size();
   }
@@ -206,6 +211,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.CampaignExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.CampaignExtensionSettingOperation getOperations(int index) {
     return operations_.get(index);
   }
@@ -217,6 +223,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.CampaignExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.CampaignExtensionSettingOperationOrBuilder getOperationsOrBuilder(
       int index) {
     return operations_.get(index);
@@ -235,6 +242,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool partial_failure = 3;</code>
    * @return The partialFailure.
    */
+  @java.lang.Override
   public boolean getPartialFailure() {
     return partialFailure_;
   }
@@ -250,6 +258,7 @@ private static final long serialVersionUID = 0L;
    * <code>bool validate_only = 4;</code>
    * @return The validateOnly.
    */
+  @java.lang.Override
   public boolean getValidateOnly() {
     return validateOnly_;
   }
@@ -1097,6 +1106,7 @@ private static final long serialVersionUID = 0L;
      * <code>bool partial_failure = 3;</code>
      * @return The partialFailure.
      */
+    @java.lang.Override
     public boolean getPartialFailure() {
       return partialFailure_;
     }
@@ -1146,6 +1156,7 @@ private static final long serialVersionUID = 0L;
      * <code>bool validate_only = 4;</code>
      * @return The validateOnly.
      */
+    @java.lang.Override
     public boolean getValidateOnly() {
       return validateOnly_;
     }

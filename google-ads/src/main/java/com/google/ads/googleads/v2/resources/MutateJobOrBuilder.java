@@ -9,146 +9,158 @@ public interface MutateJobOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the mutate job.
+   * Immutable. The resource name of the mutate job.
    * Mutate job resource names have the form:
    * `customers/{customer_id}/mutateJobs/{mutate_job_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the mutate job.
+   * Immutable. The resource name of the mutate job.
    * Mutate job resource names have the form:
    * `customers/{customer_id}/mutateJobs/{mutate_job_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * ID of this mutate job.
+   * Output only. ID of this mutate job.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * ID of this mutate job.
+   * Output only. ID of this mutate job.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * ID of this mutate job.
+   * Output only. ID of this mutate job.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * The next sequence token to use when adding operations. Only set when the
+   * Output only. The next sequence token to use when adding operations. Only set when the
    * mutate job status is PENDING.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+   * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the nextAddSequenceToken field is set.
    */
   boolean hasNextAddSequenceToken();
   /**
    * <pre>
-   * The next sequence token to use when adding operations. Only set when the
+   * Output only. The next sequence token to use when adding operations. Only set when the
    * mutate job status is PENDING.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+   * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The nextAddSequenceToken.
    */
   com.google.protobuf.StringValue getNextAddSequenceToken();
   /**
    * <pre>
-   * The next sequence token to use when adding operations. Only set when the
+   * Output only. The next sequence token to use when adding operations. Only set when the
    * mutate job status is PENDING.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue next_add_sequence_token = 3;</code>
+   * <code>.google.protobuf.StringValue next_add_sequence_token = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNextAddSequenceTokenOrBuilder();
 
   /**
    * <pre>
-   * Contains additional information about this mutate job.
+   * Output only. Contains additional information about this mutate job.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+   * <code>.google.ads.googleads.v2.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the metadata field is set.
    */
   boolean hasMetadata();
   /**
    * <pre>
-   * Contains additional information about this mutate job.
+   * Output only. Contains additional information about this mutate job.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+   * <code>.google.ads.googleads.v2.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The metadata.
    */
   com.google.ads.googleads.v2.resources.MutateJob.MutateJobMetadata getMetadata();
   /**
    * <pre>
-   * Contains additional information about this mutate job.
+   * Output only. Contains additional information about this mutate job.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.MutateJob.MutateJobMetadata metadata = 4;</code>
+   * <code>.google.ads.googleads.v2.resources.MutateJob.MutateJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v2.resources.MutateJob.MutateJobMetadataOrBuilder getMetadataOrBuilder();
 
   /**
    * <pre>
-   * Status of this mutate job.
+   * Output only. Status of this mutate job.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.MutateJobStatusEnum.MutateJobStatus status = 5;</code>
+   * <code>.google.ads.googleads.v2.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
    * <pre>
-   * Status of this mutate job.
+   * Output only. Status of this mutate job.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.MutateJobStatusEnum.MutateJobStatus status = 5;</code>
+   * <code>.google.ads.googleads.v2.enums.MutateJobStatusEnum.MutateJobStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v2.enums.MutateJobStatusEnum.MutateJobStatus getStatus();
 
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion. Only set when the mutate job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the longRunningOperation field is set.
    */
   boolean hasLongRunningOperation();
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion. Only set when the mutate job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The longRunningOperation.
    */
   com.google.protobuf.StringValue getLongRunningOperation();
   /**
    * <pre>
-   * The resource name of the long-running operation that can be used to poll
+   * Output only. The resource name of the long-running operation that can be used to poll
    * for completion. Only set when the mutate job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue long_running_operation = 6;</code>
+   * <code>.google.protobuf.StringValue long_running_operation = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getLongRunningOperationOrBuilder();
 }

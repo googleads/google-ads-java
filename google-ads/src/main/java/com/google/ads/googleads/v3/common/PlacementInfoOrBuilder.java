@@ -14,6 +14,7 @@ public interface PlacementInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue url = 1;</code>
+   * @return Whether the url field is set.
    */
   boolean hasUrl();
   /**
@@ -23,6 +24,7 @@ public interface PlacementInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue url = 1;</code>
+   * @return The url.
    */
   com.google.protobuf.StringValue getUrl();
   /**

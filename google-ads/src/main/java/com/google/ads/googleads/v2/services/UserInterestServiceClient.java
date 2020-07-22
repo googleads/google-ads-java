@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.UserInterestServiceStubSettings
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
- *   String formattedResourceName = UserInterestServiceClient.formatUserInterestName("[CUSTOMER]", "[USER_INTEREST]");
- *   UserInterest response = userInterestServiceClient.getUserInterest(formattedResourceName);
+ *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER]", "[USER_INTEREST]");
+ *   UserInterest response = userInterestServiceClient.getUserInterest(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,43 +98,6 @@ public class UserInterestServiceClient implements BackgroundResource {
   private final UserInterestServiceSettings settings;
   private final UserInterestServiceStub stub;
 
-  private static final PathTemplate USER_INTEREST_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/userInterests/{user_interest}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a user_interest resource.
-   *
-   * @deprecated Use the {@link UserInterestName} class instead.
-   */
-  @Deprecated
-  public static final String formatUserInterestName(String customer, String userInterest) {
-    return USER_INTEREST_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "user_interest", userInterest);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a user_interest
-   * resource.
-   *
-   * @deprecated Use the {@link UserInterestName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromUserInterestName(String userInterestName) {
-    return USER_INTEREST_PATH_TEMPLATE.parse(userInterestName).get("customer");
-  }
-
-  /**
-   * Parses the user_interest from the given fully-qualified path which represents a user_interest
-   * resource.
-   *
-   * @deprecated Use the {@link UserInterestName} class instead.
-   */
-  @Deprecated
-  public static final String parseUserInterestFromUserInterestName(String userInterestName) {
-    return USER_INTEREST_PATH_TEMPLATE.parse(userInterestName).get("user_interest");
-  }
-
   /** Constructs an instance of UserInterestServiceClient with default settings. */
   public static final UserInterestServiceClient create() throws IOException {
     return create(UserInterestServiceSettings.newBuilder().build());
@@ -192,16 +154,39 @@ public class UserInterestServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
-   *   String formattedResourceName = UserInterestServiceClient.formatUserInterestName("[CUSTOMER]", "[USER_INTEREST]");
-   *   UserInterest response = userInterestServiceClient.getUserInterest(formattedResourceName);
+   *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER]", "[USER_INTEREST]");
+   *   UserInterest response = userInterestServiceClient.getUserInterest(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName Resource name of the UserInterest to fetch.
+   * @param resourceName Required. Resource name of the UserInterest to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final UserInterest getUserInterest(UserInterestName resourceName) {
+    GetUserInterestRequest request =
+        GetUserInterestRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getUserInterest(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested user interest in full detail
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
+   *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER]", "[USER_INTEREST]");
+   *   UserInterest response = userInterestServiceClient.getUserInterest(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the UserInterest to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final UserInterest getUserInterest(String resourceName) {
-    USER_INTEREST_PATH_TEMPLATE.validate(resourceName, "getUserInterest");
     GetUserInterestRequest request =
         GetUserInterestRequest.newBuilder().setResourceName(resourceName).build();
     return getUserInterest(request);
@@ -215,9 +200,9 @@ public class UserInterestServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
-   *   String formattedResourceName = UserInterestServiceClient.formatUserInterestName("[CUSTOMER]", "[USER_INTEREST]");
+   *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER]", "[USER_INTEREST]");
    *   GetUserInterestRequest request = GetUserInterestRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   UserInterest response = userInterestServiceClient.getUserInterest(request);
    * }
@@ -238,9 +223,9 @@ public class UserInterestServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (UserInterestServiceClient userInterestServiceClient = UserInterestServiceClient.create()) {
-   *   String formattedResourceName = UserInterestServiceClient.formatUserInterestName("[CUSTOMER]", "[USER_INTEREST]");
+   *   UserInterestName resourceName = UserInterestName.of("[CUSTOMER]", "[USER_INTEREST]");
    *   GetUserInterestRequest request = GetUserInterestRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;UserInterest&gt; future = userInterestServiceClient.getUserInterestCallable().futureCall(request);
    *   // Do something

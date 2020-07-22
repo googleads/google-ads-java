@@ -57,6 +57,7 @@ public interface SearchGoogleAdsStreamResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+   * @return Whether the fieldMask field is set.
    */
   boolean hasFieldMask();
   /**
@@ -65,6 +66,7 @@ public interface SearchGoogleAdsStreamResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+   * @return The fieldMask.
    */
   com.google.protobuf.FieldMask getFieldMask();
   /**
@@ -84,6 +86,7 @@ public interface SearchGoogleAdsStreamResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.GoogleAdsRow summary_row = 3;</code>
+   * @return Whether the summaryRow field is set.
    */
   boolean hasSummaryRow();
   /**
@@ -94,6 +97,7 @@ public interface SearchGoogleAdsStreamResponseOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.GoogleAdsRow summary_row = 3;</code>
+   * @return The summaryRow.
    */
   com.google.ads.googleads.v3.services.GoogleAdsRow getSummaryRow();
   /**

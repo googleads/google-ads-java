@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.Campaign}
  */
-public  final class Campaign extends
+public final class Campaign extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign)
     CampaignOrBuilder {
@@ -36,6 +36,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Campaign();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -49,7 +56,6 @@ private static final long serialVersionUID = 0L;
       throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
-    int mutable_bitField1_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -143,9 +149,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 98: {
-            if (!((mutable_bitField0_ & 0x00000200) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00000200;
+              mutable_bitField0_ |= 0x00000001;
             }
             urlCustomParameters_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.CustomParameter.parser(), extensionRegistry));
@@ -427,9 +433,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 322: {
-            if (!((mutable_bitField0_ & 0x04000000) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.FrequencyCapEntry>();
-              mutable_bitField0_ |= 0x04000000;
+              mutable_bitField0_ |= 0x00000004;
             }
             frequencyCaps_.add(
                 input.readMessage(com.google.ads.googleads.v2.common.FrequencyCapEntry.parser(), extensionRegistry));
@@ -568,9 +574,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 426: {
-            if (!((mutable_bitField0_ & 0x00040000) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               labels_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00040000;
+              mutable_bitField0_ |= 0x00000002;
             }
             labels_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -591,13 +597,13 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000200) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
-      if (((mutable_bitField0_ & 0x04000000) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
       }
-      if (((mutable_bitField0_ & 0x00040000) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         labels_ = java.util.Collections.unmodifiableList(labels_);
       }
       this.unknownFields = unknownFields.build();
@@ -627,6 +633,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_google_search = 1;</code>
+     * @return Whether the targetGoogleSearch field is set.
      */
     boolean hasTargetGoogleSearch();
     /**
@@ -635,6 +642,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_google_search = 1;</code>
+     * @return The targetGoogleSearch.
      */
     com.google.protobuf.BoolValue getTargetGoogleSearch();
     /**
@@ -653,6 +661,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_search_network = 2;</code>
+     * @return Whether the targetSearchNetwork field is set.
      */
     boolean hasTargetSearchNetwork();
     /**
@@ -662,6 +671,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_search_network = 2;</code>
+     * @return The targetSearchNetwork.
      */
     com.google.protobuf.BoolValue getTargetSearchNetwork();
     /**
@@ -681,6 +691,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_content_network = 3;</code>
+     * @return Whether the targetContentNetwork field is set.
      */
     boolean hasTargetContentNetwork();
     /**
@@ -690,6 +701,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_content_network = 3;</code>
+     * @return The targetContentNetwork.
      */
     com.google.protobuf.BoolValue getTargetContentNetwork();
     /**
@@ -709,6 +721,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_partner_search_network = 4;</code>
+     * @return Whether the targetPartnerSearchNetwork field is set.
      */
     boolean hasTargetPartnerSearchNetwork();
     /**
@@ -718,6 +731,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_partner_search_network = 4;</code>
+     * @return The targetPartnerSearchNetwork.
      */
     com.google.protobuf.BoolValue getTargetPartnerSearchNetwork();
     /**
@@ -737,7 +751,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.NetworkSettings}
    */
-  public  static final class NetworkSettings extends
+  public static final class NetworkSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.NetworkSettings)
       NetworkSettingsOrBuilder {
@@ -747,6 +761,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private NetworkSettings() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NetworkSettings();
     }
 
     @java.lang.Override
@@ -762,7 +783,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -865,7 +885,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_google_search = 1;</code>
+     * @return Whether the targetGoogleSearch field is set.
      */
+    @java.lang.Override
     public boolean hasTargetGoogleSearch() {
       return targetGoogleSearch_ != null;
     }
@@ -875,7 +897,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_google_search = 1;</code>
+     * @return The targetGoogleSearch.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getTargetGoogleSearch() {
       return targetGoogleSearch_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : targetGoogleSearch_;
     }
@@ -886,6 +910,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.BoolValue target_google_search = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getTargetGoogleSearchOrBuilder() {
       return getTargetGoogleSearch();
     }
@@ -899,7 +924,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_search_network = 2;</code>
+     * @return Whether the targetSearchNetwork field is set.
      */
+    @java.lang.Override
     public boolean hasTargetSearchNetwork() {
       return targetSearchNetwork_ != null;
     }
@@ -910,7 +937,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_search_network = 2;</code>
+     * @return The targetSearchNetwork.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getTargetSearchNetwork() {
       return targetSearchNetwork_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : targetSearchNetwork_;
     }
@@ -922,6 +951,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.BoolValue target_search_network = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getTargetSearchNetworkOrBuilder() {
       return getTargetSearchNetwork();
     }
@@ -935,7 +965,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_content_network = 3;</code>
+     * @return Whether the targetContentNetwork field is set.
      */
+    @java.lang.Override
     public boolean hasTargetContentNetwork() {
       return targetContentNetwork_ != null;
     }
@@ -946,7 +978,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_content_network = 3;</code>
+     * @return The targetContentNetwork.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getTargetContentNetwork() {
       return targetContentNetwork_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : targetContentNetwork_;
     }
@@ -958,6 +992,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.BoolValue target_content_network = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getTargetContentNetworkOrBuilder() {
       return getTargetContentNetwork();
     }
@@ -971,7 +1006,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_partner_search_network = 4;</code>
+     * @return Whether the targetPartnerSearchNetwork field is set.
      */
+    @java.lang.Override
     public boolean hasTargetPartnerSearchNetwork() {
       return targetPartnerSearchNetwork_ != null;
     }
@@ -982,7 +1019,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue target_partner_search_network = 4;</code>
+     * @return The targetPartnerSearchNetwork.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getTargetPartnerSearchNetwork() {
       return targetPartnerSearchNetwork_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : targetPartnerSearchNetwork_;
     }
@@ -994,6 +1033,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.BoolValue target_partner_search_network = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getTargetPartnerSearchNetworkOrBuilder() {
       return getTargetPartnerSearchNetwork();
     }
@@ -1416,6 +1456,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue target_google_search = 1;</code>
+       * @return Whether the targetGoogleSearch field is set.
        */
       public boolean hasTargetGoogleSearch() {
         return targetGoogleSearchBuilder_ != null || targetGoogleSearch_ != null;
@@ -1426,6 +1467,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue target_google_search = 1;</code>
+       * @return The targetGoogleSearch.
        */
       public com.google.protobuf.BoolValue getTargetGoogleSearch() {
         if (targetGoogleSearchBuilder_ == null) {
@@ -1570,6 +1612,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue target_search_network = 2;</code>
+       * @return Whether the targetSearchNetwork field is set.
        */
       public boolean hasTargetSearchNetwork() {
         return targetSearchNetworkBuilder_ != null || targetSearchNetwork_ != null;
@@ -1581,6 +1624,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue target_search_network = 2;</code>
+       * @return The targetSearchNetwork.
        */
       public com.google.protobuf.BoolValue getTargetSearchNetwork() {
         if (targetSearchNetworkBuilder_ == null) {
@@ -1732,6 +1776,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue target_content_network = 3;</code>
+       * @return Whether the targetContentNetwork field is set.
        */
       public boolean hasTargetContentNetwork() {
         return targetContentNetworkBuilder_ != null || targetContentNetwork_ != null;
@@ -1743,6 +1788,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue target_content_network = 3;</code>
+       * @return The targetContentNetwork.
        */
       public com.google.protobuf.BoolValue getTargetContentNetwork() {
         if (targetContentNetworkBuilder_ == null) {
@@ -1894,6 +1940,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue target_partner_search_network = 4;</code>
+       * @return Whether the targetPartnerSearchNetwork field is set.
        */
       public boolean hasTargetPartnerSearchNetwork() {
         return targetPartnerSearchNetworkBuilder_ != null || targetPartnerSearchNetwork_ != null;
@@ -1905,6 +1952,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue target_partner_search_network = 4;</code>
+       * @return The targetPartnerSearchNetwork.
        */
       public com.google.protobuf.BoolValue getTargetPartnerSearchNetwork() {
         if (targetPartnerSearchNetworkBuilder_ == null) {
@@ -2104,26 +2152,28 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The linked Hotel Center account.
+     * Immutable. The linked Hotel Center account.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the hotelCenterId field is set.
      */
     boolean hasHotelCenterId();
     /**
      * <pre>
-     * The linked Hotel Center account.
+     * Immutable. The linked Hotel Center account.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The hotelCenterId.
      */
     com.google.protobuf.Int64Value getHotelCenterId();
     /**
      * <pre>
-     * The linked Hotel Center account.
+     * Immutable. The linked Hotel Center account.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder();
   }
@@ -2134,7 +2184,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.HotelSettingInfo}
    */
-  public  static final class HotelSettingInfo extends
+  public static final class HotelSettingInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.HotelSettingInfo)
       HotelSettingInfoOrBuilder {
@@ -2144,6 +2194,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private HotelSettingInfo() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HotelSettingInfo();
     }
 
     @java.lang.Override
@@ -2159,7 +2216,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2219,31 +2275,36 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Int64Value hotelCenterId_;
     /**
      * <pre>
-     * The linked Hotel Center account.
+     * Immutable. The linked Hotel Center account.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the hotelCenterId field is set.
      */
+    @java.lang.Override
     public boolean hasHotelCenterId() {
       return hotelCenterId_ != null;
     }
     /**
      * <pre>
-     * The linked Hotel Center account.
+     * Immutable. The linked Hotel Center account.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The hotelCenterId.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getHotelCenterId() {
       return hotelCenterId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : hotelCenterId_;
     }
     /**
      * <pre>
-     * The linked Hotel Center account.
+     * Immutable. The linked Hotel Center account.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+     * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder() {
       return getHotelCenterId();
     }
@@ -2572,20 +2633,22 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> hotelCenterIdBuilder_;
       /**
        * <pre>
-       * The linked Hotel Center account.
+       * Immutable. The linked Hotel Center account.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return Whether the hotelCenterId field is set.
        */
       public boolean hasHotelCenterId() {
         return hotelCenterIdBuilder_ != null || hotelCenterId_ != null;
       }
       /**
        * <pre>
-       * The linked Hotel Center account.
+       * Immutable. The linked Hotel Center account.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The hotelCenterId.
        */
       public com.google.protobuf.Int64Value getHotelCenterId() {
         if (hotelCenterIdBuilder_ == null) {
@@ -2596,10 +2659,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The linked Hotel Center account.
+       * Immutable. The linked Hotel Center account.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setHotelCenterId(com.google.protobuf.Int64Value value) {
         if (hotelCenterIdBuilder_ == null) {
@@ -2616,10 +2679,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The linked Hotel Center account.
+       * Immutable. The linked Hotel Center account.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setHotelCenterId(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -2634,10 +2697,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The linked Hotel Center account.
+       * Immutable. The linked Hotel Center account.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder mergeHotelCenterId(com.google.protobuf.Int64Value value) {
         if (hotelCenterIdBuilder_ == null) {
@@ -2656,10 +2719,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The linked Hotel Center account.
+       * Immutable. The linked Hotel Center account.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder clearHotelCenterId() {
         if (hotelCenterIdBuilder_ == null) {
@@ -2674,10 +2737,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The linked Hotel Center account.
+       * Immutable. The linked Hotel Center account.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.Int64Value.Builder getHotelCenterIdBuilder() {
         
@@ -2686,10 +2749,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The linked Hotel Center account.
+       * Immutable. The linked Hotel Center account.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getHotelCenterIdOrBuilder() {
         if (hotelCenterIdBuilder_ != null) {
@@ -2701,10 +2764,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The linked Hotel Center account.
+       * Immutable. The linked Hotel Center account.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value hotel_center_id = 1;</code>
+       * <code>.google.protobuf.Int64Value hotel_center_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -2772,949 +2835,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  public interface AppCampaignSettingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Represents the goal which the bidding strategy of this app campaign
-     * should optimize towards.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
-     */
-    int getBiddingStrategyGoalTypeValue();
-    /**
-     * <pre>
-     * Represents the goal which the bidding strategy of this app campaign
-     * should optimize towards.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
-     */
-    com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType getBiddingStrategyGoalType();
-
-    /**
-     * <pre>
-     * A string that uniquely identifies a mobile application.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue app_id = 2;</code>
-     */
-    boolean hasAppId();
-    /**
-     * <pre>
-     * A string that uniquely identifies a mobile application.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue app_id = 2;</code>
-     */
-    com.google.protobuf.StringValue getAppId();
-    /**
-     * <pre>
-     * A string that uniquely identifies a mobile application.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue app_id = 2;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder();
-
-    /**
-     * <pre>
-     * The application store that distributes this specific app.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;</code>
-     */
-    int getAppStoreValue();
-    /**
-     * <pre>
-     * The application store that distributes this specific app.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;</code>
-     */
-    com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore getAppStore();
-  }
-  /**
-   * <pre>
-   * Campaign level settings for App Campaigns.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.AppCampaignSetting}
-   */
-  public  static final class AppCampaignSetting extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)
-      AppCampaignSettingOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AppCampaignSetting.newBuilder() to construct.
-    private AppCampaignSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private AppCampaignSetting() {
-      biddingStrategyGoalType_ = 0;
-      appStore_ = 0;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AppCampaignSetting(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              biddingStrategyGoalType_ = rawValue;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (appId_ != null) {
-                subBuilder = appId_.toBuilder();
-              }
-              appId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(appId_);
-                appId_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-
-              appStore_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_AppCampaignSetting_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_AppCampaignSetting_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.class, com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.Builder.class);
-    }
-
-    public static final int BIDDING_STRATEGY_GOAL_TYPE_FIELD_NUMBER = 1;
-    private int biddingStrategyGoalType_;
-    /**
-     * <pre>
-     * Represents the goal which the bidding strategy of this app campaign
-     * should optimize towards.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
-     */
-    public int getBiddingStrategyGoalTypeValue() {
-      return biddingStrategyGoalType_;
-    }
-    /**
-     * <pre>
-     * Represents the goal which the bidding strategy of this app campaign
-     * should optimize towards.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
-     */
-    public com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType getBiddingStrategyGoalType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType result = com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.valueOf(biddingStrategyGoalType_);
-      return result == null ? com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.UNRECOGNIZED : result;
-    }
-
-    public static final int APP_ID_FIELD_NUMBER = 2;
-    private com.google.protobuf.StringValue appId_;
-    /**
-     * <pre>
-     * A string that uniquely identifies a mobile application.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue app_id = 2;</code>
-     */
-    public boolean hasAppId() {
-      return appId_ != null;
-    }
-    /**
-     * <pre>
-     * A string that uniquely identifies a mobile application.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue app_id = 2;</code>
-     */
-    public com.google.protobuf.StringValue getAppId() {
-      return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
-    }
-    /**
-     * <pre>
-     * A string that uniquely identifies a mobile application.
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue app_id = 2;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
-      return getAppId();
-    }
-
-    public static final int APP_STORE_FIELD_NUMBER = 3;
-    private int appStore_;
-    /**
-     * <pre>
-     * The application store that distributes this specific app.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;</code>
-     */
-    public int getAppStoreValue() {
-      return appStore_;
-    }
-    /**
-     * <pre>
-     * The application store that distributes this specific app.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;</code>
-     */
-    public com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore getAppStore() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore result = com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.valueOf(appStore_);
-      return result == null ? com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (biddingStrategyGoalType_ != com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, biddingStrategyGoalType_);
-      }
-      if (appId_ != null) {
-        output.writeMessage(2, getAppId());
-      }
-      if (appStore_ != com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, appStore_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (biddingStrategyGoalType_ != com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, biddingStrategyGoalType_);
-      }
-      if (appId_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getAppId());
-      }
-      if (appStore_ != com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, appStore_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting other = (com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting) obj;
-
-      if (biddingStrategyGoalType_ != other.biddingStrategyGoalType_) return false;
-      if (hasAppId() != other.hasAppId()) return false;
-      if (hasAppId()) {
-        if (!getAppId()
-            .equals(other.getAppId())) return false;
-      }
-      if (appStore_ != other.appStore_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + BIDDING_STRATEGY_GOAL_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + biddingStrategyGoalType_;
-      if (hasAppId()) {
-        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getAppId().hashCode();
-      }
-      hash = (37 * hash) + APP_STORE_FIELD_NUMBER;
-      hash = (53 * hash) + appStore_;
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Campaign level settings for App Campaigns.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.AppCampaignSetting}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)
-        com.google.ads.googleads.v2.resources.Campaign.AppCampaignSettingOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_AppCampaignSetting_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_AppCampaignSetting_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.class, com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        biddingStrategyGoalType_ = 0;
-
-        if (appIdBuilder_ == null) {
-          appId_ = null;
-        } else {
-          appId_ = null;
-          appIdBuilder_ = null;
-        }
-        appStore_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_AppCampaignSetting_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting getDefaultInstanceForType() {
-        return com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting build() {
-        com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting buildPartial() {
-        com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting result = new com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting(this);
-        result.biddingStrategyGoalType_ = biddingStrategyGoalType_;
-        if (appIdBuilder_ == null) {
-          result.appId_ = appId_;
-        } else {
-          result.appId_ = appIdBuilder_.build();
-        }
-        result.appStore_ = appStore_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting) {
-          return mergeFrom((com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting other) {
-        if (other == com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.getDefaultInstance()) return this;
-        if (other.biddingStrategyGoalType_ != 0) {
-          setBiddingStrategyGoalTypeValue(other.getBiddingStrategyGoalTypeValue());
-        }
-        if (other.hasAppId()) {
-          mergeAppId(other.getAppId());
-        }
-        if (other.appStore_ != 0) {
-          setAppStoreValue(other.getAppStoreValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int biddingStrategyGoalType_ = 0;
-      /**
-       * <pre>
-       * Represents the goal which the bidding strategy of this app campaign
-       * should optimize towards.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
-       */
-      public int getBiddingStrategyGoalTypeValue() {
-        return biddingStrategyGoalType_;
-      }
-      /**
-       * <pre>
-       * Represents the goal which the bidding strategy of this app campaign
-       * should optimize towards.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
-       */
-      public Builder setBiddingStrategyGoalTypeValue(int value) {
-        biddingStrategyGoalType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Represents the goal which the bidding strategy of this app campaign
-       * should optimize towards.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
-       */
-      public com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType getBiddingStrategyGoalType() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType result = com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.valueOf(biddingStrategyGoalType_);
-        return result == null ? com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Represents the goal which the bidding strategy of this app campaign
-       * should optimize towards.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
-       */
-      public Builder setBiddingStrategyGoalType(com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        biddingStrategyGoalType_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Represents the goal which the bidding strategy of this app campaign
-       * should optimize towards.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
-       */
-      public Builder clearBiddingStrategyGoalType() {
-        
-        biddingStrategyGoalType_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.StringValue appId_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> appIdBuilder_;
-      /**
-       * <pre>
-       * A string that uniquely identifies a mobile application.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue app_id = 2;</code>
-       */
-      public boolean hasAppId() {
-        return appIdBuilder_ != null || appId_ != null;
-      }
-      /**
-       * <pre>
-       * A string that uniquely identifies a mobile application.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue app_id = 2;</code>
-       */
-      public com.google.protobuf.StringValue getAppId() {
-        if (appIdBuilder_ == null) {
-          return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
-        } else {
-          return appIdBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * A string that uniquely identifies a mobile application.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue app_id = 2;</code>
-       */
-      public Builder setAppId(com.google.protobuf.StringValue value) {
-        if (appIdBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          appId_ = value;
-          onChanged();
-        } else {
-          appIdBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * A string that uniquely identifies a mobile application.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue app_id = 2;</code>
-       */
-      public Builder setAppId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (appIdBuilder_ == null) {
-          appId_ = builderForValue.build();
-          onChanged();
-        } else {
-          appIdBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * A string that uniquely identifies a mobile application.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue app_id = 2;</code>
-       */
-      public Builder mergeAppId(com.google.protobuf.StringValue value) {
-        if (appIdBuilder_ == null) {
-          if (appId_ != null) {
-            appId_ =
-              com.google.protobuf.StringValue.newBuilder(appId_).mergeFrom(value).buildPartial();
-          } else {
-            appId_ = value;
-          }
-          onChanged();
-        } else {
-          appIdBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * A string that uniquely identifies a mobile application.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue app_id = 2;</code>
-       */
-      public Builder clearAppId() {
-        if (appIdBuilder_ == null) {
-          appId_ = null;
-          onChanged();
-        } else {
-          appId_ = null;
-          appIdBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * A string that uniquely identifies a mobile application.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue app_id = 2;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getAppIdBuilder() {
-        
-        onChanged();
-        return getAppIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * A string that uniquely identifies a mobile application.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue app_id = 2;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
-        if (appIdBuilder_ != null) {
-          return appIdBuilder_.getMessageOrBuilder();
-        } else {
-          return appId_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : appId_;
-        }
-      }
-      /**
-       * <pre>
-       * A string that uniquely identifies a mobile application.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue app_id = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getAppIdFieldBuilder() {
-        if (appIdBuilder_ == null) {
-          appIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getAppId(),
-                  getParentForChildren(),
-                  isClean());
-          appId_ = null;
-        }
-        return appIdBuilder_;
-      }
-
-      private int appStore_ = 0;
-      /**
-       * <pre>
-       * The application store that distributes this specific app.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;</code>
-       */
-      public int getAppStoreValue() {
-        return appStore_;
-      }
-      /**
-       * <pre>
-       * The application store that distributes this specific app.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;</code>
-       */
-      public Builder setAppStoreValue(int value) {
-        appStore_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The application store that distributes this specific app.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;</code>
-       */
-      public com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore getAppStore() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore result = com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.valueOf(appStore_);
-        return result == null ? com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * The application store that distributes this specific app.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;</code>
-       */
-      public Builder setAppStore(com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        appStore_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The application store that distributes this specific app.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;</code>
-       */
-      public Builder clearAppStore() {
-        
-        appStore_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)
-    private static final com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting();
-    }
-
-    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<AppCampaignSetting>
-        PARSER = new com.google.protobuf.AbstractParser<AppCampaignSetting>() {
-      @java.lang.Override
-      public AppCampaignSetting parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AppCampaignSetting(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<AppCampaignSetting> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AppCampaignSetting> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface DynamicSearchAdsSettingOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting)
       com.google.protobuf.MessageOrBuilder {
@@ -3726,6 +2846,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue domain_name = 1;</code>
+     * @return Whether the domainName field is set.
      */
     boolean hasDomainName();
     /**
@@ -3735,6 +2856,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue domain_name = 1;</code>
+     * @return The domainName.
      */
     com.google.protobuf.StringValue getDomainName();
     /**
@@ -3753,6 +2875,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 2;</code>
+     * @return Whether the languageCode field is set.
      */
     boolean hasLanguageCode();
     /**
@@ -3761,6 +2884,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 2;</code>
+     * @return The languageCode.
      */
     com.google.protobuf.StringValue getLanguageCode();
     /**
@@ -3778,6 +2902,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+     * @return Whether the useSuppliedUrlsOnly field is set.
      */
     boolean hasUseSuppliedUrlsOnly();
     /**
@@ -3786,6 +2911,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+     * @return The useSuppliedUrlsOnly.
      */
     com.google.protobuf.BoolValue getUseSuppliedUrlsOnly();
     /**
@@ -3799,44 +2925,44 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The list of page feeds associated with the campaign.
+     * Output only. The list of page feeds associated with the campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     java.util.List<com.google.protobuf.StringValue> 
         getFeedsList();
     /**
      * <pre>
-     * The list of page feeds associated with the campaign.
+     * Output only. The list of page feeds associated with the campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     com.google.protobuf.StringValue getFeeds(int index);
     /**
      * <pre>
-     * The list of page feeds associated with the campaign.
+     * Output only. The list of page feeds associated with the campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     int getFeedsCount();
     /**
      * <pre>
-     * The list of page feeds associated with the campaign.
+     * Output only. The list of page feeds associated with the campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getFeedsOrBuilderList();
     /**
      * <pre>
-     * The list of page feeds associated with the campaign.
+     * Output only. The list of page feeds associated with the campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     com.google.protobuf.StringValueOrBuilder getFeedsOrBuilder(
         int index);
@@ -3848,7 +2974,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting}
    */
-  public  static final class DynamicSearchAdsSetting extends
+  public static final class DynamicSearchAdsSetting extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting)
       DynamicSearchAdsSettingOrBuilder {
@@ -3859,6 +2985,13 @@ private static final long serialVersionUID = 0L;
     }
     private DynamicSearchAdsSetting() {
       feeds_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DynamicSearchAdsSetting();
     }
 
     @java.lang.Override
@@ -3925,9 +3058,9 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 feeds_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               feeds_.add(
                   input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
@@ -3948,7 +3081,7 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           feeds_ = java.util.Collections.unmodifiableList(feeds_);
         }
         this.unknownFields = unknownFields.build();
@@ -3968,7 +3101,6 @@ private static final long serialVersionUID = 0L;
               com.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting.class, com.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DOMAIN_NAME_FIELD_NUMBER = 1;
     private com.google.protobuf.StringValue domainName_;
     /**
@@ -3978,7 +3110,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue domain_name = 1;</code>
+     * @return Whether the domainName field is set.
      */
+    @java.lang.Override
     public boolean hasDomainName() {
       return domainName_ != null;
     }
@@ -3989,7 +3123,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue domain_name = 1;</code>
+     * @return The domainName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getDomainName() {
       return domainName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : domainName_;
     }
@@ -4001,6 +3137,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue domain_name = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDomainNameOrBuilder() {
       return getDomainName();
     }
@@ -4013,7 +3150,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 2;</code>
+     * @return Whether the languageCode field is set.
      */
+    @java.lang.Override
     public boolean hasLanguageCode() {
       return languageCode_ != null;
     }
@@ -4023,7 +3162,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue language_code = 2;</code>
+     * @return The languageCode.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getLanguageCode() {
       return languageCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : languageCode_;
     }
@@ -4034,6 +3175,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue language_code = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getLanguageCodeOrBuilder() {
       return getLanguageCode();
     }
@@ -4046,7 +3188,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+     * @return Whether the useSuppliedUrlsOnly field is set.
      */
+    @java.lang.Override
     public boolean hasUseSuppliedUrlsOnly() {
       return useSuppliedUrlsOnly_ != null;
     }
@@ -4056,7 +3200,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+     * @return The useSuppliedUrlsOnly.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getUseSuppliedUrlsOnly() {
       return useSuppliedUrlsOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useSuppliedUrlsOnly_;
     }
@@ -4067,6 +3213,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getUseSuppliedUrlsOnlyOrBuilder() {
       return getUseSuppliedUrlsOnly();
     }
@@ -4075,52 +3222,57 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> feeds_;
     /**
      * <pre>
-     * The list of page feeds associated with the campaign.
+     * Output only. The list of page feeds associated with the campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public java.util.List<com.google.protobuf.StringValue> getFeedsList() {
       return feeds_;
     }
     /**
      * <pre>
-     * The list of page feeds associated with the campaign.
+     * Output only. The list of page feeds associated with the campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
         getFeedsOrBuilderList() {
       return feeds_;
     }
     /**
      * <pre>
-     * The list of page feeds associated with the campaign.
+     * Output only. The list of page feeds associated with the campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public int getFeedsCount() {
       return feeds_.size();
     }
     /**
      * <pre>
-     * The list of page feeds associated with the campaign.
+     * Output only. The list of page feeds associated with the campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getFeeds(int index) {
       return feeds_.get(index);
     }
     /**
      * <pre>
-     * The list of page feeds associated with the campaign.
+     * Output only. The list of page feeds associated with the campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+     * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getFeedsOrBuilder(
         int index) {
       return feeds_.get(index);
@@ -4394,7 +3546,7 @@ private static final long serialVersionUID = 0L;
         }
         if (feedsBuilder_ == null) {
           feeds_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           feedsBuilder_.clear();
         }
@@ -4425,7 +3577,6 @@ private static final long serialVersionUID = 0L;
       public com.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting buildPartial() {
         com.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting result = new com.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (domainNameBuilder_ == null) {
           result.domainName_ = domainName_;
         } else {
@@ -4442,15 +3593,14 @@ private static final long serialVersionUID = 0L;
           result.useSuppliedUrlsOnly_ = useSuppliedUrlsOnlyBuilder_.build();
         }
         if (feedsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             feeds_ = java.util.Collections.unmodifiableList(feeds_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.feeds_ = feeds_;
         } else {
           result.feeds_ = feedsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -4512,7 +3662,7 @@ private static final long serialVersionUID = 0L;
           if (!other.feeds_.isEmpty()) {
             if (feeds_.isEmpty()) {
               feeds_ = other.feeds_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureFeedsIsMutable();
               feeds_.addAll(other.feeds_);
@@ -4525,7 +3675,7 @@ private static final long serialVersionUID = 0L;
               feedsBuilder_.dispose();
               feedsBuilder_ = null;
               feeds_ = other.feeds_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000001);
               feedsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFeedsFieldBuilder() : null;
@@ -4574,6 +3724,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       * @return Whether the domainName field is set.
        */
       public boolean hasDomainName() {
         return domainNameBuilder_ != null || domainName_ != null;
@@ -4585,6 +3736,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue domain_name = 1;</code>
+       * @return The domainName.
        */
       public com.google.protobuf.StringValue getDomainName() {
         if (domainNameBuilder_ == null) {
@@ -4735,6 +3887,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue language_code = 2;</code>
+       * @return Whether the languageCode field is set.
        */
       public boolean hasLanguageCode() {
         return languageCodeBuilder_ != null || languageCode_ != null;
@@ -4745,6 +3898,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.StringValue language_code = 2;</code>
+       * @return The languageCode.
        */
       public com.google.protobuf.StringValue getLanguageCode() {
         if (languageCodeBuilder_ == null) {
@@ -4888,6 +4042,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       * @return Whether the useSuppliedUrlsOnly field is set.
        */
       public boolean hasUseSuppliedUrlsOnly() {
         return useSuppliedUrlsOnlyBuilder_ != null || useSuppliedUrlsOnly_ != null;
@@ -4898,6 +4053,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue use_supplied_urls_only = 3;</code>
+       * @return The useSuppliedUrlsOnly.
        */
       public com.google.protobuf.BoolValue getUseSuppliedUrlsOnly() {
         if (useSuppliedUrlsOnlyBuilder_ == null) {
@@ -5035,9 +4191,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.google.protobuf.StringValue> feeds_ =
         java.util.Collections.emptyList();
       private void ensureFeedsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           feeds_ = new java.util.ArrayList<com.google.protobuf.StringValue>(feeds_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -5046,10 +4202,10 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public java.util.List<com.google.protobuf.StringValue> getFeedsList() {
         if (feedsBuilder_ == null) {
@@ -5060,10 +4216,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public int getFeedsCount() {
         if (feedsBuilder_ == null) {
@@ -5074,10 +4230,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public com.google.protobuf.StringValue getFeeds(int index) {
         if (feedsBuilder_ == null) {
@@ -5088,10 +4244,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder setFeeds(
           int index, com.google.protobuf.StringValue value) {
@@ -5109,10 +4265,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder setFeeds(
           int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5127,10 +4283,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder addFeeds(com.google.protobuf.StringValue value) {
         if (feedsBuilder_ == null) {
@@ -5147,10 +4303,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder addFeeds(
           int index, com.google.protobuf.StringValue value) {
@@ -5168,10 +4324,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder addFeeds(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5186,10 +4342,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder addFeeds(
           int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -5204,10 +4360,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder addAllFeeds(
           java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -5223,15 +4379,15 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder clearFeeds() {
         if (feedsBuilder_ == null) {
           feeds_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           feedsBuilder_.clear();
@@ -5240,10 +4396,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public Builder removeFeeds(int index) {
         if (feedsBuilder_ == null) {
@@ -5257,10 +4413,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public com.google.protobuf.StringValue.Builder getFeedsBuilder(
           int index) {
@@ -5268,10 +4424,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public com.google.protobuf.StringValueOrBuilder getFeedsOrBuilder(
           int index) {
@@ -5282,10 +4438,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
            getFeedsOrBuilderList() {
@@ -5297,10 +4453,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public com.google.protobuf.StringValue.Builder addFeedsBuilder() {
         return getFeedsFieldBuilder().addBuilder(
@@ -5308,10 +4464,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public com.google.protobuf.StringValue.Builder addFeedsBuilder(
           int index) {
@@ -5320,10 +4476,10 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The list of page feeds associated with the campaign.
+       * Output only. The list of page feeds associated with the campaign.
        * </pre>
        *
-       * <code>repeated .google.protobuf.StringValue feeds = 5;</code>
+       * <code>repeated .google.protobuf.StringValue feeds = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
        */
       public java.util.List<com.google.protobuf.StringValue.Builder> 
            getFeedsBuilderList() {
@@ -5336,7 +4492,7 @@ private static final long serialVersionUID = 0L;
           feedsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                   feeds_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           feeds_ = null;
@@ -5396,52 +4552,76 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  public interface TrackingSettingOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v2.resources.Campaign.TrackingSetting)
+  public interface VanityPharmaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v2.resources.Campaign.VanityPharma)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * The url used for dynamic tracking.
+     * The display mode for vanity pharma URLs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+     * @return The enum numeric value on the wire for vanityPharmaDisplayUrlMode.
      */
-    boolean hasTrackingUrl();
+    int getVanityPharmaDisplayUrlModeValue();
     /**
      * <pre>
-     * The url used for dynamic tracking.
+     * The display mode for vanity pharma URLs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+     * @return The vanityPharmaDisplayUrlMode.
      */
-    com.google.protobuf.StringValue getTrackingUrl();
+    com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode();
+
     /**
      * <pre>
-     * The url used for dynamic tracking.
+     * The text that will be displayed in display URL of the text ad when
+     * website description is the selected display mode for vanity pharma URLs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+     * @return The enum numeric value on the wire for vanityPharmaText.
      */
-    com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder();
+    int getVanityPharmaTextValue();
+    /**
+     * <pre>
+     * The text that will be displayed in display URL of the text ad when
+     * website description is the selected display mode for vanity pharma URLs.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+     * @return The vanityPharmaText.
+     */
+    com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText();
   }
   /**
    * <pre>
-   * Campaign level settings for tracking information.
+   * Describes how unbranded pharma ads will be displayed.
    * </pre>
    *
-   * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.TrackingSetting}
+   * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.VanityPharma}
    */
-  public  static final class TrackingSetting extends
+  public static final class VanityPharma extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.TrackingSetting)
-      TrackingSettingOrBuilder {
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.VanityPharma)
+      VanityPharmaOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use TrackingSetting.newBuilder() to construct.
-    private TrackingSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use VanityPharma.newBuilder() to construct.
+    private VanityPharma(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private TrackingSetting() {
+    private VanityPharma() {
+      vanityPharmaDisplayUrlMode_ = 0;
+      vanityPharmaText_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VanityPharma();
     }
 
     @java.lang.Override
@@ -5449,7 +4629,7 @@ private static final long serialVersionUID = 0L;
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TrackingSetting(
+    private VanityPharma(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5457,7 +4637,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5468,17 +4647,16 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (trackingUrl_ != null) {
-                subBuilder = trackingUrl_.toBuilder();
-              }
-              trackingUrl_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(trackingUrl_);
-                trackingUrl_ = subBuilder.buildPartial();
-              }
+            case 8: {
+              int rawValue = input.readEnum();
 
+              vanityPharmaDisplayUrlMode_ = rawValue;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              vanityPharmaText_ = rawValue;
               break;
             }
             default: {
@@ -5502,48 +4680,71 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_TrackingSetting_descriptor;
+      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_VanityPharma_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_TrackingSetting_fieldAccessorTable
+      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_VanityPharma_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.Builder.class);
+              com.google.ads.googleads.v2.resources.Campaign.VanityPharma.class, com.google.ads.googleads.v2.resources.Campaign.VanityPharma.Builder.class);
     }
 
-    public static final int TRACKING_URL_FIELD_NUMBER = 1;
-    private com.google.protobuf.StringValue trackingUrl_;
+    public static final int VANITY_PHARMA_DISPLAY_URL_MODE_FIELD_NUMBER = 1;
+    private int vanityPharmaDisplayUrlMode_;
     /**
      * <pre>
-     * The url used for dynamic tracking.
+     * The display mode for vanity pharma URLs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+     * @return The enum numeric value on the wire for vanityPharmaDisplayUrlMode.
      */
-    public boolean hasTrackingUrl() {
-      return trackingUrl_ != null;
+    @java.lang.Override public int getVanityPharmaDisplayUrlModeValue() {
+      return vanityPharmaDisplayUrlMode_;
     }
     /**
      * <pre>
-     * The url used for dynamic tracking.
+     * The display mode for vanity pharma URLs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+     * @return The vanityPharmaDisplayUrlMode.
      */
-    public com.google.protobuf.StringValue getTrackingUrl() {
-      return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
+    @java.lang.Override public com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode result = com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.valueOf(vanityPharmaDisplayUrlMode_);
+      return result == null ? com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNRECOGNIZED : result;
+    }
+
+    public static final int VANITY_PHARMA_TEXT_FIELD_NUMBER = 2;
+    private int vanityPharmaText_;
+    /**
+     * <pre>
+     * The text that will be displayed in display URL of the text ad when
+     * website description is the selected display mode for vanity pharma URLs.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+     * @return The enum numeric value on the wire for vanityPharmaText.
+     */
+    @java.lang.Override public int getVanityPharmaTextValue() {
+      return vanityPharmaText_;
     }
     /**
      * <pre>
-     * The url used for dynamic tracking.
+     * The text that will be displayed in display URL of the text ad when
+     * website description is the selected display mode for vanity pharma URLs.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+     * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+     * @return The vanityPharmaText.
      */
-    public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
-      return getTrackingUrl();
+    @java.lang.Override public com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText result = com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.valueOf(vanityPharmaText_);
+      return result == null ? com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5560,8 +4761,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (trackingUrl_ != null) {
-        output.writeMessage(1, getTrackingUrl());
+      if (vanityPharmaDisplayUrlMode_ != com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, vanityPharmaDisplayUrlMode_);
+      }
+      if (vanityPharmaText_ != com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, vanityPharmaText_);
       }
       unknownFields.writeTo(output);
     }
@@ -5572,9 +4776,13 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (trackingUrl_ != null) {
+      if (vanityPharmaDisplayUrlMode_ != com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTrackingUrl());
+          .computeEnumSize(1, vanityPharmaDisplayUrlMode_);
+      }
+      if (vanityPharmaText_ != com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, vanityPharmaText_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5586,16 +4794,13 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.google.ads.googleads.v2.resources.Campaign.TrackingSetting)) {
+      if (!(obj instanceof com.google.ads.googleads.v2.resources.Campaign.VanityPharma)) {
         return super.equals(obj);
       }
-      com.google.ads.googleads.v2.resources.Campaign.TrackingSetting other = (com.google.ads.googleads.v2.resources.Campaign.TrackingSetting) obj;
+      com.google.ads.googleads.v2.resources.Campaign.VanityPharma other = (com.google.ads.googleads.v2.resources.Campaign.VanityPharma) obj;
 
-      if (hasTrackingUrl() != other.hasTrackingUrl()) return false;
-      if (hasTrackingUrl()) {
-        if (!getTrackingUrl()
-            .equals(other.getTrackingUrl())) return false;
-      }
+      if (vanityPharmaDisplayUrlMode_ != other.vanityPharmaDisplayUrlMode_) return false;
+      if (vanityPharmaText_ != other.vanityPharmaText_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5607,78 +4812,78 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTrackingUrl()) {
-        hash = (37 * hash) + TRACKING_URL_FIELD_NUMBER;
-        hash = (53 * hash) + getTrackingUrl().hashCode();
-      }
+      hash = (37 * hash) + VANITY_PHARMA_DISPLAY_URL_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + vanityPharmaDisplayUrlMode_;
+      hash = (37 * hash) + VANITY_PHARMA_TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + vanityPharmaText_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(byte[] data)
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(java.io.InputStream input)
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseDelimitedFrom(java.io.InputStream input)
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseDelimitedFrom(
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5691,7 +4896,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.google.ads.googleads.v2.resources.Campaign.TrackingSetting prototype) {
+    public static Builder newBuilder(com.google.ads.googleads.v2.resources.Campaign.VanityPharma prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5708,29 +4913,29 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Campaign level settings for tracking information.
+     * Describes how unbranded pharma ads will be displayed.
      * </pre>
      *
-     * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.TrackingSetting}
+     * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.VanityPharma}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v2.resources.Campaign.TrackingSetting)
-        com.google.ads.googleads.v2.resources.Campaign.TrackingSettingOrBuilder {
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v2.resources.Campaign.VanityPharma)
+        com.google.ads.googleads.v2.resources.Campaign.VanityPharmaOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_TrackingSetting_descriptor;
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_VanityPharma_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_TrackingSetting_fieldAccessorTable
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_VanityPharma_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.Builder.class);
+                com.google.ads.googleads.v2.resources.Campaign.VanityPharma.class, com.google.ads.googleads.v2.resources.Campaign.VanityPharma.Builder.class);
       }
 
-      // Construct using com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.newBuilder()
+      // Construct using com.google.ads.googleads.v2.resources.Campaign.VanityPharma.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5748,29 +4953,27 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (trackingUrlBuilder_ == null) {
-          trackingUrl_ = null;
-        } else {
-          trackingUrl_ = null;
-          trackingUrlBuilder_ = null;
-        }
+        vanityPharmaDisplayUrlMode_ = 0;
+
+        vanityPharmaText_ = 0;
+
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_TrackingSetting_descriptor;
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_VanityPharma_descriptor;
       }
 
       @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
-        return com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.getDefaultInstance();
+      public com.google.ads.googleads.v2.resources.Campaign.VanityPharma getDefaultInstanceForType() {
+        return com.google.ads.googleads.v2.resources.Campaign.VanityPharma.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting build() {
-        com.google.ads.googleads.v2.resources.Campaign.TrackingSetting result = buildPartial();
+      public com.google.ads.googleads.v2.resources.Campaign.VanityPharma build() {
+        com.google.ads.googleads.v2.resources.Campaign.VanityPharma result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5778,13 +4981,10 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting buildPartial() {
-        com.google.ads.googleads.v2.resources.Campaign.TrackingSetting result = new com.google.ads.googleads.v2.resources.Campaign.TrackingSetting(this);
-        if (trackingUrlBuilder_ == null) {
-          result.trackingUrl_ = trackingUrl_;
-        } else {
-          result.trackingUrl_ = trackingUrlBuilder_.build();
-        }
+      public com.google.ads.googleads.v2.resources.Campaign.VanityPharma buildPartial() {
+        com.google.ads.googleads.v2.resources.Campaign.VanityPharma result = new com.google.ads.googleads.v2.resources.Campaign.VanityPharma(this);
+        result.vanityPharmaDisplayUrlMode_ = vanityPharmaDisplayUrlMode_;
+        result.vanityPharmaText_ = vanityPharmaText_;
         onBuilt();
         return result;
       }
@@ -5823,18 +5023,21 @@ private static final long serialVersionUID = 0L;
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v2.resources.Campaign.TrackingSetting) {
-          return mergeFrom((com.google.ads.googleads.v2.resources.Campaign.TrackingSetting)other);
+        if (other instanceof com.google.ads.googleads.v2.resources.Campaign.VanityPharma) {
+          return mergeFrom((com.google.ads.googleads.v2.resources.Campaign.VanityPharma)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.google.ads.googleads.v2.resources.Campaign.TrackingSetting other) {
-        if (other == com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.getDefaultInstance()) return this;
-        if (other.hasTrackingUrl()) {
-          mergeTrackingUrl(other.getTrackingUrl());
+      public Builder mergeFrom(com.google.ads.googleads.v2.resources.Campaign.VanityPharma other) {
+        if (other == com.google.ads.googleads.v2.resources.Campaign.VanityPharma.getDefaultInstance()) return this;
+        if (other.vanityPharmaDisplayUrlMode_ != 0) {
+          setVanityPharmaDisplayUrlModeValue(other.getVanityPharmaDisplayUrlModeValue());
+        }
+        if (other.vanityPharmaText_ != 0) {
+          setVanityPharmaTextValue(other.getVanityPharmaTextValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5851,11 +5054,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parsedMessage = null;
+        com.google.ads.googleads.v2.resources.Campaign.VanityPharma parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v2.resources.Campaign.TrackingSetting) e.getUnfinishedMessage();
+          parsedMessage = (com.google.ads.googleads.v2.resources.Campaign.VanityPharma) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5865,157 +5068,157 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.protobuf.StringValue trackingUrl_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlBuilder_;
+      private int vanityPharmaDisplayUrlMode_ = 0;
       /**
        * <pre>
-       * The url used for dynamic tracking.
+       * The display mode for vanity pharma URLs.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+       * @return The enum numeric value on the wire for vanityPharmaDisplayUrlMode.
        */
-      public boolean hasTrackingUrl() {
-        return trackingUrlBuilder_ != null || trackingUrl_ != null;
+      @java.lang.Override public int getVanityPharmaDisplayUrlModeValue() {
+        return vanityPharmaDisplayUrlMode_;
       }
       /**
        * <pre>
-       * The url used for dynamic tracking.
+       * The display mode for vanity pharma URLs.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+       * @param value The enum numeric value on the wire for vanityPharmaDisplayUrlMode to set.
+       * @return This builder for chaining.
        */
-      public com.google.protobuf.StringValue getTrackingUrl() {
-        if (trackingUrlBuilder_ == null) {
-          return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
-        } else {
-          return trackingUrlBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder setTrackingUrl(com.google.protobuf.StringValue value) {
-        if (trackingUrlBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          trackingUrl_ = value;
-          onChanged();
-        } else {
-          trackingUrlBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder setTrackingUrl(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (trackingUrlBuilder_ == null) {
-          trackingUrl_ = builderForValue.build();
-          onChanged();
-        } else {
-          trackingUrlBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder mergeTrackingUrl(com.google.protobuf.StringValue value) {
-        if (trackingUrlBuilder_ == null) {
-          if (trackingUrl_ != null) {
-            trackingUrl_ =
-              com.google.protobuf.StringValue.newBuilder(trackingUrl_).mergeFrom(value).buildPartial();
-          } else {
-            trackingUrl_ = value;
-          }
-          onChanged();
-        } else {
-          trackingUrlBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public Builder clearTrackingUrl() {
-        if (trackingUrlBuilder_ == null) {
-          trackingUrl_ = null;
-          onChanged();
-        } else {
-          trackingUrl_ = null;
-          trackingUrlBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The url used for dynamic tracking.
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getTrackingUrlBuilder() {
+      public Builder setVanityPharmaDisplayUrlModeValue(int value) {
         
+        vanityPharmaDisplayUrlMode_ = value;
         onChanged();
-        return getTrackingUrlFieldBuilder().getBuilder();
+        return this;
       }
       /**
        * <pre>
-       * The url used for dynamic tracking.
+       * The display mode for vanity pharma URLs.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+       * @return The vanityPharmaDisplayUrlMode.
        */
-      public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
-        if (trackingUrlBuilder_ != null) {
-          return trackingUrlBuilder_.getMessageOrBuilder();
-        } else {
-          return trackingUrl_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
-        }
+      @java.lang.Override
+      public com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode result = com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.valueOf(vanityPharmaDisplayUrlMode_);
+        return result == null ? com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNRECOGNIZED : result;
       }
       /**
        * <pre>
-       * The url used for dynamic tracking.
+       * The display mode for vanity pharma URLs.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue tracking_url = 1;</code>
+       * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+       * @param value The vanityPharmaDisplayUrlMode to set.
+       * @return This builder for chaining.
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getTrackingUrlFieldBuilder() {
-        if (trackingUrlBuilder_ == null) {
-          trackingUrlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getTrackingUrl(),
-                  getParentForChildren(),
-                  isClean());
-          trackingUrl_ = null;
+      public Builder setVanityPharmaDisplayUrlMode(com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode value) {
+        if (value == null) {
+          throw new NullPointerException();
         }
-        return trackingUrlBuilder_;
+        
+        vanityPharmaDisplayUrlMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVanityPharmaDisplayUrlMode() {
+        
+        vanityPharmaDisplayUrlMode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int vanityPharmaText_ = 0;
+      /**
+       * <pre>
+       * The text that will be displayed in display URL of the text ad when
+       * website description is the selected display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+       * @return The enum numeric value on the wire for vanityPharmaText.
+       */
+      @java.lang.Override public int getVanityPharmaTextValue() {
+        return vanityPharmaText_;
+      }
+      /**
+       * <pre>
+       * The text that will be displayed in display URL of the text ad when
+       * website description is the selected display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+       * @param value The enum numeric value on the wire for vanityPharmaText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVanityPharmaTextValue(int value) {
+        
+        vanityPharmaText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The text that will be displayed in display URL of the text ad when
+       * website description is the selected display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+       * @return The vanityPharmaText.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText result = com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.valueOf(vanityPharmaText_);
+        return result == null ? com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The text that will be displayed in display URL of the text ad when
+       * website description is the selected display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+       * @param value The vanityPharmaText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVanityPharmaText(com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        vanityPharmaText_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The text that will be displayed in display URL of the text ad when
+       * website description is the selected display mode for vanity pharma URLs.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVanityPharmaText() {
+        
+        vanityPharmaText_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6030,944 +5233,41 @@ private static final long serialVersionUID = 0L;
       }
 
 
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v2.resources.Campaign.TrackingSetting)
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v2.resources.Campaign.VanityPharma)
     }
 
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v2.resources.Campaign.TrackingSetting)
-    private static final com.google.ads.googleads.v2.resources.Campaign.TrackingSetting DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v2.resources.Campaign.VanityPharma)
+    private static final com.google.ads.googleads.v2.resources.Campaign.VanityPharma DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v2.resources.Campaign.TrackingSetting();
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v2.resources.Campaign.VanityPharma();
     }
 
-    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting getDefaultInstance() {
+    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TrackingSetting>
-        PARSER = new com.google.protobuf.AbstractParser<TrackingSetting>() {
+    private static final com.google.protobuf.Parser<VanityPharma>
+        PARSER = new com.google.protobuf.AbstractParser<VanityPharma>() {
       @java.lang.Override
-      public TrackingSetting parsePartialFrom(
+      public VanityPharma parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrackingSetting(input, extensionRegistry);
+        return new VanityPharma(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<TrackingSetting> parser() {
+    public static com.google.protobuf.Parser<VanityPharma> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<TrackingSetting> getParserForType() {
+    public com.google.protobuf.Parser<VanityPharma> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface SelectiveOptimizationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-     */
-    java.util.List<com.google.protobuf.StringValue> 
-        getConversionActionsList();
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-     */
-    com.google.protobuf.StringValue getConversionActions(int index);
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-     */
-    int getConversionActionsCount();
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-     */
-    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
-        getConversionActionsOrBuilderList();
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getConversionActionsOrBuilder(
-        int index);
-  }
-  /**
-   * <pre>
-   * Selective optimization setting for this campaign, which includes a set of
-   * conversion actions to optimize this campaign towards.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.SelectiveOptimization}
-   */
-  public  static final class SelectiveOptimization extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)
-      SelectiveOptimizationOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SelectiveOptimization.newBuilder() to construct.
-    private SelectiveOptimization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SelectiveOptimization() {
-      conversionActions_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SelectiveOptimization(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                conversionActions_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              conversionActions_.add(
-                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          conversionActions_ = java.util.Collections.unmodifiableList(conversionActions_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_SelectiveOptimization_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_SelectiveOptimization_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.class, com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.Builder.class);
-    }
-
-    public static final int CONVERSION_ACTIONS_FIELD_NUMBER = 1;
-    private java.util.List<com.google.protobuf.StringValue> conversionActions_;
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-     */
-    public java.util.List<com.google.protobuf.StringValue> getConversionActionsList() {
-      return conversionActions_;
-    }
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-     */
-    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
-        getConversionActionsOrBuilderList() {
-      return conversionActions_;
-    }
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-     */
-    public int getConversionActionsCount() {
-      return conversionActions_.size();
-    }
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-     */
-    public com.google.protobuf.StringValue getConversionActions(int index) {
-      return conversionActions_.get(index);
-    }
-    /**
-     * <pre>
-     * The selected set of conversion actions for optimizing this campaign.
-     * </pre>
-     *
-     * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getConversionActionsOrBuilder(
-        int index) {
-      return conversionActions_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < conversionActions_.size(); i++) {
-        output.writeMessage(1, conversionActions_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < conversionActions_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, conversionActions_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization other = (com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization) obj;
-
-      if (!getConversionActionsList()
-          .equals(other.getConversionActionsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getConversionActionsCount() > 0) {
-        hash = (37 * hash) + CONVERSION_ACTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getConversionActionsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Selective optimization setting for this campaign, which includes a set of
-     * conversion actions to optimize this campaign towards.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.SelectiveOptimization}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)
-        com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimizationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_SelectiveOptimization_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_SelectiveOptimization_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.class, com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConversionActionsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (conversionActionsBuilder_ == null) {
-          conversionActions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          conversionActionsBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_SelectiveOptimization_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization getDefaultInstanceForType() {
-        return com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization build() {
-        com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization buildPartial() {
-        com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization result = new com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization(this);
-        int from_bitField0_ = bitField0_;
-        if (conversionActionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            conversionActions_ = java.util.Collections.unmodifiableList(conversionActions_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.conversionActions_ = conversionActions_;
-        } else {
-          result.conversionActions_ = conversionActionsBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization) {
-          return mergeFrom((com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization other) {
-        if (other == com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.getDefaultInstance()) return this;
-        if (conversionActionsBuilder_ == null) {
-          if (!other.conversionActions_.isEmpty()) {
-            if (conversionActions_.isEmpty()) {
-              conversionActions_ = other.conversionActions_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureConversionActionsIsMutable();
-              conversionActions_.addAll(other.conversionActions_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.conversionActions_.isEmpty()) {
-            if (conversionActionsBuilder_.isEmpty()) {
-              conversionActionsBuilder_.dispose();
-              conversionActionsBuilder_ = null;
-              conversionActions_ = other.conversionActions_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              conversionActionsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getConversionActionsFieldBuilder() : null;
-            } else {
-              conversionActionsBuilder_.addAllMessages(other.conversionActions_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.google.protobuf.StringValue> conversionActions_ =
-        java.util.Collections.emptyList();
-      private void ensureConversionActionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          conversionActions_ = new java.util.ArrayList<com.google.protobuf.StringValue>(conversionActions_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> conversionActionsBuilder_;
-
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public java.util.List<com.google.protobuf.StringValue> getConversionActionsList() {
-        if (conversionActionsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(conversionActions_);
-        } else {
-          return conversionActionsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public int getConversionActionsCount() {
-        if (conversionActionsBuilder_ == null) {
-          return conversionActions_.size();
-        } else {
-          return conversionActionsBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public com.google.protobuf.StringValue getConversionActions(int index) {
-        if (conversionActionsBuilder_ == null) {
-          return conversionActions_.get(index);
-        } else {
-          return conversionActionsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public Builder setConversionActions(
-          int index, com.google.protobuf.StringValue value) {
-        if (conversionActionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureConversionActionsIsMutable();
-          conversionActions_.set(index, value);
-          onChanged();
-        } else {
-          conversionActionsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public Builder setConversionActions(
-          int index, com.google.protobuf.StringValue.Builder builderForValue) {
-        if (conversionActionsBuilder_ == null) {
-          ensureConversionActionsIsMutable();
-          conversionActions_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          conversionActionsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public Builder addConversionActions(com.google.protobuf.StringValue value) {
-        if (conversionActionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureConversionActionsIsMutable();
-          conversionActions_.add(value);
-          onChanged();
-        } else {
-          conversionActionsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public Builder addConversionActions(
-          int index, com.google.protobuf.StringValue value) {
-        if (conversionActionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureConversionActionsIsMutable();
-          conversionActions_.add(index, value);
-          onChanged();
-        } else {
-          conversionActionsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public Builder addConversionActions(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (conversionActionsBuilder_ == null) {
-          ensureConversionActionsIsMutable();
-          conversionActions_.add(builderForValue.build());
-          onChanged();
-        } else {
-          conversionActionsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public Builder addConversionActions(
-          int index, com.google.protobuf.StringValue.Builder builderForValue) {
-        if (conversionActionsBuilder_ == null) {
-          ensureConversionActionsIsMutable();
-          conversionActions_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          conversionActionsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public Builder addAllConversionActions(
-          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
-        if (conversionActionsBuilder_ == null) {
-          ensureConversionActionsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, conversionActions_);
-          onChanged();
-        } else {
-          conversionActionsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public Builder clearConversionActions() {
-        if (conversionActionsBuilder_ == null) {
-          conversionActions_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          conversionActionsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public Builder removeConversionActions(int index) {
-        if (conversionActionsBuilder_ == null) {
-          ensureConversionActionsIsMutable();
-          conversionActions_.remove(index);
-          onChanged();
-        } else {
-          conversionActionsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getConversionActionsBuilder(
-          int index) {
-        return getConversionActionsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getConversionActionsOrBuilder(
-          int index) {
-        if (conversionActionsBuilder_ == null) {
-          return conversionActions_.get(index);  } else {
-          return conversionActionsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
-           getConversionActionsOrBuilderList() {
-        if (conversionActionsBuilder_ != null) {
-          return conversionActionsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(conversionActions_);
-        }
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public com.google.protobuf.StringValue.Builder addConversionActionsBuilder() {
-        return getConversionActionsFieldBuilder().addBuilder(
-            com.google.protobuf.StringValue.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public com.google.protobuf.StringValue.Builder addConversionActionsBuilder(
-          int index) {
-        return getConversionActionsFieldBuilder().addBuilder(
-            index, com.google.protobuf.StringValue.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * The selected set of conversion actions for optimizing this campaign.
-       * </pre>
-       *
-       * <code>repeated .google.protobuf.StringValue conversion_actions = 1;</code>
-       */
-      public java.util.List<com.google.protobuf.StringValue.Builder> 
-           getConversionActionsBuilderList() {
-        return getConversionActionsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getConversionActionsFieldBuilder() {
-        if (conversionActionsBuilder_ == null) {
-          conversionActionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  conversionActions_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          conversionActions_ = null;
-        }
-        return conversionActionsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)
-    private static final com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization();
-    }
-
-    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<SelectiveOptimization>
-        PARSER = new com.google.protobuf.AbstractParser<SelectiveOptimization>() {
-      @java.lang.Override
-      public SelectiveOptimization parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SelectiveOptimization(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<SelectiveOptimization> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SelectiveOptimization> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization getDefaultInstanceForType() {
+    public com.google.ads.googleads.v2.resources.Campaign.VanityPharma getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6979,66 +5279,70 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * ID of the Merchant Center account.
+     * Immutable. ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
      * Shopping campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the merchantId field is set.
      */
     boolean hasMerchantId();
     /**
      * <pre>
-     * ID of the Merchant Center account.
+     * Immutable. ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
      * Shopping campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The merchantId.
      */
     com.google.protobuf.Int64Value getMerchantId();
     /**
      * <pre>
-     * ID of the Merchant Center account.
+     * Immutable. ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
      * Shopping campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMerchantIdOrBuilder();
 
     /**
      * <pre>
-     * Sales country of products to include in the campaign.
+     * Immutable. Sales country of products to include in the campaign.
      * This field is required for Shopping campaigns. This field is immutable.
      * This field is optional for non-Shopping campaigns, but it must be equal
      * to 'ZZ' if set.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the salesCountry field is set.
      */
     boolean hasSalesCountry();
     /**
      * <pre>
-     * Sales country of products to include in the campaign.
+     * Immutable. Sales country of products to include in the campaign.
      * This field is required for Shopping campaigns. This field is immutable.
      * This field is optional for non-Shopping campaigns, but it must be equal
      * to 'ZZ' if set.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The salesCountry.
      */
     com.google.protobuf.StringValue getSalesCountry();
     /**
      * <pre>
-     * Sales country of products to include in the campaign.
+     * Immutable. Sales country of products to include in the campaign.
      * This field is required for Shopping campaigns. This field is immutable.
      * This field is optional for non-Shopping campaigns, but it must be equal
      * to 'ZZ' if set.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     com.google.protobuf.StringValueOrBuilder getSalesCountryOrBuilder();
 
@@ -7053,6 +5357,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+     * @return Whether the campaignPriority field is set.
      */
     boolean hasCampaignPriority();
     /**
@@ -7066,6 +5371,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+     * @return The campaignPriority.
      */
     com.google.protobuf.Int32Value getCampaignPriority();
     /**
@@ -7088,6 +5394,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+     * @return Whether the enableLocal field is set.
      */
     boolean hasEnableLocal();
     /**
@@ -7096,6 +5403,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+     * @return The enableLocal.
      */
     com.google.protobuf.BoolValue getEnableLocal();
     /**
@@ -7116,7 +5424,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.ShoppingSetting}
    */
-  public  static final class ShoppingSetting extends
+  public static final class ShoppingSetting extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.ShoppingSetting)
       ShoppingSettingOrBuilder {
@@ -7126,6 +5434,13 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private ShoppingSetting() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShoppingSetting();
     }
 
     @java.lang.Override
@@ -7141,7 +5456,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7240,37 +5554,42 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Int64Value merchantId_;
     /**
      * <pre>
-     * ID of the Merchant Center account.
+     * Immutable. ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
      * Shopping campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the merchantId field is set.
      */
+    @java.lang.Override
     public boolean hasMerchantId() {
       return merchantId_ != null;
     }
     /**
      * <pre>
-     * ID of the Merchant Center account.
+     * Immutable. ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
      * Shopping campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The merchantId.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getMerchantId() {
       return merchantId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : merchantId_;
     }
     /**
      * <pre>
-     * ID of the Merchant Center account.
+     * Immutable. ID of the Merchant Center account.
      * This field is required for create operations. This field is immutable for
      * Shopping campaigns.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+     * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMerchantIdOrBuilder() {
       return getMerchantId();
     }
@@ -7279,40 +5598,45 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.StringValue salesCountry_;
     /**
      * <pre>
-     * Sales country of products to include in the campaign.
+     * Immutable. Sales country of products to include in the campaign.
      * This field is required for Shopping campaigns. This field is immutable.
      * This field is optional for non-Shopping campaigns, but it must be equal
      * to 'ZZ' if set.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the salesCountry field is set.
      */
+    @java.lang.Override
     public boolean hasSalesCountry() {
       return salesCountry_ != null;
     }
     /**
      * <pre>
-     * Sales country of products to include in the campaign.
+     * Immutable. Sales country of products to include in the campaign.
      * This field is required for Shopping campaigns. This field is immutable.
      * This field is optional for non-Shopping campaigns, but it must be equal
      * to 'ZZ' if set.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The salesCountry.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getSalesCountry() {
       return salesCountry_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : salesCountry_;
     }
     /**
      * <pre>
-     * Sales country of products to include in the campaign.
+     * Immutable. Sales country of products to include in the campaign.
      * This field is required for Shopping campaigns. This field is immutable.
      * This field is optional for non-Shopping campaigns, but it must be equal
      * to 'ZZ' if set.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue sales_country = 2;</code>
+     * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSalesCountryOrBuilder() {
       return getSalesCountry();
     }
@@ -7330,7 +5654,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+     * @return Whether the campaignPriority field is set.
      */
+    @java.lang.Override
     public boolean hasCampaignPriority() {
       return campaignPriority_ != null;
     }
@@ -7345,7 +5671,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+     * @return The campaignPriority.
      */
+    @java.lang.Override
     public com.google.protobuf.Int32Value getCampaignPriority() {
       return campaignPriority_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : campaignPriority_;
     }
@@ -7361,6 +5689,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int32ValueOrBuilder getCampaignPriorityOrBuilder() {
       return getCampaignPriority();
     }
@@ -7373,7 +5702,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+     * @return Whether the enableLocal field is set.
      */
+    @java.lang.Override
     public boolean hasEnableLocal() {
       return enableLocal_ != null;
     }
@@ -7383,7 +5714,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+     * @return The enableLocal.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getEnableLocal() {
       return enableLocal_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableLocal_;
     }
@@ -7394,6 +5727,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.BoolValue enable_local = 4;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getEnableLocalOrBuilder() {
       return getEnableLocal();
     }
@@ -7814,24 +6148,26 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> merchantIdBuilder_;
       /**
        * <pre>
-       * ID of the Merchant Center account.
+       * Immutable. ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
        * Shopping campaigns.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return Whether the merchantId field is set.
        */
       public boolean hasMerchantId() {
         return merchantIdBuilder_ != null || merchantId_ != null;
       }
       /**
        * <pre>
-       * ID of the Merchant Center account.
+       * Immutable. ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
        * Shopping campaigns.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The merchantId.
        */
       public com.google.protobuf.Int64Value getMerchantId() {
         if (merchantIdBuilder_ == null) {
@@ -7842,12 +6178,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * ID of the Merchant Center account.
+       * Immutable. ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
        * Shopping campaigns.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setMerchantId(com.google.protobuf.Int64Value value) {
         if (merchantIdBuilder_ == null) {
@@ -7864,12 +6200,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * ID of the Merchant Center account.
+       * Immutable. ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
        * Shopping campaigns.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setMerchantId(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -7884,12 +6220,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * ID of the Merchant Center account.
+       * Immutable. ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
        * Shopping campaigns.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder mergeMerchantId(com.google.protobuf.Int64Value value) {
         if (merchantIdBuilder_ == null) {
@@ -7908,12 +6244,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * ID of the Merchant Center account.
+       * Immutable. ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
        * Shopping campaigns.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder clearMerchantId() {
         if (merchantIdBuilder_ == null) {
@@ -7928,12 +6264,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * ID of the Merchant Center account.
+       * Immutable. ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
        * Shopping campaigns.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMerchantIdBuilder() {
         
@@ -7942,12 +6278,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * ID of the Merchant Center account.
+       * Immutable. ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
        * Shopping campaigns.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMerchantIdOrBuilder() {
         if (merchantIdBuilder_ != null) {
@@ -7959,12 +6295,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * ID of the Merchant Center account.
+       * Immutable. ID of the Merchant Center account.
        * This field is required for create operations. This field is immutable for
        * Shopping campaigns.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value merchant_id = 1;</code>
+       * <code>.google.protobuf.Int64Value merchant_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -7985,26 +6321,28 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> salesCountryBuilder_;
       /**
        * <pre>
-       * Sales country of products to include in the campaign.
+       * Immutable. Sales country of products to include in the campaign.
        * This field is required for Shopping campaigns. This field is immutable.
        * This field is optional for non-Shopping campaigns, but it must be equal
        * to 'ZZ' if set.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return Whether the salesCountry field is set.
        */
       public boolean hasSalesCountry() {
         return salesCountryBuilder_ != null || salesCountry_ != null;
       }
       /**
        * <pre>
-       * Sales country of products to include in the campaign.
+       * Immutable. Sales country of products to include in the campaign.
        * This field is required for Shopping campaigns. This field is immutable.
        * This field is optional for non-Shopping campaigns, but it must be equal
        * to 'ZZ' if set.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The salesCountry.
        */
       public com.google.protobuf.StringValue getSalesCountry() {
         if (salesCountryBuilder_ == null) {
@@ -8015,13 +6353,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sales country of products to include in the campaign.
+       * Immutable. Sales country of products to include in the campaign.
        * This field is required for Shopping campaigns. This field is immutable.
        * This field is optional for non-Shopping campaigns, but it must be equal
        * to 'ZZ' if set.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setSalesCountry(com.google.protobuf.StringValue value) {
         if (salesCountryBuilder_ == null) {
@@ -8038,13 +6376,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sales country of products to include in the campaign.
+       * Immutable. Sales country of products to include in the campaign.
        * This field is required for Shopping campaigns. This field is immutable.
        * This field is optional for non-Shopping campaigns, but it must be equal
        * to 'ZZ' if set.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder setSalesCountry(
           com.google.protobuf.StringValue.Builder builderForValue) {
@@ -8059,13 +6397,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sales country of products to include in the campaign.
+       * Immutable. Sales country of products to include in the campaign.
        * This field is required for Shopping campaigns. This field is immutable.
        * This field is optional for non-Shopping campaigns, but it must be equal
        * to 'ZZ' if set.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder mergeSalesCountry(com.google.protobuf.StringValue value) {
         if (salesCountryBuilder_ == null) {
@@ -8084,13 +6422,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sales country of products to include in the campaign.
+       * Immutable. Sales country of products to include in the campaign.
        * This field is required for Shopping campaigns. This field is immutable.
        * This field is optional for non-Shopping campaigns, but it must be equal
        * to 'ZZ' if set.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public Builder clearSalesCountry() {
         if (salesCountryBuilder_ == null) {
@@ -8105,13 +6443,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sales country of products to include in the campaign.
+       * Immutable. Sales country of products to include in the campaign.
        * This field is required for Shopping campaigns. This field is immutable.
        * This field is optional for non-Shopping campaigns, but it must be equal
        * to 'ZZ' if set.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.StringValue.Builder getSalesCountryBuilder() {
         
@@ -8120,13 +6458,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sales country of products to include in the campaign.
+       * Immutable. Sales country of products to include in the campaign.
        * This field is required for Shopping campaigns. This field is immutable.
        * This field is optional for non-Shopping campaigns, but it must be equal
        * to 'ZZ' if set.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       public com.google.protobuf.StringValueOrBuilder getSalesCountryOrBuilder() {
         if (salesCountryBuilder_ != null) {
@@ -8138,13 +6476,13 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sales country of products to include in the campaign.
+       * Immutable. Sales country of products to include in the campaign.
        * This field is required for Shopping campaigns. This field is immutable.
        * This field is optional for non-Shopping campaigns, but it must be equal
        * to 'ZZ' if set.
        * </pre>
        *
-       * <code>.google.protobuf.StringValue sales_country = 2;</code>
+       * <code>.google.protobuf.StringValue sales_country = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -8174,6 +6512,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       * @return Whether the campaignPriority field is set.
        */
       public boolean hasCampaignPriority() {
         return campaignPriorityBuilder_ != null || campaignPriority_ != null;
@@ -8189,6 +6528,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.Int32Value campaign_priority = 3;</code>
+       * @return The campaignPriority.
        */
       public com.google.protobuf.Int32Value getCampaignPriority() {
         if (campaignPriorityBuilder_ == null) {
@@ -8367,6 +6707,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       * @return Whether the enableLocal field is set.
        */
       public boolean hasEnableLocal() {
         return enableLocalBuilder_ != null || enableLocal_ != null;
@@ -8377,6 +6718,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_local = 4;</code>
+       * @return The enableLocal.
        */
       public com.google.protobuf.BoolValue getEnableLocal() {
         if (enableLocalBuilder_ == null) {
@@ -8563,6 +6905,2594 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface TrackingSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v2.resources.Campaign.TrackingSetting)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the trackingUrl field is set.
+     */
+    boolean hasTrackingUrl();
+    /**
+     * <pre>
+     * Output only. The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The trackingUrl.
+     */
+    com.google.protobuf.StringValue getTrackingUrl();
+    /**
+     * <pre>
+     * Output only. The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder();
+  }
+  /**
+   * <pre>
+   * Campaign-level settings for tracking information.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.TrackingSetting}
+   */
+  public static final class TrackingSetting extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.TrackingSetting)
+      TrackingSettingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TrackingSetting.newBuilder() to construct.
+    private TrackingSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TrackingSetting() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TrackingSetting();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TrackingSetting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (trackingUrl_ != null) {
+                subBuilder = trackingUrl_.toBuilder();
+              }
+              trackingUrl_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(trackingUrl_);
+                trackingUrl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_TrackingSetting_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_TrackingSetting_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.Builder.class);
+    }
+
+    public static final int TRACKING_URL_FIELD_NUMBER = 1;
+    private com.google.protobuf.StringValue trackingUrl_;
+    /**
+     * <pre>
+     * Output only. The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the trackingUrl field is set.
+     */
+    @java.lang.Override
+    public boolean hasTrackingUrl() {
+      return trackingUrl_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The trackingUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getTrackingUrl() {
+      return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
+    }
+    /**
+     * <pre>
+     * Output only. The url used for dynamic tracking.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
+      return getTrackingUrl();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (trackingUrl_ != null) {
+        output.writeMessage(1, getTrackingUrl());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (trackingUrl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTrackingUrl());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v2.resources.Campaign.TrackingSetting)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v2.resources.Campaign.TrackingSetting other = (com.google.ads.googleads.v2.resources.Campaign.TrackingSetting) obj;
+
+      if (hasTrackingUrl() != other.hasTrackingUrl()) return false;
+      if (hasTrackingUrl()) {
+        if (!getTrackingUrl()
+            .equals(other.getTrackingUrl())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTrackingUrl()) {
+        hash = (37 * hash) + TRACKING_URL_FIELD_NUMBER;
+        hash = (53 * hash) + getTrackingUrl().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v2.resources.Campaign.TrackingSetting prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Campaign-level settings for tracking information.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.TrackingSetting}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v2.resources.Campaign.TrackingSetting)
+        com.google.ads.googleads.v2.resources.Campaign.TrackingSettingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_TrackingSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_TrackingSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.class, com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (trackingUrlBuilder_ == null) {
+          trackingUrl_ = null;
+        } else {
+          trackingUrl_ = null;
+          trackingUrlBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_TrackingSetting_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
+        return com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting build() {
+        com.google.ads.googleads.v2.resources.Campaign.TrackingSetting result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting buildPartial() {
+        com.google.ads.googleads.v2.resources.Campaign.TrackingSetting result = new com.google.ads.googleads.v2.resources.Campaign.TrackingSetting(this);
+        if (trackingUrlBuilder_ == null) {
+          result.trackingUrl_ = trackingUrl_;
+        } else {
+          result.trackingUrl_ = trackingUrlBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v2.resources.Campaign.TrackingSetting) {
+          return mergeFrom((com.google.ads.googleads.v2.resources.Campaign.TrackingSetting)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v2.resources.Campaign.TrackingSetting other) {
+        if (other == com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.getDefaultInstance()) return this;
+        if (other.hasTrackingUrl()) {
+          mergeTrackingUrl(other.getTrackingUrl());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v2.resources.Campaign.TrackingSetting parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v2.resources.Campaign.TrackingSetting) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.StringValue trackingUrl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> trackingUrlBuilder_;
+      /**
+       * <pre>
+       * Output only. The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the trackingUrl field is set.
+       */
+      public boolean hasTrackingUrl() {
+        return trackingUrlBuilder_ != null || trackingUrl_ != null;
+      }
+      /**
+       * <pre>
+       * Output only. The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The trackingUrl.
+       */
+      public com.google.protobuf.StringValue getTrackingUrl() {
+        if (trackingUrlBuilder_ == null) {
+          return trackingUrl_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
+        } else {
+          return trackingUrlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setTrackingUrl(com.google.protobuf.StringValue value) {
+        if (trackingUrlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          trackingUrl_ = value;
+          onChanged();
+        } else {
+          trackingUrlBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setTrackingUrl(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (trackingUrlBuilder_ == null) {
+          trackingUrl_ = builderForValue.build();
+          onChanged();
+        } else {
+          trackingUrlBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeTrackingUrl(com.google.protobuf.StringValue value) {
+        if (trackingUrlBuilder_ == null) {
+          if (trackingUrl_ != null) {
+            trackingUrl_ =
+              com.google.protobuf.StringValue.newBuilder(trackingUrl_).mergeFrom(value).buildPartial();
+          } else {
+            trackingUrl_ = value;
+          }
+          onChanged();
+        } else {
+          trackingUrlBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearTrackingUrl() {
+        if (trackingUrlBuilder_ == null) {
+          trackingUrl_ = null;
+          onChanged();
+        } else {
+          trackingUrl_ = null;
+          trackingUrlBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.protobuf.StringValue.Builder getTrackingUrlBuilder() {
+        
+        onChanged();
+        return getTrackingUrlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getTrackingUrlOrBuilder() {
+        if (trackingUrlBuilder_ != null) {
+          return trackingUrlBuilder_.getMessageOrBuilder();
+        } else {
+          return trackingUrl_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : trackingUrl_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The url used for dynamic tracking.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue tracking_url = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getTrackingUrlFieldBuilder() {
+        if (trackingUrlBuilder_ == null) {
+          trackingUrlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getTrackingUrl(),
+                  getParentForChildren(),
+                  isClean());
+          trackingUrl_ = null;
+        }
+        return trackingUrlBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v2.resources.Campaign.TrackingSetting)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v2.resources.Campaign.TrackingSetting)
+    private static final com.google.ads.googleads.v2.resources.Campaign.TrackingSetting DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v2.resources.Campaign.TrackingSetting();
+    }
+
+    public static com.google.ads.googleads.v2.resources.Campaign.TrackingSetting getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TrackingSetting>
+        PARSER = new com.google.protobuf.AbstractParser<TrackingSetting>() {
+      @java.lang.Override
+      public TrackingSetting parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TrackingSetting(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrackingSetting> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrackingSetting> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SelectiveOptimizationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getConversionActionsList();
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+     */
+    com.google.protobuf.StringValue getConversionActions(int index);
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+     */
+    int getConversionActionsCount();
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getConversionActionsOrBuilderList();
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getConversionActionsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Selective optimization setting for this campaign, which includes a set of
+   * conversion actions to optimize this campaign towards.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.SelectiveOptimization}
+   */
+  public static final class SelectiveOptimization extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)
+      SelectiveOptimizationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SelectiveOptimization.newBuilder() to construct.
+    private SelectiveOptimization(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SelectiveOptimization() {
+      conversionActions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SelectiveOptimization();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SelectiveOptimization(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                conversionActions_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              conversionActions_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          conversionActions_ = java.util.Collections.unmodifiableList(conversionActions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_SelectiveOptimization_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_SelectiveOptimization_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.class, com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.Builder.class);
+    }
+
+    public static final int CONVERSION_ACTIONS_FIELD_NUMBER = 1;
+    private java.util.List<com.google.protobuf.StringValue> conversionActions_;
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.StringValue> getConversionActionsList() {
+      return conversionActions_;
+    }
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getConversionActionsOrBuilderList() {
+      return conversionActions_;
+    }
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getConversionActionsCount() {
+      return conversionActions_.size();
+    }
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getConversionActions(int index) {
+      return conversionActions_.get(index);
+    }
+    /**
+     * <pre>
+     * The selected set of conversion actions for optimizing this campaign.
+     * </pre>
+     *
+     * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getConversionActionsOrBuilder(
+        int index) {
+      return conversionActions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < conversionActions_.size(); i++) {
+        output.writeMessage(1, conversionActions_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < conversionActions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, conversionActions_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization other = (com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization) obj;
+
+      if (!getConversionActionsList()
+          .equals(other.getConversionActionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getConversionActionsCount() > 0) {
+        hash = (37 * hash) + CONVERSION_ACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getConversionActionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Selective optimization setting for this campaign, which includes a set of
+     * conversion actions to optimize this campaign towards.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.SelectiveOptimization}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)
+        com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimizationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_SelectiveOptimization_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_SelectiveOptimization_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.class, com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getConversionActionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (conversionActionsBuilder_ == null) {
+          conversionActions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          conversionActionsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_SelectiveOptimization_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization getDefaultInstanceForType() {
+        return com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization build() {
+        com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization buildPartial() {
+        com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization result = new com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization(this);
+        int from_bitField0_ = bitField0_;
+        if (conversionActionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            conversionActions_ = java.util.Collections.unmodifiableList(conversionActions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.conversionActions_ = conversionActions_;
+        } else {
+          result.conversionActions_ = conversionActionsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization) {
+          return mergeFrom((com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization other) {
+        if (other == com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.getDefaultInstance()) return this;
+        if (conversionActionsBuilder_ == null) {
+          if (!other.conversionActions_.isEmpty()) {
+            if (conversionActions_.isEmpty()) {
+              conversionActions_ = other.conversionActions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureConversionActionsIsMutable();
+              conversionActions_.addAll(other.conversionActions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.conversionActions_.isEmpty()) {
+            if (conversionActionsBuilder_.isEmpty()) {
+              conversionActionsBuilder_.dispose();
+              conversionActionsBuilder_ = null;
+              conversionActions_ = other.conversionActions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              conversionActionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getConversionActionsFieldBuilder() : null;
+            } else {
+              conversionActionsBuilder_.addAllMessages(other.conversionActions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.google.protobuf.StringValue> conversionActions_ =
+        java.util.Collections.emptyList();
+      private void ensureConversionActionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          conversionActions_ = new java.util.ArrayList<com.google.protobuf.StringValue>(conversionActions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> conversionActionsBuilder_;
+
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getConversionActionsList() {
+        if (conversionActionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(conversionActions_);
+        } else {
+          return conversionActionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public int getConversionActionsCount() {
+        if (conversionActionsBuilder_ == null) {
+          return conversionActions_.size();
+        } else {
+          return conversionActionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public com.google.protobuf.StringValue getConversionActions(int index) {
+        if (conversionActionsBuilder_ == null) {
+          return conversionActions_.get(index);
+        } else {
+          return conversionActionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public Builder setConversionActions(
+          int index, com.google.protobuf.StringValue value) {
+        if (conversionActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConversionActionsIsMutable();
+          conversionActions_.set(index, value);
+          onChanged();
+        } else {
+          conversionActionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public Builder setConversionActions(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (conversionActionsBuilder_ == null) {
+          ensureConversionActionsIsMutable();
+          conversionActions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          conversionActionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public Builder addConversionActions(com.google.protobuf.StringValue value) {
+        if (conversionActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConversionActionsIsMutable();
+          conversionActions_.add(value);
+          onChanged();
+        } else {
+          conversionActionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public Builder addConversionActions(
+          int index, com.google.protobuf.StringValue value) {
+        if (conversionActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConversionActionsIsMutable();
+          conversionActions_.add(index, value);
+          onChanged();
+        } else {
+          conversionActionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public Builder addConversionActions(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (conversionActionsBuilder_ == null) {
+          ensureConversionActionsIsMutable();
+          conversionActions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          conversionActionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public Builder addConversionActions(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (conversionActionsBuilder_ == null) {
+          ensureConversionActionsIsMutable();
+          conversionActions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          conversionActionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public Builder addAllConversionActions(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (conversionActionsBuilder_ == null) {
+          ensureConversionActionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, conversionActions_);
+          onChanged();
+        } else {
+          conversionActionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public Builder clearConversionActions() {
+        if (conversionActionsBuilder_ == null) {
+          conversionActions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          conversionActionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public Builder removeConversionActions(int index) {
+        if (conversionActionsBuilder_ == null) {
+          ensureConversionActionsIsMutable();
+          conversionActions_.remove(index);
+          onChanged();
+        } else {
+          conversionActionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public com.google.protobuf.StringValue.Builder getConversionActionsBuilder(
+          int index) {
+        return getConversionActionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getConversionActionsOrBuilder(
+          int index) {
+        if (conversionActionsBuilder_ == null) {
+          return conversionActions_.get(index);  } else {
+          return conversionActionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getConversionActionsOrBuilderList() {
+        if (conversionActionsBuilder_ != null) {
+          return conversionActionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(conversionActions_);
+        }
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public com.google.protobuf.StringValue.Builder addConversionActionsBuilder() {
+        return getConversionActionsFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public com.google.protobuf.StringValue.Builder addConversionActionsBuilder(
+          int index) {
+        return getConversionActionsFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The selected set of conversion actions for optimizing this campaign.
+       * </pre>
+       *
+       * <code>repeated .google.protobuf.StringValue conversion_actions = 1 [(.google.api.resource_reference) = { ... }</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getConversionActionsBuilderList() {
+        return getConversionActionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getConversionActionsFieldBuilder() {
+        if (conversionActionsBuilder_ == null) {
+          conversionActionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  conversionActions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          conversionActions_ = null;
+        }
+        return conversionActionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v2.resources.Campaign.SelectiveOptimization)
+    private static final com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization();
+    }
+
+    public static com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SelectiveOptimization>
+        PARSER = new com.google.protobuf.AbstractParser<SelectiveOptimization>() {
+      @java.lang.Override
+      public SelectiveOptimization parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SelectiveOptimization(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SelectiveOptimization> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SelectiveOptimization> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AppCampaignSettingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Represents the goal which the bidding strategy of this app campaign
+     * should optimize towards.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
+     * @return The enum numeric value on the wire for biddingStrategyGoalType.
+     */
+    int getBiddingStrategyGoalTypeValue();
+    /**
+     * <pre>
+     * Represents the goal which the bidding strategy of this app campaign
+     * should optimize towards.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
+     * @return The biddingStrategyGoalType.
+     */
+    com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType getBiddingStrategyGoalType();
+
+    /**
+     * <pre>
+     * Immutable. A string that uniquely identifies a mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the appId field is set.
+     */
+    boolean hasAppId();
+    /**
+     * <pre>
+     * Immutable. A string that uniquely identifies a mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The appId.
+     */
+    com.google.protobuf.StringValue getAppId();
+    /**
+     * <pre>
+     * Immutable. A string that uniquely identifies a mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder();
+
+    /**
+     * <pre>
+     * Immutable. The application store that distributes this specific app.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for appStore.
+     */
+    int getAppStoreValue();
+    /**
+     * <pre>
+     * Immutable. The application store that distributes this specific app.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The appStore.
+     */
+    com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore getAppStore();
+  }
+  /**
+   * <pre>
+   * Campaign-level settings for App Campaigns.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.AppCampaignSetting}
+   */
+  public static final class AppCampaignSetting extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)
+      AppCampaignSettingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AppCampaignSetting.newBuilder() to construct.
+    private AppCampaignSetting(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AppCampaignSetting() {
+      biddingStrategyGoalType_ = 0;
+      appStore_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AppCampaignSetting();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AppCampaignSetting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              biddingStrategyGoalType_ = rawValue;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (appId_ != null) {
+                subBuilder = appId_.toBuilder();
+              }
+              appId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(appId_);
+                appId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              appStore_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_AppCampaignSetting_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_AppCampaignSetting_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.class, com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.Builder.class);
+    }
+
+    public static final int BIDDING_STRATEGY_GOAL_TYPE_FIELD_NUMBER = 1;
+    private int biddingStrategyGoalType_;
+    /**
+     * <pre>
+     * Represents the goal which the bidding strategy of this app campaign
+     * should optimize towards.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
+     * @return The enum numeric value on the wire for biddingStrategyGoalType.
+     */
+    @java.lang.Override public int getBiddingStrategyGoalTypeValue() {
+      return biddingStrategyGoalType_;
+    }
+    /**
+     * <pre>
+     * Represents the goal which the bidding strategy of this app campaign
+     * should optimize towards.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
+     * @return The biddingStrategyGoalType.
+     */
+    @java.lang.Override public com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType getBiddingStrategyGoalType() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType result = com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.valueOf(biddingStrategyGoalType_);
+      return result == null ? com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.UNRECOGNIZED : result;
+    }
+
+    public static final int APP_ID_FIELD_NUMBER = 2;
+    private com.google.protobuf.StringValue appId_;
+    /**
+     * <pre>
+     * Immutable. A string that uniquely identifies a mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the appId field is set.
+     */
+    @java.lang.Override
+    public boolean hasAppId() {
+      return appId_ != null;
+    }
+    /**
+     * <pre>
+     * Immutable. A string that uniquely identifies a mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The appId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getAppId() {
+      return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
+    }
+    /**
+     * <pre>
+     * Immutable. A string that uniquely identifies a mobile application.
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
+      return getAppId();
+    }
+
+    public static final int APP_STORE_FIELD_NUMBER = 3;
+    private int appStore_;
+    /**
+     * <pre>
+     * Immutable. The application store that distributes this specific app.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for appStore.
+     */
+    @java.lang.Override public int getAppStoreValue() {
+      return appStore_;
+    }
+    /**
+     * <pre>
+     * Immutable. The application store that distributes this specific app.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The appStore.
+     */
+    @java.lang.Override public com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore getAppStore() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore result = com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.valueOf(appStore_);
+      return result == null ? com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (biddingStrategyGoalType_ != com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, biddingStrategyGoalType_);
+      }
+      if (appId_ != null) {
+        output.writeMessage(2, getAppId());
+      }
+      if (appStore_ != com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, appStore_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (biddingStrategyGoalType_ != com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, biddingStrategyGoalType_);
+      }
+      if (appId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAppId());
+      }
+      if (appStore_ != com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, appStore_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting other = (com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting) obj;
+
+      if (biddingStrategyGoalType_ != other.biddingStrategyGoalType_) return false;
+      if (hasAppId() != other.hasAppId()) return false;
+      if (hasAppId()) {
+        if (!getAppId()
+            .equals(other.getAppId())) return false;
+      }
+      if (appStore_ != other.appStore_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BIDDING_STRATEGY_GOAL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + biddingStrategyGoalType_;
+      if (hasAppId()) {
+        hash = (37 * hash) + APP_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getAppId().hashCode();
+      }
+      hash = (37 * hash) + APP_STORE_FIELD_NUMBER;
+      hash = (53 * hash) + appStore_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Campaign-level settings for App Campaigns.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.AppCampaignSetting}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)
+        com.google.ads.googleads.v2.resources.Campaign.AppCampaignSettingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_AppCampaignSetting_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_AppCampaignSetting_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.class, com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        biddingStrategyGoalType_ = 0;
+
+        if (appIdBuilder_ == null) {
+          appId_ = null;
+        } else {
+          appId_ = null;
+          appIdBuilder_ = null;
+        }
+        appStore_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_AppCampaignSetting_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting getDefaultInstanceForType() {
+        return com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting build() {
+        com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting buildPartial() {
+        com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting result = new com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting(this);
+        result.biddingStrategyGoalType_ = biddingStrategyGoalType_;
+        if (appIdBuilder_ == null) {
+          result.appId_ = appId_;
+        } else {
+          result.appId_ = appIdBuilder_.build();
+        }
+        result.appStore_ = appStore_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting) {
+          return mergeFrom((com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting other) {
+        if (other == com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.getDefaultInstance()) return this;
+        if (other.biddingStrategyGoalType_ != 0) {
+          setBiddingStrategyGoalTypeValue(other.getBiddingStrategyGoalTypeValue());
+        }
+        if (other.hasAppId()) {
+          mergeAppId(other.getAppId());
+        }
+        if (other.appStore_ != 0) {
+          setAppStoreValue(other.getAppStoreValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int biddingStrategyGoalType_ = 0;
+      /**
+       * <pre>
+       * Represents the goal which the bidding strategy of this app campaign
+       * should optimize towards.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
+       * @return The enum numeric value on the wire for biddingStrategyGoalType.
+       */
+      @java.lang.Override public int getBiddingStrategyGoalTypeValue() {
+        return biddingStrategyGoalType_;
+      }
+      /**
+       * <pre>
+       * Represents the goal which the bidding strategy of this app campaign
+       * should optimize towards.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
+       * @param value The enum numeric value on the wire for biddingStrategyGoalType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBiddingStrategyGoalTypeValue(int value) {
+        
+        biddingStrategyGoalType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the goal which the bidding strategy of this app campaign
+       * should optimize towards.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
+       * @return The biddingStrategyGoalType.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType getBiddingStrategyGoalType() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType result = com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.valueOf(biddingStrategyGoalType_);
+        return result == null ? com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Represents the goal which the bidding strategy of this app campaign
+       * should optimize towards.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
+       * @param value The biddingStrategyGoalType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBiddingStrategyGoalType(com.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        biddingStrategyGoalType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Represents the goal which the bidding strategy of this app campaign
+       * should optimize towards.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBiddingStrategyGoalType() {
+        
+        biddingStrategyGoalType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.StringValue appId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> appIdBuilder_;
+      /**
+       * <pre>
+       * Immutable. A string that uniquely identifies a mobile application.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return Whether the appId field is set.
+       */
+      public boolean hasAppId() {
+        return appIdBuilder_ != null || appId_ != null;
+      }
+      /**
+       * <pre>
+       * Immutable. A string that uniquely identifies a mobile application.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The appId.
+       */
+      public com.google.protobuf.StringValue getAppId() {
+        if (appIdBuilder_ == null) {
+          return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
+        } else {
+          return appIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Immutable. A string that uniquely identifies a mobile application.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public Builder setAppId(com.google.protobuf.StringValue value) {
+        if (appIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          appId_ = value;
+          onChanged();
+        } else {
+          appIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. A string that uniquely identifies a mobile application.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public Builder setAppId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (appIdBuilder_ == null) {
+          appId_ = builderForValue.build();
+          onChanged();
+        } else {
+          appIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. A string that uniquely identifies a mobile application.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public Builder mergeAppId(com.google.protobuf.StringValue value) {
+        if (appIdBuilder_ == null) {
+          if (appId_ != null) {
+            appId_ =
+              com.google.protobuf.StringValue.newBuilder(appId_).mergeFrom(value).buildPartial();
+          } else {
+            appId_ = value;
+          }
+          onChanged();
+        } else {
+          appIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. A string that uniquely identifies a mobile application.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public Builder clearAppId() {
+        if (appIdBuilder_ == null) {
+          appId_ = null;
+          onChanged();
+        } else {
+          appId_ = null;
+          appIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. A string that uniquely identifies a mobile application.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public com.google.protobuf.StringValue.Builder getAppIdBuilder() {
+        
+        onChanged();
+        return getAppIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Immutable. A string that uniquely identifies a mobile application.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
+        if (appIdBuilder_ != null) {
+          return appIdBuilder_.getMessageOrBuilder();
+        } else {
+          return appId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : appId_;
+        }
+      }
+      /**
+       * <pre>
+       * Immutable. A string that uniquely identifies a mobile application.
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue app_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getAppIdFieldBuilder() {
+        if (appIdBuilder_ == null) {
+          appIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getAppId(),
+                  getParentForChildren(),
+                  isClean());
+          appId_ = null;
+        }
+        return appIdBuilder_;
+      }
+
+      private int appStore_ = 0;
+      /**
+       * <pre>
+       * Immutable. The application store that distributes this specific app.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The enum numeric value on the wire for appStore.
+       */
+      @java.lang.Override public int getAppStoreValue() {
+        return appStore_;
+      }
+      /**
+       * <pre>
+       * Immutable. The application store that distributes this specific app.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @param value The enum numeric value on the wire for appStore to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppStoreValue(int value) {
+        
+        appStore_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. The application store that distributes this specific app.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return The appStore.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore getAppStore() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore result = com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.valueOf(appStore_);
+        return result == null ? com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Immutable. The application store that distributes this specific app.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @param value The appStore to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppStore(com.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        appStore_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Immutable. The application store that distributes this specific app.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppStore() {
+        
+        appStore_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v2.resources.Campaign.AppCampaignSetting)
+    private static final com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting();
+    }
+
+    public static com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AppCampaignSetting>
+        PARSER = new com.google.protobuf.AbstractParser<AppCampaignSetting>() {
+      @java.lang.Override
+      public AppCampaignSetting parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AppCampaignSetting(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AppCampaignSetting> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AppCampaignSetting> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GeoTargetTypeSettingOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting)
       com.google.protobuf.MessageOrBuilder {
@@ -8573,6 +9503,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+     * @return The enum numeric value on the wire for positiveGeoTargetType.
      */
     int getPositiveGeoTargetTypeValue();
     /**
@@ -8581,6 +9512,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+     * @return The positiveGeoTargetType.
      */
     com.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType getPositiveGeoTargetType();
 
@@ -8590,6 +9522,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+     * @return The enum numeric value on the wire for negativeGeoTargetType.
      */
     int getNegativeGeoTargetTypeValue();
     /**
@@ -8598,6 +9531,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+     * @return The negativeGeoTargetType.
      */
     com.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType getNegativeGeoTargetType();
   }
@@ -8608,7 +9542,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting}
    */
-  public  static final class GeoTargetTypeSetting extends
+  public static final class GeoTargetTypeSetting extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting)
       GeoTargetTypeSettingOrBuilder {
@@ -8620,6 +9554,13 @@ private static final long serialVersionUID = 0L;
     private GeoTargetTypeSetting() {
       positiveGeoTargetType_ = 0;
       negativeGeoTargetType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GeoTargetTypeSetting();
     }
 
     @java.lang.Override
@@ -8635,7 +9576,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8698,8 +9638,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+     * @return The enum numeric value on the wire for positiveGeoTargetType.
      */
-    public int getPositiveGeoTargetTypeValue() {
+    @java.lang.Override public int getPositiveGeoTargetTypeValue() {
       return positiveGeoTargetType_;
     }
     /**
@@ -8708,8 +9649,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+     * @return The positiveGeoTargetType.
      */
-    public com.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType getPositiveGeoTargetType() {
+    @java.lang.Override public com.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType getPositiveGeoTargetType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType result = com.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.valueOf(positiveGeoTargetType_);
       return result == null ? com.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.UNRECOGNIZED : result;
@@ -8723,8 +9665,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+     * @return The enum numeric value on the wire for negativeGeoTargetType.
      */
-    public int getNegativeGeoTargetTypeValue() {
+    @java.lang.Override public int getNegativeGeoTargetTypeValue() {
       return negativeGeoTargetType_;
     }
     /**
@@ -8733,8 +9676,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+     * @return The negativeGeoTargetType.
      */
-    public com.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType getNegativeGeoTargetType() {
+    @java.lang.Override public com.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType getNegativeGeoTargetType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType result = com.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.valueOf(negativeGeoTargetType_);
       return result == null ? com.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.UNRECOGNIZED : result;
@@ -9068,8 +10012,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+       * @return The enum numeric value on the wire for positiveGeoTargetType.
        */
-      public int getPositiveGeoTargetTypeValue() {
+      @java.lang.Override public int getPositiveGeoTargetTypeValue() {
         return positiveGeoTargetType_;
       }
       /**
@@ -9078,8 +10023,11 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+       * @param value The enum numeric value on the wire for positiveGeoTargetType to set.
+       * @return This builder for chaining.
        */
       public Builder setPositiveGeoTargetTypeValue(int value) {
+        
         positiveGeoTargetType_ = value;
         onChanged();
         return this;
@@ -9090,7 +10038,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+       * @return The positiveGeoTargetType.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType getPositiveGeoTargetType() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType result = com.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.valueOf(positiveGeoTargetType_);
@@ -9102,6 +10052,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+       * @param value The positiveGeoTargetType to set.
+       * @return This builder for chaining.
        */
       public Builder setPositiveGeoTargetType(com.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType value) {
         if (value == null) {
@@ -9118,6 +10070,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType positive_geo_target_type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPositiveGeoTargetType() {
         
@@ -9133,8 +10086,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+       * @return The enum numeric value on the wire for negativeGeoTargetType.
        */
-      public int getNegativeGeoTargetTypeValue() {
+      @java.lang.Override public int getNegativeGeoTargetTypeValue() {
         return negativeGeoTargetType_;
       }
       /**
@@ -9143,8 +10097,11 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+       * @param value The enum numeric value on the wire for negativeGeoTargetType to set.
+       * @return This builder for chaining.
        */
       public Builder setNegativeGeoTargetTypeValue(int value) {
+        
         negativeGeoTargetType_ = value;
         onChanged();
         return this;
@@ -9155,7 +10112,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+       * @return The negativeGeoTargetType.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType getNegativeGeoTargetType() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType result = com.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.valueOf(negativeGeoTargetType_);
@@ -9167,6 +10126,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+       * @param value The negativeGeoTargetType to set.
+       * @return This builder for chaining.
        */
       public Builder setNegativeGeoTargetType(com.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType value) {
         if (value == null) {
@@ -9183,6 +10144,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNegativeGeoTargetType() {
         
@@ -9243,701 +10205,11 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  public interface VanityPharmaOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v2.resources.Campaign.VanityPharma)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * The display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-     */
-    int getVanityPharmaDisplayUrlModeValue();
-    /**
-     * <pre>
-     * The display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-     */
-    com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode();
-
-    /**
-     * <pre>
-     * The text that will be displayed in display URL of the text ad when
-     * website description is the selected display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-     */
-    int getVanityPharmaTextValue();
-    /**
-     * <pre>
-     * The text that will be displayed in display URL of the text ad when
-     * website description is the selected display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-     */
-    com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText();
-  }
-  /**
-   * <pre>
-   * Describes how unbranded pharma ads will be displayed.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.VanityPharma}
-   */
-  public  static final class VanityPharma extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.Campaign.VanityPharma)
-      VanityPharmaOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use VanityPharma.newBuilder() to construct.
-    private VanityPharma(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private VanityPharma() {
-      vanityPharmaDisplayUrlMode_ = 0;
-      vanityPharmaText_ = 0;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private VanityPharma(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              vanityPharmaDisplayUrlMode_ = rawValue;
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              vanityPharmaText_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_VanityPharma_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_VanityPharma_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v2.resources.Campaign.VanityPharma.class, com.google.ads.googleads.v2.resources.Campaign.VanityPharma.Builder.class);
-    }
-
-    public static final int VANITY_PHARMA_DISPLAY_URL_MODE_FIELD_NUMBER = 1;
-    private int vanityPharmaDisplayUrlMode_;
-    /**
-     * <pre>
-     * The display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-     */
-    public int getVanityPharmaDisplayUrlModeValue() {
-      return vanityPharmaDisplayUrlMode_;
-    }
-    /**
-     * <pre>
-     * The display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-     */
-    public com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode result = com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.valueOf(vanityPharmaDisplayUrlMode_);
-      return result == null ? com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNRECOGNIZED : result;
-    }
-
-    public static final int VANITY_PHARMA_TEXT_FIELD_NUMBER = 2;
-    private int vanityPharmaText_;
-    /**
-     * <pre>
-     * The text that will be displayed in display URL of the text ad when
-     * website description is the selected display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-     */
-    public int getVanityPharmaTextValue() {
-      return vanityPharmaText_;
-    }
-    /**
-     * <pre>
-     * The text that will be displayed in display URL of the text ad when
-     * website description is the selected display mode for vanity pharma URLs.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-     */
-    public com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText result = com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.valueOf(vanityPharmaText_);
-      return result == null ? com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (vanityPharmaDisplayUrlMode_ != com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, vanityPharmaDisplayUrlMode_);
-      }
-      if (vanityPharmaText_ != com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, vanityPharmaText_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (vanityPharmaDisplayUrlMode_ != com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, vanityPharmaDisplayUrlMode_);
-      }
-      if (vanityPharmaText_ != com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, vanityPharmaText_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v2.resources.Campaign.VanityPharma)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v2.resources.Campaign.VanityPharma other = (com.google.ads.googleads.v2.resources.Campaign.VanityPharma) obj;
-
-      if (vanityPharmaDisplayUrlMode_ != other.vanityPharmaDisplayUrlMode_) return false;
-      if (vanityPharmaText_ != other.vanityPharmaText_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VANITY_PHARMA_DISPLAY_URL_MODE_FIELD_NUMBER;
-      hash = (53 * hash) + vanityPharmaDisplayUrlMode_;
-      hash = (37 * hash) + VANITY_PHARMA_TEXT_FIELD_NUMBER;
-      hash = (53 * hash) + vanityPharmaText_;
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v2.resources.Campaign.VanityPharma prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Describes how unbranded pharma ads will be displayed.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v2.resources.Campaign.VanityPharma}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v2.resources.Campaign.VanityPharma)
-        com.google.ads.googleads.v2.resources.Campaign.VanityPharmaOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_VanityPharma_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_VanityPharma_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v2.resources.Campaign.VanityPharma.class, com.google.ads.googleads.v2.resources.Campaign.VanityPharma.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v2.resources.Campaign.VanityPharma.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        vanityPharmaDisplayUrlMode_ = 0;
-
-        vanityPharmaText_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v2.resources.CampaignProto.internal_static_google_ads_googleads_v2_resources_Campaign_VanityPharma_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.VanityPharma getDefaultInstanceForType() {
-        return com.google.ads.googleads.v2.resources.Campaign.VanityPharma.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.VanityPharma build() {
-        com.google.ads.googleads.v2.resources.Campaign.VanityPharma result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v2.resources.Campaign.VanityPharma buildPartial() {
-        com.google.ads.googleads.v2.resources.Campaign.VanityPharma result = new com.google.ads.googleads.v2.resources.Campaign.VanityPharma(this);
-        result.vanityPharmaDisplayUrlMode_ = vanityPharmaDisplayUrlMode_;
-        result.vanityPharmaText_ = vanityPharmaText_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v2.resources.Campaign.VanityPharma) {
-          return mergeFrom((com.google.ads.googleads.v2.resources.Campaign.VanityPharma)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v2.resources.Campaign.VanityPharma other) {
-        if (other == com.google.ads.googleads.v2.resources.Campaign.VanityPharma.getDefaultInstance()) return this;
-        if (other.vanityPharmaDisplayUrlMode_ != 0) {
-          setVanityPharmaDisplayUrlModeValue(other.getVanityPharmaDisplayUrlModeValue());
-        }
-        if (other.vanityPharmaText_ != 0) {
-          setVanityPharmaTextValue(other.getVanityPharmaTextValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v2.resources.Campaign.VanityPharma parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v2.resources.Campaign.VanityPharma) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int vanityPharmaDisplayUrlMode_ = 0;
-      /**
-       * <pre>
-       * The display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-       */
-      public int getVanityPharmaDisplayUrlModeValue() {
-        return vanityPharmaDisplayUrlMode_;
-      }
-      /**
-       * <pre>
-       * The display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-       */
-      public Builder setVanityPharmaDisplayUrlModeValue(int value) {
-        vanityPharmaDisplayUrlMode_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-       */
-      public com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode getVanityPharmaDisplayUrlMode() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode result = com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.valueOf(vanityPharmaDisplayUrlMode_);
-        return result == null ? com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * The display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-       */
-      public Builder setVanityPharmaDisplayUrlMode(com.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        vanityPharmaDisplayUrlMode_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode vanity_pharma_display_url_mode = 1;</code>
-       */
-      public Builder clearVanityPharmaDisplayUrlMode() {
-        
-        vanityPharmaDisplayUrlMode_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int vanityPharmaText_ = 0;
-      /**
-       * <pre>
-       * The text that will be displayed in display URL of the text ad when
-       * website description is the selected display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-       */
-      public int getVanityPharmaTextValue() {
-        return vanityPharmaText_;
-      }
-      /**
-       * <pre>
-       * The text that will be displayed in display URL of the text ad when
-       * website description is the selected display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-       */
-      public Builder setVanityPharmaTextValue(int value) {
-        vanityPharmaText_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The text that will be displayed in display URL of the text ad when
-       * website description is the selected display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-       */
-      public com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText getVanityPharmaText() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText result = com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.valueOf(vanityPharmaText_);
-        return result == null ? com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * The text that will be displayed in display URL of the text ad when
-       * website description is the selected display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-       */
-      public Builder setVanityPharmaText(com.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        vanityPharmaText_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The text that will be displayed in display URL of the text ad when
-       * website description is the selected display mode for vanity pharma URLs.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v2.enums.VanityPharmaTextEnum.VanityPharmaText vanity_pharma_text = 2;</code>
-       */
-      public Builder clearVanityPharmaText() {
-        
-        vanityPharmaText_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v2.resources.Campaign.VanityPharma)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v2.resources.Campaign.VanityPharma)
-    private static final com.google.ads.googleads.v2.resources.Campaign.VanityPharma DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v2.resources.Campaign.VanityPharma();
-    }
-
-    public static com.google.ads.googleads.v2.resources.Campaign.VanityPharma getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<VanityPharma>
-        PARSER = new com.google.protobuf.AbstractParser<VanityPharma>() {
-      @java.lang.Override
-      public VanityPharma parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new VanityPharma(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<VanityPharma> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<VanityPharma> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v2.resources.Campaign.VanityPharma getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  private int bitField0_;
-  private int bitField1_;
   private int campaignBiddingStrategyCase_ = 0;
   private java.lang.Object campaignBiddingStrategy_;
   public enum CampaignBiddingStrategyCase
-      implements com.google.protobuf.Internal.EnumLite {
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     BIDDING_STRATEGY(23),
     COMMISSION(49),
     MANUAL_CPC(24),
@@ -9957,6 +10229,8 @@ private static final long serialVersionUID = 0L;
       this.value = value;
     }
     /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -9998,13 +10272,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the campaign.
+   * Immutable. The resource name of the campaign.
    * Campaign resource names have the form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -10019,13 +10295,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the campaign.
+   * Immutable. The resource name of the campaign.
    * Campaign resource names have the form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -10044,31 +10322,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.Int64Value id_;
   /**
    * <pre>
-   * The ID of the campaign.
+   * Output only. The ID of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
   /**
    * <pre>
-   * The ID of the campaign.
+   * Output only. The ID of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
   /**
    * <pre>
-   * The ID of the campaign.
+   * Output only. The ID of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 3;</code>
+   * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -10085,7 +10368,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -10099,7 +10384,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -10114,6 +10401,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -10127,8 +10415,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus status = 5;</code>
+   * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -10138,8 +10427,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus status = 5;</code>
+   * @return The status.
    */
-  public com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus result = com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus.UNRECOGNIZED : result;
@@ -10149,22 +10439,24 @@ private static final long serialVersionUID = 0L;
   private int servingStatus_;
   /**
    * <pre>
-   * The ad serving status of the campaign.
+   * Output only. The ad serving status of the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21;</code>
+   * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for servingStatus.
    */
-  public int getServingStatusValue() {
+  @java.lang.Override public int getServingStatusValue() {
     return servingStatus_;
   }
   /**
    * <pre>
-   * The ad serving status of the campaign.
+   * Output only. The ad serving status of the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21;</code>
+   * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The servingStatus.
    */
-  public com.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus getServingStatus() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus getServingStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus result = com.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus.valueOf(servingStatus_);
     return result == null ? com.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus.UNRECOGNIZED : result;
@@ -10178,8 +10470,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus ad_serving_optimization_status = 8;</code>
+   * @return The enum numeric value on the wire for adServingOptimizationStatus.
    */
-  public int getAdServingOptimizationStatusValue() {
+  @java.lang.Override public int getAdServingOptimizationStatusValue() {
     return adServingOptimizationStatus_;
   }
   /**
@@ -10188,8 +10481,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus ad_serving_optimization_status = 8;</code>
+   * @return The adServingOptimizationStatus.
    */
-  public com.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus getAdServingOptimizationStatus() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus getAdServingOptimizationStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus result = com.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus.valueOf(adServingOptimizationStatus_);
     return result == null ? com.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus.UNRECOGNIZED : result;
@@ -10199,7 +10493,7 @@ private static final long serialVersionUID = 0L;
   private int advertisingChannelType_;
   /**
    * <pre>
-   * The primary serving target for ads within the campaign.
+   * Immutable. The primary serving target for ads within the campaign.
    * The targeting options can be refined in `network_settings`.
    * This field is required and should not be empty when creating new
    * campaigns.
@@ -10207,14 +10501,15 @@ private static final long serialVersionUID = 0L;
    * After the campaign is created, the field can not be changed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9;</code>
+   * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for advertisingChannelType.
    */
-  public int getAdvertisingChannelTypeValue() {
+  @java.lang.Override public int getAdvertisingChannelTypeValue() {
     return advertisingChannelType_;
   }
   /**
    * <pre>
-   * The primary serving target for ads within the campaign.
+   * Immutable. The primary serving target for ads within the campaign.
    * The targeting options can be refined in `network_settings`.
    * This field is required and should not be empty when creating new
    * campaigns.
@@ -10222,9 +10517,10 @@ private static final long serialVersionUID = 0L;
    * After the campaign is created, the field can not be changed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9;</code>
+   * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The advertisingChannelType.
    */
-  public com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType getAdvertisingChannelType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType getAdvertisingChannelType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType result = com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.valueOf(advertisingChannelType_);
     return result == null ? com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.UNRECOGNIZED : result;
@@ -10234,28 +10530,30 @@ private static final long serialVersionUID = 0L;
   private int advertisingChannelSubType_;
   /**
    * <pre>
-   * Optional refinement to `advertising_channel_type`.
+   * Immutable. Optional refinement to `advertising_channel_type`.
    * Must be a valid sub-type of the parent channel type.
    * Can be set only when creating campaigns.
    * After campaign is created, the field can not be changed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10;</code>
+   * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for advertisingChannelSubType.
    */
-  public int getAdvertisingChannelSubTypeValue() {
+  @java.lang.Override public int getAdvertisingChannelSubTypeValue() {
     return advertisingChannelSubType_;
   }
   /**
    * <pre>
-   * Optional refinement to `advertising_channel_type`.
+   * Immutable. Optional refinement to `advertising_channel_type`.
    * Must be a valid sub-type of the parent channel type.
    * Can be set only when creating campaigns.
    * After campaign is created, the field can not be changed.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10;</code>
+   * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The advertisingChannelSubType.
    */
-  public com.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType getAdvertisingChannelSubType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType getAdvertisingChannelSubType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType result = com.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.valueOf(advertisingChannelSubType_);
     return result == null ? com.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.UNRECOGNIZED : result;
@@ -10269,7 +10567,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 11;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingUrlTemplate() {
     return trackingUrlTemplate_ != null;
   }
@@ -10279,7 +10579,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 11;</code>
+   * @return The trackingUrlTemplate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTrackingUrlTemplate() {
     return trackingUrlTemplate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrlTemplate_;
   }
@@ -10290,6 +10592,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
   }
@@ -10304,6 +10607,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.CustomParameter url_custom_parameters = 12;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.CustomParameter> getUrlCustomParametersList() {
     return urlCustomParameters_;
   }
@@ -10315,6 +10619,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.CustomParameter url_custom_parameters = 12;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.CustomParameterOrBuilder> 
       getUrlCustomParametersOrBuilderList() {
     return urlCustomParameters_;
@@ -10327,6 +10632,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.CustomParameter url_custom_parameters = 12;</code>
    */
+  @java.lang.Override
   public int getUrlCustomParametersCount() {
     return urlCustomParameters_.size();
   }
@@ -10338,6 +10644,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.CustomParameter url_custom_parameters = 12;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.CustomParameter getUrlCustomParameters(int index) {
     return urlCustomParameters_.get(index);
   }
@@ -10349,6 +10656,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.CustomParameter url_custom_parameters = 12;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
       int index) {
     return urlCustomParameters_.get(index);
@@ -10363,7 +10671,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+   * @return Whether the realTimeBiddingSetting field is set.
    */
+  @java.lang.Override
   public boolean hasRealTimeBiddingSetting() {
     return realTimeBiddingSetting_ != null;
   }
@@ -10374,7 +10684,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+   * @return The realTimeBiddingSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.RealTimeBiddingSetting getRealTimeBiddingSetting() {
     return realTimeBiddingSetting_ == null ? com.google.ads.googleads.v2.common.RealTimeBiddingSetting.getDefaultInstance() : realTimeBiddingSetting_;
   }
@@ -10386,6 +10698,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.RealTimeBiddingSettingOrBuilder getRealTimeBiddingSettingOrBuilder() {
     return getRealTimeBiddingSetting();
   }
@@ -10398,7 +10711,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.NetworkSettings network_settings = 14;</code>
+   * @return Whether the networkSettings field is set.
    */
+  @java.lang.Override
   public boolean hasNetworkSettings() {
     return networkSettings_ != null;
   }
@@ -10408,7 +10723,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.NetworkSettings network_settings = 14;</code>
+   * @return The networkSettings.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.NetworkSettings getNetworkSettings() {
     return networkSettings_ == null ? com.google.ads.googleads.v2.resources.Campaign.NetworkSettings.getDefaultInstance() : networkSettings_;
   }
@@ -10419,6 +10736,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.NetworkSettings network_settings = 14;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.NetworkSettingsOrBuilder getNetworkSettingsOrBuilder() {
     return getNetworkSettings();
   }
@@ -10427,31 +10745,36 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotelSetting_;
   /**
    * <pre>
-   * The hotel setting for the campaign.
+   * Immutable. The hotel setting for the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the hotelSetting field is set.
    */
+  @java.lang.Override
   public boolean hasHotelSetting() {
     return hotelSetting_ != null;
   }
   /**
    * <pre>
-   * The hotel setting for the campaign.
+   * Immutable. The hotel setting for the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The hotelSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo getHotelSetting() {
     return hotelSetting_ == null ? com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo.getDefaultInstance() : hotelSetting_;
   }
   /**
    * <pre>
-   * The hotel setting for the campaign.
+   * Immutable. The hotel setting for the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+   * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfoOrBuilder getHotelSettingOrBuilder() {
     return getHotelSetting();
   }
@@ -10464,7 +10787,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting dynamic_search_ads_setting = 33;</code>
+   * @return Whether the dynamicSearchAdsSetting field is set.
    */
+  @java.lang.Override
   public boolean hasDynamicSearchAdsSetting() {
     return dynamicSearchAdsSetting_ != null;
   }
@@ -10474,7 +10799,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting dynamic_search_ads_setting = 33;</code>
+   * @return The dynamicSearchAdsSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting getDynamicSearchAdsSetting() {
     return dynamicSearchAdsSetting_ == null ? com.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting.getDefaultInstance() : dynamicSearchAdsSetting_;
   }
@@ -10485,6 +10812,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting dynamic_search_ads_setting = 33;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSettingOrBuilder getDynamicSearchAdsSettingOrBuilder() {
     return getDynamicSearchAdsSetting();
   }
@@ -10497,7 +10825,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
+   * @return Whether the shoppingSetting field is set.
    */
+  @java.lang.Override
   public boolean hasShoppingSetting() {
     return shoppingSetting_ != null;
   }
@@ -10507,7 +10837,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
+   * @return The shoppingSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.ShoppingSetting getShoppingSetting() {
     return shoppingSetting_ == null ? com.google.ads.googleads.v2.resources.Campaign.ShoppingSetting.getDefaultInstance() : shoppingSetting_;
   }
@@ -10518,6 +10850,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.ShoppingSettingOrBuilder getShoppingSettingOrBuilder() {
     return getShoppingSetting();
   }
@@ -10530,7 +10863,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetingSetting targeting_setting = 43;</code>
+   * @return Whether the targetingSetting field is set.
    */
+  @java.lang.Override
   public boolean hasTargetingSetting() {
     return targetingSetting_ != null;
   }
@@ -10540,7 +10875,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetingSetting targeting_setting = 43;</code>
+   * @return The targetingSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetingSetting getTargetingSetting() {
     return targetingSetting_ == null ? com.google.ads.googleads.v2.common.TargetingSetting.getDefaultInstance() : targetingSetting_;
   }
@@ -10551,6 +10888,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetingSetting targeting_setting = 43;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetingSettingOrBuilder getTargetingSettingOrBuilder() {
     return getTargetingSetting();
   }
@@ -10563,7 +10901,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting geo_target_type_setting = 47;</code>
+   * @return Whether the geoTargetTypeSetting field is set.
    */
+  @java.lang.Override
   public boolean hasGeoTargetTypeSetting() {
     return geoTargetTypeSetting_ != null;
   }
@@ -10573,7 +10913,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting geo_target_type_setting = 47;</code>
+   * @return The geoTargetTypeSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting getGeoTargetTypeSetting() {
     return geoTargetTypeSetting_ == null ? com.google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting.getDefaultInstance() : geoTargetTypeSetting_;
   }
@@ -10584,6 +10926,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting geo_target_type_setting = 47;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSettingOrBuilder getGeoTargetTypeSettingOrBuilder() {
     return getGeoTargetTypeSetting();
   }
@@ -10596,7 +10939,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
+   * @return Whether the appCampaignSetting field is set.
    */
+  @java.lang.Override
   public boolean hasAppCampaignSetting() {
     return appCampaignSetting_ != null;
   }
@@ -10606,7 +10951,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
+   * @return The appCampaignSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting getAppCampaignSetting() {
     return appCampaignSetting_ == null ? com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting.getDefaultInstance() : appCampaignSetting_;
   }
@@ -10617,6 +10964,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSettingOrBuilder getAppCampaignSettingOrBuilder() {
     return getAppCampaignSetting();
   }
@@ -10625,52 +10973,57 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.protobuf.StringValue> labels_;
   /**
    * <pre>
-   * The resource names of labels attached to this campaign.
+   * Output only. The resource names of labels attached to this campaign.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getLabelsList() {
     return labels_;
   }
   /**
    * <pre>
-   * The resource names of labels attached to this campaign.
+   * Output only. The resource names of labels attached to this campaign.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getLabelsOrBuilderList() {
     return labels_;
   }
   /**
    * <pre>
-   * The resource names of labels attached to this campaign.
+   * Output only. The resource names of labels attached to this campaign.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public int getLabelsCount() {
     return labels_.size();
   }
   /**
    * <pre>
-   * The resource names of labels attached to this campaign.
+   * Output only. The resource names of labels attached to this campaign.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLabels(int index) {
     return labels_.get(index);
   }
   /**
    * <pre>
-   * The resource names of labels attached to this campaign.
+   * Output only. The resource names of labels attached to this campaign.
    * </pre>
    *
-   * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+   * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLabelsOrBuilder(
       int index) {
     return labels_.get(index);
@@ -10680,22 +11033,24 @@ private static final long serialVersionUID = 0L;
   private int experimentType_;
   /**
    * <pre>
-   * The type of campaign: normal, draft, or experiment.
+   * Output only. The type of campaign: normal, draft, or experiment.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+   * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for experimentType.
    */
-  public int getExperimentTypeValue() {
+  @java.lang.Override public int getExperimentTypeValue() {
     return experimentType_;
   }
   /**
    * <pre>
-   * The type of campaign: normal, draft, or experiment.
+   * Output only. The type of campaign: normal, draft, or experiment.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+   * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The experimentType.
    */
-  public com.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType getExperimentType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType getExperimentType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType result = com.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType.valueOf(experimentType_);
     return result == null ? com.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType.UNRECOGNIZED : result;
@@ -10705,37 +11060,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue baseCampaign_;
   /**
    * <pre>
-   * The resource name of the base campaign of a draft or experiment campaign.
+   * Output only. The resource name of the base campaign of a draft or experiment campaign.
    * For base campaigns, this is equal to `resource_name`.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+   * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the baseCampaign field is set.
    */
+  @java.lang.Override
   public boolean hasBaseCampaign() {
     return baseCampaign_ != null;
   }
   /**
    * <pre>
-   * The resource name of the base campaign of a draft or experiment campaign.
+   * Output only. The resource name of the base campaign of a draft or experiment campaign.
    * For base campaigns, this is equal to `resource_name`.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+   * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The baseCampaign.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBaseCampaign() {
     return baseCampaign_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : baseCampaign_;
   }
   /**
    * <pre>
-   * The resource name of the base campaign of a draft or experiment campaign.
+   * Output only. The resource name of the base campaign of a draft or experiment campaign.
    * For base campaigns, this is equal to `resource_name`.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+   * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBaseCampaignOrBuilder() {
     return getBaseCampaign();
   }
@@ -10747,8 +11107,10 @@ private static final long serialVersionUID = 0L;
    * The budget of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+   * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignBudget field is set.
    */
+  @java.lang.Override
   public boolean hasCampaignBudget() {
     return campaignBudget_ != null;
   }
@@ -10757,8 +11119,10 @@ private static final long serialVersionUID = 0L;
    * The budget of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+   * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
+   * @return The campaignBudget.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCampaignBudget() {
     return campaignBudget_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : campaignBudget_;
   }
@@ -10767,8 +11131,9 @@ private static final long serialVersionUID = 0L;
    * The budget of the campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+   * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCampaignBudgetOrBuilder() {
     return getCampaignBudget();
   }
@@ -10777,30 +11142,32 @@ private static final long serialVersionUID = 0L;
   private int biddingStrategyType_;
   /**
    * <pre>
-   * The type of bidding strategy.
+   * Output only. The type of bidding strategy.
    * A bidding strategy can be created by setting either the bidding scheme to
    * create a standard bidding strategy or the `bidding_strategy` field to
    * create a portfolio bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22;</code>
+   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for biddingStrategyType.
    */
-  public int getBiddingStrategyTypeValue() {
+  @java.lang.Override public int getBiddingStrategyTypeValue() {
     return biddingStrategyType_;
   }
   /**
    * <pre>
-   * The type of bidding strategy.
+   * Output only. The type of bidding strategy.
    * A bidding strategy can be created by setting either the bidding scheme to
    * create a standard bidding strategy or the `bidding_strategy` field to
    * create a portfolio bidding strategy.
    * This field is read-only.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22;</code>
+   * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The biddingStrategyType.
    */
-  public com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType getBiddingStrategyType() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType getBiddingStrategyType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType result = com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType.valueOf(biddingStrategyType_);
     return result == null ? com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNRECOGNIZED : result;
@@ -10815,7 +11182,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 19;</code>
+   * @return Whether the startDate field is set.
    */
+  @java.lang.Override
   public boolean hasStartDate() {
     return startDate_ != null;
   }
@@ -10826,7 +11195,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue start_date = 19;</code>
+   * @return The startDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStartDate() {
     return startDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : startDate_;
   }
@@ -10838,6 +11209,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue start_date = 19;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStartDateOrBuilder() {
     return getStartDate();
   }
@@ -10851,7 +11223,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 20;</code>
+   * @return Whether the endDate field is set.
    */
+  @java.lang.Override
   public boolean hasEndDate() {
     return endDate_ != null;
   }
@@ -10862,7 +11236,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue end_date = 20;</code>
+   * @return The endDate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getEndDate() {
     return endDate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : endDate_;
   }
@@ -10874,6 +11250,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue end_date = 20;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getEndDateOrBuilder() {
     return getEndDate();
   }
@@ -10887,7 +11264,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
+  @java.lang.Override
   public boolean hasFinalUrlSuffix() {
     return finalUrlSuffix_ != null;
   }
@@ -10898,7 +11277,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+   * @return The finalUrlSuffix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrlSuffix() {
     return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
   }
@@ -10910,6 +11291,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
     return getFinalUrlSuffix();
   }
@@ -10923,6 +11305,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.FrequencyCapEntry frequency_caps = 40;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v2.common.FrequencyCapEntry> getFrequencyCapsList() {
     return frequencyCaps_;
   }
@@ -10933,6 +11316,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.FrequencyCapEntry frequency_caps = 40;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v2.common.FrequencyCapEntryOrBuilder> 
       getFrequencyCapsOrBuilderList() {
     return frequencyCaps_;
@@ -10944,6 +11328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.FrequencyCapEntry frequency_caps = 40;</code>
    */
+  @java.lang.Override
   public int getFrequencyCapsCount() {
     return frequencyCaps_.size();
   }
@@ -10954,6 +11339,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.FrequencyCapEntry frequency_caps = 40;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.FrequencyCapEntry getFrequencyCaps(int index) {
     return frequencyCaps_.get(index);
   }
@@ -10964,6 +11350,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v2.common.FrequencyCapEntry frequency_caps = 40;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.FrequencyCapEntryOrBuilder getFrequencyCapsOrBuilder(
       int index) {
     return frequencyCaps_.get(index);
@@ -10973,22 +11360,24 @@ private static final long serialVersionUID = 0L;
   private int videoBrandSafetySuitability_;
   /**
    * <pre>
-   * 3-Tier Brand Safety setting for the campaign.
+   * Output only. 3-Tier Brand Safety setting for the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+   * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for videoBrandSafetySuitability.
    */
-  public int getVideoBrandSafetySuitabilityValue() {
+  @java.lang.Override public int getVideoBrandSafetySuitabilityValue() {
     return videoBrandSafetySuitability_;
   }
   /**
    * <pre>
-   * 3-Tier Brand Safety setting for the campaign.
+   * Output only. 3-Tier Brand Safety setting for the campaign.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+   * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The videoBrandSafetySuitability.
    */
-  public com.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability getVideoBrandSafetySuitability() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability getVideoBrandSafetySuitability() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability result = com.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.valueOf(videoBrandSafetySuitability_);
     return result == null ? com.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.UNRECOGNIZED : result;
@@ -11002,7 +11391,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
+   * @return Whether the vanityPharma field is set.
    */
+  @java.lang.Override
   public boolean hasVanityPharma() {
     return vanityPharma_ != null;
   }
@@ -11012,7 +11403,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
+   * @return The vanityPharma.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.VanityPharma getVanityPharma() {
     return vanityPharma_ == null ? com.google.ads.googleads.v2.resources.Campaign.VanityPharma.getDefaultInstance() : vanityPharma_;
   }
@@ -11023,6 +11416,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.VanityPharmaOrBuilder getVanityPharmaOrBuilder() {
     return getVanityPharma();
   }
@@ -11036,7 +11430,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
+   * @return Whether the selectiveOptimization field is set.
    */
+  @java.lang.Override
   public boolean hasSelectiveOptimization() {
     return selectiveOptimization_ != null;
   }
@@ -11047,7 +11443,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
+   * @return The selectiveOptimization.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization getSelectiveOptimization() {
     return selectiveOptimization_ == null ? com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization.getDefaultInstance() : selectiveOptimization_;
   }
@@ -11059,6 +11457,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimizationOrBuilder getSelectiveOptimizationOrBuilder() {
     return getSelectiveOptimization();
   }
@@ -11067,31 +11466,36 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v2.resources.Campaign.TrackingSetting trackingSetting_;
   /**
    * <pre>
-   * Campaign level settings for tracking information.
+   * Output only. Campaign-level settings for tracking information.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+   * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the trackingSetting field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingSetting() {
     return trackingSetting_ != null;
   }
   /**
    * <pre>
-   * Campaign level settings for tracking information.
+   * Output only. Campaign-level settings for tracking information.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+   * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The trackingSetting.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting getTrackingSetting() {
     return trackingSetting_ == null ? com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.getDefaultInstance() : trackingSetting_;
   }
   /**
    * <pre>
-   * Campaign level settings for tracking information.
+   * Output only. Campaign-level settings for tracking information.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+   * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.resources.Campaign.TrackingSettingOrBuilder getTrackingSettingOrBuilder() {
     return getTrackingSetting();
   }
@@ -11104,8 +11508,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+   * @return The enum numeric value on the wire for paymentMode.
    */
-  public int getPaymentModeValue() {
+  @java.lang.Override public int getPaymentModeValue() {
     return paymentMode_;
   }
   /**
@@ -11114,8 +11519,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+   * @return The paymentMode.
    */
-  public com.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode getPaymentMode() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode getPaymentMode() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode result = com.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode.valueOf(paymentMode_);
     return result == null ? com.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode.UNRECOGNIZED : result;
@@ -11127,8 +11533,10 @@ private static final long serialVersionUID = 0L;
    * Portfolio bidding strategy used by campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+   * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the biddingStrategy field is set.
    */
+  @java.lang.Override
   public boolean hasBiddingStrategy() {
     return campaignBiddingStrategyCase_ == 23;
   }
@@ -11137,8 +11545,10 @@ private static final long serialVersionUID = 0L;
    * Portfolio bidding strategy used by campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+   * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
+   * @return The biddingStrategy.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBiddingStrategy() {
     if (campaignBiddingStrategyCase_ == 23) {
        return (com.google.protobuf.StringValue) campaignBiddingStrategy_;
@@ -11150,8 +11560,9 @@ private static final long serialVersionUID = 0L;
    * Portfolio bidding strategy used by campaign.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+   * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBiddingStrategyOrBuilder() {
     if (campaignBiddingStrategyCase_ == 23) {
        return (com.google.protobuf.StringValue) campaignBiddingStrategy_;
@@ -11167,7 +11578,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Commission commission = 49;</code>
+   * @return Whether the commission field is set.
    */
+  @java.lang.Override
   public boolean hasCommission() {
     return campaignBiddingStrategyCase_ == 49;
   }
@@ -11178,7 +11591,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Commission commission = 49;</code>
+   * @return The commission.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.Commission getCommission() {
     if (campaignBiddingStrategyCase_ == 49) {
        return (com.google.ads.googleads.v2.common.Commission) campaignBiddingStrategy_;
@@ -11193,6 +11608,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.Commission commission = 49;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.CommissionOrBuilder getCommissionOrBuilder() {
     if (campaignBiddingStrategyCase_ == 49) {
        return (com.google.ads.googleads.v2.common.Commission) campaignBiddingStrategy_;
@@ -11208,7 +11624,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ManualCpc manual_cpc = 24;</code>
+   * @return Whether the manualCpc field is set.
    */
+  @java.lang.Override
   public boolean hasManualCpc() {
     return campaignBiddingStrategyCase_ == 24;
   }
@@ -11219,7 +11637,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ManualCpc manual_cpc = 24;</code>
+   * @return The manualCpc.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ManualCpc getManualCpc() {
     if (campaignBiddingStrategyCase_ == 24) {
        return (com.google.ads.googleads.v2.common.ManualCpc) campaignBiddingStrategy_;
@@ -11234,6 +11654,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.ManualCpc manual_cpc = 24;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ManualCpcOrBuilder getManualCpcOrBuilder() {
     if (campaignBiddingStrategyCase_ == 24) {
        return (com.google.ads.googleads.v2.common.ManualCpc) campaignBiddingStrategy_;
@@ -11250,7 +11671,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ManualCpm manual_cpm = 25;</code>
+   * @return Whether the manualCpm field is set.
    */
+  @java.lang.Override
   public boolean hasManualCpm() {
     return campaignBiddingStrategyCase_ == 25;
   }
@@ -11262,7 +11685,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.ManualCpm manual_cpm = 25;</code>
+   * @return The manualCpm.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ManualCpm getManualCpm() {
     if (campaignBiddingStrategyCase_ == 25) {
        return (com.google.ads.googleads.v2.common.ManualCpm) campaignBiddingStrategy_;
@@ -11278,6 +11703,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.ManualCpm manual_cpm = 25;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ManualCpmOrBuilder getManualCpmOrBuilder() {
     if (campaignBiddingStrategyCase_ == 25) {
        return (com.google.ads.googleads.v2.common.ManualCpm) campaignBiddingStrategy_;
@@ -11288,21 +11714,25 @@ private static final long serialVersionUID = 0L;
   public static final int MANUAL_CPV_FIELD_NUMBER = 37;
   /**
    * <pre>
-   * A bidding strategy that pays a configurable amount per video view.
+   * Output only. A bidding strategy that pays a configurable amount per video view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+   * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the manualCpv field is set.
    */
+  @java.lang.Override
   public boolean hasManualCpv() {
     return campaignBiddingStrategyCase_ == 37;
   }
   /**
    * <pre>
-   * A bidding strategy that pays a configurable amount per video view.
+   * Output only. A bidding strategy that pays a configurable amount per video view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+   * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The manualCpv.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ManualCpv getManualCpv() {
     if (campaignBiddingStrategyCase_ == 37) {
        return (com.google.ads.googleads.v2.common.ManualCpv) campaignBiddingStrategy_;
@@ -11311,11 +11741,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A bidding strategy that pays a configurable amount per video view.
+   * Output only. A bidding strategy that pays a configurable amount per video view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+   * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.ManualCpvOrBuilder getManualCpvOrBuilder() {
     if (campaignBiddingStrategyCase_ == 37) {
        return (com.google.ads.googleads.v2.common.ManualCpv) campaignBiddingStrategy_;
@@ -11331,7 +11762,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.MaximizeConversions maximize_conversions = 30;</code>
+   * @return Whether the maximizeConversions field is set.
    */
+  @java.lang.Override
   public boolean hasMaximizeConversions() {
     return campaignBiddingStrategyCase_ == 30;
   }
@@ -11342,7 +11775,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.MaximizeConversions maximize_conversions = 30;</code>
+   * @return The maximizeConversions.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.MaximizeConversions getMaximizeConversions() {
     if (campaignBiddingStrategyCase_ == 30) {
        return (com.google.ads.googleads.v2.common.MaximizeConversions) campaignBiddingStrategy_;
@@ -11357,6 +11792,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.MaximizeConversions maximize_conversions = 30;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.MaximizeConversionsOrBuilder getMaximizeConversionsOrBuilder() {
     if (campaignBiddingStrategyCase_ == 30) {
        return (com.google.ads.googleads.v2.common.MaximizeConversions) campaignBiddingStrategy_;
@@ -11372,7 +11808,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.MaximizeConversionValue maximize_conversion_value = 31;</code>
+   * @return Whether the maximizeConversionValue field is set.
    */
+  @java.lang.Override
   public boolean hasMaximizeConversionValue() {
     return campaignBiddingStrategyCase_ == 31;
   }
@@ -11383,7 +11821,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.MaximizeConversionValue maximize_conversion_value = 31;</code>
+   * @return The maximizeConversionValue.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.MaximizeConversionValue getMaximizeConversionValue() {
     if (campaignBiddingStrategyCase_ == 31) {
        return (com.google.ads.googleads.v2.common.MaximizeConversionValue) campaignBiddingStrategy_;
@@ -11398,6 +11838,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.MaximizeConversionValue maximize_conversion_value = 31;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.MaximizeConversionValueOrBuilder getMaximizeConversionValueOrBuilder() {
     if (campaignBiddingStrategyCase_ == 31) {
        return (com.google.ads.googleads.v2.common.MaximizeConversionValue) campaignBiddingStrategy_;
@@ -11414,7 +11855,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 26;</code>
+   * @return Whether the targetCpa field is set.
    */
+  @java.lang.Override
   public boolean hasTargetCpa() {
     return campaignBiddingStrategyCase_ == 26;
   }
@@ -11426,7 +11869,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 26;</code>
+   * @return The targetCpa.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetCpa getTargetCpa() {
     if (campaignBiddingStrategyCase_ == 26) {
        return (com.google.ads.googleads.v2.common.TargetCpa) campaignBiddingStrategy_;
@@ -11442,6 +11887,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 26;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetCpaOrBuilder getTargetCpaOrBuilder() {
     if (campaignBiddingStrategyCase_ == 26) {
        return (com.google.ads.googleads.v2.common.TargetCpa) campaignBiddingStrategy_;
@@ -11457,7 +11903,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
+   * @return Whether the targetImpressionShare field is set.
    */
+  @java.lang.Override
   public boolean hasTargetImpressionShare() {
     return campaignBiddingStrategyCase_ == 48;
   }
@@ -11468,7 +11916,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
+   * @return The targetImpressionShare.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetImpressionShare getTargetImpressionShare() {
     if (campaignBiddingStrategyCase_ == 48) {
        return (com.google.ads.googleads.v2.common.TargetImpressionShare) campaignBiddingStrategy_;
@@ -11483,6 +11933,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetImpressionShareOrBuilder getTargetImpressionShareOrBuilder() {
     if (campaignBiddingStrategyCase_ == 48) {
        return (com.google.ads.googleads.v2.common.TargetImpressionShare) campaignBiddingStrategy_;
@@ -11498,7 +11949,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 29;</code>
+   * @return Whether the targetRoas field is set.
    */
+  @java.lang.Override
   public boolean hasTargetRoas() {
     return campaignBiddingStrategyCase_ == 29;
   }
@@ -11509,7 +11962,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 29;</code>
+   * @return The targetRoas.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetRoas getTargetRoas() {
     if (campaignBiddingStrategyCase_ == 29) {
        return (com.google.ads.googleads.v2.common.TargetRoas) campaignBiddingStrategy_;
@@ -11524,6 +11979,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 29;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetRoasOrBuilder getTargetRoasOrBuilder() {
     if (campaignBiddingStrategyCase_ == 29) {
        return (com.google.ads.googleads.v2.common.TargetRoas) campaignBiddingStrategy_;
@@ -11539,7 +11995,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 27;</code>
+   * @return Whether the targetSpend field is set.
    */
+  @java.lang.Override
   public boolean hasTargetSpend() {
     return campaignBiddingStrategyCase_ == 27;
   }
@@ -11550,7 +12008,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 27;</code>
+   * @return The targetSpend.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetSpend getTargetSpend() {
     if (campaignBiddingStrategyCase_ == 27) {
        return (com.google.ads.googleads.v2.common.TargetSpend) campaignBiddingStrategy_;
@@ -11565,6 +12025,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 27;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetSpendOrBuilder getTargetSpendOrBuilder() {
     if (campaignBiddingStrategyCase_ == 27) {
        return (com.google.ads.googleads.v2.common.TargetSpend) campaignBiddingStrategy_;
@@ -11580,7 +12041,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PercentCpc percent_cpc = 34;</code>
+   * @return Whether the percentCpc field is set.
    */
+  @java.lang.Override
   public boolean hasPercentCpc() {
     return campaignBiddingStrategyCase_ == 34;
   }
@@ -11591,7 +12054,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PercentCpc percent_cpc = 34;</code>
+   * @return The percentCpc.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.PercentCpc getPercentCpc() {
     if (campaignBiddingStrategyCase_ == 34) {
        return (com.google.ads.googleads.v2.common.PercentCpc) campaignBiddingStrategy_;
@@ -11606,6 +12071,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.PercentCpc percent_cpc = 34;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.PercentCpcOrBuilder getPercentCpcOrBuilder() {
     if (campaignBiddingStrategyCase_ == 34) {
        return (com.google.ads.googleads.v2.common.PercentCpc) campaignBiddingStrategy_;
@@ -11621,7 +12087,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetCpm target_cpm = 41;</code>
+   * @return Whether the targetCpm field is set.
    */
+  @java.lang.Override
   public boolean hasTargetCpm() {
     return campaignBiddingStrategyCase_ == 41;
   }
@@ -11632,7 +12100,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.TargetCpm target_cpm = 41;</code>
+   * @return The targetCpm.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetCpm getTargetCpm() {
     if (campaignBiddingStrategyCase_ == 41) {
        return (com.google.ads.googleads.v2.common.TargetCpm) campaignBiddingStrategy_;
@@ -11647,6 +12117,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.TargetCpm target_cpm = 41;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.TargetCpmOrBuilder getTargetCpmOrBuilder() {
     if (campaignBiddingStrategyCase_ == 41) {
        return (com.google.ads.googleads.v2.common.TargetCpm) campaignBiddingStrategy_;
@@ -12522,7 +12993,7 @@ private static final long serialVersionUID = 0L;
       }
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         urlCustomParametersBuilder_.clear();
       }
@@ -12576,7 +13047,7 @@ private static final long serialVersionUID = 0L;
       }
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         labelsBuilder_.clear();
       }
@@ -12616,7 +13087,7 @@ private static final long serialVersionUID = 0L;
       }
       if (frequencyCapsBuilder_ == null) {
         frequencyCaps_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         frequencyCapsBuilder_.clear();
       }
@@ -12671,9 +13142,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v2.resources.Campaign buildPartial() {
       com.google.ads.googleads.v2.resources.Campaign result = new com.google.ads.googleads.v2.resources.Campaign(this);
       int from_bitField0_ = bitField0_;
-      int from_bitField1_ = bitField1_;
-      int to_bitField0_ = 0;
-      int to_bitField1_ = 0;
       result.resourceName_ = resourceName_;
       if (idBuilder_ == null) {
         result.id_ = id_;
@@ -12696,9 +13164,9 @@ private static final long serialVersionUID = 0L;
         result.trackingUrlTemplate_ = trackingUrlTemplateBuilder_.build();
       }
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
@@ -12745,9 +13213,9 @@ private static final long serialVersionUID = 0L;
         result.appCampaignSetting_ = appCampaignSettingBuilder_.build();
       }
       if (labelsBuilder_ == null) {
-        if (((bitField0_ & 0x00040000) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           labels_ = java.util.Collections.unmodifiableList(labels_);
-          bitField0_ = (bitField0_ & ~0x00040000);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.labels_ = labels_;
       } else {
@@ -12781,9 +13249,9 @@ private static final long serialVersionUID = 0L;
         result.finalUrlSuffix_ = finalUrlSuffixBuilder_.build();
       }
       if (frequencyCapsBuilder_ == null) {
-        if (((bitField0_ & 0x04000000) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
-          bitField0_ = (bitField0_ & ~0x04000000);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.frequencyCaps_ = frequencyCaps_;
       } else {
@@ -12897,8 +13365,6 @@ private static final long serialVersionUID = 0L;
           result.campaignBiddingStrategy_ = targetCpmBuilder_.build();
         }
       }
-      result.bitField0_ = to_bitField0_;
-      result.bitField1_ = to_bitField1_;
       result.campaignBiddingStrategyCase_ = campaignBiddingStrategyCase_;
       onBuilt();
       return result;
@@ -12980,7 +13446,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -12993,7 +13459,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000001);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -13030,7 +13496,7 @@ private static final long serialVersionUID = 0L;
         if (!other.labels_.isEmpty()) {
           if (labels_.isEmpty()) {
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00040000);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureLabelsIsMutable();
             labels_.addAll(other.labels_);
@@ -13043,7 +13509,7 @@ private static final long serialVersionUID = 0L;
             labelsBuilder_.dispose();
             labelsBuilder_ = null;
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00040000);
+            bitField0_ = (bitField0_ & ~0x00000002);
             labelsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLabelsFieldBuilder() : null;
@@ -13077,7 +13543,7 @@ private static final long serialVersionUID = 0L;
         if (!other.frequencyCaps_.isEmpty()) {
           if (frequencyCaps_.isEmpty()) {
             frequencyCaps_ = other.frequencyCaps_;
-            bitField0_ = (bitField0_ & ~0x04000000);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureFrequencyCapsIsMutable();
             frequencyCaps_.addAll(other.frequencyCaps_);
@@ -13090,7 +13556,7 @@ private static final long serialVersionUID = 0L;
             frequencyCapsBuilder_.dispose();
             frequencyCapsBuilder_ = null;
             frequencyCaps_ = other.frequencyCaps_;
-            bitField0_ = (bitField0_ & ~0x04000000);
+            bitField0_ = (bitField0_ & ~0x00000004);
             frequencyCapsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFrequencyCapsFieldBuilder() : null;
@@ -13215,17 +13681,17 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
-    private int bitField1_;
 
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the campaign.
+     * Immutable. The resource name of the campaign.
      * Campaign resource names have the form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -13241,12 +13707,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign.
+     * Immutable. The resource name of the campaign.
      * Campaign resource names have the form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -13263,12 +13730,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign.
+     * Immutable. The resource name of the campaign.
      * Campaign resource names have the form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -13282,12 +13751,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign.
+     * Immutable. The resource name of the campaign.
      * Campaign resource names have the form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -13297,12 +13767,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the campaign.
+     * Immutable. The resource name of the campaign.
      * Campaign resource names have the form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -13321,20 +13793,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> idBuilder_;
     /**
      * <pre>
-     * The ID of the campaign.
+     * Output only. The ID of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the id field is set.
      */
     public boolean hasId() {
       return idBuilder_ != null || id_ != null;
     }
     /**
      * <pre>
-     * The ID of the campaign.
+     * Output only. The ID of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
      */
     public com.google.protobuf.Int64Value getId() {
       if (idBuilder_ == null) {
@@ -13345,10 +13819,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign.
+     * Output only. The ID of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -13365,10 +13839,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign.
+     * Output only. The ID of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setId(
         com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -13383,10 +13857,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign.
+     * Output only. The ID of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeId(com.google.protobuf.Int64Value value) {
       if (idBuilder_ == null) {
@@ -13405,10 +13879,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign.
+     * Output only. The ID of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearId() {
       if (idBuilder_ == null) {
@@ -13423,10 +13897,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign.
+     * Output only. The ID of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64Value.Builder getIdBuilder() {
       
@@ -13435,10 +13909,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign.
+     * Output only. The ID of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
       if (idBuilder_ != null) {
@@ -13450,10 +13924,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the campaign.
+     * Output only. The ID of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value id = 3;</code>
+     * <code>.google.protobuf.Int64Value id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -13482,6 +13956,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return Whether the name field is set.
      */
     public boolean hasName() {
       return nameBuilder_ != null || name_ != null;
@@ -13496,6 +13971,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue name = 4;</code>
+     * @return The name.
      */
     public com.google.protobuf.StringValue getName() {
       if (nameBuilder_ == null) {
@@ -13666,8 +14142,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus status = 5;</code>
+     * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -13677,8 +14154,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus status = 5;</code>
+     * @param value The enum numeric value on the wire for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -13690,7 +14170,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus status = 5;</code>
+     * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus result = com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus.valueOf(status_);
@@ -13703,6 +14185,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus status = 5;</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(com.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus value) {
       if (value == null) {
@@ -13720,6 +14204,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CampaignStatusEnum.CampaignStatus status = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       
@@ -13731,33 +14216,39 @@ private static final long serialVersionUID = 0L;
     private int servingStatus_ = 0;
     /**
      * <pre>
-     * The ad serving status of the campaign.
+     * Output only. The ad serving status of the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21;</code>
+     * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for servingStatus.
      */
-    public int getServingStatusValue() {
+    @java.lang.Override public int getServingStatusValue() {
       return servingStatus_;
     }
     /**
      * <pre>
-     * The ad serving status of the campaign.
+     * Output only. The ad serving status of the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21;</code>
+     * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for servingStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setServingStatusValue(int value) {
+      
       servingStatus_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The ad serving status of the campaign.
+     * Output only. The ad serving status of the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21;</code>
+     * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The servingStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus getServingStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus result = com.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus.valueOf(servingStatus_);
@@ -13765,10 +14256,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad serving status of the campaign.
+     * Output only. The ad serving status of the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21;</code>
+     * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The servingStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setServingStatus(com.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus value) {
       if (value == null) {
@@ -13781,10 +14274,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ad serving status of the campaign.
+     * Output only. The ad serving status of the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21;</code>
+     * <code>.google.ads.googleads.v2.enums.CampaignServingStatusEnum.CampaignServingStatus serving_status = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearServingStatus() {
       
@@ -13800,8 +14294,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus ad_serving_optimization_status = 8;</code>
+     * @return The enum numeric value on the wire for adServingOptimizationStatus.
      */
-    public int getAdServingOptimizationStatusValue() {
+    @java.lang.Override public int getAdServingOptimizationStatusValue() {
       return adServingOptimizationStatus_;
     }
     /**
@@ -13810,8 +14305,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus ad_serving_optimization_status = 8;</code>
+     * @param value The enum numeric value on the wire for adServingOptimizationStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setAdServingOptimizationStatusValue(int value) {
+      
       adServingOptimizationStatus_ = value;
       onChanged();
       return this;
@@ -13822,7 +14320,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus ad_serving_optimization_status = 8;</code>
+     * @return The adServingOptimizationStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus getAdServingOptimizationStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus result = com.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus.valueOf(adServingOptimizationStatus_);
@@ -13834,6 +14334,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus ad_serving_optimization_status = 8;</code>
+     * @param value The adServingOptimizationStatus to set.
+     * @return This builder for chaining.
      */
     public Builder setAdServingOptimizationStatus(com.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus value) {
       if (value == null) {
@@ -13850,6 +14352,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus ad_serving_optimization_status = 8;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdServingOptimizationStatus() {
       
@@ -13861,7 +14364,7 @@ private static final long serialVersionUID = 0L;
     private int advertisingChannelType_ = 0;
     /**
      * <pre>
-     * The primary serving target for ads within the campaign.
+     * Immutable. The primary serving target for ads within the campaign.
      * The targeting options can be refined in `network_settings`.
      * This field is required and should not be empty when creating new
      * campaigns.
@@ -13869,14 +14372,15 @@ private static final long serialVersionUID = 0L;
      * After the campaign is created, the field can not be changed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9;</code>
+     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for advertisingChannelType.
      */
-    public int getAdvertisingChannelTypeValue() {
+    @java.lang.Override public int getAdvertisingChannelTypeValue() {
       return advertisingChannelType_;
     }
     /**
      * <pre>
-     * The primary serving target for ads within the campaign.
+     * Immutable. The primary serving target for ads within the campaign.
      * The targeting options can be refined in `network_settings`.
      * This field is required and should not be empty when creating new
      * campaigns.
@@ -13884,16 +14388,19 @@ private static final long serialVersionUID = 0L;
      * After the campaign is created, the field can not be changed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9;</code>
+     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for advertisingChannelType to set.
+     * @return This builder for chaining.
      */
     public Builder setAdvertisingChannelTypeValue(int value) {
+      
       advertisingChannelType_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The primary serving target for ads within the campaign.
+     * Immutable. The primary serving target for ads within the campaign.
      * The targeting options can be refined in `network_settings`.
      * This field is required and should not be empty when creating new
      * campaigns.
@@ -13901,8 +14408,10 @@ private static final long serialVersionUID = 0L;
      * After the campaign is created, the field can not be changed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9;</code>
+     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The advertisingChannelType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType getAdvertisingChannelType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType result = com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.valueOf(advertisingChannelType_);
@@ -13910,7 +14419,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The primary serving target for ads within the campaign.
+     * Immutable. The primary serving target for ads within the campaign.
      * The targeting options can be refined in `network_settings`.
      * This field is required and should not be empty when creating new
      * campaigns.
@@ -13918,7 +14427,9 @@ private static final long serialVersionUID = 0L;
      * After the campaign is created, the field can not be changed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9;</code>
+     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The advertisingChannelType to set.
+     * @return This builder for chaining.
      */
     public Builder setAdvertisingChannelType(com.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType value) {
       if (value == null) {
@@ -13931,7 +14442,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The primary serving target for ads within the campaign.
+     * Immutable. The primary serving target for ads within the campaign.
      * The targeting options can be refined in `network_settings`.
      * This field is required and should not be empty when creating new
      * campaigns.
@@ -13939,7 +14450,8 @@ private static final long serialVersionUID = 0L;
      * After the campaign is created, the field can not be changed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9;</code>
+     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdvertisingChannelType() {
       
@@ -13951,42 +14463,48 @@ private static final long serialVersionUID = 0L;
     private int advertisingChannelSubType_ = 0;
     /**
      * <pre>
-     * Optional refinement to `advertising_channel_type`.
+     * Immutable. Optional refinement to `advertising_channel_type`.
      * Must be a valid sub-type of the parent channel type.
      * Can be set only when creating campaigns.
      * After campaign is created, the field can not be changed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10;</code>
+     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for advertisingChannelSubType.
      */
-    public int getAdvertisingChannelSubTypeValue() {
+    @java.lang.Override public int getAdvertisingChannelSubTypeValue() {
       return advertisingChannelSubType_;
     }
     /**
      * <pre>
-     * Optional refinement to `advertising_channel_type`.
+     * Immutable. Optional refinement to `advertising_channel_type`.
      * Must be a valid sub-type of the parent channel type.
      * Can be set only when creating campaigns.
      * After campaign is created, the field can not be changed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10;</code>
+     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for advertisingChannelSubType to set.
+     * @return This builder for chaining.
      */
     public Builder setAdvertisingChannelSubTypeValue(int value) {
+      
       advertisingChannelSubType_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional refinement to `advertising_channel_type`.
+     * Immutable. Optional refinement to `advertising_channel_type`.
      * Must be a valid sub-type of the parent channel type.
      * Can be set only when creating campaigns.
      * After campaign is created, the field can not be changed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10;</code>
+     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The advertisingChannelSubType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType getAdvertisingChannelSubType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType result = com.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.valueOf(advertisingChannelSubType_);
@@ -13994,13 +14512,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional refinement to `advertising_channel_type`.
+     * Immutable. Optional refinement to `advertising_channel_type`.
      * Must be a valid sub-type of the parent channel type.
      * Can be set only when creating campaigns.
      * After campaign is created, the field can not be changed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10;</code>
+     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The advertisingChannelSubType to set.
+     * @return This builder for chaining.
      */
     public Builder setAdvertisingChannelSubType(com.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType value) {
       if (value == null) {
@@ -14013,13 +14533,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional refinement to `advertising_channel_type`.
+     * Immutable. Optional refinement to `advertising_channel_type`.
      * Must be a valid sub-type of the parent channel type.
      * Can be set only when creating campaigns.
      * After campaign is created, the field can not be changed.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10;</code>
+     * <code>.google.ads.googleads.v2.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
      */
     public Builder clearAdvertisingChannelSubType() {
       
@@ -14037,6 +14558,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 11;</code>
+     * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
       return trackingUrlTemplateBuilder_ != null || trackingUrlTemplate_ != null;
@@ -14047,6 +14569,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue tracking_url_template = 11;</code>
+     * @return The trackingUrlTemplate.
      */
     public com.google.protobuf.StringValue getTrackingUrlTemplate() {
       if (trackingUrlTemplateBuilder_ == null) {
@@ -14184,9 +14707,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -14391,7 +14914,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -14503,7 +15026,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.CustomParameter, com.google.ads.googleads.v2.common.CustomParameter.Builder, com.google.ads.googleads.v2.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -14521,6 +15044,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     * @return Whether the realTimeBiddingSetting field is set.
      */
     public boolean hasRealTimeBiddingSetting() {
       return realTimeBiddingSettingBuilder_ != null || realTimeBiddingSetting_ != null;
@@ -14532,6 +15056,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.RealTimeBiddingSetting real_time_bidding_setting = 39;</code>
+     * @return The realTimeBiddingSetting.
      */
     public com.google.ads.googleads.v2.common.RealTimeBiddingSetting getRealTimeBiddingSetting() {
       if (realTimeBiddingSettingBuilder_ == null) {
@@ -14682,6 +15207,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.NetworkSettings network_settings = 14;</code>
+     * @return Whether the networkSettings field is set.
      */
     public boolean hasNetworkSettings() {
       return networkSettingsBuilder_ != null || networkSettings_ != null;
@@ -14692,6 +15218,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.NetworkSettings network_settings = 14;</code>
+     * @return The networkSettings.
      */
     public com.google.ads.googleads.v2.resources.Campaign.NetworkSettings getNetworkSettings() {
       if (networkSettingsBuilder_ == null) {
@@ -14831,20 +15358,22 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo, com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo.Builder, com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfoOrBuilder> hotelSettingBuilder_;
     /**
      * <pre>
-     * The hotel setting for the campaign.
+     * Immutable. The hotel setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the hotelSetting field is set.
      */
     public boolean hasHotelSetting() {
       return hotelSettingBuilder_ != null || hotelSetting_ != null;
     }
     /**
      * <pre>
-     * The hotel setting for the campaign.
+     * Immutable. The hotel setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The hotelSetting.
      */
     public com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo getHotelSetting() {
       if (hotelSettingBuilder_ == null) {
@@ -14855,10 +15384,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotel setting for the campaign.
+     * Immutable. The hotel setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelSetting(com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo value) {
       if (hotelSettingBuilder_ == null) {
@@ -14875,10 +15404,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotel setting for the campaign.
+     * Immutable. The hotel setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder setHotelSetting(
         com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo.Builder builderForValue) {
@@ -14893,10 +15422,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotel setting for the campaign.
+     * Immutable. The hotel setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeHotelSetting(com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo value) {
       if (hotelSettingBuilder_ == null) {
@@ -14915,10 +15444,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotel setting for the campaign.
+     * Immutable. The hotel setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearHotelSetting() {
       if (hotelSettingBuilder_ == null) {
@@ -14933,10 +15462,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotel setting for the campaign.
+     * Immutable. The hotel setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo.Builder getHotelSettingBuilder() {
       
@@ -14945,10 +15474,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotel setting for the campaign.
+     * Immutable. The hotel setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfoOrBuilder getHotelSettingOrBuilder() {
       if (hotelSettingBuilder_ != null) {
@@ -14960,10 +15489,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The hotel setting for the campaign.
+     * Immutable. The hotel setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo hotel_setting = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo, com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfo.Builder, com.google.ads.googleads.v2.resources.Campaign.HotelSettingInfoOrBuilder> 
@@ -14988,6 +15517,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting dynamic_search_ads_setting = 33;</code>
+     * @return Whether the dynamicSearchAdsSetting field is set.
      */
     public boolean hasDynamicSearchAdsSetting() {
       return dynamicSearchAdsSettingBuilder_ != null || dynamicSearchAdsSetting_ != null;
@@ -14998,6 +15528,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting dynamic_search_ads_setting = 33;</code>
+     * @return The dynamicSearchAdsSetting.
      */
     public com.google.ads.googleads.v2.resources.Campaign.DynamicSearchAdsSetting getDynamicSearchAdsSetting() {
       if (dynamicSearchAdsSettingBuilder_ == null) {
@@ -15141,6 +15672,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
+     * @return Whether the shoppingSetting field is set.
      */
     public boolean hasShoppingSetting() {
       return shoppingSettingBuilder_ != null || shoppingSetting_ != null;
@@ -15151,6 +15683,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.ShoppingSetting shopping_setting = 36;</code>
+     * @return The shoppingSetting.
      */
     public com.google.ads.googleads.v2.resources.Campaign.ShoppingSetting getShoppingSetting() {
       if (shoppingSettingBuilder_ == null) {
@@ -15294,6 +15827,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetingSetting targeting_setting = 43;</code>
+     * @return Whether the targetingSetting field is set.
      */
     public boolean hasTargetingSetting() {
       return targetingSettingBuilder_ != null || targetingSetting_ != null;
@@ -15304,6 +15838,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetingSetting targeting_setting = 43;</code>
+     * @return The targetingSetting.
      */
     public com.google.ads.googleads.v2.common.TargetingSetting getTargetingSetting() {
       if (targetingSettingBuilder_ == null) {
@@ -15447,6 +15982,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting geo_target_type_setting = 47;</code>
+     * @return Whether the geoTargetTypeSetting field is set.
      */
     public boolean hasGeoTargetTypeSetting() {
       return geoTargetTypeSettingBuilder_ != null || geoTargetTypeSetting_ != null;
@@ -15457,6 +15993,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting geo_target_type_setting = 47;</code>
+     * @return The geoTargetTypeSetting.
      */
     public com.google.ads.googleads.v2.resources.Campaign.GeoTargetTypeSetting getGeoTargetTypeSetting() {
       if (geoTargetTypeSettingBuilder_ == null) {
@@ -15600,6 +16137,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
+     * @return Whether the appCampaignSetting field is set.
      */
     public boolean hasAppCampaignSetting() {
       return appCampaignSettingBuilder_ != null || appCampaignSetting_ != null;
@@ -15610,6 +16148,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting app_campaign_setting = 51;</code>
+     * @return The appCampaignSetting.
      */
     public com.google.ads.googleads.v2.resources.Campaign.AppCampaignSetting getAppCampaignSetting() {
       if (appCampaignSettingBuilder_ == null) {
@@ -15747,9 +16286,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> labels_ =
       java.util.Collections.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00040000) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         labels_ = new java.util.ArrayList<com.google.protobuf.StringValue>(labels_);
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -15758,10 +16297,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<com.google.protobuf.StringValue> getLabelsList() {
       if (labelsBuilder_ == null) {
@@ -15772,10 +16311,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public int getLabelsCount() {
       if (labelsBuilder_ == null) {
@@ -15786,10 +16325,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue getLabels(int index) {
       if (labelsBuilder_ == null) {
@@ -15800,10 +16339,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setLabels(
         int index, com.google.protobuf.StringValue value) {
@@ -15821,10 +16360,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setLabels(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -15839,10 +16378,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLabels(com.google.protobuf.StringValue value) {
       if (labelsBuilder_ == null) {
@@ -15859,10 +16398,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLabels(
         int index, com.google.protobuf.StringValue value) {
@@ -15880,10 +16419,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLabels(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -15898,10 +16437,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder addLabels(
         int index, com.google.protobuf.StringValue.Builder builderForValue) {
@@ -15916,10 +16455,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder addAllLabels(
         java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
@@ -15935,15 +16474,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearLabels() {
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         labelsBuilder_.clear();
@@ -15952,10 +16491,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder removeLabels(int index) {
       if (labelsBuilder_ == null) {
@@ -15969,10 +16508,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getLabelsBuilder(
         int index) {
@@ -15980,10 +16519,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLabelsOrBuilder(
         int index) {
@@ -15994,10 +16533,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
          getLabelsOrBuilderList() {
@@ -16009,10 +16548,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder addLabelsBuilder() {
       return getLabelsFieldBuilder().addBuilder(
@@ -16020,10 +16559,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder addLabelsBuilder(
         int index) {
@@ -16032,10 +16571,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of labels attached to this campaign.
+     * Output only. The resource names of labels attached to this campaign.
      * </pre>
      *
-     * <code>repeated .google.protobuf.StringValue labels = 53;</code>
+     * <code>repeated .google.protobuf.StringValue labels = 53 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public java.util.List<com.google.protobuf.StringValue.Builder> 
          getLabelsBuilderList() {
@@ -16048,7 +16587,7 @@ private static final long serialVersionUID = 0L;
         labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 labels_,
-                ((bitField0_ & 0x00040000) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         labels_ = null;
@@ -16059,33 +16598,39 @@ private static final long serialVersionUID = 0L;
     private int experimentType_ = 0;
     /**
      * <pre>
-     * The type of campaign: normal, draft, or experiment.
+     * Output only. The type of campaign: normal, draft, or experiment.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+     * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for experimentType.
      */
-    public int getExperimentTypeValue() {
+    @java.lang.Override public int getExperimentTypeValue() {
       return experimentType_;
     }
     /**
      * <pre>
-     * The type of campaign: normal, draft, or experiment.
+     * Output only. The type of campaign: normal, draft, or experiment.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+     * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for experimentType to set.
+     * @return This builder for chaining.
      */
     public Builder setExperimentTypeValue(int value) {
+      
       experimentType_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The type of campaign: normal, draft, or experiment.
+     * Output only. The type of campaign: normal, draft, or experiment.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+     * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The experimentType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType getExperimentType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType result = com.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType.valueOf(experimentType_);
@@ -16093,10 +16638,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of campaign: normal, draft, or experiment.
+     * Output only. The type of campaign: normal, draft, or experiment.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+     * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The experimentType to set.
+     * @return This builder for chaining.
      */
     public Builder setExperimentType(com.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType value) {
       if (value == null) {
@@ -16109,10 +16656,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of campaign: normal, draft, or experiment.
+     * Output only. The type of campaign: normal, draft, or experiment.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17;</code>
+     * <code>.google.ads.googleads.v2.enums.CampaignExperimentTypeEnum.CampaignExperimentType experiment_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearExperimentType() {
       
@@ -16126,24 +16674,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> baseCampaignBuilder_;
     /**
      * <pre>
-     * The resource name of the base campaign of a draft or experiment campaign.
+     * Output only. The resource name of the base campaign of a draft or experiment campaign.
      * For base campaigns, this is equal to `resource_name`.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+     * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return Whether the baseCampaign field is set.
      */
     public boolean hasBaseCampaign() {
       return baseCampaignBuilder_ != null || baseCampaign_ != null;
     }
     /**
      * <pre>
-     * The resource name of the base campaign of a draft or experiment campaign.
+     * Output only. The resource name of the base campaign of a draft or experiment campaign.
      * For base campaigns, this is equal to `resource_name`.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+     * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The baseCampaign.
      */
     public com.google.protobuf.StringValue getBaseCampaign() {
       if (baseCampaignBuilder_ == null) {
@@ -16154,12 +16704,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the base campaign of a draft or experiment campaign.
+     * Output only. The resource name of the base campaign of a draft or experiment campaign.
      * For base campaigns, this is equal to `resource_name`.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+     * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setBaseCampaign(com.google.protobuf.StringValue value) {
       if (baseCampaignBuilder_ == null) {
@@ -16176,12 +16726,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the base campaign of a draft or experiment campaign.
+     * Output only. The resource name of the base campaign of a draft or experiment campaign.
      * For base campaigns, this is equal to `resource_name`.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+     * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder setBaseCampaign(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -16196,12 +16746,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the base campaign of a draft or experiment campaign.
+     * Output only. The resource name of the base campaign of a draft or experiment campaign.
      * For base campaigns, this is equal to `resource_name`.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+     * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeBaseCampaign(com.google.protobuf.StringValue value) {
       if (baseCampaignBuilder_ == null) {
@@ -16220,12 +16770,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the base campaign of a draft or experiment campaign.
+     * Output only. The resource name of the base campaign of a draft or experiment campaign.
      * For base campaigns, this is equal to `resource_name`.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+     * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearBaseCampaign() {
       if (baseCampaignBuilder_ == null) {
@@ -16240,12 +16790,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the base campaign of a draft or experiment campaign.
+     * Output only. The resource name of the base campaign of a draft or experiment campaign.
      * For base campaigns, this is equal to `resource_name`.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+     * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getBaseCampaignBuilder() {
       
@@ -16254,12 +16804,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the base campaign of a draft or experiment campaign.
+     * Output only. The resource name of the base campaign of a draft or experiment campaign.
      * For base campaigns, this is equal to `resource_name`.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+     * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getBaseCampaignOrBuilder() {
       if (baseCampaignBuilder_ != null) {
@@ -16271,12 +16821,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the base campaign of a draft or experiment campaign.
+     * Output only. The resource name of the base campaign of a draft or experiment campaign.
      * For base campaigns, this is equal to `resource_name`.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue base_campaign = 28;</code>
+     * <code>.google.protobuf.StringValue base_campaign = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -16300,7 +16850,8 @@ private static final long serialVersionUID = 0L;
      * The budget of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+     * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
+     * @return Whether the campaignBudget field is set.
      */
     public boolean hasCampaignBudget() {
       return campaignBudgetBuilder_ != null || campaignBudget_ != null;
@@ -16310,7 +16861,8 @@ private static final long serialVersionUID = 0L;
      * The budget of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+     * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
+     * @return The campaignBudget.
      */
     public com.google.protobuf.StringValue getCampaignBudget() {
       if (campaignBudgetBuilder_ == null) {
@@ -16324,7 +16876,7 @@ private static final long serialVersionUID = 0L;
      * The budget of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+     * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaignBudget(com.google.protobuf.StringValue value) {
       if (campaignBudgetBuilder_ == null) {
@@ -16344,7 +16896,7 @@ private static final long serialVersionUID = 0L;
      * The budget of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+     * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setCampaignBudget(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -16362,7 +16914,7 @@ private static final long serialVersionUID = 0L;
      * The budget of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+     * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeCampaignBudget(com.google.protobuf.StringValue value) {
       if (campaignBudgetBuilder_ == null) {
@@ -16384,7 +16936,7 @@ private static final long serialVersionUID = 0L;
      * The budget of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+     * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearCampaignBudget() {
       if (campaignBudgetBuilder_ == null) {
@@ -16402,7 +16954,7 @@ private static final long serialVersionUID = 0L;
      * The budget of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+     * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getCampaignBudgetBuilder() {
       
@@ -16414,7 +16966,7 @@ private static final long serialVersionUID = 0L;
      * The budget of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+     * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCampaignBudgetOrBuilder() {
       if (campaignBudgetBuilder_ != null) {
@@ -16429,7 +16981,7 @@ private static final long serialVersionUID = 0L;
      * The budget of the campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue campaign_budget = 6;</code>
+     * <code>.google.protobuf.StringValue campaign_budget = 6 [(.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -16448,45 +17000,51 @@ private static final long serialVersionUID = 0L;
     private int biddingStrategyType_ = 0;
     /**
      * <pre>
-     * The type of bidding strategy.
+     * Output only. The type of bidding strategy.
      * A bidding strategy can be created by setting either the bidding scheme to
      * create a standard bidding strategy or the `bidding_strategy` field to
      * create a portfolio bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for biddingStrategyType.
      */
-    public int getBiddingStrategyTypeValue() {
+    @java.lang.Override public int getBiddingStrategyTypeValue() {
       return biddingStrategyType_;
     }
     /**
      * <pre>
-     * The type of bidding strategy.
+     * Output only. The type of bidding strategy.
      * A bidding strategy can be created by setting either the bidding scheme to
      * create a standard bidding strategy or the `bidding_strategy` field to
      * create a portfolio bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for biddingStrategyType to set.
+     * @return This builder for chaining.
      */
     public Builder setBiddingStrategyTypeValue(int value) {
+      
       biddingStrategyType_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The type of bidding strategy.
+     * Output only. The type of bidding strategy.
      * A bidding strategy can be created by setting either the bidding scheme to
      * create a standard bidding strategy or the `bidding_strategy` field to
      * create a portfolio bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The biddingStrategyType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType getBiddingStrategyType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType result = com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType.valueOf(biddingStrategyType_);
@@ -16494,14 +17052,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of bidding strategy.
+     * Output only. The type of bidding strategy.
      * A bidding strategy can be created by setting either the bidding scheme to
      * create a standard bidding strategy or the `bidding_strategy` field to
      * create a portfolio bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The biddingStrategyType to set.
+     * @return This builder for chaining.
      */
     public Builder setBiddingStrategyType(com.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType value) {
       if (value == null) {
@@ -16514,14 +17074,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of bidding strategy.
+     * Output only. The type of bidding strategy.
      * A bidding strategy can be created by setting either the bidding scheme to
      * create a standard bidding strategy or the `bidding_strategy` field to
      * create a portfolio bidding strategy.
      * This field is read-only.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22;</code>
+     * <code>.google.ads.googleads.v2.enums.BiddingStrategyTypeEnum.BiddingStrategyType bidding_strategy_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearBiddingStrategyType() {
       
@@ -16540,6 +17101,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue start_date = 19;</code>
+     * @return Whether the startDate field is set.
      */
     public boolean hasStartDate() {
       return startDateBuilder_ != null || startDate_ != null;
@@ -16551,6 +17113,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue start_date = 19;</code>
+     * @return The startDate.
      */
     public com.google.protobuf.StringValue getStartDate() {
       if (startDateBuilder_ == null) {
@@ -16702,6 +17265,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue end_date = 20;</code>
+     * @return Whether the endDate field is set.
      */
     public boolean hasEndDate() {
       return endDateBuilder_ != null || endDate_ != null;
@@ -16713,6 +17277,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue end_date = 20;</code>
+     * @return The endDate.
      */
     public com.google.protobuf.StringValue getEndDate() {
       if (endDateBuilder_ == null) {
@@ -16864,6 +17429,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
       return finalUrlSuffixBuilder_ != null || finalUrlSuffix_ != null;
@@ -16875,6 +17441,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue final_url_suffix = 38;</code>
+     * @return The finalUrlSuffix.
      */
     public com.google.protobuf.StringValue getFinalUrlSuffix() {
       if (finalUrlSuffixBuilder_ == null) {
@@ -17019,9 +17586,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v2.common.FrequencyCapEntry> frequencyCaps_ =
       java.util.Collections.emptyList();
     private void ensureFrequencyCapsIsMutable() {
-      if (!((bitField0_ & 0x04000000) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v2.common.FrequencyCapEntry>(frequencyCaps_);
-        bitField0_ |= 0x04000000;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -17215,7 +17782,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFrequencyCaps() {
       if (frequencyCapsBuilder_ == null) {
         frequencyCaps_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         frequencyCapsBuilder_.clear();
@@ -17320,7 +17887,7 @@ private static final long serialVersionUID = 0L;
         frequencyCapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v2.common.FrequencyCapEntry, com.google.ads.googleads.v2.common.FrequencyCapEntry.Builder, com.google.ads.googleads.v2.common.FrequencyCapEntryOrBuilder>(
                 frequencyCaps_,
-                ((bitField0_ & 0x04000000) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         frequencyCaps_ = null;
@@ -17331,33 +17898,39 @@ private static final long serialVersionUID = 0L;
     private int videoBrandSafetySuitability_ = 0;
     /**
      * <pre>
-     * 3-Tier Brand Safety setting for the campaign.
+     * Output only. 3-Tier Brand Safety setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+     * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for videoBrandSafetySuitability.
      */
-    public int getVideoBrandSafetySuitabilityValue() {
+    @java.lang.Override public int getVideoBrandSafetySuitabilityValue() {
       return videoBrandSafetySuitability_;
     }
     /**
      * <pre>
-     * 3-Tier Brand Safety setting for the campaign.
+     * Output only. 3-Tier Brand Safety setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+     * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for videoBrandSafetySuitability to set.
+     * @return This builder for chaining.
      */
     public Builder setVideoBrandSafetySuitabilityValue(int value) {
+      
       videoBrandSafetySuitability_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * 3-Tier Brand Safety setting for the campaign.
+     * Output only. 3-Tier Brand Safety setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+     * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The videoBrandSafetySuitability.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability getVideoBrandSafetySuitability() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability result = com.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.valueOf(videoBrandSafetySuitability_);
@@ -17365,10 +17938,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * 3-Tier Brand Safety setting for the campaign.
+     * Output only. 3-Tier Brand Safety setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+     * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The videoBrandSafetySuitability to set.
+     * @return This builder for chaining.
      */
     public Builder setVideoBrandSafetySuitability(com.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability value) {
       if (value == null) {
@@ -17381,10 +17956,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * 3-Tier Brand Safety setting for the campaign.
+     * Output only. 3-Tier Brand Safety setting for the campaign.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42;</code>
+     * <code>.google.ads.googleads.v2.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearVideoBrandSafetySuitability() {
       
@@ -17402,6 +17978,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
+     * @return Whether the vanityPharma field is set.
      */
     public boolean hasVanityPharma() {
       return vanityPharmaBuilder_ != null || vanityPharma_ != null;
@@ -17412,6 +17989,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.VanityPharma vanity_pharma = 44;</code>
+     * @return The vanityPharma.
      */
     public com.google.ads.googleads.v2.resources.Campaign.VanityPharma getVanityPharma() {
       if (vanityPharmaBuilder_ == null) {
@@ -17556,6 +18134,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
+     * @return Whether the selectiveOptimization field is set.
      */
     public boolean hasSelectiveOptimization() {
       return selectiveOptimizationBuilder_ != null || selectiveOptimization_ != null;
@@ -17567,6 +18146,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
+     * @return The selectiveOptimization.
      */
     public com.google.ads.googleads.v2.resources.Campaign.SelectiveOptimization getSelectiveOptimization() {
       if (selectiveOptimizationBuilder_ == null) {
@@ -17713,20 +18293,22 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v2.resources.Campaign.TrackingSetting, com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.Builder, com.google.ads.googleads.v2.resources.Campaign.TrackingSettingOrBuilder> trackingSettingBuilder_;
     /**
      * <pre>
-     * Campaign level settings for tracking information.
+     * Output only. Campaign-level settings for tracking information.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the trackingSetting field is set.
      */
     public boolean hasTrackingSetting() {
       return trackingSettingBuilder_ != null || trackingSetting_ != null;
     }
     /**
      * <pre>
-     * Campaign level settings for tracking information.
+     * Output only. Campaign-level settings for tracking information.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The trackingSetting.
      */
     public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting getTrackingSetting() {
       if (trackingSettingBuilder_ == null) {
@@ -17737,10 +18319,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Campaign level settings for tracking information.
+     * Output only. Campaign-level settings for tracking information.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTrackingSetting(com.google.ads.googleads.v2.resources.Campaign.TrackingSetting value) {
       if (trackingSettingBuilder_ == null) {
@@ -17757,10 +18339,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Campaign level settings for tracking information.
+     * Output only. Campaign-level settings for tracking information.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setTrackingSetting(
         com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.Builder builderForValue) {
@@ -17775,10 +18357,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Campaign level settings for tracking information.
+     * Output only. Campaign-level settings for tracking information.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeTrackingSetting(com.google.ads.googleads.v2.resources.Campaign.TrackingSetting value) {
       if (trackingSettingBuilder_ == null) {
@@ -17797,10 +18379,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Campaign level settings for tracking information.
+     * Output only. Campaign-level settings for tracking information.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearTrackingSetting() {
       if (trackingSettingBuilder_ == null) {
@@ -17815,10 +18397,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Campaign level settings for tracking information.
+     * Output only. Campaign-level settings for tracking information.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.Builder getTrackingSettingBuilder() {
       
@@ -17827,10 +18409,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Campaign level settings for tracking information.
+     * Output only. Campaign-level settings for tracking information.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v2.resources.Campaign.TrackingSettingOrBuilder getTrackingSettingOrBuilder() {
       if (trackingSettingBuilder_ != null) {
@@ -17842,10 +18424,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Campaign level settings for tracking information.
+     * Output only. Campaign-level settings for tracking information.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46;</code>
+     * <code>.google.ads.googleads.v2.resources.Campaign.TrackingSetting tracking_setting = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v2.resources.Campaign.TrackingSetting, com.google.ads.googleads.v2.resources.Campaign.TrackingSetting.Builder, com.google.ads.googleads.v2.resources.Campaign.TrackingSettingOrBuilder> 
@@ -17868,8 +18450,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+     * @return The enum numeric value on the wire for paymentMode.
      */
-    public int getPaymentModeValue() {
+    @java.lang.Override public int getPaymentModeValue() {
       return paymentMode_;
     }
     /**
@@ -17878,8 +18461,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+     * @param value The enum numeric value on the wire for paymentMode to set.
+     * @return This builder for chaining.
      */
     public Builder setPaymentModeValue(int value) {
+      
       paymentMode_ = value;
       onChanged();
       return this;
@@ -17890,7 +18476,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+     * @return The paymentMode.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode getPaymentMode() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode result = com.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode.valueOf(paymentMode_);
@@ -17902,6 +18490,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+     * @param value The paymentMode to set.
+     * @return This builder for chaining.
      */
     public Builder setPaymentMode(com.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode value) {
       if (value == null) {
@@ -17918,6 +18508,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.PaymentModeEnum.PaymentMode payment_mode = 52;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPaymentMode() {
       
@@ -17933,8 +18524,10 @@ private static final long serialVersionUID = 0L;
      * Portfolio bidding strategy used by campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+     * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
+     * @return Whether the biddingStrategy field is set.
      */
+    @java.lang.Override
     public boolean hasBiddingStrategy() {
       return campaignBiddingStrategyCase_ == 23;
     }
@@ -17943,8 +18536,10 @@ private static final long serialVersionUID = 0L;
      * Portfolio bidding strategy used by campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+     * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
+     * @return The biddingStrategy.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getBiddingStrategy() {
       if (biddingStrategyBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 23) {
@@ -17963,7 +18558,7 @@ private static final long serialVersionUID = 0L;
      * Portfolio bidding strategy used by campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+     * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setBiddingStrategy(com.google.protobuf.StringValue value) {
       if (biddingStrategyBuilder_ == null) {
@@ -17983,7 +18578,7 @@ private static final long serialVersionUID = 0L;
      * Portfolio bidding strategy used by campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+     * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder setBiddingStrategy(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -18001,7 +18596,7 @@ private static final long serialVersionUID = 0L;
      * Portfolio bidding strategy used by campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+     * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder mergeBiddingStrategy(com.google.protobuf.StringValue value) {
       if (biddingStrategyBuilder_ == null) {
@@ -18027,7 +18622,7 @@ private static final long serialVersionUID = 0L;
      * Portfolio bidding strategy used by campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+     * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
      */
     public Builder clearBiddingStrategy() {
       if (biddingStrategyBuilder_ == null) {
@@ -18050,7 +18645,7 @@ private static final long serialVersionUID = 0L;
      * Portfolio bidding strategy used by campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+     * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
      */
     public com.google.protobuf.StringValue.Builder getBiddingStrategyBuilder() {
       return getBiddingStrategyFieldBuilder().getBuilder();
@@ -18060,8 +18655,9 @@ private static final long serialVersionUID = 0L;
      * Portfolio bidding strategy used by campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+     * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getBiddingStrategyOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 23) && (biddingStrategyBuilder_ != null)) {
         return biddingStrategyBuilder_.getMessageOrBuilder();
@@ -18077,7 +18673,7 @@ private static final long serialVersionUID = 0L;
      * Portfolio bidding strategy used by campaign.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue bidding_strategy = 23;</code>
+     * <code>.google.protobuf.StringValue bidding_strategy = 23 [(.google.api.resource_reference) = { ... }</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -18107,7 +18703,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.Commission commission = 49;</code>
+     * @return Whether the commission field is set.
      */
+    @java.lang.Override
     public boolean hasCommission() {
       return campaignBiddingStrategyCase_ == 49;
     }
@@ -18118,7 +18716,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.Commission commission = 49;</code>
+     * @return The commission.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.Commission getCommission() {
       if (commissionBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 49) {
@@ -18242,6 +18842,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.Commission commission = 49;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.CommissionOrBuilder getCommissionOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 49) && (commissionBuilder_ != null)) {
         return commissionBuilder_.getMessageOrBuilder();
@@ -18288,7 +18889,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.ManualCpc manual_cpc = 24;</code>
+     * @return Whether the manualCpc field is set.
      */
+    @java.lang.Override
     public boolean hasManualCpc() {
       return campaignBiddingStrategyCase_ == 24;
     }
@@ -18299,7 +18902,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.ManualCpc manual_cpc = 24;</code>
+     * @return The manualCpc.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.ManualCpc getManualCpc() {
       if (manualCpcBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 24) {
@@ -18423,6 +19028,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.ManualCpc manual_cpc = 24;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.ManualCpcOrBuilder getManualCpcOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 24) && (manualCpcBuilder_ != null)) {
         return manualCpcBuilder_.getMessageOrBuilder();
@@ -18470,7 +19076,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.ManualCpm manual_cpm = 25;</code>
+     * @return Whether the manualCpm field is set.
      */
+    @java.lang.Override
     public boolean hasManualCpm() {
       return campaignBiddingStrategyCase_ == 25;
     }
@@ -18482,7 +19090,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.ManualCpm manual_cpm = 25;</code>
+     * @return The manualCpm.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.ManualCpm getManualCpm() {
       if (manualCpmBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 25) {
@@ -18612,6 +19222,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.ManualCpm manual_cpm = 25;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.ManualCpmOrBuilder getManualCpmOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 25) && (manualCpmBuilder_ != null)) {
         return manualCpmBuilder_.getMessageOrBuilder();
@@ -18654,21 +19265,25 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v2.common.ManualCpv, com.google.ads.googleads.v2.common.ManualCpv.Builder, com.google.ads.googleads.v2.common.ManualCpvOrBuilder> manualCpvBuilder_;
     /**
      * <pre>
-     * A bidding strategy that pays a configurable amount per video view.
+     * Output only. A bidding strategy that pays a configurable amount per video view.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the manualCpv field is set.
      */
+    @java.lang.Override
     public boolean hasManualCpv() {
       return campaignBiddingStrategyCase_ == 37;
     }
     /**
      * <pre>
-     * A bidding strategy that pays a configurable amount per video view.
+     * Output only. A bidding strategy that pays a configurable amount per video view.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The manualCpv.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.ManualCpv getManualCpv() {
       if (manualCpvBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 37) {
@@ -18684,10 +19299,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that pays a configurable amount per video view.
+     * Output only. A bidding strategy that pays a configurable amount per video view.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setManualCpv(com.google.ads.googleads.v2.common.ManualCpv value) {
       if (manualCpvBuilder_ == null) {
@@ -18704,10 +19319,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that pays a configurable amount per video view.
+     * Output only. A bidding strategy that pays a configurable amount per video view.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setManualCpv(
         com.google.ads.googleads.v2.common.ManualCpv.Builder builderForValue) {
@@ -18722,10 +19337,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that pays a configurable amount per video view.
+     * Output only. A bidding strategy that pays a configurable amount per video view.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeManualCpv(com.google.ads.googleads.v2.common.ManualCpv value) {
       if (manualCpvBuilder_ == null) {
@@ -18748,10 +19363,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that pays a configurable amount per video view.
+     * Output only. A bidding strategy that pays a configurable amount per video view.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearManualCpv() {
       if (manualCpvBuilder_ == null) {
@@ -18771,21 +19386,22 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that pays a configurable amount per video view.
+     * Output only. A bidding strategy that pays a configurable amount per video view.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v2.common.ManualCpv.Builder getManualCpvBuilder() {
       return getManualCpvFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * A bidding strategy that pays a configurable amount per video view.
+     * Output only. A bidding strategy that pays a configurable amount per video view.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.ManualCpvOrBuilder getManualCpvOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 37) && (manualCpvBuilder_ != null)) {
         return manualCpvBuilder_.getMessageOrBuilder();
@@ -18798,10 +19414,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that pays a configurable amount per video view.
+     * Output only. A bidding strategy that pays a configurable amount per video view.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37;</code>
+     * <code>.google.ads.googleads.v2.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v2.common.ManualCpv, com.google.ads.googleads.v2.common.ManualCpv.Builder, com.google.ads.googleads.v2.common.ManualCpvOrBuilder> 
@@ -18831,7 +19447,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.MaximizeConversions maximize_conversions = 30;</code>
+     * @return Whether the maximizeConversions field is set.
      */
+    @java.lang.Override
     public boolean hasMaximizeConversions() {
       return campaignBiddingStrategyCase_ == 30;
     }
@@ -18842,7 +19460,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.MaximizeConversions maximize_conversions = 30;</code>
+     * @return The maximizeConversions.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.MaximizeConversions getMaximizeConversions() {
       if (maximizeConversionsBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 30) {
@@ -18966,6 +19586,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.MaximizeConversions maximize_conversions = 30;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.MaximizeConversionsOrBuilder getMaximizeConversionsOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 30) && (maximizeConversionsBuilder_ != null)) {
         return maximizeConversionsBuilder_.getMessageOrBuilder();
@@ -19012,7 +19633,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.MaximizeConversionValue maximize_conversion_value = 31;</code>
+     * @return Whether the maximizeConversionValue field is set.
      */
+    @java.lang.Override
     public boolean hasMaximizeConversionValue() {
       return campaignBiddingStrategyCase_ == 31;
     }
@@ -19023,7 +19646,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.MaximizeConversionValue maximize_conversion_value = 31;</code>
+     * @return The maximizeConversionValue.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.MaximizeConversionValue getMaximizeConversionValue() {
       if (maximizeConversionValueBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 31) {
@@ -19147,6 +19772,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.MaximizeConversionValue maximize_conversion_value = 31;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.MaximizeConversionValueOrBuilder getMaximizeConversionValueOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 31) && (maximizeConversionValueBuilder_ != null)) {
         return maximizeConversionValueBuilder_.getMessageOrBuilder();
@@ -19194,7 +19820,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 26;</code>
+     * @return Whether the targetCpa field is set.
      */
+    @java.lang.Override
     public boolean hasTargetCpa() {
       return campaignBiddingStrategyCase_ == 26;
     }
@@ -19206,7 +19834,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 26;</code>
+     * @return The targetCpa.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetCpa getTargetCpa() {
       if (targetCpaBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 26) {
@@ -19336,6 +19966,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.TargetCpa target_cpa = 26;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetCpaOrBuilder getTargetCpaOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 26) && (targetCpaBuilder_ != null)) {
         return targetCpaBuilder_.getMessageOrBuilder();
@@ -19383,7 +20014,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
+     * @return Whether the targetImpressionShare field is set.
      */
+    @java.lang.Override
     public boolean hasTargetImpressionShare() {
       return campaignBiddingStrategyCase_ == 48;
     }
@@ -19394,7 +20027,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
+     * @return The targetImpressionShare.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetImpressionShare getTargetImpressionShare() {
       if (targetImpressionShareBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 48) {
@@ -19518,6 +20153,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.TargetImpressionShare target_impression_share = 48;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetImpressionShareOrBuilder getTargetImpressionShareOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 48) && (targetImpressionShareBuilder_ != null)) {
         return targetImpressionShareBuilder_.getMessageOrBuilder();
@@ -19564,7 +20200,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 29;</code>
+     * @return Whether the targetRoas field is set.
      */
+    @java.lang.Override
     public boolean hasTargetRoas() {
       return campaignBiddingStrategyCase_ == 29;
     }
@@ -19575,7 +20213,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 29;</code>
+     * @return The targetRoas.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetRoas getTargetRoas() {
       if (targetRoasBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 29) {
@@ -19699,6 +20339,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.TargetRoas target_roas = 29;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetRoasOrBuilder getTargetRoasOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 29) && (targetRoasBuilder_ != null)) {
         return targetRoasBuilder_.getMessageOrBuilder();
@@ -19745,7 +20386,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 27;</code>
+     * @return Whether the targetSpend field is set.
      */
+    @java.lang.Override
     public boolean hasTargetSpend() {
       return campaignBiddingStrategyCase_ == 27;
     }
@@ -19756,7 +20399,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 27;</code>
+     * @return The targetSpend.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetSpend getTargetSpend() {
       if (targetSpendBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 27) {
@@ -19880,6 +20525,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.TargetSpend target_spend = 27;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetSpendOrBuilder getTargetSpendOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 27) && (targetSpendBuilder_ != null)) {
         return targetSpendBuilder_.getMessageOrBuilder();
@@ -19926,7 +20572,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.PercentCpc percent_cpc = 34;</code>
+     * @return Whether the percentCpc field is set.
      */
+    @java.lang.Override
     public boolean hasPercentCpc() {
       return campaignBiddingStrategyCase_ == 34;
     }
@@ -19937,7 +20585,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.PercentCpc percent_cpc = 34;</code>
+     * @return The percentCpc.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.PercentCpc getPercentCpc() {
       if (percentCpcBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 34) {
@@ -20061,6 +20711,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.PercentCpc percent_cpc = 34;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.PercentCpcOrBuilder getPercentCpcOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 34) && (percentCpcBuilder_ != null)) {
         return percentCpcBuilder_.getMessageOrBuilder();
@@ -20107,7 +20758,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetCpm target_cpm = 41;</code>
+     * @return Whether the targetCpm field is set.
      */
+    @java.lang.Override
     public boolean hasTargetCpm() {
       return campaignBiddingStrategyCase_ == 41;
     }
@@ -20118,7 +20771,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.TargetCpm target_cpm = 41;</code>
+     * @return The targetCpm.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetCpm getTargetCpm() {
       if (targetCpmBuilder_ == null) {
         if (campaignBiddingStrategyCase_ == 41) {
@@ -20242,6 +20897,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v2.common.TargetCpm target_cpm = 41;</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.common.TargetCpmOrBuilder getTargetCpmOrBuilder() {
       if ((campaignBiddingStrategyCase_ == 41) && (targetCpmBuilder_ != null)) {
         return targetCpmBuilder_.getMessageOrBuilder();

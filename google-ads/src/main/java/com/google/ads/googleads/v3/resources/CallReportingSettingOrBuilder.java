@@ -14,6 +14,7 @@ public interface CallReportingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_reporting_enabled = 1;</code>
+   * @return Whether the callReportingEnabled field is set.
    */
   boolean hasCallReportingEnabled();
   /**
@@ -23,6 +24,7 @@ public interface CallReportingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_reporting_enabled = 1;</code>
+   * @return The callReportingEnabled.
    */
   com.google.protobuf.BoolValue getCallReportingEnabled();
   /**
@@ -41,6 +43,7 @@ public interface CallReportingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_conversion_reporting_enabled = 2;</code>
+   * @return Whether the callConversionReportingEnabled field is set.
    */
   boolean hasCallConversionReportingEnabled();
   /**
@@ -49,6 +52,7 @@ public interface CallReportingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_conversion_reporting_enabled = 2;</code>
+   * @return The callConversionReportingEnabled.
    */
   com.google.protobuf.BoolValue getCallConversionReportingEnabled();
   /**
@@ -68,6 +72,7 @@ public interface CallReportingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_conversion_action = 9 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the callConversionAction field is set.
    */
   boolean hasCallConversionAction();
   /**
@@ -78,6 +83,7 @@ public interface CallReportingSettingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_conversion_action = 9 [(.google.api.resource_reference) = { ... }</code>
+   * @return The callConversionAction.
    */
   com.google.protobuf.StringValue getCallConversionAction();
   /**

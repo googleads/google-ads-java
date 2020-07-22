@@ -10,7 +10,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.CallFeedItem}
  */
-public  final class CallFeedItem extends
+public final class CallFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.CallFeedItem)
     CallFeedItemOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private CallFeedItem() {
     callConversionReportingState_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CallFeedItem();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -159,7 +165,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 1;</code>
+   * @return Whether the phoneNumber field is set.
    */
+  @java.lang.Override
   public boolean hasPhoneNumber() {
     return phoneNumber_ != null;
   }
@@ -170,7 +178,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue phone_number = 1;</code>
+   * @return The phoneNumber.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPhoneNumber() {
     return phoneNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : phoneNumber_;
   }
@@ -182,6 +192,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue phone_number = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPhoneNumberOrBuilder() {
     return getPhoneNumber();
   }
@@ -195,7 +206,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return Whether the countryCode field is set.
    */
+  @java.lang.Override
   public boolean hasCountryCode() {
     return countryCode_ != null;
   }
@@ -206,7 +219,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
+   * @return The countryCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCountryCode() {
     return countryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : countryCode_;
   }
@@ -218,6 +233,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue country_code = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCountryCodeOrBuilder() {
     return getCountryCode();
   }
@@ -231,7 +247,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_tracking_enabled = 3;</code>
+   * @return Whether the callTrackingEnabled field is set.
    */
+  @java.lang.Override
   public boolean hasCallTrackingEnabled() {
     return callTrackingEnabled_ != null;
   }
@@ -242,7 +260,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_tracking_enabled = 3;</code>
+   * @return The callTrackingEnabled.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getCallTrackingEnabled() {
     return callTrackingEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : callTrackingEnabled_;
   }
@@ -254,6 +274,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue call_tracking_enabled = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getCallTrackingEnabledOrBuilder() {
     return getCallTrackingEnabled();
   }
@@ -268,7 +289,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_conversion_action = 4;</code>
+   * @return Whether the callConversionAction field is set.
    */
+  @java.lang.Override
   public boolean hasCallConversionAction() {
     return callConversionAction_ != null;
   }
@@ -280,7 +303,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue call_conversion_action = 4;</code>
+   * @return The callConversionAction.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCallConversionAction() {
     return callConversionAction_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callConversionAction_;
   }
@@ -293,6 +318,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue call_conversion_action = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCallConversionActionOrBuilder() {
     return getCallConversionAction();
   }
@@ -306,7 +332,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_conversion_tracking_disabled = 5;</code>
+   * @return Whether the callConversionTrackingDisabled field is set.
    */
+  @java.lang.Override
   public boolean hasCallConversionTrackingDisabled() {
     return callConversionTrackingDisabled_ != null;
   }
@@ -317,7 +345,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue call_conversion_tracking_disabled = 5;</code>
+   * @return The callConversionTrackingDisabled.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getCallConversionTrackingDisabled() {
     return callConversionTrackingDisabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : callConversionTrackingDisabled_;
   }
@@ -329,6 +359,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue call_conversion_tracking_disabled = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getCallConversionTrackingDisabledOrBuilder() {
     return getCallConversionTrackingDisabled();
   }
@@ -343,8 +374,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState call_conversion_reporting_state = 6;</code>
+   * @return The enum numeric value on the wire for callConversionReportingState.
    */
-  public int getCallConversionReportingStateValue() {
+  @java.lang.Override public int getCallConversionReportingStateValue() {
     return callConversionReportingState_;
   }
   /**
@@ -355,8 +387,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState call_conversion_reporting_state = 6;</code>
+   * @return The callConversionReportingState.
    */
-  public com.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState getCallConversionReportingState() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState getCallConversionReportingState() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState result = com.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState.valueOf(callConversionReportingState_);
     return result == null ? com.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState.UNRECOGNIZED : result;
@@ -827,6 +860,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue phone_number = 1;</code>
+     * @return Whether the phoneNumber field is set.
      */
     public boolean hasPhoneNumber() {
       return phoneNumberBuilder_ != null || phoneNumber_ != null;
@@ -838,6 +872,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue phone_number = 1;</code>
+     * @return The phoneNumber.
      */
     public com.google.protobuf.StringValue getPhoneNumber() {
       if (phoneNumberBuilder_ == null) {
@@ -989,6 +1024,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue country_code = 2;</code>
+     * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
       return countryCodeBuilder_ != null || countryCode_ != null;
@@ -1000,6 +1036,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue country_code = 2;</code>
+     * @return The countryCode.
      */
     public com.google.protobuf.StringValue getCountryCode() {
       if (countryCodeBuilder_ == null) {
@@ -1151,6 +1188,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue call_tracking_enabled = 3;</code>
+     * @return Whether the callTrackingEnabled field is set.
      */
     public boolean hasCallTrackingEnabled() {
       return callTrackingEnabledBuilder_ != null || callTrackingEnabled_ != null;
@@ -1162,6 +1200,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue call_tracking_enabled = 3;</code>
+     * @return The callTrackingEnabled.
      */
     public com.google.protobuf.BoolValue getCallTrackingEnabled() {
       if (callTrackingEnabledBuilder_ == null) {
@@ -1314,6 +1353,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue call_conversion_action = 4;</code>
+     * @return Whether the callConversionAction field is set.
      */
     public boolean hasCallConversionAction() {
       return callConversionActionBuilder_ != null || callConversionAction_ != null;
@@ -1326,6 +1366,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue call_conversion_action = 4;</code>
+     * @return The callConversionAction.
      */
     public com.google.protobuf.StringValue getCallConversionAction() {
       if (callConversionActionBuilder_ == null) {
@@ -1484,6 +1525,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue call_conversion_tracking_disabled = 5;</code>
+     * @return Whether the callConversionTrackingDisabled field is set.
      */
     public boolean hasCallConversionTrackingDisabled() {
       return callConversionTrackingDisabledBuilder_ != null || callConversionTrackingDisabled_ != null;
@@ -1495,6 +1537,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue call_conversion_tracking_disabled = 5;</code>
+     * @return The callConversionTrackingDisabled.
      */
     public com.google.protobuf.BoolValue getCallConversionTrackingDisabled() {
       if (callConversionTrackingDisabledBuilder_ == null) {
@@ -1645,8 +1688,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState call_conversion_reporting_state = 6;</code>
+     * @return The enum numeric value on the wire for callConversionReportingState.
      */
-    public int getCallConversionReportingStateValue() {
+    @java.lang.Override public int getCallConversionReportingStateValue() {
       return callConversionReportingState_;
     }
     /**
@@ -1657,8 +1701,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState call_conversion_reporting_state = 6;</code>
+     * @param value The enum numeric value on the wire for callConversionReportingState to set.
+     * @return This builder for chaining.
      */
     public Builder setCallConversionReportingStateValue(int value) {
+      
       callConversionReportingState_ = value;
       onChanged();
       return this;
@@ -1671,7 +1718,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState call_conversion_reporting_state = 6;</code>
+     * @return The callConversionReportingState.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState getCallConversionReportingState() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState result = com.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState.valueOf(callConversionReportingState_);
@@ -1685,6 +1734,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState call_conversion_reporting_state = 6;</code>
+     * @param value The callConversionReportingState to set.
+     * @return This builder for chaining.
      */
     public Builder setCallConversionReportingState(com.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState value) {
       if (value == null) {
@@ -1703,6 +1754,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.enums.CallConversionReportingStateEnum.CallConversionReportingState call_conversion_reporting_state = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCallConversionReportingState() {
       

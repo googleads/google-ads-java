@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.errors;
  *
  * Protobuf type {@code google.ads.googleads.v4.errors.GoogleAdsFailure}
  */
-public  final class GoogleAdsFailure extends
+public final class GoogleAdsFailure extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.errors.GoogleAdsFailure)
     GoogleAdsFailureOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.errors.GoogleAdsError errors = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.errors.GoogleAdsError> getErrorsList() {
     return errors_;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.errors.GoogleAdsError errors = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.errors.GoogleAdsErrorOrBuilder> 
       getErrorsOrBuilderList() {
     return errors_;
@@ -129,6 +131,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.errors.GoogleAdsError errors = 1;</code>
    */
+  @java.lang.Override
   public int getErrorsCount() {
     return errors_.size();
   }
@@ -139,6 +142,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.errors.GoogleAdsError errors = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.GoogleAdsError getErrors(int index) {
     return errors_.get(index);
   }
@@ -149,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.errors.GoogleAdsError errors = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.GoogleAdsErrorOrBuilder getErrorsOrBuilder(
       int index) {
     return errors_.get(index);

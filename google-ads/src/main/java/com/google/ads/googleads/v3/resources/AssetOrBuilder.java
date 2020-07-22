@@ -15,6 +15,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -60,6 +64,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -68,6 +73,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -85,6 +91,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -93,6 +100,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.AssetTypeEnum.AssetType getType();
 
@@ -102,6 +110,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the youtubeVideoAsset field is set.
    */
   boolean hasYoutubeVideoAsset();
   /**
@@ -110,6 +119,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.YoutubeVideoAsset youtube_video_asset = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The youtubeVideoAsset.
    */
   com.google.ads.googleads.v3.common.YoutubeVideoAsset getYoutubeVideoAsset();
   /**
@@ -127,6 +137,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the mediaBundleAsset field is set.
    */
   boolean hasMediaBundleAsset();
   /**
@@ -135,6 +146,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.MediaBundleAsset media_bundle_asset = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The mediaBundleAsset.
    */
   com.google.ads.googleads.v3.common.MediaBundleAsset getMediaBundleAsset();
   /**
@@ -152,6 +164,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the imageAsset field is set.
    */
   boolean hasImageAsset();
   /**
@@ -160,6 +173,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.ImageAsset image_asset = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The imageAsset.
    */
   com.google.ads.googleads.v3.common.ImageAsset getImageAsset();
   /**
@@ -177,6 +191,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the textAsset field is set.
    */
   boolean hasTextAsset();
   /**
@@ -185,6 +200,7 @@ public interface AssetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.TextAsset text_asset = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The textAsset.
    */
   com.google.ads.googleads.v3.common.TextAsset getTextAsset();
   /**

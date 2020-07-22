@@ -9,47 +9,51 @@ public interface CreateCustomerClientRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the Manager under whom client customer is being created.
+   * Required. The ID of the Manager under whom client customer is being created.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the Manager under whom client customer is being created.
+   * Required. The ID of the Manager under whom client customer is being created.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * The new client customer to create. The resource name on this customer
+   * Required. The new client customer to create. The resource name on this customer
    * will be ignored.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.Customer customer_client = 2;</code>
+   * <code>.google.ads.googleads.v2.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the customerClient field is set.
    */
   boolean hasCustomerClient();
   /**
    * <pre>
-   * The new client customer to create. The resource name on this customer
+   * Required. The new client customer to create. The resource name on this customer
    * will be ignored.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.Customer customer_client = 2;</code>
+   * <code>.google.ads.googleads.v2.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerClient.
    */
   com.google.ads.googleads.v2.resources.Customer getCustomerClient();
   /**
    * <pre>
-   * The new client customer to create. The resource name on this customer
+   * Required. The new client customer to create. The resource name on this customer
    * will be ignored.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.resources.Customer customer_client = 2;</code>
+   * <code>.google.ads.googleads.v2.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v2.resources.CustomerOrBuilder getCustomerClientOrBuilder();
 
@@ -60,6 +64,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue email_address = 3;</code>
+   * @return Whether the emailAddress field is set.
    */
   boolean hasEmailAddress();
   /**
@@ -69,6 +74,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue email_address = 3;</code>
+   * @return The emailAddress.
    */
   com.google.protobuf.StringValue getEmailAddress();
   /**
@@ -88,6 +94,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
+   * @return The enum numeric value on the wire for accessRole.
    */
   int getAccessRoleValue();
   /**
@@ -97,6 +104,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.enums.AccessRoleEnum.AccessRole access_role = 4;</code>
+   * @return The accessRole.
    */
   com.google.ads.googleads.v2.enums.AccessRoleEnum.AccessRole getAccessRole();
 }

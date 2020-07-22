@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.UploadCallConversionsResponse}
  */
-public  final class UploadCallConversionsResponse extends
+public final class UploadCallConversionsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.UploadCallConversionsResponse)
     UploadCallConversionsResponseOrBuilder {
@@ -126,6 +126,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
    * @return Whether the partialFailureError field is set.
    */
+  @java.lang.Override
   public boolean hasPartialFailureError() {
     return partialFailureError_ != null;
   }
@@ -142,6 +143,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
    * @return The partialFailureError.
    */
+  @java.lang.Override
   public com.google.rpc.Status getPartialFailureError() {
     return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
   }
@@ -157,6 +159,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
     return getPartialFailureError();
   }
@@ -172,6 +175,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.CallConversionResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.CallConversionResult> getResultsList() {
     return results_;
   }
@@ -184,6 +188,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.CallConversionResult results = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.CallConversionResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -197,6 +202,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.CallConversionResult results = 2;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -209,6 +215,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.CallConversionResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.CallConversionResult getResults(int index) {
     return results_.get(index);
   }
@@ -221,6 +228,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.CallConversionResult results = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.CallConversionResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.CustomerClientLink}
  */
-public  final class CustomerClientLink extends
+public final class CustomerClientLink extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.CustomerClientLink)
     CustomerClientLinkOrBuilder {
@@ -149,6 +149,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -171,6 +172,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -195,6 +197,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the clientCustomer field is set.
    */
+  @java.lang.Override
   public boolean hasClientCustomer() {
     return clientCustomer_ != null;
   }
@@ -206,6 +209,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The clientCustomer.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getClientCustomer() {
     return clientCustomer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : clientCustomer_;
   }
@@ -216,6 +220,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue client_customer = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getClientCustomerOrBuilder() {
     return getClientCustomer();
   }
@@ -230,6 +235,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the managerLinkId field is set.
    */
+  @java.lang.Override
   public boolean hasManagerLinkId() {
     return managerLinkId_ != null;
   }
@@ -241,6 +247,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The managerLinkId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getManagerLinkId() {
     return managerLinkId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : managerLinkId_;
   }
@@ -251,6 +258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value manager_link_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getManagerLinkIdOrBuilder() {
     return getManagerLinkId();
   }
@@ -265,7 +273,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus status = 5;</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -276,7 +284,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus status = 5;</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus result = com.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus.UNRECOGNIZED : result;
@@ -294,6 +302,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue hidden = 6;</code>
    * @return Whether the hidden field is set.
    */
+  @java.lang.Override
   public boolean hasHidden() {
     return hidden_ != null;
   }
@@ -307,6 +316,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue hidden = 6;</code>
    * @return The hidden.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getHidden() {
     return hidden_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : hidden_;
   }
@@ -319,6 +329,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue hidden = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getHiddenOrBuilder() {
     return getHidden();
   }
@@ -1160,7 +1171,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus status = 5;</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1173,6 +1184,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1185,6 +1197,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus status = 5;</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus result = com.google.ads.googleads.v4.enums.ManagerLinkStatusEnum.ManagerLinkStatus.valueOf(status_);

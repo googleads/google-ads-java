@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.MutateMerchantCenterLinkRequest}
  */
-public  final class MutateMerchantCenterLinkRequest extends
+public final class MutateMerchantCenterLinkRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.MutateMerchantCenterLinkRequest)
     MutateMerchantCenterLinkRequestOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private MutateMerchantCenterLinkRequest() {
     customerId_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new MutateMerchantCenterLinkRequest();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -106,7 +112,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -125,7 +133,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -148,7 +158,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the operation field is set.
    */
+  @java.lang.Override
   public boolean hasOperation() {
     return operation_ != null;
   }
@@ -158,7 +170,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The operation.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MerchantCenterLinkOperation getOperation() {
     return operation_ == null ? com.google.ads.googleads.v3.services.MerchantCenterLinkOperation.getDefaultInstance() : operation_;
   }
@@ -169,6 +183,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v3.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MerchantCenterLinkOperationOrBuilder getOperationOrBuilder() {
     return getOperation();
   }
@@ -516,6 +531,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The customerId.
      */
     public java.lang.String getCustomerId() {
       java.lang.Object ref = customerId_;
@@ -535,6 +551,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for customerId.
      */
     public com.google.protobuf.ByteString
         getCustomerIdBytes() {
@@ -555,6 +572,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerId(
         java.lang.String value) {
@@ -572,6 +591,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
       
@@ -585,6 +605,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for customerId to set.
+     * @return This builder for chaining.
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
@@ -607,6 +629,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the operation field is set.
      */
     public boolean hasOperation() {
       return operationBuilder_ != null || operation_ != null;
@@ -617,6 +640,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+     * @return The operation.
      */
     public com.google.ads.googleads.v3.services.MerchantCenterLinkOperation getOperation() {
       if (operationBuilder_ == null) {

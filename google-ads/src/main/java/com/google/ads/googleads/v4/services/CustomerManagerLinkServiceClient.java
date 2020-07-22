@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.CustomerManagerLinkServiceStubS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient = CustomerManagerLinkServiceClient.create()) {
- *   String formattedResourceName = CustomerManagerLinkServiceClient.formatCustomerManagerLinkName("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
- *   CustomerManagerLink response = customerManagerLinkServiceClient.getCustomerManagerLink(formattedResourceName);
+ *   CustomerManagerLinkName resourceName = CustomerManagerLinkName.of("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
+ *   CustomerManagerLink response = customerManagerLinkServiceClient.getCustomerManagerLink(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,50 +99,6 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   private final CustomerManagerLinkServiceSettings settings;
   private final CustomerManagerLinkServiceStub stub;
 
-  private static final PathTemplate CUSTOMER_MANAGER_LINK_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/customerManagerLinks/{customer_manager_link}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a customer_manager_link
-   * resource.
-   *
-   * @deprecated Use the {@link CustomerManagerLinkName} class instead.
-   */
-  @Deprecated
-  public static final String formatCustomerManagerLinkName(
-      String customer, String customerManagerLink) {
-    return CUSTOMER_MANAGER_LINK_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "customer_manager_link", customerManagerLink);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * customer_manager_link resource.
-   *
-   * @deprecated Use the {@link CustomerManagerLinkName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCustomerManagerLinkName(
-      String customerManagerLinkName) {
-    return CUSTOMER_MANAGER_LINK_PATH_TEMPLATE.parse(customerManagerLinkName).get("customer");
-  }
-
-  /**
-   * Parses the customer_manager_link from the given fully-qualified path which represents a
-   * customer_manager_link resource.
-   *
-   * @deprecated Use the {@link CustomerManagerLinkName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerManagerLinkFromCustomerManagerLinkName(
-      String customerManagerLinkName) {
-    return CUSTOMER_MANAGER_LINK_PATH_TEMPLATE
-        .parse(customerManagerLinkName)
-        .get("customer_manager_link");
-  }
-
   /** Constructs an instance of CustomerManagerLinkServiceClient with default settings. */
   public static final CustomerManagerLinkServiceClient create() throws IOException {
     return create(CustomerManagerLinkServiceSettings.newBuilder().build());
@@ -202,8 +157,32 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient = CustomerManagerLinkServiceClient.create()) {
-   *   String formattedResourceName = CustomerManagerLinkServiceClient.formatCustomerManagerLinkName("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
-   *   CustomerManagerLink response = customerManagerLinkServiceClient.getCustomerManagerLink(formattedResourceName);
+   *   CustomerManagerLinkName resourceName = CustomerManagerLinkName.of("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
+   *   CustomerManagerLink response = customerManagerLinkServiceClient.getCustomerManagerLink(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the CustomerManagerLink to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CustomerManagerLink getCustomerManagerLink(CustomerManagerLinkName resourceName) {
+    GetCustomerManagerLinkRequest request =
+        GetCustomerManagerLinkRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCustomerManagerLink(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested CustomerManagerLink in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient = CustomerManagerLinkServiceClient.create()) {
+   *   CustomerManagerLinkName resourceName = CustomerManagerLinkName.of("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
+   *   CustomerManagerLink response = customerManagerLinkServiceClient.getCustomerManagerLink(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -211,7 +190,6 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerManagerLink getCustomerManagerLink(String resourceName) {
-    CUSTOMER_MANAGER_LINK_PATH_TEMPLATE.validate(resourceName, "getCustomerManagerLink");
     GetCustomerManagerLinkRequest request =
         GetCustomerManagerLinkRequest.newBuilder().setResourceName(resourceName).build();
     return getCustomerManagerLink(request);
@@ -225,9 +203,9 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient = CustomerManagerLinkServiceClient.create()) {
-   *   String formattedResourceName = CustomerManagerLinkServiceClient.formatCustomerManagerLinkName("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
+   *   CustomerManagerLinkName resourceName = CustomerManagerLinkName.of("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
    *   GetCustomerManagerLinkRequest request = GetCustomerManagerLinkRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CustomerManagerLink response = customerManagerLinkServiceClient.getCustomerManagerLink(request);
    * }
@@ -248,9 +226,9 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient = CustomerManagerLinkServiceClient.create()) {
-   *   String formattedResourceName = CustomerManagerLinkServiceClient.formatCustomerManagerLinkName("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
+   *   CustomerManagerLinkName resourceName = CustomerManagerLinkName.of("[CUSTOMER]", "[CUSTOMER_MANAGER_LINK]");
    *   GetCustomerManagerLinkRequest request = GetCustomerManagerLinkRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CustomerManagerLink&gt; future = customerManagerLinkServiceClient.getCustomerManagerLinkCallable().futureCall(request);
    *   // Do something

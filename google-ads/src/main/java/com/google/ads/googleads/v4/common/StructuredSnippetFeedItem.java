@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.StructuredSnippetFeedItem}
  */
-public  final class StructuredSnippetFeedItem extends
+public final class StructuredSnippetFeedItem extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.StructuredSnippetFeedItem)
     StructuredSnippetFeedItemOrBuilder {
@@ -122,6 +122,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue header = 1;</code>
    * @return Whether the header field is set.
    */
+  @java.lang.Override
   public boolean hasHeader() {
     return header_ != null;
   }
@@ -134,6 +135,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue header = 1;</code>
    * @return The header.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHeader() {
     return header_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : header_;
   }
@@ -145,6 +147,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue header = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHeaderOrBuilder() {
     return getHeader();
   }
@@ -159,6 +162,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue values = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getValuesList() {
     return values_;
   }
@@ -170,6 +174,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue values = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getValuesOrBuilderList() {
     return values_;
@@ -182,6 +187,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue values = 2;</code>
    */
+  @java.lang.Override
   public int getValuesCount() {
     return values_.size();
   }
@@ -193,6 +199,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue values = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getValues(int index) {
     return values_.get(index);
   }
@@ -204,6 +211,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue values = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getValuesOrBuilder(
       int index) {
     return values_.get(index);

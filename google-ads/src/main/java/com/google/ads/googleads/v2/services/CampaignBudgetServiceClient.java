@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.CampaignBudgetServiceStubSettin
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CampaignBudgetServiceClient campaignBudgetServiceClient = CampaignBudgetServiceClient.create()) {
- *   String formattedResourceName = CampaignBudgetServiceClient.formatCampaignBudgetName("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
- *   CampaignBudget response = campaignBudgetServiceClient.getCampaignBudget(formattedResourceName);
+ *   CampaignBudgetName resourceName = CampaignBudgetName.of("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
+ *   CampaignBudget response = campaignBudgetServiceClient.getCampaignBudget(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,44 +99,6 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
   private final CampaignBudgetServiceSettings settings;
   private final CampaignBudgetServiceStub stub;
 
-  private static final PathTemplate CAMPAIGN_BUDGET_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/campaignBudgets/{campaign_budget}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign_budget resource.
-   *
-   * @deprecated Use the {@link CampaignBudgetName} class instead.
-   */
-  @Deprecated
-  public static final String formatCampaignBudgetName(String customer, String campaignBudget) {
-    return CAMPAIGN_BUDGET_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "campaign_budget", campaignBudget);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a campaign_budget
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignBudgetName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCampaignBudgetName(String campaignBudgetName) {
-    return CAMPAIGN_BUDGET_PATH_TEMPLATE.parse(campaignBudgetName).get("customer");
-  }
-
-  /**
-   * Parses the campaign_budget from the given fully-qualified path which represents a
-   * campaign_budget resource.
-   *
-   * @deprecated Use the {@link CampaignBudgetName} class instead.
-   */
-  @Deprecated
-  public static final String parseCampaignBudgetFromCampaignBudgetName(String campaignBudgetName) {
-    return CAMPAIGN_BUDGET_PATH_TEMPLATE.parse(campaignBudgetName).get("campaign_budget");
-  }
-
   /** Constructs an instance of CampaignBudgetServiceClient with default settings. */
   public static final CampaignBudgetServiceClient create() throws IOException {
     return create(CampaignBudgetServiceSettings.newBuilder().build());
@@ -194,16 +155,39 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignBudgetServiceClient campaignBudgetServiceClient = CampaignBudgetServiceClient.create()) {
-   *   String formattedResourceName = CampaignBudgetServiceClient.formatCampaignBudgetName("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
-   *   CampaignBudget response = campaignBudgetServiceClient.getCampaignBudget(formattedResourceName);
+   *   CampaignBudgetName resourceName = CampaignBudgetName.of("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
+   *   CampaignBudget response = campaignBudgetServiceClient.getCampaignBudget(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the campaign budget to fetch.
+   * @param resourceName Required. The resource name of the campaign budget to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CampaignBudget getCampaignBudget(CampaignBudgetName resourceName) {
+    GetCampaignBudgetRequest request =
+        GetCampaignBudgetRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCampaignBudget(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Campaign Budget in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignBudgetServiceClient campaignBudgetServiceClient = CampaignBudgetServiceClient.create()) {
+   *   CampaignBudgetName resourceName = CampaignBudgetName.of("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
+   *   CampaignBudget response = campaignBudgetServiceClient.getCampaignBudget(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the campaign budget to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignBudget getCampaignBudget(String resourceName) {
-    CAMPAIGN_BUDGET_PATH_TEMPLATE.validate(resourceName, "getCampaignBudget");
     GetCampaignBudgetRequest request =
         GetCampaignBudgetRequest.newBuilder().setResourceName(resourceName).build();
     return getCampaignBudget(request);
@@ -217,9 +201,9 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignBudgetServiceClient campaignBudgetServiceClient = CampaignBudgetServiceClient.create()) {
-   *   String formattedResourceName = CampaignBudgetServiceClient.formatCampaignBudgetName("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
+   *   CampaignBudgetName resourceName = CampaignBudgetName.of("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
    *   GetCampaignBudgetRequest request = GetCampaignBudgetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CampaignBudget response = campaignBudgetServiceClient.getCampaignBudget(request);
    * }
@@ -240,9 +224,9 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignBudgetServiceClient campaignBudgetServiceClient = CampaignBudgetServiceClient.create()) {
-   *   String formattedResourceName = CampaignBudgetServiceClient.formatCampaignBudgetName("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
+   *   CampaignBudgetName resourceName = CampaignBudgetName.of("[CUSTOMER]", "[CAMPAIGN_BUDGET]");
    *   GetCampaignBudgetRequest request = GetCampaignBudgetRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CampaignBudget&gt; future = campaignBudgetServiceClient.getCampaignBudgetCallable().futureCall(request);
    *   // Do something
@@ -264,58 +248,16 @@ public class CampaignBudgetServiceClient implements BackgroundResource {
    * try (CampaignBudgetServiceClient campaignBudgetServiceClient = CampaignBudgetServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;CampaignBudgetOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCampaignBudgetsResponse response = campaignBudgetServiceClient.mutateCampaignBudgets(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose campaign budgets are being modified.
-   * @param operations The list of operations to perform on individual campaign budgets.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCampaignBudgetsResponse mutateCampaignBudgets(
-      String customerId,
-      List<CampaignBudgetOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateCampaignBudgetsRequest request =
-        MutateCampaignBudgetsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCampaignBudgets(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes campaign budgets. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignBudgetServiceClient campaignBudgetServiceClient = CampaignBudgetServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignBudgetOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateCampaignBudgetsResponse response = campaignBudgetServiceClient.mutateCampaignBudgets(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose campaign budgets are being modified.
-   * @param operations The list of operations to perform on individual campaign budgets.
+   * @param customerId Required. The ID of the customer whose campaign budgets are being modified.
+   * @param operations Required. The list of operations to perform on individual campaign budgets.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateCampaignBudgetsResponse mutateCampaignBudgets(
       String customerId, List<CampaignBudgetOperation> operations) {
-
     MutateCampaignBudgetsRequest request =
         MutateCampaignBudgetsRequest.newBuilder()
             .setCustomerId(customerId)

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.GraduateCampaignExperimentResponse}
  */
-public  final class GraduateCampaignExperimentResponse extends
+public final class GraduateCampaignExperimentResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.GraduateCampaignExperimentResponse)
     GraduateCampaignExperimentResponseOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
   private GraduateCampaignExperimentResponse() {
     graduatedCampaign_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new GraduateCampaignExperimentResponse();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -94,7 +100,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string graduated_campaign = 1;</code>
+   * @return The graduatedCampaign.
    */
+  @java.lang.Override
   public java.lang.String getGraduatedCampaign() {
     java.lang.Object ref = graduatedCampaign_;
     if (ref instanceof java.lang.String) {
@@ -114,7 +122,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string graduated_campaign = 1;</code>
+   * @return The bytes for graduatedCampaign.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getGraduatedCampaignBytes() {
     java.lang.Object ref = graduatedCampaign_;
@@ -443,6 +453,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string graduated_campaign = 1;</code>
+     * @return The graduatedCampaign.
      */
     public java.lang.String getGraduatedCampaign() {
       java.lang.Object ref = graduatedCampaign_;
@@ -463,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string graduated_campaign = 1;</code>
+     * @return The bytes for graduatedCampaign.
      */
     public com.google.protobuf.ByteString
         getGraduatedCampaignBytes() {
@@ -484,6 +496,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string graduated_campaign = 1;</code>
+     * @param value The graduatedCampaign to set.
+     * @return This builder for chaining.
      */
     public Builder setGraduatedCampaign(
         java.lang.String value) {
@@ -502,6 +516,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string graduated_campaign = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearGraduatedCampaign() {
       
@@ -516,6 +531,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string graduated_campaign = 1;</code>
+     * @param value The bytes for graduatedCampaign to set.
+     * @return This builder for chaining.
      */
     public Builder setGraduatedCampaignBytes(
         com.google.protobuf.ByteString value) {

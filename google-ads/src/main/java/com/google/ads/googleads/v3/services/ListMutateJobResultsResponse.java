@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.services;
  *
  * Protobuf type {@code google.ads.googleads.v3.services.ListMutateJobResultsResponse}
  */
-public  final class ListMutateJobResultsResponse extends
+public final class ListMutateJobResultsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.services.ListMutateJobResultsResponse)
     ListMutateJobResultsResponseOrBuilder {
@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   private ListMutateJobResultsResponse() {
     results_ = java.util.Collections.emptyList();
     nextPageToken_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListMutateJobResultsResponse();
   }
 
   @java.lang.Override
@@ -98,7 +105,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.services.ListMutateJobResultsResponse.class, com.google.ads.googleads.v3.services.ListMutateJobResultsResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESULTS_FIELD_NUMBER = 1;
   private java.util.List<com.google.ads.googleads.v3.services.MutateJobResult> results_;
   /**
@@ -108,6 +114,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateJobResult results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.services.MutateJobResult> getResultsList() {
     return results_;
   }
@@ -118,6 +125,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateJobResult results = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.services.MutateJobResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
@@ -129,6 +137,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateJobResult results = 1;</code>
    */
+  @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
@@ -139,6 +148,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateJobResult results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MutateJobResult getResults(int index) {
     return results_.get(index);
   }
@@ -149,6 +159,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.services.MutateJobResult results = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.services.MutateJobResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
@@ -165,7 +176,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string next_page_token = 2;</code>
+   * @return The nextPageToken.
    */
+  @java.lang.Override
   public java.lang.String getNextPageToken() {
     java.lang.Object ref = nextPageToken_;
     if (ref instanceof java.lang.String) {
@@ -187,7 +200,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string next_page_token = 2;</code>
+   * @return The bytes for nextPageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNextPageTokenBytes() {
     java.lang.Object ref = nextPageToken_;
@@ -447,7 +462,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.services.ListMutateJobResultsResponse buildPartial() {
       com.google.ads.googleads.v3.services.ListMutateJobResultsResponse result = new com.google.ads.googleads.v3.services.ListMutateJobResultsResponse(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (resultsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
@@ -458,7 +472,6 @@ private static final long serialVersionUID = 0L;
         result.results_ = resultsBuilder_.build();
       }
       result.nextPageToken_ = nextPageToken_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -889,6 +902,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
      */
     public java.lang.String getNextPageToken() {
       java.lang.Object ref = nextPageToken_;
@@ -911,6 +925,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
      */
     public com.google.protobuf.ByteString
         getNextPageTokenBytes() {
@@ -934,6 +949,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @param value The nextPageToken to set.
+     * @return This builder for chaining.
      */
     public Builder setNextPageToken(
         java.lang.String value) {
@@ -954,6 +971,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearNextPageToken() {
       
@@ -970,6 +988,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
+     * @param value The bytes for nextPageToken to set.
+     * @return This builder for chaining.
      */
     public Builder setNextPageTokenBytes(
         com.google.protobuf.ByteString value) {

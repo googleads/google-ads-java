@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.SiteSeed}
  */
-public  final class SiteSeed extends
+public final class SiteSeed extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.SiteSeed)
     SiteSeedOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue site = 1;</code>
    * @return Whether the site field is set.
    */
+  @java.lang.Override
   public boolean hasSite() {
     return site_ != null;
   }
@@ -120,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue site = 1;</code>
    * @return The site.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSite() {
     return site_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : site_;
   }
@@ -131,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue site = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSiteOrBuilder() {
     return getSite();
   }

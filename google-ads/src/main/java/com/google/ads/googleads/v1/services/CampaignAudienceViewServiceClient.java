@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.CampaignAudienceViewServiceStub
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
- *   String formattedResourceName = CampaignAudienceViewServiceClient.formatCampaignAudienceViewName("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
- *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(formattedResourceName);
+ *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
+ *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,50 +98,6 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
   private final CampaignAudienceViewServiceSettings settings;
   private final CampaignAudienceViewServiceStub stub;
 
-  private static final PathTemplate CAMPAIGN_AUDIENCE_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/campaignAudienceViews/{campaign_audience_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign_audience_view
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignAudienceViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatCampaignAudienceViewName(
-      String customer, String campaignAudienceView) {
-    return CAMPAIGN_AUDIENCE_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "campaign_audience_view", campaignAudienceView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * campaign_audience_view resource.
-   *
-   * @deprecated Use the {@link CampaignAudienceViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCampaignAudienceViewName(
-      String campaignAudienceViewName) {
-    return CAMPAIGN_AUDIENCE_VIEW_PATH_TEMPLATE.parse(campaignAudienceViewName).get("customer");
-  }
-
-  /**
-   * Parses the campaign_audience_view from the given fully-qualified path which represents a
-   * campaign_audience_view resource.
-   *
-   * @deprecated Use the {@link CampaignAudienceViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCampaignAudienceViewFromCampaignAudienceViewName(
-      String campaignAudienceViewName) {
-    return CAMPAIGN_AUDIENCE_VIEW_PATH_TEMPLATE
-        .parse(campaignAudienceViewName)
-        .get("campaign_audience_view");
-  }
-
   /** Constructs an instance of CampaignAudienceViewServiceClient with default settings. */
   public static final CampaignAudienceViewServiceClient create() throws IOException {
     return create(CampaignAudienceViewServiceSettings.newBuilder().build());
@@ -202,16 +157,39 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
-   *   String formattedResourceName = CampaignAudienceViewServiceClient.formatCampaignAudienceViewName("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
-   *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(formattedResourceName);
+   *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
+   *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the campaign audience view to fetch.
+   * @param resourceName Required. The resource name of the campaign audience view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CampaignAudienceView getCampaignAudienceView(CampaignAudienceViewName resourceName) {
+    GetCampaignAudienceViewRequest request =
+        GetCampaignAudienceViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCampaignAudienceView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested campaign audience view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
+   *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
+   *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the campaign audience view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignAudienceView getCampaignAudienceView(String resourceName) {
-    CAMPAIGN_AUDIENCE_VIEW_PATH_TEMPLATE.validate(resourceName, "getCampaignAudienceView");
     GetCampaignAudienceViewRequest request =
         GetCampaignAudienceViewRequest.newBuilder().setResourceName(resourceName).build();
     return getCampaignAudienceView(request);
@@ -225,9 +203,9 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
-   *   String formattedResourceName = CampaignAudienceViewServiceClient.formatCampaignAudienceViewName("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
+   *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
    *   GetCampaignAudienceViewRequest request = GetCampaignAudienceViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CampaignAudienceView response = campaignAudienceViewServiceClient.getCampaignAudienceView(request);
    * }
@@ -249,9 +227,9 @@ public class CampaignAudienceViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignAudienceViewServiceClient campaignAudienceViewServiceClient = CampaignAudienceViewServiceClient.create()) {
-   *   String formattedResourceName = CampaignAudienceViewServiceClient.formatCampaignAudienceViewName("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
+   *   CampaignAudienceViewName resourceName = CampaignAudienceViewName.of("[CUSTOMER]", "[CAMPAIGN_AUDIENCE_VIEW]");
    *   GetCampaignAudienceViewRequest request = GetCampaignAudienceViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CampaignAudienceView&gt; future = campaignAudienceViewServiceClient.getCampaignAudienceViewCallable().futureCall(request);
    *   // Do something

@@ -24,6 +24,7 @@ import com.google.ads.googleads.v4.resources.AdGroup;
 import com.google.ads.googleads.v4.services.AdGroupOperation;
 import com.google.ads.googleads.v4.services.AdGroupServiceClient;
 import com.google.ads.googleads.v4.services.MutateAdGroupResult;
+import com.google.ads.googleads.v4.services.MutateAdGroupsRequest;
 import com.google.ads.googleads.v4.services.MutateAdGroupsResponse;
 import com.google.ads.googleads.v4.utils.ErrorUtils;
 import com.google.ads.googleads.v4.utils.ResourceNames;
@@ -142,12 +143,11 @@ public class HandlePartialFailure {
         googleAdsClient.getLatestVersion().createAdGroupServiceClient()) {
       // Issues the mutate request, setting partialFailure=true.
       return service.mutateAdGroups(
-          String.valueOf(customerId),
-          Arrays.asList(op1, op2, op3),
-          // Sets partial failure to true.
-          true,
-          // Sets validate only to false.
-          false);
+          MutateAdGroupsRequest.newBuilder()
+              .setCustomerId(Long.toString(customerId))
+              .addAllOperations(Arrays.asList(op1, op2, op3))
+              .setPartialFailure(true)
+              .build());
     }
   }
 

@@ -15,6 +15,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue action_button_label = 1;</code>
+   * @return Whether the actionButtonLabel field is set.
    */
   boolean hasActionButtonLabel();
   /**
@@ -25,6 +26,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue action_button_label = 1;</code>
+   * @return The actionButtonLabel.
    */
   com.google.protobuf.StringValue getActionButtonLabel();
   /**
@@ -45,6 +47,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue action_headline = 2;</code>
+   * @return Whether the actionHeadline field is set.
    */
   boolean hasActionHeadline();
   /**
@@ -54,6 +57,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue action_headline = 2;</code>
+   * @return The actionHeadline.
    */
   com.google.protobuf.StringValue getActionHeadline();
   /**
@@ -72,6 +76,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+   * @return Whether the companionBanner field is set.
    */
   boolean hasCompanionBanner();
   /**
@@ -80,6 +85,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue companion_banner = 3;</code>
+   * @return The companionBanner.
    */
   com.google.protobuf.StringValue getCompanionBanner();
   /**

@@ -11,7 +11,7 @@ package com.google.ads.googleads.v2.common;
  *
  * Protobuf type {@code google.ads.googleads.v2.common.CustomIntentInfo}
  */
-public  final class CustomIntentInfo extends
+public final class CustomIntentInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.common.CustomIntentInfo)
     CustomIntentInfoOrBuilder {
@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CustomIntentInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CustomIntentInfo();
   }
 
   @java.lang.Override
@@ -36,7 +43,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -100,7 +106,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_intent = 1;</code>
+   * @return Whether the customIntent field is set.
    */
+  @java.lang.Override
   public boolean hasCustomIntent() {
     return customIntent_ != null;
   }
@@ -110,7 +118,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue custom_intent = 1;</code>
+   * @return The customIntent.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCustomIntent() {
     return customIntent_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customIntent_;
   }
@@ -121,6 +131,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue custom_intent = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCustomIntentOrBuilder() {
     return getCustomIntent();
   }
@@ -454,6 +465,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_intent = 1;</code>
+     * @return Whether the customIntent field is set.
      */
     public boolean hasCustomIntent() {
       return customIntentBuilder_ != null || customIntent_ != null;
@@ -464,6 +476,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue custom_intent = 1;</code>
+     * @return The customIntent.
      */
     public com.google.protobuf.StringValue getCustomIntent() {
       if (customIntentBuilder_ == null) {

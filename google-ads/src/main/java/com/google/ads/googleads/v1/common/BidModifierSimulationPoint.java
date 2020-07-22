@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.BidModifierSimulationPoint}
  */
-public  final class BidModifierSimulationPoint extends
+public final class BidModifierSimulationPoint extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.BidModifierSimulationPoint)
     BidModifierSimulationPointOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BidModifierSimulationPoint() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new BidModifierSimulationPoint();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -255,7 +261,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 1;</code>
+   * @return Whether the bidModifier field is set.
    */
+  @java.lang.Override
   public boolean hasBidModifier() {
     return bidModifier_ != null;
   }
@@ -265,7 +273,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 1;</code>
+   * @return The bidModifier.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getBidModifier() {
     return bidModifier_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : bidModifier_;
   }
@@ -276,6 +286,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getBidModifierOrBuilder() {
     return getBidModifier();
   }
@@ -289,7 +300,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
+   * @return Whether the biddableConversions field is set.
    */
+  @java.lang.Override
   public boolean hasBiddableConversions() {
     return biddableConversions_ != null;
   }
@@ -300,7 +313,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
+   * @return The biddableConversions.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getBiddableConversions() {
     return biddableConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : biddableConversions_;
   }
@@ -312,6 +327,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getBiddableConversionsOrBuilder() {
     return getBiddableConversions();
   }
@@ -325,7 +341,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
+   * @return Whether the biddableConversionsValue field is set.
    */
+  @java.lang.Override
   public boolean hasBiddableConversionsValue() {
     return biddableConversionsValue_ != null;
   }
@@ -336,7 +354,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
+   * @return The biddableConversionsValue.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getBiddableConversionsValue() {
     return biddableConversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : biddableConversionsValue_;
   }
@@ -348,6 +368,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getBiddableConversionsValueOrBuilder() {
     return getBiddableConversionsValue();
   }
@@ -360,7 +381,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value clicks = 4;</code>
+   * @return Whether the clicks field is set.
    */
+  @java.lang.Override
   public boolean hasClicks() {
     return clicks_ != null;
   }
@@ -370,7 +393,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value clicks = 4;</code>
+   * @return The clicks.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getClicks() {
     return clicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : clicks_;
   }
@@ -381,6 +406,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value clicks = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getClicksOrBuilder() {
     return getClicks();
   }
@@ -393,7 +419,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 5;</code>
+   * @return Whether the costMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCostMicros() {
     return costMicros_ != null;
   }
@@ -403,7 +431,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value cost_micros = 5;</code>
+   * @return The costMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCostMicros() {
     return costMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : costMicros_;
   }
@@ -414,6 +444,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cost_micros = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCostMicrosOrBuilder() {
     return getCostMicros();
   }
@@ -426,7 +457,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 6;</code>
+   * @return Whether the impressions field is set.
    */
+  @java.lang.Override
   public boolean hasImpressions() {
     return impressions_ != null;
   }
@@ -436,7 +469,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value impressions = 6;</code>
+   * @return The impressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getImpressions() {
     return impressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : impressions_;
   }
@@ -447,6 +482,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value impressions = 6;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getImpressionsOrBuilder() {
     return getImpressions();
   }
@@ -460,7 +496,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
+   * @return Whether the topSlotImpressions field is set.
    */
+  @java.lang.Override
   public boolean hasTopSlotImpressions() {
     return topSlotImpressions_ != null;
   }
@@ -471,7 +509,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
+   * @return The topSlotImpressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getTopSlotImpressions() {
     return topSlotImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : topSlotImpressions_;
   }
@@ -483,6 +523,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getTopSlotImpressionsOrBuilder() {
     return getTopSlotImpressions();
   }
@@ -496,7 +537,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+   * @return Whether the parentBiddableConversions field is set.
    */
+  @java.lang.Override
   public boolean hasParentBiddableConversions() {
     return parentBiddableConversions_ != null;
   }
@@ -507,7 +550,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+   * @return The parentBiddableConversions.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getParentBiddableConversions() {
     return parentBiddableConversions_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : parentBiddableConversions_;
   }
@@ -519,6 +564,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getParentBiddableConversionsOrBuilder() {
     return getParentBiddableConversions();
   }
@@ -532,7 +578,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+   * @return Whether the parentBiddableConversionsValue field is set.
    */
+  @java.lang.Override
   public boolean hasParentBiddableConversionsValue() {
     return parentBiddableConversionsValue_ != null;
   }
@@ -543,7 +591,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+   * @return The parentBiddableConversionsValue.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getParentBiddableConversionsValue() {
     return parentBiddableConversionsValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : parentBiddableConversionsValue_;
   }
@@ -555,6 +605,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getParentBiddableConversionsValueOrBuilder() {
     return getParentBiddableConversionsValue();
   }
@@ -567,7 +618,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+   * @return Whether the parentClicks field is set.
    */
+  @java.lang.Override
   public boolean hasParentClicks() {
     return parentClicks_ != null;
   }
@@ -577,7 +630,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+   * @return The parentClicks.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getParentClicks() {
     return parentClicks_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentClicks_;
   }
@@ -588,6 +643,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getParentClicksOrBuilder() {
     return getParentClicks();
   }
@@ -600,7 +656,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+   * @return Whether the parentCostMicros field is set.
    */
+  @java.lang.Override
   public boolean hasParentCostMicros() {
     return parentCostMicros_ != null;
   }
@@ -610,7 +668,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+   * @return The parentCostMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getParentCostMicros() {
     return parentCostMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentCostMicros_;
   }
@@ -621,6 +681,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getParentCostMicrosOrBuilder() {
     return getParentCostMicros();
   }
@@ -633,7 +694,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+   * @return Whether the parentImpressions field is set.
    */
+  @java.lang.Override
   public boolean hasParentImpressions() {
     return parentImpressions_ != null;
   }
@@ -643,7 +706,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+   * @return The parentImpressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getParentImpressions() {
     return parentImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentImpressions_;
   }
@@ -654,6 +719,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getParentImpressionsOrBuilder() {
     return getParentImpressions();
   }
@@ -667,7 +733,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+   * @return Whether the parentTopSlotImpressions field is set.
    */
+  @java.lang.Override
   public boolean hasParentTopSlotImpressions() {
     return parentTopSlotImpressions_ != null;
   }
@@ -678,7 +746,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+   * @return The parentTopSlotImpressions.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getParentTopSlotImpressions() {
     return parentTopSlotImpressions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : parentTopSlotImpressions_;
   }
@@ -690,6 +760,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getParentTopSlotImpressionsOrBuilder() {
     return getParentTopSlotImpressions();
   }
@@ -1382,6 +1453,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 1;</code>
+     * @return Whether the bidModifier field is set.
      */
     public boolean hasBidModifier() {
       return bidModifierBuilder_ != null || bidModifier_ != null;
@@ -1392,6 +1464,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue bid_modifier = 1;</code>
+     * @return The bidModifier.
      */
     public com.google.protobuf.DoubleValue getBidModifier() {
       if (bidModifierBuilder_ == null) {
@@ -1536,6 +1609,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
+     * @return Whether the biddableConversions field is set.
      */
     public boolean hasBiddableConversions() {
       return biddableConversionsBuilder_ != null || biddableConversions_ != null;
@@ -1547,6 +1621,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions = 2;</code>
+     * @return The biddableConversions.
      */
     public com.google.protobuf.DoubleValue getBiddableConversions() {
       if (biddableConversionsBuilder_ == null) {
@@ -1698,6 +1773,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
+     * @return Whether the biddableConversionsValue field is set.
      */
     public boolean hasBiddableConversionsValue() {
       return biddableConversionsValueBuilder_ != null || biddableConversionsValue_ != null;
@@ -1709,6 +1785,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue biddable_conversions_value = 3;</code>
+     * @return The biddableConversionsValue.
      */
     public com.google.protobuf.DoubleValue getBiddableConversionsValue() {
       if (biddableConversionsValueBuilder_ == null) {
@@ -1859,6 +1936,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value clicks = 4;</code>
+     * @return Whether the clicks field is set.
      */
     public boolean hasClicks() {
       return clicksBuilder_ != null || clicks_ != null;
@@ -1869,6 +1947,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value clicks = 4;</code>
+     * @return The clicks.
      */
     public com.google.protobuf.Int64Value getClicks() {
       if (clicksBuilder_ == null) {
@@ -2012,6 +2091,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_micros = 5;</code>
+     * @return Whether the costMicros field is set.
      */
     public boolean hasCostMicros() {
       return costMicrosBuilder_ != null || costMicros_ != null;
@@ -2022,6 +2102,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value cost_micros = 5;</code>
+     * @return The costMicros.
      */
     public com.google.protobuf.Int64Value getCostMicros() {
       if (costMicrosBuilder_ == null) {
@@ -2165,6 +2246,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value impressions = 6;</code>
+     * @return Whether the impressions field is set.
      */
     public boolean hasImpressions() {
       return impressionsBuilder_ != null || impressions_ != null;
@@ -2175,6 +2257,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value impressions = 6;</code>
+     * @return The impressions.
      */
     public com.google.protobuf.Int64Value getImpressions() {
       if (impressionsBuilder_ == null) {
@@ -2319,6 +2402,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
+     * @return Whether the topSlotImpressions field is set.
      */
     public boolean hasTopSlotImpressions() {
       return topSlotImpressionsBuilder_ != null || topSlotImpressions_ != null;
@@ -2330,6 +2414,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value top_slot_impressions = 7;</code>
+     * @return The topSlotImpressions.
      */
     public com.google.protobuf.Int64Value getTopSlotImpressions() {
       if (topSlotImpressionsBuilder_ == null) {
@@ -2481,6 +2566,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     * @return Whether the parentBiddableConversions field is set.
      */
     public boolean hasParentBiddableConversions() {
       return parentBiddableConversionsBuilder_ != null || parentBiddableConversions_ != null;
@@ -2492,6 +2578,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions = 8;</code>
+     * @return The parentBiddableConversions.
      */
     public com.google.protobuf.DoubleValue getParentBiddableConversions() {
       if (parentBiddableConversionsBuilder_ == null) {
@@ -2643,6 +2730,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     * @return Whether the parentBiddableConversionsValue field is set.
      */
     public boolean hasParentBiddableConversionsValue() {
       return parentBiddableConversionsValueBuilder_ != null || parentBiddableConversionsValue_ != null;
@@ -2654,6 +2742,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue parent_biddable_conversions_value = 9;</code>
+     * @return The parentBiddableConversionsValue.
      */
     public com.google.protobuf.DoubleValue getParentBiddableConversionsValue() {
       if (parentBiddableConversionsValueBuilder_ == null) {
@@ -2804,6 +2893,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     * @return Whether the parentClicks field is set.
      */
     public boolean hasParentClicks() {
       return parentClicksBuilder_ != null || parentClicks_ != null;
@@ -2814,6 +2904,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_clicks = 10;</code>
+     * @return The parentClicks.
      */
     public com.google.protobuf.Int64Value getParentClicks() {
       if (parentClicksBuilder_ == null) {
@@ -2957,6 +3048,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     * @return Whether the parentCostMicros field is set.
      */
     public boolean hasParentCostMicros() {
       return parentCostMicrosBuilder_ != null || parentCostMicros_ != null;
@@ -2967,6 +3059,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_cost_micros = 11;</code>
+     * @return The parentCostMicros.
      */
     public com.google.protobuf.Int64Value getParentCostMicros() {
       if (parentCostMicrosBuilder_ == null) {
@@ -3110,6 +3203,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     * @return Whether the parentImpressions field is set.
      */
     public boolean hasParentImpressions() {
       return parentImpressionsBuilder_ != null || parentImpressions_ != null;
@@ -3120,6 +3214,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_impressions = 12;</code>
+     * @return The parentImpressions.
      */
     public com.google.protobuf.Int64Value getParentImpressions() {
       if (parentImpressionsBuilder_ == null) {
@@ -3264,6 +3359,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     * @return Whether the parentTopSlotImpressions field is set.
      */
     public boolean hasParentTopSlotImpressions() {
       return parentTopSlotImpressionsBuilder_ != null || parentTopSlotImpressions_ != null;
@@ -3275,6 +3371,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value parent_top_slot_impressions = 13;</code>
+     * @return The parentTopSlotImpressions.
      */
     public com.google.protobuf.Int64Value getParentTopSlotImpressions() {
       if (parentTopSlotImpressionsBuilder_ == null) {

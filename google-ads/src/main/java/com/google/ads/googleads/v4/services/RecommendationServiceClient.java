@@ -22,7 +22,6 @@ import com.google.ads.googleads.v4.services.stub.RecommendationServiceStubSettin
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -38,8 +37,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
- *   String formattedResourceName = RecommendationServiceClient.formatRecommendationName("[CUSTOMER]", "[RECOMMENDATION]");
- *   Recommendation response = recommendationServiceClient.getRecommendation(formattedResourceName);
+ *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER]", "[RECOMMENDATION]");
+ *   Recommendation response = recommendationServiceClient.getRecommendation(resourceName);
  * }
  * </code>
  * </pre>
@@ -101,44 +100,6 @@ public class RecommendationServiceClient implements BackgroundResource {
   private final RecommendationServiceSettings settings;
   private final RecommendationServiceStub stub;
 
-  private static final PathTemplate RECOMMENDATION_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/recommendations/{recommendation}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a recommendation resource.
-   *
-   * @deprecated Use the {@link RecommendationName} class instead.
-   */
-  @Deprecated
-  public static final String formatRecommendationName(String customer, String recommendation) {
-    return RECOMMENDATION_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "recommendation", recommendation);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a recommendation
-   * resource.
-   *
-   * @deprecated Use the {@link RecommendationName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromRecommendationName(String recommendationName) {
-    return RECOMMENDATION_PATH_TEMPLATE.parse(recommendationName).get("customer");
-  }
-
-  /**
-   * Parses the recommendation from the given fully-qualified path which represents a recommendation
-   * resource.
-   *
-   * @deprecated Use the {@link RecommendationName} class instead.
-   */
-  @Deprecated
-  public static final String parseRecommendationFromRecommendationName(String recommendationName) {
-    return RECOMMENDATION_PATH_TEMPLATE.parse(recommendationName).get("recommendation");
-  }
-
   /** Constructs an instance of RecommendationServiceClient with default settings. */
   public static final RecommendationServiceClient create() throws IOException {
     return create(RecommendationServiceSettings.newBuilder().build());
@@ -195,8 +156,32 @@ public class RecommendationServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String formattedResourceName = RecommendationServiceClient.formatRecommendationName("[CUSTOMER]", "[RECOMMENDATION]");
-   *   Recommendation response = recommendationServiceClient.getRecommendation(formattedResourceName);
+   *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER]", "[RECOMMENDATION]");
+   *   Recommendation response = recommendationServiceClient.getRecommendation(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the recommendation to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final Recommendation getRecommendation(RecommendationName resourceName) {
+    GetRecommendationRequest request =
+        GetRecommendationRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getRecommendation(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested recommendation in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
+   *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER]", "[RECOMMENDATION]");
+   *   Recommendation response = recommendationServiceClient.getRecommendation(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -204,7 +189,6 @@ public class RecommendationServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Recommendation getRecommendation(String resourceName) {
-    RECOMMENDATION_PATH_TEMPLATE.validate(resourceName, "getRecommendation");
     GetRecommendationRequest request =
         GetRecommendationRequest.newBuilder().setResourceName(resourceName).build();
     return getRecommendation(request);
@@ -218,9 +202,9 @@ public class RecommendationServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String formattedResourceName = RecommendationServiceClient.formatRecommendationName("[CUSTOMER]", "[RECOMMENDATION]");
+   *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER]", "[RECOMMENDATION]");
    *   GetRecommendationRequest request = GetRecommendationRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   Recommendation response = recommendationServiceClient.getRecommendation(request);
    * }
@@ -241,9 +225,9 @@ public class RecommendationServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String formattedResourceName = RecommendationServiceClient.formatRecommendationName("[CUSTOMER]", "[RECOMMENDATION]");
+   *   RecommendationName resourceName = RecommendationName.of("[CUSTOMER]", "[RECOMMENDATION]");
    *   GetRecommendationRequest request = GetRecommendationRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;Recommendation&gt; future = recommendationServiceClient.getRecommendationCallable().futureCall(request);
    *   // Do something
@@ -253,41 +237,6 @@ public class RecommendationServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetRecommendationRequest, Recommendation> getRecommendationCallable() {
     return stub.getRecommendationCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Applies given recommendations with corresponding apply parameters.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;ApplyRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   ApplyRecommendationResponse response = recommendationServiceClient.applyRecommendation(customerId, operations, partialFailure);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer with the recommendation.
-   * @param operations Required. The list of operations to apply recommendations. If
-   *     partial_failure=false all recommendations should be of the same type There is a limit of
-   *     100 operations per request.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, operations will be carried out as a transaction if and only
-   *     if they are all valid. Default is false.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final ApplyRecommendationResponse applyRecommendation(
-      String customerId, List<ApplyRecommendationOperation> operations, boolean partialFailure) {
-    ApplyRecommendationRequest request =
-        ApplyRecommendationRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .build();
-    return applyRecommendation(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -368,43 +317,6 @@ public class RecommendationServiceClient implements BackgroundResource {
   public final UnaryCallable<ApplyRecommendationRequest, ApplyRecommendationResponse>
       applyRecommendationCallable() {
     return stub.applyRecommendationCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Dismisses given recommendations.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (RecommendationServiceClient recommendationServiceClient = RecommendationServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;DismissRecommendationRequest.DismissRecommendationOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   DismissRecommendationResponse response = recommendationServiceClient.dismissRecommendation(customerId, operations, partialFailure);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer with the recommendation.
-   * @param operations Required. The list of operations to dismiss recommendations. If
-   *     partial_failure=false all recommendations should be of the same type There is a limit of
-   *     100 operations per request.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, operations will be carried in a single transaction if and
-   *     only if they are all valid. Default is false.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final DismissRecommendationResponse dismissRecommendation(
-      String customerId,
-      List<DismissRecommendationRequest.DismissRecommendationOperation> operations,
-      boolean partialFailure) {
-    DismissRecommendationRequest request =
-        DismissRecommendationRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .build();
-    return dismissRecommendation(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD

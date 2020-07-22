@@ -12,7 +12,7 @@ package com.google.ads.googleads.v2.errors;
  *
  * Protobuf type {@code google.ads.googleads.v2.errors.PolicyViolationDetails}
  */
-public  final class PolicyViolationDetails extends
+public final class PolicyViolationDetails extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.errors.PolicyViolationDetails)
     PolicyViolationDetailsOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
   private PolicyViolationDetails() {
     externalPolicyDescription_ = "";
     externalPolicyName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PolicyViolationDetails();
   }
 
   @java.lang.Override
@@ -39,7 +46,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -120,7 +126,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string external_policy_description = 2;</code>
+   * @return The externalPolicyDescription.
    */
+  @java.lang.Override
   public java.lang.String getExternalPolicyDescription() {
     java.lang.Object ref = externalPolicyDescription_;
     if (ref instanceof java.lang.String) {
@@ -139,7 +147,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string external_policy_description = 2;</code>
+   * @return The bytes for externalPolicyDescription.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getExternalPolicyDescriptionBytes() {
     java.lang.Object ref = externalPolicyDescription_;
@@ -163,7 +173,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PolicyViolationKey key = 4;</code>
+   * @return Whether the key field is set.
    */
+  @java.lang.Override
   public boolean hasKey() {
     return key_ != null;
   }
@@ -174,7 +186,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.PolicyViolationKey key = 4;</code>
+   * @return The key.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.PolicyViolationKey getKey() {
     return key_ == null ? com.google.ads.googleads.v2.common.PolicyViolationKey.getDefaultInstance() : key_;
   }
@@ -186,6 +200,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v2.common.PolicyViolationKey key = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v2.common.PolicyViolationKeyOrBuilder getKeyOrBuilder() {
     return getKey();
   }
@@ -198,7 +213,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string external_policy_name = 5;</code>
+   * @return The externalPolicyName.
    */
+  @java.lang.Override
   public java.lang.String getExternalPolicyName() {
     java.lang.Object ref = externalPolicyName_;
     if (ref instanceof java.lang.String) {
@@ -217,7 +234,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string external_policy_name = 5;</code>
+   * @return The bytes for externalPolicyName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getExternalPolicyNameBytes() {
     java.lang.Object ref = externalPolicyName_;
@@ -240,7 +259,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool is_exemptible = 6;</code>
+   * @return The isExemptible.
    */
+  @java.lang.Override
   public boolean getIsExemptible() {
     return isExemptible_;
   }
@@ -625,6 +646,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string external_policy_description = 2;</code>
+     * @return The externalPolicyDescription.
      */
     public java.lang.String getExternalPolicyDescription() {
       java.lang.Object ref = externalPolicyDescription_;
@@ -644,6 +666,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string external_policy_description = 2;</code>
+     * @return The bytes for externalPolicyDescription.
      */
     public com.google.protobuf.ByteString
         getExternalPolicyDescriptionBytes() {
@@ -664,6 +687,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string external_policy_description = 2;</code>
+     * @param value The externalPolicyDescription to set.
+     * @return This builder for chaining.
      */
     public Builder setExternalPolicyDescription(
         java.lang.String value) {
@@ -681,6 +706,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string external_policy_description = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearExternalPolicyDescription() {
       
@@ -694,6 +720,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string external_policy_description = 2;</code>
+     * @param value The bytes for externalPolicyDescription to set.
+     * @return This builder for chaining.
      */
     public Builder setExternalPolicyDescriptionBytes(
         com.google.protobuf.ByteString value) {
@@ -717,6 +745,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.PolicyViolationKey key = 4;</code>
+     * @return Whether the key field is set.
      */
     public boolean hasKey() {
       return keyBuilder_ != null || key_ != null;
@@ -728,6 +757,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v2.common.PolicyViolationKey key = 4;</code>
+     * @return The key.
      */
     public com.google.ads.googleads.v2.common.PolicyViolationKey getKey() {
       if (keyBuilder_ == null) {
@@ -876,6 +906,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string external_policy_name = 5;</code>
+     * @return The externalPolicyName.
      */
     public java.lang.String getExternalPolicyName() {
       java.lang.Object ref = externalPolicyName_;
@@ -895,6 +926,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string external_policy_name = 5;</code>
+     * @return The bytes for externalPolicyName.
      */
     public com.google.protobuf.ByteString
         getExternalPolicyNameBytes() {
@@ -915,6 +947,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string external_policy_name = 5;</code>
+     * @param value The externalPolicyName to set.
+     * @return This builder for chaining.
      */
     public Builder setExternalPolicyName(
         java.lang.String value) {
@@ -932,6 +966,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string external_policy_name = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearExternalPolicyName() {
       
@@ -945,6 +980,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string external_policy_name = 5;</code>
+     * @param value The bytes for externalPolicyName to set.
+     * @return This builder for chaining.
      */
     public Builder setExternalPolicyNameBytes(
         com.google.protobuf.ByteString value) {
@@ -965,7 +1002,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool is_exemptible = 6;</code>
+     * @return The isExemptible.
      */
+    @java.lang.Override
     public boolean getIsExemptible() {
       return isExemptible_;
     }
@@ -975,6 +1014,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool is_exemptible = 6;</code>
+     * @param value The isExemptible to set.
+     * @return This builder for chaining.
      */
     public Builder setIsExemptible(boolean value) {
       
@@ -988,6 +1029,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool is_exemptible = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearIsExemptible() {
       

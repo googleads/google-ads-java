@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ListCampaignDraftAsyncErrorsResponse}
  */
-public  final class ListCampaignDraftAsyncErrorsResponse extends
+public final class ListCampaignDraftAsyncErrorsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ListCampaignDraftAsyncErrorsResponse)
     ListCampaignDraftAsyncErrorsResponseOrBuilder {
@@ -114,6 +114,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.rpc.Status errors = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.rpc.Status> getErrorsList() {
     return errors_;
   }
@@ -124,6 +125,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.rpc.Status errors = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.rpc.StatusOrBuilder> 
       getErrorsOrBuilderList() {
     return errors_;
@@ -135,6 +137,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.rpc.Status errors = 1;</code>
    */
+  @java.lang.Override
   public int getErrorsCount() {
     return errors_.size();
   }
@@ -145,6 +148,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.rpc.Status errors = 1;</code>
    */
+  @java.lang.Override
   public com.google.rpc.Status getErrors(int index) {
     return errors_.get(index);
   }
@@ -155,6 +159,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.rpc.Status errors = 1;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getErrorsOrBuilder(
       int index) {
     return errors_.get(index);
@@ -173,6 +178,7 @@ private static final long serialVersionUID = 0L;
    * <code>string next_page_token = 2;</code>
    * @return The nextPageToken.
    */
+  @java.lang.Override
   public java.lang.String getNextPageToken() {
     java.lang.Object ref = nextPageToken_;
     if (ref instanceof java.lang.String) {
@@ -196,6 +202,7 @@ private static final long serialVersionUID = 0L;
    * <code>string next_page_token = 2;</code>
    * @return The bytes for nextPageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getNextPageTokenBytes() {
     java.lang.Object ref = nextPageToken_;

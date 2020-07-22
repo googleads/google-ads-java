@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.AgeRangeViewServiceStubSettings
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
- *   String formattedResourceName = AgeRangeViewServiceClient.formatAgeRangeViewName("[CUSTOMER]", "[AGE_RANGE_VIEW]");
- *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(formattedResourceName);
+ *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER]", "[AGE_RANGE_VIEW]");
+ *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,43 +98,6 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
   private final AgeRangeViewServiceSettings settings;
   private final AgeRangeViewServiceStub stub;
 
-  private static final PathTemplate AGE_RANGE_VIEW_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/ageRangeViews/{age_range_view}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a age_range_view resource.
-   *
-   * @deprecated Use the {@link AgeRangeViewName} class instead.
-   */
-  @Deprecated
-  public static final String formatAgeRangeViewName(String customer, String ageRangeView) {
-    return AGE_RANGE_VIEW_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "age_range_view", ageRangeView);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a age_range_view
-   * resource.
-   *
-   * @deprecated Use the {@link AgeRangeViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAgeRangeViewName(String ageRangeViewName) {
-    return AGE_RANGE_VIEW_PATH_TEMPLATE.parse(ageRangeViewName).get("customer");
-  }
-
-  /**
-   * Parses the age_range_view from the given fully-qualified path which represents a age_range_view
-   * resource.
-   *
-   * @deprecated Use the {@link AgeRangeViewName} class instead.
-   */
-  @Deprecated
-  public static final String parseAgeRangeViewFromAgeRangeViewName(String ageRangeViewName) {
-    return AGE_RANGE_VIEW_PATH_TEMPLATE.parse(ageRangeViewName).get("age_range_view");
-  }
-
   /** Constructs an instance of AgeRangeViewServiceClient with default settings. */
   public static final AgeRangeViewServiceClient create() throws IOException {
     return create(AgeRangeViewServiceSettings.newBuilder().build());
@@ -192,16 +154,39 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
-   *   String formattedResourceName = AgeRangeViewServiceClient.formatAgeRangeViewName("[CUSTOMER]", "[AGE_RANGE_VIEW]");
-   *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(formattedResourceName);
+   *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER]", "[AGE_RANGE_VIEW]");
+   *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the age range view to fetch.
+   * @param resourceName Required. The resource name of the age range view to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AgeRangeView getAgeRangeView(AgeRangeViewName resourceName) {
+    GetAgeRangeViewRequest request =
+        GetAgeRangeViewRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAgeRangeView(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested age range view in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
+   *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER]", "[AGE_RANGE_VIEW]");
+   *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the age range view to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AgeRangeView getAgeRangeView(String resourceName) {
-    AGE_RANGE_VIEW_PATH_TEMPLATE.validate(resourceName, "getAgeRangeView");
     GetAgeRangeViewRequest request =
         GetAgeRangeViewRequest.newBuilder().setResourceName(resourceName).build();
     return getAgeRangeView(request);
@@ -215,9 +200,9 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
-   *   String formattedResourceName = AgeRangeViewServiceClient.formatAgeRangeViewName("[CUSTOMER]", "[AGE_RANGE_VIEW]");
+   *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER]", "[AGE_RANGE_VIEW]");
    *   GetAgeRangeViewRequest request = GetAgeRangeViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AgeRangeView response = ageRangeViewServiceClient.getAgeRangeView(request);
    * }
@@ -238,9 +223,9 @@ public class AgeRangeViewServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (AgeRangeViewServiceClient ageRangeViewServiceClient = AgeRangeViewServiceClient.create()) {
-   *   String formattedResourceName = AgeRangeViewServiceClient.formatAgeRangeViewName("[CUSTOMER]", "[AGE_RANGE_VIEW]");
+   *   AgeRangeViewName resourceName = AgeRangeViewName.of("[CUSTOMER]", "[AGE_RANGE_VIEW]");
    *   GetAgeRangeViewRequest request = GetAgeRangeViewRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AgeRangeView&gt; future = ageRangeViewServiceClient.getAgeRangeViewCallable().futureCall(request);
    *   // Do something

@@ -52,63 +52,59 @@ public final class ExtensionFeedItemServiceProto {
       "sion_feed_item_service.proto\022 google.ads" +
       ".googleads.v1.services\032;google/ads/googl" +
       "eads/v1/resources/extension_feed_item.pr" +
-      "oto\032\034google/api/annotations.proto\032 googl" +
-      "e/protobuf/field_mask.proto\032\036google/prot" +
-      "obuf/wrappers.proto\032\027google/api/client.p" +
-      "roto\"4\n\033GetExtensionFeedItemRequest\022\025\n\rr" +
-      "esource_name\030\001 \001(\t\"\237\001\n\037MutateExtensionFe" +
-      "edItemsRequest\022\023\n\013customer_id\030\001 \001(\t\022P\n\no" +
-      "perations\030\002 \003(\0132<.google.ads.googleads.v" +
-      "1.services.ExtensionFeedItemOperation\022\025\n" +
-      "\rvalidate_only\030\004 \001(\010\"\374\001\n\032ExtensionFeedIt" +
-      "emOperation\022/\n\013update_mask\030\004 \001(\0132\032.googl" +
-      "e.protobuf.FieldMask\022F\n\006create\030\001 \001(\01324.g" +
-      "oogle.ads.googleads.v1.resources.Extensi" +
-      "onFeedItemH\000\022F\n\006update\030\002 \001(\01324.google.ad" +
-      "s.googleads.v1.resources.ExtensionFeedIt" +
-      "emH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toperation\"t\n M" +
-      "utateExtensionFeedItemsResponse\022P\n\007resul" +
-      "ts\030\002 \003(\0132?.google.ads.googleads.v1.servi" +
-      "ces.MutateExtensionFeedItemResult\"6\n\035Mut" +
-      "ateExtensionFeedItemResult\022\025\n\rresource_n" +
-      "ame\030\001 \001(\t2\353\003\n\030ExtensionFeedItemService\022\311" +
-      "\001\n\024GetExtensionFeedItem\022=.google.ads.goo" +
-      "gleads.v1.services.GetExtensionFeedItemR" +
-      "equest\0324.google.ads.googleads.v1.resourc" +
-      "es.ExtensionFeedItem\"<\202\323\344\223\0026\0224/v1/{resou" +
-      "rce_name=customers/*/extensionFeedItems/" +
-      "*}\022\345\001\n\030MutateExtensionFeedItems\022A.google" +
-      ".ads.googleads.v1.services.MutateExtensi" +
-      "onFeedItemsRequest\032B.google.ads.googlead" +
-      "s.v1.services.MutateExtensionFeedItemsRe" +
-      "sponse\"B\202\323\344\223\002<\"7/v1/customers/{customer_" +
-      "id=*}/extensionFeedItems:mutate:\001*\032\033\312A\030g" +
-      "oogleads.googleapis.comB\204\002\n$com.google.a" +
-      "ds.googleads.v1.servicesB\035ExtensionFeedI" +
-      "temServiceProtoP\001ZHgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v1/servic" +
-      "es;services\242\002\003GAA\252\002 Google.Ads.GoogleAds" +
-      ".V1.Services\312\002 Google\\Ads\\GoogleAds\\V1\\S" +
-      "ervices\352\002$Google::Ads::GoogleAds::V1::Se" +
-      "rvicesb\006proto3"
+      "oto\032\034google/api/annotations.proto\032\027googl" +
+      "e/api/client.proto\032\037google/api/field_beh" +
+      "avior.proto\032\031google/api/resource.proto\032 " +
+      "google/protobuf/field_mask.proto\"h\n\033GetE" +
+      "xtensionFeedItemRequest\022I\n\rresource_name" +
+      "\030\001 \001(\tB2\340A\002\372A,\n*googleads.googleapis.com" +
+      "/ExtensionFeedItem\"\251\001\n\037MutateExtensionFe" +
+      "edItemsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002" +
+      "\022U\n\noperations\030\002 \003(\0132<.google.ads.google" +
+      "ads.v1.services.ExtensionFeedItemOperati" +
+      "onB\003\340A\002\022\025\n\rvalidate_only\030\004 \001(\010\"\374\001\n\032Exten" +
+      "sionFeedItemOperation\022/\n\013update_mask\030\004 \001" +
+      "(\0132\032.google.protobuf.FieldMask\022F\n\006create" +
+      "\030\001 \001(\01324.google.ads.googleads.v1.resourc" +
+      "es.ExtensionFeedItemH\000\022F\n\006update\030\002 \001(\01324" +
+      ".google.ads.googleads.v1.resources.Exten" +
+      "sionFeedItemH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\toper" +
+      "ation\"t\n MutateExtensionFeedItemsRespons" +
+      "e\022P\n\007results\030\002 \003(\0132?.google.ads.googlead" +
+      "s.v1.services.MutateExtensionFeedItemRes" +
+      "ult\"6\n\035MutateExtensionFeedItemResult\022\025\n\r" +
+      "resource_name\030\001 \001(\t2\224\004\n\030ExtensionFeedIte" +
+      "mService\022\331\001\n\024GetExtensionFeedItem\022=.goog" +
+      "le.ads.googleads.v1.services.GetExtensio" +
+      "nFeedItemRequest\0324.google.ads.googleads." +
+      "v1.resources.ExtensionFeedItem\"L\202\323\344\223\0026\0224" +
+      "/v1/{resource_name=customers/*/extension" +
+      "FeedItems/*}\332A\rresource_name\022\376\001\n\030MutateE" +
+      "xtensionFeedItems\022A.google.ads.googleads" +
+      ".v1.services.MutateExtensionFeedItemsReq" +
+      "uest\032B.google.ads.googleads.v1.services." +
+      "MutateExtensionFeedItemsResponse\"[\202\323\344\223\002<" +
+      "\"7/v1/customers/{customer_id=*}/extensio" +
+      "nFeedItems:mutate:\001*\332A\026customer_id,opera" +
+      "tions\032\033\312A\030googleads.googleapis.comB\204\002\n$c" +
+      "om.google.ads.googleads.v1.servicesB\035Ext" +
+      "ensionFeedItemServiceProtoP\001ZHgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v1/services;services\242\002\003GAA\252\002 Google.Ad" +
+      "s.GoogleAds.V1.Services\312\002 Google\\Ads\\Goo" +
+      "gleAds\\V1\\Services\352\002$Google::Ads::Google" +
+      "Ads::V1::Servicesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.ExtensionFeedItemProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetExtensionFeedItemRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetExtensionFeedItemRequest_fieldAccessorTable = new
@@ -142,14 +138,18 @@ public final class ExtensionFeedItemServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.ExtensionFeedItemProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.FieldMaskProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

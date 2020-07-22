@@ -15,6 +15,7 @@ public interface VideoOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface VideoOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface VideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface VideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.StringValue getId();
   /**
@@ -60,6 +64,7 @@ public interface VideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the channelId field is set.
    */
   boolean hasChannelId();
   /**
@@ -68,6 +73,7 @@ public interface VideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue channel_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The channelId.
    */
   com.google.protobuf.StringValue getChannelId();
   /**
@@ -85,6 +91,7 @@ public interface VideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the durationMillis field is set.
    */
   boolean hasDurationMillis();
   /**
@@ -93,6 +100,7 @@ public interface VideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value duration_millis = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The durationMillis.
    */
   com.google.protobuf.Int64Value getDurationMillis();
   /**
@@ -110,6 +118,7 @@ public interface VideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the title field is set.
    */
   boolean hasTitle();
   /**
@@ -118,6 +127,7 @@ public interface VideoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue title = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The title.
    */
   com.google.protobuf.StringValue getTitle();
   /**

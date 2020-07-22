@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.ListCampaignExperimentAsyncErrorsRequest}
  */
-public  final class ListCampaignExperimentAsyncErrorsRequest extends
+public final class ListCampaignExperimentAsyncErrorsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.ListCampaignExperimentAsyncErrorsRequest)
     ListCampaignExperimentAsyncErrorsRequestOrBuilder {
@@ -115,6 +115,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -136,6 +137,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -163,6 +165,7 @@ private static final long serialVersionUID = 0L;
    * <code>string page_token = 2;</code>
    * @return The pageToken.
    */
+  @java.lang.Override
   public java.lang.String getPageToken() {
     java.lang.Object ref = pageToken_;
     if (ref instanceof java.lang.String) {
@@ -186,6 +189,7 @@ private static final long serialVersionUID = 0L;
    * <code>string page_token = 2;</code>
    * @return The bytes for pageToken.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getPageTokenBytes() {
     java.lang.Object ref = pageToken_;
@@ -212,6 +216,7 @@ private static final long serialVersionUID = 0L;
    * <code>int32 page_size = 3;</code>
    * @return The pageSize.
    */
+  @java.lang.Override
   public int getPageSize() {
     return pageSize_;
   }
@@ -780,6 +785,7 @@ private static final long serialVersionUID = 0L;
      * <code>int32 page_size = 3;</code>
      * @return The pageSize.
      */
+    @java.lang.Override
     public int getPageSize() {
       return pageSize_;
     }

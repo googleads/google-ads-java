@@ -9,44 +9,48 @@ public interface CreateCampaignExperimentRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the customer whose campaign experiment is being created.
+   * Required. The ID of the customer whose campaign experiment is being created.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The customerId.
    */
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * The ID of the customer whose campaign experiment is being created.
+   * Required. The ID of the customer whose campaign experiment is being created.
    * </pre>
    *
-   * <code>string customer_id = 1;</code>
+   * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for customerId.
    */
   com.google.protobuf.ByteString
       getCustomerIdBytes();
 
   /**
    * <pre>
-   * The campaign experiment to be created.
+   * Required. The campaign experiment to be created.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 2;</code>
+   * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return Whether the campaignExperiment field is set.
    */
   boolean hasCampaignExperiment();
   /**
    * <pre>
-   * The campaign experiment to be created.
+   * Required. The campaign experiment to be created.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 2;</code>
+   * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * @return The campaignExperiment.
    */
   com.google.ads.googleads.v1.resources.CampaignExperiment getCampaignExperiment();
   /**
    * <pre>
-   * The campaign experiment to be created.
+   * Required. The campaign experiment to be created.
    * </pre>
    *
-   * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 2;</code>
+   * <code>.google.ads.googleads.v1.resources.CampaignExperiment campaign_experiment = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.ads.googleads.v1.resources.CampaignExperimentOrBuilder getCampaignExperimentOrBuilder();
 
@@ -57,6 +61,7 @@ public interface CreateCampaignExperimentRequestOrBuilder extends
    * </pre>
    *
    * <code>bool validate_only = 3;</code>
+   * @return The validateOnly.
    */
   boolean getValidateOnly();
 }

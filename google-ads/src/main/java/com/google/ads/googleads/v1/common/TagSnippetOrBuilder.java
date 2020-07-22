@@ -13,6 +13,7 @@ public interface TagSnippetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.TrackingCodeTypeEnum.TrackingCodeType type = 1;</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -21,6 +22,7 @@ public interface TagSnippetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.TrackingCodeTypeEnum.TrackingCodeType type = 1;</code>
+   * @return The type.
    */
   com.google.ads.googleads.v1.enums.TrackingCodeTypeEnum.TrackingCodeType getType();
 
@@ -31,6 +33,7 @@ public interface TagSnippetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
+   * @return The enum numeric value on the wire for pageFormat.
    */
   int getPageFormatValue();
   /**
@@ -40,6 +43,7 @@ public interface TagSnippetOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
+   * @return The pageFormat.
    */
   com.google.ads.googleads.v1.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat getPageFormat();
 
@@ -50,6 +54,7 @@ public interface TagSnippetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue global_site_tag = 3;</code>
+   * @return Whether the globalSiteTag field is set.
    */
   boolean hasGlobalSiteTag();
   /**
@@ -59,6 +64,7 @@ public interface TagSnippetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue global_site_tag = 3;</code>
+   * @return The globalSiteTag.
    */
   com.google.protobuf.StringValue getGlobalSiteTag();
   /**
@@ -78,6 +84,7 @@ public interface TagSnippetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue event_snippet = 4;</code>
+   * @return Whether the eventSnippet field is set.
    */
   boolean hasEventSnippet();
   /**
@@ -87,6 +94,7 @@ public interface TagSnippetOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue event_snippet = 4;</code>
+   * @return The eventSnippet.
    */
   com.google.protobuf.StringValue getEventSnippet();
   /**

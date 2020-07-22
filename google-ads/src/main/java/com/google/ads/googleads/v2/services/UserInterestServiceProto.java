@@ -33,36 +33,34 @@ public final class UserInterestServiceProto {
       "eads.v2.services\0325google/ads/googleads/v" +
       "2/resources/user_interest.proto\032\034google/" +
       "api/annotations.proto\032\027google/api/client" +
-      ".proto\"/\n\026GetUserInterestRequest\022\025\n\rreso" +
-      "urce_name\030\001 \001(\t2\352\001\n\023UserInterestService\022" +
-      "\265\001\n\017GetUserInterest\0228.google.ads.googlea" +
-      "ds.v2.services.GetUserInterestRequest\032/." +
-      "google.ads.googleads.v2.resources.UserIn" +
-      "terest\"7\202\323\344\223\0021\022//v2/{resource_name=custo" +
-      "mers/*/userInterests/*}\032\033\312A\030googleads.go" +
-      "ogleapis.comB\377\001\n$com.google.ads.googlead" +
-      "s.v2.servicesB\030UserInterestServiceProtoP" +
-      "\001ZHgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v2/services;services\242\002\003GA" +
-      "A\252\002 Google.Ads.GoogleAds.V2.Services\312\002 G" +
-      "oogle\\Ads\\GoogleAds\\V2\\Services\352\002$Google" +
-      "::Ads::GoogleAds::V2::Servicesb\006proto3"
+      ".proto\032\037google/api/field_behavior.proto\032" +
+      "\031google/api/resource.proto\"^\n\026GetUserInt" +
+      "erestRequest\022D\n\rresource_name\030\001 \001(\tB-\340A\002" +
+      "\372A\'\n%googleads.googleapis.com/UserIntere" +
+      "st2\372\001\n\023UserInterestService\022\305\001\n\017GetUserIn" +
+      "terest\0228.google.ads.googleads.v2.service" +
+      "s.GetUserInterestRequest\032/.google.ads.go" +
+      "ogleads.v2.resources.UserInterest\"G\202\323\344\223\002" +
+      "1\022//v2/{resource_name=customers/*/userIn" +
+      "terests/*}\332A\rresource_name\032\033\312A\030googleads" +
+      ".googleapis.comB\377\001\n$com.google.ads.googl" +
+      "eads.v2.servicesB\030UserInterestServicePro" +
+      "toP\001ZHgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v2/services;services\242\002" +
+      "\003GAA\252\002 Google.Ads.GoogleAds.V2.Services\312" +
+      "\002 Google\\Ads\\GoogleAds\\V2\\Services\352\002$Goo" +
+      "gle::Ads::GoogleAds::V2::Servicesb\006proto" +
+      "3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.resources.UserInterestProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v2_services_GetUserInterestRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_services_GetUserInterestRequest_fieldAccessorTable = new
@@ -72,12 +70,17 @@ public final class UserInterestServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.resources.UserInterestProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

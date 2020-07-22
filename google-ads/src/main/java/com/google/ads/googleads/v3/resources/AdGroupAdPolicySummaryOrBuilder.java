@@ -57,6 +57,7 @@ public interface AdGroupAdPolicySummaryOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for reviewStatus.
    */
   int getReviewStatusValue();
   /**
@@ -65,6 +66,7 @@ public interface AdGroupAdPolicySummaryOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus review_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The reviewStatus.
    */
   com.google.ads.googleads.v3.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus();
 
@@ -75,6 +77,7 @@ public interface AdGroupAdPolicySummaryOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for approvalStatus.
    */
   int getApprovalStatusValue();
   /**
@@ -84,6 +87,7 @@ public interface AdGroupAdPolicySummaryOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The approvalStatus.
    */
   com.google.ads.googleads.v3.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus();
 }

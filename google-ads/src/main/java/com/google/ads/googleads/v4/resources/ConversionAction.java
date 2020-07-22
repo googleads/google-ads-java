@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.ConversionAction}
  */
-public  final class ConversionAction extends
+public final class ConversionAction extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.ConversionAction)
     ConversionActionOrBuilder {
@@ -347,7 +347,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.resources.ConversionAction.AttributionModelSettings}
    */
-  public  static final class AttributionModelSettings extends
+  public static final class AttributionModelSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.ConversionAction.AttributionModelSettings)
       AttributionModelSettingsOrBuilder {
@@ -445,7 +445,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel attribution_model = 1;</code>
      * @return The enum numeric value on the wire for attributionModel.
      */
-    public int getAttributionModelValue() {
+    @java.lang.Override public int getAttributionModelValue() {
       return attributionModel_;
     }
     /**
@@ -456,7 +456,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel attribution_model = 1;</code>
      * @return The attributionModel.
      */
-    public com.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel getAttributionModel() {
+    @java.lang.Override public com.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel getAttributionModel() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel result = com.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel.valueOf(attributionModel_);
       return result == null ? com.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel.UNRECOGNIZED : result;
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for dataDrivenModelStatus.
      */
-    public int getDataDrivenModelStatusValue() {
+    @java.lang.Override public int getDataDrivenModelStatusValue() {
       return dataDrivenModelStatus_;
     }
     /**
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The dataDrivenModelStatus.
      */
-    public com.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus getDataDrivenModelStatus() {
+    @java.lang.Override public com.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus getDataDrivenModelStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus result = com.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus.valueOf(dataDrivenModelStatus_);
       return result == null ? com.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus.UNRECOGNIZED : result;
@@ -821,7 +821,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel attribution_model = 1;</code>
        * @return The enum numeric value on the wire for attributionModel.
        */
-      public int getAttributionModelValue() {
+      @java.lang.Override public int getAttributionModelValue() {
         return attributionModel_;
       }
       /**
@@ -834,6 +834,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAttributionModelValue(int value) {
+        
         attributionModel_ = value;
         onChanged();
         return this;
@@ -846,6 +847,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel attribution_model = 1;</code>
        * @return The attributionModel.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel getAttributionModel() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel result = com.google.ads.googleads.v4.enums.AttributionModelEnum.AttributionModel.valueOf(attributionModel_);
@@ -894,7 +896,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The enum numeric value on the wire for dataDrivenModelStatus.
        */
-      public int getDataDrivenModelStatusValue() {
+      @java.lang.Override public int getDataDrivenModelStatusValue() {
         return dataDrivenModelStatus_;
       }
       /**
@@ -908,6 +910,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDataDrivenModelStatusValue(int value) {
+        
         dataDrivenModelStatus_ = value;
         onChanged();
         return this;
@@ -921,6 +924,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus data_driven_model_status = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The dataDrivenModelStatus.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus getDataDrivenModelStatus() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus result = com.google.ads.googleads.v4.enums.DataDrivenModelStatusEnum.DataDrivenModelStatus.valueOf(dataDrivenModelStatus_);
@@ -1124,7 +1128,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.resources.ConversionAction.ValueSettings}
    */
-  public  static final class ValueSettings extends
+  public static final class ValueSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.ConversionAction.ValueSettings)
       ValueSettingsOrBuilder {
@@ -1249,6 +1253,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.DoubleValue default_value = 1;</code>
      * @return Whether the defaultValue field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultValue() {
       return defaultValue_ != null;
     }
@@ -1262,6 +1267,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.DoubleValue default_value = 1;</code>
      * @return The defaultValue.
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValue getDefaultValue() {
       return defaultValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : defaultValue_;
     }
@@ -1274,6 +1280,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.DoubleValue default_value = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getDefaultValueOrBuilder() {
       return getDefaultValue();
     }
@@ -1290,6 +1297,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue default_currency_code = 2;</code>
      * @return Whether the defaultCurrencyCode field is set.
      */
+    @java.lang.Override
     public boolean hasDefaultCurrencyCode() {
       return defaultCurrencyCode_ != null;
     }
@@ -1303,6 +1311,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue default_currency_code = 2;</code>
      * @return The defaultCurrencyCode.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getDefaultCurrencyCode() {
       return defaultCurrencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : defaultCurrencyCode_;
     }
@@ -1315,6 +1324,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue default_currency_code = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDefaultCurrencyCodeOrBuilder() {
       return getDefaultCurrencyCode();
     }
@@ -1331,6 +1341,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.BoolValue always_use_default_value = 3;</code>
      * @return Whether the alwaysUseDefaultValue field is set.
      */
+    @java.lang.Override
     public boolean hasAlwaysUseDefaultValue() {
       return alwaysUseDefaultValue_ != null;
     }
@@ -1344,6 +1355,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.BoolValue always_use_default_value = 3;</code>
      * @return The alwaysUseDefaultValue.
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValue getAlwaysUseDefaultValue() {
       return alwaysUseDefaultValue_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : alwaysUseDefaultValue_;
     }
@@ -1356,6 +1368,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.BoolValue always_use_default_value = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getAlwaysUseDefaultValueOrBuilder() {
       return getAlwaysUseDefaultValue();
     }
@@ -2349,7 +2362,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.resources.ConversionAction.ThirdPartyAppAnalyticsSettings}
    */
-  public  static final class ThirdPartyAppAnalyticsSettings extends
+  public static final class ThirdPartyAppAnalyticsSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
       ThirdPartyAppAnalyticsSettingsOrBuilder {
@@ -2446,6 +2459,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue event_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the eventName field is set.
      */
+    @java.lang.Override
     public boolean hasEventName() {
       return eventName_ != null;
     }
@@ -2457,6 +2471,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue event_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The eventName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getEventName() {
       return eventName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : eventName_;
     }
@@ -2467,6 +2482,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue event_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getEventNameOrBuilder() {
       return getEventName();
     }
@@ -3062,7 +3078,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.resources.ConversionAction.FirebaseSettings}
    */
-  public  static final class FirebaseSettings extends
+  public static final class FirebaseSettings extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.ConversionAction.FirebaseSettings)
       FirebaseSettingsOrBuilder {
@@ -3172,6 +3188,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue event_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the eventName field is set.
      */
+    @java.lang.Override
     public boolean hasEventName() {
       return eventName_ != null;
     }
@@ -3183,6 +3200,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue event_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The eventName.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getEventName() {
       return eventName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : eventName_;
     }
@@ -3193,6 +3211,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue event_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getEventNameOrBuilder() {
       return getEventName();
     }
@@ -3207,6 +3226,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue project_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the projectId field is set.
      */
+    @java.lang.Override
     public boolean hasProjectId() {
       return projectId_ != null;
     }
@@ -3218,6 +3238,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue project_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The projectId.
      */
+    @java.lang.Override
     public com.google.protobuf.StringValue getProjectId() {
       return projectId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : projectId_;
     }
@@ -3228,6 +3249,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.StringValue project_id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getProjectIdOrBuilder() {
       return getProjectId();
     }
@@ -3955,6 +3977,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -3977,6 +4000,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -4001,6 +4025,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -4012,6 +4037,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -4022,6 +4048,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -4038,6 +4065,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 3;</code>
    * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -4051,6 +4079,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 3;</code>
    * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -4063,6 +4092,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -4077,7 +4107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus status = 4;</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -4088,7 +4118,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus status = 4;</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus result = com.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus.UNRECOGNIZED : result;
@@ -4104,7 +4134,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -4115,7 +4145,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType result = com.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType.UNRECOGNIZED : result;
@@ -4131,7 +4161,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory category = 6;</code>
    * @return The enum numeric value on the wire for category.
    */
-  public int getCategoryValue() {
+  @java.lang.Override public int getCategoryValue() {
     return category_;
   }
   /**
@@ -4142,7 +4172,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory category = 6;</code>
    * @return The category.
    */
-  public com.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory getCategory() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory getCategory() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory result = com.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory.valueOf(category_);
     return result == null ? com.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory.UNRECOGNIZED : result;
@@ -4159,6 +4189,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the ownerCustomer field is set.
    */
+  @java.lang.Override
   public boolean hasOwnerCustomer() {
     return ownerCustomer_ != null;
   }
@@ -4171,6 +4202,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The ownerCustomer.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getOwnerCustomer() {
     return ownerCustomer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ownerCustomer_;
   }
@@ -4182,6 +4214,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue owner_customer = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getOwnerCustomerOrBuilder() {
     return getOwnerCustomer();
   }
@@ -4197,6 +4230,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue include_in_conversions_metric = 8;</code>
    * @return Whether the includeInConversionsMetric field is set.
    */
+  @java.lang.Override
   public boolean hasIncludeInConversionsMetric() {
     return includeInConversionsMetric_ != null;
   }
@@ -4209,6 +4243,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue include_in_conversions_metric = 8;</code>
    * @return The includeInConversionsMetric.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getIncludeInConversionsMetric() {
     return includeInConversionsMetric_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : includeInConversionsMetric_;
   }
@@ -4220,6 +4255,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue include_in_conversions_metric = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getIncludeInConversionsMetricOrBuilder() {
     return getIncludeInConversionsMetric();
   }
@@ -4235,6 +4271,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value click_through_lookback_window_days = 9;</code>
    * @return Whether the clickThroughLookbackWindowDays field is set.
    */
+  @java.lang.Override
   public boolean hasClickThroughLookbackWindowDays() {
     return clickThroughLookbackWindowDays_ != null;
   }
@@ -4247,6 +4284,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value click_through_lookback_window_days = 9;</code>
    * @return The clickThroughLookbackWindowDays.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getClickThroughLookbackWindowDays() {
     return clickThroughLookbackWindowDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : clickThroughLookbackWindowDays_;
   }
@@ -4258,6 +4296,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value click_through_lookback_window_days = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getClickThroughLookbackWindowDaysOrBuilder() {
     return getClickThroughLookbackWindowDays();
   }
@@ -4273,6 +4312,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value view_through_lookback_window_days = 10;</code>
    * @return Whether the viewThroughLookbackWindowDays field is set.
    */
+  @java.lang.Override
   public boolean hasViewThroughLookbackWindowDays() {
     return viewThroughLookbackWindowDays_ != null;
   }
@@ -4285,6 +4325,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value view_through_lookback_window_days = 10;</code>
    * @return The viewThroughLookbackWindowDays.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getViewThroughLookbackWindowDays() {
     return viewThroughLookbackWindowDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : viewThroughLookbackWindowDays_;
   }
@@ -4296,6 +4337,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value view_through_lookback_window_days = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getViewThroughLookbackWindowDaysOrBuilder() {
     return getViewThroughLookbackWindowDays();
   }
@@ -4311,6 +4353,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.ConversionAction.ValueSettings value_settings = 11;</code>
    * @return Whether the valueSettings field is set.
    */
+  @java.lang.Override
   public boolean hasValueSettings() {
     return valueSettings_ != null;
   }
@@ -4323,6 +4366,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.ConversionAction.ValueSettings value_settings = 11;</code>
    * @return The valueSettings.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.ConversionAction.ValueSettings getValueSettings() {
     return valueSettings_ == null ? com.google.ads.googleads.v4.resources.ConversionAction.ValueSettings.getDefaultInstance() : valueSettings_;
   }
@@ -4334,6 +4378,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.ConversionAction.ValueSettings value_settings = 11;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.ConversionAction.ValueSettingsOrBuilder getValueSettingsOrBuilder() {
     return getValueSettings();
   }
@@ -4348,7 +4393,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType counting_type = 12;</code>
    * @return The enum numeric value on the wire for countingType.
    */
-  public int getCountingTypeValue() {
+  @java.lang.Override public int getCountingTypeValue() {
     return countingType_;
   }
   /**
@@ -4359,7 +4404,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType counting_type = 12;</code>
    * @return The countingType.
    */
-  public com.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType getCountingType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType getCountingType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType result = com.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType.valueOf(countingType_);
     return result == null ? com.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType.UNRECOGNIZED : result;
@@ -4375,6 +4420,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.ConversionAction.AttributionModelSettings attribution_model_settings = 13;</code>
    * @return Whether the attributionModelSettings field is set.
    */
+  @java.lang.Override
   public boolean hasAttributionModelSettings() {
     return attributionModelSettings_ != null;
   }
@@ -4386,6 +4432,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.ConversionAction.AttributionModelSettings attribution_model_settings = 13;</code>
    * @return The attributionModelSettings.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.ConversionAction.AttributionModelSettings getAttributionModelSettings() {
     return attributionModelSettings_ == null ? com.google.ads.googleads.v4.resources.ConversionAction.AttributionModelSettings.getDefaultInstance() : attributionModelSettings_;
   }
@@ -4396,6 +4443,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.ConversionAction.AttributionModelSettings attribution_model_settings = 13;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.ConversionAction.AttributionModelSettingsOrBuilder getAttributionModelSettingsOrBuilder() {
     return getAttributionModelSettings();
   }
@@ -4409,6 +4457,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.TagSnippet> getTagSnippetsList() {
     return tagSnippets_;
   }
@@ -4419,6 +4468,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.TagSnippetOrBuilder> 
       getTagSnippetsOrBuilderList() {
     return tagSnippets_;
@@ -4430,6 +4480,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getTagSnippetsCount() {
     return tagSnippets_.size();
   }
@@ -4440,6 +4491,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TagSnippet getTagSnippets(int index) {
     return tagSnippets_.get(index);
   }
@@ -4450,6 +4502,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TagSnippetOrBuilder getTagSnippetsOrBuilder(
       int index) {
     return tagSnippets_.get(index);
@@ -4467,6 +4520,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value phone_call_duration_seconds = 15;</code>
    * @return Whether the phoneCallDurationSeconds field is set.
    */
+  @java.lang.Override
   public boolean hasPhoneCallDurationSeconds() {
     return phoneCallDurationSeconds_ != null;
   }
@@ -4480,6 +4534,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value phone_call_duration_seconds = 15;</code>
    * @return The phoneCallDurationSeconds.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPhoneCallDurationSeconds() {
     return phoneCallDurationSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : phoneCallDurationSeconds_;
   }
@@ -4492,6 +4547,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value phone_call_duration_seconds = 15;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPhoneCallDurationSecondsOrBuilder() {
     return getPhoneCallDurationSeconds();
   }
@@ -4506,6 +4562,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue app_id = 16;</code>
    * @return Whether the appId field is set.
    */
+  @java.lang.Override
   public boolean hasAppId() {
     return appId_ != null;
   }
@@ -4517,6 +4574,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue app_id = 16;</code>
    * @return The appId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAppId() {
     return appId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : appId_;
   }
@@ -4527,6 +4585,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue app_id = 16;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAppIdOrBuilder() {
     return getAppId();
   }
@@ -4541,7 +4600,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor mobile_app_vendor = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for mobileAppVendor.
    */
-  public int getMobileAppVendorValue() {
+  @java.lang.Override public int getMobileAppVendorValue() {
     return mobileAppVendor_;
   }
   /**
@@ -4552,7 +4611,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor mobile_app_vendor = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The mobileAppVendor.
    */
-  public com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor getMobileAppVendor() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor getMobileAppVendor() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor.valueOf(mobileAppVendor_);
     return result == null ? com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor.UNRECOGNIZED : result;
@@ -4568,6 +4627,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.ConversionAction.FirebaseSettings firebase_settings = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the firebaseSettings field is set.
    */
+  @java.lang.Override
   public boolean hasFirebaseSettings() {
     return firebaseSettings_ != null;
   }
@@ -4579,6 +4639,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.ConversionAction.FirebaseSettings firebase_settings = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The firebaseSettings.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.ConversionAction.FirebaseSettings getFirebaseSettings() {
     return firebaseSettings_ == null ? com.google.ads.googleads.v4.resources.ConversionAction.FirebaseSettings.getDefaultInstance() : firebaseSettings_;
   }
@@ -4589,6 +4650,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.ConversionAction.FirebaseSettings firebase_settings = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.ConversionAction.FirebaseSettingsOrBuilder getFirebaseSettingsOrBuilder() {
     return getFirebaseSettings();
   }
@@ -4603,6 +4665,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.ConversionAction.ThirdPartyAppAnalyticsSettings third_party_app_analytics_settings = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the thirdPartyAppAnalyticsSettings field is set.
    */
+  @java.lang.Override
   public boolean hasThirdPartyAppAnalyticsSettings() {
     return thirdPartyAppAnalyticsSettings_ != null;
   }
@@ -4614,6 +4677,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.ConversionAction.ThirdPartyAppAnalyticsSettings third_party_app_analytics_settings = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The thirdPartyAppAnalyticsSettings.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.ConversionAction.ThirdPartyAppAnalyticsSettings getThirdPartyAppAnalyticsSettings() {
     return thirdPartyAppAnalyticsSettings_ == null ? com.google.ads.googleads.v4.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.getDefaultInstance() : thirdPartyAppAnalyticsSettings_;
   }
@@ -4624,6 +4688,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.ConversionAction.ThirdPartyAppAnalyticsSettings third_party_app_analytics_settings = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.ConversionAction.ThirdPartyAppAnalyticsSettingsOrBuilder getThirdPartyAppAnalyticsSettingsOrBuilder() {
     return getThirdPartyAppAnalyticsSettings();
   }
@@ -5874,7 +5939,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus status = 4;</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -5887,6 +5952,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -5899,6 +5965,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus status = 4;</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus result = com.google.ads.googleads.v4.enums.ConversionActionStatusEnum.ConversionActionStatus.valueOf(status_);
@@ -5946,7 +6013,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -5959,6 +6026,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -5971,6 +6039,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType result = com.google.ads.googleads.v4.enums.ConversionActionTypeEnum.ConversionActionType.valueOf(type_);
@@ -6018,7 +6087,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory category = 6;</code>
      * @return The enum numeric value on the wire for category.
      */
-    public int getCategoryValue() {
+    @java.lang.Override public int getCategoryValue() {
       return category_;
     }
     /**
@@ -6031,6 +6100,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCategoryValue(int value) {
+      
       category_ = value;
       onChanged();
       return this;
@@ -6043,6 +6113,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory category = 6;</code>
      * @return The category.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory getCategory() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory result = com.google.ads.googleads.v4.enums.ConversionActionCategoryEnum.ConversionActionCategory.valueOf(category_);
@@ -6910,7 +6981,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType counting_type = 12;</code>
      * @return The enum numeric value on the wire for countingType.
      */
-    public int getCountingTypeValue() {
+    @java.lang.Override public int getCountingTypeValue() {
       return countingType_;
     }
     /**
@@ -6923,6 +6994,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCountingTypeValue(int value) {
+      
       countingType_ = value;
       onChanged();
       return this;
@@ -6935,6 +7007,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType counting_type = 12;</code>
      * @return The countingType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType getCountingType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType result = com.google.ads.googleads.v4.enums.ConversionActionCountingTypeEnum.ConversionActionCountingType.valueOf(countingType_);
@@ -7777,7 +7850,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor mobile_app_vendor = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for mobileAppVendor.
      */
-    public int getMobileAppVendorValue() {
+    @java.lang.Override public int getMobileAppVendorValue() {
       return mobileAppVendor_;
     }
     /**
@@ -7790,6 +7863,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMobileAppVendorValue(int value) {
+      
       mobileAppVendor_ = value;
       onChanged();
       return this;
@@ -7802,6 +7876,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor mobile_app_vendor = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The mobileAppVendor.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor getMobileAppVendor() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v4.enums.MobileAppVendorEnum.MobileAppVendor.valueOf(mobileAppVendor_);

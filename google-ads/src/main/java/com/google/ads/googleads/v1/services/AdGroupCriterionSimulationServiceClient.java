@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.AdGroupCriterionSimulationServi
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -36,8 +35,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (AdGroupCriterionSimulationServiceClient adGroupCriterionSimulationServiceClient = AdGroupCriterionSimulationServiceClient.create()) {
- *   String formattedResourceName = AdGroupCriterionSimulationServiceClient.formatAdGroupCriterionSimulationName("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
- *   AdGroupCriterionSimulation response = adGroupCriterionSimulationServiceClient.getAdGroupCriterionSimulation(formattedResourceName);
+ *   AdGroupCriterionSimulationName resourceName = AdGroupCriterionSimulationName.of("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
+ *   AdGroupCriterionSimulation response = adGroupCriterionSimulationServiceClient.getAdGroupCriterionSimulation(resourceName);
  * }
  * </code>
  * </pre>
@@ -98,52 +97,6 @@ import javax.annotation.Generated;
 public class AdGroupCriterionSimulationServiceClient implements BackgroundResource {
   private final AdGroupCriterionSimulationServiceSettings settings;
   private final AdGroupCriterionSimulationServiceStub stub;
-
-  private static final PathTemplate AD_GROUP_CRITERION_SIMULATION_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/adGroupCriterionSimulations/{ad_group_criterion_simulation}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a
-   * ad_group_criterion_simulation resource.
-   *
-   * @deprecated Use the {@link AdGroupCriterionSimulationName} class instead.
-   */
-  @Deprecated
-  public static final String formatAdGroupCriterionSimulationName(
-      String customer, String adGroupCriterionSimulation) {
-    return AD_GROUP_CRITERION_SIMULATION_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "ad_group_criterion_simulation", adGroupCriterionSimulation);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * ad_group_criterion_simulation resource.
-   *
-   * @deprecated Use the {@link AdGroupCriterionSimulationName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromAdGroupCriterionSimulationName(
-      String adGroupCriterionSimulationName) {
-    return AD_GROUP_CRITERION_SIMULATION_PATH_TEMPLATE
-        .parse(adGroupCriterionSimulationName)
-        .get("customer");
-  }
-
-  /**
-   * Parses the ad_group_criterion_simulation from the given fully-qualified path which represents a
-   * ad_group_criterion_simulation resource.
-   *
-   * @deprecated Use the {@link AdGroupCriterionSimulationName} class instead.
-   */
-  @Deprecated
-  public static final String parseAdGroupCriterionSimulationFromAdGroupCriterionSimulationName(
-      String adGroupCriterionSimulationName) {
-    return AD_GROUP_CRITERION_SIMULATION_PATH_TEMPLATE
-        .parse(adGroupCriterionSimulationName)
-        .get("ad_group_criterion_simulation");
-  }
 
   /** Constructs an instance of AdGroupCriterionSimulationServiceClient with default settings. */
   public static final AdGroupCriterionSimulationServiceClient create() throws IOException {
@@ -206,17 +159,40 @@ public class AdGroupCriterionSimulationServiceClient implements BackgroundResour
    *
    * <pre><code>
    * try (AdGroupCriterionSimulationServiceClient adGroupCriterionSimulationServiceClient = AdGroupCriterionSimulationServiceClient.create()) {
-   *   String formattedResourceName = AdGroupCriterionSimulationServiceClient.formatAdGroupCriterionSimulationName("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
-   *   AdGroupCriterionSimulation response = adGroupCriterionSimulationServiceClient.getAdGroupCriterionSimulation(formattedResourceName);
+   *   AdGroupCriterionSimulationName resourceName = AdGroupCriterionSimulationName.of("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
+   *   AdGroupCriterionSimulation response = adGroupCriterionSimulationServiceClient.getAdGroupCriterionSimulation(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the ad group criterion simulation to fetch.
+   * @param resourceName Required. The resource name of the ad group criterion simulation to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final AdGroupCriterionSimulation getAdGroupCriterionSimulation(
+      AdGroupCriterionSimulationName resourceName) {
+    GetAdGroupCriterionSimulationRequest request =
+        GetAdGroupCriterionSimulationRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getAdGroupCriterionSimulation(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested ad group criterion simulation in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (AdGroupCriterionSimulationServiceClient adGroupCriterionSimulationServiceClient = AdGroupCriterionSimulationServiceClient.create()) {
+   *   AdGroupCriterionSimulationName resourceName = AdGroupCriterionSimulationName.of("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
+   *   AdGroupCriterionSimulation response = adGroupCriterionSimulationServiceClient.getAdGroupCriterionSimulation(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the ad group criterion simulation to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final AdGroupCriterionSimulation getAdGroupCriterionSimulation(String resourceName) {
-    AD_GROUP_CRITERION_SIMULATION_PATH_TEMPLATE.validate(
-        resourceName, "getAdGroupCriterionSimulation");
     GetAdGroupCriterionSimulationRequest request =
         GetAdGroupCriterionSimulationRequest.newBuilder().setResourceName(resourceName).build();
     return getAdGroupCriterionSimulation(request);
@@ -230,9 +206,9 @@ public class AdGroupCriterionSimulationServiceClient implements BackgroundResour
    *
    * <pre><code>
    * try (AdGroupCriterionSimulationServiceClient adGroupCriterionSimulationServiceClient = AdGroupCriterionSimulationServiceClient.create()) {
-   *   String formattedResourceName = AdGroupCriterionSimulationServiceClient.formatAdGroupCriterionSimulationName("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
+   *   AdGroupCriterionSimulationName resourceName = AdGroupCriterionSimulationName.of("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
    *   GetAdGroupCriterionSimulationRequest request = GetAdGroupCriterionSimulationRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   AdGroupCriterionSimulation response = adGroupCriterionSimulationServiceClient.getAdGroupCriterionSimulation(request);
    * }
@@ -254,9 +230,9 @@ public class AdGroupCriterionSimulationServiceClient implements BackgroundResour
    *
    * <pre><code>
    * try (AdGroupCriterionSimulationServiceClient adGroupCriterionSimulationServiceClient = AdGroupCriterionSimulationServiceClient.create()) {
-   *   String formattedResourceName = AdGroupCriterionSimulationServiceClient.formatAdGroupCriterionSimulationName("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
+   *   AdGroupCriterionSimulationName resourceName = AdGroupCriterionSimulationName.of("[CUSTOMER]", "[AD_GROUP_CRITERION_SIMULATION]");
    *   GetAdGroupCriterionSimulationRequest request = GetAdGroupCriterionSimulationRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;AdGroupCriterionSimulation&gt; future = adGroupCriterionSimulationServiceClient.getAdGroupCriterionSimulationCallable().futureCall(request);
    *   // Do something

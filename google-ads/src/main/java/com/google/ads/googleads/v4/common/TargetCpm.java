@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.TargetCpm}
  */
-public  final class TargetCpm extends
+public final class TargetCpm extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.TargetCpm)
     TargetCpmOrBuilder {

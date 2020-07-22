@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.resources;
  *
  * Protobuf type {@code google.ads.googleads.v1.resources.FeedItemAttributeValue}
  */
-public  final class FeedItemAttributeValue extends
+public final class FeedItemAttributeValue extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.resources.FeedItemAttributeValue)
     FeedItemAttributeValueOrBuilder {
@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
     booleanValues_ = java.util.Collections.emptyList();
     stringValues_ = java.util.Collections.emptyList();
     doubleValues_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new FeedItemAttributeValue();
   }
 
   @java.lang.Override
@@ -129,36 +136,36 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 58: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               integerValues_ = new java.util.ArrayList<com.google.protobuf.Int64Value>();
-              mutable_bitField0_ |= 0x00000040;
+              mutable_bitField0_ |= 0x00000001;
             }
             integerValues_.add(
                 input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry));
             break;
           }
           case 66: {
-            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               booleanValues_ = new java.util.ArrayList<com.google.protobuf.BoolValue>();
-              mutable_bitField0_ |= 0x00000080;
+              mutable_bitField0_ |= 0x00000002;
             }
             booleanValues_.add(
                 input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry));
             break;
           }
           case 74: {
-            if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
               stringValues_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
-              mutable_bitField0_ |= 0x00000100;
+              mutable_bitField0_ |= 0x00000004;
             }
             stringValues_.add(
                 input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
             break;
           }
           case 82: {
-            if (!((mutable_bitField0_ & 0x00000200) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               doubleValues_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
-              mutable_bitField0_ |= 0x00000200;
+              mutable_bitField0_ |= 0x00000008;
             }
             doubleValues_.add(
                 input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
@@ -179,16 +186,16 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         integerValues_ = java.util.Collections.unmodifiableList(integerValues_);
       }
-      if (((mutable_bitField0_ & 0x00000080) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         booleanValues_ = java.util.Collections.unmodifiableList(booleanValues_);
       }
-      if (((mutable_bitField0_ & 0x00000100) != 0)) {
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
         stringValues_ = java.util.Collections.unmodifiableList(stringValues_);
       }
-      if (((mutable_bitField0_ & 0x00000200) != 0)) {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
         doubleValues_ = java.util.Collections.unmodifiableList(doubleValues_);
       }
       this.unknownFields = unknownFields.build();
@@ -208,7 +215,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v1.resources.FeedItemAttributeValue.class, com.google.ads.googleads.v1.resources.FeedItemAttributeValue.Builder.class);
   }
 
-  private int bitField0_;
   public static final int FEED_ATTRIBUTE_ID_FIELD_NUMBER = 1;
   private com.google.protobuf.Int64Value feedAttributeId_;
   /**
@@ -217,7 +223,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+   * @return Whether the feedAttributeId field is set.
    */
+  @java.lang.Override
   public boolean hasFeedAttributeId() {
     return feedAttributeId_ != null;
   }
@@ -227,7 +235,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+   * @return The feedAttributeId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getFeedAttributeId() {
     return feedAttributeId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : feedAttributeId_;
   }
@@ -238,6 +248,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getFeedAttributeIdOrBuilder() {
     return getFeedAttributeId();
   }
@@ -251,7 +262,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value integer_value = 2;</code>
+   * @return Whether the integerValue field is set.
    */
+  @java.lang.Override
   public boolean hasIntegerValue() {
     return integerValue_ != null;
   }
@@ -262,7 +275,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.Int64Value integer_value = 2;</code>
+   * @return The integerValue.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getIntegerValue() {
     return integerValue_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : integerValue_;
   }
@@ -274,6 +289,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value integer_value = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIntegerValueOrBuilder() {
     return getIntegerValue();
   }
@@ -287,7 +303,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+   * @return Whether the booleanValue field is set.
    */
+  @java.lang.Override
   public boolean hasBooleanValue() {
     return booleanValue_ != null;
   }
@@ -298,7 +316,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+   * @return The booleanValue.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getBooleanValue() {
     return booleanValue_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : booleanValue_;
   }
@@ -310,6 +330,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getBooleanValueOrBuilder() {
     return getBooleanValue();
   }
@@ -321,12 +342,14 @@ private static final long serialVersionUID = 0L;
    * String value. Should be set if feed_attribute_id refers to a feed attribute
    * of type STRING, URL or DATE_TIME.
    * For STRING the maximum length is 1500 characters. For URL the maximum
-   * length is 2076 characters. For DATE_TIME the format of the string must
-   * be the same as start and end time for the feed item.
+   * length is 2076 characters. For DATE_TIME the string must be in the format
+   * "YYYYMMDD HHMMSS".
    * </pre>
    *
    * <code>.google.protobuf.StringValue string_value = 4;</code>
+   * @return Whether the stringValue field is set.
    */
+  @java.lang.Override
   public boolean hasStringValue() {
     return stringValue_ != null;
   }
@@ -335,12 +358,14 @@ private static final long serialVersionUID = 0L;
    * String value. Should be set if feed_attribute_id refers to a feed attribute
    * of type STRING, URL or DATE_TIME.
    * For STRING the maximum length is 1500 characters. For URL the maximum
-   * length is 2076 characters. For DATE_TIME the format of the string must
-   * be the same as start and end time for the feed item.
+   * length is 2076 characters. For DATE_TIME the string must be in the format
+   * "YYYYMMDD HHMMSS".
    * </pre>
    *
    * <code>.google.protobuf.StringValue string_value = 4;</code>
+   * @return The stringValue.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStringValue() {
     return stringValue_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : stringValue_;
   }
@@ -349,12 +374,13 @@ private static final long serialVersionUID = 0L;
    * String value. Should be set if feed_attribute_id refers to a feed attribute
    * of type STRING, URL or DATE_TIME.
    * For STRING the maximum length is 1500 characters. For URL the maximum
-   * length is 2076 characters. For DATE_TIME the format of the string must
-   * be the same as start and end time for the feed item.
+   * length is 2076 characters. For DATE_TIME the string must be in the format
+   * "YYYYMMDD HHMMSS".
    * </pre>
    *
    * <code>.google.protobuf.StringValue string_value = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStringValueOrBuilder() {
     return getStringValue();
   }
@@ -368,7 +394,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue double_value = 5;</code>
+   * @return Whether the doubleValue field is set.
    */
+  @java.lang.Override
   public boolean hasDoubleValue() {
     return doubleValue_ != null;
   }
@@ -379,7 +407,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue double_value = 5;</code>
+   * @return The doubleValue.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getDoubleValue() {
     return doubleValue_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : doubleValue_;
   }
@@ -391,6 +421,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue double_value = 5;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getDoubleValueOrBuilder() {
     return getDoubleValue();
   }
@@ -404,7 +435,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Money price_value = 6;</code>
+   * @return Whether the priceValue field is set.
    */
+  @java.lang.Override
   public boolean hasPriceValue() {
     return priceValue_ != null;
   }
@@ -415,7 +448,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Money price_value = 6;</code>
+   * @return The priceValue.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.Money getPriceValue() {
     return priceValue_ == null ? com.google.ads.googleads.v1.common.Money.getDefaultInstance() : priceValue_;
   }
@@ -427,6 +462,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.Money price_value = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.MoneyOrBuilder getPriceValueOrBuilder() {
     return getPriceValue();
   }
@@ -441,6 +477,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value integer_values = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.Int64Value> getIntegerValuesList() {
     return integerValues_;
   }
@@ -452,6 +489,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value integer_values = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.Int64ValueOrBuilder> 
       getIntegerValuesOrBuilderList() {
     return integerValues_;
@@ -464,6 +502,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value integer_values = 7;</code>
    */
+  @java.lang.Override
   public int getIntegerValuesCount() {
     return integerValues_.size();
   }
@@ -475,6 +514,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value integer_values = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getIntegerValues(int index) {
     return integerValues_.get(index);
   }
@@ -486,6 +526,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.Int64Value integer_values = 7;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIntegerValuesOrBuilder(
       int index) {
     return integerValues_.get(index);
@@ -501,6 +542,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.BoolValue boolean_values = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.BoolValue> getBooleanValuesList() {
     return booleanValues_;
   }
@@ -512,6 +554,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.BoolValue boolean_values = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.BoolValueOrBuilder> 
       getBooleanValuesOrBuilderList() {
     return booleanValues_;
@@ -524,6 +567,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.BoolValue boolean_values = 8;</code>
    */
+  @java.lang.Override
   public int getBooleanValuesCount() {
     return booleanValues_.size();
   }
@@ -535,6 +579,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.BoolValue boolean_values = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getBooleanValues(int index) {
     return booleanValues_.get(index);
   }
@@ -546,6 +591,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.BoolValue boolean_values = 8;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getBooleanValuesOrBuilder(
       int index) {
     return booleanValues_.get(index);
@@ -567,6 +613,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue string_values = 9;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getStringValuesList() {
     return stringValues_;
   }
@@ -584,6 +631,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue string_values = 9;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getStringValuesOrBuilderList() {
     return stringValues_;
@@ -602,6 +650,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue string_values = 9;</code>
    */
+  @java.lang.Override
   public int getStringValuesCount() {
     return stringValues_.size();
   }
@@ -619,6 +668,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue string_values = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getStringValues(int index) {
     return stringValues_.get(index);
   }
@@ -636,6 +686,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue string_values = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getStringValuesOrBuilder(
       int index) {
     return stringValues_.get(index);
@@ -651,6 +702,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.DoubleValue double_values = 10;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.DoubleValue> getDoubleValuesList() {
     return doubleValues_;
   }
@@ -662,6 +714,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.DoubleValue double_values = 10;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
       getDoubleValuesOrBuilderList() {
     return doubleValues_;
@@ -674,6 +727,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.DoubleValue double_values = 10;</code>
    */
+  @java.lang.Override
   public int getDoubleValuesCount() {
     return doubleValues_.size();
   }
@@ -685,6 +739,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.DoubleValue double_values = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getDoubleValues(int index) {
     return doubleValues_.get(index);
   }
@@ -696,6 +751,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.DoubleValue double_values = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getDoubleValuesOrBuilder(
       int index) {
     return doubleValues_.get(index);
@@ -1077,25 +1133,25 @@ private static final long serialVersionUID = 0L;
       }
       if (integerValuesBuilder_ == null) {
         integerValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         integerValuesBuilder_.clear();
       }
       if (booleanValuesBuilder_ == null) {
         booleanValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         booleanValuesBuilder_.clear();
       }
       if (stringValuesBuilder_ == null) {
         stringValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         stringValuesBuilder_.clear();
       }
       if (doubleValuesBuilder_ == null) {
         doubleValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
         doubleValuesBuilder_.clear();
       }
@@ -1126,7 +1182,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v1.resources.FeedItemAttributeValue buildPartial() {
       com.google.ads.googleads.v1.resources.FeedItemAttributeValue result = new com.google.ads.googleads.v1.resources.FeedItemAttributeValue(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (feedAttributeIdBuilder_ == null) {
         result.feedAttributeId_ = feedAttributeId_;
       } else {
@@ -1158,42 +1213,41 @@ private static final long serialVersionUID = 0L;
         result.priceValue_ = priceValueBuilder_.build();
       }
       if (integerValuesBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           integerValues_ = java.util.Collections.unmodifiableList(integerValues_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.integerValues_ = integerValues_;
       } else {
         result.integerValues_ = integerValuesBuilder_.build();
       }
       if (booleanValuesBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           booleanValues_ = java.util.Collections.unmodifiableList(booleanValues_);
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.booleanValues_ = booleanValues_;
       } else {
         result.booleanValues_ = booleanValuesBuilder_.build();
       }
       if (stringValuesBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           stringValues_ = java.util.Collections.unmodifiableList(stringValues_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.stringValues_ = stringValues_;
       } else {
         result.stringValues_ = stringValuesBuilder_.build();
       }
       if (doubleValuesBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           doubleValues_ = java.util.Collections.unmodifiableList(doubleValues_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.doubleValues_ = doubleValues_;
       } else {
         result.doubleValues_ = doubleValuesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -1264,7 +1318,7 @@ private static final long serialVersionUID = 0L;
         if (!other.integerValues_.isEmpty()) {
           if (integerValues_.isEmpty()) {
             integerValues_ = other.integerValues_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureIntegerValuesIsMutable();
             integerValues_.addAll(other.integerValues_);
@@ -1277,7 +1331,7 @@ private static final long serialVersionUID = 0L;
             integerValuesBuilder_.dispose();
             integerValuesBuilder_ = null;
             integerValues_ = other.integerValues_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
             integerValuesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getIntegerValuesFieldBuilder() : null;
@@ -1290,7 +1344,7 @@ private static final long serialVersionUID = 0L;
         if (!other.booleanValues_.isEmpty()) {
           if (booleanValues_.isEmpty()) {
             booleanValues_ = other.booleanValues_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureBooleanValuesIsMutable();
             booleanValues_.addAll(other.booleanValues_);
@@ -1303,7 +1357,7 @@ private static final long serialVersionUID = 0L;
             booleanValuesBuilder_.dispose();
             booleanValuesBuilder_ = null;
             booleanValues_ = other.booleanValues_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000002);
             booleanValuesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getBooleanValuesFieldBuilder() : null;
@@ -1316,7 +1370,7 @@ private static final long serialVersionUID = 0L;
         if (!other.stringValues_.isEmpty()) {
           if (stringValues_.isEmpty()) {
             stringValues_ = other.stringValues_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureStringValuesIsMutable();
             stringValues_.addAll(other.stringValues_);
@@ -1329,7 +1383,7 @@ private static final long serialVersionUID = 0L;
             stringValuesBuilder_.dispose();
             stringValuesBuilder_ = null;
             stringValues_ = other.stringValues_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000004);
             stringValuesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getStringValuesFieldBuilder() : null;
@@ -1342,7 +1396,7 @@ private static final long serialVersionUID = 0L;
         if (!other.doubleValues_.isEmpty()) {
           if (doubleValues_.isEmpty()) {
             doubleValues_ = other.doubleValues_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureDoubleValuesIsMutable();
             doubleValues_.addAll(other.doubleValues_);
@@ -1355,7 +1409,7 @@ private static final long serialVersionUID = 0L;
             doubleValuesBuilder_.dispose();
             doubleValuesBuilder_ = null;
             doubleValues_ = other.doubleValues_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00000008);
             doubleValuesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDoubleValuesFieldBuilder() : null;
@@ -1403,6 +1457,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * @return Whether the feedAttributeId field is set.
      */
     public boolean hasFeedAttributeId() {
       return feedAttributeIdBuilder_ != null || feedAttributeId_ != null;
@@ -1413,6 +1468,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value feed_attribute_id = 1;</code>
+     * @return The feedAttributeId.
      */
     public com.google.protobuf.Int64Value getFeedAttributeId() {
       if (feedAttributeIdBuilder_ == null) {
@@ -1557,6 +1613,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value integer_value = 2;</code>
+     * @return Whether the integerValue field is set.
      */
     public boolean hasIntegerValue() {
       return integerValueBuilder_ != null || integerValue_ != null;
@@ -1568,6 +1625,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.Int64Value integer_value = 2;</code>
+     * @return The integerValue.
      */
     public com.google.protobuf.Int64Value getIntegerValue() {
       if (integerValueBuilder_ == null) {
@@ -1719,6 +1777,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+     * @return Whether the booleanValue field is set.
      */
     public boolean hasBooleanValue() {
       return booleanValueBuilder_ != null || booleanValue_ != null;
@@ -1730,6 +1789,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.BoolValue boolean_value = 3;</code>
+     * @return The booleanValue.
      */
     public com.google.protobuf.BoolValue getBooleanValue() {
       if (booleanValueBuilder_ == null) {
@@ -1879,11 +1939,12 @@ private static final long serialVersionUID = 0L;
      * String value. Should be set if feed_attribute_id refers to a feed attribute
      * of type STRING, URL or DATE_TIME.
      * For STRING the maximum length is 1500 characters. For URL the maximum
-     * length is 2076 characters. For DATE_TIME the format of the string must
-     * be the same as start and end time for the feed item.
+     * length is 2076 characters. For DATE_TIME the string must be in the format
+     * "YYYYMMDD HHMMSS".
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 4;</code>
+     * @return Whether the stringValue field is set.
      */
     public boolean hasStringValue() {
       return stringValueBuilder_ != null || stringValue_ != null;
@@ -1893,11 +1954,12 @@ private static final long serialVersionUID = 0L;
      * String value. Should be set if feed_attribute_id refers to a feed attribute
      * of type STRING, URL or DATE_TIME.
      * For STRING the maximum length is 1500 characters. For URL the maximum
-     * length is 2076 characters. For DATE_TIME the format of the string must
-     * be the same as start and end time for the feed item.
+     * length is 2076 characters. For DATE_TIME the string must be in the format
+     * "YYYYMMDD HHMMSS".
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 4;</code>
+     * @return The stringValue.
      */
     public com.google.protobuf.StringValue getStringValue() {
       if (stringValueBuilder_ == null) {
@@ -1911,8 +1973,8 @@ private static final long serialVersionUID = 0L;
      * String value. Should be set if feed_attribute_id refers to a feed attribute
      * of type STRING, URL or DATE_TIME.
      * For STRING the maximum length is 1500 characters. For URL the maximum
-     * length is 2076 characters. For DATE_TIME the format of the string must
-     * be the same as start and end time for the feed item.
+     * length is 2076 characters. For DATE_TIME the string must be in the format
+     * "YYYYMMDD HHMMSS".
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 4;</code>
@@ -1935,8 +1997,8 @@ private static final long serialVersionUID = 0L;
      * String value. Should be set if feed_attribute_id refers to a feed attribute
      * of type STRING, URL or DATE_TIME.
      * For STRING the maximum length is 1500 characters. For URL the maximum
-     * length is 2076 characters. For DATE_TIME the format of the string must
-     * be the same as start and end time for the feed item.
+     * length is 2076 characters. For DATE_TIME the string must be in the format
+     * "YYYYMMDD HHMMSS".
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 4;</code>
@@ -1957,8 +2019,8 @@ private static final long serialVersionUID = 0L;
      * String value. Should be set if feed_attribute_id refers to a feed attribute
      * of type STRING, URL or DATE_TIME.
      * For STRING the maximum length is 1500 characters. For URL the maximum
-     * length is 2076 characters. For DATE_TIME the format of the string must
-     * be the same as start and end time for the feed item.
+     * length is 2076 characters. For DATE_TIME the string must be in the format
+     * "YYYYMMDD HHMMSS".
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 4;</code>
@@ -1983,8 +2045,8 @@ private static final long serialVersionUID = 0L;
      * String value. Should be set if feed_attribute_id refers to a feed attribute
      * of type STRING, URL or DATE_TIME.
      * For STRING the maximum length is 1500 characters. For URL the maximum
-     * length is 2076 characters. For DATE_TIME the format of the string must
-     * be the same as start and end time for the feed item.
+     * length is 2076 characters. For DATE_TIME the string must be in the format
+     * "YYYYMMDD HHMMSS".
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 4;</code>
@@ -2005,8 +2067,8 @@ private static final long serialVersionUID = 0L;
      * String value. Should be set if feed_attribute_id refers to a feed attribute
      * of type STRING, URL or DATE_TIME.
      * For STRING the maximum length is 1500 characters. For URL the maximum
-     * length is 2076 characters. For DATE_TIME the format of the string must
-     * be the same as start and end time for the feed item.
+     * length is 2076 characters. For DATE_TIME the string must be in the format
+     * "YYYYMMDD HHMMSS".
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 4;</code>
@@ -2021,8 +2083,8 @@ private static final long serialVersionUID = 0L;
      * String value. Should be set if feed_attribute_id refers to a feed attribute
      * of type STRING, URL or DATE_TIME.
      * For STRING the maximum length is 1500 characters. For URL the maximum
-     * length is 2076 characters. For DATE_TIME the format of the string must
-     * be the same as start and end time for the feed item.
+     * length is 2076 characters. For DATE_TIME the string must be in the format
+     * "YYYYMMDD HHMMSS".
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 4;</code>
@@ -2040,8 +2102,8 @@ private static final long serialVersionUID = 0L;
      * String value. Should be set if feed_attribute_id refers to a feed attribute
      * of type STRING, URL or DATE_TIME.
      * For STRING the maximum length is 1500 characters. For URL the maximum
-     * length is 2076 characters. For DATE_TIME the format of the string must
-     * be the same as start and end time for the feed item.
+     * length is 2076 characters. For DATE_TIME the string must be in the format
+     * "YYYYMMDD HHMMSS".
      * </pre>
      *
      * <code>.google.protobuf.StringValue string_value = 4;</code>
@@ -2070,6 +2132,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue double_value = 5;</code>
+     * @return Whether the doubleValue field is set.
      */
     public boolean hasDoubleValue() {
       return doubleValueBuilder_ != null || doubleValue_ != null;
@@ -2081,6 +2144,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue double_value = 5;</code>
+     * @return The doubleValue.
      */
     public com.google.protobuf.DoubleValue getDoubleValue() {
       if (doubleValueBuilder_ == null) {
@@ -2232,6 +2296,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.Money price_value = 6;</code>
+     * @return Whether the priceValue field is set.
      */
     public boolean hasPriceValue() {
       return priceValueBuilder_ != null || priceValue_ != null;
@@ -2243,6 +2308,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.Money price_value = 6;</code>
+     * @return The priceValue.
      */
     public com.google.ads.googleads.v1.common.Money getPriceValue() {
       if (priceValueBuilder_ == null) {
@@ -2387,9 +2453,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.Int64Value> integerValues_ =
       java.util.Collections.emptyList();
     private void ensureIntegerValuesIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         integerValues_ = new java.util.ArrayList<com.google.protobuf.Int64Value>(integerValues_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -2594,7 +2660,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearIntegerValues() {
       if (integerValuesBuilder_ == null) {
         integerValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         integerValuesBuilder_.clear();
@@ -2706,7 +2772,7 @@ private static final long serialVersionUID = 0L;
         integerValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
                 integerValues_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         integerValues_ = null;
@@ -2717,9 +2783,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.BoolValue> booleanValues_ =
       java.util.Collections.emptyList();
     private void ensureBooleanValuesIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         booleanValues_ = new java.util.ArrayList<com.google.protobuf.BoolValue>(booleanValues_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -2924,7 +2990,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearBooleanValues() {
       if (booleanValuesBuilder_ == null) {
         booleanValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         booleanValuesBuilder_.clear();
@@ -3036,7 +3102,7 @@ private static final long serialVersionUID = 0L;
         booleanValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
                 booleanValues_,
-                ((bitField0_ & 0x00000080) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         booleanValues_ = null;
@@ -3047,9 +3113,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.StringValue> stringValues_ =
       java.util.Collections.emptyList();
     private void ensureStringValuesIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         stringValues_ = new java.util.ArrayList<com.google.protobuf.StringValue>(stringValues_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -3320,7 +3386,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearStringValues() {
       if (stringValuesBuilder_ == null) {
         stringValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         stringValuesBuilder_.clear();
@@ -3474,7 +3540,7 @@ private static final long serialVersionUID = 0L;
         stringValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
                 stringValues_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         stringValues_ = null;
@@ -3485,9 +3551,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.protobuf.DoubleValue> doubleValues_ =
       java.util.Collections.emptyList();
     private void ensureDoubleValuesIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         doubleValues_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(doubleValues_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -3692,7 +3758,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDoubleValues() {
       if (doubleValuesBuilder_ == null) {
         doubleValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         doubleValuesBuilder_.clear();
@@ -3804,7 +3870,7 @@ private static final long serialVersionUID = 0L;
         doubleValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
                 doubleValues_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         doubleValues_ = null;

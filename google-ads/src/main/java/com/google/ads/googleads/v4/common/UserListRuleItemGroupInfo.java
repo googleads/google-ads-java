@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.UserListRuleItemGroupInfo}
  */
-public  final class UserListRuleItemGroupInfo extends
+public final class UserListRuleItemGroupInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.UserListRuleItemGroupInfo)
     UserListRuleItemGroupInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListRuleItemInfo rule_items = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.UserListRuleItemInfo> getRuleItemsList() {
     return ruleItems_;
   }
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListRuleItemInfo rule_items = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.UserListRuleItemInfoOrBuilder> 
       getRuleItemsOrBuilderList() {
     return ruleItems_;
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListRuleItemInfo rule_items = 1;</code>
    */
+  @java.lang.Override
   public int getRuleItemsCount() {
     return ruleItems_.size();
   }
@@ -138,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListRuleItemInfo rule_items = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListRuleItemInfo getRuleItems(int index) {
     return ruleItems_.get(index);
   }
@@ -148,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListRuleItemInfo rule_items = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListRuleItemInfoOrBuilder getRuleItemsOrBuilder(
       int index) {
     return ruleItems_.get(index);

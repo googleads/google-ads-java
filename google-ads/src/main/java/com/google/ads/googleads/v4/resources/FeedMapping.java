@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.FeedMapping}
  */
-public  final class FeedMapping extends
+public final class FeedMapping extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.FeedMapping)
     FeedMappingOrBuilder {
@@ -190,6 +190,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -212,6 +213,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -236,6 +238,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feed field is set.
    */
+  @java.lang.Override
   public boolean hasFeed() {
     return feed_ != null;
   }
@@ -247,6 +250,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The feed.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFeed() {
     return feed_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : feed_;
   }
@@ -257,6 +261,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFeedOrBuilder() {
     return getFeed();
   }
@@ -274,6 +279,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.resources.AttributeFieldMapping> getAttributeFieldMappingsList() {
     return attributeFieldMappings_;
   }
@@ -288,6 +294,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.resources.AttributeFieldMappingOrBuilder> 
       getAttributeFieldMappingsOrBuilderList() {
     return attributeFieldMappings_;
@@ -303,6 +310,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public int getAttributeFieldMappingsCount() {
     return attributeFieldMappings_.size();
   }
@@ -317,6 +325,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AttributeFieldMapping getAttributeFieldMappings(int index) {
     return attributeFieldMappings_.get(index);
   }
@@ -331,6 +340,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.resources.AttributeFieldMapping attribute_field_mappings = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AttributeFieldMappingOrBuilder getAttributeFieldMappingsOrBuilder(
       int index) {
     return attributeFieldMappings_.get(index);
@@ -347,7 +357,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -359,7 +369,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus result = com.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus.UNRECOGNIZED : result;
@@ -1575,7 +1585,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1589,6 +1599,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1602,6 +1613,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus result = com.google.ads.googleads.v4.enums.FeedMappingStatusEnum.FeedMappingStatus.valueOf(status_);
@@ -1651,6 +1663,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for placeholderType.
      */
+    @java.lang.Override
     public int getPlaceholderTypeValue() {
       if (targetCase_ == 3) {
         return ((java.lang.Integer) target_).intValue();
@@ -1682,6 +1695,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The placeholderType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType() {
       if (targetCase_ == 3) {
         @SuppressWarnings("deprecation")
@@ -1737,6 +1751,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for criterionType.
      */
+    @java.lang.Override
     public int getCriterionTypeValue() {
       if (targetCase_ == 4) {
         return ((java.lang.Integer) target_).intValue();
@@ -1768,6 +1783,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The criterionType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType getCriterionType() {
       if (targetCase_ == 4) {
         @SuppressWarnings("deprecation")

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.AdGroupCriterion}
  */
-public  final class AdGroupCriterion extends
+public final class AdGroupCriterion extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.AdGroupCriterion)
     AdGroupCriterionOrBuilder {
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.resources.AdGroupCriterion.QualityInfo}
    */
-  public  static final class QualityInfo extends
+  public static final class QualityInfo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.AdGroupCriterion.QualityInfo)
       QualityInfoOrBuilder {
@@ -881,6 +881,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int32Value quality_score = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the qualityScore field is set.
      */
+    @java.lang.Override
     public boolean hasQualityScore() {
       return qualityScore_ != null;
     }
@@ -894,6 +895,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int32Value quality_score = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The qualityScore.
      */
+    @java.lang.Override
     public com.google.protobuf.Int32Value getQualityScore() {
       return qualityScore_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : qualityScore_;
     }
@@ -906,6 +908,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int32Value quality_score = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int32ValueOrBuilder getQualityScoreOrBuilder() {
       return getQualityScore();
     }
@@ -920,7 +923,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket creative_quality_score = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for creativeQualityScore.
      */
-    public int getCreativeQualityScoreValue() {
+    @java.lang.Override public int getCreativeQualityScoreValue() {
       return creativeQualityScore_;
     }
     /**
@@ -931,7 +934,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket creative_quality_score = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The creativeQualityScore.
      */
-    public com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket getCreativeQualityScore() {
+    @java.lang.Override public com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket getCreativeQualityScore() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(creativeQualityScore_);
       return result == null ? com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
@@ -947,7 +950,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket post_click_quality_score = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for postClickQualityScore.
      */
-    public int getPostClickQualityScoreValue() {
+    @java.lang.Override public int getPostClickQualityScoreValue() {
       return postClickQualityScore_;
     }
     /**
@@ -958,7 +961,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket post_click_quality_score = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The postClickQualityScore.
      */
-    public com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket getPostClickQualityScore() {
+    @java.lang.Override public com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket getPostClickQualityScore() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(postClickQualityScore_);
       return result == null ? com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
@@ -974,7 +977,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket search_predicted_ctr = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for searchPredictedCtr.
      */
-    public int getSearchPredictedCtrValue() {
+    @java.lang.Override public int getSearchPredictedCtrValue() {
       return searchPredictedCtr_;
     }
     /**
@@ -985,7 +988,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket search_predicted_ctr = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The searchPredictedCtr.
      */
-    public com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket getSearchPredictedCtr() {
+    @java.lang.Override public com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket getSearchPredictedCtr() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(searchPredictedCtr_);
       return result == null ? com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket.UNRECOGNIZED : result;
@@ -1540,7 +1543,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket creative_quality_score = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The enum numeric value on the wire for creativeQualityScore.
        */
-      public int getCreativeQualityScoreValue() {
+      @java.lang.Override public int getCreativeQualityScoreValue() {
         return creativeQualityScore_;
       }
       /**
@@ -1553,6 +1556,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCreativeQualityScoreValue(int value) {
+        
         creativeQualityScore_ = value;
         onChanged();
         return this;
@@ -1565,6 +1569,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket creative_quality_score = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The creativeQualityScore.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket getCreativeQualityScore() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(creativeQualityScore_);
@@ -1612,7 +1617,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket post_click_quality_score = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The enum numeric value on the wire for postClickQualityScore.
        */
-      public int getPostClickQualityScoreValue() {
+      @java.lang.Override public int getPostClickQualityScoreValue() {
         return postClickQualityScore_;
       }
       /**
@@ -1625,6 +1630,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setPostClickQualityScoreValue(int value) {
+        
         postClickQualityScore_ = value;
         onChanged();
         return this;
@@ -1637,6 +1643,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket post_click_quality_score = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The postClickQualityScore.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket getPostClickQualityScore() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(postClickQualityScore_);
@@ -1684,7 +1691,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket search_predicted_ctr = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The enum numeric value on the wire for searchPredictedCtr.
        */
-      public int getSearchPredictedCtrValue() {
+      @java.lang.Override public int getSearchPredictedCtrValue() {
         return searchPredictedCtr_;
       }
       /**
@@ -1697,6 +1704,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setSearchPredictedCtrValue(int value) {
+        
         searchPredictedCtr_ = value;
         onChanged();
         return this;
@@ -1709,6 +1717,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket search_predicted_ctr = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The searchPredictedCtr.
        */
+      @java.lang.Override
       public com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket getSearchPredictedCtr() {
         @SuppressWarnings("deprecation")
         com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket result = com.google.ads.googleads.v4.enums.QualityScoreBucketEnum.QualityScoreBucket.valueOf(searchPredictedCtr_);
@@ -1960,7 +1969,7 @@ private static final long serialVersionUID = 0L;
    *
    * Protobuf type {@code google.ads.googleads.v4.resources.AdGroupCriterion.PositionEstimates}
    */
-  public  static final class PositionEstimates extends
+  public static final class PositionEstimates extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.AdGroupCriterion.PositionEstimates)
       PositionEstimatesOrBuilder {
@@ -2110,6 +2119,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value first_page_cpc_micros = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the firstPageCpcMicros field is set.
      */
+    @java.lang.Override
     public boolean hasFirstPageCpcMicros() {
       return firstPageCpcMicros_ != null;
     }
@@ -2122,6 +2132,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value first_page_cpc_micros = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The firstPageCpcMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFirstPageCpcMicros() {
       return firstPageCpcMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : firstPageCpcMicros_;
     }
@@ -2133,6 +2144,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value first_page_cpc_micros = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFirstPageCpcMicrosOrBuilder() {
       return getFirstPageCpcMicros();
     }
@@ -2148,6 +2160,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value first_position_cpc_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the firstPositionCpcMicros field is set.
      */
+    @java.lang.Override
     public boolean hasFirstPositionCpcMicros() {
       return firstPositionCpcMicros_ != null;
     }
@@ -2160,6 +2173,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value first_position_cpc_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The firstPositionCpcMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getFirstPositionCpcMicros() {
       return firstPositionCpcMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : firstPositionCpcMicros_;
     }
@@ -2171,6 +2185,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value first_position_cpc_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getFirstPositionCpcMicrosOrBuilder() {
       return getFirstPositionCpcMicros();
     }
@@ -2186,6 +2201,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value top_of_page_cpc_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the topOfPageCpcMicros field is set.
      */
+    @java.lang.Override
     public boolean hasTopOfPageCpcMicros() {
       return topOfPageCpcMicros_ != null;
     }
@@ -2198,6 +2214,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value top_of_page_cpc_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The topOfPageCpcMicros.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getTopOfPageCpcMicros() {
       return topOfPageCpcMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : topOfPageCpcMicros_;
     }
@@ -2209,6 +2226,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value top_of_page_cpc_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getTopOfPageCpcMicrosOrBuilder() {
       return getTopOfPageCpcMicros();
     }
@@ -2224,6 +2242,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the estimatedAddClicksAtFirstPositionCpc field is set.
      */
+    @java.lang.Override
     public boolean hasEstimatedAddClicksAtFirstPositionCpc() {
       return estimatedAddClicksAtFirstPositionCpc_ != null;
     }
@@ -2236,6 +2255,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The estimatedAddClicksAtFirstPositionCpc.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getEstimatedAddClicksAtFirstPositionCpc() {
       return estimatedAddClicksAtFirstPositionCpc_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : estimatedAddClicksAtFirstPositionCpc_;
     }
@@ -2247,6 +2267,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value estimated_add_clicks_at_first_position_cpc = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getEstimatedAddClicksAtFirstPositionCpcOrBuilder() {
       return getEstimatedAddClicksAtFirstPositionCpc();
     }
@@ -2262,6 +2283,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the estimatedAddCostAtFirstPositionCpc field is set.
      */
+    @java.lang.Override
     public boolean hasEstimatedAddCostAtFirstPositionCpc() {
       return estimatedAddCostAtFirstPositionCpc_ != null;
     }
@@ -2274,6 +2296,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The estimatedAddCostAtFirstPositionCpc.
      */
+    @java.lang.Override
     public com.google.protobuf.Int64Value getEstimatedAddCostAtFirstPositionCpc() {
       return estimatedAddCostAtFirstPositionCpc_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : estimatedAddCostAtFirstPositionCpc_;
     }
@@ -2285,6 +2308,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.protobuf.Int64Value estimated_add_cost_at_first_position_cpc = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
+    @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getEstimatedAddCostAtFirstPositionCpcOrBuilder() {
       return getEstimatedAddCostAtFirstPositionCpc();
     }
@@ -3685,6 +3709,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -3707,6 +3732,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -3732,6 +3758,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the criterionId field is set.
    */
+  @java.lang.Override
   public boolean hasCriterionId() {
     return criterionId_ != null;
   }
@@ -3744,6 +3771,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The criterionId.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCriterionId() {
     return criterionId_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : criterionId_;
   }
@@ -3755,6 +3783,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value criterion_id = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCriterionIdOrBuilder() {
     return getCriterionId();
   }
@@ -3777,7 +3806,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus status = 3;</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -3796,7 +3825,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus status = 3;</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus result = com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus.UNRECOGNIZED : result;
@@ -3812,6 +3841,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.AdGroupCriterion.QualityInfo quality_info = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the qualityInfo field is set.
    */
+  @java.lang.Override
   public boolean hasQualityInfo() {
     return qualityInfo_ != null;
   }
@@ -3823,6 +3853,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.AdGroupCriterion.QualityInfo quality_info = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The qualityInfo.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdGroupCriterion.QualityInfo getQualityInfo() {
     return qualityInfo_ == null ? com.google.ads.googleads.v4.resources.AdGroupCriterion.QualityInfo.getDefaultInstance() : qualityInfo_;
   }
@@ -3833,6 +3864,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.AdGroupCriterion.QualityInfo quality_info = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdGroupCriterion.QualityInfoOrBuilder getQualityInfoOrBuilder() {
     return getQualityInfo();
   }
@@ -3847,6 +3879,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
+  @java.lang.Override
   public boolean hasAdGroup() {
     return adGroup_ != null;
   }
@@ -3858,6 +3891,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdGroup() {
     return adGroup_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : adGroup_;
   }
@@ -3868,6 +3902,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue ad_group = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdGroupOrBuilder() {
     return getAdGroup();
   }
@@ -3882,7 +3917,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType type = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -3893,7 +3928,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType type = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType result = com.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType.UNRECOGNIZED : result;
@@ -3911,6 +3946,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue negative = 31 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the negative field is set.
    */
+  @java.lang.Override
   public boolean hasNegative() {
     return negative_ != null;
   }
@@ -3924,6 +3960,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue negative = 31 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The negative.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getNegative() {
     return negative_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : negative_;
   }
@@ -3936,6 +3973,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue negative = 31 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getNegativeOrBuilder() {
     return getNegative();
   }
@@ -3950,7 +3988,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus system_serving_status = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for systemServingStatus.
    */
-  public int getSystemServingStatusValue() {
+  @java.lang.Override public int getSystemServingStatusValue() {
     return systemServingStatus_;
   }
   /**
@@ -3961,7 +3999,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus system_serving_status = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The systemServingStatus.
    */
-  public com.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus getSystemServingStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus getSystemServingStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus result = com.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus.valueOf(systemServingStatus_);
     return result == null ? com.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus.UNRECOGNIZED : result;
@@ -3977,7 +4015,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for approvalStatus.
    */
-  public int getApprovalStatusValue() {
+  @java.lang.Override public int getApprovalStatusValue() {
     return approvalStatus_;
   }
   /**
@@ -3988,7 +4026,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvalStatus.
    */
-  public com.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus getApprovalStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus getApprovalStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus result = com.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.valueOf(approvalStatus_);
     return result == null ? com.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.UNRECOGNIZED : result;
@@ -4006,6 +4044,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue disapproval_reasons = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getDisapprovalReasonsList() {
     return disapprovalReasons_;
   }
@@ -4019,6 +4058,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue disapproval_reasons = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getDisapprovalReasonsOrBuilderList() {
     return disapprovalReasons_;
@@ -4033,6 +4073,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue disapproval_reasons = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public int getDisapprovalReasonsCount() {
     return disapprovalReasons_.size();
   }
@@ -4046,6 +4087,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue disapproval_reasons = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getDisapprovalReasons(int index) {
     return disapprovalReasons_.get(index);
   }
@@ -4059,6 +4101,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue disapproval_reasons = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDisapprovalReasonsOrBuilder(
       int index) {
     return disapprovalReasons_.get(index);
@@ -4075,6 +4118,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue bid_modifier = 44;</code>
    * @return Whether the bidModifier field is set.
    */
+  @java.lang.Override
   public boolean hasBidModifier() {
     return bidModifier_ != null;
   }
@@ -4087,6 +4131,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue bid_modifier = 44;</code>
    * @return The bidModifier.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getBidModifier() {
     return bidModifier_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : bidModifier_;
   }
@@ -4098,6 +4143,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue bid_modifier = 44;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getBidModifierOrBuilder() {
     return getBidModifier();
   }
@@ -4112,6 +4158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 16;</code>
    * @return Whether the cpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpcBidMicros() {
     return cpcBidMicros_ != null;
   }
@@ -4123,6 +4170,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 16;</code>
    * @return The cpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpcBidMicros() {
     return cpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpcBidMicros_;
   }
@@ -4133,6 +4181,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpc_bid_micros = 16;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpcBidMicrosOrBuilder() {
     return getCpcBidMicros();
   }
@@ -4147,6 +4196,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpm_bid_micros = 17;</code>
    * @return Whether the cpmBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpmBidMicros() {
     return cpmBidMicros_ != null;
   }
@@ -4158,6 +4208,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpm_bid_micros = 17;</code>
    * @return The cpmBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpmBidMicros() {
     return cpmBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpmBidMicros_;
   }
@@ -4168,6 +4219,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpm_bid_micros = 17;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpmBidMicrosOrBuilder() {
     return getCpmBidMicros();
   }
@@ -4182,6 +4234,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 24;</code>
    * @return Whether the cpvBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasCpvBidMicros() {
     return cpvBidMicros_ != null;
   }
@@ -4193,6 +4246,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 24;</code>
    * @return The cpvBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getCpvBidMicros() {
     return cpvBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cpvBidMicros_;
   }
@@ -4203,6 +4257,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value cpv_bid_micros = 24;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCpvBidMicrosOrBuilder() {
     return getCpvBidMicros();
   }
@@ -4219,6 +4274,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
    * @return Whether the percentCpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasPercentCpcBidMicros() {
     return percentCpcBidMicros_ != null;
   }
@@ -4232,6 +4288,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
    * @return The percentCpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getPercentCpcBidMicros() {
     return percentCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : percentCpcBidMicros_;
   }
@@ -4244,6 +4301,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value percent_cpc_bid_micros = 33;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPercentCpcBidMicrosOrBuilder() {
     return getPercentCpcBidMicros();
   }
@@ -4258,6 +4316,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value effective_cpc_bid_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectiveCpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasEffectiveCpcBidMicros() {
     return effectiveCpcBidMicros_ != null;
   }
@@ -4269,6 +4328,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value effective_cpc_bid_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getEffectiveCpcBidMicros() {
     return effectiveCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveCpcBidMicros_;
   }
@@ -4279,6 +4339,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value effective_cpc_bid_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getEffectiveCpcBidMicrosOrBuilder() {
     return getEffectiveCpcBidMicros();
   }
@@ -4293,6 +4354,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value effective_cpm_bid_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectiveCpmBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasEffectiveCpmBidMicros() {
     return effectiveCpmBidMicros_ != null;
   }
@@ -4304,6 +4366,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value effective_cpm_bid_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCpmBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getEffectiveCpmBidMicros() {
     return effectiveCpmBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveCpmBidMicros_;
   }
@@ -4314,6 +4377,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value effective_cpm_bid_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getEffectiveCpmBidMicrosOrBuilder() {
     return getEffectiveCpmBidMicros();
   }
@@ -4328,6 +4392,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value effective_cpv_bid_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectiveCpvBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasEffectiveCpvBidMicros() {
     return effectiveCpvBidMicros_ != null;
   }
@@ -4339,6 +4404,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value effective_cpv_bid_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCpvBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getEffectiveCpvBidMicros() {
     return effectiveCpvBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveCpvBidMicros_;
   }
@@ -4349,6 +4415,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value effective_cpv_bid_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getEffectiveCpvBidMicrosOrBuilder() {
     return getEffectiveCpvBidMicros();
   }
@@ -4363,6 +4430,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectivePercentCpcBidMicros field is set.
    */
+  @java.lang.Override
   public boolean hasEffectivePercentCpcBidMicros() {
     return effectivePercentCpcBidMicros_ != null;
   }
@@ -4374,6 +4442,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectivePercentCpcBidMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getEffectivePercentCpcBidMicros() {
     return effectivePercentCpcBidMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectivePercentCpcBidMicros_;
   }
@@ -4384,6 +4453,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value effective_percent_cpc_bid_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getEffectivePercentCpcBidMicrosOrBuilder() {
     return getEffectivePercentCpcBidMicros();
   }
@@ -4398,7 +4468,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for effectiveCpcBidSource.
    */
-  public int getEffectiveCpcBidSourceValue() {
+  @java.lang.Override public int getEffectiveCpcBidSourceValue() {
     return effectiveCpcBidSource_;
   }
   /**
@@ -4409,7 +4479,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCpcBidSource.
    */
-  public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectiveCpcBidSource() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectiveCpcBidSource() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpcBidSource_);
     return result == null ? com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
@@ -4425,7 +4495,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for effectiveCpmBidSource.
    */
-  public int getEffectiveCpmBidSourceValue() {
+  @java.lang.Override public int getEffectiveCpmBidSourceValue() {
     return effectiveCpmBidSource_;
   }
   /**
@@ -4436,7 +4506,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCpmBidSource.
    */
-  public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectiveCpmBidSource() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectiveCpmBidSource() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpmBidSource_);
     return result == null ? com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
@@ -4452,7 +4522,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for effectiveCpvBidSource.
    */
-  public int getEffectiveCpvBidSourceValue() {
+  @java.lang.Override public int getEffectiveCpvBidSourceValue() {
     return effectiveCpvBidSource_;
   }
   /**
@@ -4463,7 +4533,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCpvBidSource.
    */
-  public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpvBidSource_);
     return result == null ? com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
@@ -4479,7 +4549,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for effectivePercentCpcBidSource.
    */
-  public int getEffectivePercentCpcBidSourceValue() {
+  @java.lang.Override public int getEffectivePercentCpcBidSourceValue() {
     return effectivePercentCpcBidSource_;
   }
   /**
@@ -4490,7 +4560,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectivePercentCpcBidSource.
    */
-  public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectivePercentCpcBidSource() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectivePercentCpcBidSource() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.valueOf(effectivePercentCpcBidSource_);
     return result == null ? com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.UNRECOGNIZED : result;
@@ -4506,6 +4576,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.AdGroupCriterion.PositionEstimates position_estimates = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the positionEstimates field is set.
    */
+  @java.lang.Override
   public boolean hasPositionEstimates() {
     return positionEstimates_ != null;
   }
@@ -4517,6 +4588,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.resources.AdGroupCriterion.PositionEstimates position_estimates = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The positionEstimates.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdGroupCriterion.PositionEstimates getPositionEstimates() {
     return positionEstimates_ == null ? com.google.ads.googleads.v4.resources.AdGroupCriterion.PositionEstimates.getDefaultInstance() : positionEstimates_;
   }
@@ -4527,6 +4599,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.resources.AdGroupCriterion.PositionEstimates position_estimates = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.resources.AdGroupCriterion.PositionEstimatesOrBuilder getPositionEstimatesOrBuilder() {
     return getPositionEstimates();
   }
@@ -4541,6 +4614,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 11;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalUrlsList() {
     return finalUrls_;
   }
@@ -4552,6 +4626,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 11;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalUrlsOrBuilderList() {
     return finalUrls_;
@@ -4564,6 +4639,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 11;</code>
    */
+  @java.lang.Override
   public int getFinalUrlsCount() {
     return finalUrls_.size();
   }
@@ -4575,6 +4651,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrls(int index) {
     return finalUrls_.get(index);
   }
@@ -4586,6 +4663,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_urls = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlsOrBuilder(
       int index) {
     return finalUrls_.get(index);
@@ -4600,6 +4678,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 51;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.protobuf.StringValue> getFinalMobileUrlsList() {
     return finalMobileUrls_;
   }
@@ -4610,6 +4689,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 51;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
       getFinalMobileUrlsOrBuilderList() {
     return finalMobileUrls_;
@@ -4621,6 +4701,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 51;</code>
    */
+  @java.lang.Override
   public int getFinalMobileUrlsCount() {
     return finalMobileUrls_.size();
   }
@@ -4631,6 +4712,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 51;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalMobileUrls(int index) {
     return finalMobileUrls_.get(index);
   }
@@ -4641,6 +4723,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.protobuf.StringValue final_mobile_urls = 51;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalMobileUrlsOrBuilder(
       int index) {
     return finalMobileUrls_.get(index);
@@ -4656,6 +4739,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue final_url_suffix = 50;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
+  @java.lang.Override
   public boolean hasFinalUrlSuffix() {
     return finalUrlSuffix_ != null;
   }
@@ -4667,6 +4751,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue final_url_suffix = 50;</code>
    * @return The finalUrlSuffix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getFinalUrlSuffix() {
     return finalUrlSuffix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : finalUrlSuffix_;
   }
@@ -4677,6 +4762,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 50;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getFinalUrlSuffixOrBuilder() {
     return getFinalUrlSuffix();
   }
@@ -4691,6 +4777,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
+  @java.lang.Override
   public boolean hasTrackingUrlTemplate() {
     return trackingUrlTemplate_ != null;
   }
@@ -4702,6 +4789,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
    * @return The trackingUrlTemplate.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTrackingUrlTemplate() {
     return trackingUrlTemplate_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : trackingUrlTemplate_;
   }
@@ -4712,6 +4800,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 13;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTrackingUrlTemplateOrBuilder() {
     return getTrackingUrlTemplate();
   }
@@ -4726,6 +4815,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 14;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.CustomParameter> getUrlCustomParametersList() {
     return urlCustomParameters_;
   }
@@ -4737,6 +4827,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 14;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.CustomParameterOrBuilder> 
       getUrlCustomParametersOrBuilderList() {
     return urlCustomParameters_;
@@ -4749,6 +4840,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 14;</code>
    */
+  @java.lang.Override
   public int getUrlCustomParametersCount() {
     return urlCustomParameters_.size();
   }
@@ -4760,6 +4852,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 14;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomParameter getUrlCustomParameters(int index) {
     return urlCustomParameters_.get(index);
   }
@@ -4771,6 +4864,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.CustomParameter url_custom_parameters = 14;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomParameterOrBuilder getUrlCustomParametersOrBuilder(
       int index) {
     return urlCustomParameters_.get(index);
@@ -4785,6 +4879,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.KeywordInfo keyword = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the keyword field is set.
    */
+  @java.lang.Override
   public boolean hasKeyword() {
     return criterionCase_ == 27;
   }
@@ -4796,6 +4891,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.KeywordInfo keyword = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The keyword.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.KeywordInfo getKeyword() {
     if (criterionCase_ == 27) {
        return (com.google.ads.googleads.v4.common.KeywordInfo) criterion_;
@@ -4809,6 +4905,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.KeywordInfo keyword = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.KeywordInfoOrBuilder getKeywordOrBuilder() {
     if (criterionCase_ == 27) {
        return (com.google.ads.googleads.v4.common.KeywordInfo) criterion_;
@@ -4825,6 +4922,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PlacementInfo placement = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the placement field is set.
    */
+  @java.lang.Override
   public boolean hasPlacement() {
     return criterionCase_ == 28;
   }
@@ -4836,6 +4934,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.PlacementInfo placement = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The placement.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PlacementInfo getPlacement() {
     if (criterionCase_ == 28) {
        return (com.google.ads.googleads.v4.common.PlacementInfo) criterion_;
@@ -4849,6 +4948,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.PlacementInfo placement = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.PlacementInfoOrBuilder getPlacementOrBuilder() {
     if (criterionCase_ == 28) {
        return (com.google.ads.googleads.v4.common.PlacementInfo) criterion_;
@@ -4865,6 +4965,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.MobileAppCategoryInfo mobile_app_category = 29 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the mobileAppCategory field is set.
    */
+  @java.lang.Override
   public boolean hasMobileAppCategory() {
     return criterionCase_ == 29;
   }
@@ -4876,6 +4977,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.MobileAppCategoryInfo mobile_app_category = 29 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The mobileAppCategory.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.MobileAppCategoryInfo getMobileAppCategory() {
     if (criterionCase_ == 29) {
        return (com.google.ads.googleads.v4.common.MobileAppCategoryInfo) criterion_;
@@ -4889,6 +4991,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.MobileAppCategoryInfo mobile_app_category = 29 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder() {
     if (criterionCase_ == 29) {
        return (com.google.ads.googleads.v4.common.MobileAppCategoryInfo) criterion_;
@@ -4905,6 +5008,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.MobileApplicationInfo mobile_application = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the mobileApplication field is set.
    */
+  @java.lang.Override
   public boolean hasMobileApplication() {
     return criterionCase_ == 30;
   }
@@ -4916,6 +5020,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.MobileApplicationInfo mobile_application = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The mobileApplication.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.MobileApplicationInfo getMobileApplication() {
     if (criterionCase_ == 30) {
        return (com.google.ads.googleads.v4.common.MobileApplicationInfo) criterion_;
@@ -4929,6 +5034,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.MobileApplicationInfo mobile_application = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder() {
     if (criterionCase_ == 30) {
        return (com.google.ads.googleads.v4.common.MobileApplicationInfo) criterion_;
@@ -4945,6 +5051,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ListingGroupInfo listing_group = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the listingGroup field is set.
    */
+  @java.lang.Override
   public boolean hasListingGroup() {
     return criterionCase_ == 32;
   }
@@ -4956,6 +5063,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ListingGroupInfo listing_group = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The listingGroup.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ListingGroupInfo getListingGroup() {
     if (criterionCase_ == 32) {
        return (com.google.ads.googleads.v4.common.ListingGroupInfo) criterion_;
@@ -4969,6 +5077,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ListingGroupInfo listing_group = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ListingGroupInfoOrBuilder getListingGroupOrBuilder() {
     if (criterionCase_ == 32) {
        return (com.google.ads.googleads.v4.common.ListingGroupInfo) criterion_;
@@ -4985,6 +5094,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AgeRangeInfo age_range = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the ageRange field is set.
    */
+  @java.lang.Override
   public boolean hasAgeRange() {
     return criterionCase_ == 36;
   }
@@ -4996,6 +5106,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AgeRangeInfo age_range = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The ageRange.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AgeRangeInfo getAgeRange() {
     if (criterionCase_ == 36) {
        return (com.google.ads.googleads.v4.common.AgeRangeInfo) criterion_;
@@ -5009,6 +5120,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.AgeRangeInfo age_range = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AgeRangeInfoOrBuilder getAgeRangeOrBuilder() {
     if (criterionCase_ == 36) {
        return (com.google.ads.googleads.v4.common.AgeRangeInfo) criterion_;
@@ -5025,6 +5137,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.GenderInfo gender = 37 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the gender field is set.
    */
+  @java.lang.Override
   public boolean hasGender() {
     return criterionCase_ == 37;
   }
@@ -5036,6 +5149,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.GenderInfo gender = 37 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The gender.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.GenderInfo getGender() {
     if (criterionCase_ == 37) {
        return (com.google.ads.googleads.v4.common.GenderInfo) criterion_;
@@ -5049,6 +5163,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.GenderInfo gender = 37 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.GenderInfoOrBuilder getGenderOrBuilder() {
     if (criterionCase_ == 37) {
        return (com.google.ads.googleads.v4.common.GenderInfo) criterion_;
@@ -5065,6 +5180,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.IncomeRangeInfo income_range = 38 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the incomeRange field is set.
    */
+  @java.lang.Override
   public boolean hasIncomeRange() {
     return criterionCase_ == 38;
   }
@@ -5076,6 +5192,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.IncomeRangeInfo income_range = 38 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The incomeRange.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.IncomeRangeInfo getIncomeRange() {
     if (criterionCase_ == 38) {
        return (com.google.ads.googleads.v4.common.IncomeRangeInfo) criterion_;
@@ -5089,6 +5206,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.IncomeRangeInfo income_range = 38 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.IncomeRangeInfoOrBuilder getIncomeRangeOrBuilder() {
     if (criterionCase_ == 38) {
        return (com.google.ads.googleads.v4.common.IncomeRangeInfo) criterion_;
@@ -5105,6 +5223,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ParentalStatusInfo parental_status = 39 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the parentalStatus field is set.
    */
+  @java.lang.Override
   public boolean hasParentalStatus() {
     return criterionCase_ == 39;
   }
@@ -5116,6 +5235,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.ParentalStatusInfo parental_status = 39 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The parentalStatus.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ParentalStatusInfo getParentalStatus() {
     if (criterionCase_ == 39) {
        return (com.google.ads.googleads.v4.common.ParentalStatusInfo) criterion_;
@@ -5129,6 +5249,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.ParentalStatusInfo parental_status = 39 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.ParentalStatusInfoOrBuilder getParentalStatusOrBuilder() {
     if (criterionCase_ == 39) {
        return (com.google.ads.googleads.v4.common.ParentalStatusInfo) criterion_;
@@ -5145,6 +5266,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the userList field is set.
    */
+  @java.lang.Override
   public boolean hasUserList() {
     return criterionCase_ == 42;
   }
@@ -5156,6 +5278,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The userList.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListInfo getUserList() {
     if (criterionCase_ == 42) {
        return (com.google.ads.googleads.v4.common.UserListInfo) criterion_;
@@ -5169,6 +5292,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListInfoOrBuilder getUserListOrBuilder() {
     if (criterionCase_ == 42) {
        return (com.google.ads.googleads.v4.common.UserListInfo) criterion_;
@@ -5185,6 +5309,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.YouTubeVideoInfo youtube_video = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the youtubeVideo field is set.
    */
+  @java.lang.Override
   public boolean hasYoutubeVideo() {
     return criterionCase_ == 40;
   }
@@ -5196,6 +5321,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.YouTubeVideoInfo youtube_video = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The youtubeVideo.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.YouTubeVideoInfo getYoutubeVideo() {
     if (criterionCase_ == 40) {
        return (com.google.ads.googleads.v4.common.YouTubeVideoInfo) criterion_;
@@ -5209,6 +5335,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.YouTubeVideoInfo youtube_video = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder() {
     if (criterionCase_ == 40) {
        return (com.google.ads.googleads.v4.common.YouTubeVideoInfo) criterion_;
@@ -5225,6 +5352,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.YouTubeChannelInfo youtube_channel = 41 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the youtubeChannel field is set.
    */
+  @java.lang.Override
   public boolean hasYoutubeChannel() {
     return criterionCase_ == 41;
   }
@@ -5236,6 +5364,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.YouTubeChannelInfo youtube_channel = 41 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The youtubeChannel.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.YouTubeChannelInfo getYoutubeChannel() {
     if (criterionCase_ == 41) {
        return (com.google.ads.googleads.v4.common.YouTubeChannelInfo) criterion_;
@@ -5249,6 +5378,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.YouTubeChannelInfo youtube_channel = 41 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder() {
     if (criterionCase_ == 41) {
        return (com.google.ads.googleads.v4.common.YouTubeChannelInfo) criterion_;
@@ -5265,6 +5395,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.TopicInfo topic = 43 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the topic field is set.
    */
+  @java.lang.Override
   public boolean hasTopic() {
     return criterionCase_ == 43;
   }
@@ -5276,6 +5407,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.TopicInfo topic = 43 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The topic.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TopicInfo getTopic() {
     if (criterionCase_ == 43) {
        return (com.google.ads.googleads.v4.common.TopicInfo) criterion_;
@@ -5289,6 +5421,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.TopicInfo topic = 43 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.TopicInfoOrBuilder getTopicOrBuilder() {
     if (criterionCase_ == 43) {
        return (com.google.ads.googleads.v4.common.TopicInfo) criterion_;
@@ -5305,6 +5438,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserInterestInfo user_interest = 45 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the userInterest field is set.
    */
+  @java.lang.Override
   public boolean hasUserInterest() {
     return criterionCase_ == 45;
   }
@@ -5316,6 +5450,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.UserInterestInfo user_interest = 45 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The userInterest.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserInterestInfo getUserInterest() {
     if (criterionCase_ == 45) {
        return (com.google.ads.googleads.v4.common.UserInterestInfo) criterion_;
@@ -5329,6 +5464,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.UserInterestInfo user_interest = 45 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserInterestInfoOrBuilder getUserInterestOrBuilder() {
     if (criterionCase_ == 45) {
        return (com.google.ads.googleads.v4.common.UserInterestInfo) criterion_;
@@ -5345,6 +5481,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.WebpageInfo webpage = 46 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the webpage field is set.
    */
+  @java.lang.Override
   public boolean hasWebpage() {
     return criterionCase_ == 46;
   }
@@ -5356,6 +5493,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.WebpageInfo webpage = 46 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The webpage.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.WebpageInfo getWebpage() {
     if (criterionCase_ == 46) {
        return (com.google.ads.googleads.v4.common.WebpageInfo) criterion_;
@@ -5369,6 +5507,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.WebpageInfo webpage = 46 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.WebpageInfoOrBuilder getWebpageOrBuilder() {
     if (criterionCase_ == 46) {
        return (com.google.ads.googleads.v4.common.WebpageInfo) criterion_;
@@ -5385,6 +5524,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AppPaymentModelInfo app_payment_model = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the appPaymentModel field is set.
    */
+  @java.lang.Override
   public boolean hasAppPaymentModel() {
     return criterionCase_ == 47;
   }
@@ -5396,6 +5536,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AppPaymentModelInfo app_payment_model = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The appPaymentModel.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AppPaymentModelInfo getAppPaymentModel() {
     if (criterionCase_ == 47) {
        return (com.google.ads.googleads.v4.common.AppPaymentModelInfo) criterion_;
@@ -5409,6 +5550,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.AppPaymentModelInfo app_payment_model = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AppPaymentModelInfoOrBuilder getAppPaymentModelOrBuilder() {
     if (criterionCase_ == 47) {
        return (com.google.ads.googleads.v4.common.AppPaymentModelInfo) criterion_;
@@ -5425,6 +5567,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CustomAffinityInfo custom_affinity = 48 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the customAffinity field is set.
    */
+  @java.lang.Override
   public boolean hasCustomAffinity() {
     return criterionCase_ == 48;
   }
@@ -5436,6 +5579,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CustomAffinityInfo custom_affinity = 48 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The customAffinity.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomAffinityInfo getCustomAffinity() {
     if (criterionCase_ == 48) {
        return (com.google.ads.googleads.v4.common.CustomAffinityInfo) criterion_;
@@ -5449,6 +5593,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.CustomAffinityInfo custom_affinity = 48 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomAffinityInfoOrBuilder getCustomAffinityOrBuilder() {
     if (criterionCase_ == 48) {
        return (com.google.ads.googleads.v4.common.CustomAffinityInfo) criterion_;
@@ -5465,6 +5610,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CustomIntentInfo custom_intent = 49 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the customIntent field is set.
    */
+  @java.lang.Override
   public boolean hasCustomIntent() {
     return criterionCase_ == 49;
   }
@@ -5476,6 +5622,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.CustomIntentInfo custom_intent = 49 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The customIntent.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomIntentInfo getCustomIntent() {
     if (criterionCase_ == 49) {
        return (com.google.ads.googleads.v4.common.CustomIntentInfo) criterion_;
@@ -5489,6 +5636,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.CustomIntentInfo custom_intent = 49 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.CustomIntentInfoOrBuilder getCustomIntentOrBuilder() {
     if (criterionCase_ == 49) {
        return (com.google.ads.googleads.v4.common.CustomIntentInfo) criterion_;
@@ -7419,7 +7567,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus status = 3;</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -7440,6 +7588,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -7460,6 +7609,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus status = 3;</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus result = com.google.ads.googleads.v4.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus.valueOf(status_);
@@ -7833,7 +7983,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType type = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -7846,6 +7996,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -7858,6 +8009,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType type = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType result = com.google.ads.googleads.v4.enums.CriterionTypeEnum.CriterionType.valueOf(type_);
@@ -8078,7 +8230,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus system_serving_status = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for systemServingStatus.
      */
-    public int getSystemServingStatusValue() {
+    @java.lang.Override public int getSystemServingStatusValue() {
       return systemServingStatus_;
     }
     /**
@@ -8091,6 +8243,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSystemServingStatusValue(int value) {
+      
       systemServingStatus_ = value;
       onChanged();
       return this;
@@ -8103,6 +8256,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus system_serving_status = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The systemServingStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus getSystemServingStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus result = com.google.ads.googleads.v4.enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus.valueOf(systemServingStatus_);
@@ -8150,7 +8304,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for approvalStatus.
      */
-    public int getApprovalStatusValue() {
+    @java.lang.Override public int getApprovalStatusValue() {
       return approvalStatus_;
     }
     /**
@@ -8163,6 +8317,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setApprovalStatusValue(int value) {
+      
       approvalStatus_ = value;
       onChanged();
       return this;
@@ -8175,6 +8330,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus approval_status = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The approvalStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus getApprovalStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus result = com.google.ads.googleads.v4.enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.valueOf(approvalStatus_);
@@ -10010,7 +10166,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for effectiveCpcBidSource.
      */
-    public int getEffectiveCpcBidSourceValue() {
+    @java.lang.Override public int getEffectiveCpcBidSourceValue() {
       return effectiveCpcBidSource_;
     }
     /**
@@ -10023,6 +10179,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveCpcBidSourceValue(int value) {
+      
       effectiveCpcBidSource_ = value;
       onChanged();
       return this;
@@ -10035,6 +10192,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpc_bid_source = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The effectiveCpcBidSource.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectiveCpcBidSource() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpcBidSource_);
@@ -10082,7 +10240,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for effectiveCpmBidSource.
      */
-    public int getEffectiveCpmBidSourceValue() {
+    @java.lang.Override public int getEffectiveCpmBidSourceValue() {
       return effectiveCpmBidSource_;
     }
     /**
@@ -10095,6 +10253,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveCpmBidSourceValue(int value) {
+      
       effectiveCpmBidSource_ = value;
       onChanged();
       return this;
@@ -10107,6 +10266,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpm_bid_source = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The effectiveCpmBidSource.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectiveCpmBidSource() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpmBidSource_);
@@ -10154,7 +10314,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for effectiveCpvBidSource.
      */
-    public int getEffectiveCpvBidSourceValue() {
+    @java.lang.Override public int getEffectiveCpvBidSourceValue() {
       return effectiveCpvBidSource_;
     }
     /**
@@ -10167,6 +10327,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveCpvBidSourceValue(int value) {
+      
       effectiveCpvBidSource_ = value;
       onChanged();
       return this;
@@ -10179,6 +10340,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_cpv_bid_source = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The effectiveCpvBidSource.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectiveCpvBidSource() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.valueOf(effectiveCpvBidSource_);
@@ -10226,7 +10388,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for effectivePercentCpcBidSource.
      */
-    public int getEffectivePercentCpcBidSourceValue() {
+    @java.lang.Override public int getEffectivePercentCpcBidSourceValue() {
       return effectivePercentCpcBidSource_;
     }
     /**
@@ -10239,6 +10401,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectivePercentCpcBidSourceValue(int value) {
+      
       effectivePercentCpcBidSource_ = value;
       onChanged();
       return this;
@@ -10251,6 +10414,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource effective_percent_cpc_bid_source = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The effectivePercentCpcBidSource.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource getEffectivePercentCpcBidSource() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource result = com.google.ads.googleads.v4.enums.BiddingSourceEnum.BiddingSource.valueOf(effectivePercentCpcBidSource_);
@@ -11736,6 +11900,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.KeywordInfo keyword = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the keyword field is set.
      */
+    @java.lang.Override
     public boolean hasKeyword() {
       return criterionCase_ == 27;
     }
@@ -11747,6 +11912,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.KeywordInfo keyword = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The keyword.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.KeywordInfo getKeyword() {
       if (keywordBuilder_ == null) {
         if (criterionCase_ == 27) {
@@ -11864,6 +12030,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.KeywordInfo keyword = 27 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.KeywordInfoOrBuilder getKeywordOrBuilder() {
       if ((criterionCase_ == 27) && (keywordBuilder_ != null)) {
         return keywordBuilder_.getMessageOrBuilder();
@@ -11910,6 +12077,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PlacementInfo placement = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the placement field is set.
      */
+    @java.lang.Override
     public boolean hasPlacement() {
       return criterionCase_ == 28;
     }
@@ -11921,6 +12089,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.PlacementInfo placement = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The placement.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PlacementInfo getPlacement() {
       if (placementBuilder_ == null) {
         if (criterionCase_ == 28) {
@@ -12038,6 +12207,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.PlacementInfo placement = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.PlacementInfoOrBuilder getPlacementOrBuilder() {
       if ((criterionCase_ == 28) && (placementBuilder_ != null)) {
         return placementBuilder_.getMessageOrBuilder();
@@ -12084,6 +12254,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.MobileAppCategoryInfo mobile_app_category = 29 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the mobileAppCategory field is set.
      */
+    @java.lang.Override
     public boolean hasMobileAppCategory() {
       return criterionCase_ == 29;
     }
@@ -12095,6 +12266,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.MobileAppCategoryInfo mobile_app_category = 29 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The mobileAppCategory.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.MobileAppCategoryInfo getMobileAppCategory() {
       if (mobileAppCategoryBuilder_ == null) {
         if (criterionCase_ == 29) {
@@ -12212,6 +12384,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.MobileAppCategoryInfo mobile_app_category = 29 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.MobileAppCategoryInfoOrBuilder getMobileAppCategoryOrBuilder() {
       if ((criterionCase_ == 29) && (mobileAppCategoryBuilder_ != null)) {
         return mobileAppCategoryBuilder_.getMessageOrBuilder();
@@ -12258,6 +12431,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.MobileApplicationInfo mobile_application = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the mobileApplication field is set.
      */
+    @java.lang.Override
     public boolean hasMobileApplication() {
       return criterionCase_ == 30;
     }
@@ -12269,6 +12443,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.MobileApplicationInfo mobile_application = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The mobileApplication.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.MobileApplicationInfo getMobileApplication() {
       if (mobileApplicationBuilder_ == null) {
         if (criterionCase_ == 30) {
@@ -12386,6 +12561,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.MobileApplicationInfo mobile_application = 30 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder() {
       if ((criterionCase_ == 30) && (mobileApplicationBuilder_ != null)) {
         return mobileApplicationBuilder_.getMessageOrBuilder();
@@ -12432,6 +12608,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ListingGroupInfo listing_group = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the listingGroup field is set.
      */
+    @java.lang.Override
     public boolean hasListingGroup() {
       return criterionCase_ == 32;
     }
@@ -12443,6 +12620,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ListingGroupInfo listing_group = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The listingGroup.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ListingGroupInfo getListingGroup() {
       if (listingGroupBuilder_ == null) {
         if (criterionCase_ == 32) {
@@ -12560,6 +12738,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.ListingGroupInfo listing_group = 32 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ListingGroupInfoOrBuilder getListingGroupOrBuilder() {
       if ((criterionCase_ == 32) && (listingGroupBuilder_ != null)) {
         return listingGroupBuilder_.getMessageOrBuilder();
@@ -12606,6 +12785,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.AgeRangeInfo age_range = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the ageRange field is set.
      */
+    @java.lang.Override
     public boolean hasAgeRange() {
       return criterionCase_ == 36;
     }
@@ -12617,6 +12797,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.AgeRangeInfo age_range = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The ageRange.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.AgeRangeInfo getAgeRange() {
       if (ageRangeBuilder_ == null) {
         if (criterionCase_ == 36) {
@@ -12734,6 +12915,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.AgeRangeInfo age_range = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.AgeRangeInfoOrBuilder getAgeRangeOrBuilder() {
       if ((criterionCase_ == 36) && (ageRangeBuilder_ != null)) {
         return ageRangeBuilder_.getMessageOrBuilder();
@@ -12780,6 +12962,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.GenderInfo gender = 37 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the gender field is set.
      */
+    @java.lang.Override
     public boolean hasGender() {
       return criterionCase_ == 37;
     }
@@ -12791,6 +12974,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.GenderInfo gender = 37 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The gender.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.GenderInfo getGender() {
       if (genderBuilder_ == null) {
         if (criterionCase_ == 37) {
@@ -12908,6 +13092,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.GenderInfo gender = 37 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.GenderInfoOrBuilder getGenderOrBuilder() {
       if ((criterionCase_ == 37) && (genderBuilder_ != null)) {
         return genderBuilder_.getMessageOrBuilder();
@@ -12954,6 +13139,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.IncomeRangeInfo income_range = 38 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the incomeRange field is set.
      */
+    @java.lang.Override
     public boolean hasIncomeRange() {
       return criterionCase_ == 38;
     }
@@ -12965,6 +13151,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.IncomeRangeInfo income_range = 38 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The incomeRange.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.IncomeRangeInfo getIncomeRange() {
       if (incomeRangeBuilder_ == null) {
         if (criterionCase_ == 38) {
@@ -13082,6 +13269,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.IncomeRangeInfo income_range = 38 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.IncomeRangeInfoOrBuilder getIncomeRangeOrBuilder() {
       if ((criterionCase_ == 38) && (incomeRangeBuilder_ != null)) {
         return incomeRangeBuilder_.getMessageOrBuilder();
@@ -13128,6 +13316,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ParentalStatusInfo parental_status = 39 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the parentalStatus field is set.
      */
+    @java.lang.Override
     public boolean hasParentalStatus() {
       return criterionCase_ == 39;
     }
@@ -13139,6 +13328,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.ParentalStatusInfo parental_status = 39 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The parentalStatus.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ParentalStatusInfo getParentalStatus() {
       if (parentalStatusBuilder_ == null) {
         if (criterionCase_ == 39) {
@@ -13256,6 +13446,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.ParentalStatusInfo parental_status = 39 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.ParentalStatusInfoOrBuilder getParentalStatusOrBuilder() {
       if ((criterionCase_ == 39) && (parentalStatusBuilder_ != null)) {
         return parentalStatusBuilder_.getMessageOrBuilder();
@@ -13302,6 +13493,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the userList field is set.
      */
+    @java.lang.Override
     public boolean hasUserList() {
       return criterionCase_ == 42;
     }
@@ -13313,6 +13505,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The userList.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserListInfo getUserList() {
       if (userListBuilder_ == null) {
         if (criterionCase_ == 42) {
@@ -13430,6 +13623,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserListInfoOrBuilder getUserListOrBuilder() {
       if ((criterionCase_ == 42) && (userListBuilder_ != null)) {
         return userListBuilder_.getMessageOrBuilder();
@@ -13476,6 +13670,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.YouTubeVideoInfo youtube_video = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the youtubeVideo field is set.
      */
+    @java.lang.Override
     public boolean hasYoutubeVideo() {
       return criterionCase_ == 40;
     }
@@ -13487,6 +13682,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.YouTubeVideoInfo youtube_video = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The youtubeVideo.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.YouTubeVideoInfo getYoutubeVideo() {
       if (youtubeVideoBuilder_ == null) {
         if (criterionCase_ == 40) {
@@ -13604,6 +13800,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.YouTubeVideoInfo youtube_video = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.YouTubeVideoInfoOrBuilder getYoutubeVideoOrBuilder() {
       if ((criterionCase_ == 40) && (youtubeVideoBuilder_ != null)) {
         return youtubeVideoBuilder_.getMessageOrBuilder();
@@ -13650,6 +13847,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.YouTubeChannelInfo youtube_channel = 41 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the youtubeChannel field is set.
      */
+    @java.lang.Override
     public boolean hasYoutubeChannel() {
       return criterionCase_ == 41;
     }
@@ -13661,6 +13859,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.YouTubeChannelInfo youtube_channel = 41 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The youtubeChannel.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.YouTubeChannelInfo getYoutubeChannel() {
       if (youtubeChannelBuilder_ == null) {
         if (criterionCase_ == 41) {
@@ -13778,6 +13977,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.YouTubeChannelInfo youtube_channel = 41 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder() {
       if ((criterionCase_ == 41) && (youtubeChannelBuilder_ != null)) {
         return youtubeChannelBuilder_.getMessageOrBuilder();
@@ -13824,6 +14024,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.TopicInfo topic = 43 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the topic field is set.
      */
+    @java.lang.Override
     public boolean hasTopic() {
       return criterionCase_ == 43;
     }
@@ -13835,6 +14036,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.TopicInfo topic = 43 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The topic.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.TopicInfo getTopic() {
       if (topicBuilder_ == null) {
         if (criterionCase_ == 43) {
@@ -13952,6 +14154,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.TopicInfo topic = 43 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.TopicInfoOrBuilder getTopicOrBuilder() {
       if ((criterionCase_ == 43) && (topicBuilder_ != null)) {
         return topicBuilder_.getMessageOrBuilder();
@@ -13998,6 +14201,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserInterestInfo user_interest = 45 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the userInterest field is set.
      */
+    @java.lang.Override
     public boolean hasUserInterest() {
       return criterionCase_ == 45;
     }
@@ -14009,6 +14213,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.UserInterestInfo user_interest = 45 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The userInterest.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserInterestInfo getUserInterest() {
       if (userInterestBuilder_ == null) {
         if (criterionCase_ == 45) {
@@ -14126,6 +14331,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.UserInterestInfo user_interest = 45 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.UserInterestInfoOrBuilder getUserInterestOrBuilder() {
       if ((criterionCase_ == 45) && (userInterestBuilder_ != null)) {
         return userInterestBuilder_.getMessageOrBuilder();
@@ -14172,6 +14378,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.WebpageInfo webpage = 46 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the webpage field is set.
      */
+    @java.lang.Override
     public boolean hasWebpage() {
       return criterionCase_ == 46;
     }
@@ -14183,6 +14390,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.WebpageInfo webpage = 46 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The webpage.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.WebpageInfo getWebpage() {
       if (webpageBuilder_ == null) {
         if (criterionCase_ == 46) {
@@ -14300,6 +14508,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.WebpageInfo webpage = 46 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.WebpageInfoOrBuilder getWebpageOrBuilder() {
       if ((criterionCase_ == 46) && (webpageBuilder_ != null)) {
         return webpageBuilder_.getMessageOrBuilder();
@@ -14346,6 +14555,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.AppPaymentModelInfo app_payment_model = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the appPaymentModel field is set.
      */
+    @java.lang.Override
     public boolean hasAppPaymentModel() {
       return criterionCase_ == 47;
     }
@@ -14357,6 +14567,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.AppPaymentModelInfo app_payment_model = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The appPaymentModel.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.AppPaymentModelInfo getAppPaymentModel() {
       if (appPaymentModelBuilder_ == null) {
         if (criterionCase_ == 47) {
@@ -14474,6 +14685,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.AppPaymentModelInfo app_payment_model = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.AppPaymentModelInfoOrBuilder getAppPaymentModelOrBuilder() {
       if ((criterionCase_ == 47) && (appPaymentModelBuilder_ != null)) {
         return appPaymentModelBuilder_.getMessageOrBuilder();
@@ -14520,6 +14732,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.CustomAffinityInfo custom_affinity = 48 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the customAffinity field is set.
      */
+    @java.lang.Override
     public boolean hasCustomAffinity() {
       return criterionCase_ == 48;
     }
@@ -14531,6 +14744,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.CustomAffinityInfo custom_affinity = 48 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The customAffinity.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.CustomAffinityInfo getCustomAffinity() {
       if (customAffinityBuilder_ == null) {
         if (criterionCase_ == 48) {
@@ -14648,6 +14862,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.CustomAffinityInfo custom_affinity = 48 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.CustomAffinityInfoOrBuilder getCustomAffinityOrBuilder() {
       if ((criterionCase_ == 48) && (customAffinityBuilder_ != null)) {
         return customAffinityBuilder_.getMessageOrBuilder();
@@ -14694,6 +14909,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.CustomIntentInfo custom_intent = 49 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the customIntent field is set.
      */
+    @java.lang.Override
     public boolean hasCustomIntent() {
       return criterionCase_ == 49;
     }
@@ -14705,6 +14921,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.common.CustomIntentInfo custom_intent = 49 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The customIntent.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.CustomIntentInfo getCustomIntent() {
       if (customIntentBuilder_ == null) {
         if (criterionCase_ == 49) {
@@ -14822,6 +15039,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.google.ads.googleads.v4.common.CustomIntentInfo custom_intent = 49 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.common.CustomIntentInfoOrBuilder getCustomIntentOrBuilder() {
       if ((criterionCase_ == 49) && (customIntentBuilder_ != null)) {
         return customIntentBuilder_.getMessageOrBuilder();

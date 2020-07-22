@@ -14,6 +14,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_target = 1;</code>
+   * @return Whether the promotionTarget field is set.
    */
   boolean hasPromotionTarget();
   /**
@@ -23,6 +24,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_target = 1;</code>
+   * @return The promotionTarget.
    */
   com.google.protobuf.StringValue getPromotionTarget();
   /**
@@ -41,6 +43,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier discount_modifier = 2;</code>
+   * @return The enum numeric value on the wire for discountModifier.
    */
   int getDiscountModifierValue();
   /**
@@ -49,6 +52,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier discount_modifier = 2;</code>
+   * @return The discountModifier.
    */
   com.google.ads.googleads.v1.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier getDiscountModifier();
 
@@ -58,6 +62,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
+   * @return Whether the promotionStartDate field is set.
    */
   boolean hasPromotionStartDate();
   /**
@@ -66,6 +71,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_start_date = 7;</code>
+   * @return The promotionStartDate.
    */
   com.google.protobuf.StringValue getPromotionStartDate();
   /**
@@ -83,6 +89,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
+   * @return Whether the promotionEndDate field is set.
    */
   boolean hasPromotionEndDate();
   /**
@@ -91,6 +98,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_end_date = 8;</code>
+   * @return The promotionEndDate.
    */
   com.google.protobuf.StringValue getPromotionEndDate();
   /**
@@ -110,6 +118,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion occasion = 9;</code>
+   * @return The enum numeric value on the wire for occasion.
    */
   int getOccasionValue();
   /**
@@ -120,6 +129,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion occasion = 9;</code>
+   * @return The occasion.
    */
   com.google.ads.googleads.v1.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion getOccasion();
 
@@ -222,6 +232,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+   * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
   /**
@@ -230,6 +241,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue tracking_url_template = 12;</code>
+   * @return The trackingUrlTemplate.
    */
   com.google.protobuf.StringValue getTrackingUrlTemplate();
   /**
@@ -297,6 +309,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 14;</code>
+   * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
   /**
@@ -306,6 +319,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue final_url_suffix = 14;</code>
+   * @return The finalUrlSuffix.
    */
   com.google.protobuf.StringValue getFinalUrlSuffix();
   /**
@@ -325,6 +339,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 15;</code>
+   * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
   /**
@@ -334,6 +349,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 15;</code>
+   * @return The languageCode.
    */
   com.google.protobuf.StringValue getLanguageCode();
   /**
@@ -354,6 +370,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value percent_off = 3;</code>
+   * @return Whether the percentOff field is set.
    */
   boolean hasPercentOff();
   /**
@@ -364,6 +381,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value percent_off = 3;</code>
+   * @return The percentOff.
    */
   com.google.protobuf.Int64Value getPercentOff();
   /**
@@ -384,6 +402,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Money money_amount_off = 4;</code>
+   * @return Whether the moneyAmountOff field is set.
    */
   boolean hasMoneyAmountOff();
   /**
@@ -393,6 +412,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Money money_amount_off = 4;</code>
+   * @return The moneyAmountOff.
    */
   com.google.ads.googleads.v1.common.Money getMoneyAmountOff();
   /**
@@ -411,6 +431,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_code = 5;</code>
+   * @return Whether the promotionCode field is set.
    */
   boolean hasPromotionCode();
   /**
@@ -419,6 +440,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue promotion_code = 5;</code>
+   * @return The promotionCode.
    */
   com.google.protobuf.StringValue getPromotionCode();
   /**
@@ -437,6 +459,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Money orders_over_amount = 6;</code>
+   * @return Whether the ordersOverAmount field is set.
    */
   boolean hasOrdersOverAmount();
   /**
@@ -446,6 +469,7 @@ public interface PromotionFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.Money orders_over_amount = 6;</code>
+   * @return The ordersOverAmount.
    */
   com.google.ads.googleads.v1.common.Money getOrdersOverAmount();
   /**

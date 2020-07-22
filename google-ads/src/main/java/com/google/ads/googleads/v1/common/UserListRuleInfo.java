@@ -11,7 +11,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.UserListRuleInfo}
  */
-public  final class UserListRuleInfo extends
+public final class UserListRuleInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.UserListRuleInfo)
     UserListRuleInfoOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   private UserListRuleInfo() {
     ruleType_ = 0;
     ruleItemGroups_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new UserListRuleInfo();
   }
 
   @java.lang.Override
@@ -56,9 +63,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               ruleItemGroups_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.UserListRuleItemGroupInfo>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             ruleItemGroups_.add(
                 input.readMessage(com.google.ads.googleads.v1.common.UserListRuleItemGroupInfo.parser(), extensionRegistry));
@@ -79,7 +86,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         ruleItemGroups_ = java.util.Collections.unmodifiableList(ruleItemGroups_);
       }
       this.unknownFields = unknownFields.build();
@@ -99,7 +106,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v1.common.UserListRuleInfo.class, com.google.ads.googleads.v1.common.UserListRuleInfo.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RULE_TYPE_FIELD_NUMBER = 1;
   private int ruleType_;
   /**
@@ -113,8 +119,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
+   * @return The enum numeric value on the wire for ruleType.
    */
-  public int getRuleTypeValue() {
+  @java.lang.Override public int getRuleTypeValue() {
     return ruleType_;
   }
   /**
@@ -128,8 +135,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
+   * @return The ruleType.
    */
-  public com.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType getRuleType() {
+  @java.lang.Override public com.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType getRuleType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType result = com.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType.valueOf(ruleType_);
     return result == null ? com.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType.UNRECOGNIZED : result;
@@ -145,6 +153,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.UserListRuleItemGroupInfo rule_item_groups = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v1.common.UserListRuleItemGroupInfo> getRuleItemGroupsList() {
     return ruleItemGroups_;
   }
@@ -156,6 +165,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.UserListRuleItemGroupInfo rule_item_groups = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v1.common.UserListRuleItemGroupInfoOrBuilder> 
       getRuleItemGroupsOrBuilderList() {
     return ruleItemGroups_;
@@ -168,6 +178,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.UserListRuleItemGroupInfo rule_item_groups = 2;</code>
    */
+  @java.lang.Override
   public int getRuleItemGroupsCount() {
     return ruleItemGroups_.size();
   }
@@ -179,6 +190,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.UserListRuleItemGroupInfo rule_item_groups = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.UserListRuleItemGroupInfo getRuleItemGroups(int index) {
     return ruleItemGroups_.get(index);
   }
@@ -190,6 +202,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v1.common.UserListRuleItemGroupInfo rule_item_groups = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.UserListRuleItemGroupInfoOrBuilder getRuleItemGroupsOrBuilder(
       int index) {
     return ruleItemGroups_.get(index);
@@ -410,7 +423,7 @@ private static final long serialVersionUID = 0L;
 
       if (ruleItemGroupsBuilder_ == null) {
         ruleItemGroups_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         ruleItemGroupsBuilder_.clear();
       }
@@ -441,18 +454,16 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v1.common.UserListRuleInfo buildPartial() {
       com.google.ads.googleads.v1.common.UserListRuleInfo result = new com.google.ads.googleads.v1.common.UserListRuleInfo(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.ruleType_ = ruleType_;
       if (ruleItemGroupsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           ruleItemGroups_ = java.util.Collections.unmodifiableList(ruleItemGroups_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.ruleItemGroups_ = ruleItemGroups_;
       } else {
         result.ruleItemGroups_ = ruleItemGroupsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -508,7 +519,7 @@ private static final long serialVersionUID = 0L;
         if (!other.ruleItemGroups_.isEmpty()) {
           if (ruleItemGroups_.isEmpty()) {
             ruleItemGroups_ = other.ruleItemGroups_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureRuleItemGroupsIsMutable();
             ruleItemGroups_.addAll(other.ruleItemGroups_);
@@ -521,7 +532,7 @@ private static final long serialVersionUID = 0L;
             ruleItemGroupsBuilder_.dispose();
             ruleItemGroupsBuilder_ = null;
             ruleItemGroups_ = other.ruleItemGroups_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             ruleItemGroupsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getRuleItemGroupsFieldBuilder() : null;
@@ -572,8 +583,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
+     * @return The enum numeric value on the wire for ruleType.
      */
-    public int getRuleTypeValue() {
+    @java.lang.Override public int getRuleTypeValue() {
       return ruleType_;
     }
     /**
@@ -587,8 +599,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
+     * @param value The enum numeric value on the wire for ruleType to set.
+     * @return This builder for chaining.
      */
     public Builder setRuleTypeValue(int value) {
+      
       ruleType_ = value;
       onChanged();
       return this;
@@ -604,7 +619,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
+     * @return The ruleType.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType getRuleType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType result = com.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType.valueOf(ruleType_);
@@ -621,6 +638,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
+     * @param value The ruleType to set.
+     * @return This builder for chaining.
      */
     public Builder setRuleType(com.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType value) {
       if (value == null) {
@@ -642,6 +661,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRuleType() {
       
@@ -653,9 +673,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v1.common.UserListRuleItemGroupInfo> ruleItemGroups_ =
       java.util.Collections.emptyList();
     private void ensureRuleItemGroupsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         ruleItemGroups_ = new java.util.ArrayList<com.google.ads.googleads.v1.common.UserListRuleItemGroupInfo>(ruleItemGroups_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -860,7 +880,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearRuleItemGroups() {
       if (ruleItemGroupsBuilder_ == null) {
         ruleItemGroups_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         ruleItemGroupsBuilder_.clear();
@@ -972,7 +992,7 @@ private static final long serialVersionUID = 0L;
         ruleItemGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v1.common.UserListRuleItemGroupInfo, com.google.ads.googleads.v1.common.UserListRuleItemGroupInfo.Builder, com.google.ads.googleads.v1.common.UserListRuleItemGroupInfoOrBuilder>(
                 ruleItemGroups_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         ruleItemGroups_ = null;

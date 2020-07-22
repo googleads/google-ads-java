@@ -14,6 +14,7 @@ public interface ExternalAttributionDataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue external_attribution_credit = 1;</code>
+   * @return Whether the externalAttributionCredit field is set.
    */
   boolean hasExternalAttributionCredit();
   /**
@@ -23,6 +24,7 @@ public interface ExternalAttributionDataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.DoubleValue external_attribution_credit = 1;</code>
+   * @return The externalAttributionCredit.
    */
   com.google.protobuf.DoubleValue getExternalAttributionCredit();
   /**
@@ -41,6 +43,7 @@ public interface ExternalAttributionDataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue external_attribution_model = 2;</code>
+   * @return Whether the externalAttributionModel field is set.
    */
   boolean hasExternalAttributionModel();
   /**
@@ -49,6 +52,7 @@ public interface ExternalAttributionDataOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue external_attribution_model = 2;</code>
+   * @return The externalAttributionModel.
    */
   com.google.protobuf.StringValue getExternalAttributionModel();
   /**

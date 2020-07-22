@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v1/services/google_ads_service.proto")
 public final class GoogleAdsServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class GoogleAdsServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v1.services.GoogleAdsService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getSearchMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.SearchGoogleAdsRequest,
-      com.google.ads.googleads.v1.services.SearchGoogleAdsResponse> METHOD_SEARCH = getSearchMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.SearchGoogleAdsRequest,
       com.google.ads.googleads.v1.services.SearchGoogleAdsResponse> getSearchMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Search",
+      requestType = com.google.ads.googleads.v1.services.SearchGoogleAdsRequest.class,
+      responseType = com.google.ads.googleads.v1.services.SearchGoogleAdsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.SearchGoogleAdsRequest,
       com.google.ads.googleads.v1.services.SearchGoogleAdsResponse> getSearchMethod() {
-    return getSearchMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.SearchGoogleAdsRequest,
-      com.google.ads.googleads.v1.services.SearchGoogleAdsResponse> getSearchMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.SearchGoogleAdsRequest, com.google.ads.googleads.v1.services.SearchGoogleAdsResponse> getSearchMethod;
     if ((getSearchMethod = GoogleAdsServiceGrpc.getSearchMethod) == null) {
       synchronized (GoogleAdsServiceGrpc.class) {
         if ((getSearchMethod = GoogleAdsServiceGrpc.getSearchMethod) == null) {
-          GoogleAdsServiceGrpc.getSearchMethod = getSearchMethod = 
+          GoogleAdsServiceGrpc.getSearchMethod = getSearchMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.SearchGoogleAdsRequest, com.google.ads.googleads.v1.services.SearchGoogleAdsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.GoogleAdsService", "Search"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Search"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.SearchGoogleAdsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.SearchGoogleAdsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new GoogleAdsServiceMethodDescriptorSupplier("Search"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GoogleAdsServiceMethodDescriptorSupplier("Search"))
+              .build();
         }
-     }
-     return getSearchMethod;
+      }
+    }
+    return getSearchMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateGoogleAdsRequest,
-      com.google.ads.googleads.v1.services.MutateGoogleAdsResponse> METHOD_MUTATE = getMutateMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateGoogleAdsRequest,
       com.google.ads.googleads.v1.services.MutateGoogleAdsResponse> getMutateMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Mutate",
+      requestType = com.google.ads.googleads.v1.services.MutateGoogleAdsRequest.class,
+      responseType = com.google.ads.googleads.v1.services.MutateGoogleAdsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateGoogleAdsRequest,
       com.google.ads.googleads.v1.services.MutateGoogleAdsResponse> getMutateMethod() {
-    return getMutateMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateGoogleAdsRequest,
-      com.google.ads.googleads.v1.services.MutateGoogleAdsResponse> getMutateMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v1.services.MutateGoogleAdsRequest, com.google.ads.googleads.v1.services.MutateGoogleAdsResponse> getMutateMethod;
     if ((getMutateMethod = GoogleAdsServiceGrpc.getMutateMethod) == null) {
       synchronized (GoogleAdsServiceGrpc.class) {
         if ((getMutateMethod = GoogleAdsServiceGrpc.getMutateMethod) == null) {
-          GoogleAdsServiceGrpc.getMutateMethod = getMutateMethod = 
+          GoogleAdsServiceGrpc.getMutateMethod = getMutateMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v1.services.MutateGoogleAdsRequest, com.google.ads.googleads.v1.services.MutateGoogleAdsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v1.services.GoogleAdsService", "Mutate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Mutate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateGoogleAdsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v1.services.MutateGoogleAdsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new GoogleAdsServiceMethodDescriptorSupplier("Mutate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new GoogleAdsServiceMethodDescriptorSupplier("Mutate"))
+              .build();
         }
-     }
-     return getMutateMethod;
+      }
+    }
+    return getMutateMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static GoogleAdsServiceStub newStub(io.grpc.Channel channel) {
-    return new GoogleAdsServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GoogleAdsServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GoogleAdsServiceStub>() {
+        @java.lang.Override
+        public GoogleAdsServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GoogleAdsServiceStub(channel, callOptions);
+        }
+      };
+    return GoogleAdsServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class GoogleAdsServiceGrpc {
    */
   public static GoogleAdsServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new GoogleAdsServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GoogleAdsServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GoogleAdsServiceBlockingStub>() {
+        @java.lang.Override
+        public GoogleAdsServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GoogleAdsServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return GoogleAdsServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class GoogleAdsServiceGrpc {
    */
   public static GoogleAdsServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new GoogleAdsServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<GoogleAdsServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<GoogleAdsServiceFutureStub>() {
+        @java.lang.Override
+        public GoogleAdsServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new GoogleAdsServiceFutureStub(channel, callOptions);
+        }
+      };
+    return GoogleAdsServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class GoogleAdsServiceGrpc {
      */
     public void search(com.google.ads.googleads.v1.services.SearchGoogleAdsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.SearchGoogleAdsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getSearchMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getSearchMethod(), responseObserver);
     }
 
     /**
@@ -155,7 +163,7 @@ public final class GoogleAdsServiceGrpc {
      * only features it offers over calling those methods directly are:
      * - Atomic transactions
      * - Temp resource names (described below)
-     * - Somewhat reduced latency over making a series of mutate calls.
+     * - Somewhat reduced latency over making a series of mutate calls
      * Note: Only resources that support atomic transactions are included, so this
      * method can't replace all calls to individual services.
      * ## Atomic Transaction Benefits
@@ -166,9 +174,9 @@ public final class GoogleAdsServiceGrpc {
      * ## Temp Resource Names
      * Temp resource names are a special type of resource name used to create a
      * resource and reference that resource in the same request. For example, if a
-     * campaign budget is created with 'resource_name' equal to
-     * 'customers/123/campaignBudgets/-1', that resource name can be reused in
-     * the 'Campaign.budget' field in the same request. That way, the two
+     * campaign budget is created with `resource_name` equal to
+     * `customers/123/campaignBudgets/-1`, that resource name can be reused in
+     * the `Campaign.budget` field in the same request. That way, the two
      * resources are created and linked atomically.
      * To create a temp resource name, put a negative number in the part of the
      * name that the server would normally allocate.
@@ -190,20 +198,20 @@ public final class GoogleAdsServiceGrpc {
      */
     public void mutate(com.google.ads.googleads.v1.services.MutateGoogleAdsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateGoogleAdsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getSearchMethodHelper(),
+            getSearchMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.SearchGoogleAdsRequest,
                 com.google.ads.googleads.v1.services.SearchGoogleAdsResponse>(
                   this, METHODID_SEARCH)))
           .addMethod(
-            getMutateMethodHelper(),
+            getMutateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v1.services.MutateGoogleAdsRequest,
@@ -218,19 +226,15 @@ public final class GoogleAdsServiceGrpc {
    * Service to fetch data and metrics across resources.
    * </pre>
    */
-  public static final class GoogleAdsServiceStub extends io.grpc.stub.AbstractStub<GoogleAdsServiceStub> {
-    private GoogleAdsServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GoogleAdsServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GoogleAdsServiceStub extends io.grpc.stub.AbstractAsyncStub<GoogleAdsServiceStub> {
+    private GoogleAdsServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GoogleAdsServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GoogleAdsServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GoogleAdsServiceStub(channel, callOptions);
     }
 
@@ -242,7 +246,7 @@ public final class GoogleAdsServiceGrpc {
     public void search(com.google.ads.googleads.v1.services.SearchGoogleAdsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.SearchGoogleAdsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getSearchMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getSearchMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -255,7 +259,7 @@ public final class GoogleAdsServiceGrpc {
      * only features it offers over calling those methods directly are:
      * - Atomic transactions
      * - Temp resource names (described below)
-     * - Somewhat reduced latency over making a series of mutate calls.
+     * - Somewhat reduced latency over making a series of mutate calls
      * Note: Only resources that support atomic transactions are included, so this
      * method can't replace all calls to individual services.
      * ## Atomic Transaction Benefits
@@ -266,9 +270,9 @@ public final class GoogleAdsServiceGrpc {
      * ## Temp Resource Names
      * Temp resource names are a special type of resource name used to create a
      * resource and reference that resource in the same request. For example, if a
-     * campaign budget is created with 'resource_name' equal to
-     * 'customers/123/campaignBudgets/-1', that resource name can be reused in
-     * the 'Campaign.budget' field in the same request. That way, the two
+     * campaign budget is created with `resource_name` equal to
+     * `customers/123/campaignBudgets/-1`, that resource name can be reused in
+     * the `Campaign.budget` field in the same request. That way, the two
      * resources are created and linked atomically.
      * To create a temp resource name, put a negative number in the part of the
      * name that the server would normally allocate.
@@ -291,7 +295,7 @@ public final class GoogleAdsServiceGrpc {
     public void mutate(com.google.ads.googleads.v1.services.MutateGoogleAdsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v1.services.MutateGoogleAdsResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -300,19 +304,15 @@ public final class GoogleAdsServiceGrpc {
    * Service to fetch data and metrics across resources.
    * </pre>
    */
-  public static final class GoogleAdsServiceBlockingStub extends io.grpc.stub.AbstractStub<GoogleAdsServiceBlockingStub> {
-    private GoogleAdsServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GoogleAdsServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GoogleAdsServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GoogleAdsServiceBlockingStub> {
+    private GoogleAdsServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GoogleAdsServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GoogleAdsServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GoogleAdsServiceBlockingStub(channel, callOptions);
     }
 
@@ -323,7 +323,7 @@ public final class GoogleAdsServiceGrpc {
      */
     public com.google.ads.googleads.v1.services.SearchGoogleAdsResponse search(com.google.ads.googleads.v1.services.SearchGoogleAdsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getSearchMethodHelper(), getCallOptions(), request);
+          getChannel(), getSearchMethod(), getCallOptions(), request);
     }
 
     /**
@@ -336,7 +336,7 @@ public final class GoogleAdsServiceGrpc {
      * only features it offers over calling those methods directly are:
      * - Atomic transactions
      * - Temp resource names (described below)
-     * - Somewhat reduced latency over making a series of mutate calls.
+     * - Somewhat reduced latency over making a series of mutate calls
      * Note: Only resources that support atomic transactions are included, so this
      * method can't replace all calls to individual services.
      * ## Atomic Transaction Benefits
@@ -347,9 +347,9 @@ public final class GoogleAdsServiceGrpc {
      * ## Temp Resource Names
      * Temp resource names are a special type of resource name used to create a
      * resource and reference that resource in the same request. For example, if a
-     * campaign budget is created with 'resource_name' equal to
-     * 'customers/123/campaignBudgets/-1', that resource name can be reused in
-     * the 'Campaign.budget' field in the same request. That way, the two
+     * campaign budget is created with `resource_name` equal to
+     * `customers/123/campaignBudgets/-1`, that resource name can be reused in
+     * the `Campaign.budget` field in the same request. That way, the two
      * resources are created and linked atomically.
      * To create a temp resource name, put a negative number in the part of the
      * name that the server would normally allocate.
@@ -371,7 +371,7 @@ public final class GoogleAdsServiceGrpc {
      */
     public com.google.ads.googleads.v1.services.MutateGoogleAdsResponse mutate(com.google.ads.googleads.v1.services.MutateGoogleAdsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateMethod(), getCallOptions(), request);
     }
   }
 
@@ -380,19 +380,15 @@ public final class GoogleAdsServiceGrpc {
    * Service to fetch data and metrics across resources.
    * </pre>
    */
-  public static final class GoogleAdsServiceFutureStub extends io.grpc.stub.AbstractStub<GoogleAdsServiceFutureStub> {
-    private GoogleAdsServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private GoogleAdsServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class GoogleAdsServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GoogleAdsServiceFutureStub> {
+    private GoogleAdsServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected GoogleAdsServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected GoogleAdsServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GoogleAdsServiceFutureStub(channel, callOptions);
     }
 
@@ -404,7 +400,7 @@ public final class GoogleAdsServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.services.SearchGoogleAdsResponse> search(
         com.google.ads.googleads.v1.services.SearchGoogleAdsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getSearchMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getSearchMethod(), getCallOptions()), request);
     }
 
     /**
@@ -417,7 +413,7 @@ public final class GoogleAdsServiceGrpc {
      * only features it offers over calling those methods directly are:
      * - Atomic transactions
      * - Temp resource names (described below)
-     * - Somewhat reduced latency over making a series of mutate calls.
+     * - Somewhat reduced latency over making a series of mutate calls
      * Note: Only resources that support atomic transactions are included, so this
      * method can't replace all calls to individual services.
      * ## Atomic Transaction Benefits
@@ -428,9 +424,9 @@ public final class GoogleAdsServiceGrpc {
      * ## Temp Resource Names
      * Temp resource names are a special type of resource name used to create a
      * resource and reference that resource in the same request. For example, if a
-     * campaign budget is created with 'resource_name' equal to
-     * 'customers/123/campaignBudgets/-1', that resource name can be reused in
-     * the 'Campaign.budget' field in the same request. That way, the two
+     * campaign budget is created with `resource_name` equal to
+     * `customers/123/campaignBudgets/-1`, that resource name can be reused in
+     * the `Campaign.budget` field in the same request. That way, the two
      * resources are created and linked atomically.
      * To create a temp resource name, put a negative number in the part of the
      * name that the server would normally allocate.
@@ -453,7 +449,7 @@ public final class GoogleAdsServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v1.services.MutateGoogleAdsResponse> mutate(
         com.google.ads.googleads.v1.services.MutateGoogleAdsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateMethod(), getCallOptions()), request);
     }
   }
 
@@ -546,8 +542,8 @@ public final class GoogleAdsServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GoogleAdsServiceFileDescriptorSupplier())
-              .addMethod(getSearchMethodHelper())
-              .addMethod(getMutateMethodHelper())
+              .addMethod(getSearchMethod())
+              .addMethod(getMutateMethod())
               .build();
         }
       }

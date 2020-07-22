@@ -13,7 +13,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.AdScheduleInfo}
  */
-public  final class AdScheduleInfo extends
+public final class AdScheduleInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.AdScheduleInfo)
     AdScheduleInfoOrBuilder {
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour start_minute = 1;</code>
    * @return The enum numeric value on the wire for startMinute.
    */
-  public int getStartMinuteValue() {
+  @java.lang.Override public int getStartMinuteValue() {
     return startMinute_;
   }
   /**
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour start_minute = 1;</code>
    * @return The startMinute.
    */
-  public com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour getStartMinute() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour getStartMinute() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour.valueOf(startMinute_);
     return result == null ? com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour.UNRECOGNIZED : result;
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour end_minute = 2;</code>
    * @return The enum numeric value on the wire for endMinute.
    */
-  public int getEndMinuteValue() {
+  @java.lang.Override public int getEndMinuteValue() {
     return endMinute_;
   }
   /**
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour end_minute = 2;</code>
    * @return The endMinute.
    */
-  public com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour getEndMinute() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour getEndMinute() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour.valueOf(endMinute_);
     return result == null ? com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour.UNRECOGNIZED : result;
@@ -211,6 +211,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value start_hour = 3;</code>
    * @return Whether the startHour field is set.
    */
+  @java.lang.Override
   public boolean hasStartHour() {
     return startHour_ != null;
   }
@@ -225,6 +226,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value start_hour = 3;</code>
    * @return The startHour.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getStartHour() {
     return startHour_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : startHour_;
   }
@@ -238,6 +240,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value start_hour = 3;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getStartHourOrBuilder() {
     return getStartHour();
   }
@@ -255,6 +258,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value end_hour = 4;</code>
    * @return Whether the endHour field is set.
    */
+  @java.lang.Override
   public boolean hasEndHour() {
     return endHour_ != null;
   }
@@ -269,6 +273,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value end_hour = 4;</code>
    * @return The endHour.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getEndHour() {
     return endHour_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : endHour_;
   }
@@ -282,6 +287,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value end_hour = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getEndHourOrBuilder() {
     return getEndHour();
   }
@@ -298,7 +304,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
    * @return The enum numeric value on the wire for dayOfWeek.
    */
-  public int getDayOfWeekValue() {
+  @java.lang.Override public int getDayOfWeekValue() {
     return dayOfWeek_;
   }
   /**
@@ -311,7 +317,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
    * @return The dayOfWeek.
    */
-  public com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
     return result == null ? com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
@@ -728,7 +734,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour start_minute = 1;</code>
      * @return The enum numeric value on the wire for startMinute.
      */
-    public int getStartMinuteValue() {
+    @java.lang.Override public int getStartMinuteValue() {
       return startMinute_;
     }
     /**
@@ -743,6 +749,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStartMinuteValue(int value) {
+      
       startMinute_ = value;
       onChanged();
       return this;
@@ -757,6 +764,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour start_minute = 1;</code>
      * @return The startMinute.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour getStartMinute() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour.valueOf(startMinute_);
@@ -811,7 +819,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour end_minute = 2;</code>
      * @return The enum numeric value on the wire for endMinute.
      */
-    public int getEndMinuteValue() {
+    @java.lang.Override public int getEndMinuteValue() {
       return endMinute_;
     }
     /**
@@ -827,6 +835,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEndMinuteValue(int value) {
+      
       endMinute_ = value;
       onChanged();
       return this;
@@ -842,6 +851,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour end_minute = 2;</code>
      * @return The endMinute.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour getEndMinute() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v4.enums.MinuteOfHourEnum.MinuteOfHour.valueOf(endMinute_);
@@ -1261,7 +1271,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
      * @return The enum numeric value on the wire for dayOfWeek.
      */
-    public int getDayOfWeekValue() {
+    @java.lang.Override public int getDayOfWeekValue() {
       return dayOfWeek_;
     }
     /**
@@ -1276,6 +1286,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDayOfWeekValue(int value) {
+      
       dayOfWeek_ = value;
       onChanged();
       return this;
@@ -1290,6 +1301,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
      * @return The dayOfWeek.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v4.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);

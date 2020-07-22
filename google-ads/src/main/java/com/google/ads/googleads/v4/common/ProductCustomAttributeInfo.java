@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ProductCustomAttributeInfo}
  */
-public  final class ProductCustomAttributeInfo extends
+public final class ProductCustomAttributeInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ProductCustomAttributeInfo)
     ProductCustomAttributeInfoOrBuilder {
@@ -114,6 +114,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue value = 1;</code>
    * @return Whether the value field is set.
    */
+  @java.lang.Override
   public boolean hasValue() {
     return value_ != null;
   }
@@ -125,6 +126,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue value = 1;</code>
    * @return The value.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getValue() {
     return value_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : value_;
   }
@@ -135,6 +137,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue value = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getValueOrBuilder() {
     return getValue();
   }
@@ -149,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex index = 2;</code>
    * @return The enum numeric value on the wire for index.
    */
-  public int getIndexValue() {
+  @java.lang.Override public int getIndexValue() {
     return index_;
   }
   /**
@@ -160,7 +163,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex index = 2;</code>
    * @return The index.
    */
-  public com.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex getIndex() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex getIndex() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex result = com.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex.valueOf(index_);
     return result == null ? com.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex.UNRECOGNIZED : result;
@@ -665,7 +668,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex index = 2;</code>
      * @return The enum numeric value on the wire for index.
      */
-    public int getIndexValue() {
+    @java.lang.Override public int getIndexValue() {
       return index_;
     }
     /**
@@ -678,6 +681,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIndexValue(int value) {
+      
       index_ = value;
       onChanged();
       return this;
@@ -690,6 +694,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex index = 2;</code>
      * @return The index.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex getIndex() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex result = com.google.ads.googleads.v4.enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex.valueOf(index_);

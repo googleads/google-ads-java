@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.MediaAudio}
  */
-public  final class MediaAudio extends
+public final class MediaAudio extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.MediaAudio)
     MediaAudioOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the adDurationMillis field is set.
    */
+  @java.lang.Override
   public boolean hasAdDurationMillis() {
     return adDurationMillis_ != null;
   }
@@ -118,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The adDurationMillis.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAdDurationMillis() {
     return adDurationMillis_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : adDurationMillis_;
   }
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAdDurationMillisOrBuilder() {
     return getAdDurationMillis();
   }

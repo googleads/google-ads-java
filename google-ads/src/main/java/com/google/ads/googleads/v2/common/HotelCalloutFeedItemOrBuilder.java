@@ -14,6 +14,7 @@ public interface HotelCalloutFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
+   * @return Whether the text field is set.
    */
   boolean hasText();
   /**
@@ -23,6 +24,7 @@ public interface HotelCalloutFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue text = 1;</code>
+   * @return The text.
    */
   com.google.protobuf.StringValue getText();
   /**
@@ -42,6 +44,7 @@ public interface HotelCalloutFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 2;</code>
+   * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
   /**
@@ -51,6 +54,7 @@ public interface HotelCalloutFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 2;</code>
+   * @return The languageCode.
    */
   com.google.protobuf.StringValue getLanguageCode();
   /**

@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,6 @@ import com.google.api.gax.paging.AbstractPagedListResponse;
 import com.google.api.gax.rpc.OperationCallable;
 import com.google.api.gax.rpc.PageContext;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.longrunning.Operation;
 import com.google.longrunning.OperationsClient;
@@ -59,8 +58,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
- *   String formattedResourceName = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
- *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(formattedResourceName);
+ *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+ *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(resourceName);
  * }
  * </code>
  * </pre>
@@ -122,50 +121,6 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
   private final CampaignExperimentServiceSettings settings;
   private final CampaignExperimentServiceStub stub;
   private final OperationsClient operationsClient;
-
-  private static final PathTemplate CAMPAIGN_EXPERIMENT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/campaignExperiments/{campaign_experiment}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign_experiment
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignExperimentName} class instead.
-   */
-  @Deprecated
-  public static final String formatCampaignExperimentName(
-      String customer, String campaignExperiment) {
-    return CAMPAIGN_EXPERIMENT_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "campaign_experiment", campaignExperiment);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a campaign_experiment
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignExperimentName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCampaignExperimentName(
-      String campaignExperimentName) {
-    return CAMPAIGN_EXPERIMENT_PATH_TEMPLATE.parse(campaignExperimentName).get("customer");
-  }
-
-  /**
-   * Parses the campaign_experiment from the given fully-qualified path which represents a
-   * campaign_experiment resource.
-   *
-   * @deprecated Use the {@link CampaignExperimentName} class instead.
-   */
-  @Deprecated
-  public static final String parseCampaignExperimentFromCampaignExperimentName(
-      String campaignExperimentName) {
-    return CAMPAIGN_EXPERIMENT_PATH_TEMPLATE
-        .parse(campaignExperimentName)
-        .get("campaign_experiment");
-  }
 
   /** Constructs an instance of CampaignExperimentServiceClient with default settings. */
   public static final CampaignExperimentServiceClient create() throws IOException {
@@ -237,8 +192,32 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedResourceName = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
-   *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(formattedResourceName);
+   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the campaign experiment to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CampaignExperiment getCampaignExperiment(CampaignExperimentName resourceName) {
+    GetCampaignExperimentRequest request =
+        GetCampaignExperimentRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCampaignExperiment(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested campaign experiment in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
+   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -246,7 +225,6 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignExperiment getCampaignExperiment(String resourceName) {
-    CAMPAIGN_EXPERIMENT_PATH_TEMPLATE.validate(resourceName, "getCampaignExperiment");
     GetCampaignExperimentRequest request =
         GetCampaignExperimentRequest.newBuilder().setResourceName(resourceName).build();
     return getCampaignExperiment(request);
@@ -260,9 +238,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedResourceName = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
    *   GetCampaignExperimentRequest request = GetCampaignExperimentRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CampaignExperiment response = campaignExperimentServiceClient.getCampaignExperiment(request);
    * }
@@ -283,9 +261,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedResourceName = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
    *   GetCampaignExperimentRequest request = GetCampaignExperimentRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CampaignExperiment&gt; future = campaignExperimentServiceClient.getCampaignExperimentCallable().futureCall(request);
    *   // Do something
@@ -296,50 +274,6 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
   public final UnaryCallable<GetCampaignExperimentRequest, CampaignExperiment>
       getCampaignExperimentCallable() {
     return stub.getCampaignExperimentCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates a campaign experiment based on a campaign draft. The draft campaign will be forked into
-   * a real campaign (called the experiment campaign) that will begin serving ads if successfully
-   * created.
-   *
-   * <p>The campaign experiment is created immediately with status INITIALIZING. This method return
-   * a long running operation that tracks the forking of the draft campaign. If the forking fails, a
-   * list of errors can be retrieved using the ListCampaignExperimentAsyncErrors method. The
-   * operation's metadata will be a StringValue containing the resource name of the created campaign
-   * experiment.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String customerId = "";
-   *   CampaignExperiment campaignExperiment = CampaignExperiment.newBuilder().build();
-   *   boolean validateOnly = false;
-   *   campaignExperimentServiceClient.createCampaignExperimentAsync(customerId, campaignExperiment, validateOnly).get();
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose campaign experiment is being created.
-   * @param campaignExperiment Required. The campaign experiment to be created.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  @BetaApi(
-      "The surface for long-running operations is not stable yet and may change in the future.")
-  public final OperationFuture<Empty, CreateCampaignExperimentMetadata>
-      createCampaignExperimentAsync(
-          String customerId, CampaignExperiment campaignExperiment, boolean validateOnly) {
-
-    CreateCampaignExperimentRequest request =
-        CreateCampaignExperimentRequest.newBuilder()
-            .setCustomerId(customerId)
-            .setCampaignExperiment(campaignExperiment)
-            .setValidateOnly(validateOnly)
-            .build();
-    return createCampaignExperimentAsync(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -372,7 +306,6 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
       "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationFuture<Empty, CreateCampaignExperimentMetadata>
       createCampaignExperimentAsync(String customerId, CampaignExperiment campaignExperiment) {
-
     CreateCampaignExperimentRequest request =
         CreateCampaignExperimentRequest.newBuilder()
             .setCustomerId(customerId)
@@ -495,49 +428,6 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;CampaignExperimentOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCampaignExperimentsResponse response = campaignExperimentServiceClient.mutateCampaignExperiments(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose campaign experiments are being
-   *     modified.
-   * @param operations Required. The list of operations to perform on individual campaign
-   *     experiments.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCampaignExperimentsResponse mutateCampaignExperiments(
-      String customerId,
-      List<CampaignExperimentOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateCampaignExperimentsRequest request =
-        MutateCampaignExperimentsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCampaignExperiments(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Updates campaign experiments. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignExperimentOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateCampaignExperimentsResponse response = campaignExperimentServiceClient.mutateCampaignExperiments(customerId, operations);
    * }
    * </code></pre>
@@ -550,7 +440,6 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    */
   public final MutateCampaignExperimentsResponse mutateCampaignExperiments(
       String customerId, List<CampaignExperimentOperation> operations) {
-
     MutateCampaignExperimentsRequest request =
         MutateCampaignExperimentsRequest.newBuilder()
             .setCustomerId(customerId)
@@ -619,9 +508,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedCampaignExperiment = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   String campaignExperiment = "";
    *   String campaignBudget = "";
-   *   GraduateCampaignExperimentResponse response = campaignExperimentServiceClient.graduateCampaignExperiment(formattedCampaignExperiment, campaignBudget);
+   *   GraduateCampaignExperimentResponse response = campaignExperimentServiceClient.graduateCampaignExperiment(campaignExperiment, campaignBudget);
    * }
    * </code></pre>
    *
@@ -632,7 +521,6 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    */
   public final GraduateCampaignExperimentResponse graduateCampaignExperiment(
       String campaignExperiment, String campaignBudget) {
-    CAMPAIGN_EXPERIMENT_PATH_TEMPLATE.validate(campaignExperiment, "graduateCampaignExperiment");
     GraduateCampaignExperimentRequest request =
         GraduateCampaignExperimentRequest.newBuilder()
             .setCampaignExperiment(campaignExperiment)
@@ -650,10 +538,10 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedCampaignExperiment = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   String campaignExperiment = "";
    *   String campaignBudget = "";
    *   GraduateCampaignExperimentRequest request = GraduateCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(formattedCampaignExperiment)
+   *     .setCampaignExperiment(campaignExperiment)
    *     .setCampaignBudget(campaignBudget)
    *     .build();
    *   GraduateCampaignExperimentResponse response = campaignExperimentServiceClient.graduateCampaignExperiment(request);
@@ -677,10 +565,10 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedCampaignExperiment = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   String campaignExperiment = "";
    *   String campaignBudget = "";
    *   GraduateCampaignExperimentRequest request = GraduateCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(formattedCampaignExperiment)
+   *     .setCampaignExperiment(campaignExperiment)
    *     .setCampaignBudget(campaignBudget)
    *     .build();
    *   ApiFuture&lt;GraduateCampaignExperimentResponse&gt; future = campaignExperimentServiceClient.graduateCampaignExperimentCallable().futureCall(request);
@@ -706,8 +594,8 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedCampaignExperiment = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
-   *   campaignExperimentServiceClient.promoteCampaignExperimentAsync(formattedCampaignExperiment).get();
+   *   String campaignExperiment = "";
+   *   campaignExperimentServiceClient.promoteCampaignExperimentAsync(campaignExperiment).get();
    * }
    * </code></pre>
    *
@@ -718,7 +606,6 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
       "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationFuture<Empty, Empty> promoteCampaignExperimentAsync(
       String campaignExperiment) {
-    CAMPAIGN_EXPERIMENT_PATH_TEMPLATE.validate(campaignExperiment, "promoteCampaignExperiment");
     PromoteCampaignExperimentRequest request =
         PromoteCampaignExperimentRequest.newBuilder()
             .setCampaignExperiment(campaignExperiment)
@@ -738,9 +625,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedCampaignExperiment = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   String campaignExperiment = "";
    *   PromoteCampaignExperimentRequest request = PromoteCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(formattedCampaignExperiment)
+   *     .setCampaignExperiment(campaignExperiment)
    *     .build();
    *   campaignExperimentServiceClient.promoteCampaignExperimentAsync(request).get();
    * }
@@ -768,9 +655,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedCampaignExperiment = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   String campaignExperiment = "";
    *   PromoteCampaignExperimentRequest request = PromoteCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(formattedCampaignExperiment)
+   *     .setCampaignExperiment(campaignExperiment)
    *     .build();
    *   OperationFuture&lt;Empty, Empty&gt; future = campaignExperimentServiceClient.promoteCampaignExperimentOperationCallable().futureCall(request);
    *   // Do something
@@ -796,9 +683,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedCampaignExperiment = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   String campaignExperiment = "";
    *   PromoteCampaignExperimentRequest request = PromoteCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(formattedCampaignExperiment)
+   *     .setCampaignExperiment(campaignExperiment)
    *     .build();
    *   ApiFuture&lt;Operation&gt; future = campaignExperimentServiceClient.promoteCampaignExperimentCallable().futureCall(request);
    *   // Do something
@@ -820,8 +707,8 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedCampaignExperiment = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
-   *   campaignExperimentServiceClient.endCampaignExperiment(formattedCampaignExperiment);
+   *   String campaignExperiment = "";
+   *   campaignExperimentServiceClient.endCampaignExperiment(campaignExperiment);
    * }
    * </code></pre>
    *
@@ -829,7 +716,6 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final void endCampaignExperiment(String campaignExperiment) {
-    CAMPAIGN_EXPERIMENT_PATH_TEMPLATE.validate(campaignExperiment, "endCampaignExperiment");
     EndCampaignExperimentRequest request =
         EndCampaignExperimentRequest.newBuilder().setCampaignExperiment(campaignExperiment).build();
     endCampaignExperiment(request);
@@ -844,9 +730,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedCampaignExperiment = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   String campaignExperiment = "";
    *   EndCampaignExperimentRequest request = EndCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(formattedCampaignExperiment)
+   *     .setCampaignExperiment(campaignExperiment)
    *     .build();
    *   campaignExperimentServiceClient.endCampaignExperiment(request);
    * }
@@ -868,9 +754,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedCampaignExperiment = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   String campaignExperiment = "";
    *   EndCampaignExperimentRequest request = EndCampaignExperimentRequest.newBuilder()
-   *     .setCampaignExperiment(formattedCampaignExperiment)
+   *     .setCampaignExperiment(campaignExperiment)
    *     .build();
    *   ApiFuture&lt;Void&gt; future = campaignExperimentServiceClient.endCampaignExperimentCallable().futureCall(request);
    *   // Do something
@@ -891,8 +777,37 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedResourceName = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
-   *   for (Status element : campaignExperimentServiceClient.listCampaignExperimentAsyncErrors(formattedResourceName).iterateAll()) {
+   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   for (Status element : campaignExperimentServiceClient.listCampaignExperimentAsyncErrors(resourceName).iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The name of the campaign experiment from which to retrieve the
+   *     async errors.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ListCampaignExperimentAsyncErrorsPagedResponse listCampaignExperimentAsyncErrors(
+      CampaignExperimentName resourceName) {
+    ListCampaignExperimentAsyncErrorsRequest request =
+        ListCampaignExperimentAsyncErrorsRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return listCampaignExperimentAsyncErrors(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns all errors that occurred during CampaignExperiment create or promote (whichever
+   * occurred last). Supports standard list paging.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
+   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   for (Status element : campaignExperimentServiceClient.listCampaignExperimentAsyncErrors(resourceName.toString()).iterateAll()) {
    *     // doThingsWith(element);
    *   }
    * }
@@ -904,7 +819,6 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    */
   public final ListCampaignExperimentAsyncErrorsPagedResponse listCampaignExperimentAsyncErrors(
       String resourceName) {
-    CAMPAIGN_EXPERIMENT_PATH_TEMPLATE.validate(resourceName, "listCampaignExperimentAsyncErrors");
     ListCampaignExperimentAsyncErrorsRequest request =
         ListCampaignExperimentAsyncErrorsRequest.newBuilder().setResourceName(resourceName).build();
     return listCampaignExperimentAsyncErrors(request);
@@ -919,9 +833,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedResourceName = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
    *   ListCampaignExperimentAsyncErrorsRequest request = ListCampaignExperimentAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   for (Status element : campaignExperimentServiceClient.listCampaignExperimentAsyncErrors(request).iterateAll()) {
    *     // doThingsWith(element);
@@ -946,9 +860,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedResourceName = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
    *   ListCampaignExperimentAsyncErrorsRequest request = ListCampaignExperimentAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;ListCampaignExperimentAsyncErrorsPagedResponse&gt; future = campaignExperimentServiceClient.listCampaignExperimentAsyncErrorsPagedCallable().futureCall(request);
    *   // Do something
@@ -973,9 +887,9 @@ public class CampaignExperimentServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignExperimentServiceClient campaignExperimentServiceClient = CampaignExperimentServiceClient.create()) {
-   *   String formattedResourceName = CampaignExperimentServiceClient.formatCampaignExperimentName("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
+   *   CampaignExperimentName resourceName = CampaignExperimentName.of("[CUSTOMER]", "[CAMPAIGN_EXPERIMENT]");
    *   ListCampaignExperimentAsyncErrorsRequest request = ListCampaignExperimentAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   while (true) {
    *     ListCampaignExperimentAsyncErrorsResponse response = campaignExperimentServiceClient.listCampaignExperimentAsyncErrorsCallable().call(request);

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.BatchJobResult}
  */
-public  final class BatchJobResult extends
+public final class BatchJobResult extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.BatchJobResult)
     BatchJobResultOrBuilder {
@@ -125,6 +125,7 @@ private static final long serialVersionUID = 0L;
    * <code>int64 operation_index = 1;</code>
    * @return The operationIndex.
    */
+  @java.lang.Override
   public long getOperationIndex() {
     return operationIndex_;
   }
@@ -140,6 +141,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateOperationResponse mutate_operation_response = 2;</code>
    * @return Whether the mutateOperationResponse field is set.
    */
+  @java.lang.Override
   public boolean hasMutateOperationResponse() {
     return mutateOperationResponse_ != null;
   }
@@ -152,6 +154,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.MutateOperationResponse mutate_operation_response = 2;</code>
    * @return The mutateOperationResponse.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateOperationResponse getMutateOperationResponse() {
     return mutateOperationResponse_ == null ? com.google.ads.googleads.v4.services.MutateOperationResponse.getDefaultInstance() : mutateOperationResponse_;
   }
@@ -163,6 +166,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.MutateOperationResponse mutate_operation_response = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.MutateOperationResponseOrBuilder getMutateOperationResponseOrBuilder() {
     return getMutateOperationResponse();
   }
@@ -177,6 +181,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.rpc.Status status = 3;</code>
    * @return Whether the status field is set.
    */
+  @java.lang.Override
   public boolean hasStatus() {
     return status_ != null;
   }
@@ -188,6 +193,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.rpc.Status status = 3;</code>
    * @return The status.
    */
+  @java.lang.Override
   public com.google.rpc.Status getStatus() {
     return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
   }
@@ -198,6 +204,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.rpc.Status status = 3;</code>
    */
+  @java.lang.Override
   public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
     return getStatus();
   }
@@ -578,6 +585,7 @@ private static final long serialVersionUID = 0L;
      * <code>int64 operation_index = 1;</code>
      * @return The operationIndex.
      */
+    @java.lang.Override
     public long getOperationIndex() {
       return operationIndex_;
     }

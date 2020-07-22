@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/mobile_device_constant_service.proto")
 public final class MobileDeviceConstantServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class MobileDeviceConstantServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.MobileDeviceConstantService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetMobileDeviceConstantMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest,
-      com.google.ads.googleads.v4.resources.MobileDeviceConstant> METHOD_GET_MOBILE_DEVICE_CONSTANT = getGetMobileDeviceConstantMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest,
       com.google.ads.googleads.v4.resources.MobileDeviceConstant> getGetMobileDeviceConstantMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetMobileDeviceConstant",
+      requestType = com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.MobileDeviceConstant.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest,
       com.google.ads.googleads.v4.resources.MobileDeviceConstant> getGetMobileDeviceConstantMethod() {
-    return getGetMobileDeviceConstantMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest,
-      com.google.ads.googleads.v4.resources.MobileDeviceConstant> getGetMobileDeviceConstantMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest, com.google.ads.googleads.v4.resources.MobileDeviceConstant> getGetMobileDeviceConstantMethod;
     if ((getGetMobileDeviceConstantMethod = MobileDeviceConstantServiceGrpc.getGetMobileDeviceConstantMethod) == null) {
       synchronized (MobileDeviceConstantServiceGrpc.class) {
         if ((getGetMobileDeviceConstantMethod = MobileDeviceConstantServiceGrpc.getGetMobileDeviceConstantMethod) == null) {
-          MobileDeviceConstantServiceGrpc.getGetMobileDeviceConstantMethod = getGetMobileDeviceConstantMethod = 
+          MobileDeviceConstantServiceGrpc.getGetMobileDeviceConstantMethod = getGetMobileDeviceConstantMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest, com.google.ads.googleads.v4.resources.MobileDeviceConstant>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.MobileDeviceConstantService", "GetMobileDeviceConstant"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMobileDeviceConstant"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.MobileDeviceConstant.getDefaultInstance()))
-                  .setSchemaDescriptor(new MobileDeviceConstantServiceMethodDescriptorSupplier("GetMobileDeviceConstant"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MobileDeviceConstantServiceMethodDescriptorSupplier("GetMobileDeviceConstant"))
+              .build();
         }
-     }
-     return getGetMobileDeviceConstantMethod;
+      }
+    }
+    return getGetMobileDeviceConstantMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static MobileDeviceConstantServiceStub newStub(io.grpc.Channel channel) {
-    return new MobileDeviceConstantServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MobileDeviceConstantServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MobileDeviceConstantServiceStub>() {
+        @java.lang.Override
+        public MobileDeviceConstantServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MobileDeviceConstantServiceStub(channel, callOptions);
+        }
+      };
+    return MobileDeviceConstantServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class MobileDeviceConstantServiceGrpc {
    */
   public static MobileDeviceConstantServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new MobileDeviceConstantServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MobileDeviceConstantServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MobileDeviceConstantServiceBlockingStub>() {
+        @java.lang.Override
+        public MobileDeviceConstantServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MobileDeviceConstantServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return MobileDeviceConstantServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class MobileDeviceConstantServiceGrpc {
    */
   public static MobileDeviceConstantServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new MobileDeviceConstantServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MobileDeviceConstantServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MobileDeviceConstantServiceFutureStub>() {
+        @java.lang.Override
+        public MobileDeviceConstantServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MobileDeviceConstantServiceFutureStub(channel, callOptions);
+        }
+      };
+    return MobileDeviceConstantServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class MobileDeviceConstantServiceGrpc {
      */
     public void getMobileDeviceConstant(com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.MobileDeviceConstant> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMobileDeviceConstantMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetMobileDeviceConstantMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetMobileDeviceConstantMethodHelper(),
+            getGetMobileDeviceConstantMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest,
@@ -126,19 +140,15 @@ public final class MobileDeviceConstantServiceGrpc {
    * Service to fetch mobile device constants.
    * </pre>
    */
-  public static final class MobileDeviceConstantServiceStub extends io.grpc.stub.AbstractStub<MobileDeviceConstantServiceStub> {
-    private MobileDeviceConstantServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MobileDeviceConstantServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MobileDeviceConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<MobileDeviceConstantServiceStub> {
+    private MobileDeviceConstantServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MobileDeviceConstantServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MobileDeviceConstantServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MobileDeviceConstantServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class MobileDeviceConstantServiceGrpc {
     public void getMobileDeviceConstant(com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.MobileDeviceConstant> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetMobileDeviceConstantMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetMobileDeviceConstantMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class MobileDeviceConstantServiceGrpc {
    * Service to fetch mobile device constants.
    * </pre>
    */
-  public static final class MobileDeviceConstantServiceBlockingStub extends io.grpc.stub.AbstractStub<MobileDeviceConstantServiceBlockingStub> {
-    private MobileDeviceConstantServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MobileDeviceConstantServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MobileDeviceConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MobileDeviceConstantServiceBlockingStub> {
+    private MobileDeviceConstantServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MobileDeviceConstantServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MobileDeviceConstantServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MobileDeviceConstantServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class MobileDeviceConstantServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.MobileDeviceConstant getMobileDeviceConstant(com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetMobileDeviceConstantMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetMobileDeviceConstantMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class MobileDeviceConstantServiceGrpc {
    * Service to fetch mobile device constants.
    * </pre>
    */
-  public static final class MobileDeviceConstantServiceFutureStub extends io.grpc.stub.AbstractStub<MobileDeviceConstantServiceFutureStub> {
-    private MobileDeviceConstantServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MobileDeviceConstantServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MobileDeviceConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MobileDeviceConstantServiceFutureStub> {
+    private MobileDeviceConstantServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MobileDeviceConstantServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MobileDeviceConstantServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MobileDeviceConstantServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class MobileDeviceConstantServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.MobileDeviceConstant> getMobileDeviceConstant(
         com.google.ads.googleads.v4.services.GetMobileDeviceConstantRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetMobileDeviceConstantMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetMobileDeviceConstantMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class MobileDeviceConstantServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MobileDeviceConstantServiceFileDescriptorSupplier())
-              .addMethod(getGetMobileDeviceConstantMethodHelper())
+              .addMethod(getGetMobileDeviceConstantMethod())
               .build();
         }
       }

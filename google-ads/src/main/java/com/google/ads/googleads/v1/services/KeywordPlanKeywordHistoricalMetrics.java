@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.services;
  *
  * Protobuf type {@code google.ads.googleads.v1.services.KeywordPlanKeywordHistoricalMetrics}
  */
-public  final class KeywordPlanKeywordHistoricalMetrics extends
+public final class KeywordPlanKeywordHistoricalMetrics extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.services.KeywordPlanKeywordHistoricalMetrics)
     KeywordPlanKeywordHistoricalMetricsOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private KeywordPlanKeywordHistoricalMetrics() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new KeywordPlanKeywordHistoricalMetrics();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -117,7 +123,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_query = 1;</code>
+   * @return Whether the searchQuery field is set.
    */
+  @java.lang.Override
   public boolean hasSearchQuery() {
     return searchQuery_ != null;
   }
@@ -132,7 +140,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue search_query = 1;</code>
+   * @return The searchQuery.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getSearchQuery() {
     return searchQuery_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : searchQuery_;
   }
@@ -148,6 +158,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue search_query = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getSearchQueryOrBuilder() {
     return getSearchQuery();
   }
@@ -161,7 +172,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics keyword_metrics = 2;</code>
+   * @return Whether the keywordMetrics field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordMetrics() {
     return keywordMetrics_ != null;
   }
@@ -172,7 +185,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics keyword_metrics = 2;</code>
+   * @return The keywordMetrics.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics getKeywordMetrics() {
     return keywordMetrics_ == null ? com.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics.getDefaultInstance() : keywordMetrics_;
   }
@@ -184,6 +199,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics keyword_metrics = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v1.common.KeywordPlanHistoricalMetricsOrBuilder getKeywordMetricsOrBuilder() {
     return getKeywordMetrics();
   }
@@ -551,6 +567,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue search_query = 1;</code>
+     * @return Whether the searchQuery field is set.
      */
     public boolean hasSearchQuery() {
       return searchQueryBuilder_ != null || searchQuery_ != null;
@@ -566,6 +583,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue search_query = 1;</code>
+     * @return The searchQuery.
      */
     public com.google.protobuf.StringValue getSearchQuery() {
       if (searchQueryBuilder_ == null) {
@@ -745,6 +763,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics keyword_metrics = 2;</code>
+     * @return Whether the keywordMetrics field is set.
      */
     public boolean hasKeywordMetrics() {
       return keywordMetricsBuilder_ != null || keywordMetrics_ != null;
@@ -756,6 +775,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics keyword_metrics = 2;</code>
+     * @return The keywordMetrics.
      */
     public com.google.ads.googleads.v1.common.KeywordPlanHistoricalMetrics getKeywordMetrics() {
       if (keywordMetricsBuilder_ == null) {

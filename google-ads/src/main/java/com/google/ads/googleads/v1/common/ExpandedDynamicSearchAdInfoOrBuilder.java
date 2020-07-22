@@ -13,6 +13,7 @@ public interface ExpandedDynamicSearchAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 1;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -21,6 +22,7 @@ public interface ExpandedDynamicSearchAdInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 1;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**

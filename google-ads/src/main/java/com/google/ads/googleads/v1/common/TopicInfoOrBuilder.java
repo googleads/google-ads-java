@@ -13,6 +13,7 @@ public interface TopicInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue topic_constant = 1;</code>
+   * @return Whether the topicConstant field is set.
    */
   boolean hasTopicConstant();
   /**
@@ -21,6 +22,7 @@ public interface TopicInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue topic_constant = 1;</code>
+   * @return The topicConstant.
    */
   com.google.protobuf.StringValue getTopicConstant();
   /**

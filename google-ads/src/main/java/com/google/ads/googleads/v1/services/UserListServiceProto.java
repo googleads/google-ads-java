@@ -52,62 +52,58 @@ public final class UserListServiceProto {
       "list_service.proto\022 google.ads.googleads" +
       ".v1.services\0321google/ads/googleads/v1/re" +
       "sources/user_list.proto\032\034google/api/anno" +
-      "tations.proto\032 google/protobuf/field_mas" +
-      "k.proto\032\036google/protobuf/wrappers.proto\032" +
-      "\027google/rpc/status.proto\032\027google/api/cli" +
-      "ent.proto\"+\n\022GetUserListRequest\022\025\n\rresou" +
-      "rce_name\030\001 \001(\t\"\246\001\n\026MutateUserListsReques" +
-      "t\022\023\n\013customer_id\030\001 \001(\t\022G\n\noperations\030\002 \003" +
-      "(\01323.google.ads.googleads.v1.services.Us" +
-      "erListOperation\022\027\n\017partial_failure\030\003 \001(\010" +
-      "\022\025\n\rvalidate_only\030\004 \001(\010\"\341\001\n\021UserListOper" +
-      "ation\022/\n\013update_mask\030\004 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\022=\n\006create\030\001 \001(\0132+.google." +
-      "ads.googleads.v1.resources.UserListH\000\022=\n" +
-      "\006update\030\002 \001(\0132+.google.ads.googleads.v1." +
-      "resources.UserListH\000\022\020\n\006remove\030\003 \001(\tH\000B\013" +
-      "\n\toperation\"\225\001\n\027MutateUserListsResponse\022" +
-      "1\n\025partial_failure_error\030\003 \001(\0132\022.google." +
-      "rpc.Status\022G\n\007results\030\002 \003(\01326.google.ads" +
-      ".googleads.v1.services.MutateUserListRes" +
-      "ult\"-\n\024MutateUserListResult\022\025\n\rresource_" +
-      "name\030\001 \001(\t2\232\003\n\017UserListService\022\245\001\n\013GetUs" +
-      "erList\0224.google.ads.googleads.v1.service" +
-      "s.GetUserListRequest\032+.google.ads.google" +
-      "ads.v1.resources.UserList\"3\202\323\344\223\002-\022+/v1/{" +
-      "resource_name=customers/*/userLists/*}\022\301" +
-      "\001\n\017MutateUserLists\0228.google.ads.googlead" +
-      "s.v1.services.MutateUserListsRequest\0329.g" +
-      "oogle.ads.googleads.v1.services.MutateUs" +
-      "erListsResponse\"9\202\323\344\223\0023\"./v1/customers/{" +
-      "customer_id=*}/userLists:mutate:\001*\032\033\312A\030g" +
-      "oogleads.googleapis.comB\373\001\n$com.google.a" +
-      "ds.googleads.v1.servicesB\024UserListServic" +
-      "eProtoP\001ZHgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v1/services;servic" +
-      "es\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Servi" +
-      "ces\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002" +
-      "$Google::Ads::GoogleAds::V1::Servicesb\006p" +
-      "roto3"
+      "tations.proto\032\027google/api/client.proto\032\037" +
+      "google/api/field_behavior.proto\032\031google/" +
+      "api/resource.proto\032 google/protobuf/fiel" +
+      "d_mask.proto\032\027google/rpc/status.proto\"V\n" +
+      "\022GetUserListRequest\022@\n\rresource_name\030\001 \001" +
+      "(\tB)\340A\002\372A#\n!googleads.googleapis.com/Use" +
+      "rList\"\260\001\n\026MutateUserListsRequest\022\030\n\013cust" +
+      "omer_id\030\001 \001(\tB\003\340A\002\022L\n\noperations\030\002 \003(\01323" +
+      ".google.ads.googleads.v1.services.UserLi" +
+      "stOperationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(" +
+      "\010\022\025\n\rvalidate_only\030\004 \001(\010\"\341\001\n\021UserListOpe" +
+      "ration\022/\n\013update_mask\030\004 \001(\0132\032.google.pro" +
+      "tobuf.FieldMask\022=\n\006create\030\001 \001(\0132+.google" +
+      ".ads.googleads.v1.resources.UserListH\000\022=" +
+      "\n\006update\030\002 \001(\0132+.google.ads.googleads.v1" +
+      ".resources.UserListH\000\022\020\n\006remove\030\003 \001(\tH\000B" +
+      "\013\n\toperation\"\225\001\n\027MutateUserListsResponse" +
+      "\0221\n\025partial_failure_error\030\003 \001(\0132\022.google" +
+      ".rpc.Status\022G\n\007results\030\002 \003(\01326.google.ad" +
+      "s.googleads.v1.services.MutateUserListRe" +
+      "sult\"-\n\024MutateUserListResult\022\025\n\rresource" +
+      "_name\030\001 \001(\t2\303\003\n\017UserListService\022\265\001\n\013GetU" +
+      "serList\0224.google.ads.googleads.v1.servic" +
+      "es.GetUserListRequest\032+.google.ads.googl" +
+      "eads.v1.resources.UserList\"C\202\323\344\223\002-\022+/v1/" +
+      "{resource_name=customers/*/userLists/*}\332" +
+      "A\rresource_name\022\332\001\n\017MutateUserLists\0228.go" +
+      "ogle.ads.googleads.v1.services.MutateUse" +
+      "rListsRequest\0329.google.ads.googleads.v1." +
+      "services.MutateUserListsResponse\"R\202\323\344\223\0023" +
+      "\"./v1/customers/{customer_id=*}/userList" +
+      "s:mutate:\001*\332A\026customer_id,operations\032\033\312A" +
+      "\030googleads.googleapis.comB\373\001\n$com.google" +
+      ".ads.googleads.v1.servicesB\024UserListServ" +
+      "iceProtoP\001ZHgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v1/services;serv" +
+      "ices\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Ser" +
+      "vices\312\002 Google\\Ads\\GoogleAds\\V1\\Services" +
+      "\352\002$Google::Ads::GoogleAds::V1::Servicesb" +
+      "\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.UserListProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetUserListRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetUserListRequest_fieldAccessorTable = new
@@ -141,15 +137,19 @@ public final class UserListServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.UserListProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.FieldMaskProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
-    com.google.rpc.StatusProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -31,40 +31,49 @@ public final class FeedPlaceholderViewProto {
       "\n=google/ads/googleads/v2/resources/feed" +
       "_placeholder_view.proto\022!google.ads.goog" +
       "leads.v2.resources\0324google/ads/googleads" +
-      "/v2/enums/placeholder_type.proto\032\034google" +
-      "/api/annotations.proto\"\212\001\n\023FeedPlacehold" +
-      "erView\022\025\n\rresource_name\030\001 \001(\t\022\\\n\020placeho" +
-      "lder_type\030\002 \001(\0162B.google.ads.googleads.v" +
-      "2.enums.PlaceholderTypeEnum.PlaceholderT" +
-      "ypeB\205\002\n%com.google.ads.googleads.v2.reso" +
-      "urcesB\030FeedPlaceholderViewProtoP\001ZJgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v2/resources;resources\242\002\003GAA\252\002!Go" +
-      "ogle.Ads.GoogleAds.V2.Resources\312\002!Google" +
-      "\\Ads\\GoogleAds\\V2\\Resources\352\002%Google::Ad" +
-      "s::GoogleAds::V2::Resourcesb\006proto3"
+      "/v2/enums/placeholder_type.proto\032\037google" +
+      "/api/field_behavior.proto\032\031google/api/re" +
+      "source.proto\032\034google/api/annotations.pro" +
+      "to\"\273\002\n\023FeedPlaceholderView\022K\n\rresource_n" +
+      "ame\030\001 \001(\tB4\340A\003\372A.\n,googleads.googleapis." +
+      "com/FeedPlaceholderView\022a\n\020placeholder_t" +
+      "ype\030\002 \001(\0162B.google.ads.googleads.v2.enum" +
+      "s.PlaceholderTypeEnum.PlaceholderTypeB\003\340" +
+      "A\003:t\352Aq\n,googleads.googleapis.com/FeedPl" +
+      "aceholderView\022Acustomers/{customer}/feed" +
+      "PlaceholderViews/{feed_placeholder_view}" +
+      "B\205\002\n%com.google.ads.googleads.v2.resourc" +
+      "esB\030FeedPlaceholderViewProtoP\001ZJgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v2/resources;resources\242\002\003GAA\252\002!Googl" +
+      "e.Ads.GoogleAds.V2.Resources\312\002!Google\\Ad" +
+      "s\\GoogleAds\\V2\\Resources\352\002%Google::Ads::" +
+      "GoogleAds::V2::Resourcesb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v2.enums.PlaceholderTypeProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v2_resources_FeedPlaceholderView_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v2_resources_FeedPlaceholderView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v2_resources_FeedPlaceholderView_descriptor,
         new java.lang.String[] { "ResourceName", "PlaceholderType", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v2.enums.PlaceholderTypeProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

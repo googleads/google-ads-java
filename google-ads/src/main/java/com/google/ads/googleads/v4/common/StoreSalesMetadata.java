@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.StoreSalesMetadata}
  */
-public  final class StoreSalesMetadata extends
+public final class StoreSalesMetadata extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.StoreSalesMetadata)
     StoreSalesMetadataOrBuilder {
@@ -149,6 +149,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue loyalty_fraction = 1;</code>
    * @return Whether the loyaltyFraction field is set.
    */
+  @java.lang.Override
   public boolean hasLoyaltyFraction() {
     return loyaltyFraction_ != null;
   }
@@ -163,6 +164,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue loyalty_fraction = 1;</code>
    * @return The loyaltyFraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getLoyaltyFraction() {
     return loyaltyFraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : loyaltyFraction_;
   }
@@ -176,6 +178,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue loyalty_fraction = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getLoyaltyFractionOrBuilder() {
     return getLoyaltyFraction();
   }
@@ -194,6 +197,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue transaction_upload_fraction = 2;</code>
    * @return Whether the transactionUploadFraction field is set.
    */
+  @java.lang.Override
   public boolean hasTransactionUploadFraction() {
     return transactionUploadFraction_ != null;
   }
@@ -209,6 +213,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.DoubleValue transaction_upload_fraction = 2;</code>
    * @return The transactionUploadFraction.
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValue getTransactionUploadFraction() {
     return transactionUploadFraction_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : transactionUploadFraction_;
   }
@@ -223,6 +228,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.DoubleValue transaction_upload_fraction = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.DoubleValueOrBuilder getTransactionUploadFractionOrBuilder() {
     return getTransactionUploadFraction();
   }
@@ -240,6 +246,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
    * @return Whether the customKey field is set.
    */
+  @java.lang.Override
   public boolean hasCustomKey() {
     return customKey_ != null;
   }
@@ -254,6 +261,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
    * @return The customKey.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCustomKey() {
     return customKey_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customKey_;
   }
@@ -267,6 +275,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue custom_key = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCustomKeyOrBuilder() {
     return getCustomKey();
   }
@@ -281,6 +290,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.StoreSalesThirdPartyMetadata third_party_metadata = 3;</code>
    * @return Whether the thirdPartyMetadata field is set.
    */
+  @java.lang.Override
   public boolean hasThirdPartyMetadata() {
     return thirdPartyMetadata_ != null;
   }
@@ -292,6 +302,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.StoreSalesThirdPartyMetadata third_party_metadata = 3;</code>
    * @return The thirdPartyMetadata.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.StoreSalesThirdPartyMetadata getThirdPartyMetadata() {
     return thirdPartyMetadata_ == null ? com.google.ads.googleads.v4.common.StoreSalesThirdPartyMetadata.getDefaultInstance() : thirdPartyMetadata_;
   }
@@ -302,6 +313,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.StoreSalesThirdPartyMetadata third_party_metadata = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.StoreSalesThirdPartyMetadataOrBuilder getThirdPartyMetadataOrBuilder() {
     return getThirdPartyMetadata();
   }

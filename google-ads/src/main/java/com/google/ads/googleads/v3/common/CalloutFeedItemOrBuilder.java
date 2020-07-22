@@ -14,6 +14,7 @@ public interface CalloutFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue callout_text = 1;</code>
+   * @return Whether the calloutText field is set.
    */
   boolean hasCalloutText();
   /**
@@ -23,6 +24,7 @@ public interface CalloutFeedItemOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue callout_text = 1;</code>
+   * @return The calloutText.
    */
   com.google.protobuf.StringValue getCalloutText();
   /**

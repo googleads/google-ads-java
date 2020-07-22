@@ -30,7 +30,6 @@ import com.google.api.gax.paging.AbstractPagedListResponse;
 import com.google.api.gax.rpc.OperationCallable;
 import com.google.api.gax.rpc.PageContext;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.longrunning.Operation;
 import com.google.longrunning.OperationsClient;
@@ -51,8 +50,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
- *   String formattedResourceName = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
- *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(formattedResourceName);
+ *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+ *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(resourceName);
  * }
  * </code>
  * </pre>
@@ -114,43 +113,6 @@ public class CampaignDraftServiceClient implements BackgroundResource {
   private final CampaignDraftServiceSettings settings;
   private final CampaignDraftServiceStub stub;
   private final OperationsClient operationsClient;
-
-  private static final PathTemplate CAMPAIGN_DRAFT_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/campaignDrafts/{campaign_draft}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a campaign_draft resource.
-   *
-   * @deprecated Use the {@link CampaignDraftName} class instead.
-   */
-  @Deprecated
-  public static final String formatCampaignDraftName(String customer, String campaignDraft) {
-    return CAMPAIGN_DRAFT_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "campaign_draft", campaignDraft);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a campaign_draft
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignDraftName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCampaignDraftName(String campaignDraftName) {
-    return CAMPAIGN_DRAFT_PATH_TEMPLATE.parse(campaignDraftName).get("customer");
-  }
-
-  /**
-   * Parses the campaign_draft from the given fully-qualified path which represents a campaign_draft
-   * resource.
-   *
-   * @deprecated Use the {@link CampaignDraftName} class instead.
-   */
-  @Deprecated
-  public static final String parseCampaignDraftFromCampaignDraftName(String campaignDraftName) {
-    return CAMPAIGN_DRAFT_PATH_TEMPLATE.parse(campaignDraftName).get("campaign_draft");
-  }
 
   /** Constructs an instance of CampaignDraftServiceClient with default settings. */
   public static final CampaignDraftServiceClient create() throws IOException {
@@ -220,8 +182,32 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedResourceName = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
-   *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(formattedResourceName);
+   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the campaign draft to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CampaignDraft getCampaignDraft(CampaignDraftName resourceName) {
+    GetCampaignDraftRequest request =
+        GetCampaignDraftRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCampaignDraft(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested campaign draft in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
+   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -229,7 +215,6 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CampaignDraft getCampaignDraft(String resourceName) {
-    CAMPAIGN_DRAFT_PATH_TEMPLATE.validate(resourceName, "getCampaignDraft");
     GetCampaignDraftRequest request =
         GetCampaignDraftRequest.newBuilder().setResourceName(resourceName).build();
     return getCampaignDraft(request);
@@ -243,9 +228,9 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedResourceName = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
    *   GetCampaignDraftRequest request = GetCampaignDraftRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CampaignDraft response = campaignDraftServiceClient.getCampaignDraft(request);
    * }
@@ -266,9 +251,9 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedResourceName = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
    *   GetCampaignDraftRequest request = GetCampaignDraftRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CampaignDraft&gt; future = campaignDraftServiceClient.getCampaignDraftCallable().futureCall(request);
    *   // Do something
@@ -278,46 +263,6 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    */
   public final UnaryCallable<GetCampaignDraftRequest, CampaignDraft> getCampaignDraftCallable() {
     return stub.getCampaignDraftCallable();
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes campaign drafts. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CampaignDraftOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCampaignDraftsResponse response = campaignDraftServiceClient.mutateCampaignDrafts(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId Required. The ID of the customer whose campaign drafts are being modified.
-   * @param operations Required. The list of operations to perform on individual campaign drafts.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCampaignDraftsResponse mutateCampaignDrafts(
-      String customerId,
-      List<CampaignDraftOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-    MutateCampaignDraftsRequest request =
-        MutateCampaignDraftsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCampaignDrafts(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
@@ -414,8 +359,8 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedCampaignDraft = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
-   *   campaignDraftServiceClient.promoteCampaignDraftAsync(formattedCampaignDraft).get();
+   *   String campaignDraft = "";
+   *   campaignDraftServiceClient.promoteCampaignDraftAsync(campaignDraft).get();
    * }
    * </code></pre>
    *
@@ -425,7 +370,6 @@ public class CampaignDraftServiceClient implements BackgroundResource {
   @BetaApi(
       "The surface for long-running operations is not stable yet and may change in the future.")
   public final OperationFuture<Empty, Empty> promoteCampaignDraftAsync(String campaignDraft) {
-    CAMPAIGN_DRAFT_PATH_TEMPLATE.validate(campaignDraft, "promoteCampaignDraft");
     PromoteCampaignDraftRequest request =
         PromoteCampaignDraftRequest.newBuilder().setCampaignDraft(campaignDraft).build();
     return promoteCampaignDraftAsync(request);
@@ -446,9 +390,9 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedCampaignDraft = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   String campaignDraft = "";
    *   PromoteCampaignDraftRequest request = PromoteCampaignDraftRequest.newBuilder()
-   *     .setCampaignDraft(formattedCampaignDraft)
+   *     .setCampaignDraft(campaignDraft)
    *     .build();
    *   campaignDraftServiceClient.promoteCampaignDraftAsync(request).get();
    * }
@@ -479,9 +423,9 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedCampaignDraft = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   String campaignDraft = "";
    *   PromoteCampaignDraftRequest request = PromoteCampaignDraftRequest.newBuilder()
-   *     .setCampaignDraft(formattedCampaignDraft)
+   *     .setCampaignDraft(campaignDraft)
    *     .build();
    *   OperationFuture&lt;Empty, Empty&gt; future = campaignDraftServiceClient.promoteCampaignDraftOperationCallable().futureCall(request);
    *   // Do something
@@ -510,9 +454,9 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedCampaignDraft = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   String campaignDraft = "";
    *   PromoteCampaignDraftRequest request = PromoteCampaignDraftRequest.newBuilder()
-   *     .setCampaignDraft(formattedCampaignDraft)
+   *     .setCampaignDraft(campaignDraft)
    *     .build();
    *   ApiFuture&lt;Operation&gt; future = campaignDraftServiceClient.promoteCampaignDraftCallable().futureCall(request);
    *   // Do something
@@ -534,8 +478,37 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedResourceName = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
-   *   for (Status element : campaignDraftServiceClient.listCampaignDraftAsyncErrors(formattedResourceName).iterateAll()) {
+   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   for (Status element : campaignDraftServiceClient.listCampaignDraftAsyncErrors(resourceName).iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The name of the campaign draft from which to retrieve the async
+   *     errors.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final ListCampaignDraftAsyncErrorsPagedResponse listCampaignDraftAsyncErrors(
+      CampaignDraftName resourceName) {
+    ListCampaignDraftAsyncErrorsRequest request =
+        ListCampaignDraftAsyncErrorsRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return listCampaignDraftAsyncErrors(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns all errors that occurred during CampaignDraft promote. Throws an error if called before
+   * campaign draft is promoted. Supports standard list paging.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
+   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   for (Status element : campaignDraftServiceClient.listCampaignDraftAsyncErrors(resourceName.toString()).iterateAll()) {
    *     // doThingsWith(element);
    *   }
    * }
@@ -547,7 +520,6 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    */
   public final ListCampaignDraftAsyncErrorsPagedResponse listCampaignDraftAsyncErrors(
       String resourceName) {
-    CAMPAIGN_DRAFT_PATH_TEMPLATE.validate(resourceName, "listCampaignDraftAsyncErrors");
     ListCampaignDraftAsyncErrorsRequest request =
         ListCampaignDraftAsyncErrorsRequest.newBuilder().setResourceName(resourceName).build();
     return listCampaignDraftAsyncErrors(request);
@@ -562,9 +534,9 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedResourceName = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
    *   ListCampaignDraftAsyncErrorsRequest request = ListCampaignDraftAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   for (Status element : campaignDraftServiceClient.listCampaignDraftAsyncErrors(request).iterateAll()) {
    *     // doThingsWith(element);
@@ -589,9 +561,9 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedResourceName = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
    *   ListCampaignDraftAsyncErrorsRequest request = ListCampaignDraftAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;ListCampaignDraftAsyncErrorsPagedResponse&gt; future = campaignDraftServiceClient.listCampaignDraftAsyncErrorsPagedCallable().futureCall(request);
    *   // Do something
@@ -616,9 +588,9 @@ public class CampaignDraftServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (CampaignDraftServiceClient campaignDraftServiceClient = CampaignDraftServiceClient.create()) {
-   *   String formattedResourceName = CampaignDraftServiceClient.formatCampaignDraftName("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
+   *   CampaignDraftName resourceName = CampaignDraftName.of("[CUSTOMER]", "[CAMPAIGN_DRAFT]");
    *   ListCampaignDraftAsyncErrorsRequest request = ListCampaignDraftAsyncErrorsRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   while (true) {
    *     ListCampaignDraftAsyncErrorsResponse response = campaignDraftServiceClient.listCampaignDraftAsyncErrorsCallable().call(request);

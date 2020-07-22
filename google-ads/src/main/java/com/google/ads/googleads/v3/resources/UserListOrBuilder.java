@@ -15,6 +15,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
@@ -43,6 +46,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
@@ -63,6 +67,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the readOnly field is set.
    */
   boolean hasReadOnly();
   /**
@@ -74,6 +79,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue read_only = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The readOnly.
    */
   com.google.protobuf.BoolValue getReadOnly();
   /**
@@ -95,6 +101,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
@@ -104,6 +111,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
@@ -122,6 +130,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 5;</code>
+   * @return Whether the description field is set.
    */
   boolean hasDescription();
   /**
@@ -130,6 +139,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue description = 5;</code>
+   * @return The description.
    */
   com.google.protobuf.StringValue getDescription();
   /**
@@ -149,6 +159,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListMembershipStatusEnum.UserListMembershipStatus membership_status = 6;</code>
+   * @return The enum numeric value on the wire for membershipStatus.
    */
   int getMembershipStatusValue();
   /**
@@ -159,6 +170,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListMembershipStatusEnum.UserListMembershipStatus membership_status = 6;</code>
+   * @return The membershipStatus.
    */
   com.google.ads.googleads.v3.enums.UserListMembershipStatusEnum.UserListMembershipStatus getMembershipStatus();
 
@@ -169,6 +181,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue integration_code = 7;</code>
+   * @return Whether the integrationCode field is set.
    */
   boolean hasIntegrationCode();
   /**
@@ -178,6 +191,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue integration_code = 7;</code>
+   * @return The integrationCode.
    */
   com.google.protobuf.StringValue getIntegrationCode();
   /**
@@ -200,6 +214,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value membership_life_span = 8;</code>
+   * @return Whether the membershipLifeSpan field is set.
    */
   boolean hasMembershipLifeSpan();
   /**
@@ -212,6 +227,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value membership_life_span = 8;</code>
+   * @return The membershipLifeSpan.
    */
   com.google.protobuf.Int64Value getMembershipLifeSpan();
   /**
@@ -235,6 +251,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the sizeForDisplay field is set.
    */
   boolean hasSizeForDisplay();
   /**
@@ -245,6 +262,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value size_for_display = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The sizeForDisplay.
    */
   com.google.protobuf.Int64Value getSizeForDisplay();
   /**
@@ -266,6 +284,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for sizeRangeForDisplay.
    */
   int getSizeRangeForDisplayValue();
   /**
@@ -276,6 +295,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_display = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The sizeRangeForDisplay.
    */
   com.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange getSizeRangeForDisplay();
 
@@ -288,6 +308,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the sizeForSearch field is set.
    */
   boolean hasSizeForSearch();
   /**
@@ -299,6 +320,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value size_for_search = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The sizeForSearch.
    */
   com.google.protobuf.Int64Value getSizeForSearch();
   /**
@@ -320,6 +342,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for sizeRangeForSearch.
    */
   int getSizeRangeForSearchValue();
   /**
@@ -329,6 +352,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange size_range_for_search = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The sizeRangeForSearch.
    */
   com.google.ads.googleads.v3.enums.UserListSizeRangeEnum.UserListSizeRange getSizeRangeForSearch();
 
@@ -339,6 +363,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
@@ -348,6 +373,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v3.enums.UserListTypeEnum.UserListType getType();
 
@@ -359,6 +385,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListClosingReasonEnum.UserListClosingReason closing_reason = 14;</code>
+   * @return The enum numeric value on the wire for closingReason.
    */
   int getClosingReasonValue();
   /**
@@ -369,6 +396,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListClosingReasonEnum.UserListClosingReason closing_reason = 14;</code>
+   * @return The closingReason.
    */
   com.google.ads.googleads.v3.enums.UserListClosingReasonEnum.UserListClosingReason getClosingReason();
 
@@ -380,6 +408,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for accessReason.
    */
   int getAccessReasonValue();
   /**
@@ -390,6 +419,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason access_reason = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The accessReason.
    */
   com.google.ads.googleads.v3.enums.AccessReasonEnum.AccessReason getAccessReason();
 
@@ -402,6 +432,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListAccessStatusEnum.UserListAccessStatus account_user_list_status = 16;</code>
+   * @return The enum numeric value on the wire for accountUserListStatus.
    */
   int getAccountUserListStatusValue();
   /**
@@ -413,6 +444,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.UserListAccessStatusEnum.UserListAccessStatus account_user_list_status = 16;</code>
+   * @return The accountUserListStatus.
    */
   com.google.ads.googleads.v3.enums.UserListAccessStatusEnum.UserListAccessStatus getAccountUserListStatus();
 
@@ -422,6 +454,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue eligible_for_search = 17;</code>
+   * @return Whether the eligibleForSearch field is set.
    */
   boolean hasEligibleForSearch();
   /**
@@ -430,6 +463,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue eligible_for_search = 17;</code>
+   * @return The eligibleForSearch.
    */
   com.google.protobuf.BoolValue getEligibleForSearch();
   /**
@@ -448,6 +482,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the eligibleForDisplay field is set.
    */
   boolean hasEligibleForDisplay();
   /**
@@ -457,6 +492,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.BoolValue eligible_for_display = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The eligibleForDisplay.
    */
   com.google.protobuf.BoolValue getEligibleForDisplay();
   /**
@@ -475,6 +511,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CrmBasedUserListInfo crm_based_user_list = 19;</code>
+   * @return Whether the crmBasedUserList field is set.
    */
   boolean hasCrmBasedUserList();
   /**
@@ -483,6 +520,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.CrmBasedUserListInfo crm_based_user_list = 19;</code>
+   * @return The crmBasedUserList.
    */
   com.google.ads.googleads.v3.common.CrmBasedUserListInfo getCrmBasedUserList();
   /**
@@ -501,6 +539,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the similarUserList field is set.
    */
   boolean hasSimilarUserList();
   /**
@@ -510,6 +549,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.SimilarUserListInfo similar_user_list = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The similarUserList.
    */
   com.google.ads.googleads.v3.common.SimilarUserListInfo getSimilarUserList();
   /**
@@ -528,6 +568,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.RuleBasedUserListInfo rule_based_user_list = 21;</code>
+   * @return Whether the ruleBasedUserList field is set.
    */
   boolean hasRuleBasedUserList();
   /**
@@ -536,6 +577,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.RuleBasedUserListInfo rule_based_user_list = 21;</code>
+   * @return The ruleBasedUserList.
    */
   com.google.ads.googleads.v3.common.RuleBasedUserListInfo getRuleBasedUserList();
   /**
@@ -553,6 +595,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LogicalUserListInfo logical_user_list = 22;</code>
+   * @return Whether the logicalUserList field is set.
    */
   boolean hasLogicalUserList();
   /**
@@ -561,6 +604,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.LogicalUserListInfo logical_user_list = 22;</code>
+   * @return The logicalUserList.
    */
   com.google.ads.googleads.v3.common.LogicalUserListInfo getLogicalUserList();
   /**
@@ -578,6 +622,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.BasicUserListInfo basic_user_list = 23;</code>
+   * @return Whether the basicUserList field is set.
    */
   boolean hasBasicUserList();
   /**
@@ -586,6 +631,7 @@ public interface UserListOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.BasicUserListInfo basic_user_list = 23;</code>
+   * @return The basicUserList.
    */
   com.google.ads.googleads.v3.common.BasicUserListInfo getBasicUserList();
   /**

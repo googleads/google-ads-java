@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.KeywordPlanKeywordForecast}
  */
-public  final class KeywordPlanKeywordForecast extends
+public final class KeywordPlanKeywordForecast extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.KeywordPlanKeywordForecast)
     KeywordPlanKeywordForecastOrBuilder {
@@ -121,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue keyword_plan_ad_group_keyword = 1;</code>
    * @return Whether the keywordPlanAdGroupKeyword field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordPlanAdGroupKeyword() {
     return keywordPlanAdGroupKeyword_ != null;
   }
@@ -133,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue keyword_plan_ad_group_keyword = 1;</code>
    * @return The keywordPlanAdGroupKeyword.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getKeywordPlanAdGroupKeyword() {
     return keywordPlanAdGroupKeyword_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : keywordPlanAdGroupKeyword_;
   }
@@ -144,6 +146,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue keyword_plan_ad_group_keyword = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getKeywordPlanAdGroupKeywordOrBuilder() {
     return getKeywordPlanAdGroupKeyword();
   }
@@ -158,6 +161,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.ForecastMetrics keyword_forecast = 2;</code>
    * @return Whether the keywordForecast field is set.
    */
+  @java.lang.Override
   public boolean hasKeywordForecast() {
     return keywordForecast_ != null;
   }
@@ -169,6 +173,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.ForecastMetrics keyword_forecast = 2;</code>
    * @return The keywordForecast.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ForecastMetrics getKeywordForecast() {
     return keywordForecast_ == null ? com.google.ads.googleads.v4.services.ForecastMetrics.getDefaultInstance() : keywordForecast_;
   }
@@ -179,6 +184,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.ForecastMetrics keyword_forecast = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ForecastMetricsOrBuilder getKeywordForecastOrBuilder() {
     return getKeywordForecast();
   }

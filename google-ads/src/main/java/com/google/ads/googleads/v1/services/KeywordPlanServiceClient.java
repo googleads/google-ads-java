@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.KeywordPlanServiceStubSettings;
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
- *   String formattedResourceName = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
- *   KeywordPlan response = keywordPlanServiceClient.getKeywordPlan(formattedResourceName);
+ *   KeywordPlanName resourceName = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
+ *   KeywordPlan response = keywordPlanServiceClient.getKeywordPlan(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,43 +99,6 @@ public class KeywordPlanServiceClient implements BackgroundResource {
   private final KeywordPlanServiceSettings settings;
   private final KeywordPlanServiceStub stub;
 
-  private static final PathTemplate KEYWORD_PLAN_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding("customers/{customer}/keywordPlans/{keyword_plan}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a keyword_plan resource.
-   *
-   * @deprecated Use the {@link KeywordPlanName} class instead.
-   */
-  @Deprecated
-  public static final String formatKeywordPlanName(String customer, String keywordPlan) {
-    return KEYWORD_PLAN_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "keyword_plan", keywordPlan);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a keyword_plan
-   * resource.
-   *
-   * @deprecated Use the {@link KeywordPlanName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromKeywordPlanName(String keywordPlanName) {
-    return KEYWORD_PLAN_PATH_TEMPLATE.parse(keywordPlanName).get("customer");
-  }
-
-  /**
-   * Parses the keyword_plan from the given fully-qualified path which represents a keyword_plan
-   * resource.
-   *
-   * @deprecated Use the {@link KeywordPlanName} class instead.
-   */
-  @Deprecated
-  public static final String parseKeywordPlanFromKeywordPlanName(String keywordPlanName) {
-    return KEYWORD_PLAN_PATH_TEMPLATE.parse(keywordPlanName).get("keyword_plan");
-  }
-
   /** Constructs an instance of KeywordPlanServiceClient with default settings. */
   public static final KeywordPlanServiceClient create() throws IOException {
     return create(KeywordPlanServiceSettings.newBuilder().build());
@@ -193,16 +155,39 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
-   *   KeywordPlan response = keywordPlanServiceClient.getKeywordPlan(formattedResourceName);
+   *   KeywordPlanName resourceName = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   KeywordPlan response = keywordPlanServiceClient.getKeywordPlan(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the plan to fetch.
+   * @param resourceName Required. The resource name of the plan to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final KeywordPlan getKeywordPlan(KeywordPlanName resourceName) {
+    GetKeywordPlanRequest request =
+        GetKeywordPlanRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getKeywordPlan(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested plan in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
+   *   KeywordPlanName resourceName = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   KeywordPlan response = keywordPlanServiceClient.getKeywordPlan(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the plan to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlan getKeywordPlan(String resourceName) {
-    KEYWORD_PLAN_PATH_TEMPLATE.validate(resourceName, "getKeywordPlan");
     GetKeywordPlanRequest request =
         GetKeywordPlanRequest.newBuilder().setResourceName(resourceName).build();
     return getKeywordPlan(request);
@@ -216,9 +201,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   KeywordPlanName resourceName = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GetKeywordPlanRequest request = GetKeywordPlanRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   KeywordPlan response = keywordPlanServiceClient.getKeywordPlan(request);
    * }
@@ -239,9 +224,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   KeywordPlanName resourceName = KeywordPlanName.of("[CUSTOMER]", "[KEYWORD_PLAN]");
    *   GetKeywordPlanRequest request = GetKeywordPlanRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;KeywordPlan&gt; future = keywordPlanServiceClient.getKeywordPlanCallable().futureCall(request);
    *   // Do something
@@ -263,58 +248,16 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;KeywordPlanOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateKeywordPlansResponse response = keywordPlanServiceClient.mutateKeywordPlans(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose keyword plans are being modified.
-   * @param operations The list of operations to perform on individual keyword plans.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateKeywordPlansResponse mutateKeywordPlans(
-      String customerId,
-      List<KeywordPlanOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateKeywordPlansRequest request =
-        MutateKeywordPlansRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateKeywordPlans(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes keyword plans. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;KeywordPlanOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateKeywordPlansResponse response = keywordPlanServiceClient.mutateKeywordPlans(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose keyword plans are being modified.
-   * @param operations The list of operations to perform on individual keyword plans.
+   * @param customerId Required. The ID of the customer whose keyword plans are being modified.
+   * @param operations Required. The list of operations to perform on individual keyword plans.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateKeywordPlansResponse mutateKeywordPlans(
       String customerId, List<KeywordPlanOperation> operations) {
-
     MutateKeywordPlansRequest request =
         MutateKeywordPlansRequest.newBuilder()
             .setCustomerId(customerId)
@@ -381,16 +324,15 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String formattedKeywordPlan = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
-   *   GenerateForecastMetricsResponse response = keywordPlanServiceClient.generateForecastMetrics(formattedKeywordPlan);
+   *   String keywordPlan = "";
+   *   GenerateForecastMetricsResponse response = keywordPlanServiceClient.generateForecastMetrics(keywordPlan);
    * }
    * </code></pre>
    *
-   * @param keywordPlan The resource name of the keyword plan to be forecasted.
+   * @param keywordPlan Required. The resource name of the keyword plan to be forecasted.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateForecastMetricsResponse generateForecastMetrics(String keywordPlan) {
-    KEYWORD_PLAN_PATH_TEMPLATE.validate(keywordPlan, "generateForecastMetrics");
     GenerateForecastMetricsRequest request =
         GenerateForecastMetricsRequest.newBuilder().setKeywordPlan(keywordPlan).build();
     return generateForecastMetrics(request);
@@ -404,9 +346,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String formattedKeywordPlan = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   String keywordPlan = "";
    *   GenerateForecastMetricsRequest request = GenerateForecastMetricsRequest.newBuilder()
-   *     .setKeywordPlan(formattedKeywordPlan)
+   *     .setKeywordPlan(keywordPlan)
    *     .build();
    *   GenerateForecastMetricsResponse response = keywordPlanServiceClient.generateForecastMetrics(request);
    * }
@@ -428,9 +370,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String formattedKeywordPlan = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   String keywordPlan = "";
    *   GenerateForecastMetricsRequest request = GenerateForecastMetricsRequest.newBuilder()
-   *     .setKeywordPlan(formattedKeywordPlan)
+   *     .setKeywordPlan(keywordPlan)
    *     .build();
    *   ApiFuture&lt;GenerateForecastMetricsResponse&gt; future = keywordPlanServiceClient.generateForecastMetricsCallable().futureCall(request);
    *   // Do something
@@ -451,17 +393,16 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String formattedKeywordPlan = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
-   *   GenerateHistoricalMetricsResponse response = keywordPlanServiceClient.generateHistoricalMetrics(formattedKeywordPlan);
+   *   String keywordPlan = "";
+   *   GenerateHistoricalMetricsResponse response = keywordPlanServiceClient.generateHistoricalMetrics(keywordPlan);
    * }
    * </code></pre>
    *
-   * @param keywordPlan The resource name of the keyword plan of which historical metrics are
-   *     requested.
+   * @param keywordPlan Required. The resource name of the keyword plan of which historical metrics
+   *     are requested.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final GenerateHistoricalMetricsResponse generateHistoricalMetrics(String keywordPlan) {
-    KEYWORD_PLAN_PATH_TEMPLATE.validate(keywordPlan, "generateHistoricalMetrics");
     GenerateHistoricalMetricsRequest request =
         GenerateHistoricalMetricsRequest.newBuilder().setKeywordPlan(keywordPlan).build();
     return generateHistoricalMetrics(request);
@@ -475,9 +416,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String formattedKeywordPlan = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   String keywordPlan = "";
    *   GenerateHistoricalMetricsRequest request = GenerateHistoricalMetricsRequest.newBuilder()
-   *     .setKeywordPlan(formattedKeywordPlan)
+   *     .setKeywordPlan(keywordPlan)
    *     .build();
    *   GenerateHistoricalMetricsResponse response = keywordPlanServiceClient.generateHistoricalMetrics(request);
    * }
@@ -499,9 +440,9 @@ public class KeywordPlanServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
-   *   String formattedKeywordPlan = KeywordPlanServiceClient.formatKeywordPlanName("[CUSTOMER]", "[KEYWORD_PLAN]");
+   *   String keywordPlan = "";
    *   GenerateHistoricalMetricsRequest request = GenerateHistoricalMetricsRequest.newBuilder()
-   *     .setKeywordPlan(formattedKeywordPlan)
+   *     .setKeywordPlan(keywordPlan)
    *     .build();
    *   ApiFuture&lt;GenerateHistoricalMetricsResponse&gt; future = keywordPlanServiceClient.generateHistoricalMetricsCallable().futureCall(request);
    *   // Do something

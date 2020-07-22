@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v2.services.stub.KeywordPlanCampaignServiceStubS
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
- *   String formattedResourceName = KeywordPlanCampaignServiceClient.formatKeywordPlanCampaignName("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
- *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(formattedResourceName);
+ *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
+ *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(resourceName);
  * }
  * </code>
  * </pre>
@@ -100,50 +99,6 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
   private final KeywordPlanCampaignServiceSettings settings;
   private final KeywordPlanCampaignServiceStub stub;
 
-  private static final PathTemplate KEYWORD_PLAN_CAMPAIGN_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/keywordPlanCampaigns/{keyword_plan_campaign}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a keyword_plan_campaign
-   * resource.
-   *
-   * @deprecated Use the {@link KeywordPlanCampaignName} class instead.
-   */
-  @Deprecated
-  public static final String formatKeywordPlanCampaignName(
-      String customer, String keywordPlanCampaign) {
-    return KEYWORD_PLAN_CAMPAIGN_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "keyword_plan_campaign", keywordPlanCampaign);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * keyword_plan_campaign resource.
-   *
-   * @deprecated Use the {@link KeywordPlanCampaignName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromKeywordPlanCampaignName(
-      String keywordPlanCampaignName) {
-    return KEYWORD_PLAN_CAMPAIGN_PATH_TEMPLATE.parse(keywordPlanCampaignName).get("customer");
-  }
-
-  /**
-   * Parses the keyword_plan_campaign from the given fully-qualified path which represents a
-   * keyword_plan_campaign resource.
-   *
-   * @deprecated Use the {@link KeywordPlanCampaignName} class instead.
-   */
-  @Deprecated
-  public static final String parseKeywordPlanCampaignFromKeywordPlanCampaignName(
-      String keywordPlanCampaignName) {
-    return KEYWORD_PLAN_CAMPAIGN_PATH_TEMPLATE
-        .parse(keywordPlanCampaignName)
-        .get("keyword_plan_campaign");
-  }
-
   /** Constructs an instance of KeywordPlanCampaignServiceClient with default settings. */
   public static final KeywordPlanCampaignServiceClient create() throws IOException {
     return create(KeywordPlanCampaignServiceSettings.newBuilder().build());
@@ -202,16 +157,39 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanCampaignServiceClient.formatKeywordPlanCampaignName("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
-   *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(formattedResourceName);
+   *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
+   *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the Keyword Plan campaign to fetch.
+   * @param resourceName Required. The resource name of the Keyword Plan campaign to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final KeywordPlanCampaign getKeywordPlanCampaign(KeywordPlanCampaignName resourceName) {
+    GetKeywordPlanCampaignRequest request =
+        GetKeywordPlanCampaignRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getKeywordPlanCampaign(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested Keyword Plan campaign in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
+   *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
+   *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the Keyword Plan campaign to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final KeywordPlanCampaign getKeywordPlanCampaign(String resourceName) {
-    KEYWORD_PLAN_CAMPAIGN_PATH_TEMPLATE.validate(resourceName, "getKeywordPlanCampaign");
     GetKeywordPlanCampaignRequest request =
         GetKeywordPlanCampaignRequest.newBuilder().setResourceName(resourceName).build();
     return getKeywordPlanCampaign(request);
@@ -225,9 +203,9 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanCampaignServiceClient.formatKeywordPlanCampaignName("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
+   *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
    *   GetKeywordPlanCampaignRequest request = GetKeywordPlanCampaignRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   KeywordPlanCampaign response = keywordPlanCampaignServiceClient.getKeywordPlanCampaign(request);
    * }
@@ -248,9 +226,9 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   String formattedResourceName = KeywordPlanCampaignServiceClient.formatKeywordPlanCampaignName("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
+   *   KeywordPlanCampaignName resourceName = KeywordPlanCampaignName.of("[CUSTOMER]", "[KEYWORD_PLAN_CAMPAIGN]");
    *   GetKeywordPlanCampaignRequest request = GetKeywordPlanCampaignRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;KeywordPlanCampaign&gt; future = keywordPlanCampaignServiceClient.getKeywordPlanCampaignCallable().futureCall(request);
    *   // Do something
@@ -273,58 +251,18 @@ public class KeywordPlanCampaignServiceClient implements BackgroundResource {
    * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;KeywordPlanCampaignOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateKeywordPlanCampaignsResponse response = keywordPlanCampaignServiceClient.mutateKeywordPlanCampaigns(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose Keyword Plan campaigns are being modified.
-   * @param operations The list of operations to perform on individual Keyword Plan campaigns.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateKeywordPlanCampaignsResponse mutateKeywordPlanCampaigns(
-      String customerId,
-      List<KeywordPlanCampaignOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateKeywordPlanCampaignsRequest request =
-        MutateKeywordPlanCampaignsRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateKeywordPlanCampaigns(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates, updates, or removes Keyword Plan campaigns. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient = KeywordPlanCampaignServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;KeywordPlanCampaignOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateKeywordPlanCampaignsResponse response = keywordPlanCampaignServiceClient.mutateKeywordPlanCampaigns(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose Keyword Plan campaigns are being modified.
-   * @param operations The list of operations to perform on individual Keyword Plan campaigns.
+   * @param customerId Required. The ID of the customer whose Keyword Plan campaigns are being
+   *     modified.
+   * @param operations Required. The list of operations to perform on individual Keyword Plan
+   *     campaigns.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateKeywordPlanCampaignsResponse mutateKeywordPlanCampaigns(
       String customerId, List<KeywordPlanCampaignOperation> operations) {
-
     MutateKeywordPlanCampaignsRequest request =
         MutateKeywordPlanCampaignsRequest.newBuilder()
             .setCustomerId(customerId)

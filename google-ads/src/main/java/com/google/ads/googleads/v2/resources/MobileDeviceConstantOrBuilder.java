@@ -9,140 +9,152 @@ public interface MobileDeviceConstantOrBuilder extends
 
   /**
    * <pre>
-   * The resource name of the mobile device constant.
+   * Output only. The resource name of the mobile device constant.
    * Mobile device constant resource names have the form:
    * `mobileDeviceConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
    * <pre>
-   * The resource name of the mobile device constant.
+   * Output only. The resource name of the mobile device constant.
    * Mobile device constant resource names have the form:
    * `mobileDeviceConstants/{criterion_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
 
   /**
    * <pre>
-   * The ID of the mobile device constant.
+   * Output only. The ID of the mobile device constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the id field is set.
    */
   boolean hasId();
   /**
    * <pre>
-   * The ID of the mobile device constant.
+   * Output only. The ID of the mobile device constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
    */
   com.google.protobuf.Int64Value getId();
   /**
    * <pre>
-   * The ID of the mobile device constant.
+   * Output only. The ID of the mobile device constant.
    * </pre>
    *
-   * <code>.google.protobuf.Int64Value id = 2;</code>
+   * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder();
 
   /**
    * <pre>
-   * The name of the mobile device.
+   * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the name field is set.
    */
   boolean hasName();
   /**
    * <pre>
-   * The name of the mobile device.
+   * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The name.
    */
   com.google.protobuf.StringValue getName();
   /**
    * <pre>
-   * The name of the mobile device.
+   * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue name = 3;</code>
+   * <code>.google.protobuf.StringValue name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
 
   /**
    * <pre>
-   * The manufacturer of the mobile device.
+   * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+   * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the manufacturerName field is set.
    */
   boolean hasManufacturerName();
   /**
    * <pre>
-   * The manufacturer of the mobile device.
+   * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+   * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The manufacturerName.
    */
   com.google.protobuf.StringValue getManufacturerName();
   /**
    * <pre>
-   * The manufacturer of the mobile device.
+   * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue manufacturer_name = 4;</code>
+   * <code>.google.protobuf.StringValue manufacturer_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getManufacturerNameOrBuilder();
 
   /**
    * <pre>
-   * The operating system of the mobile device.
+   * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+   * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the operatingSystemName field is set.
    */
   boolean hasOperatingSystemName();
   /**
    * <pre>
-   * The operating system of the mobile device.
+   * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+   * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The operatingSystemName.
    */
   com.google.protobuf.StringValue getOperatingSystemName();
   /**
    * <pre>
-   * The operating system of the mobile device.
+   * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue operating_system_name = 5;</code>
+   * <code>.google.protobuf.StringValue operating_system_name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.protobuf.StringValueOrBuilder getOperatingSystemNameOrBuilder();
 
   /**
    * <pre>
-   * The type of mobile device.
+   * Output only. The type of mobile device.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
   /**
    * <pre>
-   * The type of mobile device.
+   * Output only. The type of mobile device.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6;</code>
+   * <code>.google.ads.googleads.v2.enums.MobileDeviceTypeEnum.MobileDeviceType type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
    */
   com.google.ads.googleads.v2.enums.MobileDeviceTypeEnum.MobileDeviceType getType();
 }

@@ -12,7 +12,7 @@ package com.google.ads.googleads.v2.resources;
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.CustomerLabel}
  */
-public  final class CustomerLabel extends
+public final class CustomerLabel extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.CustomerLabel)
     CustomerLabelOrBuilder {
@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   }
   private CustomerLabel() {
     resourceName_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CustomerLabel();
   }
 
   @java.lang.Override
@@ -38,7 +45,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -117,13 +123,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * Customer label resource names have the form:
    * `customers/{customer_id}/customerLabels/{label_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -138,13 +146,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Name of the resource.
+   * Immutable. Name of the resource.
    * Customer label resource names have the form:
    * `customers/{customer_id}/customerLabels/{label_id}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -163,34 +173,39 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue customer_;
   /**
    * <pre>
-   * The resource name of the customer to which the label is attached.
+   * Output only. The resource name of the customer to which the label is attached.
    * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue customer = 2;</code>
+   * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the customer field is set.
    */
+  @java.lang.Override
   public boolean hasCustomer() {
     return customer_ != null;
   }
   /**
    * <pre>
-   * The resource name of the customer to which the label is attached.
+   * Output only. The resource name of the customer to which the label is attached.
    * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue customer = 2;</code>
+   * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The customer.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCustomer() {
     return customer_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customer_;
   }
   /**
    * <pre>
-   * The resource name of the customer to which the label is attached.
+   * Output only. The resource name of the customer to which the label is attached.
    * Read only.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue customer = 2;</code>
+   * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCustomerOrBuilder() {
     return getCustomer();
   }
@@ -199,37 +214,42 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.StringValue label_;
   /**
    * <pre>
-   * The resource name of the label assigned to the customer.
+   * Output only. The resource name of the label assigned to the customer.
    * Note: the Customer ID portion of the label resource name is not
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the label field is set.
    */
+  @java.lang.Override
   public boolean hasLabel() {
     return label_ != null;
   }
   /**
    * <pre>
-   * The resource name of the label assigned to the customer.
+   * Output only. The resource name of the label assigned to the customer.
    * Note: the Customer ID portion of the label resource name is not
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The label.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getLabel() {
     return label_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : label_;
   }
   /**
    * <pre>
-   * The resource name of the label assigned to the customer.
+   * Output only. The resource name of the label assigned to the customer.
    * Note: the Customer ID portion of the label resource name is not
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>.google.protobuf.StringValue label = 3;</code>
+   * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getLabelOrBuilder() {
     return getLabel();
   }
@@ -605,12 +625,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * Customer label resource names have the form:
      * `customers/{customer_id}/customerLabels/{label_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -626,12 +647,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * Customer label resource names have the form:
      * `customers/{customer_id}/customerLabels/{label_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -648,12 +670,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * Customer label resource names have the form:
      * `customers/{customer_id}/customerLabels/{label_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -667,12 +691,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * Customer label resource names have the form:
      * `customers/{customer_id}/customerLabels/{label_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -682,12 +707,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Name of the resource.
+     * Immutable. Name of the resource.
      * Customer label resource names have the form:
      * `customers/{customer_id}/customerLabels/{label_id}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -706,22 +733,24 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> customerBuilder_;
     /**
      * <pre>
-     * The resource name of the customer to which the label is attached.
+     * Output only. The resource name of the customer to which the label is attached.
      * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 2;</code>
+     * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the customer field is set.
      */
     public boolean hasCustomer() {
       return customerBuilder_ != null || customer_ != null;
     }
     /**
      * <pre>
-     * The resource name of the customer to which the label is attached.
+     * Output only. The resource name of the customer to which the label is attached.
      * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 2;</code>
+     * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The customer.
      */
     public com.google.protobuf.StringValue getCustomer() {
       if (customerBuilder_ == null) {
@@ -732,11 +761,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer to which the label is attached.
+     * Output only. The resource name of the customer to which the label is attached.
      * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 2;</code>
+     * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCustomer(com.google.protobuf.StringValue value) {
       if (customerBuilder_ == null) {
@@ -753,11 +782,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer to which the label is attached.
+     * Output only. The resource name of the customer to which the label is attached.
      * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 2;</code>
+     * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setCustomer(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -772,11 +801,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer to which the label is attached.
+     * Output only. The resource name of the customer to which the label is attached.
      * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 2;</code>
+     * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeCustomer(com.google.protobuf.StringValue value) {
       if (customerBuilder_ == null) {
@@ -795,11 +824,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer to which the label is attached.
+     * Output only. The resource name of the customer to which the label is attached.
      * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 2;</code>
+     * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCustomer() {
       if (customerBuilder_ == null) {
@@ -814,11 +843,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer to which the label is attached.
+     * Output only. The resource name of the customer to which the label is attached.
      * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 2;</code>
+     * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getCustomerBuilder() {
       
@@ -827,11 +856,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer to which the label is attached.
+     * Output only. The resource name of the customer to which the label is attached.
      * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 2;</code>
+     * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getCustomerOrBuilder() {
       if (customerBuilder_ != null) {
@@ -843,11 +872,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the customer to which the label is attached.
+     * Output only. The resource name of the customer to which the label is attached.
      * Read only.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer = 2;</code>
+     * <code>.google.protobuf.StringValue customer = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
@@ -868,24 +897,26 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> labelBuilder_;
     /**
      * <pre>
-     * The resource name of the label assigned to the customer.
+     * Output only. The resource name of the label assigned to the customer.
      * Note: the Customer ID portion of the label resource name is not
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue label = 3;</code>
+     * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the label field is set.
      */
     public boolean hasLabel() {
       return labelBuilder_ != null || label_ != null;
     }
     /**
      * <pre>
-     * The resource name of the label assigned to the customer.
+     * Output only. The resource name of the label assigned to the customer.
      * Note: the Customer ID portion of the label resource name is not
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue label = 3;</code>
+     * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The label.
      */
     public com.google.protobuf.StringValue getLabel() {
       if (labelBuilder_ == null) {
@@ -896,12 +927,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the label assigned to the customer.
+     * Output only. The resource name of the label assigned to the customer.
      * Note: the Customer ID portion of the label resource name is not
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue label = 3;</code>
+     * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLabel(com.google.protobuf.StringValue value) {
       if (labelBuilder_ == null) {
@@ -918,12 +949,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the label assigned to the customer.
+     * Output only. The resource name of the label assigned to the customer.
      * Note: the Customer ID portion of the label resource name is not
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue label = 3;</code>
+     * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setLabel(
         com.google.protobuf.StringValue.Builder builderForValue) {
@@ -938,12 +969,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the label assigned to the customer.
+     * Output only. The resource name of the label assigned to the customer.
      * Note: the Customer ID portion of the label resource name is not
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue label = 3;</code>
+     * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLabel(com.google.protobuf.StringValue value) {
       if (labelBuilder_ == null) {
@@ -962,12 +993,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the label assigned to the customer.
+     * Output only. The resource name of the label assigned to the customer.
      * Note: the Customer ID portion of the label resource name is not
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue label = 3;</code>
+     * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLabel() {
       if (labelBuilder_ == null) {
@@ -982,12 +1013,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the label assigned to the customer.
+     * Output only. The resource name of the label assigned to the customer.
      * Note: the Customer ID portion of the label resource name is not
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue label = 3;</code>
+     * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValue.Builder getLabelBuilder() {
       
@@ -996,12 +1027,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the label assigned to the customer.
+     * Output only. The resource name of the label assigned to the customer.
      * Note: the Customer ID portion of the label resource name is not
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue label = 3;</code>
+     * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.StringValueOrBuilder getLabelOrBuilder() {
       if (labelBuilder_ != null) {
@@ -1013,12 +1044,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the label assigned to the customer.
+     * Output only. The resource name of the label assigned to the customer.
      * Note: the Customer ID portion of the label resource name is not
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>.google.protobuf.StringValue label = 3;</code>
+     * <code>.google.protobuf.StringValue label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 

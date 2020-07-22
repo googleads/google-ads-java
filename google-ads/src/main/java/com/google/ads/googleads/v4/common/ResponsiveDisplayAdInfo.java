@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ResponsiveDisplayAdInfo}
  */
-public  final class ResponsiveDisplayAdInfo extends
+public final class ResponsiveDisplayAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ResponsiveDisplayAdInfo)
     ResponsiveDisplayAdInfoOrBuilder {
@@ -299,6 +299,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset marketing_images = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.AdImageAsset> getMarketingImagesList() {
     return marketingImages_;
   }
@@ -312,6 +313,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset marketing_images = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.AdImageAssetOrBuilder> 
       getMarketingImagesOrBuilderList() {
     return marketingImages_;
@@ -326,6 +328,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset marketing_images = 1;</code>
    */
+  @java.lang.Override
   public int getMarketingImagesCount() {
     return marketingImages_.size();
   }
@@ -339,6 +342,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset marketing_images = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdImageAsset getMarketingImages(int index) {
     return marketingImages_.get(index);
   }
@@ -352,6 +356,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset marketing_images = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdImageAssetOrBuilder getMarketingImagesOrBuilder(
       int index) {
     return marketingImages_.get(index);
@@ -369,6 +374,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset square_marketing_images = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.AdImageAsset> getSquareMarketingImagesList() {
     return squareMarketingImages_;
   }
@@ -382,6 +388,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset square_marketing_images = 2;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.AdImageAssetOrBuilder> 
       getSquareMarketingImagesOrBuilderList() {
     return squareMarketingImages_;
@@ -396,6 +403,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset square_marketing_images = 2;</code>
    */
+  @java.lang.Override
   public int getSquareMarketingImagesCount() {
     return squareMarketingImages_.size();
   }
@@ -409,6 +417,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset square_marketing_images = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdImageAsset getSquareMarketingImages(int index) {
     return squareMarketingImages_.get(index);
   }
@@ -422,6 +431,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset square_marketing_images = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdImageAssetOrBuilder getSquareMarketingImagesOrBuilder(
       int index) {
     return squareMarketingImages_.get(index);
@@ -438,6 +448,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset logo_images = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.AdImageAsset> getLogoImagesList() {
     return logoImages_;
   }
@@ -450,6 +461,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset logo_images = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.AdImageAssetOrBuilder> 
       getLogoImagesOrBuilderList() {
     return logoImages_;
@@ -463,6 +475,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset logo_images = 3;</code>
    */
+  @java.lang.Override
   public int getLogoImagesCount() {
     return logoImages_.size();
   }
@@ -475,6 +488,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset logo_images = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdImageAsset getLogoImages(int index) {
     return logoImages_.get(index);
   }
@@ -487,6 +501,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset logo_images = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdImageAssetOrBuilder getLogoImagesOrBuilder(
       int index) {
     return logoImages_.get(index);
@@ -503,6 +518,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset square_logo_images = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.AdImageAsset> getSquareLogoImagesList() {
     return squareLogoImages_;
   }
@@ -515,6 +531,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset square_logo_images = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.AdImageAssetOrBuilder> 
       getSquareLogoImagesOrBuilderList() {
     return squareLogoImages_;
@@ -528,6 +545,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset square_logo_images = 4;</code>
    */
+  @java.lang.Override
   public int getSquareLogoImagesCount() {
     return squareLogoImages_.size();
   }
@@ -540,6 +558,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset square_logo_images = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdImageAsset getSquareLogoImages(int index) {
     return squareLogoImages_.get(index);
   }
@@ -552,6 +571,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdImageAsset square_logo_images = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdImageAssetOrBuilder getSquareLogoImagesOrBuilder(
       int index) {
     return squareLogoImages_.get(index);
@@ -567,6 +587,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset headlines = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.AdTextAsset> getHeadlinesList() {
     return headlines_;
   }
@@ -578,6 +599,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset headlines = 5;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.AdTextAssetOrBuilder> 
       getHeadlinesOrBuilderList() {
     return headlines_;
@@ -590,6 +612,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset headlines = 5;</code>
    */
+  @java.lang.Override
   public int getHeadlinesCount() {
     return headlines_.size();
   }
@@ -601,6 +624,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset headlines = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdTextAsset getHeadlines(int index) {
     return headlines_.get(index);
   }
@@ -612,6 +636,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset headlines = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdTextAssetOrBuilder getHeadlinesOrBuilder(
       int index) {
     return headlines_.get(index);
@@ -627,6 +652,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AdTextAsset long_headline = 6;</code>
    * @return Whether the longHeadline field is set.
    */
+  @java.lang.Override
   public boolean hasLongHeadline() {
     return longHeadline_ != null;
   }
@@ -638,6 +664,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.AdTextAsset long_headline = 6;</code>
    * @return The longHeadline.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdTextAsset getLongHeadline() {
     return longHeadline_ == null ? com.google.ads.googleads.v4.common.AdTextAsset.getDefaultInstance() : longHeadline_;
   }
@@ -648,6 +675,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.AdTextAsset long_headline = 6;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdTextAssetOrBuilder getLongHeadlineOrBuilder() {
     return getLongHeadline();
   }
@@ -662,6 +690,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset descriptions = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.AdTextAsset> getDescriptionsList() {
     return descriptions_;
   }
@@ -673,6 +702,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset descriptions = 7;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.AdTextAssetOrBuilder> 
       getDescriptionsOrBuilderList() {
     return descriptions_;
@@ -685,6 +715,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset descriptions = 7;</code>
    */
+  @java.lang.Override
   public int getDescriptionsCount() {
     return descriptions_.size();
   }
@@ -696,6 +727,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset descriptions = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdTextAsset getDescriptions(int index) {
     return descriptions_.get(index);
   }
@@ -707,6 +739,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdTextAsset descriptions = 7;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdTextAssetOrBuilder getDescriptionsOrBuilder(
       int index) {
     return descriptions_.get(index);
@@ -721,6 +754,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdVideoAsset youtube_videos = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.AdVideoAsset> getYoutubeVideosList() {
     return youtubeVideos_;
   }
@@ -731,6 +765,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdVideoAsset youtube_videos = 8;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.AdVideoAssetOrBuilder> 
       getYoutubeVideosOrBuilderList() {
     return youtubeVideos_;
@@ -742,6 +777,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdVideoAsset youtube_videos = 8;</code>
    */
+  @java.lang.Override
   public int getYoutubeVideosCount() {
     return youtubeVideos_.size();
   }
@@ -752,6 +788,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdVideoAsset youtube_videos = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdVideoAsset getYoutubeVideos(int index) {
     return youtubeVideos_.get(index);
   }
@@ -762,6 +799,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.AdVideoAsset youtube_videos = 8;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.AdVideoAssetOrBuilder getYoutubeVideosOrBuilder(
       int index) {
     return youtubeVideos_.get(index);
@@ -777,6 +815,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue business_name = 9;</code>
    * @return Whether the businessName field is set.
    */
+  @java.lang.Override
   public boolean hasBusinessName() {
     return businessName_ != null;
   }
@@ -788,6 +827,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue business_name = 9;</code>
    * @return The businessName.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getBusinessName() {
     return businessName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : businessName_;
   }
@@ -798,6 +838,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue business_name = 9;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getBusinessNameOrBuilder() {
     return getBusinessName();
   }
@@ -814,6 +855,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue main_color = 10;</code>
    * @return Whether the mainColor field is set.
    */
+  @java.lang.Override
   public boolean hasMainColor() {
     return mainColor_ != null;
   }
@@ -827,6 +869,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue main_color = 10;</code>
    * @return The mainColor.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getMainColor() {
     return mainColor_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : mainColor_;
   }
@@ -839,6 +882,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue main_color = 10;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getMainColorOrBuilder() {
     return getMainColor();
   }
@@ -855,6 +899,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue accent_color = 11;</code>
    * @return Whether the accentColor field is set.
    */
+  @java.lang.Override
   public boolean hasAccentColor() {
     return accentColor_ != null;
   }
@@ -868,6 +913,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue accent_color = 11;</code>
    * @return The accentColor.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAccentColor() {
     return accentColor_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : accentColor_;
   }
@@ -880,6 +926,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue accent_color = 11;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAccentColorOrBuilder() {
     return getAccentColor();
   }
@@ -898,6 +945,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue allow_flexible_color = 12;</code>
    * @return Whether the allowFlexibleColor field is set.
    */
+  @java.lang.Override
   public boolean hasAllowFlexibleColor() {
     return allowFlexibleColor_ != null;
   }
@@ -913,6 +961,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue allow_flexible_color = 12;</code>
    * @return The allowFlexibleColor.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getAllowFlexibleColor() {
     return allowFlexibleColor_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : allowFlexibleColor_;
   }
@@ -927,6 +976,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue allow_flexible_color = 12;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getAllowFlexibleColorOrBuilder() {
     return getAllowFlexibleColor();
   }
@@ -941,6 +991,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue call_to_action_text = 13;</code>
    * @return Whether the callToActionText field is set.
    */
+  @java.lang.Override
   public boolean hasCallToActionText() {
     return callToActionText_ != null;
   }
@@ -952,6 +1003,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue call_to_action_text = 13;</code>
    * @return The callToActionText.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCallToActionText() {
     return callToActionText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : callToActionText_;
   }
@@ -962,6 +1014,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue call_to_action_text = 13;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCallToActionTextOrBuilder() {
     return getCallToActionText();
   }
@@ -976,6 +1029,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue price_prefix = 14;</code>
    * @return Whether the pricePrefix field is set.
    */
+  @java.lang.Override
   public boolean hasPricePrefix() {
     return pricePrefix_ != null;
   }
@@ -987,6 +1041,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue price_prefix = 14;</code>
    * @return The pricePrefix.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPricePrefix() {
     return pricePrefix_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : pricePrefix_;
   }
@@ -997,6 +1052,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue price_prefix = 14;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPricePrefixOrBuilder() {
     return getPricePrefix();
   }
@@ -1012,6 +1068,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue promo_text = 15;</code>
    * @return Whether the promoText field is set.
    */
+  @java.lang.Override
   public boolean hasPromoText() {
     return promoText_ != null;
   }
@@ -1024,6 +1081,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue promo_text = 15;</code>
    * @return The promoText.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPromoText() {
     return promoText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : promoText_;
   }
@@ -1035,6 +1093,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue promo_text = 15;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPromoTextOrBuilder() {
     return getPromoText();
   }
@@ -1049,7 +1108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 16;</code>
    * @return The enum numeric value on the wire for formatSetting.
    */
-  public int getFormatSettingValue() {
+  @java.lang.Override public int getFormatSettingValue() {
     return formatSetting_;
   }
   /**
@@ -1060,7 +1119,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 16;</code>
    * @return The formatSetting.
    */
-  public com.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting getFormatSetting() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting getFormatSetting() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting result = com.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.valueOf(formatSetting_);
     return result == null ? com.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.UNRECOGNIZED : result;
@@ -5728,7 +5787,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 16;</code>
      * @return The enum numeric value on the wire for formatSetting.
      */
-    public int getFormatSettingValue() {
+    @java.lang.Override public int getFormatSettingValue() {
       return formatSetting_;
     }
     /**
@@ -5741,6 +5800,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFormatSettingValue(int value) {
+      
       formatSetting_ = value;
       onChanged();
       return this;
@@ -5753,6 +5813,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting format_setting = 16;</code>
      * @return The formatSetting.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting getFormatSetting() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting result = com.google.ads.googleads.v4.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.valueOf(formatSetting_);

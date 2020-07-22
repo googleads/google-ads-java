@@ -5,16 +5,16 @@ package com.google.ads.googleads.v2.resources;
 
 /**
  * <pre>
- * A distance view with metrics aggregated by the user’s distance from an
- * advertiser’s location extensions. Each DistanceBucket includes all
+ * A distance view with metrics aggregated by the user's distance from an
+ * advertiser's location extensions. Each DistanceBucket includes all
  * impressions that fall within its distance and a single impression will
- * contribute to the metrics for all DistanceBuckets that include the user’s
+ * contribute to the metrics for all DistanceBuckets that include the user's
  * distance.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v2.resources.DistanceView}
  */
-public  final class DistanceView extends
+public final class DistanceView extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v2.resources.DistanceView)
     DistanceViewOrBuilder {
@@ -26,6 +26,13 @@ private static final long serialVersionUID = 0L;
   private DistanceView() {
     resourceName_ = "";
     distanceBucket_ = 0;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new DistanceView();
   }
 
   @java.lang.Override
@@ -41,7 +48,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -113,13 +119,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object resourceName_;
   /**
    * <pre>
-   * The resource name of the distance view.
+   * Output only. The resource name of the distance view.
    * Distance view resource names have the form:
    * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -134,13 +142,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource name of the distance view.
+   * Output only. The resource name of the distance view.
    * Distance view resource names have the form:
    * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
    * </pre>
    *
-   * <code>string resource_name = 1;</code>
+   * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -159,22 +169,24 @@ private static final long serialVersionUID = 0L;
   private int distanceBucket_;
   /**
    * <pre>
-   * Grouping of user distance from location extensions.
+   * Output only. Grouping of user distance from location extensions.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2;</code>
+   * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for distanceBucket.
    */
-  public int getDistanceBucketValue() {
+  @java.lang.Override public int getDistanceBucketValue() {
     return distanceBucket_;
   }
   /**
    * <pre>
-   * Grouping of user distance from location extensions.
+   * Output only. Grouping of user distance from location extensions.
    * </pre>
    *
-   * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2;</code>
+   * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The distanceBucket.
    */
-  public com.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket getDistanceBucket() {
+  @java.lang.Override public com.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket getDistanceBucket() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket result = com.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket.valueOf(distanceBucket_);
     return result == null ? com.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket.UNRECOGNIZED : result;
@@ -184,31 +196,36 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.BoolValue metricSystem_;
   /**
    * <pre>
-   * True if the DistanceBucket is using the metric system, false otherwise.
+   * Output only. True if the DistanceBucket is using the metric system, false otherwise.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+   * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the metricSystem field is set.
    */
+  @java.lang.Override
   public boolean hasMetricSystem() {
     return metricSystem_ != null;
   }
   /**
    * <pre>
-   * True if the DistanceBucket is using the metric system, false otherwise.
+   * Output only. True if the DistanceBucket is using the metric system, false otherwise.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+   * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The metricSystem.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getMetricSystem() {
     return metricSystem_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : metricSystem_;
   }
   /**
    * <pre>
-   * True if the DistanceBucket is using the metric system, false otherwise.
+   * Output only. True if the DistanceBucket is using the metric system, false otherwise.
    * </pre>
    *
-   * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+   * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getMetricSystemOrBuilder() {
     return getMetricSystem();
   }
@@ -395,10 +412,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A distance view with metrics aggregated by the user’s distance from an
-   * advertiser’s location extensions. Each DistanceBucket includes all
+   * A distance view with metrics aggregated by the user's distance from an
+   * advertiser's location extensions. Each DistanceBucket includes all
    * impressions that fall within its distance and a single impression will
-   * contribute to the metrics for all DistanceBuckets that include the user’s
+   * contribute to the metrics for all DistanceBuckets that include the user's
    * distance.
    * </pre>
    *
@@ -572,12 +589,13 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * The resource name of the distance view.
+     * Output only. The resource name of the distance view.
      * Distance view resource names have the form:
      * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The resourceName.
      */
     public java.lang.String getResourceName() {
       java.lang.Object ref = resourceName_;
@@ -593,12 +611,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the distance view.
+     * Output only. The resource name of the distance view.
      * Distance view resource names have the form:
      * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for resourceName.
      */
     public com.google.protobuf.ByteString
         getResourceNameBytes() {
@@ -615,12 +634,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the distance view.
+     * Output only. The resource name of the distance view.
      * Distance view resource names have the form:
      * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceName(
         java.lang.String value) {
@@ -634,12 +655,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the distance view.
+     * Output only. The resource name of the distance view.
      * Distance view resource names have the form:
      * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceName() {
       
@@ -649,12 +671,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource name of the distance view.
+     * Output only. The resource name of the distance view.
      * Distance view resource names have the form:
      * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
      * </pre>
      *
-     * <code>string resource_name = 1;</code>
+     * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for resourceName to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
@@ -671,33 +695,39 @@ private static final long serialVersionUID = 0L;
     private int distanceBucket_ = 0;
     /**
      * <pre>
-     * Grouping of user distance from location extensions.
+     * Output only. Grouping of user distance from location extensions.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2;</code>
+     * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for distanceBucket.
      */
-    public int getDistanceBucketValue() {
+    @java.lang.Override public int getDistanceBucketValue() {
       return distanceBucket_;
     }
     /**
      * <pre>
-     * Grouping of user distance from location extensions.
+     * Output only. Grouping of user distance from location extensions.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2;</code>
+     * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for distanceBucket to set.
+     * @return This builder for chaining.
      */
     public Builder setDistanceBucketValue(int value) {
+      
       distanceBucket_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Grouping of user distance from location extensions.
+     * Output only. Grouping of user distance from location extensions.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2;</code>
+     * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The distanceBucket.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket getDistanceBucket() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket result = com.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket.valueOf(distanceBucket_);
@@ -705,10 +735,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Grouping of user distance from location extensions.
+     * Output only. Grouping of user distance from location extensions.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2;</code>
+     * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The distanceBucket to set.
+     * @return This builder for chaining.
      */
     public Builder setDistanceBucket(com.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket value) {
       if (value == null) {
@@ -721,10 +753,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Grouping of user distance from location extensions.
+     * Output only. Grouping of user distance from location extensions.
      * </pre>
      *
-     * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2;</code>
+     * <code>.google.ads.googleads.v2.enums.DistanceBucketEnum.DistanceBucket distance_bucket = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
      */
     public Builder clearDistanceBucket() {
       
@@ -738,20 +771,22 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> metricSystemBuilder_;
     /**
      * <pre>
-     * True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+     * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the metricSystem field is set.
      */
     public boolean hasMetricSystem() {
       return metricSystemBuilder_ != null || metricSystem_ != null;
     }
     /**
      * <pre>
-     * True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+     * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The metricSystem.
      */
     public com.google.protobuf.BoolValue getMetricSystem() {
       if (metricSystemBuilder_ == null) {
@@ -762,10 +797,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+     * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setMetricSystem(com.google.protobuf.BoolValue value) {
       if (metricSystemBuilder_ == null) {
@@ -782,10 +817,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+     * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setMetricSystem(
         com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -800,10 +835,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+     * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeMetricSystem(com.google.protobuf.BoolValue value) {
       if (metricSystemBuilder_ == null) {
@@ -822,10 +857,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+     * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearMetricSystem() {
       if (metricSystemBuilder_ == null) {
@@ -840,10 +875,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+     * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValue.Builder getMetricSystemBuilder() {
       
@@ -852,10 +887,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+     * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getMetricSystemOrBuilder() {
       if (metricSystemBuilder_ != null) {
@@ -867,10 +902,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue metric_system = 3;</code>
+     * <code>.google.protobuf.BoolValue metric_system = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 

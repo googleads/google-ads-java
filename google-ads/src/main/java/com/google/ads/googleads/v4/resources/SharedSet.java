@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.SharedSet}
  */
-public  final class SharedSet extends
+public final class SharedSet extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.SharedSet)
     SharedSetOrBuilder {
@@ -170,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The resourceName.
    */
+  @java.lang.Override
   public java.lang.String getResourceName() {
     java.lang.Object ref = resourceName_;
     if (ref instanceof java.lang.String) {
@@ -192,6 +193,7 @@ private static final long serialVersionUID = 0L;
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for resourceName.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getResourceNameBytes() {
     java.lang.Object ref = resourceName_;
@@ -216,6 +218,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
+  @java.lang.Override
   public boolean hasId() {
     return id_ != null;
   }
@@ -227,6 +230,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getId() {
     return id_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : id_;
   }
@@ -237,6 +241,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value id = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getIdOrBuilder() {
     return getId();
   }
@@ -252,7 +257,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -264,7 +269,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The type.
    */
-  public com.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType getType() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType result = com.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType.UNRECOGNIZED : result;
@@ -284,6 +289,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 4;</code>
    * @return Whether the name field is set.
    */
+  @java.lang.Override
   public boolean hasName() {
     return name_ != null;
   }
@@ -299,6 +305,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue name = 4;</code>
    * @return The name.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getName() {
     return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
   }
@@ -313,6 +320,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue name = 4;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
     return getName();
   }
@@ -327,7 +335,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for status.
    */
-  public int getStatusValue() {
+  @java.lang.Override public int getStatusValue() {
     return status_;
   }
   /**
@@ -338,7 +346,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
-  public com.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus getStatus() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus getStatus() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus result = com.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus.valueOf(status_);
     return result == null ? com.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus.UNRECOGNIZED : result;
@@ -354,6 +362,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value member_count = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the memberCount field is set.
    */
+  @java.lang.Override
   public boolean hasMemberCount() {
     return memberCount_ != null;
   }
@@ -365,6 +374,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value member_count = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The memberCount.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getMemberCount() {
     return memberCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : memberCount_;
   }
@@ -375,6 +385,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value member_count = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getMemberCountOrBuilder() {
     return getMemberCount();
   }
@@ -389,6 +400,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value reference_count = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the referenceCount field is set.
    */
+  @java.lang.Override
   public boolean hasReferenceCount() {
     return referenceCount_ != null;
   }
@@ -400,6 +412,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value reference_count = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The referenceCount.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getReferenceCount() {
     return referenceCount_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : referenceCount_;
   }
@@ -410,6 +423,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value reference_count = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getReferenceCountOrBuilder() {
     return getReferenceCount();
   }
@@ -1144,7 +1158,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -1158,6 +1172,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -1171,6 +1186,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType result = com.google.ads.googleads.v4.enums.SharedSetTypeEnum.SharedSetType.valueOf(type_);
@@ -1411,7 +1427,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for status.
      */
-    public int getStatusValue() {
+    @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
@@ -1424,6 +1440,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
       onChanged();
       return this;
@@ -1436,6 +1453,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus status = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The status.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus getStatus() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus result = com.google.ads.googleads.v4.enums.SharedSetStatusEnum.SharedSetStatus.valueOf(status_);

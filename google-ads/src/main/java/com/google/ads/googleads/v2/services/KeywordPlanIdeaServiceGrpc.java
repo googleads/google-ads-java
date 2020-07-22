@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v2/services/keyword_plan_idea_service.proto")
 public final class KeywordPlanIdeaServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class KeywordPlanIdeaServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v2.services.KeywordPlanIdeaService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGenerateKeywordIdeasMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest,
-      com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse> METHOD_GENERATE_KEYWORD_IDEAS = getGenerateKeywordIdeasMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest,
       com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse> getGenerateKeywordIdeasMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateKeywordIdeas",
+      requestType = com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest.class,
+      responseType = com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest,
       com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse> getGenerateKeywordIdeasMethod() {
-    return getGenerateKeywordIdeasMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest,
-      com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse> getGenerateKeywordIdeasMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest, com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse> getGenerateKeywordIdeasMethod;
     if ((getGenerateKeywordIdeasMethod = KeywordPlanIdeaServiceGrpc.getGenerateKeywordIdeasMethod) == null) {
       synchronized (KeywordPlanIdeaServiceGrpc.class) {
         if ((getGenerateKeywordIdeasMethod = KeywordPlanIdeaServiceGrpc.getGenerateKeywordIdeasMethod) == null) {
-          KeywordPlanIdeaServiceGrpc.getGenerateKeywordIdeasMethod = getGenerateKeywordIdeasMethod = 
+          KeywordPlanIdeaServiceGrpc.getGenerateKeywordIdeasMethod = getGenerateKeywordIdeasMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest, com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v2.services.KeywordPlanIdeaService", "GenerateKeywordIdeas"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateKeywordIdeas"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeywordPlanIdeaServiceMethodDescriptorSupplier("GenerateKeywordIdeas"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeywordPlanIdeaServiceMethodDescriptorSupplier("GenerateKeywordIdeas"))
+              .build();
         }
-     }
-     return getGenerateKeywordIdeasMethod;
+      }
+    }
+    return getGenerateKeywordIdeasMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static KeywordPlanIdeaServiceStub newStub(io.grpc.Channel channel) {
-    return new KeywordPlanIdeaServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanIdeaServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanIdeaServiceStub>() {
+        @java.lang.Override
+        public KeywordPlanIdeaServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanIdeaServiceStub(channel, callOptions);
+        }
+      };
+    return KeywordPlanIdeaServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class KeywordPlanIdeaServiceGrpc {
    */
   public static KeywordPlanIdeaServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new KeywordPlanIdeaServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanIdeaServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanIdeaServiceBlockingStub>() {
+        @java.lang.Override
+        public KeywordPlanIdeaServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanIdeaServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return KeywordPlanIdeaServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class KeywordPlanIdeaServiceGrpc {
    */
   public static KeywordPlanIdeaServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new KeywordPlanIdeaServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeywordPlanIdeaServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeywordPlanIdeaServiceFutureStub>() {
+        @java.lang.Override
+        public KeywordPlanIdeaServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeywordPlanIdeaServiceFutureStub(channel, callOptions);
+        }
+      };
+    return KeywordPlanIdeaServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class KeywordPlanIdeaServiceGrpc {
      */
     public void generateKeywordIdeas(com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGenerateKeywordIdeasMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGenerateKeywordIdeasMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGenerateKeywordIdeasMethodHelper(),
+            getGenerateKeywordIdeasMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest,
@@ -126,19 +140,15 @@ public final class KeywordPlanIdeaServiceGrpc {
    * Service to generate keyword ideas.
    * </pre>
    */
-  public static final class KeywordPlanIdeaServiceStub extends io.grpc.stub.AbstractStub<KeywordPlanIdeaServiceStub> {
-    private KeywordPlanIdeaServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordPlanIdeaServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordPlanIdeaServiceStub extends io.grpc.stub.AbstractAsyncStub<KeywordPlanIdeaServiceStub> {
+    private KeywordPlanIdeaServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordPlanIdeaServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordPlanIdeaServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordPlanIdeaServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class KeywordPlanIdeaServiceGrpc {
     public void generateKeywordIdeas(com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGenerateKeywordIdeasMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGenerateKeywordIdeasMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class KeywordPlanIdeaServiceGrpc {
    * Service to generate keyword ideas.
    * </pre>
    */
-  public static final class KeywordPlanIdeaServiceBlockingStub extends io.grpc.stub.AbstractStub<KeywordPlanIdeaServiceBlockingStub> {
-    private KeywordPlanIdeaServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordPlanIdeaServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordPlanIdeaServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<KeywordPlanIdeaServiceBlockingStub> {
+    private KeywordPlanIdeaServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordPlanIdeaServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordPlanIdeaServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordPlanIdeaServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class KeywordPlanIdeaServiceGrpc {
      */
     public com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse generateKeywordIdeas(com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGenerateKeywordIdeasMethodHelper(), getCallOptions(), request);
+          getChannel(), getGenerateKeywordIdeasMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class KeywordPlanIdeaServiceGrpc {
    * Service to generate keyword ideas.
    * </pre>
    */
-  public static final class KeywordPlanIdeaServiceFutureStub extends io.grpc.stub.AbstractStub<KeywordPlanIdeaServiceFutureStub> {
-    private KeywordPlanIdeaServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeywordPlanIdeaServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeywordPlanIdeaServiceFutureStub extends io.grpc.stub.AbstractFutureStub<KeywordPlanIdeaServiceFutureStub> {
+    private KeywordPlanIdeaServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeywordPlanIdeaServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeywordPlanIdeaServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeywordPlanIdeaServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class KeywordPlanIdeaServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v2.services.GenerateKeywordIdeaResponse> generateKeywordIdeas(
         com.google.ads.googleads.v2.services.GenerateKeywordIdeasRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGenerateKeywordIdeasMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGenerateKeywordIdeasMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class KeywordPlanIdeaServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new KeywordPlanIdeaServiceFileDescriptorSupplier())
-              .addMethod(getGenerateKeywordIdeasMethodHelper())
+              .addMethod(getGenerateKeywordIdeasMethod())
               .build();
         }
       }

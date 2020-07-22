@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.BasicUserListInfo}
  */
-public  final class BasicUserListInfo extends
+public final class BasicUserListInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.BasicUserListInfo)
     BasicUserListInfoOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListActionInfo actions = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.common.UserListActionInfo> getActionsList() {
     return actions_;
   }
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListActionInfo actions = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.common.UserListActionInfoOrBuilder> 
       getActionsOrBuilderList() {
     return actions_;
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListActionInfo actions = 1;</code>
    */
+  @java.lang.Override
   public int getActionsCount() {
     return actions_.size();
   }
@@ -138,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListActionInfo actions = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListActionInfo getActions(int index) {
     return actions_.get(index);
   }
@@ -148,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.common.UserListActionInfo actions = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.UserListActionInfoOrBuilder getActionsOrBuilder(
       int index) {
     return actions_.get(index);

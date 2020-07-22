@@ -13,6 +13,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList website_list = 3;</code>
+   * @return Whether the websiteList field is set.
    */
   boolean hasWebsiteList();
   /**
@@ -21,6 +22,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList website_list = 3;</code>
+   * @return The websiteList.
    */
   com.google.ads.googleads.v3.common.PolicyTopicEvidence.WebsiteList getWebsiteList();
   /**
@@ -38,6 +40,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList text_list = 4;</code>
+   * @return Whether the textList field is set.
    */
   boolean hasTextList();
   /**
@@ -46,6 +49,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList text_list = 4;</code>
+   * @return The textList.
    */
   com.google.ads.googleads.v3.common.PolicyTopicEvidence.TextList getTextList();
   /**
@@ -64,6 +68,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 5;</code>
+   * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
   /**
@@ -73,6 +78,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue language_code = 5;</code>
+   * @return The languageCode.
    */
   com.google.protobuf.StringValue getLanguageCode();
   /**
@@ -92,6 +98,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList destination_text_list = 6;</code>
+   * @return Whether the destinationTextList field is set.
    */
   boolean hasDestinationTextList();
   /**
@@ -101,6 +108,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList destination_text_list = 6;</code>
+   * @return The destinationTextList.
    */
   com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationTextList getDestinationTextList();
   /**
@@ -119,6 +127,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch destination_mismatch = 7;</code>
+   * @return Whether the destinationMismatch field is set.
    */
   boolean hasDestinationMismatch();
   /**
@@ -127,6 +136,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch destination_mismatch = 7;</code>
+   * @return The destinationMismatch.
    */
   com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationMismatch getDestinationMismatch();
   /**
@@ -145,6 +155,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+   * @return Whether the destinationNotWorking field is set.
    */
   boolean hasDestinationNotWorking();
   /**
@@ -154,6 +165,7 @@ public interface PolicyTopicEvidenceOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking destination_not_working = 8;</code>
+   * @return The destinationNotWorking.
    */
   com.google.ads.googleads.v3.common.PolicyTopicEvidence.DestinationNotWorking getDestinationNotWorking();
   /**

@@ -13,6 +13,7 @@ public interface CustomerOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Customer update = 1;</code>
+   * @return Whether the update field is set.
    */
   boolean hasUpdate();
   /**
@@ -21,6 +22,7 @@ public interface CustomerOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.resources.Customer update = 1;</code>
+   * @return The update.
    */
   com.google.ads.googleads.v3.resources.Customer getUpdate();
   /**
@@ -38,6 +40,7 @@ public interface CustomerOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+   * @return Whether the updateMask field is set.
    */
   boolean hasUpdateMask();
   /**
@@ -46,6 +49,7 @@ public interface CustomerOperationOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+   * @return The updateMask.
    */
   com.google.protobuf.FieldMask getUpdateMask();
   /**

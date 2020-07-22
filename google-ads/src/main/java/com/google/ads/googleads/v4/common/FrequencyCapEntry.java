@@ -11,7 +11,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.FrequencyCapEntry}
  */
-public  final class FrequencyCapEntry extends
+public final class FrequencyCapEntry extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.FrequencyCapEntry)
     FrequencyCapEntryOrBuilder {
@@ -122,6 +122,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.FrequencyCapKey key = 1;</code>
    * @return Whether the key field is set.
    */
+  @java.lang.Override
   public boolean hasKey() {
     return key_ != null;
   }
@@ -134,6 +135,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.common.FrequencyCapKey key = 1;</code>
    * @return The key.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.FrequencyCapKey getKey() {
     return key_ == null ? com.google.ads.googleads.v4.common.FrequencyCapKey.getDefaultInstance() : key_;
   }
@@ -145,6 +147,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.common.FrequencyCapKey key = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.common.FrequencyCapKeyOrBuilder getKeyOrBuilder() {
     return getKey();
   }
@@ -159,6 +162,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value cap = 2;</code>
    * @return Whether the cap field is set.
    */
+  @java.lang.Override
   public boolean hasCap() {
     return cap_ != null;
   }
@@ -170,6 +174,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int32Value cap = 2;</code>
    * @return The cap.
    */
+  @java.lang.Override
   public com.google.protobuf.Int32Value getCap() {
     return cap_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : cap_;
   }
@@ -180,6 +185,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int32Value cap = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int32ValueOrBuilder getCapOrBuilder() {
     return getCap();
   }

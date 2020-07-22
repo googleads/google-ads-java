@@ -13,6 +13,7 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval date_interval = 1;</code>
+   * @return The enum numeric value on the wire for dateInterval.
    */
   int getDateIntervalValue();
   /**
@@ -21,6 +22,7 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval date_interval = 1;</code>
+   * @return The dateInterval.
    */
   com.google.ads.googleads.v3.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval getDateInterval();
 
@@ -33,6 +35,7 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DateRange date_range = 2;</code>
+   * @return Whether the dateRange field is set.
    */
   boolean hasDateRange();
   /**
@@ -44,6 +47,7 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.common.DateRange date_range = 2;</code>
+   * @return The dateRange.
    */
   com.google.ads.googleads.v3.common.DateRange getDateRange();
   /**

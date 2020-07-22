@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.resources;
  *
  * Protobuf type {@code google.ads.googleads.v4.resources.MediaVideo}
  */
-public  final class MediaVideo extends
+public final class MediaVideo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.resources.MediaVideo)
     MediaVideoOrBuilder {
@@ -146,6 +146,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the adDurationMillis field is set.
    */
+  @java.lang.Override
   public boolean hasAdDurationMillis() {
     return adDurationMillis_ != null;
   }
@@ -157,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The adDurationMillis.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getAdDurationMillis() {
     return adDurationMillis_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : adDurationMillis_;
   }
@@ -167,6 +169,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value ad_duration_millis = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getAdDurationMillisOrBuilder() {
     return getAdDurationMillis();
   }
@@ -181,6 +184,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the youtubeVideoId field is set.
    */
+  @java.lang.Override
   public boolean hasYoutubeVideoId() {
     return youtubeVideoId_ != null;
   }
@@ -192,6 +196,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The youtubeVideoId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getYoutubeVideoId() {
     return youtubeVideoId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : youtubeVideoId_;
   }
@@ -202,6 +207,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue youtube_video_id = 2 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getYoutubeVideoIdOrBuilder() {
     return getYoutubeVideoId();
   }
@@ -218,6 +224,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the advertisingIdCode field is set.
    */
+  @java.lang.Override
   public boolean hasAdvertisingIdCode() {
     return advertisingIdCode_ != null;
   }
@@ -231,6 +238,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The advertisingIdCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getAdvertisingIdCode() {
     return advertisingIdCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : advertisingIdCode_;
   }
@@ -243,6 +251,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue advertising_id_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getAdvertisingIdCodeOrBuilder() {
     return getAdvertisingIdCode();
   }
@@ -258,6 +267,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the isciCode field is set.
    */
+  @java.lang.Override
   public boolean hasIsciCode() {
     return isciCode_ != null;
   }
@@ -270,6 +280,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The isciCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getIsciCode() {
     return isciCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : isciCode_;
   }
@@ -281,6 +292,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue isci_code = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getIsciCodeOrBuilder() {
     return getIsciCode();
   }

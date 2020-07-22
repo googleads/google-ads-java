@@ -52,62 +52,58 @@ public final class CampaignServiceProto {
       "ign_service.proto\022 google.ads.googleads." +
       "v1.services\0320google/ads/googleads/v1/res" +
       "ources/campaign.proto\032\034google/api/annota" +
-      "tions.proto\032 google/protobuf/field_mask." +
-      "proto\032\036google/protobuf/wrappers.proto\032\027g" +
-      "oogle/rpc/status.proto\032\027google/api/clien" +
-      "t.proto\"+\n\022GetCampaignRequest\022\025\n\rresourc" +
-      "e_name\030\001 \001(\t\"\246\001\n\026MutateCampaignsRequest\022" +
-      "\023\n\013customer_id\030\001 \001(\t\022G\n\noperations\030\002 \003(\013" +
-      "23.google.ads.googleads.v1.services.Camp" +
-      "aignOperation\022\027\n\017partial_failure\030\003 \001(\010\022\025" +
-      "\n\rvalidate_only\030\004 \001(\010\"\341\001\n\021CampaignOperat" +
-      "ion\022/\n\013update_mask\030\004 \001(\0132\032.google.protob" +
-      "uf.FieldMask\022=\n\006create\030\001 \001(\0132+.google.ad" +
-      "s.googleads.v1.resources.CampaignH\000\022=\n\006u" +
-      "pdate\030\002 \001(\0132+.google.ads.googleads.v1.re" +
-      "sources.CampaignH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n\t" +
-      "operation\"\225\001\n\027MutateCampaignsResponse\0221\n" +
-      "\025partial_failure_error\030\003 \001(\0132\022.google.rp" +
-      "c.Status\022G\n\007results\030\002 \003(\01326.google.ads.g" +
-      "oogleads.v1.services.MutateCampaignResul" +
-      "t\"-\n\024MutateCampaignResult\022\025\n\rresource_na" +
-      "me\030\001 \001(\t2\232\003\n\017CampaignService\022\245\001\n\013GetCamp" +
-      "aign\0224.google.ads.googleads.v1.services." +
-      "GetCampaignRequest\032+.google.ads.googlead" +
-      "s.v1.resources.Campaign\"3\202\323\344\223\002-\022+/v1/{re" +
-      "source_name=customers/*/campaigns/*}\022\301\001\n" +
-      "\017MutateCampaigns\0228.google.ads.googleads." +
-      "v1.services.MutateCampaignsRequest\0329.goo" +
-      "gle.ads.googleads.v1.services.MutateCamp" +
-      "aignsResponse\"9\202\323\344\223\0023\"./v1/customers/{cu" +
-      "stomer_id=*}/campaigns:mutate:\001*\032\033\312A\030goo" +
-      "gleads.googleapis.comB\373\001\n$com.google.ads" +
-      ".googleads.v1.servicesB\024CampaignServiceP" +
-      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v1/services;services" +
-      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Service" +
-      "s\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$G" +
-      "oogle::Ads::GoogleAds::V1::Servicesb\006pro" +
-      "to3"
+      "tions.proto\032\027google/api/client.proto\032\037go" +
+      "ogle/api/field_behavior.proto\032\031google/ap" +
+      "i/resource.proto\032 google/protobuf/field_" +
+      "mask.proto\032\027google/rpc/status.proto\"V\n\022G" +
+      "etCampaignRequest\022@\n\rresource_name\030\001 \001(\t" +
+      "B)\340A\002\372A#\n!googleads.googleapis.com/Campa" +
+      "ign\"\260\001\n\026MutateCampaignsRequest\022\030\n\013custom" +
+      "er_id\030\001 \001(\tB\003\340A\002\022L\n\noperations\030\002 \003(\01323.g" +
+      "oogle.ads.googleads.v1.services.Campaign" +
+      "OperationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022" +
+      "\025\n\rvalidate_only\030\004 \001(\010\"\341\001\n\021CampaignOpera" +
+      "tion\022/\n\013update_mask\030\004 \001(\0132\032.google.proto" +
+      "buf.FieldMask\022=\n\006create\030\001 \001(\0132+.google.a" +
+      "ds.googleads.v1.resources.CampaignH\000\022=\n\006" +
+      "update\030\002 \001(\0132+.google.ads.googleads.v1.r" +
+      "esources.CampaignH\000\022\020\n\006remove\030\003 \001(\tH\000B\013\n" +
+      "\toperation\"\225\001\n\027MutateCampaignsResponse\0221" +
+      "\n\025partial_failure_error\030\003 \001(\0132\022.google.r" +
+      "pc.Status\022G\n\007results\030\002 \003(\01326.google.ads." +
+      "googleads.v1.services.MutateCampaignResu" +
+      "lt\"-\n\024MutateCampaignResult\022\025\n\rresource_n" +
+      "ame\030\001 \001(\t2\303\003\n\017CampaignService\022\265\001\n\013GetCam" +
+      "paign\0224.google.ads.googleads.v1.services" +
+      ".GetCampaignRequest\032+.google.ads.googlea" +
+      "ds.v1.resources.Campaign\"C\202\323\344\223\002-\022+/v1/{r" +
+      "esource_name=customers/*/campaigns/*}\332A\r" +
+      "resource_name\022\332\001\n\017MutateCampaigns\0228.goog" +
+      "le.ads.googleads.v1.services.MutateCampa" +
+      "ignsRequest\0329.google.ads.googleads.v1.se" +
+      "rvices.MutateCampaignsResponse\"R\202\323\344\223\0023\"." +
+      "/v1/customers/{customer_id=*}/campaigns:" +
+      "mutate:\001*\332A\026customer_id,operations\032\033\312A\030g" +
+      "oogleads.googleapis.comB\373\001\n$com.google.a" +
+      "ds.googleads.v1.servicesB\024CampaignServic" +
+      "eProtoP\001ZHgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v1/services;servic" +
+      "es\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Servi" +
+      "ces\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002" +
+      "$Google::Ads::GoogleAds::V1::Servicesb\006p" +
+      "roto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.CampaignProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.rpc.StatusProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetCampaignRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetCampaignRequest_fieldAccessorTable = new
@@ -141,15 +137,19 @@ public final class CampaignServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.CampaignProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.FieldMaskProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
-    com.google.rpc.StatusProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

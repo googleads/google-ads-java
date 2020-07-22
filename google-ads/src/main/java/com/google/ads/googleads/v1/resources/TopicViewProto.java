@@ -30,35 +30,43 @@ public final class TopicViewProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v1/resources/topi" +
       "c_view.proto\022!google.ads.googleads.v1.re" +
-      "sources\032\034google/api/annotations.proto\"\"\n" +
-      "\tTopicView\022\025\n\rresource_name\030\001 \001(\tB\373\001\n%co" +
-      "m.google.ads.googleads.v1.resourcesB\016Top" +
-      "icViewProtoP\001ZJgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v1/resources;" +
-      "resources\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
-      "1.Resources\312\002!Google\\Ads\\GoogleAds\\V1\\Re" +
-      "sources\352\002%Google::Ads::GoogleAds::V1::Re" +
-      "sourcesb\006proto3"
+      "sources\032\037google/api/field_behavior.proto" +
+      "\032\031google/api/resource.proto\032\034google/api/" +
+      "annotations.proto\"\245\001\n\tTopicView\022A\n\rresou" +
+      "rce_name\030\001 \001(\tB*\340A\003\372A$\n\"googleads.google" +
+      "apis.com/TopicView:U\352AR\n\"googleads.googl" +
+      "eapis.com/TopicView\022,customers/{customer" +
+      "}/topicViews/{topic_view}B\373\001\n%com.google" +
+      ".ads.googleads.v1.resourcesB\016TopicViewPr" +
+      "otoP\001ZJgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v1/resources;resource" +
+      "s\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1.Resour" +
+      "ces\312\002!Google\\Ads\\GoogleAds\\V1\\Resources\352" +
+      "\002%Google::Ads::GoogleAds::V1::Resourcesb" +
+      "\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_google_ads_googleads_v1_resources_TopicView_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_resources_TopicView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v1_resources_TopicView_descriptor,
         new java.lang.String[] { "ResourceName", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

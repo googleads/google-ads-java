@@ -15,6 +15,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator operator = 1;</code>
+   * @return The enum numeric value on the wire for operator.
    */
   int getOperatorValue();
   /**
@@ -25,6 +26,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v1.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator operator = 1;</code>
+   * @return The operator.
    */
   com.google.ads.googleads.v1.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator getOperator();
 
@@ -36,6 +38,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 2;</code>
+   * @return Whether the value field is set.
    */
   boolean hasValue();
   /**
@@ -46,6 +49,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 2;</code>
+   * @return The value.
    */
   com.google.protobuf.StringValue getValue();
   /**
@@ -67,6 +71,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value offset_in_days = 3;</code>
+   * @return Whether the offsetInDays field is set.
    */
   boolean hasOffsetInDays();
   /**
@@ -77,6 +82,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.Int64Value offset_in_days = 3;</code>
+   * @return The offsetInDays.
    */
   com.google.protobuf.Int64Value getOffsetInDays();
   /**

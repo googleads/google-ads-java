@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.errors;
  *
  * Protobuf type {@code google.ads.googleads.v4.errors.ErrorDetails}
  */
-public  final class ErrorDetails extends
+public final class ErrorDetails extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.errors.ErrorDetails)
     ErrorDetailsOrBuilder {
@@ -128,6 +128,7 @@ private static final long serialVersionUID = 0L;
    * <code>string unpublished_error_code = 1;</code>
    * @return The unpublishedErrorCode.
    */
+  @java.lang.Override
   public java.lang.String getUnpublishedErrorCode() {
     java.lang.Object ref = unpublishedErrorCode_;
     if (ref instanceof java.lang.String) {
@@ -149,6 +150,7 @@ private static final long serialVersionUID = 0L;
    * <code>string unpublished_error_code = 1;</code>
    * @return The bytes for unpublishedErrorCode.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getUnpublishedErrorCodeBytes() {
     java.lang.Object ref = unpublishedErrorCode_;
@@ -173,6 +175,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.errors.PolicyViolationDetails policy_violation_details = 2;</code>
    * @return Whether the policyViolationDetails field is set.
    */
+  @java.lang.Override
   public boolean hasPolicyViolationDetails() {
     return policyViolationDetails_ != null;
   }
@@ -184,6 +187,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.errors.PolicyViolationDetails policy_violation_details = 2;</code>
    * @return The policyViolationDetails.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.PolicyViolationDetails getPolicyViolationDetails() {
     return policyViolationDetails_ == null ? com.google.ads.googleads.v4.errors.PolicyViolationDetails.getDefaultInstance() : policyViolationDetails_;
   }
@@ -194,6 +198,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.errors.PolicyViolationDetails policy_violation_details = 2;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.PolicyViolationDetailsOrBuilder getPolicyViolationDetailsOrBuilder() {
     return getPolicyViolationDetails();
   }
@@ -208,6 +213,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.errors.PolicyFindingDetails policy_finding_details = 3;</code>
    * @return Whether the policyFindingDetails field is set.
    */
+  @java.lang.Override
   public boolean hasPolicyFindingDetails() {
     return policyFindingDetails_ != null;
   }
@@ -219,6 +225,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.errors.PolicyFindingDetails policy_finding_details = 3;</code>
    * @return The policyFindingDetails.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.PolicyFindingDetails getPolicyFindingDetails() {
     return policyFindingDetails_ == null ? com.google.ads.googleads.v4.errors.PolicyFindingDetails.getDefaultInstance() : policyFindingDetails_;
   }
@@ -229,6 +236,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.errors.PolicyFindingDetails policy_finding_details = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.errors.PolicyFindingDetailsOrBuilder getPolicyFindingDetailsOrBuilder() {
     return getPolicyFindingDetails();
   }

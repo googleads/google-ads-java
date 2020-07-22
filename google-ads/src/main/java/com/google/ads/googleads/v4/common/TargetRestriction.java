@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.TargetRestriction}
  */
-public  final class TargetRestriction extends
+public final class TargetRestriction extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.TargetRestriction)
     TargetRestrictionOrBuilder {
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
    * @return The enum numeric value on the wire for targetingDimension.
    */
-  public int getTargetingDimensionValue() {
+  @java.lang.Override public int getTargetingDimensionValue() {
     return targetingDimension_;
   }
   /**
@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
    * @return The targetingDimension.
    */
-  public com.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension getTargetingDimension() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension getTargetingDimension() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension.valueOf(targetingDimension_);
     return result == null ? com.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension.UNRECOGNIZED : result;
@@ -147,6 +147,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue bid_only = 2;</code>
    * @return Whether the bidOnly field is set.
    */
+  @java.lang.Override
   public boolean hasBidOnly() {
     return bidOnly_ != null;
   }
@@ -164,6 +165,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.BoolValue bid_only = 2;</code>
    * @return The bidOnly.
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValue getBidOnly() {
     return bidOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : bidOnly_;
   }
@@ -180,6 +182,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.BoolValue bid_only = 2;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.BoolValueOrBuilder getBidOnlyOrBuilder() {
     return getBidOnly();
   }
@@ -528,7 +531,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
      * @return The enum numeric value on the wire for targetingDimension.
      */
-    public int getTargetingDimensionValue() {
+    @java.lang.Override public int getTargetingDimensionValue() {
       return targetingDimension_;
     }
     /**
@@ -541,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetingDimensionValue(int value) {
+      
       targetingDimension_ = value;
       onChanged();
       return this;
@@ -553,6 +557,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension targeting_dimension = 1;</code>
      * @return The targetingDimension.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension getTargetingDimension() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v4.enums.TargetingDimensionEnum.TargetingDimension.valueOf(targetingDimension_);

@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GenerateProductMixIdeasRequest}
  */
-public  final class GenerateProductMixIdeasRequest extends
+public final class GenerateProductMixIdeasRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GenerateProductMixIdeasRequest)
     GenerateProductMixIdeasRequestOrBuilder {
@@ -153,6 +153,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The customerId.
    */
+  @java.lang.Override
   public java.lang.String getCustomerId() {
     java.lang.Object ref = customerId_;
     if (ref instanceof java.lang.String) {
@@ -173,6 +174,7 @@ private static final long serialVersionUID = 0L;
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for customerId.
    */
+  @java.lang.Override
   public com.google.protobuf.ByteString
       getCustomerIdBytes() {
     java.lang.Object ref = customerId_;
@@ -198,6 +200,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the plannableLocationId field is set.
    */
+  @java.lang.Override
   public boolean hasPlannableLocationId() {
     return plannableLocationId_ != null;
   }
@@ -210,6 +213,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The plannableLocationId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getPlannableLocationId() {
     return plannableLocationId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : plannableLocationId_;
   }
@@ -221,6 +225,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getPlannableLocationIdOrBuilder() {
     return getPlannableLocationId();
   }
@@ -236,6 +241,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the currencyCode field is set.
    */
+  @java.lang.Override
   public boolean hasCurrencyCode() {
     return currencyCode_ != null;
   }
@@ -248,6 +254,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The currencyCode.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getCurrencyCode() {
     return currencyCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currencyCode_;
   }
@@ -259,6 +266,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue currency_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getCurrencyCodeOrBuilder() {
     return getCurrencyCode();
   }
@@ -274,6 +282,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the budgetMicros field is set.
    */
+  @java.lang.Override
   public boolean hasBudgetMicros() {
     return budgetMicros_ != null;
   }
@@ -286,6 +295,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The budgetMicros.
    */
+  @java.lang.Override
   public com.google.protobuf.Int64Value getBudgetMicros() {
     return budgetMicros_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : budgetMicros_;
   }
@@ -297,6 +307,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.Int64Value budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    */
+  @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getBudgetMicrosOrBuilder() {
     return getBudgetMicros();
   }
@@ -313,6 +324,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.Preferences preferences = 5;</code>
    * @return Whether the preferences field is set.
    */
+  @java.lang.Override
   public boolean hasPreferences() {
     return preferences_ != null;
   }
@@ -326,6 +338,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.services.Preferences preferences = 5;</code>
    * @return The preferences.
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.Preferences getPreferences() {
     return preferences_ == null ? com.google.ads.googleads.v4.services.Preferences.getDefaultInstance() : preferences_;
   }
@@ -338,6 +351,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.ads.googleads.v4.services.Preferences preferences = 5;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.PreferencesOrBuilder getPreferencesOrBuilder() {
     return getPreferences();
   }

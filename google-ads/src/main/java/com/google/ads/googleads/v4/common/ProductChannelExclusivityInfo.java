@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ProductChannelExclusivityInfo}
  */
-public  final class ProductChannelExclusivityInfo extends
+public final class ProductChannelExclusivityInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ProductChannelExclusivityInfo)
     ProductChannelExclusivityInfoOrBuilder {
@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity channel_exclusivity = 1;</code>
    * @return The enum numeric value on the wire for channelExclusivity.
    */
-  public int getChannelExclusivityValue() {
+  @java.lang.Override public int getChannelExclusivityValue() {
     return channelExclusivity_;
   }
   /**
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity channel_exclusivity = 1;</code>
    * @return The channelExclusivity.
    */
-  public com.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity getChannelExclusivity() {
+  @java.lang.Override public com.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity getChannelExclusivity() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity result = com.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.valueOf(channelExclusivity_);
     return result == null ? com.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.UNRECOGNIZED : result;
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity channel_exclusivity = 1;</code>
      * @return The enum numeric value on the wire for channelExclusivity.
      */
-    public int getChannelExclusivityValue() {
+    @java.lang.Override public int getChannelExclusivityValue() {
       return channelExclusivity_;
     }
     /**
@@ -445,6 +445,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChannelExclusivityValue(int value) {
+      
       channelExclusivity_ = value;
       onChanged();
       return this;
@@ -457,6 +458,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity channel_exclusivity = 1;</code>
      * @return The channelExclusivity.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity getChannelExclusivity() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity result = com.google.ads.googleads.v4.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.valueOf(channelExclusivity_);

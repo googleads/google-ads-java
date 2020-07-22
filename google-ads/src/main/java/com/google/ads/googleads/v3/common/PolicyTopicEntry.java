@@ -16,7 +16,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.PolicyTopicEntry}
  */
-public  final class PolicyTopicEntry extends
+public final class PolicyTopicEntry extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.PolicyTopicEntry)
     PolicyTopicEntryOrBuilder {
@@ -29,6 +29,13 @@ private static final long serialVersionUID = 0L;
     type_ = 0;
     evidences_ = java.util.Collections.emptyList();
     constraints_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new PolicyTopicEntry();
   }
 
   @java.lang.Override
@@ -75,18 +82,18 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               evidences_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.PolicyTopicEvidence>();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000001;
             }
             evidences_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.PolicyTopicEvidence.parser(), extensionRegistry));
             break;
           }
           case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               constraints_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.PolicyTopicConstraint>();
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000002;
             }
             constraints_.add(
                 input.readMessage(com.google.ads.googleads.v3.common.PolicyTopicConstraint.parser(), extensionRegistry));
@@ -107,10 +114,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         evidences_ = java.util.Collections.unmodifiableList(evidences_);
       }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         constraints_ = java.util.Collections.unmodifiableList(constraints_);
       }
       this.unknownFields = unknownFields.build();
@@ -130,7 +137,6 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v3.common.PolicyTopicEntry.class, com.google.ads.googleads.v3.common.PolicyTopicEntry.Builder.class);
   }
 
-  private int bitField0_;
   public static final int TOPIC_FIELD_NUMBER = 1;
   private com.google.protobuf.StringValue topic_;
   /**
@@ -142,7 +148,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue topic = 1;</code>
+   * @return Whether the topic field is set.
    */
+  @java.lang.Override
   public boolean hasTopic() {
     return topic_ != null;
   }
@@ -155,7 +163,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue topic = 1;</code>
+   * @return The topic.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getTopic() {
     return topic_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : topic_;
   }
@@ -169,6 +179,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue topic = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getTopicOrBuilder() {
     return getTopic();
   }
@@ -181,8 +192,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
+   * @return The enum numeric value on the wire for type.
    */
-  public int getTypeValue() {
+  @java.lang.Override public int getTypeValue() {
     return type_;
   }
   /**
@@ -191,8 +203,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
+   * @return The type.
    */
-  public com.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType getType() {
+  @java.lang.Override public com.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType getType() {
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType result = com.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType.valueOf(type_);
     return result == null ? com.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType.UNRECOGNIZED : result;
@@ -208,6 +221,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEvidence evidences = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEvidence> getEvidencesList() {
     return evidences_;
   }
@@ -219,6 +233,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEvidence evidences = 3;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.PolicyTopicEvidenceOrBuilder> 
       getEvidencesOrBuilderList() {
     return evidences_;
@@ -231,6 +246,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEvidence evidences = 3;</code>
    */
+  @java.lang.Override
   public int getEvidencesCount() {
     return evidences_.size();
   }
@@ -242,6 +258,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEvidence evidences = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidence getEvidences(int index) {
     return evidences_.get(index);
   }
@@ -253,6 +270,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicEvidence evidences = 3;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicEvidenceOrBuilder getEvidencesOrBuilder(
       int index) {
     return evidences_.get(index);
@@ -268,6 +286,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicConstraint constraints = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v3.common.PolicyTopicConstraint> getConstraintsList() {
     return constraints_;
   }
@@ -279,6 +298,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicConstraint constraints = 4;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v3.common.PolicyTopicConstraintOrBuilder> 
       getConstraintsOrBuilderList() {
     return constraints_;
@@ -291,6 +311,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicConstraint constraints = 4;</code>
    */
+  @java.lang.Override
   public int getConstraintsCount() {
     return constraints_.size();
   }
@@ -302,6 +323,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicConstraint constraints = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicConstraint getConstraints(int index) {
     return constraints_.get(index);
   }
@@ -313,6 +335,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v3.common.PolicyTopicConstraint constraints = 4;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v3.common.PolicyTopicConstraintOrBuilder getConstraintsOrBuilder(
       int index) {
     return constraints_.get(index);
@@ -574,13 +597,13 @@ private static final long serialVersionUID = 0L;
 
       if (evidencesBuilder_ == null) {
         evidences_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         evidencesBuilder_.clear();
       }
       if (constraintsBuilder_ == null) {
         constraints_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         constraintsBuilder_.clear();
       }
@@ -611,7 +634,6 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v3.common.PolicyTopicEntry buildPartial() {
       com.google.ads.googleads.v3.common.PolicyTopicEntry result = new com.google.ads.googleads.v3.common.PolicyTopicEntry(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (topicBuilder_ == null) {
         result.topic_ = topic_;
       } else {
@@ -619,24 +641,23 @@ private static final long serialVersionUID = 0L;
       }
       result.type_ = type_;
       if (evidencesBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           evidences_ = java.util.Collections.unmodifiableList(evidences_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.evidences_ = evidences_;
       } else {
         result.evidences_ = evidencesBuilder_.build();
       }
       if (constraintsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           constraints_ = java.util.Collections.unmodifiableList(constraints_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.constraints_ = constraints_;
       } else {
         result.constraints_ = constraintsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -695,7 +716,7 @@ private static final long serialVersionUID = 0L;
         if (!other.evidences_.isEmpty()) {
           if (evidences_.isEmpty()) {
             evidences_ = other.evidences_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureEvidencesIsMutable();
             evidences_.addAll(other.evidences_);
@@ -708,7 +729,7 @@ private static final long serialVersionUID = 0L;
             evidencesBuilder_.dispose();
             evidencesBuilder_ = null;
             evidences_ = other.evidences_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
             evidencesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEvidencesFieldBuilder() : null;
@@ -721,7 +742,7 @@ private static final long serialVersionUID = 0L;
         if (!other.constraints_.isEmpty()) {
           if (constraints_.isEmpty()) {
             constraints_ = other.constraints_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureConstraintsIsMutable();
             constraints_.addAll(other.constraints_);
@@ -734,7 +755,7 @@ private static final long serialVersionUID = 0L;
             constraintsBuilder_.dispose();
             constraintsBuilder_ = null;
             constraints_ = other.constraints_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
             constraintsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getConstraintsFieldBuilder() : null;
@@ -785,6 +806,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue topic = 1;</code>
+     * @return Whether the topic field is set.
      */
     public boolean hasTopic() {
       return topicBuilder_ != null || topic_ != null;
@@ -798,6 +820,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue topic = 1;</code>
+     * @return The topic.
      */
     public com.google.protobuf.StringValue getTopic() {
       if (topicBuilder_ == null) {
@@ -960,8 +983,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
+     * @return The enum numeric value on the wire for type.
      */
-    public int getTypeValue() {
+    @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
@@ -970,8 +994,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
+     * @param value The enum numeric value on the wire for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
+      
       type_ = value;
       onChanged();
       return this;
@@ -982,7 +1009,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public com.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType getType() {
       @SuppressWarnings("deprecation")
       com.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType result = com.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType.valueOf(type_);
@@ -994,6 +1023,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(com.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType value) {
       if (value == null) {
@@ -1010,6 +1041,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.ads.googleads.v3.enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType type = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -1021,9 +1053,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.PolicyTopicEvidence> evidences_ =
       java.util.Collections.emptyList();
     private void ensureEvidencesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         evidences_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.PolicyTopicEvidence>(evidences_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1228,7 +1260,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEvidences() {
       if (evidencesBuilder_ == null) {
         evidences_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         evidencesBuilder_.clear();
@@ -1340,7 +1372,7 @@ private static final long serialVersionUID = 0L;
         evidencesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.PolicyTopicEvidence, com.google.ads.googleads.v3.common.PolicyTopicEvidence.Builder, com.google.ads.googleads.v3.common.PolicyTopicEvidenceOrBuilder>(
                 evidences_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         evidences_ = null;
@@ -1351,9 +1383,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v3.common.PolicyTopicConstraint> constraints_ =
       java.util.Collections.emptyList();
     private void ensureConstraintsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         constraints_ = new java.util.ArrayList<com.google.ads.googleads.v3.common.PolicyTopicConstraint>(constraints_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1558,7 +1590,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearConstraints() {
       if (constraintsBuilder_ == null) {
         constraints_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         constraintsBuilder_.clear();
@@ -1670,7 +1702,7 @@ private static final long serialVersionUID = 0L;
         constraintsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v3.common.PolicyTopicConstraint, com.google.ads.googleads.v3.common.PolicyTopicConstraint.Builder, com.google.ads.googleads.v3.common.PolicyTopicConstraintOrBuilder>(
                 constraints_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         constraints_ = null;

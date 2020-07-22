@@ -10,7 +10,7 @@ package com.google.ads.googleads.v1.common;
  *
  * Protobuf type {@code google.ads.googleads.v1.common.ProductItemIdInfo}
  */
-public  final class ProductItemIdInfo extends
+public final class ProductItemIdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v1.common.ProductItemIdInfo)
     ProductItemIdInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ProductItemIdInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ProductItemIdInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 1;</code>
+   * @return Whether the value field is set.
    */
+  @java.lang.Override
   public boolean hasValue() {
     return value_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue value = 1;</code>
+   * @return The value.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getValue() {
     return value_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : value_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue value = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getValueOrBuilder() {
     return getValue();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue value = 1;</code>
+     * @return Whether the value field is set.
      */
     public boolean hasValue() {
       return valueBuilder_ != null || value_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue value = 1;</code>
+     * @return The value.
      */
     public com.google.protobuf.StringValue getValue() {
       if (valueBuilder_ == null) {

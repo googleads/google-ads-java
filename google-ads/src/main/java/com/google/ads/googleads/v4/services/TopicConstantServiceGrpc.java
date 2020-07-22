@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v4/services/topic_constant_service.proto")
 public final class TopicConstantServiceGrpc {
 
@@ -30,49 +30,49 @@ public final class TopicConstantServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v4.services.TopicConstantService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetTopicConstantMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetTopicConstantRequest,
-      com.google.ads.googleads.v4.resources.TopicConstant> METHOD_GET_TOPIC_CONSTANT = getGetTopicConstantMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetTopicConstantRequest,
       com.google.ads.googleads.v4.resources.TopicConstant> getGetTopicConstantMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetTopicConstant",
+      requestType = com.google.ads.googleads.v4.services.GetTopicConstantRequest.class,
+      responseType = com.google.ads.googleads.v4.resources.TopicConstant.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetTopicConstantRequest,
       com.google.ads.googleads.v4.resources.TopicConstant> getGetTopicConstantMethod() {
-    return getGetTopicConstantMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetTopicConstantRequest,
-      com.google.ads.googleads.v4.resources.TopicConstant> getGetTopicConstantMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v4.services.GetTopicConstantRequest, com.google.ads.googleads.v4.resources.TopicConstant> getGetTopicConstantMethod;
     if ((getGetTopicConstantMethod = TopicConstantServiceGrpc.getGetTopicConstantMethod) == null) {
       synchronized (TopicConstantServiceGrpc.class) {
         if ((getGetTopicConstantMethod = TopicConstantServiceGrpc.getGetTopicConstantMethod) == null) {
-          TopicConstantServiceGrpc.getGetTopicConstantMethod = getGetTopicConstantMethod = 
+          TopicConstantServiceGrpc.getGetTopicConstantMethod = getGetTopicConstantMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v4.services.GetTopicConstantRequest, com.google.ads.googleads.v4.resources.TopicConstant>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v4.services.TopicConstantService", "GetTopicConstant"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTopicConstant"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.services.GetTopicConstantRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v4.resources.TopicConstant.getDefaultInstance()))
-                  .setSchemaDescriptor(new TopicConstantServiceMethodDescriptorSupplier("GetTopicConstant"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TopicConstantServiceMethodDescriptorSupplier("GetTopicConstant"))
+              .build();
         }
-     }
-     return getGetTopicConstantMethod;
+      }
+    }
+    return getGetTopicConstantMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static TopicConstantServiceStub newStub(io.grpc.Channel channel) {
-    return new TopicConstantServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TopicConstantServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TopicConstantServiceStub>() {
+        @java.lang.Override
+        public TopicConstantServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TopicConstantServiceStub(channel, callOptions);
+        }
+      };
+    return TopicConstantServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -80,7 +80,14 @@ public final class TopicConstantServiceGrpc {
    */
   public static TopicConstantServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new TopicConstantServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TopicConstantServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TopicConstantServiceBlockingStub>() {
+        @java.lang.Override
+        public TopicConstantServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TopicConstantServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return TopicConstantServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -88,7 +95,14 @@ public final class TopicConstantServiceGrpc {
    */
   public static TopicConstantServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new TopicConstantServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TopicConstantServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TopicConstantServiceFutureStub>() {
+        @java.lang.Override
+        public TopicConstantServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TopicConstantServiceFutureStub(channel, callOptions);
+        }
+      };
+    return TopicConstantServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -105,13 +119,13 @@ public final class TopicConstantServiceGrpc {
      */
     public void getTopicConstant(com.google.ads.googleads.v4.services.GetTopicConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.TopicConstant> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTopicConstantMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetTopicConstantMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetTopicConstantMethodHelper(),
+            getGetTopicConstantMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v4.services.GetTopicConstantRequest,
@@ -126,19 +140,15 @@ public final class TopicConstantServiceGrpc {
    * Service to fetch topic constants.
    * </pre>
    */
-  public static final class TopicConstantServiceStub extends io.grpc.stub.AbstractStub<TopicConstantServiceStub> {
-    private TopicConstantServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TopicConstantServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TopicConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<TopicConstantServiceStub> {
+    private TopicConstantServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TopicConstantServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TopicConstantServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TopicConstantServiceStub(channel, callOptions);
     }
 
@@ -150,7 +160,7 @@ public final class TopicConstantServiceGrpc {
     public void getTopicConstant(com.google.ads.googleads.v4.services.GetTopicConstantRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v4.resources.TopicConstant> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetTopicConstantMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetTopicConstantMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -159,19 +169,15 @@ public final class TopicConstantServiceGrpc {
    * Service to fetch topic constants.
    * </pre>
    */
-  public static final class TopicConstantServiceBlockingStub extends io.grpc.stub.AbstractStub<TopicConstantServiceBlockingStub> {
-    private TopicConstantServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TopicConstantServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TopicConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TopicConstantServiceBlockingStub> {
+    private TopicConstantServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TopicConstantServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TopicConstantServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TopicConstantServiceBlockingStub(channel, callOptions);
     }
 
@@ -182,7 +188,7 @@ public final class TopicConstantServiceGrpc {
      */
     public com.google.ads.googleads.v4.resources.TopicConstant getTopicConstant(com.google.ads.googleads.v4.services.GetTopicConstantRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetTopicConstantMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetTopicConstantMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,19 +197,15 @@ public final class TopicConstantServiceGrpc {
    * Service to fetch topic constants.
    * </pre>
    */
-  public static final class TopicConstantServiceFutureStub extends io.grpc.stub.AbstractStub<TopicConstantServiceFutureStub> {
-    private TopicConstantServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TopicConstantServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TopicConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TopicConstantServiceFutureStub> {
+    private TopicConstantServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TopicConstantServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TopicConstantServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TopicConstantServiceFutureStub(channel, callOptions);
     }
 
@@ -215,7 +217,7 @@ public final class TopicConstantServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v4.resources.TopicConstant> getTopicConstant(
         com.google.ads.googleads.v4.services.GetTopicConstantRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetTopicConstantMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetTopicConstantMethod(), getCallOptions()), request);
     }
   }
 
@@ -303,7 +305,7 @@ public final class TopicConstantServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new TopicConstantServiceFileDescriptorSupplier())
-              .addMethod(getGetTopicConstantMethodHelper())
+              .addMethod(getGetTopicConstantMethod())
               .build();
         }
       }

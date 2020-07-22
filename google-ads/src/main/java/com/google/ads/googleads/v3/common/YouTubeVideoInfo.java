@@ -10,7 +10,7 @@ package com.google.ads.googleads.v3.common;
  *
  * Protobuf type {@code google.ads.googleads.v3.common.YouTubeVideoInfo}
  */
-public  final class YouTubeVideoInfo extends
+public final class YouTubeVideoInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v3.common.YouTubeVideoInfo)
     YouTubeVideoInfoOrBuilder {
@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private YouTubeVideoInfo() {
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new YouTubeVideoInfo();
   }
 
   @java.lang.Override
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -99,7 +105,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue video_id = 1;</code>
+   * @return Whether the videoId field is set.
    */
+  @java.lang.Override
   public boolean hasVideoId() {
     return videoId_ != null;
   }
@@ -109,7 +117,9 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.google.protobuf.StringValue video_id = 1;</code>
+   * @return The videoId.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getVideoId() {
     return videoId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : videoId_;
   }
@@ -120,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue video_id = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getVideoIdOrBuilder() {
     return getVideoId();
   }
@@ -452,6 +463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue video_id = 1;</code>
+     * @return Whether the videoId field is set.
      */
     public boolean hasVideoId() {
       return videoIdBuilder_ != null || videoId_ != null;
@@ -462,6 +474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.google.protobuf.StringValue video_id = 1;</code>
+     * @return The videoId.
      */
     public com.google.protobuf.StringValue getVideoId() {
       if (videoIdBuilder_ == null) {

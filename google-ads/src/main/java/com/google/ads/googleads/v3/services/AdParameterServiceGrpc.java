@@ -21,7 +21,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v3/services/ad_parameter_service.proto")
 public final class AdParameterServiceGrpc {
 
@@ -30,86 +30,80 @@ public final class AdParameterServiceGrpc {
   public static final String SERVICE_NAME = "google.ads.googleads.v3.services.AdParameterService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getGetAdParameterMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdParameterRequest,
-      com.google.ads.googleads.v3.resources.AdParameter> METHOD_GET_AD_PARAMETER = getGetAdParameterMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdParameterRequest,
       com.google.ads.googleads.v3.resources.AdParameter> getGetAdParameterMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetAdParameter",
+      requestType = com.google.ads.googleads.v3.services.GetAdParameterRequest.class,
+      responseType = com.google.ads.googleads.v3.resources.AdParameter.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdParameterRequest,
       com.google.ads.googleads.v3.resources.AdParameter> getGetAdParameterMethod() {
-    return getGetAdParameterMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdParameterRequest,
-      com.google.ads.googleads.v3.resources.AdParameter> getGetAdParameterMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.GetAdParameterRequest, com.google.ads.googleads.v3.resources.AdParameter> getGetAdParameterMethod;
     if ((getGetAdParameterMethod = AdParameterServiceGrpc.getGetAdParameterMethod) == null) {
       synchronized (AdParameterServiceGrpc.class) {
         if ((getGetAdParameterMethod = AdParameterServiceGrpc.getGetAdParameterMethod) == null) {
-          AdParameterServiceGrpc.getGetAdParameterMethod = getGetAdParameterMethod = 
+          AdParameterServiceGrpc.getGetAdParameterMethod = getGetAdParameterMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.GetAdParameterRequest, com.google.ads.googleads.v3.resources.AdParameter>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.AdParameterService", "GetAdParameter"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAdParameter"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.GetAdParameterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.resources.AdParameter.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdParameterServiceMethodDescriptorSupplier("GetAdParameter"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdParameterServiceMethodDescriptorSupplier("GetAdParameter"))
+              .build();
         }
-     }
-     return getGetAdParameterMethod;
+      }
+    }
+    return getGetAdParameterMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getMutateAdParametersMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdParametersRequest,
-      com.google.ads.googleads.v3.services.MutateAdParametersResponse> METHOD_MUTATE_AD_PARAMETERS = getMutateAdParametersMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdParametersRequest,
       com.google.ads.googleads.v3.services.MutateAdParametersResponse> getMutateAdParametersMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MutateAdParameters",
+      requestType = com.google.ads.googleads.v3.services.MutateAdParametersRequest.class,
+      responseType = com.google.ads.googleads.v3.services.MutateAdParametersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdParametersRequest,
       com.google.ads.googleads.v3.services.MutateAdParametersResponse> getMutateAdParametersMethod() {
-    return getMutateAdParametersMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdParametersRequest,
-      com.google.ads.googleads.v3.services.MutateAdParametersResponse> getMutateAdParametersMethodHelper() {
     io.grpc.MethodDescriptor<com.google.ads.googleads.v3.services.MutateAdParametersRequest, com.google.ads.googleads.v3.services.MutateAdParametersResponse> getMutateAdParametersMethod;
     if ((getMutateAdParametersMethod = AdParameterServiceGrpc.getMutateAdParametersMethod) == null) {
       synchronized (AdParameterServiceGrpc.class) {
         if ((getMutateAdParametersMethod = AdParameterServiceGrpc.getMutateAdParametersMethod) == null) {
-          AdParameterServiceGrpc.getMutateAdParametersMethod = getMutateAdParametersMethod = 
+          AdParameterServiceGrpc.getMutateAdParametersMethod = getMutateAdParametersMethod =
               io.grpc.MethodDescriptor.<com.google.ads.googleads.v3.services.MutateAdParametersRequest, com.google.ads.googleads.v3.services.MutateAdParametersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "google.ads.googleads.v3.services.AdParameterService", "MutateAdParameters"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MutateAdParameters"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateAdParametersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.ads.googleads.v3.services.MutateAdParametersResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AdParameterServiceMethodDescriptorSupplier("MutateAdParameters"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AdParameterServiceMethodDescriptorSupplier("MutateAdParameters"))
+              .build();
         }
-     }
-     return getMutateAdParametersMethod;
+      }
+    }
+    return getMutateAdParametersMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AdParameterServiceStub newStub(io.grpc.Channel channel) {
-    return new AdParameterServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdParameterServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdParameterServiceStub>() {
+        @java.lang.Override
+        public AdParameterServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdParameterServiceStub(channel, callOptions);
+        }
+      };
+    return AdParameterServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -117,7 +111,14 @@ public final class AdParameterServiceGrpc {
    */
   public static AdParameterServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AdParameterServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdParameterServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdParameterServiceBlockingStub>() {
+        @java.lang.Override
+        public AdParameterServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdParameterServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return AdParameterServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -125,7 +126,14 @@ public final class AdParameterServiceGrpc {
    */
   public static AdParameterServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AdParameterServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AdParameterServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AdParameterServiceFutureStub>() {
+        @java.lang.Override
+        public AdParameterServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AdParameterServiceFutureStub(channel, callOptions);
+        }
+      };
+    return AdParameterServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -142,7 +150,7 @@ public final class AdParameterServiceGrpc {
      */
     public void getAdParameter(com.google.ads.googleads.v3.services.GetAdParameterRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.AdParameter> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAdParameterMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAdParameterMethod(), responseObserver);
     }
 
     /**
@@ -153,20 +161,20 @@ public final class AdParameterServiceGrpc {
      */
     public void mutateAdParameters(com.google.ads.googleads.v3.services.MutateAdParametersRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateAdParametersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getMutateAdParametersMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getMutateAdParametersMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getGetAdParameterMethodHelper(),
+            getGetAdParameterMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.GetAdParameterRequest,
                 com.google.ads.googleads.v3.resources.AdParameter>(
                   this, METHODID_GET_AD_PARAMETER)))
           .addMethod(
-            getMutateAdParametersMethodHelper(),
+            getMutateAdParametersMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.google.ads.googleads.v3.services.MutateAdParametersRequest,
@@ -181,19 +189,15 @@ public final class AdParameterServiceGrpc {
    * Service to manage ad parameters.
    * </pre>
    */
-  public static final class AdParameterServiceStub extends io.grpc.stub.AbstractStub<AdParameterServiceStub> {
-    private AdParameterServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdParameterServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdParameterServiceStub extends io.grpc.stub.AbstractAsyncStub<AdParameterServiceStub> {
+    private AdParameterServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdParameterServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdParameterServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdParameterServiceStub(channel, callOptions);
     }
 
@@ -205,7 +209,7 @@ public final class AdParameterServiceGrpc {
     public void getAdParameter(com.google.ads.googleads.v3.services.GetAdParameterRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.resources.AdParameter> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetAdParameterMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetAdParameterMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -217,7 +221,7 @@ public final class AdParameterServiceGrpc {
     public void mutateAdParameters(com.google.ads.googleads.v3.services.MutateAdParametersRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v3.services.MutateAdParametersResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getMutateAdParametersMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMutateAdParametersMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -226,19 +230,15 @@ public final class AdParameterServiceGrpc {
    * Service to manage ad parameters.
    * </pre>
    */
-  public static final class AdParameterServiceBlockingStub extends io.grpc.stub.AbstractStub<AdParameterServiceBlockingStub> {
-    private AdParameterServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdParameterServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdParameterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdParameterServiceBlockingStub> {
+    private AdParameterServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdParameterServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdParameterServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdParameterServiceBlockingStub(channel, callOptions);
     }
 
@@ -249,7 +249,7 @@ public final class AdParameterServiceGrpc {
      */
     public com.google.ads.googleads.v3.resources.AdParameter getAdParameter(com.google.ads.googleads.v3.services.GetAdParameterRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetAdParameterMethodHelper(), getCallOptions(), request);
+          getChannel(), getGetAdParameterMethod(), getCallOptions(), request);
     }
 
     /**
@@ -260,7 +260,7 @@ public final class AdParameterServiceGrpc {
      */
     public com.google.ads.googleads.v3.services.MutateAdParametersResponse mutateAdParameters(com.google.ads.googleads.v3.services.MutateAdParametersRequest request) {
       return blockingUnaryCall(
-          getChannel(), getMutateAdParametersMethodHelper(), getCallOptions(), request);
+          getChannel(), getMutateAdParametersMethod(), getCallOptions(), request);
     }
   }
 
@@ -269,19 +269,15 @@ public final class AdParameterServiceGrpc {
    * Service to manage ad parameters.
    * </pre>
    */
-  public static final class AdParameterServiceFutureStub extends io.grpc.stub.AbstractStub<AdParameterServiceFutureStub> {
-    private AdParameterServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AdParameterServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AdParameterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdParameterServiceFutureStub> {
+    private AdParameterServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AdParameterServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AdParameterServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AdParameterServiceFutureStub(channel, callOptions);
     }
 
@@ -293,7 +289,7 @@ public final class AdParameterServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.resources.AdParameter> getAdParameter(
         com.google.ads.googleads.v3.services.GetAdParameterRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetAdParameterMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getGetAdParameterMethod(), getCallOptions()), request);
     }
 
     /**
@@ -305,7 +301,7 @@ public final class AdParameterServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v3.services.MutateAdParametersResponse> mutateAdParameters(
         com.google.ads.googleads.v3.services.MutateAdParametersRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getMutateAdParametersMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getMutateAdParametersMethod(), getCallOptions()), request);
     }
   }
 
@@ -398,8 +394,8 @@ public final class AdParameterServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AdParameterServiceFileDescriptorSupplier())
-              .addMethod(getGetAdParameterMethodHelper())
-              .addMethod(getMutateAdParametersMethodHelper())
+              .addMethod(getGetAdParameterMethod())
+              .addMethod(getMutateAdParametersMethod())
               .build();
         }
       }

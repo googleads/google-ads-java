@@ -33,36 +33,34 @@ public final class AgeRangeViewServiceProto {
       "leads.v1.services\0326google/ads/googleads/" +
       "v1/resources/age_range_view.proto\032\034googl" +
       "e/api/annotations.proto\032\027google/api/clie" +
-      "nt.proto\"/\n\026GetAgeRangeViewRequest\022\025\n\rre" +
-      "source_name\030\001 \001(\t2\352\001\n\023AgeRangeViewServic" +
-      "e\022\265\001\n\017GetAgeRangeView\0228.google.ads.googl" +
-      "eads.v1.services.GetAgeRangeViewRequest\032" +
-      "/.google.ads.googleads.v1.resources.AgeR" +
-      "angeView\"7\202\323\344\223\0021\022//v1/{resource_name=cus" +
-      "tomers/*/ageRangeViews/*}\032\033\312A\030googleads." +
-      "googleapis.comB\377\001\n$com.google.ads.google" +
-      "ads.v1.servicesB\030AgeRangeViewServiceProt" +
-      "oP\001ZHgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v1/services;services\242\002\003" +
-      "GAA\252\002 Google.Ads.GoogleAds.V1.Services\312\002" +
-      " Google\\Ads\\GoogleAds\\V1\\Services\352\002$Goog" +
-      "le::Ads::GoogleAds::V1::Servicesb\006proto3"
+      "nt.proto\032\037google/api/field_behavior.prot" +
+      "o\032\031google/api/resource.proto\"^\n\026GetAgeRa" +
+      "ngeViewRequest\022D\n\rresource_name\030\001 \001(\tB-\340" +
+      "A\002\372A\'\n%googleads.googleapis.com/AgeRange" +
+      "View2\372\001\n\023AgeRangeViewService\022\305\001\n\017GetAgeR" +
+      "angeView\0228.google.ads.googleads.v1.servi" +
+      "ces.GetAgeRangeViewRequest\032/.google.ads." +
+      "googleads.v1.resources.AgeRangeView\"G\202\323\344" +
+      "\223\0021\022//v1/{resource_name=customers/*/ageR" +
+      "angeViews/*}\332A\rresource_name\032\033\312A\030googlea" +
+      "ds.googleapis.comB\377\001\n$com.google.ads.goo" +
+      "gleads.v1.servicesB\030AgeRangeViewServiceP" +
+      "rotoP\001ZHgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v1/services;services" +
+      "\242\002\003GAA\252\002 Google.Ads.GoogleAds.V1.Service" +
+      "s\312\002 Google\\Ads\\GoogleAds\\V1\\Services\352\002$G" +
+      "oogle::Ads::GoogleAds::V1::Servicesb\006pro" +
+      "to3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v1.resources.AgeRangeViewProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
-        }, assigner);
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.ResourceProto.getDescriptor(),
+        });
     internal_static_google_ads_googleads_v1_services_GetAgeRangeViewRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_google_ads_googleads_v1_services_GetAgeRangeViewRequest_fieldAccessorTable = new
@@ -72,12 +70,17 @@ public final class AgeRangeViewServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(com.google.api.ClientProto.methodSignature);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v1.resources.AgeRangeViewProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.ResourceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

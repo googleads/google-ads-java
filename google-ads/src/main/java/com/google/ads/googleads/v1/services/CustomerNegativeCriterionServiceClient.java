@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 Google LLC
+ * Copyright 2020 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v1.services.stub.CustomerNegativeCriterionServic
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,8 @@ import javax.annotation.Generated;
  * <pre>
  * <code>
  * try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient = CustomerNegativeCriterionServiceClient.create()) {
- *   String formattedResourceName = CustomerNegativeCriterionServiceClient.formatCustomerNegativeCriteriaName("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERIA]");
- *   CustomerNegativeCriterion response = customerNegativeCriterionServiceClient.getCustomerNegativeCriterion(formattedResourceName);
+ *   CustomerNegativeCriterionName resourceName = CustomerNegativeCriterionName.of("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERION]");
+ *   CustomerNegativeCriterion response = customerNegativeCriterionServiceClient.getCustomerNegativeCriterion(resourceName);
  * }
  * </code>
  * </pre>
@@ -99,52 +98,6 @@ import javax.annotation.Generated;
 public class CustomerNegativeCriterionServiceClient implements BackgroundResource {
   private final CustomerNegativeCriterionServiceSettings settings;
   private final CustomerNegativeCriterionServiceStub stub;
-
-  private static final PathTemplate CUSTOMER_NEGATIVE_CRITERIA_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/customerNegativeCriteria/{customer_negative_criteria}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a customer_negative_criteria
-   * resource.
-   *
-   * @deprecated Use the {@link CustomerNegativeCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String formatCustomerNegativeCriteriaName(
-      String customer, String customerNegativeCriteria) {
-    return CUSTOMER_NEGATIVE_CRITERIA_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "customer_negative_criteria", customerNegativeCriteria);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a
-   * customer_negative_criteria resource.
-   *
-   * @deprecated Use the {@link CustomerNegativeCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromCustomerNegativeCriteriaName(
-      String customerNegativeCriteriaName) {
-    return CUSTOMER_NEGATIVE_CRITERIA_PATH_TEMPLATE
-        .parse(customerNegativeCriteriaName)
-        .get("customer");
-  }
-
-  /**
-   * Parses the customer_negative_criteria from the given fully-qualified path which represents a
-   * customer_negative_criteria resource.
-   *
-   * @deprecated Use the {@link CustomerNegativeCriteriaName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerNegativeCriteriaFromCustomerNegativeCriteriaName(
-      String customerNegativeCriteriaName) {
-    return CUSTOMER_NEGATIVE_CRITERIA_PATH_TEMPLATE
-        .parse(customerNegativeCriteriaName)
-        .get("customer_negative_criteria");
-  }
 
   /** Constructs an instance of CustomerNegativeCriterionServiceClient with default settings. */
   public static final CustomerNegativeCriterionServiceClient create() throws IOException {
@@ -207,16 +160,40 @@ public class CustomerNegativeCriterionServiceClient implements BackgroundResourc
    *
    * <pre><code>
    * try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient = CustomerNegativeCriterionServiceClient.create()) {
-   *   String formattedResourceName = CustomerNegativeCriterionServiceClient.formatCustomerNegativeCriteriaName("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERIA]");
-   *   CustomerNegativeCriterion response = customerNegativeCriterionServiceClient.getCustomerNegativeCriterion(formattedResourceName);
+   *   CustomerNegativeCriterionName resourceName = CustomerNegativeCriterionName.of("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERION]");
+   *   CustomerNegativeCriterion response = customerNegativeCriterionServiceClient.getCustomerNegativeCriterion(resourceName);
    * }
    * </code></pre>
    *
-   * @param resourceName The resource name of the criterion to fetch.
+   * @param resourceName Required. The resource name of the criterion to fetch.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final CustomerNegativeCriterion getCustomerNegativeCriterion(
+      CustomerNegativeCriterionName resourceName) {
+    GetCustomerNegativeCriterionRequest request =
+        GetCustomerNegativeCriterionRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getCustomerNegativeCriterion(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the requested criterion in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient = CustomerNegativeCriterionServiceClient.create()) {
+   *   CustomerNegativeCriterionName resourceName = CustomerNegativeCriterionName.of("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERION]");
+   *   CustomerNegativeCriterion response = customerNegativeCriterionServiceClient.getCustomerNegativeCriterion(resourceName.toString());
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. The resource name of the criterion to fetch.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final CustomerNegativeCriterion getCustomerNegativeCriterion(String resourceName) {
-    CUSTOMER_NEGATIVE_CRITERIA_PATH_TEMPLATE.validate(resourceName, "getCustomerNegativeCriterion");
     GetCustomerNegativeCriterionRequest request =
         GetCustomerNegativeCriterionRequest.newBuilder().setResourceName(resourceName).build();
     return getCustomerNegativeCriterion(request);
@@ -230,9 +207,9 @@ public class CustomerNegativeCriterionServiceClient implements BackgroundResourc
    *
    * <pre><code>
    * try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient = CustomerNegativeCriterionServiceClient.create()) {
-   *   String formattedResourceName = CustomerNegativeCriterionServiceClient.formatCustomerNegativeCriteriaName("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERIA]");
+   *   CustomerNegativeCriterionName resourceName = CustomerNegativeCriterionName.of("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERION]");
    *   GetCustomerNegativeCriterionRequest request = GetCustomerNegativeCriterionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   CustomerNegativeCriterion response = customerNegativeCriterionServiceClient.getCustomerNegativeCriterion(request);
    * }
@@ -254,9 +231,9 @@ public class CustomerNegativeCriterionServiceClient implements BackgroundResourc
    *
    * <pre><code>
    * try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient = CustomerNegativeCriterionServiceClient.create()) {
-   *   String formattedResourceName = CustomerNegativeCriterionServiceClient.formatCustomerNegativeCriteriaName("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERIA]");
+   *   CustomerNegativeCriterionName resourceName = CustomerNegativeCriterionName.of("[CUSTOMER]", "[CUSTOMER_NEGATIVE_CRITERION]");
    *   GetCustomerNegativeCriterionRequest request = GetCustomerNegativeCriterionRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;CustomerNegativeCriterion&gt; future = customerNegativeCriterionServiceClient.getCustomerNegativeCriterionCallable().futureCall(request);
    *   // Do something
@@ -279,58 +256,16 @@ public class CustomerNegativeCriterionServiceClient implements BackgroundResourc
    * try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient = CustomerNegativeCriterionServiceClient.create()) {
    *   String customerId = "";
    *   List&lt;CustomerNegativeCriterionOperation&gt; operations = new ArrayList&lt;&gt;();
-   *   boolean partialFailure = false;
-   *   boolean validateOnly = false;
-   *   MutateCustomerNegativeCriteriaResponse response = customerNegativeCriterionServiceClient.mutateCustomerNegativeCriteria(customerId, operations, partialFailure, validateOnly);
-   * }
-   * </code></pre>
-   *
-   * @param customerId The ID of the customer whose criteria are being modified.
-   * @param operations The list of operations to perform on individual criteria.
-   * @param partialFailure If true, successful operations will be carried out and invalid operations
-   *     will return errors. If false, all operations will be carried out in one transaction if and
-   *     only if they are all valid. Default is false.
-   * @param validateOnly If true, the request is validated but not executed. Only errors are
-   *     returned, not results.
-   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
-   */
-  public final MutateCustomerNegativeCriteriaResponse mutateCustomerNegativeCriteria(
-      String customerId,
-      List<CustomerNegativeCriterionOperation> operations,
-      boolean partialFailure,
-      boolean validateOnly) {
-
-    MutateCustomerNegativeCriteriaRequest request =
-        MutateCustomerNegativeCriteriaRequest.newBuilder()
-            .setCustomerId(customerId)
-            .addAllOperations(operations)
-            .setPartialFailure(partialFailure)
-            .setValidateOnly(validateOnly)
-            .build();
-    return mutateCustomerNegativeCriteria(request);
-  }
-
-  // AUTO-GENERATED DOCUMENTATION AND METHOD
-  /**
-   * Creates or removes criteria. Operation statuses are returned.
-   *
-   * <p>Sample code:
-   *
-   * <pre><code>
-   * try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient = CustomerNegativeCriterionServiceClient.create()) {
-   *   String customerId = "";
-   *   List&lt;CustomerNegativeCriterionOperation&gt; operations = new ArrayList&lt;&gt;();
    *   MutateCustomerNegativeCriteriaResponse response = customerNegativeCriterionServiceClient.mutateCustomerNegativeCriteria(customerId, operations);
    * }
    * </code></pre>
    *
-   * @param customerId The ID of the customer whose criteria are being modified.
-   * @param operations The list of operations to perform on individual criteria.
+   * @param customerId Required. The ID of the customer whose criteria are being modified.
+   * @param operations Required. The list of operations to perform on individual criteria.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MutateCustomerNegativeCriteriaResponse mutateCustomerNegativeCriteria(
       String customerId, List<CustomerNegativeCriterionOperation> operations) {
-
     MutateCustomerNegativeCriteriaRequest request =
         MutateCustomerNegativeCriteriaRequest.newBuilder()
             .setCustomerId(customerId)

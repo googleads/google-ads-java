@@ -15,6 +15,7 @@ public interface FeedMappingOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The resourceName.
    */
   java.lang.String getResourceName();
   /**
@@ -25,6 +26,7 @@ public interface FeedMappingOrBuilder extends
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for resourceName.
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
@@ -35,6 +37,7 @@ public interface FeedMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return Whether the feed field is set.
    */
   boolean hasFeed();
   /**
@@ -43,6 +46,7 @@ public interface FeedMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.protobuf.StringValue feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The feed.
    */
   com.google.protobuf.StringValue getFeed();
   /**
@@ -125,6 +129,7 @@ public interface FeedMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for status.
    */
   int getStatusValue();
   /**
@@ -134,6 +139,7 @@ public interface FeedMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedMappingStatusEnum.FeedMappingStatus status = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The status.
    */
   com.google.ads.googleads.v3.enums.FeedMappingStatusEnum.FeedMappingStatus getStatus();
 
@@ -144,6 +150,7 @@ public interface FeedMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for placeholderType.
    */
   int getPlaceholderTypeValue();
   /**
@@ -153,6 +160,7 @@ public interface FeedMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The placeholderType.
    */
   com.google.ads.googleads.v3.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderType();
 
@@ -163,6 +171,7 @@ public interface FeedMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for criterionType.
    */
   int getCriterionTypeValue();
   /**
@@ -172,6 +181,7 @@ public interface FeedMappingOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v3.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The criterionType.
    */
   com.google.ads.googleads.v3.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType getCriterionType();
 

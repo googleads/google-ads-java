@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.services;
  *
  * Protobuf type {@code google.ads.googleads.v4.services.GenerateProductMixIdeasResponse}
  */
-public  final class GenerateProductMixIdeasResponse extends
+public final class GenerateProductMixIdeasResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.services.GenerateProductMixIdeasResponse)
     GenerateProductMixIdeasResponseOrBuilder {
@@ -107,6 +107,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.ProductAllocation product_allocation = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<com.google.ads.googleads.v4.services.ProductAllocation> getProductAllocationList() {
     return productAllocation_;
   }
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.ProductAllocation product_allocation = 1;</code>
    */
+  @java.lang.Override
   public java.util.List<? extends com.google.ads.googleads.v4.services.ProductAllocationOrBuilder> 
       getProductAllocationOrBuilderList() {
     return productAllocation_;
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.ProductAllocation product_allocation = 1;</code>
    */
+  @java.lang.Override
   public int getProductAllocationCount() {
     return productAllocation_.size();
   }
@@ -138,6 +141,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.ProductAllocation product_allocation = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ProductAllocation getProductAllocation(int index) {
     return productAllocation_.get(index);
   }
@@ -148,6 +152,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>repeated .google.ads.googleads.v4.services.ProductAllocation product_allocation = 1;</code>
    */
+  @java.lang.Override
   public com.google.ads.googleads.v4.services.ProductAllocationOrBuilder getProductAllocationOrBuilder(
       int index) {
     return productAllocation_.get(index);

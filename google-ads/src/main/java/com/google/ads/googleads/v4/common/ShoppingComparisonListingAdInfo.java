@@ -10,7 +10,7 @@ package com.google.ads.googleads.v4.common;
  *
  * Protobuf type {@code google.ads.googleads.v4.common.ShoppingComparisonListingAdInfo}
  */
-public  final class ShoppingComparisonListingAdInfo extends
+public final class ShoppingComparisonListingAdInfo extends
     com.google.protobuf.GeneratedMessageV3 implements
     // @@protoc_insertion_point(message_implements:google.ads.googleads.v4.common.ShoppingComparisonListingAdInfo)
     ShoppingComparisonListingAdInfoOrBuilder {
@@ -108,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue headline = 1;</code>
    * @return Whether the headline field is set.
    */
+  @java.lang.Override
   public boolean hasHeadline() {
     return headline_ != null;
   }
@@ -120,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * <code>.google.protobuf.StringValue headline = 1;</code>
    * @return The headline.
    */
+  @java.lang.Override
   public com.google.protobuf.StringValue getHeadline() {
     return headline_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : headline_;
   }
@@ -131,6 +133,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.google.protobuf.StringValue headline = 1;</code>
    */
+  @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getHeadlineOrBuilder() {
     return getHeadline();
   }

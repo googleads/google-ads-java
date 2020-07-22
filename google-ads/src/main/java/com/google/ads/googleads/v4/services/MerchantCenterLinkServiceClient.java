@@ -21,7 +21,6 @@ import com.google.ads.googleads.v4.services.stub.MerchantCenterLinkServiceStubSe
 import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.api.pathtemplate.PathTemplate;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
@@ -99,50 +98,6 @@ import javax.annotation.Generated;
 public class MerchantCenterLinkServiceClient implements BackgroundResource {
   private final MerchantCenterLinkServiceSettings settings;
   private final MerchantCenterLinkServiceStub stub;
-
-  private static final PathTemplate MERCHANT_CENTER_LINK_PATH_TEMPLATE =
-      PathTemplate.createWithoutUrlEncoding(
-          "customers/{customer}/merchantCenterLinks/{merchant_center_link}");
-
-  /**
-   * Formats a string containing the fully-qualified path to represent a merchant_center_link
-   * resource.
-   *
-   * @deprecated Use the {@link MerchantCenterLinkName} class instead.
-   */
-  @Deprecated
-  public static final String formatMerchantCenterLinkName(
-      String customer, String merchantCenterLink) {
-    return MERCHANT_CENTER_LINK_PATH_TEMPLATE.instantiate(
-        "customer", customer,
-        "merchant_center_link", merchantCenterLink);
-  }
-
-  /**
-   * Parses the customer from the given fully-qualified path which represents a merchant_center_link
-   * resource.
-   *
-   * @deprecated Use the {@link MerchantCenterLinkName} class instead.
-   */
-  @Deprecated
-  public static final String parseCustomerFromMerchantCenterLinkName(
-      String merchantCenterLinkName) {
-    return MERCHANT_CENTER_LINK_PATH_TEMPLATE.parse(merchantCenterLinkName).get("customer");
-  }
-
-  /**
-   * Parses the merchant_center_link from the given fully-qualified path which represents a
-   * merchant_center_link resource.
-   *
-   * @deprecated Use the {@link MerchantCenterLinkName} class instead.
-   */
-  @Deprecated
-  public static final String parseMerchantCenterLinkFromMerchantCenterLinkName(
-      String merchantCenterLinkName) {
-    return MERCHANT_CENTER_LINK_PATH_TEMPLATE
-        .parse(merchantCenterLinkName)
-        .get("merchant_center_link");
-  }
 
   /** Constructs an instance of MerchantCenterLinkServiceClient with default settings. */
   public static final MerchantCenterLinkServiceClient create() throws IOException {
@@ -272,8 +227,32 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   String formattedResourceName = MerchantCenterLinkServiceClient.formatMerchantCenterLinkName("[CUSTOMER]", "[MERCHANT_CENTER_LINK]");
-   *   MerchantCenterLink response = merchantCenterLinkServiceClient.getMerchantCenterLink(formattedResourceName);
+   *   MerchantCenterLinkName resourceName = MerchantCenterLinkName.of("[CUSTOMER]", "[MERCHANT_CENTER_LINK]");
+   *   MerchantCenterLink response = merchantCenterLinkServiceClient.getMerchantCenterLink(resourceName);
+   * }
+   * </code></pre>
+   *
+   * @param resourceName Required. Resource name of the Merchant Center link.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final MerchantCenterLink getMerchantCenterLink(MerchantCenterLinkName resourceName) {
+    GetMerchantCenterLinkRequest request =
+        GetMerchantCenterLinkRequest.newBuilder()
+            .setResourceName(resourceName == null ? null : resourceName.toString())
+            .build();
+    return getMerchantCenterLink(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD
+  /**
+   * Returns the Merchant Center link in full detail.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
+   *   MerchantCenterLinkName resourceName = MerchantCenterLinkName.of("[CUSTOMER]", "[MERCHANT_CENTER_LINK]");
+   *   MerchantCenterLink response = merchantCenterLinkServiceClient.getMerchantCenterLink(resourceName.toString());
    * }
    * </code></pre>
    *
@@ -281,7 +260,6 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final MerchantCenterLink getMerchantCenterLink(String resourceName) {
-    MERCHANT_CENTER_LINK_PATH_TEMPLATE.validate(resourceName, "getMerchantCenterLink");
     GetMerchantCenterLinkRequest request =
         GetMerchantCenterLinkRequest.newBuilder().setResourceName(resourceName).build();
     return getMerchantCenterLink(request);
@@ -295,9 +273,9 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   String formattedResourceName = MerchantCenterLinkServiceClient.formatMerchantCenterLinkName("[CUSTOMER]", "[MERCHANT_CENTER_LINK]");
+   *   MerchantCenterLinkName resourceName = MerchantCenterLinkName.of("[CUSTOMER]", "[MERCHANT_CENTER_LINK]");
    *   GetMerchantCenterLinkRequest request = GetMerchantCenterLinkRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   MerchantCenterLink response = merchantCenterLinkServiceClient.getMerchantCenterLink(request);
    * }
@@ -318,9 +296,9 @@ public class MerchantCenterLinkServiceClient implements BackgroundResource {
    *
    * <pre><code>
    * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient = MerchantCenterLinkServiceClient.create()) {
-   *   String formattedResourceName = MerchantCenterLinkServiceClient.formatMerchantCenterLinkName("[CUSTOMER]", "[MERCHANT_CENTER_LINK]");
+   *   MerchantCenterLinkName resourceName = MerchantCenterLinkName.of("[CUSTOMER]", "[MERCHANT_CENTER_LINK]");
    *   GetMerchantCenterLinkRequest request = GetMerchantCenterLinkRequest.newBuilder()
-   *     .setResourceName(formattedResourceName)
+   *     .setResourceName(resourceName.toString())
    *     .build();
    *   ApiFuture&lt;MerchantCenterLink&gt; future = merchantCenterLinkServiceClient.getMerchantCenterLinkCallable().futureCall(request);
    *   // Do something

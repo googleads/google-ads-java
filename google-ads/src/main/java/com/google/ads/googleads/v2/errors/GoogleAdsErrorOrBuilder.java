@@ -13,6 +13,7 @@ public interface GoogleAdsErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.errors.ErrorCode error_code = 1;</code>
+   * @return Whether the errorCode field is set.
    */
   boolean hasErrorCode();
   /**
@@ -21,6 +22,7 @@ public interface GoogleAdsErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.errors.ErrorCode error_code = 1;</code>
+   * @return The errorCode.
    */
   com.google.ads.googleads.v2.errors.ErrorCode getErrorCode();
   /**
@@ -38,6 +40,7 @@ public interface GoogleAdsErrorOrBuilder extends
    * </pre>
    *
    * <code>string message = 2;</code>
+   * @return The message.
    */
   java.lang.String getMessage();
   /**
@@ -46,6 +49,7 @@ public interface GoogleAdsErrorOrBuilder extends
    * </pre>
    *
    * <code>string message = 2;</code>
+   * @return The bytes for message.
    */
   com.google.protobuf.ByteString
       getMessageBytes();
@@ -56,6 +60,7 @@ public interface GoogleAdsErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Value trigger = 3;</code>
+   * @return Whether the trigger field is set.
    */
   boolean hasTrigger();
   /**
@@ -64,6 +69,7 @@ public interface GoogleAdsErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.common.Value trigger = 3;</code>
+   * @return The trigger.
    */
   com.google.ads.googleads.v2.common.Value getTrigger();
   /**
@@ -81,6 +87,7 @@ public interface GoogleAdsErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.errors.ErrorLocation location = 4;</code>
+   * @return Whether the location field is set.
    */
   boolean hasLocation();
   /**
@@ -89,6 +96,7 @@ public interface GoogleAdsErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.errors.ErrorLocation location = 4;</code>
+   * @return The location.
    */
   com.google.ads.googleads.v2.errors.ErrorLocation getLocation();
   /**
@@ -107,6 +115,7 @@ public interface GoogleAdsErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.errors.ErrorDetails details = 5;</code>
+   * @return Whether the details field is set.
    */
   boolean hasDetails();
   /**
@@ -116,6 +125,7 @@ public interface GoogleAdsErrorOrBuilder extends
    * </pre>
    *
    * <code>.google.ads.googleads.v2.errors.ErrorDetails details = 5;</code>
+   * @return The details.
    */
   com.google.ads.googleads.v2.errors.ErrorDetails getDetails();
   /**
